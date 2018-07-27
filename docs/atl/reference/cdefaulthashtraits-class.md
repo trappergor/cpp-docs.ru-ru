@@ -1,5 +1,5 @@
 ---
-title: Класс CDefaultHashTraits | Документы Microsoft
+title: Класс CDefaultHashTraits | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85cf9e27211763559617715a6c025055b25379fa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a87ecddfff7cb3096ae30d9da5d9e5b6913adcbd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886249"
 ---
 # <a name="cdefaulthashtraits-class"></a>Класс CDefaultHashTraits
 Этот класс предоставляет статическую функцию для вычисления хэш-значения.  
@@ -35,19 +36,19 @@ class CDefaultHashTraits
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Тип данных, хранимых в коллекции.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CDefaultHashTraits::Hash](#hash)|(Статический) Эта функция вызывается для вычисления хэш-значение для данного элемента.|  
+|[CDefaultHashTraits::Hash](#hash)|(Статический) Вызывайте эту функцию, для которого требуется вычислить значение хэша для данного элемента.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс содержит один статическую функцию, которая возвращает значение хэша для данного элемента. Этот класс используется [CDefaultElementTraits класса](../../atl/reference/cdefaultelementtraits-class.md).  
+ Этот класс содержит один статическую функцию, которая возвращает значение хэша для данного элемента. Этот класс используется [класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -55,21 +56,21 @@ class CDefaultHashTraits
  **Заголовок:** atlcoll.h  
   
 ##  <a name="hash"></a>  CDefaultHashTraits::Hash  
- Эта функция вызывается для вычисления хэш-значение для данного элемента.  
+ Вызывайте эту функцию, для которого требуется вычислить значение хэша для данного элемента.  
   
 ```
 static ULONG Hash(const T& element) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `element`  
+ *Элемент*  
  Элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает хэш-значения.  
+ Возвращает хэш-значение.  
   
 ### <a name="remarks"></a>Примечания  
- Значение по умолчанию алгоритм хеширования — очень простой: возвращаемое значение — число элементов. Переопределите эту функцию, если требуется более сложный алгоритм.  
+ Алгоритм хэширования по умолчанию очень прост: возвращаемое значение — номер элемента. Переопределите эту функцию, если требуется более сложный алгоритм.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

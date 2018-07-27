@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cceec4e7d954e07e1d776042f311dfa1a386300
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966625"
 ---
 # <a name="addrvaluereference-class"></a>Класс add_rvalue_reference
 
@@ -38,13 +39,13 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-T тип для изменения.
+*T* введите для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Класс `add_rvalue_reference` содержит член с именем `type`, который является псевдонимом для типа ссылки rvalue на параметр шаблона `T`. Семантика сворачивания ссылок подразумевает, что для типов `T`, не являющихся типами объектов или функций, `T&&` — `T`. Например, если `T` является типом ссылки lvalue `add_rvalue_reference<T>::type` является тип ссылки lvalue, не является ссылкой rvalue.
+`add_rvalue_reference` Классе имеется член с именем `type`, который является псевдонимом для типа ссылки rvalue к параметру шаблона *T*. Семантика сворачивания ссылок подразумевает, что для типов без объектов и функции, не являющейся *T*, `T&&` — *T*. Например, если *T* является типом ссылки lvalue `add_rvalue_reference<T>::type` является ссылочным типом lvalue, а не ссылкой rvalue.
 
-Для удобства \<type_traits > определяет шаблон вспомогательный `add_rvalue_reference_t`, что псевдонимы `type` членом `add_rvalue_reference`.
+Для удобства \<type_traits > определяет вспомогательный шаблон `add_rvalue_reference_t`, в котором псевдонимы `type` членом `add_rvalue_reference`.
 
 ## <a name="example"></a>Пример
 

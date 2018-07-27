@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376697"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Использование отладочного построения для проверки затирания памяти
 Использование отладочного построения для проверки затирания памяти, то необходимо перестроить проект для отладки. Перейдите в самом начале приложения `InitInstance` функции и добавьте следующую строку:  

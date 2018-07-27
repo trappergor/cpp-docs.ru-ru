@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379020"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (имя файла-заглушки MS-DOS)
 ```  

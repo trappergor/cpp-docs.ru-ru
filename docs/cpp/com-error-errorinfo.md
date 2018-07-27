@@ -1,5 +1,5 @@
 ---
-title: _com_error::ErrorInfo | Документы Microsoft
+title: _com_error::ErrorInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fbc735dfae1b30209eccfd14f1170826fb07680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52935c81849ded072cb20d6c835b3a71b66c2871
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941318"
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Блок, относящийся только к системам Microsoft**  
   
- Извлекает **IErrorInfo** объект, переданный в конструктор.  
+ Получает объект `IErrorInfo`, переданный конструктору.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,10 +37,10 @@ IErrorInfo * ErrorInfo( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Необработанный **IErrorInfo** элемент, переданный в конструктор.  
+ Необработанный элемент `IErrorInfo`, переданный в конструктор.  
   
 ## <a name="remarks"></a>Примечания  
- Получает инкапсулированный **IErrorInfo** элемент `_com_error` объекта, или **NULL** Если **IErrorInfo** элемента записывается. Вызывающий объект должен вызвать **выпуска** в возвращаемом объекте после завершения его использования.  
+ Получает инкапсулированный `IErrorInfo` элемент `_com_error` объекта, или значение NULL, если нет `IErrorInfo` элемента записывается. Вызывающий объект должен вызвать `Release` для возвращенного объекта после завершения с помощью его.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363827"
 ---
 # <a name="atl-utilities-reference"></a>Справочник по служебным программам ATL
 Библиотека ATL предоставляет код для обработки URL-адреса и пути в виде [CPathT](../atl/reference/cpatht-class.md) и [CUrl](../atl/reference/curl-class.md). Пул потоков [CThreadPool](../atl/reference/cthreadpool-class.md), можно использовать в приложениях. Этот код можно найти в atlpath.h и файлов atlutil.h.  

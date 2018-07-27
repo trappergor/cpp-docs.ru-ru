@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380905"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (задание ограничения выделения памяти для предкомпилированного заголовка)
 Этот параметр задает объем памяти, который выделяется компилятором для конструирования предкомпилированных заголовков.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343009"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp: класс приложений
 Класс основного приложения в MFC инкапсулирует инициализации, запуска и завершения приложения для ОС Windows. Приложения, разработанного на платформе должен иметь один и только один объект класса, производный от [CWinApp](../mfc/reference/cwinapp-class.md). Перед созданием windows создается этот объект.  

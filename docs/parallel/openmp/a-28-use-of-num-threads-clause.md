@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689120"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   Использование предложения num_threads
 В следующем примере демонстрируется `num_threads` предложение ([разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8). Более 10 потоков выполняется параллельной области.  

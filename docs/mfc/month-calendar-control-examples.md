@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342911"
 ---
 # <a name="month-calendar-control-examples"></a>Примеры элемента управления "Календарь на месяц"
 [CMNCTRL1](../visual-cpp-samples.md) образец приложения показывает различные атрибуты `CMonthCalCtrl` класса. Элемент управления, найденных на отдельной вкладке в образце показаны основные функции и пользователь может динамически изменять определенные атрибуты.  

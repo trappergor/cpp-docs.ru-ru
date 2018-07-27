@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369436"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (указание каталогов метаданных)
 Указывает каталог, в котором компилятор будет производить поиск для разрешения ссылок, переданных в директиву `#using`.  

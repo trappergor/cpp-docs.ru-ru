@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391318"
 ---
 # <a name="printfp-positional-parameters"></a>Позиционные параметры printf_p
 Позиционные параметры предоставляют возможность определить число аргументов, которые будут заменены в поле в строке формата. Доступны следующие функции `printf` с позиционными параметрами:  

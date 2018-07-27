@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278038"
 ---
 # <a name="compiler-warning-level-1-c4353"></a>Предупреждение компилятора (уровень 1) C4353
 использовано нестандартное расширение: константа 0 в качестве выражения функции. Вместо этого используйте функцию «__noop» встроенная функция  

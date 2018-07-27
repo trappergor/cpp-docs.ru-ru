@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382276"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051. Использование CTL3D сегодня и в будущем
 Этот технический Обратите внимание, что обсуждалось ранее CTL3D и MFC, больше не используется. Объемные эффекты для элементов управления автоматически реализуемой MFC.  

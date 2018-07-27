@@ -1,5 +1,5 @@
 ---
-title: Класс CHtmlEditDoc | Документы Microsoft
+title: Класс CHtmlEditDoc | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de452365a02b69798c62e2eecfd8051afcf08bb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6d8f5f8fa3867e1a9e38dc6bf919d57ead72de
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335608"
 ---
 # <a name="chtmleditdoc-class"></a>Класс CHtmlEditDoc
-С [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), предоставляет функции платформы редактирования WebBrowser в контексте архитектуры представления документов MFC.  
+С помощью [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), предоставляет функции платформы редактирования WebBrowser в контексте архитектуры представления документов MFC.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,17 +44,17 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Создает объект `CHtmlEditDoc`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHtmlEditDoc::GetView](#getview)|Извлекает `CHtmlEditView` объект присоединен к этому документу.|  
-|[CHtmlEditDoc::IsModified](#ismodified)|Возвращает значение, показывающее, содержит ли элемент управления WebBrowser связанного представления документ, который был изменен пользователем.|  
-|[CHtmlEditDoc::OpenURL](#openurl)|Открытие URL-адреса.|  
+|[CHtmlEditDoc::IsModified](#ismodified)|Возвращает, содержит ли элемент управления WebBrowser связанного представления документа, которые были изменены пользователем.|  
+|[CHtmlEditDoc::OpenURL](#openurl)|Открывает URL-адрес.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -68,7 +69,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
  **Заголовок:** afxhtml.h  
   
 ##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
- Создает **CHtmlEditDoc** объекта.  
+ Создает объект `CHtmlEditDoc`.  
   
 ```  
 CHtmlEditDoc();
@@ -82,30 +83,30 @@ virtual CHtmlEditView* GetView() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на документ **CHtmlEditView** объекта.  
+ Возвращает указатель на документ `CHtmlEditView` объекта.  
   
 ##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
- Возвращает значение, показывающее, содержит ли элемент управления WebBrowser связанного представления документ, который был изменен пользователем.  
+ Возвращает, содержит ли элемент управления WebBrowser связанного представления документа, которые были изменены пользователем.  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
 ##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL  
- Открытие URL-адреса.  
+ Открывает URL-адрес.  
   
 ```  
 virtual BOOL OpenURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszURL`  
+ *lpszURL*  
  URL-адрес, чтобы открыть.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** при успешном выполнении **FALSE** при сбое.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ## <a name="see-also"></a>См. также  
- [Образец HTMLEdit](../../visual-cpp-samples.md)   
+ [Пример HTMLEdit](../../visual-cpp-samples.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
 

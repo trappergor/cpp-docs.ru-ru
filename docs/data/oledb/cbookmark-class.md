@@ -1,5 +1,5 @@
 ---
-title: Класс CBookmark | Документы Microsoft
+title: Класс CBookmark | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,82 @@ f1_keywords:
 - CBookmark
 - ATL.CBookmark<nSize>
 - ATL::CBookmark
+- CBookmark<0>.CBookmark<0>
+- CBookmark::CBookmark
+- ATL.CBookmark.CBookmark
+- CBookmark.CBookmark
+- CBookmark
+- ATL::CBookmark<0>::CBookmark<0>
+- ATL.CBookmark<0>.CBookmark<0>
+- CBookmark<0>::CBookmark<0>
+- ATL::CBookmark::CBookmark
+- ATL.CBookmark<0>.GetBuffer
+- ATL.CBookmark.GetBuffer
+- ATL::CBookmark<0>::GetBuffer
+- ATL::CBookmark::GetBuffer
+- CBookmark.GetBuffer
+- ATL::CBookmark<nSize>::GetBuffer
+- ATL.CBookmark<nSize>.GetBuffer
+- CBookmark<0>.GetBuffer
+- CBookmark<nSize>::GetBuffer
+- CBookmark<0>::GetBuffer
+- CBookmark<nSize>.GetBuffer
+- CBookmark::GetBuffer
+- CBookmark::GetSize
+- ATL.CBookmark<nSize>.GetSize
+- CBookmark<nSize>.GetSize
+- CBookmark.GetSize
+- ATL::CBookmark::GetSize
+- CBookmark<0>::GetSize
+- ATL::CBookmark<nSize>::GetSize
+- ATL.CBookmark<0>.GetSize
+- ATL::CBookmark<0>::GetSize
+- ATL.CBookmark.GetSize
+- CBookmark<0>.GetSize
+- CBookmark<nSize>::GetSize
+- CBookmark<0>::SetBookmark
+- ATL.CBookmark<0>.SetBookmark
+- CBookmark<0>.SetBookmark
+- SetBookmark
+- ATL::CBookmark::SetBookmark
+- ATL::CBookmark<0>::SetBookmark
+- CBookmark.SetBookmark
+- ATL.CBookmark.SetBookmark
+- CBookmark::SetBookmark
+- CBookmark<0>::operator=
+- CBookmark<0>.operator=
+- ATL.CBookmark.operator=
+- CBookmark::operator=
+- ATL.CBookmark<0>.operator=
+- ATL::CBookmark<0>::operator=
+- CBookmark.operator=
+- ATL::CBookmark::operator=
 dev_langs:
 - C++
 helpviewer_keywords:
 - CBookmark class
+- CBookmark class, constructor
+- GetBuffer method
+- GetSize method
+- SetBookmark method
+- = operator, with OLE DB templates
+- operator =, bookmarks
+- operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c14fde6fb07a35ef9e2955ce61f991bede6b11a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7545a9a31ff9bd7426002ef97176c59dd308dd49
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209148"
 ---
 # <a name="cbookmark-class"></a>Класс CBookmark
-Содержит значения закладки в свой буфер.  
+Содержит значение закладки в свой буфер.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,9 +98,12 @@ template <>
 class CBookmark< 0 > : public CBookmarkBase  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `nSize`  
- Размер буфера закладки в байтах. Когда `nSize` равен нулю, буфера закладки создается динамически во время выполнения.  
+### <a name="parameters"></a>Параметры  
+ *nSize*  
+ Размер буфера закладки в байтах. Когда *nSize* равен нулю, буфера закладки создается динамически во время выполнения.  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h  
   
 ## <a name="members"></a>Участники  
   
@@ -50,23 +111,102 @@ class CBookmark< 0 > : public CBookmarkBase
   
 |||  
 |-|-|  
-|[CBookmark](../../data/oledb/cbookmark-class.md)|Конструктор|  
-|[GetBuffer](../../data/oledb/cbookmark-getbuffer.md)|Извлекает указатель на буфер.|  
-|[GetSize](../../data/oledb/cbookmark-getsize.md)|Получает размер буфера в байтах.|  
-|[SetBookmark](../../data/oledb/cbookmark-setbookmark.md)|Задает значение закладки.|  
+|[CBookmark](#cbookmark)|Конструктор|  
+|[GetBuffer](#getbuffer)|Извлекает указатель на буфер.|  
+|[GetSize](#getsize)|Получает размер буфера в байтах.|  
+|[SetBookmark](#setbookmark)|Задает значение закладки.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор =](../../data/oledb/cbookmark-operator-equal.md)|Назначает один `CBookmark` класса в другой.|  
+|[оператор =](#operator)|Назначает один `CBookmark` класса в другой.|  
   
 ## <a name="remarks"></a>Примечания  
- **CBookmark\<0 >** является специализацией шаблона `CBookmark`; буфера создается динамически во время выполнения.  
+ `CBookmark<0>` является специализацией шаблона `CBookmark`; его буфера создается динамически во время выполнения.  
+
+## <a name="cbookmark"></a> CBookmark::CBookmark
+Конструктор.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+### <a name="syntax"></a>Синтаксис  
   
+```cpp
+      CBookmark();   
+
+CBookmark(DBLENGTH nSize);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *nSize*  
+ [in] Размер буфера закладки в байтах.  
+  
+### <a name="remarks"></a>Примечания  
+ Первая функция задает буфер значение NULL, и размер буфера равным 0. Вторая функция задает размер буфера *nSize*и буфер для байтового массива *nSize* байт.  
+  
+> [!NOTE]
+>  Эта функция доступна только в `CBookmark<0>`. 
+  
+## <a name="getbuffer"></a> CBookmark::GetBuffer
+Извлекает указатель на буфер закладки.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+virtual BYTE* GetBuffer() const throw();  
+  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Указатель на буфер закладки. 
+
+## <a name="getsize"></a> CBookmark::GetSize
+Получает размер буфера закладки.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+virtual DBLENGTH GetSize() const throw();  
+  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Размер буфера в байтах.  
+
+## <a name="setbookmark"></a> CBookmark::SetBookmark
+Копирует значение ссылается *pBuffer* для `CBookmark` буфер и задает размер буфера *nSize*.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```
+HRESULT SetBookmark(DBLENGTH nSize,  
+  BYTE* pBuffer) throw();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *nSize*  
+ [in] Размер буфера закладки.  
+  
+ *pBuffer*  
+ [in] Указатель на массив байтов, содержащий значение.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Стандартный HRESULT.  
+  
+### <a name="remarks"></a>Примечания  
+ Эта функция доступна только в `CBookmark<0>`. 
+
+## <a name="operator"></a> CBookmark::operator =
+Назначает `CBookmark` объект с другим объектом.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      CBookmark& operator =(const CBookmark& bookmark) throw();  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот оператор необходим только в `CBookmark<0>`.   
+
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349926"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Классы документов и представлений, создаваемые с помощью Мастера приложений MFC
 Мастер приложений MFC позволяет начать на вашей разработки программ путем создания классы базовой документов и представлений автоматически. После этого можно [сопоставить эти классы команд и сообщений](../mfc/reference/mapping-messages-to-functions.md) и использовать редактор исходного кода Visual C++ для написания функций-членов.  

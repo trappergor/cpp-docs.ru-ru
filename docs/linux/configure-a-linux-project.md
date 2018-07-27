@@ -14,14 +14,15 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207906"
 ---
 # <a name="configure-a-linux-project"></a>Настройка проекта Linux
-В этом разделе описывается настройка проекта Linux в Visual Studio. Сведения о проектах CMake Linux см. в разделе [Настройка проекта CMake Linux](cmake-linux-project.md).
+В этом разделе описывается, как настроить проект C++ для Linux в Visual Studio. Сведения о проектах CMake Linux в Visual Studio см. в разделе [Настройка проекта Linux CMake](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Общие параметры
 Можно настраивать различные параметры проекта Linux с помощью Visual Studio.  Чтобы просмотреть эти параметры, выберите меню **Проект > Свойства** или щелкните правой кнопкой мыши проект в **обозревателе решений** и выберите в контекстном меню пункт **Свойства**. Появятся параметры **Общие**.

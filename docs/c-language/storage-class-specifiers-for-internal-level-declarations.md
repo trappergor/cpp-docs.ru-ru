@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385768"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Спецификаторы классов хранения для объявлений внутреннего уровня
 Любой из четырех терминальных описателей *storage-class-specifier* можно использовать для объявления переменных на внутреннем уровне. Если в таком объявлении не указан *storage-class-specifier*, по умолчанию используется класс хранения **auto**. Поэтому ключевое слово **auto** редко встречается в программах на языке C.  

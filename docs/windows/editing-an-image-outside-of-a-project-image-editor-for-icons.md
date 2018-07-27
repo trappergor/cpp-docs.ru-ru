@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873018"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Редактирование изображения за пределами проекта (редактор изображений для значков)
 Можно открыть и редактировать изображения в среде разработки так же, как и в любом приложении графики. Изображения, которые вы работаете не обязаны быть частью проекта Visual Studio для редактирования в автономном режиме.  

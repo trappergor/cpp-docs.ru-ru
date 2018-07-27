@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128518"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Практическое руководство. Создание пустых проектов CLR
 Для создания пустого проекта CLR используйте **пустой проект CLR** шаблона, которое доступно из **новый проект** диалоговое окно.  

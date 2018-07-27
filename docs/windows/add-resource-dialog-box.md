@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857523"
 ---
 # <a name="add-resource-dialog-box"></a>Добавление ресурса - диалоговое окно
 Это диалоговое окно предназначено для добавления ресурсов в проект классического приложения Windows C++.  

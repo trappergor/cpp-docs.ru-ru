@@ -1,7 +1,8 @@
 ---
-title: Загрузка, установка и настройка рабочей нагрузки Linux | Документы Майкрософт
+title: Установка рабочей нагрузки Linux для проектов C++ в Visual Studio | Документация Майкрософт
+description: Скачивание, установка и настройка рабочей нагрузки Linux для проектов C++ в Visual Studio.
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,13 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 1d28f0db0ff91dbdb08c9ca88dfe197e8942a7f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e33b9ac72ca7691ccbb80a9a30349d3a1e31e194
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207563"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Загрузка, установка и настройка рабочей нагрузки Linux
+
+Чтобы использовать Visual Studio IDE для создания и отладки проектов C++ в Linux, нужно установить рабочую нагрузку **разработки на C++ для Linux**.
 
 ## <a name="visual-studio-setup"></a>Установка Visual Studio
 1. Запустите установщик Visual Studio и выберите рабочую нагрузку **Разработка приложений Linux на C++**.

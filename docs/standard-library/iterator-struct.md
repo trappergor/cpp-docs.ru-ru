@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963632"
 ---
 # <a name="iterator-struct"></a>Структура iterator
 
-Пустая базовая структура, используемая для обеспечения правильной работы определяемого пользователем класса итератора с **iterator_trait**.
+Пустая базовая структура позволяет убедиться в правильной работе класс пользовательской итератора с `iterator_trait`s.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,7 +47,7 @@ struct iterator {
 
 - `iterator_category` (синоним для параметра-шаблона `Category`).
 
-- `value_type` (синоним для параметра-шаблона **Type**).
+- `value_type` (синоним для параметра-шаблона `Type`).
 
 - `difference_type` (синоним для параметра-шаблона `Distance`).
 
@@ -56,7 +57,7 @@ struct iterator {
 
 - `reference` (синоним для параметра-шаблона `Reference`).
 
-Обратите внимание, что `value_type` не должен быть типом константы, даже если **указатель** указывает на объект **типа** const и ссылка обозначает объект **типа** const.
+Обратите внимание, что `value_type` не должны даже если тип константы `pointer` указывает на объект из **const** `Type` и ссылка обозначает объект **const** `Type`.
 
 ## <a name="example"></a>Пример
 

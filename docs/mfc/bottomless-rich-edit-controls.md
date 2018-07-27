@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343315"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Элементы управления "Rich Edit" "без дна"
 Приложение может изменить размер элемента управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) при необходимости, чтобы он всегда совпадает с размером его содержимого. Элемента управления rich edit поддерживает эти так называемые «без дна» функциональные возможности, отправляя родительского окна [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) уведомление при каждом изменении размера его содержимого.  

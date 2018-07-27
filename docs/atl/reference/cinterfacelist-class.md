@@ -1,5 +1,5 @@
 ---
-title: Класс CInterfaceList | Документы Microsoft
+title: Класс CInterfaceList | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc523b1eccc88678cda48a0c7e429ea0fc09f9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 33cfcc072e000bc903cceb4ac5551071e35610d9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884380"
 ---
 # <a name="cinterfacelist-class"></a>Класс CInterfaceList
-Этот класс предоставляет методы, используемые при построении список указателей интерфейса СОМ.  
+Этот класс предоставляет методы, используемые при построении списка указателей интерфейса СОМ.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +38,22 @@ class CInterfaceList
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `I`  
+ *I*  
  COM-интерфейс, указав тип указателя для сохранения.  
   
- `piid`  
- Указатель на IID `I`.  
+ *piid*  
+ Указатель на идентификатор IID *я*.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CInterfaceList::CInterfaceList](#cinterfacelist)|Конструктор список интерфейсов.|  
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|Конструктор для списке интерфейсов.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет конструктор и производные методы для создания списка указателей интерфейса СОМ. Используйте [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) когда массив является обязательным.  
+ Этот класс предоставляет конструктор и производные методы для создания списка указателей интерфейса СОМ. Используйте [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) когда необходима массив.  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -65,18 +66,18 @@ class CInterfaceList
  **Заголовок:** atlcoll.h  
   
 ##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList  
- Конструктор список интерфейсов.  
+ Конструктор для списке интерфейсов.  
   
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nBlockSize`  
+ *nBlockSize*  
  Размер блока по умолчанию 10.  
   
 ### <a name="remarks"></a>Примечания  
- Размер блока — это мера, объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использует больше ресурсов.  
+ Размер блока — это мера объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использовать больше ресурсов.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CAtlList](../../atl/reference/catllist-class.md)   

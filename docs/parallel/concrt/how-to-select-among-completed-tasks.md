@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687118"
 ---
 # <a name="how-to-select-among-completed-tasks"></a>Практическое руководство. Выбор среди завершенных задач
 В этом примере показано, как использовать [concurrency::choice](../../parallel/concrt/reference/choice-class.md) и [concurrency::join](../../parallel/concrt/reference/join-class.md) классов, чтобы выбрать первую задачу для завершения алгоритма поиска.  

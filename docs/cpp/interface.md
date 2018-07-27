@@ -1,5 +1,5 @@
 ---
-title: __interface | Документы Microsoft
+title: __interface | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944501"
 ---
 # <a name="interface"></a>__interface
 **Блок, относящийся только к системам Microsoft**  
@@ -43,16 +44,15 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- C++ [класса](../cpp/class-cpp.md) или [структуры](../cpp/struct-cpp.md) могут быть реализованы с учетом этих правил, но `__interface` их применения.  
+ C++ [класс](../cpp/class-cpp.md) или [структуры](../cpp/struct-cpp.md) могут быть реализованы с учетом этих правил, но **__interface** применяет их.  
   
  Например, ниже приведен пример определения интерфейса:  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
@@ -63,16 +63,16 @@ __interface IMyInterface {
   
  Обратите внимание — нет необходимости явно указывать, что функции `CommitX` и `get_X` являются чистой виртуальными. Эквивалентное объявление для первой функции могло бы быть следующим:  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` подразумевает [novtable](../cpp/novtable.md) `__declspec` модификатор.  
+ **__interface** подразумевает [novtable](../cpp/novtable.md) **__declspec** модификатор.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как использовать свойства, объявленные в интерфейсе.  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  

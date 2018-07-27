@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691271"
 ---
 # <a name="omplockt"></a>omp_lock_t
 Тип, содержащий состояние блокировки, доступен ли блокировка или если поток владеет блокировкой.  

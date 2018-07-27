@@ -18,17 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0be2e87f77e047e1b29d99e562a67bb9f4f1ee9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951982"
 ---
 # <a name="tn001-window-class-registration"></a>TN001. Регистрация класса Window
 Эта заметка описывает MFC подпрограммы, которые регистрируют специальные [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es, необходимые для Microsoft Windows. Определенные `WNDCLASS` описаны атрибуты, используемые MFC и Windows.  
   
 ## <a name="the-problem"></a>Проблема  
- Атрибуты [CWnd](../mfc/reference/cwnd-class.md) объекта, например `HWND` обработки в Windows, хранятся в двух местах: объект window и `WNDCLASS`. Имя `WNDCLASS` передается Общие окна создания функции например [CWnd::Create](../mfc/reference/cwnd-class.md#create) и [CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create) в `lpszClassName` параметра.  
+ Атрибуты [CWnd](../mfc/reference/cwnd-class.md) объекта, например `HWND` обработки в Windows, хранятся в двух местах: объект window и `WNDCLASS`. Имя `WNDCLASS` передается Общие окна создания функции например [CWnd::Create](../mfc/reference/cwnd-class.md#create) и [CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create) в *lpszClassName* параметра.  
   
  Это `WNDCLASS` должны быть зарегистрированы посредством одного из четырех средств:  
   
@@ -43,17 +44,17 @@ ms.lasthandoff: 05/04/2018
 ## <a name="wndclass-fields"></a>Например, WNDCLASS поля  
  `WNDCLASS` Структура состоит из различных полей, которые описывают класс окна. В следующей таблице показаны поля и указывает, как они используются в приложениях MFC:  
   
-|Поле|Описание|  
+|Поле|Описание:|  
 |-----------|-----------------|  
-|`lpfnWndProc`|Процедура окна должен быть `AfxWndProc`|  
-|`cbClsExtra`|не используется (должно быть равно нулю)|  
-|`cbWndExtra`|не используется (должно быть равно нулю)|  
-|`hInstance`|автоматически заполняется [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
-|`hIcon`|значок окна фрейма, см. ниже|  
-|`hCursor`|курсор, когда указатель мыши находится на окно, см. ниже|  
-|`hbrBackground`|цвет фона, см. ниже|  
-|`lpszMenuName`|не используется (должен иметь значение NULL)|  
-|`lpszClassName`|Имя класса, см. ниже|  
+|*lpfnWndProc*|Процедура окна должен быть `AfxWndProc`|  
+|*cbClsExtra*|не используется (должно быть равно нулю)|  
+|*cbWndExtra*|не используется (должно быть равно нулю)|  
+|*hInstance*|автоматически заполняется [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
+|*hIcon*|значок окна фрейма, см. ниже|  
+|*hCursor*|курсор, когда указатель мыши находится на окно, см. ниже|  
+|*hbrBackground*|цвет фона, см. ниже|  
+|*lpszMenuName*|не используется (должен иметь значение NULL)|  
+|*lpszClassName*|Имя класса, см. ниже|  
   
 ## <a name="provided-wndclasses"></a>Предоставленный WNDCLASSes  
  Более ранних версиях MFC (до MFC 4.0), предоставляется несколько предопределенных классов окон. Эти классы окон больше не предоставляются по умолчанию. Приложения должны использовать `AfxRegisterWndClass` с соответствующими параметрами.  
@@ -104,7 +105,7 @@ pWnd->Create(strWndClass, ...);
  `AfxRegisterWndClass` вызывает исключение [CResourceException](../mfc/reference/cresourceexception-class.md) Если класс окна не удалось зарегистрировать (из-за некорректных параметров, или недостаточно памяти Windows).  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass и функции AfxRegisterClass  
- Если вы хотите сделать что-либо более сложными чем `AfxRegisterWndClass` предоставляет, можно вызвать Windows API `RegisterClass` или функции MFC `AfxRegisterClass`. `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) и [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` функции принимают `lpszClassName` строковое имя для класс окна в качестве первого параметра. Можно использовать любое имя класса окна зарегистрированных, независимо от метода, который использовался для его регистрации.  
+ Если вы хотите сделать что-либо более сложными чем `AfxRegisterWndClass` предоставляет, можно вызвать Windows API `RegisterClass` или функции MFC `AfxRegisterClass`. `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) и [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` функции принимают *lpszClassName* строковое имя для класс окна в качестве первого параметра. Можно использовать любое имя класса окна зарегистрированных, независимо от метода, который использовался для его регистрации.  
   
  Очень важно использовать `AfxRegisterClass` (или `AfxRegisterWndClass`) в библиотеке DLL для Win32. Win32 не может отменить регистрацию автоматически классы зарегистрированы библиотекой DLL, поэтому необходимо явно отменить регистрацию классов при завершении библиотеки DLL. С помощью `AfxRegisterClass` вместо `RegisterClass` это выполняется автоматически. `AfxRegisterClass` хранит список уникальных классов зарегистрирован для библиотеки DLL и автоматически отменять их при завершении библиотеки DLL. При использовании `RegisterClass` в библиотеку DLL, необходимо убедиться, что все классы не зарегистрированы, при завершении библиотеки DLL (в вашей [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) функции). Невыполнение этого требования может привести к `RegisterClass` неожиданному сбою, когда другое клиентское приложение пытается использовать библиотеку DLL.  
   

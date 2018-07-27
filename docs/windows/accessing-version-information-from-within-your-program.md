@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856275"
 ---
 # <a name="accessing-version-information-from-within-your-program"></a>Доступ к сведениям о версии из создаваемой программы
 ### <a name="to-access-version-information-from-within-your-program"></a>Доступ к сведениям о версии из создаваемой программы  

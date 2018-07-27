@@ -6,11 +6,12 @@ ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 1ac1051ddaa67dc1970119586ecb9e937583c58a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 786713f37bc8470dd5c455eae49eb4faed72b781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957416"
 ---
 # <a name="ltchronogt-operators"></a>Операторы &lt;chrono&gt;
 
@@ -48,21 +49,21 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Слева `duration` или `time_point` объекта.
+*Слева* слева `duration` или `time_point` объекта.
 
-`Right` Право `duration` или `time_point` объекта.
+*Справа* справа `duration` или `time_point` объекта.
 
-`Time` Объект `time_point` объекта.
+*Время* A `time_point` объекта.
 
-`Dur` Объект `duration` объекта.
+*Длительность* A `duration` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Первая функция возвращает объект `duration`, длительность интервала которого равна разнице временных интервалов двух аргументов.
 
-Вторая функция возвращает объект `time_point`, который представляет момент времени, полученный путем отнимания временного интервала, представленного объектом `Dur`, от момента времени, заданного объектом `Time`.
+Вторая функция возвращает `time_point` , представляющий точку во времени, отстоящий отрицание временного интервала, представленного *Dur*, от момента времени, который задается параметром *время*.
 
-Третья функция возвращает объект `duration`, представляющий временной интервал между объектами `Left` и `Right`.
+Третья функция возвращает `duration` , представляющий интервал времени между *слева* и *справа*.
 
 ## <a name="op_neq"></a> operator!=
 
@@ -85,7 +86,7 @@ constexpr bool operator!=(
 
 `Left` Слева `duration` или `time_point` объекта.
 
-`Right` Право `duration` или `time_point` объекта.
+`Right` Справа `duration` или `time_point` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -113,13 +114,13 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Параметры
 
-`Dur` Объект `duration` объекта.
+*Длительность* A `duration` объекта.
 
-`Mult` Целочисленное значение.
+*Mult* целочисленное значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первая функция возвращает объект `duration`, длительность интервала которого равна значению `Mult`, умноженному на длительность `Dur`.
+Каждая функция возвращает `duration` объекта, длительность интервала которого равна *Mult* умноженное на длину *Dur*.
 
 Если `is_convertible<Rep2, common_type<Rep1, Rep2>>`*содержит значение true*, первая функция не участвует в разрешении перегрузки. Дополнительные сведения см. в разделе [<type_traits>](../standard-library/type-traits.md).
 
@@ -146,19 +147,19 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Параметры
 
-`Dur` Объект `duration` объекта.
+*Длительность* A `duration` объекта.
 
-`Div` Целочисленное значение.
+*Div* целочисленное значение.
 
-`Left` Слева `duration` объекта.
+*Слева* слева `duration` объекта.
 
-`Right` Право `duration` объекта.
+*Справа* справа `duration` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый оператор возвращает объект duration с длительностью интервала, равной длительности `Dur`, деленной на значение `Div`.
+Первый оператор возвращает объект длительность интервала которого длина равна длине *Dur* деленной на значение *Div*.
 
-Второй оператор возвращает соотношение длительностей интервалов `Left` и `Right`.
+Второй оператор возвращает соотношение длительностей интервалов из *слева* и *справа*.
 
 Если `is_convertible<Rep2, common_type<Rep1, Rep2>>`*содержит значение true*, а `Rep2` не является экземпляром `duration`, первый оператор не участвует в разрешении перегрузки. Дополнительные сведения см. в разделе [<type_traits>](../standard-library/type-traits.md).
 
@@ -190,19 +191,19 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Слева `duration` или `time_point` объекта.
+*Слева* слева `duration` или `time_point` объекта.
 
-`Right` Право `duration` или `time_point` объекта.
+*Справа* справа `duration` или `time_point` объекта.
 
-`Time` Объект `time_point` объекта.
+*Время* A `time_point` объекта.
 
-`Dur` Объект `duration` объекта.
+*Длительность* A `duration` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первая функция возвращает объект `duration` с временным интервалом, равным сумме интервалов `Left` и `Right`.
+Первая функция возвращает `duration` объект, с временным интервалом, равным сумме интервалов *слева* и *справа*.
 
-Вторая и третья функции возвращают объект `time_point`, который представляет момент времени, отстоящий от момента времени `Time` на временной интервал `Dur`.
+Вторая и третья функции возвращают `time_point` , представляющий точку во времени, отстоящий интервал *Dur*, от момента времени *время*.
 
 ## <a name="op_lt"></a> operator&lt;
 
@@ -223,17 +224,17 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Слева `duration` или `time_point` объекта.
+*Слева* слева `duration` или `time_point` объекта.
 
-`Right` Право `duration` или `time_point` объекта.
+*Справа* справа `duration` или `time_point` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первая функция возвращает значение `true`, если длина интервала `Left` меньше, чем длина интервала `Right`. В противном случае функция возвращает значение `false`.
+Первая функция возвращает **true** Если длина интервала *слева* меньше, чем длина интервала *справа*. В противном случае функция возвращает **false**.
 
-Вторая функция возвращает значение `true`, если `Left` больше `Right`. В противном случае функция возвращает значение `false`.
+Вторая функция возвращает **true** Если *слева* предшествует *справа*. В противном случае функция возвращает **false**.
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> operator&lt;=
 
 Определяет, верно ли, что один из объектов [duration](../standard-library/duration-class.md) или [time_point](../standard-library/time-point-class.md) меньше другого объекта `duration` или `time_point` или равен ему.
 
@@ -251,9 +252,9 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Слева `duration` или `time_point` объекта.
+*Слева* слева `duration` или `time_point` объекта.
 
-`Right` Право `duration` или `time_point` объекта.
+*Справа* справа `duration` или `time_point` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -277,15 +278,15 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Слева `duration` или `time_point` объекта.
+*Слева* слева `duration` или `time_point` объекта.
 
-`Right` Право `duration` или `time_point` объекта.
+*Справа* справа `duration` или `time_point` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первая функция возвращает значение `true`, если `Left` и `Right` представляют интервалы времени одинаковой длины. В противном случае функция возвращает значение `false`.
+Первая функция возвращает **true** Если *слева* и *справа* представляют интервалы времени, которые имеют одинаковую длину. В противном случае функция возвращает **false**.
 
-Вторая функция возвращает значение `true`, если `Left` и `Right` представляют один и тот же момент времени. В противном случае функция возвращает значение `false`.
+Вторая функция возвращает **true** Если *слева* и *справа* представляют тот же момент времени. В противном случае функция возвращает **false**.
 
 ## <a name="op_gt"></a> operator&gt;
 
@@ -305,9 +306,9 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Слева `duration` или `time_point` объекта.
+*Слева* слева `duration` или `time_point` объекта.
 
-`Right` Право `duration` или `time_point` объекта.
+*Справа* справа `duration` или `time_point` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -331,9 +332,9 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Слева `duration` или `time_point` объекта.
+*Слева* слева `duration` или `time_point` объекта.
 
-`Right` Право `duration` или `time_point` объекта.
+*Справа* справа `duration` или `time_point` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -359,19 +360,19 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Параметры
 
-`Dur` Объект `duration` объекта.
+*Длительность* A `duration` объекта.
 
-`Div` Целочисленное значение.
+*Div* целочисленное значение.
 
-`Left` Слева `duration` объекта.
+*Слева* слева `duration` объекта.
 
-`Right` Право `duration` объекта.
+*Справа* справа `duration` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первая функция возвращает объект `duration`, длительность интервала которого равна остатку от деления `Dur` на `Div`.
+Первая функция возвращает `duration` объекта, длительность интервала которого равна *Dur* остаток от деления *Div*.
 
-Вторая функция возвращает значение, представляющее остаток от деления `Left` на `Right`.
+Вторая функция возвращает значение, представляющее *слева* остаток от деления *справа*.
 
 ## <a name="see-also"></a>См. также
 

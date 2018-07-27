@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056383"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 Сохранение всех или части текущего `context`: регистр предполагает значение основание системы счисления, перечисление и cref флаги или значения процессора/сопроцессора. `context` Может быть **ПРЕДПОЛАГАЕТСЯ, что**, `RADIX`, **ВЫВОД**, **ЦП**, или **все**.  

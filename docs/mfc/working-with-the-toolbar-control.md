@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385941"
 ---
 # <a name="working-with-the-toolbar-control"></a>Работа с элементом управления панели инструментов
 В этой статье объясняется, как можно доступ к [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) основным [CToolBar](../mfc/reference/ctoolbar-class.md) для большего контроля над панелей инструментов. Это довольно сложная тема.  

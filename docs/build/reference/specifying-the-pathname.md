@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375666"
 ---
 # <a name="specifying-the-pathname"></a>Указание пути
 Каждый параметр выходного файла принимает *pathname* аргумент, который можно указать расположение и имя для выходного файла. Аргумент может включать имя диска, каталог и имя файла. Пробелы между параметром и аргумента.  

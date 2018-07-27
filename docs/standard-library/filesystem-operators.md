@@ -22,15 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e601afeb05e0347dba8bf792611f20068c69b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e93cbd4298a0f2094c2c5950220610a17642512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965582"
 ---
 # <a name="ltfilesystemgt-operators"></a>Операторы &lt;filesystem&gt;
 
-Операторы выполняют лексическое сравнение двух путей как строк. Используйте **эквивалентную** функцию, чтобы определить, ссылаются ли два пути (например, относительный путь и абсолютный путь) на один и тот же файл или каталог на диске.
+Операторы выполняют лексическое сравнение двух путей как строк. Используйте `equivalent` функцию, чтобы определить, ссылаются ли два пути (например, относительный путь и абсолютный путь) на один и тот же файл или каталог на диске.
 
 Дополнительные сведения см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 

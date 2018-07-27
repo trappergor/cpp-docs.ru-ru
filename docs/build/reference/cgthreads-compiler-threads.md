@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371425"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (потоки компилятора)
 Задает число потоков cl.exe, используемых для оптимизации и создания кода, если задано создание кода во время компоновки.  

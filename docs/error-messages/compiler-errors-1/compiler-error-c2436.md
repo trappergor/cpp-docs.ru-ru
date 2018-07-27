@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198694"
 ---
 # <a name="compiler-error-c2436"></a>Ошибка компилятора C2436
 «Идентификатор»: функция-член или вложенный класс в списке инициализации конструктора  

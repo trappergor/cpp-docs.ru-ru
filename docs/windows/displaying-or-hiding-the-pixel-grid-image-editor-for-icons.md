@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882931"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Отображение или скрытие пиксельной сетки (редактор изображений для значков)
 В любой области редактора изображений, масштаб 4 или выше можно отобразить сетку, которая разделяет отдельные точки изображения.  

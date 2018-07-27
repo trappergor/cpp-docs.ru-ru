@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380658"
 ---
 # <a name="blank-lines"></a>Пустые строки
 **ANSI 4.9.2** Отображаются ли при считывании пробелы, которые записаны в текстовый поток непосредственно перед символом новой строки  

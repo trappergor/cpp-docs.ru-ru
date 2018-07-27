@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373144"
 ---
 # <a name="f-set-stack-size"></a>/F (Задание размера стека)
 Задает размер стека программы в байтах.  

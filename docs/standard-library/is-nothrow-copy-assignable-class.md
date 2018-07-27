@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5c5bdc1e944483071f0f1dcd53c3bc93eb6ed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e540d6fe4c00772af01b187d24efae18fd62357f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957562"
 ---
 # <a name="isnothrowcopyassignable-class"></a>Класс is_nothrow_copy_assignable
 
@@ -35,11 +36,11 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Запрашиваемый тип.
+*T* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа имеет значение true для типа с возможностью ссылки `T`, где `is_nothrow_assignable<T&, const T&>` имеет значение true, в противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если для типа с возможностью ссылки *T* где `is_nothrow_assignable<T&, const T&>` содержит значение true; в противном случае он содержит значение false.
 
 ## <a name="requirements"></a>Требования
 

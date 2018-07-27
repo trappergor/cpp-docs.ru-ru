@@ -37,11 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207657"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -62,7 +63,7 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Параметры
 
-*числа*<br/>
+*Число добавлений*<br/>
 Числитель.
 
 *denom*<br/>
@@ -73,13 +74,13 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**remquo** возвращает остаток с плавающей запятой *x* / *y*. Если значение *y* равно 0,0, **remquo** возвращает несигнальным значением NaN. Сведения о представлении несигнальным значением NaN, **printf** семействах, см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** возвращает остаток с плавающей запятой от *x* / *y*. Если значение *y* равно 0,0, **remquo** возвращает несигнальное значение NaN. Сведения о представлении NaN в тихом режиме, **printf** семейства, см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Примечания
 
-**Remquo** функция вычисляет остаток с плавающей запятой *f* из *x* / *y* таким образом, что *x*   =  *я* * *y* + *f*, где *я* должно быть целым числом , *f* имеет тот же знак *x*и абсолютное значение *f* меньше, чем абсолютное значение *y*.
+**Remquo** функция вычисляет остаток с плавающей запятой *f* из *x* / *y* таким образом, чтобы *x*   =  *я* \* *y* + *f*, где *я* должно быть целым числом , *f* имеет тот же знак, что *x*и абсолютное значение *f* меньше, чем абсолютное значение *y*.
 
-C++ допускает перегрузки, поэтому можно вызывать перегрузки **remquo** , принимающие и возвращающие **float** или **длинные** **двойные** значения. В программе на языке C **remquo** всегда принимает два **двойные** аргументы и возвращает **двойные**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **remquo** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **remquo** всегда принимает два **двойные** аргументы и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

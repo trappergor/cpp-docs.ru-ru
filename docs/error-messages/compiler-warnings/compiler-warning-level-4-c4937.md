@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294935"
 ---
 # <a name="compiler-warning-level-4-c4937"></a>Предупреждение компилятора (уровень 4) C4937
 "текст1" и "текст2" неразличимы в качестве аргументов для директивы "директива"  

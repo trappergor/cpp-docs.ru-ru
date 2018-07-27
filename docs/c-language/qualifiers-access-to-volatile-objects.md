@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384689"
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>Квалификаторы. Доступ к временным объектам
 **ANSI 3.5.5.3** Описание доступа к объекту, тип которого определен с квалификатором volatile  

@@ -1,5 +1,5 @@
 ---
-title: Класс CNoWorkerThread | Документы Microsoft
+title: Класс CNoWorkerThread | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e1962d10f274f4f8c35ba27cb05c41e8bf19cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16eafd8c33bf1c9a42b95c31a333ff1df55b3495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962508"
 ---
 # <a name="cnoworkerthread-class"></a>Класс CNoWorkerThread
-Этот класс используется в качестве аргумента для `MonitorClass` параметр шаблона классы кэша, если вы хотите отключить обслуживания динамического кэша.  
+Этот класс используется в качестве аргумента для `MonitorClass` параметр шаблона классов кэша, если вы хотите отключить обслуживания динамического кэша.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -46,26 +47,26 @@ class CNoWorkerThread
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CNoWorkerThread::AddHandle](#addhandle)|Эквивалент нефункциональные [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
-|[CNoWorkerThread::AddTimer](#addtimer)|Эквивалент нефункциональные [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
-|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|Эквивалент нефункциональные [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).|  
-|[CNoWorkerThread::GetThreadId](#getthreadid)|Эквивалент нефункциональные [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).|  
-|[CNoWorkerThread::Initialize](#initialize)|Эквивалент нефункциональные [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).|  
-|[CNoWorkerThread::RemoveHandle](#removehandle)|Эквивалент нефункциональные [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
-|[CNoWorkerThread::Shutdown](#shutdown)|Эквивалент нефункциональные [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
+|[CNoWorkerThread::AddHandle](#addhandle)|Нефункциональные эквивалент [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
+|[CNoWorkerThread::AddTimer](#addtimer)|Нефункциональные эквивалент [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
+|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|Нефункциональные эквивалент [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).|  
+|[CNoWorkerThread::GetThreadId](#getthreadid)|Нефункциональные эквивалент [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).|  
+|[CNoWorkerThread::Initialize](#initialize)|Нефункциональные эквивалент [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).|  
+|[CNoWorkerThread::RemoveHandle](#removehandle)|Нефункциональные эквивалент [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
+|[CNoWorkerThread::Shutdown](#shutdown)|Нефункциональные эквивалент [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет тот же открытый интерфейс, как [CWorkerThread](../../atl/reference/cworkerthread-class.md). Этот интерфейс должен предоставляться `MonitorClass` параметр шаблона классам кэше.  
+ Этот класс предоставляет тот же открытый интерфейс, как [CWorkerThread](../../atl/reference/cworkerthread-class.md). Этот интерфейс должен предоставляться `MonitorClass` параметр шаблона классов кэша.  
   
- Методы в этом классе реализованы для не выполняют никаких действий. Методы, которые возвращают значение HRESULT всегда возвращают S_OK и методы, которые возвращают идентификатор ДЕСКРИПТОРА или поток всегда возвращает значение 0.  
+ Методы в этом классе реализованы в бездействии. Методы, которые всегда возвращают значение HRESULT, верните значение s_ок, и методы, возвращающие идентификатор МАРКЕРА или поток всегда возвращают 0.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файлов atlutil.h  
   
 ##  <a name="addhandle"></a>  CNoWorkerThread::AddHandle  
- Эквивалент нефункциональные [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Нефункциональные эквивалент [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ```
 HRESULT AddHandle(HANDLE /* hObject
@@ -83,7 +84,7 @@ HRESULT AddHandle(HANDLE /* hObject
  Реализацию, предоставляемую этим классом не выполняет никаких действий.  
   
 ##  <a name="addtimer"></a>  CNoWorkerThread::AddTimer  
- Эквивалент нефункциональные [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
+ Нефункциональные эквивалент [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
   
 ```
 HRESULT AddTimer(DWORD /* dwInterval
@@ -103,7 +104,7 @@ HRESULT AddTimer(DWORD /* dwInterval
  Реализацию, предоставляемую этим классом не выполняет никаких действий.  
   
 ##  <a name="getthreadhandle"></a>  CNoWorkerThread::GetThreadHandle  
- Эквивалент нефункциональные [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
+ Нефункциональные эквивалент [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
   
 ```
 HANDLE GetThreadHandle() throw();
@@ -116,7 +117,7 @@ HANDLE GetThreadHandle() throw();
  Реализацию, предоставляемую этим классом не выполняет никаких действий.  
   
 ##  <a name="getthreadid"></a>  CNoWorkerThread::GetThreadId  
- Эквивалент нефункциональные [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
+ Нефункциональные эквивалент [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
   
 ```
 DWORD GetThreadId() throw();
@@ -129,7 +130,7 @@ DWORD GetThreadId() throw();
  Реализацию, предоставляемую этим классом не выполняет никаких действий.  
   
 ##  <a name="initialize"></a>  CNoWorkerThread::Initialize  
- Эквивалент нефункциональные [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
+ Нефункциональные эквивалент [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
   
 ```
 HRESULT Initialize() throw();
@@ -142,7 +143,7 @@ HRESULT Initialize() throw();
  Реализацию, предоставляемую этим классом не выполняет никаких действий.  
   
 ##  <a name="removehandle"></a>  CNoWorkerThread::RemoveHandle  
- Эквивалент нефункциональные [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
+ Нефункциональные эквивалент [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
   
 ```
 HRESULT RemoveHandle(HANDLE /* hObject
@@ -156,7 +157,7 @@ HRESULT RemoveHandle(HANDLE /* hObject
  Реализацию, предоставляемую этим классом не выполняет никаких действий.  
   
 ##  <a name="shutdown"></a>  CNoWorkerThread::Shutdown  
- Эквивалент нефункциональные [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
+ Нефункциональные эквивалент [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
   
 ```
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();

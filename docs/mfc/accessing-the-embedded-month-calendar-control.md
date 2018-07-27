@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332131"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Доступ к встроенному элементу управления "Календарь на месяц"
 Объект элемента управления Календарь месяца embedded может осуществляться из `CDateTimeCtrl` объекта с помощью вызова [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) функции-члена.  

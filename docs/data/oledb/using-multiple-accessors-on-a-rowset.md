@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111319"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Использование нескольких методов доступа в наборе строк
 Существует три основных сценария, в которых необходимо использовать несколько методов доступа.  

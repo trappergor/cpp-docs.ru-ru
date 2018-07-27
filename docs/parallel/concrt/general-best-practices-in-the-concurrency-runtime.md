@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694122"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Общие рекомендации в среде выполнения с параллелизмом
 В этом документе описываются рекомендации, относящиеся к различным областям среды выполнения с параллелизмом.  

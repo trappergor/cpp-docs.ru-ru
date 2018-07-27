@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386908"
 ---
 # <a name="array-declarations"></a>Объявления массивов
 "Объявление массива" именует массив и задает тип его элементов. Он также может определять число элементов в массиве. Переменная с типом массива считается указателем на тип элементов массива.  

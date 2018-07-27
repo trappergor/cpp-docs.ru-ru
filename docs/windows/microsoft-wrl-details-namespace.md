@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881774"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Пространство имен Microsoft::WRL::Details
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  

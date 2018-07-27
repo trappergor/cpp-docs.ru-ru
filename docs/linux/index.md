@@ -3,13 +3,14 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
-title: "Документация по разработке для Linux на C++"
-description: "Создание и отладка приложений на платформе Linux."
+title: Документация по разработке для Linux на C++
+description: Создание и отладка приложений на платформе Linux.
 ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
 ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29794184"
 ---
 # <a name="linux-development-with-c-documentation"></a>Документация по разработке для Linux на C++
 

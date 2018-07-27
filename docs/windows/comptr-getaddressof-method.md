@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870241"
 ---
 # <a name="comptrgetaddressof-method"></a>Метод ComPtr::GetAddressOf
 Извлекает адрес члена данных [ptr_](../windows/comptr-ptr-data-member.md) , который содержит указатель на интерфейс, представленный этим объектом ComPtr.  

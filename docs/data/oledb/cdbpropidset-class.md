@@ -1,5 +1,5 @@
 ---
-title: Класс CDBPropIDSet | Документы Microsoft
+title: Класс CDBPropIDSet | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,30 +9,59 @@ f1_keywords:
 - CDBPropIDSet
 - ATL.CDBPropIDSet
 - ATL::CDBPropIDSet
+- CDBPropIDSet.AddPropertyID
+- CDBPropIDSet::AddPropertyID
+- AddPropertyID
+- ATL.CDBPropIDSet.AddPropertyID
+- ATL::CDBPropIDSet::AddPropertyID
+- ATL::CDBPropIDSet::CDBPropIDSet
+- CDBPropIDSet
+- CDBPropIDSet.CDBPropIDSet
+- CDBPropIDSet::CDBPropIDSet
+- ATL.CDBPropIDSet.CDBPropIDSet
+- CDBPropIDSet.operator=
+- ATL.CDBPropIDSet.operator=
+- ATL::CDBPropIDSet::operator=
+- CDBPropIDSet::operator=
+- CDBPropIDSet.SetGUID
+- ATL::CDBPropIDSet::SetGUID
+- SetGUID
+- ATL.CDBPropIDSet.SetGUID
+- CDBPropIDSet::SetGUID
 dev_langs:
 - C++
 helpviewer_keywords:
 - CDBPropIDSet class
+- AddPropertyID method
+- CDBPropIDSet class, constructor
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
+- SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67bfd11a46d8e0c852c1881ff8874b7fbd817164
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e77b92822ac82a4fbea06fe354952c9dbd79378
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207589"
 ---
 # <a name="cdbpropidset-class"></a>Класс CDBPropIDSet
-Наследует от **DBPROPIDSET** структуры и добавляет конструктор, который инициализирует ключевых полей и [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) доступ к методу.  
+Наследует от `DBPROPIDSET` структурировать и добавляет конструктор, который инициализирует ключевых полей, а также [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) доступ к методу.  
   
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
 class CDBPropIDSet : public tagDBPROPIDSET  
 ```  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h
   
 ## <a name="members"></a>Участники  
   
@@ -40,22 +69,77 @@ class CDBPropIDSet : public tagDBPROPIDSET
   
 |||  
 |-|-|  
-|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|Добавляет свойство идентификатор набора свойств.|  
-|[CDBPropIDSet](../../data/oledb/cdbpropidset-cdbpropidset.md)|Конструктор.|  
-|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|Задает идентификатор GUID для свойства идентификатора набора.|  
+|[AddPropertyID](#addpropertyid)|Добавляет свойство в набор свойств идентификатора.|  
+|[CDBPropIDSet](#cdbpropidset)|Конструктор.|  
+|[SetGUID](#setguid)|Задает идентификатор GUID набора.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор =](../../data/oledb/cdbpropidset-operator-equal.md)|Назначает содержимого идентификатор свойства набора в другой.|  
+|[оператор =](#op_equal)|Назначает содержимого идентификатор свойства набора в другой.|  
   
 ## <a name="remarks"></a>Примечания  
- Используйте потребителей OLE DB **DBPROPIDSET** структуры можно передать массив идентификаторов свойств, для которых необходимо получить сведения о свойстве. Свойства, определенные в одном [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) структуры принадлежат набору одно свойство.  
+ Использования потребителей OLE DB `DBPROPIDSET` структуры передается массив идентификаторов свойств, для которых необходимо получить сведения о свойстве. Свойств, идентифицированных в одном [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) структура принадлежат набору одно свойство.  
+
+## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
+Добавляет идентификатор свойства идентификатор набора свойств.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      bool AddPropertyID(DBPROPID propid) throw();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *PropID*  
+ [in] Задайте идентификатор свойства, необходимо добавить идентификатор свойства.  
+
+## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
+Конструктор. Инициализирует `rgProperties`, `cProperties`и (необязательно) `guidPropertySet` поля [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) структуры.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      CDBPropIDSet(const GUID& guid);  
+
+CDBPropIDSet(const CDBPropIDSet& propidset);  
+
+CDBPropIDSet();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *Идентификатор GUID*  
+ [in] Идентификатор GUID, используемый для инициализации `guidPropertySet` поля.  
+  
+ *propidset*  
+ [in] Другой `CDBPropIDSet` объект для копирования.  
+
+## <a name="setguid"></a> CDBPropIDSet::SetGUID
+Задает GUID поля в `DBPROPIDSET` структуры.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      void SetGUID(const GUID& guid) throw();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *Идентификатор GUID*  
+ [in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) структуры.  
+  
+### <a name="remarks"></a>Примечания  
+ Это поле можно задать [конструктор](../../data/oledb/cdbpropidset-cdbpropidset.md) также. Эта функция вызывается в том случае, если вы используете конструктор по умолчанию для этого класса.  
+
+## <a name="op_equal"></a> CDBPropIDSet::operator =
+Назначает содержимое задать другой набор свойств ID идентификатор свойства.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
+```  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

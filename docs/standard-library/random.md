@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956509"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="quick-tips"></a>Краткие советы
 
-Вот несколько советов, которые следует учитывать при использовании \<случайных >:
+Вот несколько советов, следует учитывать при использовании \<случайных >:
 
 - В большинстве случаев РГСЧ формируют необработанные значения, которые упорядочиваются распределением. (Исключением служит функция [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), так как она использует РГСЧ напрямую.)
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/08/2018
 
 - Самое полезное сочетание для большинства приложений — это механизм `mt19937` с `uniform_int_distribution`, как показано в [примере кода](#code) далее в этой статье.
 
-Существует много параметров для выбора в \<случайных > заголовок и какой-либо из них предпочтительнее устаревшей функции времени выполнения C `rand()`. Сведения о том, что проблемы с `rand()` и как \<случайных > справляется с этими недостатками. в разделе [в этом видеоролике](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Существует множество вариантов для выбора в \<случайных > заголовок и какой-либо из них предпочтительнее устаревшей функции времени выполнения C `rand()`. Сведения о недостатках `rand()` и как \<случайных > этими недостатками, см. в разделе [в этом видео](http://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Примеры
 
@@ -309,7 +310,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |||
 |-|-|
-|[Класс bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Формирует распределение Бернулли значений типа `bool`.|
+|[Класс bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Формирует распределение Бернулли **bool** значения.|
 |[Класс binomial_distribution](../standard-library/binomial-distribution-class.md)|Формирует биномиальное распределение целых значений.|
 |[Класс geometric_distribution](../standard-library/geometric-distribution-class.md)|Формирует геометрическое распределение целых значений.|
 |[Класс negative_binomial_distribution](../standard-library/negative-binomial-distribution-class.md)|Формирует отрицательное биномиальное распределение целых значений.|
@@ -322,7 +323,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |-|-|
 |[Класс cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Формирует распределение Коши вещественных значений (с плавающей запятой).|
 |[Класс chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Формирует распределение хи-квадрат вещественных значений (с плавающей запятой).|
-|[Класс fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Формирует F-распределение (также известное как F снедекора или распределение Фишера-снедекора) вещественных значений (с плавающей точкой).|
+|[Класс fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Формирует F-распределение (также известное как F-распределение Снедекора или распределение Фишера-снедекора) вещественных значений (с плавающей запятой).|
 |[Класс lognormal_distribution](../standard-library/lognormal-distribution-class.md)|Формирует логарифмически нормальное распределение вещественных значений (с плавающей запятой).|
 |[Класс normal_distribution](../standard-library/normal-distribution-class.md)|Формирует нормальное (Гауссово) распределение вещественных значений (с плавающей запятой).|
 |[Класс student_t_distribution](../standard-library/student-t-distribution-class.md)|Формирует *t*-распределение Стьюдента вещественных значений (с плавающей запятой).|
@@ -353,7 +354,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ### <a name="utility-functions"></a>Служебные функции
 
-В этом разделе перечислены основные служебные функции, предоставленные в \<случайных > заголовок.
+В этом разделе перечислены общие служебные функции, доступные в \<случайных > заголовок.
 
 |||
 |-|-|
@@ -374,11 +375,11 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 См. в следующих разделах содержатся сведения о каждой категории класса шаблонов, определенных в \<случайных >. Обе категории принимают тип в качестве аргумента и используют общие имена параметров шаблона для описания свойств типа, которые можно использовать как тип фактического аргумента, как показано далее.
 
-- `IntType` обозначает `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` или `unsigned long long`.
+- `IntType` Указывает **короткие**, **int**, **long**, **long long**, **unsigned short**,  **unsigned int**, **unsigned long**, или **long long без знака**.
 
-- `UIntType` обозначает `unsigned short`, `unsigned int`, `unsigned long` или `unsigned long long`.
+- `UIntType` Указывает **unsigned short**, **unsigned int**, **unsigned long**, или **long long без знака**.
 
-- `RealType` обозначает `float`, `double` или `long double`.
+- `RealType` Указывает **float**, **двойные**, или **long double**.
 
 ### <a name="engines"></a>Механизмы
 

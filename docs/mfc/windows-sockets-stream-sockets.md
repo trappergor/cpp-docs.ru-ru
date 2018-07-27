@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386110"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Сокеты Windows. Сокеты потоков
 В этой статье описывается сокетах, один из двух доступных типов Windows Socket. (Другой тип — [сокета датаграмм](../mfc/windows-sockets-datagram-sockets.md).)  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225434"
 ---
 # <a name="compiler-error-c2395"></a>Ошибка компилятора C2395
 'your_type::operator'op'' : недопустимый оператор CLR или WinRT. Хотя бы один параметр должен быть следующих типов: "T", "T%", "T&", "T^", "T^%", "T^&", где T = ваш тип  

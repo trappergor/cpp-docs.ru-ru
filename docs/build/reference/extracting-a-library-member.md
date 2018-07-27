@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371246"
 ---
 # <a name="extracting-a-library-member"></a>Извлечение члена библиотеки
 LIB можно использовать для создания Объектный OBJ-файл, содержащий копию элемента существующей библиотеки. Чтобы извлечь копию члена, используйте следующий синтаксис:  

@@ -1,5 +1,5 @@
 ---
-title: Класс IErrorRecordsImpl | Документы Microsoft
+title: Класс IErrorRecordsImpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,24 +9,82 @@ f1_keywords:
 - ATL::IErrorRecordsImpl
 - ATL.IErrorRecordsImpl
 - IErrorRecordsImpl
+- GetErrorDescriptionString
+- IErrorRecordsImpl.GetErrorDescriptionString
+- IErrorRecordsImpl::GetErrorDescriptionString
+- GetErrorGUID
+- IErrorRecordsImpl.GetErrorGUID
+- IErrorRecordsImpl::GetErrorGUID
+- GetErrorHelpContext
+- IErrorRecordsImpl::GetErrorHelpContext
+- IErrorRecordsImpl.GetErrorHelpContext
+- IErrorRecordsImpl::GetErrorHelpFile
+- GetErrorHelpFile
+- IErrorRecordsImpl.GetErrorHelpFile
+- IErrorRecordsImpl.GetErrorSource
+- GetErrorSource
+- IErrorRecordsImpl::GetErrorSource
+- IErrorRecordsImpl.AddErrorRecord
+- AddErrorRecord
+- IErrorRecordsImpl::AddErrorRecord
+- ATL::IErrorRecordsImpl::GetBasicErrorInfo
+- IErrorRecordsImpl::GetBasicErrorInfo
+- GetBasicErrorInfo
+- ATL.IErrorRecordsImpl.GetBasicErrorInfo
+- IErrorRecordsImpl.GetBasicErrorInfo
+- ATL::IErrorRecordsImpl::GetCustomErrorObject
+- IErrorRecordsImpl::GetCustomErrorObject
+- ATL.IErrorRecordsImpl.GetCustomErrorObject
+- IErrorRecordsImpl.GetCustomErrorObject
+- GetCustomErrorObject
+- GetErrorInfo
+- IErrorRecordsImpl.GetErrorInfo
+- IErrorRecordsImpl::GetErrorInfo
+- IErrorRecordsImpl::GetErrorParameters
+- ATL.IErrorRecordsImpl.GetErrorParameters
+- IErrorRecordsImpl.GetErrorParameters
+- GetErrorParameters
+- ATL::IErrorRecordsImpl::GetErrorParameters
+- IErrorRecordsImpl::GetRecordCount
+- ATL::IErrorRecordsImpl::GetRecordCount
+- IErrorRecordsImpl.GetRecordCount
+- ATL.IErrorRecordsImpl.GetRecordCount
+- IErrorRecordsImpl::m_rgErrors
+- IErrorRecordsImpl.m_rgErrors
+- ATL.IErrorRecordsImpl.m_rgErrors
+- m_rgErrors
+- ATL::IErrorRecordsImpl::m_rgErrors
 dev_langs:
 - C++
 helpviewer_keywords:
 - IErrorRecordsImpl class
+- GetErrorDescriptionString method
+- GetErrorGUID method
+- GetErrorHelpContext method
+- GetErrorHelpFile method
+- GetErrorSource method
+- AddErrorRecord method
+- GetBasicErrorInfo method
+- GetCustomErrorObject method
+- GetErrorInfo method
+- GetErrorParameters method
+- GetRecordCount method
+- m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d0425e7765cf09abb870cb39720cf43c8c74174
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4f12bd935e7dedf46e531d46e2ec91084059e9d
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269690"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Класс IErrorRecordsImpl
-Реализует OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) интерфейс, добавление записей, а также получение записей из элемента данных ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) типа **CAtlArray <** `RecordClass`**>**.  
+Реализует OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) интерфейс, добавления записей и извлечения записей из элемента данных ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) типа **CAtlArray <** `RecordClass`**>**.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,12 +93,15 @@ template <class T, class RecordClass = ATLERRORINFO>
 class IErrorRecordsImpl : public IErrorRecords  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
+### <a name="parameters"></a>Параметры  
+ *T*  
  Класс, производный от `IErrorRecordsImpl`.  
   
- `RecordClass`  
- Класс, представляющий объект OLE DB error.  
+ *RecordClass*  
+ Класс, который представляет объект ошибки OLE DB.  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
 ## <a name="members"></a>Участники  
   
@@ -48,31 +109,202 @@ class IErrorRecordsImpl : public IErrorRecords
   
 |||  
 |-|-|  
-|[GetErrorDescriptionString](../../data/oledb/ierrorrecordsimpl-geterrordescriptionstring.md)|Возвращает строку описания ошибки из записи об ошибке.|  
-|[GetErrorGUID](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|Возвращает ошибку, GUID из записи об ошибке.|  
-|[GetErrorHelpContext](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|Возвращает идентификатор контекста справки из записи об ошибке.|  
-|[GetErrorHelpFile](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|Возвращает полный путь файла справки из записи об ошибке.|  
-|[GetErrorSource](../../data/oledb/ierrorrecordsimpl-geterrorsource.md)|Возвращает исходный код ошибки из записи об ошибке.|  
+|[GetErrorDescriptionString](#geterrordescriptionstring)|Получает строку описания ошибки из записи об ошибке.|  
+|[GetErrorGUID](#geterrorguid)|Получает ошибку GUID из записи об ошибке.|  
+|[GetErrorHelpContext](#geterrorhelpcontext)|Получает идентификатор контекста справки из записи об ошибке.|  
+|[GetErrorHelpFile](#geterrorhelpfile)|Получает полный путь файла справки из записи об ошибке.|  
+|[GetErrorSource](#geterrorsource)|Получает исходный код ошибки из записи об ошибке.|  
   
 ### <a name="interface-methods"></a>Методы интерфейса  
   
 |||  
 |-|-|  
-|[AddErrorRecord](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|Добавляет запись в объект ошибки OLE DB.|  
-|[GetBasicErrorInfo](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|Возвращает основные сведения об ошибке, например, код возврата и номер ошибки поставщика.|  
-|[GetCustomErrorObject](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|Возвращает указатель интерфейса на объект настраиваемой ошибки.|  
-|[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|Возвращает [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) указатель интерфейса на указанную запись.|  
-|[GetErrorParameters](../../data/oledb/cdberrorinfo-geterrorparameters.md)|Возвращает параметры ошибок.|  
-|[GetRecordCount](../../mfc/reference/cdaorecordset-class.md#getrecordcount)|Возвращает число записей в записи объект OLE DB.|  
+|[AddErrorRecord](#adderrorrecord)|Добавляет запись в объекте ошибки OLE DB.|  
+|[GetBasicErrorInfo](#getbasicerrorinfo)|Возвращает основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.|  
+|[GetCustomErrorObject](#getcustomerrorobject)|Возвращает указатель на интерфейс объекта пользовательских ошибок.|  
+|[GetErrorInfo](#geterrorinfo)|Возвращает [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) указатель интерфейса на указанную запись.|  
+|[GetErrorParameters](#geterrorparameters)|Возвращает параметры ошибки.|  
+|[GetRecordCount](#getrecordcount)|Возвращает число записей в объекте запись OLE DB.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
 |||  
 |-|-|  
-|[m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|Массив записей ошибок.|  
+|[m_rgErrors](#rgerrors)|Массив записей ошибок.|  
+
+## <a name="geterrordescriptionstring"></a> IErrorRecordsImpl::GetErrorDescriptionString
+Получает строку описания ошибки из записи об ошибке.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldb.h  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *rCurError*  
+ `ERRORINFO` Записей в `IErrorInfo` интерфейс.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Указатель на строку, описывающую ошибку.  
+  
+## <a name="geterrorguid"></a> IErrorRecordsImpl::GetErrorGUID
+Получает ошибку GUID из записи об ошибке.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      REFGUID GetErrorGUID(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *rCurError*  
+ `ERRORINFO` Записей в `IErrorInfo` интерфейс.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Ссылка на идентификатор GUID для ошибки.  
+
+## <a name="geterrorhelpcontext"></a> IErrorRecordsImpl::GetErrorHelpContext
+Получает идентификатор контекста справки из записи об ошибке.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *rCurError*  
+ `ERRORINFO` Записей в `IErrorInfo` интерфейс.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Идентификатор контекста справки для ошибки.  
+
+## <a name="geterrorhelpfile"></a> IErrorRecordsImpl::GetErrorHelpFile
+Возвращает имя пути файла справки из записи об ошибке.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *rCurError*  
+ `ERRORINFO` Записей в `IErrorInfo` интерфейс.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Указатель на строку, содержащую путь файла справки для ошибки.
+
+## <a name="geterrorsource"></a> IErrorRecordsImpl::GetErrorSource
+Получает исходный код, который вызвал ошибку из записи об ошибке.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *rCurError*  
+ `ERRORINFO` Записей в `IErrorInfo` интерфейс.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Указатель на строку, содержащую исходный код для ошибки. 
+
+## <a name="adderrorrecord"></a> IErrorRecordsImpl::AddErrorRecord
+Добавляет запись в объекте ошибки OLE DB.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
+   DWORD dwLookupID,  
+   DISPPARAMS *pdispparams,  
+   IUnknown *punkCustomError,  
+   DWORD dwDynamicErrorID);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ См. в разделе [IErrorRecords::AddErrorRecord](https://msdn.microsoft.com/library/ms725362.aspx) в *справочнике программиста OLE DB*.  
+
+## <a name="getbasicerrorinfo"></a> IErrorRecordsImpl::GetBasicErrorInfo
+Возвращает основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+   ERRORINFO *pErrorInfo);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ См. в разделе [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/ms723907.aspx) в *справочнике программиста OLE DB*. 
+
+## <a name="getcustomerrorobject"></a> IErrorRecordsImpl::GetCustomErrorObject
+Возвращает указатель на интерфейс объекта пользовательских ошибок.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
+   REFIID riid,  
+   IUnknown **ppObject);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ См. в разделе [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/library/ms725417.aspx) в *справочнике программиста OLE DB*.  
+
+## <a name="geterrorinfo"></a> IErrorRecordsImpl::GetErrorInfo
+Возвращает [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) указатель интерфейса на указанную запись.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
+   LCID lcid,  
+   IErrorInfo **ppErrorInfo);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ См. в разделе [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) в *справочнике программиста OLE DB*.
+
+## <a name="geterrorparameters"></a> IErrorRecordsImpl::GetErrorParameters
+Возвращает параметры ошибки.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
+   DISPPARAMS *pdispparams);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ См. в разделе [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/ms715793.aspx) в *справочнике программиста OLE DB*.  
+
+## <a name="getrecordcount"></a> IErrorRecordsImpl::GetRecordCount
+Возвращает число записей в объекте запись OLE DB.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ См. в разделе [IErrorRecords::GetRecordCount](https://msdn.microsoft.com/library/ms722724.aspx) в *справочнике программиста OLE DB*.  
+
+## <a name="rgerrors"></a> IErrorRecordsImpl::m_rgErrors
+Массив записей ошибок.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+CAtlArray<  
+RecordClass  
+> m_rgErrors;  
+  
+```  
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

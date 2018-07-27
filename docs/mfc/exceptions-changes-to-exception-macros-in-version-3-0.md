@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931022"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Исключения. Изменения макроса исключений в версии 3.0
 Это довольно сложная тема.  
@@ -45,13 +46,13 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- вызывается как **CException\***, даже если он формируется как **CCustomException**. **ПЕРЕХВАТЫВАТЬ** макрос в MFC версии 2.5 и более ранних использует `CObject::IsKindOf` для проверки типа во время выполнения. Так как выражение  
+ вызывается как `CException*`, даже если он формируется как `CCustomException`. **ПЕРЕХВАТЫВАТЬ** макрос в MFC версии 2.5 и более ранних использует `CObject::IsKindOf` для проверки типа во время выполнения. Так как выражение  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  имеет значение true, первый блок catch перехватывает это исключение. В версии 3.0, которая использует исключения C++ реализовать множество макросы обработки исключений, соответствует создается второй блок catch `CException`.  
   
- Следующий код является редкой. Обычно появляется при передаче объекта исключения в другую функцию, которая принимает универсальный **CException\***, выполняет обработку «до создания исключения» и наконец, создается исключение.  
+ Следующий код является редкой. Обычно появляется при передаче в другую функцию, которая принимает универсальный объект исключения `CException*`, выполняет обработку «до создания исключения» и наконец, создается исключение.  
   
  Чтобы обойти эту проблему, переместите выражение throw из функции в вызывающий код и исключение фактический тип, известным компилятору во время генерации.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- С помощью **THROW** в catch блока нормализует указатель `e` для удаления, так что внешнее catch сайта будет получать недопустимый указатель. Используйте `THROW_LAST` повторное создание `e`.  
+ С помощью **THROW** в catch блока нормализует указатель `e` для удаления, так что внешнее catch сайта будет получать недопустимый указатель. Используйте **THROW_LAST** повторное создание `e`.  
   
  Дополнительные сведения см. в разделе [исключений: исключения перехвата и удаление](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   

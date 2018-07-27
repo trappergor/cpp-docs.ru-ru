@@ -1,5 +1,5 @@
 ---
-title: Класс CEnumeratorAccessor | Документы Microsoft
+title: Класс CEnumeratorAccessor | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,21 +9,51 @@ f1_keywords:
 - ATL::CEnumeratorAccessor
 - CEnumeratorAccessor
 - ATL.CEnumeratorAccessor
+- CEnumeratorAccessor.m_bIsParent
+- ATL::CEnumeratorAccessor::m_bIsParent
+- m_bIsParent
+- ATL.CEnumeratorAccessor.m_bIsParent
+- CEnumeratorAccessor::m_bIsParent
+- ATL::CEnumeratorAccessor::m_nType
+- CEnumeratorAccessor.m_nType
+- CEnumeratorAccessor::m_nType
+- ATL.CEnumeratorAccessor.m_nType
+- m_nType
+- ATL::CEnumeratorAccessor::m_szDescription
+- CEnumeratorAccessor.m_szDescription
+- CEnumeratorAccessor::m_szDescription
+- ATL.CEnumeratorAccessor.m_szDescription
+- CEnumeratorAccessor::m_szName
+- ATL.CEnumeratorAccessor.m_szName
+- m_szName
+- ATL::CEnumeratorAccessor::m_szName
+- CEnumeratorAccessor.m_szName
+- CEnumeratorAccessor::m_szParseName
+- ATL::CEnumeratorAccessor::m_szParseName
+- m_szParseName
+- CEnumeratorAccessor.m_szParseName
+- ATL.CEnumeratorAccessor.m_szParseName
 dev_langs:
 - C++
 helpviewer_keywords:
 - CEnumeratorAccessor class
+- m_bIsParent
+- m_nType
+- m_szDescription
+- m_szName
+- m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bb071f47eb7079c8de63da47ee0d837f44442c1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6275b07cd06c82d2b9531c3b206b81eedef10db
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233429"
 ---
 # <a name="cenumeratoraccessor-class"></a>Класс CEnumeratorAccessor
 Используемые [CEnumerator](../../data/oledb/cenumerator-class.md) доступ к данным из перечислитель набора строк.  
@@ -33,6 +63,9 @@ ms.lasthandoff: 05/04/2018
 ```cpp
 class CEnumeratorAccessor  
 ```  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h  
   
 ## <a name="members"></a>Участники  
   
@@ -40,18 +73,80 @@ class CEnumeratorAccessor
   
 |||  
 |-|-|  
-|[m_bIsParent](../../data/oledb/cenumeratoraccessor-m-bisparent.md)|Переменная, показывающего, является Перечислитель перечислитель родительский, если строка находится перечислитель.|  
-|[m_nType](../../data/oledb/cenumeratoraccessor-m-ntype.md)|Переменная, позволяющее определить, описывает ли строка источника данных или перечислителя.|  
-|[m_szDescription](../../data/oledb/cenumeratoraccessor-m-szdescription.md)|Описание источника данных или перечислителя.|  
-|[m_szName](../../data/oledb/cenumeratoraccessor-m-szname.md)|Имя источника данных или перечислителя.|  
-|[m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)|Строка для [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) для получения моникера для источника данных или перечислителя.|  
+|[m_bIsParent](#bisparent)|Переменная, указывающее, является ли перечислитель перечислитель родительского, если строка не содержит перечислителя.|  
+|[m_nType](#ntype)|Переменная, указывающее, является ли строка описывает источник данных или перечислителя.|  
+|[m_szDescription](#szdescription)|Описание источника данных или перечислителя.|  
+|[m_szName](#szname)|Имя источника данных или перечислителя.|  
+|[m_szParseName](#szparsename)|Строка, передаваемая для [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) для получения моникера для источника данных или перечислителя.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот набор строк состоит из источников данных и перечислителей, видимый из текущего перечислителя.  
+ Этот набор строк состоит из источников данных и перечислители, отображается в текущий перечислитель.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
+Переменная, указывающее, является ли перечислитель перечислитель родительского, если строка не содержит перечислителя.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+VARIANT_BOOL m_bIsParent;  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ См. в разделе [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) в *Справочник программиста OLE DB по* Дополнительные сведения. 
+
+## <a name="ntype"></a> CEnumeratorAccessor::m_nType
+Переменная, указывающее, является ли строка описывает источник данных или перечислителя.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+USHORT m_nType;  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ См. в разделе [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) в *Справочник программиста OLE DB по* Дополнительные сведения.
+
+## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
+Описание источника данных или перечислителя.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+WCHAR m_szDescription[129];  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ См. в разделе [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) в *Справочник программиста OLE DB по* Дополнительные сведения.
+
+## <a name="szname"></a> CEnumeratorAccessor::m_szName
+Имя источника данных или перечислителя.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+WCHAR m_szName[129];  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ См. в разделе [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) в *Справочник программиста OLE DB по* Дополнительные сведения.  
+
+## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
+Строка, передаваемая для [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) для получения моникера для источника данных или перечислителя.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+WCHAR m_szParseName[129];  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ См. в разделе [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) в *Справочник программиста OLE DB по* Дополнительные сведения.  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

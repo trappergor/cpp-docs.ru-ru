@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342063"
 ---
 # <a name="deprecated-ansi-apis"></a>Нерекомендуемые API ANSI
 Библиотека Microsoft Foundation Class (MFC) переносит классы и методы, которые основаны на наборе символов Юникода. Следовательно несколько методов с MFC версии ANSI являются устаревшими. Используйте Юникод версии этих методов в будущие версии приложений.  

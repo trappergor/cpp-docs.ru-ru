@@ -1,5 +1,5 @@
 ---
-title: Исключение bad_cast | Документы Microsoft
+title: Исключение bad_cast | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c09754e44b2cf1d7bda4bde35b8d76335d96711
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944160"
 ---
 # <a name="badcast-exception"></a>Исключение bad_cast
 Исключение `bad_cast` создается оператором `dynamic_cast` в результате ошибки приведения к ссылочному типу.  
@@ -37,7 +38,7 @@ catch (bad_cast)
 ## <a name="remarks"></a>Примечания  
  Исключение `bad_cast` имеет следующий интерфейс:  
   
-```  
+```cpp 
 class bad_cast : public exception {  
 public:  
    bad_cast(const char * _Message = "bad cast");  
@@ -48,7 +49,7 @@ public:
   
  Ниже приводится пример ошибки оператора `dynamic_cast`, при котором создается исключение `bad_cast`.  
   
-```  
+```cpp 
 // expre_bad_cast_Exception.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -77,16 +78,16 @@ int main() {
 }  
 ```  
   
- Исключение создается потому, что объект, для которого выполняется приведение (Shape), не является производным от указанного типа приведения (Circle). Чтобы исключение не создавалось, добавьте в функцию `main` следующие объявления:  
+ Исключение создается потому, что объект, для которого выполняется приведение (Shape), не является производным от указанного типа приведения (Circle). Чтобы избежать исключения, добавьте следующие объявления для **основной**:  
   
-```  
+```cpp 
 Circle circle_instance;  
 Circle& ref_circle = circle_instance;  
 ```  
   
- Затем измените приведение в блоке `try` следующим образом:  
+ Затем измените приведение в **попробуйте** блокировать следующим образом:  
   
-```  
+```cpp 
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   

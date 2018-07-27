@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050845"
 ---
 # <a name="ml-fatal-error-a1005"></a>Неустранимая ошибка ML A1005
 **ограничение сборщик данных: полной таблицы имен параметра макроса**  

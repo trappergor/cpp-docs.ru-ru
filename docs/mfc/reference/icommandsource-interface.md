@@ -1,5 +1,5 @@
 ---
-title: Интерфейс руководство. | Документы Microsoft
+title: Интерфейс ICommandSource | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,14 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff57ec9deea4ff8b39e572d720ad7e0fdaa15dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 375d4135e4042abbd6aee6fc547640d78a33ce0d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335777"
 ---
-# <a name="icommandsource-interface"></a>Интерфейс руководство.
-Управляет команды, отправляемые из исходного объекта команды в пользовательском элементе управления.  
+# <a name="icommandsource-interface"></a>Интерфейс ICommandSource
+Управляет команды, отправляемые из исходного объекта команды в пользовательский элемент управления.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,28 +47,28 @@ interface class ICommandSource
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[ICommandSource::AddCommandHandler](#addcommandhandler)|Добавляет обработчик команд объект источника команды.|  
-|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|Добавляет группу обработчики команд объект источника команды.|  
-|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|Добавляет группу обработчики сообщений команды пользовательского интерфейса на объект источника команды.|  
+|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|Добавляет группу обработчиков команд объект источника команды.|  
+|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|Добавляет группу обработчики сообщений команды интерфейса пользователя объект источника команды.|  
 |[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|Добавляет обработчик сообщений команды интерфейса пользователя объект источника команды.|  
-|[ICommandSource::PostCommand](#postcommand)|Отправляет сообщение, не ожидая его обработки.|  
+|[ICommandSource::PostCommand](#postcommand)|Отправляет сообщение, не дожидаясь его обработки.|  
 |[ICommandSource::RemoveCommandHandler](#removecommandhandler)|Удаляет обработчик команд из исходного объекта команды.|  
-|[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|Удаляет группу обработчики команд из исходного объекта команды.|  
-|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Удаляет группу обработчики сообщений команды пользовательского интерфейса из исходного объекта команды.|  
-|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|Удаляет обработчик сообщения команды интерфейс пользователя из исходного объекта команды.|  
+|[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|Удаляет группу обработчиков команд из исходного объекта команды.|  
+|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Удаляет группу обработчики сообщений команды интерфейса пользователя из исходного объекта команды.|  
+|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|Удаляет обработчик сообщений команды интерфейса пользователя из исходного объекта команды.|  
 |[ICommandSource::SendCommand](#sendcommand)|Отправляет сообщение и ожидает его обработки перед возвратом.|  
   
 ### <a name="remarks"></a>Примечания  
- Если разместить пользовательский элемент управления в представлении MFC [класс CWinFormsView](../../mfc/reference/cwinformsview-class.md) команды маршруты и обновление команды пользовательского интерфейса сообщения в пользовательский элемент управления мог обрабатывать команды MFC (например, элементы меню и кнопки панели инструментов). Путем реализации [интерфейс ICommandTarget](../../mfc/reference/icommandtarget-interface.md), вы предоставляете ссылку на пользовательский элемент управления `ICommandSource` объекта.  
+ При размещении пользовательского элемента управления в представлении MFC [класс CWinFormsView](../../mfc/reference/cwinformsview-class.md) команды маршруты и обновление команды сообщения пользовательского интерфейса для пользовательского элемента управления, чтобы тот мог обрабатывать команды MFC (например, элементы меню и кнопки панели инструментов). Путем реализации [интерфейс ICommandTarget](../../mfc/reference/icommandtarget-interface.md), вы предоставляете ссылку на пользовательский элемент управления `ICommandSource` объекта.  
   
- В разделе [как: Добавление маршрутизации команд для элемента управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `ICommandTarget`.  
+ См. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `ICommandTarget`.  
   
- Дополнительные сведения об использовании Windows Forms см. в разделе [с помощью пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 ### <a name="requirements"></a>Требования  
- **Заголовок:** afxwinforms.h (определенный в сборке atlmfc\lib\mfcmifc80.dll)  
+ **Заголовок:** afxwinforms.h (определенных в сборке atlmfc\lib\mfcmifc80.dll)  
   
 ## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
 Добавляет обработчик команд объект источника команды.
@@ -78,18 +79,18 @@ void AddCommandHandler(
 ```
 
 ### <a name="parameters"></a>Параметры  
-`cmdID`  
+*cmdID*  
 Идентификатор команды.  
-`cmdHandler`  
-Дескриптор метода обработчика команд.
+*cmdHandler*  
+Дескриптор метода обработчика команды.
 
 ### <a name="remarks"></a>Примечания
-Этот метод добавляет cmdHandler обработчик команд в исходный объект команды и сопоставляется cmdID обработчик.
-В разделе [как: Добавление маршрутизации команд для элемента управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование AddCommandHandler.
+Этот метод добавляет cmdHandler обработчика команды с исходным объектом команды и сопоставляет обработчик cmdID.
+См. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование AddCommandHandler.
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
-Добавляет группу обработчики команд объект источника команды.
+Добавляет группу обработчиков команд объект источника команды.
 ```
 void AddCommandRangeHandler(
     unsigned int cmdIDMin,
@@ -97,17 +98,17 @@ void AddCommandRangeHandler(
     CommandHandler^ cmdHandler);
 ```
 ### <a name="parameters"></a>Параметры  
-`cmdIDMin`  
+*cmdIDMin*  
 Начальный индекс диапазона идентификатор команды.
-`cmdIDMax`  
-Конечный индекс диапазон Идентификаторов команд.
-`cmdHandler`  
-Дескриптор метода обработчика сообщений, с которыми связаны команды.
+*cmdIDMax*  
+Конечный индекс диапазона идентификатор команды.
+*cmdHandler*  
+Дескриптор метода обработчика сообщений, с которой сопоставлены команды.
 ### <a name="remarks"></a>Примечания
-Этот метод сопоставляет непрерывный диапазон идентификаторов команд обработчику одно сообщение и добавляет его в исходный объект команды. Используется для обработки нескольких связанных кнопок с помощью одного метода.
+Этот метод сопоставляет непрерывный диапазон идентификаторов команд обработчику одно сообщение и добавляет его на объект источника команды. Используется для обработки нескольких связанных кнопок с одним методом.
 
 ## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
-Добавляет группу обработчики сообщений команды пользовательского интерфейса на объект источника команды.
+Добавляет группу обработчики сообщений команды интерфейса пользователя объект источника команды.
 ```
 void AddCommandRangeUIHandler(
     unsigned int cmdIDMin, 
@@ -115,15 +116,15 @@ void AddCommandRangeUIHandler(
     CommandUIHandler^ cmdUIHandler);
 ```
 ### <a name="parameters"></a>Параметры  
-`cmdIDMin`  
+*cmdIDMin*  
 Начальный индекс диапазона идентификатор команды.
-`cmdIDMax`  
-Конечный индекс диапазон Идентификаторов команд.
-`cmdHandler`  
-Дескриптор метода обработчика сообщений, с которыми связаны команды.
+*cmdIDMax*  
+Конечный индекс диапазона идентификатор команды.
+*cmdHandler*  
+Дескриптор метода обработчика сообщений, с которой сопоставлены команды.
 
 ### <a name="remarks"></a>Примечания
-Этот метод сопоставляет непрерывный диапазон идентификаторов команд обработчик сообщения команды интерфейса одного пользователя и добавляет его в исходный объект команды. Используется для обработки нескольких связанных кнопок с помощью одного метода.
+Этот метод сопоставляет непрерывный диапазон идентификаторов команд обработчика сообщений команда интерфейс одного пользователя и добавляет его на объект источника команды. Используется для обработки нескольких связанных кнопок с одним методом.
 
 ## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
 Добавляет обработчик сообщений команды интерфейса пользователя объект источника команды.
@@ -133,24 +134,24 @@ void AddCommandUIHandler(
     CommandUIHandler^ cmdUIHandler);
 ```
 ### <a name="parameters"></a>Параметры
-`cmdID`  
+*cmdID*  
 Идентификатор команды.  
-`cmdUIHandler`  
-Дескриптор метод обработчика сообщения пользовательского интерфейса команды.
+*cmdUIHandler*  
+Дескриптор методу обработчика сообщений команды интерфейса пользователя.
 
 ### <a name="remarks"></a>Примечания
-Этот метод добавляет cmdHandler обработчика сообщения пользовательского интерфейса команды исходный объект команды и сопоставляется cmdID обработчик.
+Этот метод добавляет cmdHandler обработчик сообщений для пользователя интерфейс команда объект источника команды и сопоставляет обработчик cmdID.
 
 ## <a name="postcommand"></a> ICommandSource::PostCommand
-Отправляет сообщение, не ожидая его обработки.
+Отправляет сообщение, не дожидаясь его обработки.
 ```
 void PostCommand(unsigned int command);
 ```
 ### <a name="parameters"></a>Параметры
-`command`  
-Идентификатор команды сообщения должны быть учтены.
+*command*  
+Идентификатор команды сообщение для публикации.
 ### <a name="remarks"></a>Примечания
-Этот метод асинхронно отправляет сообщение, сопоставлен с Идентификатором, указанным параметром команды. Он вызывает CWnd::PostMessage, чтобы поместить сообщение в очередь сообщений окна и возвращается без ожидания соответствующее окно для обработки сообщения.
+Этот метод асинхронно отправляет сообщение, сопоставляется с Идентификатором, указанным параметром команды. Он вызывает CWnd::PostMessage для размещения сообщения в очередь сообщений окна и затем возвращается без ожидания соответствующее окно для обработки сообщения.
 
 
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
@@ -159,52 +160,52 @@ void PostCommand(unsigned int command);
 void RemoveCommandHandler(unsigned int cmdID);
 ```
 ### <a name="parameters"></a>Параметры
-`cmdID`  
+*cmdID*  
 Идентификатор команды.
 ### <a name="remarks"></a>Примечания
-Этот метод удаляет обработчик команд, сопоставленный с cmdID исходный объект команды.
+Этот метод удаляет обработчик команды, сопоставленный с cmdID объект источника команды.
 
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler 
-Удаляет группу обработчики команд из исходного объекта команды.
+Удаляет группу обработчиков команд из исходного объекта команды.
 ```
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
 ### <a name="parameters"></a>Параметры
-`cmdIDMin`  
+*cmdIDMin*  
 Начальный индекс диапазона идентификатор команды.
-`cmdIDMax`  
-Конечный индекс диапазон Идентификаторов команд.
+*cmdIDMax*  
+Конечный индекс диапазона идентификатор команды.
 ### <a name="remarks"></a>Примечания
-Этот метод удаляет группу обработчики сообщений, сопоставленный с указанных идентификаторов команд, cmdIDMin и cmdIDMax, исходный объект команды.
+Этот метод удаляет группу обработчиков сообщений, сопоставленный с указанным идентификаторов команд cmdIDMin и cmdIDMax, объект источника команды.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler 
-Удаляет группу обработчики сообщений команды пользовательского интерфейса из исходного объекта команды.
+Удаляет группу обработчики сообщений команды интерфейса пользователя из исходного объекта команды.
 ```
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
 ### <a name="parameters"></a>Параметры
-`cmdIDMin`  
+*cmdIDMin*  
 Начальный индекс диапазона идентификатор команды.
-`cmdIDMax`  
-Конечный индекс диапазон Идентификаторов команд.
+*cmdIDMax*  
+Конечный индекс диапазона идентификатор команды.
 ### <a name="remarks"></a>Примечания
-Этот метод удаляет группу пользователя интерфейс сообщения обработчики команд, сопоставленный с указанных идентификаторов команд, cmdIDMin и cmdIDMax, исходный объект команды.
+Этот метод удаляет группу пользователя интерфейс сообщение обработчиков команд, сопоставленный с указанным идентификаторов команд cmdIDMin и cmdIDMax, объект источника команды.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler 
-Удаляет обработчик сообщения команды интерфейс пользователя из исходного объекта команды.
+Удаляет обработчик сообщений команды интерфейса пользователя из исходного объекта команды.
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 ### <a name="parameters"></a>Параметры
-`cmdID`  
+*cmdID*  
 Идентификатор команды.
 ### <a name="remarks"></a>Примечания
-Этот метод удаляет cmdID, полученного из исходного объекта команды обработчик сообщения команды пользовательского интерфейса.
+Этот метод удаляет обработчик пользовательского интерфейса команды сообщения сопоставляется cmdID из исходного объекта команды.
 
 ## <a name="sendcommand"></a> ICommandSource::SendCommand 
 Отправляет сообщение и ожидает его обработки перед возвратом.
@@ -212,10 +213,10 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 void SendCommand(unsigned int command);
 ```
 ### <a name="parameters"></a>Параметры
-`command`  
-Идентификатор команды отправляемого сообщения.
+*command*  
+Идентификатор команды отправляемое сообщение.
 ### <a name="remarks"></a>Примечания
-Этот метод синхронно отправляет сообщение, сопоставлен с Идентификатором, указанным параметром команды. Он вызывает CWnd::SendMessage, чтобы поместить сообщение в очередь сообщений окна и ожидает, пока сообщение обработано процедуры окна перед возвратом.
+Этот метод синхронно отправляет сообщение, сопоставляется с Идентификатором, указанным параметром команды. Он вызывает CWnd::SendMessage должен разместить сообщение в очередь сообщений окна и ожидает, пока сообщение обработано процедуры окно перед возвращением.
 ## <a name="see-also"></a>См. также  
- [Как: Добавление команды управления маршрутизации в Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
+ [Практическое: Добавление команды управления маршрутизации для Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [Интерфейс ICommandTarget](../../mfc/reference/icommandtarget-interface.md)

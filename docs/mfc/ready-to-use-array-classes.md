@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a5f94964b9e28b851c34ac456f3cfe630c255c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397b45d6304d80c90a05daf48067ca7fff03194a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932049"
 ---
 # <a name="ready-to-use-array-classes"></a>Готовые классы массивов
 Следующие классы являются классы массивов готовые к использованию.  
@@ -31,13 +32,13 @@ ms.lasthandoff: 05/04/2018
  Хранит элементы типа **БАЙТОВ** в массиве.  
   
  [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- Хранит элементы типа `DWORD` в массиве.  
+ Хранит элементы типа **DWORD** в массиве.  
   
  [CObArray](../mfc/reference/cobarray-class.md)  
  Хранит указатели на объекты класса `CObject` или на объекты классов, производных от `CObject` в массиве.  
   
  [CPtrArray](../mfc/reference/cptrarray-class.md)  
- Хранит указатели на `void` (универсальных указателей) в массиве.  
+ Хранит указатели на **void** (универсальных указателей) в массиве.  
   
  [CUIntArray](../mfc/reference/cuintarray-class.md)  
  Хранит элементы типа **UINT** в массиве.  

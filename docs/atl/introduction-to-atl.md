@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355808"
 ---
 # <a name="introduction-to-atl"></a>Общие сведения об ATL
 ATL представляет библиотеку ATL, классы набор основанных на шаблонах C++ с помощью которого можно легко создавать небольшие, быстрый объекты модели объектов компонентов (COM). Он имеет специальную поддержку ключевых функций COM, включая: stock реализации [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364), [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720), и `IDispatch`; двойной интерфейсы; Стандартные интерфейсы перечислителя COM; точки подключения; перемещаемые интерфейсы; и элементы управления ActiveX.  

@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1bcdfa87eac674d935eeaa8007434f930636e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964412"
 ---
 # <a name="negativebinomialdistribution-class"></a>Класс negative_binomial_distribution
 
@@ -76,36 +77,36 @@ public:
     result_type min() const;
     result_type max() const;
 };
+```
 
-### Parameters
+### <a name="parameters"></a>Параметры
 
-*IntType*
-The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).
+*IntType* целочисленный тип результата, по умолчанию **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-## Remarks
+## <a name="remarks"></a>Примечания
 
-The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.
+Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа **int** Если тип не указан, распределенные в соответствии с отрицательное биномиальное распределение дискретной функции вероятности. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.
+Члены свойств `k()` и `p()` возвращают текущие хранимые распределение значений параметров *k* и *p* соответственно.
 
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.
+Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.
+Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.
 
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.
+Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.
 
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
+Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
 
-For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=400516).
+Подробные сведения о отрицательное биномиальное распределение дискретной функции вероятности см. в статье в Wolfram mathworld [отрицательное биномиальное распределение](http://go.microsoft.com/fwlink/p/?linkid=400516).
 
-## Example
+## <a name="example"></a>Пример
 
 ```cpp
 // compile with: /EHsc /W4
@@ -245,7 +246,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* `p` параметр распределения.
 
-*параметр* структура параметров, используемая для формирования распределения.
+*parm* структуру параметров, используемый для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -269,7 +270,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* `p` параметр распределения.
 
-*правый* `param_type` структура, используемая для сравнения.
+*правом* `param_type` структура, используемая для сравнения.
 
 ### <a name="remarks"></a>Примечания
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359733"
 ---
 # <a name="registry-entries"></a>Записи реестра
 DCOM представляет концепцию идентификаторов приложения (AppID), какой группы параметров конфигурации для одного или нескольких объектов DCOM в центральном расположении в реестре. Укажите идентификатор AppID, указав его значение в AppID, с именем значения в разделе CLSID объекта.  

@@ -1,5 +1,5 @@
 ---
-title: Сохраняемость классов (ATL) | Документы Microsoft
+title: Классы сохраняемости (ATL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16490105f0ec2ded73f45e54d0f8a6700264893c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c085e6e5a8f0bbddba5be2905b437425d9a5c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963658"
 ---
 # <a name="persistence-classes"></a>Классы сохраняемости
 Следующие классы реализуют сохранения объектов:  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) позволяет клиенту для загрузки и сохранения свойств объекта в контейнер свойств.  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) позволяет клиенту Загрузка и сохранение свойств объекта в контейнер свойств.  
   
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) позволяет клиенту для загрузки и сохранения данных постоянного объекта в поток.  
+-   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) позволяет клиенту, для загрузки и сохранения данных постоянного объекта в поток.  
   
--   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) позволяет клиенту для загрузки и сохранения данных постоянного объекта в хранилище.  
+-   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) позволяет клиенту, для загрузки и сохранения данных постоянного объекта в хранилище.  
   
 ## <a name="related-articles"></a>Связанные статьи  
  [Учебник по ATL](../atl/active-template-library-atl-tutorial.md)  

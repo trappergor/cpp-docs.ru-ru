@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383246"
 ---
 # <a name="user-interface-elements-mfc"></a>Элементы пользовательского интерфейса (MFC)
 Сведения о создании пользовательского интерфейса для приложения с помощью библиотеки Microsoft Foundation Class (MFC) см. в следующих разделах.  

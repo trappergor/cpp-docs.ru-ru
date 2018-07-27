@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346862"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Добавление потребителя ODBC MFC
 Потребитель MFC ODBC состоит из ODBC набора записей класса и привязки данных для доступа к источнику данных.  

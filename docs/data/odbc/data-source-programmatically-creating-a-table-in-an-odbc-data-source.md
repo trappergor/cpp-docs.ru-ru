@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090514"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Источник данных. Создание таблицы в источнике данных ODBC программным путем
 В этом разделе объясняется, как создать таблицу для данных источника, используя `ExecuteSQL` функции-члена класса `CDatabase`, передавая функции строку, содержащую **CREATE TABLE** инструкции SQL.  

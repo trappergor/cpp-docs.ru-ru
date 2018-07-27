@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685909"
 ---
 # <a name="22-conditional-compilation"></a>2.2 Условная компиляция
 _**OPENMP** имя макроса определяется OpenMP совместимые реализациями десятичной константы *yyyymm*, которое будет год и месяц утвержденных спецификации. Этот макрос не должно быть субъект **#define** или **#undef** директивы предварительной обработки.  

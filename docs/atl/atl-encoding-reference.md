@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358632"
 ---
 # <a name="atl-encoding-reference"></a>Справочник по кодировке ATL
 Кодирование в UTF8 и широкий набор общих стандартов Интернета как uuencode, шестнадцатеричный, поддерживается код содержится в файла atlenc.h.  

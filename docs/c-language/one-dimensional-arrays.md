@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388910"
 ---
 # <a name="one-dimensional-arrays"></a>Одномерные массивы
 Постфиксное выражение, за которым следует выражение в квадратных скобках (**[ ]**), является представлением элемента объекта массива с индексом. Выражение с индексом в представленной ниже форме ссылается на значение, размешенное по адресу на *expression* позиций дальше *postfix-expression*:  

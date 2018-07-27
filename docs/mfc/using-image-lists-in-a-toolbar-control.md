@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951911"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Использование списков изображений в элементе управления панели инструментов
 По умолчанию изображения, используемые кнопки в элементе управления панели инструментов хранятся в виде единого растрового изображения. Однако можно также хранить изображения кнопки в наборе списков изображений. Объект элемента управления панели инструментов можно использовать до трех списков отдельных изображений:  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Отключить список изображение, содержит изображения для кнопок панели инструментов, которая в данный момент отключены.  
   
--   Выделено изображения список содержит изображения для кнопки панели инструментов, выделяются в настоящее время. Этот список изображений используется только в том случае, если панель инструментов использует **TBSTYLE_FLAT** стиля.  
+-   Выделено изображения список содержит изображения для кнопки панели инструментов, выделяются в настоящее время. Этот список изображений используется только в том случае, если панель инструментов использует TBSTYLE_FLAT стиль.  
   
  При связывании с элементом управления панели инструментов используются эти списки изображений `CToolBarCtrl` объекта. Эта связь осуществляется с помощью обращений [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), и [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
   

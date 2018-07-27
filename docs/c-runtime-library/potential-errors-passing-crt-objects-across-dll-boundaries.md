@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391263"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Потенциальные ошибки при передаче объектов CRT через границы DLL
 При передаче объектов времени выполнения C (CRT), таких как дескрипторы файлов, языковые стандарты и переменные среды, в библиотеку DLL или из нее (вызовы функций через границы DLL) может возникнуть непредвиденное поведение, если библиотека DLL, а также файлы вызывающие функции из DLL, используют различные копии библиотек CRT.  

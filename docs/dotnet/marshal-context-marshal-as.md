@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136211"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
 Выполняет маршалинг на конкретный объект данных для преобразования между управляемой и собственного типа данных.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382613"
 ---
 # <a name="window-destruction-sequence"></a>Последовательность деструкции окна
 В платформе MFC, когда пользователь закрывает окно фрейма окна по умолчанию [OnClose](../mfc/reference/cwnd-class.md#onclose) вызовов обработчика [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). Последний функцию-член вызывается при уничтожении окна Windows [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), который не Очистка некоторых вызывает [по умолчанию](../mfc/reference/cwnd-class.md#default) член для выполнения очистки Windows и наконец вызывает виртуальная функция-член [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). [CFrameWnd](../mfc/reference/cframewnd-class.md) реализация `PostNcDestroy` удаляет объект window C++.  

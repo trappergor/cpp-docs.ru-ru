@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346933"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Способы создания строки состояния
 MFC предоставляет две классы для создания строки состояния: [CStatusBar](../mfc/reference/cstatusbar-class.md) и [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (который создает оболочку для стандартного элемента управления Windows API). `CStatusBar` предоставляет все функциональные возможности, строки состояния, стандартного элемента управления, он автоматически взаимодействует с меню и панелей инструментов и обрабатывает многие необходимые общие параметры управления и структуры. Однако полученный исполняемый файл обычно будет больше, созданные с помощью `CStatusBarCtrl`.  

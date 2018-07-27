@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092474"
 ---
 # <a name="strings-ccx"></a>Строки (C++/CX)
 Представления текста в среде выполнения Windows в C + +/ CX, [класс Platform::String](../cppcx/platform-string-class.md). Используйте `Platform::String Class` при передаче строки и обратно в методы в классах среды выполнения Windows, или когда выполняется взаимодействие с другими компонентами среды выполнения Windows через границы интерфейса (ABI) приложения. `Platform::String Class` предоставляет методы для некоторых типичных операций над строками, но он является полнофункциональным классом строки. При разработке модуля в C++ используйте стандартные строковые типы C++ (такие как [wstring](../standard-library/basic-string-class.md) ) для сложной обработки строк и преобразуйте конечный результат в тип [Platform::String^](../cppcx/platform-string-class.md) , прежде чем передать его открытому интерфейсу или получить его из такого интерфейса. Операция преобразования между типом `wstring` или `wchar_t*` и типом `Platform::String`проста и эффективна.  

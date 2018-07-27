@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877739"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Обработка исключений (расширения компонентов C++)
 Приложения, скомпилированные с **/ZW** параметр компилятора или **/CLR** используются *исключения* для обработки непредвиденных ошибок во время выполнения программы. В следующих разделах рассматривается обработка исключений в приложениях C++/CX и C++/CLI.  

@@ -1,5 +1,5 @@
 ---
-title: Макросы схемы COM | Документы Microsoft
+title: Макросы сопоставления COM | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879313"
 ---
-# <a name="com-map-macros"></a>Макросы схемы COM
+# <a name="com-map-macros"></a>Макросы сопоставления COM
 Эти макросы определяют схемы интерфейсов COM.  
   
 |||  
 |-|-|  
-|[BEGIN_COM_MAP](#begin_com_map)|Отмечает начало карты записей COM интерфейс.|  
-|[END_COM_MAP](#end_com_map)|Отмечает конец записях сопоставления COM. интерфейса.|  
+|[BEGIN_COM_MAP](#begin_com_map)|Отмечает начало карты записей интерфейс COM.|  
+|[END_COM_MAP](#end_com_map)|Помечает конец интерфейса COM карты записей.|  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
    
 ##  <a name="begin_com_map"></a>  BEGIN_COM_MAP  
- Сопоставление COM — механизм, который предоставляет интерфейсы для объекта клиенту с помощью `QueryInterface`.  
+ В сопоставление COM — механизм, который предоставляет интерфейсы объекта клиенту с помощью `QueryInterface`.  
   
 ```
 BEGIN_COM_MAP(x)
@@ -43,21 +44,21 @@ BEGIN_COM_MAP(x)
   
 ### <a name="parameters"></a>Параметры  
  *x*  
- [in] Имя класса объекта, который вы предоставляете интерфейсов.  
+ [in] Имя объекта класса, которую необходимо предоставить интерфейсы на.  
   
 ### <a name="remarks"></a>Примечания  
- [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) возвращает только указателей для интерфейсов COM карты. Запуск схему интерфейсов с `BEGIN_COM_MAP` макрос, добавьте записи для каждого из интерфейсов с [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) макрос или одного из его вариантов и выполнить сопоставление с [END_COM_MAP](#end_com_map) макрос.  
+ [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) возвращает только указатели для интерфейсов COM карты. Запустите схему интерфейсов макрос BEGIN_COM_MAP, добавьте записи для каждого из интерфейсов с [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) макрос или один из его варианты и выполнить сопоставление с [END_COM_MAP](#end_com_map) макрос.  
 
   
 ### <a name="example"></a>Пример  
- От библиотеки ATL [BEEPER](../../visual-cpp-samples.md) образца:  
+ Из библиотеки ATL [BEEPER](../../visual-cpp-samples.md) пример:  
   
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   
 
   
 ##  <a name="end_com_map"></a>  END_COM_MAP  
- Завершает определение сопоставление интерфейса COM.  
+ Завершает определение интерфейса COM карты.  
   
 ```
 END_COM_MAP()

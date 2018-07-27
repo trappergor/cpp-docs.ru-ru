@@ -1,5 +1,5 @@
 ---
-title: Класс CComContainedObject | Документы Microsoft
+title: Класс CComContainedObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d4b0a6491aaeb27e4a1d986db01c03d1c5314d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881062"
 ---
 # <a name="ccomcontainedobject-class"></a>Класс CComContainedObject
-Этот класс реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) делегирование для владельца объекта **IUnknown**.  
+Этот класс реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) делегируя владельца объекта `IUnknown`.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -44,29 +45,29 @@ class CComContainedObject : public Base
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `Base`  
- Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).  
+ *Base*  
+ Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Конструктор. Инициализирует член указатель на объект-владелец `IUnknown`.|  
+|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Конструктор. Инициализирует элемент указатель на объект владельца `IUnknown`.|  
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComContainedObject::AddRef](#addref)|Увеличивает счетчик ссылок на объект-владелец.|  
-|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Извлекает объект-владелец `IUnknown`.|  
+|[CComContainedObject::AddRef](#addref)|Увеличивает счетчик ссылок на объект владельца.|  
+|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Извлекает объект владельца `IUnknown`.|  
 |[CComContainedObject::QueryInterface](#queryinterface)|Извлекает указатель на интерфейс, запрошенный в объекте владельца.|  
-|[CComContainedObject::Release](#release)|Уменьшает счетчик ссылок на объект-владелец.|  
+|[CComContainedObject::Release](#release)|Уменьшает счетчик ссылок на объект владельца.|  
   
 ## <a name="remarks"></a>Примечания  
- ATL использует `CComContainedObject` в классах [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), и [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) делегирование для владельца объекта **IUnknown**. (Им является внешний объект статистической обработки или объект, для которого создается интерфейсом перемещаемые.) `CComContainedObject` вызовы `CComObjectRootEx` `OuterQueryInterface`, `OuterAddRef`, и `OuterRelease`, наследуемых через `Base`.  
+ Использует ATL `CComContainedObject` в классах [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), и [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) делегируя владельца объекта `IUnknown`. (Им является внешний объект статистической обработки, или объект, для которого создается интерфейсом перемещаемой.) `CComContainedObject` вызовы `CComObjectRootEx` `OuterQueryInterface`, `OuterAddRef`, и `OuterRelease`, наследуемых через `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `Base`  
@@ -77,14 +78,14 @@ class CComContainedObject : public Base
  **Заголовок:** atlcom.h  
   
 ##  <a name="addref"></a>  CComContainedObject::AddRef  
- Увеличивает счетчик ссылок на объект-владелец.  
+ Увеличивает счетчик ссылок на объект владельца.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение, которое может быть полезно для диагностики и тестирования.  
+ Значение, которое может быть полезно для диагностики или тестирования.  
   
 ##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject  
  Конструктор.  
@@ -94,11 +95,11 @@ CComContainedObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pv`  
- [in] Объект-владелец **IUnknown**.  
+ *PV*  
+ [in] Владелец объекта `IUnknown`.  
   
 ### <a name="remarks"></a>Примечания  
- Наборы `m_pOuterUnknown` указателя на член (наследуется через `Base` класса) для `pv`.  
+ Наборы `m_pOuterUnknown` указателя на член (унаследованные `Base` класс) для *pv*.  
   
 ##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject  
  Деструктор  
@@ -111,17 +112,17 @@ CComContainedObject(void* pv);
  Освобождает все выделенные ресурсы.  
   
 ##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown  
- Возвращает `m_pOuterUnknown` указателя на член (наследуется через *базы* класса), содержащий объект-владелец **IUnknown**.  
+ Возвращает `m_pOuterUnknown` указателя на член (унаследованные *базы* класс), содержащий объект владельца `IUnknown`.  
   
 ```
 IUnknown* GetControllingUnknown();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект-владелец **IUnknown**.  
+ Владелец объекта `IUnknown`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод может быть виртуальной Если `Base` объявил [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) макрос.  
+ Этот метод может быть виртуальной Если `Base` объявило [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) макрос.  
   
 ##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface  
  Извлекает указатель на интерфейс, запрошенный в объекте владельца.  
@@ -133,27 +134,27 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
+ *IID*  
  [in] Идентификатор запрашиваемого интерфейса.  
   
- `ppvObject`  
- [out] Указатель на указатель на интерфейс, определяемый `iid`. Если объект не поддерживает этот интерфейс `ppvObject` равно **NULL**.  
+ *ppvObject*  
+ [out] Указатель на указатель интерфейса, идентифицируемый *iid*. Если объект не поддерживает этот интерфейс *ppvObject* имеет значение NULL.  
   
- `pp`  
- [out] Указатель на указатель интерфейса, принадлежащих указанному типу `Q`. Если объект не поддерживает этот интерфейс `pp` равно **NULL**.  
+ *PP*  
+ [out] Указатель на указатель интерфейса, идентифицируемый по типу `Q`. Если объект не поддерживает этот интерфейс *pp* имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение `HRESULT` .  
+ Стандартное значение HRESULT.  
   
 ##  <a name="release"></a>  CComContainedObject::Release  
- Уменьшает счетчик ссылок на объект-владелец.  
+ Уменьшает счетчик ссылок на объект владельца.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В отладочных построениях **выпуска** возвращает значение, которое может быть полезно для диагностики и тестирования. В неотладочных сборках **выпуска** всегда возвращает значение 0.  
+ В отладочных сборках `Release` возвращает значение, которое может быть полезно для диагностики или тестирования. В неотладочных сборках `Release` всегда возвращает значение 0.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

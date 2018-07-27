@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385745"
 ---
 # <a name="statements-limits-on-switch-statements"></a>Операторы: пределы операторов выбора
 **ANSI 3.6.4.2** Максимальное число значений **case** в операторе `switch`  

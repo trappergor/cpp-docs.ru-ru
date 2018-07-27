@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376394"
 ---
 # <a name="rules-for-module-definition-statements"></a>Правила для операторов определения модуля
 Для всех инструкций в DEF-файла, применяются следующие правила синтаксиса. Другие правила, которые относятся к конкретному оператору, описаны в каждой инструкции.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344784"
 ---
 # <a name="drawing-and-printing-classes"></a>Классы рисования и печати
 В Windows все данные для графического вывода рисуется виртуального область рисования или контекст устройства (DC). MFC предоставляет классы для инкапсуляции различных контроллеров домена, а также encapsulations графических инструментов Windows как растровые изображения, кисти, перья и палитры.  

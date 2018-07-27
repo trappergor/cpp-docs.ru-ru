@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878812"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Практическое руководство. Непосредственное создание экземпляра компонентов WRL
 Использование среды выполнения C++ шаблон библиотеки Windows (WRL)[Microsoft::wrl:: make](../windows/make-function.md) и [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) функции для создания экземпляра компонента из модуля, оно определено.  

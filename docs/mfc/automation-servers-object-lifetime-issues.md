@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341804"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Серверы автоматизации. Вопросы времени жизни объектов
 Когда клиент автоматизации создает или активирует объект OLE, сервер передает клиент указатель на этот объект. Клиент устанавливает ссылку на объект через вызов функции OLE [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Эта ссылка действует до клиент вызывает метод [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Клиентские приложения, написанные с использованием классов библиотеки классов Microsoft Foundation OLE не требуется выполнять эти вызовы платформа делает это.) Система OLE и сам сервер может установить ссылки на объект. Сервер не следует удалить объект, при условии, что внешние ссылки на объект остаются в силе.  

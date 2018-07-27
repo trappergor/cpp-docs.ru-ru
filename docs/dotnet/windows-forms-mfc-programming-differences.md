@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172675"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Различия в программировании Windows Forms/MFC
 В подразделах [с помощью пользовательского элемента управления формы Windows в MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) описывают поддержку MFC для Windows Forms. Если вы не знакомы с .NET Framework или программирования MFC, этот раздел содержит справочные сведения о различиях в программировании между этими двумя.  

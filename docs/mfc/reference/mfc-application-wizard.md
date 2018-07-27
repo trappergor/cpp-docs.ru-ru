@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372007"
 ---
 # <a name="mfc-application-wizard"></a>мастер приложений MFC
 Мастер приложений MFC создает приложения, при компиляции реализует базовые возможности приложения Windows исполняемого файла (.exe). Начальное приложение MFC включает (.cpp) исходные файлы C++, файлы ресурсов (RC), файлы заголовков (h) и файл проекта (VCXPROJ). Код, созданный в этих начальных файлах основан на MFC.  

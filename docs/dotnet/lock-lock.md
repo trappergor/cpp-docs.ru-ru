@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135031"
 ---
 # <a name="locklock"></a>lock::lock
 Создает `lock` объекта, при необходимости ожидания бесконечно, получения блокировки на указанный период времени, или совсем.  

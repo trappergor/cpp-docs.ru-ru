@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325595"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Свойства копирования источников проекта (Linux C++)
 

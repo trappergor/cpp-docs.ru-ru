@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341979"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Примеры элемента выбора даты и времени
 [CMNCTRL1](../visual-cpp-samples.md) образец демонстрирует различные атрибуты `CDateTimeCtrl` класса. Отдельные страницы содержит элемент выбора даты и времени, пользователю можно управлять, изменяя различные атрибуты и тестирование основные функциональные возможности элемента управления.  

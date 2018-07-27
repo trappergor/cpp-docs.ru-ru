@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879624"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Новый &lt;устройства&gt; изображения тип-диалоговое окно (редактор изображений для значков)
 Позволяет создавать новые изображения устройств заданного типа. Чтобы открыть **New \<устройства > изображения** диалоговое окно, нажмите кнопку **Создание типа изображений** на **изображения** меню.  

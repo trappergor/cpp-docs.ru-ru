@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298331"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Предупреждение компилятора (уровень 4) C4437
 приведение dynamic_cast из виртуального базового типа «class1» в «class2» может привести к сбою в некоторых контекстах компиляции с параметром/vd2 или определите «класс2» с #pragma vtordisp(2) фактически  

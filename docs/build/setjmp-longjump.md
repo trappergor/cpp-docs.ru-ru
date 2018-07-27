@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379839"
 ---
 # <a name="setjmplongjump"></a>setjmp/longjump
 При включении setjmpex.h или setjmp.h, все вызовы [setjmp](../c-runtime-library/reference/setjmp.md) или [longjmp](../c-runtime-library/reference/longjmp.md) приведет к очистки, который вызывает деструкторы и наконец вызывает.  В отличие от x86, где включение файла setjmp.h предложения finally и деструкторы не вызываются.  

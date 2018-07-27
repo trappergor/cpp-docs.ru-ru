@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858491"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Размещение элементов управления в диалоговых окнах
 Редактор диалоговых окон средства макета, выравнивание и размер элементов управления автоматически. Для большинства задач можно использовать [инструментов редактора диалоговых окон](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Все команды панели инструментов редактора диалоговых окон также доступны в меню «Формат» и большинства [сочетания клавиш](../windows/accelerator-keys-for-the-dialog-editor.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450801"
 ---
 # <a name="unicode-the-wide-character-set"></a>Юникод. Набор расширенных символов
 

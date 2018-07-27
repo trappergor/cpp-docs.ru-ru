@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350371"
 ---
 # <a name="onidle-member-function"></a>Функция-член OnIdle
 При обработке сообщения не Windows платформа вызывает [CWinApp](../mfc/reference/cwinapp-class.md) функции-члена [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (описаны в справочнике по библиотеке MFC).  

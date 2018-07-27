@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383442"
 ---
 # <a name="implementation-defined-behavior"></a>Поведение, определяемое реализацией
 Стандарт ANSI X3.159-1989, *American National Standard for Information Systems* - *Programming Language* - *C*, (Национальный стандарт США для информационных систем — Язык программирования — Язык C) содержит раздел "Portability Issues" (Проблемы переносимости). В разделе ANSI перечислены области языка C, которые в стандарте ANSI оставлены открытыми для конкретной реализации. В этом разделе описывается, как в Microsoft C обрабатываются эти области языка C, определяемые его реализацией.  

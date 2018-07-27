@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096695"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Создание объекта-получателя OLE DB
 Потребитель OLE DB-шаблоны можно создать с или без мастер потребителей OLE DB ATL на то, что с помощью мастера — это рекомендуемый способ. Потребитель может действовать в любое приложение, поддерживающее ATL.  

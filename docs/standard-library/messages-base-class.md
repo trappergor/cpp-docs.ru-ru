@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddde025fa633ccc1b9561acf595de186548ba3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e402f103a29dd4c4af49fa1c34b9cae71fc6e9af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964851"
 ---
 # <a name="messagesbase-class"></a>Класс messages_base
 
-Базовый класс, описывающий тип `int` для каталога сообщений.
+Базовый класс, описывающий **int** тип для каталога сообщений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +38,7 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>Примечания
 
-Тип каталога является синонимом типа `int`, который описывает возможные возвращаемые значения сообщений:: [do_open](../standard-library/messages-class.md#do_open).
+Тип каталога является синонимом типа **int** , описывающий возможные возвращаемые значения сообщений:: [do_open](../standard-library/messages-class.md#do_open).
 
 ## <a name="requirements"></a>Требования
 

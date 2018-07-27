@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413210"
 ---
 # <a name="to-functions"></a>Функции to
 Каждая из функций **to** и связанный с ней макрос, если таковой имеется, преобразуют один символ в другой.  

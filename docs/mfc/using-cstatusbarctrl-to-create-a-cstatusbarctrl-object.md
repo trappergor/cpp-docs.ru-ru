@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f322003a36d89927930c0a57fd060078755f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb378bba1505f8bbc3739c070d52abe9ef4f8afc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953831"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Использование CStatusBarCtrl для создания объекта CStatusBarCtrl
 Вот пример типичного использования [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
   
 4.  Вызовите [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) для задания количества разделов в состояние элемента управления и координаты правой границы каждой части панели.  
   
-5.  Вызовите [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) для задания текста в данной части строки состояния. Сообщение объявляет недействительной измененную часть элемента управления, и, когда он в следующий раз получает сообщение `WM_PAINT`, отображается новый текст.  
+5.  Вызовите [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) для задания текста в данной части строки состояния. Сообщение объявляет недействительной часть элемента управления, который был изменен, поэтому она отображается новый текст, когда элемент управления рядом получает сообщения WM_PAINT.  
   
  В некоторых случаях в строке состояния достаточно для отображения текста в строке. В этом случае вызвать [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple). Этот запрос помещает строки состояния в «простой» режим, в котором отображается одна строка текста.  
   

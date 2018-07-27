@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391367"
 ---
 # <a name="language-strings"></a>Language Strings
 Функции `setlocale` и `_create_locale` могут использовать поддерживаемые языки API многоязыковой поддержки Windows для операционных систем, которые не используют кодовую страницу Юникода. Список языков, поддерживаемых в разных версиях операционных систем, вы найдете в [документации по API многоязыковой поддержке (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Строка языка может принимать любое из значений, перечисленных в столбцах **Язык** и **Сокращение названия языка** списка поддерживаемых языков. Дополнительные сведения о языковой поддержке по версии операционной системы см. в [приложении A: поведение продукта](http://msdn.microsoft.com/goglobal/bb896001.aspx) в статье [MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: справочник по коду языка Windows).   

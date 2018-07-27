@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197381"
 ---
 # <a name="compiler-error-c2341"></a>Ошибка компилятора C2341
 » Имя раздела: сегмент должен быть определен с помощью #pragma data_seg, code_seg или предыдущего раздела, для использования  

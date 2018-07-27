@@ -1,5 +1,5 @@
 ---
-title: Класс CComPolyObject | Документы Microsoft
+title: Класс CComPolyObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,14 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383a83a2e2b09c9652e7185592a5891179416e0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5bd2a384af6e73ae0c113bf8c27ae9d0c7529a8
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881104"
 ---
 # <a name="ccompolyobject-class"></a>Класс CComPolyObject
-Этот класс реализует **IUnknown** для суммирования или неагрегированные объекта.  
+Этот класс реализует `IUnknown` для суммирования или неагрегированные объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,47 +46,47 @@ class CComPolyObject : public IUnknown,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `contained`  
- Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), также как и из любых других интерфейсов, которые требуется поддерживать на объект.  
+ *содержится*  
+ Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также от любых других интерфейсов, которую требуется поддерживать на объекте.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|Конструктор.|  
 |[CComPolyObject:: ~ CComPolyObject](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComPolyObject::AddRef](#addref)|Увеличивает значение счетчика ссылок объекта.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(Статический) Позволяет создать новый **CComPolyObject <** `contained` **>** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComPolyObject::AddRef](#addref)|Увеличивает счетчик ссылок объекта.|  
+|[CComPolyObject::CreateInstance](#createinstance)|(Статический) Позволяет создать новую **CComPolyObject <** `contained` **>** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Выполняет окончательной инициализации `m_contained`.|  
-|[CComPolyObject::FinalRelease](#finalrelease)|Выполняет окончательного удаления `m_contained`.|  
+|[CComPolyObject::FinalRelease](#finalrelease)|Выполняет окончательный деструкция `m_contained`.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|Извлекает указатель на запрошенный интерфейс.|  
-|[CComPolyObject::Release](#release)|Уменьшает значение счетчика ссылок объекта.|  
+|[CComPolyObject::Release](#release)|Уменьшает счетчик ссылок объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComPolyObject::m_contained](#m_contained)|Делегаты **IUnknown** вызывает внешняя Неизвестная строка, если объект является статистическим выражением, или для **IUnknown** объекта, если объект не является статистическим выражением.|  
+|[CComPolyObject::m_contained](#m_contained)|Делегаты `IUnknown` вызывает внешняя Неизвестная строка, если объект является статистическим или `IUnknown` объекта, если объект не является агрегатом.|  
   
 ## <a name="remarks"></a>Примечания  
  `CComPolyObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) для суммирования или неагрегированные объекта.  
   
- При создании экземпляра `CComPolyObject` создается значение внешнего проверяется unknown. Если это **NULL**, **IUnknown** реализуется для неагрегированные объекта. Если внешняя Неизвестная строка не **NULL**, **IUnknown** реализуется для вычисляемого объекта.  
+ При создании экземпляра класса `CComPolyObject` создается значение внешнего проверяется unknown. Если он равен NULL, `IUnknown` реализуется для объекта неагрегированные. Если внешняя Неизвестная строка не равно NULL, `IUnknown` реализуется для объединенного объекта.  
   
- Преимущество использования `CComPolyObject` — избежать обладает и разрешением [CComAggObject](../../atl/reference/ccomaggobject-class.md) и [CComObject](../../atl/reference/ccomobject-class.md) в модуле для обработки случаев, статистические и нестатистические. Один `CComPolyObject` объект обрабатывает в обоих случаях. Это означает, что существуют только одна копия виртуальной таблице и одной копии функций в модуле. При большом вашей vtable это существенно уменьшить размер вашего модуля. Тем не менее, используемой при небольших вашей vtable `CComPolyObject` может привести к немного больший размер модуля, так как он не оптимизирован для суммирования или неагрегированные объекта, как `CComAggObject` и `CComObject`.  
+ Преимущество использования `CComPolyObject` — избежать обеих [CComAggObject](../../atl/reference/ccomaggobject-class.md) и [CComObject](../../atl/reference/ccomobject-class.md) в модуле для обработки вариантов, статистические и неагрегированные. Один `CComPolyObject` объект обрабатывает в обоих случаях. Это означает, что только одна копия таблицы vtable и одна копия функции существуют в модуле. Если в таблице vtable имеет большой размер, это может значительно снизить размер вашего модуля. Тем не менее, если в таблице vtable невелик, с помощью `CComPolyObject` может привести к немного больший размер модуля, поскольку метод не оптимизирован для суммирования или неагрегированные объекта, так как `CComAggObject` и `CComObject`.  
   
- Если `DECLARE_POLY_AGGREGATABLE` макрос, указанный в определении класса объекта, `CComPolyObject` будет использоваться для создания объекта. `DECLARE_POLY_AGGREGATABLE` будет автоматически объявлено при использовании мастера проектов ATL для создания полного доступа или управления Internet Explorer.  
+ Если макрос DECLARE_POLY_AGGREGATABLE, указанный в определении класса объекта, `CComPolyObject` будет использоваться для создания объекта. DECLARE_POLY_AGGREGATABLE будет объявлено автоматически в том случае, если вы используете мастер проектов ATL для создания полного доступа или управления Internet Explorer.  
   
- Если статистическим выражением, `CComPolyObject` объект имеет свой собственный **IUnknown**, отдельно от внешнего объекта **IUnknown**и хранит число ссылок. `CComPolyObject` использует [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) делегировать внешняя Неизвестная строка.  
+ Если статистическая обработка, `CComPolyObject` объект имеет свой собственный `IUnknown`, отдельно от внешнего объекта `IUnknown`и ведет собственный счетчик ссылок. `CComPolyObject` использует [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) делегировать внешняя Неизвестная строка.  
   
- Дополнительные сведения о статистической обработки см. в статье [основы объекта ATL COM-объекты](../../atl/fundamentals-of-atl-com-objects.md).  
+ Дополнительные сведения о статистической обработке см. в статье [основы объекта ATL COM-объекты](../../atl/fundamentals-of-atl-com-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CComObjectRootBase`  
@@ -107,7 +108,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение, которое может быть полезно для диагностики и тестирования.  
+ Значение, которое может быть полезно для диагностики или тестирования.  
   
 ##  <a name="ccompolyobject"></a>  CComPolyObject::CComPolyObject  
  Конструктор.  
@@ -117,11 +118,11 @@ CComPolyObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pv`  
- [in] Указатель на внешняя Неизвестная статистической обработки, если объект или **NULL** Если объект, если объект не является статистическим выражением.  
+ *PV*  
+ [in] Указатель на внешний unknown, если объект должен выполнить статистическую обработку, или значение NULL, если объект, если объект не является агрегатом.  
   
 ### <a name="remarks"></a>Примечания  
- Инициализирует `CComContainedObject` данные-член [m_contained](#m_contained)и увеличивает счетчик блокировки модуля.  
+ Инициализирует `CComContainedObject` данные-член, [m_contained](#m_contained)и увеличивает счетчик блокировки модуля.  
   
  Деструктор уменьшает счетчик блокировки модуля.  
   
@@ -136,7 +137,7 @@ CComPolyObject(void* pv);
  Освобождает все выделенные ресурсы, вызовы [FinalRelease](#finalrelease), и уменьшает счетчик блокировки модуля.  
   
 ##  <a name="createinstance"></a>  CComPolyObject::CreateInstance  
- Позволяет создать новый **CComPolyObject <** `contained` **>** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Позволяет создать новую **CComPolyObject <** `contained` **>** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -145,47 +146,47 @@ static HRESULT WINAPI CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pp`  
- [out] Указатель на **CComPolyObject <** `contained` **>** указателя. Если `CreateInstance` завершается неудачно, `pp` равно **NULL**.  
+ *PP*  
+ [out] Указатель на **CComPolyObject <** `contained` **>** указатель. Если `CreateInstance` завершилась неудачно, *pp* имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение `HRESULT` .  
+ Стандартное значение HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Возвращаемый объект имеет нулевое число ссылок, поэтому вызовов `AddRef` немедленно, воспользуйтесь **выпуска** освободить ссылку на указатель на объект после завершения.  
+ Возвращаемый объект имеет нулевое число ссылок, назовем `AddRef` немедленно, используйте `Release` освободить ссылку на указатель на объект, когда все будет готово.  
   
- Если не требуется прямой доступ к объекту, но все равно хотите создать новый объект без необходимости проведения `CoCreateInstance`, используйте [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) вместо него.  
+ Если вы не требующие прямого доступа к объекту, но по-прежнему хотите создать новый объект без необходимости проведения `CoCreateInstance`, использовать [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) вместо этого.  
   
 ##  <a name="finalconstruct"></a>  CComPolyObject::FinalConstruct  
- Вызывается во время последних этапов создания объекта, этот метод выполняет инициализацию окончательного [m_contained](#m_contained) члена данных.  
+ Вызывается во время последних этапов создания объекта, этот метод выполняет инициализацию окончательный [m_contained](#m_contained) данные-член.  
   
 ```
 HRESULT FinalConstruct();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение `HRESULT` .  
+ Стандартное значение HRESULT.  
   
 ##  <a name="finalrelease"></a>  CComPolyObject::FinalRelease  
- Вызывается при уничтожении объекта, этот метод освобождает [m_contained](#m_contained) члена данных.  
+ Вызывается во время уничтожения объекта, этот метод освобождает [m_contained](#m_contained) данные-член.  
   
 ```
 void FinalRelease();
 ```  
   
 ##  <a name="m_contained"></a>  CComPolyObject::m_contained  
- Объект [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) объект, производный от класса.  
+ Объект [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) объект, производный от этого класса.  
   
 ```
 CComContainedObject<contained> m_contained;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `contained`  
- [in] Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), также как и из любых других интерфейсов, которые требуется поддерживать на объект.  
+ *содержится*  
+ [in] Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также от любых других интерфейсов, которую требуется поддерживать на объекте.  
   
 ### <a name="remarks"></a>Примечания  
- **IUnknown** вызывается с помощью `m_contained` делегируются внешняя Неизвестная строка, если объект является статистическим выражением, или **IUnknown** этого объекта, если объект не является статистическим выражением.  
+ `IUnknown` выполняет вызов через `m_contained` делегируются внешняя Неизвестная строка, если объект является статистическим, или `IUnknown` этого объекта, если объект не является агрегатом.  
   
 ##  <a name="queryinterface"></a>  CComPolyObject::QueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
@@ -197,23 +198,23 @@ HRESULT QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `Q`  
+ *Q*  
  COM-интерфейса.  
   
- `iid`  
+ *IID*  
  [in] Идентификатор запрашиваемого интерфейса.  
   
- `ppvObject`  
- [out] Указатель на указатель на интерфейс, определяемый `iid`. Если объект не поддерживает этот интерфейс `ppvObject` равно **NULL**.  
+ *ppvObject*  
+ [out] Указатель на указатель интерфейса, идентифицируемый *iid*. Если объект не поддерживает этот интерфейс *ppvObject* имеет значение NULL.  
   
- `pp`  
- [out] Указатель на интерфейс, определенный **__uuidof(Q)**.  
+ *PP*  
+ [out] Указатель на интерфейс, определенный `__uuidof(Q)`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение `HRESULT` .  
+ Стандартное значение HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Для вычисляемого объекта, если запрошенный интерфейс **IUnknown**, `QueryInterface` возвращает указатель на статистические объекта собственные **IUnknown** и увеличивает счетчик ссылок. В противном случае этот метод запрашивает интерфейс через `CComContainedObject` данные-член [m_contained](#m_contained).  
+ Для вычисляемого объекта, если запрошенный интерфейс `IUnknown`, `QueryInterface` возвращает указатель на объединенные объекта собственные `IUnknown` и увеличивает счетчик ссылок. В противном случае этот метод отправляет запрос для интерфейса через `CComContainedObject` данные-член, [m_contained](#m_contained).  
   
 ##  <a name="release"></a>  CComPolyObject::Release  
  Уменьшает счетчик ссылок на объект.  
@@ -223,9 +224,9 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В отладочных построениях **выпуска** возвращает значение, которое может быть полезно для диагностики и тестирования. В сборках отладки **выпуска** всегда возвращает значение 0.  
+ В отладочных сборках `Release` возвращает значение, которое может быть полезно для диагностики или тестирования. В сборках отладки `Release` всегда возвращает значение 0.  
   
 ## <a name="see-also"></a>См. также  
- [CComObjectRootEx-класс](../../atl/reference/ccomobjectrootex-class.md)   
+ [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
  [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

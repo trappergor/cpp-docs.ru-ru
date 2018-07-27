@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246106"
 ---
 # <a name="compiler-error-c2881"></a>Ошибка компилятора C2881
 пространство имен «1»: уже используется в качестве псевдонима для пространства имен «2»  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382571"
 ---
 # <a name="what-frame-windows-do"></a>Функция окон фрейма
 Помимо просто кадрирования представления, фреймов несут ответственность за многочисленные задачи, связанные с согласование кадра его в представлении и вместе с приложением. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) и [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) наследовать от [CFrameWnd](../mfc/reference/cframewnd-class.md), поэтому они имеют `CFrameWnd` возможности, а также новые возможности, добавленные ими. Дочерние окна примеры представления, элементы управления, такие как кнопки, списки и панели элементов управления, включая панели инструментов, строк состояния и индикаторы диалоговое окно.  

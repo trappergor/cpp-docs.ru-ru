@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197745"
 ---
 # <a name="compiler-error-c2394"></a>Ошибка компилятора C2394
 'your_type:: operator'op'»: среда CLR или WinRToperator не является допустимым. Хотя бы один параметр должен быть следующих типов: "T^", "T^%", "T^&", где T = ваш тип  

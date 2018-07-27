@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384311"
 ---
 # <a name="c-sequence-points"></a>Точки следования C
 Между последовательными «точками последовательности» значение объекта может быть изменено только один раз с помощью выражения. В языке C определены следующие точки последовательности.  

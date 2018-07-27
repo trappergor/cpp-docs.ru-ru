@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361893"
 ---
 # <a name="registry-scripting-examples"></a>Примеры сценариев реестра
 Примеры сценариев в этом разделе показано, как добавить раздел в системный реестр, Регистрация сервера регистрации COM и указать несколько синтаксический анализ деревьев.  

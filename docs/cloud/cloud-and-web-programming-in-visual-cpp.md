@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412404"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Облачное и веб-программирование в Visual C++
 

@@ -21,14 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfdff6023beeedfa14d37e5b404fa3c223691b85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f8214b2f40926cc4ab1471dce99ce5215362011
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930494"
 ---
 # <a name="ole-container-classes"></a>Классы контейнера OLE
-Эти классы используются приложением-контейнером. Оба `COleLinkingDoc` и `COleDocument` управления наборами `COleClientItem` объектов. Вместо того чтобы наследование класса документов от **CDocument**, вы будете сделайте его производным от `COleLinkingDoc` или `COleDocument`, в зависимости от того, поддержку для ссылок на объекты, внедренные в документе.  
+Эти классы используются приложением-контейнером. Оба `COleLinkingDoc` и `COleDocument` управления наборами `COleClientItem` объектов. Вместо того чтобы наследование класса документов от `CDocument`, вы будете сделайте его производным от `COleLinkingDoc` или `COleDocument`, в зависимости от того, поддержку для ссылок на объекты, внедренные в документе.  
   
  Используйте `COleClientItem` объекта для представления каждого элемента OLE в документе, внедряется из другого документа или ссылку на другой документ.  
   

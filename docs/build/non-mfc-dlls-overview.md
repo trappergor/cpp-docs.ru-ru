@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368646"
 ---
 # <a name="non-mfc-dlls-overview"></a>Общие сведения о библиотеках DLL, не являющихся MFC
 Не - MFC библиотеки DLL является библиотекой DLL, внутренне не использует MFC, а экспортированные функции в DLL может быть вызван MFC или не MFC исполняемые файлы. Функции обычно экспортируются из не - MFC библиотеки DLL с помощью стандартного интерфейса C.  

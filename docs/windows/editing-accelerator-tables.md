@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872943"
 ---
 # <a name="editing-accelerator-tables"></a>Редактирование в таблицах сочетаний клавиш
 В Visual C++ можно изменить таблицу сочетаний клавиш непосредственно с помощью редактирования прямо в редакторе сочетаний клавиш.  

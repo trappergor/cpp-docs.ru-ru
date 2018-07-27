@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880183"
 ---
 # <a name="partial--c-component-extensions"></a>partial (расширения компонентов C++)
 `partial` Ключевое слово включает различные части одного класса ref создавать независимо друг от друга и в разных файлах.  

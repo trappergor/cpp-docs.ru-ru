@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b762c3abb5f57574dc2a60d6b2145af2e0c0484b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952104"
 ---
 # <a name="canimationvalue-class"></a>Класс CAnimationValue
 Реализует функции объекта анимации, имеющего одно значение.  
@@ -49,13 +50,13 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::CAnimationValue](#canimationvalue)|Перегружен. Создает объект CAnimationValue.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::AddTransition](#addtransition)|Добавляет переход, применяемый к значению.|  
 |[CAnimationValue::GetValue](#getvalue)|Перегружен. Возвращает текущее значение.|  
@@ -64,13 +65,13 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Помещает переменную инкапсулированный анимации в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::operator DOUBLE](#operator_double)|Обеспечивает преобразование между CAnimationValue и DOUBLE.|  
 |[CAnimationValue::operator INT32](#operator_int32)|Обеспечивает преобразование между CAnimationValue и INT32.|  
@@ -78,7 +79,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::m_value](#m_value)|Инкапсулированный анимации переменной, представляющей значение анимации.|  
   
@@ -103,7 +104,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTransition`  
+ *pTransition*  
  Указатель на объект перехода.  
   
 ### <a name="remarks"></a>Примечания  
@@ -124,16 +125,16 @@ CAnimationValue(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Указывает значение по умолчанию.  
   
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы.  
   
- `nObjectID`  
+ *nObjectID*  
  Указывает идентификатор объекта.  
   
- `dwUserData`  
+ *dwUserData*  
  Задает определяемые пользователем данные.  
   
 ### <a name="remarks"></a>Примечания  
@@ -149,7 +150,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lst`  
+ *lst*  
  Когда функция возвращает значение, он содержит указатель CAnimationVariable, представляющий анимированное значение.  
   
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue  
@@ -161,10 +162,10 @@ BOOL GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dblValue`  
+ *dblValue*  
  Выходные данные. Если функция возвращает он содержит текущее значение переменной анимации.  
   
- `nValue`  
+ *nValue*  
  Выходные данные. Если функция возвращает он содержит текущее значение переменной анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -228,10 +229,10 @@ void operator=(INT32 nVal);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dblVal`  
+ *dblVal*  
  Указывает значение, присваиваемое значение анимации.  
   
- `nVal`  
+ *nVal*  
  Указывает значение, присваиваемое значение анимации.  
   
 ### <a name="remarks"></a>Примечания  
@@ -245,7 +246,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Указывает значение по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  

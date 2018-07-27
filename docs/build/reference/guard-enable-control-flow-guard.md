@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377408"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (включение защиты потока управления)
 Включение создания компилятором проверок безопасности для защиты потока управления.  

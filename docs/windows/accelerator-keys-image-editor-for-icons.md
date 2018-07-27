@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861536"
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>Сочетания клавиш (редактор изображений для значков)
 Ниже перечислены сочетания клавиш для команд редактора изображений, привязанных к ключи по умолчанию. Чтобы изменить сочетания клавиш, нажмите кнопку **параметры** на **средства** меню и нажмите кнопку **клавиатуры** под **среды** папки. Дополнительные сведения см. в разделе [Определение и настройка сочетаний клавиш в Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

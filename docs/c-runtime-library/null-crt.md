@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387613"
 ---
 # <a name="null-crt"></a>NULL (CRT)
 **NULL** представляет собой пустое значение указателя и используется во многих операциях с указателями и функциях. Он эквивалентен 0. **NULL** определен в следующих файлах заголовков: CRTDBG.H, LOCALE.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H, TCHAR.H, TIME.H и WCHAR.H.  

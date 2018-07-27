@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197784"
 ---
 # <a name="compiler-error-c2460"></a>Ошибка компилятора C2460
 «идентификатор1»: использует «идентификатор2», который определяется  

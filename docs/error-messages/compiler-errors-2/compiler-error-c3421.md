@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255296"
 ---
 # <a name="compiler-error-c3421"></a>Ошибка компилятора C3421
 "тип": невозможно вызвать метод завершения для данного класса, поскольку он либо недоступен, либо не существует  

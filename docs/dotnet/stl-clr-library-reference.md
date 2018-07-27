@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171826"
 ---
 # <a name="stlclr-library-reference"></a>Справочник по библиотеке STL/CLR
 Библиотека STL/CLR представляет собой упакованную подмножества стандартной библиотеки C++ для использования с C++ и .NET Framework common language runtime (CLR). С помощью STL/CLR можно использовать все контейнеры, итераторов и алгоритмов стандартной библиотеки в управляемой среде.  

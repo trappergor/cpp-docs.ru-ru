@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685678"
 ---
 # <a name="library-support-for-multithreading"></a>Поддержка многопоточности библиотеками
 Все версии библиотек CRT теперь поддерживают многопоточность за исключением неблокирующих версий некоторых функций. В разделе [производительность многопоточных библиотек](../c-runtime-library/multithreaded-libraries-performance.md) для получения дополнительной информации.  

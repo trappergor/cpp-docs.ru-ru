@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353136"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Рекомендации по выбору класса коллекции
 Эта статья содержит подробные сведения, которые помогут вам выбрать класс коллекции для конкретного приложения.  

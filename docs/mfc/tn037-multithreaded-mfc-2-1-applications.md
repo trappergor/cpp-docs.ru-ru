@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382019"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037. Многопоточные приложения MFC 2.1
 Это техническое Примечание изначально описаны ограничения на многопотоковые программы с MFC 2.1, был установлен вместе с Visual C++ 1.0 для Windows NT. MFC 3.0 поддерживает многопоточность напрямую и задокументирован. Эту ссылку для получения дополнительной информации см.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419970"
 ---
 # <a name="ordering-of-c-arrays"></a>Упорядочение массивов C++
 Массивы C++ размещаются в памяти по срокам. Построчный порядок означает, что быстрее всего изменяется последний индекс.  

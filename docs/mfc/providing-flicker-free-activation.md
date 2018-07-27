@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356558"
 ---
 # <a name="providing-flicker-free-activation"></a>Предоставление активации без мерцания
 Если элемент управления рисовании одинаково в активным и неактивным состоянием (и не использует активации без окна), можно исключить операции рисования и сопутствующее видимое мерцание, которое обычно случается при переходе между неактивные и активные состояния. Чтобы сделать это, включите **noFlickerActivate** флаг в набор флагов, возвращенных [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Пример:  

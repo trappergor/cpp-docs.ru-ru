@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878896"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 В результате файл IDL или .h, должны быть включены в сгенерированный IDL-файл.  

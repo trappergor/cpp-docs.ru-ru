@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392066"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Библиотеки DLL и поведение библиотеки времени выполнения Visual C++  
   

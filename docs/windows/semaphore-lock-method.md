@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892479"
 ---
 # <a name="semaphorelock-method"></a>Метод Semaphore::Lock
 Ожидает, пока текущий объект или объект семафора, связанный с указанным дескриптором, не будет находиться в сигнальном состоянии или указанный интервал времени ожидания истечет.  

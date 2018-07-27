@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889559"
 ---
 # <a name="symbol-value-restrictions"></a>Ограничения для символьных значений
 Значением символа может быть любое целое число, указанное в обычном для директив препроцессора #define формате. Ниже приведены примеры значений символов.  

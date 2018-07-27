@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91496e96763ab8c79ae1c71d68b9ae8f8db15e50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81c61eec099be90099e5cb0a28355d0037c92774
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956643"
 ---
 # <a name="cd2dpointu-class"></a>Класс CD2DPointU
 Программа-оболочка для `D2D1_POINT_2U`.  
@@ -37,13 +38,13 @@ class CD2DPointU : public D2D1_POINT_2U;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DPointU::CD2DPointU](#cd2dpointu)|Перегружен. Создает `CD2DPointU` из объекта `D2D1_POINT_2U` объекта.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DPointU::operator CPoint](#operator_cpoint)|Преобразует `CD2DPointU` для `CPoint` объекта.|  
   
@@ -66,13 +67,13 @@ CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pt`  
+ *pt*  
  Исходная точка  
   
- `uX`  
+ *uX*  
  Источник X  
   
- `uY`  
+ *uY*  
  Источник Y  
   
 ##  <a name="operator_cpoint"></a>  CD2DPointU::operator CPoint  

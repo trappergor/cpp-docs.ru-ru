@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343623"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Вызовы к обработчику со стороны платформы
 Следующие разделы сначала изучить, как платформа перенаправляет команды, а затем проверьте, как другие сообщения и уведомления элементов управления отправляются в windows:  

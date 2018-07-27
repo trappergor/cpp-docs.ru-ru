@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339024"
 ---
 # <a name="compiler-intrinsics"></a>Встроенные объекты компилятора
 Большинство функций содержатся в библиотеках, но некоторые функции, встроенные (то есть внутренние) в компилятор. Они называются встроенными или внутренними функциями .  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb54ae332dac556333516c5e50129b9ba43ce07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964162"
 ---
 # <a name="binaryfunction-struct"></a>Структура binary_function
 
@@ -44,7 +45,7 @@ struct binary_function {
 
 **const second_argument_type&** ) **const**
 
-Все такие бинарные функции могут ссылаться на тип своего первого аргумента как **first_argument_type**, тип второго аргумента как **second_argument_type** и возвращаемый тип как ***result_type***.
+Все такие бинарные функции могут ссылаться на тип своего первого аргумента, как `first_argument_type`, тип второго аргумента как `second_argument_type`и возвращаемый тип как ***result_type***.
 
 ## <a name="example"></a>Пример
 

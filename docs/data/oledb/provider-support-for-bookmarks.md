@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112512"
 ---
 # <a name="provider-support-for-bookmarks"></a>Поддержка закладок поставщиками
 В примере в этом разделе добавляется `IRowsetLocate` интерфейс `CMyProviderRowset` класса. В большинстве случаев сначала Добавление интерфейса в существующий COM-объекта. Затем можно проверить его, добавив дополнительные вызовы из шаблонов потребителей. В примере показано, как:  

@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d48bd8dce38a5042c01b56f40cebb2e030be6f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954647"
 ---
 # <a name="referencewrapper-class"></a>Класс reference_wrapper
 
@@ -70,26 +71,26 @@ private:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Создает документ `reference_wrapper`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[result_type](#result_type)|Слабый тип результата ссылки в оболочке.|
 |[type](#type)|Тип ссылки в оболочке.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[get](#get)|Получает ссылку в оболочке.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Получает указатель на ссылку в оболочке.|
 |[reference_wrapper::operator()](#op_call)|Вызывает ссылку в оболочке.|
@@ -185,9 +186,9 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-`Types` Список типов аргументов.
+*Типы* типы списка аргументов.
 
-`args` Список аргументов.
+*args* списка аргументов.
 
 ### <a name="remarks"></a>Примечания
 
@@ -228,9 +229,9 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Тип программы-оболочки.
+*Ty* тип для упаковки.
 
-`val` Значение для упаковки.
+*Val* значение для упаковки.
 
 ### <a name="remarks"></a>Примечания
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877609"
 ---
 # <a name="mfc-database-programming-symbols"></a>Символы программирования базы данных MFC
 Символы в этой таблице отображаются только в проекте MFC, когда была добавлена поддержка базы данных. Они поддерживают подключение MFC к серверам SQL и программированию базы данных.  

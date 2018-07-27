@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::GetBSTR | Документы Microsoft
+title: _bstr_t::GetBSTR | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c9903170f62652357264a3ea2de0839496e9e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3041e8a4ece0ddff813b7ef9cd2ccb258e520a82
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940486"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Блок, относящийся только к системам Microsoft**  
@@ -39,10 +40,10 @@ BSTR& GetBSTR( );
  Начало строки `BSTR`, инкапсулированной объектом `_bstr_t`.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `GetBSTR` действует на все объекты `_bstr_t`, которые совместно используют строку `BSTR`. Одну и ту же строку `_bstr_t` может совместно использовать несколько объектов `BSTR`. Это делается при помощи конструктора копии и `operator=`.  
+ Функция `GetBSTR` действует на все объекты `_bstr_t`, которые совместно используют строку `BSTR`. Более одного `_bstr_t` могут совместно использовать `BSTR` при помощи конструктора копии и и **оператор =**.  
   
 ## <a name="example"></a>Пример  
- В разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) пример использования `GetBSTR`.  
+ См. в разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) в качестве примера использования `GetBSTR`.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

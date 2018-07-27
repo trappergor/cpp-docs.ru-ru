@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f1d24fb90b99d7b757f628be4b39d42f0c0051f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 676cc8ea493d113e9ef8a6f85108fdf3bad6ce5f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959511"
 ---
 # <a name="indirectarray-class"></a>Класс indirect_array
 
@@ -30,11 +31,11 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="remarks"></a>Примечания
 
-В классе описывается объект, который хранит ссылку на объект **va** класса [valarray](../standard-library/valarray-class.md)**\<Type>**, а также объект **xa** класса **valarray<size_t>**, который описывает порядок элементов для выбора из объекта **valarray\<Type>**.
+Этот класс описывает объект, который хранит ссылку на объект `va` класса [valarray](../standard-library/valarray-class.md)**\<тип >**, вместе с объектом `xa` класса `valarray<size_t>`, который описывает последовательность элементов для выбора из `valarray<Type>` объекта.
 
-Объект **indirect_array\<Type>** создается только путем написания выражения вида **va[xa]**. Функции — члены класса indirect_array затем ведут себя как соответствующие сигнатуры функций, определенных для **valarray\<Type>** с той разницей, что затрагивается только последовательность выбранных элементов.
+При создании `indirect_array<Type>` только путем написания выражения вида `va[xa]`. Функции-члены класса indirect_array затем ведут себя как соответствующие сигнатуры функций, заданные для `valarray<Type>`, за исключением того, что затрагивается только последовательность выбранных элементов.
 
-Последовательность состоит из элементов **xa.**[size](../standard-library/valarray-class.md#size), где элемент `I` становится индексом **xa**[`I`] в **va**.
+Последовательность состоит **xa.** [размер](../standard-library/valarray-class.md#size) элементов, где элемент `I` становится индексом **xa**[ `I`] в `va`.
 
 ## <a name="example"></a>Пример
 

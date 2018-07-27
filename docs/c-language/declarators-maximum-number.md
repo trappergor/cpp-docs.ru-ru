@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382150"
 ---
 # <a name="declarators-maximum-number"></a>Деклараторы. Максимальное количество
 **ANSI 3.5.4** Максимальное число деклараторов, которые могут изменять арифметический тип, тип структуры или тип объединения  

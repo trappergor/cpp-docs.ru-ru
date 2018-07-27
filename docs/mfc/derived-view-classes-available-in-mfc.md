@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345668"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Производные классы представлений, доступные в MFC
 Следующая таблица показывает представление классы MFC и их связи друг с другом. Возможности класса представления, зависят от класс представления MFC, из которого он является производным.  

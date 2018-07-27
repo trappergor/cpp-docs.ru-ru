@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106012"
 ---
 # <a name="provider-wizard-generated-files"></a>Созданные мастером поставщика файлы
 Мастер поставщика ATL OLE DB создает следующие файлы. В последующих разделах используется короткое имя «MyProvider», но конкретные имена файлов зависят от выбора, внесенные при создании поставщика.  

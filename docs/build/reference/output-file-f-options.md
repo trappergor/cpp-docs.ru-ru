@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373027"
 ---
 # <a name="output-file-f-options"></a>Параметры выходного файла (/F)
 Параметры выходного файла создания или переименования выходных файлов. Они влияют на все C или C++ указаны исходные файлы в переменной среды компилятора CL, в командной строке или в любом файле команды.  

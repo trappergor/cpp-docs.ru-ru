@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209008"
 ---
 # <a name="backinsertiterator-class"></a>Класс back_insert_iterator
 
@@ -39,7 +40,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-`Container` Тип контейнера к задней части элементов, которое вставляется в `back_insert_iterator`.
+*Контейнер* тип контейнера к задней части какие элементы являются вставит `back_insert_iterator`.
 
 ## <a name="remarks"></a>Примечания
 
@@ -47,24 +48,24 @@ class back_insert_iterator;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[back_insert_iterator](#back_insert_iterator)|Создает итератор `back_insert_iterator`, который добавляет элементы в местоположение за последним элементом в контейнере.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий контейнер для итератора `back_insert_iterator`.|
 |[reference](#reference)|Тип, предоставляющий ссылку для итератора `back_insert_iterator`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
-|[оператор*](#op_star)|Оператор удаления ссылки, используемый для реализации выражения итератора вывода * `i` = `x` для вставки в конечную часть.|
+|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в конечную часть.|
 |[оператор++](#op_add_add)|Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
-|[оператор=](#op_eq)|Оператор присваивания, используемый для применения выражения итератора вывода * `i` = `x` для вставки в конечную часть.|
+|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в конечную часть.|
 
 ## <a name="requirements"></a>Требования
 
@@ -82,7 +83,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Параметры
 
-`_Cont` Контейнер, `back_insert_iterator` вставляет элемент в.
+*_Cont* контейнера, `back_insert_iterator` вставляет элемент в коллекцию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -190,7 +191,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::operator*
+## <a name="op_star"></a>  back_insert_iterator::operator\*
 
 Оператор удаления ссылки, используемый для реализации выражения итератора вывода \* *i* = *x*.
 
@@ -322,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Параметры
 
-`val` Значение должны быть вставлены в контейнере.
+*Val* значение для вставки в контейнер.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

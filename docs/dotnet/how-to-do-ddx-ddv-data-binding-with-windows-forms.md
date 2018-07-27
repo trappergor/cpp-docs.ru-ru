@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131664"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Практическое руководство. Привязка данных DDX/DDV к элементам управления Windows Forms
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) вызовы [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) для создания элемента управления, сопоставление идентификатора элемента управления ресурса Если вы используете `DDX_ManagedControl` для `CWinFormsControl` управления (в код, созданный мастером), не следует вызывать `CreateManagedControl` явным образом для того же элемента управления.  

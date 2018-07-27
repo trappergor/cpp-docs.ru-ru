@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345082"
 ---
 # <a name="memory-management"></a>Управление памятью
 Эта группа статьи описывается воспользоваться преимуществами служб общего назначения из Microsoft Foundation Class библиотеки (MFC), связанные с управлением памяти. Выделение памяти можно разделить на две основные категории: фрейма выделения и выделения кучи.  

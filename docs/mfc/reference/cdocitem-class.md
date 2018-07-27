@@ -1,5 +1,5 @@
 ---
-title: Класс CDocItem | Документы Microsoft
+title: Класс CDocItem | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88c30418f886cd791a7119367c5ddbccc19003fa
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335585"
 ---
 # <a name="cdocitem-class"></a>Класс CDocItem
 Базовый класс для элементов документа, являющихся компонентами данных документа.  
@@ -39,10 +40,10 @@ class CDocItem : public CCmdTarget
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CDocItem::GetDocument](#getdocument)|Возвращает документ, который содержит элемент.|  
-|[CDocItem::IsBlank](#isblank)|Определяет, содержит ли элемент никакой информации.|  
+|[CDocItem::GetDocument](#getdocument)|Возвращает документ, содержащий элемент.|  
+|[CDocItem::IsBlank](#isblank)|Определяет, содержит ли данные.|  
   
 ## <a name="remarks"></a>Примечания  
  `CDocItem` объекты используются для представления элементов OLE в документах клиента и сервера.  
@@ -60,17 +61,17 @@ class CDocItem : public CCmdTarget
  **Заголовок:** afxole.h  
   
 ##  <a name="getdocument"></a>  CDocItem::GetDocument  
- Вызовите эту функцию для получения документа, который содержит элемент.  
+ Вызывайте эту функцию, чтобы получить документ, который содержит элемент.  
   
 ```  
 CDocument* GetDocument() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на документ, который содержит элемент. **NULL**, если элемент не является частью документа.  
+ Указатель на документ, который содержит элемент; Значение NULL, если элемент не является частью документа.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция переопределяется в производных классах [COleClientItem](../../mfc/reference/coleclientitem-class.md) и [COleServerItem](../../mfc/reference/coleserveritem-class.md), возвращающая указатель на любой [COleDocument](../../mfc/reference/coledocument-class.md), [ COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), или [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) объекта.  
+ Эта функция переопределен в производных классах [COleClientItem](../../mfc/reference/coleclientitem-class.md) и [COleServerItem](../../mfc/reference/coleserveritem-class.md), возвращающая указатель на либо [COleDocument](../../mfc/reference/coledocument-class.md), [ COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), или [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) объекта.  
   
 ##  <a name="isblank"></a>  CDocItem::IsBlank  
  Вызывается платформой при сериализации по умолчанию.  
@@ -80,15 +81,15 @@ virtual BOOL IsBlank() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если элемент не содержит сведений; в противном случае — 0.  
+ Ненулевое значение, если элемент не содержит сведений; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию `CDocItem` объекта не может быть пустым. [COleClientItem](../../mfc/reference/coleclientitem-class.md) объектов иногда пусты, так как они наследуются непосредственно `CDocItem`. Тем не менее [COleServerItem](../../mfc/reference/coleserveritem-class.md) объекты всегда пусты. По умолчанию, содержащий приложения OLE `COleClientItem` объекты, которые не имеют x или y сериализуются экстента. Это делается путем возвращения **TRUE** из переопределения события `IsBlank` Если элемент не имеет x или y экстента.  
+ По умолчанию `CDocItem` объекты не являются пустыми. [COleClientItem](../../mfc/reference/coleclientitem-class.md) объектов иногда пусты, так как они являются производными непосредственно из `CDocItem`. Тем не менее [COleServerItem](../../mfc/reference/coleserveritem-class.md) объекты всегда будут пустыми. По умолчанию приложений OLE, содержащих `COleClientItem` объекты, которые не имеют x или y сериализуются экстента. Это можно сделать, возвращая TRUE из переопределения `IsBlank` Если элемент не имеет x или y экстента.  
   
- Переопределите эту функцию, если вы хотите применить другие действия во время сериализации.  
+ Переопределите эту функцию, если вы хотите реализовать другие действия во время сериализации.  
   
 ## <a name="see-also"></a>См. также  
- [CCmdTarget-класс](../../mfc/reference/ccmdtarget-class.md)   
+ [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Класс COleDocument](../../mfc/reference/coledocument-class.md)   
  [Класс COleServerItem](../../mfc/reference/coleserveritem-class.md)   

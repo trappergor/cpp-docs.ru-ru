@@ -60,11 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9f7a66b60d70231628ded5dc096bad702bf088
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 135bb279daf4c000c025ac6f8fa51a6b023e2d1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952548"
 ---
 # <a name="canimationbaseobject-class"></a>Класс CAnimationBaseObject
 Базовый класс для всех объектов анимации.  
@@ -79,14 +80,14 @@ class CAnimationBaseObject : public CObject;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Перегружен. Создает объект анимации.|  
 |[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Деструктор Вызывается при уничтожении объекта анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationBaseObject::ApplyTransitions](#applytransitions)|Добавляет переходы на раскадровку с переменной инкапсулированный анимации.|  
 |[CAnimationBaseObject::ClearTransitions](#cleartransitions)|Удаляет все связанные с ней переходы.|  
@@ -105,14 +106,14 @@ class CAnimationBaseObject : public CObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|Собирает указателей на переменные автономной анимации.|  
 |[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|Устанавливает связь между переменными анимации, содержащиеся в объекта анимации и их контейнера.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Указывает, следует ли автоматически уничтожаться связанные с ней переходы.|  
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Содержит пользовательские данные.|  
@@ -148,10 +149,10 @@ virtual BOOL ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на раскадровку.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  Со значением FALSE этот метод добавляет только переходы, которые не зависят от ключевых кадров.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -174,13 +175,13 @@ CAnimationBaseObject(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы.  
   
- `nObjectID`  
+ *nObjectID*  
  Указывает идентификатор объекта.  
   
- `dwUserData`  
+ *dwUserData*  
  Определяемые пользователем данные, связанные с объектом анимации и извлечь позже, во время выполнения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -194,7 +195,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bAutodestroy`  
+ *bAutodestroy*  
  Указывает, следует ли автоматически уничтожения объектов перехода или просто удалить их из связанного списка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -208,7 +209,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pVariable`  
+ *pVariable*  
  Указатель на переменную анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -250,10 +251,10 @@ virtual void EnableIntegerValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pController`  
+ *pController*  
  Указатель на родительский контроллер.  
   
- `bEnable`  
+ *bEnable*  
  Указывает, следует ли включить или отключить событие изменения целочисленное значение.  
   
 ### <a name="remarks"></a>Примечания  
@@ -269,10 +270,10 @@ virtual void EnableValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pController`  
+ *pController*  
  Указатель на родительский контроллер.  
   
- `bEnable`  
+ *bEnable*  
  Указывает, следует ли включить или отключить событие изменения значения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -288,7 +289,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lst`  
+ *lst*  
  Список, должно быть заполнено анимации переменные, содержащиеся в объекте анимации.  
   
 ### <a name="remarks"></a>Примечания  
@@ -389,7 +390,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bValue`  
+ *bValue*  
  Указывает, автоматически уничтожить флаг.  
   
 ### <a name="remarks"></a>Примечания  
@@ -405,10 +406,10 @@ void SetID(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nObjectID`  
+ *nObjectID*  
  Указывает идентификатор нового объекта.  
   
- `nGroupID`  
+ *nGroupID*  
  Задает новый идентификатор группы.  
   
 ### <a name="remarks"></a>Примечания  
@@ -432,7 +433,7 @@ void SetUserData (DWORD dwUserData);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwUserData`  
+ *dwUserData*  
  Указывает пользовательские данные.  
   
 ### <a name="remarks"></a>Примечания  

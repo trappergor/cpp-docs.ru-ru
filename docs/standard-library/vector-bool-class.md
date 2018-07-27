@@ -25,15 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7f4e185f19b07ddcec47b8f167e7040a5bef28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962784"
 ---
 # <a name="vectorltboolgt-class"></a>Класс vector&lt;bool&gt;
 
-Класс `vector<bool>` является частичной специализацией объекта [vector](../standard-library/vector-class.md) для элементов типа `bool`. Он имеет распределитель базового типа, который используется специализацией, обеспечивающей оптимизацию пространства путем сохранения одного значения `bool` на бит.
+`vector<bool>` Класс является частичной специализацией объекта [вектор](../standard-library/vector-class.md) для элементов типа **bool**. Он имеет распределитель для базового типа, который используется специализацией, обеспечивающей оптимизацию пространства путем сохранения одного **bool** значение бит.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,19 +47,19 @@ class vector<bool, Allocator>
 
 Поведение данной специализации шаблона класса аналогично поведению класса vector, за исключением различий, указанных в данной статье.
 
-Операции, которые работают с типом `bool`, соответствуют значениям в хранилище контейнера. Параметр `allocator_traits::construct` не используется для создания данных значений.
+Операции, которые работают с **bool** типа соответствуют значениям в хранилище контейнера. Параметр `allocator_traits::construct` не используется для создания данных значений.
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[const_pointer](#const_pointer)|Typedef для итератора `const_iterator`, который может применяться как указатель константы на логический элемент `vector<bool>`.|
-|[const_reference](#const_reference)|Typedef для `bool`. После инициализации данный объект не проверяет наличие обновлений исходного значения.|
+|[const_reference](#const_reference)|Typedef для **bool**. После инициализации данный объект не проверяет наличие обновлений исходного значения.|
 |[pointer](#pointer)|Typedef для итератора `iterator`, который может применяться как указатель на логический элемент `vector<bool>`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[flip](#flip)|Обращает все биты в `vector<bool>`.|
 |[swap](#swap)|Выполняет обмен элементами между двумя объектами `vector<bool>`.|
@@ -150,9 +151,9 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
-|`Pos`|Позиция элемента `vector<bool>`.|
+|*торговых терминалов*|Позиция элемента `vector<bool>`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -162,7 +163,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>Примечания
 
-При компиляции с набором `_ITERATOR_DEBUG_LEVEL` возникает ошибка во время выполнения, если предпринимается попытка доступа к элементу за пределами вектора.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с набором _ITERATOR_DEBUG_LEVEL, то во время выполнения возникает ошибка при попытке доступа к элементу за пределами вектора.  Дополнительные сведения см. в разделе [Проверенные итераторы](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Пример
 
@@ -267,7 +268,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-Обеспечивает неявное преобразование из `vector<bool>::reference` в `bool`.
+Предоставляет неявное преобразование из `vector<bool>::reference` для **bool**.
 
 ```cpp
 operator bool() const;
@@ -292,9 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Параметры
 
-`Right` Ссылка на элемент, значение которого должен быть присвоено биту.
+*Справа*  
+ Ссылка на элемент, значение которого должно быть присвоено биту.
 
-`Val` Логическое значение, присваиваемое бит.
+*Val*  
+ Логическое значение, которое должно быть присвоено биту.
 
 #### <a name="example"></a>Пример
 
@@ -379,9 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Элемент для обмена на `Right` элемент.
+*Слева*  
+ Элемент должны поменяться местами с *справа* элемент.
 
-`Right` Элемент для обмена на `Left` элемент.
+*Справа*  
+ Элемент должны поменяться местами с *слева* элемент.
 
 ### <a name="remarks"></a>Примечания
 

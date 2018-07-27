@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343503"
 ---
 # <a name="exitinstance-member-function"></a>Функция-член ExitInstance
 [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) функции-члена класса [CWinApp](../mfc/reference/cwinapp-class.md) вызывается всякий раз, копия приложения завершается, обычно в результате пользователю выход из приложения.  

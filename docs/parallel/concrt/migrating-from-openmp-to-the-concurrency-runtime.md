@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690492"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Переход от OpenMP к среде выполнения с параллелизмом
 Среда выполнения с параллелизмом позволяет использовать самые разные модели программирования. Эти модели могут перекрываться с моделями других библиотек или дополнять их. Документы в этом разделе сравнения [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) в среду выполнения с параллелизмом и приводятся примеры способов миграции существующего кода OpenMP для использования среды выполнения с параллелизмом.  

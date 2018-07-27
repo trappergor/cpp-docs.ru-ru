@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111719"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Упрощение доступа к данным с помощью атрибутов базы данных
 В этом разделе демонстрируется использование атрибутов базы данных для упрощения операций базы данных.  

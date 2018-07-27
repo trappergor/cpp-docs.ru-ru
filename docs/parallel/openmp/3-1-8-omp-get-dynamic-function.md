@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686195"
 ---
 # <a name="318-ompgetdynamic-function"></a>3.1.8 Функция omp_get_dynamic
 **Omp_get_dynamic** функция возвращает ненулевое значение, если включено динамическое выравнивание потоков и возвращает 0 в противном случае. Он следующий:  

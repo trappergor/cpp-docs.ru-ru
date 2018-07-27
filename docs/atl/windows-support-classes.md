@@ -1,5 +1,5 @@
 ---
-title: Windows поддерживает классов (ATL) | Документы Microsoft
+title: Windows поддерживает классов (ATL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2095e5141dfdd320bae0e7aa69ffd4b3c9fe9a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40521ce5b7ec192781e1496590fdd42b36e132e1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848393"
 ---
 # <a name="windows-support-classes"></a>Классы поддержки Windows
 Следующие классы обеспечивают поддержку windows.  
   
--   [_U_MENUorID](../atl/reference/u-menuorid-class.md) предоставляет оболочки для **CreateWindow** и **CreateWindowEx**.  
+-   [_U_MENUorID](../atl/reference/u-menuorid-class.md) предоставляет оболочки для `CreateWindow` и `CreateWindowEx`.  
   
 -   [CWindow](../atl/reference/cwindow-class.md) содержит методы для управления окном. `CWindow` — это базовый класс для `CWindowImpl`, `CDialogImpl` и `CContainedWindow`.  
   
@@ -34,13 +35,13 @@ ms.lasthandoff: 05/03/2018
   
 -   [CDialogImpl](../atl/reference/cdialogimpl-class.md) реализует диалоговое окно.  
   
--   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) реализует диалоговое окно (модальные и немодальные), на котором размещена элементы управления ActiveX.  
+-   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) реализует диалоговое окно (модальное или немодальное), на котором размещены элементы управления ActiveX.  
   
--   [CSimpleDialog](../atl/reference/csimpledialog-class.md) реализует диалоговое окно (модальные и немодальные) с базовыми функциями.  
+-   [CSimpleDialog](../atl/reference/csimpledialog-class.md) реализует диалоговое окно (модальное или немодальное) с базовыми функциями.  
   
--   [CAxWindow](../atl/reference/caxwindow-class.md) манипулирует окна, на котором размещается элемент управления ActiveX.  
+-   [CAxWindow](../atl/reference/caxwindow-class.md) управляет окном, в котором размещается элемент управления ActiveX.  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) содержит методы для работы окно, которое размещает элемент ActiveX, а также поддержка размещения Лицензированные элементы управления ActiveX.  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) содержит методы для работы окно, которое размещает элемент ActiveX, а также поддержку размещения Лицензированные элементы управления ActiveX.  
   
 -   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) реализует окно, содержатся внутри другого объекта.  
   
@@ -48,9 +49,9 @@ ms.lasthandoff: 05/03/2018
   
 -   [CDynamicChain](../atl/reference/cdynamicchain-class.md) поддержка динамического объединения схемы сообщений.  
   
--   [CMessageMap](../atl/reference/cmessagemap-class.md) позволяет объекту предоставлять свои сообщения сопоставляется с другими объектами.  
+-   [CMessageMap](../atl/reference/cmessagemap-class.md) позволяет объекту предоставлять его сообщения сопоставляется с другими объектами.  
   
--   [CWinTraits](../atl/reference/cwintraits-class.md) предоставляет простой способ стандартизации признаки объект ATL окна.  
+-   [CWinTraits](../atl/reference/cwintraits-class.md) предлагает простой способ стандартизации признаки объекта ATL окна.  
   
 -   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) предоставляет значения по умолчанию для стилей окна и расширенные стили, используемые для создания окна. Эти значения добавляются с помощью оператора логического или, для значений, предоставленных во время создания окна.  
   

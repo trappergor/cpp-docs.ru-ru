@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d268b9cd2ba7d83f44b5e0ebd516208d17ee726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966587"
 ---
 # <a name="ostrstream-class"></a>Класс ostrstream
 
@@ -47,13 +48,13 @@ class ostrstream : public ostream
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[ostrstream](#ostrstream)|Создает объект типа `ostrstream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[freeze](#freeze)|Делает буфер потока недоступным для операций с буфером потока.|
 |[pcount](#pcount)|Возвращает число элементов, записанных в управляемую последовательность.|
@@ -76,7 +77,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Параметры
 
-`_Freezeit` Объект `bool` , указывающее, следует ли поток, который должен быть зафиксирован.
+*_Freezeit* объект **bool** , указывающее, следует ли поток, который должен быть зафиксирован.
 
 ### <a name="remarks"></a>Примечания
 
@@ -84,7 +85,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="example"></a>Пример
 
-См. раздел [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) с примером использования **freeze**.
+См. в разделе [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) пример, использующий `freeze`.
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -100,19 +101,19 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Параметры
 
-`ptr` Буфер.
+*PTR* буфера.
 
-`count` Размер буфера в байтах.
+*число* размер буфера в байтах.
 
-`_Mode` Режим входного и выходного буфера. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим* режим ввода-вывода буфера. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Примечания
 
-Оба конструктора инициализируют базовый класс путем вызова [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), где **sb** является сохраненным объектом класса [strstreambuf](../standard-library/strstreambuf-class.md). Первый конструктор также инициализирует **sb** путем вызова `strstreambuf`. Второй конструктор инициализирует базовый класс одним из двух способов:
+Оба конструктора инициализируют базовый класс путем вызова [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), где `sb` является сохраненным объектом класса [strstreambuf](../standard-library/strstreambuf-class.md). Первый конструктор также инициализирует `sb` путем вызова `strstreambuf`. Второй конструктор инициализирует базовый класс одним из двух способов:
 
-- Если `_Mode`  &  **ios_base::app**== 0, то `ptr` должен назначить первый элемент массива из `count` элементов. Далее конструктор вызывает `strstreambuf`(`ptr`, `count`, `ptr`).
+- Если `_Mode`  &  **ios_base::app**== 0, то `ptr` должен назначить первый элемент массива `count` элементов, а также вызовы конструктора `strstreambuf`(`ptr`, `count`, `ptr`).
 
-- В противном случае `ptr` должен назначить первый элемент массива элементов-счетчиков, содержащий строку C, первый элемент которой обозначается `ptr`. Затем конструктор вызывает `strstreambuf`(`ptr`, `count`, `ptr`  +  `strlen`(`ptr`)).
+- В противном случае `ptr` должен назначить первый элемент массива элементов count, содержащий строку C первый элемент которой обозначается `ptr`, а также вызовы конструктора `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
@@ -148,7 +149,7 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает адрес хранимого буфера потока типа **pointer**, указывающий на [strstreambuf](../standard-library/strstreambuf-class.md).
+Функция-член возвращает адрес буфера сохраненного потока типа `pointer` для [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Пример
 
@@ -172,7 +173,7 @@ char *str();
 
 ### <a name="example"></a>Пример
 
-См. раздел [strstream::str](../standard-library/strstreambuf-class.md#str) с примером использования **str**.
+См. в разделе [strstream::str](../standard-library/strstreambuf-class.md#str) пример, использующий `str`.
 
 ## <a name="see-also"></a>См. также
 

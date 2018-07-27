@@ -7,11 +7,12 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c52376f504e526c03d4f2c2afd39c029761f3c99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f930fb43ea554e1dd445dabb382adecc6f67e35f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964968"
 ---
 # <a name="ltnewgt-functions"></a>Функции &lt;new&gt;
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="nothrow"></a>  nothrow
 
-Предоставляет объект для использования в качестве аргумента для версий `nothrow` **new** и **delete**.
+Предоставляет объект для использования в качестве аргумента для **nothrow** версиях **новый** и **удалить**.
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -37,7 +38,7 @@ extern const std::nothrow_t nothrow;
 
 ## <a name="set_new_handler"></a>  set_new_handler
 
-Устанавливает пользовательскую функцию, вызываемую в случае сбоя `operator new` при попытке выделения памяти.
+Устанавливает пользовательскую функцию, вызываемую при **оператор new** завершается сбоем при попытке выделения памяти.
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -45,7 +46,8 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>Параметры
 
-`Pnew` New_handler должны быть установлены.
+*Pnew*  
+`new_handler` Должны быть установлены.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -53,7 +55,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Функция сохраняет `Pnew` в статическом указателе [нового обработчика](../standard-library/new-typedefs.md#new_handler), с которым она работает, затем возвращает значение, ранее хранившееся в указателе. Новый обработчик используется [оператором new](../standard-library/new-operators.md#op_new)( **size_t**).
+Функция сохраняет *Pnew* в статическом [новый обработчик](../standard-library/new-typedefs.md#new_handler) указатель, которым она работает, затем возвращает значение, ранее сохраненное в указателе. Новый обработчик используется [оператор new](../standard-library/new-operators.md#op_new)(**size_t**).
 
 ### <a name="example"></a>Пример
 

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379688"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>Выбор графического объекта в контексте устройства
 Этот раздел относится к использованию графические объекты в контексте устройства окна. По окончании [создайте графический объект](../mfc/one-stage-and-two-stage-construction-of-objects.md), необходимо выбрать его в контекст устройства вместо объекта по умолчанию, хранящиеся в ней:  

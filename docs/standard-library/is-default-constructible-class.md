@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267f0d83ee8f92eb73bddfbcd383f59db83c8a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23a361362d574910d21b0031d5687331f8c11dda
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964259"
 ---
 # <a name="isdefaultconstructible-class"></a>Класс is_default_constructible
 
@@ -35,11 +36,11 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Запрашиваемый тип.
+*T* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа имеет значение true, если тип `T` является типом класса, имеющим конструктор по умолчанию, в противном случае — значение false. Это эквивалентно предикату `is_constructible<T>`. Тип `T` должен быть полным типом, `void`или массивом с неизвестными границами.
+Экземпляр предиката типа содержит значение true, если тип *T* является типом класса, который имеет конструктор по умолчанию, в противном случае он содержит значение false. Это эквивалентно предикату `is_constructible<T>`. Тип *T* должно быть полным типом, **void**, или массив с неизвестной границей.
 
 ## <a name="example"></a>Пример
 

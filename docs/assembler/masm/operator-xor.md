@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057381"
 ---
 # <a name="operator-xor"></a>Оператор XOR
 Возвращает результат побитовой операции **XOR** операции для *expression1* и *expression2*.  

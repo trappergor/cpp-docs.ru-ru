@@ -150,11 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9669856016281a0830f610a907ae238b91cc8cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5582c634428290086393791ae23d551726bff7ab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040666"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>Класс преобразованный CMFCVisualManagerWindows
 `CMFCVisualManagerWindows` имитирует внешний вид Microsoft Windows XP или Microsoft Vista, когда пользователь выбирает тему Vista или Windows XP.  
@@ -171,13 +172,13 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCVisualManagerWindows::CMFCVisualManagerWindows`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Платформа вызывает этот метод для определения ли 3D вкладки всегда должны быть выделены в приложении. (Переопределяет [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|  
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Переопределяет `CMFCVisualManager::DrawComboBorderWinXP`.)|  
@@ -248,7 +249,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Указывает, отображаются ли темы Windows XP 3D вкладки.|  
   
@@ -295,7 +296,7 @@ CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsTemporary`  
+ [in] *bIsTemporary*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -312,11 +313,11 @@ virtual BOOL DrawComboBorderWinXP(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsDropped`  
- [in] `bIsHighlighted`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bDisabled*  
+ [in] *bIsDropped*  
+ [in] *bIsHighlighted*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -335,11 +336,11 @@ virtual BOOL DrawComboDropButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsDropped`  
- [in] `bIsHighlighted`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bDisabled*  
+ [in] *bIsDropped*  
+ [in] *bIsHighlighted*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -357,10 +358,10 @@ virtual BOOL DrawPushButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `pButton`  
- [in] `uiState`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *pButton*  
+ [in] *uiState*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -407,7 +408,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -434,8 +435,8 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
- [in] `state`  
+ [in] *pButton*  
+ [in] *состояния*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -449,7 +450,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -535,10 +536,10 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectGripper`  
- [in] `bHorz`  
- [in] `pBar`  
+ [in] *основного контроллера домена*  
+ [in] *rectGripper*  
+ [in] *bHorz*  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -555,11 +556,11 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `pEdit`  
- [in] `state`  
- [in] `clrText`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *pEdit*  
+ [in] *состояния*  
+ [in] *clrText*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -577,10 +578,10 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `state`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *состояния*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -597,11 +598,11 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `state`  
- [in] `bHorz`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *состояния*  
+ [in] *bHorz*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -620,13 +621,13 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `bActive`  
- [in] `bHorz`  
- [in] `bMaximized`  
- [in] `bDisabled`  
- [in] `nImageID`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *bActive*  
+ [in] *bHorz*  
+ [in] *bMaximized*  
+ [in] *bDisabled*  
+ [in] *nImageID*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -644,12 +645,12 @@ virtual void OnDrawCaptionButtonIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `id`  
- [in] `bActive`  
- [in] `bDisabled`  
- [in] `ptImage`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *идентификатор*  
+ [in] *bActive*  
+ [in] *bDisabled*  
+ [in] *ptImage*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -667,12 +668,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `nState`  
- [in] `bHighlighted`  
- [in] `bPressed`  
- [in] `bEnabled`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *nState*  
+ [in] *bHighlighted*  
+ [in] *bPressed*  
+ [in] *bEnabled*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -690,12 +691,12 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsDropped`  
- [in] `bIsHighlighted`  
- [in] `pButton`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bDisabled*  
+ [in] *bIsDropped*  
+ [in] *bIsHighlighted*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -713,12 +714,12 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsDropped`  
- [in] `bIsHighlighted`  
- [in] `pButton`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bDisabled*  
+ [in] *bIsDropped*  
+ [in] *bIsHighlighted*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -730,7 +731,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -747,11 +748,11 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsHighlighted`  
- [in] `pButton`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bDisabled*  
+ [in] *bIsHighlighted*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -767,10 +768,10 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsOpened`  
- [in] `colorBox`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bIsOpened*  
+ [in] *colorBox*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -786,10 +787,10 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pToolBar`  
- [in] `rectBorder`  
- [in] `rectBorderSize`  
+ [in] *основного контроллера домена*  
+ [in] *pToolBar*  
+ [in] *rectBorder*  
+ [in] *rectBorderSize*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -806,11 +807,11 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCtrl`  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsPressed`  
- [in] `bIsHighlighted`  
+ [in] *pCtrl*  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bIsPressed*  
+ [in] *bIsHighlighted*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -826,10 +827,10 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCtrl`  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsUp`  
+ [in] *pCtrl*  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bIsUp*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -844,9 +845,9 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pMenu`  
- [in] `rect`  
+ [in] *основного контроллера домена*  
+ [in] *pMenu*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -863,11 +864,11 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `uiSystemCommand`  
- [in] `nStyle`  
- [in] `bHighlight`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *uiSystemCommand*  
+ [in] *nStyle*  
+ [in] *bHighlight*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -883,10 +884,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pFrameWnd`  
- [in] `rectBorder`  
- [in] `rectBorderSize`  
+ [in] *основного контроллера домена*  
+ [in] *pFrameWnd*  
+ [in] *rectBorder*  
+ [in] *rectBorderSize*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -902,10 +903,10 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectBtn`  
- [in] `bIsHighlighted`  
- [in] `bIsPressed`  
+ [in] *основного контроллера домена*  
+ [in] *rectBtn*  
+ [in] *bIsHighlighted*  
+ [in] *bIsPressed*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -920,9 +921,9 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
+ [in] *основного контроллера домена*  
+ [in] *pBar*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -939,11 +940,11 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pBar`  
- [in] `bActive`  
- [in] `rectCaption`  
- [in] `rectButtons`  
+ [in] *основного контроллера домена*  
+ [in] *pBar*  
+ [in] *bActive*  
+ [in] *rectCaption*  
+ [in] *rectButtons*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -960,9 +961,9 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `pButton`  
+ [in] *основного контроллера домена*  
+ [in] *rectClient*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -979,11 +980,11 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `nBorderSize`  
- [in] `iImage`  
- [in] `bHilited`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *nBorderSize*  
+ [in] *iImage*  
+ [in] *bHilited*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -999,10 +1000,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
- [in] `bIsHoriz`  
+ [in] *основного контроллера домена*  
+ [in] *pBar*  
+ [in] *rect*  
+ [in] *bIsHoriz*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1019,11 +1020,11 @@ virtual void OnDrawSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectSpin`  
- [in] `nState`  
- [in] `bOrientation`  
- [in] `pSpinCtrl`  
+ [in] *основного контроллера домена*  
+ [in] *rectSpin*  
+ [in] *nState*  
+ [in] *bOrientation*  
+ [in] *pSpinCtrl*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1040,11 +1041,11 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rectPane`  
- [in] `uiID`  
- [in] `nStyle`  
+ [in] *основного контроллера домена*  
+ [in] *pBar*  
+ [in] *rectPane*  
+ [in] *uiID*  
+ [in] *nStyle*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1065,15 +1066,15 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pStatusBar`  
- [in] `rectProgress`  
- [in] `nProgressTotal`  
- [in] `nProgressCurr`  
- [in] `clrBar`  
- [in] `clrProgressBarDest`  
- [in] `clrProgressText`  
- [in] `bProgressText`  
+ [in] *основного контроллера домена*  
+ [in] *pStatusBar*  
+ [in] *rectProgress*  
+ [in] *nProgressTotal*  
+ [in] *nProgressCurr*  
+ [in] *clrBar*  
+ [in] *clrProgressBarDest*  
+ [in] *clrProgressText*  
+ [in] *bProgressText*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1088,9 +1089,9 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pStatBar`  
- [in] `rectSizeBox`  
+ [in] *основного контроллера домена*  
+ [in] *pStatBar*  
+ [in] *rectSizeBox*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1107,11 +1108,11 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectTab`  
- [in] `iTab`  
- [in] `bIsActive`  
- [in] `pTabWnd`  
+ [in] *основного контроллера домена*  
+ [in] *rectTab*  
+ [in] *iTab*  
+ [in] *bIsActive*  
+ [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1129,12 +1130,12 @@ virtual void OnDrawTabCloseButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `pTabWnd`  
- [in] `bIsHighlighted`  
- [in] `bIsPressed`  
- [in] `bIsDisabled`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *pTabWnd*  
+ [in] *bIsHighlighted*  
+ [in] *bIsPressed*  
+ [in] *bIsDisabled*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1151,11 +1152,11 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `pButton`  
- [in] `uiState`  
- [in] `pWndTab`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *pButton*  
+ [in] *uiState*  
+ [in] *pWndTab*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1172,11 +1173,11 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pTask`  
- [in] `pIcons`  
- [in] `bIsHighlighted`  
- [in] `bIsSelected`  
+ [in] *основного контроллера домена*  
+ [in] *pTask*  
+ [in] *pIcons*  
+ [in] *bIsHighlighted*  
+ [in] *bIsSelected*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1192,10 +1193,10 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bSpecial`  
- [in] `bNoTitle`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bSpecial*  
+ [in] *bNoTitle*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1212,11 +1213,11 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pGroup`  
- [in] `bIsHighlighted`  
- [in] `bIsSelected`  
- [in] `bCanCollapse`  
+ [in] *основного контроллера домена*  
+ [in] *pGroup*  
+ [in] *bIsHighlighted*  
+ [in] *bIsSelected*  
+ [in] *bCanCollapse*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1231,9 +1232,9 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsActive`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bIsActive*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1248,9 +1249,9 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `pButton`  
+ [in] *основного контроллера домена*  
+ [in] *rectClient*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1265,9 +1266,9 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `pTabWnd`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1283,10 +1284,10 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `pButton`  
- [in] `pWndTab`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *pButton*  
+ [in] *pWndTab*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1301,9 +1302,9 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `pTabWnd`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *pTabWnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1322,11 +1323,11 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rectClient`  
- [in] `rectClip`  
- [in] `bNCArea`  
+ [in] *основного контроллера домена*  
+ [in] *pBar*  
+ [in] *rectClient*  
+ [in] *rectClip*  
+ [in] *bNCArea*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1342,10 +1343,10 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `state`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *состояния*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1360,9 +1361,9 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsSelected`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bIsSelected*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1380,10 +1381,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectCaption`  
- [in] `pFrameWnd`  
- [in] `bActive`  
+ [in] *основного контроллера домена*  
+ [in] *rectCaption*  
+ [in] *pFrameWnd*  
+ [in] *bActive*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1402,11 +1403,11 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsHighlighted`  
- [in] `bIsPressed`  
- [in] `clrText`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bIsHighlighted*  
+ [in] *bIsPressed*  
+ [in] *clrText*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1421,9 +1422,9 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bSpecial`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bSpecial*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1437,8 +1438,8 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectWorkArea`  
+ [in] *основного контроллера домена*  
+ [in] *rectWorkArea*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1454,10 +1455,10 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `clrText`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *clrText*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1471,8 +1472,8 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectRarelyUsed`  
+ [in] *основного контроллера домена*  
+ [in] *rectRarelyUsed*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1493,7 +1494,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bOn`  
+ [in] *bВ системах*  
   
 ### <a name="remarks"></a>Примечания  
   

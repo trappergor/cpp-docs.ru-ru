@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882766"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Спецификаторы переопределения (расширения компонентов C++)
 *Спецификаторы переопределения* изменяют поведение унаследованных типов и членов унаследованных типов ведут себя в производных типах.  

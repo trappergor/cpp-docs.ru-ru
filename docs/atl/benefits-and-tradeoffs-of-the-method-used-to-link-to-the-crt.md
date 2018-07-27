@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355391"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Преимуществами и недостатками метод, используемый для связи с этой библиотекой CRT
 Проект можно связать с CRT статически или динамически. В следующей таблице описаны преимущества и недостатки, по выбору подходящего метода.  

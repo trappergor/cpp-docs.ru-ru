@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378721"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (использование файла предкомпилированного заголовка)
 Указывает компилятору на необходимость использования существующего файла предкомпилированного заголовка (PCH) в текущей компиляции.  

@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9087642a529911c0c0a885c4613a3dbf2e92311f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037626"
 ---
 # <a name="clistview-class"></a>CListView-класс
 Упрощает использование элемента управления "список" и [CListCtrl](../../mfc/reference/clistctrl-class.md), класс, который инкапсулирует функциональность элемента управления списка в архитектуру представления документов MFC.  
@@ -41,19 +42,19 @@ class CListView : public CCtrlView
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CListView::CListView](#clistview)|Создает объект `CListView`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CListView::GetListCtrl](#getlistctrl)|Возвращает список элементов управления, связанный с представлением.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CListView::RemoveImageList](#removeimagelist)|Удаляет указанный образ список из списка.|  
   
@@ -104,7 +105,7 @@ void RemoveImageList(int nImageList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nImageList`  
+ *nImageList*  
  Отсчитываемый от нуля индекс образа для удаления.  
   
 ## <a name="see-also"></a>См. также  

@@ -22,11 +22,12 @@ helpviewer_keywords:
 - std::initializer_list::size
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3941464c80d254b6675e1982dac952c3f29a0f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954058"
 ---
 # <a name="initializerlist-class"></a>Класс initializer_list
 
@@ -41,9 +42,9 @@ class initializer_list
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Type`|Тип данных элемента для сохранения в `initializer_list`.|
+|*Тип*|Тип данных элемента для сохранения в `initializer_list`.|
 
 
 ## <a name="remarks"></a>Примечания
@@ -58,13 +59,13 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[initializer_list](../standard-library/forward-list-class.md#forward_list)|Создает объект типа `initializer_list`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |value_type|Тип элементов в `initializer_list`.|
 |ссылка|Тип, предоставляющий ссылку на элемент в `initializer_list`.|
@@ -75,7 +76,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[begin](#begin)|Возвращает указатель на первый элемент в `initializer_list`.|
 |[end](#end)|Возвращает указатель на позицию, следующую за последним элементом в `initializer_list`.|
@@ -124,10 +125,10 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`First`|Положение первого элемента в диапазоне копируемых элементов.|
-|`Last`|Положение первого элемента после диапазона копируемых элементов.|
+|*Первый*|Положение первого элемента в диапазоне копируемых элементов.|
+|*последний*|Положение первого элемента после диапазона копируемых элементов.|
 
 ### <a name="remarks"></a>Примечания
 

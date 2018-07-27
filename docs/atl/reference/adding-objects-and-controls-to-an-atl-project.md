@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357777"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Добавление объектов и элементов управления в проект ATL
 Один из мастеров кода ATL можно использовать для добавления элемента управления или объекта для проектов на базе ATL и MFC. Для каждого COM-объект или элемент управления добавляется, мастер создает .cpp и h-файлы, а также RGS-файл для поддержки реестра на основе сценария. В Visual Studio доступны следующие мастера кода ATL:  

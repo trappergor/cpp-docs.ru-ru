@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693147"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>Е. Новые возможности и пояснениями, описанными в версии 2.0
 В этом приложении перечислены ключевые изменения, внесенные в спецификации OpenMP C/C++ при переходе с версии 1.0 до версии 2.0. Ниже перечислены новые возможности, добавленные в спецификации:  

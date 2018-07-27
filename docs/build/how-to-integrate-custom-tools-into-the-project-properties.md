@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368906"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Практическое руководство. Интеграция пользовательских средств в свойства проекта
 Можно добавить параметры пользовательских средств в Visual Studio **страницы свойств** окна путем создания базового файла схемы XML.  

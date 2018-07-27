@@ -1,5 +1,5 @@
 ---
-title: Класс IDBInitializeImpl | Документы Microsoft
+title: Класс IDBInitializeImpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,54 @@ f1_keywords:
 - IDBInitializeImpl
 - ATL::IDBInitializeImpl
 - ATL.IDBInitializeImpl
+- IDBInitializeImpl.IDBInitializeImpl
+- IDBInitializeImpl
+- IDBInitializeImpl::IDBInitializeImpl
+- Initialize
+- IDBInitializeImpl::Initialize
+- IDBInitializeImpl.Initialize
+- IDBInitializeImpl.Uninitialize
+- Uninitialize
+- IDBInitializeImpl::Uninitialize
+- ATL::IDBInitializeImpl::m_dwStatus
+- IDBInitializeImpl.m_dwStatus
+- ATL.IDBInitializeImpl.m_dwStatus
+- IDBInitializeImpl::m_dwStatus
+- IDBInitializeImpl<T>::m_dwStatus
+- ATL.IDBInitializeImpl<T>.m_dwStatus
+- ATL::IDBInitializeImpl<T>::m_dwStatus
+- m_dwStatus
+- ATL::IDBInitializeImpl<T>::m_pCUtlPropInfo
+- m_pCUtlPropInfo
+- IDBInitializeImpl::m_pCUtlPropInfo
+- ATL.IDBInitializeImpl.m_pCUtlPropInfo
+- IDBInitializeImpl<T>::m_pCUtlPropInfo
+- IDBInitializeImpl.m_pCUtlPropInfo
+- ATL::IDBInitializeImpl::m_pCUtlPropInfo
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDBInitializeImpl class
+- IDBInitializeImpl constructor
+- Initialize method
+- Uninitialize method
+- m_dwStatus
+- m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e18d220b8ca7da0e76ac1434cebf851ef40ad67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69c7f92110312d4ae8cff427d1081853290919e9
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269928"
 ---
 # <a name="idbinitializeimpl-class"></a>Класс IDBInitializeImpl
-Предоставляет реализацию для [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx) интерфейса.  
+Предоставляет реализацию для [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,9 +67,12 @@ template <class T>
 class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
- Класс, производный от `IDBInitializeImpl`.  
+### <a name="parameters"></a>Параметры  
+ *T*  
+ Ваш класс, производный от `IDBInitializeImpl`.  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
 ## <a name="members"></a>Участники  
   
@@ -47,27 +80,100 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
   
 |||  
 |-|-|  
-|[IDBInitializeImpl](../../data/oledb/idbinitializeimpl-idbinitializeimpl.md)|Конструктор.|  
+|[IDBInitializeImpl](#idbinitializeimpl)|Конструктор.|  
   
 ### <a name="interface-methods"></a>Методы интерфейса  
   
 |||  
 |-|-|  
-|[Initialize](../../data/oledb/idbinitializeimpl-initialize.md)|Запускает службу.|  
-|[Отмена инициализации](../../data/oledb/idbinitializeimpl-uninitialize.md)|Останавливает службу.|  
+|[Initialize](#initialize)|Запускает службу.|  
+|[Отменить инициализацию](#uninitialize)|Останавливает службу.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
 |||  
 |-|-|  
-|[m_dwStatus](../../data/oledb/idbinitializeimpl-m-dwstatus.md)|Флаги источника данных.|  
-|[m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)|Указатель на реализацию свойства DB сведения.|  
+|[m_dwStatus](#dwstatus)|Флаги источника данных.|  
+|[m_pCUtlPropInfo](#pcutlpropinfo)|Указатель на реализацию свойства DB сведения.|  
   
 ## <a name="remarks"></a>Примечания  
- Обязательный интерфейс для объектов источников данных и дополнительный интерфейс для перечислителей.  
+ Обязательный интерфейс на объекты источника данных и дополнительный интерфейс для перечислителей.  
+
+## <a name="idbinitializeimpl"></a> IDBInitializeImpl::IDBInitializeImpl
+Конструктор.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldb.h  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+IDBInitializeImpl();  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Инициализирует все члены данных. 
+  
+## <a name="initialize"></a> IDBInitializeImpl::Initialize
+Инициализирует объект источника данных, Подготовка поддержка его свойств.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      STDMETHOD(Initialize)(void);  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ См. в разделе [IDBInitialize::Initialize](https://msdn.microsoft.com/library/ms718026.aspx) в *справочнике программиста OLE DB*. 
+
+## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
+Объект, в неинициализированном состоянии источника местах данные путем освобождения внутренних ресурсов, таких как поддержка свойств.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      STDMETHOD(Uninitialize)(void);  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ См. в разделе [IDBInitialize::Uninitialize](https://msdn.microsoft.com/library/ms719648.aspx) в *справочнике программиста OLE DB*.
+
+## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
+Флаги источника данных.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+DWORD m_dwStatus;  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Эти флаги задать или указать состояние различных атрибутов для объекта источника данных. Содержит один или несколько из следующих **перечисления** значения:  
+  
+```  
+enum DATASOURCE_FLAGS {  
+    DSF_MASK_INIT     = 0xFFFFF00F,  
+    DSF_PERSIST_DIRTY = 0x00000001,  
+    DSF_INITIALIZED   = 0x00000010,  
+};  
+```  
+  
+|||  
+|-|-|  
+|`DSF_MASK_INIT`|Маска, чтобы включить восстановление неинициализированном состоянии.|  
+|`DSF_PERSIST_DIRTY`|Набор, если объект источника данных требует постоянного хранения (то есть, если будут внесены изменения).|  
+|`DSF_INITIALIZED`|Набор, если источник данных был инициализирован.|  
+
+## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
+Указатель на объект реализации свойства DB сведения.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+CUtlPropInfo<  
+T  
+>* m_pCUtlPropInfo;  
+  
+```  
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

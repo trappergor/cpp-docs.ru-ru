@@ -1,5 +1,5 @@
 ---
-title: Класс CComAutoThreadModule | Документы Microsoft
+title: Класс CComAutoThreadModule | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,14 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b00b9966ed4d9833e885a03e4b5f380ac307f08
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbef36927598eb0c91185a02030a1c47d4418079
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880041"
 ---
 # <a name="ccomautothreadmodule-class"></a>Класс CComAutoThreadModule
-Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -48,7 +49,7 @@ class CComAutoThreadModule : public CComModule
   
 #### <a name="parameters"></a>Параметры  
  `ThreadAllocator`  
- [in] Класс управления выбором потока. Значение по умолчанию — [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ [in] Класс управления выбора потоков. Значение по умолчанию — [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
 ## <a name="members"></a>Участники  
   
@@ -56,11 +57,11 @@ class CComAutoThreadModule : public CComModule
   
 |||  
 |-|-|  
-|[CreateInstance](#createinstance)|Выбирает поток, а затем создает объект в связанный подразделении.|  
+|[CreateInstance](#createinstance)|Выбирает поток, а затем создает объект в связанного подразделения.|  
 |[GetDefaultThreads](#getdefaultthreads)|(Статический) Динамически вычисляет количество потоков для модуля, в зависимости от количества процессоров.|  
-|[Init](#init)|Создает потоков модуля.|  
-|[Блокировка](#lock)|Увеличивает счетчик блокировки модуля и в текущем потоке.|  
-|[Снятие блокировки](#unlock)|Уменьшает счетчик блокировок для этого модуля и в текущем потоке.|  
+|[Init](#init)|Создает потоки модуля.|  
+|[Блокировки](#lock)|Увеличивает счетчик блокировки модуля и в текущем потоке.|  
+|[разблокировать](#unlock)|Уменьшает счетчик блокировок в модуле и в текущем потоке.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
@@ -69,20 +70,20 @@ class CComAutoThreadModule : public CComModule
 |||  
 |-|-|  
 |[dwThreadID](#dwthreadid)|Содержит идентификатор текущего потока.|  
-|[m_Allocator](#m_allocator)|Управляет Выбор потока.|  
+|[m_Allocator](#m_allocator)|Управляет выделение потока.|  
 |[m_nThreads](#m_nthreads)|Содержит количество потоков в модуле.|  
-|[m_pApartments](#m_papartments)|Управление подразделениями модуля.|  
+|[m_pApartments](#m_papartments)|Управляет подразделениями модуля.|  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот класс устарел, были заменены [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) и [CAtlModule](../../atl/reference/catlmodule-class.md) производных классов. Приведенные далее сведения может использоваться с более старых версиях библиотеки ATL.  
+>  Этот класс является устаревшим, были заменены [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) и [CAtlModule](../../atl/reference/catlmodule-class.md) производных классов. Приведенные далее сведения может использоваться с более старых версиях ATL.  
   
- `CComAutoThreadModule` является производным от [CComModule](../../atl/reference/ccommodule-class.md) для реализации пула потоков, модели подразделения COM-сервера для EXE-файлов и служб Windows. `CComAutoThreadModule` использует [CComApartment](../../atl/reference/ccomapartment-class.md) для управления подразделениями для каждого потока в модуле.  
+ `CComAutoThreadModule` является производным от [CComModule](../../atl/reference/ccommodule-class.md) для реализации пула потоков, модель с подразделением COM-сервера для служб exe- и Windows. `CComAutoThreadModule` использует [CComApartment](../../atl/reference/ccomapartment-class.md) для управления как подразделение, для каждого потока в модуле.  
   
- Является производным от своего модуля `CComAutoThreadModule` при необходимости создавать объекты в нескольких подразделениях. Необходимо также включить [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) макроса в определении класса объекта, чтобы указать [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) как фабрика класса.  
+ Наследовать из модуля `CComAutoThreadModule` целесообразно создавать объекты в нескольких подразделениях. Необходимо также включить [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) макроса в определении класса объекта, чтобы указать [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) как фабрика класса.  
   
- По умолчанию мастер приложений COM ATL (мастер проектов ATL в Visual Studio .NET) будет наследовать из модуля `CComModule`. Чтобы использовать `CComAutoThreadModule`, измените определение класса. Пример:  
+ По умолчанию мастером приложений COM ATL (мастер проектов ATL в Visual Studio .NET) будет наследовать из модуля `CComModule`. Чтобы использовать `CComAutoThreadModule`, измените определение класса. Пример:  
   
  [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
   
@@ -105,7 +106,7 @@ class CComAutoThreadModule : public CComModule
  **Заголовок:** atlbase.h  
   
 ##  <a name="createinstance"></a>  CComAutoThreadModule::CreateInstance  
- Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+ По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 ```
 HRESULT CreateInstance(
@@ -118,20 +119,20 @@ HRESULT CreateInstance(
  *pfnCreateInstance*  
  [in] Указатель на функцию создателя.  
   
- `riid`  
+ *riid*  
  [in] Идентификатор IID запрошенного интерфейса.  
   
- `ppvObj`  
- [out] Указатель на указатель на интерфейс, определяемый `riid`. Если объект не поддерживает этот интерфейс `ppvObj` имеет значение NULL.  
+ *ppvObj*  
+ [out] Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppvObj* имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Выбирает поток, а затем создает объект в связанный подразделении.  
+ Выбирает поток, а затем создает объект в связанного подразделения.  
   
 ##  <a name="dwthreadid"></a>  CComAutoThreadModule::dwThreadID  
- Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+ По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 ```
 DWORD dwThreadID;
@@ -141,7 +142,7 @@ DWORD dwThreadID;
  Содержит идентификатор текущего потока.  
   
 ##  <a name="getdefaultthreads"></a>  CComAutoThreadModule::GetDefaultThreads  
- Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+ По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 ```
 static int GetDefaultThreads();
@@ -151,10 +152,10 @@ static int GetDefaultThreads();
  Число потоков, создаваемых в модуле exe-файла.  
   
 ### <a name="remarks"></a>Примечания  
- Эта статическая функция динамически вычисляет максимальное количество потоков для модуля exe-файла, в зависимости от количества процессоров. По умолчанию это возвращаемое значение передается [Init](#init) метод для создания потоков.  
+ Эта статическая функция динамически вычисляет максимальное количество потоков для модуля exe-файла, в зависимости от количества процессоров. По умолчанию это значение передается [Init](#init) метод для создания потоков.  
   
 ##  <a name="init"></a>  CComAutoThreadModule::Init  
- Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+ По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 ```
 HRESULT Init(
@@ -165,79 +166,79 @@ HRESULT Init(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `p`  
- [in] Указатель на массив записей объекта карты.  
+ *p*  
+ [in] Указатель на массив элементов объекта map.  
   
- `h`  
- [in] `HINSTANCE` Передаваемый **DLLMain** или `WinMain`.  
+ *h*  
+ [in] Передаваемый объект HINSTANCE `DLLMain` или `WinMain`.  
   
- `plibid`  
- [in] Указатель на идентификатор LIBID библиотеки типов, связанные с проектом.  
+ *plibid*  
+ [in] Указатель на идентификатор LIBID библиотеки типов, связанных с проектом.  
   
- `nThreads`  
- [in] Число потоков, создаваемых. По умолчанию `nThreads` является значение, возвращаемое [GetDefaultThreads](#getdefaultthreads).  
+ *nThreads*  
+ [in] Число потоков должен быть создан. По умолчанию *nThreads* является значение, возвращенное [GetDefaultThreads](#getdefaultthreads).  
   
 ### <a name="remarks"></a>Примечания  
- Инициализирует данные-члены и создает указанное число потоков `nThreads`.  
+ Инициализирует данные-члены и создает число потоков, определяемое *nThreads*.  
   
 ##  <a name="lock"></a>  CComAutoThreadModule::Lock  
- Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+ По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 ```
 LONG Lock();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение, которое может быть полезно для диагностики и тестирования.  
+ Значение, которое может быть полезно для диагностики или тестирования.  
   
 ### <a name="remarks"></a>Примечания  
- Выполняет шаг atomic число блокировок для модуля и для текущего потока. `CComAutoThreadModule` счетчик блокировки модуля используется для определения, является ли все клиенты получают доступ к модуль. Число блокировок для текущего потока используется для статистической обработки.  
+ Выполняет шаг atomic счетчик блокировок для модуля, а также для текущего потока. `CComAutoThreadModule` счетчик блокировки модуля используется для определения, ли все клиенты получают доступ к модуля. Число блокировок в текущем потоке используется для статистических целей.  
   
 ##  <a name="m_allocator"></a>  CComAutoThreadModule::m_Allocator  
- Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+ По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 ```
 ThreadAllocator  m_Allocator;
 ```     
   
 ### <a name="remarks"></a>Примечания  
- Объект управления выбором потока. По умолчанию `ThreadAllocator` параметр шаблона класса [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ Объект, управляющий поток выбора. По умолчанию `ThreadAllocator` параметр шаблона класса является [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
 ##  <a name="m_nthreads"></a>  CComAutoThreadModule::m_nThreads  
- Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+ По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 ```
 int m_nThreads;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Содержит количество потоков в модуле exe-файла. Когда [Init](#init) вызове `m_nThreads` присвоено `nThreads` значение параметра. Каждый поток связанного подразделения управляется [CComApartment](../../atl/reference/ccomapartment-class.md) объекта.  
+ Содержит количество потоков в модуле exe-файла. Когда [Init](#init) вызове `m_nThreads` присваивается *nThreads* значение параметра. Каждый поток связанного подразделения управляется [CComApartment](../../atl/reference/ccomapartment-class.md) объекта.  
   
 ##  <a name="m_papartments"></a>  CComAutoThreadModule::m_pApartments  
- Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+ По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 ```
 CComApartment* m_pApartments;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Указывает массив [CComApartment](../../atl/reference/ccomapartment-class.md) объектов, каждый из которых управляет подразделение в модуле. Число элементов в массиве основывается на [m_nThreads](#m_nthreads) член.  
+ Указывает на массив из [CComApartment](../../atl/reference/ccomapartment-class.md) объектов, каждый из которых управляет подразделение в модуле. Число элементов в массиве основан на [m_nThreads](#m_nthreads) член.  
   
 ##  <a name="unlock"></a>  CComAutoThreadModule::Unlock  
- Начиная с ATL 7.0 `CComAutoThreadModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
+ По состоянию на ATL 7.0 `CComAutoThreadModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
 ```
 LONG Unlock();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение, которое может быть полезно для диагностики и тестирования.  
+ Значение, которое может быть полезно для диагностики или тестирования.  
   
 ### <a name="remarks"></a>Примечания  
- Выполняет атомарные декремента число блокировок для модуля и для текущего потока. `CComAutoThreadModule` счетчик блокировки модуля используется для определения, является ли все клиенты получают доступ к модуль. Число блокировок для текущего потока используется для статистической обработки.  
+ Выполняет атомарные декремента счетчик блокировок для модуля, а также для текущего потока. `CComAutoThreadModule` счетчик блокировки модуля используется для определения, ли все клиенты получают доступ к модуля. Число блокировок в текущем потоке используется для статистических целей.  
   
  Когда счетчик блокировки модуля достигает нуля, модуль может быть выгружен.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
- [Классы модуля](../../atl/atl-module-classes.md)
+ [Модульные классы](../../atl/atl-module-classes.md)

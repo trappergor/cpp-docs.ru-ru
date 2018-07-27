@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093406"
 ---
 # <a name="accessing-xml-data"></a>Доступ к данным XML
 Существует два отдельных метода получения XML-данных из источника данных: одна использует [CStreamRowset](../../data/oledb/cstreamrowset-class.md) и для других целей [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  

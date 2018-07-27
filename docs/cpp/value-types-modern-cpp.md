@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423422"
 ---
 # <a name="value-types-modern-c"></a>Типы значений (современный C++)
 Классы C++, по типы значений по умолчанию. В этом разделе Вводный обзор типов значений и проблемы, связанные с их использованием.  

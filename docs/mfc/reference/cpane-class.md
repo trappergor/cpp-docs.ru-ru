@@ -1,5 +1,5 @@
 ---
-title: Класс CPane | Документы Microsoft
+title: Класс CPane | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -143,14 +143,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b764777f33b0ae8ea1521e931ee45740f7057ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab0f59604cc23f5d8cbd442fcc2a526962bdc4e9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851423"
 ---
 # <a name="cpane-class"></a>CPane Class
-`CPane` Класс — это расширение из [CControlBar-класс](../../mfc/reference/ccontrolbar-class.md). При обновлении существующего проекта MFC, замените все вхождения `CControlBar` с `CPane`.  
+`CPane` Класс — это расширение из [класс CControlBar](../../mfc/reference/ccontrolbar-class.md). При обновлении существующего проекта MFC, замените все вхождения `CControlBar` с `CPane`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -162,98 +163,98 @@ class CPane : public CBasePane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CPane::~CPane`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Немедленно повторно вычисляет макет панели.|  
-|[CPane::AllocElements](#allocelements)|Выделяет хранилище для внутреннего использования.|  
-|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Указывает, отображается ли области в списке области для приложения, созданных средой выполнения.|  
-|[CPane::CalcAvailableSize](#calcavailablesize)|Вычисляет разность размер текущего окна прямоугольника и указанного прямоугольника.|  
-|[CPane::CalcInsideRect](#calcinsiderect)|Вычисляет внутри прямоугольника, области, принимая во внимание границы и захват.|  
+|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Сразу же повторно вычисляет макет области.|  
+|[CPane::AllocElements](#allocelements)|Выделяет память для внутреннего использования.|  
+|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Указывает, отображается ли области в список областей для приложения созданных средой выполнения.|  
+|[CPane::CalcAvailableSize](#calcavailablesize)|Вычисляет разность размер текущего прямоугольника окна и указанного прямоугольника.|  
+|[CPane::CalcInsideRect](#calcinsiderect)|Вычисляет внутри прямоугольника, области, принимая во внимание границ и захват.|  
 |[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Вычисляет недавно закрепленной прямоугольника.|  
 |[CPane::CalcSize](#calcsize)|Вычисляет размер области.|  
-|[CPane::CanBeDocked](#canbedocked)|Определяет закреплением панели в области заданного базового.|  
-|[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Определяет, можно ли преобразовать области документ с вкладками.|  
-|[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Преобразует закрепляемую панель в документ с вкладками.|  
+|[CPane::CanBeDocked](#canbedocked)|Определяет, ли области можно закрепить в области заданного базового.|  
+|[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Определяет, может ли быть преобразован области документ с вкладками.|  
+|[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Преобразует закрепляемую панель документа с вкладками.|  
 |[CPane::CopyState](#copystate)|Копирует состояние области. (Переопределяет [CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|  
 |[CPane::Create](#create)|Создает панель элементов управления и прикрепляет его к `CPane` объекта.|  
-|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Создает для плавающей панели окна области.|  
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Создает для плавающую панель окна области.|  
 |[CPane::CreateEx](#createex)|Создает панель элементов управления и прикрепляет его к `CPane` объекта.|  
 |`CPane::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |[CPane::DockByMouse](#dockbymouse)|Закрепляет область с помощью мыши закрепление метод.|  
-|[CPane::DockPane](#dockpane)|Закрепляет область с плавающей запятой в базовой области.|  
+|[CPane::DockPane](#dockpane)|Закрепляет область с плавающей запятой в базовый область.|  
 |[CPane::DockPaneStandard](#dockpanestandard)|Закрепляет область с помощью структуры (standard) закрепления.|  
-|[CPane::DockToFrameWindow](#docktoframewindow)|Закрепляет закрепляемую панель кадра. (Переопределяет `CBasePane::DockToFrameWindow`.)|  
-|[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Указывает, можно закрепить ли другой области в той же строке, место закрепления текущей области.|  
+|[CPane::DockToFrameWindow](#docktoframewindow)|Закрепляет закрепляемую панель кадр. (Переопределяет `CBasePane::DockToFrameWindow`.)|  
+|[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Указывает, можно закрепить ли другой области той же строке, место закрепления текущей области.|  
 |[CPane::FloatPane](#floatpane)|Смещает области.|  
-|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Возвращает сумму, в пикселях, которые могут быть развернуты в области.|  
+|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Возвращает сумму, в пикселях, которые могут расширить области.|  
 |[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Возвращает сумму, в пикселях, которые можно сжать области.|  
-|[CPane::GetBorders](#getborders)|Возвращает ширину границы панели.|  
-|[CPane::GetClientHotSpot](#getclienthotspot)|Возвращает *гиперобъект* области.|  
-|[CPane::GetDockSiteRow](#getdocksiterow)|Возвращает по строке закрепления, в котором закреплена области.|  
+|[CPane::GetBorders](#getborders)|Возвращает ширину границы для области.|  
+|[CPane::GetClientHotSpot](#getclienthotspot)|Возвращает *гиперобъект* для области.|  
+|[CPane::GetDockSiteRow](#getdocksiterow)|Возвращает по строке закрепления, в котором закрепленной панели.|  
 |[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Определяет, является ли область в режиме монопольного строки.|  
-|[CPane::GetHotSpot](#gethotspot)|Возвращает гиперобъекта, который хранится в базовом `CMFCDragFrameImpl` объекта.|  
-|[CPane::GetMinSize](#getminsize)|Возвращает минимально допустимого размера области.|  
-|[CPane::GetPaneName](#getpanename)|Извлекает название области.|  
+|[CPane::GetHotSpot](#gethotspot)|Возвращает активную точку, которые хранятся в базовом `CMFCDragFrameImpl` объекта.|  
+|[CPane::GetMinSize](#getminsize)|Получает минимальный поддерживаемый размер для области.|  
+|[CPane::GetPaneName](#getpanename)|Извлекает заголовок области.|  
 |`CPane::GetResizeStep`|Используется внутренним образом.|  
-|`CPane::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
+|`CPane::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
 |[CPane::GetVirtualRect](#getvirtualrect)|Извлекает *виртуального прямоугольник* области.|  
-|[CPane::IsChangeState](#ischangestate)|При перемещении области, этот метод анализирует положение панели относительно других областей, закрепление строк и окна и возвращает соответствующее `AFX_CS_STATUS` значение.|  
-|[CPane::IsDragMode](#isdragmode)|Указывает, является, перетаскиваемый области.|  
+|[CPane::IsChangeState](#ischangestate)|Области переместить, этот метод анализирует положение панели относительно других областей закрепление строк и окна и возвращает соответствующее значение AFX_CS_STATUS.|  
+|[CPane::IsDragMode](#isdragmode)|Указывает, перетаскиваемый ли области.|  
 |[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Указывает, является ли область в окне фрейма несколькими областями. (Переопределяет `CBasePane::IsInFloatingMultiPaneFrameWnd`.)|  
-|[CPane::IsLeftOf](#isleftof)|Определяет, остается ли области (или в более поздней версии) заданного прямоугольника.|  
-|[CPane::IsResizable](#isresizable)|Определяет, можно ли изменять размер области. (Переопределяет [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|  
-|[CPane::IsTabbed](#istabbed)|Определяет ли области был вставлен в набор вкладок окна с вкладками. (Переопределяет [CBasePane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|  
+|[CPane::IsLeftOf](#isleftof)|Определяет, остается ли области объекта (или более поздней версии) заданного прямоугольника.|  
+|[CPane::IsResizable](#isresizable)|Определяет, возможно ли изменение размеров области. (Переопределяет [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|  
+|[CPane::IsTabbed](#istabbed)|Определяет, ли области был вставлен в элементе управления "Вкладка" окна с вкладками. (Переопределяет [CBasePane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|  
 |[CPane::LoadState](#loadstate)|Загружает состояние панели из реестра. (Переопределяет [CBasePane::LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|  
-|[CPane::MoveByAlignment](#movebyalignment)|Перемещает области и виртуальный прямоугольника на указанную величину.|  
+|[CPane::MoveByAlignment](#movebyalignment)|Перемещение области и прямоугольника, виртуальный на заданную величину.|  
 |[CPane::MovePane](#movepane)|Перемещает область заданного прямоугольника.|  
-|[CPane::OnAfterChangeParent](#onafterchangeparent)|Вызывается платформой при изменении родительской области.|  
-|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Вызывается платформой при родительской области.|  
-|[CPane::OnPressCloseButton](#onpressclosebutton)|Вызывается платформой, когда пользователь нажимает кнопку "Закрыть" в заголовке области.|  
+|[CPane::OnAfterChangeParent](#onafterchangeparent)|Вызывается платформой при изменении родительского элемента области.|  
+|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Вызывается платформой, когда родительской области.|  
+|[CPane::OnPressCloseButton](#onpressclosebutton)|Вызывается платформой, когда пользователь выбирает "Закрыть" в заголовке для области.|  
 |`CPane::OnProcessDblClk`|Используется внутренним образом.|  
 |[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Вызывается платформой непосредственно перед отображением меню особой панели.|  
 |[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Вызывается платформой непосредственно перед отображением меню особой панели.|  
 |`CPane::PrepareToDock`|Используется внутренним образом.|  
-|[CPane::RecalcLayout](#recalclayout)|Обновление сведений о макете для области. (Переопределяет [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|  
+|[CPane::RecalcLayout](#recalclayout)|Повторно вычисляет сведения о структуре для области. (Переопределяет [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|  
 |[CPane::SaveState](#savestate)|Сохраняет состояние панели в реестр. (Переопределяет [CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|  
-|[CPane::SetActiveInGroup](#setactiveingroup)|Флаги панели как активный.|  
+|[CPane::SetActiveInGroup](#setactiveingroup)|Флаги панели как активные.|  
 |[CPane::SetBorders](#setborders)|Задает значения границы области.|  
 |[CPane::SetClientHotSpot](#setclienthotspot)|Задает для области гиперобъекта.|  
-|[CPane::SetDockState](#setdockstate)|Восстанавливает сведения о состоянии для области закрепления.|  
-|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Включает или отключает режим монопольного строк.|  
+|[CPane::SetDockState](#setdockstate)|Восстанавливает сведения о состоянии для панели закрепления.|  
+|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Включает или отключает режим монопольного строки.|  
 |[CPane::SetMiniFrameRTC](#setminiframertc)|Задает сведения о классе среды выполнения для окна области по умолчанию.|  
-|[CPane::SetMinSize](#setminsize)|Задает минимальный допустимый размер области.|  
+|[CPane::SetMinSize](#setminsize)|Задает минимальный поддерживаемый размер для области.|  
 |[CPane::SetVirtualRect](#setvirtualrect)|Наборы *виртуального прямоугольник* области.|  
-|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Растягивает панель по вертикали или по горизонтали на основании стиль закрепления.|  
+|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Растягивает панель по вертикали или по горизонтали в зависимости от стиль закрепления.|  
 |[CPane::ToggleAutoHide](#toggleautohide)|Переключает режим автоматического скрытия.|  
-|[CPane::UndockPane](#undockpane)|Удаляет область из сайта закрепления, по умолчанию ползунок или окна области, где он в настоящее время закреплен. (Переопределяет [CBasePane::UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|  
-|[CPane::UpdateVirtualRect](#updatevirtualrect)|Обновление виртуального прямоугольника.|  
+|[CPane::UndockPane](#undockpane)|Удаляет области из сайта закрепления, по умолчанию ползунок или окна области, где она в настоящее время закреплена. (Переопределяет [CBasePane::UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|  
+|[CPane::UpdateVirtualRect](#updatevirtualrect)|Обновляет виртуального прямоугольника.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CPane::OnAfterDock](#onafterdock)|Вызывается платформой при закрепленным областью.|  
-|[CPane::OnAfterFloat](#onafterfloat)|Вызывается платформой при ставшая областью.|  
-|[CPane::OnBeforeDock](#onbeforedock)|Вызывается платформой при закрепления панели.|  
-|[CPane::OnBeforeFloat](#onbeforefloat)|Вызывается платформой, когда панель быть перемещается.|  
+|[CPane::OnAfterDock](#onafterdock)|Вызывается платформой при область был закреплен.|  
+|[CPane::OnAfterFloat](#onafterfloat)|Вызывается платформой при стала плавающей панели.|  
+|[CPane::OnBeforeDock](#onbeforedock)|Вызывается платформой при области быть закреплено.|  
+|[CPane::OnBeforeFloat](#onbeforefloat)|Вызывается платформой при область быть оставить плавающим.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[CPane::m_bHandleMinSize](#m_bhandleminsize)|Позволяет согласованно обрабатывать минимальный размер для областей.|  
-|[CPane::m_recentDockInfo](#m_recentdockinfo)|Сведения о последних закрепления.|  
+|[CPane::m_bHandleMinSize](#m_bhandleminsize)|Позволяет согласованно обрабатывать минимальный размер для области.|  
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|Содержит сведения о последней закрепления.|  
   
 ## <a name="remarks"></a>Примечания  
- Как правило `CPane` объекты не создаются напрямую. Если требуется область, которая имеет функциональность, закрепления, создайте производный объект от [CDockablePane](../../mfc/reference/cdockablepane-class.md). Если требуются функциональные возможности панели инструментов, создайте производный объект от [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).  
+ Как правило `CPane` не создаются экземпляры объектов напрямую. Если требуется область, которая имеет возможности закрепления, создайте производный объект от [CDockablePane](../../mfc/reference/cdockablepane-class.md). Если требуются функциональные возможности панели инструментов, создайте производный объект от [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).  
   
- При наследовании от класса `CPane`, его можно закрепить в [CDockSite](../../mfc/reference/cdocksite-class.md) и его можно перемещается в [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
+ При наследовании от класса `CPane`, его можно закрепить в [CDockSite](../../mfc/reference/cdocksite-class.md) и его можно оставить плавающим в [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -270,21 +271,21 @@ class CPane : public CBasePane
  **Заголовок:** afxPane.h  
   
 ##  <a name="adjustsizeimmediate"></a>  CPane::AdjustSizeImmediate  
- Немедленно повторно вычисляет макет панели.  
+ Сразу же повторно вычисляет макет области.  
   
 ```  
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bRecalcLayout`  
- `TRUE` автоматически пересчитать макета панели; в противном случае `FALSE`.  
+ [in] *bRecalcLayout*  
+ Значение TRUE, чтобы автоматически повторно рассчитать макет области; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается, когда динамически изменять макет панели. Например можно вызвать этот метод, если скрыть или Показать кнопки панели инструментов.  
+ Этот метод следует вызывайте при изменении макета области динамически. Например можно вызвать этот метод при можно скрывать или отображать кнопки на панели инструментов.  
   
 ##  <a name="allocelements"></a>  CPane::AllocElements  
- Выделяет хранилище для внутреннего использования.  
+ Выделяет память для внутреннего использования.  
   
 ```  
 BOOL AllocElements(
@@ -293,41 +294,41 @@ BOOL AllocElements(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nElements`  
- Количество элементов, для которого для выделения памяти.  
+ [in] *nElements*  
+ Число элементов, для которого будут выделены ресурсы хранилища.  
   
- [in] `cbElement`  
- Размер в байтах элемента.  
+ [in] *cbElement*  
+ Размер в байтах, элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `FALSE` При сбое выделения памяти; в противном случае `TRUE`.  
+ Значение FALSE, если выделение памяти завершается сбоем; в противном случае — значение TRUE.  
   
 ##  <a name="allowshowonpanemenu"></a>  CPane::AllowShowOnPaneMenu  
- Указывает, отображается ли области в списке области для приложения, созданных средой выполнения.  
+ Указывает, отображается ли области в список областей для приложения созданных средой выполнения.  
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если область отображается в списке. в противном случае `FALSE`. Базовая реализация всегда возвращает `TRUE`.  
+ Значение TRUE, если область отображается в списке. в противном случае — значение FALSE. Базовая реализация всегда возвращает значение TRUE.  
   
 ### <a name="remarks"></a>Примечания  
- Приложение создается мастером приложений содержит параметр меню со списком областей, которые он содержит. Этот метод определяет, отображается ли области в списке.  
+ Приложения, созданные с помощью мастера содержит пункт меню, в которой перечислены области, которые она содержит. Этот метод определяет, отображается ли область в списке.  
   
 ##  <a name="calcavailablesize"></a>  CPane::CalcAvailableSize  
- Вычисляет разность размер текущего окна прямоугольника и указанного прямоугольника.  
+ Вычисляет разность размер текущего прямоугольника окна и указанного прямоугольника.  
   
 ```  
 virtual CSize CalcAvailableSize(CRect rectRequired);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectRequired`  
- Требуется прямоугольник.  
+ [in] *rectRequired*  
+ Прямоугольник, который требуется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Разница в ширину и высоту между `rectRequired` и прямоугольника текущего окна.  
+ Разница в ширине и высоте между *rectRequired* и текущий прямоугольник окна.  
   
 ##  <a name="calcinsiderect"></a>  CPane::CalcInsideRect  
  Вычисляет внутри прямоугольника, области, включая границы и захват.  
@@ -339,14 +340,14 @@ void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `rect`  
- Содержит размер и смещение клиентской области окна.  
+ [out] *rect*  
+ Содержит размер и смещение клиентской области панели.  
   
- [in] `bHorz`  
- `TRUE` Если панель ориентированную горизонтально. в противном случае `FALSE`.  
+ [in] *bHorz*  
+ Значение TRUE, если области его компонент ориентирован горизонтально. в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой, когда требуется Перерасчет макета для области. `rect` Параметра заполняется размера и смещения клиентской области окна. Сюда входят, захват и границ.  
+ Этот метод вызывается платформой, когда ее нужно повторно рассчитать макет для панели. *Rect* параметр заполняется с размером и смещением клиентской области панели. Сюда входят, границы и захват.  
   
 ##  <a name="calcrecentdockedrect"></a>  CPane::CalcRecentDockedRect  
  Вычисляет недавно закрепленной прямоугольника.  
@@ -366,56 +367,56 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bVertDock`  
- `TRUE` Если область расположенное, `FALSE` в противном случае.  
+ [in] *bVertDock*  
+ Значение TRUE, если области закрепляется по вертикали, и значение FALSE в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Реализация по умолчанию этот метод возвращает размер (0, 0).  
   
 ### <a name="remarks"></a>Примечания  
- Производные классы должны переопределять этот метод.  
+ Производные классы должны переопределить этот метод.  
   
 ##  <a name="canbedocked"></a>  CPane::CanBeDocked  
- Определяет, если панель можно закрепить в области заданного базового.  
+ Определяет, если области можно закрепить в области заданного базового.  
   
 ```  
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;  
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDockBar`  
- Указывает область, где этой панели можно закреплять.  
+ [in] *pDockBar*  
+ Указывает области, где в этой области быть закреплено.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если в этой области можно закрепить в указанной области закрепления. в противном случае `FALSE`.  
+ Значение TRUE, если в этой области можно закрепить в указанной области закрепления. в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод обычно вызывается платформой для определения ли панель можно закрепить в указанной области закрепления. Определить можно закрепить области, метод области в настоящее время включена закрепления выравнивания.  
+ Этот метод обычно вызывается платформой для определения ли панель можно закрепить в указанной области закрепления. Определить области могут быть закреплены, метод панели в настоящее время включить выравнивание закрепления.  
   
- Включить закрепление с разных сторон окна фрейма, вызвав [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
+ Включить закрепление в различных сторон окна фрейма, вызвав [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
   
 ##  <a name="canbetabbeddocument"></a>  CPane::CanBeTabbedDocument  
- Определяет, можно ли преобразовать области документ с вкладками.  
+ Определяет, если область может быть преобразован в документ с вкладками.  
   
 ```  
 virtual BOOL CanBeTabbedDocument() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если область может быть преобразовано в документ с вкладками. в противном случае `FALSE`.  
+ Значение TRUE, если область может быть преобразован в документ с вкладками; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе и возврата `FALSE` Если вы хотите запретить при преобразовании в документ с вкладками в области. В меню положение окна будет отсутствовать документа с вкладками.  
+ Переопределите этот метод в производном классе и возвращает значение FALSE, если вы хотите запретить, преобразуемые в документ с вкладками в области. В меню положение окна будет отсутствовать документа с вкладками.  
   
 ##  <a name="converttotabbeddocument"></a>  CPane::ConvertToTabbedDocument  
- Преобразует закрепляемую панель в документ с вкладками.  
+ Преобразует закрепляемую панель документа с вкладками.  
   
 ```  
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bActiveTabOnly`  
+ [in] *bActiveTabOnly*  
  Не используется в `CPane::ConvertToTabbedDocument`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -429,11 +430,11 @@ virtual void CopyState(CPane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pOrgBar`  
- Указатель на панель.  
+ [in] *pOrgBar*  
+ Указатель на область.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод копирует состояние `pOrgBar` для текущей области.  
+ Этот метод копирует состояние *pOrgBar* для текущей области.  
   
 ##  <a name="create"></a>  CPane::Create  
  Создает панель элементов управления и прикрепляет его к [CPane](../../mfc/reference/cpane-class.md) объекта.  
@@ -450,53 +451,53 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszClassName`  
+ [in] *lpszClassName*  
  Задает имя класса Windows.  
   
- [in] `dwStyle`  
- Задает атрибуты стилей окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ [in] *dwStyle*  
+ Указывает атрибуты стиля окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
- Указывает исходный размер и положение `pParentWnd` окна в клиентских координатах.  
+ [in] *rect*  
+ Задает первоначальный размер и положение *pParentWnd* окна в координатах клиентской области окна.  
   
- [in] [out] `pParentWnd`  
- Указывает родительского окна в этой области.  
+ [in] [out] *pParentWnd*  
+ Задает родительское окно данной области.  
   
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор области.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Задает стиль для области. Дополнительные сведения см. в разделе [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Указывает контекст создания области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если области выполнено успешно; в противном случае `FALSE`.  
+ Значение TRUE, если область создана успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает область Windows и прикрепляет его к `CPane` объекта.  
+ Этот метод создает область Windows и присоединяет его к `CPane` объекта.  
   
- Если явно не инициализирован [CPane::m_recentDockInfo](#m_recentdockinfo) перед вызовом метода `Create`, параметр `rect` будет использоваться в виде прямоугольника с плавающей запятой или закрепления панели.  
+ Если явно не инициализирован [CPane::m_recentDockInfo](#m_recentdockinfo) перед вызовом метода `Create`, параметр *rect* будет использоваться как прямоугольник, когда с плавающей запятой или закрепления панели.  
   
 ##  <a name="createdefaultminiframe"></a>  CPane::CreateDefaultMiniframe  
- Создает для плавающей панели окна области.  
+ Создает для плавающую панель окна области.  
   
 ```  
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectInitial`  
- Задает начальный размер и положение, в экранных координатах окна области для создания.  
+ [in] *rectInitial*  
+ Задает первоначальный размер и положение окна минифрейма для создания, в экранных координатах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Окна вновь созданный области.  
+ Только что созданный окне.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой для создания окна области при перемещается областью. Окно области может иметь тип [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) или типа [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Окна области multi создается в том случае, если на панели отображаются `AFX_CBRS_FLOAT_MULTI` стиля.  
+ Этот метод вызывается платформой для создания окна области при плавающий область. Окно области может иметь тип [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) или типа [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Окна области с несколькими создается в том случае, если область имеет стиль AFX_CBRS_FLOAT_MULTI.  
   
- Сведения о классе среды выполнения для окна области хранится в `CPane::m_pMiniFrameRTC` член. Производный класс можно использовать для установки этого элемента, если вы решили создать настраиваемый окна.  
+ Сведения о классе среды выполнения для окна области хранится в `CPane::m_pMiniFrameRTC` член. Производный класс можно использовать для установки этого элемента в том случае, если вы решите создать настроенный окна.  
   
 ##  <a name="createex"></a>  CPane::CreateEx  
  Создает панель элементов управления и прикрепляет его к [CPane](../../mfc/reference/cpane-class.md) объекта.  
@@ -514,37 +515,37 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwStyleEx`  
- Задает атрибуты стиля расширенные окна. Дополнительные сведения см. в разделе [расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
+ [in] *dwStyleEx*  
+ Указывает атрибуты окно расширенного стиля. Дополнительные сведения см. в разделе [расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
- [in] `lpszClassName`  
+ [in] *lpszClassName*  
  Задает имя класса Windows.  
   
- [in] `dwStyle`  
- Задает атрибуты стилей окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ [in] *dwStyle*  
+ Указывает атрибуты стиля окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
- Указывает исходный размер и положение `pParentWnd` окна в клиентских координатах.  
+ [in] *rect*  
+ Задает первоначальный размер и положение *pParentWnd* окна в координатах клиентской области окна.  
   
- [in] [out] `pParentWnd`  
- Указывает родительского окна в этой области.  
+ [in] [out] *pParentWnd*  
+ Задает родительское окно данной области.  
   
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор области.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Задает стиль для области. Дополнительные сведения см. в разделе [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
- [in] [out] `pContext`  
- Указывает контекст создания области.  
+ [in] [out] *pContext*  
+ Указывает контекст создать для панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если области выполнено успешно; в противном случае `FALSE`.  
+ Значение TRUE, если область создана успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает область Windows и прикрепляет его к `CPane` объекта.  
+ Этот метод создает область Windows и присоединяет его к `CPane` объекта.  
   
- Если явно не инициализирован [CPane::m_recentDockInfo](#m_recentdockinfo) перед вызовом метода `CreateEx`, параметр `rect` будет использоваться в виде прямоугольника с плавающей запятой или закрепления панели.  
+ Если явно не инициализирован [CPane::m_recentDockInfo](#m_recentdockinfo) перед вызовом метода `CreateEx`, параметр *rect* будет использоваться как прямоугольник, когда с плавающей запятой или закрепления панели.  
   
 ##  <a name="dockbymouse"></a>  CPane::DockByMouse  
  Закрепляет область с помощью мыши.  
@@ -554,14 +555,14 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDockBar`  
- Указывает базовый области, к которому закрепление этой панели.  
+ [in] *pDockBar*  
+ Указывает базовый панели, к которому закрепление этой панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если область была закреплена успешно. в противном случае `FALSE`.  
+ Значение TRUE, если области была закреплена успешно; в противном случае — значение FALSE.  
   
 ##  <a name="dockpane"></a>  CPane::DockPane  
- Закрепляет область с плавающей запятой в базовой области.  
+ Закрепляет область с плавающей запятой в базовый область.  
   
 ```  
 virtual BOOL DockPane(
@@ -571,29 +572,29 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `pDockBar`  
- Указывает базовый области закрепление этой панели на.  
+ [in] [out] *pDockBar*  
+ Указывает панель, базовый закрепление этой панели на.  
   
- [in] `lpRect`  
- Указывает прямоугольник в базовой области, где этой панели можно закреплять.  
+ [in] *lpRect*  
+ Указывает прямоугольник в базовый области, где в этой области быть закреплено.  
   
- [in] `dockMethod`  
- Задает метод закрепления для использования. Ниже приведены доступные параметры:  
+ [in] *dockMethod*  
+ Задает метод закрепления для использования. Возможными значениями являются следующим образом:  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
-|`DM_UNKNOWN`|Платформа использует этот параметр, когда метод закрепления неизвестен. Области не хранить его последней позиции с плавающей запятой. Этот параметр позволяет программно закрепить в области при необходимости хранения последней позиции с плавающей запятой.|  
-|`DM_MOUSE`|Используется внутренним образом.|  
-|`DM_DBL_CLICK`|Этот параметр используется при двойном щелчке захвата. Перемещен на его последней позиции закрепления панели. Если область является открепить, дважды щелкнув, области перемещен на его последней позиции с плавающей запятой.|  
-|`DM_SHOW`|Этот параметр можно использовать программно закрепление области. Области хранит его последней позиции с плавающей запятой.|  
-|`DM_RECT`|Панель закрепляется в регионе, который задается параметром `lpRect`.|  
-|`DM_STANDARD`|При использовании этого параметра платформа рисует области как кадр структуры при ее перемещении.|  
+|DM_UNKNOWN|Инфраструктура использует этот параметр, если метод закрепления неизвестно. Области не хранит его последней позиции с плавающей запятой. Этот параметр позволяет программно закрепить в области, когда у вас нет для хранения последней позиции с плавающей запятой.|  
+|DM_MOUSE|Используется внутренним образом.|  
+|DM_DBL_CLICK|Этот параметр используется при двойном щелчке захвата. Области перемещен в его последней позиции закрепления. Незакрепленного области, дважды щелкнув области перемещен в его последней позиции с плавающей запятой.|  
+|DM_SHOW|Этот параметр можно использовать, чтобы программно закрепить на панели. Области хранит его последней позиции с плавающей запятой.|  
+|DM_RECT|Области, расположенной в регионе, который задается параметром *lpRect*.|  
+|DM_STANDARD|При использовании этого параметра, платформа рисует области как кадре структуры при ее перемещении.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если область была закреплена успешно. в противном случае `FALSE`.  
+ Значение TRUE, если области была закреплена успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод закрепляет область базовый области, который задается параметром `pDockBar` параметр. Сначала необходимо разрешить закрепление путем вызова [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
+ Этот метод закрепляет область области базовый, который задается параметром *pDockBar* параметра. Сначала необходимо включить закрепление путем вызова [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
   
 ##  <a name="dockpanestandard"></a>  CPane::DockPaneStandard  
  Закрепляет область с помощью структуры (standard) закрепления.  
@@ -603,17 +604,17 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bWasDocked`  
- `TRUE` Если область была успешно закреплена; в противном случае `FALSE`.  
+ [in] *bWasDocked*  
+ Значение TRUE, если области был успешно закреплено; в противном случае — значение FALSE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Этот метод всегда возвращает `this` указателя.  
+ Этот метод всегда возвращает **это** указатель.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод используется только для областей, которые являются производными от [класс CDockablePane](../../mfc/reference/cdockablepane-class.md). Дополнительные сведения см. в разделе [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).  
   
 ##  <a name="docktoframewindow"></a>  CPane::DockToFrameWindow  
- Закрепляет закрепляемую панель кадра.  
+ Закрепляет закрепляемую панель кадр.  
   
 ```  
 virtual BOOL DockToFrameWindow(
@@ -626,43 +627,43 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  В части, которую требуется закрепить на панели, чтобы родительского фрейма.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Указанный размер.  
   
- [in] `dwDockFlags`  
+ [in] *dwDockFlags*  
  Не обрабатывается.  
   
- [in] `pRelativeBar`  
+ [in] *pRelativeBar*  
  Не обрабатывается.  
   
- [in] `nRelativeIndex`  
+ [in] *nRelativeIndex*  
  Не обрабатывается.  
   
- [in] `bOuterEdge`  
- Если `TRUE` и нет других закрепляемых областей сбоку, которые задаются параметром `dwAlignment`, панель закреплена за пределами области, ближе к краю родительского фрейма. Если `FALSE`, панель прикрепляется ближе к центру клиентской области.  
+ [in] *bOuterEdge*  
+ Если значение TRUE и существует являются другие закрепляемые панели на стороне, которые задаются параметром *dwAlignment*, области, расположенной за пределами области, ближе к краем родительского фрейма. Если значение равно FALSE, области закрепляется ближе относительно центральной части клиентской области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `FALSE` Если разделитель области ( [класса CPaneDivider](../../mfc/reference/cpanedivider-class.md)) не может быть создан; в противном случае — `TRUE`.  
+ Значение FALSE, если разделитель панели ( [класс CPaneDivider](../../mfc/reference/cpanedivider-class.md)) не может быть создан; в противном случае — значение TRUE.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="doesallowsiblingbars"></a>  CPane::DoesAllowSiblingBars  
- Указывает, можно закрепить ли другой области в той же строке, место закрепления текущей области.  
+ Указывает, можно закрепить ли другой области той же строке, место закрепления текущей области.  
   
 ```  
 virtual BOOL DoesAllowSiblingBars() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если в этой области можно закрепить на другую панель на одной строке с самим собой; в противном случае `FALSE`.  
+ Значение TRUE, если в этой области можно закрепить на другую панель, на той же строке само по себе; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
  Можно включить или отключить это поведение, вызвав [CPane::SetExclusiveRowMode](#setexclusiverowmode).  
   
- По умолчанию отключен режим монопольного строки имеют панели инструментов и меню имеет включен режим монопольного строки.  
+ По умолчанию панелях инструментов находятся отключен режим монопольную и в строке меню был включен режим монопольную.  
   
 ##  <a name="floatpane"></a>  CPane::FloatPane  
  Смещает области.  
@@ -675,30 +676,30 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectFloat`  
+ [in] *rectFloat*  
  Указывает расположение, в экранных координатах, для размещения области, когда она перемещается.  
   
- [in] `dockMethod`  
- Задает метод закрепления для использования при перемещается области. Список возможных значений см. в разделе [CPane::DockPane](#dockpane).  
+ [in] *dockMethod*  
+ Задает метод закрепления для использования при плавающий области. Список возможных значений см. в разделе [CPane::DockPane](#dockpane).  
   
- [in] `bShow`  
- `TRUE` Чтобы отобразить область при перемещается; в противном случае `FALSE`.  
+ [in] *bShow*  
+ Значение TRUE для отображения области при перемещенное; в противном случае — значение FALSE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если область была успешно перемещается или если области не перемещается, так как [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) возвращает `FALSE`; в противном случае `FALSE`.  
+ Значение TRUE, если успешно было плавающий области или области невозможно оставить плавающим, так как [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) возвращает FALSE, в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается для float области в позиции, который задается параметром `rectFloat` параметр. Этот метод автоматически создает окно области родительской области.  
+ Вызовите этот метод для плавающей панели в позиции, который задается параметром *rectFloat* параметра. Этот метод автоматически создает родительского окна области для области.  
   
 ##  <a name="getavailableexpandsize"></a>  CPane::GetAvailableExpandSize  
- Возвращает сумму, в пикселях, которые могут быть развернуты в области.  
+ Возвращает сумму, в пикселях, которые могут расширить области.  
   
 ```  
 virtual int GetAvailableExpandSize() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если панель закреплена горизонтально, возвращает значение ширины; в противном случае возвращает значение доступной высоте.  
+ Если панель закреплена горизонтально, возвращаемое значение является доступную ширину; в противном случае возвращает значение высоты.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -710,26 +711,26 @@ virtual int GetAvailableStretchSize() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Размер в пикселях, которые можно сжать области. Если панель закреплена горизонтально, эта сумма представляет доступную ширину; в противном случае — это доступная высота.  
+ Размер в пикселях, которые можно сжать области. Если панель закреплена горизонтально, эта сумма представляет доступную ширину; в противном случае это доступной высоте.  
   
 ### <a name="remarks"></a>Примечания  
- Доступный размер stretch вычисляется путем вычитания минимально допустимого размера области ( [CPane::GetMinSize](#getminsize)) из текущего размера ( [CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).  
+ Доступный размер stretch вычисляется путем вычитания минимально допустимого размера для панели ( [CPane::GetMinSize](#getminsize)) из текущего размера ( [CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).  
   
 ##  <a name="getborders"></a>  CPane::GetBorders  
- Возвращает ширину границы панели.  
+ Возвращает ширину границы для области.  
   
 ```  
 CRect GetBorders() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [CRect](../../atl-mfc-shared/reference/crect-class.md) , содержащий Текущая ширина в пикселях каждого края панели. Например, значение `left` членом `CRect` объект представляет собой ширину левой границы.  
+ Объект [CRect](../../atl-mfc-shared/reference/crect-class.md) , содержащий Текущая ширина в пикселях каждой части панели. Например, значение `left` членом `CRect` объект является Ширина левой границы.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы задать размер границ, вызовите [CPane::SetBorders](#setborders).  
+ Чтобы задать размер границы, вызовите [CPane::SetBorders](#setborders).  
   
 ##  <a name="getclienthotspot"></a>  CPane::GetClientHotSpot  
- Возвращает *гиперобъект* области.  
+ Возвращает *гиперобъект* для области.  
   
 ```  
 CPoint GetClientHotSpot() const;  
@@ -738,33 +739,33 @@ CPoint GetClientHotSpot() const;
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- *Гиперобъект* — это точка в области, в которой пользователь выбирает и удерживает чтобы поместить область. Активная область используется для анимации, при перемещении из закрепленного положения панели.  
+ *Гиперобъект* — это точка в области, пользователь выбирает и удерживает чтобы поместить область. Активная область используется для создавать плавную анимацию при перемещении области из закрепленной позиции.  
   
 ##  <a name="getdocksiterow"></a>  CPane::GetDockSiteRow  
- Возвращает по строке dock ( [CDockingPanesRow класс](../../mfc/reference/cdockingpanesrow-class.md)) в закрепления панели.  
+ Возвращает строку, dock ( [класс CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)) в закрепленной панели.  
   
 ```  
 CDockingPanesRow* GetDockSiteRow() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `CDockingPanesRow`*, указывающий на строку dock закреплено области, или `NULL` Если области не закреплен.  
+ Объект `CDockingPanesRow`*, указывающий строку закрепления, в котором закрепленной панели, или значение NULL, если области не закреплено.  
   
 ##  <a name="getexclusiverowmode"></a>  CPane::GetExclusiveRowMode  
- Определяет, является ли область в режиме монопольного строки.  
+ Определяет, является ли в режиме монопольного строки.  
   
 ```  
 virtual BOOL GetExclusiveRowMode() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если панель в режиме монопольного строки. в противном случае `FALSE`.  
+ Значение TRUE, если области находится в режиме монопольного строки; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о режиме монопольного строк см. в разделе [CPane::SetExclusiveRowMode](#setexclusiverowmode).  
+ Дополнительные сведения о режиме монопольного строки, см. в разделе [CPane::SetExclusiveRowMode](#setexclusiverowmode).  
   
 ##  <a name="gethotspot"></a>  CPane::GetHotSpot  
- Возвращает гиперобъекта, который хранится в базовом `CMFCDragFrameImpl` объекта.  
+ Возвращает активную точку, которые хранятся в базовом `CMFCDragFrameImpl` объекта.  
   
 ```  
 CPoint GetHotSpot() const;  
@@ -773,34 +774,34 @@ CPoint GetHotSpot() const;
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- `CPane` Класс содержит `CMFCDragFrameImpl` объекта, `m_dragFrameImpl`, который отвечает за рисование прямоугольника, который появляется, когда пользователь перемещает областью в стандартном режиме закрепления. Активная точка используется для отрисовки прямоугольника относительно текущего положения мыши, когда пользователь перемещает области.  
+ `CPane` Класс содержит `CMFCDragFrameImpl` объекта, `m_dragFrameImpl`, который отвечает за рисование прямоугольника, который отображается, когда пользователь перемещает панель в стандартном режиме закрепления. Активная точка используется для рисования прямоугольника по отношению к текущей позиции мыши при перемещении области.  
   
 ##  <a name="getminsize"></a>  CPane::GetMinSize  
- Возвращает минимально допустимого размера области.  
+ Получает минимальный поддерживаемый размер для области.  
   
 ```  
 virtual void GetMinSize(CSize& size) const;  
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `size`  
+ [out] *размер*  
  Объект `CSize` объект, который заполняется минимально допустимого размера.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getpanename"></a>  CPane::GetPaneName  
- Извлекает название области.  
+ Извлекает заголовок области.  
   
 ```  
 virtual void GetPaneName(CString& strName) const;  
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `strName`  
- Объект `CString` объект, который заполняется с именем заголовка.  
+ [out] *strName*  
+ Объект `CString` объект, который заполняется имя заголовка.  
   
 ### <a name="remarks"></a>Примечания  
- Заголовок панели отображается в области заголовка, если области закрепленными или с плавающей запятой. Если область является частью группы с вкладками, название отображается в области вкладок. Если области находится в режиме автоматического скрытия, заголовок отображается на `CMFCAutoHideButton`.  
+ Заголовок панели отображается в области заголовка при области закрепленными или с плавающей запятой. Если область является частью группы с вкладками, заголовок отображается в области вкладок. Если панель в режиме автоматического скрытия, название будет отображаться на `CMFCAutoHideButton`.  
   
 ##  <a name="getvirtualrect"></a>  CPane::GetVirtualRect  
  Извлекает *виртуального прямоугольник* области.  
@@ -810,16 +811,16 @@ void GetVirtualRect(CRect& rectVirtual) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `rectVirtual`  
+ [out] *rectVirtual*  
  Объект `CRect` объект, который заполняется виртуального прямоугольника.  
   
 ### <a name="remarks"></a>Примечания  
- При перемещении областью платформа сохраняет исходное положение области в виртуальный прямоугольника. Платформу можно использовать виртуальный прямоугольник для восстановления исходной позиции области.  
+ При перемещении области framework хранит исходной позиции области в виртуальный прямоугольник. Виртуальный прямоугольник может использоваться платформой для восстановления исходной позиции области.  
   
- Не следует вызывать методы, которые связаны с виртуального прямоугольники, если программным образом перемещается панелей.  
+ Не следует вызывать методы, которые связаны с виртуального прямоугольники, если при перемещении области программным образом.  
   
 ##  <a name="ischangestate"></a>  CPane::IsChangeState  
- При перемещении области, этот метод анализирует их положение относительно других областей, закрепление строк и окна и возвращает соответствующее `AFX_CS_STATUS` значение.  
+ Области переместить, этот метод анализирует их положение относительно других областей закрепление строк и окна и возвращает соответствующее значение AFX_CS_STATUS.  
   
 ```  
 virtual AFX_CS_STATUS IsChangeState(
@@ -828,49 +829,49 @@ virtual AFX_CS_STATUS IsChangeState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nOffset`  
- Указывает закрепления чувствительности. Например, область, которая перемещается в пределах `nOffset` пикселей закрепление строки будет закреплен.  
+ [in] *nOffset*  
+ Задает чувствительность закрепления. Например, область, в которой перемещается в *nOffset* закрепляется пикселов из строки закрепления.  
   
- [in] `ppTargetBar`  
- При возвращении метода `ppTargetBar` содержит указатель на объект, к которому должен фиксироваться текущей панели, или `NULL` Если закрепление не происходит.  
+ [in] *ppTargetBar*  
+ При возвращении метода *ppTargetBar* содержит указатель на объект, к которому должно быть закреплено текущей области или значение NULL, если закрепление не происходит.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Одно из следующих `AFX_CS_STATUS` значения:  
+ Одно из следующих значений AFX_CS_STATUS:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
-|`CS_NOTHING`|Область не рядом с сайта закрепления. Платформа не Закрепить панель.|  
-|`CS_DOCK_IMMEDIATELY`|Области находится на сайте закрепления и `DT_IMMEDIATE` стиль включен. Платформа закрепляет область немедленно.|  
-|`CS_DELAY_DOCK`|Область — на сайте закрепления, другой области закрепления или края главного фрейма. Платформа закрепляет область, когда пользователь отпускает перемещения.|  
-|`CS_DELAY_DOCK_TO_TAB`|Область — на сайте закрепления, вызывающее области быть закреплено в окно с вкладками. Это происходит, когда область — заголовок другой области закрепления или над областью вкладки области с вкладками. Платформа закрепляет область, когда пользователь отпускает перемещения.|  
+|CS_NOTHING|Область не рядом с сайта закрепления. Платформа не закрепление области.|  
+|CS_DOCK_IMMEDIATELY|Области находится на сайте закрепления и стиль DT_IMMEDIATE включен. Платформа немедленно закрепляет область.|  
+|CS_DELAY_DOCK|Область — на сайте закрепления, края главного фрейма или другую панель закрепления. Платформа закрепляет область, когда пользователь отпускает перемещения.|  
+|CS_DELAY_DOCK_TO_TAB|Область — на сайте закрепления, в которой эта панель быть закреплено в окно с вкладками. Это происходит, когда область — заголовок другого закрепляемой области или по области вкладок области с вкладками. Платформа закрепляет область, когда пользователь отпускает перемещения.|  
   
 ##  <a name="isdragmode"></a>  CPane::IsDragMode  
- Указывает, переносится ли области.  
+ Определяет, перемещается ли области.  
   
 ```  
 virtual BOOL IsDragMode() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если перемещается области; в противном случае `FALSE`.  
+ Значение TRUE, если перемещается области; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="isinfloatingmultipaneframewnd"></a>  CPane::IsInFloatingMultiPaneFrameWnd  
- Указывает, является ли область в окне фрейма несколькими областями ( [CMultiPaneFrameWnd класса](../../mfc/reference/cmultipaneframewnd-class.md)).  
+ Указывает, является ли область в окне фрейма несколькими областями ( [класс CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если панель в окне фрейма несколькими областями. в противном случае `FALSE`.  
+ Значение TRUE, если панель в окне фрейма несколькими областями; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- В окне фрейма несколькими областями только закрепляемых областей можно с плавающей запятой. Таким образом `CPane::IsInFloatingMultiPaneFrameWnd` всегда возвращает `FALSE`.  
+ В окне фрейма несколькими областями может перемещаться только закрепляемых областей. Таким образом `CPane::IsInFloatingMultiPaneFrameWnd` всегда возвращает значение FALSE.  
   
 ##  <a name="isleftof"></a>  CPane::IsLeftOf  
- Определяет, остается ли области (или в более поздней версии) заданного прямоугольника.  
+ Определяет, остается ли области объекта (или более поздней версии) заданного прямоугольника.  
   
 ```  
 bool IsLeftOf(
@@ -879,46 +880,46 @@ bool IsLeftOf(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
  Объект `CRect` объект, используемый для сравнения.  
   
- [in] `bWindowRect`  
- Если `TRUE`, `rect` предполагается, что содержат экранные координаты; Если `FALSE`, `rect` должна содержать координаты клиента.  
+ [in] *bWindowRect*  
+ Если значение равно TRUE, *rect* предполагается, что содержит координаты экрана; Если значение равно FALSE, *rect* предполагается, что содержит в координатах клиентской области окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- Если панель закреплена горизонтально, этот метод проверяет, остается ли ее расположение из `rect`. В противном случае этот метод проверяет, является ли расположение выше `rect`.  
+ Если панель закреплена горизонтально, этот метод проверяет ли его расположение хорошо провести остаток *rect*. В противном случае этот метод проверяет, является ли расположение выше *rect*.  
   
 ##  <a name="isresizable"></a>  CPane::IsResizable  
- Указывает, является ли область с раскрывающимися списками.  
+ Указывает, является ли области можно изменять.  
   
 ```  
 virtual BOOL IsResizable() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если панель можно изменять; в противном случае `FALSE`.  
+ Значение TRUE, если области регулируемого размера; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Базовый `CPane` объектов не изменяется.  
+ Base `CPane` объектов не изменяется.  
   
- В диспетчере закрепления использует раскрывающимися флаг для определения области макета. Области изменяемого размера не всегда можно найти в папке внешние края родительского фрейма.  
+ В диспетчере закрепления использует переменного размера флаг для определения области макета. Не изменять размер панелей всегда находятся в внешние края родительского фрейма.  
   
- Изменяемого размера не области не могут присутствовать в закрепление контейнеров.  
+ Не изменять размер панелей не могут размещаться в закрепление контейнеры.  
   
 ##  <a name="istabbed"></a>  CPane::IsTabbed  
- Определяет, была ли вставлена в набор вкладок окна с вкладками области.  
+ Определяет, ли области вставлен в элемент управления "Вкладка" окна с вкладками.  
   
 ```  
 virtual BOOL IsTabbed() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если области вкладок; в противном случае `FALSE`.  
+ Значение TRUE, если области представлено в форме вкладок; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Состояние с вкладками обрабатывается отдельно из числа с плавающей закрепления и автоматического скрытия состояния.  
+ Состояние с вкладками будет обрабатываться отдельно с плавающей запятой, закреплено и автоматического скрытия состояния.  
   
 ##  <a name="loadstate"></a>  CPane::LoadState  
  Загружает состояние панели из реестра.  
@@ -931,47 +932,47 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Имя профиля.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс профиля.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если состояние панели был загружен успешно. в противном случае `FALSE`.  
+ Значение TRUE, если состояние панели был загружен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа вызывает этот метод загружает состояние панели из реестра. Его можно переопределить в производном классе, чтобы загрузить дополнительные данные, сохраненные с [CPane::SaveState](#savestate).  
+ Платформа вызывает этот метод, чтобы загрузить состояние панели из реестра. Переопределение в производном классе, чтобы загрузить дополнительные сведения, сохраненные с [CPane::SaveState](#savestate).  
   
- При переопределении этого метода также вызов базового метода и возврата `FALSE` возвращает базовый метод `FALSE`.  
+ При переопределении этого метода также вызываться базовый метод и возвращает значение FALSE, если базовый метод возвращает значение FALSE.  
   
 ##  <a name="m_bhandleminsize"></a>  CPane::m_bHandleMinSize  
- Позволяет согласованно обрабатывать размеры области в минимальное.  
+ Позволяет согласованно обрабатывать размеры минимальное области.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bHandleMinSize;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если переопределить один или несколько области закрепления в приложении `GetMinSize`, или если приложение вызывает `SetMinSize`, требуется значение этого статического члена `TRUE` для включения framework постоянно обрабатывать способ изменения размеров областей.  
+ Если один или несколько закрепляемых панелей в приложении переопределить `GetMinSize`, или если приложение вызывает `SetMinSize`, может потребоваться присвоить статический элемент значение TRUE, чтобы включить платформу постоянно обрабатывать способ изменения размеров для панелей.  
   
- Если это значение равно `TRUE`, обрезается, размер которого следует сократить ниже их минимальный размер всех панелей, не растягивается. Поскольку платформа использует области окна в целях изменения размера панели, не изменяйте размер окна области закрепления панели, если это значение равно `TRUE`.  
+ Если это значение имеет значение TRUE, обрезаются все панели, размер которого следует сократить ниже их минимальный размер, не растягивается. Так как инфраструктура использует области окон в целях изменения размера панели, не изменяйте размер области окна для закрепляемых панелей в том случае, если это значение имеет значение TRUE.  
   
 ##  <a name="m_recentdockinfo"></a>  CPane::m_recentDockInfo  
- Сведения о последних закрепления.  
+ Содержит сведения о последней закрепления.  
   
 ```  
 CRecentDockSiteInfo m_recentDockInfo;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Платформа сохраняет последние закрепления сведения о состоянии для панели в этом члене.  
+ Framework хранит данные состояния последней закрепления для области в этом члене.  
   
 ##  <a name="movebyalignment"></a>  CPane::MoveByAlignment  
- Перемещает области и виртуальный прямоугольника на указанную величину.  
+ Перемещение области и прямоугольника, виртуальный на заданную величину.  
   
 ```  
 BOOL MoveByAlignment(
@@ -980,26 +981,26 @@ BOOL MoveByAlignment(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Задает выравнивание панели.  
   
- [in] `nOffset`  
- Размер в пикселях, по которому выполняется перемещение области и прямоугольник виртуальных.  
+ [in] *nOffset*  
+ Размер в пикселях, которую следует переместить области и прямоугольника, виртуальный.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- `dwAlignment` может иметь любое из следующих значений.  
+ *dwAlignment* может быть любым из следующих значений:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
-|`CBRS_ALIGN_TOP`|Позволяет области быть закреплено в верхней части клиентской области окна фрейма.|  
-|`CBRS_ALIGN_BOTTOM`|Позволяет области быть закреплено в нижнюю часть клиентской области окна фрейма.|  
-|`CBRS_ALIGN_LEFT`|Позволяет панели можно закреплять левого края клиентской области окна фрейма.|  
-|`CBRS_ALIGN_RIGHT`|Включает области, чтобы закрепить в правой части клиентской области окна фрейма.|  
-|`CBRS_ALIGN_ANY`|Включает области, чтобы закрепить с любой стороны клиентской области окна фрейма.|  
+|CBRS_ALIGN_TOP|Позволяет области быть закреплено в верхнюю часть клиентской области окна фрейма.|  
+|CBRS_ALIGN_BOTTOM|Позволяет области быть закреплено в нижнюю часть клиентской области окна фрейма.|  
+|CBRS_ALIGN_LEFT|Позволяет области быть закреплено в левую часть клиентской области окна фрейма.|  
+|CBRS_ALIGN_RIGHT|Позволяет области быть закреплено правую часть клиентской области окна фрейма.|  
+|CBRS_ALIGN_ANY|Включает области, чтобы закрепить с любой стороны клиентской области окна фрейма.|  
   
- Если `dwAlignment` содержит `CBRS_ALIGN_LEFT` или `CBRS_ALIGN_RIGHT` флаг, области и прямоугольник виртуального перемещаются по горизонтали; в противном случае, если `dwAlignment` содержит `CBRS_ALIGN_TOP` или `CBRS_ALIGN_BOTTOM` флаг, области и прямоугольник виртуального перемещаются по вертикали.  
+ Если *dwAlignment* содержит флаг CBRS_ALIGN_LEFT или CBRS_ALIGN_RIGHT, области и прямоугольника виртуального перемещаются по горизонтали; в противном случае — значение *dwAlignment* содержит CBRS_ALIGN_TOP или CBRS_ALIGN Флаг ни_жние, области и прямоугольника виртуального перемещаются по вертикали.  
   
 ##  <a name="movepane"></a>  CPane::MovePane  
  Перемещает область заданного прямоугольника.  
@@ -1012,37 +1013,37 @@ virtual CSize MovePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectNew`  
+ [in] *rectNew*  
  Указывает новый прямоугольник для области.  
   
- [in] `bForceMove`  
- Если `TRUE`, этот метод игнорирует Минимальный допустимый размер области ( [CPane::GetMinSize](#getminsize)); в противном случае настраивается области, если необходимо, чтобы убедиться, что он не меньше минимально допустимого размера.  
+ [in] *bForceMove*  
+ Если значение равно TRUE, этот метод игнорирует Минимальный допустимый размер области ( [CPane::GetMinSize](#getminsize)); в противном случае настраивается области, при необходимости, чтобы убедиться, что он не меньше минимально допустимого размера.  
   
- [in] `hdwp`  
+ [in] *hdwp*  
  Не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `CSize` , содержащий ширину и высоту в различия между прямоугольниками, старое и новое (старый прямоугольник - `rectNew`).  
+ Объект `CSize` , содержащий ширину и высоту в различия между новым и старым прямоугольников (старый прямоугольник - *rectNew*).  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод используется только для закрепляемых областей.  
   
 ##  <a name="onafterchangeparent"></a>  CPane::OnAfterChangeParent  
- Вызывается платформой при изменении родительской области.  
+ Вызывается платформой при изменении родительского элемента области.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `pWndOldParent`  
- Предыдущее окно родительской области.  
+ [in] [out] *pWndOldParent*  
+ Область предыдущего родительского окна.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой при изменении родительской области из-за операции закрепления или с плавающей запятой.  
   
 ##  <a name="onafterdock"></a>  CPane::OnAfterDock  
- Вызывается платформой при закрепленным областью.  
+ Вызывается платформой при область был закреплен.  
   
 ```  
 virtual void OnAfterDock(
@@ -1052,27 +1053,27 @@ virtual void OnAfterDock(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Этот параметр не используется.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Этот параметр не используется.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Этот параметр не используется.  
   
 ##  <a name="onafterfloat"></a>  CPane::OnAfterFloat  
- Вызывается структурой после смещает областью.  
+ Вызвано структурой после отображается область.  
   
 ```  
 virtual void OnAfterFloat();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если вы хотите выполнить обработку после смещает панель можно переопределить этот метод в производном классе.  
+ Если вы хотите выполнять любую обработку после отображается панель, можно переопределить этот метод в производном классе.  
   
 ##  <a name="onbeforechangeparent"></a>  CPane::OnBeforeChangeParent  
- Вызывается платформой при родительской области.  
+ Вызывается платформой, когда родительской области.  
   
 ```  
 virtual void OnBeforeChangeParent(
@@ -1081,19 +1082,19 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `pWndNewParent`  
- Указывает новый родительского окна.  
+ [in] [out] *pWndNewParent*  
+ Указывает нового родительского окна.  
   
- [in] `bDelay`  
- `TRUE` для задержки глобальные настройки макета закрепления. в противном случае `FALSE`.  
+ [in] *bDelay*  
+ Значение TRUE, чтобы отложить глобальные настройки макета закрепления. в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой при намерении изменить, так как выполняется области родительского элемента области закрепления или перемещается.  
+ Этот метод вызывается платформой при родительской области должно произойти изменение, так как производится области закрепления или перемещению к последующей.  
   
- По умолчанию области не зарегистрирован в области закрепления путем вызова `CDockSite::RemovePane`.  
+ По умолчанию области не зарегистрирован закрепляемой области, вызвав `CDockSite::RemovePane`.  
   
 ##  <a name="onbeforedock"></a>  CPane::OnBeforeDock  
- Вызывается платформой при закрепления панели.  
+ Вызывается платформой при области закрепления.  
   
 ```  
 virtual BOOL OnBeforeDock(
@@ -1103,23 +1104,23 @@ virtual BOOL OnBeforeDock(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `ppDockBar`  
- Указывает области, в которой эта область закрепление в.  
+ [in] [out] *ppDockBar*  
+ Указывает панель, на которой эта панель закрепление в.  
   
- [in] `lpRect`  
- Указывает на прямоугольник, закрепления.  
+ [in] *lpRect*  
+ Указывает прямоугольник закрепления.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Задает метод закрепления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если панели можно закреплять. Если функция возвращает `FALSE`, закрепления операция будет прервана.  
+ Значение TRUE, если область может быть закреплено. Если функция возвращает значение FALSE, закрепления операция будет прервана.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой при закрепления панели. Если вы хотите выполнить обработку перед панель закреплена Наконец можно переопределить этот метод в производном классе.  
+ Этот метод вызывается платформой при области быть закреплено. Если вы хотите выполнять любую обработку, прежде чем панель закрепляется и, наконец, можно переопределить этот метод в производном классе.  
   
 ##  <a name="onbeforefloat"></a>  CPane::OnBeforeFloat  
- Вызывается платформой, когда область о к float.  
+ Вызывается платформой, когда область будет о число с плавающей запятой.  
   
 ```  
 virtual BOOL OnBeforeFloat(
@@ -1128,20 +1129,20 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectFloat`  
- Задает положение и размер области, когда она находится в состоянии с плавающей запятой.  
+ [in] *rectFloat*  
+ Указывает положение и размер области, когда он находится в плавающем состоянии.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Задает метод закрепления панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если область может быть перемещается; в противном случае `FALSE`.  
+ Значение TRUE, если можно перемещать области; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой, когда область о к float. Если вы хотите выполнить обработку перед finally смещает области можно переопределить этот метод в производном классе.  
+ Этот метод вызывается платформой, когда область будет о число с плавающей запятой. Если вы хотите выполнять любую обработку, прежде чем наконец расположенном в области, можно переопределить этот метод в производном классе.  
   
 ##  <a name="onpressclosebutton"></a>  CPane::OnPressCloseButton  
- Вызывается платформой, когда пользователь нажимает кнопку Закрыть на заголовок для области.  
+ Вызывается платформой, когда пользователь нажимает "Закрыть" в заголовке для области.  
   
 ```  
 virtual void OnPressCloseButton();
@@ -1158,17 +1159,17 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Указывает расположение меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если меню может отображаться; в противном случае `FALSE`.  
+ Значение TRUE, если можно отобразить меню; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Меню содержит несколько элементов, которые позволяют указать поведение панели, а именно: **плавающее**, **закрепление**, **автоматическое скрытие**, и **скрыть**. Можно включить это меню в любой области путем вызова [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).  
+ Меню содержит несколько элементов, которые позволяют указать поведение области, а именно: **плавающее**, **закрепления**, **Автоскрытие**, и **скрыть**. Вы можете включить это меню для всех панелей путем вызова [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).  
   
 ##  <a name="recalclayout"></a>  CPane::RecalcLayout  
- Обновление сведений о макете для области.  
+ Повторно вычисляет сведения о структуре для области.  
   
 ```  
 virtual void RecalcLayout();
@@ -1177,7 +1178,7 @@ virtual void RecalcLayout();
 ### <a name="remarks"></a>Примечания  
  Если панель закреплена, этот метод обновляет виртуального прямоугольник для области, установив его размер текущий размер области.  
   
- Если панель открывается как плавающее окно, этот метод уведомляет мини-родительского фрейма для настройки размера панели, чтобы размер мини-рамки. Платформа гарантирует, что мини-рамки по крайней мере Минимальный допустимый размер области ( [CPane::GetMinSize](#getminsize)) и при необходимости изменять размеры мини-рамки.  
+ Если область является перемещаемой, этот метод уведомляет мини-родительского фрейма изменяет размер панели, чтобы размер мини-рамки. Инфраструктура гарантирует, что области не меньше минимально допустимого размера для панели ( [CPane::GetMinSize](#getminsize)) и изменяет размер области, при необходимости.  
   
 ##  <a name="savestate"></a>  CPane::SaveState  
  Сохраняет состояние панели в реестр.  
@@ -1190,40 +1191,40 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Имя профиля.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс профиля.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если состояние была сохранена успешно. в противном случае `FALSE`.  
+ Значение TRUE, если состояние было сохранено успешно. в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа вызывает этот метод при сохраняет состояние панели в реестр. Переопределить `SaveState` в производном классе для хранения дополнительных сведений.  
+ Этот метод вызывается платформой при сохранении состояния области реестра. Переопределить `SaveState` в производном классе для хранения дополнительной информации.  
   
- При переопределении этого метода также вызов базового метода и возврата `FALSE` возвращает базовый метод `FALSE`.  
+ При переопределении этого метода также вызываться базовый метод и возвращает значение FALSE, если базовый метод возвращает значение FALSE.  
   
 ##  <a name="setactiveingroup"></a>  CPane::SetActiveInGroup  
- Флаги панели как активный.  
+ Флаги панели как активные.  
   
 ```  
 virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bActive`  
- Объект `BOOL` , указывающее, помечена ли области, как активные.  
+ [in] *bActive*  
+ Логическое значение, указывающее ли области помечен как активный.  
   
 ### <a name="remarks"></a>Примечания  
- Когда отображается закрепляемую панель или выбрана кнопка автоматического скрытия, соответствующую область автоматического скрытия помечается как активный.  
+ Когда отображается закрепляемую панель или нажатия кнопки автоматического скрытия, соответствующую область автоматического скрытия помечается как активный.  
   
- Внешний вид кнопки автоматического скрытия, которая связана с областью на основе двух факторов. Если область активна и `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` — `TRUE`, платформа отображает кнопку автоматического скрытия как значка и метки. Неактивные области платформа отображает значок автоматического скрытия.  
+ Внешний вид кнопки автоматического скрытия, связанный с панелью зависит от двух факторов. Если область является активным и `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` имеет значение TRUE, отображает framework, кнопку автоматического скрытия как значок и метку. Для неактивного области платформа отображает только значок автоматического скрытия.  
   
- Если `CMFCAutoHideButton::m_bOverlappingTabs` — `FALSE`, или если области не находится в группе, платформа отображает кнопку автоматического скрытия как значка и метки.  
+ Если `CMFCAutoHideButton::m_bOverlappingTabs` имеет значение FALSE, или если области не находится в группе, платформа отображает кнопку автоматического скрытия как значок и метку.  
   
 ##  <a name="setborders"></a>  CPane::SetBorders  
  Задает значения границы области.  
@@ -1239,80 +1240,80 @@ void SetBorders(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `cxLeft`  
- Ширина в пикселях левой границы области.  
+ [in] *cxLeft*  
+ Задает ширину в пикселях левой границы области.  
   
- [in] `cyTop`  
- Ширина в пикселях верхней границы области.  
+ [in] *cyTop*  
+ Задает ширину в пикселях, верхней границы области.  
   
- [in] `cxRight`  
- Ширина в пикселях правой границы области.  
+ [in] *cxRight*  
+ Задает ширину в пикселях правой границы области.  
   
- [in] `cyBottom`  
- Ширина в пикселях нижней границы панели.  
+ [in] *cyBottom*  
+ Задает ширину в пикселях, нижней границы области.  
   
- [in] `lpRect`  
- Объект [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, содержащий ширину в пикселях каждого границы области.  
+ [in] *lpRect*  
+ Объект [CRect](../../atl-mfc-shared/reference/crect-class.md) , содержащий ширину в пикселях каждого границы области.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция вызывается для задается размер границы области.  
+ Вызывайте эту функцию, чтобы задать размеры границы области.  
   
 ##  <a name="setclienthotspot"></a>  CPane::SetClientHotSpot  
- Наборы *гиперобъект* области.  
+ Наборы *гиперобъект* для области.  
   
 ```  
 void SetClientHotSpot(const CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ptNew`  
+ [in] *ptNew*  
  Объект `CPoint` , указывающий новую активную зону.  
   
 ### <a name="remarks"></a>Примечания  
- *Гиперобъект* — это точка в области, в которой пользователь выбирает и удерживает чтобы поместить область. Активная область используется для анимации при перетаскивании из закрепленной позиции области.  
+ *Гиперобъект* — это точка в области, пользователь выбирает и удерживает чтобы поместить область. Активная область используется для создавать плавную анимацию при перетаскивании из закрепленного положения области.  
   
 ##  <a name="setdockstate"></a>  CPane::SetDockState  
- Восстанавливает сведения о состоянии для области закрепления.  
+ Восстанавливает сведения о состоянии для панели закрепления.  
   
 ```  
 virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDockManager`  
- Указатель на диспетчере закрепления для фрейма главного окна.  
+ [in] *pDockManager*  
+ Указатель на диспетчере закрепления для окна главного фрейма.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой для восстановления последних закрепления сведения о состоянии для панели. Область сохраняет последние закрепления сведений о состоянии в [CPane::m_recentDockInfo](#m_recentdockinfo). Дополнительные сведения см. в разделе [CRecentDockSiteInfo класса](../../mfc/reference/crecentdocksiteinfo-class.md).  
+ Этот метод вызывается платформой для восстановления последних закрепления сведения о состоянии для панели. Область хранит актуальные сведения состоянии закрепления в [CPane::m_recentDockInfo](#m_recentdockinfo). Дополнительные сведения см. в разделе [класс CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).  
   
- Можно также вызвать этот метод, чтобы задать состояние закрепления при загрузке панели информации из внешнего источника.  
+ Можно также вызвать этот метод для задания состояние закрепления при загрузке панели сведения из внешнего источника.  
   
 ##  <a name="setexclusiverowmode"></a>  CPane::SetExclusiveRowMode  
- Включает или отключает режим монопольного строк.  
+ Включает или отключает режим монопольного строки.  
   
 ```  
 virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bExclusive`  
- `TRUE` Чтобы включить режим монопольного строк; в противном случае `FALSE`.  
+ [in] *bExclusive*  
+ Значение TRUE, чтобы включить режим монопольную; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод служит для включения или отключения режима монопольного строк. Если панель находится в режиме монопольного строки, он не могут совместно использовать ту же строку с панели инструментов.  
+ Этот метод используется для включения или отключения режима монопольного строки. Если панель находится в режиме монопольного строки, он не могут совместно использовать ту же строку с панели инструментов.  
   
- По умолчанию отключен режим монопольного строки имеют все панели инструментов и меню был включен режим монопольного строки.  
+ По умолчанию отключен режим монопольную имеют все панели инструментов и меню был включен режим монопольную.  
   
 ##  <a name="setminsize"></a>  CPane::SetMinSize  
- Задает минимальный допустимый размер области.  
+ Задает минимальный поддерживаемый размер для области.  
   
 ```  
 void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `size`  
- Объект `CSize` , содержащий минимально допустимого размера области.  
+ [in] *размер*  
+ Объект `CSize` , содержащий минимальный поддерживаемый размер для области.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1326,16 +1327,16 @@ void SetVirtualRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
  Объект `CRect` объект, который указывает на виртуальный прямоугольник, задаваемый.  
   
- [in] `bMapToParent`  
- Укажите `TRUE` Если `rect` содержит точки относительно родительского окна.  
+ [in] *bMapToParent*  
+ Укажите значение TRUE, если *rect* содержит точки относительно родительского окна.  
   
 ### <a name="remarks"></a>Примечания  
- Объект *виртуального прямоугольник* сохраняет исходное положение панели при перемещении. Платформу можно использовать виртуальный прямоугольник для восстановления исходной позиции.  
+ Объект *виртуального прямоугольник* сохраняет исходное положение области, при перемещении. Виртуальный прямоугольник может использоваться платформой для восстановления исходной позиции.  
   
- Не следует вызывать методы, которые связаны с виртуального прямоугольники, если программным образом перемещается панелей.  
+ Не следует вызывать методы, которые связаны с виртуального прямоугольники, если при перемещении области программным образом.  
   
 ##  <a name="setminiframertc"></a>  CPane::SetMiniFrameRTC  
  Задает сведения о классе среды выполнения для окна области по умолчанию.  
@@ -1345,14 +1346,14 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `pClass`  
+ [in] [out] *pClass*  
  Указывает сведения о классе среды выполнения для окна области.  
   
 ### <a name="remarks"></a>Примечания  
- Когда область перемещается, он помещается [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) окна (области). Можно предоставить пользовательский `CPaneFrameWnd`-производного класса, который будет использовать, когда [CPane::CreateDefaultMiniframe](#createdefaultminiframe) вызывается.  
+ При область перемещается, он помещается [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) окна (области). Можно указать пользовательское `CPaneFrameWnd`-производный класс, который будет использовать, когда [CPane::CreateDefaultMiniframe](#createdefaultminiframe) вызывается.  
   
 ##  <a name="stretchpanedeferwndpos"></a>  CPane::StretchPaneDeferWndPos  
- Растягивает панель по вертикали или по горизонтали на основании стиль закрепления.  
+ Растягивает панель по вертикали или по горизонтали в зависимости от стиль закрепления.  
   
 ```  
 virtual int StretchPaneDeferWndPos(
@@ -1361,17 +1362,17 @@ virtual int StretchPaneDeferWndPos(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nStretchSize`  
+ [in] *nStretchSize*  
  Размер в пикселях для растяжения области. Уменьшение размера области, используйте отрицательное значение.  
   
- [in] `hdwp`  
+ [in] *hdwp*  
  Не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Фактический объем в пикселях, что области выполнено растяжение.  
+ Фактический объем в пикселях, что области была перенесена.  
   
 ### <a name="remarks"></a>Примечания  
- При необходимости, этот метод изменяет `nStretchSize` чтобы убедиться, что области не превышает предельные размеры. Эти ограничения создаются вызовом [CPane::GetAvailableStretchSize](#getavailablestretchsize) и [CPane::GetAvailableExpandSize](#getavailableexpandsize).  
+ При необходимости, этот метод изменяет *nStretchSize* чтобы убедиться, что области не превышает ограничения размера. Эти ограничения можно получить путем вызова [CPane::GetAvailableStretchSize](#getavailablestretchsize) и [CPane::GetAvailableExpandSize](#getavailableexpandsize).  
   
 ##  <a name="toggleautohide"></a>  CPane::ToggleAutoHide  
  Переключает режим автоматического скрытия.  
@@ -1381,24 +1382,24 @@ virtual void ToggleAutoHide();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается для переключения в режим автоматического скрытия. Чтобы переключиться в режим автоматического скрытия необходимо закрепить панель фрейма главного окна.  
+ Вызовите этот метод для переключения в режим автоматического скрытия. Для переключения в режим автоматического скрытия необходимо закрепить панель фрейма главного окна.  
   
 ##  <a name="undockpane"></a>  CPane::UndockPane  
- Удаляет область из сайта закрепления, по умолчанию ползунок или окна области, где он в настоящее время закреплен.  
+ Удаляет области из сайта закрепления, по умолчанию ползунок или окна области, где она в настоящее время закреплена.  
   
 ```  
 virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bDelay`  
- Если `FALSE`, платформа вызывает [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) для настройки макета закрепления.  
+ [in] *bDelay*  
+ Если значение равно FALSE, платформа вызывает [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) для настройки макета закрепления.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте этот метод, чтобы программно отменить закрепление панели.  
+ Этот метод позволяет программно открепить панель.  
   
 ##  <a name="updatevirtualrect"></a>  CPane::UpdateVirtualRect  
- Обновление виртуального прямоугольника.  
+ Обновляет виртуального прямоугольника.  
   
 ```  
 void UpdateVirtualRect();  
@@ -1407,18 +1408,18 @@ void UpdateVirtualRect(CPoint ptOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ptOffset`  
- Объект `CPoint` объект, который определяет смещение, на который необходимо сдвинуть области.  
+ [in] *ptOffset*  
+ Объект `CPoint` , указывающий смещение, на который необходимо сдвинуть области.  
   
- [in] `sizeNew`  
- Объект `CSize` объект, который указывает новый размер области.  
+ [in] *sizeNew*  
+ Объект `CSize` объект, который указывает новый размер для области.  
   
 ### <a name="remarks"></a>Примечания  
- Первая перегрузка задает виртуальный прямоугольник, используя текущее положение и размер области.  
+ Первая перегрузка задает прямоугольник, виртуальной, используя текущее положение и размер области.  
   
- Вторая перегрузка сдвигает виртуального прямоугольник на величину, который задается параметром `ptOffset`.  
+ Вторая перегрузка сдвигает виртуального прямоугольник на величину, который задается параметром *ptOffset*.  
   
- Третьей перегрузке задает виртуальный прямоугольник, используя текущее положение области и размер, который задается параметром `sizeNew`.  
+ Третья перегрузка задает виртуальный прямоугольника с помощью текущей позиции и размера, который задается параметром *sizeNew*.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

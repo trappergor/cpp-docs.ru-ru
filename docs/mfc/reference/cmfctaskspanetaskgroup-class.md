@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCTasksPaneTaskGroup | Документы Microsoft
+title: Класс CMFCTasksPaneTaskGroup | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,14 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849169"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Класс CMFCTasksPaneTaskGroup
-`CMFCTasksPaneTaskGroup` Класс — это вспомогательный класс, используемый [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) управления. Объекты типа `CMFCTasksPaneTaskGroup` представляют *группу задач*. Группа задач — это список элементов, отображаемых структурой в отдельном поле с кнопкой "Свернуть". Поле может иметь необязательный заголовок (имя группы). Если группа свернута, список задач не отображается.  
+`CMFCTasksPaneTaskGroup` Класс — это вспомогательный класс, используемый [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) элемента управления. Объекты типа `CMFCTasksPaneTaskGroup` представляют *группу задач*. Группа задач — это список элементов, отображаемых структурой в отдельном поле с кнопкой "Свернуть". Поле может иметь необязательный заголовок (имя группы). Если группа свернута, список задач не отображается.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,43 +54,43 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Создает объект `CMFCTasksPaneTaskGroup`.|  
 |`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Определяет, какие данные специальных возможностей для текущей группы задач.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Определяет, является ли группа задач выравнивается по нижней части элемента управления области задач.|  
+|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Определяет, выровнены ли группа задач в нижней части элемента управления области задач.|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Определяет, свернута ли группа задач.|  
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Определяет, является ли группа задач *специальные.* Платформа отображает специальные заголовки разными цветами.|  
-|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Содержит внутреннего списка задач.|  
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Определяет, является ли группа задач *специальные.* Платформа отображает специальные заголовки другим цветом.|  
+|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Содержит внутренний список задач.|  
 |[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Указывает ограничивающий прямоугольник заголовка группы.|  
 |[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Указывает ограничивающий прямоугольник группы.|  
 |[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Задает имя группы.|  
   
 ## <a name="remarks"></a>Примечания  
- На следующем рисунке показана группа расширенные задачи:  
+ На следующем рисунке показан группу расширенные задачи:  
   
  ![Развернутая группа задач](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
- На следующем рисунке показано свернутая группа задач:  
+ На следующем рисунке показан свернутая группа задач:  
   
  ![Свернутая группа задач](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
   
- На следующем рисунке показано группа задач без заголовка:  
+ На следующем рисунке показан группа задач без заголовка:  
   
  ![Группа задач без заголовка](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
   
- На следующем рисунке показаны две группы задач. Первая группа задач, задав помечен как специальные `m_bIsSpecial` флаг `TRUE`, а вторая группа задач не является особенным. Обратите внимание, как заголовок для первой группы задач темного, чем второй группы задач:  
+ Ниже показаны две группы задач. Первая группа задач, задав помечается как специальные `m_bIsSpecial` флаг значение TRUE, а вторая группа задач не является особенным. Обратите внимание, что заголовок для первой группы задач темнее, чем вторая группа задач:  
   
  ![Специальная группа задач](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
   
@@ -115,35 +116,35 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszName`  
+ *lpszName*  
  Указывает имя группы в заголовке группы.  
   
- `bIsBottom`  
- Указывает ли группе выравнивается относительно нижней части элемента управления области задач.  
+ *bIsBottom*  
+ Указывает, выравнивается ли группы в нижнюю часть элемента управления области задач.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  Указывает, является ли группа используется в качестве *специальные* , и таким образом, является ли название группы заполняется другим цветом.  
   
- `bIsCollapsed`  
- Указывает, является ли группа свернута.  
+ *bIsCollapsed*  
+ Определяет, свернута ли группа.  
   
- `pPage`  
+ *Физ_страница*  
  Указывает страницу свойств, к которой принадлежит эта группа задач.  
   
- `hIcon`  
- Задает значок, отображаемый в заголовке группы.  
+ *hIcon*  
+ Указывает значок, отображаемый в заголовке группы.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
- Определяет, является ли группа задач выравнивается по нижней части элемента управления области задач.  
+ Определяет, выровнены ли группа задач в нижней части элемента управления области задач.  
   
 ```  
 BOOL m_bIsBottom;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Только одна группа может быть выровнен по нижней части элемента управления области задач. Последний необходимо добавить эту группу задач. Дополнительные сведения см. в разделе [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+ Только одна группа может быть выровнен по нижней части элемента управления области задач. Последнее необходимо добавить эту группу задач. Дополнительные сведения см. в разделе [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
 ##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  Определяет, свернута ли группа задач.  
@@ -153,27 +154,27 @@ BOOL m_bIsCollapsed;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Можно включить или отключить возможность свертывания групп в области задач путем вызова [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
+ Можно включить или отключить возможность свернуть группы в области задач путем вызова [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
 ##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
- Определяет, является ли группа задач *специальные* и ли заголовок специальная группа задач должна быть определена с другим цветом.  
+ Определяет, является ли группа задач *специальные* и ли заголовок для группы «специальная задача» должны идентифицироваться по другим цветом.  
   
 ```  
 BOOL m_bIsSpecial;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если приложение использует тему Windows XP и `m_bIsSpecial` — `FALSE`, платформа вызывает `DrawThemeBackground` с `EBP_NORMALGROUPBACKGROUND` флаг. Если `m_bIsSpecial` — `TRUE`, платформа вызывает `DrawThemeBackground` с `EBP_SPECIALGROUPBACKGROUND` флаг.  
+ Если приложение использует визуальной темы Windows XP и `m_bIsSpecial` имеет значение FALSE, платформа вызывает `DrawThemeBackground` с флагом EBP_NORMALGROUPBACKGROUND. Если `m_bIsSpecial` имеет значение TRUE, платформа вызывает `DrawThemeBackground` с флагом EBP_SPECIALGROUPBACKGROUND.  
   
 ##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
- Содержит внутреннего списка задач.  
+ Содержит внутренний список задач.  
   
 ```  
 CObList m_lstTasks;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы заполнить этот список, вызовите [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
+ Для заполнения этого списка, вызовите [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
   
 ##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect  
  Указывает ограничивающий прямоугольник заголовка группы.  
@@ -203,7 +204,7 @@ CString m_strName;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если это значение является пустым, заголовка группы не отображается и не могут быть свернуты группы.  
+ Если это значение не указано, отображается название группы и их нельзя свернуть группу.  
   
 ##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData  
  Определяет, какие данные специальных возможностей для текущей группы задач.  
@@ -215,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParent`  
- Представляет окно родительской группы задач.  
+ [in] *pParent*  
+ Представляет родительское окно текущей группы задач.  
   
- [выходной] `data`  
+ [out] *данных*  
  Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей группы задач.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если `data` параметр был успешно заполненная данные специальных возможностей текущей группы задач; в противном случае — `FALSE`.  
+ Значение TRUE, если *данных* параметр был успешно заполнен данные специальных возможностей текущей группы задач; в противном случае — значение FALSE.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

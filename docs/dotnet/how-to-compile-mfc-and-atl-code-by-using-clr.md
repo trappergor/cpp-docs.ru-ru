@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136071"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Практическое руководство. Компиляция кода MFC и ATL с помощью параметра /clr
 В этом разделе описывается, как для компиляции программ MFC и ATL целевой общеязыковая среда выполнения.  

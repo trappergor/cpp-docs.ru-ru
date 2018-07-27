@@ -1,5 +1,5 @@
 ---
-title: Структура CODBCFieldInfo | Документы Microsoft
+title: Структура CODBCFieldInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88bcac3c7ce4658ec7dafeaa1cac45b5f2450298
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853086"
 ---
 # <a name="codbcfieldinfo-structure"></a>Структура CODBCFieldInfo
 `CODBCFieldInfo` Структура содержит сведения о полях в источник данных ODBC.  
@@ -40,20 +41,20 @@ struct CODBCFieldInfo
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `m_strName`  
+ *m_strName*  
  Имя поля.  
   
  *m_nSQLType*  
- Тип данных SQL поля. Это может быть тип данных SQL драйвера или тип данных ODBC SQL. Список допустимых типов данных ODBC SQL в разделе «Типы данных SQL» в Windows SDK. Сведения о типах данных драйвера SQL см. в документации драйвера.  
+ Тип данных SQL поля. Это может быть типом данных ODBC SQL или типом данных специфические для драйвера SQL. Список допустимых типов данных ODBC SQL см. в разделе «Типы данных SQL» в пакете Windows SDK. Сведения о типах данных драйвера SQL см. в разделе документации по драйверу.  
   
  *m_nPrecision*  
- Максимальная точность поля. Дополнительные сведения см. в Windows SDK «Точность, масштаб, длину и отображаемый размер».  
+ Максимальная точность поля. Дополнительные сведения см. в разделе «Точность, масштаб, длину и отображаемый размер» в пакете Windows SDK.  
   
  *m_nScale*  
- Масштаб поля. Дополнительные сведения см. в Windows SDK «Точность, масштаб, длину и отображаемый размер».  
+ Масштаб поля. Дополнительные сведения см. в разделе «Точность, масштаб, длину и отображаемый размер» в пакете Windows SDK.  
   
  *m_nNullability*  
- Является ли поле допускает значение Null. Это может быть одно из двух значений: **SQL_NULLABLE** Если поле допускает значения Null, или **SQL_NO_NULLS** Если поле не может принимать значение Null.  
+ Является ли поле допускает значение Null. Это может быть одно из двух значений: SQL_NULLABLE, если поле допускает значения Null, или SQL_NO_NULLS, если поле не принимает значения Null.  
   
 ## <a name="remarks"></a>Примечания  
  Чтобы получить эти данные, вызовите [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  

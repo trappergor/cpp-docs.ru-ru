@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420971"
 ---
 # <a name="using-atexit"></a>Использование atexit
 С [atexit](../c-runtime-library/reference/atexit.md) функции, можно указать функцию обработки выхода, которая выполняется перед завершением работы программы. Никакие глобальные статические объекты, инициализированные до вызова функции `atexit`, не уничтожаются до вызова функции обработки выхода.  

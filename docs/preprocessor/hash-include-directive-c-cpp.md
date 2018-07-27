@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843552"
 ---
 # <a name="include-directive-cc"></a>Директива #include (C/C++)
 Указывает препроцессору, что содержимое заданного файла необходимо обработать так, как если бы оно находилось в исходной программе в той точке, в которой располагается эта директива.  

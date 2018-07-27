@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098528"
 ---
 # <a name="creating-a-simple-consumer"></a>Создание простого объекта-получателя
 Используйте мастер проектов ATL и Мастер потребителя ATL OLE DB для создания объекта-получателя OLE DB-шаблоны.  

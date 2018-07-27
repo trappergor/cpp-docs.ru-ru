@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356690"
 ---
 # <a name="introduction-to-atl-window-classes"></a>Введение в классы окон ATL
 Следующие классы ATL предназначены для реализации и управления окнами.  

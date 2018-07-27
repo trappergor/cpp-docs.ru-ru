@@ -1,5 +1,5 @@
 ---
-title: 'Как: определить конструкторы перемещения и операторы присваивания move (C++) | Документы Microsoft'
+title: 'Как: определить конструкторы перемещения и операторы присваивания перемещением (C++) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028155"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Конструкторы move и операторы присваивания move (C++)
-В этом разделе описывается процесс записи *конструктор перемещения* и оператор присваивания перемещения для класса C++. Конструктор перемещения позволяет ресурсы, принадлежащие объекте rvalue должна быть перемещена в lvalue без копирования. Дополнительные сведения о семантике перемещения см. в разделе [декларатор ссылки Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+В этом разделе описывается создание *конструктор перемещения* и оператор присваивания перемещения для класса C++. Конструктор перемещения позволяет ресурсы, принадлежащие объекте rvalue должна быть перемещена в другую lvalue без копирования. Дополнительные сведения о семантике перемещения см. в разделе [декларатор ссылки Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  Этот раздел построен на основе приведенного ниже класса C++ `MemoryBlock`, который управляет буфером памяти.  
   
@@ -270,7 +271,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- До Visual Studio 2010 в этом примере получен следующий результат:  
+ До выхода Visual Studio 2010 этот пример формирует следующие выходные данные:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -302,7 +303,8 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Если для класса определены как конструктор перемещения, так и оператор присваивания перемещения, можно исключить избыточный код, написав конструктор перемещения так, чтобы он вызывал оператор присваивания перемещения. В следующем примере показана измененная версия конструктора перемещения, вызывающая оператор присваивания перемещения:  
   
-```  
+```cpp
+  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -312,8 +314,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- [Std::move](../standard-library/utility-functions.md#move) функция сохраняет свойство rvalue `other` параметра.  
+ [Std::move](../standard-library/utility-functions.md#move) функция сохраняет свойство rvalue параметра *других* параметра.  
   
 ## <a name="see-also"></a>См. также  
  [Декларатор ссылки rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<Программа > переместить](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<Служебная программа > переместить](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694148"
 ---
 # <a name="structuredtaskgroup-class"></a>Класс structured_task_group
 Класс `structured_task_group` представляет коллекцию параллельной работы со сложной структурой. Можно поместить в очередь `structured_task_group` отдельные параллельные задачи с помощью объектов `task_handle` и ожидать их выполнения или отменить группу задач до завершения выполнения, что приведет к отмене всех задач, которые не начали выполнение.  

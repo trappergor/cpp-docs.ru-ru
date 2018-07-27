@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341966"
 ---
 # <a name="command-routing-classes"></a>Классы маршрутизации команд
 Как пользователь взаимодействует с приложением, выбрав меню или кнопок панели элементов управления с помощью мыши, приложение отправляет сообщения из объекта затронутых пользовательского интерфейса соответствующий целевой объект команды. Целевой объект команды классы, производные от `CCmdTarget` включают [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), и классов, производных от них. Платформа поддерживает автоматическое команда маршрутизации, команды могут обрабатываться самый подходящий объект активного в приложении.  

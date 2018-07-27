@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386268"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Выражения L-Value и R-Value
 Выражения, которые ссылаются на адреса памяти, называются выражениями l-значения. L-значение представляет значение locator или left области хранения, что означает, что оно может отображаться слева от знака равенства (**=**). L-значения часто являются идентификаторами.  

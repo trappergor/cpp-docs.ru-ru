@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344348"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Инициализация частей объекта CStatusBarCtrl
 По умолчанию строка состояния отображает сведения о состоянии с помощью отдельных панелей. Эти области (также называемый частей) может содержать строку текста, значок или оба.  

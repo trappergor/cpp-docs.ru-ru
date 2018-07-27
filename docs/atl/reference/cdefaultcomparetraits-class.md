@@ -1,5 +1,5 @@
 ---
-title: Класс CDefaultCompareTraits | Документы Microsoft
+title: Класс CDefaultCompareTraits | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b06bf475c60c0190fc6ab78f4357e1b247f1d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ed197cc1f18821b65c249ee15a7e75f54fc7a32
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884770"
 ---
 # <a name="cdefaultcomparetraits-class"></a>Класс CDefaultCompareTraits
 Этот класс предоставляет по умолчанию элемент функции сравнения.  
@@ -36,20 +37,20 @@ class CDefaultCompareTraits
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Тип данных, хранимых в коллекции.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CDefaultCompareTraits::CompareElements](#compareelements)|(Статический) Вызывайте эту функцию для сравнения на равенство двух элементов.|  
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Статический) Эта функция вызывается для определения элемента больше и меньше.|  
+|[CDefaultCompareTraits::CompareElements](#compareelements)|(Статический) Вызывайте эту функцию для сравнения двух элементов на предмет равенства.|  
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Статический) Вызывайте эту функцию, чтобы определить элемент больше и меньше.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс содержит два статические функции для сравнения элементов, хранящихся в объекте класса коллекции. Этот класс используется [CDefaultElementTraits класса](../../atl/reference/cdefaultelementtraits-class.md).  
+ Этот класс содержит два статических функций для сравнения элементов, сохраненную в объекте класса коллекции. Этот класс используется [класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -57,50 +58,50 @@ class CDefaultCompareTraits
  **Заголовок:** atlcoll.h  
   
 ##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements  
- Вызывайте эту функцию для сравнения на равенство двух элементов.  
+ Вызывайте эту функцию для сравнения двух элементов на предмет равенства.  
   
 ```
 static bool CompareElements(const T& element1, const T& element2);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `element1`  
+ *element1*  
  Первый элемент  
   
- `element2`  
+ *элемент элемент2*  
  Второй элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если элементы равны false в противном случае.  
+ Возвращает значение true, если элементы равны; значение false в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию эта функция является равенства ( `==`) оператор. Для объектов, отличных от простых типов данных эта функция может потребоваться переопределить.  
+ По умолчанию эта функция реализуется равенство (**==**) оператор. Для объектов, отличных от простых типов данных эта функция может потребоваться переопределить.  
   
 ##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered  
- Эта функция вызывается для определения элемента больше и меньше.  
+ Вызывайте эту функцию, чтобы определить элемент больше и меньше.  
   
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `element1`  
+ *element1*  
  Первый элемент  
   
- `element2`  
+ *элемент элемент2*  
  Второй элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение типа integer, зависимости в следующей таблице:  
+ Возвращает целое число, согласно приведенной ниже таблице:  
   
 |Условие|Возвращаемое значение|  
 |---------------|------------------|  
-|`element1` < `element2`|<0|  
-|`element1` == `element2`|0|  
-|`element1` > `element2`|>0|  
+|*element1* < *элемент элемент2*|<0|  
+|*element1* == *элемент элемент2*|0|  
+|*element1* > *элемент элемент2*|>0|  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию эта функция использует `==`, **\<**, и **>** операторы. Для объектов, отличных от простых типов данных эта функция может потребоваться переопределить.  
+ Реализация по умолчанию эта функция использует **==**, **\<**, и **>** операторы. Для объектов, отличных от простых типов данных эта функция может потребоваться переопределить.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

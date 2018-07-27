@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348313"
 ---
 # <a name="mfc-activex-controls-methods"></a>Элементы управления ActiveX в MFC. Методы
 Элемент управления ActiveX запускает события для связи между ним и его контейнера элемента управления. Контейнер может также обмениваться данными с элементом управления с помощью методов и свойств. Метода также вызываются функции.  

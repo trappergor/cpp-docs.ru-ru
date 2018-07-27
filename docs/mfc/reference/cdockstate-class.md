@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcfbe14743ffff91a4a1749f0394a6deb8f0547a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83ae0a746e31c211517563a018e5b7da18e3350a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955600"
 ---
 # <a name="cdockstate-class"></a>Класс CDockState
 Сериализуемый класс `CObject` для загрузки, выгрузки или очистки состояния одной или нескольких закрепляемых панелей элементов управления в постоянной памяти (файле).  
@@ -45,7 +46,7 @@ class CDockState : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDockState::Clear](#clear)|Удаляет сведения о состоянии закрепления.|  
 |[CDockState::GetVersion](#getversion)|Возвращает номер версии сохраненного состояния панели.|  
@@ -54,7 +55,7 @@ class CDockState : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDockState::m_arrBarInfo](#m_arrbarinfo)|Массив указателей на сохраненный закрепить сведения о состоянии, по одной записи для каждой панели элементов управления.|  
   
@@ -106,7 +107,7 @@ void LoadState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszProfileName`  
+ *lpszProfileName*  
  Указатель null teminated строка, указывающая имя раздела в файле инициализации или ключ в реестре Windows, где хранятся сведения о состоянии.  
   
 ### <a name="remarks"></a>Примечания  
@@ -127,7 +128,7 @@ void SaveState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszProfileName`  
+ *lpszProfileName*  
  Указатель null teminated строка, указывающая имя раздела в файле инициализации или ключ в реестре Windows, где хранятся сведения о состоянии.  
   
 ### <a name="remarks"></a>Примечания  

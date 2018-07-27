@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342138"
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>Создание элемента выбора даты и времени
 Способ создания элемента управления выбора даты и времени зависит от того, с помощью элемента управления в диалоговом окне или его создания в окне nondialog.  

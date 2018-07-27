@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35ac7686706aad871b95f8b94d2bb11b459a64e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961744"
 ---
 # <a name="checkedarrayiterator-class"></a>Класс checked_array_iterator
 
@@ -150,13 +151,13 @@ int main()
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[checked_array_iterator](#checked_array_iterator)|Формирование итератора `checked_array_iterator` по умолчанию или итератора `checked_array_iterator` из базового итератора.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[difference_type](#difference_type)|Тип, обеспечивающий разницу между двумя итераторами `checked_array_iterator`, которые ссылаются на элементы в одном контейнере.|
 |[pointer](#pointer)|Тип, содержащий указатель на элемент, к которому обращается итератор `checked_array_iterator`.|
@@ -164,13 +165,13 @@ int main()
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[base](#base)|Восстановление базового итератора из соответствующего итератора `checked_array_iterator`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор==](#op_eq_eq)|Проверка двух итераторов `checked_array_iterator` на равенство.|
 |[оператор!=](#op_neq)|Проверка двух итераторов `checked_array_iterator` на неравенство.|
@@ -252,11 +253,11 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Параметры
 
-`ptr` Указатель на массив.
+*PTR* указатель на массив.
 
-`size` Размер массива.
+*размер* размер массива.
 
-`index` (Необязательно) Элемент в массиве, чтобы инициализировать итератор.  По умолчанию итератор инициализируется первым элементом в массиве.
+*Индекс* (необязательно) элемент в массиве, для инициализации итератора.  По умолчанию итератор инициализируется первым элементом в массиве.
 
 ### <a name="remarks"></a>Примечания
 
@@ -324,7 +325,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-`right` `checked_array_iterator` По которому проверяется на равенство.
+*правом* `checked_array_iterator` по которому проверяется на предмет равенства.
 
 ### <a name="remarks"></a>Примечания
 
@@ -379,7 +380,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-`right` `checked_array_iterator` По которому проверяется на неравенство.
+*правом* `checked_array_iterator` по которому проверяется на предмет их неравенства.
 
 ### <a name="remarks"></a>Примечания
 
@@ -434,7 +435,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-`right` `checked_array_iterator` По которому проверяется на неравенство.
+*правом* `checked_array_iterator` по которому проверяется на предмет их неравенства.
 
 ### <a name="remarks"></a>Примечания
 
@@ -489,7 +490,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-`right` `checked_array_iterator` Для сравнения.
+*правом* `checked_array_iterator` для сравнения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -507,7 +508,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-`right` `checked_array_iterator` Для сравнения.
+*правом* `checked_array_iterator` для сравнения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -525,7 +526,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-`right` `checked_array_iterator` Для сравнения.
+*правом* `checked_array_iterator` для сравнения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -755,7 +756,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-`_Off` Смещение, на которую увеличивается итератор.
+*_Off* смещение, на который необходимо увеличить итератор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -802,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-`_Off` Смещение для добавления `checked_array_iterator`.
+*_Off* смещение, добавляемое к `checked_array_iterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -849,7 +850,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-`_Off` Смещение, на которую увеличивается итератор.
+*_Off* смещение, на который необходимо увеличить итератор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -899,7 +900,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-`_Off` Смещение для уменьшения из `checked_array_iterator`.
+*_Off* смещение, которое необходимо уменьшить `checked_array_iterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -921,7 +922,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-`_Off` Смещение от `checked_array_iterator` адрес.
+*_Off* смещение от `checked_array_iterator` адрес.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

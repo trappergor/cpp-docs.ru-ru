@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694996"
 ---
 # <a name="c2-rules"></a>C.2 Правила
 Нотация описан в разделе 6.1 стандарта C. В этом приложении грамматики показывает расширения Грамматика базовый язык для директивы OpenMP C и C++.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368802"
 ---
 # <a name="language-specific-handler"></a>Обработчик конкретного языка
 Относительный адрес обработчик конкретного языка в UNWIND_INFO отсутствует, каждый раз, когда установлены флаги UNW_FLAG_EHANDLER или UNW_FLAG_UHANDLER. Как описано в предыдущем разделе, обработчик языка вызывается как часть поиска для обработчика исключений или в процессе очистки. Он имеет следующий прототип:  

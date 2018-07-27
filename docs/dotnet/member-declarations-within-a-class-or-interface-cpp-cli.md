@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135122"
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>Объявления членов в пределах класса или интерфейса (C++/CLI)
 Объявление свойств и операторов был широко переработан при переходе от управляемых расширений для C++ к Visual C++, скрытие основные сведения о реализации, которые были видны в управляемых расширениях. Также были изменены объявлений событий.  

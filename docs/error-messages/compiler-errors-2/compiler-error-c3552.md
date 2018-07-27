@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252547"
 ---
 # <a name="compiler-error-c3552"></a>Ошибка компилятора C3552
 "имя_типа": тип возвращаемого значения с поздним заданием не может содержать "auto"  

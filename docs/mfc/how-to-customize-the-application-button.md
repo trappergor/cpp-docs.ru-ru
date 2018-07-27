@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351368"
 ---
 # <a name="how-to-customize-the-application-button"></a>Практическое руководство. Настройка кнопки приложения
 При нажатии кнопки приложения отображается меню команд. Как правило, меню содержит команды, связанной с файлом, например **откройте**, **Сохранить**, **печати**, и **выхода**.  

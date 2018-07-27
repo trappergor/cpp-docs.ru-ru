@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688054"
 ---
 # <a name="message-passing-functions"></a>Функции передачи сообщений
 Библиотека асинхронных агентов предоставляет несколько функций, которые позволяют передавать сообщения между компонентами.  

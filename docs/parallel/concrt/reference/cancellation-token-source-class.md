@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689679"
 ---
 # <a name="cancellationtokensource-class"></a>Класс cancellation_token_source
 Класс `cancellation_token_source` представляет возможность отмены некоторой отменяемой операции.  

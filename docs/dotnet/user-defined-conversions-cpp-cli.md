@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170652"
 ---
 # <a name="user-defined-conversions-ccli"></a>заданные пользователем преобразования (C++/CLI)
 В этом разделе рассматриваются заданные пользователем преобразования (UDC) при выполнении одного из типов для преобразования ссылку или экземпляр типа значения или ссылочным типом.  

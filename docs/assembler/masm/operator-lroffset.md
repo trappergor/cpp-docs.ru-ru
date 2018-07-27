@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056594"
 ---
 # <a name="operator-lroffset"></a>Оператор LROFFSET
 Возвращает смещение *выражение*. То же, что **СМЕЩЕНИЕ**, но он приводит к возникновению ошибки разрешить смещение загрузчика, что позволяет Windows переместить сегменты кода.  

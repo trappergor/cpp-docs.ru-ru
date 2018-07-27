@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300817"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>Предупреждение средств компоновщика LNK4099
 PDB-ФАЙЛ «имя_файла» не найден «библиотека» или по «пути»; компоновка объекта выполняется как при отсутствии отладочных данных  

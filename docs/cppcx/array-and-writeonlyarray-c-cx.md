@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089396"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Классы Array и WriteOnlyArray (C++/CX)
 Можно свободно использовать обычные массивы в стиле языка C или [std::array](../standard-library/array-class-stl.md) в C + +/ CX программы (хотя [std::vector](../standard-library/vector-class.md) часто является лучшим выбором), но любого API, который публикуется в метаданных, необходимо преобразовать массив в стиле C или вектора синхронизации в [Platform::Array](../cppcx/platform-array-class.md) или [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) типа, в зависимости от того, как он используется. Тип [Platform::Array](../cppcx/platform-array-class.md) не сравним по эффективности и широте возможностей с типом [std::vector](../standard-library/vector-class.md), поэтому в общем случае не рекомендуется использовать его во внутреннем коде, который выполняет множество операций над элементами массива.  

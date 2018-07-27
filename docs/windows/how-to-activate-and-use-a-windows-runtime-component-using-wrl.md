@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880779"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Практическое руководство. Активация и использование компонента среды выполнения Windows с помощью WRL
 В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для инициализации среды выполнения Windows и как активация и использование компонента среды выполнения Windows.  

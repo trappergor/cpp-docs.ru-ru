@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088484"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Параметры компилятора и компоновщика (C++/CX)
 Переменная среды, C + +/ CX параметры компилятора и параметры компоновщика поддерживают построение приложений для среды выполнения Windows.  

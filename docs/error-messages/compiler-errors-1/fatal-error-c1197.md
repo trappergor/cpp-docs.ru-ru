@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227284"
 ---
 # <a name="fatal-error-c1197"></a>Неустранимая ошибка C1197
 не может ссылаться «mscorlib.dll_1», так как программой был уже адресован «mscorlib.dll_2»  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411488"
 ---
 # <a name="text-and-binary-mode-file-io"></a>Файловый ввод-вывод в текстовом и двоичном режиме
 

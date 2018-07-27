@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247075"
 ---
 # <a name="compiler-error-c2946"></a>Ошибка компилятора C2946
 явное создание экземпляра; "класс" не является специализацией класса-шаблона  

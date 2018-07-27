@@ -1,5 +1,5 @@
 ---
-title: _com_error::HRESULTToWCode | Документы Microsoft
+title: _com_error::HRESULTToWCode | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e3955fcda665e08e5415652a1e8f1f232d0fe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbcbd73f1a4a6d80ed30a5d70ca43d5fe45677f9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941721"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
 **Блок, относящийся только к системам Microsoft**  
   
- Сопоставляет 32-разрядный `HRESULT` с 16-разрядным `wCode`.  
+ Сопоставляется 16-разрядное в 32-разрядное значение HRESULT `wCode`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,14 +38,14 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `hr`  
- 32-разрядный `HRESULT` должен быть сопоставлен 16-разрядное `wCode`.  
+ *hr*  
+ 32-разрядное значение HRESULT должны быть сопоставлены с 16-разрядное `wCode`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- 16-разрядное `wCode` , полученного из 32-разрядных `HRESULT`.  
+ 16-разрядное `wCode` , полученного из 32-разрядное значение HRESULT.  
   
 ## <a name="remarks"></a>Примечания  
- В разделе [_com_error::WCode](../cpp/com-error-wcode.md) для получения дополнительной информации.  
+ См. в разделе [_com_error::WCode](../cpp/com-error-wcode.md) Дополнительные сведения.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

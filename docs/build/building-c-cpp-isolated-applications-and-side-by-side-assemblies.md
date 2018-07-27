@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361288"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Построение изолированных приложений и параллельных сборок C/C++
 Visual C++ поддерживает модель развертывания клиентских приложений Windows, основанную на идее [изолированных приложений](http://msdn.microsoft.com/library/aa375190) и [параллельных сборок](http://msdn.microsoft.com/library/ff951640). По умолчанию Visual C++ выполняет построение всех машинных приложений C/C++ в качестве изолированных приложений, использующих [манифесты](http://msdn.microsoft.com/library/aa375365) для описания зависимостей от библиотек Visual C++.  

@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957036"
 ---
 # <a name="cdiscretetransition-class"></a>Класс CDiscreteTransition
 Инкапсулирует отдельный переход.  
@@ -45,19 +46,19 @@ class CDiscreteTransition : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Создает объект отдельный переход и инициализирует его параметры.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDiscreteTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|  
 |[CDiscreteTransition::m_delay](#m_delay)|Количество времени, на которое задержать мгновенный переход в последнее значение.|  
@@ -87,13 +88,13 @@ CDiscreteTransition(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `delay`  
+ *Задержка*  
  Количество времени, на которое задержать мгновенный переход в последнее значение.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Значение переменной анимации в конце перехода.  
   
- `hold`  
+ *Удержание*  
  Количество времени, на который для хранения переменной в свое последнее значение.  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
@@ -105,7 +106,7 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-`pLibrary`  
+*pLibrary*  
  Указатель на [IUIAnimationTransitionLibrary интерфейс](https://msdn.microsoft.com/library/windows/desktop/dd371897), который определяет библиотеку стандартных переходов.  
 
   

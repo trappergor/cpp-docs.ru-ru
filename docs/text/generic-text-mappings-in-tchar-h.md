@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867107"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Универсальные текстовые сопоставления в файле Tchar.h
 Чтобы упростить преобразование кода для международного использования [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] библиотека времени выполнения предоставляет [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-конкретных универсальные текстовые сопоставления для многих типов данных, подпрограмм и других объектов. Можно использовать эти сопоставления, которые определены в файле Tchar.h для написания универсального кода, который можно скомпилировать в однобайтовой, многобайтовой кодировке или [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] наборов, в зависимости от константы манифеста, определяется с помощью символов `#define` инструкции. Универсальные текстовые сопоставления представляют собой [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] расширения, которые не являются [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] совместимы.  

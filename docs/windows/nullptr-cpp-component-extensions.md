@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880716"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (расширения компонентов C++)
 `nullptr` Ключевое слово представляет *значение указателя null*. Значение пустого указателя показывает, что тип дескриптора объекта, внутреннего указателя или собственного указателя не указывает на объект.  

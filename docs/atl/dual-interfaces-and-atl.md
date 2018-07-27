@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355050"
 ---
 # <a name="dual-interfaces-and-atl"></a>Сдвоенные интерфейсы и ATL
 Сдвоенный интерфейс позволяет получить доступ как к методам disp-интерфейс или как методы vtable его методы. В этом разделе рассматриваются некоторые возможности сдвоенные интерфейсы с точки зрения ATL.  

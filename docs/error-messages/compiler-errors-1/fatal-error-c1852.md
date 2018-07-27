@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199515"
 ---
 # <a name="fatal-error-c1852"></a>Неустранимая ошибка C1852
 "имя_файла" не является допустимым файлом предкомпилированного заголовка  

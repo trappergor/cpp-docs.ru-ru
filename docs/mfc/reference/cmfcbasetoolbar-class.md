@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc35091fef87c007fad73be45297536a170ca19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037848"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Класс CMFCBaseToolBar
 Базовый класс для панели инструментов.  
@@ -41,14 +42,14 @@ class CMFCBaseToolBar : public CPane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCBaseToolBar::CMFCBaseToolBar`|Конструктор по умолчанию.|  
 |`CMFCBaseToolBar::~CMFCBaseToolBar`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCBaseToolBar::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Возвращает режим закрепления. (Переопределяет [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
@@ -89,7 +90,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `size`  
+ [out] *размер*  
  Минимальный размер панели инструментов.  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
@@ -100,7 +101,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndOldParent`  
+ [in] *pWndOldParent*  
  Указатель на предыдущем родительского окна.  
   
 ## <a name="see-also"></a>См. также  

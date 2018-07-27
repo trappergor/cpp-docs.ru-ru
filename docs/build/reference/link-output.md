@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376732"
 ---
 # <a name="link-output"></a>Выходные данные LINK
 Выходные данные Link включает файлы .exe, библиотеки DLL, файлы сопоставления и сообщения.  

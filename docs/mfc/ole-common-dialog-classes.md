@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348108"
 ---
 # <a name="ole-common-dialog-classes"></a>Классы общих диалоговых окон OLE
 Эти классы обрабатывают общие задачи OLE путем реализации ряд стандартных диалоговых окон OLE. Они также обеспечивают функциональные возможности OLE единый пользовательский интерфейс.  

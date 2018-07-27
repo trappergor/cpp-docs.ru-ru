@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872365"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Создание 256-цветного значка или курсора (редактор изображений для значков)
 Редактор изображений, значков и курсоров может быть размера больших (64 × 64) с 256-цветной палитры для выбора. После создания ресурса выбирается стиль изображения устройства.  

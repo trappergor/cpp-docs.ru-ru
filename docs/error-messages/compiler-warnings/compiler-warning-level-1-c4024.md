@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270847"
 ---
 # <a name="compiler-warning-level-1-c4024"></a>Предупреждение (уровень 1) C4024 компилятора
 «функция»: различные типы для формального и фактического параметров «число»  

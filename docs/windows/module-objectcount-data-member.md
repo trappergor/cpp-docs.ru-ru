@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875023"
 ---
 # <a name="moduleobjectcount-data-member"></a>Элемент данных Module::objectCount_
 Хранит список количества классов были созданы при помощи [сделать](../windows/make-function.md) функции.  

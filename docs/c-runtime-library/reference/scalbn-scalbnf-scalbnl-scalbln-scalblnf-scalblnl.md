@@ -46,11 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209460"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -111,15 +112,15 @@ long double scalblnl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Scalbn** функции возвращают значение *x* * **FLT_RADIX**<sup>exp</sup> при успешном выполнении. При переполнении (в зависимости от знака *x*), **scalbn** возвращает **HUGE_VAL**; **errno** имеет значение **ERANGE** .
+**Scalbn** функции возвращают значение *x* \* **FLT_RADIX**<sup>exp</sup> при успешном выполнении. При переполнении (в зависимости от знака *x*), **scalbn** возвращает +/- **HUGE_VAL**; **errno** присваивается значение **ERANGE** .
 
-Дополнительные сведения о **errno** и возможна ошибка возвращаемые значения см. в разделе [errno _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Дополнительные сведения о **errno** и возможных ошибок, которые возвращают значения, см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**FLT_RADIX** определяется в \<float.h > основание системы счисления собственного с плавающей запятой; в двоичных системах имеет значение 2, и **scalbn** эквивалентно [ldexp](ldexp.md).
+**FLT_RADIX** определяется в \<float.h > как собственное основание с плавающей запятой; в двоичных системах имеет значение 2, и **scalbn** эквивалентен [ldexp](ldexp.md).
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **scalbn** и **scalbln** , принимающие и возвращающие **float** или **длинные** **двойные** типов. В программе на языке C **scalbn** всегда принимает **двойные** и **int** и возвращает **двойные**, и **scalbln**всегда принимает **двойные** и **длинные** и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **scalbn** и **scalbln** , принимающие и возвращающие **float** или **long** **двойные** типов. В программе на языке C **scalbn** всегда принимает **двойные** и **int** и возвращает **двойные**, и **scalbln**всегда принимает **двойные** и **long** и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

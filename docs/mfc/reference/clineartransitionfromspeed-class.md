@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039486"
 ---
 # <a name="clineartransitionfromspeed-class"></a>Класс CLinearTransitionFromSpeed
 Инкапсулирует переход с линейной скоростью.  
@@ -43,19 +44,19 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Создает объект переход с линейной скоростью и инициализирует его с высокой скоростью и конечное значение.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinearTransitionFromSpeed::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|  
 |[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Абсолютное значение этой переменной скорости.|  
@@ -83,10 +84,10 @@ CLinearTransitionFromSpeed(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dblSpeed`  
+ *dblSpeed*  
  Абсолютное значение этой переменной скорости.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Значение переменной анимации в конце перехода.  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
@@ -99,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
-`pLibrary`  
+*pLibrary*  
  Указатель на [IUIAnimationTransitionLibrary интерфейс](https://msdn.microsoft.com/library/windows/desktop/dd371897), который определяет библиотеку стандартных переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

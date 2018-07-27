@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382485"
 ---
 # <a name="remainders"></a>Остатки от деления
 **ANSI 3.3.5** Знак остатка при целочисленном делении  

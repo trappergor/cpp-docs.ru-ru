@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695646"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Рекомендации по работе со средой выполнения с параллелизмом
 В этом разделе приводятся рекомендации, которые помогут вам эффективно использовать среду выполнения с параллелизмом. Эти рекомендации относятся к [библиотеки параллельных шаблонов](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL), [библиотеки асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)и [планировщик](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  

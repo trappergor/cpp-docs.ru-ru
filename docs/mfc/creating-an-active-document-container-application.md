@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929449"
 ---
 # <a name="creating-an-active-document-container-application"></a>Создание приложения с контейнером активных документов
 Простейшим и наиболее рекомендуемый способ создания приложения с контейнером активных документов является создание приложения MFC EXE контейнера с помощью мастера приложений MFC, а затем измените приложения для поддержки вложения активного документа.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  Выберите **приложение MFC** на правой панели.  
   
-4.  Назовите проект `MyProj`, нажмите кнопку **ОК**.  
+4.  Назовите проект *MyProj*, нажмите кнопку **ОК**.  
   
 5.  Выберите **поддержка составных документов** страницы.  
   
@@ -47,9 +48,9 @@ ms.lasthandoff: 05/04/2018
   
 9. Когда мастер приложений MFC завершит создание приложения, откройте следующие файлы с помощью обозревателя решений:  
   
-    -   MyProjview.cpp  
+    -   *MyProjview.cpp*  
   
-10. В MyProjview.cpp внесите следующие изменения:  
+10. В *MyProjview.cpp*, внесите следующие изменения:  
   
     -   В `CMyProjView::OnPreparePrinting`, замените содержимое функции с помощью следующего кода:  
   

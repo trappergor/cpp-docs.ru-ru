@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129753"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Практическое руководство. Доступ к символам объекта System::String
 Можно получить доступ к символов <xref:System.String> объекта для высокопроизводительных вызовов неуправляемых функций, принимающих `wchar_t*` строки. Метод возвращает внутренний указатель на первый символ <xref:System.String> объекта. Этот указатель можно работать напрямую или закрепленные и передается в функцию, ожидающую обычных `wchar_t` строки.  

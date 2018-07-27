@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee9beb54dd241c6987b79db238f033f3d169497
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8801c41b23ab2c33e4c4e2df9cde8155c1eefafb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957772"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -79,27 +80,27 @@ void swap (
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`left`|Ссылка на объект `sstream`.|
-|`right`|Ссылка на объект `sstream`.|
+|*left*|Ссылка на объект `sstream`.|
+|*right*|Ссылка на объект `sstream`.|
 
 ## <a name="remarks"></a>Примечания
 
-Объекты типа `char *` могут использовать функциональность объекта [\<strstream>](../standard-library/strstream.md) для потоковой передачи. Тем не менее \<strstream > устарел и использование \<sstream > рекомендуется.
+Объекты типа `char *` могут использовать функциональность объекта [\<strstream>](../standard-library/strstream.md) для потоковой передачи. Тем не менее \<strstream > является устаревшим и использование \<sstream > рекомендуется.
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
-|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Создает тип `basic_istringstream`, специализированный на параметре шаблона `char`.|
-|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Создает тип `basic_ostringstream`, специализированный на параметре шаблона `char`.|
-|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Создает тип `basic_stringbuf`, специализированный на параметре шаблона `char`.|
-|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Создает тип `basic_stringstream`, специализированный на параметре шаблона `char`.|
-|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Создает тип `basic_istringstream`, специализированный на параметре шаблона `wchar_t`.|
-|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Создает тип `basic_ostringstream`, специализированный на параметре шаблона `wchar_t`.|
-|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Создает тип `basic_stringbuf`, специализированный на параметре шаблона `wchar_t`.|
-|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Создает тип `basic_stringstream`, специализированный на параметре шаблона `wchar_t`.|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Создает тип `basic_istringstream` специализированный на **char** параметр шаблона.|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Создает тип `basic_ostringstream` специализированный на **char** параметр шаблона.|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Создает тип `basic_stringbuf` специализированный на **char** параметр шаблона.|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Создает тип `basic_stringstream` специализированный на **char** параметр шаблона.|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Создает тип `basic_istringstream` специализированный на **wchar_t** параметр шаблона.|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Создает тип `basic_ostringstream` специализированный на **wchar_t** параметр шаблона.|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Создает тип `basic_stringbuf` специализированный на **wchar_t** параметр шаблона.|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Создает тип `basic_stringstream` специализированный на **wchar_t** параметр шаблона.|
 
 ### <a name="manipulators"></a>Манипуляторы
 
@@ -109,12 +110,12 @@ void swap (
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
-|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Описывает буфер потока, который управляет передачей элементов типа **Elem**, признаки символов которого определяются с помощью класса **Tr**, в последовательность элементов, сохраненную в объекте массива, и из нее.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> с элементами типа **Elem**, признаки символов которых определяются классом **Tr**, а элементы выделяются распределителем класса `Alloc`.|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> с элементами типа **Elem**, признаки символов которых определяются классом **Tr**, а элементы выделяются распределителем класса `Alloc`.|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Описывает объект, управляющий извлечением и вставкой элементов и закодированных объектов с помощью буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> с элементами типа **Elem**. Их признаки символов определяются классом **Tr**, а элементы выделяются распределителем класса `Alloc`.|
+|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Описывает буфер потока, который управляет передачей элементов типа `Elem`, признаки символов которого определяются с помощью класса `Tr`, в последовательность элементов, сохраненную в объекте массива, и из нее.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, с элементами типа `Elem`, признаки символов определяются классом `Tr`, а элементы выделяются распределителем класса `Alloc`.|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, с элементами типа `Elem`, признаки символов определяются классом `Tr`, а элементы выделяются распределителем класса `Alloc`.|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, с элементами типа `Elem`, признаки символов определяются классом `Tr`, а элементы выделяются распределителем класса `Alloc`.|
 
 ## <a name="requirements"></a>Требования
 

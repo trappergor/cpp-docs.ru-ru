@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236898"
 ---
 # <a name="compiler-error-c2749"></a>Ошибка компилятора C2749
 «Тип»: только выдать или перехватить дескриптор для управляемого класса с помощью/CLR: safe  

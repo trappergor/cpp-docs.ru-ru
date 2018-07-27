@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33853821"
 ---
 # <a name="benefits-of-character-set-portability"></a>Преимущества переносимости кодировки
 Можно обеспечить с помощью возможностей переносимости времени выполнения MFC и C, даже если не требуется делать в настоящее время интернационализировать приложение:  

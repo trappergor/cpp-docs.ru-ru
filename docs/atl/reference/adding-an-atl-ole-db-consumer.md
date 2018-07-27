@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356358"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Добавление потребителя ATL OLE DB
 Этот мастер используется для добавления в проект потребителя ATL OLE DB. Потребителя ATL OLE DB состоит из OLE DB доступа класса и привязки данных для доступа к источнику данных. Проект необходимо создать как COM-приложение ATL или как приложение MFC или Win32, содержащее поддержку ATL (которую мастер потребителя ATL OLE DB добавляется автоматически).  

@@ -1,7 +1,7 @@
 ---
-title: Структура CDaoRelationInfo | Документы Microsoft
+title: Структура CDaoRelationInfo | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,70 +17,72 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0fedf6ad90af670a462b0ccac23cc599a1a13e26
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336362"
 ---
 # <a name="cdaorelationinfo-structure"></a>Структура CDaoRelationInfo
-`CDaoRelationInfo` Структура содержит сведения о связи, определенные между двумя таблицами в поля [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) объекта.  
+`CDaoRelationInfo` Структура содержит сведения о связи, определенные между полями двух таблиц [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp
 struct CDaoRelationInfo  
 {  
-    CDaoRelationInfo();
-*// Constructor  
-    CString m_strName;      // Primary  
-    CString m_strTable;     // Primary  
+    CDaoRelationInfo();                     // Constructor  
+    CString m_strName;                      // Primary  
+    CString m_strTable;                     // Primary  
     CString m_strForeignTable;              // Primary  
-    long m_lAttributes;     // Secondary  
+    long m_lAttributes;                     // Secondary  
     CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
-    short m_nFields;        // Secondary *// Below the // Implementation comment: *// Destructor, not otherwise documented  
+    short m_nFields;                        // Secondary
+    // Below the // Implementation comment:
+    // Destructor, not otherwise documented  
 };  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `m_strName`  
+*m_strName*  
  Однозначно называет объект отношения. Дополнительные сведения см. в разделе «Имя свойства» в справке DAO.  
   
  *m_strTable*  
  Имена главной таблицы в связи.  
   
  *m_strForeignTable*  
- Имена внешней таблице в связи. Внешние таблицы — это таблица, используется для включения внешних ключей. Как правило используется внешней таблицы для наложения ссылочной целостности. Внешняя таблица обычно находится на стороне "многие" связи "один ко многим". Внешние таблицы примеры таблиц, содержащих коды для штатов США или Канады республики или заказов клиента.  
+ Имя таблицы внешнего в связи. Внешней таблицы — это таблица, содержащий внешние ключи. Как правило используется внешней таблицы для наложения ссылочной целостности. Внешняя таблица обычно находится на стороне "многие" отношения «один ко многим». Примеры внешних таблиц: таблицы, содержащие коды для American состояний или провинциях Канады или заказов клиентов.  
   
- `m_lAttributes`  
- Содержит сведения о типе связи. Значение этого элемента может быть одно из следующих:  
+ *m_lAttributes*  
+ Содержит сведения о типе связи. Значение этого элемента может быть любое из следующих:  
   
-- **dbRelationUnique** связи один к одному.  
+- `dbRelationUnique` Отношение один к одному.  
   
-- **dbRelationDontEnforce** отношение не будет принудительно (целостность данных).  
+- `dbRelationDontEnforce` Связь не является включенным (не ограничением ссылочной целостности).  
   
-- **dbRelationInherited** существует связь в долгосрочной базы данных, который содержит две вложенные таблицы.  
+- `dbRelationInherited` Связь существует в базе кадр, который содержит две вложенные таблицы.  
   
-- **dbRelationLeft** связь является левое соединение. Левое внешнее соединение включает все записи из первого (слева) таблицы, даже если нет совпадающих значений для записей во второй таблице (справа).  
+- `dbRelationLeft` Связь является левое соединение. Левое внешнее соединение включает в себя все записи из первого (слева) таблицы, даже если они не соответствуют для записей во второй таблице (справа).  
   
-- **dbRelationRight** связь является правой соединения. Правое внешнее соединение включает все записи из второй (правый) таблицы, даже если отсутствуют соответствующие значения для записи в первой таблице (слева).  
+- `dbRelationRight` Связь является правильного соединения. Правое внешнее соединение включает в себя все записи из второго (справа) таблицы, даже если они не соответствуют для записей в таблице первого (слева).  
   
-- **dbRelationUpdateCascade** обновления происходит каскадом.  
+- `dbRelationUpdateCascade` Обновления будут нарастать.  
   
-- **dbRelationDeleteCascade** удаления происходит каскадом.  
+- `dbRelationDeleteCascade` Удаление происходит каскадом.  
   
- `m_pFieldInfos`  
- Указатель на массив [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) структуры. Массив содержит один объект для каждого поля в связи. `m_nFields` Элемент данных дает число элементов массива.  
+*m_pFieldInfos*  
+ Указатель на массив [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) структуры. Массив содержит один объект для каждого поля в связи. `m_nFields` Данные-член возвращает количество элементов массива.  
   
- `m_nFields`  
+*m_nFields*  
  Число `CDaoRelationFieldInfo` объекты в `m_pFieldInfos` элемент данных.  
   
 ## <a name="remarks"></a>Примечания  
- Ссылки на первичной и вторичной выше указывают, как возвращаются сведения по [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) функции-члена в классе `CDaoDatabase`.  
+ Ссылки на первичной и вторичной выше указывают, как возвращаются данные по [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) функции-члена в классе `CDaoDatabase`.  
   
- Класс MFC не представлены отношения объектов. Вместо этого, объект DAO, базовый объект MFC `CDaoDatabase` класс содержит коллекцию объектов отношения: `CDaoDatabase` предоставляет функции-члены для некоторых отдельных элементов данных о связях, или доступ к ним можно обращаться за один раз с `CDaoRelationInfo` путем вызова метода `GetRelationInfo` функции-члена вмещающего объекта базы данных.  
+ Класс MFC не представлены отношения объектов. Вместо этого, объект DAO, базовый объект MFC `CDaoDatabase` класс содержит коллекцию объектов связи: `CDaoDatabase` предоставляет функции-члены для доступа к некоторых отдельных элементов, сведения о связях, или можно получить доступ к их за один раз с `CDaoRelationInfo` путем вызова метода `GetRelationInfo` функция-член края содержащего его объекта базы данных.  
   
- Сведений, получаемых методом [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) функции-члена хранится в `CDaoRelationInfo` структуры. `CDaoRelationInfo` также определяет `Dump` функции-члена в отладочных построений. Можно использовать `Dump` для помещения в дамп содержимого `CDaoRelationInfo` объекта.  
+ Сведений, получаемых методом [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) функция-член хранится в `CDaoRelationInfo` структуры. `CDaoRelationInfo` также определяет `Dump` создает функцию-член в режиме отладки. Можно использовать `Dump` для помещения в дамп содержимое `CDaoRelationInfo` объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdao.h  

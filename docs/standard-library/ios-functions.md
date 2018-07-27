@@ -52,11 +52,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 4937d79c04484dd0cd96f74abb7150873b6f7235
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23689b7c7d6770816db02e4a463fd63080abbaf4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959096"
 ---
 # <a name="ltiosgt-functions"></a>Функции &lt;ios&gt;
 
@@ -81,7 +82,7 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -89,9 +90,9 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию переменные типа `bool` показываются как 1 или 0.
+По умолчанию переменные типа **bool** отображаются в виде 1 или 0.
 
-`boolalpha` вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), а затем возвращает `str`.
+`boolalpha` эффективно вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), а затем возвращает *str*.
 
 [noboolalpha](../standard-library/ios-functions.md#noboolalpha) отменяет результат `boolalpha`.
 
@@ -132,7 +133,7 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -142,7 +143,7 @@ ios_base& dec(ios_base& str);
 
 По умолчанию целочисленные переменные отображаются в десятичной записи.
 
-**Dec** вызывает `str.` [setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec` **, ios_base::basefield**), а затем возвращает `str`.
+`dec` эффективно вызывает `str.` [setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`, `ios_base::basefield`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -184,7 +185,7 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>Параметры
 
-`_Iosbase` `ios_base` Объекта.
+*_Iosbase* `ios_base` объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -200,7 +201,7 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -208,9 +209,9 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="remarks"></a>Примечания
 
-**fixed** является представлением по умолчанию для отображения чисел с плавающей запятой. [scientific](../standard-library/ios-functions.md#scientific) вызывает отображение чисел с плавающей запятой в экспоненциальном представлении.
+`fixed` Представляет нотацию отображения по умолчанию для чисел с плавающей запятой. [scientific](../standard-library/ios-functions.md#scientific) вызывает отображение чисел с плавающей запятой в экспоненциальном представлении.
 
-Манипулятор вызывает * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, **ios_base::floatfield**), а затем возвращает `str`.
+Манипулятор вызывает * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, `ios_base::floatfield`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -247,7 +248,7 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -257,11 +258,11 @@ ios_base& hex(ios_base& str);
 
 По умолчанию целочисленные переменные отображаются в десятичной записи. [dec](../standard-library/ios-functions.md#dec) и [oct](../standard-library/ios-functions.md#oct) также изменяют способ показа целочисленных переменных.
 
-Манипулятор вызывает `str`**.**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, **ios_base::basefield**), а затем возвращает `str`.
+Манипулятор вызывает `str` **.** [setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, `ios_base::basefield`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
-См. [dec](../standard-library/ios-functions.md#dec) с примером использования **hex**.
+См. в разделе [dec](../standard-library/ios-functions.md#dec) пример демонстрирует использование `hex`.
 
 ## <a name="internal"></a>  internal
 
@@ -273,17 +274,17 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на объект, от которого произведен `str`.
+Ссылка на объект, из которого *str* является производным.
 
 ### <a name="remarks"></a>Примечания
 
 [showpos](../standard-library/ios-functions.md#showpos) вызывает показ знака для отображения положительных чисел.
 
-Манипулятор вызывает `str`. [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags)), а затем возвращает `str`.
+Манипулятор вызывает `str`. [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags)), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -318,7 +319,7 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -326,7 +327,7 @@ ios_base& left(ios_base& str);
 
 ### <a name="remarks"></a>Примечания
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::left`, **ios_base::adjustfield**), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::left`, `ios_base::adjustfield`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -360,7 +361,7 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -370,7 +371,7 @@ ios_base& noboolalpha(ios_base& str);
 
 По умолчанию действует `noboolalpha`.
 
-`noboolalpha` вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), а затем возвращает `str`.
+`noboolalpha` эффективно вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), а затем возвращает *str*.
 
 [noboolalpha](../standard-library/ios-functions.md#boolalpha) отменяет результат `noboolalpha`.
 
@@ -388,7 +389,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -398,7 +399,7 @@ ios_base& noshowbase(ios_base& str);
 
 По умолчанию параметр `noshowbase` включен. Используйте [showbase](../standard-library/ios-functions.md#showbase) для указания основания чисел.
 
-Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -414,7 +415,7 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -424,7 +425,7 @@ ios_base& noshowpoint(ios_base& str);
 
 По умолчанию `noshowpoint` включен. Используйте [showpoint](../standard-library/ios-functions.md#showpoint) и [precision](../standard-library/ios-base-class.md#precision) для показа нулей после десятичной запятой.
 
-Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -460,7 +461,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -470,7 +471,7 @@ ios_base& noshowpos(ios_base& str);
 
 По умолчанию параметр `noshowpos` включен.
 
-Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), затем возвращает `str`.
+Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -486,7 +487,7 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -496,7 +497,7 @@ ios_base& noskipws(ios_base& str);
 
 По умолчанию используется [skipws](../standard-library/ios-functions.md#skipws). При чтении пробела из входного потока он сообщает о конце буфера.
 
-Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -527,7 +528,7 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -537,7 +538,7 @@ ios_base& nounitbuf(ios_base& str);
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf) вызывает обработку буфера, когда он не пустой.
 
-Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`), а затем возвращает *str*.
 
 ## <a name="nouppercase"></a>  nouppercase
 
@@ -549,7 +550,7 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -557,7 +558,7 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="remarks"></a>Примечания
 
-Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -573,7 +574,7 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -583,11 +584,11 @@ ios_base& oct(ios_base& str);
 
 По умолчанию целочисленные переменные отображаются в десятичной записи. [dec](../standard-library/ios-functions.md#dec) и [hex](../standard-library/ios-functions.md#hex) также изменяют способ показа целочисленных переменных.
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
-См. [dec](../standard-library/ios-functions.md#dec) с примером использования **oct**.
+См. в разделе [dec](../standard-library/ios-functions.md#dec) пример демонстрирует использование `oct`.
 
 ## <a name="right"></a>  right
 
@@ -599,7 +600,7 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -609,7 +610,7 @@ ios_base& right(ios_base& str);
 
 [left](../standard-library/ios-functions.md#left) также изменяет выравнивание текста.
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -655,7 +656,7 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -665,7 +666,7 @@ ios_base& scientific(ios_base& str);
 
 По умолчанию числа с плавающей запятой показываются в нотации [fixed](../standard-library/ios-functions.md#fixed).
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -699,7 +700,7 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -709,7 +710,7 @@ ios_base& showbase(ios_base& str);
 
 Запись числа можно изменить при помощи [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct) или [hex](../standard-library/ios-functions.md#hex).
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -752,7 +753,7 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -762,7 +763,7 @@ ios_base& showpoint(ios_base& str);
 
 По умолчанию действует [noshowpoint](../standard-library/ios-functions.md#noshowpoint).
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -778,7 +779,7 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -788,7 +789,7 @@ ios_base& showpos(ios_base& str);
 
 По умолчанию используется [noshowpos](../standard-library/ios-functions.md#noshowpos).
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -822,7 +823,7 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -832,7 +833,7 @@ ios_base& skipws(ios_base& str);
 
 По умолчанию действует `skipws`. [noskipws](../standard-library/ios-functions.md#noskipws) устанавливает режим чтения пробелов из входного потока.
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -875,11 +876,11 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на объект, от которого произведен `str`.
+Ссылка на объект, из которого *str* является производным.
 
 ### <a name="remarks"></a>Примечания
 
@@ -887,7 +888,7 @@ ios_base& unitbuf(ios_base& str);
 
 По умолчанию действует [nounitbuf](../standard-library/ios-functions.md#nounitbuf).
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)), а затем возвращает *str*.
 
 ## <a name="uppercase"></a>  uppercase
 
@@ -899,17 +900,17 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>Параметры
 
-`str` Ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или тип, который наследует от `ios_base`.
+*STR* ссылку на объект типа [ios_base](../standard-library/ios-base-class.md), или к типу, который наследует от `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на объект, от которого произведен `str`.
+Ссылка на объект, из которого *str* является производным.
 
 ### <a name="remarks"></a>Примечания
 
 По умолчанию действует [nouppercase](../standard-library/ios-functions.md#nouppercase).
 
-Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)), а затем возвращает `str`.
+Манипулятор вызывает `str`.[ setf](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)), а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 

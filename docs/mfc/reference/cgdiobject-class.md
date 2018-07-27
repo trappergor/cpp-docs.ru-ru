@@ -1,5 +1,5 @@
 ---
-title: Класс CGdiObject | Документы Microsoft
+title: Класс CGdiObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6749c62a5d8de0bd1da3a5d619a85a0ec874a21a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338422"
 ---
 # <a name="cgdiobject-class"></a>Класс CGdiObject
 Предоставляет базовый класс для различных типов объектов интерфейса графических устройств Windows (GDI), таких как растровые изображения, области, кисти, перья, палитры и шрифты.  
@@ -59,43 +60,43 @@ class CGdiObject : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::CGdiObject](#cgdiobject)|Создает объект `CGdiObject`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::Attach](#attach)|Присоединяет объект Windows GDI для `CGdiObject` объекта.|  
-|[CGdiObject::CreateStockObject](#createstockobject)|Получает дескриптор Windows предопределенных стандартных перья, кисти или шрифты.|  
-|[CGdiObject::DeleteObject](#deleteobject)|Удаляет объект Windows GDI присоединен к `CGdiObject` объекта из памяти, освобождая все системы хранения, связанный с объектом.|  
-|[CGdiObject::DeleteTempMap](#deletetempmap)|Удаляет все временные `CGdiObject` объектов, созданных `FromHandle`.|  
-|[CGdiObject::Detach](#detach)|Отсоединяет объект Windows GDI из `CGdiObject` объекта и возвращает дескриптор в объект Windows GDI.|  
+|[CGdiObject::CreateStockObject](#createstockobject)|Извлекает дескриптор Windows предопределенные акций перья, кисти или шрифты.|  
+|[CGdiObject::DeleteObject](#deleteobject)|Удаляет объект Windows GDI присоединен к `CGdiObject` объект из памяти, освобождая все хранилища системы, связанный с объектом.|  
+|[CGdiObject::DeleteTempMap](#deletetempmap)|Удаляет все временные `CGdiObject` объекты, создаваемые `FromHandle`.|  
+|[CGdiObject::Detach](#detach)|Отсоединяет объект Windows GDI из `CGdiObject` объекта и возвращает дескриптор объекта Windows GDI.|  
 |[CGdiObject::FromHandle](#fromhandle)|Возвращает указатель на `CGdiObject` объект, заданный дескриптор в объект Windows GDI.|  
-|[CGdiObject::GetObject](#getobject)|Заполняет буфер с данными, который описывает объект Windows GDI присоединяется к `CGdiObject` объекта.|  
+|[CGdiObject::GetObject](#getobject)|Заполняет буфер с данными, который описывает объект Windows GDI подключен к `CGdiObject` объекта.|  
 |[CGdiObject::GetObjectType](#getobjecttype)|Извлекает тип объекта GDI.|  
-|[CGdiObject::GetSafeHandle](#getsafehandle)|Возвращает `m_hObject` Если `this` — `NULL`в этом случае `NULL` возвращается.|  
-|[CGdiObject::UnrealizeObject](#unrealizeobject)|Сбрасывает источника кисти или сбрасывает логическую палитру.|  
+|[CGdiObject::GetSafeHandle](#getsafehandle)|Возвращает `m_hObject` Если **это** имеет значение NULL, в котором возвращается вариантов значение NULL.|  
+|[CGdiObject::UnrealizeObject](#unrealizeobject)|Сбрасывает происхождение кисти или сбрасывает логической палитры.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::operator! =](#operator_neq)|Определяет, если два объекта GDI логически не равны.|  
 |[CGdiObject::operator ==](#operator_eq_eq)|Определяет, логически равны ли два объекта GDI.|  
-|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Извлекает `HANDLE` в присоединенном объекте Windows GDI.|  
+|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Извлекает ДЕСКРИПТОР в присоединенном объекте Windows GDI.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CGdiObject::m_hObject](#m_hobject)|Объект `HANDLE` содержащий `HBITMAP`, `HPALETTE`, `HRGN`, `HBRUSH`, `HPEN`, или `HFONT` присоединен к этому объекту.|  
+|[CGdiObject::m_hObject](#m_hobject)|МАРКЕР, содержащий HBITMAP, HPALETTE, HRGN, HBRUSH, HPEN или HFONT присоединен к этому объекту.|  
   
 ## <a name="remarks"></a>Примечания  
- Никогда не создавайте `CGdiObject` напрямую. Вместо этого объект создается из одного из его производных классов, таких как `CPen` или `CBrush`.  
+ Никогда не создаст `CGdiObject` напрямую. Вместо этого объект создается из одного из его производных классов, таких как `CPen` или `CBrush`.  
   
- Дополнительные сведения о `CGdiObject`, в разделе [графические объекты](../../mfc/graphic-objects.md).  
+ Дополнительные сведения о `CGdiObject`, см. в разделе [графические объекты](../../mfc/graphic-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -113,11 +114,11 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hObject`  
- Объект `HANDLE` в объект Windows GDI (например, `HPEN` или `HBRUSH`).  
+ *hObject*  
+ ДЕСКРИПТОР Windows объект GDI (например, HPEN или HBRUSH).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если вложение прошла успешно; в противном случае — 0.  
+ Ненулевое значение, если вложение выполнено успешно; в противном случае 0.  
   
 ##  <a name="cgdiobject"></a>  CGdiObject::CGdiObject  
  Создает объект `CGdiObject`.  
@@ -127,42 +128,42 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Никогда не создавайте `CGdiObject` напрямую. Вместо этого объект создается из одного из его производных классов, таких как `CPen` или **Cbrush**.  
+ Никогда не создаст `CGdiObject` напрямую. Вместо этого объект создается из одного из его производных классов, таких как `CPen` или `Cbrush`.  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
- Получает дескриптор к одной из предопределенных стандартных Windows GDI перья, кисти или шрифты и присоединяет объект GDI для `CGdiObject` объекта.  
+ Извлекает дескриптор один из предопределенных акций Windows GDI перья, кисти или шрифты и присоединяет объект GDI для `CGdiObject` объекта.  
   
 ```  
 BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
- Константа, указывающая тип требуемого stock-объектом. Параметр *fnObject* для [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) в Windows SDK описание соответствующие значения.  
+ *nIndex*  
+ Константа, задающая тип требуемого объекта акций. См. параметр *fnObject* для [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) в пакете SDK для Windows, описание соответствующие значения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Вызов этой функции с помощью одного из производных классов, соответствующее типу объектов Windows GDI, например `CPen` для биржевой пера.  
+ Вызов этой функции с помощью одного из производных классов, которые соответствует тип объектов Windows GDI, таким как `CPen` для биржевой пера.  
   
 ##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
- Удаляет присоединяемый объект Windows GDI из памяти, освобождая все хранилища системы, связанный с объектом Windows GDI.  
+ Удаляет присоединенный объект Windows GDI из памяти, освобождая все хранилища системы, связанный с объектом Windows GDI.  
   
 ```  
 BOOL DeleteObject();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если объект GDI успешно удален; в противном случае — 0.  
+ Ненулевое значение, если объект GDI был успешно удален; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Хранилище, связанное с `CGdiObject` этот вызов не влияет на объект. Приложение не должно вызывать `DeleteObject` на `CGdiObject` объекта, выбранного в данный момент в контексте устройства.  
+ Хранилище, связанное с `CGdiObject` этот вызов не влияет на объект. Приложение не должно вызывать `DeleteObject` на `CGdiObject` объект, который выбран в данный момент в контексте устройства.  
   
- При удалении шаблона кисти растровое изображение, связанное с кистью не удаляется. Битовая карта, необходимо удалить независимо друг от друга.  
+ При удалении шаблона кисти, растровое изображение, связанное с кистью не удаляется. Растровое изображение необходимо удалять по отдельности.  
   
 ##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap  
- Автоматически вызывается `CWinApp` обработчиком времени простоя `DeleteTempMap` удаляет все временные `CGdiObject` объектов, созданных `FromHandle`.  
+ Автоматически вызывается `CWinApp` обработчиком времени простоя, `DeleteTempMap` удаляет все временные `CGdiObject` объекты, создаваемые `FromHandle`.  
   
 ```  
 static void PASCAL DeleteTempMap();
@@ -175,14 +176,14 @@ static void PASCAL DeleteTempMap();
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
 ##  <a name="detach"></a>  CGdiObject::Detach  
- Отсоединяет объект Windows GDI из `CGdiObject` объекта и возвращает дескриптор в объект Windows GDI.  
+ Отсоединяет объект Windows GDI из `CGdiObject` объекта и возвращает дескриптор объекта Windows GDI.  
   
 ```  
 HGDIOBJ Detach();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `HANDLE` для Windows GDI объекта отсоединенных; в противном случае **NULL** Если ни один из объектов GDI подключен.  
+ Объект `HANDLE` для Windows GDI объекта отсоединена; в противном случае — значение NULL, если объект GDI не подключен.  
   
 ##  <a name="fromhandle"></a>  CGdiObject::FromHandle  
  Возвращает указатель на `CGdiObject` объект, заданный дескриптор в объект Windows GDI.  
@@ -192,16 +193,16 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hObject`  
- Объект `HANDLE` объект Windows GDI.  
+ *hObject*  
+ ДЕСКРИПТОР объекта Windows GDI.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CGdiObject` , которые могут быть постоянными или временными.  
+ Указатель на `CGdiObject` , может быть временным или постоянным.  
   
 ### <a name="remarks"></a>Примечания  
- Если `CGdiObject` объект уже не присоединен к объектов Windows GDI, временный `CGdiObject` объект создается и прикрепляется.  
+ Если `CGdiObject` объект еще не присоединен к объекту Windows GDI, временный `CGdiObject` созданный и присоединенный объект.  
   
- Этот временный `CGdiObject` объект действителен только до следующего приложение имеет время простоя в свой цикл событий во время работы которого удаляются все временные графические объекты. Другими словами является, что временный объект допустима только во время обработки одного окна сообщения.  
+ Этот временный `CGdiObject` объект действителен только до следующей встречи, в приложении есть время простоя в свой цикл событий, после чего будут удалены все временные графические объекты. Другими словами — это что временный объект допустима только во время обработки сообщения одного окна.  
   
 ##  <a name="getobject"></a>  CGdiObject::GetObject  
  Заполняет буфер данных, который определяет указанный объект.  
@@ -213,30 +214,30 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nCount`  
- Указывает число байтов для копирования в `lpObject` буфера.  
+ *nCount*  
+ Указывает число байтов для копирования в *lpObject* буфера.  
   
- `lpObject`  
- Указывает на буфер, предоставленный пользователем, получающего данные.  
+ *lpObject*  
+ Указывает на буфер, предоставленные пользователем, для получения информации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Число байтов, полученных; в противном случае значение 0, если ошибка возникает.  
+ Число байтов, полученных; в противном случае 0 когда возникает ошибка.  
   
 ### <a name="remarks"></a>Примечания  
- Функция извлекает структуру данных, тип которого зависит от типа графического объекта, как показано в следующем списке:  
+ Функция возвращает структуру данных, тип которого зависит от типа графического объекта, как показано в следующем списке:  
   
 |Object|Тип буфера|  
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
 |`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
-|`CBitmap`|[РАСТРОВОЕ ИЗОБРАЖЕНИЕ](../../mfc/reference/bitmap-structure.md)|  
-|`CPalette`|**WORD**|  
+|`CBitmap`|[ТОЧЕЧНЫЙ РИСУНОК](../../mfc/reference/bitmap-structure.md)|  
+|`CPalette`|WORD|  
 |`CRgn`|Не поддерживается|  
   
- Если объект является `CBitmap` объекта, `GetObject` возвращает только ширину, высоту и цвет шрифта формат растрового изображения. Число битов могут быть получены с помощью [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
+ Если объект является `CBitmap` объекта, `GetObject` возвращает только ширину, высоту и цвет сведения о формате растрового изображения. Число битов могут быть получены с помощью [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
   
- Если объект является `CPalette` объекта, `GetObject` извлекает **WORD** , указывает количество записей в палитре. Функция не извлекает [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) структура, определяющая палитры. Приложение может получить сведения о записи палитр, вызвав [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
+ Если объект является `CPalette` объекта, `GetObject` извлекает слово, которое указывает количество записей в палитре. Функция не извлекает [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) структура, определяющая палитры. Приложение может получить сведения о записи палитр, вызвав [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  Извлекает тип объекта GDI.  
@@ -246,52 +247,52 @@ UINT GetObjectType() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Тип объекта, в случае успешного выполнения; в противном случае — 0. Он может иметь одно из следующих значений:  
+ Тип объекта, если выполнение прошло успешно; в противном случае 0. Он может иметь одно из следующих значений:  
   
-- **OBJ_BITMAP** растрового изображения  
+- OBJ_BITMAP растрового изображения  
   
-- **OBJ_BRUSH** кисти  
+- OBJ_BRUSH кисти  
   
-- **OBJ_FONT** шрифта  
+- OBJ_FONT шрифта  
   
-- **OBJ_PAL** палитры  
+- Палитра OBJ_PAL  
   
-- **OBJ_PEN** пера  
+- OBJ_PEN пера  
   
-- **OBJ_EXTPEN** расширенного пера  
+- Расширенные OBJ_EXTPEN пера  
   
-- **OBJ_REGION** области  
+- OBJ_REGION регион  
   
-- **OBJ_DC** контекста устройства  
+- Контекст устройства OBJ_DC  
   
-- **OBJ_MEMDC** контекста устройства памяти  
+- Контекста устройства памяти OBJ_MEMDC  
   
-- **OBJ_METAFILE** метафайл  
+- OBJ_METAFILE метафайл  
   
-- **OBJ_METADC** контексте устройства метафайла  
+- Контексте устройства метафайла OBJ_METADC  
   
-- **OBJ_ENHMETAFILE** расширенный метафайл  
+- OBJ_ENHMETAFILE расширенного метафайла  
   
-- **OBJ_ENHMETADC** контекст устройства расширенный метафайл  
+- Контекст устройства OBJ_ENHMETADC расширенный метафайл  
   
 ##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle  
- Возвращает `m_hObject` Если **это** — **NULL**в этом случае **NULL** возвращается.  
+ Возвращает `m_hObject` Если **это** имеет значение NULL, в котором возвращается вариантов значение NULL.  
   
 ```  
 HGDIOBJ GetSafeHandle() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `HANDLE` в присоединенном объекте Windows GDI; в противном случае **NULL** Если объект не подключен.  
+ ДЕСКРИПТОР Windows GDI в присоединенном объекте; в противном случае — значение NULL, если объект не присоединен.  
   
 ### <a name="remarks"></a>Примечания  
- Это является частью интерфейса парадигма общие дескриптор и полезен, когда **NULL** представляет собой допустимое или специальное значение для дескриптора.  
+ Это является частью подход к пользовательскому интерфейсу общие дескриптор и полезно, если NULL является допустимым или специальных значение для дескриптора.  
   
 ### <a name="example"></a>Пример  
-  Далее приведен пример [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled).  
+  См. в примере [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled).  
   
 ##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
- Объект `HANDLE` содержащий `HBITMAP`, **HRGN**, `HBRUSH`, `HPEN`, `HPALETTE`, или **HFONT** присоединен к этому объекту.  
+ МАРКЕР, содержащий HBITMAP, HRGN, HBRUSH, HPEN, HPALETTE или HFONT присоединен к этому объекту.  
   
 ```  
 HGDIOBJ m_hObject;  
@@ -305,7 +306,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `obj`  
+ *obj*  
  Указатель на существующий `CGdiObject`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -319,21 +320,21 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `obj`  
+ *obj*  
  Ссылка на существующий `CGdiObject`.  
   
 ### <a name="remarks"></a>Примечания  
- Определяет, является ли объект GDI с левой стороны равно объект GDI справа от оператора.  
+ Определяет, эквивалентен ли объект GDI с левой стороны объект GDI справа от оператора.  
   
 ##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
- Извлекает `HANDLE` в присоединенном объекте Windows GDI; в противном случае **NULL** Если объект не подключен.  
+ Извлекает ДЕСКРИПТОР присоединенный объект Windows GDI; в противном случае — значение NULL, если объект не присоединен.  
   
 ```  
 operator HGDIOBJ() const;  
 ```  
   
 ##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject  
- Сбрасывает источника кисти или сбрасывает логическую палитру.  
+ Сбрасывает происхождение кисти или сбрасывает логической палитры.  
   
 ```  
 BOOL UnrealizeObject();
@@ -343,17 +344,17 @@ BOOL UnrealizeObject();
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Хотя `UnrealizeObject` является функция-член `CGdiObject` класса, он должен вызываться только на `CBrush` или `CPalette` объектов.  
+ Хотя `UnrealizeObject` является функцией-членом из `CGdiObject` класс, он должен вызываться только в `CBrush` или `CPalette` объектов.  
   
- Для `CBrush` объектов, `UnrealizeObject` направлена на Сброс начала заданного кисти в следующий раз, он установлен в контекст устройства. Если объект является `CPalette` объекта, `UnrealizeObject` указывает системе, следует реализовать палитру, как будто он был не ранее была реализована. В следующий раз, приложение вызывает [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette) функции для палитре система полностью сопоставляет логическую палитру для системной палитры.  
+ Для `CBrush` объектов, `UnrealizeObject` направлена на Сброс начала заданного кисти в следующий раз, он выбран в контексте устройства. Если объект является `CPalette` объекта, `UnrealizeObject` указывает, что система для реализации палитры, как будто он был не ранее было удовлетворено. В следующий раз, приложение вызывает [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette) функция для указанного палитры, система полностью указывает логическую палитру для системной палитры.  
   
- `UnrealizeObject` Не следует использовать функцию с объектами акций. `UnrealizeObject` Функция должна вызываться всякий раз, когда новый источник кисти имеет значение (с помощью параметра [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) функции). `UnrealizeObject` Функция не должна вызываться для выбранной кисти или выбранных палитры любой контекст отображения.  
+ `UnrealizeObject` Функции не следует использовать с объектами акций. `UnrealizeObject` Функция должна вызываться всякий раз, когда новый источник кисти имеет значение (с помощью параметра [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) функции). `UnrealizeObject` Функция не должна вызываться для выбранной кисти или выбранного палитру для любого контекста отображения.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CBitmap-класс](../../mfc/reference/cbitmap-class.md)   
- [CBrush-класс](../../mfc/reference/cbrush-class.md)   
- [CFont-класс](../../mfc/reference/cfont-class.md)   
- [CPalette-класс](../../mfc/reference/cpalette-class.md)   
- [CPen-класс](../../mfc/reference/cpen-class.md)   
+ [Класс CBitmap](../../mfc/reference/cbitmap-class.md)   
+ [Класс CBrush](../../mfc/reference/cbrush-class.md)   
+ [Класс CFont](../../mfc/reference/cfont-class.md)   
+ [Класс CPalette](../../mfc/reference/cpalette-class.md)   
+ [Cpen-класс](../../mfc/reference/cpen-class.md)   
  [Класс CRgn](../../mfc/reference/crgn-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Класс CTable | Документы Microsoft
+title: Класс CTable | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,21 +9,27 @@ f1_keywords:
 - ATL::CTable
 - ATL.CTable
 - CTable
+- ATL.CTable.Open
+- ATL::CTable::Open
+- CTable::Open
+- CTable.Open
 dev_langs:
 - C++
 helpviewer_keywords:
 - CTable class
+- Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e12ec9f7cc7db4da78df8f3b49ed4fdadef3f769
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7dc1383199b5e8167936d99d487bdfc3eb15bddb
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233494"
 ---
 # <a name="ctable-class"></a>Класс CTable
 Предоставляет средства для прямого доступа к простому набору строк (без параметров).  
@@ -37,28 +43,76 @@ class CTable :
    public CAccessorRowset <TAccessor, TRowset>  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `TAccessor`  
- Класса метода доступа.  
+### <a name="parameters"></a>Параметры  
+ *TAccessor*  
+ Класс, метод доступа.  
   
- `TRowset`  
- От класса набора строк.  
+ *TRowset*  
+ Класс набора строк.  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="methods"></a>Методы  
   
 |||  
 |-|-|  
-|[Открыть](../../data/oledb/ctable-open.md)|Открытие таблицы.|  
+|[Открыть](#open)|Открытие таблицы.|  
   
 ## <a name="remarks"></a>Примечания  
- В разделе [CCommand](../../data/oledb/ccommand-class.md) сведения о том, как выполнить команду, чтобы доступ к строк.  
+ См. в разделе [CCommand](../../data/oledb/ccommand-class.md) сведения о том, как выполнить команду, чтобы получить доступ к набор строк.  
+
+## <a name="open"></a> CTable::Open
+Открытие таблицы.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+HRESULT Open(const CSession& session,  
+   LPCWSTR wszTableName,  
+   DBPROPSET* pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw ();  
+
+
+HRESULT Open(const CSession& session,  
+   LPCSTR szTableName,  
+   DBPROPSET* pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw ();  
+
+
+HRESULT Open(const CSession& session,  
+   DBID& dbid,  
+   DBPROPSET* pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw ();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *Сеанс*  
+ [in] Сеанс, в течение которого открыт таблицы.  
+  
+ *wszTableName*  
+ [in] Имя таблицы, передаваемое в виде строки Юникода.  
+  
+ *szTableName*  
+ [in] Имя таблицы, переданного как строку ANSI.  
+  
+ *dbid*  
+ [in] `DBID` Таблицы, чтобы открыть.  
+  
+ *pPropSet*  
+ [in] Указатель на массив [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](https://msdn.microsoft.com/library/ms713696.aspx) в *справочнике программиста OLE DB* в Windows SDK. Значение NULL по умолчанию задает свойства отсутствуют.  
+  
+ *ulPropSets*  
+ [in] Число [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структуры, передаются в *pPropSet* аргумент.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Стандартный HRESULT.  
+  
+### <a name="remarks"></a>Примечания  
+ Дополнительные сведения см. в разделе [IOpenRowset::OpenRowset](https://msdn.microsoft.com/library/ms716724.aspx) в *Справочник программиста OLE DB по*.  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)
+ [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   

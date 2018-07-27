@@ -1,5 +1,5 @@
 ---
-title: Структура _ATL_COM_MODULE70 | Документы Microsoft
+title: Структура _ATL_COM_MODULE70 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d78165481c8f2e9d8bba33ad14ebd0794f04fde
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883717"
 ---
 # <a name="atlcommodule70-structure"></a>Структура _ATL_COM_MODULE70
-Используемый код с COM в ATL  
+Используемый код, связанный с COM в ATL  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,17 +48,17 @@ struct _ATL_COM_MODULE70 {
  `m_hInstTypeLib`  
  Дескриптор экземпляра, в библиотеку типов для этого модуля.  
   
- **m_ppAutoObjMapFirst**  
- Адрес элемента массива, указывающее начало карты записей объект для этого модуля.  
+ `m_ppAutoObjMapFirst`  
+ Адрес элемента массива, который задает начало карты записей объект для этого модуля.  
   
- **m_ppAutoObjMapLast**  
- Адрес элемента массива, указывая на конец объекта карты записей для этого модуля.  
+ `m_ppAutoObjMapLast`  
+ Адрес элемента массива, указывающий на конец записи сопоставления объекта для этого модуля.  
   
  `m_csObjMap`  
- Для сериализации доступ к записям карты объект критической секции. Используется внутренними механизмами ATL.  
+ Критический раздел для сериализации доступа к записям объекта карты. Используется системой ATL.  
   
 ## <a name="remarks"></a>Примечания  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) определяется как typedef из `_ATL_COM_MODULE70`.  
+ [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) определяется как typedef типа _ATL_COM_MODULE70.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  

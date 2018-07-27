@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367655"
 ---
 # <a name="function-types"></a>Типы функций
 Существуют два типа функций. Функция, которая требует кадр стека, вызывается функция кадра. Функция, которая не требует кадр стека, называется конечной функции.  

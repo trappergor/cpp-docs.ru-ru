@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891689"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Пошаговое руководство: Создание приложения UWP, с использованием WRL и Media Foundation
 Использование среды выполнения C++ шаблон библиотеки Windows (WRL) для создания приложения универсальной платформы Windows (UWP), которое использует [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  

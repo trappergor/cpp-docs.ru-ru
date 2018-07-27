@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378149"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (отключить расширения языка)
 **/Za** параметр компилятор выдает ошибку для языковых конструкций, которые не совместимы с ANSI C89 или ISO C ++ 11. **/Ze** параметр компилятора, который включен по умолчанию, включает расширения Microsoft.  

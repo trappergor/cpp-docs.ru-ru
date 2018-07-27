@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::AddRef | Документы Microsoft
+title: _com_ptr_t::AddRef | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a1b629f254bae2b72790546bcbb00185f2c44c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40ed48b54a3862f7ac5804e7652d98b661bb071d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940996"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
 **Блок, относящийся только к системам Microsoft**  
   
- Вызовы `AddRef` функцию-член **IUnknown** на инкапсулированный указатель на интерфейс.  
+ Вызовы `AddRef` функцию-член `IUnknown` на инкапсулированный указатель на интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +37,7 @@ void AddRef( );
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Вызовы `IUnknown::AddRef` на инкапсулированный указатель на интерфейс, вызов `E_POINTER` ошибки, если указатель находится **NULL**.  
+ Вызовы `IUnknown::AddRef` на инкапсулированный указатель на интерфейс, вызывает ошибку E_POINTER, если указатель имеет значение NULL.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

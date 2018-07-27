@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417413"
 ---
 # <a name="scanf-type-field-characters"></a>Символы поля типа scanf
 Следующие сведения применимы к любой функции из семейства `scanf` , включая безопасные версии, например `scanf_s`.  

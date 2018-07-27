@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121628"
 ---
 # <a name="cuintarray-class"></a>Класс CUIntArray
 Поддерживает массивы целых чисел без знака.  
@@ -67,8 +68,8 @@ ms.lasthandoff: 05/04/2018
 class CUIntArray : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
- Функции-члены `CUIntArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель как параметр функции или возвращаемого значения, замените **UINT**.  
+## <a name="members"></a>Участники  
+ Функции-члены `CUIntArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить UINT.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -78,13 +79,13 @@ class CUIntArray : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|  
@@ -93,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Освобождает всю неиспользуемую память сверх текущей верхней границы.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Возвращает значение по указанному индексу.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Возвращает количество элементов в массиве.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Разрешает доступ к элементам в массиве. Может быть **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Разрешает доступ к элементам в массиве. Может иметь значение NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Возвращает количество элементов в массиве.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Возвращает самый большой допустимый индекс.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|  
@@ -106,12 +107,12 @@ class CUIntArray : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|  
   
 ## <a name="remarks"></a>Примечания  
- Целое число без знака или **UINT**, отличается от слов и двойных слов в том, что физический размер **UINT** может меняться в зависимости от целевой операционной среде. Объект **UINT** такого же размера, как двойное слово соответственно.  
+ Целое число без знака или UINT, отличается от слов и двойных слов, что физический размер UINT можно изменить в зависимости от целевой операционной среде. UINT имеет тот же размер, как двойное слово соответственно.  
   
  `CUIntArray` включает в себя [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) макрос для поддержки доступа типа во время выполнения и Сохранение дампа [CDumpContext](../../mfc/reference/cdumpcontext-class.md) объекта. Если вам требуется дамп отдельных целое число без знака элементов, необходимо задать глубины контекста дампа 1 или выше. Невозможно сериализовать массивы целое число без знака.  
   

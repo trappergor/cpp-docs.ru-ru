@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420945"
 ---
 # <a name="scope-resolution-operator-"></a>Оператор разрешения области: ::
 Оператор разрешения области `::` используется для идентификации и устранения неоднозначности идентификаторов, которые используются в разных областях. Дополнительные сведения об области см. в разделе [область](../cpp/scope-visual-cpp.md).  

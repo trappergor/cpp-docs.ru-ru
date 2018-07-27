@@ -1,5 +1,5 @@
 ---
-title: Введите доступ к библиотеке | Документы Microsoft
+title: Введите доступ к библиотеке | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb81a8aa7d9262992da29a2d93cf770fad754316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afba5d2c2d0cd0b84e12cbd13cedba473b535587
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885901"
 ---
 # <a name="type-library-access"></a>Доступ к библиотеке типов
-Библиотеки типов предоставляют интерфейсы для других приложений, поддерживающих OLE элемента управления OLE. Каждый элемент управления OLE должны иметь библиотеку типов, если один или несколько интерфейсов, предоставляемых.  
+Библиотеки типов предоставить доступ к интерфейсам управления OLE для других приложений, поддерживающих OLE. Каждый элемент управления OLE должен иметь библиотеку типов, если один или несколько интерфейсов должны быть предоставлены.  
   
- Следующие макросы разрешить элемента управления OLE для предоставления доступа к библиотеке типов:  
+ Следующие макросы разрешить управления OLE для предоставления доступа к библиотеке типов:  
   
 ### <a name="type-library-access"></a>Доступ к библиотеке типов  
   
 |||  
 |-|-|  
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Объявляет `GetTypeLib` функции-члене класса элемента управления OLE (следует использовать в объявлении класса).|  
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Реализует `GetTypeLib` функции-члене класса элемента управления OLE (следует использовать в реализацию класса).|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Объявляет `GetTypeLib` функции-члена элемента управления OLE (необходимо использовать в объявлении класса).|  
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Реализует `GetTypeLib` функции-члена элемента управления OLE (необходимо использовать в реализации класса).|  
   
 ##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
- Объявляет `GetTypeLib` функции-члена класса элемента управления.  
+ Объявляет `GetTypeLib` функция-член класса элемента управления.  
   
 ```   
 DECLARE_OLETYPELIB(class_name)   
@@ -46,13 +47,13 @@ DECLARE_OLETYPELIB(class_name)
  Имя класса элемента управления, относящиеся к библиотеке типов.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте этот макрос в файле заголовка для класса элемента управления.  
+ Используйте этот макрос в файле заголовка класса элемента управления.  
 
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  
 
 ##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB  
- Реализует элемент управления `GetTypeLib` функции-члена.  
+ Реализует элемент управления `GetTypeLib` функция-член.  
   
 ```   
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)   
@@ -65,14 +66,14 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
  *tlid*  
  Идентификатор библиотеки типов.  
   
- `wVerMajor`  
- Номер основной версии библиотеки типов.  
+ *wVerMajor*  
+ Номер основной номер версии библиотеки типов.  
   
- `wVerMinor`  
+ *wVerMinor*  
  Номера дополнительный номер версии библиотеки типов.  
   
 ### <a name="remarks"></a>Примечания  
- Этот макрос должен указываться в файле реализации для любого класса элемента управления, который использует `DECLARE_OLETYPELIB` макрос.  
+ Этот макрос должен указываться в файле реализации для любого класса элемента управления, который использует declare_oletypelib-макрос.  
 
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  

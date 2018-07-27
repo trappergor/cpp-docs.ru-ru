@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
-ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
+ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762064"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209096"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) и [15.7](#improvements_157)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) и [15.7](#improvements_157)
 
 Благодаря поддержке обобщенных constexpr и NSDMI для статистических выражений, компилятор Microsoft Visual C++ теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствует несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md).
 
@@ -81,7 +81,7 @@ ms.locfileid: "34762064"
 
 Теперь когда определение перечисления не вводит перечислитель, а источник перечисления использует синтаксис инициализации списка, происходит неявное и несужающее преобразование из базового типа перечисления в области в само перечисление. Дополнительные сведения см. в документе о [правилах конструкции значений класса enum](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
 
-### <a name="capturing-this-by-value"></a>Обращение к объекту *this по значению
+### <a name="capturing-this-by-value"></a>Захват объекта \*this по значению
 
 Теперь лямбда-выражение может обращаться к объекту `*this` по значению. Это позволяет использовать лямбда-выражения в сценариях с параллельными и асинхронными операциями, особенно на новых архитектурах компьютеров. Дополнительные сведения см. в документе о [захвате объекта \*this по значению в виде [=,\*this] в лямбда-выражении](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
 
@@ -339,7 +339,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html). Изменения в функциях-членах `std::traits_type` `length`, `compare` и `find`, чтобы `std::string_view` можно было использовать в константных выражениях. (В Visual Studio 2017 версии 15.6 поддерживается только для Clang/LLVM. В версии 15.7, предварительная версия 2, почти полная поддержка и для ClXX.)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-and-157update157"></a>Исправления ошибок в Visual Studio версий 15.0, [15.3](#update_153), [15.5](#update_155) и [15.7](#update_157)
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Исправления ошибок в Visual Studio версий 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157) и [15.8](#update_158)
 
 ### <a name="copy-list-initialization"></a>Инициализация копии списка
 
@@ -493,12 +493,12 @@ int main()
     printf("%i\n", static_cast<int>(s))
 ```
 
-Для строк, созданных и управляемых с помощью CStringW, следует использовать предоставленный `operator LPCWSTR()` для приведения объекта CStringW к указателю C, ожидаемому строкой формата.
+Для строк, созданных и управляемых с помощью CString, следует использовать предоставленный `operator LPCTSTR()` для приведения объекта CString к указателю C, ожидаемому строкой формата.
 
 ```cpp
-CStringW str1;
-CStringW str2;
-str1.Format(L"%s", static_cast<LPCWSTR>(str2));
+CString str1;
+CString str2 = _T("hello!");
+str1.Format(_T("%s"), static_cast<LPCTSTR>(str2));
 ```
 
 ### <a name="cv-qualifiers-in-class-construction"></a>CV-квалификаторы при построении класса
@@ -1621,6 +1621,211 @@ int main() {
     return 0;
 }
 
+```
+
+## <a name="update_158"></a> Исправления ошибок и изменения в поведении в Visual Studio 2017 15.8
+
+### <a name="typename-on-unqualified-identifiers"></a>Ключевое слово typename в неквалифицированных идентификаторах
+
+В режиме [/permissive-](build/reference/permissive-standards-conformance.md) компилятор больше не принимает ложные ключевые слова `typename` в неквалифицированных идентификаторах в определениях шаблонов псевдонимов. Следующий код теперь вызывает ошибку C7511: *"T": после ключевого слова typename должно следовать полное имя*.
+
+```cpp
+template <typename T>
+using  X = typename T;
+```
+
+Чтобы исправить эту ошибку, просто измените вторую строку на `using  X = T;`.
+
+### <a name="declspec-on-right-side-of-alias-template-definitions"></a>Ключевое слово __declspec() справа от определений шаблонов псевдонимов
+
+Ключевое слово [__declspec](cpp/declspec.md) теперь запрещено указывать справа от определения шаблона псевдонима. Ранее компилятор принимал его, но при использовании псевдонима оно всегда игнорировалось и предупреждение об устаревании не появлялось.
+
+Вместо него можно использовать стандартный атрибут [\[\[deprecated\]\]](cpp/attributes.md) C++. Он будет учитываться, начиная с Visual Studio 2017 версии 15.6. Следующий код теперь вызывает ошибку C2760: *синтаксическая ошибка: непредвиденный токен __declspec, ожидается type specifier*.
+
+```cpp
+template <typename T>
+using X = __declspec(deprecated("msg")) T;
+```
+
+Чтобы исправить эту ошибку, измените код на следующий (укажите атрибут перед знаком "=" определения псевдонима).
+
+```cpp
+template <typename T>
+using  X [[deprecated("msg")]] = T;
+```
+
+### <a name="two-phase-name-lookup-diagnostics"></a>Диагностика двухэтапного поиска имен
+
+Для двухэтапного поиска имен нужно, чтобы независимые имена, используемые в тексте шаблона, отображались в шаблоне во время определения. Ранее компилятор Microsoft C++ мог не искать ненайденное имя до создания экземпляров. Теперь ему требуется, чтобы независимые имена привязывались уже в тексте шаблона.
+
+Ошибка может возникать при поиске в зависимых базовых классах. Ранее компилятор разрешал использовать имена, определенные в зависимых базовых классах, так как их поиск выполнялся во время создания экземпляров после разрешения всех типов. Теперь этот код вызывает ошибку. В этом случае вы можете принудительно использовать поиск переменной во время создания экземпляров. Для этого задайте ей в качестве квалификатора тип базового класса или другим образом сделайте ее зависимой, например добавьте указатель `this->`.
+
+В режиме **/permissive-** следующий код теперь вызывает ошибку C3861: *base_value: идентификатор не найден*.
+
+```cpp
+template <class T>
+struct Base {
+    int base_value = 42;
+};
+
+template <class T>
+struct S : Base<T> {
+    int f() {
+        return base_value;
+    }
+};
+
+```
+
+Чтобы исправить эту ошибку, измените инструкцию `return` на `return this->base_value;`.
+
+### <a name="forward-declarations-and-definitions-in-namespace-std"></a>Опережающие объявления и определения в пространстве имен std
+
+Стандарт C++ запрещает пользователю добавлять опережающие объявления и определения в пространство имен `std`. Добавление объявлений или определений в пространство имен `std` или во вложенное в std пространство имен теперь приводит в неопределенному поведению.
+
+В дальнейшем Майкрософт изменит место определения некоторых типов STL. При этом работа существующего кода, который добавляет опережающие объявления в пространство имен `std`, будет нарушена. Новое предупреждение C4643 помогает выявить такие проблемы с источником. Предупреждение можно включить в режиме **/default**; по умолчанию оно отключено. Оно повлияет на программы, которые компилируются с параметром **/Wall** или **/WX**. 
+
+Следующий код теперь вызывает ошибку C4643: *опережающее объявление vector в пространстве имен std запрещено стандартом C++*. 
+
+
+```cpp
+namespace std { 
+    template<typename T> class vector; 
+} 
+```
+
+Чтобы исправить эту ошибку, используйте директиву **include** вместо опережающего объявления.
+
+```cpp
+#include <vector>
+```
+
+### <a name="constructors-that-delegate-to-themselves"></a>Конструкторы, делегирующие самим себе
+
+Стандарт C++ предполагает, что компилятор должен породить диагностическое сообщение, если делегирующий конструктор делегирует самому себе. Компилятор Microsoft C++ в режимах [/std:c++17](build/reference/std-specify-language-standard-version.md) и [/std:c++latest](build/reference/std-specify-language-standard-version.md) теперь порождает ошибку C7535: *"X::X": делегирующий конструктор вызывает сам себя*.
+
+Без этой ошибки следующая программа скомпилируется, но создаст бесконечный цикл.
+
+```cpp
+class X { 
+public: 
+    X(int, int); 
+    X(int v) : X(v){}
+}; 
+```
+
+Чтобы избежать этого, делегируйте в другой конструктор.
+
+```cpp
+class X { 
+public: 
+
+    X(int, int); 
+    X(int v) : X(v, 0) {} 
+}; 
+```
+
+### <a name="offsetof-with-constant-expressions"></a>Макрос offsetof с константными выражениями
+
+Макрос [offsetof](c-runtime-library/reference/offsetof-macro.md) обычно реализовывался с помощью макроса, требующего [reinterpret_cast](cpp/reinterpret-cast-operator.md). Это недопустимо в контекстах, требующих константного выражения, но обычно компилятор Microsoft C++ разрешал это. Макрос offsetof, входящий в состав библиотеки STL, правильно использует встроенные функции компилятора (**__builtin_offsetof**), но многие изменяли его на собственный **offsetof**.  
+
+В Visual Studio 2017 версии 15.8 компилятор ограничивает области, в которых reinterpret_cast может использоваться в режиме по умолчанию, чтобы код соответствовал стандартному поведению C++. В режиме [/permissive-](build/reference/permissive-standards-conformance.md) ограничения еще строже. Использование offsetof там, где требуются константные выражения, может привести к тому, что код вызовет предупреждение C4644: *нестандартное использование шаблона offsetof на основе макроса в константных выражениях; используйте offsetof, заданный в стандартной библиотеке C++*, — или C2975: *недопустимый аргумент шаблона, ожидается константное выражение времени компиляции*.
+
+Следующий код вызывает ошибку C4644 в режимах **/default** и **/std:c++17**, а также ошибку C2975 в режиме **/permissive-**: 
+
+```cpp
+struct Data { 
+    int x; 
+}; 
+
+// Common pattern of user-defined offsetof 
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+
+int main() 
+
+{ 
+    switch (0) { 
+    case MY_OFFSET(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+Чтобы исправить ошибку, используйте **offsetof**, определенный в \<cstddef>.
+
+```cpp
+#include <cstddef>  
+
+struct Data { 
+    int x; 
+};  
+
+int main() 
+{ 
+    switch (0) { 
+    case offsetof(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+
+### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>Квалификаторы cv-qualifier в базовых классах, участвующих в раскрытии пакета
+
+Компиляторы Microsoft C++ предыдущих версий не обнаруживали квалификаторы cv-qualifier в базовом классе, если он также участвовал в раскрытии пакета. 
+
+В Visual Studio 2017 версии 15.8 в режиме **/permissive-** следующий код вызывает ошибку C3770: *const S: не является допустимым базовым классом*. 
+
+```cpp
+template<typename... T> 
+class X : public T... { };  
+
+class S { };  
+
+int main() 
+{ 
+    X<const S> x; 
+} 
+```
+### <a name="template-keyword-and-nested-name-specifiers"></a>Ключевое слово template и описатели вложенных имен
+
+В режиме **/permissive-** компилятору теперь нужно, чтобы ключевое слово `template` предшествовало имени шаблона, если оно стоит после зависимого описателя вложенных имен. 
+
+Следующий код в режиме **/permissive-** теперь вызывает ошибку C7510: *foo: перед зависимым именем шаблона теперь должен стоять префикс template. Примечание. См. справку по компилируемому экземпляру шаблона класса "X<T>"*.
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {} 
+}; 
+
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        Base<T>::foo<int>(); 
+    } 
+}; 
+```
+
+Чтобы исправить эту ошибку, добавьте ключевое слово `template` в инструкцию `Base<T>::foo<int>();`, как показано в следующем примере.
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {}
+};
+ 
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        // Add template keyword here:
+        Base<T>::template foo<int>(); 
+    } 
+}; 
 ```
 
 ## <a name="see-also"></a>См. также

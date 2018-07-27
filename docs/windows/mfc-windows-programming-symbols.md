@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882697"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Символы программирования MFC Windows
 Эти символы являются частью файлов поддержки MFC, но они поддерживают стандартные функции приложения Windows и действия. Эти символы используются главным образом с меню. При работе с меню в редакторе меню эти символы будут отображаться в окне свойств, связанных с часто используемых команд меню. Например, если приложение имеет меню Файл командой Exit, данная команда будет связана с символом ID_APP_EXIT в [окно свойств](/visualstudio/ide/reference/properties-window).  

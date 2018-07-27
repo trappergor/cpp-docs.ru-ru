@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d342fdd903de610c0676d7a9e0b6e58ef15f41f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040890"
 ---
 # <a name="clineartransition-class"></a>Класс CLinearTransition
 Инкапсулирует линейный переход.  
@@ -39,23 +40,23 @@ ms.lasthandoff: 05/04/2018
 class CLinearTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinearTransition::CLinearTransition](#clineartransition)|Создает объект линейный переход и инициализирует его с длительностью и конечное значение.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinearTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|  
 |[CLinearTransition::m_duration](#m_duration)|Продолжительность перехода.|  
@@ -83,10 +84,10 @@ CLinearTransition(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Продолжительность перехода.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Значение переменной анимации в конце перехода.  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
@@ -99,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
-`pLibrary`  
+*pLibrary*  
  Указатель на [IUIAnimationTransitionLibrary интерфейс](https://msdn.microsoft.com/library/windows/desktop/dd371897), который определяет библиотеку стандартных переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

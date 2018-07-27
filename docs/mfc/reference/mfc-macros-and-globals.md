@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375690"
 ---
 # <a name="mfc-macros-and-globals"></a>Макросы и глобальные объекты MFC
 Библиотеки классов Microsoft Foundation можно разделить на два основных раздела: (1) классы MFC и (2) макросы и глобальные переменные. Если функция или переменная не является членом класса, это глобальная функция или переменная.  

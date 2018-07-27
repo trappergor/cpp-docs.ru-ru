@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::operator += + | Документы Microsoft
+title: _bstr_t::operator += + | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e443b233e19f6cdc64d7d6021a9a9c078a4f327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a2ea7cd3b93f7445190f16a92a580fe9628a976
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944231"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Блок, относящийся только к системам Microsoft**  
@@ -33,42 +34,32 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _bstr_t& operator+=(  
-   const _bstr_t& s1   
-);  
-_bstr_t operator+(  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const char* s2,  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const wchar_t* s3,  
-   const _bstr_t& s1   
-);  
+_bstr_t& operator+=( const _bstr_t& s1 );  
+_bstr_t operator+( const _bstr_t& s1 );  
+friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
+friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *S1*  
+ *s1*  
  Объект `_bstr_t`.  
   
- *S2*  
+ *s2*  
  Многобайтовая строка.  
   
- `s3`  
+ *S3*  
  Строка Юникода.  
   
 ## <a name="remarks"></a>Примечания  
  Эти операторы выполняют объединение строк:  
   
--   **оператор += (***s1***)** добавляет символы в инкапсулированный `BSTR` из *s1* инкапсулированный этотобъектвконец`BSTR`.      
+-   **оператор += (***s1***)** добавляет символы из инкапсулированного `BSTR` из *s1* в конец этого объекта инкапсулированный `BSTR`.      
   
--   **оператор + (***s1***)** возврат нового `_bstr_t` , формируется путем присоединения этот объект `BSTR` с данными о *s1*.      
+-   **оператор + (***s1***)** возврат нового `_bstr_t` , образуется путем объединения этого объекта `BSTR` с данными о *s1*.      
   
--   **оператор + (***s2***&#124;***s1***)** возвращает новую `_bstr_t` , сформированном путем объединения Многобайтовая строка *s2*, преобразованной в Юникод, с `BSTR` , содержащийся в *s1*.          
+-   **оператор + (***s2***&#124;***s1***)** возвращает новый `_bstr_t` , образуется путем объединения Многобайтовая строка *s2*, преобразованной в Юникод, с помощью `BSTR` инкапсулирован в *s1*.          
   
--   **оператор + (** `s3` **,***s1***)** возвращает новую `_bstr_t` , формируется путем присоединения строки в Юникоде `s3` с `BSTR` , содержащийся в *s1*.        
+-   **оператор + (***s3* **,***s1***)** возвращает новый `_bstr_t` который образуется путем объединения строки Юникод *s3* с `BSTR` инкапсулирован в *s1*.        
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

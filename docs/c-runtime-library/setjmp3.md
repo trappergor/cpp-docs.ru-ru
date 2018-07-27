@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408371"
 ---
 # <a name="setjmp3"></a>_setjmp3
 Внутренняя функция CRT. Новая реализация функции `setjmp`.  

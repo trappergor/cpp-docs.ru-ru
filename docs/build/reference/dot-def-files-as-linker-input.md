@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370531"
 ---
 # <a name="def-files-as-linker-input"></a>DEF-файлы в качестве входных файлов компоновщика
 В разделе [файлы определения модуля (DEF)](../../build/reference/module-definition-dot-def-files.md) для получения дополнительной информации. Используйте [/DEF](../../build/reference/def-specify-module-definition-file.md) возможность указания имени DEF-файла.  

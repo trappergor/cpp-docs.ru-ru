@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284034"
 ---
 # <a name="compiler-warning-level-1-c4631"></a>Предупреждение компилятора (уровень 1) C4631
 MSXML или XPath недоступны, комментарии XML-документа не будут обработаны. reason  

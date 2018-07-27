@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879787"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (новый слот в vtable) (расширения компонентов C++)
 `new` Ключевое слово указывает, что виртуальный член получает новую ячейку в таблице vtable.  

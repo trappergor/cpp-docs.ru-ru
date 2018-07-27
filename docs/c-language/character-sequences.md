@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382394"
 ---
 # <a name="character-sequences"></a>Последовательности символов
 **ANSI 3.8.2** Сопоставление последовательностей символов в исходных файлах  

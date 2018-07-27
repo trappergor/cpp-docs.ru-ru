@@ -1,5 +1,5 @@
 ---
-title: __int8, __int16, __int32, __int64 | Документы Microsoft
+title: __int8, __int16, __int32, __int64 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,31 +24,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8083d37d2526820ccd75104f9ee8a748eb5d33bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 409197ec99a8df9ad1999b20edd1537f10ced085
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944255"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
- В Microsoft C/C++ поддерживаются целочисленные типы с указанием размера. Можно объявить с помощью 8-, 16-, 32- или 64-разрядные целочисленные переменные **__int *** n* спецификатор, где *n* 8, 16, 32 или 64.  
+ В Microsoft C/C++ поддерживаются целочисленные типы с указанием размера. 8-, 16-, 32- или 64-разрядные целочисленные переменные можно объявлять с помощью **__int *** n* описатель типа где *n* 8, 16, 32 или 64.  
   
  В следующем примере объявляется по одной переменной каждого из этих целочисленных типов с указанием размера:  
   
-```  
+```cpp 
 __int8 nSmall;      // Declares 8-bit integer  
 __int16 nMedium;    // Declares 16-bit integer  
 __int32 nLarge;     // Declares 32-bit integer  
 __int64 nHuge;      // Declares 64-bit integer  
 ```  
   
- Типы `__int8`, `__int16` и `__int32` аналогичны типам данных ANSI с таким же размером. Они могут использоваться для написания переносимого кода, который одинаково работает на разных платформах. `__int8` Тип данных является синонимом типа `char`, `__int16` является синонимом типа **короткие**, и `__int32` является синонимом типа `int`. `__int64` Тип является синонимом типа `long long`.  
+ Типы **__int8**, **__int16**, и **__int32** аналогичны типам данных ANSI с таким же размера и полезны для написания переносимого кода, который одинаково работает на различных платформах. **__Int8** тип данных является синонимом типа **char**, **__int16** является синонимом типа **короткие**, и **__int32**  является синонимом типа **int**. **__Int64** тип является синонимом типа **long long**.  
   
 ## <a name="example"></a>Пример  
- Следующий пример показывает, что __int*xx* параметр будет повышен до `int`:  
+ Следующий пример показывает, что __int*xx* параметр будет повышен до **int**:  
   
-```  
+```cpp 
 // sized_int_types.cpp  
   
 #include <stdio.h>  
@@ -73,5 +74,5 @@ func
   
 ## <a name="see-also"></a>См. также  
  [Ключевые слова](../cpp/keywords-cpp.md)   
- [Базовые типы](../cpp/fundamental-types-cpp.md)   
+ [Фундаментальные типы](../cpp/fundamental-types-cpp.md)   
  [Диапазоны типов данных](../cpp/data-type-ranges.md)

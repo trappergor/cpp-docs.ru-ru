@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371285"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (обработка комментариев документации) (C/C++)
 Указывает компилятору на необходимость обработать комментарии документации в файлах исходного кода и создания XDC-файл для каждого файла исходного кода с комментариями документации.  

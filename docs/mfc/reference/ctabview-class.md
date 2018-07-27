@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121761"
 ---
 # <a name="ctabview-class"></a>Класс CTabView
 `CTabView` Класс упрощает использование класса элемента управления tab ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) в приложениях, использующих архитектуру документ/представление MFC.  
@@ -51,7 +52,7 @@ class CTabbedView : public CView
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTabView::AddView](#addview)|Добавляет новое представление вкладок элемента управления.|  
 |[CTabView::FindTab](#findtab)|Возвращает индекс указанного представления в набор вкладок.|  
@@ -62,7 +63,7 @@ class CTabbedView : public CView
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTabView::IsScrollBar](#isscrollbar)|Вызывается платформой при создании представления вкладки для определения, имеет ли представление вкладка общих горизонтальной полосы прокрутки.|  
 |[CTabView::OnActivateView](#onactivateview)|Вызывается платформой при представлении вкладка становится активным или неактивным.|  
@@ -94,16 +95,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pViewClass`  
+ [in] *pViewClass*  
  Указатель на класс среды выполнения inserted представления.  
   
- [in] `strViewLabel`  
+ [in] *strViewLabel*  
  Указывает текст вкладки.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Задает отсчитываемый от нуля позиция, с которой нужно вставить представление. Если позиция равна -1 в конце вставляется новая вкладка.  
   
- [in] `pContext`  
+ [in] *pContext*  
  Указатель на `CCreateContext` представления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -120,7 +121,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hWndView`  
+ [in] *hWndView*  
  Дескриптор представления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -137,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Допустимый указатель на активное представление или `NULL` Если нет активных представления.  
+ Допустимый указатель на активное представление, или значение NULL, если нет активное представление.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -159,12 +160,12 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если вкладка представления должны создаваться вместе с полоса прокрутки общего. В противном случае — значение `FALSE`.  
+ Значение TRUE, если вкладка представления должны создаваться вместе с полоса прокрутки общего. В противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой при `CTabView` создан объект.  
+ Этот метод вызывается платформой при *CTabView* создан объект.  
   
- Переопределить `IsScrollBar` метод в `CTabView`-производного класса и возврата `TRUE` Если нужно создать представление, имеющее общего горизонтальной полосы прокрутки.  
+ Переопределить *IsScrollBar* метод в *CTabView*-производного класса и возвращает TRUE, если нужно создать представление, имеющее общего горизонтальной полосы прокрутки.  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Вызывается платформой при представлении вкладка становится активным или неактивным.  
@@ -174,7 +175,7 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `view`  
+ [in] *представление*  
  Указатель на представление.  
   
 ### <a name="remarks"></a>Примечания  
@@ -188,7 +189,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Индекс удаляемого представления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -204,11 +205,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Отсчитываемый от нуля индекс представления вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если указанное представление сделан активным, `FALSE` Если недопустимый индекс представления.  
+ Значение TRUE, если указанное представление сделан активным, FALSE, если используется недопустимый индекс представления.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371789"
 ---
 # <a name="failure-hooks"></a>Обработчики сбоев
 Обработчик сбоев включается так же, как [обработчика уведомлений](../../build/reference/notification-hooks.md). Процедура обработки требует возврата подходящего значения, чтобы обработки можно продолжить (HINSTANCE или FARPROC) или 0, чтобы указать, должно быть создано исключение.  

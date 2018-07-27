@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346140"
 ---
 # <a name="enabling-tool-tips"></a>Включение всплывающих подсказок
 Можно включить поддержку совет средство для дочерних элементов управления окна (например, элементы управления на форму представления или диалогового окна поле).  

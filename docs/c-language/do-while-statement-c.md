@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385436"
 ---
 # <a name="do-while-statement-c"></a>Оператор do-while (C)
 Оператор `do-while` позволяет повторять выполнение оператора или составного оператора до тех пор, пока указанное выражение не станет ложным.  

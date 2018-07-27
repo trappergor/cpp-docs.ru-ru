@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368516"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Импорт данных с помощью объявления __declspec(dllimport)
 В случае с данными, с помощью **__declspec(dllimport)** при работе, удаляет уровень косвенного обращения. При импорте данных из библиотеки DLL, все равно необходимо пройти через адресную таблицу импорта. Прежде чем **__declspec(dllimport)**, это означает, что необходимо сделать дополнительный уровень косвенного обращения при доступе к данным, экспортированным из библиотеки DLL:  

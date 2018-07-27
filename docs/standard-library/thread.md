@@ -1,5 +1,5 @@
 ---
-title: '&lt;поток&gt; | Документы Microsoft'
+title: '&lt;поток&gt; | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5558f1e7998cca1efd64fbc5ee0ad39cc40ee2a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5470d7c7e83c260f44d723665d5d9c0a5ad061
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953033"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
-Включите стандартный заголовок \<поток > Определение класса `thread` и различные вспомогательные функции.
+Включите стандартный заголовок \<поток > для определения класса **поток** и различные вспомогательные функции.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,35 +36,35 @@ ms.lasthandoff: 05/08/2018
 > [!NOTE]
 > В коде, скомпилированном с помощью **/CLR**, этот заголовок блокируется.
 
-`__STDCPP_THREADS__` Макрос определен как ненулевое значение, чтобы указать, что этот заголовок поддерживает потоков.
+`__STDCPP_THREADS__` Макрос определен как ненулевое значение, указывающее, что этот заголовок поддерживает потоков.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[Класс thread](../standard-library/thread-class.md)|Определяет объект, который используется для просмотра и управления потоком выполнения в приложении.|
+|[Класс thread](../standard-library/thread-class.md)|Определяет объект, который позволяет наблюдать и управлять потоком выполнения в приложении.|
 
 ### <a name="public-structures"></a>Открытые структуры
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
-|[Структура hash (стандартная библиотека C++)](../standard-library/hash-structure-stl.md)|Определяет функцию-член возвращает значение, которое однозначно определяется `thread::id`. Функция-член определяет [хэш](../standard-library/hash-class.md) функция, которая подходит для сопоставления значений типа `thread::id` распределение значений индекса.|
+|[Структура hash (стандартная библиотека C++)](../standard-library/hash-structure-stl.md)|Определяет функцию-член, который возвращает значение, которое уникально определяется с помощью `thread::id`. Функция-член определяет [хэш](../standard-library/hash-class.md) функцию, которая подходит для сопоставления значений типа `thread::id` с распределением значений индекса.|
 
 ### <a name="public-functions"></a>Открытые функции
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|Уникально идентифицирует текущий поток выполнения.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Блокирует вызывающий поток.|
 |[sleep_until](../standard-library/thread-functions.md#sleep_until)|Блокирует вызывающий поток по крайней мере до указанного времени.|
-|[swap](../standard-library/thread-functions.md#swap)|Меняет местами два состояния `thread` объектов.|
+|[swap](../standard-library/thread-functions.md#swap)|Меняет местами состояния двух **поток** объектов.|
 |[yield](../standard-library/thread-functions.md#yield)|Сигнализирует операционной системе, что необходимо запустить другие потоки, даже если в обычной ситуации текущий поток продолжал бы выполняться.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[оператор > =-оператор](../standard-library/thread-operators.md#op_gt_eq)|Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.|
 |[оператор > оператор](../standard-library/thread-operators.md#op_gt)|Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.|

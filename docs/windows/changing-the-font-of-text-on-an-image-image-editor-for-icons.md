@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860896"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Изменение шрифта текста на изображении (редактор изображений для значков)
 Ниже приведен пример того, как:  

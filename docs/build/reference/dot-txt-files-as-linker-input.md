@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369907"
 ---
 # <a name="txt-files-as-linker-input"></a>TXT-файлы в качестве входных файлов компоновщика
 ССЫЛКА ожидает различных текстовых файлов в качестве дополнительных входных данных. [Командный файл](../../build/reference/link-command-files.md) описатель (@) и [базовый адрес](../../build/reference/base-base-address.md) (/ BASE), [/DEF](../../build/reference/def-specify-module-definition-file.md), и [/ORDER](../../build/reference/order-put-functions-in-order.md) все параметры укажите текстовых файлов. Эти файлы могут иметь любое разрешение, не только txt.  

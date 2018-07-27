@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694567"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Рекомендации по работе с библиотекой параллельных шаблонов
 В этом документе описано, как наиболее эффективно использовать библиотеку параллельных шаблонов (PPL). Библиотека PPL предоставляет алгоритмы, объекты и контейнеры общего назначения для выполнения детального параллелизма.  

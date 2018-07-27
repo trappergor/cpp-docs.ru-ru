@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090452"
 ---
 # <a name="open-database-connectivity-odbc"></a>Интерфейс ODBC (ODBC)
 Библиотека Microsoft Foundation Classes (MFC) предоставляет классы для разработки программ с использованием интерфейса ODBC. Начиная с Visual Studio 2015 и ODBC для SQL Server 2012 является предпочтительным способом подключения к источникам данных SQL.
