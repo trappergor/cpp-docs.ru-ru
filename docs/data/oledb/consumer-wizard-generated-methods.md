@@ -1,5 +1,5 @@
 ---
-title: Методы, создаваемые мастером потребителя | Документы Microsoft
+title: Методы, создаваемые мастером потребителя | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,39 +25,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0e03d24f61b3eba1ff4c6fa1e4d888a0252a21b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c8a3605a94e0feffa1072d1c7cd92a8bdfecb66
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098606"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340884"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Методы, создаваемые мастером объекта-получателя
-Мастер потребителя ATL OLE DB и мастер приложений MFC создают определенные функции, которые следует иметь в виду. Обратите внимание, что по-разному реализованы некоторые методы в проектах с атрибутами предостережений несколько; Ниже описаны все случаи. Сведения о просмотре внедренного кода см. в разделе [Отладка внедренного кода](/visualstudio/debugger/how-to-debug-injected-code).  
+Мастер потребителя ATL OLE DB и мастер приложений MFC создают определенные функции, которые следует иметь в виду. Обратите внимание, что некоторые методы реализуются по-разному в проектах с атрибутами существует несколько моментов; Ниже описаны все случаи. Сведения о просмотре внедренного кода см. в разделе [Отладка внедренного кода](/visualstudio/debugger/how-to-debug-injected-code).  
   
 -   `OpenAll` Открывает источник данных, наборы строк и включает закладки, если они доступны.  
   
 -   `CloseAll` Закрывает все открытые наборы строк и прекращает выполнение всех команд.  
   
--   `OpenRowset` вызывается методом OpenAll для открытия набора или наборов строк потребителя.  
+-   `OpenRowset` вызывается методом OpenAll для открытия набора строк потребителя или наборы строк.  
   
--   `GetRowsetProperties` Извлекает указатель на значение свойства в наборе строк с которого могут быть заданы свойства.  
+-   `GetRowsetProperties` Извлекает указатель на свойство в наборе строк с помощью свойства, которые могут быть заданы.  
   
--   `OpenDataSource` Открывает источник данных, используя заданную в строку инициализации **свойства связи данных** диалоговое окно.  
+-   `OpenDataSource` Открывает источник данных, используя указанный в строке инициализации **свойства канала передачи данных** диалоговое окно.  
   
--   `CloseDataSource` закрывает источник данных подходящим способом.  
+-   `CloseDataSource` закрывает источник данных соответствующим образом.  
   
 ## <a name="openall-and-closeall"></a>OpenAll и CloseAll  
   
-```  
+```cpp  
 HRESULT OpenAll();   
 
 void CloseAll();  
 ```  
   
- В следующем примере показано, как можно вызвать `OpenAll` и `CloseAll` при повторном выполнении одной команды. Сравните пример кода в [CCommand::Close](../../data/oledb/ccommand-close.md), который демонстрирует вариант вызова **закрыть** и `ReleaseCommand` вместо `CloseAll`.  
+ В следующем примере показано, как можно вызвать `OpenAll` и `CloseAll` при выполнении той же команды несколько раз. Сравните пример кода в [CCommand::Close](../../data/oledb/ccommand-close.md), который показан вариант, который вызывает `Close` и `ReleaseCommand` вместо `CloseAll`.  
   
-```  
+```cpp  
 int main(int argc, char* argv[])  
 {  
    HRESULT hr;  
@@ -89,18 +89,18 @@ int main(int argc, char* argv[])
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Обратите внимание, что при определении `HasBookmark` метода `OpenAll` код задает свойству DBPROP_IRowsetLocate; убедитесь, что только в том случае, если поставщик поддерживает это свойство.  
+ Обратите внимание, что при определении `HasBookmark` метод, `OpenAll` код задает свойства DBPROP_IRowsetLocate; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
   
-## <a name="openrowset"></a>Функции OpenRowset  
+## <a name="openrowset"></a>OpenRowset  
   
-```  
+```cpp  
 // OLE DB Template version:   
 HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** вызывает этот метод для открытия набора или наборов строк в объекте-получателе. Как правило, необязательно вызывать `OpenRowset` Если не требуется для работы с несколькими источниками данных и сеансы либо или строк. `OpenRowset` объявляется в файле заголовка класса команд или таблиц.  
+ `OpenAll` вызывает этот метод для открытия набора или наборов строк в объекте-получателе. Как правило, не нужно вызывать `OpenRowset` только если вы хотите работать с несколькими источниками данных и сеансы либо/строк. `OpenRowset` объявляется в файле заголовка класса команд или таблиц:  
   
 ```  
 // OLE DB Template version:  
@@ -115,9 +115,9 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
- Атрибуты реализуют этот метод по-разному. Эта версия принимает объект сеанса и командной строки, который по умолчанию для командной строки, указанной в db_command, несмотря на то, что вы можете передать его. Обратите внимание, что при определении `HasBookmark` метода `OpenRowset` код задает свойству DBPROP_IRowsetLocate; убедитесь, что только в том случае, если поставщик поддерживает это свойство.  
+ Атрибуты реализуют этот метод по-разному. Эта версия принимает объект сеанса и командной строки, который по умолчанию для командной строки, указанной в db_command, несмотря на то, что вы можете передать его. Обратите внимание, что при определении `HasBookmark` метод, `OpenRowset` код задает свойства DBPROP_IRowsetLocate; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
   
-```  
+```cpp  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)  
 {  
@@ -136,13 +136,13 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
   
 ## <a name="getrowsetproperties"></a>GetRowsetProperties  
   
-```  
+```cpp 
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Этот метод извлекает указатель набора свойств набора строк; Этот указатель можно использовать для задания свойства, такие как DBPROP_IRowsetChange. `GetRowsetProperties` используется в класс записей пользователя следующим образом. Можно изменить этот код, чтобы задать дополнительные свойства набора строк:  
+ Этот метод извлекает указатель на набор свойств набора строк; Этот указатель можно использовать для задания свойства, такие как DBPROP_IRowsetChange. `GetRowsetProperties` используется в класс записей пользователя следующим образом. Можно изменить этот код, чтобы задать дополнительные свойства набора строк:  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -153,18 +153,18 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Не следует определять глобальный `GetRowsetProperties` метод, так как он может конфликтовать с каким-либо определенным мастером. Обратите внимание, что созданный мастером метод, который вы получаете с атрибутами и шаблон проектов; атрибуты не вводят данный код.  
+ Не следует определять глобальный `GetRowsetProperties` метод, так как он может конфликтовать с одним определен с помощью мастера. Обратите внимание, что это созданный мастером метод, который вы получаете с атрибутами и шаблонного проектов; атрибуты не вводят этот код.  
   
-## <a name="opendatasource-and-closedatasource"></a>Функция OpenDataSource и CloseDataSource  
+## <a name="opendatasource-and-closedatasource"></a>OpenDataSource и CloseDataSource  
   
-```  
+```cpp  
 HRESULT OpenDataSource();   
 
 void CloseDataSource();  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Мастер определяет методы, `OpenDataSource` и `CloseDataSource`; `OpenDataSource` вызовы [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).  
+ Мастер определяет методы `OpenDataSource` и `CloseDataSource`; `OpenDataSource` вызовы [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).  
   
 ## <a name="see-also"></a>См. также  
  [Создание объекта-получателя OLE DB с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

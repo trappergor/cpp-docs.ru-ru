@@ -1,5 +1,5 @@
 ---
-title: Использование существующего набора записей ADO | Документы Microsoft
+title: Использование существующего набора записей ADO | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c74ec0d17c296707334930736d0cf237ecfe7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103568"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338942"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Использование существующего набора записей ADO
-Чтобы смешать шаблоны потребителя OLE DB и Active Data Objects (ADO), используйте ADO для открытия набора записей (соответствующего набору строк в шаблоны потребителей OLE DB). Если у вас есть набор записей, выполните следующие действия для подключения к набору строк OLE DB:  
+Создайте шаблоны потребителей OLE DB и Active Data Objects (ADO), открыть набор записей (соответствующий набор строк в шаблоны потребителей OLE DB) с помощью ADO. Если у вас есть набор записей, выполните следующие действия для подключения к набор строк OLE DB.  
   
 1.  Вызовите `QueryInterface` для `IRowset` и `IAccessor` указатели.  
   
-    ```  
+    ```cpp  
     IRowset* lpRowset = NULL;  
     IAccessor* lpAccessor = NULL;  
     lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
@@ -37,11 +37,11 @@ ms.locfileid: "33103568"
     ```  
   
     > [!NOTE]
-    >  *lpUnk* указывает **IUnknown** объекта набора записей ADO.  
+    >  *lpUnk* указывает `IUnknown` объекта набора записей ADO.  
   
-2.  Присоедините их соответствующие классы шаблонов потребителей OLE DB для доступа и строк.  
+2.  Назначить их соответствующие классы шаблонов потребителей OLE DB для доступа и строк.  
   
-    ```  
+    ```cpp  
     CRowset rs;  
     CAccessor accessor;  
   

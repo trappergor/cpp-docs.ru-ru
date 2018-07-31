@@ -1,5 +1,5 @@
 ---
-title: Интерфейсы объекта транзакции | Документы Microsoft
+title: Интерфейсы объекта транзакции | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 415fdec8397b72bf8f391865fb5af418f95fdf03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba98cfa4a88b695995902bdaca5e4ae3f33e5198
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104556"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339758"
 ---
 # <a name="transaction-object-interfaces"></a>Интерфейсы объекта транзакции
-Объект транзакции определяет неделимую единицу работы в источнике данных и определяет, как эти единицы работы связаны друг с другом. Этот объект не поддерживается напрямую с помощью шаблонов поставщика OLE DB (то есть, необходимо создать собственный объект).  
+Объект транзакции определяет атомарной единицей работы над источником данных и определяет, каким образом эти единицы работы связаны друг с другом. Этот объект не поддерживается напрямую с помощью шаблонов поставщика OLE DB (то есть необходимо создать собственный объект).  
   
  В следующей таблице показаны обязательные и необязательные интерфейсы, определенные в OLE DB для объекта транзакции.  
   
 |Интерфейс|Обязательный?|Реализовано с помощью шаблонов OLE DB?|  
 |---------------|---------------|--------------------------------------|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Обязательно|Нет|  
-|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Обязательно|Нет|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Необязательный|Нет|  
+|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Обязательный|Нет|  
+|[ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|Обязательный|Нет|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|Нет|  
   
 ## <a name="see-also"></a>См. также  
  [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

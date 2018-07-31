@@ -1,5 +1,5 @@
 ---
-title: Класс CDynamicStringAccessorA | Документы Microsoft
+title: Класс CDynamicStringAccessorA | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6d05ac97846f55cf65d4010179b28d2b543ef66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e56f71a427fda2444992cc0ed2c3b6166993af1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096487"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341027"
 ---
 # <a name="cdynamicstringaccessora-class"></a>Класс CDynamicStringAccessorA
-Дает возможность доступа к источнику данных, если у вас нет сведений о схеме базы данных (базовая структура).  
+Позволяет доступ к источнику данных, когда схема базы данных (базовая структура).  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,18 +34,18 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Они оба запроса, что поставщик извлечь все данные из хранилища данных в виде строковых данных, но `CDynamicStringAccessor` запросов ANSI строковые данные.  
+ Они оба запроса, что поставщик получить все данные из хранилища данных в виде строковых данных, но `CDynamicStringAccessor` запросы ANSI строковые данные.  
   
- `CDynamicStringAccessorA` наследует **GetString** и `SetString` из `CDynamicStringAccessor`. При использовании этих методов в `CDynamicStringAccessorA` объекта, ***BaseType*** — **CHAR**.  
+ `CDynamicStringAccessorA` наследует `GetString` и `SetString` из `CDynamicStringAccessor`. При использовании этих методов в `CDynamicStringAccessorA` объекта, ***BaseType*** — **CHAR**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor-класс](../../data/oledb/caccessor-class.md)   
+ [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Ссылка на шаблоны OLE DB потребителя](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Класс CAccessor](../../data/oledb/caccessor-class.md)   
  [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [Класс CManualAccessor](../../data/oledb/cmanualaccessor-class.md)   
- [CDynamicAccessor-класс](../../data/oledb/cdynamicaccessor-class.md)   
+ [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
  [Класс CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Реализация простых объектов получателей | Документы Microsoft
+title: Реализация простых объектов получателей | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 841d982090503a1e72b1d6798a5f0eecdb543fe2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7be7709baadff35c10cec861b4a0bca94c8cbe5f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112567"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337174"
 ---
 # <a name="implementing-a-simple-consumer"></a>Реализация простых объектов-получателей
-В следующих темах редактировать файлы, созданные мастер приложений MFC и Мастер потребителя ATL OLE DB для создания простого объекта-получателя. В этом примере состоит из следующих частей:  
+В следующих темах изменение файлов, созданных в мастере приложений MFC и Мастер потребителя ATL OLE DB, для создания простого объекта-получателя. В этом примере состоит из следующих частей:  
   
--   «Извлечение данных с помощью потребителя» показано, как реализовать код в получателе, который считывает все данные, по строкам таблицы базы данных.  
+-   «Получение данных с помощью потребителя» показан способ реализации кода в объекте-получателе, считывает все данные, по строкам таблицы базы данных.  
   
--   «Добавление поддержки закладок для потребителя» показано добавление поддержки закладок для потребителя.  
+-   «Добавление поддержки закладок для потребителя» показано, как добавить поддержку закладок для потребителя.  
   
--   «Добавление поддержки XML потребителю» показано, как изменить код объекта-получателя для вывода набора строк извлеченных данных как XML-данных.  
-  
-> [!NOTE]
->  Приложение-потребитель, описанные в этом разделе можно использовать для проверки образцов поставщиков MyProv и Provider.  
+-   «Добавление поддержки XML для потребителя» показано, как изменить код потребителя, чтобы выходные данные набора строк извлеченных в виде XML-данных.  
   
 > [!NOTE]
->  Чтобы построить приложение потребителя для проверки поставщика MyProv (тот же поставщик описано в [Усовершенствование простого поставщика только для чтения](../../data/oledb/enhancing-the-simple-read-only-provider.md)), необходимо включить поддержку закладок, как описано в «Добавление поддержки закладок для потребителя».  
+>  Приложение-потребитель, описанные в этом разделе можно использовать для проверки образцов поставщиков MyProv и поставщика.  
   
 > [!NOTE]
->  Чтобы построить приложение потребителя для проверки поставщика, опустить поддержки закладок в «Добавление закладки поддержки в код потребителя» и перейдите к «Добавление поддержки XML потребителю».  
+>  Чтобы построить приложение потребителя для проверки поставщика MyProv (тот же поставщик, описано в разделе [Усовершенствование простого поставщика только для чтения](../../data/oledb/enhancing-the-simple-read-only-provider.md)), необходимо включить поддержку закладок, как описано в разделе «Добавление поддержки закладок для потребителя».  
   
-## <a name="retrieving-data-with-the-consumer"></a>Получение данных с помощью потребителя  
+> [!NOTE]
+>  Чтобы создать приложение-потребитель для тестирования поставщика, оставить поддержки закладок в «Добавление закладки поддержки в код потребителя» и перейдите к «Добавление поддержки XML в потребитель».  
   
-#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Чтобы изменить консольного приложения для использования потребителя OLE DB  
+## <a name="retrieving-data-with-the-consumer"></a>Извлечение данных с помощью потребителя  
+  
+#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Чтобы изменить консольное приложение для использования потребителей OLE DB  
   
 1.  В файле MyCons.cpp измените основной код, вставив полужирный текст следующим образом:  
   
-    ```  
+    ```cpp  
     // MyCons.cpp : Defines the entry point for the console application.  
     //  
     #include "stdafx.h"  
@@ -55,39 +55,50 @@ ms.locfileid: "33112567"
     ...  
     int main(int argc, char* argv[])  
     {  
- HRESULT hr = CoInitialize(NULL);   // Instantiate rowset   CProducts rs;   hr = rs.OpenAll();   ATLASSERT(SUCCEEDED(hr ) );   hr = rs.MoveFirst();   // Iterate through the rowset   while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )   {      // Print out the column information for each row      printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",             rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );      hr = rs.MoveNext();   }   rs.Close();   rs.ReleaseCommand();   CoUninitialize();  
+       HRESULT hr = CoInitialize(NULL);   // Instantiate rowset   
+       CProducts rs;   
+       hr = rs.OpenAll();   
+       ATLASSERT(SUCCEEDED(hr ) );   
+       hr = rs.MoveFirst();   // Iterate through the rowset   
+       while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )   {      // Print out the column information for each row      
+         printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",             
+           rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );      
+         hr = rs.MoveNext();   }   
+       rs.Close();   
+       rs.ReleaseCommand();   
+       CoUninitialize();  
   
        return 0;  
     }  
     ```  
   
 ## <a name="adding-bookmark-support-to-the-consumer"></a>Добавление поддержки закладок для потребителя  
- Закладка — это столбец, который уникально идентифицирует строки в таблице. Обычно это ключевой столбец, но не всегда; он зависит от поставщика. В этом разделе показано, как добавить поддержку закладки. Чтобы сделать это, необходимо в класс записей пользователя выполните следующие действия:  
+ Закладка — это столбец, который однозначно определяет строки в таблице. Обычно это ключевой столбец, но не всегда; он зависит от поставщика. В этом разделе показано, как добавить поддержку закладок. Чтобы сделать это, вам потребуется выполнить следующий код в класс записей пользователя.  
   
--   Создайте экземпляры закладок. Данные элементы являются объектами типа [CBookmark](../../data/oledb/cbookmark-class.md).  
+-   Создайте экземпляр закладки. Данные элементы являются объектами типа [CBookmark](../../data/oledb/cbookmark-class.md).  
   
--   Запрос столбца закладки от поставщика, задав **DBPROP_IRowsetLocate** свойство.  
+-   Запрос столбца закладки от поставщика, задав `DBPROP_IRowsetLocate` свойство.  
   
 -   Добавьте запись закладки в сопоставление столбцов с помощью [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) макрос.  
   
- Предыдущие шаги обеспечивают поддержку закладок и объект закладки, с которым необходимо работать. В следующем примере демонстрируется закладки следующим образом:  
+ Ранее вы получите поддержку закладок и объект закладки, с которым необходимо работать. Этот пример кода демонстрирует закладки следующим образом:  
   
 -   Откройте файл для записи.  
   
 -   Выходные данные набора строк в файл по строкам.  
   
--   Переместить курсор набора строк, вызвав закладки [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
+-   Переместить курсор набора строк к закладке, вызвав [функции MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
   
--   Выходные данные закладкой строка, помеченная в конец файла.  
+-   Выходной строке с закладкой, добавив его в конец файла.  
   
 > [!NOTE]
->  При использовании приложения потребителя для проверки образцов приложений поставщиков Provider оставьте Поддержка закладок, описанные в этом разделе.  
+>  Если вы используете это приложение-потребитель для тестирования пример приложения поставщика поставщика, пропустите Поддержка закладок, описанные в этом разделе.  
   
-#### <a name="to-instantiate-the-bookmark"></a>Создание экземпляра закладки  
+#### <a name="to-instantiate-the-bookmark"></a>Для создания экземпляра закладки  
   
-1.  Метод доступа должен содержать объект типа [CBookmark](../../data/oledb/cbookmark-class.md). `nSize` Параметр задает размер буфера закладки в байтах (обычно 4 для 32-разрядных платформах) и 8 для 64-разрядных платформах. Добавьте следующее объявление члена данных столбца в класс записей пользователя:  
+1.  Метод доступа должен содержать объект типа [CBookmark](../../data/oledb/cbookmark-class.md). *NSize* параметр задает размер буфера закладки в байтах (обычно 4 для 32-разрядных платформ) и 8 для 64-разрядных платформах. Добавьте следующее объявление к элементам данных в столбце в класс записей пользователя:  
   
-    ```  
+    ```cpp  
     //////////////////////////////////////////////////////////////////////  
     // Products.h  
     class CProductsAccessor  
@@ -102,7 +113,7 @@ ms.locfileid: "33112567"
   
 1.  Добавьте следующий код в `GetRowsetProperties` метод в класс записей пользователя:  
   
-    ```  
+    ```cpp  
     // Set the DBPROP_IRowsetLocate property.  
     void GetRowsetProperties(CDBPropSet* pPropSet)  
     {  
@@ -116,7 +127,7 @@ ms.locfileid: "33112567"
   
 1.  Добавьте следующую запись в сопоставление столбцов в класс записей пользователя:  
   
-    ```  
+    ```cpp  
     // Set a bookmark entry in the column map.  
     BEGIN_COLUMN_MAP(CProductsAccessor)  
        BOOKMARK_ENTRY(m_bookmark)   // Add bookmark entry  
@@ -126,11 +137,11 @@ ms.locfileid: "33112567"
     END_COLUMN_MAP()  
     ```  
   
-#### <a name="to-use-a-bookmark-in-your-main-code"></a>Использование закладки в основном коде  
+#### <a name="to-use-a-bookmark-in-your-main-code"></a>Чтобы использовать закладки в основном коде  
   
-1.  В файле MyCons.cpp из консольного приложения, созданного ранее измените основной код следующим образом. Для использования закладок основной код необходимо создать собственный объект закладки (`myBookmark`); это закладка отличается от того, в методе доступа (`m_bookmark`).  
+1.  В файле MyCons.cpp из консольного приложения, созданного ранее измените основной код следующим образом. Для использования закладок основного кода необходимо создать собственный объект закладки (`myBookmark`); это закладка отличается от того, в методе доступа (`m_bookmark`).  
   
-    ```  
+    ```cpp  
     ///////////////////////////////////////////////////////////////////////  
     // MyCons.cpp : Defines the entry point for the console application.  
     //  
@@ -143,7 +154,7 @@ ms.locfileid: "33112567"
   
     int _tmain(int argc, _TCHAR* argv[])  
     {  
- HRESULT hr = CoInitialize(NULL);  
+       HRESULT hr = CoInitialize(NULL);  
   
        // Instantiate rowset  
        CProducts rs;  
@@ -197,24 +208,24 @@ ms.locfileid: "33112567"
     }  
     ```  
   
- Дополнительные сведения о закладках см. в разделе [с помощью закладок](../../data/oledb/using-bookmarks.md). Также приведены примеры закладок в [обновление наборов строк](../../data/oledb/updating-rowsets.md).  
+ Дополнительные сведения о закладках см. в разделе [с помощью закладок](../../data/oledb/using-bookmarks.md). Примеры закладок также отображаются в [обновление наборов строк](../../data/oledb/updating-rowsets.md).  
   
-## <a name="adding-xml-support-to-the-consumer"></a>Добавление поддержки XML в код потребителя  
- Как было сказано в [доступ к данным XML](../../data/oledb/accessing-xml-data.md), существует два способа для получения XML-данных из источника данных: с помощью [CStreamRowset](../../data/oledb/cstreamrowset-class.md) или с помощью [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). В этом примере используется `CStreamRowset`, которым более эффективна, но он требует наличия SQL Server 2000, запущенного на компьютере, на котором выполняется этот образец приложения.  
+## <a name="adding-xml-support-to-the-consumer"></a>Добавление поддержки XML объекту-получателю  
+ Как уже говорилось в [доступ к данным XML](../../data/oledb/accessing-xml-data.md), существует два способа для получения XML-данных из источника данных: с помощью [CStreamRowset](../../data/oledb/cstreamrowset-class.md) или с помощью [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). В этом примере используется `CStreamRowset`, которое более эффективно, но требует наличия SQL Server 2000, запущенного на компьютере, на котором выполнена в этом образце приложения.  
   
-#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Для класса команды для наследования от класса CStreamRowset  
+#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Чтобы изменить класс команд для наследования от класса CStreamRowset  
   
-1.  В приложении-потребителе, созданный ранее, измените вашей `CCommand` объявления, чтобы указать `CStreamRowset` как набор строк класса следующим образом:  
+1.  В приложении-потребителе, созданный ранее, измените вашей `CCommand` декларацию, чтобы определять `CStreamRowset` как набор строк класса следующим образом:  
   
-    ```  
+    ```cpp  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Для изменения основного кода для извлечения и вывода XML-данных  
+#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Чтобы изменить основной код для извлечения и вывода XML-данных  
   
 1.  В файле MyCons.cpp из консольного приложения, созданного ранее измените основной код следующим образом:  
   
-    ```  
+    ```cpp  
     ///////////////////////////////////////////////////////////////////////  
     // MyCons.cpp : Defines the entry point for the console application.  
     //  
@@ -227,7 +238,7 @@ ms.locfileid: "33112567"
   
     int _tmain(int argc, _TCHAR* argv[])  
     {  
- HRESULT hr = CoInitialize(NULL);  
+       HRESULT hr = CoInitialize(NULL);  
   
        // Instantiate rowset  
        CProducts rs;  
@@ -249,7 +260,7 @@ ms.locfileid: "33112567"
        for (;;)  
        {  
           // Read sequential stream data into buffer  
-    HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
+          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
           if (FAILED (hr))  
              break;  
           // Output buffer to file  

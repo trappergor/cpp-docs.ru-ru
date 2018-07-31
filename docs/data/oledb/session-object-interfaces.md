@@ -1,5 +1,5 @@
 ---
-title: Интерфейсы объекта сеанса | Документы Microsoft
+title: Интерфейсы объекта сеанса | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,38 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f591e62874bd6924dd60077b921bbfc67600af1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01d08fb35a1e954aad07153f63ad3ed34282570d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112931"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337850"
 ---
 # <a name="session-object-interfaces"></a>Интерфейсы объекта сеанса
 В следующей таблице показаны обязательные и необязательные интерфейсы, определенные в OLE DB для объекта сеанса.  
   
 |Интерфейс|Обязательный?|Реализовано с помощью шаблонов OLE DB?|  
 |---------------|---------------|--------------------------------------|  
-|[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)|Обязательно|Да|  
-|[IOpenRowset](https://msdn.microsoft.com/en-us/library/ms716946.aspx)|Обязательно|Да|  
-|[ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx)|Обязательно|Да|  
-|[IAlterIndex](https://msdn.microsoft.com/en-us/library/ms714943.aspx)|Необязательный|Нет|  
-|[IAlterTable](https://msdn.microsoft.com/en-us/library/ms719764.aspx)|Необязательный|Нет|  
-|[IBindResource](https://msdn.microsoft.com/en-us/library/ms714936.aspx)|Необязательный|Нет|  
-|[ICreateRow](https://msdn.microsoft.com/en-us/library/ms716832.aspx)|Необязательный|Нет|  
-|[IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx)|Необязательный|Да|  
-|[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)|Необязательный|Да|  
-|[IIndexDefinition](https://msdn.microsoft.com/en-us/library/ms711593.aspx)|Необязательный|Нет|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Необязательный|Да|  
-|[ITableCreation](https://msdn.microsoft.com/en-us/library/ms713639.aspx)|Необязательный|Нет|  
-|[ITableDefinition](https://msdn.microsoft.com/en-us/library/ms714277.aspx)|Необязательный|Нет|  
-|[ITableDefinitionWithConstraints](https://msdn.microsoft.com/en-us/library/ms720947.aspx)|Необязательный|Нет|  
-|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Необязательный|Нет|  
-|[Интерфейс ITransactionJoin](https://msdn.microsoft.com/en-us/library/ms718071.aspx)|Необязательный|Нет|  
-|[Интерфейс ITransactionLocal](https://msdn.microsoft.com/en-us/library/ms714893.aspx)|Необязательный|Нет|  
-|[ITransactionObject](https://msdn.microsoft.com/en-us/library/ms713659.aspx)|Необязательный|Нет|  
+|[IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx)|Обязательный|Да|  
+|[IOpenRowset](https://msdn.microsoft.com/library/ms716946.aspx)|Обязательный|Да|  
+|[ISessionProperties](https://msdn.microsoft.com/library/ms713721.aspx)|Обязательный|Да|  
+|[IAlterIndex](https://msdn.microsoft.com/library/ms714943.aspx)|Optional|Нет|  
+|[IAlterTable](https://msdn.microsoft.com/library/ms719764.aspx)|Optional|Нет|  
+|[IBindResource](https://msdn.microsoft.com/library/ms714936.aspx)|Optional|Нет|  
+|[ICreateRow](https://msdn.microsoft.com/library/ms716832.aspx)|Optional|Нет|  
+|[IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx)|Optional|Да|  
+|[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)|Optional|Да|  
+|[IIndexDefinition](https://msdn.microsoft.com/library/ms711593.aspx)|Optional|Нет|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|Да|  
+|[ITableCreation](https://msdn.microsoft.com/library/ms713639.aspx)|Optional|Нет|  
+|[ITableDefinition](https://msdn.microsoft.com/library/ms714277.aspx)|Optional|Нет|  
+|[ITableDefinitionWithConstraints](https://msdn.microsoft.com/library/ms720947.aspx)|Optional|Нет|  
+|[ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|Optional|Нет|  
+|[Интерфейс ITransactionJoin](https://msdn.microsoft.com/library/ms718071.aspx)|Optional|Нет|  
+|[Интерфейс ITransactionLocal](https://msdn.microsoft.com/library/ms714893.aspx)|Optional|Нет|  
+|[ITransactionObject](https://msdn.microsoft.com/library/ms713659.aspx)|Optional|Нет|  
   
- Объект сеанса создает объект набора строк. Если поставщик поддерживает команды, сеанс также создает командный объект (`CCommand`, реализации OLE DB **TCommand**). Реализует объект команды `ICommand` интерфейс и использует `ICommand::Execute` метод для выполнения команд на наборе строк, как показано на следующем рисунке.  
+ Объект сеанса создает объект набора строк. Если поставщик поддерживает команды, сеанс также создает объект command (`CCommand`, реализации OLE DB `TCommand`). Реализует объект команды `ICommand` интерфейс и использует `ICommand::Execute` метод для выполнения команд на наборе строк, как показано на рисунке ниже.  
   
  ![Концептуальная схема поставщика](../../data/oledb/media/vc4u551.gif "vc4u551")  
   

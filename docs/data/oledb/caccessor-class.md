@@ -1,5 +1,5 @@
 ---
-title: Класс CAccessor | Документы Microsoft
+title: Класс CAccessor | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,38 +21,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dffefb74faf6836b9f2fc81a7800dc34084657cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e7f722d4d1759bdec7a23bb15076b38de000eb6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093913"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337421"
 ---
 # <a name="caccessor-class"></a>Класс CAccessor
 Представляет один из типов доступа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```cpp
 template <class T>  
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
+### <a name="parameters"></a>Параметры  
+ *T*  
  Класс записей пользователя.  
   
 ## <a name="remarks"></a>Примечания  
  Он используется, когда запись статически привязан к источнику данных. Запись содержит буфера. Этот класс поддерживает несколько методов доступа в наборе строк.  
   
- Используйте этот тип метода доступа, если известно, что структура и тип базы данных.  
+ Используйте этот тип метода доступа, если вы знаете структуру и тип базы данных.  
   
- Если ваш метод доступа содержит поля, указывающие на памяти (такие как `BSTR` или интерфейса), должен быть освобожден, вызовите функцию-член [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) до следующего запись доступна для чтения.  
+ Если ваш метод доступа содержит поля, указывающие на область памяти (такие как `BSTR` или интерфейс), должен быть освобожден, вызовите функцию-член [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) до следующей запись доступна для чтения.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

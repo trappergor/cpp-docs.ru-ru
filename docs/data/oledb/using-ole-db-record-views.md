@@ -1,5 +1,5 @@
 ---
-title: Использование представлений записей OLE DB | Документы Microsoft
+title: Использование представлений записей OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,26 +20,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6cebf8a1c1130a33ffd07e2d23d65c55a2a67b34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d98b2f95c9b06d748b7486955b03f34f41e9ab57
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111277"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339517"
 ---
 # <a name="using-ole-db-record-views"></a>Использование представлений записей OLE DB
-Если требуется отобразить данные набора строк OLE DB в приложении MFC, следует использовать класс MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Объект представления записей создан из `COleDBRecordView` позволяет отображать записи базы данных в элементах управления MFC. Представление записей — представление формы диалогового окна, непосредственно подключенные к объекту набора строк OLE DB, созданные на основе `CRowset` класса шаблона. Получение дескриптора для объекта набора строк проста:  
+Если вы хотите отобразить данные набора строк OLE DB в приложении MFC, следует использовать класс MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Созданный объект представления записей из `COleDBRecordView` позволяет отображать записи базы данных в элементы управления MFC. Представление записей — это представление формы диалогового окна, непосредственно подключенные к объект набора строк OLE DB, созданный из `CRowset` класс шаблона. Получение дескриптора объекта набора строк прост:  
   
-```  
+```cpp  
 COleDBRecordView myRecordView;  
 ...  
 // CProductAccessor is a user record class  
 CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();  
 ```  
   
- В представлении отображаются поля `CRowset` в элементах управления диалогового окна. `COleDBRecordView` Объект использует Exchange данных диалогового окна (DDX) и навигационные функции встроены в `CRowset` (**MoveFirst**, `MoveNext`, `MovePrev`, и `MoveLast`) для автоматизации перемещения данных между элементами управления в форме и полями набора строк. `COleDBRecordView` хранит список положение пользователя в наборе строк, чтобы представление записей можно обновить пользовательский интерфейс и предоставляет [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) метод для обновления текущей записи перед переходом на другой.  
+ В представлении отображаются поля `CRowset` в элементах управления диалогового окна. `COleDBRecordView` Объект использует Exchange данных диалогового окна (DDX) и навигационные функции встроены в `CRowset` (`MoveFirst`, `MoveNext`, `MovePrev`, и `MoveLast`) для автоматизации перемещения данных между элементами управления на форме и поля для набора строк. `COleDBRecordView` отслеживает этой положение пользователя в наборе строк, представление записей можно обновить пользовательский интерфейс и предоставляет [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) метод для обновления текущей записи перед переходом на другой.  
   
- Можно использовать функции DDX с **COleDbRecordView** для получения данных непосредственно из набора записей базы данных и его отображения в элементе управления диалогового окна. Следует использовать **DDX_\***  методы (такие как `DDX_Text`), а не **DDX_Field\***  функции (такие как `DDX_FieldText`) с **COleDbRecordView** .  
+ Можно использовать функции DDX с `COleDbRecordView` для получения данных непосредственно из набора записей базы данных и отображения его в элемент управления диалогового окна. Следует использовать **DDX_\***  методы (такие как `DDX_Text`), а не **DDX_Field\***  функции (такие как `DDX_FieldText`) с `COleDbRecordView`.  
   
 ## <a name="see-also"></a>См. также  
  [Использование методов доступа](../../data/oledb/using-accessors.md)   
