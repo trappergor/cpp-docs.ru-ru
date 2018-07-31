@@ -36,12 +36,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181202"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340668"
 ---
 # <a name="caccessorbase-class"></a>Класс CAccessorBase
 Все методы доступа в шаблонах OLE DB являются производными от этого класса. `CAccessorBase` позволяет одному набору строк для управления несколько методов доступа. Он также предоставляет привязки параметров и выходных столбцов.  
@@ -74,7 +74,6 @@ ms.locfileid: "39181202"
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Примечания  
@@ -86,7 +85,7 @@ void Close();
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -103,7 +102,6 @@ void Close();
   
 ```cpp
 ULONG GetNumAccessors() const;  
-  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -115,7 +113,7 @@ ULONG GetNumAccessors() const;
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      bool IsAutoAccessor(ULONG nAccessor) const;  
+bool IsAutoAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Параметры  

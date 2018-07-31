@@ -1,5 +1,5 @@
 ---
-title: Классы баз данных MFC (ODBC и DAO) | Документы Microsoft
+title: Классы баз данных MFC (ODBC и DAO) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ef8331142550424641b00742d302caedc2974a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94202eab788d376abf80866beafe74c52180474f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088119"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336581"
 ---
 # <a name="mfc-database-classes"></a>Классы баз данных MFC 
 > [!NOTE]
->  Корпорация Майкрософт рекомендует использовать ODBC через Microsoft ODBC Driver 13 (или более поздней версии) для SQL Server для новых проектов. DAO больше не поддерживается.    
+>  Корпорация Майкрософт рекомендует использовать ODBC с помощью Microsoft ODBC Driver 13 (или более поздней версии) для SQL Server для новых проектов. DAO больше не поддерживается.    
 
  Дополнительные сведения см. в следующих разделах:  
--   [Схема технологий доступа к данным](https://msdn.microsoft.com/en-us/library/ms810810.aspx) 
+-   [Схема технологий доступа к данным](https://msdn.microsoft.com/library/ms810810.aspx) 
 
--   [ODBC Driver 13.1 for SQL Server выпуска](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 for SQL Server следует использовать для создания новых или усовершенствования существующих приложений, которые необходимо воспользоваться преимуществами новых функций SQL Server 2016.
+-   [ODBC Driver 13.1 for SQL Server выпуска](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 for SQL Server следует использовать для создания новых или усовершенствования существующих приложений, которым требуется, чтобы воспользоваться преимуществами новых функций SQL Server 2016.
   
 -   [ODBC и MFC](../data/odbc/odbc-and-mfc.md)  
   
@@ -39,4 +39,4 @@ ms.locfileid: "33088119"
 -   [Использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md)  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к данным программирования (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+ [Доступ к данным, программирование (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

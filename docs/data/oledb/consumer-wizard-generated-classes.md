@@ -1,5 +1,5 @@
 ---
-title: Классы, создаваемые мастером потребителя | Документы Microsoft
+title: Классы, создаваемые мастером потребителя | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091989"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338748"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Классы, создаваемые мастером объекта-получателя
 При создании потребителя с помощью мастера потребителя ATL OLE DB вы можете выбрать использование шаблонов OLE DB или атрибутов OLE DB. В обоих случаях мастер создает класс команд и класс записей пользователя. В классе команд содержится код для открытия источника данных и набора строк, указанных в мастере. Класс записей пользователя содержит сопоставление столбцов для выбранной таблицы базы данных. Однако созданный код в каждом случае отличается.  
@@ -47,9 +47,9 @@ ms.locfileid: "33091989"
 >  Если вы изменяете класс записей пользователя или создаете собственного потребителя, переменные данных должны находиться перед переменными состояния и длины.  
   
 > [!NOTE]
->  Мастер потребителя ATL OLE DB использует тип **DB_NUMERIC** для привязки числовых типов данных. Ранее он использовал **DBTYPE_VARNUMERIC** (формат которого описывался типом **DB_VARNUMERIC** ; см. Oledb.h). Если потребители создаются без помощи мастера, рекомендуется использовать **DB_NUMERIC**.  
+>  Мастер потребителя ATL OLE DB использует `DB_NUMERIC` тип для привязки числовых типов данных. Ранее он использовал `DBTYPE_VARNUMERIC` (формат которого описывался `DB_VARNUMERIC` типа; см. Oledb.h). Если не используется мастер создания потребителей, рекомендуется использовать `DB_NUMERIC`.  
   
-```  
+```cpp  
 // Products.H : Declaration of the CProducts class  
   
 class CProductsAccessor  
@@ -95,7 +95,7 @@ public:
 ### <a name="rowset-properties"></a>Свойства набора строк  
  Далее мастер задает свойства набора строк. Если в мастере потребителя ATL OLE DB вы выбрали **Изменить**, **Вставить**или **Удалить** , здесь задаются соответствующие свойства (свойство DBPROP_IRowsetChange всегда задается, а затем одно или несколько свойств DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT или DBPROPVAL_UP_DELETE соответственно).  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -108,7 +108,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ### <a name="command-or-table-class"></a>Класс команд или таблиц  
  Если вы указали класс команд, мастер объявляет класс команд; для кода на основе шаблонов команда выглядит следующим образом:  
   
-```  
+```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
 SELECT \  
    ProductID, \  
@@ -146,7 +146,7 @@ SELECT \
 ### <a name="class-declaration"></a>Объявление класса  
  Наконец, мастер создает объявление класса команд, например следующим образом:  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
@@ -157,7 +157,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
  В следующем примере мастер создает объявление класса `COrders`, но класс записей пользователя `COrdersAccessor` не появляется, поскольку его вводит атрибут.  
   
-```  
+```cpp  
 #define _ATL_ATTRIBUTES  
 #include <atlbase.h>  
 #include <atldbcli.h>  

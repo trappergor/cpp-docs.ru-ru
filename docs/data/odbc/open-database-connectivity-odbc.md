@@ -1,5 +1,5 @@
 ---
-title: Интерфейс ODBC (ODBC) | Документы Microsoft
+title: Open Database Connectivity (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: de6931db1ef8048e6f376447307beebed67aa56a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a729497fe24fb0c08734e45d360965f5d22880c4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090452"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339452"
 ---
 # <a name="open-database-connectivity-odbc"></a>Интерфейс ODBC (ODBC)
-Библиотека Microsoft Foundation Classes (MFC) предоставляет классы для разработки программ с использованием интерфейса ODBC. Начиная с Visual Studio 2015 и ODBC для SQL Server 2012 является предпочтительным способом подключения к источникам данных SQL.
+Библиотека Microsoft Foundation Classes (MFC) предоставляет классы для разработки программ с использованием интерфейса ODBC. Начиная с Visual Studio 2015 и ODBC для SQL Server 2012 является предпочтительным способом для подключения к источникам данных SQL.
   
- Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK в MSDN.  
+ Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) пакета SDK в MSDN.  
   
   
-## <a name="in-this-section"></a>Содержание раздела  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [ODBC](odbc-basics.md)— Open Database Connectivity standard и API-Интерфейс  
+-   [ODBC](odbc-basics.md)— Open Database Connectivity standard и API  
   
 -   [Какие MFC поддержку предоставляет](odbc-and-mfc.md) для программирования с использованием ODBC  
   
@@ -60,14 +60,14 @@ ms.locfileid: "33090452"
   
 -   [Выполнение прямых вызовов SQL](sql-making-direct-sql-calls-odbc.md)  
   
--   [Выполнение прямых вызовов API-интерфейса ODBC](odbc-calling-odbc-api-functions-directly.md)  
+-   [Выполнение прямых вызовов API-Интерфейс ODBC](odbc-calling-odbc-api-functions-directly.md)  
   
--   [Как работают классы базы данных с архитектурой документ/представление MFC](working-with-documents-and-views.md)  
+-   [Как работают классы базы данных с архитектурой документ/представление MFC?](working-with-documents-and-views.md)  
   
 -   [Список драйверов ODBC](odbc-driver-list.md)  
   
 ## <a name="odbc-database-tasks"></a>Задачи базы данных ODBC  
- Эти задачи основаны на MFC [ODBC](odbc-basics.md) классы. Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK.  
+ Эти задачи основаны на основе MFC [ODBC](odbc-basics.md) классы. Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK.  
   
 -   [Установка и начало работы с ODBC](installing-and-getting-started-with-odbc.md)  
   
@@ -86,4 +86,4 @@ ms.locfileid: "33090452"
 -   [Использование набора записей MFC ODBC](use-mfc-odbc-recordsets.md)  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к данным программирования (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+ [Доступ к данным, программирование (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

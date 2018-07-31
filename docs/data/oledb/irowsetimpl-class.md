@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 59793d206f8b53d57347070cbfccd6d98ff2c005
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321959"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338344"
 ---
 # <a name="irowsetimpl-class"></a>Класс IRowsetImpl
 Предоставляет реализацию интерфейса `IRowset`.  
@@ -177,7 +177,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
+STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBREFCOUNT rgRefCounts[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -193,7 +193,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
   
 ```cpp
 HRESULT CreateRow(DBROWOFFSET lRowsOffset,  
-  DBCOUNTITEM& cRowsObtained,  
+   DBCOUNTITEM& cRowsObtained,  
    HROW* rgRows);  
 ```  
   
@@ -216,7 +216,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      STDMETHOD(GetData )(HROW hRow,  
+STDMETHOD(GetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pDstData);  
 ```  
@@ -239,7 +239,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
+virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
    ATLCOLUMNINFO* columnNames);  
 ```  
   
@@ -259,7 +259,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
+STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
    DBROWOFFSET lRowsOffset,  
    DBROWCOUNT cRows,  
    DBCOUNTITEM* pcRowsObtained,  
@@ -276,7 +276,6 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
   
 ```cpp
 IRowsetImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Примечания  
@@ -307,7 +306,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
+STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWOPTIONS rgRowOptions[],  
    DBREFCOUNT rgRefCounts[],  
@@ -323,7 +322,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
+STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -338,7 +337,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
+virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
    RowClass* currentRow,  
    ATLCOLUMNINFO* columnInfo);  
 ```  
@@ -366,7 +365,6 @@ HRESULT RefRows(DBCOUNTITEM cRows,
   
 ```cpp
 unsigned m_bCanFetchBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Примечания  
@@ -379,7 +377,6 @@ unsigned m_bCanFetchBack:1;
   
 ```cpp
 unsigned  m_bCanScrollBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Примечания  
@@ -392,7 +389,6 @@ unsigned  m_bCanScrollBack:1;
   
 ```cpp
 unsigned m_bReset:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Примечания  
@@ -405,7 +401,6 @@ unsigned m_bReset:1;
   
 ```cpp
 DBROWOFFSET m_iRowset;  
-  
 ```  
 
 ## <a name="rgrowhandles"></a> IRowsetImpl::m_rgRowHandles
@@ -414,9 +409,7 @@ DBROWOFFSET m_iRowset;
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-MapClass  
- m_rgRowHandles;  
-  
+MapClass m_rgRowHandles;  
 ```  
   
 ### <a name="remarks"></a>Примечания  

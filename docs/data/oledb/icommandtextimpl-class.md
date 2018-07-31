@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2223958f2f5dbacb7c86bf2735c1de3a85d9d488
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269495"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340297"
 ---
 # <a name="icommandtextimpl-class"></a>Класс ICommandTextImpl
 Предоставляет реализацию для [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx) интерфейс.  
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 ### <a name="parameters"></a>Параметры  
  *T*  
- Команда класс, производный от **ICommandTextImpl**. 
+ Команда класс, производный от `ICommandTextImpl`. 
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** altdb.h  
@@ -82,7 +82,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      STDMETHOD(GetCommandText)(GUID * pguidDialect,   
+STDMETHOD(GetCommandText)(GUID * pguidDialect,   
    LPOLESTR * ppwszCommand);  
 ```  
   
@@ -95,7 +95,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
+STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
    LPCOLESTR pwszCommand);  
 ```  
   
@@ -109,7 +109,6 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 ```cpp
 CComBSTR m_strCommandText;  
-  
 ```  
   
 ## <a name="see-also"></a>См. также  

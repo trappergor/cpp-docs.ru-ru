@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e8415fdac405f0a639b03cc90a710214d2c8d0c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207842"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337601"
 ---
 # <a name="cdbpropset-class"></a>Класс CDBPropSet
 Наследует от `DBPROPSET` структурировать и добавляет конструктор, который инициализирует ключевых полей, а также `AddProperty` доступ к методу.  
@@ -136,7 +136,7 @@ bool AddProperty(DWORD dwPropertyID,
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      CDBPropSet(const GUID& guid);  
+CDBPropSet(const GUID& guid);  
 
 CDBPropSet(const CDBPropSet& propset);  
 
@@ -156,7 +156,7 @@ CDBPropSet();
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      void SetGUID(const GUID& guid) throw();  
+void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -172,7 +172,7 @@ CDBPropSet();
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      CDBPropSet& operator =(CDBPropSet& propset) throw();  
+CDBPropSet& operator =(CDBPropSet& propset) throw();  
 ```  
   
 ## <a name="see-also"></a>См. также  

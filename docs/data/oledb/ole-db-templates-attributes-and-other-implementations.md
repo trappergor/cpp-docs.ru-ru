@@ -1,5 +1,5 @@
 ---
-title: Шаблоны OLE DB, атрибуты и другие реализации | Документы Microsoft
+title: Шаблоны OLE DB, атрибуты и другие реализации | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef9baf43ded1533eb7f4962db7344f9dc1def0ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32d9356c5c223df723626cf6ac07a7b5fda368de
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111176"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340655"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Шаблоны, атрибуты и другие реализации OLE DB
-## <a name="atl-ole-db-templates"></a>Шаблоны OLE DB ATL  
- Шаблоны OLE DB, которые являются частью библиотеки ATL (библиотеки ATL), упростить технологии высокой производительности баз данных OLE DB путем предоставления классов, реализующих многие часто используемые интерфейсы OLE DB. Вместе с этого шаблона библиотека включает поддержку мастера для создания начальных приложений OLE DB.  
+## <a name="atl-ole-db-templates"></a>Шаблоны ATL OLE DB  
+ Шаблоны OLE DB, которые являются частью ATL (Active Template Library), упрощают технологии высокой производительности баз данных OLE DB путем предоставления классов, реализующих многие часто используемые интерфейсы OLE DB. Вместе с этот шаблон библиотека поставляется поддержка мастера для создания начальных приложений OLE DB.  
   
  Библиотека шаблонов состоит из двух частей:  
   
--   **Шаблоны потребителей OLE DB** используется для реализации приложений OLE DB клиента (покупатели).  
+-   **Шаблоны потребителей OLE DB** используется для реализации приложения клиент (потребитель) OLE DB.  
   
--   **Шаблоны поставщика OLE DB** используется для реализации приложения OLE DB для сервера (поставщик).  
+-   **Шаблоны поставщика OLE DB** используется для реализации приложения сервера (поставщик) OLE DB.  
   
- Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. раздел [Справочник программиста OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx).  
+ Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. в разделе [Справочник программиста OLE DB по](https://msdn.microsoft.com/library/ms713643.aspx).  
   
- Дополнительные сведения можно сделать следующее.  
+ Дополнительные сведения вы можете:  
   
 -   Ознакомьтесь с разделами о [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md) или [шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).  
   
 -   Создание [потребителя OLE DB](../../data/oledb/creating-an-ole-db-consumer.md) или [поставщик OLE DB](../../data/oledb/creating-an-ole-db-provider.md).  
   
--   Просмотреть список [классы потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) или [классы поставщика OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).  
+-   См. в списке [классы потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) или [классы поставщика OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).  
   
--   Просмотреть список [примеры шаблонов OLE DB](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c).  
+-   См. в списке [примеры шаблонов OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c).  
   
--   В разделе [справочника программиста OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx) (в Windows SDK).  
+-   См. в разделе [справочнике программиста OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) (в Windows SDK).  
   
 ## <a name="ole-db-attributes"></a>Атрибуты OLE DB  
- [Атрибуты потребителя OLE DB](../../windows/ole-db-consumer-attributes.md) предоставляют удобный способ создания потребителей OLE DB. Атрибуты OLE DB вводят кода на основе [шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) для создания рабочих потребителей OLE DB и поставщики. Если необходимо указать функциональные возможности, не поддерживаемые атрибуты, можно использовать шаблоны OLE DB в сочетании с атрибутами в коде.  
+ [Атрибуты потребителя OLE DB](../../windows/ole-db-consumer-attributes.md) предоставляют удобный способ создания потребителей OLE DB. Эти атрибуты OLE DB внедряют код на основе [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) для создания рабочих потребителей OLE DB и поставщиков. Если вам нужно указать функциональные возможности, не поддерживаемые атрибуты, можно использовать шаблоны OLE DB в сочетании с атрибутами в коде.  
   
 ## <a name="mfc-ole-db-classes"></a>Классы MFC OLE DB  
- В библиотеке MFC представлен один класс [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), которое отображает записи базы данных в элементах управления. Представление — это представление формы, непосредственно подключенные к `CRowset` и отображает свойства поля `CRowset` в элементах управления шаблона диалогового окна. Он также предоставляет реализацию по умолчанию для перемещения к первому следующего, предыдущего или последней записи и интерфейс для обновления записи в настоящее время для представления. Дополнительные сведения см. в разделе `COleDBRecordView`.  
+ Библиотека MFC содержит один класс [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), которая отображает записи базы данных в элементах управления. Представление — представление формы, который напрямую подключен к `CRowset` и отображает поля `CRowset` в элементах управления шаблона диалогового окна. Он также предоставляет реализацию по умолчанию для перехода к первой, далее, предыдущих или последних записей и интерфейс для обновления записи в данный момент в представлении. Дополнительные сведения см. в разделе `COleDBRecordView`.  
   
-## <a name="ole-db-sdk-interfaces"></a>Пакет SDK для интерфейсов OLE DB  
- В случаях, где шаблоны OLE DB не поддерживают функциональные возможности OLE DB необходимо использовать сами интерфейсы OLE DB. Дополнительные сведения см. в разделе [Справочник программиста OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx) в Windows SDK.  
+## <a name="ole-db-sdk-interfaces"></a>Интерфейсы OLE DB SDK  
+ В случаях, когда шаблоны OLE DB не поддерживает функциональные возможности OLE DB необходимо использовать сами интерфейсы OLE DB. Дополнительные сведения см. в разделе [Справочник программиста OLE DB по](https://msdn.microsoft.com/library/ms713643.aspx) в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Программирование объектов OLE DB](../../data/oledb/ole-db-programming.md)   
