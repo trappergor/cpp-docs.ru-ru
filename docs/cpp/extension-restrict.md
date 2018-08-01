@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e402fc9a32b92960f251796365199a608d6d1137
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1ed49662b28f2ac84fc8c53f677b2deada974d3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944856"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403509"
 ---
 # <a name="restrict"></a>__restrict
 Как и **__declspec ( [ограничить](../cpp/restrict.md) )** модификатор, **__restrict** слово указывает, что символ не является псевдонимом в текущей области. **__Restrict** ключевое слово отличается от `__declspec ( restrict )` модификатор одним из следующих способов:  

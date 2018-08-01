@@ -1,5 +1,5 @@
 ---
-title: 'Побитовое исключающее или оператор: ^ | Документы Microsoft'
+title: 'Оператор побитового исключающего или: ^ | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe2f64c20c0d741608dfb2631c2e36026a31e8bb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409856"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406680"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Битовый оператор ИЛИ (исключительное): ^
 ## <a name="syntax"></a>Синтаксис  
@@ -40,7 +40,7 @@ expression ^ expression
 Оба операнда оператора побитового эксклюзивного ИЛИ должны быть целочисленного типа. Обычные арифметические преобразования, описанные в [стандартные преобразования](standard-conversions.md) применяются к операндам.  
   
 ## <a name="operator-keyword-for-"></a>Ключевое слово оператора ^  
-**Xor** оператор является текстовым эквивалентом **^**. Существует два способа доступа к **xor** оператор в программах: включить файл заголовка `iso646.h`, или выполнить компиляцию с [/Za](../build/reference/za-ze-disable-language-extensions.md) параметр компилятора (отключить расширения языка).  
+**Xor** оператор является текстовым эквивалентом **^**. Существует два способа для доступа к **xor** оператор в программах: включить файл заголовка `iso646.h`, или выполнить компиляцию с [/Za](../build/reference/za-ze-disable-language-extensions.md) параметр компилятора (отключить расширения языка).  
   
 ## <a name="example"></a>Пример  
   
@@ -60,5 +60,3 @@ int main() {
   
 ## <a name="see-also"></a>См. также  
  [Встроенные операторы C++, приоритет и ассоциативность](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
-
-

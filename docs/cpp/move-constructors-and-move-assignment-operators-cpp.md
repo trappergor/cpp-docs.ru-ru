@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028155"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405575"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Конструкторы move и операторы присваивания move (C++)
 В этом разделе описывается создание *конструктор перемещения* и оператор присваивания перемещения для класса C++. Конструктор перемещения позволяет ресурсы, принадлежащие объекте rvalue должна быть перемещена в другую lvalue без копирования. Дополнительные сведения о семантике перемещения см. в разделе [декларатор ссылки Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -250,7 +250,7 @@ int main()
   
  В этом примере выводятся следующие данные:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.  
 In ~MemoryBlock(). length = 0.  
@@ -273,7 +273,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  До выхода Visual Studio 2010 этот пример формирует следующие выходные данные:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.  
 In ~MemoryBlock(). length = 25. Deleting resource.  
@@ -304,7 +304,6 @@ In ~MemoryBlock(). length = 75. Deleting resource.
  Если для класса определены как конструктор перемещения, так и оператор присваивания перемещения, можно исключить избыточный код, написав конструктор перемещения так, чтобы он вызывал оператор присваивания перемещения. В следующем примере показана измененная версия конструктора перемещения, вызывающая оператор присваивания перемещения:  
   
 ```cpp
-  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  

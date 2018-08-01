@@ -1,5 +1,5 @@
 ---
-title: Выражения с бинарными операторами | Документы Microsoft
+title: Выражения с бинарными операторами | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414680"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406823"
 ---
 # <a name="expressions-with-binary-operators"></a>Выражения с бинарными операторами
 Бинарные операторы действуют на два операнда в выражении. Используются следующие бинарные операторы.  
@@ -96,7 +96,7 @@ ms.locfileid: "32414680"
   
     -   Присваивание побитового исключающего ИЛИ (^=)  
   
-    -   Побитовое назначение включительно или (&#124;=)  
+    -   Побитовое присваивание включительно или (&#124;=)  
   
 -   [Оператор "запятая"](../cpp/comma-operator.md) (,)  
   

@@ -1,5 +1,5 @@
 ---
-title: Символы пунктуации (C++) | Документы Microsoft
+title: Знаки препинания (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecaa90598ce07cd0db52b7a4c30cfacc12566aba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1602857896745daae6e7af969add76ca2c1e1ead
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420095"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406758"
 ---
-# <a name="punctuators-c"></a>Символы пунктуации (C++)
+# <a name="punctuators-c"></a>Знаки препинания (C++)
 Символы пунктуации в C++ имеют синтаксическое и семантическое значение для компилятора, однако сами по себе не указывают на операцию, которая позволяет получить значение. Некоторые символы пунктуации (по отдельности или в сочетании) могут также быть операторами C++ или иметь значение для препроцессора.  
 
  К символам пунктуации относятся следующие:  

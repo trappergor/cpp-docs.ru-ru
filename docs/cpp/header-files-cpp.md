@@ -17,12 +17,12 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746b0829be6f66203d22cae4072dded9f6be32d8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9f6950049d9bd9b9264383ab6e5e216023526880
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939706"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404769"
 ---
 # <a name="header-files-c"></a>Файлы заголовков (C++)
 
@@ -92,18 +92,24 @@ int main()
 
 ## <a name="include-guards"></a>Защита включения
 
-Как правило, содержат файлы заголовков *включают guard* или **один раз #pragma** директиву, чтобы убедиться, что они не вставлены несколько раз в одном CPP-файла. 
+Как правило, содержат файлы заголовков *включают guard* или `#pragma once` директиву, чтобы убедиться, что они не вставлены несколько раз в одном CPP-файла. 
 
-my_class.h
-#<a name="ifndef-myclassh--include-guard"></a>ifndef MY_CLASS_H / / include guard
-#<a name="define-myclassh"></a>Определение MY_CLASS_H
+```cpp
+// my_class.h
+#ifndef MY_CLASS_H // include guard
+#define MY_CLASS_H
 
-
-пространство имен N {класса my_class {открытый: void do_something();};
-
+namespace N
+{
+    class my_class
+    {
+    public:
+        void do_something();
+    };
 }
 
-#<a name="endif--myclassh-"></a>ENDIF / * MY_CLASS_H * /
+#endif /* MY_CLASS_H */
+```
 
 ## <a name="what-to-put-in-a-header-file"></a>Что следует поместить в файл заголовка
 
@@ -129,14 +135,12 @@ my_class.h
 
 namespace N  // namespace declaration
 {
-
     inline namespace P
     {
         //...
     }
 
     enum class colors : short { red, blue, purple, azure };
-
 
     const double PI = 3.14;  // const and constexpr definitions
     constexpr int MeaningOfLife{ 42 };
@@ -153,7 +157,6 @@ namespace N  // namespace declaration
 #ifdef LOG   // conditional compilation directive
     void print_to_log();
 #endif
-
 
     class my_class   // regular class definition, 
     {                // but no non-inline function definitions
@@ -190,5 +193,5 @@ namespace N  // namespace declaration
 
     template <typename T>  // template declaration
     class value_widget;
-
 }
+```

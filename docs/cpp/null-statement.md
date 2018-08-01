@@ -1,5 +1,5 @@
 ---
-title: Значение NULL, оператор | Документы Microsoft
+title: Значение NULL, оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 624ff1051977804e6cefd97a813dce36cacdc3e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab391bb75dd6e7a2ef1ccf0951fa93770e6cd316
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408779"
 ---
 # <a name="null-statement"></a>Оператор NULL
 «Оператор null» — это инструкция выражения с *выражение* отсутствует. Она полезна, если синтаксис языка требует инструкции, но не оценки выражения. Она состоит из точки с запятой.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующем фрагменте кода показано, как копировать одну строку в другую. Кроме того, код содержит инструкцию null.  
   
-```  
+```cpp 
 // null_statement.cpp  
 char *myStrCpy( char *Dest, const char *Source )  
 {  

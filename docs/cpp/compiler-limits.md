@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecf3351180fbff4d6872c7027eee90b92e560059
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 01260500a564e6cb18b4477a423ce1ef70444201
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938903"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402189"
 ---
 # <a name="compiler-limits"></a>Ограничения компилятора
 Стандарт языка C++ рекомендует ограничения для различных языковых конструкций. Ниже приведен список случаев, когда компилятор Visual C++ не реализует рекомендуемые ограничения. Первое число является ограничением, установленным в стандарте ISO C++ 11 (INCITS/ISO/IEC 14882-2011[2012], приложение B), а второе — ограничением, реализуемым Visual C++:  

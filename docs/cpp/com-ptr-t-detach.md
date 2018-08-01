@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c07a9ce1d315c6738472850b987ccb397feda267
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: cf38e433f7042707b502a4cba2088db9412adb29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941357"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405838"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
 **Блок, относящийся только к системам Microsoft**  
@@ -31,9 +31,7 @@ ms.locfileid: "37941357"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 Interface* Detach( ) throw( );  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  

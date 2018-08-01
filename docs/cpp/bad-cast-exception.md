@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a37ae011ec2f06a505063678f481e6e41696c86
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944160"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401371"
 ---
 # <a name="badcast-exception"></a>Исключение bad_cast
-Исключение `bad_cast` создается оператором `dynamic_cast` в результате ошибки приведения к ссылочному типу.  
+**Bad_cast** исключение **dynamic_cast** оператор, в результате ошибки приведения к ссылочному типу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Исключение `bad_cast` имеет следующий интерфейс:  
+ Интерфейс для **bad_cast** является:  
   
 ```cpp 
 class bad_cast : public exception {  
@@ -47,7 +47,7 @@ public:
 };  
 ```  
   
- Ниже приводится пример ошибки оператора `dynamic_cast`, при котором создается исключение `bad_cast`.  
+ Следующий код содержит пример ошибки оператора **dynamic_cast** , порождающий **bad_cast** исключение.  
   
 ```cpp 
 // expre_bad_cast_Exception.cpp  
@@ -78,7 +78,7 @@ int main() {
 }  
 ```  
   
- Исключение создается потому, что объект, для которого выполняется приведение (Shape), не является производным от указанного типа приведения (Circle). Чтобы избежать исключения, добавьте следующие объявления для **основной**:  
+ Исключение создается потому, что объект, для которого выполняется приведение (Shape), не является производным от указанного типа приведения (Circle). Чтобы исключение не создавалось, добавьте в функцию `main` следующие объявления:  
   
 ```cpp 
 Circle circle_instance;  

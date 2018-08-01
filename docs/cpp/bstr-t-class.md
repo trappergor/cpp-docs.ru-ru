@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027252"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404929"
 ---
 # <a name="bstrt-class"></a>Класс _bstr_t
 **Блок, относящийся только к системам Microsoft**  
   
- Объект `_bstr_t` инкапсулирует [данные типа BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Этот класс управляет выделением и освобождением посредством вызовов функций для ресурсов `SysAllocString` и `SysFreeString` и других `BSTR` API-интерфейсы, когда это необходимо. Класс `_bstr_t` использует подсчет ссылок во избежание слишком большой нагрузки.  
+ Объект `_bstr_t` инкапсулирует [данные типа BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Этот класс управляет выделением и освобождением посредством вызовов функций для ресурсов `SysAllocString` и `SysFreeString` и других `BSTR` API-интерфейсы, когда это необходимо. **_Bstr_t** класс использует подсчет ссылок, чтобы избежать слишком большой нагрузки.  
   
 ### <a name="construction"></a>Создание экземпляра  
   

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50cf3d7e5168ba40acde386b62cf02c0933f8ca4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 54780b11e07819ca78eba89d9af5a8ba018cc9e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941253"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401812"
 ---
 # <a name="additional-termination-considerations"></a>Дополнительные сведения о завершении
-Программы на языке C++ можно завершить с помощью **выйти из**, **возвращают**, или **прервать**. Можно добавить обработку выхода с помощью функции `atexit`. Эти темы рассматриваются в следующих разделах.  
+Программы на языке C++ можно завершить с помощью `exit`, **возвращают**, или `abort`. Можно добавить обработку выхода с помощью функции `atexit`. Эти темы рассматриваются в следующих разделах.  
   
 ## <a name="see-also"></a>См. также  
  [Запуск и завершение](../cpp/startup-and-termination-cpp.md)

@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0e9e3d7f16e40d41774dd1def89ef9bdd0ba1c82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944220"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404601"
 ---
 # <a name="comptrt-class"></a>Класс _com_ptr_t
 **Блок, относящийся только к системам Microsoft**  
   
- Объект `_com_ptr_t` инкапсулирует указатель на COM-интерфейс и называется интеллектуальным указателем. Этот класс шаблона управляет выделением и освобождением посредством вызовов функций для ресурсов `IUnknown` функций-членов: `QueryInterface`, `AddRef`, и `Release`.  
+ Объект **_com_ptr_t** объект инкапсулирует указатель на интерфейс COM и называется «интеллектуальными» указатель. Этот класс шаблона управляет выделением и освобождением посредством вызовов функций для ресурсов `IUnknown` функций-членов: `QueryInterface`, `AddRef`, и `Release`.  
   
- Интеллектуальный указатель обычно ссылаются определения typedef, предоставляемого макросом _COM_SMARTPTR_TYPEDEF. Этот макрос имеет имя интерфейса и IID и объявляет специализацию объекта `_com_ptr_t`, используя имя интерфейса и суффикс `Ptr`. Пример:  
+ Интеллектуальный указатель обычно ссылаются определения typedef, предоставляемого макросом _COM_SMARTPTR_TYPEDEF. Этот макрос принимает имя интерфейса и IID и объявляет специализацию объекта **_com_ptr_t** с именем интерфейса и суффикс `Ptr`. Пример:  
   
 ```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- объявляет `_com_ptr_t` специализации `IMyInterfacePtr`.  
+ объявляет **_com_ptr_t** специализации `IMyInterfacePtr`.  
   
  Набор [функции шаблонов](../cpp/relational-function-templates.md), не являющихся членами этого шаблона класса, поддерживает сравнение с интеллектуальным указателем в правой части оператора сравнения.  
   
@@ -42,7 +42,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Создает объект `_com_ptr_t`.|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Создает **_com_ptr_t** объекта.|  
   
 ### <a name="low-level-operations"></a>Низкоуровневые операции  
   
@@ -61,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[оператор =](../cpp/com-ptr-t-operator-equal.md)|Присваивает новое значение существующему объекту `_com_ptr_t`.|  
+|[оператор =](../cpp/com-ptr-t-operator-equal.md)|Назначает новое значение к существующему **_com_ptr_t** объекта.|  
 |[операторы: ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Сравнение объекта интеллектуального указателя с другим интеллектуальным указателем, необработанным указателем на интерфейс, или значение NULL.|  
 |[Средства извлечения](../cpp/com-ptr-t-extractors.md)|Извлекают инкапсулированный указатель на COM-интерфейс.|  
   

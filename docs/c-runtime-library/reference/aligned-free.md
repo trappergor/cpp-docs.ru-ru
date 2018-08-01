@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd89d0c8657df4bec2da5bf021c8964ad418cd9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51220aaf47056f63d37471c61857f8a128a67179
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393372"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402452"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,13 +54,13 @@ void _aligned_free (
 
 ### <a name="parameters"></a>Параметры
 
-*memblock* указатель на блок памяти, возвращенный в **_aligned_malloc** или **_aligned_offset_malloc** функции.
+*memblock* указатель на блок памяти, который был возвращен к `_aligned_malloc` или `_aligned_offset_malloc` функции.
 
 ## <a name="remarks"></a>Примечания
 
 **_aligned_free** помечен `__declspec(noalias)`, это означает, что функция гарантированно не изменит глобальные переменные. Дополнительные сведения см. в разделе [noalias](../../cpp/noalias.md).
 
-Эта функция в отличие от других функций CRT _aligned не проверяет свой параметр. Если *memblock* — **NULL** указателем, эта функция просто не выполняет действия. Это не приводит к изменению **errno** и не вызывает обработчик недопустимого параметра. Если в функции возникает ошибка, связанная с тем, что предварительно для выделения блоков памяти не использовались функции _aligned либо в результате непредвиденного сбоя возникла ошибка распределения памяти, функция создает отчет отладки, используя [макросы _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
+Эта функция в отличие от других функций CRT _aligned не проверяет свой параметр. Если *memblock* является указателем NULL, эта функция просто не выполняет никаких действий. Она не влияет на `errno` и не вызывает обработчик недопустимых параметров. Если в функции возникает ошибка, связанная с тем, что предварительно для выделения блоков памяти не использовались функции _aligned либо в результате непредвиденного сбоя возникла ошибка распределения памяти, функция создает отчет отладки, используя [макросы _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -74,4 +74,4 @@ void _aligned_free (
 
 ## <a name="see-also"></a>См. также
 
-[Выравнивание данных](../../c-runtime-library/data-alignment.md)<br/>
+[Выравнивание данных](../../c-runtime-library/data-alignment.md)  

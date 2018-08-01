@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944754"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407784"
 ---
 # <a name="pointers-to-members"></a>Указатели на члены
 Объявления указателей на члены — это особый случай объявлений указателей.  Они объявляются с помощью следующей последовательности:  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- В приведенном выше примере `pwCaption` является указателем на любой член класса `Window` , имеет тип **char\***. `pwCaption` имеет тип `char * Window::* `. В следующем фрагменте кода объявляются указатели на функции-члены `SetCaption` и `GetCaption`.  
+ В приведенном выше примере `pwCaption` является указателем на любой член класса `Window` , имеет тип `char*`. `pwCaption` имеет тип `char * Window::* `. В следующем фрагменте кода объявляются указатели на функции-члены `SetCaption` и `GetCaption`.  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  Разница между **.\***  и **-> \*** операторов (операторов указателя на член) является то, что **.\***  оператор выбирает члены указанному объекту или ссылка на объект, тогда как **-> \*** оператор выбирает члены с помощью указателя. (Дополнительные сведения об этих операторах см. в разделе [выражения с операторами указателя на член](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Результатом операторов указателя на член является тип члена — в этом случае **char \*** .  
+ Результатом операторов указателя на член является тип члена — в этом случае `char *`.  
   
  В следующем фрагменте кода функции-члены `GetCaption` и `SetCaption` вызываются с использованием указателей на члены.  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>См. также  
- 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32558413dd0dc6f7288493067d7373a14e520e29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1cefb6ba2fe076714b420024ec09464fd928b63d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944760"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406390"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Исключения и освобождение стека в C++
 В механизме исключений C++ элемент управления перемещается из оператора throw в первый оператор catch, который может обработать выданный тип. При достижении оператора catch все автоматические переменные, находящиеся в области между throw и операторов catch, удаляются в процессе, называемом *стека*. При очистке стека выполнение продолжается следующим образом.  
@@ -114,5 +114,4 @@ int main()
     Exiting main.  
   
 */  
-  
 ```  

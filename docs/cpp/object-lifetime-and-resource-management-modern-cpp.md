@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941555"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406046"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Управление временем жизни и ресурсами объекта (современный C++)
 В отличие от управляемых языков C++ нет сборщик мусора (GC), который автоматически освобождает ресурсы, нет больше — используемая память по мере выполнения программы. В C++ управление ресурсами непосредственно связано с временем жизни объекта. В этом документе описываются факторы, которые влияют на время жизни объекта в C++ и управлении ими.  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  Используйте `unique_ptr` для уникальное владение, например, в *pimpl* идиом. (См. в разделе [Pimpl для инкапсуляции времени компиляции](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Сделать `unique_ptr` основной целью все явные **новый** выражения.  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  Если необходима оптимизация производительности, может потребоваться использовать *хорошо инкапсулированный* -владелец указатели и явные вызовы для удаления. Например, при реализации структуры данных низкого уровня.  

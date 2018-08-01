@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392787"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404756"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,21 +66,21 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*  
 Значение с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Acosh** функции возвращают обратный гиперболический косинус (гиперболический арккосинус) *x*. Эти функции допустимы в домене *x* ≥ 1. Если *x* меньше 1 **errno** равно **EDOM** и результатом является несигнальным значением NaN. Если *x* является несигнальным значением NaN, неопределенным или бесконечным, возвращается то же значение.
+**Acosh** функции возвращают обратный гиперболический косинус (гиперболический арккосинус) *x*. Эти функции допустимы в домене *x* ≥ 1. Если *x* меньше 1, `errno` присваивается `EDOM` и результатом является несигнальное значение NaN. Если *x* является несигнальным значением NaN, неопределенным или бесконечным, возвращается то же значение.
 
-|Входные данные|Исключение SEH|**_matherr** исключение|
+|Входные данные|Исключение SEH|Исключение`_matherr` |
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|Нет|Нет|
 |*x* < 1|Нет|Нет|
 
 ## <a name="remarks"></a>Примечания
 
-При использовании C++ можно вызывать перегрузки **acosh** , принимающие и возвращающие **float** или **длинные** **двойные** значения. В программе на языке C **acosh** всегда принимает и возвращает **двойные**.
+При использовании C++ можно вызывать перегрузки **acosh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **acosh** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)  
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)  
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)  
+[cosh, coshf, coshl](cosh-coshf-coshl.md)  
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)  
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)  

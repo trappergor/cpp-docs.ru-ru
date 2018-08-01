@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939075"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403830"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Блок, относящийся только к системам Microsoft**  
   
- Создает объект `_com_ptr_t`.  
+ Создает **_com_ptr_t** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  Если значение равно TRUE, `AddRef` вызывается Увеличиваемый счетчик ссылок инкапсулированного указателя на интерфейс.  
   
  *CP*  
- Объект `_com_ptr_t`.  
+ Объект **_com_ptr_t** объекта.  
   
  *p*  
- Необработанный указатель на интерфейс, его тип отличается от типа интеллектуального указателя этого объекта `_com_ptr_t`.  
+ Необработанный указатель на интерфейс, его тип отличается от типа интеллектуального указателя этого **_com_ptr_t** объекта.  
   
  *varSrc*  
  Объект `_variant_t`.  

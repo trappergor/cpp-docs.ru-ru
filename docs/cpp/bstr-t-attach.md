@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Attach | Документы Microsoft
+title: _bstr_t::Attach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb114a33d3ac356bff16aeab47b8d894b7513e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9f69811b7b25a793d11ef6d53aaf0638c752a11
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409109"
 ---
 # <a name="bstrtattach"></a>_bstr_t::Attach
 **Блок, относящийся только к системам Microsoft**  
@@ -30,8 +31,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      void Attach(  
+void Attach(  
    BSTR s  
 );  
 ```  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  Если переменная `_bstr_t` была ранее присоединена к другому ресурсу `BSTR`, `_bstr_t` очистит ресурсы `BSTR`, если другие переменные `_bstr_t` не используют `BSTR`.  
   
 ## <a name="example"></a>Пример  
- В разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) пример использования **присоединение**.  
+ См. в разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) в качестве примера использования **Attach**.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

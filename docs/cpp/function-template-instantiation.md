@@ -1,5 +1,5 @@
 ---
-title: Создание экземпляра шаблона функции | Документы Microsoft
+title: Создание экземпляра шаблона функции | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6374dcd9dad263afd0961be91971d3283ba863ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e773fd8e2c38311a1c36aff4c97199cbebb503e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412128"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406485"
 ---
 # <a name="function-template-instantiation"></a>Создание экземпляра шаблона функции
 При первом вызове шаблона функции для каждого типа компилятор создает экземпляр. Каждый экземпляр представляет собой шаблонную функцию, специализированную для данного типа. Этот экземпляр будет вызваться каждый раз, когда функция используется для данного типа. Если имеется несколько одинаковых экземпляров, даже в различных модулях, в исполняемый файл будет помещен только один экземпляр.  

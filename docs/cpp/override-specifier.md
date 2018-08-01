@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c95a67df03f62279b7b9c46ef41b6cafe7ff3df1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940658"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408155"
 ---
 # <a name="override-specifier"></a>Спецификатор override
 Можно использовать **переопределить** ключевое слово для назначения члена функции, которые переопределить виртуальную функцию в базовом классе.  
@@ -27,7 +27,6 @@ ms.locfileid: "37940658"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 function-declaration override;  
 ```  
   
@@ -56,9 +55,7 @@ class DerivedClass: public BaseClass
     virtual void funcC(double = 0.0); // DerivedClass::funcC(double) has a different  
                                       // parameter type than BaseClass::funcC(int), so  
                                       // DerivedClass::funcC(double) is a new member function  
-  
 };  
-  
 ```  
   
  При использовании **переопределить**, компилятор создает ошибки, а не создает нового члена функции.  
@@ -86,7 +83,6 @@ class DerivedClass: public BaseClass
     void funcD() override; // compiler error: DerivedClass::funcD() does not   
                            // override the non-virtual BaseClass::funcD()  
 };  
-  
 ```  
   
  Чтобы указать, что функции не может быть переопределен и не может быть унаследован классами, используйте [окончательный](../cpp/final-specifier.md) ключевое слово.  
@@ -94,4 +90,3 @@ class DerivedClass: public BaseClass
 ## <a name="see-also"></a>См. также  
  [Спецификатор final](../cpp/final-specifier.md)   
  [Ключевые слова](../cpp/keywords-cpp.md)   
- 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940823"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401578"
 ---
 # <a name="for-statement-c"></a>Оператор for (C++)
 Повторяет выполнение инструкций (statement), пока условие не станет ложным. Сведения об операторе for для диапазона см. в разделе [Оператор for для диапазона (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  По умолчанию в разделе [/Ze](../build/reference/za-ze-disable-language-extensions.md), переменной, объявленной в **для** цикл остается в пределах области до **для** цикл внешней области.  
   
- [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) включает поведение объявленных в циклах for переменных по стандарту без необходимости указания /Za.  
+ [/ Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) включает стандартное поведение переменных, объявленных в циклах for, без необходимости указания `/Za`.  
   
- Можно также использовать различия области видимости **для** цикл для повторного объявления переменных в /Ze следующим образом:  
+ Можно также использовать различия области видимости **для** цикл для повторного объявления переменных в `/Ze` следующим образом:  
   
 ```cpp  
 // for_statement5.cpp  
