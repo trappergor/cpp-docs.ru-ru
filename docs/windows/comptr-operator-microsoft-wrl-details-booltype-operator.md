@@ -1,5 +1,5 @@
 ---
-title: 'ComPtr::operator:: Booltype | Документы Microsoft'
+title: 'Оператор ComPtr::operator:: Booltype | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5efd641e5c908e5f1c4d4a3cdb78cd146b634f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4ec737c3f24899e50220c3e862283b88a826b9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883164"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461168"
 ---
 # <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>Оператор ComPtr::operator Microsoft::WRL::Details::BoolType
-Указывает, управляет ли ComPtr временем существования объекта интерфейса.  
+Указывает ли **ComPtr** управление временем существования объектов интерфейса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,7 +30,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если интерфейс связан с этим объектом ComPtr, адрес [BoolStruct::Member](../windows/boolstruct-member-data-member.md) данные-член; в противном случае `nullptr`.  
+ Если интерфейс связан с данным **ComPtr**, адрес [BoolStruct::Member](../windows/boolstruct-member-data-member.md) данные-член; в противном случае **nullptr**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953751"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463493"
 ---
 # <a name="specifiers"></a>Спецификаторы
 В этом разделе описывается *decl-specifiers* (описатели объявления) компонент [объявление](declarations-and-definitions-cpp.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "38953751"
  Так как **автоматический**, **без знака**, **long**, и **короткие** подразумевают **int**,  **TypeDef** имя одного из этих ключевых слов принимается является членом следующих *declarator-list,* не *decl-specifiers*.  
   
 > [!NOTE]
->  Поскольку имя можно объявить повторно, его интерпретация относится к самой последней декларации в текущей области. Повторное объявление может повлиять на способ интерпретации имен компилятором, в особенности — имен `typedef`.  
+>  Поскольку имя можно объявить повторно, его интерпретация относится к самой последней декларации в текущей области. Повторное объявление может повлиять на способ интерпретации имен компилятором, особенно **typedef** имена.  
   
 ## <a name="see-also"></a>См. также  
  [Объявления и определения](declarations-and-definitions-cpp.md)

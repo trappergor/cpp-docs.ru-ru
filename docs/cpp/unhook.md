@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944783"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463718"
 ---
 # <a name="unhook"></a>__unhook
 Отменяет связь метода обработчика с событием.  
@@ -31,8 +31,7 @@ ms.locfileid: "37944783"
 ## <a name="syntax"></a>Синтаксис  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  Имя интерфейса, отсоединяемого с помощью *получателя*, только для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/event-receiver.md) атрибут является **true**.  
   
  *source*  
- Указатель на экземпляр источника события. В зависимости от кода `type` указано в **event_receiver**, *источника* может принимать одно из следующих:  
+ Указатель на экземпляр источника события. В зависимости от кода `type` указано в `event_receiver`, *источника* может принимать одно из следующих:  
   
 -   Собственный указатель на объект источника события.  
   
--   **IUnknown**-на основе указателя (источник COM).  
+-   `IUnknown`-На основе указателя (источник COM).  
   
 -   Указатель на управляемый объект (для управляемых событий).  
   

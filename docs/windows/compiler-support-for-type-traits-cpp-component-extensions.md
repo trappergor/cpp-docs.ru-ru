@@ -1,5 +1,5 @@
 ---
-title: Поддержка характеристик типов компилятором (расширения компонентов C++) компилятором | Документы Microsoft
+title: Поддержка компилятора для признаков типов (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -71,31 +71,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862420"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463620"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Поддержка характеристик типов компилятором (расширения компонентов C++)
-Компилятор поддерживает *введите признаки*, представляющие различные характеристики типа во время компиляции.  
+Компилятор поддерживает *признаки типов*, представляющие различные характеристики типа во время компиляции.  
   
 ## <a name="all-runtimes"></a>Все среды выполнения  
  **Заметки**  
   
  Признаки типов особенно важны для программистов, создающих библиотеки.  
   
- Ниже перечислены признаки типов, поддерживаемых компилятором. Если условие, заданное по имени признака типа, не выполняется, все признаки типов возвращают значение `false`.  
+ Следующий список содержит признаки типов, поддерживаемые компилятором. Все признаки типов возвращают **false** при несоблюдении условия, указанного по имени признака типа.  
   
- (В следующем списке, примеры кода представлены только в C + +/ CLI. но соответствующий признак типа также поддерживается в [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)], если не указано иное. Термин «тип платформы» ссылается типов среды выполнения Windows или типами среды CLR).  
+ (В списке ниже примеры кода представлены только в C + +/ CLI. но соответствующий признак типа также поддерживается в [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)], если не указано иное. Термин, «тип платформы» относится к типов среды выполнения Windows или типами среды CLR.)  
   
 -   `__has_assign(` `type` `)`  
   
      Возвращает значение true, если тип платформы или собственный тип содержит оператор присваивания копии.  
   
     ```  
-  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -103,7 +102,6 @@ ms.locfileid: "33862420"
     int main() {  
     System::Console::WriteLine(__has_assign(R));  
     }  
-  
     ```  
   
 -   `__has_copy(` `type` `)`  
@@ -111,7 +109,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если тип платформы или собственный тип содержит конструктор копии.  
   
     ```  
-  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -119,15 +116,13 @@ ms.locfileid: "33862420"
     int main() {  
     System::Console::WriteLine(__has_copy(R));  
     }  
-  
     ```  
   
 -   `__has_finalizer(` `type` `)`  
   
-     (В [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] не поддерживается.) Возвращает значение true, если тип CLR содержит метод завершения. В разделе [деструкторы и методы завершения в разделе: определение и использование классов и структур (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) для получения дополнительной информации.  
+     (В [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] не поддерживается.) Возвращает значение true, если тип CLR содержит метод завершения. См. в разделе [деструкторы и методы завершения в разделе: определение и использование классов и структур (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Дополнительные сведения.  
   
     ```  
-  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -138,7 +133,6 @@ ms.locfileid: "33862420"
     int main() {  
     Console::WriteLine(__has_finalizer(R));  
     }  
-  
     ```  
   
 -   `__has_nothrow_assign(` `type` `)`  
@@ -146,7 +140,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если оператор присваивания копии имеет пустую спецификацию исключений.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -156,7 +149,6 @@ ms.locfileid: "33862420"
     __has_nothrow_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_constructor(` `type` `)`  
@@ -164,7 +156,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если конструктор по умолчанию имеет пустую спецификацию исключений.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -174,7 +165,6 @@ ms.locfileid: "33862420"
     __has_nothrow_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_copy(` `type` `)`  
@@ -182,7 +172,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если конструктор копии имеет пустую спецификацию исключений.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -192,7 +181,6 @@ ms.locfileid: "33862420"
     __has_nothrow_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_assign(` `type` `)`  
@@ -200,7 +188,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если тип содержит тривиальный оператор присваивания, созданный компилятором.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -208,7 +195,6 @@ ms.locfileid: "33862420"
     __has_trivial_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_constructor(` `type` `)`  
@@ -216,7 +202,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если тип содержит тривиальный конструктор, созданный компилятором.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -224,7 +209,6 @@ ms.locfileid: "33862420"
     __has_trivial_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_copy(` `type` `)`  
@@ -232,7 +216,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если тип содержит тривиальный конструктор копии, созданный компилятором.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -240,15 +223,13 @@ ms.locfileid: "33862420"
     __has_trivial_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_destructor(` `type` `)`  
   
      Возвращает значение true, если тип содержит тривиальный деструктор, созданный компилятором.  
   
-    ```  
-  
+    ``` cpp 
     // has_trivial_destructor.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -257,15 +238,13 @@ ms.locfileid: "33862420"
     __has_trivial_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_user_destructor(` `type` `)`  
   
      Возвращает значение true, если тип платформы или собственный тип содержит объявленный пользователем деструктор.  
   
-    ```  
-  
+    ```cpp
     // has_user_destructor.cpp  
   
     using namespace System;  
@@ -276,7 +255,6 @@ ms.locfileid: "33862420"
     int main() {  
     Console::WriteLine(__has_user_destructor(R));  
     }  
-  
     ```  
   
 -   `__has_virtual_destructor(` `type` `)`  
@@ -285,8 +263,7 @@ ms.locfileid: "33862420"
   
      Признак `__has_virtual_destructor` также работает с типами платформ, и любой определенный пользователем деструктор в типе платформы является виртуальным деструктором.  
   
-    ```  
-  
+    ```cpp  
     // has_virtual_destructor.cpp  
     #include <stdio.h>  
     struct S {  
@@ -297,7 +274,6 @@ ms.locfileid: "33862420"
     __has_virtual_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_abstract(` `type` `)`  
@@ -306,8 +282,7 @@ ms.locfileid: "33862420"
   
      Признак `__is_abstract` также работает с типами платформ. Интерфейс хотя бы с одним членом является абстрактным типом, как и ссылочный тип по крайней мере с одним абстрактным членом. Дополнительные сведения об абстрактных типах платформ см. в разделе [абстрактные классы](../cpp/abstract-classes-cpp.md)  
   
-    ```  
-  
+    ```cpp  
     // is_abstract.cpp  
     #include <stdio.h>  
     struct S {  
@@ -318,17 +293,15 @@ ms.locfileid: "33862420"
     __is_abstract(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
   
      Возвращает значение true, если первый тип является базовым классом второго типа или оба типа одинаковы.  
   
-     Признак `__is_base_of` также работает с типами платформ. Например, он возвращает значение true, если первый тип [класс интерфейса](../windows/interface-class-cpp-component-extensions.md) и второй тип реализует интерфейс.  
+     Признак `__is_base_of` также работает с типами платформ. Например, он возвратит значение true, если первый тип — [класс интерфейса](../windows/interface-class-cpp-component-extensions.md) и второй тип реализует интерфейс.  
   
-    ```  
-  
+    ```cpp
     // is_base_of.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -341,15 +314,13 @@ ms.locfileid: "33862420"
     __is_base_of(S, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_class(` `type` `)`  
   
      Возвращает значение true, если тип является собственным классом или структурой.  
   
-    ```  
-  
+    ```
     #include <stdio.h>  
     struct S {};  
   
@@ -357,7 +328,6 @@ ms.locfileid: "33862420"
     __is_class(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
@@ -365,7 +335,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если первый тип может быть преобразован во второй.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -377,7 +346,6 @@ ms.locfileid: "33862420"
     __is_convertible_to(T, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_delegate(` `type` `)`  
@@ -385,12 +353,10 @@ ms.locfileid: "33862420"
      Возвращает значение true, если `type` — делегат. Дополнительные сведения см. в разделе [delegate (расширения компонентов C++)](../windows/delegate-cpp-component-extensions.md).  
   
     ```  
-  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
     }  
-  
     ```  
   
 -   `__is_empty(` `type` `)`  
@@ -398,7 +364,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если тип не содержит данных-членов экземпляра.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -408,15 +373,13 @@ ms.locfileid: "33862420"
     __is_empty(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_enum(` `type` `)`  
   
      Возвращает значение true, если тип является собственным перечислением.  
   
-    ```  
-  
+    ```cpp
     // is_enum.cpp  
     #include <stdio.h>  
     enum E { a, b };  
@@ -432,15 +395,13 @@ ms.locfileid: "33862420"
     __is_enum(S::E2) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_interface_class(` `type` `)`  
   
      Возвращает значение true, если передается интерфейс платформы. Дополнительные сведения см. в разделе [класс интерфейса](../windows/interface-class-cpp-component-extensions.md).  
   
-    ```  
-  
+    ```cpp
     // is_interface_class.cpp  
   
     using namespace System;  
@@ -448,7 +409,6 @@ ms.locfileid: "33862420"
     int main() {  
     Console::WriteLine(__is_interface_class(I));  
     }  
-  
     ```  
   
 -   `__is_pod(` `type` `)`  
@@ -458,7 +418,6 @@ ms.locfileid: "33862420"
      Для фундаментальных типов признак `__is_pod` возвращает значение false.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -466,7 +425,6 @@ ms.locfileid: "33862420"
     __is_pod(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_polymorphic(` `type` `)`  
@@ -474,7 +432,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если собственный тип содержит виртуальные функции.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -484,7 +441,6 @@ ms.locfileid: "33862420"
     __is_polymorphic(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_ref_array(` `type` `)`  
@@ -492,28 +448,24 @@ ms.locfileid: "33862420"
      Возвращает значение true, если передается массив платформы. Дополнительные сведения см. в разделе [массивы](../windows/arrays-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
     Console::WriteLine(__is_ref_array(array<int>));  
     }  
-  
     ```  
   
 -   `__is_ref_class(` `type` `)`  
   
-     Возвращает значение true, если передается ссылочный класс. Дополнительные сведения об определяемых пользователем ссылочных типов см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Возвращает значение true, если передается ссылочный класс. Дополнительные сведения об определяемых пользователем ссылочных типах см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     int main() {  
     Console::WriteLine(__is_ref_class(Buffer));  
     Console::WriteLine(__is_ref_class(R));  
     }  
-  
     ```  
   
 -   `__is_sealed(` `type` `)`  
@@ -521,20 +473,17 @@ ms.locfileid: "33862420"
      Возвращает значение true, если передается платформа или собственный тип, отмеченный как запечатанный. Дополнительные сведения см. в разделе [запечатанный](../windows/sealed-cpp-component-extensions.md).  
   
     ```  
-  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
     }  
-  
     ```  
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     Возвращает значение true, если передается тип значения, не содержащий ссылки на кучу со сборкой мусора. Дополнительные сведения о типах значений, определяемых пользователем. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Возвращает значение true, если передается тип значения, не содержащий ссылки на кучу со сборкой мусора. Дополнительные сведения о типах значений, определяемых пользователем, см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -546,7 +495,6 @@ ms.locfileid: "33862420"
     Console::WriteLine(__is_simple_value_class(V));  
     Console::WriteLine(__is_simple_value_class(V2));  
     }  
-  
     ```  
   
 -   `__is_union(` `type` `)`  
@@ -554,7 +502,6 @@ ms.locfileid: "33862420"
      Возвращает значение true, если тип является объединением.  
   
     ```  
-  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -565,21 +512,18 @@ ms.locfileid: "33862420"
     __is_union(A) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_value_class(` `type` `)`  
   
-     Возвращает значение true, если передается тип значения. Дополнительные сведения о типах значений, определяемых пользователем. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Возвращает значение true, если передается тип значения. Дополнительные сведения о типах значений, определяемых пользователем, см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     value struct V {};  
   
     int main() {  
     System::Console::WriteLine(__is_value_class(V));  
     }  
-  
     ```  
   
 ## <a name="windows-runtime"></a>Среда выполнения Windows  
@@ -603,7 +547,7 @@ ms.locfileid: "33862420"
   
  В следующем примере кода показано, как использование шаблона класса для предоставления признака типа компилятора **/CLR** компиляции. Дополнительные сведения см. в разделе [среды выполнения Windows и управляемые шаблоны](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
-```  
+```cpp  
 // compiler_type_traits.cpp  
 // compile with: /clr  
 using namespace System;  

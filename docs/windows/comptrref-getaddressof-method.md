@@ -1,5 +1,5 @@
 ---
-title: Метод ComPtrRef::GetAddressOf | Документы Microsoft
+title: Метод ComPtrRef::GetAddressOf | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc8e80fe97bc0a4ace0cb53e43f306ad2b85309
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883311"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462941"
 ---
 # <a name="comptrrefgetaddressof-method"></a>Метод ComPtrRef::GetAddressOf
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,10 +34,10 @@ InterfaceType* const * GetAddressOf() const;
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Адрес указателя на интерфейс, представленный текущим объектом ComPtrRef.  
+ Адрес указателя на интерфейс, представленный текущим **ComPtrRef** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Извлекает адрес указателя на интерфейс, представленный текущим объектом ComPtrRef.  
+ Извлекает адрес указателя на интерфейс, представленный текущим **ComPtrRef** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
@@ -45,5 +45,5 @@ InterfaceType* const * GetAddressOf() const;
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [ComPtrRef-класс](../windows/comptrref-class.md)   
+ [Comptrref-класс](../windows/comptrref-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Перечисление AsyncStatusInternal | Документы Microsoft
+title: Asyncstatusinternal-перечисление | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 150169442aa68395b4dc8a4f4c74951e877f18f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863729"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464880"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal - перечисление
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,22 +34,22 @@ enum AsyncStatusInternal;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Задает сопоставление между внутренними перечислениями состояний асинхронных операций и **Windows::Foundation::AsyncStatus** перечисления.  
+ Задает сопоставление между внутренними перечислениями состояний асинхронных операций и перечислением `Windows::Foundation::AsyncStatus`.  
   
 ## <a name="members"></a>Участники  
- `_Created`  
+ *_Created*  
  Эквивалентно ::Windows::Foundation::AsyncStatus::Created  
   
- `_Started`  
+ *_Started*  
  Эквивалентно ::Windows::Foundation::AsyncStatus::Started  
   
- `_Completed`  
+ *_Completed*  
  Эквивалентно ::Windows::Foundation::AsyncStatus::Completed  
   
- `_Cancelled`  
+ *_Cancelled*  
  Эквивалентно ::Windows::Foundation::AsyncStatus::Cancelled  
   
- `_Error`  
+ *_Сведения*  
  Эквивалентно ::Windows::Foundation::AsyncStatus::Error  
   
 ## <a name="requirements"></a>Требования  

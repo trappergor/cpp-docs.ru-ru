@@ -1,5 +1,5 @@
 ---
-title: Метод ChainInterfaces::FillArrayWithIid | Документы Microsoft
+title: Метод ChainInterfaces::FillArrayWithIid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e6283b86b8e225771f259df9b5377fffa3667fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bd9f899457c3a6045d7a5525c9fb560e23f10d3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855946"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461040"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>Метод ChainInterfaces::FillArrayWithIid
-Сохраняет идентификатор интерфейса определяются `I0` параметр шаблона в указанном месте в указанном массиве идентификаторов интерфейсов.  
+Идентификатор интерфейса определяется хранилищ *I0* параметр шаблона в указанном расположении в указанном массиве идентификаторов интерфейсов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,11 +37,11 @@ __forceinline static void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `index`  
- Указатель на значение индекса в `iids` массива.  
+ *Индекс*  
+ Указатель на значение индекса в *идентификаторы IID* массива.  
   
- `iids`  
- Массив идентификаторов интерфейса.  
+ *идентификаторы IID*  
+ Массив идентификаторов интерфейсов.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

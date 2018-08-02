@@ -1,5 +1,5 @@
 ---
-title: Класс ActivationFactory | Документы Microsoft
+title: Класс ActivationFactory | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6775e9466ed337a070b6a234a4d65bb949a009e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857959"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461509"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory - класс
 Позволяет одному или нескольким классам быть активированными средой выполнения Windows.  
@@ -39,23 +39,23 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `I0`  
- Интерфейс нулевой.  
+ *I0*  
+ Интерфейс признаками.  
   
- `I1`  
+ *I1*  
  Первый интерфейс.  
   
- `I2`  
+ *I2*  
  Второй интерфейс.  
   
 ## <a name="remarks"></a>Примечания  
- ActivationFactory предоставляет методы регистрации и базовую функциональность для интерфейса представляет интерфейс IActivationFactory. ActivationFactory позволяет для реализации пользовательской фабрики.  
+ **ActivationFactory** предоставляет методы регистрации и базовые функциональные возможности для `IActivationFactory` интерфейс. **ActivationFactory** также предоставляет возможность реализации пользовательской фабрики.  
   
- Символически в следующем фрагменте кода показано, как использовать ActivationFactory.  
+ В следующем фрагменте кода символически описывается использование ActivationFactory.  
   
  [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]  
   
- В следующем фрагменте кода показано, как использовать [реализует](../windows/implements-structure.md) структура для указания более чем на три интерфейса идентификаторы.  
+ В следующем фрагменте кода показано, как использовать [реализует](../windows/implements-structure.md) структуры, чтобы указать более чем на три ИД интерфейса.  
   
  `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`  
   
@@ -63,20 +63,20 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Инициализирует класс ActivationFactory.|  
+|[Конструктор ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Инициализирует **ActivationFactory** класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Увеличивает значение счетчика ссылок объекта ActivationFactory.|  
+|[Метод ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Увеличивает счетчик ссылок текущего **ActivationFactory** объекта.|  
 |[Метод ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Извлекает массив идентификаторов реализованного интерфейса.|  
-|[Метод ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Возвращает имя класса среды выполнения объекта, который создает экземпляр текущего ActivationFactory.|  
+|[Метод ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Получает имя класса среды выполнения объекта, который текущего **ActivationFactory** создает экземпляр.|  
 |[Метод ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Возвращает объект, который создает экземпляр текущего ActivationFactory уровень доверия.|  
 |[Метод ActivationFactory::QueryInterface](../windows/activationfactory-queryinterface-method.md)|Извлекает указатель на указанный интерфейс.|  
-|[Метод ActivationFactory::Release](../windows/activationfactory-release-method.md)|Уменьшает счетчик ссылок объекта ActivationFactory.|  
+|[Метод ActivationFactory::Release](../windows/activationfactory-release-method.md)|Уменьшает счетчик ссылок текущего **ActivationFactory** объекта.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  

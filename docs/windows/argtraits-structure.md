@@ -1,5 +1,5 @@
 ---
-title: Структура ArgTraits | Документы Microsoft
+title: Argtraits-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162fbdea86aef81582902340102d54777e3f861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858046"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462047"
 ---
 # <a name="argtraits-structure"></a>ArgTraits - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -118,38 +118,38 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `TMemberFunction`  
- Параметр имени типа для структуры ArgTraits, который не должен соответствовать какой-либо сигнатуре метода Invoke.  
+ *TMemberFunction*  
+ Параметр имени типа для структуры ArgTraits, который не соответствует ни одному `Invoke` сигнатуру метода.  
   
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Интерфейс делегата.  
   
- `TArg1`  
- Тип первого аргумента метода Invoke.  
+ *TArg1*  
+ Тип первого аргумента `Invoke` метод.  
   
- `TArg2`  
- Тип второго аргумента метода Invoke.  
+ *TArg2*  
+ Тип второго аргумента `Invoke` метод.  
   
- `TArg3`  
- Тип третьего аргумента метода Invoke.  
+ *TArg3*  
+ Тип третьего аргумента `Invoke` метод.  
   
- `TArg4`  
- Тип четвертого аргумента метода Invoke.  
+ *TArg4*  
+ Тип четвертого аргумента `Invoke` метод.  
   
- `TArg5`  
- Тип пятого аргумента метода Invoke.  
+ *TArg5*  
+ Тип пятого аргумента `Invoke` метод.  
   
- `TArg6`  
- Тип шестого аргумента метода Invoke.  
+ *TArg6*  
+ Тип шестого аргумента `Invoke` метод.  
   
- `TArg7`  
- Тип седьмого аргумента метода Invoke.  
+ *TArg7*  
+ Тип седьмого аргумента `Invoke` метод.  
   
- `TArg8`  
- Тип восьмого аргумента метода Invoke.  
+ *TArg8*  
+ Тип восьмого аргумента `Invoke` метод.  
   
- `TArg9`  
- Тип девятого аргумента метода Invoke.  
+ *TArg9*  
+ Тип девятого аргумента `Invoke` метод.  
   
 ## <a name="remarks"></a>Примечания  
  Структура `ArgTraits` объявляет указанный интерфейс делегата и анонимную функцию-член, которая принимает указанное число параметров.  
@@ -158,7 +158,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`Arg1Type`|Typedef для TArg1.|  
 |`Arg2Type`|Typedef для TArg2.|  
@@ -172,9 +172,9 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[Константа ArgTraits::args](../windows/argtraits-args-constant.md)|Содержит счетчик количества параметров метода Invoke для интерфейса делегата.|  
+|[Константа ArgTraits::args](../windows/argtraits-args-constant.md)|Ведет статистику, число параметров `Invoke` метод для интерфейса делегата.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `ArgTraits`  

@@ -1,5 +1,5 @@
 ---
-title: Метод ComPtrRef::ReleaseAndGetAddressOf | Документы Microsoft
+title: Метод ComPtrRef::ReleaseAndGetAddressOf | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab97dad8f14d72a6e8e441c9889a0e18870a0b4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 631f27dc7124cfce655f6a254548335ca8f1039f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884011"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465413"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>Метод ComPtrRef::ReleaseAndGetAddressOf
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,10 +34,10 @@ InterfaceType** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс, представленный удаленным объектом ComPtrRef.  
+ Указатель на интерфейс, который был представлен в удаленные **ComPtrRef** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Удаляет текущий объект ComPtrRef и возвращает указатель на указатель на интерфейс, представленный объектом ComPtrRef.  
+ Удаляет текущий **ComPtrRef** и возвращает указатель на указатель на интерфейс, который был представлен **ComPtrRef** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
@@ -45,5 +45,5 @@ InterfaceType** ReleaseAndGetAddressOf();
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [ComPtrRef-класс](../windows/comptrref-class.md)   
+ [Comptrref-класс](../windows/comptrref-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

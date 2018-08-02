@@ -1,5 +1,5 @@
 ---
-title: Написание обработчика завершения | Документы Microsoft
+title: Написание обработчика завершения | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37319e50e7d2429ca9b64c5fc81d8c7c4418ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423240"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462837"
 ---
 # <a name="writing-a-termination-handler"></a>Написание обработчика завершения
 В отличие от обработчика исключений, обработчик завершения выполняется всегда независимо от того, завершен ли в обычном режиме защищенный блок кода. Единственным назначением обработчика завершения должна быть проверка правильности закрытия таких ресурсов, как память, дескрипторы и файлы, независимо от того, как завершается выполнение фрагмента кода.  
@@ -37,7 +37,7 @@ ms.locfileid: "32423240"
   
 -   [Оператор try-finally](../cpp/try-finally-statement.md)  
   
--   [Освобождение ресурсов](../cpp/cleaning-up-resources.md)  
+-   [Очистка ресурсов](../cpp/cleaning-up-resources.md)  
   
 -   [Время действий в обработке исключений](../cpp/timing-of-exception-handling-a-summary.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод ChainInterfaces::Verify | Документы Microsoft
+title: Метод ChainInterfaces::Verify | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860698"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466843"
 ---
 # <a name="chaininterfacesverify-method"></a>Метод ChainInterfaces::Verify
-Проверяет, чтобы каждый интерфейс определены параметры шаблона `I0` через `I9` наследует от IUnknown или IInspectable и который `I0` наследует от `I1` через `I9`.  
+Проверяет, что каждому интерфейсу, определяемая параметрами шаблона *I0* через *I9* наследует от IUnknown и IInspectable и что *I0* наследует от *I1* через *I9*.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ WRL_NOTHROW __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Если операция проверки завершается ошибкой, `static_assert` выдает сообщение об ошибке с описанием причины.  
+ При сбое операции проверки **static_assert** выдает сообщение об ошибке, описывающее ошибку.  
   
 ## <a name="remarks"></a>Примечания  
- Параметры шаблона `I0` и `I1` являются обязательными, а параметры с `I2` до `I9` — необязательными.  
+ Параметры шаблона *I0* и *I1* являются обязательными и параметры *I2* через *I9* являются необязательными.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: Структура ChainInterfaces | Документы Microsoft
+title: Структура ChainInterfaces | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18814a4ad87cefa39201d369926c0778931d4d64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861140"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461537"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces - структура
 Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.  
@@ -61,61 +61,61 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `I0`  
- (Обязательно) Интерфейс с Идентификатором 0.  
+ *I0*  
+ (Обязательно) Идентификатор интерфейса 0.  
   
- `I1`  
+ *I1*  
  (Обязательно) Идентификатор интерфейса 1.  
   
- `I2`  
- (Необязательно) Интерфейс с Идентификатором 2.  
+ *I2*  
+ (Необязательно) Идентификатор интерфейса 2.  
   
- `I3`  
+ *I3*  
  (Необязательно) Идентификатор интерфейса 3.  
   
- `I4`  
- (Необязательно) Идентификатор интерфейса 4.  
+ *I4*  
+ (Необязательно) Идентификатор интерфейса. 4.  
   
- `I5`  
+ *I5*  
  (Необязательно) Идентификатор интерфейса 5.  
   
- `I6`  
+ *I6*  
  (Необязательно) Идентификатор интерфейса 6.  
   
- `I7`  
+ *I7*  
  (Необязательно) Идентификатор интерфейса 7.  
   
- `I8`  
+ *I8*  
  (Необязательно) Идентификатор интерфейса 8.  
   
- `I9`  
+ *I9*  
  (Необязательно) Идентификатор интерфейса 9.  
   
- `DerivedType`  
+ *DerivedType*  
  Производный тип.  
   
- `BaseType`  
+ *BaseType*  
  Базовый тип производного типа.  
   
- `hasImplements`  
- Логическое значение, если `true`, значит, нельзя использовать [MixIn](../windows/mixin-structure.md) структуры с классом, который является производным от [реализует](../windows/implements-structure.md) структура.  
+ *hasImplements*  
+ Логическое значение, если **true**, означает, что нельзя использовать [Примеси](../windows/mixin-structure.md) структуру с классом, который является производным от [реализует](../windows/implements-structure.md) структура.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Указывает ли идентификатор указанный интерфейс может быть приведен к каждой специализации, определяемая параметрами ChainInterface шаблона.|  
-|[Метод ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Приводит указатель интерфейса типа, определяемого `I0` параметр шаблона в указатель на IUnknown.|  
-|[Метод ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Сохраняет идентификатор интерфейса определяются `I0` параметр шаблона в указанном месте в указанном массиве идентификаторов интерфейсов.|  
-|[Метод ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Проверяет, чтобы каждый интерфейс определены параметры шаблона `I0` через `I9` наследует от IUnknown или IInspectable и который `I0` наследует от `I1` через `I9`.|  
+|[Метод ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Указывает ли идентификатор указанный интерфейс может быть приведен к каждому из специализаций, определяемая параметрами шаблона ChainInterface.|  
+|[Метод ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Приведение указателя интерфейса типа, определенного с *I0* параметр шаблона в указатель на интерфейс IUnknown.|  
+|[Метод ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Идентификатор интерфейса определяется хранилищ *I0* параметр шаблона в указанном расположении в указанном массиве идентификаторов интерфейсов.|  
+|[Метод ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Проверяет, что каждому интерфейсу, определяемая параметрами шаблона *I0* через *I9* наследует от `IUnknown` и/или `IInspectable`и что *I0* наследует от *I1* через *I9*.|  
   
 ### <a name="protected-constants"></a>Защищенные константы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[Константа ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|Общее количество идентификаторов, содержащихся в интерфейсах, заданные параметры шаблона интерфейса `I0` через `I9`.|  
+|[Константа ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|Общее количество содержащихся в интерфейсах, указанные параметрами шаблона идентификаторы интерфейсов *I0* через *I9*.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  

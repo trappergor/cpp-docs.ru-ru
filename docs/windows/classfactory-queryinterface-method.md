@@ -1,5 +1,5 @@
 ---
-title: Метод ClassFactory::QueryInterface | Документы Microsoft
+title: Метод ClassFactory::QueryInterface | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b939fdd593c031eb3e750ff6b41a275fa5685cda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855992"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467096"
 ---
 # <a name="classfactoryqueryinterface-method"></a>Метод ClassFactory::QueryInterface
-Извлекает указатель на интерфейс, определяемый параметром.  
+Извлекает указатель на интерфейс, заданный параметром.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `riid`  
+ *riid*  
  Идентификатор интерфейса.  
   
- `ppvObject`  
- После завершения операции, указатель на интерфейс, заданный параметром `riid`.  
+ *ppvObject*  
+ После завершения операции, указатель на интерфейс, заданный параметром *riid*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.  

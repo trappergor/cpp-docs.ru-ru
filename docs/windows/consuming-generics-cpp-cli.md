@@ -1,5 +1,5 @@
 ---
-title: Использование универсальных типов (C + +/ CLI) | Документы Microsoft
+title: Использование универсальных типов (C + +/ CLI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870823"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460495"
 ---
 # <a name="consuming-generics-ccli"></a>Использование универсальных типов (C++/CLI)
 Универсальные шаблоны, созданные на одном языке .NET, могут использоваться в других языках .NET. В отличие от обычных шаблонов, универсальный шаблон в скомпилированной сборке остается универсальным. Таким образом, экземпляр универсального типа можно создать в другой сборке и даже на языке, отличном от языка сборки, в которой был определен универсальный тип.  
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере показан универсальный класс, определенный в C#.  
   
 ### <a name="code"></a>Код  
   
-```  
+```cs  
 // consuming_generics_from_other_NET_languages.cs  
 // compile with: /target:library  
 // a C# program  
@@ -90,12 +90,12 @@ public class CircularList<ItemType> {
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере используется сборка, созданная в C#.  
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // consuming_generics_from_other_NET_languages_2.cpp  
 // compile with: /clr  
 #using <consuming_generics_from_other_NET_languages.dll>  

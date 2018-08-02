@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38edaa7dfa97fd34ab70b21785a416c3ed072d55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7ccdbc71679a197e0464b4ec42dba948754c4c5c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940557"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462268"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Преобразования типов и безопасность типов (современный C++)
 В этом документе определяет распространенных проблем преобразования типа и описывает, как их избежать в коде C++.  
@@ -75,7 +75,6 @@ num2 = -1;
 num = num2;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
-  
 ```  
   
  Обратите внимание на то, что значения являются интерпретации в обоих направлениях. Если программа создает странным результатам, в которых кажется знак значения инвертированы по сравнению с ожиданиям, найдите неявные преобразования целочисленных типов со знаком и без знака. В следующем примере результат выражения (0 - 1) неявным образом преобразуется из **int** для **unsigned int** при его сохранении в `num`. Это приводит к повторной интерпретации битовый шаблон.  
@@ -83,7 +82,6 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 ```cpp  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
-  
 ```  
   
  Компилятор не выдает предупреждение о неявные преобразования целочисленных типов со знаком и без знака. Таким образом мы рекомендуем полностью избежать со знаком для без преобразования. Если их невозможно избежать, добавьте в код проверку среды выполнения, чтобы определить, является ли преобразуемое значение больше или равно нулю и меньше или равно максимальному значению типа со знаком. Значения в этом диапазоне будут перенесены из подписи без знака или без знака для подписанных без интерпретировать.  
@@ -93,7 +91,6 @@ cout << u3 << endl; // prints 4294967295
   
 ```cpp  
 char* s = "Help" + 3;  
-  
 ```  
   
 ## <a name="explicit-conversions-casts"></a>Явные преобразования (приведения)  
@@ -104,7 +101,6 @@ char* s = "Help" + 3;
 ```cpp  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
-  
 ```  
   
  Оператор приведения типов C-стиль идентичен оператор вызова (), поэтому inconspicuous в коде и легко не заметить. Оба являются неправильный, так как они трудно распознаваемых во обзора или поиска, и они разрозненных, для вызова любого сочетания **статический**, **const**, и **reinterpret_cast**. Выяснение приведения старого стиля фактически может быть сложной и ошибкам. По этим причинам при приведение является обязательным, рекомендуется использовать один из следующих операторов приведения типа, что в некоторых случаях являются значительно более строго типизированными и который гораздо более явно express цель программирования:  
@@ -121,7 +117,6 @@ int(x); // old-style cast, functional syntax
     // No error but not necessarily safe.  
     Base* b = new Base();  
     Derived* d2 = static_cast<Derived*>(b);  
-  
     ```  
   
      Дополнительные сведения см. в разделе [static_cast](../cpp/static-cast-operator.md).  
@@ -147,7 +142,6 @@ int(x); // old-style cast, functional syntax
     }  
   
     //Output: d3 is null;  
-  
     ```  
   
      Дополнительные сведения см. в разделе [dynamic_cast](../cpp/dynamic-cast-operator.md).  
@@ -161,7 +155,6 @@ int(x); // old-style cast, functional syntax
        const double pi = 3.14;  
        Func(const_cast<double&>(pi)); //No error.  
     }  
-  
     ```  
   
      Дополнительные сведения см. в разделе [const_cast](../cpp/const-cast-operator.md).  
@@ -181,7 +174,6 @@ int(x); // old-style cast, functional syntax
                       // to do this?  
     int k = reinterpret_cast<int>(str);// Programming intent is clear.  
                                        // However, it is not 64-bit safe.  
-  
     ```  
   
      Дополнительные сведения см. в разделе [оператор reinterpret_cast](../cpp/reinterpret-cast-operator.md).  

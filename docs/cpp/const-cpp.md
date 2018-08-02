@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73e030ede8305db4ea05826f0ce7704420ac0400
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9c3e42cf2dad7e227636582baa4deabcfc05bc1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403405"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466547"
 ---
 # <a name="const-c"></a>const (C++)
 При изменении объявления данных **const** ключевое слово указывает, что объект или переменная не является изменяемым.  
@@ -131,7 +131,7 @@ int main()
 }  
 ```  
   
-## <a name="c-and-c-const-differences"></a>Различия констант в языках C и C++  
+## <a name="c-and-c-const-differences"></a>Различия констант C и C++  
  При объявлении переменной как **const** в файле исходного кода C, делается следующим образом:  
   
 ```cpp 
@@ -169,7 +169,7 @@ extern "C" const int x=10;
   
 -   [volatile](../cpp/volatile-cpp.md)  
   
--   [#define](../preprocessor/hash-define-directive-c-cpp.md).  
+-   [#define](../preprocessor/hash-define-directive-c-cpp.md)  
   
 ## <a name="see-also"></a>См. также  
  [Ключевые слова](../cpp/keywords-cpp.md)

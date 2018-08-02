@@ -1,5 +1,5 @@
 ---
-title: Класс AsyncBase | Документы Microsoft
+title: Класс AsyncBase | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c9dbd5d7296edaed9e850e6453f1b1b593ddba9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863393"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466206"
 ---
 # <a name="asyncbase-class"></a>AsyncBase - класс
 Реализует асинхронный конечный автомат среды выполнения Windows.  
@@ -30,7 +30,6 @@ ms.locfileid: "33863393"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -46,44 +45,44 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `TComplete`  
+ *TComplete*  
  Обработчик событий, вызываемый при завершении асинхронной операции.  
   
- `TProgress`  
- Обработчик событий, вызываемый при асинхронной операции сообщает текущий ход выполнения операции.  
+ *TProgress*  
+ Обработчик событий, вызываемый при асинхронной операции отображается ход выполнения текущей операции.  
   
- `resultType`  
- Один из [AsyncResultType](../windows/asyncresulttype-enumeration.md) значений перечисления. По умолчанию SingleResult.  
+ *Тип resultType*  
+ Один из [AsyncResultType](../windows/asyncresulttype-enumeration.md) значений перечисления. По умолчанию — SingleResult.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор AsyncBase::AsyncBase](../windows/asyncbase-asyncbase-constructor.md)|Инициализирует экземпляр класса AsyncBase.|  
+|[Конструктор AsyncBase::AsyncBase](../windows/asyncbase-asyncbase-constructor.md)|Инициализирует новый экземпляр класса **AsyncBase** класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод AsyncBase::Cancel](../windows/asyncbase-cancel-method.md)|Отменяет асинхронную операцию.|  
 |[Метод AsyncBase::Close](../windows/asyncbase-close-method.md)|Закрывает асинхронной операции.|  
-|[Метод AsyncBase::FireCompletion](../windows/asyncbase-firecompletion-method.md)|Вызывается обработчик события завершения или сбрасывает делегат внутренней хода выполнения.|  
+|[Метод AsyncBase::FireCompletion](../windows/asyncbase-firecompletion-method.md)|Вызывает обработчик события завершения или сбрасывает делегат внутренней хода выполнения.|  
 |[Метод AsyncBase::FireProgress](../windows/asyncbase-fireprogress-method.md)|Вызывает текущий обработчик событий процесса выполнения.|  
 |[Метод AsyncBase::get_ErrorCode](../windows/asyncbase-get-errorcode-method.md)|Получает код ошибки для текущей асинхронной операции.|  
 |[Метод AsyncBase::get_Id](../windows/asyncbase-get-id-method.md)|Извлекает дескриптор асинхронной операции.|  
 |[Метод AsyncBase::get_Status](../windows/asyncbase-get-status-method.md)|Получает значение, указывающее состояние асинхронной операции.|  
-|[Метод AsyncBase::GetOnComplete](../windows/asyncbase-getoncomplete-method.md)|Копирует адрес текущего обработчика событий завершения в указанную переменную.|  
+|[Метод AsyncBase::GetOnComplete](../windows/asyncbase-getoncomplete-method.md)|Копирует адрес текущего обработчика событий завершения в указанной переменной.|  
 |[Метод AsyncBase::GetOnProgress](../windows/asyncbase-getonprogress-method.md)|Копирует адрес текущего обработчика событий процесса выполнения в указанную переменную.|  
 |[Метод AsyncBase::put_Id](../windows/asyncbase-put-id-method.md)|Задает дескриптор асинхронной операции.|  
-|[Метод AsyncBase::PutOnComplete](../windows/asyncbase-putoncomplete-method.md)|Задает адрес обработчик события завершения с указанным значением.|  
-|[Метод AsyncBase::PutOnProgress](../windows/asyncbase-putonprogress-method.md)|Задает адрес обработчика событий процесса выполнения в указанное значение.|  
+|[Метод AsyncBase::PutOnComplete](../windows/asyncbase-putoncomplete-method.md)|Задает адрес обработчик события завершения для указанного значения.|  
+|[Метод AsyncBase::PutOnProgress](../windows/asyncbase-putonprogress-method.md)|Задает адрес обработчика событий процесса выполнения указанное значение.|  
 |[Метод AsyncBase::Start](../windows/asyncbase-start-method.md)|Начинает асинхронную операцию.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод AsyncBase::CheckValidStateForDelegateCall](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Проверяет, является ли делегат свойства можно изменить в текущем состоянии асинхронной.|  
 |[Метод AsyncBase::CheckValidStateForResultsCall](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Проверяет, является ли результаты асинхронной операции можно собирать в текущем состоянии асинхронной.|  
@@ -93,8 +92,8 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 |[Метод AsyncBase::OnCancel](../windows/asyncbase-oncancel-method.md)|При переопределении в производном классе отменяет асинхронную операцию.|  
 |[Метод AsyncBase::OnClose](../windows/asyncbase-onclose-method.md)|При переопределении в производном классе, закрывает асинхронной операции.|  
 |[Метод AsyncBase::OnStart](../windows/asyncbase-onstart-method.md)|При переопределении в производном классе запускает асинхронную операцию.|  
-|[Метод AsyncBase::TryTransitionToCompleted](../windows/asyncbase-trytransitiontocompleted-method.md)|Указывает, завершена ли текущую асинхронную операцию.|  
-|[Метод AsyncBase::TryTransitionToError](../windows/asyncbase-trytransitiontoerror-method.md)|Указывает, является ли указанный код ошибки можно изменить состояние Внутренняя ошибка.|  
+|[Метод AsyncBase::TryTransitionToCompleted](../windows/asyncbase-trytransitiontocompleted-method.md)|Указывает, завершена ли текущей асинхронной операции.|  
+|[Метод AsyncBase::TryTransitionToError](../windows/asyncbase-trytransitiontoerror-method.md)|Указывает, является ли указанный код ошибки можно изменить внутреннее состояние ошибки.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `AsyncBase`  

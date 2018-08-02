@@ -12,16 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 951a7d5c4c171a6662c55d9ae7906cc1500cd137
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406735"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462892"
 ---
 # <a name="definitions-and-declarations-c"></a>Определения и объявления (C++)
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
- Интерфейс DLL относится ко всем элементам (функциям и данным), которые заведомо экспортироваться некоторой программой в системе; то есть все элементы, которые обозначаются как **dllimport** или **dllexport**. Всех объявлениях, включенных в интерфейс DLL необходимо указать либо **dllimport** или **dllexport** атрибута. Тем не менее, в определении должен указываться только **dllexport** атрибута. Например, следующее определение функции вызовет ошибку компилятора.
+**Системам Microsoft** интерфейс DLL относится ко всем элементам (функциям и данным), про которые известно экспортироваться некоторой программой в системе, то есть все элементы, которые объявляются как **dllimport** или **dllexport** . Всех объявлениях, включенных в интерфейс DLL необходимо указать либо **dllimport** или **dllexport** атрибута. Тем не менее, в определении должен указываться только **dllexport** атрибута. Например, следующее определение функции вызовет ошибку компилятора.
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport

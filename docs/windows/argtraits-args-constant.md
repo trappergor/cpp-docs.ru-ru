@@ -1,5 +1,5 @@
 ---
-title: Константа ArgTraits::args | Документы Microsoft
+title: Константа ArgTraits::args | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87b29634d5b9acef2e2ccb3f7b4d5f227433d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855777"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466560"
 ---
 # <a name="argtraitsargs-constant"></a>Константа ArgTraits::args
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,10 +34,10 @@ static const int args = -1; ;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Содержит счетчик количества параметров метода Invoke для интерфейса делегата.  
+ Ведет статистику, число параметров `Invoke` метод для интерфейса делегата.  
   
 ## <a name="remarks"></a>Примечания  
- Когда `args` равно -1 указывает, может быть не соответствует сигнатуре метода Invoke.  
+ Когда `args` равно -1 указывает, может существовать совпадения `Invoke` сигнатуру метода.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  
@@ -45,5 +45,5 @@ static const int args = -1; ;
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [ArgTraits-структура](../windows/argtraits-structure.md)   
+ [Argtraits-структура](../windows/argtraits-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

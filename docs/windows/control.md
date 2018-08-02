@@ -1,5 +1,5 @@
 ---
-title: элемент управления | Документы Microsoft
+title: элемент управления | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870836"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466491"
 ---
 # <a name="control"></a>элемент управления
 Указывает, что определяемый пользователем тип элемента управления.  
@@ -30,17 +30,15 @@ ms.locfileid: "33870836"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [control]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Управления** атрибут задает [coclass](../windows/coclass.md) атрибута. **Управления** языка C++ имеет ту же функциональность, что [управления](http://msdn.microsoft.com/library/windows/desktop/aa366764) языка MIDL.  
+ **Управления** подразумевает атрибут [coclass](../windows/coclass.md) атрибута. **Управления** атрибут C++ имеет ту же функциональность, что [управления](http://msdn.microsoft.com/library/windows/desktop/aa366764) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -61,7 +59,7 @@ class CTest : public ICustom {};
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

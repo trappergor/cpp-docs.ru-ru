@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::Start | Документы Microsoft
+title: Метод AsyncBase::Start | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0acc6f62530daf641a2e4d568ed511d6fd831c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab47405f81cf6fb92af215f1868d8ad7c42bffa7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860922"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463734"
 ---
 # <a name="asyncbasestart-method"></a>Метод AsyncBase::Start
 Начинает асинхронную операцию.  
@@ -36,10 +36,10 @@ STDMETHOD(
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция начинается или уже запущен; в противном случае E_ILLEGAL_STATE_CHANGE.  
+ Значение S_OK, если операция запускается или уже запущен; в противном случае E_ILLEGAL_STATE_CHANGE.  
   
 ## <a name="remarks"></a>Примечания  
- Start() IAsyncInfo::Start это реализация по умолчанию, а не фактический работает. Чтобы фактически запускает асинхронную операцию, переопределите OnStart() чисто виртуального метода.  
+ **Start()** — это реализация по умолчанию `IAsyncInfo::Start`, а не фактические работает. Чтобы фактически запускает асинхронную операцию, переопределите `OnStart()` чисто виртуального метода.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

@@ -1,5 +1,5 @@
 ---
-title: Спецификатор Virtual | Документы Microsoft
+title: Спецификатор Virtual | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,13 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 200fdb93e7baf8ff229b0445b7ad7a8ceab90d19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01b569bd4a752eed66f2af138a7136032b092f51
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421264"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464974"
 ---
 # <a name="virtual-specifier"></a>Спецификатор virtual
-[Виртуальных](../cpp/virtual-cpp.md) ключевое слово может применяться только к функции-члены класса нестатической. Это означает, что привязка вызовов функции откладывается до времени выполнения. Дополнительные сведения см. в разделе [виртуальные функции](../cpp/virtual-functions.md).  
-  
+[Виртуальных](../cpp/virtual-cpp.md) слово может применяться только к класса нестатических функций-членов. Это означает, что привязка вызовов функции откладывается до времени выполнения. Дополнительные сведения см. в разделе [виртуальные функции](../cpp/virtual-functions.md).  

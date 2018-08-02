@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025907"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465998"
 ---
 # <a name="comptrasiid-method"></a>Метод ComPtr::AsIID
-Возвращает объект ComPtr, представляющий интерфейс, определенный указанным идентификатором интерфейса.  
+Возвращает **ComPtr** , представляющий интерфейс, определенный с помощью идентификатора указанного интерфейса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,11 +37,11 @@ WRL_NOTHROW HRESULT AsIID(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `riid`  
+ *riid*  
  Идентификатор интерфейса.  
   
- `p`  
- Если объект имеет интерфейс, идентификатор которой равняется `riid`, двойной косвенный указатель на интерфейс, определенный следующим `riid` параметра; в противном случае указатель на интерфейс IUnknown.  
+ *p*  
+ Если объект имеет интерфейс, идентификатор которой равняется *riid*, двойной косвенный указатель на интерфейс, определенный следующим *riid* параметра; в противном случае указатель на `IUnknown`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  

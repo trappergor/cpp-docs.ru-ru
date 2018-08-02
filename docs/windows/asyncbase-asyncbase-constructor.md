@@ -1,5 +1,5 @@
 ---
-title: Конструктор AsyncBase::AsyncBase | Документы Microsoft
+title: Конструктор AsyncBase::AsyncBase | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf794e3cbd9b566dafcdd1d5928ab9598bb1f08b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6b9b2b1abd9e42461f3bcfc57fcad1840382053
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854776"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466258"
 ---
 # <a name="asyncbaseasyncbase-constructor"></a>Конструктор AsyncBase::AsyncBase
-Инициализирует экземпляр класса AsyncBase.  
+Инициализирует новый экземпляр класса **AsyncBase** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   

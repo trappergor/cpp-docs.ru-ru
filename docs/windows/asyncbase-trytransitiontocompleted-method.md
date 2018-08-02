@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::TryTransitionToCompleted | Документы Microsoft
+title: Метод AsyncBase::TryTransitionToCompleted | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f628acd1424af11cab5040b2c65d528f1774dff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f2185b83a393860904903f4b82b3c3b42a2c3b33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861263"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460746"
 ---
 # <a name="asyncbasetrytransitiontocompleted-method"></a>Метод AsyncBase::TryTransitionToCompleted
-Указывает, завершена ли текущую асинхронную операцию.  
+Указывает, завершена ли текущей асинхронной операции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ bool TryTransitionToCompleted(
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` Если асинхронная операция завершена. в противном случае `false`.  
+ **значение true,** Если асинхронная операция была завершена; в противном случае **false**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

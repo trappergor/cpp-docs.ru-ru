@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944567"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462190"
 ---
 # <a name="switch-statement-c"></a>Оператор switch (C++)
 Позволяет выбирать между несколькими разделами кода в зависимости от значения целочисленного выражения.  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  Объект **переключения** инструкции могут быть вложенными. В таких случаях **случай** или **по умолчанию** метки связать с ближайшим **переключения** инструкцию, которая содержит их.  
 
- 
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
  Microsoft C не ограничивает количество значений case в **переключения** инструкции. Это число ограничивается только объемом доступной памяти. ANSI C требует по крайней мере 257 меток case разрешен в **переключения** инструкции.  
   
@@ -175,4 +174,3 @@ int main(int argc, char *argv[])
 ## <a name="see-also"></a>См. также  
  [Операторы выбора](../cpp/selection-statements-cpp.md)   
  [Ключевые слова](../cpp/keywords-cpp.md)   
- 

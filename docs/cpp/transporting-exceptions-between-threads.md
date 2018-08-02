@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f2d785e9f7ab7fa91f51d22299ebab0f39197e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a36aaddd5540fc9259178ba1686960c488b4d246
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942072"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462301"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Перенос исключений между потоками
 
@@ -265,7 +265,6 @@ exception_ptr 1: Caught a  myException exception.
 **Заголовок:** \<exception>
 
 ## <a name="see-also"></a>См. также
-
-- [Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)
-- [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md)
-- [/clr (компиляция среды выполнения)](../build/reference/clr-common-language-runtime-compilation.md)
+ [Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)  
+ [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md)  
+ [/clr (компиляция среды выполнения)](../build/reference/clr-common-language-runtime-compilation.md)

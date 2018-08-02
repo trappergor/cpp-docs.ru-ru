@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::FireCompletion | Документы Microsoft
+title: Метод AsyncBase::FireCompletion | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cd18d340a11575ed9f6f52d92a5910dcee1faec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa5988516f3836749357b15295ac228b78fe3f04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859739"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467245"
 ---
 # <a name="asyncbasefirecompletion-method"></a>Метод AsyncBase::FireCompletion
-Вызывается обработчик события завершения или сбрасывает делегат внутренней хода выполнения.  
+Вызывает обработчик события завершения или сбрасывает делегат внутренней хода выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ virtual void FireCompletion();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Первая версия FireCompletion() сбрасывает переменной делегата внутренней хода выполнения. Вторая версия вызывает обработчик событий завершения при завершении асинхронной операции.  
+ Первая версия **FireCompletion()** сбрасывает переменной делегата внутренней хода выполнения. Вторая версия вызывает обработчик события завершения, если асинхронная операция завершена.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

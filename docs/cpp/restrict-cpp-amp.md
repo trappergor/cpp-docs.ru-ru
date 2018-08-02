@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944580"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461892"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 Спецификатор ограничения может применяться к объявлениям функций и лямбда-выражений. Он реализует ограничения на код функции и на ее поведение в приложениях, в которых используется среда выполнения C++ AMP.  
@@ -93,7 +93,6 @@ ms.locfileid: "37944580"
  В следующем примере показано, как использовать `restrict(amp)`предложение.  
   
 ```cpp 
-  
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   
   
@@ -109,7 +108,6 @@ void callFunctions() restrict(amp)
   
     // Calling a non-amp-restricted function is not allowed.  
     // functionNonAmp();   
-  
 }  
 ```  
   

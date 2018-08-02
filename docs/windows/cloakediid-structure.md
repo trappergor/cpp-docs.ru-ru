@@ -1,5 +1,5 @@
 ---
-title: Структура CloakedIid | Документы Microsoft
+title: Структура CloakedIid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57ad76b48b92519eaeed089dfb14817c38273588
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856164"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461227"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid - структура
-Указывает шаблонам RuntimeClass, Implements и ChainInterfaces, что заданный интерфейс недоступен в списке IID.  
+Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, что заданный интерфейс недоступен в списке IID.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,11 +35,11 @@ struct CloakedIid : T;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Интерфейс, который является скрытым (замаскированные).  
   
 ## <a name="remarks"></a>Примечания  
- Ниже приведен пример использования CloakedIid: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
+ Ниже приведен пример того, как `CloakedIid` используется: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `T`  

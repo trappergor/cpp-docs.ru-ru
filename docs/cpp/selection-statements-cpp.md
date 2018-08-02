@@ -1,5 +1,5 @@
 ---
-title: Инструкции выбора (C++) | Документы Microsoft
+title: Операторы выбора (C++) | Документация Майкрософт
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f72e3c8145b2909495e53645af8ba500a102ebc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421277"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464432"
 ---
 # <a name="selection-statements-c"></a>Операторы выбора (C++)
-Операторы выбора C++, [Если](../cpp/if-else-statement-cpp.md) и [переключения](../cpp/switch-statement-cpp.md), позволяют выполнять те или иные участки кода выполнения.  
+Операторы выбора C++, [Если](../cpp/if-else-statement-cpp.md) и [переключения](../cpp/switch-statement-cpp.md), предоставляют средства для условного выполнения части кода.  
   
- [__If_exists](../cpp/if-exists-statement.md) и [__if_not_exists](../cpp/if-not-exists-statement.md) инструкции позволяют включать код в зависимости от наличия определенного символа.  
+ [__If_exists](../cpp/if-exists-statement.md) и [__if_not_exists](../cpp/if-not-exists-statement.md) позволяют включать код в зависимости от наличия определенного символа.  
   
  Синтаксис этих операторов см. в соответствующих разделах.  
   

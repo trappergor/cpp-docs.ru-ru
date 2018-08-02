@@ -1,5 +1,5 @@
 ---
-title: call_as | Документы Microsoft
+title: call_as | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860870"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465874"
 ---
 # <a name="callas"></a>call_as
-Включает [локального](../windows/local-cpp.md) функции для сопоставления удаленной функции так, что при вызове удаленной функции локальной функции.  
+Позволяет [локального](../windows/local-cpp.md) функции для сопоставления с удаленной функции так, что при вызове удаленной функции локальной функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
@@ -41,12 +40,12 @@ ms.locfileid: "33860870"
  Локальная функция, которую требуется вызывать при вызове удаленной функции.  
   
 ## <a name="remarks"></a>Примечания  
- **Call_as** языка C++ имеет ту же функциональность, что [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) языка MIDL.  
+ **Call_as** атрибут C++ имеет ту же функциональность, что [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В следующем коде показано, как использовать **call_as** сопоставляется функции не поддерживающие удаленное взаимодействие (**f1**) функции удаленного взаимодействия (**Remf1**):  
+ В следующем коде показано, как можно использовать **call_as** для сопоставления функции не поддерживающие удаленное взаимодействие (**f1**) функции удаленного взаимодействия (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -74,4 +73,4 @@ __interface IMInterface {
 ## <a name="see-also"></a>См. также  
  [Атрибуты IDL](../windows/idl-attributes.md)   
  [Атрибуты метода](../windows/method-attributes.md)   
- [Локальные](../windows/local-cpp.md)   
+ [локальный](../windows/local-cpp.md)   

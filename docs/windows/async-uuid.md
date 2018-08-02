@@ -1,5 +1,5 @@
 ---
-title: async_uuid | Документы Microsoft
+title: async_uuid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856909"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466752"
 ---
 # <a name="asyncuuid"></a>async_uuid
-Указывает идентификатор UUID, компилятор MIDL для определения синхронные и асинхронные версии COM-интерфейса.  
+Указывает UUID, компилятор MIDL определить синхронные и асинхронные версии COM-интерфейса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [async_uuid (  
+[async_uuid (  
    uuid  
 )]  
 ```  
   
 #### <a name="parameters"></a>Параметры  
  *uuid*  
- UUID, идентифицирующая версию интерфейса.  
+ UUID, которое определяет версию интерфейса.  
   
 ## <a name="remarks"></a>Примечания  
- **Async_uuid** языка C++ имеет ту же функциональность, что [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) языка MIDL.  
+ **Async_uuid** атрибут C++ имеет ту же функциональность, что [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_async_uuid.cpp  
 // compile with: /LD  
 #include <Windows.h>  
@@ -66,7 +65,7 @@ __interface ICustom {
 |**Применение**|`interface`|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**Двойная**, **disp-интерфейс**|  
+|**Недопустимые атрибуты**|**двойной**, **disp-интерфейс**|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   

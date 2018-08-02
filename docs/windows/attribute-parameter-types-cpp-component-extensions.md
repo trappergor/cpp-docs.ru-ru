@@ -1,5 +1,5 @@
 ---
-title: Атрибут типы параметров (расширения компонентов C++) | Документы Microsoft
+title: Атрибут типы параметров (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79d89eec82725b28bdbe43f08ac2c05cdb889f6e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860311"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466973"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Типы параметров атрибутов (расширения компонентов C++)
 Значения, передаваемые в атрибуты, должны быть известны компилятору во время компиляции.  Параметры атрибутов могут быть следующих типов:  
   
--   `bool`  
+-   **bool**  
   
--   `char`, `unsigned char`  
+-   **char**, **unsigned char**  
   
--   `short`, `unsigned short`  
+-   **short**, **unsigned short**  
   
--   `int`, `unsigned int`  
+-   **int**, **типа int без знака**  
   
--   `long`, `unsigned long`  
+-   **Long**, **unsigned long**  
   
--   `__int64`, `unsigned __int64`  
+-   **__int64**, **unsigned __int64**  
   
--   `float`, `double`  
+-   **число с плавающей запятой**, **double**  
   
--   `wchar_t`  
+-   **wchar_t**  
   
 -   `char*`, `wchar_t*` или `System::String*`  
   
@@ -47,13 +47,13 @@ ms.locfileid: "33860311"
   
 -   `System::Object ^`  
   
--   `enum`  
+-   **enum**  
   
 ## <a name="example"></a>Пример  
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // attribute_parameter_types.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -76,12 +76,12 @@ ref struct MyStruct {
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  При определении атрибутов все неименованные (позиционные) аргументы должны предшествовать любым именованным аргументам.  
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // extending_metadata_c.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -109,12 +109,12 @@ ref class ClassD {};   // Positional and named
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  Параметры атрибутов могут быть одномерными массивами указанных выше типов.  
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // extending_metadata_d.cpp  
 // compile with: /clr /c  
 using namespace System;  
