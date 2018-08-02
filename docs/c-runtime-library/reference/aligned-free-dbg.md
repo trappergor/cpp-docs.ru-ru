@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c7eb281ecc7a7175614c5c72c54c7267cf55e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23e76c5fc4881f0689bf83ee96acd2a7cce8c948
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393463"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401565"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
@@ -53,15 +53,15 @@ void _aligned_free_dbg(
 
 ### <a name="parameters"></a>Параметры
 
-*memblock* указатель на блок памяти, возвращенный в [_aligned_malloc](aligned-malloc.md) или [_aligned_offset_malloc](aligned-offset-malloc.md) функции.
+*memblock* указатель на блок памяти, который был возвращен к [_aligned_malloc](aligned-malloc.md) или [_aligned_offset_malloc](aligned-offset-malloc.md) функции.
 
 ## <a name="remarks"></a>Примечания
 
-**_Aligned_free_dbg** функция является отладочной версией [_aligned_free](aligned-free.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_free_dbg** сокращается до вызова **_aligned_free**. Оба **_aligned_free** и **_aligned_free_dbg** освобождения блока памяти в основной куче, но **_aligned_free_dbg** включает возможность отладки: возможность хранить освободившиеся блоки в связанном списке кучи для моделирования условий недостатка памяти.
+**_Aligned_free_dbg** функция — это отладочная версия [_aligned_free](aligned-free.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_free_dbg** сокращается до вызова `_aligned_free`. Оба `_aligned_free` и **_aligned_free_dbg** освобождают блок памяти в основной куче, но **_aligned_free_dbg** включает возможность отладки: возможность хранить освободившиеся блоки в связанном списке кучи для моделирования условий недостатка памяти.
 
-**_aligned_free_dbg** выполняет проверку действительности для всех указанных файлов и расположений блоков перед выполнением операции освобождения. Приложение не ожидает предоставления этих сведений. Когда освобождается блок памяти, диспетчер отладочной кучи автоматически проверяет целостность буферов по обеим сторонам пользовательской части и выдает отчет об ошибке в случае их перезаписи. Если **_CRTDBG_DELAY_FREE_MEM_DF** битовое поле [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) флаг установлен, освободившийся блок заполняется значением 0xDD, назначенный **_FREE_BLOCK** блокировку типа, и хранятся в связанном списке кучи блоков памяти.
+**_aligned_free_dbg** выполняет проверку допустимости для всех указанных файлов и расположений блоков перед выполнением операции освобождения. Приложение не ожидает предоставления этих сведений. Когда освобождается блок памяти, диспетчер отладочной кучи автоматически проверяет целостность буферов по обеим сторонам пользовательской части и выдает отчет об ошибке в случае их перезаписи. Если _CRTDBG_DELAY_FREE_MEM_DF битовые поля [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) флаг установлен, освободившийся блок заполняется значением 0xDD, назначенный тип блока _FREE_BLOCK и хранится в связанном списке кучи блоков памяти.
 
-Если произошла ошибка при освобождении памяти, **errno** задаются сведения из операционной системы о характере сбоя. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+В случае возникновения ошибки при освобождении памяти для `errno` задаются сведения о характере сбоя, полученные от операционной системы. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -75,4 +75,4 @@ void _aligned_free_dbg(
 
 ## <a name="see-also"></a>См. также
 
-[Процедуры отладки](../../c-runtime-library/debug-routines.md)<br/>
+[Процедуры отладки](../../c-runtime-library/debug-routines.md)  

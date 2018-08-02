@@ -1,5 +1,5 @@
 ---
-title: Команда обработчики (доступ к данным MFC) перемещения по записям | Документы Microsoft
+title: Команда обработчики для прокрутки (доступ к данным MFC) записей | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 03dec2e3eff0f61db5f4c8b7573400a589615b02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef2b57bd37441b9a35c26ab36fcf3cb15cd0d878
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089383"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340332"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Обработчики команд для прокрутки записей (доступ к данным MFC) 
 [CRecordView](../mfc/reference/crecordview-class.md) класс предоставляет обработку по умолчанию для следующих стандартных команд:  
   
--   **ID_RECORD_MOVE_FIRST**  
+-   ID_RECORD_MOVE_FIRST  
   
--   **ID_RECORD_MOVE_LAST**  
+-   ID_RECORD_MOVE_LAST  
   
--   **ID_RECORD_MOVE_NEXT**  
+-   ID_RECORD_MOVE_NEXT  
   
--   **ID_RECORD_MOVE_PREV**  
+-   ID_RECORD_MOVE_PREV  
   
- `OnMove` Функция-член предоставляет обработку по умолчанию для всех четырех команд, которые переходят от записи к записи. Если команды даны, RFX (или DFX) загружает новую запись в поля набора записей и DDX передвигает значения в элементы управления формы записи. Сведения об RFX см. в разделе [обмен полей записей (RFX)](../data/odbc/record-field-exchange-rfx.md).  
+ `OnMove` Функция-член предоставляет обработку по умолчанию для всех четырех команд, при переходе от записи к записи. Если команды даны, RFX (или DFX) загружает новую запись в поля набора записей и DDX передвигает значения в элементы управления формы записи. Дополнительные сведения о RFX см. в разделе [обмен полей записей (RFX)](../data/odbc/record-field-exchange-rfx.md).  
   
 > [!NOTE]
 >  Обязательно используйте стандартные идентификаторы команд для любых объектов пользовательского интерфейса, связанных с стандартными командами перехода к записи.  

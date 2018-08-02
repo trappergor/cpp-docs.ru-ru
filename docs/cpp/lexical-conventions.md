@@ -1,5 +1,5 @@
 ---
-title: Лексические соглашения | Документы Microsoft
+title: Лексические соглашения | Документация Майкрософт
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419133"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405913"
 ---
 # <a name="lexical-conventions"></a>Лексические соглашения
 В этом разделе представлены базовые элементы программы на C++. Эти элементы (так называемые лексические элементы или токены) используются для построения операторов, определений, объявлений других компонентов, из которых состоит вся программа. В этом разделе описываются следующие лексические элементы:
@@ -45,5 +45,5 @@ ms.locfileid: "32419133"
 - [Определенные пользователем литералы](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>См. также
-- [Справочник по языку C++](../cpp/cpp-language-reference.md)
-- [Программа и компоновка](program-and-linkage-cpp.md)
+ [Справочник по языку C++](../cpp/cpp-language-reference.md)  
+ [Программа и компоновка](program-and-linkage-cpp.md)

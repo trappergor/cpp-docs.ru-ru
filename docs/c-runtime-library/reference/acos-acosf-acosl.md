@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392774"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401942"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -67,24 +67,24 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*  
 Значение от -1 до 1, для которого нужно вычислить арккосинус (арккосинус).
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Acos** функция возвращает арккосинус числа *x* в диапазоне от 0 до π радианы.
+**Acos** функция возвращает арккосинус *x* в диапазоне от 0 до радиан π.
 
 По умолчанию если *x* меньше -1 или больше 1, **acos** возвращает неопределенное.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
-|± QNAN,IND|Нет|**_DOMAIN**|
-|&#124;x&#124;>1|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
+|± ∞|INVALID|_DOMAIN|
+|± QNAN,IND|Нет|_DOMAIN|
+|&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **acos** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **acos** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **acos** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **acos** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 
@@ -94,7 +94,7 @@ long double acos( long double x );   // C++ only
 
 ## <a name="example"></a>Пример
 
-Эта программа предлагает ввести значение в диапазоне от -1 до 1. Создать входные значения вне этого диапазона **_DOMAIN** сообщения об ошибках. Если введено допустимое значение, программа выводит на экран арксинус и арккосинус этого значения.
+Эта программа предлагает ввести значение в диапазоне от -1 до 1. Входные значения вне этого диапазона вызывают сообщения об ошибке `_DOMAIN`. Если введено допустимое значение, программа выводит на экран арксинус и арккосинус этого значения.
 
 ```C
 // crt_asincos.c
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)  
+[asin, asinf, asinl](asin-asinf-asinl.md)  
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[cos, cosf, cosl](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin, sinf, sinl](sin-sinf-sinl.md)  
+[tan, tanf, tanl](tan-tanf-tanl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Вызов (C++) функции | Документы Microsoft
+title: Функция вызов (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7a752630b391d09140fa7552a452b3d2b751a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2c3e28d4d69265c86e3c88d07de460558b3f71b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409359"
 ---
 # <a name="function-call-c"></a>Вызов функций (C++)
 Оператор вызова функции, записываемый при помощи скобок, является бинарным оператором.  
@@ -33,7 +34,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 primary-expression ( expression-list )  
 ```  
   
@@ -42,14 +42,14 @@ primary-expression ( expression-list )
   
  Перезагрузка оператора вызова функции не меняет способ вызова функций; она лишь изменяет способ интерпретации оператора при применении к объектам заданного типа класса. К примеру, приведенный ниже код в обычных условиях не имеет смысла.  
   
-```  
+```cpp 
 Point pt;  
 pt( 3, 2 );  
 ```  
   
  Однако, если оператор вызова функции был соответствующим образом перегружен, то этот синтаксис может использоваться для сдвига координаты `x` на три единицы, а координаты `y` — на две. Такое определение приводится в следующем примере.  
   
-```  
+```cpp 
 // function_call.cpp  
 class Point  
 {  

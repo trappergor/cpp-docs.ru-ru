@@ -1,5 +1,5 @@
 ---
-title: Шаблоны потребителя OLE DB (C++) | Документы Microsoft
+title: Шаблоны потребителей OLE DB (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39264ed7485e67377963316730689645c73f185f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112112"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339403"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Шаблоны потребителей OLE DB (C++)
 Шаблоны потребителей OLE DB поддерживают спецификацию OLE DB версии 2.6. (Шаблоны потребителей OLE DB проверяются на соответствие OLE DB версии 2.6, но не поддерживают все интерфейсы спецификации.) Использование шаблонов потребителей позволяет свести к минимуму объем кода, который вам необходимо написать для реализации потребителя OLE DB. Шаблоны обеспечивают:  
@@ -34,7 +34,7 @@ ms.locfileid: "33112112"
   
 -   типы данных неуправляемого кода C/C++ для программирования OLE DB.  
   
- Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. [справочник программиста OLE DB](https://msdn.microsoft.com/en-us/library/ms718124.aspx).  
+ Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. в разделе [Справочник программиста OLE DB по](https://msdn.microsoft.com/library/ms718124.aspx).  
   
  Шаблоны OLE DB поддерживают существующую объектную модель OLE DB, а не добавляют новую объектную модель. Классы верхнего уровня в шаблонах потребителей OLE DB создают компоненты, параллельные компонентам, определенным в спецификации OLE DB. Шаблоны потребителей OLE DB включает дополнительные возможности, такие как несколько методов доступа к набору строк. Использование шаблонов и множественного наследования позволяет создавать более компактные и гибкие библиотеки.  
   
@@ -68,5 +68,5 @@ ms.locfileid: "33112112"
 ## <a name="see-also"></a>См. также  
  [Программирование объектов OLE DB](../../data/oledb/ole-db-programming.md)   
  [Доступ к данным](../data-access-in-cpp.md)   
- [OLE DB для документации по пакету SDK](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
- [Справочник программиста OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)
+ [Документация по OLE DB SDK](https://msdn.microsoft.com/library/ms722784.aspx)   
+ [Справочник программиста OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)

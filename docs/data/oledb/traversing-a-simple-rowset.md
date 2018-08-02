@@ -1,5 +1,5 @@
 ---
-title: Перебор простого набора строк | Документы Microsoft
+title: Перебор простого набора строк | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102955"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336658"
 ---
 # <a name="traversing-a-simple-rowset"></a>Перебор простого набора строк
-В следующем примере показано быстрый и простой базы данных доступа, не связанных с командами. Следующий код потребителя, в проект ATL извлекает записи из таблицы с именем *исполнители* в Microsoft Access, базы данных с помощью поставщика Microsoft OLE DB для ODBC. Код создает [CTable](../../data/oledb/ctable-class.md) таблицы с методом доступа на основе класса записей пользователя `CArtists`. Открывает подключение, открывает сеанс для подключения и открывает таблицу в сеансе.  
+В следующем примере показано быстрый и простой базы данных доступа, не связанных с командами. Следующий код потребителя, в проект ATL, извлекает записи из таблицы с именем *исполнители* в Microsoft Access базу данных, используя поставщик Microsoft OLE DB для ODBC. Код создает [CTable](../../data/oledb/ctable-class.md) таблицы с методом доступа на основе класс записей пользователя `CArtists`. Открывает соединение, открывается сеанс подключения и открывает таблицу в сеансе.  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,9 +53,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Записи пользователя, `CArtists`, выглядит следующим образом:  
+ Записи пользователя `CArtists`, выглядит следующим образом:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

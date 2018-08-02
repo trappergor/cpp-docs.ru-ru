@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 673bceb5042a91361ece00360c4d9c5b140e4d00
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034820"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402703"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Практическое руководство. Создание и использование экземпляров weak_ptr
 Иногда объект должен хранить способ доступа к базовым объектом объекта `shared_ptr` не вызывая счетчик ссылок увеличивается. Как правило, такая ситуация возникает при наличии циклических ссылок между `shared_ptr` экземпляров.  

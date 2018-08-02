@@ -1,5 +1,5 @@
 ---
-title: Программирование объектов OLE DB | Документы Microsoft
+title: Программирование объектов OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb77c5b7d7f6de91f74e83c395d0fcc13ebf70e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d211297d587fffcfc58ac57db6687dc8edde4344
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107182"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336551"
 ---
 # <a name="ole-db-programming"></a>Программирование объектов OLE DB
-Microsoft OLE DB — это устаревшая технология; для новых приложений не требуется доступ к данным API для связанных серверов SQL. Все другие новые приложения должны использовать ODBC. Текущий поставщик OLE DB для SQL Server — SQLNCLI11. БИБЛИОТЕКИ DLL. Поставщик по-прежнему доставки в SQL Server 2016. Эта документация предназначена для разработчиков, которые поддержки существующих приложений, которые уже используют OLE DB.
+Microsoft OLE DB — это устаревшая технология; для новых приложений это требуется API доступа к данным для связанных серверов SQL. Все другие новые приложения должны использовать ODBC. Текущий поставщик OLE DB для SQL Server — SQLNCLI11. БИБЛИОТЕКА DLL. Поставщик по-прежнему продается в SQL Server 2016. Эта документация предназначена для разработчиков, которые поддержки существующих приложений, которые уже используют OLE DB.
   
  Шаблоны OLE DB являются шаблонами C++, которые упрощают использование технологии баз данных OLE DB с высокой производительностью за счет использования классов, реализующих многие часто используемые интерфейсы OLE DB. Библиотека шаблонов состоит из шаблонов клиента и шаблонов поставщика.  
   
@@ -35,15 +35,14 @@ Microsoft OLE DB — это устаревшая технология; для н
   
 |Для получения дополнительных сведений о|См.|  
 |-------------------------|---------|  
-|Использование пользовательских шаблонов OLE DB (основные разделы)|[Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|  
+|Использование пользовательских шаблонов OLE DB (основные разделы)|[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|  
 |Использование шаблонов поставщика OLE DB (основные разделы)|[Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
-|Классы и макросы шаблонов OLE DB|[Справочник по шаблонам OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
+|Классы и макросы шаблонов OLE DB|[Ссылка на шаблоны OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Атрибуты пользователя OLE DB|[Атрибуты объекта-получателя OLE DB](../../windows/ole-db-consumer-attributes.md)|  
-|Интерфейсы OLE DB|[Справочник программиста OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx) (в Windows SDK)|  
-|Примеры шаблонов OLE DB|[Примеры шаблонов OLE DB](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c)| 
+|Интерфейсы OLE DB|[Справочник программиста OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) (в пакете Windows SDK)|  
+|Примеры шаблонов OLE DB|[Примеры шаблонов OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
 |Общие сведения о программировании доступа к данным (Visual C++)|[Программирование доступа к данным](../../data/data-access-programming-mfc-atl.md)|  
 |Основные разделы ODBC|[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)|  
 
-  
 ## <a name="see-also"></a>См. также  
  [Доступ к данным](../data-access-in-cpp.md)

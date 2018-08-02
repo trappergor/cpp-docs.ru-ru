@@ -1,5 +1,5 @@
 ---
-title: Создание проекта для поставщика | Документы Microsoft
+title: Создание проекта для поставщика | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08ceb80842d8552e19b62ff2ac2252d3f291b4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dad3b020cb7f66fc4ba6535f79393c2d0ad0333f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098359"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339845"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Создание проекта для поставщика
-#### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Чтобы создать проект, в которой будет находиться поставщика OLE DB  
+### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Чтобы создать проект, в которой будет находиться поставщик OLE DB  
   
-1.  Из **файл** меню, нажмите кнопку `New`, а затем нажмите кнопку **проекта**.  
+1.  В меню **Файл** последовательно выберите пункты **Создать** и **Проект**.  
   
      Откроется диалоговое окно **Новый проект** .  
   
-2.  На панели типов проекта выберите папку Проекты Visual C++. В области шаблонов выберите **проект ATL**.  
+2.  В области типов проектов щелкните папку проектов Visual C++. В области «Шаблоны» щелкните **проекта ATL**.  
   
 3.  В **имя** введите имя для проекта и нажмите кнопку **ОК**.  
   
-     Появится мастер проектов ATL.  
+     Откроется мастер проектов ATL.  
   
-4.  В мастере проектов ATL, выберите **библиотеки динамической компоновки (DLL)** для **тип сервера**.  
+4.  В мастере проектов ATL. выберите **библиотеки динамической компоновки (DLL)** для **тип сервера**.  
   
 5.  Нажмите кнопку **Готово**.  
   

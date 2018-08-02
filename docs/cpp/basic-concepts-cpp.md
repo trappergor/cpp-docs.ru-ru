@@ -1,5 +1,5 @@
 ---
-title: Основные понятия (C++) | Документы Microsoft
+title: Основные понятия (C++) | Документация Майкрософт
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409580"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403580"
 ---
 # <a name="basic-concepts--c"></a>Основные понятия (C++)
 В этом разделе рассматриваются понятия, которые абсолютно необходимы для понимания C++. Программистам, работающим с языком C, большинство из них уже знакомы, однако ряд незначительных отличий в них могут привести к тому, что программы будут порождать непрогнозируемый результат. В раздел входят следующие темы:  

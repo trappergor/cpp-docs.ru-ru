@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 887ab1e29cf2a0eab656cc6d1b4587252871d328
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944508"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402826"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Явно используемые по умолчанию и удаленные функции
 В C++11 установленные по умолчанию и удаленные функции позволяют явным образом указывать, будут ли специальные функции-члены создаваться автоматически. Кроме того, удаленные функции определяют простой язык, который помогает предотвращать проблемы с повышением типов в аргументах любых функций — специальных функций-членов, а также обычных функций членов и функций, не являющихся членами. Такие проблемы могут приводить к ошибкам в вызовах функций.  
@@ -145,5 +145,4 @@ template < typename T >
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   
 void call_with_true_double_only(double param) { return; } // also define for const double, double&, etc. as needed.  
-  
 ```

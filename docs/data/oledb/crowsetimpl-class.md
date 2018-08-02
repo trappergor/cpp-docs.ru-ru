@@ -45,12 +45,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cdd76941a2e91edf598bc5bd354369c849b2dd35
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 1583a5cb6ff67943bde8af530593dff94986d551
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269707"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340479"
 ---
 # <a name="crowsetimpl-class"></a>Класс CRowsetImpl
 Предоставляет стандартную реализацию набора строк OLE DB без необходимости множественное наследование, многие реализации интерфейсов.  
@@ -182,7 +182,7 @@ HRESULT CRowsetBaseImpl::SetCommandText(DBID* pTableID,
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,  
+static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,  
    ULONG* pcCols);  
 ```  
   
@@ -258,7 +258,6 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
   
 ```cpp
 ArrayType CRowsetBaseImpl::m_rgRowData;  
-  
 ```  
   
 ### <a name="remarks"></a>Примечания  
@@ -271,7 +270,6 @@ ArrayType CRowsetBaseImpl::m_rgRowData;
   
 ```cpp
 CComBSTR CRowsetBaseImpl::m_strCommandText;  
-  
 ```  
 
 ## <a name="strindextext"></a> CRowsetImpl::m_strIndexText
@@ -281,5 +279,4 @@ CComBSTR CRowsetBaseImpl::m_strCommandText;
   
 ```cpp
 CComBSTR CRowsetBaseImpl::m_strIndexText;  
-  
-```  
+``` 

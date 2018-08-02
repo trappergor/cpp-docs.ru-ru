@@ -1,5 +1,5 @@
 ---
-title: Исключение bad_typeid | Документы Microsoft
+title: Исключение bad_typeid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0771f5e93ba473c9ae1101996e8276bec4cd432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55718522bdbf618fb656eedc5c6afd59bfcaca08
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409009"
 ---
 # <a name="badtypeid-exception"></a>Исключение bad_typeid
-`bad_typeid` Исключение [оператор typeid](../cpp/typeid-operator.md) Если операнд для `typeid` является указателем NULL.  
+**Bad_typeid** исключение [оператор typeid](../cpp/typeid-operator.md) при операнд для **typeid** является указателем NULL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      catch (bad_typeid)  
+catch (bad_typeid)  
    statement  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Исключение `bad_typeid` имеет следующий интерфейс:  
+ Интерфейс для **bad_typeid** является:  
   
-```  
+```cpp 
 class bad_typeid : public exception  
 {  
 public:  
@@ -48,9 +48,9 @@ public:
 };  
 ```  
   
- В следующем примере показан оператор `typeid`, вызывающий исключение `bad_typeid`.  
+ В следующем примере показан **typeid** оператор генерации **bad_typeid** исключение.  
   
-```  
+```cpp 
 // expre_bad_typeid.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -78,7 +78,7 @@ catch (bad_typeid){
   
 ## <a name="output"></a>Вывод  
   
-```  
+```Output 
 Object is NULL  
 ```  
   

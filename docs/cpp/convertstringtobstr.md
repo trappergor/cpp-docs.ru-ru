@@ -16,28 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2683daf4fd1293d3fad043037165fa3cbc13de3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c579437ef0d5bd786b7066756b8e0bac4fa59e4a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944176"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408506"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Блок, относящийся только к системам Microsoft**  
   
- Преобразует **char \***  значение `BSTR`.  
+ Преобразует `char *` значение `BSTR`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 BSTR __stdcall ConvertStringToBSTR(const char* pSrc)  
 ```  
   
 #### <a name="parameters"></a>Параметры  
  *pSrc*  
- Объект **char \***  переменной.  
+ Объект `char *` переменной.  
   
 ## <a name="example"></a>Пример  
   

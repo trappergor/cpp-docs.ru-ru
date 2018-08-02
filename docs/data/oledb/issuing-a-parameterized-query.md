@@ -1,5 +1,5 @@
 ---
-title: Выполнение параметризированного запроса | Документы Microsoft
+title: Выполнение параметризированного запроса | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104579"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339540"
 ---
 # <a name="issuing-a-parameterized-query"></a>Выполнение параметризированного запроса
-Следующий пример выполняет простой параметризованный запрос, который извлекает записи с полем возраст (то есть больше 30) из таблицы в базе данных Microsoft Access. Для поддержки параметра пользовательская запись должна иметь дополнительную схему. Следующий код в проект ATL использует `CCommand` вместо класса `CTable` класс, используемый в предыдущем примере [перебор простого набора строк](../../data/oledb/traversing-a-simple-rowset.md).  
+Следующий пример выдает простой параметризованный запрос, который извлекает записи с полем возраст (то есть больше 30) из таблицы в базе данных Microsoft Access. Для поддержки параметра записи пользователя необходимо иметь дополнительную схему. В следующем коде, в проекте ATL используется `CCommand` вместо класса `CTable` класс, используемый в предыдущем примере, [перебор простого набора строк](../../data/oledb/traversing-a-simple-rowset.md).  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -51,9 +51,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Записи пользователя, `CArtists`, выглядит следующим образом:  
+ Записи пользователя `CArtists`, выглядит следующим образом:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

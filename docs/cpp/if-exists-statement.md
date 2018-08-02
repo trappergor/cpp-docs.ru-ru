@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ac866487c25ee4ce75abbebe9b9f9c2a5e97828
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944212"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405948"
 ---
 # <a name="ifexists-statement"></a>Оператор __if_exists
 **__If_exists** инструкции проверяет, является ли указанный идентификатор существует. Если идентификатор существует, выполняется определенный блок операторов.  
@@ -40,8 +40,8 @@ statements
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|`identifier`|Идентификатор, наличие которого требуется проверить.|  
-|`statements`|Один или несколько операторов для выполнения, если `identifier` существует.|  
+|*identifier*|Идентификатор, наличие которого требуется проверить.|  
+|*Инструкции*|Один или несколько операторов для выполнения, если *идентификатор* существует.|  
   
 ## <a name="remarks"></a>Примечания  
   

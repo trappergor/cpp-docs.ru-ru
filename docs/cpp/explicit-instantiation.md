@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 834a71f5fd670874fd7dad5a77cb89a837119c2d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: bb2f1c14028820525748c8e770a7263eedd3099f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940619"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405205"
 ---
 # <a name="explicit-instantiation"></a>явное создание экземпляра
 Явное создание экземпляров можно использовать для создания шаблонного класса или функции, чтобы обойтись без их использования в коде. Поскольку это полезно для создания файлов библиотек (.lib), в которых шаблоны используются для распространения, то определения шаблонов без создания экземпляров не включаются в объектные файлы (.obj).  

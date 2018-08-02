@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1057754b5c98086de42daedd5e7aab70656eba69
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944216"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402500"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Блок, относящийся только к системам Microsoft**  
@@ -41,7 +41,6 @@ __declspec(naked) declarator
 
  Компилятор не может создать подставляемую функцию для функции, помеченной атрибутом naked, даже если функция помечена также [__forceinline](inline-functions-cpp.md) ключевое слово.  
 
-  
  Компилятор выдает ошибку, если **с атрибутом naked** атрибут применяется только на определение метода, не являющихся членами.  
   
 ## <a name="examples"></a>Примеры  

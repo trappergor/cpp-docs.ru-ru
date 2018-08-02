@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c48da9a0ff3b9cadf0b7e228f3108277154e8417
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944718"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402888"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Блок, относящийся только к системам Microsoft**  
@@ -32,7 +32,6 @@ ms.locfileid: "37944718"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 void Attach( Interface* pInterface ) throw( );  
 void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
@@ -46,7 +45,7 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
   
 ## <a name="remarks"></a>Примечания  
   
--   **Присоединение (***pInterface***)** `AddRef` не вызывается.     Право на владение интерфейсом передается данному объекту `_com_ptr_t`. `Release` вызывается для уменьшения счетчика ссылок для ранее инкапсулированного указателя.  
+-   **Присоединение (***pInterface***)** `AddRef` не вызывается. Право на владение интерфейсом передается данному объекту `_com_ptr_t`. `Release` вызывается для уменьшения счетчика ссылок для ранее инкапсулированного указателя.  
   
 -   **Присоединение (***pInterface* **,***fAddRef***)** Если *fAddRef* имеет значение TRUE, `AddRef`вызывается следует выполнить приращение счетчика ссылок для указателя инкапсулированного интерфейса.       Если *fAddRef* имеет значение FALSE, это `_com_ptr_t` объект принимает владение базовым указателем на интерфейс без вызова `AddRef`. `Release` вызывается для уменьшения счетчика ссылок для ранее инкапсулированного указателя.  
   

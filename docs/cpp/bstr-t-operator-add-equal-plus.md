@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2ea7cd3b93f7445190f16a92a580fe9628a976
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aad73939b8fd011fd6e1c9bf16f8dfe6eb303ff3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944231"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405747"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
 **Блок, относящийся только к системам Microsoft**  
@@ -33,7 +33,6 @@ ms.locfileid: "37944231"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 _bstr_t& operator+=( const _bstr_t& s1 );  
 _bstr_t operator+( const _bstr_t& s1 );  
 friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
@@ -53,9 +52,9 @@ friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);
 ## <a name="remarks"></a>Примечания  
  Эти операторы выполняют объединение строк:  
   
--   **оператор += (***s1***)** добавляет символы из инкапсулированного `BSTR` из *s1* в конец этого объекта инкапсулированный `BSTR`.      
+-   **оператор += (***s1***)** добавляет символы из инкапсулированного `BSTR` из *s1* в конец этого объекта инкапсулированный `BSTR`.  
   
--   **оператор + (***s1***)** возврат нового `_bstr_t` , образуется путем объединения этого объекта `BSTR` с данными о *s1*.      
+-   **оператор + (***s1***)** возврат нового `_bstr_t` , образуется путем объединения этого объекта `BSTR` с данными о *s1*.  
   
 -   **оператор + (***s2***&#124;***s1***)** возвращает новый `_bstr_t` , образуется путем объединения Многобайтовая строка *s2*, преобразованной в Юникод, с помощью `BSTR` инкапсулирован в *s1*.          
   

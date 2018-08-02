@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0190b62491dbb9d15ee4f01a1cbc4c2741f74dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f073f82114c2d58b6d4d94bfeb35048b9e676c45
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944765"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405539"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Проверка блоков Catch (C++)
 C++ позволяет создавать исключения любого типа, хотя обычно рекомендуется создавать типы, производные от std::exception. Может быть перехвачено исключение C++ **catch** обработчик, который указывает тот же тип, как исключение, или обработчиком, который способен перехватывать любой тип исключения.  

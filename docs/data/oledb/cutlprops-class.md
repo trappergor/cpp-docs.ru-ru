@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0eab382a236033cc137b4c5f5bd6b32fc93c6a1
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 661ac13acd1d8eac0ecde9af9fa08875b99153e3
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269674"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336984"
 ---
 # <a name="cutlprops-class"></a>Класс CUtlProps
 Реализует свойства для различных интерфейсов свойство OLE DB (например, `IDBProperties`, `IDBProperties`, и `IRowsetInfo`).  
@@ -90,7 +90,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,  
+OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,  
    DBPROPID dwPropId,  
    VARIANT* pvValue);  
 ```  
@@ -114,7 +114,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,  
+virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,  
    DBPROP* pDBProp);  
 ```  
   
@@ -137,7 +137,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);  
+virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -169,7 +169,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="syntax"></a>Синтаксис  
   
 ```cpp
-      virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,  
+virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,  
    DBPROP* pDBProp);  
 ```  
   

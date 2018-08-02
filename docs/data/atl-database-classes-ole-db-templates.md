@@ -1,5 +1,5 @@
 ---
-title: Классы баз данных ATL (шаблоны OLE DB) | Документы Microsoft
+title: Классы баз данных ATL (шаблоны OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fabced79232d17807d252da9dac5b066ddf69f25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 083ac7485ce2056ab97ca32142be3e88094573f9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089056"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337889"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Классы баз данных библиотеки ATL (шаблоны OLE DB)
-Корпорация Майкрософт предоставляет несколько реализаций OLE DB, набор COM-интерфейсов, обеспечивающих унифицированный доступ к данным в различных источниках и форматах.  OLE DB обычно не используется; Данная документация является для разработчиков, которые обслуживание кода прежних версий. Новые приложения должны использовать ODBC для подключения к источникам данных SQL.
+Корпорация Майкрософт предоставляет несколько реализаций OLE DB, набор COM-интерфейсов, обеспечивающих унифицированный доступ к данным в различных источниках и форматах.  OLE DB обычно не используется; Данный документ предназначен для разработчиков, которые Поддержка устаревшего кода. Новые приложения должны использовать ODBC для подключения к источникам данных SQL.
   
- Шаблоны OLE DB являются шаблонами C++ библиотеки ATL, которые упрощают использование классов, реализующих многие часто используемые интерфейсы OLE DB технологии баз данных OLE DB.  
+ Шаблоны OLE DB являются шаблонами C++ ATL, которые упрощают технологии баз данных OLE DB для использования, предоставляя классов, реализующих многие часто используемые интерфейсы OLE DB.  
   
  Библиотека шаблонов состоит из двух частей:  
   
--   [Шаблоны потребителя OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) используется для реализации приложений OLE DB клиента (покупатели).  
+-   [Шаблоны потребителей OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) используется для реализации приложения клиент (потребитель) OLE DB.  
   
--   [Шаблоны поставщика OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) используется для реализации приложения OLE DB для сервера (поставщик).  
+-   [Шаблоны поставщика OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) используется для реализации приложения сервера (поставщик) OLE DB.  
   
- Кроме того [атрибуты потребителя OLE DB](../windows/ole-db-consumer-attributes.md) предоставляют удобный способ создания потребителей OLE DB. Атрибуты OLE DB вводят код, основанный на шаблонах потребителей OLE DB для создания рабочих потребителей OLE DB.  
+ Кроме того [атрибуты потребителя OLE DB](../windows/ole-db-consumer-attributes.md) предоставляют удобный способ создания потребителей OLE DB. Эти атрибуты OLE DB внедряют код, основанный на шаблонах потребителей OLE DB для создания рабочих потребителей OLE DB.  
   
- Обратите внимание, что библиотека MFC содержит класс, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), которое отображает записи базы данных в элементах управления. Представление — это представление формы, непосредственно подключенные к `CRowset` объекта и отображает поля `CRowset` в элементах управления шаблона диалогового окна.  
+ Обратите внимание, что библиотека MFC содержит один класс [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), которая отображает записи базы данных в элементах управления. Представление — представление формы, который напрямую подключен к `CRowset` и отображает поля `CRowset` в элементах управления шаблона диалогового окна.  
   
  Дополнительные сведения см. в разделе [OLE DB программирования](../data/oledb/ole-db-programming.md) и [Руководство программиста OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548).  
   
 ## <a name="see-also"></a>См. также  
- [Создание потребителя OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   
+ [Создание объекта-получателя OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   
  [Создание поставщика OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
- [Ссылка на шаблоны потребителя OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Ссылка на шаблоны OLE DB потребителя](../data/oledb/ole-db-consumer-templates-reference.md)   
  [Ссылка на шаблоны поставщика OLE DB](../data/oledb/ole-db-provider-templates-reference.md)   
- [Примеры шаблонов OLE DB](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [Примеры шаблонов OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)

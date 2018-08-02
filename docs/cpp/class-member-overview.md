@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c454872a3f8d1c7f41ba2f6cea7d81402b6327f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944855"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403473"
 ---
 # <a name="class-member-overview"></a>Обзор членов класса
 Класс или структура состоит из членов. Действия, выполняемые классом, выполняются с помощью его функций-членов. Состояние, в котором он находится, хранится в его элементах данных. Инициализация членов выполняется конструкторы и очистке, например освобождение памяти и освобождение ресурсов осуществляется деструкторы. В C++ 11 и более поздних версиях элементы данных можно (и обычно следует) инициализировать при объявлении.  
@@ -124,7 +124,6 @@ int TestRun::_instances{ 0 };
  В C++ 11 и более поздних версиях деклараторы нестатических членов могут содержать инициализаторы.  
   
 ```cpp 
-  
 class CanInit  
 {  
 public:  

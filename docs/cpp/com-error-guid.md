@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c592607732eb5558ce74edb7b71adbc023b2ae52
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939030"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402287"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
 **Блок, относящийся только к системам Microsoft**  
@@ -31,13 +31,11 @@ ms.locfileid: "37939030"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 GUID GUID( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает результат `IErrorInfo::GetGUID` для `IErrorInfo` записанного в `_com_error` объекта. Если нет `IErrorInfo` объекта записывается, то возвращается значение GUID_NULL.  
+ Возвращает результат `IErrorInfo::GetGUID` для `IErrorInfo` записанного в `_com_error` объекта. Если не `IErrorInfo` записывается объект, он возвращает `GUID_NULL`.  
   
 ## <a name="remarks"></a>Примечания  
  Любые сбои при вызове `IErrorInfo::GetGUID` метод игнорируется.  

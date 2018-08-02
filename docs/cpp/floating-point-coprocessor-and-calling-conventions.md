@@ -1,5 +1,5 @@
 ---
-title: Сопроцессор с плавающей запятой и соглашения о вызовах | Документы Microsoft
+title: Сопроцессор с плавающей запятой и соглашения о вызовах | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46cf9c937453894ed37ad434ad94609d0744be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66ccd54c4abb1d8d9761d5ded88beba76bfae043
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410805"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401358"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>Сопроцессор для вычислений с плавающей запятой и соглашения о вызовах
-При создании сборки подпрограммы для вычислений с плавающей точки сопроцессора, необходимо сохранять значение с плавающей запятой и очистить стек сопроцессора, если только вы возвращаете **float** или **двойные** значение (которое функция должна возвращать в ST(0)).  
+При создании сборки подпрограммы для вычислений с плавающей точки сопроцессора, которые необходимо сохранить вычислений с плавающей точки управления word и очистить стек сопроцессора в том случае, если вы возвращаете **float** или **двойные** значение (которое функция должна возвращать в ST(0)).  
   
 ## <a name="see-also"></a>См. также  
  [Соглашения о вызовах](../cpp/calling-conventions.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941776"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405234"
 ---
 # <a name="identifiers-c"></a>Идентификаторы (C++)
 Идентификатор — это последовательность символов, используемая для обозначения одного из следующих элементов:  
@@ -81,7 +81,7 @@ N O P Q R S T U V W X Y Z
   
  Символ доллара `$` является допустимым символом идентификатора в Visual C++. В Visual C++ в идентификаторах также допускается использование фактических символов, представленных разрешенными диапазонами универсальных имен символов. Чтобы использовать эти символы, необходимо сохранить файл в той кодировке, которая включает эти символы.  В этом примере показано, как можно взаимозаменяемо использовать в коде расширенные символы и универсальные имена символов.  
   
-```  
+```cpp  
 // extended_identifier.cpp  
 // In Visual Studio, use File, Advanced Save Options to set  
 // the file encoding to Unicode codepage 1200  

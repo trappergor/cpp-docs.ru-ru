@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a2aad184a1f388df6f7a6941aa9e5f302f35b12
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: d0b74909e048789662800569f8d996747fb8cadf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102902"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403047"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Практическое руководство. Создание и использование экземпляров shared_ptr
 `shared_ptr` Тип — смарт-указатель в стандартной библиотеке C++, который предназначен для сценариев, в которых возможно больше одного владельца, для управления временем существования объекта в памяти. После инициализации `shared_ptr` скопируйте его, передать его по значению в аргументы функций и назначьте его в другом `shared_ptr` экземпляров. Все экземпляры указывать на тот же объект, а общий доступ к один «управляющий блок», который увеличивает и уменьшает счетчик ссылок каждый раз, когда новый `shared_ptr` добавляется, выходит за пределы области или сбрасывается. Когда число ссылок достигает нуля, блок управления удаляет ресурсов памяти и самого себя.  
