@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 50a177468795ae0e288910fa51192d9cc9a24502
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939734"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403158"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Операторы сдвигов влево и вправо (&gt; &gt; и &lt; &lt;)
 Побитовые операторы сдвига являются оператором сдвига вправо (>>), который перемещает биты *выражение сдвига* оператор сдвига влево и вправо (<<), который перемещает биты *выражение сдвига* слева. <sup>1</sup>  
@@ -66,7 +66,6 @@ int main() {
     bitset<16> bitset3{short3};  
     cout << bitset3 << endl;  // 0000000000010000  
 }  
-  
 ```  
   
  Если выполняется сдвиг влево числа со знаком и при этом затрагивается бит знака, результат не определен. В следующем примере показано, что происходит в Visual C++, если выполняется сдвиг влево 1 бита в позицию бита знака.  

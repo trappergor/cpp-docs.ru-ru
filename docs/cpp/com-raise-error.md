@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f38a0d97b90f1512e5f16b3bd147bda3e0614e4f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 54cb2183bccc45446cd68b8d5d6d2753f571009b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944477"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408093"
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Блок, относящийся только к системам Microsoft**  
@@ -31,7 +31,6 @@ ms.locfileid: "37944477"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 void __stdcall _com_raise_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = 0  
@@ -46,11 +45,11 @@ void __stdcall _com_raise_error(
  Объект `IErrorInfo`.  
   
 ## <a name="remarks"></a>Примечания  
- `_com_raise_error`, который определен в \<comdef.h >, могут быть заменены версии одним и тем же именем и прототипом, написанный пользователем. Это можно сделать, если требуется использовать `#import` без обработки исключений C++. В этом случае пользовательская версия `_com_raise_error` может решить выполнить `longjmp` или отобразить окно сообщения и остановки. Однако пользовательская версия не должна возвращаться, поскольку код поддержки COM в компиляторе не ожидает ее возврата.  
+ **_com_raise_error**, который определен в \<comdef.h >, могут быть заменены версии одним и тем же именем и прототипом, написанный пользователем. Это можно сделать, если требуется использовать `#import` без обработки исключений C++. В этом случае пользовательская версия **_com_raise_error** может решить выполнить `longjmp` или отобразить окно сообщения и остановки. Однако пользовательская версия не должна возвращаться, поскольку код поддержки COM в компиляторе не ожидает ее возврата.  
   
  Можно также использовать [_set_com_error_handler](../cpp/set-com-error-handler.md) для замены функции обработки ошибок по умолчанию.  
   
- По умолчанию `_com_raise_error` определяется следующим образом.  
+ По умолчанию **_com_raise_error** определяется следующим образом:  
   
 ```cpp  
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {  

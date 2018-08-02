@@ -1,5 +1,5 @@
 ---
-title: Явные переопределения (C++) | Документы Microsoft
+title: Явные переопределения (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda87a0241e61cfc3fa26d4829f0504b784e8ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7b333d42f5e5e309ffa17e8c267dcb22ec30e6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409449"
 ---
 # <a name="explicit-overrides-c"></a>Явные переопределения (C++)
 **Блок, относящийся только к системам Microsoft**  
   
- Если же виртуальная функция объявлена в двух или более [интерфейсы](../cpp/interface.md) и класс, производный от этих интерфейсов, можно явным образом переопределить каждую виртуальную функцию.  
+ Если же виртуальная функция объявлена в двух и более [интерфейсы](../cpp/interface.md) и если класс является производным от этих интерфейсов, можно явным образом переопределить каждую виртуальную функцию.  
   
- Сведения о явном переопределении в управляемом коде с использованием нового управляемого синтаксиса см. в разделе [явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Сведения о явном переопределении в управляемом коде, с помощью нового управляемого синтаксиса, см. в разделе [явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показано использование явного переопределения:  
   
-```  
+```cpp 
 // deriv_ExplicitOverrides.cpp  
 // compile with: /GR  
 extern "C" int printf_s(const char *, ...);  

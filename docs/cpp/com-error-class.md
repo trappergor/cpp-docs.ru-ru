@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026638"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407765"
 ---
 # <a name="comerror-class"></a>Класс _com_error
 **Блок, относящийся только к системам Microsoft**  
   
- Объект `_com_error` представляет условие исключения, обнаруженное функциями оболочки обработки ошибок в файлах заголовков, создаваемых из библиотеки типов, или одним из классов поддержки COM. `_com_error` Класс инкапсулирует код ошибки HRESULT и все связанные `IErrorInfo Interface` объекта.  
+ Объект **_com_error** представляет условие исключения, обнаруженное функциями оболочки обработки ошибок в файлах заголовков, создаваемых из библиотеки типов или одним из классов поддержки COM. **_Com_error** класс инкапсулирует код ошибки HRESULT и все связанные `IErrorInfo Interface` объекта.  
   
 ### <a name="construction"></a>Создание экземпляра  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|Создает объект `_com_error`.|  
+|[_com_error](../cpp/com-error-com-error.md)|Создает **_com_error** объекта.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор =](../cpp/com-error-operator-equal.md)|Присваивает существующий объект `_com_error` другому объекту.|  
+|[оператор =](../cpp/com-error-operator-equal.md)|Присвоение существующего **_com_error** объект с другим объектом.|  
   
 ### <a name="extractor-functions"></a>Функции извлечения  
   
@@ -62,7 +62,7 @@ ms.locfileid: "39026638"
   
 |||  
 |-|-|  
-|[ErrorMessage](../cpp/com-error-errormessage.md)|Получает строковое сообщение для значения HRESULT, хранящегося в объекте `_com_error`.|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Получает строковое сообщение для значения HRESULT, хранящегося в **_com_error** объекта.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>Средства сопоставления ExepInfo.wCode с HRESULT  
   

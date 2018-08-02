@@ -1,5 +1,5 @@
 ---
-title: Операторы доступа к членам:. и -&gt; | Документы Microsoft
+title: Операторы доступа к членам:. и -&gt; | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2958291551d081b4284c6683d62f6dd5de06f70d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408789"
 ---
 # <a name="member-access-operators--and--gt"></a>Операторы доступа к членам:. и -&gt;
 ## <a name="syntax"></a>Синтаксис  
@@ -50,7 +51,7 @@ postfix-expression -> name
 ## <a name="example"></a>Пример  
  В следующем примере показаны обе формы оператора доступа к членам.  
   
-```  
+```cpp 
 // expre_Selection_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -84,6 +85,6 @@ int main() {
   
 ## <a name="see-also"></a>См. также  
  [Постфиксные выражения](../cpp/postfix-expressions.md)   
- [Встроенный C++ операторы, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Встроенные операторы C++, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Классы и структуры](../cpp/classes-and-structs-cpp.md)   
  [Члены структур и объединений](../c-language/structure-and-union-members.md)

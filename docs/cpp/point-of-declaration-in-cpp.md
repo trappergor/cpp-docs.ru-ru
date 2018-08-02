@@ -1,5 +1,5 @@
 ---
-title: Точка объявления в C++ | Документы Microsoft
+title: Точка объявления в C++ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e42f43e6187e19df6e9c1111c0e92aa4b9929199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89f94cdee6be18436b3f39f840fb7880e5860adb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409379"
 ---
 # <a name="point-of-declaration-in-c"></a>Точка объявления в C++
 Имя считается объявленным сразу после его декларатора, но перед его (необязательным) инициализатором. (Дополнительные сведения о деклараторах см. в разделе [объявления и определения](declarations-and-definitions-cpp.md).)  
   
  Рассмотрим следующий пример.  
   
-```  
+```cpp 
 // point_of_declaration1.cpp  
 // compile with: /W1   
 double dVar = 7.0;  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- Если точка объявления располагалась *после* инициализации, то локальная `dVar` инициализировалась 7,0 — значением глобальной переменной `dVar`. Поскольку это не так, `dVar` инициализируется неопределенным значением.  
+ Если точка объявления располагалась *после* инициализацию, то локальная `dVar` инициализировалась 7,0 — значением глобальной переменной `dVar`. Поскольку это не так, `dVar` инициализируется неопределенным значением.  
   
 ## <a name="see-also"></a>См. также  
  [Область](../cpp/scope-visual-cpp.md)

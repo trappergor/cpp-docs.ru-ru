@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff0103a9debe63def6dbbcf7e3730a8e09dcbc2
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5fe9e5c1099f6c30483cdb20c48daf9c35fbed8e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944454"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404981"
 ---
 # <a name="aliases-and-typedefs-c"></a>Псевдонимы и определения типов (C++)
 Можно использовать *объявления псевдонима* для объявления имени для использования в качестве синонима к ранее объявленному типу. (Этот механизм также называется неформально *псевдоним типа*). Этот механизм также можно использовать для создания *шаблон псевдонима*, который может быть особенно полезно для пользовательских механизмов выделения памяти.  
@@ -31,10 +31,10 @@ using identifier = type;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `identifier`  
+ *identifier*  
  Имя псевдонима.  
   
- `type`  
+ *type*  
  Идентификатор типа, для которого создается псевдоним.  
   
  Псевдоним не вводит в программу новый тип и не может менять значение существующего имени типа.  
@@ -177,7 +177,6 @@ int main()
 // typedef UL back in scope  
 ```  
  
-  
 ```cpp 
 // typedef_specifier1.cpp  
 typedef char FlagType;  

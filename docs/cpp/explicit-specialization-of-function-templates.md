@@ -1,5 +1,5 @@
 ---
-title: Явная специализация шаблонов функций | Документы Microsoft
+title: Явная специализация шаблонов функций | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35eda35a7d2474826ce151292121be224955420
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410737"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407693"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Явная специализация шаблонов функций
 Используя шаблон функции, можно указать особое поведение для определенного типа, предоставив явную специализацию (переопределение) шаблона функции для этого типа. Пример:  
@@ -32,7 +32,7 @@ ms.locfileid: "32410737"
 template<> void MySwap(double a, double b);  
 ```  
   
- Это объявление позволяет определить другую функцию для **двойные** переменных. Подобно функциям, не являющимся шаблоном, стандартные преобразования типов (например, преобразование типа **float** для **двойные**) применяются.  
+ Это объявление позволяет определить другую функцию для **двойные** переменные. Подобно функциям не являющихся шаблонами, стандартные преобразования типов (например, преобразование типа **float** для **двойные**) применяются.  
   
 ## <a name="example"></a>Пример  
   

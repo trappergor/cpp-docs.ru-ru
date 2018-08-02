@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8aca9422c4798cd798d048ce42443c4f38bd170
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 677d3dcab98b9bff8df7a49ba584900bd0b72925
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944465"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407222"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Блок, относящийся только к системам Microsoft**  
@@ -31,7 +31,6 @@ ms.locfileid: "37944465"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 HRESULT CreateInstance(  
    const CLSID& rclsid,  
    IUnknown* pOuter=NULL,  
@@ -68,7 +67,7 @@ HRESULT CreateInstance(
 ## <a name="remarks"></a>Примечания  
  Эти функции-члены вызывают `CoCreateInstance` для создания нового COM-объект, а затем запрашивают тип интерфейса данного интеллектуального указателя. Результирующий указатель затем инкапсулируется в этот объект `_com_ptr_t`. `Release` вызывается для уменьшения счетчика ссылок для ранее инкапсулированного указателя. Эта процедура возвращает значение HRESULT, указывающее успех или неудачу.  
   
--   **CreateInstance (***rclsid* **,***dwClsContext***)** создает новый выполняемый экземпляр объекта, учитывая `CLSID`.        
+-   **CreateInstance (***rclsid* **,***dwClsContext***)** создает новый выполняемый экземпляр объекта, учитывая `CLSID`.  
   
 -   **CreateInstance (***clsidString* **,***dwClsContext***)** создает новый выполняемый экземпляр объекта, учитывая Строка Юникода, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.        
   

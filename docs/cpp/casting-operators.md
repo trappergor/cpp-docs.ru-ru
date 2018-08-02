@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b2aa683f539e643127f8f71ff536d4c2ca2c9c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941629"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407530"
 ---
 # <a name="casting-operators"></a>Операторы приведения
 Некоторые операторы приведения типа используются только в языке C++. Эти операторы позволяют устранить неоднозначность и возможности допустить ошибку, которые характеры для приведения типов в стиле языка C. Эти операторы перечислены ниже.  
@@ -35,7 +35,7 @@ ms.locfileid: "37941629"
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md) используется для создания проверяемых MSIL.  
   
- В операторах `const_cast` и `reinterpret_cast` сохраняется опасность допустить ошибку (как в операторах приведения типов в C), поэтому их следует использовать только в тех случаях, когда обойтись без них не удается. Однако они необходимы, чтобы полностью заменить приведения старого стиля.  
+ Используйте **const_cast** и **reinterpret_cast** в качестве последнего средства, так как же опасностях как приведения старого стиля представления этих операторов. Однако они необходимы, чтобы полностью заменить приведения старого стиля.  
   
 ## <a name="see-also"></a>См. также  
  [Приведение](../cpp/casting.md)

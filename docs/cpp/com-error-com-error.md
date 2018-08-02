@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec16faa9881fc1c69dca5f8f39b8797cf0fcff0d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c1389635c3ef026e8b3a7dfe13976cca58a15a82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944472"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406722"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 **Блок, относящийся только к системам Microsoft**  
   
- Создает объект `_com_error`.  
+ Создает **_com_error** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 _com_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = NULL,  
@@ -48,23 +47,23 @@ _com_error( const _com_error& that ) throw( );
  Объект `IErrorInfo`.  
   
  `bool fAddRef=false`  
- Дает конструктору указание вызвать метод AddRef на отличный от null `IErrorInfo` интерфейс. Это обеспечивает правильный подсчет ссылок в распространенной ситуации, когда право владения интерфейсом передается в объект `_com_error`, например:  
+ Дает конструктору указание вызвать метод AddRef на отличный от null `IErrorInfo` интерфейс. Это обеспечивает правильный подсчет ссылок в общем случае, когда владение интерфейсом передается в **_com_error** объект, например:  
   
 ```cpp 
 throw _com_error(hr, perrinfo);  
 ```  
   
- Если вы не хотите код, чтобы передать права владения для `_com_error` объекта и `AddRef` необходим для смещения `Release` в `_com_error` деструктор, создать объект следующим образом:  
+ Если вы не хотите код, чтобы передать права владения для **_com_error** объекта и `AddRef` необходим для смещения `Release` в **_com_error** деструктор, конструируется объект как выглядит следующим образом:  
   
 ```cpp 
 _com_error err(hr, perrinfo, true);  
 ```  
   
  *,*  
- Существующий объект `_com_error`.  
+ Существующий **_com_error** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Первый конструктор создает новый объект по заданному HRESULT и необязательный `IErrorInfo` объекта. Второй создает копию существующего объекта `_com_error`.  
+ Первый конструктор создает новый объект по заданному HRESULT и необязательный `IErrorInfo` объекта. Второй создает копию существующего **_com_error** объекта.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

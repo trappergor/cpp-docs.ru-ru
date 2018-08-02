@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aa741a794d0e6735ae2cecea07a87481abc18cec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944489"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404113"
 ---
 # <a name="pointers-c"></a>Указатели (C++)
 Указатели объявляются с помощью следующей последовательности.  
@@ -32,7 +32,7 @@ ms.locfileid: "37944489"
 [ms-modifier] declarator ;  
 ```  
   
- Для элемента `declarator` этой последовательности может использоваться любой допустимый декларатор указателя.  Синтаксис простого декларатора указателя следующий:  
+ Для элемента `declarator` этой последовательности может использоваться любой допустимый декларатор указателя. Синтаксис простого декларатора указателя следующий:  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -249,8 +249,7 @@ int main() {
 ```  
   
 ```Output  
-  
-      a  
+a  
 45  
 d  
 a  

@@ -1,5 +1,5 @@
 ---
-title: Оператор "запятая":, | Документы Microsoft
+title: Оператор "запятая":, | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409189"
 ---
 # <a name="comma-operator-"></a>Оператор "запятая": ,
 Позволяет группировать два оператора, когда ожидается один.  
@@ -28,7 +29,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 expression , expression  
 ```  
   
@@ -45,7 +45,7 @@ expression , expression
   
  В тех случаях, когда в качестве разделителя обычно используется запятая (например, в фактических аргументах для функций или составных инициализаторов), оператор-запятую и его операнды следует заключать в скобки. Пример:  
   
-```  
+```cpp 
 func_one( x, y + 2, z );  
 func_two( (x--, y + 2), z );  
 ```  
@@ -54,7 +54,7 @@ func_two( (x--, y + 2), z );
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp 
 // cpp_comma_operator.cpp  
 #include <stdio.h>  
 int main () {  
@@ -74,5 +74,5 @@ int main () {
   
 ## <a name="see-also"></a>См. также  
  [Выражения с бинарными операторами](../cpp/expressions-with-binary-operators.md)   
- [Встроенный C++ операторы, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Встроенные операторы C++, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Оператор последовательного вычисления](../c-language/sequential-evaluation-operator.md)

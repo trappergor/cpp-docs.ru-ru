@@ -1,5 +1,5 @@
 ---
-title: Инициализация массивов | Документы Microsoft
+title: Инициализация массивов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacd447d27f3dd8bd2d2d88e6d975cdb29a82026
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1ecb15cfc34ec518f46474497a3577a51b00c4e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408959"
 ---
 # <a name="initializing-arrays"></a>Инициализация массивов
 Если класс имеет конструктор, массивы этого класса инициализируются конструктором. Если число элементов в списке инициализаторов меньше числа элементов в массиве, для остальных элементов используется конструктор по умолчанию. Если конструктор по умолчанию для класса не определен, список инициализаторов должен быть полным, т. е. для каждого элемента массива должен иметься один инициализатор.  
   
  Рассмотрим класс `Point`, определяющий два конструктора:  
   
-```  
+```cpp 
 // initializing_arrays1.cpp  
 class Point  
 {  
@@ -53,7 +54,7 @@ int main()
   
  Массивы статических членов (ли **const** или нет) могут инициализироваться в своих определениях (вне объявления класса). Пример:  
   
-```  
+```cpp 
 // initializing_arrays2.cpp  
 class WindowColors  
 {  
@@ -68,4 +69,3 @@ int main()
 {  
 }  
 ```  
-  
