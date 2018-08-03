@@ -1,5 +1,5 @@
 ---
-title: cpp_quote | Документы Microsoft
+title: cpp_quote | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dc81eacdbadb971ab86f4cfde1353e89bbe1342
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871166"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463831"
 ---
 # <a name="cppquote"></a>cpp_quote
-Создает указанную строку без символов кавычек, в сгенерированный IDL-файл.  
+Выдает заданную строку, без знаков кавычек в созданного IDL-файла.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ cpp_quote(  
+[ cpp_quote(  
    "statement"  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Параметры  
  *statement*  
- Инструкцию C.  
+ Инструкцию "C".  
   
 ## <a name="remarks"></a>Примечания  
- **Cpp_quote** C++ атрибут полезен, если вы хотите поместить директиву препроцессора в IDL-файл.  
+ **Cpp_quote** C++ атрибут полезен, если вы хотите поместить директиву препроцессора в IDL-файле.  
   
- Можно также использовать **cpp_quote** и создания h-файле, в процессе компиляции MIDL. Например если имеется файл заголовка C++, который использует атрибуты C++ IDL, но не может использовать этот файл для некоторых задач, затем можно скомпилировать его, чтобы создать созданные MIDL h-файл, который можно использовать.  
+ Можно также использовать **cpp_quote** и формирования h-файле в процессе компиляции MIDL. Например если файл заголовка C++, который использует атрибуты C++ IDL, но не может использовать этот файл для некоторых задач, после этого можно скомпилировать его, чтобы создать файл созданные MIDL .h, который можно использовать.  
   
- **Cpp_quote** атрибут имеет ту же функциональность, что [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) языка MIDL.  
+ **Cpp_quote** атрибут имеет ту же функциональность, что [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [двойного](../windows/dual.md) использовать пример, как использовать **cpp_quote**.  
+ См. в примере [двойного](../windows/dual.md) пример использования способы использования **cpp_quote**.  
   
 ## <a name="requirements"></a>Требования  
   
