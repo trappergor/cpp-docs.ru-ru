@@ -1,5 +1,5 @@
 ---
-title: appobject | Документы Microsoft
+title: appobject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856977"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466375"
 ---
 # <a name="appobject"></a>appobject
-Идентифицирует класс как объект приложения, который связан с приложением полный .exe и указывает, что функциях и свойствах компонентного класса доступны глобально в этом [библиотеки типов](../mfc/automation-clients-using-type-libraries.md).  
+Идентифицирует сокласс как объект приложения, который связан с приложением полный .exe и указывает, что функциях и свойствах компонентного класса доступны глобально в этом [библиотеки типов](../mfc/automation-clients-using-type-libraries.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Appobject** языка C++ имеет ту же функциональность, что [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) языка MIDL.  
+ **Appobject** атрибут C++ имеет ту же функциональность, что [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В следующем коде показано определение простого класса предшествует блок атрибутов, которая включает **appobject**:  
+ В следующем коде показано определение простого класса предшествует блок атрибута, который включает в себя **appobject**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -62,9 +60,9 @@ class A : public ICustom {
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**coclass**|  
+|**Обязательные атрибуты**|`coclass`|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  

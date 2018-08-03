@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944460"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462223"
 ---
 # <a name="this-pointer"></a>Указатель this
 **Это** является указателем, доступен только в нестатических функциях-членах из **класс**, **структуры**, или **объединение** типа. Он указывает на объект, для которого вызывается функция-член. Статические функции-члены не имеют **это** указатель.  
@@ -31,7 +31,6 @@ ms.locfileid: "37944460"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -201,4 +200,3 @@ int main()
   
 ## <a name="see-also"></a>См. также  
  [Ключевые слова](../cpp/keywords-cpp.md)   
- 

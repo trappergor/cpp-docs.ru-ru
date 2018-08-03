@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956597"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463152"
 ---
 # <a name="references-c"></a>Ссылки (C++)
 В ссылке, как и в указателе, хранится адрес объекта, расположенного в другой области памяти. В отличие от указателя, после инициализации ссылку нельзя перенаправить на другой объект или присвоить ей нулевое значение. Существует два типа ссылок: ссылки lvalue, указывающие на именованные переменной и ссылки rvalue, указывающие на [временный объект](../cpp/temporary-objects.md). Оператором & обозначаются ссылки lvalue, а оператором &&, в зависимости от контекста, — ссылки rvalue или универсальные ссылки (как rvalue, так и lvalue).  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>Комментарий  
- Подразделы в этом разделе:  
-  
--   [Аргументы функции ссылочного типа](../cpp/reference-type-function-arguments.md)  
-  
--   [Возвращаемые значения функции ссылочного типа](../cpp/reference-type-function-returns.md)  
-  
--   [Ссылки на указатели](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>См. также
+ [Аргументы функции ссылочного типа](../cpp/reference-type-function-arguments.md)  
+ [Возвращаемые значения функции ссылочного типа](../cpp/reference-type-function-returns.md)  
+ [Ссылки на указатели](../cpp/references-to-pointers.md)  
   

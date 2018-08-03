@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::GetOnProgress | Документы Microsoft
+title: Метод AsyncBase::GetOnProgress | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83af39180da819349e95051c57dc137835db87bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e88509a77c58266c56290b84adfd1e7c143da2ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859544"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465091"
 ---
 # <a name="asyncbasegetonprogress-method"></a>Метод AsyncBase::GetOnProgress
 Копирует адрес текущего обработчика событий процесса выполнения в указанную переменную.  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `progressHandler`  
+ *progressHandler*  
  Расположение, в котором сохраняется адрес текущего обработчика событий процесса выполнения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае E_ILLEGAL_METHOD_CALL.  
+ Значение S_OK, если выполнение прошло успешно; в противном случае E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

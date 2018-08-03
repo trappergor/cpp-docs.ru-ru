@@ -1,5 +1,5 @@
 ---
-title: Использование функции abort | Документы Microsoft
+title: Использование функции abort | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7231339ba4884445d7ad6b0161c6cff793c6db8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e63c3134dee6c316519dfcc34cff30b591b56460
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421852"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465400"
 ---
 # <a name="using-abort"></a>Использование функции abort
-Вызов [прервать](../c-runtime-library/reference/abort.md) приводит к немедленному завершению. Выполняется обход нормального процесса удаления для инициализированных глобальных статических объектов. Также осуществляется обход всей специальной обработки, которая была задана с помощью функции `atexit`.  
+Вызов [прервать](../c-runtime-library/reference/abort.md) функции приводит к немедленному завершению. Выполняется обход нормального процесса удаления для инициализированных глобальных статических объектов. Также осуществляется обход всей специальной обработки, которая была задана с помощью функции `atexit`.  
   
 ## <a name="see-also"></a>См. также  
  [Дополнительные сведения о завершении](../cpp/additional-termination-considerations.md)

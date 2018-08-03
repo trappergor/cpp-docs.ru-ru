@@ -1,5 +1,5 @@
 ---
-title: Структура CriticalSectionTraits | Документы Microsoft
+title: Criticalsectiontraits-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870555"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466687"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits - структура
-Специализирует объект CriticalSection для поддержки недопустимую критическую секцию или функцию освобождения критической секции.  
+Специализируется объект CriticalSection для поддержки недопустимую критическую секцию или функцию для освобождения критического раздела.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +37,16 @@ struct CriticalSectionTraits;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|`Type`|Объект `typedef` , определяющий указатель для критической секции. `Type` определяется как `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|Объект **typedef** указатель, определяющий критической секции. `Type` определяется как `typedef CRITICAL_SECTION* Type;`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод CriticalSectionTraits::GetInvalidValue](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Специализирует шаблон CriticalSection таким образом, что он всегда будет являться недопустимым.|  
-|[Метод CriticalSectionTraits::Unlock](../windows/criticalsectiontraits-unlock-method.md)|Специализирует шаблон CriticalSection так, чтобы она поддерживала снимать владения объектом указанного критической секции.|  
+|[Метод CriticalSectionTraits::GetInvalidValue](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Специализируется `CriticalSection` шаблона, чтобы шаблон всегда является недопустимым.|  
+|[Метод CriticalSectionTraits::Unlock](../windows/criticalsectiontraits-unlock-method.md)|Специализируется `CriticalSection` шаблона, так что он поддерживает снятию владения объектом указанного критический раздел.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CriticalSectionTraits`  

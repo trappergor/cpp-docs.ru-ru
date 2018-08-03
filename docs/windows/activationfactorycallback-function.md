@@ -1,5 +1,5 @@
 ---
-title: Функция ActivationFactoryCallback | Документы Microsoft
+title: Activationfactorycallback-функция | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857328"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461397"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback - функция
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -37,19 +37,19 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `activationId`  
+ *activationId*  
  Дескриптор строка, задающая имя класса среды выполнения.  
   
- `ppFactory`  
- После завершения операции фабрики активации, соответствующий параметру `activationId`.  
+ *ppFactory*  
+ После завершения операции фабрику активации, соответствующее параметру *activationId*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. Скорее всего, ошибки HRESULT: CLASS_E_CLASSNOTAVAILABLE и E_INVALIDARG.  
+ Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. Скорее всего, ошибочные значения HRESULT: CLASS_E_CLASSNOTAVAILABLE и E_INVALIDARG.  
   
 ## <a name="remarks"></a>Примечания  
- Получает фабрику активации для активации указанного идентификатора.  
+ Возвращает фабрику активации для активации указанного идентификатора.  
   
- Среда выполнения Windows вызывает эту функцию обратного вызова, чтобы запросить объект, указанный по имени класса среды выполнения.  
+ Среда выполнения Windows вызывает эту функцию обратного вызова для запроса объекта, заданный его именем класса среды выполнения.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: статистические выражения | Документы Microsoft
+title: статистические выражения | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19dea3b078f894931002d186b20c1ffb85bb763b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857991"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466934"
 ---
 # <a name="aggregates"></a>статистические выражения
 Указывает, что объект выполняет статистическое вычисление объекта, заданного параметром CLSID.  
@@ -33,24 +33,23 @@ ms.locfileid: "33857991"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ aggregates(  
+[ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `clsid`  
+ *CLSID*  
  Указывает CLSID статистически вычисляемого объекта.  
   
- `variable_name`  
- Имя переменной для вставки. Эта переменная содержит **IUnknown** для статистически вычисляемого объекта.  
+ *имя_переменной*  
+ Имя переменной для вставки. Эта переменная содержит `IUnknown` из статистически вычисляемого объекта.  
   
 ## <a name="remarks"></a>Примечания  
  При применении к объекту атрибут **aggregates** языка C++ реализует внешнюю программу-оболочку статистически вычисляемого объекта (указан в `clsid`).  
   
- Этот атрибут требует, чтобы атрибут [coclass](../windows/coclass.md), [progid](../windows/progid.md)или [vi_progid](../windows/vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если **progid** применяется, **vi_progid** и **coclass** также применяются.  
+ Этот атрибут требует, чтобы атрибут [coclass](../windows/coclass.md), [progid](../windows/progid.md)или [vi_progid](../windows/vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если `progid` применяется, `vi_progid` и `coclass` также применяются.  
   
  **Проекты ATL**  
   
@@ -64,7 +63,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_aggregates.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -95,9 +94,9 @@ struct CObject : IObject
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Да|  
-|**Обязательные атрибуты**|Один или несколько из следующих: **coclass**, **progid**или **vi_progid**.|  
+|**Обязательные атрибуты**|Один или несколько из следующих: `coclass`, `progid`, или `vi_progid`.|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
@@ -106,7 +105,6 @@ struct CObject : IObject
  [Атрибуты COM](../windows/com-attributes.md)   
  [Атрибуты классов](../windows/class-attributes.md)   
  [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Агрегат](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
- [статистическую обработку](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
+ [Статистической обработки](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
+ [Статистическую обработку](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
  [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
- 

@@ -1,5 +1,5 @@
 ---
-title: Метод ClassFactory::AddRef | Документы Microsoft
+title: Метод ClassFactory::AddRef | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ab84f54c8fa5c4784cbdf564805bcfea29b6a93
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e01ceee3b889a1755fe272366ab66b32a79ae6f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856151"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462697"
 ---
 # <a name="classfactoryaddref-method"></a>Метод ClassFactory::AddRef
-Увеличивает счетчик ссылок для текущим объектом ClassFactory.  
+Увеличивает счетчик ссылок для текущего **ClassFactory** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   

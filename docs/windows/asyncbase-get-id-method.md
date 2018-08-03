@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::get_Id | Документы Microsoft
+title: Метод AsyncBase::get_Id | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6720348692e92e05922bde1100e42c24a866933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea5efa31a3ebff3c86800a023e3525589952c2fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859804"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464718"
 ---
 # <a name="asyncbasegetid-method"></a>Метод AsyncBase::get_Id
 Извлекает дескриптор асинхронной операции.  
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `id`  
+ *id*  
  Расположение, где будет храниться дескриптор.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае E_ILLEGAL_METHOD_CALL.  
+ Значение S_OK, если выполнение прошло успешно; в противном случае E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод реализует IAsyncInfo::get_Id.  
+ Этот метод реализует `IAsyncInfo::get_Id`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f8b845fd147f51e3546f7a11afa0bae6deb5d527
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939849"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461469"
 ---
 # <a name="stdcall"></a>__stdcall
 **Блок, относящийся только к системам Microsoft**  
   
- **__Stdcall** соглашения о вызове используется для вызова функции Win32 API. Вызываемый объект очищает стек, поэтому компилятор применяет **vararg** функции **__cdecl**. Для функций, использующих данное соглашение о вызовах, требуется прототип.  
+ **__Stdcall** соглашения о вызове используется для вызова функции Win32 API. Вызываемый объект очищает стек, поэтому компилятор применяет `vararg` функции **__cdecl**. Для функций, использующих данное соглашение о вызовах, требуется прототип.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
@@ -73,7 +72,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>Пример  
- В следующем примере использование __**stdcall** всех `WINAPI` типы функций, которые обрабатываются как стандартный вызов:  
+ В следующем примере использование **__stdcall** всех `WINAPI` типы функций, которые обрабатываются как стандартный вызов:  
   
 ```cpp  
 // Example of the __stdcall keyword  

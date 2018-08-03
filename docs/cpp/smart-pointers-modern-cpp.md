@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a604ee36bf7d410f9e176278cc98a934874fbac
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939888"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462255"
 ---
 # <a name="smart-pointers-modern-c"></a>Интеллектуальные указатели (современный C++)
 В современных особенностях программирования на C++, стандартная библиотека содержит *интеллектуальные указатели*, которые используются для помогают гарантировать, что программы свободны от памяти и ресурсов утечек и исключений.  

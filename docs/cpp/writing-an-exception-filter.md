@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b02144f55231a7b4472cd62322fd61a543d18
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944250"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462122"
 ---
 # <a name="writing-an-exception-filter"></a>Написание фильтра исключений
 Исключение можно обработать посредством перехода на уровень обработчика исключений или путем продолжения выполнения. Вместо использования кода обработчика исключений для обработки исключения и дальше, можно использовать *фильтра* устранить проблему и затем, возвращая значение -1, возобновить Обычный поток без очистки стека.  

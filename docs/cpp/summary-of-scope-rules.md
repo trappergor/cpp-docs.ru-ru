@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce7c57688fae22c3bba844cff480ae3aec03785
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4439ec167cca7a2e3314879faf4c65c842801e90
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028142"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465477"
 ---
 # <a name="summary-of-scope-rules"></a>Общие сведения о правилах области
 Использование имени должно быть однозначно в пределах его области видимости (до той точки, в которой задана перезагрузка). Если имя обозначает функцию, то она должна быть однозначной с точки зрения количества и типа параметров. Если имя сохраняет однозначность, [доступа к членам](../cpp/member-access-control-cpp.md) применяются правила.  

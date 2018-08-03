@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944280"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464166"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Блок, относящийся только к системам Microsoft**  
@@ -32,7 +32,6 @@ ms.locfileid: "37944280"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  **Unsigned int** значение для копирования в новый `_variant_t` объекта.  
   
  *i8Src*  
- __**Int64** значение для копирования в новый `_variant_t` объекта.  
+ **__Int64** значение для копирования в новый `_variant_t` объекта.  
   
  *ui8Src*  
  **Unsigned __int64** значение для копирования в новый `_variant_t` объекта.  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **_variant_t (_variant_t &***var_t_Src***)** создает `_variant_t` из другого объекта `_variant_t` объекта.     Тип variant сохранен.  
   
--   **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** создает `_variant_t` из существующего `VARIANT` объект.       Если `fCopy` — **false**, **VARIANT** объект присоединен к новому объекту без создания копии.  
+-   **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** создает `_variant_t` из существующего `VARIANT` объект.       Если *fCopy* — **false**, **VARIANT** объект присоединен к новому объекту без создания копии.  
   
 -   **_variant_t (короткий***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** создает `_variant_t` объект типа VT_I2 или VT_BOOL из **короткие** целочисленное значение.       Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f4f0f2a82c02bcb58f89d604978d31eb01ebd1fd
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028624"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465695"
 ---
 # <a name="single-inheritance"></a>Одиночное наследование
 При единичном наследовании, самой распространенной форме наследования, каждый класс имеет только один базовый класс. Рассмотрим пример взаимоотношений на следующем рисунке.  
@@ -164,4 +164,3 @@ int main() {
   
 > [!NOTE]
 >  Такие функции, как `PrintNameOf`, не рекомендуется реализовывать в базовых классах. [Виртуальные функции](../cpp/virtual-functions.md) эффективным.  
-  

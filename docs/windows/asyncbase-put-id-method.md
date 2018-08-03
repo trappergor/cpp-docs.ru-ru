@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::put_Id | Документы Microsoft
+title: Метод AsyncBase::put_Id | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a439d94cd84ef2d94abcd9bb7a8e895db47290bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e9a0203bd0da2ea62d015264c1f4e8c58fcae66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859843"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463198"
 ---
 # <a name="asyncbaseputid-method"></a>Метод AsyncBase::put_Id
 Задает дескриптор асинхронной операции.  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `id`  
+ *id*  
  Ненулевое значение дескриптора.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае возвращается E_INVALIDARG или E_ILLEGAL_METHOD_CALL.  
+ Значение S_OK, если выполнение прошло успешно; в противном случае — значение E_INVALIDARG или E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Creatormap::activationid | Документы Microsoft
+title: Элемент данных Creatormap::activationid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881800"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467135"
 ---
 # <a name="creatormapactivationid-data-member"></a>Элемент данных CreatorMap::activationId
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -37,10 +37,10 @@ union {
 ```  
   
 ## <a name="parameters"></a>Параметры  
- `clsid`  
+ *CLSID*  
  Идентификатор интерфейса.  
   
- `getRuntimeName`  
+ *getRuntimeName*  
  Функция, которая извлекает имя объекта в среде выполнения Windows.  
   
 ## <a name="remarks"></a>Примечания  
@@ -52,5 +52,5 @@ union {
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [CreatorMap-структура](../windows/creatormap-structure.md)   
+ [Creatormap-структура](../windows/creatormap-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

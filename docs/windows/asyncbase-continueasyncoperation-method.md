@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::ContinueAsyncOperation | Документы Microsoft
+title: Метод AsyncBase::ContinueAsyncOperation | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: caf7cd1cbee97761c6877ec6ab3a51ea956cbfd1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7b5d2b10b571a3517beab98eaa839d5c7fd86c2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859596"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460837"
 ---
 # <a name="asyncbasecontinueasyncoperation-method"></a>Метод AsyncBase::ContinueAsyncOperation
 Определяет, должны продолжать обработку асинхронной операции или следует остановить.  
@@ -34,7 +34,7 @@ inline bool ContinueAsyncOperation();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` Если текущее состояние асинхронной операции *работы*, означающее операцию следует продолжить. В противном случае `false`, означающее операцию следует остановить.  
+ **значение true,** Если текущее состояние асинхронной операции *работы*, который означает, что операция должна продолжаться. В противном случае **false**, который означает, что операция следует остановить.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

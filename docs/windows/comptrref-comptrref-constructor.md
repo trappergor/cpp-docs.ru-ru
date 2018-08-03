@@ -1,5 +1,5 @@
 ---
-title: Конструктор ComPtrRef::ComPtrRef | Документы Microsoft
+title: Конструктор ComPtrRef::ComPtrRef | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870663"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463636"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>Конструктор ComPtrRef::ComPtrRef
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -36,11 +36,11 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `ptr`  
- Базовое значение другим объектом ComPtrRef.  
+ *ptr*  
+ Базовое значение другого **ComPtrRef** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Инициализирует новый экземпляр класса ComPtrRef из заданного указателя с другим объектом ComPtrRef.  
+ Инициализирует новый экземпляр класса **ComPtrRef** класс из заданного указателя в другой **ComPtrRef** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
@@ -48,5 +48,5 @@ ComPtrRef(
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [ComPtrRef-класс](../windows/comptrref-class.md)   
+ [Comptrref-класс](../windows/comptrref-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

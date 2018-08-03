@@ -1,5 +1,5 @@
 ---
-title: Класс ClassFactory | Документы Microsoft
+title: Класс ClassFactory | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858397"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463870"
 ---
 # <a name="classfactory-class"></a>ClassFactory - класс
-Реализует базовую функциональность интерфейса IClassFactory.  
+Реализует базовую функциональность интерфейса `IClassFactory`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,19 +46,19 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `I0`  
- Интерфейс нулевой.  
+ *I0*  
+ Интерфейс признаками.  
   
- `I1`  
+ *I1*  
  Первый интерфейс.  
   
- `I2`  
+ *I2*  
  Второй интерфейс.  
   
 ## <a name="remarks"></a>Примечания  
- Использовать `ClassFactory` для реализации пользовательской фабрики.  
+ Использовать `ClassFactory` для обеспечения реализации пользовательской фабрики.  
   
- Следующий шаблон программирования демонстрируется использование [реализует](../windows/implements-structure.md) структура для указания более трех интерфейсов на фабрику классов.  
+ Следующий шаблон программирования демонстрирует использование [реализует](../windows/implements-structure.md) структура для указания более трех интерфейсов на фабрику класса.  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
@@ -66,17 +66,17 @@ class ClassFactory : public Details::RuntimeClass<
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Увеличивает счетчик ссылок для текущим объектом ClassFactory.|  
 |[Метод ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим объектом ClassFactory.|  
-|[Метод ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Извлекает указатель на интерфейс, определяемый параметром.|  
+|[Метод ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Извлекает указатель на интерфейс, заданный параметром.|  
 |[Метод ClassFactory::Release](../windows/classfactory-release-method.md)|Уменьшает счетчик ссылок для текущим объектом ClassFactory.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  

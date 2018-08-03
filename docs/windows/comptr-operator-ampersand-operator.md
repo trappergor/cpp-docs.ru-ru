@@ -1,5 +1,5 @@
 ---
-title: ComPtr::operator&amp; оператор | Документы Microsoft
+title: Оператор ComPtr::operator&amp; оператора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bfe8cf9091d888c33420f53f584ca5509d80527
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0afff1699a4c7a3a14f07967cfb5ba5727ba0320
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872410"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461566"
 ---
-# <a name="comptroperatoramp-operator"></a>ComPtr::operator&amp; оператор
-Освобождает интерфейс, связанный с этим объектом `ComPtr`, а затем извлекает адрес объекта `ComPtr`.  
+# <a name="comptroperatoramp-operator"></a>Оператор ComPtr::operator&amp; оператор
+Освобождает интерфейс, связанный с данным **ComPtr** объекта, а затем извлекает адрес **ComPtr** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Слабая ссылка на текущий объект `ComPtr`.  
+ Слабая ссылка на текущий **ComPtr**.  
   
 ## <a name="remarks"></a>Примечания  
  Этот метод отличается от [ComPtr::GetAddressOf](../windows/comptr-getaddressof-method.md) в том, что данный метод освобождает ссылку на указатель интерфейса. Используйте метод `ComPtr::GetAddressOf`, если необходим адрес указателя интерфейса, но этот интерфейс освобождать не требуется.  

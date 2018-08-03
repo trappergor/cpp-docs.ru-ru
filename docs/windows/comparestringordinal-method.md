@@ -1,5 +1,5 @@
 ---
-title: Метод CompareStringOrdinal | Документы Microsoft
+title: Метод CompareStringOrdinal | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3abf87340671d1ac4851b055a57896e340d0c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58e808510868e375672ee5de0b27c4bed3c568e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860815"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464055"
 ---
 # <a name="comparestringordinal-method"></a>Метод CompareStringOrdinal
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,19 +34,19 @@ inline INT32 CompareStringOrdinal(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `lhs`  
+ *lhs*  
  Первый HSTRING для сравнения.  
   
- `rhs`  
+ *правая часть*  
  Второй HSTRING для сравнения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |Значение|Условие|  
 |-----------|---------------|  
-|-1|Значение `lhs` меньше `rhs`.|  
-|0|`lhs` равняется `rhs`.|  
-|1|Значение `lhs` больше значения `rhs`.|  
+|-1|*LHS* — меньше, чем *rhs*.|  
+|0|*LHS* равно *rhs*.|  
+|1|*LHS* больше, чем *rhs*.|  
   
 ## <a name="remarks"></a>Примечания  
  Сравнивает два указанных объекта HSTRING и возвращает целое число, которое показывает их относительное положение в порядке сортировки.  

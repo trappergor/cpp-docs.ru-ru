@@ -1,5 +1,5 @@
 ---
-title: Массив атрибутов | Документы Microsoft
+title: Массив атрибутов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad5a054d6b1cf680998dc5eb073fafc8d351e298
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac37f1b5b5df8f39e584b8e5476af81a4b09ecff
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854471"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464341"
 ---
 # <a name="array-attributes"></a>Атрибуты массивов
-Следующие атрибуты применяется к массивам или **SAFEARRAY**s.  
+Следующие атрибуты применяется к массивам или `SAFEARRAY`s.  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
-|[library_block](../windows/library-block.md)|Помещает конструкцию внутри блока библиотеки IDL-файл.|  
-|[satype](../windows/satype.md)|Указывает тип данных массива SAFEARRAY структуры.|  
-|[string](../windows/string-cpp.md)|Указывает, что одномерный массив `char`, `wchar_t`, **байтов** (или эквивалентную) массив или указатель на такой массив должен рассматриваться как строка.|  
+|[library_block](../windows/library-block.md)|Помещает конструкцию внутри блока библиотеки в IDL-файл.|  
+|[satype](../windows/satype.md)|Указывает тип данных структуры SAFEARRAY.|  
+|[string](../windows/string-cpp.md)|Указывает, что одномерный массив **char**, **wchar_t**, **байтов** (или эквивалентную) массив или указатель на такой массив должен обрабатываться как строка.|  
   
 ## <a name="see-also"></a>См. также  
  [Список атрибутов по использованию](../windows/attributes-by-usage.md)

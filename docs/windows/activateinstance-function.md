@@ -1,5 +1,5 @@
 ---
-title: Функция ActivateInstance | Документы Microsoft
+title: Activateinstance-функция | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855579"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461975"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance - функция
-Регистрирует и извлекает экземпляр заданного типа, определенного в идентификатор указанного класса.  
+Регистрирует и возвращает экземпляр заданного типа, определенного в идентификатор указанного класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,17 +39,17 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Тип для активации.  
+ *T*  
+ Типа, подлежащего активации.  
   
- `activatableClassId`  
- Имя идентификатора класса, которая определяет параметр `T`.  
+ *activatableClassId*  
+ Имя идентификатора класса, определяет параметр *T*.  
   
- `instance`  
- После завершения операции, ссылку на экземпляр `T`.  
+ *экземпляр*  
+ После завершения операции, ссылку на экземпляр *T*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае — значение HRESULT, указывающее причину ошибки.  
+ Значение S_OK, если выполнение прошло успешно; в противном случае ошибку HRESULT, которые указывают на причину ошибки.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  

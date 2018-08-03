@@ -20,40 +20,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a3406d53296c778eba2ce9a6794afac2c846bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9315c2bb946cd80dd68153543ad6ae532ec9b7a0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939810"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460876"
 ---
 # <a name="variantt-class"></a>Класс _variant_t
 **Блок, относящийся только к системам Microsoft**  
   
- Объект `_variant_t` инкапсулирует тип данных `VARIANT`. Этот класс управляет выделением и освобождением ресурсов и вызывает функцию `VariantInit` и `VariantClear` соответствующим образом.  
+ Объект **_variant_t** инкапсулирует `VARIANT` тип данных. Этот класс управляет выделением и освобождением ресурсов и вызывает функцию `VariantInit` и `VariantClear` соответствующим образом.  
   
 ### <a name="construction"></a>Создание экземпляра  
   
 |||  
 |-|-|  
-|[_variant_t](../cpp/variant-t-variant-t.md)|Создает объект `_variant_t`.|  
+|[_variant_t](../cpp/variant-t-variant-t.md)|Создает **_variant_t** объекта.|  
   
 ### <a name="operations"></a>Операции  
   
 |||  
 |-|-|  
-|[Attach](../cpp/variant-t-attach.md)|Присоединяет `VARIANT` в коллекцию `_variant_t` объекта.|  
+|[Attach](../cpp/variant-t-attach.md)|Присоединяет `VARIANT` в коллекцию **_variant_t** объекта.|  
 |[Очистить](../cpp/variant-t-clear.md)|Удаляет инкапсулированный `VARIANT` объекта.|  
-|[ChangeType](../cpp/variant-t-changetype.md)|Изменяет тип `_variant_t` на указанный `VARTYPE`.|  
-|[Detach](../cpp/variant-t-detach.md)|Отключает инкапсулированный `VARIANT` из данного `_variant_t` объекта.|  
-|[SetString](../cpp/variant-t-setstring.md)|Присваивает строку данному объекту `_variant_t`.|  
+|[ChangeType](../cpp/variant-t-changetype.md)|Изменяет тип **_variant_t** на указанный `VARTYPE`.|  
+|[Detach](../cpp/variant-t-detach.md)|Отключает инкапсулированный `VARIANT` из данного **_variant_t** объекта.|  
+|[SetString](../cpp/variant-t-setstring.md)|Присваивает строку данному **_variant_t** объекта.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[оператор =](../cpp/variant-t-operator-equal.md)|Присваивает новое значение существующему объекту `_variant_t`.|  
-|[оператор ==,! =](../cpp/variant-t-relational-operators.md)|Сравнивает два объекта `_variant_t` и определяет, равны ли они.|  
+|[оператор =](../cpp/variant-t-operator-equal.md)|Назначает новое значение к существующему **_variant_t** объекта.|  
+|[оператор ==,! =](../cpp/variant-t-relational-operators.md)|Сравнение двух **_variant_t** объектов на Признак равенства или неравенства.|  
 |[Средства извлечения](../cpp/variant-t-extractors.md)|Извлечение данных из инкапсулированного `VARIANT` объекта.|  
   
 **Завершение блока, относящегося только к системам Майкрософт**  

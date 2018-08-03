@@ -1,5 +1,5 @@
 ---
-title: 'Оператор разрешения области::: | Документы Microsoft'
+title: 'Оператор разрешения области::: | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7caea3a32c0bb983518f7610918c78c8c31c63a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf3678d204042bdea5e892a6e89d041b5091f38
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420945"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467083"
 ---
 # <a name="scope-resolution-operator-"></a>Оператор разрешения области: ::
-Оператор разрешения области `::` используется для идентификации и устранения неоднозначности идентификаторов, которые используются в разных областях. Дополнительные сведения об области см. в разделе [область](../cpp/scope-visual-cpp.md).  
+Оператор разрешения области **::** используется для выявления и устранения неоднозначности идентификаторов, которые используются в разных областях. Дополнительные сведения об области см. в разделе [область](../cpp/scope-visual-cpp.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,9 +62,7 @@ int main() {
     // A class name used to disambiguate  
     NamespaceA::ClassA a1;  
     a1.x = 2;  
-  
 }  
-  
 ```  
   
  Оператор разрешения области без квалификатора области применяется к глобальному пространству имен.  
@@ -101,7 +99,6 @@ namespace NamespaceB {
   
 namespace NamespaceC{  
     using namespace B;  
-  
 }  
 int main() {  
     NamespaceB::ClassB c_b;  
@@ -110,7 +107,6 @@ int main() {
     c_b.x = 3;  
     c_c.x = 4;  
 }  
-  
 ```  
   
  Можно использовать цепочки операторов разрешения области. В следующем примере `NamespaceD::NamespaceD1` определяет вложенное пространство имен `NamespaceD1`, а `NamespaceE::ClassE::ClassE1` определяет вложенный класс `ClassE1`.  
@@ -123,7 +119,6 @@ namespace NamespaceD{
 }  
   
 namespace NamespaceE{  
-  
     class ClassE{  
     public:  
         class ClassE1{  
@@ -138,7 +133,6 @@ int main() {
     NamespaceE::ClassE::ClassE1 e1;  
     e1.x = 7  ;  
 }  
-  
 ```  
   
 ## <a name="with-static-members"></a>Со статическими членами  
@@ -158,7 +152,6 @@ int main() {
     int gx1 = ClassG::x;  
     int gx2 = ClassG::get_x();   
 }  
-  
 ```  
   
 ## <a name="with-scoped-enumerations"></a>С ограниченными перечислениями  
@@ -172,12 +165,10 @@ enum class EnumA{
 };  
   
 int main() {  
-  
     EnumA enum_value = EnumA::First;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Встроенный C++ операторы, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Встроенные операторы C++, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Пространства имен](../cpp/namespaces-cpp.md)   

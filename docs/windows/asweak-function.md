@@ -1,5 +1,5 @@
 ---
-title: Функция AsWeak | Документы Microsoft
+title: Функция AsWeak | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854828"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462629"
 ---
 # <a name="asweak-function"></a>AsWeak - функция
 Извлекает слабую ссылку на определенный экземпляр.  
@@ -38,17 +38,17 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Указатель на тип параметра `p`.  
+ *T*  
+ Указатель на тип параметра *p*.  
   
- `p`  
+ *p*  
  Экземпляр типа.  
   
- `pWeak`  
- После завершения операции указатель слабую ссылку на параметр `p`.  
+ *pWeak*  
+ После завершения операции, указатель на слабую ссылку на параметр *p*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее причину сбоя.  
+ Значение S_OK, если операция выполнена успешно; в противном случае ошибка HRESULT, указывающее причину сбоя.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  

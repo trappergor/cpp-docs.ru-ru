@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3ae16363956afc7cca853307ef2888846a02864d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941344"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461774"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Ограничения обработчиков завершения
 Нельзя использовать **goto** инструкцию, чтобы перейти к **__try** блока инструкций или **__finally** блока инструкций. Входить в этот блок необходимо только через обычный поток управления. (Вы можете Однако переходить из **__try** блока инструкций.) Кроме того, невозможно вложить обработчик исключений или обработчик завершения в **__finally** блока.  

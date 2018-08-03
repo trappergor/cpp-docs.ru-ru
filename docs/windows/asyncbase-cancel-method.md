@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::Cancel | Документы Microsoft
+title: Метод AsyncBase::Cancel | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0559f32315265a7db5543e8559097177c2a670fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee338d4e90f94ed7cb7f9158235c66b72e9f2e52
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859856"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464750"
 ---
 # <a name="asyncbasecancel-method"></a>Метод AsyncBase::Cancel
 Отменяет асинхронную операцию.  
@@ -39,7 +39,7 @@ STDMETHOD(
  По умолчанию всегда возвращает значение S_OK.  
   
 ## <a name="remarks"></a>Примечания  
- Cancel() — это реализация по умолчанию IAsyncInfo::Cancel, а не фактический работает. Действительно отменить асинхронную операцию, переопределите OnCancel() чисто виртуального метода.  
+ `Cancel()` — Это реализация по умолчанию `IAsyncInfo::Cancel`, а не фактические работает. Действительно отменить асинхронную операцию, переопределить `OnCancel()` чисто виртуального метода.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  
