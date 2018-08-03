@@ -1,5 +1,5 @@
 ---
-title: Ссылки на указатели | Документы Microsoft
+title: Ссылки на указатели | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467832"
 ---
 # <a name="references-to-pointers"></a>Ссылки на указатели
 Ссылки на указатели можно объявлять так же, как ссылки на объекты. При объявлении ссылки на указатель создается изменяемое значение, используемое подобно обычному указателю.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  Функции `Add1` и `Add2` функционально эквивалентны (хотя вызываются по-разному). Различие заключается в том, что в функции `Add1` используются двойные ссылки, а в функции `Add2` — ссылка на указатель.  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   

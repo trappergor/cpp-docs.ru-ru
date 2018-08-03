@@ -1,5 +1,5 @@
 ---
-title: Метод CriticalSection::Lock | Документы Microsoft
+title: Метод CriticalSection::Lock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c873494a702802b8ead3dab9cac28557664f618
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871329"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464552"
 ---
 # <a name="criticalsectionlock-method"></a>Метод CriticalSection::Lock
-Ожиданий владения объектом указанного критической секции. Эта функция возвращает при предоставлении владельцем вызывающего потока.  
+Ожиданий владения объектом указанного критический раздел. Функция возвращает при предоставлении владельцем вызывающего потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,14 +38,14 @@ SyncLock Lock();
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `cs`  
+ *cs*  
  Определенный пользователем объект критической секции.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект блокировки, который можно использовать, чтобы разблокировать текущую критическую секцию.  
   
 ## <a name="remarks"></a>Примечания  
- Первый **блокировки** функция влияет на текущий объект критической секции. Второй **блокировки** функция влияет на определяемый пользователем критической секции.  
+ Первый **блокировки** функции влияет на текущий объект критической секции. Второй **блокировки** функции влияет на определяемый пользователем критическую секцию.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

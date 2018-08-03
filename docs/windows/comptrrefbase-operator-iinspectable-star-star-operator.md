@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c23ba7ba476b44b44f48b76119776e2f2cb188e
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 19e04f5415f9f7a736371c888dff7559df6c6c66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181150"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462340"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator IInspectable\* \* оператор
 
@@ -36,9 +36,9 @@ operator IInspectable**() const;
 
 ## <a name="remarks"></a>Примечания
 
-Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член в указатель к a указатель-интерфейс IInspectable.
+Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член в указатель к a указатель to `IInspectable` интерфейс.
 
-Если текущий ComPtrRefBase не является производным от IInspectable, возникает ошибка.
+Ошибка создается в том случае, если текущий **ComPtrRefBase** не является производным от `IInspectable`.
 
 Это приведение доступна только если **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** определен.
 
@@ -49,6 +49,5 @@ operator IInspectable**() const;
 **Пространство имен:** Microsoft::wrl:: Details
 
 ## <a name="see-also"></a>См. также
-
 [Comptrrefbase-класс](../windows/comptrrefbase-class.md)   
 [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

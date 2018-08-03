@@ -1,5 +1,5 @@
 ---
-title: Перечисление AsyncResultType | Документы Microsoft
+title: Перечисление AsyncResultType | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4a8465dd61e52425a0335e171cf516591ae589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8171c4a57621a4f17a5f0ddb0745faa70fde6524
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863313"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465289"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType - перечисление
-Указывает тип результата, возвращаемого методом GetResults().  
+Указывает тип результата, возвращенный `GetResults()` метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,9 +37,9 @@ enum AsyncResultType;
   
 ### <a name="values"></a>Значения  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|`MultipleResults`|Набор несколько результатов, представленных постепенно между начальное состояние, и перед вызовом Close().|  
+|`MultipleResults`|Набор нескольких результатов, которые представлены постепенно между `Start` состояние и перед `Close()` вызывается.|  
 |`SingleResult`|Один результат, который представлен после завершения события.|  
   
 ## <a name="requirements"></a>Требования  

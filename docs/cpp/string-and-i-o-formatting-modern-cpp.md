@@ -1,5 +1,5 @@
 ---
-title: Строки и вводом выводом форматирование (современный C++) | Документы Microsoft
+title: Строка и ввод вывод форматирование (современный C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 391648d71fa3d38a0f704a014c163b7f8b102e40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49ece9fef9122d5e2811eeb70a0ea1cba81b2e33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422388"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464101"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Форматирование строк и ввода-вывода (современный C++)
-C++ [iostreams](../standard-library/iostream.md) способны форматированную строку ввода-вывода. Например ниже демонстрируется задание cout для форматирования целое число для вывода в шестнадцатеричном формате, сначала сохранить текущее состояние off и повторно параметру после этого, так как после форматирования состояния передается cout, он остается таким образом, пока не будут изменены, а не только для одной строки из кода.  
+C++ [iostreams](../standard-library/iostream.md) способны форматированную строку ввода-вывода. Например приведенный ниже показано, как задать cout для форматирования целого числа для вывода в шестнадцатеричном формате, сначала сохранив отключенное текущее состояние и затем перезадав его, так как после форматирование состояния передано для cout, оно остается таким образом, пока не будет изменено, не только для одной строки кода.  
   
 ```cpp  
 #include <iostream>  
@@ -44,22 +44,21 @@ int main()
         << endl;  
     cout.copyfmt(state); // restore previous formatting  
 }  
-  
 ```  
   
- Это может быть полностью слишком громоздким, во многих случаях. В качестве альтернативы можно использовать Boost.Format из библиотек Boost C++, несмотря на то, что он является нестандартным. Можно загрузить любой библиотеки Boost из [повышение](http://www.boost.org/) веб-сайта.  
+ Это может быть слишком громоздким во многих случаях. Кроме того можно использовать Boost.Format из библиотек Boost C++, несмотря на то, что он является нестандартным. Вы можете скачать Любая библиотека поддержки из [Boost](http://www.boost.org/) веб-сайта.  
   
- Ниже приведены некоторые преимущества Boost.Format.  
+ Ниже приведены некоторые преимущества Boost.Format:  
   
--   Safe: Строго типизированным и создает исключение для ошибок, например, спецификация слишком мало или слишком много элементов.  
+-   Безопасность: Типобезопасный и создает исключение для ошибок, например, спецификация слишком мало или слишком много элементов.  
   
 -   Расширяемый: Работает для любого типа, который может передаваться.  
   
--   Удобство: Стандартные Posix и аналогичные строки формата.  
+-   Удобство: Стандартный Posix и подобные строки формата.  
   
- Несмотря на то, что Boost.Format основана на C++ [iostreams](../standard-library/iostream-programming.md), относящихся к надежным и расширяемые, они не являются оптимизации производительности. Когда потребуется, чтобы оптимизировать производительность, рассмотрите возможность C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) и [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), которые являются быстрый и простой в использовании. Тем не менее они не являются расширяемой или от уязвимостей. (Существует безопасные версии, но они создают небольшое уменьшение производительности. Дополнительные сведения см. в разделе [printf_s _printf_s_l, wprintf_s _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) и [sprintf_s _sprintf_s_l, swprintf_s _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
+ Хотя Boost.Format основывается на C++ [iostreams](../standard-library/iostream-programming.md), которые являются безопасными и расширяемыми, они не оптимизированная. При необходимости оптимизации производительности, необходимо учитывать C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) и [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), которые быстро и легко в использовании. Тем не менее они не являются расширяемыми или безопасными от уязвимостей. (Безопасные версии существуют, но они подлежат небольшое уменьшение производительности. Дополнительные сведения см. в разделе [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) и [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
   
- В следующем коде показано некоторые возможности форматирования повышение.  
+ Следующий код демонстрирует некоторые из функций поддержки форматирования.  
   
 ```cpp  
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );  
@@ -69,7 +68,6 @@ int main()
         cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];  
     // Georges Benjamin Clemenceau             +33 (0) 123 456 789  
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321  
-  
 ```  
   
 ## <a name="see-also"></a>См. также  

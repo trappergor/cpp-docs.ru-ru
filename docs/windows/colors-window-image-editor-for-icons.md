@@ -1,5 +1,5 @@
 ---
-title: Цвета окно (редактор изображений для значков) | Документы Microsoft
+title: Цвета окна (редактор изображений для значков) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,29 +26,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a327fd99028bf8e1a6d7724a515f264aa04a4e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ee53735c84d586aa41cd4a1c5d3e8a70051c88e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860376"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460975"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Окно "Цвета" (редактор изображений для значков)
-Окно выбора цвета состоит из двух следующих частей.  
+**Цвета** окно состоит из двух частей:  
   
-1.  Палитра цветов, являющаяся массивом образцов цветов, представляющих цвета, которые можно использовать. Можно щелкать эти образцы для выбора цвета переднего плана и фона при использовании графических средств.  
+1.  **Палитра цветов**, который является массивом образцов цветов, представляющих цвета, можно использовать. Можно щелкать эти образцы для выбора цвета переднего плана и фона при использовании графических средств.  
   
-2.  Индикатор цветов, показывающий цвета переднего плана и фона, селекторы для экрана и инвертированный цвет.  
+2.  **Индикатор цветов**, показывающий цвета переднего плана и фона, селекторы для экрана и инвертированный цвет.  
   
-     ![Окно выбора цвета](../windows/media/vccolorswindow.gif "vcColorsWindow")  
+     ![Окно "цвета"](../windows/media/vccolorswindow.gif "vcColorsWindow")  
 Окно "Цвета"  
   
 > [!NOTE]
->  **Экране цвет** и **Инвертированный цвет** средства доступны только для значков и курсоров.  
+>  **Экрана цвет** и **Инвертированный цвет** средства доступны только для значков и курсоров.  
   
- Можно использовать окно выбора цвета с [панель инструментов редактора изображений](../windows/toolbar-image-editor-for-icons.md).  
-  
-
+ Можно использовать окно "цвета" с [панель инструментов редактора изображений](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Требования  
  Нет  
@@ -57,5 +55,5 @@ ms.locfileid: "33860376"
  [Отображение или скрытие окна выбора цвета](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
  [Создание прозрачных областей или обратный областей на изображениях устройств](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
  [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Селектор пользовательских цветов-диалоговое окно](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
+ ["Диалоговое окно" селектор пользовательских цветов "](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
  [Редактор изображений для значков](../windows/image-editor-for-icons.md)

@@ -1,5 +1,5 @@
 ---
-title: Привязываемые | Документы Microsoft
+title: Привязываемые | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861809"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467148"
 ---
 # <a name="bindable"></a>bindable
 Указывает, что свойство поддерживает привязку данных.  
@@ -30,26 +30,24 @@ ms.locfileid: "33861809"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [bindable]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Привязываемых** языка C++ имеет ту же функциональность, что [привязываемых](http://msdn.microsoft.com/library/windows/desktop/aa366738) языка MIDL. Его можно использовать на свойства, определенные с [propget](../windows/propget.md), [propput](../windows/propput.md), или [propputref](../windows/propputref.md) атрибуты или можно вручную определить привязываемых метод.  
+ **Bindable** атрибут C++ имеет ту же функциональность, что [bindable](http://msdn.microsoft.com/library/windows/desktop/aa366738) описании атрибута MIDL. Его можно использовать на свойства, определенные с [propget](../windows/propget.md), [propput](../windows/propput.md), или [propputref](../windows/propputref.md) атрибуты, или можно вручную определить метод привязки.  
   
- В следующих примерах MFC показано использование **привязываемых**:  
+ В следующих примерах MFC показано использование **bindable**:  
   
--   [Примеры элементов управления: Элементы управления ActiveX на основе MFC](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Примеры элементов управления: Элементы управления ActiveX на основе MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [Образец CIRC: Элемент управления ActiveX](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [Кр образец: Элемент управления ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [Образец TESTHELP: Элемент управления ActiveX с подсказки и справки](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [Образец TESTHELP: Элемент управления ActiveX с помощью подсказки и помощь](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>Пример  
- В следующем коде показано, как использовать **привязываемых** для свойства:  
+ В следующем коде показано, как можно использовать **bindable** свойства:  
   
-```  
+```cpp  
 // cpp_attr_ref_bindable.cpp  
 // compile with: /LD  
 #include <windows.h>  

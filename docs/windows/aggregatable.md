@@ -1,5 +1,5 @@
 ---
-title: статистическую обработку | Документы Microsoft
+title: статистическое вычисление может выполняться | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d80b2fb707145f698e8d9bb883059478c3da10b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b5d94a1e66043a83e2ffb2aa8c1d44d9cbd16cc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863830"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467200"
 ---
 # <a name="aggregatable"></a>aggregatable
 Указывает, что класс поддерживает агрегирование.  
@@ -30,8 +30,7 @@ ms.locfileid: "33863830"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ aggregatable(   
+[ aggregatable(   
    value  
 ) ]  
 ```  
@@ -40,30 +39,30 @@ ms.locfileid: "33863830"
  *значение* (необязательно)  
  Параметр, чтобы указать, когда может быть статистически вычислена COM-объекта:  
   
--   **никогда не** COM-объект невозможно выполнить статистическую обработку.  
+-   **никогда не** невозможно выполнить статистическую обработку, COM-объект.  
   
--   **Допускается** COM-объект можно создать напрямую, или могут быть агрегированными. Это значение по умолчанию.  
+-   **Допускается** , COM-объект может быть создан напрямую или он может быть статистически вычислена. Это значение по умолчанию.  
   
--   **всегда** COM-объект нельзя создать напрямую и только могут быть агрегированными. При вызове `CoCreateInstance` для этого объекта необходимо указать статистической обработки объекта **IUnknown** интерфейса (Управление **IUnknown**).  
+-   **всегда** , COM-объект не может быть создан напрямую и только можно выполнять статистические вычисления. При вызове `CoCreateInstance` для данного объекта, необходимо указать объект статистической обработки `IUnknown` интерфейс (управляющий `IUnknown`).  
   
 ## <a name="remarks"></a>Примечания  
- **Статистическую обработку** языка C++ имеет ту же функциональность, что [статистическую обработку](http://msdn.microsoft.com/library/windows/desktop/aa366721) языка MIDL. Это означает, что компилятор пройдет **статистическую обработку** атрибут через созданного IDL-файла.  
+ **Статистическую обработку** атрибут C++ имеет ту же функциональность, что [статистическую обработку](http://msdn.microsoft.com/library/windows/desktop/aa366721) описании атрибута MIDL. Это означает, что компилятор пройдет **статистическую обработку** через атрибут для созданного IDL-файла.  
   
- Этот атрибут требует, чтобы атрибут [coclass](../windows/coclass.md), [progid](../windows/progid.md)или [vi_progid](../windows/vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если **progid** применяется, **vi_progid** и **coclass** также применяются.  
+ Этот атрибут требует, чтобы атрибут [coclass](../windows/coclass.md), [progid](../windows/progid.md)или [vi_progid](../windows/vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если `progid` применяется, `vi_progid` и `coclass` также применяются.  
   
  **Проекты ATL**  
   
- Если этот атрибут используется в проекте, где применяется ATL, поведение атрибута изменяется. Помимо описанную выше проблему атрибут также добавляет одно из следующих макросов целевого класса.  
+ Если этот атрибут используется в проекте, где применяется ATL, поведение атрибута изменяется. В дополнение к описанную выше проблему атрибут также добавляет одно из следующих макросов целевой класс:  
   
-|Значение параметра|Вставленные макрос|  
+|Значение параметра|Вставленный макрос|  
 |---------------------|--------------------|  
-|**Никогда не**|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
-|**Допускается**|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
-|**Всегда**|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
+|*Никогда не*|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
+|*Разрешено*|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
+|*Всегда*|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_aggregatable.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -83,9 +82,9 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Один или несколько из следующих: **coclass**, **progid**или **vi_progid**.|  
+|**Обязательные атрибуты**|Один или несколько из следующих: `coclass`, `progid`, или `vi_progid`.|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  

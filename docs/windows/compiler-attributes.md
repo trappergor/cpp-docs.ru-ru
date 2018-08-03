@@ -1,5 +1,5 @@
 ---
-title: Атрибуты компилятора | Документы Microsoft
+title: Атрибуты компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4366b5d804275f78ef1c3b4f1dd8e8e51b01b8c2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 02aa14eccddca4bc3631957d6aa3d3d1b2af6894
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860662"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463458"
 ---
 # <a name="compiler-attributes"></a>Атрибуты компилятора
-Атрибуты компилятора предоставляют широкий набор функциональных возможностей.  
+Атрибуты компилятора предоставляют широкий набор функций.  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
-|[emitidl](../windows/emitidl.md)|Определяет, будут обработаны и помещен в сгенерированный IDL-файл все последующие атрибуты IDL.|  
+|[emitidl](../windows/emitidl.md)|Определяет, будет ли обработано и помещаются в созданного IDL-файла все последующие атрибуты IDL.|  
 |[event_receiver](../windows/event-receiver.md)|Создает приемник событий.|  
 |[event_source](../windows/event-source.md)|Создает источник событий.|  
-|[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
-|[Реализует](../windows/implements-cpp.md)|Задает интерфейсы диспетчеризации, преобразуются в качестве членов IDL coclass.|  
-|[importidl](../windows/importidl.md)|Вставляет указанный IDL-файла в сгенерированный IDL-файл.|  
+|[export](../windows/export.md)|В результате структуру данных, должно быть помещено в IDL-файла.|  
+|[Реализует](../windows/implements-cpp.md)|Указывает диспетчерские интерфейсы, которые нужно принудительно в качестве членов компонентного класса IDL.|  
+|[importidl](../windows/importidl.md)|Вставляет указанный IDL-файла в созданного IDL-файла.|  
 |[importlib](../windows/importlib.md)|Делает типы, которые уже были скомпилированы в другую библиотеку типов, доступными для создаваемой библиотеки типов.|  
-|[includelib](../windows/includelib-cpp.md)|В результате файл IDL или .h, должны быть включены в сгенерированный IDL-файл.|  
-|[library_block](../windows/library-block.md)|Помещает конструкцию внутри блока библиотеки IDL-файл.|  
-|[no_injected_text](../windows/no-injected-text.md)|Запрещает компилятору встраивать код в результате использования атрибута.|  
-|[satype](../windows/satype.md)|Указывает тип данных **SAFEARRAY**.|  
-|[version](../windows/version-cpp.md)|Определяет конкретную версию несколькими версиями интерфейс или класс.|  
+|[includelib](../windows/includelib-cpp.md)|В результате файл IDL или .h, должны быть включены в созданного IDL-файла.|  
+|[library_block](../windows/library-block.md)|Помещает конструкцию внутри блока библиотеки в IDL-файл.|  
+|[no_injected_text](../windows/no-injected-text.md)|Запрещает компилятору вставку кода в результате использования атрибута.|  
+|[satype](../windows/satype.md)|Указывает тип данных `SAFEARRAY`.|  
+|[version](../windows/version-cpp.md)|Идентифицирует конкретную версию несколькими версиями интерфейса или класса.|  
   
 ## <a name="see-also"></a>См. также  
  [Список атрибутов по группам](../windows/attributes-by-group.md)

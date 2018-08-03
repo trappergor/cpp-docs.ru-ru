@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::FireProgress | Документы Microsoft
+title: Метод AsyncBase::FireProgress | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c2c5aab609b597c3a9ff464b868ba831889deed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: faa2e1af556f0184fa88055bcbf154eb783e24e5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863586"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463601"
 ---
 # <a name="asyncbasefireprogress-method"></a>Метод AsyncBase::FireProgress
 Вызывает текущий обработчик событий процесса выполнения.  
@@ -36,7 +36,7 @@ void FireProgress(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `arg`  
+ *arg*  
  Метод обработчика событий для запуска.  
   
 ## <a name="remarks"></a>Примечания  

@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409089"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466908"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 Этот раздел посвящен присущий Майкрософт рекомендуется использовать объявления declspec. Сведения о C ++ 14 `[[deprecated]]` атрибута и рекомендации по использованию этого атрибута и характерные для Майкрософт declspec или директиву pragma, см. в разделе [стандартные атрибуты C++](attributes.md).
 
- За исключением указанных ниже **устаревшим** объявление предлагает ту же функциональность, что [устаревшим](../preprocessor/deprecated-c-cpp.md) директивы pragma:  
+За исключением указанных ниже **устаревшим** объявление предлагает ту же функциональность, что [устаревшим](../preprocessor/deprecated-c-cpp.md) директивы pragma:  
   
 -   **Устаревшим** объявление позволяет указать определенные формы перегрузок функций как нерекомендуемые, тогда как форма директивы pragma применяется ко всем перегруженным формам имени функции.  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод ComPtr::Detach | Документы Microsoft
+title: Метод ComPtr::Detach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afa5976d26351ed3022c58fa8226b6038fa816c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4d4a84131a6159c665e3947d7b642ab0592b2e36
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883597"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465442"
 ---
 # <a name="comptrdetach-method"></a>Метод ComPtr::Detach
-Отменяет связь этого объекта `ComPtr` с интерфейсом, который он представляет.  
+Отменяет связь этого **ComPtr** объекта с интерфейсом, который он представляет.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +34,7 @@ T* Detach();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс, который был представлен этим объектом `ComPtr`.  
+ Указатель на интерфейс, который был представлен этим **ComPtr** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  

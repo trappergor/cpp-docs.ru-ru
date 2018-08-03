@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bbe9f077fd0d80a831d319660be26090ad5411f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207856"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463857"
 ---
 # <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void\* \* оператор
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,7 +34,7 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Удаляет текущий объект ComPtrRef, приведение указателя на интерфейс, представленный объектом ComPtrRef как указатель к указатель to `void`и затем возвращает указатель приведения.  
+ Удаляет текущий **ComPtrRef** объекта, приведение указателя на интерфейс, который был представлен **ComPtrRef** объекта как указатель к указатель to **void**, а затем Возвращает указатель приведения.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  

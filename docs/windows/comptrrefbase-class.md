@@ -1,5 +1,5 @@
 ---
-title: Класс ComPtrRefBase | Документы Microsoft
+title: Comptrrefbase-класс | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883584"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464247"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase - класс
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -37,8 +37,8 @@ class ComPtrRefBase;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Объект [ComPtr\<T >](../windows/comptr-class.md) тип или тип, производный от него, а не просто интерфейс, представленный экземпляром ComPtr.  
+ *T*  
+ Объект [ComPtr\<T >](../windows/comptr-class.md) тип или тип, производный от него, а не просто интерфейс, представленный **ComPtr**.  
   
 ## <a name="remarks"></a>Примечания  
  Представляет базовый класс для [ComPtrRef](../windows/comptrref-class.md) класса.  
@@ -47,20 +47,20 @@ class ComPtrRefBase;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|`InterfaceType`|Синоним для типа параметра шаблона `T`.|  
+|`InterfaceType`|Синоним для типа параметра-шаблона *T*.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Оператор ComPtrRefBase::operator IInspectable**](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член к указателю к a указатель-интерфейс IInspectable.|  
-|[Оператор ComPtrRefBase::operator IUnknown**](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член к указатель в a указатель интерфейса IUnknown.|  
+|[Оператор ComPtrRefBase::operator IInspectable**](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член в указатель к a указатель-интерфейс IInspectable.|  
+|[Оператор ComPtrRefBase::operator IUnknown**](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член в указатель к a указатель-интерфейса IUnknown.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Элемент данных ComPtrRefBase::ptr_](../windows/comptrrefbase-ptr-data-member.md)|Указатель на тип, заданный текущим параметром шаблона.|  
   

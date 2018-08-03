@@ -1,5 +1,5 @@
 ---
-title: Преобразований в стиле C с - clr (C + +/ CLI) | Документы Microsoft
+title: Приведение в стиле C с помощью - clr (C + +/ CLI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860402"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464588"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Приведение в стиле C с использованием параметра /clr (C++/CLI)
-Следующий раздел относится только к общеязыковая среда выполнения.  
+Следующий раздел относится только к среда CLR.  
   
- При использовании с типами CLR, компилятор пытается сопоставить C-стиле приведение к одному из приведения типов, перечисленных ниже, в следующем порядке:  
+ При использовании с типами данных CLR, компилятор пытается сопоставить для языка C приведения к одному из приведения типов, перечисленных ниже, в следующем порядке:  
   
 1.  const_cast  
   
 2.  safe_cast  
   
-3.  safe_cast плюс const_cast  
+3.  safe_cast, а также const_cast  
   
 4.  static_cast  
   
-5.  static_cast плюс const_cast  
+5.  static_cast, а также const_cast  
   
- Если ни один из перечисленных выше приведения допустим и тип выражения и целевого типа являются ссылочными типами CLR, приведение в стиле C сопоставляет проверку среды выполнения (инструкции MSIL castclass). В противном случае приведение в стиле считается недействительным, и компилятор выдает ошибку.  
+ Если ни один из перечисленных выше приведения является допустимым, и тип выражения и целевого типа являются ссылочными типами среды CLR, приведение в стиле C сопоставляет проверка во время выполнения (инструкции MSIL castclass). В противном случае приведение в стиле C считается недействительным, и компилятор выдает ошибку.  
   
 ## <a name="remarks"></a>Примечания  
- Приведение в стиле не рекомендуется. При компиляции с параметром [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md), используйте [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
+ Приведение в стиле C не рекомендуется. При компиляции с параметром [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md), использовать [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
- В следующем примере показано приведение в стиле, сопоставляется `const_cast`.  
+ В следующем примере показано приведение в стиле, сопоставляется **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- В следующем примере показано приведение в стиле, сопоставляется `safe_cast`.  
+ В следующем примере показано приведение в стиле, сопоставляется **safe_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- В следующем примере показано приведение в стиле, сопоставляется `safe_cast` , а также `const_cast`.  
+ В следующем примере показано приведение в стиле, сопоставляется **safe_cast** , а также **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- В следующем примере показано приведение в стиле, сопоставляется `static_cast`.  
+ В следующем примере показано приведение в стиле, сопоставляется **static_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- В следующем примере показано приведение в стиле, сопоставляется `static_cast` , а также `const_cast`.  
+ В следующем примере показано приведение в стиле, сопоставляется **static_cast** , а также **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -133,7 +133,7 @@ int main() {
   
  В следующем примере показано приведение в стиле, сопоставляется проверки во время выполнения.  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -154,7 +154,7 @@ int main() {
   
  В следующем примере показано недопустимое приведение в стиле, который указывает компилятору выдавать ошибку.  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

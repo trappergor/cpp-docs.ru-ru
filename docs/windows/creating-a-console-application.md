@@ -1,5 +1,5 @@
 ---
-title: Создание консольного приложения | Документы Microsoft
+title: Создание консольного приложения | Документация Майкрософт
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a65373cdc04235f067a8cd20cf2c7c6c9b9f13c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de317366d16748e9fb0a8a62f3602ad9d4ce025e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883532"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467281"
 ---
 # <a name="creating-a-console-application"></a>Создание консольного приложения
-С помощью мастера приложений Win32 является самым простым способом создания консольного приложения Win32.  
+Для создания консольного приложения Win32 проще всего с помощью мастера приложений Win32.  
   
-### <a name="to-create-a-win32-console-application"></a>Создание консольного приложения Win32  
+### <a name="to-create-a-win32-console-application"></a>Для создания консольного приложения Win32  
   
-1.  Следуйте инструкциям в разделе справки [Создание проекта с использованием мастера приложений Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Следуйте инструкциям, приведенным в разделе справки [Создание проекта с использованием мастера приложений Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  В **новый проект** выберите **проект Win32** в области шаблонов, чтобы открыть мастер.  
+2.  В **новый проект** выберите **проект Win32** в **шаблоны** панели, чтобы открыть мастер.  
   
-3.  Определение вашей [параметры приложения](../windows/application-settings-win-32-project-wizard.md) с помощью [мастер приложений Win32](../windows/win32-application-wizard.md).  
+3.  Определение вашего [параметры приложения](../windows/application-settings-win-32-project-wizard.md) с помощью [мастер приложений Win32](../windows/win32-application-wizard.md).  
   
     > [!NOTE]
     >  Для сохранения параметров, заданных в мастере по умолчанию, пропустите этот шаг.  
   
-4.  Нажмите кнопку **Готово** , чтобы закрыть мастер и только что созданный проект откроется в **обозревателе решений**.  
+4.  Нажмите кнопку **Готово** чтобы закрыть мастер и только что созданный проект откроется в **обозревателе решений**.  
   
 ## <a name="see-also"></a>См. также  
  [Консольные проекты](/visualstudio/debugger/debugging-preparation-console-projects)   
  [Добавление функциональных возможностей с помощью мастеров кода](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Страницы свойств](../ide/property-pages-visual-cpp.md)   
- [Развертывание приложений](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Развертывание приложений](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

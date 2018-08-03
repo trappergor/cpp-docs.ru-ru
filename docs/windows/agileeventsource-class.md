@@ -1,5 +1,5 @@
 ---
-title: Класс AgileEventSource | Документы Microsoft
+title: Класс AgileEventSource | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58eb96e3a0268d3ba70b60d9c315e935e19485f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858124"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462073"
 ---
 # <a name="agileeventsource-class"></a>Класс AgileEventSource
 
-Представляет событие, произошедшее в гибкой компонент, который является компонентом, который может осуществляться из любого потока. Наследует от [EventSource](eventsource-class.md) и переопределяет `Add` функция-член с параметром еще один тип для указания параметров для способы вызова agile событий.
+Представляет событие, произошедшее в компоненте agile, который является компонентом, который может осуществляться из любого потока. Наследует от [EventSource](eventsource-class.md) и переопределяет `Add` функция-член с параметром дополнительный тип для указания параметров для способ вызова agile события.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,16 +37,16 @@ class AgileEventSource
 ```
 
 ## <a name="parameters"></a>Параметры  
- `TDelegateInterface`  
+ *TDelegateInterface*  
 
  Интерфейс делегат, представляющий обработчик событий.
 
- `TEventSourceOptions`  
- [InvokeModeOptions](invokemodeoptions-structure.md) структура имеет значение, поле которого invokeMode `InvokeMode::StopOnFirstError` или `InvokeMode::FireAll`.
+ *TEventSourceOptions*  
+ [InvokeModeOptions](invokemodeoptions-structure.md) структура, поля которого invokeMode задается `InvokeMode::StopOnFirstError` или `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Примечания
 
-Большинство компонентов в среде выполнения Windows являются гибкими компонентами. Дополнительные сведения см. в разделе [работа с потоками и маршалинг (C + +/ CX)](../cppcx/threading-and-marshaling-c-cx.md).
+Подавляющее большинство компонентов в среде выполнения Windows — agile компоненты. Дополнительные сведения см. в разделе [работа с потоками и маршалинг (C + +/ CX)](../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -62,13 +62,13 @@ class AgileEventSource
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[Метод AgileEventSource::Add](#add)|Добавляет обработчик событий agile, представленный указанным интерфейсом делегата набору обработчиков событий для текущего объекта AgileEventSource.|
+|[Метод AgileEventSource::Add](#add)|Добавляет обработчик событий agile, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего объекта AgileEventSource.|
 
 ## <a name="add"></a> Метод AgileEventSource::Add
 
-Добавляет обработчик событий, представленный указанным интерфейсом делегата набору обработчиков событий для текущего [EventSource](eventsource-class.md) объекта.
+Добавляет обработчик событий, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего [EventSource](eventsource-class.md) объекта.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -81,11 +81,11 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Параметры
 
-*delegateInterface*
-
+*delegateInterface*  
 Интерфейс для объекта делегата, который представляет обработчик событий.
 
-*токен* после завершения операции дескриптор, представляющий событие. Используйте этот маркер в качестве параметра в метод Remove() для удаления обработчика событий.
+*Маркер*  
+После завершения операции представляет дескриптор события. Используйте этот маркер в качестве параметра в метод Remove() для удаления обработчика событий.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -93,5 +93,4 @@ HRESULT Add(
 
 
 ## <a name="see-also"></a>См. также
-
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

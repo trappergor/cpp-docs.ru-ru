@@ -1,5 +1,5 @@
 ---
-title: Метод CriticalSectionTraits::Unlock | Документы Microsoft
+title: Метод CriticalSectionTraits::Unlock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35a632a6c88ed29ef5e30e942c1341246de75e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883502"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466014"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>Метод CriticalSectionTraits::Unlock
-Специализирует шаблон CriticalSection так, чтобы она поддерживала снимать владения объектом указанного критической секции.  
+Специализирует шаблон CriticalSection так, чтобы она поддерживала снятию владения объектом указанного критический раздел.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +36,13 @@ inline static void Unlock(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `cs`  
+ *cs*  
  Указатель на объект критической секции.  
   
 ## <a name="remarks"></a>Примечания  
  *Тип* модификатор определяется как `typedef CRITICAL_SECTION* Type;`.  
   
- Дополнительные сведения см. в разделе «LeaveCriticalSection функции» в разделе «Функции синхронизации» в документации Windows API.  
+ Дополнительные сведения см. в разделе «LeaveCriticalSection function» в разделе «Функции синхронизации» в документации по Windows API.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

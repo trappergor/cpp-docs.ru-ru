@@ -1,5 +1,5 @@
 ---
-title: Метод ChainInterfaces::CanCastTo | Документы Microsoft
+title: Метод ChainInterfaces::CanCastTo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2286c347fbd68f34fac807e80facca0a0286aa6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860298"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461214"
 ---
 # <a name="chaininterfacescancastto-method"></a>Метод ChainInterfaces::CanCastTo
-Указывает ли идентификатор интерфейса указанного может быть приведен к каждому специализации, определяемая параметрами шаблона не по умолчанию.  
+Указывает ли идентификатор указанный интерфейс может быть приведен к каждому из специализаций, определяемая параметрами шаблона не по умолчанию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,14 +37,14 @@ __forceinline bool CanCastTo(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `riid`  
+ *riid*  
  Идентификатор интерфейса.  
   
- `ppv`  
- Указатель на идентификатор последнего интерфейс, который был приведен успешно.  
+ *ppv*  
+ Указатель на последний идентификатор интерфейса, который был приведен успешно.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` При успешном завершении всех операций приведения. в противном случае `false`.  
+ **значение true,** Если все операции приведения выполнена успешно; в противном случае **false**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

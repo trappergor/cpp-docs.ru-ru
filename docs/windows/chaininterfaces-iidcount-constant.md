@@ -1,5 +1,5 @@
 ---
-title: Константа ChainInterfaces::IidCount | Документы Microsoft
+title: Константа ChainInterfaces::IidCount | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860006"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463945"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>Константа ChainInterfaces::IidCount
-Общее количество идентификаторов, содержащихся в интерфейсах, заданные параметры шаблона интерфейса `I0` через `I9`.  
+Общее количество содержащихся в интерфейсах, указанные параметрами шаблона идентификаторы интерфейсов *I0* через *I9*.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Общее количество идентификаторов интерфейсов.  
+ Общее число идентификаторов интерфейса.  
   
 ## <a name="remarks"></a>Примечания  
- Параметры шаблона `I0` и `I1` являются обязательными и параметры `I2` через `I9` являются необязательными. Количество каждого интерфейса IID обычно равно 1.  
+ Параметры шаблона *I0* и *I1* являются обязательными и параметры *I2* через *I9* являются необязательными. Количество каждого интерфейса IID обычно равно 1.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: Оператор ComPtrRef::operator * | Документы Microsoft
+title: Оператор ComPtrRef::operator * | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03de935ab9195cddf3ea9936b694b55ba2cec34c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 55d4fa6156c4ef2032111c0306c3cff8dce14059
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883476"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461456"
 ---
 # <a name="comptrrefoperator-operator"></a>Оператор ComPtrRef::operator*
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,10 +34,10 @@ InterfaceType* operator *();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс, представленный текущим объектом ComPtrRef.  
+ Указатель на интерфейс, представленный текущим **ComPtrRef** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Извлекает указатель на интерфейс, представленный текущим объектом ComPtrRef.  
+ Извлекает указатель на интерфейс, представленный текущим **ComPtrRef** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
@@ -45,5 +45,5 @@ InterfaceType* operator *();
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [ComPtrRef-класс](../windows/comptrref-class.md)   
+ [Comptrref-класс](../windows/comptrref-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

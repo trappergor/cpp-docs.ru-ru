@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e81b81509877ff53b613af80638b2386ed0cb0b2
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 93ae3ac7f0d6fff700e1c89aad197d5f03734cf5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944807"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467112"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 **Блок, относящийся только к системам Microsoft**  
@@ -32,7 +32,6 @@ ms.locfileid: "37944807"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 __declspec( uuid("ComObjectGUID") ) declarator  
 ```  
   
