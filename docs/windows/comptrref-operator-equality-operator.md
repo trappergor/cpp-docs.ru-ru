@@ -1,5 +1,5 @@
 ---
-title: ComPtrRef::operator ==-оператор | Документы Microsoft
+title: ComPtrRef::operator ==-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b7cc1d89a0e113164530245467afd94becdc1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880785"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463958"
 ---
 # <a name="comptrrefoperator-operator"></a>Оператор ComPtrRef::operator==
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -55,18 +55,18 @@ bool operator==(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `a`  
+ *a*  
  Ссылка на объект ComPtrRef.  
   
- `b`  
- Ссылка на другой объект ComPtrRef или указатель на анонимный тип (`void*`).  
+ *b*  
+ Ссылку на другой объект ComPtrRef, или указатель на анонимный тип (`void*`).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Первый оператор возвращает `true` Если объект `a` равен объекту `b`; в противном случае `false`.  
+ Первый оператор возвращает **true** Если объект *a* равен объекту *b*; в противном случае **false**.  
   
- Второй и третий операторы возвращают `true` Если объект `a` равен `nullptr`; в противном случае `false`.  
+ Второй и третий операторы возвращают **true** Если объект *a* равен **nullptr**; в противном случае **false**.  
   
- Четвертый и пятый операторы yield `true` Если объект `a` равен объекту `b`; в противном случае `false`.  
+ Четвертый и пятый операторы yield **true** Если объект *a* равен объекту *b*; в противном случае **false**.  
   
 ## <a name="remarks"></a>Примечания  
  Указывает, равны ли два объекта ComPtrRef.  

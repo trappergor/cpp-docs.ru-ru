@@ -1,5 +1,5 @@
 ---
-title: ComPtrRef::operator! =-оператор | Документы Microsoft
+title: ComPtrRef::operator! =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883558"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462928"
 ---
 # <a name="comptrrefoperator-operator"></a>Оператор ComPtrRef::operator!=
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -55,21 +55,21 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `a`  
- Ссылка на объект ComPtrRef.  
+ *a*  
+ Ссылку на **ComPtrRef** объекта.  
   
- `b`  
- Ссылка на другой объект ComPtrRef или указатель на анонимный объект (`void*`).  
+ *b*  
+ Ссылка на другой **ComPtrRef** объект или указатель на анонимный объект (`void*`).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Первый оператор возвращает значение `true`, если объект `a` не равен объекту `b`; в противном случае —значение `false`.  
+ Первый оператор возвращает **true** Если объект *a* не равен объекту *b*; в противном случае **false**.  
   
- Второй и третий операторы возвращают значение `true`, если объект `a` не равен `nullptr`; в противном случае — значение `false`.  
+ Второй и третий операторы возвращают **true** Если объект *a* не равно **nullptr**; в противном случае **false**.  
   
- Четвертый и пятый операторы yield `true` Если объект `a` не равен объекту `b`; в противном случае `false`.  
+ Четвертый и пятый операторы yield **true** Если объект *a* не равен объекту *b*; в противном случае **false**.  
   
 ## <a name="remarks"></a>Примечания  
- Указывает на неравенство двух объектов ComPtrRef.  
+ Указывает ли два **ComPtrRef** объекты не равны.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
