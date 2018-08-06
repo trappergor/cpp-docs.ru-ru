@@ -1,5 +1,5 @@
 ---
-title: ComPtr::operator! =-оператор | Документы Microsoft
+title: Оператор ComPtr::operator! =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2450b5d473d1caadae171516cf337479bfd5d603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a4c15946862a66c0d4d830f590230763ce3e6f9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881885"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461826"
 ---
 # <a name="comptroperator-operator"></a>Оператор ComPtr::operator!=
-Определяет неравенство двух объектов СomPtr.  
+Указывает ли два **ComPtr** объекты не равны.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,20 +42,19 @@ bool operator!=(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `a`  
- Ссылка на объект ComPtr.  
+ *a*  
+ Ссылку на **ComPtr** объекта.  
   
- `b`  
- Ссылка на другой объект ComPtr.  
+ *b*  
+ Ссылка на другой **ComPtr** объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Первый оператор возвращает значение `true`, если объект `a` не равен объекту `b`; в противном случае —значение `false`.  
+ Первый оператор возвращает **true** Если объект *a* не равен объекту *b*; в противном случае **false**.  
   
- Второй и третий операторы возвращают значение `true`, если объект `a` не равен `nullptr`; в противном случае — значение `false`.  
+ Второй и третий операторы возвращают **true** Если объект *a* не равно **nullptr**; в противном случае **false**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
