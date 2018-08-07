@@ -1,5 +1,5 @@
 ---
-title: Структура EnableIf | Документы Microsoft
+title: Enableif-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873382"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569034"
 ---
 # <a name="enableif-structure"></a>EnableIf - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -43,22 +43,22 @@ struct EnableIf<true, T>;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Тип.  
   
- `b`  
+ *b*  
  Выражение типа Boolean.  
   
 ## <a name="remarks"></a>Примечания  
- Определяет данные-член типа, указанного в качестве второго параметра шаблона, если первый параметр шаблона равен `true`.  
+ Определяет данные-член типа, указанного в качестве второго параметра шаблона, если первый параметр шаблона, результатом которого является **true**.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|`type`|Если параметр `b` равен `true`, частичная специализация определяет, что данные-член `type` будут иметь тип `T`.|  
+|`type`|Если параметр шаблона *b* принимает значение **true**, частичная специализация определяет данные-член `type` типа `T`.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `EnableIf`  

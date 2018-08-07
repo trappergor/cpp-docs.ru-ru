@@ -1,5 +1,5 @@
 ---
-title: Конструктор EventSource::EventSource | Документы Microsoft
+title: Конструктор EventSource::EventSource | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb1cbab4c53b66f66fd79f28729230f16eb2482c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98927c0c6a4bc484b6babc3e74d772399e2f2f24
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872423"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569699"
 ---
 # <a name="eventsourceeventsource-constructor"></a>Конструктор EventSource::EventSource
-Инициализирует новый экземпляр класса EventSource.  
+Инициализирует новый экземпляр класса **EventSource** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
