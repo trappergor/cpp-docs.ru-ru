@@ -1,5 +1,5 @@
 ---
-title: helpstringdll | Документы Microsoft
+title: helpstringdll | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877349"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570084"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-Указывает имя библиотеки DLL, в которых будет производиться выполняют поиск строки в документе (локализации).  
+Указывает имя библиотеки DLL для выполнения уточняющего запроса строки документа (локализации).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `string`  
- Библиотеки DLL для уточняющего запроса строки документа.  
+### <a name="parameters"></a>Параметры  
+ *string*  
+ Библиотека DLL, чтобы использовать для выполнения уточняющего запроса строки документа.  
   
 ## <a name="remarks"></a>Примечания  
- **Helpstringdll** языка C++ имеет ту же функциональность, что [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) языка MIDL.  
+ **Helpstringdll** атрибут C++ имеет ту же функциональность, что [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,7 +63,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**Применение**|**Класс**, `interface`, метод|  
+|**Применение**|**Класс**, **интерфейс**, метод интерфейса|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

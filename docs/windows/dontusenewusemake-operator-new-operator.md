@@ -1,5 +1,5 @@
 ---
-title: Оператор Dontusenewusemake::operator new | Документы Microsoft
+title: Оператор Dontusenewusemake::operator new | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59354062dded7792dca1cd84683bba64f6a64aa0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873684"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571429"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>Оператор DontUseNewUseMake::operator new
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -37,17 +37,17 @@ void* operator new(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `__unnamed0`  
+ *__unnamed0*  
  Неименованный параметр, который определяет количество байт памяти для выделения.  
   
- `placement`  
+ *Размещение*  
  Выделяемый тип.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Предоставляет способ передачи дополнительных аргументов при перегрузке оператора `new`.  
+ Предоставляет способ передачи дополнительных аргументов при перегрузке оператора **новый**.  
   
 ## <a name="remarks"></a>Примечания  
- Перегружает оператор `new` и препятствует его использованию в RuntimeClass.  
+ Перегружает оператор **новый** и предотвращает использование в `RuntimeClass`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

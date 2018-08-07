@@ -1,5 +1,5 @@
 ---
-title: 'Как: объявление типов значений с использованием ключевого слова interior_ptr (C + +/ CLI) | Документы Microsoft'
+title: 'Практическое: объявление типов значений с использованием ключевого слова interior_ptr (C + +/ CLI) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6015d5a61589b8ed2d38b6491392fd42e4f38ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879481"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571192"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI)
-`interior_ptr` можно использовать с типом значения.  
+**Interior_ptr** может использоваться с типом значения.  
   
 > [!IMPORTANT]
->  Эта функция языка поддерживается **/CLR** параметр компилятора, а не **/zw** параметр компилятора.  
+>  Эта функция языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.  
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
- Следующие C + +/ CLI образце показано, как использовать `interior_ptr` с типом значения.  
+### <a name="description"></a>Описание:  
+ Следующие C + +/ CLI примере показано, как использовать **interior_ptr** с типом значения.  
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // interior_ptr_value_types.cpp  
 // compile with: /clr  
 value struct V {  
@@ -66,7 +66,7 @@ int main() {
   
 ### <a name="output"></a>Вывод  
   
-```  
+```Output  
 1  
 2  
 2  
@@ -77,14 +77,14 @@ int main() {
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
- В типе значения указатель `this` равен interior_ptr.  
+### <a name="description"></a>Описание:  
+ В тип значения **это** указатель равен interior_ptr.  
   
- В теле нестатической функции-члена типа значения `V` указатель `this` является выражением типа `interior_ptr<V>`. Значение этого выражения — адрес объекта, для которого вызывается эта функция.  
+ В теле нестатических функцию член типа значения `V`, **это** является выражением типа `interior_ptr<V>` , значение которого является адрес объекта, для которого вызывается функция.  
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // interior_ptr_value_types_this.cpp  
 // compile with: /clr /LD  
 value struct V {  
@@ -98,14 +98,14 @@ value struct V {
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере показано использование оператора взятия адреса со статическими членами.  
   
  Адрес статического члена типа Visual C++ создает собственный указатель.  Адрес статического члена типа значения является управляемым указателем, так как член типа значения выделяется в куче среды выполнения и может быть перемещен сборщиком мусора.  
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // interior_ptr_value_static.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,7 +131,7 @@ int main() {
   
 ### <a name="output"></a>Вывод  
   
-```  
+```Output 
 22  
 23  
 hello  

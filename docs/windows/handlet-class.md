@@ -1,5 +1,5 @@
 ---
-title: Класс HandleT | Документы Microsoft
+title: Handlet-класс | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a596bf1e086ac7b1a1a72c3504ce4f41844ba4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87a8718971a2da008b03dca1e9653d8454115adb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876154"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570601"
 ---
 # <a name="handlet-class"></a>HandleT - класс
 Представляет дескриптор объекта.  
@@ -36,52 +36,52 @@ template <
 class HandleT;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `HandleTraits`  
+### <a name="parameters"></a>Параметры  
+ *HandleTraits*  
  Экземпляр [HandleTraits](../windows/handletraits-structure.md) структура, которая определяет общие характеристики дескриптора.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`Traits`|Синоним для `HandleTraits`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор HandleT::HandleT](../windows/handlet-handlet-constructor.md)|Инициализирует новый экземпляр класса HandleT.|  
-|[Деструктор HandleT::~HandleT](../windows/handlet-tilde-handlet-destructor.md)|Отменяет инициализацию экземпляра класса HandleT.|  
+|[Конструктор HandleT::HandleT](../windows/handlet-handlet-constructor.md)|Инициализирует новый экземпляр класса **HandleT** класса.|  
+|[Деструктор HandleT::~HandleT](../windows/handlet-tilde-handlet-destructor.md)|Отменяет инициализацию экземпляра **HandleT** класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод HandleT::Attach](../windows/handlet-attach-method.md)|Связывает указанный дескриптор с текущего объекта HandleT.|  
-|[Метод HandleT::Close](../windows/handlet-close-method.md)|Закрытие текущего объекта HandleT.|  
-|[Метод HandleT::Detach](../windows/handlet-detach-method.md)|Отсоединяет текущий объект HandleT из его базового дескриптора.|  
+|[Метод HandleT::Attach](../windows/handlet-attach-method.md)|Связывает указанный дескриптор с текущим **HandleT** объекта.|  
+|[Метод HandleT::Close](../windows/handlet-close-method.md)|Закрывает текущий **HandleT** объекта.|  
+|[Метод HandleT::Detach](../windows/handlet-detach-method.md)|Отсоединяет текущий **HandleT** объект из его базовый дескриптор.|  
 |[Метод HandleT::Get](../windows/handlet-get-method.md)|Возвращает значение базового дескриптора.|  
-|[Метод HandleT::IsValid](../windows/handlet-isvalid-method.md)|Указывает, представляет ли текущий объект HandleT дескриптор.|  
+|[Метод HandleT::IsValid](../windows/handlet-isvalid-method.md)|Указывает, является ли текущий **HandleT** представляет дескриптор.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод HandleT::InternalClose](../windows/handlet-internalclose-method.md)|Закрытие текущего объекта HandleT.|  
+|[Метод HandleT::InternalClose](../windows/handlet-internalclose-method.md)|Закрывает текущий **HandleT** объекта.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Оператор HandleT::operator=](../windows/handlet-operator-assign-operator.md)|Перемещение текущего объекта HandleT значение указанного объекта HandleT.|  
+|[Оператор HandleT::operator=](../windows/handlet-operator-assign-operator.md)|Перемещает значение указанного **HandleT** объект с текущим **HandleT** объекта.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[Элемент данных HandleT::handle_](../windows/handlet-handle-data-member.md)|Содержит дескриптор, который представлен объектом HandleT.|  
+|[Элемент данных HandleT::handle_](../windows/handlet-handle-data-member.md)|Содержит дескриптор, представленного **HandleT** объекта.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `HandleT`  

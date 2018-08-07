@@ -1,5 +1,5 @@
 ---
-title: Метод EventSource::Remove | Документы Microsoft
+title: Метод EventSource::Remove | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf0480252fca342b8a690e93f92ae14ca5e84c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874386"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569499"
 ---
 # <a name="eventsourceremove-method"></a>Метод EventSource::Remove
-Удаляет обработчик событий, представленного маркером регистрации указанное событие из набора обработчиков событий, связанных с текущим объектом EventSource.  
+Удаляет обработчик событий, представленного маркером регистрации указанное событие из набора обработчиков событий, связанных с текущим **EventSource** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT Remove(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `token`  
- Дескриптор, представляющий обработчик событий. Этот маркер был возвращен во время регистрации обработчика событий [Add()](../windows/eventsource-add-method.md) метод.  
+### <a name="parameters"></a>Параметры  
+ *Маркер*  
+ Дескриптор, который представляет обработчик событий. Этот токен был возвращен при регистрации обработчика событий с [Add()](../windows/eventsource-add-method.md) метод.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о структуре EventRegistrationToken см. в разделе Windows::Foundation:: eventregistrationtoken структуры в справочной документации среды выполнения Windows.  
+ Дополнительные сведения о структуру EventRegistrationToken, см. в разделе `Windows::Foundation::EventRegistrationToken` раздел структуры в справочной документации среды выполнения Windows.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  

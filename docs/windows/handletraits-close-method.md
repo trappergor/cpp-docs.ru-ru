@@ -1,5 +1,5 @@
 ---
-title: Метод HANDLETraits::Close | Документы Microsoft
+title: Метод HANDLETraits::Close | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f45f95fb1b060f3892def6dc2962bfffef70c77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581c7b8447b800d9a3401cd76f3adc5ada25994d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875618"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569834"
 ---
 # <a name="handletraitsclose-method"></a>Метод HANDLETraits::Close
 Закрывает указанный дескриптор.  
@@ -35,12 +35,12 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `h`  
+### <a name="parameters"></a>Параметры  
+ *h*  
  Чтобы закрыть дескриптор.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если обрабатывать `h` Закрыто успешно; в противном случае **false**.  
+ **значение true,** Если обрабатывать *h* Закрыто успешно; в противном случае — значение **false**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

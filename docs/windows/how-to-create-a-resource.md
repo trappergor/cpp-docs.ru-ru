@@ -1,5 +1,5 @@
 ---
-title: 'Как: создать ресурс | Документы Microsoft'
+title: 'Практическое: создать ресурс | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a5c8ee47203f24c1995cfde9dda40912f21467
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878649"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571474"
 ---
 # <a name="how-to-create-a-resource"></a>Практическое руководство. Создание ресурса
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33878649"
   
 ### <a name="to-create-a-new-resource-in-class-view"></a>Создание ресурса в представлении классов  
   
-1.  В [представлении классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)щелкните правой кнопкой мыши нужный класс, выберите в контекстном меню команду **Добавить**, а затем выберите пункт **Добавить ресурс** .  
+1.  В [представление классов](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните класс правой кнопкой мыши и выберите пункт **добавить**, затем нажмите кнопку **добавить ресурс** в контекстном меню.  
   
 2.  В [диалоговом окне "Добавить ресурс"](../windows/add-resource-dialog-box.md)выберите тип ресурса, который хотите добавить в проект.  
   
@@ -58,11 +58,12 @@ ms.locfileid: "33878649"
   
  Вы можете создать ресурс как новый ресурс с параметрами по умолчанию (ресурс, созданный не по шаблону) или как ресурс на основе [шаблона](../windows/how-to-use-resource-templates.md).  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.*  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.*
+
+
+## <a name="requirements"></a>Требования  
   
- **Требования**  
-  
- Win32  
+Win32  
   
 ## <a name="see-also"></a>См. также  
  [Файлы ресурсов](../windows/resource-files-visual-studio.md)   

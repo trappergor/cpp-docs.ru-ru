@@ -1,5 +1,5 @@
 ---
-title: first_is | Документы Microsoft
+title: first_is | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875010"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569267"
 ---
 # <a name="firstis"></a>first_is
 Указывает индекс первого элемента массива для передачи.  
@@ -30,23 +30,22 @@ ms.locfileid: "33875010"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ first_is(  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *Выражение*  
- Одно или несколько выражений языка C. Допускаются слоты пустой аргумент.  
+ Одно или несколько выражений языка. Допускаются слотов пустой аргумент.  
   
 ## <a name="remarks"></a>Примечания  
- **First_is** языка C++ имеет ту же функциональность, что [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) языка MIDL.  
+ **First_is** атрибут C++ имеет ту же функциональность, что [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
  В следующем коде показано несколько способов определения раздел в массиве:  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -72,7 +71,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 |||  
 |-|-|  
-|**Применение**|Поле в `struct` или **объединение**, интерфейс параметр, метод|  
+|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

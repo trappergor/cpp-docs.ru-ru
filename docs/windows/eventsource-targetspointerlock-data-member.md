@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Eventsource::targetspointerlock_ | Документы Microsoft
+title: Элемент данных Eventsource::targetspointerlock_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb3c2131331521dab1b8264b696206d953762851
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b58aa072af5ff96093f9999d212f8b19ff0571c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873112"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569821"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>Элемент данных EventSource::targetsPointerLock_
-Синхронизирует доступ к членам внутренней данных даже в том случае, когда добавляются обработчики событий для этого события EventSource, удален или вызван.  
+Синхронизирует доступ к членам внутренние данные, даже когда обработчики событий для данного **EventSource** был добавлен, удален или вызванный.  
   
 ## <a name="syntax"></a>Синтаксис  
   

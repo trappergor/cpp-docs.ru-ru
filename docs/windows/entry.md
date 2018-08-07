@@ -1,5 +1,5 @@
 ---
-title: запись | Документы Microsoft
+title: запись | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872319"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569642"
 ---
 # <a name="entry"></a>entry
 Указывает экспортированной функции или константы в модуле, определяя точки входа в библиотеку DLL.  
@@ -30,21 +30,20 @@ ms.locfileid: "33872319"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `id`  
+ *id*  
  Идентификатор точки входа.  
   
 ## <a name="remarks"></a>Примечания  
- **Входа** языка C++ имеет ту же функциональность, что [входа](http://msdn.microsoft.com/library/windows/desktop/aa366815) языка MIDL.  
+ **Запись** атрибут C++ имеет ту же функциональность, что [запись](http://msdn.microsoft.com/library/windows/desktop/aa366815) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [idl_module](../windows/idl-module.md) для пример использования **входа**.  
+ См. в примере [idl_module](../windows/idl-module.md) для пример использования **запись**.  
   
 ## <a name="requirements"></a>Требования  
   

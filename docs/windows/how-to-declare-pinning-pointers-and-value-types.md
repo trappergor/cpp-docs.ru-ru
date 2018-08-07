@@ -1,5 +1,5 @@
 ---
-title: 'Как: объявление закрепляющих указателей и типы значений | Документы Microsoft'
+title: 'Практическое: объявление закрепляющих указателей и типов значений | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40187b7da9083ddaa5342e4bdfeba556fb900e7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880388"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569759"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Практическое руководство. Объявление закрепляющих указателей и типов значений
-Тип значения можно упаковать неявно. Затем можно объявить закрепляющий указатель на объект с типом значения, сам и использование **pin_ptr** упакованный тип значения.  
+Тип значения можно упаковать неявно. Затем можно объявить закрепляющий указатель на объект типа значения самого и использование **pin_ptr** упакованный тип значения.  
   
 ## <a name="example"></a>Пример  
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // pin_ptr_value.cpp  
 // compile with: /clr  
 value struct V {  
@@ -50,7 +50,7 @@ int main() {
   
 ### <a name="output"></a>Вывод  
   
-```  
+```Output  
 8  
 7  
 7  

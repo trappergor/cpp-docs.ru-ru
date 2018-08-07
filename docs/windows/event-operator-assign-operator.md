@@ -1,5 +1,5 @@
 ---
-title: Event::operator =-оператор | Документы Microsoft
+title: Event::operator =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871127"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571302"
 ---
 # <a name="eventoperator-operator"></a>Оператор Event::operator=
-Присваивает указанную ссылку на событие текущему экземпляру Event.  
+Назначает указанное **событий** ссылку на текущий **событий** экземпляра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,11 +36,11 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `h`  
- Rvalue ссылка на экземпляр события.  
+ *h*  
+ Ссылка rvalue на **событий** экземпляра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Указатель на текущий экземпляр события.  
+ Указатель на текущий **событий** экземпляра.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: defaultvtable | Документы Microsoft
+title: defaultvtable | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882541"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569674"
 ---
 # <a name="defaultvtable"></a>defaultvtable
-Определяет интерфейс как интерфейс vtable по умолчанию для COM-объекта.  
+Определяет интерфейс как интерфейс по умолчанию vtable для COM-объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `interface`  
- Указанный интерфейс, должны быть vtable по умолчанию для COM-объекта.  
+ *interface*  
+ Указанный интерфейс, который вы хотите иметь vtable по умолчанию для COM-объекта.  
   
 ## <a name="remarks"></a>Примечания  
- **Defaultvtable** языка C++ имеет ту же функциональность, что [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) языка MIDL.  
+ **Defaultvtable** атрибут C++ имеет ту же функциональность, что [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В следующем коде показано атрибуты для класса, используйте **defaultvtable** указание интерфейс по умолчанию:  
+ В следующем коде показано атрибуты для класса, используйте **defaultvtable** для указания интерфейс по умолчанию:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -78,7 +77,7 @@ class CMyC3 : public IMyI3 {};
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|**coclass**|  
 |**Недопустимые атрибуты**|Нет|  

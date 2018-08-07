@@ -1,5 +1,5 @@
 ---
-title: Метод HandleT::Close | Документы Microsoft
+title: Метод HandleT::Close | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69f3f2c756d158954676f6fc42941b1b80f4345e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873255"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569922"
 ---
 # <a name="handletclose-method"></a>Метод HandleT::Close
-Закрытие текущего объекта HandleT.  
+Закрывает текущий **HandleT** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +34,7 @@ void Close();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Дескриптор, лежащий в основе текущего объекта HandleT, закрывается и объекту HandleT присваивается недопустимое состояние.  
+ Дескриптор, лежащий в основе текущего **HandleT** закрывается и **HandleT** присваивается недопустимое состояние.  
   
  Если дескриптор не закрывается правильно, возникает исключение в вызывающем потоке.  
   

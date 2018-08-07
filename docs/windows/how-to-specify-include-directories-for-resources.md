@@ -1,5 +1,5 @@
 ---
-title: 'Как: укажите каталогов включения для ресурсов | Документы Microsoft'
+title: 'Практическое: укажите каталогов включения для ресурсов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875283"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569544"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Практическое руководство. Указание каталогов включения для ресурсов
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Для указания включите каталоги для конкретного rc-файла  
   
 1.  Щелкните правой кнопкой мыши RC-файл в обозревателе решений и выберите **свойства** в контекстном меню.  
   
-2.  В **страницы свойств** диалоговое окно, нажмите кнопку **ресурсов** узел на панели слева, затем укажите дополнительные каталоги включения в **Дополнительные каталоги включаемых файлов** свойство.  
+2.  В **страницы свойств** диалоговом окне щелкните **ресурсы** узел в области слева, затем укажите дополнительные каталоги включения в **Дополнительные каталоги включаемых файлов** свойство.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) руководства разработчика .NET Framework. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Пошаговое руководство: использование ресурсов для локализации с ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) руководства разработчика .NET Framework. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Пошаговое руководство: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Требования**  
+## <a name="requirements"></a>Требования  
   
  Win32  
   
 ## <a name="see-also"></a>См. также  
  [Диалоговое окно включения ресурсов](../windows/resource-includes-dialog-box.md)   
- [TN035: Использование нескольких файлов ресурсов и файлов заголовка в Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
+ [TN035: Использование нескольких файлов ресурсов и файлы заголовков в Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
  [Символы: Идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)   
  [Файлы ресурсов](../windows/resource-files-visual-studio.md)   
  [Редакторы ресурсов](../windows/resource-editors.md)

@@ -1,5 +1,5 @@
 ---
-title: Метод HString::Attach | Документы Microsoft
+title: Метод HString::Attach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738c44c11c69f8d2479335ce3effc4135dfe0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20a05bf603b874d260c95c010e6f0e8312b35649
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876070"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570993"
 ---
 # <a name="hstringattach-method"></a>Метод HString::Attach
-Связывает указанный объект HString с текущий объект HString.  
+Связывает указанный **HString** объект с текущим **HString** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 void Attach(  
        HSTRING hstr  
        ) throw()  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `hstr`  
- Существующий объект HString.  
+ *HSTR*  
+ Существующий **HString** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
