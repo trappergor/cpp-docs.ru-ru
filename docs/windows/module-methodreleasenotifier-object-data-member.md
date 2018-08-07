@@ -1,5 +1,5 @@
 ---
-title: 'Данные:: Object_ | Документы Microsoft'
+title: 'Данных Module::methodreleasenotifier:: Object_ | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2ed7505943f71e2fb1817d075d7afaf69323160
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bcc6efe59c71314837ff9c47d9c86c5b7f36c608
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881540"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607236"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Элемент данных Module::MethodReleaseNotifier::object_
-Содержит указатель на объект, функция-член которого является обработчиком событий для текущего объекта Module::MethodReleaseNotifier.  
+Содержит указатель на объект, функция-член которого является обработчиком событий для текущего **Module::MethodReleaseNotifier** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   

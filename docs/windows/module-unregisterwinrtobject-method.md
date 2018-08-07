@@ -1,5 +1,5 @@
 ---
-title: Метод Module::UnregisterWinRTObject | Документы Microsoft
+title: Метод Module::UnregisterWinRTObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aab0ec29dbda428a1173d57e2671f1e4b609e085
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bf681acc485b08448fcb4e936ca1096a8137384
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882606"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607476"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Метод Module::UnregisterWinRTObject
-Отменяет регистрацию одного или нескольких объектов среды выполнения Windows, чтобы другие приложения не смогут подключиться к ним.  
+Отменяет регистрацию одного или нескольких объектов среды выполнения Windows, таким образом, чтобы другие приложения не смогут подключиться к ним.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,11 +34,10 @@ virtual HRESULT UnregisterWinRTObject(
    unsigned int,  
    _Inout_ WINRT_REGISTRATION_COOKIE* cookie  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `cookie`  
+ *Файл cookie*  
  Указатель на значение, определяющее объект класса, регистрация которого должна быть отменена.  
   
 ## <a name="return-value"></a>Возвращаемое значение  

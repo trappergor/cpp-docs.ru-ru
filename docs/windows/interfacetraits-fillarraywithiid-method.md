@@ -1,5 +1,5 @@
 ---
-title: Метод InterfaceTraits::FillArrayWithIid | Документы Microsoft
+title: Метод InterfaceTraits::FillArrayWithIid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6e32b2e40ba9dc2b8085f8edc99beb899e90ace
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ef552e5025a18eb4c778f9d08389d2b7e3634d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877505"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605660"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>Метод InterfaceTraits::FillArrayWithIid
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,22 +34,21 @@ __forceinline static void FillArrayWithIid(
    _Inout_ unsigned long &index,  
    _In_ IID* iids  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `index`  
+### <a name="parameters"></a>Параметры  
+ *Индекс*  
  Указатель на поле, содержащее значение отсчитываемый от нуля индекс.  
   
- `iids`  
- Массив идентификаторов интерфейса.  
+ *идентификаторы IID*  
+ Массив идентификаторов интерфейсов.  
   
 ## <a name="remarks"></a>Примечания  
- Назначает идентификатор интерфейса `Base` на элемент массива, заданного аргументом индекса.  
+ Назначает идентификатор интерфейса `Base` к элементу массива, указанного аргументом индекса.  
   
- В отличие от имени этого API только один массив элемент изменен; не весь массив.  
+ В отличие от имени этого API только один массив изменяется; не весь массив.  
   
- Дополнительные сведения о `Base`, см. в разделе определения открытых типов в [InterfaceTraits-структура](../windows/interfacetraits-structure.md).  
+ Дополнительные сведения о `Base`, см. в разделе общедоступные определения типов в [interfacetraits-структура](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
@@ -57,5 +56,5 @@ __forceinline static void FillArrayWithIid(
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [InterfaceTraits-структура](../windows/interfacetraits-structure.md)   
+ [Interfacetraits-структура](../windows/interfacetraits-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Метод Module::RegisterObjects | Документы Microsoft
+title: Метод Module::RegisterObjects | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 986dcfff49529eedd8d495f4c37e19fa2b6cb8bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdaa1b23bbefb64071e5f1f330c8708f9f9516ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875348"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605270"
 ---
 # <a name="moduleregisterobjects-method"></a>Метод Module::RegisterObjects
-Регистрирует объекты COM или среды выполнения Windows, чтобы другие приложения могли к ним подключиться.  
+Регистрирует объекты COM или среду выполнения Windows, чтобы другие приложения могли подключиться к ним.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,11 +35,11 @@ HRESULT RegisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `module`  
- Массив объектов COM или среды выполнения Windows.  
+### <a name="parameters"></a>Параметры  
+ *модуль*  
+ Массив объектов COM или среду выполнения Windows.  
   
- `serverName`  
+ *Имя_сервера*  
  Имя сервера, который создал объекты.  
   
 ## <a name="return-value"></a>Возвращаемое значение  

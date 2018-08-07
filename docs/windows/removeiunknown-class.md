@@ -1,5 +1,5 @@
 ---
-title: Класс RemoveIUnknown | Документы Microsoft
+title: Класс RemoveIUnknown | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb005bc3cbf411a7d5b5ddbfa44cd6aecf802105
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69775303c5a12f82ef2a31cc61112af4b14d3aad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879546"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606173"
 ---
 # <a name="removeiunknown-class"></a>Класс RemoveIUnknown
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -39,22 +39,22 @@ template <
 class RemoveIUnknown : public T;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
+### <a name="parameters"></a>Параметры  
+ *T*  
  Класс.  
   
 ## <a name="remarks"></a>Примечания  
  Создает тип, эквивалентный базовому типу `IUnknown`, но имеющий невиртуальные функции-члены `QueryInterface`, `AddRef` и `Release`.  
   
- По умолчанию методы модели COM предоставляют виртуальные методы `QueryInterface`, `AddRef` и Release. Однако для `ComPtr` не требуется нагрузка, связанная с виртуальными методами. Интерфейс `RemoveIUnknown` исключает эту нагрузку, предоставляя закрытые невиртуальные методы `QueryInterface`, `AddRef` и `Release`.  
+ По умолчанию методы модели COM предоставляют виртуальные `QueryInterface`, `AddRef`, и `Release` методы. Однако для `ComPtr` не требуется нагрузка, связанная с виртуальными методами. Интерфейс `RemoveIUnknown` исключает эту нагрузку, предоставляя закрытые невиртуальные методы `QueryInterface`, `AddRef` и `Release`.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|`ReturnType`|Синоним для типа, эквивалентного параметру шаблона `T`, но имеющего невиртуальные члены IUnknown.|  
+|`ReturnType`|Синоним для типа, которое эквивалентно значению параметра-шаблона *T* , но имеющий невиртуальные `IUnknown` членов.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `T`  

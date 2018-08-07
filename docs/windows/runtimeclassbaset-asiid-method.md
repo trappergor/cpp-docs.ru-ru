@@ -1,5 +1,5 @@
 ---
-title: Метод RuntimeClassBaseT::AsIID | Документы Microsoft
+title: Метод RuntimeClassBaseT::AsIID | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892134"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607431"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>Метод RuntimeClassBaseT::AsIID
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -38,21 +38,21 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
- Тип, который реализует идентификатор интерфейса, заданный параметром `riid`.  
+### <a name="parameters"></a>Параметры  
+ *T*  
+ Тип, который реализует идентификатор интерфейса, заданный параметром *riid*.  
   
- `implements`  
- Переменная типа, указанного в параметре шаблона `T`.  
+ *Реализует*  
+ Переменной типа, указанного параметром шаблона *T*.  
   
- `riid`  
+ *riid*  
  Извлекаемый идентификатор интерфейса.  
   
- `ppvObject`  
- Если операция завершилась успешно, представляет указатель на указатель интерфейса, заданный параметром `riid`.  
+ *ppvObject*  
+ При успешном выполнении эта операция указатель для указатель на интерфейс, указанного параметром *riid*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае — значение HRESULT, описывающее ошибку.  
+ Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, описывающее ошибку.  
   
 ## <a name="remarks"></a>Примечания  
  Извлекает указатель на идентификатор указанного интерфейса.  

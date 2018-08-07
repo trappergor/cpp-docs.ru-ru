@@ -1,5 +1,5 @@
 ---
-title: Метод ImplementsHelper::CanCastTo | Документы Microsoft
+title: Метод ImplementsHelper::CanCastTo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6de971f2de2421a2d7987dab30ba73fa2d225b15
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a60f2e45e276592c7c1223526cd002bdc6e79013
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876557"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605484"
 ---
 # <a name="implementshelpercancastto-method"></a>Метод ImplementsHelper::CanCastTo
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -30,7 +30,6 @@ ms.locfileid: "33876557"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 HRESULT CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  
@@ -42,14 +41,14 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `riid`  
+### <a name="parameters"></a>Параметры  
+ *riid*  
  Ссылка на идентификатор интерфейса.  
   
- `ppv`  
- Если операция завершилась успешно, указатель на интерфейс, заданный `riid` или `iid`.  
+ *ppv*  
+ Если операция выполнена успешно, указатель на интерфейс, заданный *riid* или *iid*.  
   
- `iid`  
+ *IID*  
  Ссылка на идентификатор интерфейса.  
   
 ## <a name="return-value"></a>Возвращаемое значение  

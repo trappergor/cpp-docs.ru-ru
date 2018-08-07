@@ -1,5 +1,5 @@
 ---
-title: propget | Документы Microsoft
+title: propget | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 339cb03b645e3aff0a6bb806e431c7be274340d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3552a8c64260345b6a956878c459182089e1af0f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881869"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607551"
 ---
 # <a name="propget"></a>propget
-Задает функции метода доступа свойства.  
+Указывает функции метода доступа свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [propget]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Propget** языка C++ имеет ту же функциональность, что [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) языка MIDL.  
+ **Propget** атрибут C++ имеет ту же функциональность, что [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) для приведен пример использования **propget**.  
+ См. в примере [bindable](../windows/bindable.md) использовать образец **propget**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -50,7 +48,7 @@ ms.locfileid: "33881869"
 |**Применение**|Метод|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**propput**, **propputref**|  
+|**Недопустимые атрибуты**|`propput`, `propputref`|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   

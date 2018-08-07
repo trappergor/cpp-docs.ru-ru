@@ -1,5 +1,5 @@
 ---
-title: last_is | Документы Microsoft
+title: last_is | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f27c0a12ddf5fe87f7065a16d042bd0afcfc0315
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0519409e71457ca025318a591772faf33592abe
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877525"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606072"
 ---
 # <a name="lastis"></a>last_is
-Определяет индекс последнего элемента массива для передачи.  
+Указывает индекс последнего элемента массива для передачи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ last_is(  
+[ last_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *Выражение*  
- Одно или несколько выражений языка C. Допускаются слоты пустой аргумент.  
+ Одно или несколько выражений языка. Допускаются слотов пустой аргумент.  
   
 ## <a name="remarks"></a>Примечания  
- **Last_is** языка C++ имеет ту же функциональность, что [last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) языка MIDL.  
+ **Last_is** атрибут C++ имеет ту же функциональность, что [last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В разделе [first_is](../windows/first-is.md) пример указания фрагмент массива.  
+ См. в разделе [first_is](../windows/first-is.md) пример указания фрагмент массива.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33877525"
   
 |||  
 |-|-|  
-|**Применение**|Поле в `struct` или **объединение**, интерфейс параметр, метод|  
+|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

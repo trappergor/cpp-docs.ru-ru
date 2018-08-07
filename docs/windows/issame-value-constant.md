@@ -1,5 +1,5 @@
 ---
-title: Константа IsSame::value | Документы Microsoft
+title: Константа IsSame::value | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aaf248622b6306af1a3eeebb258b296be43448da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e9d1ae2b4ea4ad4769a770d503ff8bd82c91a53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875244"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608791"
 ---
 # <a name="issamevalue-constant"></a>Константа IsSame::value
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -30,7 +30,6 @@ ms.locfileid: "33875244"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
   template <typename T1, typename T2>  
 struct IsSame  
 {  
@@ -42,13 +41,12 @@ struct IsSame<T1, T1>
 {  
     static const bool value = true;  
 };  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
  Указывает, совпадают ли заданные типы друг с другом.  
   
- `value` — **true** , если параметры шаблона совпадают, и **false** Если параметры шаблона не совпадают.  
+ `value` — **true** Если параметров шаблона являются одинаковыми, и **false** Если параметры шаблона различаются.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** internal.h  

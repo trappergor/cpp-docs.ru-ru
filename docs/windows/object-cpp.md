@@ -1,5 +1,5 @@
 ---
-title: объект (C++) | Документы Microsoft
+title: объект (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879712"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607914"
 ---
 # <a name="object-c"></a>object (C++)
 Определяет пользовательский интерфейс.  
@@ -30,18 +30,16 @@ ms.locfileid: "33879712"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [object]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Если предшествующие определение интерфейса **объекта** языка C++ вызывает интерфейс помещается в IDL-файл как пользовательский интерфейс.  
+ Когда перед определение интерфейса **объект** атрибут C++ вызывает интерфейс помещается в IDL-файл как пользовательский интерфейс.  
   
- Любой интерфейс, отмеченный атрибутом объект должен наследовать от **IUnknown**. Это условие выполнено, если любой из этих базовых интерфейсов наследуют от **IUnknown**. Если базовые интерфейсы не наследуют от **IUnknown**, компилятор вызывает интерфейс, отмеченный атрибутом **объекта** для наследования от **IUnknown**.  
+ Любой интерфейс, отмеченный атрибутом объект должен наследовать от `IUnknown`. Это условие выполняется в том случае, если любой из этих базовых интерфейсов наследуют от `IUnknown`. Если нет базовых интерфейсов наследуют от `IUnknown`, компилятор вызовет интерфейс, отмеченный атрибутом **объект** для наследования от `IUnknown`.  
   
 ## <a name="example"></a>Пример  
- В разделе [nonbrowsable](../windows/nonbrowsable.md) пример демонстрирует использование **объекта**.  
+ См. в разделе [недоступная для просмотра](../windows/nonbrowsable.md) пример демонстрирует использование **объект**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -49,7 +47,7 @@ ms.locfileid: "33879712"
   
 |||  
 |-|-|  
-|**Применение**|`interface`|  
+|**Применение**|**interface**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  
@@ -59,7 +57,7 @@ ms.locfileid: "33879712"
 ## <a name="see-also"></a>См. также  
  [Атрибуты IDL](../windows/idl-attributes.md)   
  [Атрибуты интерфейса](../windows/interface-attributes.md)   
- [Два двухъядерных](../windows/dual.md)   
+ [Dual](../windows/dual.md)   
  [Disp-интерфейс](../windows/dispinterface.md)   
- [Настройка](../windows/custom-cpp.md)   
+ [Custom](../windows/custom-cpp.md)   
  [__interface](../cpp/interface.md)   

@@ -1,5 +1,5 @@
 ---
-title: Редактор изображений для значков | Документы Microsoft
+title: Редактор изображений для значков | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41c4bf71d8d3479f8353c1f57e725f07926dee47
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb5da618ce94711ce41e305c234ef5a5087c5f38
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879286"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603576"
 ---
 # <a name="image-editor-for-icons"></a>Редактор изображений для значков
 В редакторе изображений предлагается широкий набор средств для создания и редактирования изображений, а также возможности, которые могут помочь в создании точечных рисунков для панели инструментов. Помимо точечных рисунков, значков и курсоров, можно редактировать изображения в форматах GIF и JPEG при помощи команд меню **Изображение** и средств панели инструментов **Редактор изображений** .  
@@ -56,12 +56,11 @@ ms.locfileid: "33879286"
 ## <a name="managed-resources"></a>Управляемые ресурсы  
  Для работы с файлами ресурсов в управляемых проектах можно использовать редактор изображений и [Двоичный редактор](binary-editor.md) . Все управляемые ресурсы, которые нужно редактировать, должны быть связанными ресурсами. Редакторы ресурсов Visual Studio не поддерживают редактирование внедренных ресурсов.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования  
  Нет  
   
 ## <a name="see-also"></a>См. также  
  [Редакторы ресурсов](../windows/resource-editors.md)   
  [Значки](http://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)
-

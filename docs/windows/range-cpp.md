@@ -1,5 +1,5 @@
 ---
-title: диапазон (C++) | Документы Microsoft
+title: диапазон (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877934"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603446"
 ---
 # <a name="range-c"></a>range (C++)
-Указывает диапазон допустимых значений для аргументов или поля, значения которых устанавливаются во время выполнения.  
+Указывает диапазон допустимых значений для полей, значения которых устанавливаются во время выполнения и аргументы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -39,17 +38,17 @@ ms.locfileid: "33877934"
   
 #### <a name="parameters"></a>Параметры  
  *low*  
- Значение Низкий диапазон.  
+ Значение нижняя граница диапазона.  
   
  *high*  
  Значение верхняя граница диапазона.  
   
 ## <a name="remarks"></a>Примечания  
- **Диапазон** языка C++ имеет ту же функциональность, что [диапазон](http://msdn.microsoft.com/library/windows/desktop/aa367151) языка MIDL.  
+ **Диапазон** атрибут C++ имеет ту же функциональность, что [диапазон](http://msdn.microsoft.com/library/windows/desktop/aa367151) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

@@ -1,5 +1,5 @@
 ---
-title: importidl | Документы Microsoft
+title: importidl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877479"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607187"
 ---
 # <a name="importidl"></a>importidl
-Вставляет указанный IDL-файла в сгенерированный IDL-файл.  
+Вставляет указанный IDL-файла в созданного IDL-файла.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `idl_file`  
- Определяет имя IDL-файла, которую требуется объединить с IDL-файла, создаваемого для вашего приложения.  
+### <a name="parameters"></a>Параметры  
+ *idl_file*  
+ Определяет имя IDL-файла, которые необходимо объединить с IDL-файла, создаваемого для вашего приложения.  
   
 ## <a name="remarks"></a>Примечания  
- **Importidl** атрибута C++ помещает раздел вне блока библиотеки (в `idl_file`) в вашей программе созданного IDL-файла и в разделе библиотеки (в `idl_file`) в раздел библиотеки программы созданного IDL-файла.  
+ **Importidl** атрибут C++ помещает разделе за пределами блока библиотеки (в *idl_file*) в вашей программе созданного IDL-файла и в разделе библиотеки (в *idl_file*) в библиотеку раздел для вашей программы создается IDL-файла.  
   
- Вы можете использовать **importidl**, например, если вы хотите использовать вручную IDL-файл с вашего созданного IDL-файла.  
+ Вы можете использовать **importidl**, например, если вы хотите использовать с вашей созданного IDL-файла вручную IDL-файл.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -72,5 +71,5 @@ ms.locfileid: "33877479"
  [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
  [Импорт](../windows/import.md)   
  [importlib](../windows/importlib.md)   
- [Включить](../windows/include-cpp.md)   
+ [включить](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

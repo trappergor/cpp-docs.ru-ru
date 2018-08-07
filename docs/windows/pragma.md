@@ -1,5 +1,5 @@
 ---
-title: Директива pragma | Документы Microsoft
+title: директивы pragma | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cab41277a7e5560fd842bf720fd776961d918d99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5abd483fb5a680ac3dba4ec01fc4bc6ebfa09ef2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878152"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602621"
 ---
 # <a name="pragma"></a>pragma
-Создает указанную строку в созданного IDL-файла без использования кавычек. .  
+Создает указанную строку в созданного IDL-файла без использования кавычек. 
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ pragma(  
+[ pragma(  
    pragma_statement  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Параметры  
  *pragma_statement*  
- Директива pragma, необходимо перейти в сгенерированный IDL-файл.  
+ Директива pragma, который вы хотите перейти на созданного IDL-файла.  
   
 ## <a name="remarks"></a>Примечания  
- **Pragma** языка C++ имеет ту же функциональность, что [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) языка MIDL.  
+ **Pragma** атрибут C++ имеет ту же функциональность, что [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_pragma.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

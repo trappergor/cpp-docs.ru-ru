@@ -1,5 +1,5 @@
 ---
-title: 'RuntimeClass:: ~ RuntimeClass деструктор | Документы Microsoft'
+title: 'RuntimeClass:: ~ RuntimeClass деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b48ead21adc8b641840727af236c3c6e58efee9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13f537a9f5f6a66107a381324ccef1a6bef2ff32
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892193"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608033"
 ---
 # <a name="runtimeclassruntimeclass-destructor"></a>Деструктор RuntimeClass::~RuntimeClass
-Деинициализирует текущий экземпляр класса RuntimeClass.  
+Деинициализирует текущий экземпляр **RuntimeClass** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   

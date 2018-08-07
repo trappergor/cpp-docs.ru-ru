@@ -1,5 +1,5 @@
 ---
-title: nonbrowsable | Документы Microsoft
+title: недоступная для просмотра | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb752c02eb200e952cf247684675ebd377eeaaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877372"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604594"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
-Указывает, что член интерфейса не будут отображаться в обозревателе свойств.  
+Указывает, что член интерфейса не должен отображаться в обозревателе свойств.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [nonbrowsable]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Nonbrowsable** языка C++ имеет ту же функциональность, что [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) языка MIDL.  
+ **Недоступная для просмотра** атрибут C++ имеет ту же функциональность, что [недоступная для просмотра](http://msdn.microsoft.com/library/windows/desktop/aa367117) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_nonbrowsable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

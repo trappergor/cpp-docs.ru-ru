@@ -1,5 +1,5 @@
 ---
-title: Метод ImplementsHelper::FillArrayWithIid | Документы Microsoft
+title: Метод ImplementsHelper::FillArrayWithIid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da38eddae5ab9c49da98a4c5e9f383d59d110ee1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879927"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608326"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>Метод ImplementsHelper::FillArrayWithIid
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -36,14 +36,14 @@ void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `index`  
- Отсчитываемый от нуля индекс, который указывает начальный элемент массива для этой операции. По завершении этой операции `index` увеличивается на 1.  
+ *Индекс*  
+ Отсчитываемый от нуля индекс, указывающий начальный элемент массива для этой операции. По завершении этой операции *индекс* увеличивается на 1.  
   
- `iids`  
+ *идентификаторы IID*  
  Массив типа IID.  
   
 ## <a name="remarks"></a>Примечания  
- Вставляет идентификатор интерфейса, заданный текущим параметром шаблона нулевого в качестве элемента указанного массива.  
+ Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

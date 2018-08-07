@@ -1,5 +1,5 @@
 ---
-title: requestedit | Документы Microsoft
+title: requestedit | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878259"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606479"
 ---
 # <a name="requestedit"></a>requestedit
-Указывает, что свойство поддерживает **OnRequestEdit** уведомления.  
+Указывает, что свойство поддерживает `OnRequestEdit` уведомлений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Requestedit** языка C++ имеет ту же функциональность, что [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) языка MIDL.  
+ **Requestedit** атрибут C++ имеет ту же функциональность, что [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) для приведен пример использования **requestedit**.  
+ См. в примере [bindable](../windows/bindable.md) использовать образец **requestedit**.  
   
 ## <a name="requirements"></a>Требования  
   

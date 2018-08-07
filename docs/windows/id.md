@@ -1,5 +1,5 @@
 ---
-title: Идентификатор | Документы Microsoft
+title: Идентификатор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882451"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605712"
 ---
 # <a name="id"></a>id
-Указывает `dispid` параметра для функции-члена (свойство или метод в интерфейсе или disp-интерфейс).  
+Указывает *dispid* параметра для функции-члена (свойство или метод, в интерфейс или диспетчерский интерфейс).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `dispid`  
- Идентификатор диспетчеризации для метода интерфейса.  
+### <a name="parameters"></a>Параметры  
+ *Идентификатор DISPID*  
+ Идентификатор диспетчеризации метода интерфейса.  
   
 ## <a name="remarks"></a>Примечания  
- **Идентификатор** языка C++ имеет ту же функциональность, что [идентификатор](http://msdn.microsoft.com/library/windows/desktop/aa367040) языка MIDL.  
+ **Идентификатор** атрибут C++ имеет ту же функциональность, что [идентификатор](http://msdn.microsoft.com/library/windows/desktop/aa367040) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **идентификатор**.  
+ См. в примере [bindable](../windows/bindable.md) пример демонстрирует использование **идентификатор**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -63,6 +62,6 @@ ms.locfileid: "33882451"
  [Атрибуты IDL](../windows/idl-attributes.md)   
  [Атрибуты метода](../windows/method-attributes.md)   
  [Атрибуты членов данных](../windows/data-member-attributes.md)   
- [значение по умолчанию](../windows/defaultvalue.md)   
+ [DefaultValue](../windows/defaultvalue.md)   
  [in](../windows/in-cpp.md)   
  [out](../windows/out-cpp.md)   

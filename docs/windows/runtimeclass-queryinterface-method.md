@@ -1,5 +1,5 @@
 ---
-title: Метод RuntimeClass::QueryInterface | Документы Microsoft
+title: Метод RuntimeClass::QueryInterface | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f5183d0273abfc23834099c07987dca6b3da7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15f611a9fe361e401e1884cb1794f8d1ef1f5591
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892109"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603541"
 ---
 # <a name="runtimeclassqueryinterface-method"></a>Метод RuntimeClass::QueryInterface
 Извлекает указатель на идентификатор указанного интерфейса.  
@@ -30,7 +30,6 @@ ms.locfileid: "33892109"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 STDMETHOD(  
    QueryInterface  
 )  
@@ -38,12 +37,12 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `riid`  
+### <a name="parameters"></a>Параметры  
+ *riid*  
  Идентификатор интерфейса.  
   
- `ppvObject`  
- После завершения этого opereation указатель интерфейса, указанного параметром `riid` параметр.  
+ *ppvObject*  
+ После завершения этого opereation указатель интерфейса, заданного параметром *riid* параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  

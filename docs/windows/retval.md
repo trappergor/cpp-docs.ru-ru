@@ -1,5 +1,5 @@
 ---
-title: retval | Документы Microsoft
+title: retval | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888725"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606355"
 ---
 # <a name="retval"></a>retval
 Назначает параметр, который получает возвращаемое значение члена.  
@@ -30,18 +30,16 @@ ms.locfileid: "33888725"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [retval]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Retval** языка C++ имеет ту же функциональность, что [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) языка MIDL.  
+ **Retval** атрибут C++ имеет ту же функциональность, что [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) описании атрибута MIDL.  
   
  **retval** должны располагаться на последний аргумент в объявлении функции.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) для приведен пример использования **retval**.  
+ См. в примере [bindable](../windows/bindable.md) использовать образец **retval**.  
   
 ## <a name="requirements"></a>Требования  
   

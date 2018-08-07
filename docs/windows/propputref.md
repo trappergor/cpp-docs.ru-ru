@@ -1,5 +1,5 @@
 ---
-title: propputref | Документы Microsoft
+title: propputref | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ac9784e450746a4474879aae346a4242bbe2fd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc11561401ff34b629fecdc31a00ffb845d6a2d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878194"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606804"
 ---
 # <a name="propputref"></a>propputref
-Задает функцию настройки свойства, которое использует ссылку вместо значения.  
+Задает функцию настройки свойства, которая использует ссылку вместо значения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [propputref]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Propputref** языка C++ имеет ту же функциональность, что [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) языка MIDL.  
+ **Propputref** атрибут C++ имеет ту же функциональность, что [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) для приведен пример использования **propputref**.  
+ См. в примере [bindable](../windows/bindable.md) использовать образец **propputref**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -50,7 +48,7 @@ ms.locfileid: "33878194"
 |**Применение**|Метод|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**propget**, **propput**|  
+|**Недопустимые атрибуты**|`propget`, `propput`|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   

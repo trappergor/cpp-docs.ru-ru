@@ -1,5 +1,5 @@
 ---
-title: New (новый слот в vtable) (расширения компонентов C++) | Документы Microsoft
+title: New (новый слот в vtable) (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879787"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607015"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (новый слот в vtable) (расширения компонентов C++)
-`new` Ключевое слово указывает, что виртуальный член получает новую ячейку в таблице vtable.  
+**Новый** слово указывает, что виртуальный член получает новую ячейку в таблице vtable.  
   
 ## <a name="all-runtimes"></a>Все среды выполнения  
  (Отсутствуют комментарии для этой возможности языка, которая применяется во всех средах выполнения.)  
@@ -32,25 +32,24 @@ ms.locfileid: "33879787"
  Не поддерживается в среде выполнения Windows.  
   
 ## <a name="common-language-runtime"></a>Среда CLR 
- **Заметки**  
+### <a name="remarks"></a>Примечания  
   
- В **/CLR** компиляции `new` указывает, что виртуальный член получает новую ячейку в таблице vtable, что функция не переопределяет метод базового класса.  
+ В `/clr` компиляции **новый** указывает, что виртуальный член получает новую ячейку в таблице vtable, что функция не переопределяет метод базового класса.  
   
- `new` в результате модификатор newslot добавляемый IL-код для функции.  Дополнительные сведения о newslot см. в разделе:  
+ **новый** вызывает модификатор newslot добавляемый IL-код для функции.  Дополнительные сведения о newslot см. в разделе:  
   
--   [Метод MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [Метод MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [Перечисление MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [Перечисление пространство](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/clr**  
+ Параметр компилятора: `/clr`  
   
 ### <a name="examples"></a>Примеры  
- **Пример**  
   
- В следующем примере показано влияние `new`.  
+ В следующем примере показано влияние **новый**.  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  

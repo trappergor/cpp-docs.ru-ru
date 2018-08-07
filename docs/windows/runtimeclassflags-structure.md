@@ -1,5 +1,5 @@
 ---
-title: Структура RuntimeClassFlags | Документы Microsoft
+title: Структура RuntimeClassFlags | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05166be14680b14d704095f5f1c9375bd97da7d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6206a167c8b7292db21b9466975d057fc36cbe2f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892030"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604938"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags - структура
-Содержит тип экземпляра класса [RuntimeClass](../windows/runtimeclass-class.md).  
+Содержит тип для экземпляра [RuntimeClass](../windows/runtimeclass-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,15 +36,15 @@ template <
 struct RuntimeClassFlags;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `flags`  
+### <a name="parameters"></a>Параметры  
+ *flags*  
  Объект [runtimeclasstype-перечисление](../windows/runtimeclasstype-enumeration.md) значение.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Константа RuntimeClassFlags::value](../windows/runtimeclassflags-value-constant.md)|Содержит [runtimeclasstype-перечисление](../windows/runtimeclasstype-enumeration.md) значение.|  
   

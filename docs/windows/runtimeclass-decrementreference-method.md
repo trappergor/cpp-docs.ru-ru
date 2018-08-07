@@ -1,5 +1,5 @@
 ---
-title: Метод RuntimeClass::DecrementReference | Документы Microsoft
+title: Метод RuntimeClass::DecrementReference | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 660c78ba8a6b3000facc43541249fb6f9856a813
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c56f3ca8abae71313ca24eec26eeacbf70862f9c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892687"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605972"
 ---
 # <a name="runtimeclassdecrementreference-method"></a>Метод RuntimeClass::DecrementReference
-Уменьшает счетчик ссылок для текущего объекта RuntimeClass.  
+Уменьшает счетчик ссылок для текущего **RuntimeClass** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   

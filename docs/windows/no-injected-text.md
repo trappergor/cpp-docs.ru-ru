@@ -1,5 +1,5 @@
 ---
-title: no_injected_text | Документы Microsoft
+title: no_injected_text | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74336ffaa5e1f9f1990acedf1669526c9152b82b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880352"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603424"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-Запрещает компилятору встраивать код в результате использования атрибута.  
+Запрещает компилятору вставку кода в результате использования атрибута.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ no_injected_text(  
+[ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `boolean` (необязательно)  
- **значение true,** Если требуется, чтобы не коду, введенному, **false** для внедренным кодом. **значение true,** значение по умолчанию.  
+ *логическое* (необязательно)  
+ **значение true,** Если нет кода, подставленного, **false** чтобы кода, которые следует вставить. **значение true,** используется по умолчанию.  
   
 ## <a name="remarks"></a>Примечания  
- Чаще всего используют **no_injected_text** C++ атрибут должен быть, [/Fx](../build/reference/fx-merge-injected-code.md) параметр компилятора, который вставляет **no_injected_text** атрибута в MRG-файле.  
+ Наиболее распространенное использование **no_injected_text** C++ атрибут должен быть, [/Fx](../build/reference/fx-merge-injected-code.md) параметр компилятора, который вставляет **no_injected_text** атрибут в MRG-файла.  
   
 ## <a name="requirements"></a>Требования  
   

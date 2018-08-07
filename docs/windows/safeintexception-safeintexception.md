@@ -1,5 +1,5 @@
 ---
-title: SafeIntException::SafeIntException | Документы Microsoft
+title: SafeIntException::SafeIntException | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef3c1d11c0f814699ca1492f7ec1fb49c43c3d76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 744bf034572745cd88a35f47a1ca2da03e900fd8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892180"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606661"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
-Создает объект `SafeIntException`.  
+Создает **SafeIntException** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,12 +39,12 @@ SafeIntException(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- [in] `code`  
- Значение данных перечисления, которое описывает возникшей ошибки.  
+### <a name="parameters"></a>Параметры  
+ [in] *кода*  
+ Значение типа перечислимых данных, описывающее возникшую ошибку.  
   
 ## <a name="remarks"></a>Примечания  
- Возможные значения параметра `code` определены в файле Safeint.h. Для удобства возможные значения также перечислены здесь.  
+ Возможные значения *кода* определены в файле Safeint.h. Для удобства возможные значения также перечислены здесь.  
   
 -   `SafeIntNoError`  
   

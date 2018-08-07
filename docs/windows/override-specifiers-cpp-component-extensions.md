@@ -1,5 +1,5 @@
 ---
-title: Спецификаторы переопределения (расширения компонентов C++) | Документы Microsoft
+title: Переопределить спецификаторы (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb610157d1d56c00b48e98086137351e9fd43a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f84379e57dc5730227726d28c6947d0274b615c5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882766"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603918"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Спецификаторы переопределения (расширения компонентов C++)
 *Спецификаторы переопределения* изменяют поведение унаследованных типов и членов унаследованных типов ведут себя в производных типах.  
   
 ## <a name="all-runtimes"></a>Все среды выполнения  
- **Заметки**  
+### <a name="remarks"></a>Примечания  
   
  Дополнительные сведения о спецификаторах переопределения см. в разделах:  
   
@@ -39,23 +39,23 @@ ms.locfileid: "33882766"
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   [Спецификаторы переопределения и компиляция в машинный код](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
+-   [Спецификаторы переопределения и компиляции в машинный код](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
- Также при объявлении типа можно использовать `abstract` и `sealed` в качестве спецификаторов переопределения.  
+ **Абстрактный** и **запечатанный** относятся также и на объявления типа, где они не действуют как спецификаторы переопределения.  
   
- Сведения о переопределении функции базового класса явным образом, в разделе [явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Сведения о явного переопределения функции базового класса, см. в разделе [явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Среда выполнения Windows  
  (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/ZW**  
+ Параметр компилятора: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Среда CLR  
  (Отсутствуют комментарии для этой функции языка, которая применяется только в среде CLR).  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/clr**  
+ Параметр компилятора: `/clr`  
   
 ## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,5 +1,5 @@
 ---
-title: SafeMultiply | Документы Microsoft
+title: SafeMultiply | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 89581544e203249a548b49f0695b28662407229b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662f43d34494850f230723f57163383df99e4848
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889486"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603320"
 ---
 # <a name="safemultiply"></a>SafeMultiply
-Перемножает два числа в способом, который обеспечивает защиту от переполнения.  
+Перемножает два числа вместе способом, который обеспечивает защиту от переполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,26 +38,26 @@ inline bool SafeMultiply (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- [in] `t`  
- Первое число для умножения. Это должен быть типа T.  
+### <a name="parameters"></a>Параметры  
+ [in] *t*  
+ Первое число для умножения. Это должен быть типа `T`.  
   
- [in] `u`  
- Второе число для умножения. Это должен быть типа u.  
+ [in] *u*  
+ Второе число для умножения. Это должен быть типа `U`.  
   
- [выходной] `result`  
- Параметр где `SafeMultiply` сохраняет результат.  
+ [out] *результат*  
+ Параметр где **SafeMultiply** сохраняет результат.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` При отсутствии ошибок; `false` при возникновении ошибки.  
+ **значение true,** при отсутствии ошибок; **false** при возникновении ошибки.  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначена для операции умножения одного без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
+ Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначен для операцию умножения одного без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Этот метод использовать только в том случае, когда один математической операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класса вместо вызова автономного отдельных функций.  
+>  Этот метод должен использоваться только в тех случаях, когда одной математической операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класса вместо вызова отдельных автономных функций.  
   
- Дополнительные сведения о типах шаблонов T и U см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
+ Дополнительные сведения о типах шаблонов `T` и `U`, см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** safeint.h  
@@ -67,5 +67,5 @@ inline bool SafeMultiply (
 ## <a name="see-also"></a>См. также  
  [Функции SafeInt](../windows/safeint-functions.md)   
  [Библиотека SafeInt](../windows/safeint-library.md)   
- [SafeInt-класс](../windows/safeint-class.md)   
+ [Класс SafeInt](../windows/safeint-class.md)   
  [SafeDivide](../windows/safedivide.md)

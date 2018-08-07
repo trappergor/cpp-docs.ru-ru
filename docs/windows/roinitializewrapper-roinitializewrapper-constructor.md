@@ -1,5 +1,5 @@
 ---
-title: Конструктор RoInitializeWrapper::RoInitializeWrapper | Документы Microsoft
+title: Конструктор RoInitializeWrapper::RoInitializeWrapper | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f2af40c671760bb8d4e667c209598c46b24665
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889213"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604402"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>Конструктор RoInitializeWrapper::RoInitializeWrapper
-Инициализирует новый экземпляр класса RoInitializeWrapper.  
+Инициализирует новый экземпляр класса **RoInitializeWrapper** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,12 +31,12 @@ ms.locfileid: "33889213"
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `flags`  
+### <a name="parameters"></a>Параметры  
+ *flags*  
  Одно из перечислений RO_INIT_TYPE, которые задает поддержку, предоставляемые средой выполнения Windows.  
   
 ## <a name="remarks"></a>Примечания  
- Класс RoInitializeWrapper вызывает Windows::Foundation::Initialize (*флаги*).  
+ **RoInitializeWrapper** класс вызывает `Windows::Foundation::Initialize(flags)`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

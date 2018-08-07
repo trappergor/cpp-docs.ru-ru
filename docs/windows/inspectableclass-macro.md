@@ -1,5 +1,5 @@
 ---
-title: Макрос InspectableClass | Документы Microsoft
+title: Макрос InspectableClass | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 922f7f74771125aed0122c408ef902da2569e5c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873775"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608960"
 ---
 # <a name="inspectableclass-macro"></a>Макрос InspectableClass
 Задает уровень имя и доверия класса среды выполнения.  
@@ -33,15 +33,15 @@ InspectableClass(
    trustLevel)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `runtimeClassName`  
+### <a name="parameters"></a>Параметры  
+ *runtimeClassName*  
  Полное текстовое имя класса среды выполнения.  
   
- `trustLevel`  
+ *trustLevel*  
  Один из [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) значений перечисления.  
   
 ## <a name="remarks"></a>Примечания  
- `InspectableClass` Макрос может использоваться только с типами среды выполнения Windows.  
+ **InspectableClass** макрос может использоваться только с типами среды выполнения Windows.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

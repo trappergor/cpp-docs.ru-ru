@@ -1,5 +1,5 @@
 ---
-title: Структура InterfaceTraits | Документы Microsoft
+title: Interfacetraits-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4203fbb639b06e7e421809f9d901c70933d586d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878688"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606752"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -41,12 +41,12 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `I0`  
+### <a name="parameters"></a>Параметры  
+ *I0*  
  Имя интерфейса.  
   
- `CloakedType`  
- Для RuntimeClass, Implements и ChainInterfaces интерфейс, который не будет в списке поддерживаемых идентификаторов интерфейсов.  
+ *CloakedType*  
+ Для `RuntimeClass`, `Implements` и `ChainInterfaces`, интерфейс, который не будет в списке поддерживаемых идентификаторы интерфейсов.  
   
 ## <a name="remarks"></a>Примечания  
  Реализует общие характеристики интерфейса.  
@@ -57,25 +57,25 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|`Base`|Синоним для параметра шаблона `I0`.|  
+|`Base`|Синоним для *I0* параметр шаблона.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод InterfaceTraits::CanCastTo](../windows/interfacetraits-cancastto-method.md)|Указывает ли заданный указатель может быть приведен к указателю на `Base`.|  
 |[Метод InterfaceTraits::CastToBase](../windows/interfacetraits-casttobase-method.md)|Приводит определенный указатель к указателю на `Base`.|  
-|[Метод InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Приводит определенный указатель на указатель на IUnknown.|  
-|[Метод InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Назначает идентификатор интерфейса `Base` на элемент массива, заданного аргументом индекса.|  
+|[Метод InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Приводит определенный указатель к указателю на `IUnknown`.|  
+|[Метод InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Назначает идентификатор интерфейса `Base` к элементу массива, указанного аргументом индекса.|  
 |[Метод InterfaceTraits::Verify](../windows/interfacetraits-verify-method.md)|Проверяет, что базовый правильно производный.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[Константа InterfaceTraits::IidCount](../windows/interfacetraits-iidcount-constant.md)|Содержит количество идентификаторов, связанного с текущим объектом InterfaceTraits интерфейса.|  
+|[Константа InterfaceTraits::IidCount](../windows/interfacetraits-iidcount-constant.md)|Содержит номер интерфейса идентификаторов, связанных с текущим **InterfaceTraits** объекта.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `InterfaceTraits`  

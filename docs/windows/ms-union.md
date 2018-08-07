@@ -1,5 +1,5 @@
 ---
-title: ms_union | Документы Microsoft
+title: ms_union | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377995149fda8efd565c30caff9b7791748ed79
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b795231cad936f30ef329f015b6ff691aa0d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882041"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606703"
 ---
 # <a name="msunion"></a>ms_union
 Управляет выравниванием представление данных сети nonencapsulated объединений.  
@@ -30,18 +30,16 @@ ms.locfileid: "33882041"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [ms_union]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Ms_union** языка C++ имеет ту же функциональность, что [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) языка MIDL.  
+ **Ms_union** атрибут C++ имеет ту же функциональность, что [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
  В следующем коде показано размещение **ms_union**:  
   
-```  
+```cpp  
 // cpp_attr_ref_ms_union.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -73,7 +71,7 @@ __interface IFireTabCtrl {
 |**Применение**|Nonencapsulated объединения|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**dispinterface**|  
+|**Недопустимые атрибуты**|`dispinterface`|  
   
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   

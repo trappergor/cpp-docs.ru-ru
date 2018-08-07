@@ -1,5 +1,5 @@
 ---
-title: Класс RoInitializeWrapper | Документы Microsoft
+title: Класс RoInitializeWrapper | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/20/2018
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9fab2ecd259e75767728a46448c06df4c4729ef3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705596"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606726"
 ---
 # <a name="roinitializewrapper-class"></a>Класс RoInitializeWrapper
 Инициализирует среду выполнения Windows.  
@@ -32,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Примечания  
- RoInitializeWrapper — удобный метод, который инициализирует среду выполнения Windows и возвращает значение HRESULT, указывающее, успешно ли выполнена операция. Так как вызывает деструктор класса `::Windows::Foundation::Uninitialize`, экземпляры `RoInitializeWrapper` должны объявляться на верхнего уровня и в глобальной области.  
+ **RoInitializeWrapper** — это удобный инструмент, который инициализирует среду выполнения Windows и возвращает значение HRESULT, указывающее, является ли операция выполнена успешно. Так как вызывает деструктор класса `::Windows::Foundation::Uninitialize`, экземпляры **RoInitializeWrapper** должен быть объявлен в области глобального или верхнего уровня.  
   
 ## <a name="members"></a>Участники  
   
@@ -40,14 +40,14 @@ class RoInitializeWrapper
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор RoInitializeWrapper::RoInitializeWrapper](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Инициализирует новый экземпляр класса RoInitializeWrapper.|  
-|[Деструктор RoInitializeWrapper::~RoInitializeWrapper](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Удаляет текущий экземпляр класса RoInitializeWrapper.|  
+|[Конструктор RoInitializeWrapper::RoInitializeWrapper](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Инициализирует новый экземпляр класса **RoInitializeWrapper** класса.|  
+|[Деструктор RoInitializeWrapper::~RoInitializeWrapper](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Удаляет текущий экземпляр **RoInitializeWrapper** класса.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[Оператор RoInitializeWrapper::HRESULT()](../windows/roinitializewrapper-hresult-parens-operator.md)|Возвращает значение HRESULT, полученное конструктором RoInitializeWrapper.|  
+|[Оператор RoInitializeWrapper::HRESULT()](../windows/roinitializewrapper-hresult-parens-operator.md)|Возвращает значение HRESULT **RoInitializeWrapper** конструктор.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `RoInitializeWrapper`  

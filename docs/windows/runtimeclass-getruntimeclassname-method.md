@@ -1,5 +1,5 @@
 ---
-title: Метод RuntimeClass::GetRuntimeClassName | Документы Microsoft
+title: Метод RuntimeClass::GetRuntimeClassName | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cfe3cc4a8a304bbd04fde9e6c38e2b9170e2e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7706a16a860cf554068dd3416e7c1f8b1fcea311
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892443"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608778"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>Метод RuntimeClass::GetRuntimeClassName
 
-Возвращает имя класса среды выполнения текущего объекта RuntimeClass.
+Получает имя класса среды выполнения текущего **RuntimeClass** объекта.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,7 +47,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>Примечания
 
-Если выдается ошибка утверждения &#95; &#95;WRL_STRICT&#95; &#95; или &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; не определена.
+Ошибка assert создается в том случае, если &#95; &#95;WRL_STRICT&#95; &#95; или &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; не определена.
 
 ## <a name="requirements"></a>Требования
 
@@ -56,5 +56,4 @@ STDMETHOD( GetRuntimeClassName )(
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
-
-[Класс RuntimeClass](../windows/runtimeclass-class.md)
+ [Класс RuntimeClass](../windows/runtimeclass-class.md)

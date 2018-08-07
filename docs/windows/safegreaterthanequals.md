@@ -1,5 +1,5 @@
 ---
-title: SafeGreaterThanEquals | Документы Microsoft
+title: SafeGreaterThanEquals | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c8b08e9262c1fc251de9ce2e23ba37783e97ab9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a33fd059b90248a53d355f09f074c9b52bd93ccf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888764"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606560"
 ---
 # <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 Сравнивает два числа.  
@@ -37,25 +37,25 @@ inline bool SafeGreaterThanEquals (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- [in] `t`  
- Первое число для сравнения. Это должен быть типа T.  
+### <a name="parameters"></a>Параметры  
+ [in] *t*  
+ Первое число для сравнения. Это должен быть типа `T`.  
   
- [in] `u`  
- Второе число для сравнения. Это должен быть типа u.  
+ [in] *u*  
+ Второе число для сравнения. Это должен быть типа `U`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` Если `t` больше или равно `u`; в противном случае `false`.  
+ **значение true,** Если *t* больше или равно *u*; в противном случае **false**.  
   
 ## <a name="remarks"></a>Примечания  
- `SafeGreaterThanEquals` повышает оператор сравнения стандартных, так как он позволяет сравнить два различных типов чисел.  
+ **SafeGreaterThanEquals** расширяет возможности оператор сравнения стандартные, так как он позволяет сравнить две различных типов чисел.  
   
- Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначена для операции сравнения одного без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
+ Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначен для операции одно сравнение, без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Этот метод использовать только в том случае, когда один математической операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класса вместо вызова автономного отдельных функций.  
+>  Этот метод должен использоваться только в тех случаях, когда одной математической операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класса вместо вызова отдельных автономных функций.  
   
- Дополнительные сведения о типах шаблонов T и U см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
+ Дополнительные сведения о типах шаблонов `T` и `U`, см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** safeint.h  
@@ -65,7 +65,7 @@ inline bool SafeGreaterThanEquals (
 ## <a name="see-also"></a>См. также  
  [Функции SafeInt](../windows/safeint-functions.md)   
  [Библиотека SafeInt](../windows/safeint-library.md)   
- [SafeInt-класс](../windows/safeint-class.md)   
+ [Класс SafeInt](../windows/safeint-class.md)   
  [SafeGreaterThan](../windows/safegreaterthan.md)   
  [SafeLessThanEquals](../windows/safelessthanequals.md)   
  [SafeLessThan](../windows/safelessthan.md)

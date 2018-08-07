@@ -1,5 +1,5 @@
 ---
-title: Класс Module | Документы Microsoft
+title: Класс модуля | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af8fa5bbafa76ab13f14d1a10e040a38bc6e2fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c437035713634736a02afbce1325d14ba18229
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880586"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604415"
 ---
 # <a name="module-class"></a>Module - класс
 Представляет коллекцию связанных объектов.  
@@ -30,7 +30,6 @@ ms.locfileid: "33880586"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 template<ModuleType moduleType>  
 class Module;  
   
@@ -41,35 +40,35 @@ template<>
 class Module<OutOfProc> : public Module<InProc>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `moduleType`  
+### <a name="parameters"></a>Параметры  
+ *Тип модуля*  
  Сочетание одного или нескольких [ModuleType](../windows/moduletype-enumeration.md) значений перечисления.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="protected-classes"></a>Защищенные классы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий задается лямбда-выражением, функтором или указателем на функцию.|  
-|[Класс Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий задается объектом и его элементом указателя для метода.|  
+|[Класс Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий заданного объекта и ее члена указатель на метод.|  
 |[Класс Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в модуле.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Деструктор Module::~Module](../windows/module-tilde-module-destructor.md)|Деинициализирует текущий экземпляр класса Module.|  
+|[Деструктор Module::~Module](../windows/module-tilde-module-destructor.md)|Деинициализирует текущий экземпляр **модуль** класса.|  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор Module::Module](../windows/module-module-constructor.md)|Инициализирует новый экземпляр класса Module.|  
+|[Конструктор Module::Module](../windows/module-module-constructor.md)|Инициализирует новый экземпляр класса **модуль** класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод Module::Create](../windows/module-create-method.md)|Создает экземпляр модуля.|  
 |[Метод Module::DecrementObjectCount](../windows/module-decrementobjectcount-method.md)|Уменьшает число объектов, отслеживаемых модулем.|  
@@ -79,33 +78,33 @@ class Module<OutOfProc> : public Module<InProc>;
 |[Метод Module::GetObjectCount](../windows/module-getobjectcount-method.md)|Извлекает количество объектов, управляемых этим модулем.|  
 |[Метод Module::IncrementObjectCount](../windows/module-incrementobjectcount-method.md)|Увеличивает число объектов, отслеживаемых модулем.|  
 |[Метод Module::RegisterCOMObject](../windows/module-registercomobject-method.md)|Регистрирует один или несколько объектов модели COM, чтобы другие приложения могли к ним подключиться.|  
-|[Метод Module::RegisterObjects](../windows/module-registerobjects-method.md)|Регистрирует объекты COM или среды выполнения Windows, чтобы другие приложения могли к ним подключиться.|  
-|[Метод Module::RegisterWinRTObject](../windows/module-registerwinrtobject-method.md)|Регистрирует один или несколько объектов среды выполнения Windows, чтобы другие приложения могли к ним подключиться.|  
+|[Метод Module::RegisterObjects](../windows/module-registerobjects-method.md)|Регистрирует объекты COM или среду выполнения Windows, чтобы другие приложения могли подключиться к ним.|  
+|[Метод Module::RegisterWinRTObject](../windows/module-registerwinrtobject-method.md)|Регистрирует один или несколько объектов среды выполнения Windows, чтобы другие приложения могли подключиться к ним.|  
 |[Метод Module::Terminate](../windows/module-terminate-method.md)|Приводит к завершению работы всех экземпляров фабрик, созданных модулем.|  
 |[Метод Module::UnregisterCOMObject](../windows/module-unregistercomobject-method.md)|Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.|  
 |[Метод Module::UnregisterObjects](../windows/module-unregisterobjects-method.md)|Отменяет регистрацию объектов в указанном модуле. Таким образом другие приложения не смогут подключиться к ним.|  
-|[Метод Module::UnregisterWinRTObject](../windows/module-unregisterwinrtobject-method.md)|Отменяет регистрацию одного или нескольких объектов среды выполнения Windows, чтобы другие приложения не смогут подключиться к ним.|  
+|[Метод Module::UnregisterWinRTObject](../windows/module-unregisterwinrtobject-method.md)|Отменяет регистрацию одного или нескольких объектов среды выполнения Windows, таким образом, чтобы другие приложения не смогут подключиться к ним.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод Module::Create](../windows/module-create-method.md)|Создает экземпляр модуля.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[Элемент данных Module::objectCount_](../windows/module-objectcount-data-member.md)|Хранит список количества классов были созданы при помощи [сделать](../windows/make-function.md) функции.|  
+|[Элемент данных Module::objectCount_](../windows/module-objectcount-data-member.md)|Следит за сколько классы были созданы при помощи [сделать](../windows/make-function.md) функции.|  
 |[Элемент данных Module::releaseNotifier_](../windows/module-releasenotifier-data-member.md)|Содержит указатель на объект ReleaseNotifier.|  
   
 ### <a name="macros"></a>Макросы  
   
 |||  
 |-|-|  
-|[ActivatableClass](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, который содержит фабрику, можно создать экземпляр указанного класса. Этот макрос задает параметры идентификатора фабрики и группы по умолчанию.|  
-|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, который содержит фабрику, можно создать экземпляр указанного класса. Этот макрос позволяет задать параметр конкретного фабрики.|  
-|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, который содержит фабрику, можно создать экземпляр указанного класса. Этот макрос можно указать определенный фабрики и параметры идентификатора группы.|  
+|[ActivatableClass](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, содержащий фабрику, можно создать экземпляр указанного класса. Этот макрос задает параметры идентификатора фабрики и группы по умолчанию.|  
+|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, содержащий фабрику, можно создать экземпляр указанного класса. Этот макрос можно указать параметр конкретной фабрике.|  
+|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, содержащий фабрику, можно создать экземпляр указанного класса. Этот макрос можно задать такие параметры идентификатора группы и конкретной фабрике.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `ModuleBase`  

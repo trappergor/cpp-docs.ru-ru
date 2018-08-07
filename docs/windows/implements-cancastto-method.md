@@ -1,5 +1,5 @@
 ---
-title: Метод Implements::CanCastTo | Документы Microsoft
+title: Метод Implements::CanCastTo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53b17558998812895ece4b47f5de03700e502b8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877077"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608947"
 ---
 # <a name="implementscancastto-method"></a>Метод Implements::CanCastTo
 Возвращает указатель на указанный интерфейс.  
@@ -36,15 +36,15 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `riid`  
+### <a name="parameters"></a>Параметры  
+ *riid*  
  Ссылку на идентификатор интерфейса.  
   
- `ppv`  
- Если успешно, указатель на интерфейс, заданный `riid`.  
+ *ppv*  
+ Если в случае успешного выполнения указатель на интерфейс, заданный *riid*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае — значение HRESULT, указывающее ошибку, например E_NOINTERFACE.  
+ Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, указывающее ошибку, например E_NOINTERFACE.  
   
 ## <a name="remarks"></a>Примечания  
  Это внутренняя вспомогательная функция, которая выполняет операцию QueryInterface.  

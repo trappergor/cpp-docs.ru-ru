@@ -1,5 +1,5 @@
 ---
-title: Редактор меню | Документы Microsoft
+title: Редактор меню | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879442"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606254"
 ---
 # <a name="menu-editor"></a>Редактор меню
 Меню позволяют упорядочить команды логичным и удобным для поиска способом. Редактор меню позволяет разработчику создавать и редактировать меню, работая прямо со строкой меню, очень похожей на ту, что отображается в готовом приложении.  
   
- Для проектов Visual C++ редактор меню можно использовать для выполнения следующих действий:  
+Для проектов Visual C++ редактор меню можно использовать для выполнения следующих действий:  
   
 -   [создание меню;](../windows/creating-a-menu.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33879442"
     > [!NOTE]
     >  Для программ библиотеки Microsoft Foundation Class (MFC) и программ ATL можно использовать мастеры кода для привязки команд меню к коду. Дополнительные сведения см. в разделе [Добавление события](../ide/adding-an-event-visual-cpp.md).  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
  Win32  
@@ -75,4 +75,3 @@ ms.locfileid: "33879442"
  [Объекты пользовательского интерфейса и идентификаторы команд](../mfc/user-interface-objects-and-command-ids.md)   
  [Меню](../mfc/menus-mfc.md)   
  [Меню](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
-

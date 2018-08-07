@@ -1,5 +1,5 @@
 ---
-title: ref (C++) | Документы Microsoft
+title: ref (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f266c263fea33254cb8b0c706982a6d2453eed97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 197ee3b30c257b98e2147bd030000db8dd192067
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881475"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607596"
 ---
 # <a name="ref-c"></a>ref (C++)
 Определяет указатель ссылки.  
@@ -30,18 +30,16 @@ ms.locfileid: "33881475"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [ref]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `ref` Языка C++ имеет ту же функциональность, что [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) языка MIDL.  
+ **Ref** атрибут C++ имеет ту же функциональность, что [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Следующий код показывает, как использовать `ref` атрибута:  
+ Ниже показано, как использовать **ref** атрибут:  
   
-```  
+```cpp  
 // cpp_attr_ref_ref.cpp  
 // compile with: /LD  
 #include <windows.h>   
@@ -59,7 +57,7 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**Применение**|`typedef`, параметр интерфейса, метод интерфейса|  
+|**Применение**|**TypeDef**, параметр интерфейса, метод интерфейса|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

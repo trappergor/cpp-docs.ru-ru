@@ -1,5 +1,5 @@
 ---
-title: Функция Move | Документы Microsoft
+title: Move-функция | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da1a3c839add5d056674896b5a3c6a32145924f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d058919d0906b458c6c4e81d65c9438c95a22b85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876775"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607307"
 ---
 # <a name="move-function"></a>Move - функция
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -36,15 +36,15 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
+### <a name="parameters"></a>Параметры  
+ *T*  
  Тип аргумента.  
   
- `arg`  
+ *arg*  
  Аргумент для перемещения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Параметр `arg` после признаки ссылку или ссылку rvalue, если таковые имеются, будут удалены.  
+ Параметр *arg* после ссылка или rvalue атрибутами, если таковые имеются, будут удалены.  
   
 ## <a name="remarks"></a>Примечания  
  Перемещает указанный аргумент из одного расположения в другое.  

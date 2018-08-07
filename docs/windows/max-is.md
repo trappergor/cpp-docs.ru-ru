@@ -1,5 +1,5 @@
 ---
-title: max_is | Документы Microsoft
+title: max_is | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878974"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608434"
 ---
 # <a name="maxis"></a>max_is
-Задает максимальное значение для индекса массива допустимым.  
+Определяет максимальное значение для индекса допустимым массивом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ max_is(  
+[ max_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Параметры  
  *Выражение*  
- Одно или несколько выражений языка C. Допускаются слоты пустой аргумент.  
+ Одно или несколько выражений языка. Допускаются слотов пустой аргумент.  
   
 ## <a name="remarks"></a>Примечания  
- **Max_is** языка C++ имеет ту же функциональность, что [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) языка MIDL.  
+ **Max_is** атрибут C++ имеет ту же функциональность, что [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) описании атрибута MIDL.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -49,7 +48,7 @@ ms.locfileid: "33878974"
   
 |||  
 |-|-|  
-|**Применение**|Поле в `struct` или **объединение**, интерфейс параметр, метод|  
+|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|**size_is**|  
@@ -57,7 +56,7 @@ ms.locfileid: "33878974"
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Пример  
- В разделе [first_is](../windows/first-is.md) пример указания фрагмент массива.  
+ См. в разделе [first_is](../windows/first-is.md) пример указания фрагмент массива.  
   
 ## <a name="see-also"></a>См. также  
  [Атрибуты IDL](../windows/idl-attributes.md)   

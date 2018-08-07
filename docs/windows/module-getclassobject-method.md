@@ -1,5 +1,5 @@
 ---
-title: Метод Module::GetClassObject | Документы Microsoft
+title: Метод Module::GetClassObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9205b04fc27e1c6e0e6133a08c3c2f69ffdfc314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878542"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602657"
 ---
 # <a name="modulegetclassobject-method"></a>Метод Module::GetClassObject
 Извлекает кэш фабрик классов.  
@@ -38,23 +38,23 @@ ms.locfileid: "33878542"
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `clsid`  
+### <a name="parameters"></a>Параметры  
+ *CLSID*  
  Идентификатор класса.  
   
- `riid`  
+ *riid*  
  Запрошенный идентификатор интерфейса.  
   
- `ppv`  
+ *ppv*  
  Указатель на возвращаемый объект.  
   
- `serverName`  
- Имя сервера, указанное в макросе `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx` или `ActivatableClass`; в противном случае — значение `nullptr` для получения имени сервера по умолчанию.  
+ *Имя_сервера*  
+ Имя сервера, указанное в `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, или `ActivatableClass` макроса; или **nullptr** для получения имени сервера по умолчанию.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 ## <a name="remarks"></a>Примечания  
- Используйте этот метод только для модели COM, а не средой выполнения Windows. Этот метод реализует только методы IClassFactory.  
+ Этот метод можно используйте только для модели COM, а не среду выполнения Windows. Этот метод предоставляет только `IClassFactory` методы.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: Метод Module::RegisterWinRTObject | Документы Microsoft
+title: Метод Module::RegisterWinRTObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874958"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603761"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Метод Module::RegisterWinRTObject
-Регистрирует один или несколько объектов среды выполнения Windows, чтобы другие приложения могли к ним подключиться.  
+Регистрирует один или несколько объектов среды выполнения Windows, чтобы другие приложения могли подключиться к ним.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,17 +36,17 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `serverName`  
+### <a name="parameters"></a>Параметры  
+ *Имя_сервера*  
  Имя, которое определяет подмножество объектов, затронутых этой операцией.  
   
- `activatableClassIds`  
+ *activatableClassIds*  
  Массив активируемых идентификаторов CLSID для регистрации.  
   
- `cookie`  
+ *Файл cookie*  
  Значение, которое идентифицирует зарегистрированные объекты класса. Это значение в дальнейшем используется для отмены регистрации.  
   
- `count`  
+ *count*  
  Количество объектов, которое необходимо зарегистрировать.  
   
 ## <a name="return-value"></a>Возвращаемое значение  

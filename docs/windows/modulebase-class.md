@@ -1,5 +1,5 @@
 ---
-title: Класс ModuleBase | Документы Microsoft
+title: Класс ModuleBase | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878740"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605062"
 ---
 # <a name="modulebase-class"></a>Класс ModuleBase
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -40,14 +40,14 @@ class ModuleBase;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор ModuleBase::ModuleBase](../windows/modulebase-modulebase-constructor.md)|Инициализирует новый экземпляр класса Module.|  
-|[Деструктор ModuleBase::~ModuleBase](../windows/modulebase-tilde-modulebase-destructor.md)|Деинициализирует текущий экземпляр класса Module.|  
+|[Конструктор ModuleBase::ModuleBase](../windows/modulebase-modulebase-constructor.md)|Инициализирует экземпляр класса `Module`.|  
+|[Деструктор ModuleBase::~ModuleBase](../windows/modulebase-tilde-modulebase-destructor.md)|Деинициализирует текущий экземпляр `Module` класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md)|При реализации уменьшает число объектов, отслеживаемых модулем.|  
 |[Метод ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md)|При реализации увеличивает число объектов, отслеживаемых модулем.|  

@@ -1,5 +1,5 @@
 ---
-title: 'Конструктор Module::releasenotifier:: releasenotifier | Документы Microsoft'
+title: 'Конструктор Module::releasenotifier:: releasenotifier | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf21e1abc88c0fac0b9d20653fdb45c3706466d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882473"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608473"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Конструктор Module::ReleaseNotifier::ReleaseNotifier
-Инициализирует новый экземпляр класса Module::ReleaseNotifier.  
+Инициализирует новый экземпляр класса **Module::ReleaseNotifier** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,9 +33,9 @@ ms.locfileid: "33882473"
 ReleaseNotifier(bool release) throw();  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `release`  
- `true` Удаление этого экземпляра при вызове метода Release; `false` не удалить этот экземпляр.  
+### <a name="parameters"></a>Параметры  
+ *release*  
+ **значение true,** удалить данный экземпляр, когда `Release` вызове метода; **false** не удалить этот экземпляр.  
   
 ## <a name="exceptions"></a>Исключения  
   

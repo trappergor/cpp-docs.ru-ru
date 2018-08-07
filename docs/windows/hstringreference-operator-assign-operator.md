@@ -1,5 +1,5 @@
 ---
-title: HStringReference::Operator =-оператор | Документы Microsoft
+title: Оператор HStringReference::Operator =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73ec71526d340aafb16ddf2af274dce7ad0e9cbd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc8f919dcec994be5d4f0300e9c96dde95895e16
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875543"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608525"
 ---
 # <a name="hstringreferenceoperator-operator"></a>Оператор HStringReference::Operator=
-Значение другой объект HStringReference перемещается в текущий объект HStringReference.  
+Перемещает значение другого **HStringReference** объект с текущим **HStringReference** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,12 +31,12 @@ ms.locfileid: "33875543"
 HStringReference& operator=(HStringReference&& other) throw()  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `other`  
- Существующий объект HStringReference.  
+### <a name="parameters"></a>Параметры  
+ *other*  
+ Существующий **HStringReference** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Значение существующего объекта `other` копируется в текущий объект HStringReference, а затем объект `other` удаляется.  
+ Значение существующего *других* объект копируется в текущий **HStringReference** объекта, а затем *других* уничтожении объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

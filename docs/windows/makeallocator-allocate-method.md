@@ -1,5 +1,5 @@
 ---
-title: Метод MakeAllocator::Allocate | Документы Microsoft
+title: Метод MakeAllocator::Allocate | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876220"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606267"
 ---
 # <a name="makeallocatorallocate-method"></a>Метод MakeAllocator::Allocate
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,14 +34,14 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если операция завершилась успешно, представляет указатель на выделенную память; в противном случае — значение `nullptr`.  
+ При успешном выполнении указатель на выделенную память; в противном случае **nullptr**.  
   
 ## <a name="remarks"></a>Примечания  
- Выделяет память и связывает ее с текущим объектом MakeAllocator.  
+ Выделяет память и связывает его с текущим **MakeAllocator** объекта.  
   
- Размер выделенной памяти равен размеру типа, заданного текущим параметром шаблона MakeAllocator.  
+ Размер выделенной памяти равен размеру типа, указанного текущим **MakeAllocator** параметр шаблона.  
   
- Разработчику необходимо переопределить только метод Allocate() для реализации другой модели выделения памяти.  
+ Разработчику необходимо переопределить только **Allocate()** метод для реализации другой модели выделения памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
@@ -49,5 +49,5 @@ __forceinline void* Allocate();
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [MakeAllocator-класс](../windows/makeallocator-class.md)   
+ [Makeallocator-класс](../windows/makeallocator-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

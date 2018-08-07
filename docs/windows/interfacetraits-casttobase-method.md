@@ -1,5 +1,5 @@
 ---
-title: Метод InterfaceTraits::CastToBase | Документы Microsoft
+title: Метод InterfaceTraits::CastToBase | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878529"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606453"
 ---
 # <a name="interfacetraitscasttobase-method"></a>Метод InterfaceTraits::CastToBase
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -36,12 +36,12 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
- Тип параметра `ptr`.  
+### <a name="parameters"></a>Параметры  
+ *T*  
+ Тип параметра *ptr*.  
   
- `ptr`  
- Указатель на тип `T`.  
+ *ptr*  
+ Указатель на тип *T*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Указатель на `Base`.  
@@ -49,7 +49,7 @@ static __forceinline Base* CastToBase(
 ## <a name="remarks"></a>Примечания  
  Приводит определенный указатель к указателю на `Base`.  
   
- Дополнительные сведения о `Base`, см. в разделе определения открытых типов в [InterfaceTraits-структура](../windows/interfacetraits-structure.md).  
+ Дополнительные сведения о `Base`, см. в разделе общедоступные определения типов в [interfacetraits-структура](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
@@ -57,5 +57,5 @@ static __forceinline Base* CastToBase(
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [InterfaceTraits-структура](../windows/interfacetraits-structure.md)   
+ [Interfacetraits-структура](../windows/interfacetraits-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Метод InterfaceTraits::Verify | Документы Microsoft
+title: Метод InterfaceTraits::Verify | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5c16ebda96d5d1c8ff12532e728f32501ea4db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875504"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603052"
 ---
 # <a name="interfacetraitsverify-method"></a>Метод InterfaceTraits::Verify
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,9 +34,9 @@ __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Проверяет, что базовый правильно производный.  
+ Проверяет, что `Base` должным образом является производным.  
   
- Дополнительные сведения о `Base`, см. в разделе определения открытых типов в [InterfaceTraits-структура](../windows/interfacetraits-structure.md).  
+ Дополнительные сведения о `Base`, см. в разделе общедоступные определения типов в [interfacetraits-структура](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
@@ -44,5 +44,5 @@ __forceinline static void Verify();
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [InterfaceTraits-структура](../windows/interfacetraits-structure.md)   
+ [Interfacetraits-структура](../windows/interfacetraits-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

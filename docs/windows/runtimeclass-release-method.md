@@ -1,5 +1,5 @@
 ---
-title: Метод RuntimeClass::Release | Документы Microsoft
+title: Метод RuntimeClass::Release | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888800"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607528"
 ---
 # <a name="runtimeclassrelease-method"></a>Метод RuntimeClass::Release
-Выполняет операцию освобождения модели COM, с текущим объектом RuntimeClass.  
+Выполняет операцию освобождения модели COM в текущем **RuntimeClass** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ STDMETHOD_(
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
   
 ## <a name="remarks"></a>Примечания  
- Если счетчик ссылок становится равным нулю, RuntimeClass объект удаляется.  
+ Если счетчик ссылок становится равным нулю, **RuntimeClass** объект удаляется.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

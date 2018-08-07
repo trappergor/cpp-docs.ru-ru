@@ -1,5 +1,5 @@
 ---
-title: Метод ImplementsHelper::CastToUnknown | Документы Microsoft
+title: Метод ImplementsHelper::CastToUnknown | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874503"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604243"
 ---
 # <a name="implementshelpercasttounknown-method"></a>Метод ImplementsHelper::CastToUnknown
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,10 +34,10 @@ IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Указатель на базовый интерфейс IUnknown.  
+ Указатель базового интерфейса IUnknown.  
   
 ## <a name="remarks"></a>Примечания  
- Возвращает указатель на базовый интерфейс IUnknown для текущей структуры реализует.  
+ Возвращает указатель на базовый `IUnknown` интерфейса для текущего `Implements` структуры.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

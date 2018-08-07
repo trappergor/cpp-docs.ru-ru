@@ -1,5 +1,5 @@
 ---
-title: satype | Документы Microsoft
+title: satype | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888686"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603398"
 ---
 # <a name="satype"></a>satype
-Указывает тип данных **SAFEARRAY** структуры.  
+Указывает тип данных `SAFEARRAY` структуры.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *data_type*  
- Тип данных для **SAFEARRAY** структуру данных, которая передается как параметр метода интерфейса.  
+ Тип данных для `SAFEARRAY` структура данных, которая передается как параметр метода интерфейса.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -52,14 +51,14 @@ ms.locfileid: "33888686"
 |**Недопустимые атрибуты**|Нет|  
   
 ## <a name="remarks"></a>Примечания  
- **Satype** атрибут C++ указывает тип данных **SAFEARRAY**.  
+ **Satype** C++ атрибут указывает тип данных `SAFEARRAY`.  
   
 > [!NOTE]
->  Уровень косвенности удаляется из **SAFEARRAY** указатель в созданного IDL-файла из как он объявлен в CPP-файле.  
+>  Уровень косвенности удаляется из `SAFEARRAY` указатель на созданного IDL-файла из как объявлено в CPP-файл.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
