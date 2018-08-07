@@ -1,5 +1,5 @@
 ---
-title: safe_cast (расширения компонентов C++) | Документы Microsoft
+title: safe_cast (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57f59aa201a60fb2cf118b31eb4be377cd246ece
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891520"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606388"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (расширения компонентов C++)
-В случае успешного выполнения операция `safe_cast` возвращает указанное выражение как указанный тип; в противном случае вызывается исключение `InvalidCastException`.  
+**Safe_cast** операция возвращает указанное выражение как указанный тип, в случае успеха; в противном случае создает `InvalidCastException`.  
   
 ## <a name="all-runtimes"></a>Все среды выполнения  
  (Отсутствуют комментарии для этой функции языка, которая применяется во всех средах выполнения.)  
@@ -40,15 +40,10 @@ type-id
 >(  
 expression  
 )  
-  
 ```  
   
-### <a name="parameters"></a>Параметры  
-  
-### <a name="remarks"></a>Примечания  
-  
 ## <a name="windows-runtime"></a>Среда выполнения Windows  
- Параметр `safe_cast` позволяет изменить тип указанного выражения. В ситуациях, где вы полностью рассчитываете на возможность преобразования переменной или параметра в определенный тип, можно использовать safe_cast без блока try-catch для обнаружения ошибок программирования во время разработки. Дополнительные сведения см. в разделе [приведение (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
+ **safe_cast** позволяет изменить тип заданного выражения. В ситуациях, где вы полностью рассчитываете переменная или параметр, возможность преобразования определенного типа, можно использовать **safe_cast** без **try-catch** блок для обнаружения ошибок программирования во время разработки. Дополнительные сведения см. в разделе [приведение (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -58,7 +53,6 @@ type-id
 >(  
 expression  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>Параметры  
@@ -69,17 +63,16 @@ expression
  Выражение, которое оценивается в дескрипторе ссылки или типа значения, типе значения или отслеживаемой ссылке на ссылку или тип значения.  
   
 ### <a name="remarks"></a>Примечания  
- `safe_cast` Создает `InvalidCastException` если его не удается преобразовать *выражение* тип, указанный в *идентификатор типа*. Для перехвата `InvalidCastException`, укажите [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md) параметр компилятора и используйте оператор try-catch.  
+ **safe_cast** вызывает `InvalidCastException` когда не может преобразовать *выражение* типу, заданному *идентификатор типа*. Для перехвата `InvalidCastException`, укажите [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md) параметр компилятора и используйте **try/catch** инструкции.  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/ZW**  
+ Параметр компилятора: `/ZW`  
   
 ### <a name="examples"></a>Примеры  
- **Пример**  
   
- В следующем примере кода демонстрируется использование `safe_cast` со средой выполнения Windows.  
+ В следующем примере кода демонстрируется использование **safe_cast** со средой выполнения Windows.  
   
-```cpp#  
+```cpp  
 // safe_cast_ZW.cpp  
 // compile with: /ZW /EHsc  
   
@@ -112,7 +105,7 @@ Caught expected exception: InvalidCastException
 ```  
   
 ## <a name="common-language-runtime"></a>Среда CLR 
- Параметр `safe_cast` позволяет изменить тип выражения и создать проверяемый код MSIL.  
+ **safe_cast** позволяет изменить тип выражения и создать проверяемый код MSIL.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -122,7 +115,6 @@ type-id
 >(  
 expression  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>Параметры  
@@ -133,31 +125,30 @@ expression
  Выражение, которое оценивается в дескрипторе ссылки или типа значения, типе значения или отслеживаемой ссылке на ссылку или тип значения.  
   
 ### <a name="remarks"></a>Примечания  
- Выражение `safe_cast<` *идентификатор типа*`>(`*выражение* `)` преобразует выражение операнда в объект типа type-ID.  
+ Выражение `safe_cast<` *идентификатор типа*`>(`*выражение* `)` преобразует выражение операнда в объект типа type-id.  
   
- Компилятор будет принимать [static_cast](../cpp/static-cast-operator.md) в большинстве мест, где будет принимать `safe_cast`.  Однако `safe_cast` гарантированно создает проверяемый код MSIL, тогда как `static_cast` может создать непроверяемый MSIL.  В разделе [чистый и проверяемый код (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) и [Peverify.exe (средство PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) Дополнительные сведения о проверяемом коде.  
+ Компилятор будет принимать [static_cast](../cpp/static-cast-operator.md) в большинстве мест, где он будет принимать **safe_cast**.  Тем не менее **safe_cast** гарантированно создается проверяемый код MSIL, тогда как **static_cast** может создать непроверяемый MSIL.  См. в разделе [чистый и проверяемый код (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) и [Peverify.exe (средство PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) Дополнительные сведения о проверяемом коде.  
   
- Как и `static_cast`, `safe_cast` вызывает заданные пользователем преобразования.  
+ Как и **static_cast**, **safe_cast** вызывает заданные пользователем преобразования.  
   
- Дополнительные сведения о приведениях см. в разделе [операторы приведения](../cpp/casting-operators.md).  
+ Дополнительные сведения о приведении см. в разделе [операторы приведения](../cpp/casting-operators.md).  
   
- `safe_cast` не применяется **const_cast** (отбросить квалификатор **const**).  
+ **safe_cast** не применяется **const_cast** (отвергает **const**).  
   
- `safe_cast` находится в пространстве имен CLI.  В разделе [платформы, по умолчанию и пространства имен cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) для получения дополнительной информации.  
+ **safe_cast** находится в пространстве имен cli.  См. в разделе [Platform, default и cli пространств имен](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Дополнительные сведения.  
   
- Дополнительные сведения о **safe_cas**t, см.:  
+ Дополнительные сведения о **safe_cast**, см. в разделе:  
   
--   [C-стиль приведения с параметром/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
+-   [Приведение в стиле C с параметром/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
   
 -   [Практическое руководство. Использование safe_cast в C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
 
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/clr**  
+ Параметр компилятора: `/clr`  
   
 ### <a name="examples"></a>Примеры  
- **Пример**  
   
- Пример, когда компилятор не будет принимать `static_cast`, но будет принимать `safe_cast`, —приведения между несвязанными типами интерфейса.  При использовании `safe_cast` компилятор не будет выдавать ошибку преобразования и будет выполнять проверку во время выполнения, чтобы увидеть, возможно ли приведение.  
+ Один пример того, где компилятор не будет принимать **static_cast** , но будет принимать **safe_cast** — приведения между несвязанными типами интерфейса.  С помощью **safe_cast**, компилятор не будет выдавать ошибку преобразования и выполняет проверку во время выполнения, чтобы увидеть, если приведение возможна  
   
 ```cpp  
 // safe_cast.cpp  

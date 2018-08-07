@@ -1,5 +1,5 @@
 ---
-title: iid_is | Документы Microsoft
+title: iid_is | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878006"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603294"
 ---
 # <a name="iidis"></a>iid_is
-Задает COM-интерфейса, на который указывает указатель интерфейса IID.  
+Указывает идентификатор IID интерфейса COM, на которые указывает указатель интерфейса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ iid_is(  
+[ iid_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Параметры  
  *Выражение*  
- Выражение языка C, которое определяет IID для интерфейса COM, на который указывает указатель на интерфейс.  
+ Выражение языка C, которое указывает IID COM-интерфейса, на который указывает указатель интерфейса.  
   
 ## <a name="remarks"></a>Примечания  
- **Iid_is** языка C++ имеет ту же функциональность, что [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) языка MIDL.  
+ **Iid_is** атрибут C++ имеет ту же функциональность, что [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
  В следующем коде показано использование **iid_is**:  
   
-```  
+```cpp  
 // cpp_attr_ref_iid_is.cpp  
 // compile with: /LD  
 #include "wtypes.h"  

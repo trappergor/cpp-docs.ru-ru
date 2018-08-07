@@ -1,5 +1,5 @@
 ---
-title: Структура RuntimeClassBase | Документы Microsoft
+title: Структура RuntimeClassBase | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d80f475cf8a50dcb084ca6e953842e91c55e4502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b272c733dab71e615a46cb4af25609c560bdbfef
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888413"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602683"
 ---
 # <a name="runtimeclassbase-structure"></a>Структура RuntimeClassBase
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -32,9 +32,9 @@ struct RuntimeClassBase;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Используется для обнаружения экземпляра RuntimeClass в [сделать](../windows/make-function.md) функции.  
+ Позволяет определить `RuntimeClass` в [сделать](../windows/make-function.md) функции.  
   
- RuntimeClassBase является пустой структурой.  
+ **RuntimeClassBase** является пустой структурой.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `RuntimeClassBase`  

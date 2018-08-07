@@ -1,5 +1,5 @@
 ---
-title: Mutex::operator =-оператор | Документы Microsoft
+title: Mutex::operator =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8791d3c947206be399f475bb8c895b2b5e032133
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 837c8ed508b713f790d1a6a56310705a00f12b3f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875491"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602750"
 ---
 # <a name="mutexoperator-operator"></a>Оператор Mutex::operator=
-Назначает (перемещается) указанный мьютекс объекта на текущий объект Mutex.  
+Назначает (перемещается) указанного **мьютекс** объект с текущим **мьютекс** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,12 +35,12 @@ Mutex& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `h`  
- Ссылка rvalue на объект взаимного исключения.  
+### <a name="parameters"></a>Параметры  
+ *h*  
+ Ссылка rvalue на **мьютекс** объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Ссылка на текущий объект Mutex.  
+ Ссылку на текущий **мьютекс** объекта.  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе **семантику перемещения** раздел [декларатор ссылки Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  

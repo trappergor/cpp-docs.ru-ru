@@ -1,5 +1,5 @@
 ---
-title: length_is | Документы Microsoft
+title: length_is | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d41c2c4747f69b5ddfae4cd5863c072cd2316ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e0294c7cc118c4014e998ad570d7e1e453ea2c6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879611"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606505"
 ---
 # <a name="lengthis"></a>length_is
-Указывает количество элементов массива, для передачи.  
+Указывает количество элементов массива для передачи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ length_is(  
+[ length_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *Выражение*  
- Одно или несколько выражений языка C. Допускаются слоты пустой аргумент.  
+ Одно или несколько выражений языка. Допускаются слотов пустой аргумент.  
   
 ## <a name="remarks"></a>Примечания  
- **Length_is** языка C++ имеет ту же функциональность, что [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) языка MIDL.  
+ **Length_is** атрибут C++ имеет ту же функциональность, что [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В разделе [first_is](../windows/first-is.md) пример указания фрагмент массива.  
+ См. в разделе [first_is](../windows/first-is.md) пример указания фрагмент массива.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33879611"
   
 |||  
 |-|-|  
-|**Применение**|Поле в `struct` или **объединение**, интерфейс параметр, метод|  
+|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

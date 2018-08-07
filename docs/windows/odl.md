@@ -1,5 +1,5 @@
 ---
-title: ODL | Документы Microsoft
+title: ODL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877700"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608190"
 ---
 # <a name="odl"></a>odl
-Определяет интерфейс как интерфейс языка описания объектов (ODL). Компилятор MIDL не требует **odl** атрибут; она распознается только для совместимости с более старых ODL-файлы.  
+Определяет интерфейс как интерфейс языка описания объекта (ODL). Компилятор MIDL не требует **odl** атрибут; он распознается только в целях совместимости с более старой ODL-файлы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [odl]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Odl** языка C++ имеет ту же функциональность, что [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) языка MIDL.  
+ **Odl** атрибут C++ имеет ту же функциональность, что [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,7 +64,7 @@ public:
   
 |||  
 |-|-|  
-|**Применение**|`interface`|  
+|**Применение**|**interface**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

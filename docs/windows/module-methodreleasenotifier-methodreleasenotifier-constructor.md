@@ -1,5 +1,5 @@
 ---
-title: 'Конструктор Module::methodreleasenotifier:: methodreleasenotifier | Документы Microsoft'
+title: 'Конструктор Module::methodreleasenotifier:: methodreleasenotifier | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91540ca3fff03f1f0a449413c2d1ca72781c70f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8e48b6f8ec4a985bfa7fa5b8d0069e472df86e8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875231"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605994"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Конструктор Module::MethodReleaseNotifier::MethodReleaseNotifier
-Инициализирует новый экземпляр класса Module::MethodReleaseNotifier.  
+Инициализирует новый экземпляр класса **Module::MethodReleaseNotifier** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 MethodReleaseNotifier(  
    _In_ T* object,   
    _In_ void (T::* method)(),   
@@ -39,15 +38,15 @@ MethodReleaseNotifier(
             method_(method);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `object`  
+### <a name="parameters"></a>Параметры  
+ *object*  
  Объект, функция-член которого является обработчиком событий.  
   
- `method`  
- Функция-член параметра `object` , обработчик событий.  
+ *Метод*  
+ Функция-член параметра *объект* то есть обработчик событий.  
   
- `release`  
- Укажите `true` для включения вызов базового [модуль:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) метода; в противном случае укажите `false`.  
+ *release*  
+ Укажите **true** для включения вызова базового [модуль:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) метода; в противном случае укажите **false**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  

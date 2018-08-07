@@ -1,5 +1,5 @@
 ---
-title: nonextensible | Документы Microsoft
+title: nonextensible | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881605"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608499"
 ---
 # <a name="nonextensible"></a>nonextensible
-Указывает, что `IDispatch` реализация содержит только свойства и методы, перечисленных в описании интерфейса и не могут быть расширены с помощью дополнительных членов во время выполнения.  
+Указывает, что `IDispatch` реализация содержит только свойства и методы, перечисленных в описании интерфейса и не может быть расширен с помощью дополнительных членов во время выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Nonextensible** языка C++ имеет ту же функциональность, что [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) языка MIDL.  
+ **Nonextensible** атрибут C++ имеет ту же функциональность, что [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) описании атрибута MIDL.  
   
- Использование **nonextensible** также требует [oleautomation](../windows/oleautomation.md) атрибута.  
+ Использование **nonextensible** также требуется [oleautomation](../windows/oleautomation.md) атрибута.  
   
 ## <a name="example"></a>Пример  
- Следующий код показывает один из способов использования **nonextensible** атрибута:  
+ В следующем коде показано один из способов использования **nonextensible** атрибут:  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -64,9 +62,9 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**Применение**|`interface`|  
+|**Применение**|**interface**|  
 |**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**Двойная** и **oleautomation**, или **disp-интерфейс**|  
+|**Обязательные атрибуты**|`dual` и `oleautomation`, или `dispinterface`|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  

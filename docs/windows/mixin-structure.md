@@ -1,5 +1,5 @@
 ---
-title: Структура MixIn | Документы Microsoft
+title: Структура MixIn | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20dac5f189a51a1610da45e43e03e51ff1c3610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876167"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605728"
 ---
 # <a name="mixin-structure"></a>MixIn - структура
 Гарантирует, что класс среды выполнения является производным от интерфейсов среды выполнения Windows, если таковые имеются, а затем от интерфейсов классической модели COM.  
@@ -39,18 +39,18 @@ template<
 struct MixIn;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `Derived`  
+### <a name="parameters"></a>Параметры  
+ *Производные*  
  Тип, производный от [реализует](../windows/implements-structure.md) структуры.  
   
- `MixInType`  
+ *MixInType*  
  Базовый тип.  
   
- `hasImplements`  
- Значение `true`, если `MixInType` является производным от текущей реализации базового типа; в противном случае — значение `false`.  
+ *hasImplements*  
+ **значение true,** Если *MixInType* является производным от текущей реализации базового типа; **false** в противном случае.  
   
 ## <a name="remarks"></a>Примечания  
- Если класс является производным от среды выполнения Windows и интерфейсов класса модели COM, список объявления класса сначала должен перечислить все интерфейсы среды выполнения Windows, и затем любой классического COM интерфейсы. Параметр MixIn проверяет, определены ли интерфейсы в правильном порядке.  
+ Если класс является производным от среды выполнения Windows и интерфейсов класса модели COM, список объявления класса сначала должен перечислить все интерфейсы среды выполнения Windows, и затем любой классического COM интерфейсы. **MixIn** гарантирует, что интерфейсы будут указаны в правильном порядке.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `MixIn`  

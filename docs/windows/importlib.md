@@ -1,5 +1,5 @@
 ---
-title: importlib | Документы Microsoft
+title: importlib | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c21b97e50fa03861245a0c0881963387dd8a3102
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4563d1b24b3af6e450a67a21d6a083f1839bc3e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876762"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603072"
 ---
 # <a name="importlib"></a>importlib
 Делает типы, которые уже были скомпилированы в другую библиотеку типов, доступными для создаваемой библиотеки типов.  
@@ -30,23 +30,22 @@ ms.locfileid: "33876762"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ importlib(  
+[ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *tlb_file*  
  Заключенное в кавычки имя TLB-файла, который необходимо импортировать в библиотеку типов текущего проекта.  
   
 ## <a name="remarks"></a>Примечания  
- **Importlib** языка C++ вызывает `importlib` инструкции помещается в блок library созданного IDL-файла. **Importlib** атрибут имеет ту же функциональность, что [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) языка MIDL.  
+ **Importlib** C++ атрибут приводит к `importlib` инструкцию, чтобы поместить в блок library созданного IDL-файла. **Importlib** атрибут имеет ту же функциональность, что [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример использования **importlib**:  
+ Ниже показан пример использования **importlib**:  
   
-```  
+```cpp  
 // cpp_attr_ref_importlib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -71,5 +70,5 @@ ms.locfileid: "33876762"
  [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
  [Импорт](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [Включить](../windows/include-cpp.md)   
+ [включить](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)

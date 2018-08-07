@@ -1,5 +1,5 @@
 ---
-title: Структура InvokeHelper | Документы Microsoft
+title: Invokehelper-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b612530c1a29588cd837b2cdbeef37faf84c8b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2975cd066dd15f9179b2e1f0f3fc72084c9c573b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880411"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604272"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -88,42 +88,42 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `TDelegateInterface`  
- `TCallback`  
+### <a name="parameters"></a>Параметры  
+ *TDelegateInterface*  
+ *TCallback*  
  Тип функции обработчика событий.  
   
- `argCount`  
- Число аргументов в специализации InvokeHelper.  
+ *argCount*  
+ Число аргументов в **InvokeHelper** специализации.  
   
 ## <a name="remarks"></a>Примечания  
- Предоставляет реализацию на основе заданного числа и тип аргументов метода Invoke().  
+ Предоставляет реализацию `Invoke()` метод на основе заданного числа и типа аргументов.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`Traits`|Синоним для класса, который определяет тип каждого аргумента обработчика событий.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор InvokeHelper::InvokeHelper](../windows/invokehelper-invokehelper-constructor.md)|Инициализирует новый экземпляр класса InvokeHelper.|  
+|[Конструктор InvokeHelper::InvokeHelper](../windows/invokehelper-invokehelper-constructor.md)|Инициализирует новый экземпляр класса **InvokeHelper** класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод InvokeHelper::Invoke](../windows/invokehelper-invoke-method.md)|Вызывает обработчик событий, сигнатура которого содержит указанное число аргументов.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Элемент данных InvokeHelper::callback_](../windows/invokehelper-callback-data-member.md)|Представляет обработчик событий вызывается при возникновении события.|  
+|[Элемент данных InvokeHelper::callback_](../windows/invokehelper-callback-data-member.md)|Представляет обработчик событий для вызова при возникновении события.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `InvokeHelper`  

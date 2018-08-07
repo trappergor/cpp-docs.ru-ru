@@ -1,5 +1,5 @@
 ---
-title: SafeLessThan | Документы Microsoft
+title: SafeLessThan | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed6f114d13b006425cd3e94e898b2fe924ec732d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0188d3f08f0d4a06fb174163dc0a837e3dc9c041
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888433"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605783"
 ---
 # <a name="safelessthan"></a>SafeLessThan
 Определяет, является ли одно число меньше другого.  
@@ -37,25 +37,25 @@ inline bool SafeLessThan (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- [in] `t`  
- Первое число. Это должен быть типа T.  
+### <a name="parameters"></a>Параметры  
+ [in] *t*  
+ Первое число. Это должен быть типа `T`.  
   
- [in] `u`  
- Второй номер. Это должен быть типа u.  
+ [in] *u*  
+ Второй номер. Это должен быть типа `U`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` Если `t` — меньше, чем `u`; в противном случае `false`.  
+ **значение true,** Если *t* — меньше, чем *u*; в противном случае **false**.  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод расширяет возможности оператор сравнения стандартной, так как `SafeLessThan` позволяет сравнить два различных типа номер.  
+ Этот метод расширяет возможности оператор сравнения стандартные, так как **SafeLessThan** позволяет сравнить две различные виды номер.  
   
- Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначена для операции сравнения одного без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
+ Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначен для операции одно сравнение, без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Этот метод использовать только в том случае, когда один математической операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класса, вместо того чтобы вызывать отдельные функции автономный.  
+>  Этот метод должен использоваться только в тех случаях, когда одной математической операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класс, вместо того чтобы вызывать отдельные функции автономного.  
   
- Дополнительные сведения о типах шаблонов T и U см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
+ Дополнительные сведения о типах шаблонов `T` и `U`, см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** safeint.h  
@@ -65,7 +65,7 @@ inline bool SafeLessThan (
 ## <a name="see-also"></a>См. также  
  [Функции SafeInt](../windows/safeint-functions.md)   
  [Библиотека SafeInt](../windows/safeint-library.md)   
- [SafeInt-класс](../windows/safeint-class.md)   
+ [Класс SafeInt](../windows/safeint-class.md)   
  [SafeLessThanEquals](../windows/safelessthanequals.md)   
  [SafeGreaterThan](../windows/safegreaterthan.md)   
  [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)

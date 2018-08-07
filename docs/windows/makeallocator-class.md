@@ -1,5 +1,5 @@
 ---
-title: Класс MakeAllocator | Документы Microsoft
+title: Makeallocator-класс | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878064"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605923"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator - класс
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -30,7 +30,6 @@ ms.locfileid: "33878064"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,35 +43,35 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
+### <a name="parameters"></a>Параметры  
+ *T*  
  Имя типа.  
   
- `hasWeakReferenceSupport`  
- `true` выделить память для объекта, который поддерживает слабые ссылки; `false` выделить память для объекта, который не поддерживает слабые ссылки.  
+ *hasWeakReferenceSupport*  
+ **значение true,** выделить память для объекта, который поддерживает слабых ссылок; **false** выделить память для объекта, который не поддерживает слабые ссылки.  
   
 ## <a name="remarks"></a>Примечания  
- Выделяет память для активируемого класса, независимо от поддержки слабой ссылки.  
+ Выделяет память для активируемого класса, с или без поддержку слабых ссылок.  
   
- Переопределите MakeAllocator-класс для реализации модели выделения памяти, определяемые пользователем.  
+ Переопределить **MakeAllocator** класс для реализации модели выделения памяти, определяемые пользователем.  
   
- MakeAllocator обычно используется для предотвращения утечек памяти в том случае, если объект создается во время построения.  
+ **MakeAllocator** обычно используется для предотвращения утечек памяти в том случае, если объект вызывает исключение во время построения.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Инициализирует новый экземпляр класса MakeAllocator.|  
-|[Деструктор MakeAllocator::~MakeAllocator](../windows/makeallocator-tilde-makeallocator-destructor.md)|Деинициализирует текущий экземпляр класса MakeAllocator.|  
+|[Конструктор MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Инициализирует новый экземпляр класса **MakeAllocator** класса.|  
+|[Деструктор MakeAllocator::~MakeAllocator](../windows/makeallocator-tilde-makeallocator-destructor.md)|Деинициализирует текущий экземпляр **MakeAllocator** класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод MakeAllocator::Allocate](../windows/makeallocator-allocate-method.md)|Выделяет память и связывает ее с текущим объектом MakeAllocator.|  
-|[Метод MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Отсоединяет памяти, выделенной с помощью [Allocate](../windows/makeallocator-allocate-method.md) метод с текущим объектом MakeAllocator.|  
+|[Метод MakeAllocator::Allocate](../windows/makeallocator-allocate-method.md)|Выделяет память и связывает его с текущим **MakeAllocator** объекта.|  
+|[Метод MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Отменяет связь памяти, выделенной с помощью [выделения](../windows/makeallocator-allocate-method.md) метод из текущего **MakeAllocator** объекта.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `MakeAllocator`  

@@ -1,5 +1,5 @@
 ---
-title: noncreatable | Документы Microsoft
+title: noncreatable | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4055d541fa60c714262a64466734bc2b2323775b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4881d0e2bc1379f5c4cafa17f485707bca315783
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877827"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607947"
 ---
 # <a name="noncreatable"></a>noncreatable
-Определяет объект, который не может быть создан сам по себе.  
+Определяет объект, который не может быть создан сама по себе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [noncreatable]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Noncreatable** языка C++ имеет ту же функциональность, что [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) языка MIDL и автоматически передается в созданный. IDL-файл компилятором.  
+ **Noncreatable** атрибут C++ имеет ту же функциональность, что [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) описании атрибута MIDL и автоматически передает вызов в созданный. IDL-файл компилятором.  
   
- Если этот атрибут используется в проект, использующий ATL, изменяет поведение атрибута. Помимо описанное выше поведение также вставляет атрибут [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос. Этот макрос указывает ATL, что не удается создать объект извне.  
+ Если этот атрибут используется в проекте, где применяется ATL, поведение атрибута изменяется. Помимо описанного выше поведения, атрибут также вставляет [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос. Этот макрос с библиотекой ATL указывает, что объект не может быть создан извне.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_noncreatable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,7 +64,7 @@ class CMyClass : public A
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|**coclass**|  
 |**Недопустимые атрибуты**|Нет|  

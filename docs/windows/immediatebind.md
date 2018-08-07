@@ -1,5 +1,5 @@
 ---
-title: immediatebind | Документы Microsoft
+title: immediatebind | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876268"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603059"
 ---
 # <a name="immediatebind"></a>immediatebind
-Указывает, что базы данных будут немедленно уведомления обо всех изменениях свойства объекта с привязкой к данным.  
+Указывает, что базы данных будет немедленно оповещаться обо всех изменений свойства объекта привязки данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [immediatebind]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Immediatebind** языка C++ имеет ту же функциональность, что [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) языка MIDL.  
+ **Immediatebind** атрибут C++ имеет ту же функциональность, что [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В разделе [привязываемых](../windows/bindable.md) пример демонстрирует использование **immediatebind**.  
+ См. в разделе [bindable](../windows/bindable.md) пример демонстрирует использование **immediatebind**.  
   
 ## <a name="requirements"></a>Требования  
   

@@ -1,5 +1,5 @@
 ---
-title: Конструктор HStringReference::HStringReference | Документы Microsoft
+title: Конструктор HStringReference::HStringReference | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc88ea32d4384b36559a4a10da0a5975345bf0d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dce8c6fca14ad26665bf4868681234374c20f85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876011"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608148"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>Конструктор HStringReference::HStringReference
-Инициализирует новый экземпляр класса HStringReference.  
+Инициализирует новый экземпляр класса **HStringReference** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,25 +38,25 @@ HStringReference(wchar_t const (&str)[ sizeDest],
 HStringReference(HStringReference&& other) throw();  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `sizeDest`  
- Параметр шаблона, задающее размер буфера назначения HStringReference.  
+### <a name="parameters"></a>Параметры  
+ *sizeDest*  
+ Параметр шаблона, который указывает размер целевой **HStringReference** буфера.  
   
- `str`  
+ *str*  
  Ссылка на строку расширенных символов.  
   
- `len`  
- Максимальная длина `str` буфером параметров для использования в этой операции. Если `len` параметр не указан, вся `str` параметр используется. Если параметр `len` больше, чем параметр `sizeDest`, значит для `len` установлено значение `sizeDest`-1.  
+ *функция Len*  
+ Максимальная длина *str* буфером параметров для использования в данной операции. Если *len* параметр не указан, весь *str* используется параметр. Если *len* больше, чем *sizeDest*, *len* присваивается *sizeDest*-1.  
   
- `other`  
- Другой объект HStringReference.  
+ *other*  
+ Другой **HStringReference** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Первый конструктор инициализирует новый объект HStringReference того же размера, что и параметр `str`.  
+ Первый конструктор инициализирует новый **HStringReference** объект того же размера, как параметр *str*.  
   
- Второй конструктор инициализирует новый объект HStringReference, размер которого определен параметром `len`.  
+ Второй конструктор инициализирует новый **HStringReference** объект, размер которого определен параметром *len*.  
   
- Третий конструктор инициализирует новый объект HStringReference значению `other` параметра, а затем удаляет `other` параметра.  
+ Третий конструктор инициализирует новый **HStringReference** объекта к значению *других* параметра, а затем удаляет *других* параметра.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

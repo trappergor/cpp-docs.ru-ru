@@ -1,5 +1,5 @@
 ---
-title: 'MakeAllocator:: ~ MakeAllocator деструктор | Документы Microsoft'
+title: 'MakeAllocator:: ~ MakeAllocator деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e31f666ca6263a9b9b770261a0899bcad1bc8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877103"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606313"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>Деструктор MakeAllocator::~MakeAllocator
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,7 +34,7 @@ ms.locfileid: "33877103"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Деинициализирует текущий экземпляр класса MakeAllocator.  
+ Деинициализирует текущий экземпляр **MakeAllocator** класса.  
   
  Этот деструктор также удаляет базовой выделенную память при необходимости.  
   
@@ -44,5 +44,5 @@ ms.locfileid: "33877103"
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [MakeAllocator-класс](../windows/makeallocator-class.md)   
+ [Makeallocator-класс](../windows/makeallocator-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

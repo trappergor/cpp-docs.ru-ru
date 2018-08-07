@@ -1,5 +1,5 @@
 ---
-title: out (C++) | Документы Microsoft
+title: out (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b23ff91a67962ec36cf6a9c2f5ebbf8122ab73c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9a3d102050da84f7dcbc8714a4c04b46cf3f5a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876817"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606128"
 ---
 # <a name="out-c"></a>out (C++)
 Определяет параметры-указатели, которые возвращаются из вызываемой процедуры в вызывающую (от сервера к клиенту).  
@@ -30,9 +30,7 @@ ms.locfileid: "33876817"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [out]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
@@ -57,5 +55,5 @@ ms.locfileid: "33876817"
 ## <a name="see-also"></a>См. также  
  [Атрибуты IDL](../windows/idl-attributes.md)   
  [Атрибуты параметра](../windows/parameter-attributes.md)   
- [значение по умолчанию](../windows/defaultvalue.md)   
+ [DefaultValue](../windows/defaultvalue.md)   
  [id](../windows/id.md)   

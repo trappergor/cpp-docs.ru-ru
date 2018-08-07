@@ -1,5 +1,5 @@
 ---
-title: 'Значки и курсоры: ресурсы изображений для устройств отображения (редактор изображений для значков) | Документы Microsoft'
+title: 'Значки и курсоры: ресурсы изображений для устройств отображения (редактор изображений для значков) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881914"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604620"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Значки и курсоры: ресурсы изображений для устройств отображения (редактор изображений для значков)
 Значки и курсоры представляют собой графические ресурсы, которые могут состоять из нескольких изображений разных размеров, использующих разные цветовые схемы, в зависимости от типа устройства отображения. Кроме того, у курсоров есть "активная точка" — точка, которая используется системой Windows для отслеживания позиции курсора. Как и в случае с растровыми и другими изображениями, для создания и редактирования значков и курсоров используется редактор изображений.  
@@ -75,13 +75,12 @@ ms.locfileid: "33881914"
   
 -   [Настройка активной точки курсора](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
  Нет  
   
 ## <a name="see-also"></a>См. также  
  [Редактор изображений для значков](../windows/image-editor-for-icons.md)   
- [значки](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
+ [Значки](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [Курсоры](http://msdn.microsoft.com/library/windows/desktop/ms646970)
-

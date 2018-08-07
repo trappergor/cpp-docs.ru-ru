@@ -1,5 +1,5 @@
 ---
-title: 'RoInitializeWrapper:: ~ RoInitializeWrapper деструктор | Документы Microsoft'
+title: 'RoInitializeWrapper:: ~ RoInitializeWrapper деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29683e68f1f5aadcd477cdc717b03a648c5cccc7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c6eaeb044cf3e169bf5927a2fec948cc8d4294c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892004"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606280"
 ---
 # <a name="roinitializewrapperroinitializewrapper-destructor"></a>Деструктор RoInitializeWrapper::~RoInitializeWrapper
 Отменяет инициализацию среды выполнения Windows.  
@@ -32,7 +32,7 @@ ms.locfileid: "33892004"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Класс RoInitializeWrapper вызывает Windows::Foundation::Uninitialize().  
+ **RoInitializeWrapper** класс вызывает `Windows::Foundation::Uninitialize()`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

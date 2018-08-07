@@ -1,5 +1,5 @@
 ---
-title: Функция RaiseException | Документы Microsoft
+title: Функция RaiseException | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af97ac13386db450318f4d1f384517a8dd77baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e93b7281b079918641bf36ebcd72968a98eb95ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882187"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602670"
 ---
 # <a name="raiseexception-function"></a>RaiseException - функция
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -35,17 +35,17 @@ inline void __declspec(noreturn)   RaiseException(
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `hr`  
- Код исключения для исключения; то есть HRESULT сбоя операции.  
+### <a name="parameters"></a>Параметры  
+ *hr*  
+ Код исключения объекта исключения; то есть значение HRESULT неудачной операции.  
   
- `dwExceptionFlags`  
- Флаг, указывающий продолжено (значение флага равно нулю), либо noncontinuable исключения (значение флага не равно нулю). По умолчанию исключение делающего продолжение невозможным.  
+ *dwExceptionFlags*  
+ Флаг, указывающий, допускающее исключения (значение флага равно нулю) или noncontinuable исключение (флаг значение отлично от нуля). По умолчанию исключение делающего продолжение невозможным.  
   
 ## <a name="remarks"></a>Примечания  
  Вызывает исключение в вызывающем потоке.  
   
- Дополнительные сведения см. в разделе Windows **RaiseException** функции.  
+ Дополнительные сведения см. в разделе Windows `RaiseException` функции.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** internal.h  

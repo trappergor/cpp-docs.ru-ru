@@ -1,5 +1,5 @@
 ---
-title: Структура IsBaseOfStrict | Документы Microsoft
+title: Isbaseofstrict-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db8f315c0589ceb7cd9411873152fe644985818e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876895"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604507"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -42,23 +42,23 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `Base`  
+### <a name="parameters"></a>Параметры  
+ *Base*  
  Базовый тип.  
   
- `Derived`  
+ *Производные*  
  Производный тип.  
   
 ## <a name="remarks"></a>Примечания  
  Проверяет, является ли один тип базовым для другого.  
   
- Первый шаблон определяет, является ли тип, производный от базового типа, что может обеспечить **true** или **false**. Второй шаблон проверяет, является ли тип является производным от самого себя, который всегда создает **false**.  
+ Первый шаблон проверяет, является ли тип, производный от базового типа, который может дать **true** или **false**. Второй шаблон проверяет, является ли тип является производным от самого себя, которая всегда создает **false**.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Константа IsBaseOfStrict::value](../windows/isbaseofstrict-value-constant.md)|Указывает, является ли один тип базовым для другого.|  
   

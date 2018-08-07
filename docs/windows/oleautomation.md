@@ -1,5 +1,5 @@
 ---
-title: oleautomation | Документы Microsoft
+title: oleautomation | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8093a36199eeddf2a96ae0830c56ac0acde51cfe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e8c7ea92e914543d80b199ef9d52435eb7116d9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882294"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608011"
 ---
 # <a name="oleautomation"></a>oleautomation
-Указывает, что интерфейс совместим с автоматизацией.  
+Указывает, что интерфейс совместим со службой автоматизации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [oleautomation]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Oleautomation** языка C++ имеет ту же функциональность, что [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) языка MIDL.  
+ **Oleautomation** атрибут C++ имеет ту же функциональность, что [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- См. в примерах для [defaultvalue](../windows/defaultvalue.md) и [nonextensible](../windows/nonextensible.md) для приведен пример использования **oleautomation**.  
+ См. в примерах [defaultvalue](../windows/defaultvalue.md) и [nonextensible](../windows/nonextensible.md) использовать образец **oleautomation**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -47,7 +45,7 @@ ms.locfileid: "33882294"
   
 |||  
 |-|-|  
-|**Применение**|`interface`|  
+|**Применение**|**interface**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|**dispinterface**|  

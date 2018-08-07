@@ -1,5 +1,5 @@
 ---
-title: 'Элемент данных Module::genericreleasenotifier:: | Документы Microsoft'
+title: 'Данных Module::genericreleasenotifier:: Callback_ | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6f7c430fcd75033e10e0a23d9d0ab78675653bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ad301ba081ad063ff58ebf7a749b0d32371d05b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880714"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605036"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Элемент данных Module::GenericReleaseNotifier::callback_
-Содержит лямбда-выражения, функтором или обработчик событий указателя на функцию, связанный с текущим объектом Module::GenericReleaseNotifier.  
+Содержит лямбда-выражения, функтором или обработчик событий указателя на функцию, связанный с текущим `Module::GenericReleaseNotifier` объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   

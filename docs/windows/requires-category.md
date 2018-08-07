@@ -1,5 +1,5 @@
 ---
-title: requires_category | Документы Microsoft
+title: requires_category | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6822773292fd651eaae3be5c00fb2b693a80a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ddcfe01ec5bd838a84ddad351f43802a8142b44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882320"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606105"
 ---
 # <a name="requirescategory"></a>requires_category
-Задает категории обязательный компонент целевого класса.  
+Указывает необходимый компонент категории целевого класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-     [ requires_category(   
+[ requires_category(   
   requires_category  
 ) ]  
 ```  
@@ -41,14 +40,14 @@ ms.locfileid: "33882320"
  Идентификатор необходимая категория.  
   
 ## <a name="remarks"></a>Примечания  
- **Requires_category** C++ атрибут задает категории компонентов, предусмотренного для целевого класса. Дополнительные сведения см. в разделе [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
+ **Requires_category** C++ атрибут задает категории компонентов, требуемых для целевого класса. Дополнительные сведения см. в разделе [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
   
  Этот атрибут требует, чтобы атрибут [coclass](../windows/coclass.md), [progid](../windows/progid.md)или [vi_progid](../windows/vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу.  
   
 ## <a name="example"></a>Пример  
- Следующий код требует, чтобы объект реализован категорию элемента управления.  
+ Следующий код требует, что объект реализует категорию элемента управления.  
   
-```  
+```cpp  
 // cpp_attr_ref_requires_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -68,9 +67,9 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Один или несколько из следующих: **coclass**, **progid**или **vi_progid**.|  
+|**Обязательные атрибуты**|Один или несколько из следующих: `coclass`, `progid`, или `vi_progid`.|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  

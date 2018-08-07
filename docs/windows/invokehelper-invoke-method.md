@@ -1,5 +1,5 @@
 ---
-title: Метод InvokeHelper::Invoke | Документы Microsoft
+title: Метод InvokeHelper::Invoke | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d3fc5ac67d6c03cef7f096f898db0e2f29d125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8db9d9b44a2646d69dfbbd423d712f0d1c92d6cd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882307"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607976"
 ---
 # <a name="invokehelperinvoke-method"></a>Метод InvokeHelper::Invoke
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -62,36 +62,36 @@ STDMETHOD(
 )( typename Traits;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `arg1`  
+### <a name="parameters"></a>Параметры  
+ *arg1*  
  Аргумент 1.  
   
- `arg2`  
+ *Arg2*  
  Аргумент 2.  
   
- `arg3`  
+ *arg3*  
  Аргумент 3.  
   
- `arg4`  
+ *arg4*  
  Аргумент 4.  
   
- `arg5`  
+ *arg5*  
  Аргумент 5.  
   
- `arg6`  
+ *arg6*  
  Аргумент 6.  
   
- `arg7`  
+ *arg7*  
  Аргумент 7.  
   
- `arg8`  
+ *arg8*  
  Аргумент 8.  
   
- `arg9`  
+ *arg9*  
  Аргумент 9.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае — значение HRESULT, описывающее ошибку.  
+ Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, описывающее ошибку.  
   
 ## <a name="remarks"></a>Примечания  
  Вызывает обработчик событий, сигнатура которого содержит указанное число аргументов.  

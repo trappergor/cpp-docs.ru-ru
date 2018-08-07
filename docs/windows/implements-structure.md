@@ -1,5 +1,5 @@
 ---
-title: Реализует структуру | Документы Microsoft
+title: Реализует структуру | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0dc23a9c90fc2112d67180ceae86ebde0e057b06
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880924"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607810"
 ---
 # <a name="implements-structure"></a>Implements - структура
-Реализует QueryInterface и GetIid для указанных интерфейсов.  
+Реализует `QueryInterface` и `GetIid` для указанных интерфейсов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,66 +58,66 @@ template <
 struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `I0`  
- Интерфейс нулевой идентификатор. (Обязательный)  
+### <a name="parameters"></a>Параметры  
+ *I0*  
+ Идентификатор нулевого интерфейса. (Обязательный)  
   
- `I1`  
- Первый идентификатор интерфейса. (Необязательный параметр).  
+ *I1*  
+ Идентификатор первого интерфейса. (Необязательный параметр).  
   
- `I2`  
- Второй идентификатор интерфейса. (Необязательный параметр).  
+ *I2*  
+ Идентификатор второго интерфейса. (Необязательный параметр).  
   
- `I3`  
- Третий идентификатор интерфейса. (Необязательный параметр).  
+ *I3*  
+ Идентификатор третьего интерфейса. (Необязательный параметр).  
   
- `I4`  
- Четвертый идентификатор интерфейса. (Необязательный параметр).  
+ *I4*  
+ Идентификатор четвертого интерфейса. (Необязательный параметр).  
   
- `I5`  
- Пятый идентификатор интерфейса. (Необязательный параметр).  
+ *I5*  
+ Идентификатор пятого интерфейса. (Необязательный параметр).  
   
- `I6`  
- Шестой идентификатор интерфейса. (Необязательный параметр).  
+ *I6*  
+ Идентификатор шестого интерфейса. (Необязательный параметр).  
   
- `I7`  
- Седьмой идентификатор интерфейса. (Необязательный параметр).  
+ *I7*  
+ Идентификатор седьмого интерфейса. (Необязательный параметр).  
   
- `I8`  
- Идентификатор интерфейса восьмого (Необязательный параметр).  
+ *I8*  
+ Идентификатор восьмого интерфейса. (Необязательный параметр).  
   
- `I9`  
- Девятый идентификатор интерфейса. (Необязательный параметр).  
+ *I9*  
+ Идентификатор девятого интерфейса. (Необязательный параметр).  
   
- `flags`  
+ *flags*  
  Флаги конфигурации для класса. Один или несколько [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) перечисления, которые указаны в [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) структуры.  
   
 ## <a name="remarks"></a>Примечания  
- Является производным из списка указанных интерфейсов и реализует QueryInterface и GetIid вспомогательные шаблоны.  
+ Является производным от списка указанных интерфейсов и реализует вспомогательные шаблоны для `QueryInterface` и `GetIid`.  
   
- Каждый `I0` через `I9` параметр интерфейса должен быть производным от либо IUnknown IInspectable, или [ChainInterfaces](../windows/chaininterfaces-structure.md) шаблона. `flags` Параметр определяет, создается ли поддержка IUnknown или IInspectable.  
+ Каждый *I0* через *I9* параметр интерфейса должен быть производным от `IUnknown`, `IInspectable`, или [ChainInterfaces](../windows/chaininterfaces-structure.md) шаблона. *Флаги* параметр определяет, создается ли поддержка для `IUnknown` или `IInspectable`.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`ClassFlags`|Синоним для `RuntimeClassFlags<WinRt>`.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод Implements::CanCastTo](../windows/implements-cancastto-method.md)|Возвращает указатель на указанный интерфейс.|  
-|[Метод Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Возвращает указатель на базовый интерфейс IUnknown.|  
-|[Метод Implements::FillArrayWithIid](../windows/implements-fillarraywithiid-method.md)|Вставляет идентификатор интерфейса, заданный текущим параметром шаблона нулевого в качестве элемента указанного массива.|  
+|[Метод Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Возвращает указатель на базовый `IUnknown` интерфейс.|  
+|[Метод Implements::FillArrayWithIid](../windows/implements-fillarraywithiid-method.md)|Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.|  
   
 ### <a name="protected-constants"></a>Защищенные константы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[Константа Implements::IidCount](../windows/implements-iidcount-constant.md)|Содержит количество идентификаторов реализованного интерфейса.|  
+|[Константа Implements::IidCount](../windows/implements-iidcount-constant.md)|Содержит число идентификаторов реализованного интерфейса.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  

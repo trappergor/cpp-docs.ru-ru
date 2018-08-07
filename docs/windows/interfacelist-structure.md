@@ -1,5 +1,5 @@
 ---
-title: Структура InterfaceList | Документы Microsoft
+title: Interfacelist-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 267ef2d9e1b24028016831e050385997ac0037e6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876739"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604844"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -37,12 +37,12 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
- Имя интерфейса; Первый интерфейс в рекурсивный список.  
+### <a name="parameters"></a>Параметры  
+ *T*  
+ Имя интерфейса; Первый интерфейс в списке рекурсивной.  
   
- `U`  
- Имя интерфейса; остальные интерфейсы в рекурсивный список.  
+ *U*  
+ Имя интерфейса; остальные интерфейсы в списке рекурсивной.  
   
 ## <a name="remarks"></a>Примечания  
  Используется для создания рекурсивный список интерфейсов.  
@@ -51,10 +51,10 @@ struct InterfaceList;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|`FirstT`|Синоним параметра шаблона `T`.|  
-|`RestT`|Синоним параметра шаблона `U`.|  
+|`FirstT`|Синоним параметра-шаблона *T*.|  
+|`RestT`|Синоним параметра-шаблона *U*.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `InterfaceList`  

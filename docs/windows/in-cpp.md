@@ -1,5 +1,5 @@
 ---
-title: в (C++) | Документы Microsoft
+title: в (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb730163b9048005d3af64bb42ae9113681d52b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c09ae7e750a6372dd622f251a3b512e4ea67ef4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874022"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606440"
 ---
 # <a name="in-c"></a>in (C++)
-Указывает, что параметр является должен передаваться из вызывающей процедуры к вызываемой процедуре.  
+Указывает, что параметр передается из вызывающей процедуры вызываемой процедуры.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [in]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **В** языка C++ имеет ту же функциональность, что [в](http://msdn.microsoft.com/library/windows/desktop/aa367051) языка MIDL.  
+ **В** атрибут C++ имеет ту же функциональность, что [в](http://msdn.microsoft.com/library/windows/desktop/aa367051) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В разделе [привязываемых](../windows/bindable.md) пример демонстрирует использование **в**.  
+ См. в разделе [bindable](../windows/bindable.md) пример демонстрирует использование **в**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -58,6 +56,6 @@ ms.locfileid: "33874022"
  [Атрибуты IDL](../windows/idl-attributes.md)   
  [Атрибуты параметра](../windows/parameter-attributes.md)   
  [Атрибуты метода](../windows/method-attributes.md)   
- [значение по умолчанию](../windows/defaultvalue.md)   
+ [DefaultValue](../windows/defaultvalue.md)   
  [Идентификатор](../windows/id.md)   
  [out](../windows/out-cpp.md)   

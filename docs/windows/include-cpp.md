@@ -1,5 +1,5 @@
 ---
-title: Включить (C++) | Документы Microsoft
+title: Включить (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2c88dd610c1a0b8a8fee4e23da1b5ad844e989c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878428"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603492"
 ---
 # <a name="include-c"></a>include (C++)
-Указывает один или несколько файлов заголовков, которые должны быть включены в сгенерированный IDL-файл.  
+Указывает один или несколько файлов заголовка для включения в созданного IDL-файла.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ include(  
+[ include(  
    header_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *HEADER_FILE*  
- Имя файла, который будет включен в сгенерированный IDL-файл.  
+ Имя файла, который будет включен в созданного IDL-файла.  
   
 ## <a name="remarks"></a>Примечания  
- **Включают** языка C++ вызывает `#include` инструкцию, чтобы поместить под `import "docobj.idl"` инструкции в сгенерированный IDL-файл.  
+ **Включают** C++ атрибут приводит к `#include` инструкцию, чтобы помещаться под `import "docobj.idl"` инструкции в созданного IDL-файла.  
   
- **Включают** языка C++ имеет ту же функциональность, что [включают](http://msdn.microsoft.com/library/windows/desktop/aa367052) языка MIDL.  
+ **Включают** атрибут C++ имеет ту же функциональность, что [включают](http://msdn.microsoft.com/library/windows/desktop/aa367052) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример использования **включают**. Например, файл include.h содержит только # оператор include.  
+ Ниже показан пример использования **включают**. В этом примере include.h файл содержит только # оператор include.  
   
-```  
+```cpp  
 // cpp_attr_ref_include.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

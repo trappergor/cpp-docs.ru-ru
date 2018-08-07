@@ -1,5 +1,5 @@
 ---
-title: Метод RuntimeClassBaseT::GetImplementedIIDS | Документы Microsoft
+title: Метод RuntimeClassBaseT::GetImplementedIIDS | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892238"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603255"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>Метод RuntimeClassBaseT::GetImplementedIIDS
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -38,24 +38,24 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
- Тип параметра `implements`.  
+### <a name="parameters"></a>Параметры  
+ *T*  
+ Тип *реализует* параметра.  
   
- `implements`  
- Указатель на тип, указанный параметром `T`.  
+ *Реализует*  
+ Указатель на тип, указанный параметром *T*.  
   
- `iidCount`  
- Максимальное количество идентификаторов интерфейса для извлечения.  
+ *iidCount*  
+ Максимальное число идентификаторов интерфейса для извлечения.  
   
- `iids`  
- Если эта операция завершается успешно, массив идентификаторов, реализуемый типом интерфейса `T`.  
+ *идентификаторы IID*  
+ Если эта операция завершается успешно, массив идентификаторов, реализуемый типом интерфейсов *T*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае — значение HRESULT, описывающее ошибку.  
+ Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, описывающее ошибку.  
   
 ## <a name="remarks"></a>Примечания  
- Извлекает массив идентификаторов, которые реализуются указанного типа интерфейса.  
+ Извлекает массив идентификаторов, которые реализуются с помощью указанного типа интерфейсов.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  

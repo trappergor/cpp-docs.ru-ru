@@ -1,5 +1,5 @@
 ---
-title: __identifier (c + +/ CLI) | Документы Microsoft
+title: __identifier (c + +/ CLI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877687"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603349"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 Включает использование ключевых слов Visual C++ в качестве идентификаторов.  
   
 ## <a name="all-platforms"></a>Все платформы  
-**Синтаксис**  
+### <a name="syntax"></a>Синтаксис  
   
 ```  
 __identifier(  
 Visual_C++_keyword  
 )  
-  
 ```  
   
-**Заметки**  
+### <a name="remarks"></a>Примечания  
   
-Использование `__identifier` ключевое слово для идентификаторов, которые не являются ключевыми словами, разрешено, но настоятельно не рекомендуется, как правило стиля.  
+Использование **__identifier** ключевое слово для идентификаторов, которые не являются ключевые слова, разрешено, но настоятельно не рекомендуется в рамках стиля.  
   
 ## <a name="windows-runtime"></a>Среда выполнения Windows  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/ZW**  
+ Параметр компилятора: `/ZW`  
   
 ### <a name="examples"></a>Примеры  
  **Пример**  
   
- В следующем примере класс с именем `template` создается в C# и распространяемых в виде библиотеки DLL. В программе Visual C++, которая использует `template` класса `__identifier` ключевое слово скрывает тот факт, `template` является ключевым словом standard C++.  
+ В следующем примере класс с именем `template` создается на языке C# и распространяемых в виде библиотеки DLL. В программе Visual C++, который использует `template` класс, **__identifier** ключевое слово скрывает тот факт, **шаблона** является ключевым словом standard C++.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -60,7 +59,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /ZW  
 #using <identifier_template.dll>  
@@ -71,19 +70,18 @@ int main() {
 ```  
   
 ## <a name="common-language-runtime"></a>Среда CLR 
- **Заметки**  
+### <a name="remarks"></a>Примечания  
   
- `__identifier` Ключевое слово может использоваться с **/CLR** параметр компилятора.  
+ **__Identifier** ключевое слово может использоваться с `/clr` параметр компилятора.  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/clr**  
+ Параметр компилятора: `/clr`  
   
 ### <a name="examples"></a>Примеры  
- **Пример**  
   
- В следующем примере класс с именем `template` создается в C# и распространяемых в виде библиотеки DLL. В программе Visual C++, которая использует `template` класса `__identifier` ключевое слово скрывает тот факт, `template` является ключевым словом standard C++.  
+ В следующем примере класс с именем `template` создается на языке C# и распространяемых в виде библиотеки DLL. В программе Visual C++, который использует `template` класс, **__identifier** ключевое слово скрывает тот факт, **шаблона** является ключевым словом standard C++.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -91,7 +89,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /clr  
 #using <identifier_template.dll>  

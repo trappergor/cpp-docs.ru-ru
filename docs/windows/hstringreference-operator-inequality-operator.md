@@ -1,5 +1,5 @@
 ---
-title: HStringReference::Operator! =-оператор | Документы Microsoft
+title: Оператор HStringReference::Operator! =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ed2eeaceac23dc7a4efb17e2aba03cd9bc88eeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e2fc27d47fa218dd4378538bb193d650727ed22
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876609"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606531"
 ---
 # <a name="hstringreferenceoperator-operator"></a>Оператор HStringReference::O
-Указывает, равны ли два параметра.  
+Указывает, действительно ли два параметра не равны.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,18 +43,17 @@ inline bool operator!=(
 inline bool operator!=(  
                const HStringReference& lhs,   
                const HSTRING& rhs) throw()  
-  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `lhs`  
- Первый параметр для сравнения. `lhs` может быть объект HStringReference или дескриптор HSTRING.  
+### <a name="parameters"></a>Параметры  
+ *lhs*  
+ Первый параметр для сравнения. *LHS* может быть **HStringReference** объекта или дескриптором HSTRING.  
   
- `rhs`  
- Второй параметр для сравнения.  `rhs` может быть объект HStringReference или дескриптор HSTRING.  
+ *правая часть*  
+ Второй параметр для сравнения.  *правая часть* может быть **HStringReference** объекта или дескриптором HSTRING.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` Если `lhs` и `rhs` параметров не равны; в противном случае — `false`.  
+ **значение true,** Если *lhs* и *rhs* параметры не равны; в противном случае — значение **false**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

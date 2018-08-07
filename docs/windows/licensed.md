@@ -1,5 +1,5 @@
 ---
-title: лицензии | Документы Microsoft
+title: Лицензированные | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875751"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603806"
 ---
 # <a name="licensed"></a>licensed
-Указывает, что COM-объект, к которому он применяется лицензируется и должны быть созданы с использованием **IClassFactory2**.  
+Указывает, что COM-объект, к которому он применяется предоставляется по лицензии и должны быть созданы при помощи `IClassFactory2`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Лицензированных** языка C++ имеет ту же функциональность, что [лицензированных](http://msdn.microsoft.com/library/windows/desktop/aa367070) языка MIDL.  
+ **Лицензированные** атрибут C++ имеет ту же функциональность, что [Лицензированные](http://msdn.microsoft.com/library/windows/desktop/aa367070) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,9 +63,9 @@ public:
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**coclass**|  
+|**Обязательные атрибуты**|`coclass`|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  

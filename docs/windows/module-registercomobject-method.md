@@ -1,5 +1,5 @@
 ---
-title: Метод Module::RegisterCOMObject | Документы Microsoft
+title: Метод Module::RegisterCOMObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c997b4221dee913a6eaad55f6f114b0ad9d820e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873983"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606544"
 ---
 # <a name="moduleregistercomobject-method"></a>Метод Module::RegisterCOMObject
 Регистрирует один или несколько объектов модели COM, чтобы другие приложения могли к ним подключиться.  
@@ -39,20 +39,20 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `serverName`  
+### <a name="parameters"></a>Параметры  
+ *Имя_сервера*  
  Полное имя сервера.  
   
- `clsids`  
+ *идентификаторов CLSID*  
  Массив регистрируемых идентификаторов CLSID.  
   
- `factories`  
+ *фабрики*  
  Массив интерфейсов IUnknown объектов класса, чья доступность публикуется.  
   
- `cookies`  
+ *Файлы cookie*  
  После завершения операции представляет массив указателей на значения, которые определяют зарегистрированные объекты класса. Эти значения в дальнейшем используются для отмены регистрации.  
   
- `count`  
+ *count*  
  Количество идентификаторов CLSID, которые необходимо зарегистрировать.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -61,7 +61,7 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 ## <a name="remarks"></a>Примечания  
  COM-объекты зарегистрированы с помощью перечислителя CLSCTX_LOCAL_SERVER перечисления CLSCTX.  
   
- Тип подключения к зарегистрированным объектам определяется сочетанием текущего параметра шаблона `comflag` и перечислителя REGCLS_SUSPENDED перечисления REGCLS.  
+ Тип подключения к зарегистрированным объектам определяется сочетание текущего *comflag* параметр шаблона и перечислителя REGCLS_SUSPENDED перечисления.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  

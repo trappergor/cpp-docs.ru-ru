@@ -1,5 +1,5 @@
 ---
-title: Метод Module::GetActivationFactory | Документы Microsoft
+title: Метод Module::GetActivationFactory | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 837cb68173ca1994de6bc560882d617bb3aa03e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41b90ea56f65665ccdaff0fe4dceff292d1cdcf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887017"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608109"
 ---
 # <a name="modulegetactivationfactory-method"></a>Метод Module::GetActivationFactory
 Получает фабрику активации для модуля.  
@@ -37,15 +37,15 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `pActivatibleClassId`  
+### <a name="parameters"></a>Параметры  
+ *pActivatibleClassId*  
  Представляет IID класса среды выполнения.  
   
- `ppIFactory`  
+ *ppIFactory*  
  Представляет интерфейс IActivationFactory указанного класса среды выполнения.  
   
- `serverName`  
- Имя подмножества фабрик класса в текущем модуле. Укажите имя сервера, используемое в [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) макрос, или укажите `nullptr` для получения имени сервера по умолчанию.  
+ *Имя_сервера*  
+ Имя подмножества фабрик класса в текущем модуле. Укажите имя сервера, используемое в [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) макрос, или указать **nullptr** для получения имени сервера по умолчанию.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, возвращаемое GetActivationFactory.  
@@ -56,4 +56,5 @@ WRL_NOTHROW HRESULT GetActivationFactory(
  **Пространство имен:** Microsoft::WRL  
   
 ## <a name="see-also"></a>См. также  
-[Класс модуля](../windows/module-class.md) [макрос Activatableclass](../windows/activatableclass-macros.md)
+ [Класс Module](../windows/module-class.md)  
+ [Макрос ActivatableClass](../windows/activatableclass-macros.md)

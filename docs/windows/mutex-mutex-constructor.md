@@ -1,5 +1,5 @@
 ---
-title: Конструктор Mutex::Mutex | Документы Microsoft
+title: Конструктор Mutex::Mutex | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb7782e44fc8598ca3b806ef922f8d0840765e28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a7549371ba4648f8fcce03a98a021c8027c676e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876460"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605198"
 ---
 # <a name="mutexmutex-constructor"></a>Конструктор Mutex::Mutex
-Инициализирует новый экземпляр класса Mutex.  
+Инициализирует новый экземпляр класса **мьютекс** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,12 +39,12 @@ Mutex(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `h`  
- Дескриптор или rvalue-ссылка на дескриптор объекта Mutex.  
+### <a name="parameters"></a>Параметры  
+ *h*  
+ Дескриптор или rvalue ссылка на дескриптор для **мьютекс** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Первый конструктор инициализирует объект Mutex из указанного дескриптора. Второй конструктор инициализирует объект Mutex из указанного дескриптора, а затем передает право на владение мьютексом на текущий объект Mutex.  
+ Первый конструктор инициализирует **мьютекс** объект из указанного дескриптора. Второй конструктор инициализирует **мьютекс** объект из указанного дескриптора, а затем перемещает владение мьютексом текущему **мьютекс** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

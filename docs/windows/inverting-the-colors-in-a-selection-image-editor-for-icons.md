@@ -1,5 +1,5 @@
 ---
-title: Преобразование цветов в выделенной области (редактор изображений для значков) | Документы Microsoft
+title: Преобразование цветов в выделенной области (редактор изображений для значков) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874084"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608921"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Преобразование цветов в выделенной области (редактор изображений для значков)
 Редактор изображений предоставляет удобный способ инвертирования цветов в выбранной части изображения, что позволяет увидеть, как будет выглядеть изображение в инвертированных цветах.  
   
 ### <a name="to-invert-colors-in-the-current-selection"></a>Инвертирование цветов в выделенной области  
   
-1.  На **изображения** меню, нажмите кнопку **обратить цвета**.  
+1.  На **изображение** меню, щелкните **обратить цвета**.  
   
-
-  
- Требования  
+## <a name="requirements"></a>Требования  
   
  Нет  
   

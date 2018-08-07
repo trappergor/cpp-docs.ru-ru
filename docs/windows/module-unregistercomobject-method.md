@@ -1,5 +1,5 @@
 ---
-title: Метод Module::UnregisterCOMObject | Документы Microsoft
+title: Метод Module::UnregisterCOMObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881940"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602634"
 ---
 # <a name="moduleunregistercomobject-method"></a>Метод Module::UnregisterCOMObject
 Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.  
@@ -36,14 +36,14 @@ virtual HRESULT UnregisterCOMObject(
    unsigned int count  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `serverName`  
+### <a name="parameters"></a>Параметры  
+ *Имя_сервера*  
  (Не используется)  
   
- `cookies`  
- Массив указателей на значения, которые идентифицируют объекты класса для отмены регистрации. Массив был создан с помощью [RegisterCOMObject](../windows/module-registercomobject-method.md) метод.  
+ *Файлы cookie*  
+ Массив указателей на значения, которые идентифицируют объекты класса для отмены регистрации. Массив был создан с [RegisterCOMObject](../windows/module-registercomobject-method.md) метод.  
   
- `count`  
+ *count*  
  Количество классов для отмены регистрации.  
   
 ## <a name="return-value"></a>Возвращаемое значение  

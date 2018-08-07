@@ -1,5 +1,5 @@
 ---
-title: LCID | Документы Microsoft
+title: LCID | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c36c4a53dc627af10b6c768cdc9bc9353cbd4877
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919bf90fad228a3d7b4f574072e5f315da6427d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877258"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602704"
 ---
 # <a name="lcid"></a>lcid
-Позволяет передавать код языка функции.  
+Позволяет передать код языка функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [lcid]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Lcid** атрибута C++ реализует функциональность [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) языка MIDL. Если вы хотите реализовать языковой стандарт для блока библиотеки, используйте **lcid =** `lcid` параметр [модуль](../windows/module-cpp.md) атрибута.  
+ **Lcid** атрибут C++ реализует функции [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) описании атрибута MIDL. Если вы хотите реализовать языкового стандарта для блока библиотеки, используйте **lcid =** `lcid` параметр [модуль](../windows/module-cpp.md) атрибута.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cpp_attr_ref_lcid.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

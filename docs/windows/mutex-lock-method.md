@@ -1,5 +1,5 @@
 ---
-title: Метод Mutex::LOCK | Документы Microsoft
+title: Метод Mutex::LOCK | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880876"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603528"
 ---
 # <a name="mutexlock-method"></a>Метод Mutex::Lock
-Ожидает, пока текущий объект или объект мьютекса, связанный с указанным дескриптором освобождает объект взаимного исключения или истечения отведенного времени ожидания.  
+Только после текущего объекта, или **мьютекс** объект, связанный с указанным дескриптором, выпуски, мьютексом или указанный интервал времени ожидания истечет.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,12 +40,12 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `milliseconds`  
+### <a name="parameters"></a>Параметры  
+ *в миллисекундах*  
  Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, что означает неограниченное время ожидания.  
   
- `h`  
- Дескриптор объекта Mutex.  
+ *h*  
+ Дескриптор **мьютекс** объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   

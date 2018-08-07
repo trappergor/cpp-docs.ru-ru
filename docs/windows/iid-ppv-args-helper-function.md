@@ -1,5 +1,5 @@
 ---
-title: Функция IID_PPV_ARGS_Helper | Документы Microsoft
+title: Iid_ppv_args_helper-функция | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882346"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608382"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper - функция
 Проверяет, что тип заданного аргумента является производным от интерфейса `IUnknown`.  
   
 > [!IMPORTANT]
->  Данная специализация шаблона поддерживает инфраструктуру WRL и не предназначена для использования непосредственно из кода. Используйте [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) вместо него.  
+>  Данная специализация шаблона поддерживает инфраструктуру WRL и не предназначена для использования непосредственно из кода. Используйте [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) вместо этого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Тип аргумента `pp`.  
+ *T*  
+ Тип аргумента *pp*.  
   
- `pp`  
+ *PP*  
  Двойной косвенный указатель.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Аргумент `pp` выполняет приведение указателя на указатель к `void`.  
+ Аргумент *pp* приведен указатель для указатель для **void**.  
   
 ## <a name="remarks"></a>Примечания  
- Ошибка времени компиляции возникает, если параметр шаблона `T` не является производным от `IUnknown`.  
+ Ошибка времени компиляции создается в том случае, если параметр шаблона *T* не является производным от `IUnknown`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
   
 ## <a name="see-also"></a>См. также  
- [Справочник (библиотека среды выполнения Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [Справочник по (библиотека среды выполнения Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

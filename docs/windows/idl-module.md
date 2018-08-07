@@ -1,5 +1,5 @@
 ---
-title: idl_module | Документы Microsoft
+title: idl_module | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11547a3fb1bd46a1e2edb8ce9dd0a6547464f796
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfda47ced14d7c112d27d0036b4d636e32c91907
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882528"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607564"
 ---
 # <a name="idlmodule"></a>idl_module
 Указывает точку входа в DLL-файл.  
@@ -30,8 +30,7 @@ ms.locfileid: "33882528"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ idl_module (   
+[ idl_module (   
    name=module_name,   
    dllname=dll,   
    uuid="uuid",   
@@ -44,47 +43,47 @@ ms.locfileid: "33882528"
 function declaration  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- **name**  
- Определяемое пользователем имя для блока кода, который будет отображаться в IDL-файл.  
+### <a name="parameters"></a>Параметры  
+ *name*  
+ Определяемое пользователем имя для блока кода, который будет отображаться в IDL-файла.  
   
- **имя DLL-библиотеки** (необязательно)  
+ *dllname* (необязательно)  
  DLL-файл, содержащий экспорта.  
   
- `uuid` (необязательно)  
+ *UUID* (необязательно)  
  Уникальный идентификатор.  
   
- **HelpString** (необязательно)  
+ *HelpString* (необязательно)  
  Строка символов, используемый для описания библиотеки типов.  
   
- **helpstringcontext** (необязательно)  
- Идентификатор раздела справки в .hlp или CHM-файле.  
+ *helpstringcontext* (необязательно)  
+ Идентификатор раздела справки в файл с расширением .hlp или .chm.  
   
- **helpcontext** (необязательно)  
+ *HelpContext* (необязательно)  
  Идентификатор справки для этой библиотеки типов.  
   
- **hidden** (необязательно)  
- Параметр, который препятствует отображению библиотеки. Дополнительные сведения см. в описании атрибута MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
+ *скрытые* (необязательно)  
+ Параметр, который запрещает отображение библиотеки. Дополнительные сведения см. в описании атрибута MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
   
- ***ограниченные*** (необязательно)  
- Члены библиотеки не может вызываться произвольным образом. Дополнительные сведения см. в описании атрибута MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
+ *ограниченные* (необязательно)  
+ Элементы библиотеки нельзя вызывать произвольным образом. Дополнительные сведения см. в описании атрибута MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
   
  *объявление функции*  
- Функция, которая будет определена.  
+ Функция, которую вы создадите.  
   
 ## <a name="remarks"></a>Примечания  
- `idl_module` Языка c++ позволяет указать точку входа в DLL-файл, который можно импортировать из DLL-файла.  
+ **Idl_module** C++ атрибут позволяет указать точку входа в DLL-файл, который можно импортировать из файла DLL.  
   
- **Idl_module** атрибут имеет функциональность, аналогичную [модуль](http://msdn.microsoft.com/library/windows/desktop/aa367099) языка MIDL.  
+ **Idl_module** атрибут имеет функциональность, аналогичную [модуль](http://msdn.microsoft.com/library/windows/desktop/aa367099) описании атрибута MIDL.  
   
- Никаких действий можно экспортировать из COM-объект, который можно экспортировать из DLL-файла, поместив точки входа библиотеки DLL в блок library IDL-файл.  
+ Никаких действий можно экспортировать из COM-объект, который можно экспортировать из DLL-файл, поместив точки входа библиотеки DLL в блок library IDL-файле.  
   
- Ваш необходимо использовать `idl_module` в два этапа. Во-первых необходимо определить пары имя/DLL. Затем, при использовании `idl_module` для указания точки входа, укажите имя и дополнительные атрибуты.  
+ Ваш необходимо использовать **idl_module** в два этапа. Во-первых необходимо определить пару имя/DLL. Затем, при использовании **idl_module** для указания точки входа, укажите имя и дополнительные атрибуты.  
   
 ## <a name="example"></a>Пример  
- Следующий код показывает, как использовать `idl_module` атрибута:  
+ Ниже показано, как использовать **idl_module** атрибут:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_module.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  

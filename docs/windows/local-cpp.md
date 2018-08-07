@@ -1,5 +1,5 @@
 ---
-title: локальный (C++) | Документы Microsoft
+title: локальный (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17a57ad56402b345aa64e4e4fd02bc57dd7f0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877921"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604204"
 ---
 # <a name="local-c"></a>local (C++)
-При использовании в заголовке интерфейс позволяет использовать компилятор MIDL как генератор заголовок. При использовании в отдельную функцию, назначает локальной процедуры, для которого заглушки не создаются.  
+При использовании в заголовке интерфейс позволяет использовать как генератор заголовка компилятора MIDL. При использовании в отдельной функции, обозначает локальной процедуры, для которого создаются без заглушек.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [local]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `local` Языка C++ имеет ту же функциональность, что [локального](http://msdn.microsoft.com/library/windows/desktop/aa367071) языка MIDL.  
+ **Локального** атрибут C++ имеет ту же функциональность, что [локального](http://msdn.microsoft.com/library/windows/desktop/aa367071) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В разделе [call_as](../windows/call-as.md) пример демонстрирует использование `local`.  
+ См. в разделе [call_as](../windows/call-as.md) пример демонстрирует использование **локального**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -47,10 +45,10 @@ ms.locfileid: "33877921"
   
 |||  
 |-|-|  
-|**Применение**|`interface`, метод|  
+|**Применение**|**интерфейс**, метод интерфейса|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**dispinterface**|  
+|**Недопустимые атрибуты**|`dispinterface`|  
   
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Перемещение или копирование элемента таблицы сочетаний клавиш в другой файл описания ресурсов | Документы Microsoft
+title: Перемещение или копирование элемента таблицы сочетаний клавиш в другой файл описания ресурсов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877908"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608056"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Перемещение или копирование элемента таблицы сочетаний клавиш в другой файл описания ресурсов
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Перемещение или копирование записи таблицы сочетаний клавиш в другой файл описания ресурсов  
@@ -44,9 +44,7 @@ ms.locfileid: "33877908"
     > [!NOTE]
     >  Для копирования и вставки можно также использовать сочетания клавиш.  
   
-
-  
- **Требования**  
+## <a name="requirements"></a>Требования  
   
  Win32  
   

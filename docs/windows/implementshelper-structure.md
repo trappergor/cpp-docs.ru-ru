@@ -1,5 +1,5 @@
 ---
-title: Структура ImplementsHelper | Документы Microsoft
+title: Implementshelper-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58f27e418946987633f771bc8d2c3224bc2cd7fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875943"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605621"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -38,20 +38,20 @@ template <
 friend struct Details::ImplementsHelper;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `RuntimeClassFlagsT`  
- Поле флагов, которое указывает один или несколько [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) перечислителей.  
+### <a name="parameters"></a>Параметры  
+ *RuntimeClassFlagsT*  
+ Поле флагов, который указывает один или несколько [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) перечислителей.  
   
- `ILst`  
- Список идентификаторов интерфейса.  
+ *ILst*  
+ Список идентификаторов интерфейсов.  
   
- `IsDelegateToClass`  
- Укажите `true` , если текущий экземпляр реализует является базовым классом первого идентификатора интерфейса в `ILst`; в противном случае `false`.  
+ *IsDelegateToClass*  
+ Укажите **true** Если текущий экземпляр `Implements` является базовым классом для идентификатор первого интерфейса в *ILst*; в противном случае **false**.  
   
 ## <a name="remarks"></a>Примечания  
  Помогает реализовать [реализует](../windows/implements-structure.md) структуры.  
   
- Этот шаблон просматривает список интерфейсов и добавляет их в качестве базовых классов, а также как сведения, необходимые для включения QueryInterface.  
+ Этот шаблон обходит список интерфейсов и добавляет их в качестве базовых классов, а также как сведения, необходимые для включения QueryInterface.  
   
 ## <a name="members"></a>Участники  
   
@@ -64,5 +64,5 @@ friend struct Details::ImplementsHelper;
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [Справочник (библиотека среды выполнения Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Справочник по (библиотека среды выполнения Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

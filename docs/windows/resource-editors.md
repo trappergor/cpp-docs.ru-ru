@@ -1,5 +1,5 @@
 ---
-title: Редакторы ресурсов | Документы Microsoft
+title: Редакторы ресурсов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91151b215a180fd926acf1205d810fc8eb6fd6f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879598"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604464"
 ---
 # <a name="resource-editors"></a>редакторы ресурсов
 Редактор ресурсов представляет собой специализированную среду для создания и изменения ресурсов, включенных в проект Visual Studio. Редакторы ресурсов Visual Studio используют общий набор способов и интерфейсов, упрощая и ускоряя создание и изменение ресурсов приложения. Редакторы ресурсов позволяют [просматривать и изменять ресурсы в соответствующем редакторе](../windows/viewing-and-editing-resources-in-a-resource-editor.md) , а также [предварительно просматривать ресурсы](../windows/previewing-resources.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "33879598"
   
  **Примечание** .   Поскольку в проектах управляемого кода не используются файлы описания ресурсов, ресурсы необходимо открывать из **обозревателя решений**. Для работы с файлами ресурсов в управляемых проектах можно использовать [редактор изображений](../windows/image-editor-for-icons.md) и [двоичный редактор](binary-editor.md) . Все управляемые ресурсы, которые нужно редактировать, должны быть связанными ресурсами. Редакторы ресурсов Visual Studio не поддерживают редактирование внедренных ресурсов.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 |Редактор|Редактируемый элемент|  
 |----------------|----------------|  
@@ -58,4 +58,3 @@ ms.locfileid: "33879598"
  [Файлы ресурсов](../windows/resource-files-visual-studio.md)   
  [Символы: Идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)   
  [Меню и другие ресурсы](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
