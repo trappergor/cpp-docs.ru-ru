@@ -1,5 +1,5 @@
 ---
-title: Метод HandleT::InternalClose | Документы Microsoft
+title: Метод HandleT::InternalClose | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b0aef97645d515a03dcf2cab90eedc06f07971c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a54b61902c8994397c7bd6effa74a90d43c7e512
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874149"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568645"
 ---
 # <a name="handletinternalclose-method"></a>Метод HandleT::InternalClose
-Закрытие текущего объекта HandleT.  
+Закрывает текущий **HandleT** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ virtual bool InternalClose();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` Если текущего объекта HandleT Закрыто успешно. в противном случае `false`.  
+ **значение true,** Если текущий **HandleT** Закрыто успешно; в противном случае — значение **false**.  
   
 ## <a name="remarks"></a>Примечания  
- InternalClose() защищен.  
+ **InternalClose()** — **защищенные**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

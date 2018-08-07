@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Eventsource::targets_ | Документы Microsoft
+title: Элемент данных Eventsource::targets_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8782d66683d0a242e5321e8e3a0c8ab24b6f358
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871748"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568853"
 ---
 # <a name="eventsourcetargets-data-member"></a>Элемент данных EventSource::targets_
 Массив из одного или нескольких обработчиков событий.  
@@ -34,7 +34,7 @@ ComPtr<Details::EventTargetArray> targets_;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- При возникновении события, представленного текущим объектом EventSource, обработчики событий вызываются.  
+ Когда события, представленного текущим **EventSource** объект встречается, обработчики событий вызываются.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  

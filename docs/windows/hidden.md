@@ -1,5 +1,5 @@
 ---
-title: скрытые | Документы Microsoft
+title: скрытые | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 444994f046b58fbd54dcd3982836bb7fc4d53ed1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879689"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568674"
 ---
 # <a name="hidden"></a>hidden
 Указывает, что элемент существует, но не должен отображаться в пользовательском браузере.  
@@ -30,16 +30,14 @@ ms.locfileid: "33879689"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [hidden]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Скрытые** языка C++ имеет ту же функциональность, что [скрытые](http://msdn.microsoft.com/library/windows/desktop/aa366861) языка MIDL.  
+ **Скрытые** атрибут C++ имеет ту же функциональность, что [скрытые](http://msdn.microsoft.com/library/windows/desktop/aa366861) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **скрытые**.  
+ См. в примере [bindable](../windows/bindable.md) пример демонстрирует использование **скрытые**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -47,9 +45,9 @@ ms.locfileid: "33879689"
   
 |||  
 |-|-|  
-|**Применение**|`interface`, **класса**, `struct`, метод, свойство|  
+|**Применение**|**интерфейс**, **класс**, **структуры**, метод, свойство|  
 |**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**кокласс** (при применении к **классу** или `struct`)|  
+|**Обязательные атрибуты**|**Компонентный класс** (при применении к **класс** или **структуры**)|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
