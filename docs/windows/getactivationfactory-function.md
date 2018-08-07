@@ -1,5 +1,5 @@
 ---
-title: Функция GetActivationFactory | Документы Microsoft
+title: Getactivationfactory-функция | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881342"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570315"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory - функция
 Извлекает фабрику активации для типа, указанного в параметре шаблона.  
@@ -39,15 +39,15 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
+### <a name="parameters"></a>Параметры  
+ *T*  
  Параметр шаблона, который определяет тип фабрики активации.  
   
- `activatableClassId`  
+ *activatableClassId*  
  Имя класса, который может создать фабрика активации.  
   
- `factory`  
- Когда эта операция завершается, ссылка на фабрику активации для типа `T`.  
+ *фабрики*  
+ После завершения операции, ссылка на фабрику активации для типа *T*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее причину неудачного завершения операции.  

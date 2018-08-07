@@ -1,5 +1,5 @@
 ---
-title: Универсальные делегаты (Visual C++) | Документы Microsoft
+title: Универсальные делегаты (Visual C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875602"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571315"
 ---
 # <a name="generic-delegates-visual-c"></a>Универсальные делегаты (Visual C++)
 Параметры универсального типа можно использовать с делегатами. Дополнительные сведения о делегатах см. в разделе [delegate (расширения компонентов C++)](../windows/delegate-cpp-component-extensions.md).  
@@ -37,17 +37,17 @@ generic < [class | typename] type-parameter-identifiers>
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `attributes` (Необязательно)  
+ *атрибуты* (необязательно)  
  Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе "Атрибуты".  
   
- *Тип — параметр-идентификаторы*  
+ *Тип-параметр-идентификаторы*  
  Разделенный запятыми список идентификаторов параметров типа.  
   
- `type-parameter-constraints-clauses`  
- В форме, указанной в [ограничений для параметров универсального типа (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *Тип параметра — ограничения предложения*  
+ Имеет формат, определенный в [ограничений для параметров универсального типа (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *модификаторы доступности* (необязательно)  
- Модификаторы доступа (например **открытый**, `private`).  
+ *модификаторы доступа* (необязательно)  
+ Модификаторы доступа (например **открытый**, **частного**).  
   
  *Тип результата*  
  Возвращаемый тип делегата.  
@@ -55,13 +55,13 @@ generic < [class | typename] type-parameter-identifiers>
  *identifier*  
  Имя делегата.  
   
- *формальных параметров* (необязательно)  
+ *формальные_параметры* (необязательно)  
  Список параметров делегата.  
   
 ## <a name="example"></a>Пример  
  Параметры типа делегата определяются в точке создания объекта делегата. Делегат и связанный с ним метод должны иметь одинаковую сигнатуру. В следующем примере показано объявление универсального делегата.  
   
-```  
+```cpp  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
 generic <class ItemType>  
@@ -77,7 +77,7 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
   
 -   если универсальный метод вызывается без указания аргументов типа, компилятор пытается определить аргументы типа для вызова.  
   
-```  
+```cpp  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
 generic <class ItemType>  
@@ -114,7 +114,7 @@ int main() {
 ## <a name="example"></a>Пример  
  В следующем примере объявляется универсальный делегат `GenDelegate<ItemType>`, а затем создается его экземпляр путем связывания с методом `MyMethod`, использующим параметр типа `ItemType`. Создаются и вызываются два экземпляра делегата (целое число и число двойной точности).  
   
-```  
+```cpp  
 // generics_generic_delegate.cpp  
 // compile with: /clr  
 using namespace System;  

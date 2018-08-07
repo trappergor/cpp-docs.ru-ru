@@ -1,5 +1,5 @@
 ---
-title: HelpFile | Документы Microsoft
+title: HelpFile | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876193"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570451"
 ---
 # <a name="helpfile"></a>helpfile
 Задает имя файла справки для библиотеки типов.  
@@ -30,21 +30,20 @@ ms.locfileid: "33876193"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ helpfile(  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *filename*  
  Имя файла, который содержит разделы справки.  
   
 ## <a name="remarks"></a>Примечания  
- **Helpfile** языка C++ имеет ту же функциональность, что [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) языка MIDL.  
+ **Helpfile** атрибут C++ имеет ту же функциональность, что [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [модуль](../windows/module-cpp.md) пример демонстрирует использование **helpfile**.  
+ См. в примере [модуль](../windows/module-cpp.md) пример демонстрирует использование **helpfile**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33876193"
   
 |||  
 |-|-|  
-|**Применение**|`interface`, `typedef`, **класса**, метод, свойство|  
+|**Применение**|**интерфейс**, **typedef**, **класс**, метод, **свойство**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

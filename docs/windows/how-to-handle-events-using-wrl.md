@@ -1,5 +1,5 @@
 ---
-title: 'Как: обработка событий с помощью WRL | Документы Microsoft'
+title: 'Практическое: обработка событий с помощью WRL | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,25 +13,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3c1666d1c79414beddc5b5e3ccc03953c92e902
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881157"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570637"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Практическое руководство. Обработка событий с использованием WRL
-В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для подписки и обрабатывать события объекта среды выполнения Windows.  
+В этом документе демонстрируется использование Windows шаблонов среды выполнения C++ Library (WRL) и обрабатывать события объекта среды выполнения Windows.  
   
- Более простой пример, который создает экземпляр этого компонента и извлекает значение свойства, в разделе [как: активация и использование компонента среды выполнения Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
+ Более простой пример, который создает экземпляр этого компонента и извлекает значение свойства, см. в разделе [как: активация и использование компонента среды выполнения Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
   
 ## <a name="subscribing-to-and-handling-events"></a>Подписка на события и их обработка  
- Следующие действия запускают объект `ABI::Windows::System::Threading::IDeviceWatcher` и используют обработчики событий для отслеживания прогресса. Интерфейс `IDeviceWatcher` позволяет перечислять устройства асинхронно (или в фоновом режиме) и получать уведомление при добавлении, удалении и изменении устройства. [Обратного вызова](../windows/callback-function-windows-runtime-cpp-template-library.md) функция является важной частью в этом примере, поскольку она позволяет определить обработчики событий, которые обрабатывают результаты фоновых операций. Далее приведен полный пример.  
+ Следующие действия запускают объект `ABI::Windows::System::Threading::IDeviceWatcher` и используют обработчики событий для отслеживания прогресса. Интерфейс `IDeviceWatcher` позволяет перечислять устройства асинхронно (или в фоновом режиме) и получать уведомление при добавлении, удалении и изменении устройства. [Обратного вызова](../windows/callback-function-windows-runtime-cpp-template-library.md) функция является важной частью в этом примере, поскольку она позволяет определить обработчики событий, которые обрабатывают результаты фоновых операций. Полный пример выглядит следующим образом.  
   
 > [!WARNING]
->  Несмотря на то, что обычно используется библиотека шаблонов C++ среды выполнения Windows в приложении универсальной платформы Windows, в этом примере используется консольное приложение для иллюстрации. Функции, такие как `wprintf_s` недоступны в приложении универсальной платформы Windows. Дополнительные сведения о типах и функции, которые можно использовать в приложении универсальной платформы Windows см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) и [Win32 и COM для приложений UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
+>  Несмотря на то, что обычно используется библиотека шаблонов C++ среды выполнения Windows в приложении универсальной платформы Windows, в этом примере используется консольное приложение для иллюстрации. Функции, такие как `wprintf_s` не доступны из приложения универсальной платформы Windows. Дополнительные сведения о типах и функциях, которые можно использовать в приложении универсальной платформы Windows, см. в разделе [функции CRT не поддерживаются в приложениях универсальной платформы Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) и [Win32 и COM для приложений UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
-1.  Включить (`#include`) все необходимые среды выполнения Windows, библиотека шаблонов C++ среды выполнения Windows или заголовков стандартной библиотеки C++.  
+1.  Включить (`#include`) все необходимые заголовки стандартной библиотеки C++, библиотека шаблонов C++ среды выполнения Windows или среды выполнения Windows.  
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33881157"
   
      [!code-cpp[wrl-consume-event#7](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_2.cpp)]  
   
-3.  Инициализирует среду выполнения Windows.  
+3.  Инициализации среды выполнения Windows.  
   
      [!code-cpp[wrl-consume-event#3](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_3.cpp)]  
   
@@ -58,7 +58,7 @@ ms.locfileid: "33881157"
   
      [!code-cpp[wrl-consume-event#5](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_5.cpp)]  
   
-     Среда выполнения Windows использует полные имена для определения типов. `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` Параметр представляет собой строку, предоставляемые средой выполнения Windows и содержит имя класса необходимая среда выполнения.  
+     Среда выполнения Windows использует полные имена для идентификации типов. `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` Параметр представляет собой строку, которая предоставляется средой выполнения Windows и содержит имя класса необходимая среда выполнения.  
   
 6.  Создайте объект `IDeviceWatcher`.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33881157"
      Обработчик событий `EnumerationCompleted` останавливает процесс перечисления. Рекомендуется обрабатывать это событие, если имеется менее десяти устройств.  
   
     > [!TIP]
-    >  В этом примере используется лямбда-выражение для определения обратных вызовов. Можно также использовать объекты функций (функторы), указатели на функции или [std::function](../standard-library/function-class.md) объектов. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../cpp/lambda-expressions-in-cpp.md).  
+    >  В этом примере используется лямбда-выражение для определения обратных вызовов. Можно также использовать объекты функций (функторы), указатели функций или [std::function](../standard-library/function-class.md) объектов. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../cpp/lambda-expressions-in-cpp.md).  
   
 8.  Запустите процесс перечисления.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "33881157"
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или в файл с именем `wrl-consume-events.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
+ Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или вставьте его в файл с именем `wrl-consume-events.cpp` и выполните следующую команду в окне командной строки Visual Studio.  
   
- **CL.exe wrl-consume-events.cpp runtimeobject.lib**  
+ `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   
 ## <a name="see-also"></a>См. также  
  [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

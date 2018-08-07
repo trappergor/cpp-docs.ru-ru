@@ -1,5 +1,5 @@
 ---
-title: Метод HString::IsValid | Документы Microsoft
+title: Метод HString::IsValid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe2bea7e7971daa1c6bb169a1c049a6757d9ed8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26ca5d70f6632c35da64215376e0dddd6eca9fcb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874321"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571006"
 ---
 # <a name="hstringisvalid-method"></a>Метод HString::IsValid
-Указывает, является ли текущий объект HString пустым.  
+Указывает, является ли текущий **HString** объект пуст или не.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,7 +32,7 @@ bool IsValid() const throw()
 ```  
   
 #### <a name="parameters"></a>Параметры  
- Значение `true`, если текущий объект HString не пуст; в противном случае — значение `false`.  
+ **значение true,** Если текущий **HString** объект не является пустой; в противном случае **false**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

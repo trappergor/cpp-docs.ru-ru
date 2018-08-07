@@ -1,5 +1,5 @@
 ---
-title: значение DefaultValue | Документы Microsoft
+title: DefaultValue | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873421"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569990"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-Позволяет задавать значения по умолчанию для типизированных необязательного параметра.  
+Позволяет задавать значение по умолчанию для типизированного необязательного параметра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
@@ -39,12 +38,12 @@ ms.locfileid: "33873421"
  Значение по умолчанию для параметра.  
   
 ## <a name="remarks"></a>Примечания  
- **Defaultvalue** языка C++ имеет ту же функциональность, что [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) языка MIDL.  
+ **Defaultvalue** атрибут C++ имеет ту же функциональность, что [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В следующем коде показан метод интерфейса с помощью **defaultvalue** атрибута:  
+ В следующем коде показан метод интерфейса с помощью **defaultvalue** атрибут:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  

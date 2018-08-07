@@ -1,5 +1,5 @@
 ---
-title: Метод DeferrableEventArgs::GetDeferral | Документы Microsoft
+title: Метод DeferrableEventArgs::GetDeferral | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2442894c5f7bd85eb94262e776294c1e52a19e01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13cd6b361fccc49de6142a0640ff96dbab3cb92c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883545"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571208"
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>Метод DeferrableEventArgs::GetDeferral
-Возвращает ссылку на [отсрочки](http://go.microsoft.com/fwlink/p/?linkid=526520) объект, который представляет отложенное событие.  
+Получает ссылку на [отсрочки](http://go.microsoft.com/fwlink/p/?linkid=526520) объект, который представляет отложенное событие.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,8 +30,8 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `result`  
- Указатель, который будет ссылаться [отсрочки](http://go.microsoft.com/fwlink/p/?linkid=526520) объекта после завершения вызова.  
+ *результат*  
+ Указатель, который будет ссылаться на [отсрочки](http://go.microsoft.com/fwlink/p/?linkid=526520) объекта после завершения вызова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  

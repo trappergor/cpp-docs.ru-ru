@@ -1,5 +1,5 @@
 ---
-title: Группирование переключателей в диалоговом окне | Документы Microsoft
+title: Группирование переключателей в диалоговом окне | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aee3245a65ccdccc32b40c313eecdd45cb3ea8bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879332"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571507"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Группирование переключателей в диалоговом окне
 При добавлении переключателей в диалоговое окно объедините их в группу, задав свойство "Группа" в окне "Свойства" для первого переключателя в группе. После этого идентификатор элемента управления для этого переключателя появляется в [мастере добавления переменной-члена](../ide/add-member-variable-wizard.md), что позволяет добавить переменную-член для группы переключателей.  
@@ -60,14 +60,13 @@ ms.locfileid: "33879332"
   
 6.  Теперь вы можете изменить свой код, чтобы указать, какой переключатель должен быть выбранным. Например, если указать m_radioBox1 = 0, будет выбран первый переключатель в группе.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Требования  
+## <a name="requirements"></a>Требования  
   
  Win32  
   
 ## <a name="see-also"></a>См. также  
- [Размещение элементов управления в диалоговые окна](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Размещение элементов управления в диалоговых окнах](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)   
  [Элементы управления](../mfc/controls-mfc.md)
-

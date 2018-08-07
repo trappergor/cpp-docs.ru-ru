@@ -1,5 +1,5 @@
 ---
-title: 'Как: Добавление поддержки MFC в файлы описания ресурсов | Документы Microsoft'
+title: 'Практическое: Добавление поддержки MFC в файлы описания ресурсов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50c0493e630c2b141da1fced6964ffc514c761d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879800"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569746"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Практическое руководство. Добавление поддержки MFC в файлы описания ресурсов
-Как правило, при построении приложения MFC для Windows с помощью [мастер приложений MFC](../mfc/reference/mfc-application-wizard.md), мастер создает базовый набор файлов (включая RC-файла ресурсов), который содержит основные функции Microsoft Foundation классы (MFC). Однако при редактировании RC-файла для приложения Windows, в основе которого не лежит MFC, будут недоступны следующие возможности, предназначенные для платформы MFC.  
+Как правило, при создании приложения MFC для Windows с помощью [мастер приложений MFC](../mfc/reference/mfc-application-wizard.md), мастер создает базовый набор файлов (включая RC-файл ресурсов), который включает основные функции Microsoft Foundation классы (MFC). Однако при редактировании RC-файла для приложения Windows, в основе которого не лежит MFC, будут недоступны следующие возможности, предназначенные для платформы MFC.  
   
--   Мастеры кода MFC (предыдущее название «[мастер классов MFC](http://msdn.microsoft.com/en-us/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)»)  
+-   Мастеры кода MFC (прежнее название — "[мастер классов MFC](http://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)«)  
   
 -   Строки подсказок для меню.  
   
@@ -49,14 +49,12 @@ ms.locfileid: "33879800"
   
 2.  В [представление ресурсов](../windows/resource-view-window.md), выделите папку ресурсов (например, MFC.rc).  
   
-3.  В [окно свойств](/visualstudio/ide/reference/properties-window), задайте **режим MFC** свойства **True**.  
+3.  В [окно "Свойства"](/visualstudio/ide/reference/properties-window), задайте **режим MFC** свойства **True**.  
   
     > [!NOTE]
-    >  Кроме того, что будет установлен этот флаг, RC-файл должен быть частью проекта MFC. Например, если просто задать **режим MFC** для **True** RC-файл в Win32 проекта вы не получите действующие функции MFC.  
+    >  Кроме того, что будет установлен этот флаг, RC-файл должен быть частью проекта MFC. Например, просто задав **режим MFC** для **True** на RC-файла в Win32 проект не станут доступными функции MFC.  
   
-
-  
- **Требования**  
+## <a name="requirements"></a>Требования  
   
  MFC  
   

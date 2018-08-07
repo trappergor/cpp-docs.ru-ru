@@ -1,5 +1,5 @@
 ---
-title: Конструктор HandleT::HandleT | Документы Microsoft
+title: Конструктор HandleT::HandleT | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881901"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569515"
 ---
 # <a name="handlethandlet-constructor"></a>Конструктор HandleT::HandleT
-Инициализирует новый экземпляр класса HandleT.  
+Инициализирует новый экземпляр класса **HandleT** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,12 +40,12 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `h`  
+### <a name="parameters"></a>Параметры  
+ *h*  
  Дескриптор.  
   
 ## <a name="remarks"></a>Примечания  
- Первый конструктор инициализирует объект HandleT, не является допустимым дескриптором для объекта. Второй конструктор создает новый объект HandleT из параметра `h`.  
+ Первый конструктор инициализирует **HandleT** объект, который не является допустимым дескриптором для объекта. Второй конструктор создает новый **HandleT** объект из параметра *h*.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

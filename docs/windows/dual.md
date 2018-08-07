@@ -1,5 +1,5 @@
 ---
-title: Двойная | Документы Microsoft
+title: двойной | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872384"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571022"
 ---
 # <a name="dual"></a>dual
 Помещает интерфейс в IDL-файл как сдвоенный интерфейс.  
@@ -30,18 +30,16 @@ ms.locfileid: "33872384"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Когда **двойного** атрибута C++ предшествует интерфейс, он вызывает интерфейс должен располагаться внутри блока библиотеки в сгенерированный IDL-файл.  
+ Когда **двойной** интерфейсу предшествует атрибут C++, это вызывает интерфейс необходимо поместить в блок library созданного IDL-файла.  
   
 ## <a name="example"></a>Пример  
- В следующем коде показан блок атрибута, который использует **двойного** до определения интерфейса:  
+ В следующем коде приведен, использующий блок атрибутов **двойной** до определения интерфейса:  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,7 +77,7 @@ __interface IStatic : IDispatch
   
 |||  
 |-|-|  
-|**Применение**|`interface`|  
+|**Применение**|**interface**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|**dispinterface**|  
@@ -89,7 +87,7 @@ __interface IStatic : IDispatch
 ## <a name="see-also"></a>См. также  
  [Атрибуты IDL](../windows/idl-attributes.md)   
  [Список атрибутов по использованию](../windows/attributes-by-usage.md)   
- [Настройка](../windows/custom-cpp.md)   
+ [Custom](../windows/custom-cpp.md)   
  [Disp-интерфейс](../windows/dispinterface.md)   
  [object](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

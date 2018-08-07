@@ -1,5 +1,5 @@
 ---
-title: Исключение при обработке (расширения компонентов C++) | Документы Microsoft
+title: Обработка исключений (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b6dcf8e844fbb2e8e133dc5dc6f0b98a3166ac6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877739"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568658"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Обработка исключений (расширения компонентов C++)
-Приложения, скомпилированные с **/ZW** параметр компилятора или **/CLR** используются *исключения* для обработки непредвиденных ошибок во время выполнения программы. В следующих разделах рассматривается обработка исключений в приложениях C++/CX и C++/CLI.  
+Приложения, скомпилированные с `/ZW` параметр компилятора или `/clr` используются *исключения* для обработки непредвиденных ошибок во время выполнения программы. В следующих разделах рассматривается обработка исключений в приложениях C++/CX и C++/CLI.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Основные принципы использования управляемых исключений](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- Описывает создание исключений и использование `try` / `catch` блоков.  
+ Описывает создание исключений и использование **попробуйте**/**catch** блоков.  
   
  [Различия в поведении в/CLR при обработке исключений](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
  Рассматриваются отличия от стандартного поведения обработки исключений C++.  

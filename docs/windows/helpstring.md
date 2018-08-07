@@ -1,5 +1,5 @@
 ---
-title: HelpString | Документы Microsoft
+title: HelpString | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879010"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570935"
 ---
 # <a name="helpstring"></a>helpstring
-Определяет строку символов, используемый для описания элемента, к которому он применяется.  
+Определяет строку символов, используемую для описания элемента, к которому оно применяется.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ helpstring(  
+[ helpstring(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `string`  
- Текст справки строки.  
+### <a name="parameters"></a>Параметры  
+ *string*  
+ Текст строки справки.  
   
 ## <a name="remarks"></a>Примечания  
- **Helpstring** языка C++ имеет ту же функциональность, что [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) языка MIDL.  
+ **Helpstring** атрибут C++ имеет ту же функциональность, что [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [defaultvalue](../windows/defaultvalue.md) пример демонстрирует использование **helpstring**.  
+ См. в примере [defaultvalue](../windows/defaultvalue.md) пример демонстрирует использование **helpstring**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33879010"
   
 |||  
 |-|-|  
-|**Применение**|`interface`, `typedef`, **класса**, метод, свойство|  
+|**Применение**|**интерфейс**, **typedef**, **класс**, метод, свойство|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  
@@ -65,5 +64,5 @@ ms.locfileid: "33879010"
  [Атрибуты классов](../windows/class-attributes.md)   
  [Атрибуты метода](../windows/method-attributes.md)   
  [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Файл справки](../windows/helpfile.md)   
+ [HelpFile](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   

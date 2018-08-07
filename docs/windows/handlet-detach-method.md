@@ -1,5 +1,5 @@
 ---
-title: Метод HandleT::Detach | Документы Microsoft
+title: Метод HandleT::Detach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 100d215099494c9b2714fd2c42dee69644a5006c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc11d6be992584adb1ce2075e73d080cc3a43f47
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878467"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569483"
 ---
 # <a name="handletdetach-method"></a>Метод HandleT::Detach
-Отсоединяет текущий объект HandleT из его базового дескриптора.  
+Отсоединяет текущий **HandleT** объект из его базовый дескриптор.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ typename HandleTraits::Type Detach();
  Базовый дескриптор.  
   
 ## <a name="remarks"></a>Примечания  
- По завершении этой операции текущего объекта HandleT присваивается недопустимое состояние.  
+ После завершения операции текущего **HandleT** присваивается недопустимое состояние.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

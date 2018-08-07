@@ -1,5 +1,5 @@
 ---
-title: 'Как: объявление и использование внутренних указателей и управляемых массивов (C + +/ CLI) | Документы Microsoft'
+title: 'Практическое: объявление и использование внутренних указателей и управляемых массивов (C + +/ CLI) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875309"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569847"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Практическое руководство. Объявление и использование внутренних указателей и управляемых массивов (C++/CLI)
-Следующие C + +/ CLI образце показано, как объявить и использовать внутренний указатель в массив.  
+Следующие C + +/ CLI образце показано, как можно объявить и использовать внутренний указатель в массив.  
   
 > [!IMPORTANT]
->  Эта функция языка поддерживается **/CLR** параметр компилятора, а не **/zw** параметр компилятора.  
+>  Эта функция языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.  
   
 ## <a name="example"></a>Пример  
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // interior_ptr_arrays.cpp  
 // compile with: /clr  
 #define SIZE 10  
@@ -59,7 +59,7 @@ int main() {
   
 ### <a name="output"></a>Вывод  
   
-```  
+```Output  
 1st element in arr holds: 1  
 ipi points to memory address whose value is: 1  
 after incrementing ipi, it points to memory address whose value is: 2  

@@ -1,5 +1,5 @@
 ---
-title: Перечисление FactoryCacheFlags | Документы Microsoft
+title: Перечисление FactoryCacheFlags | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ba3d9b75ff72399e1b9a027c937c24bba4a6c37
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc4bd998368fb325878a81ee4954a2ceec9432fe
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874334"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570107"
 ---
 # <a name="factorycacheflags-enumeration"></a>Перечисление FactoryCacheFlags
 Определяет, кэшируются ли объекты фабрики.  
@@ -32,7 +32,7 @@ enum FactoryCacheFlags;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию политика кэширования указывается как [ModuleType](../windows/moduletype-enumeration.md) параметр шаблона при создании [модуль](../windows/module-class.md) объекта. Для переопределения этой политики укажите значение `FactoryCacheFlags` при создании объекта фабрики.  
+ По умолчанию политика кэширования указывается как [ModuleType](../windows/moduletype-enumeration.md) параметр шаблона при создании [модуль](../windows/module-class.md) объекта. Чтобы переопределить эту политику, укажите **FactoryCacheFlags** значение при создании объекта фабрики.  
   
 |||  
 |-|-|  

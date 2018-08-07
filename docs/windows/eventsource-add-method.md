@@ -1,5 +1,5 @@
 ---
-title: Метод EventSource::Add | Документы Microsoft
+title: Метод EventSource::Add | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873242"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570393"
 ---
 # <a name="eventsourceadd-method"></a>Метод EventSource::Add
-Добавляет обработчик событий, представленный указанным интерфейсом делегата, к набору обработчиков событий для текущего объекта EventSource.  
+Добавляет обработчик событий, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего **EventSource** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,11 +36,11 @@ HRESULT Add(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `delegateInterface`  
+### <a name="parameters"></a>Параметры  
+ *delegateInterface*  
  Интерфейс для объекта делегата, который представляет обработчик событий.  
   
- `token`  
+ *Маркер*  
  После завершения операции представляет дескриптор события. Используйте этот маркер в качестве параметра для [Remove()](../windows/eventsource-remove-method.md) метод для удаления обработчика событий.  
   
 ## <a name="return-value"></a>Возвращаемое значение  

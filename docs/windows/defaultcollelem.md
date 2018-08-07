@@ -1,5 +1,5 @@
 ---
-title: defaultcollelem | Документы Microsoft
+title: defaultcollelem | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da53f10932ffc0696d567bc1140e3e92a609e2c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04317a516b94ae5fc70b61cd3ae33269ad437dce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870914"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569889"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 Используется для оптимизации кода Visual Basic.  
@@ -30,18 +30,16 @@ ms.locfileid: "33870914"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [defaultcollelem]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Defaultcollelem** языка C++ имеет ту же функциональность, что [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) языка MIDL.  
+ **Defaultcollelem** атрибут C++ имеет ту же функциональность, что [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В следующем коде показан метод интерфейса с помощью **defaultcollelem** атрибута:  
+ В следующем коде показан метод интерфейса с помощью **defaultcollelem** атрибут:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultcollelem.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

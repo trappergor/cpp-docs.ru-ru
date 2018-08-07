@@ -1,5 +1,5 @@
 ---
-title: Конструктор Event::Event (библиотека шаблонов C++ среды выполнения Windows) | Документы Microsoft
+title: Конструктор Event::Event (библиотека шаблонов C++ среды выполнения Windows) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a63e7ddbf2528b78eac7761bbcf4891f31cc886
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882632"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571416"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Конструктор Event::Event (библиотека шаблонов C++ среды выполнения Windows)
 Инициализирует новый экземпляр класса Event.  
@@ -37,8 +37,8 @@ WRL_NOTHROW Event(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `h`  
- Дескриптор события. По умолчанию `h` инициализируется со значением `nullptr`.  
+ *h*  
+ Дескриптор события. По умолчанию *h* инициализируется **nullptr**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

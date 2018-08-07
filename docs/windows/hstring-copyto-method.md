@@ -1,5 +1,5 @@
 ---
-title: Метод HString::CopyTo | Документы Microsoft
+title: Метод HString::CopyTo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,27 +13,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b44974faf5fc1f068d28d7febe3ed2a266f4869e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65d8e259b74bcdffbf11c6c96172d918f9db1b50
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874776"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570877"
 ---
 # <a name="hstringcopyto-method"></a>Метод HString::CopyTo
-Копирует текущий HString объект к объекту HSTRING.  
+Копирует текущий **HString** объект в объект HSTRING.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 HRESULT CopyTo(  
    _Out_ HSTRING *str  
    ) const throw();  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `str`  
+ *str*  
  HSTRING, который получает копию.  
   
 ## <a name="remarks"></a>Примечания  

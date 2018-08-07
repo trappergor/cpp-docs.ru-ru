@@ -1,5 +1,5 @@
 ---
-title: Метод FtmBase::CreateGlobalInterfaceTable | Документы Microsoft
+title: Метод FtmBase::CreateGlobalInterfaceTable | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b17749d5f20007e05f181de8f4e069d3fc736f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de98932420cf5eb0d5b9b13011044e5bfc7b400d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872397"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569008"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>Метод FtmBase::CreateGlobalInterfaceTable
 Создает общую таблицу интерфейса (GIT).  
@@ -35,9 +35,9 @@ static HRESULT CreateGlobalInterfaceTable(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `git`  
- После завершения этой операции представляет указатель на общую таблицу интерфейса.  
+### <a name="parameters"></a>Параметры  
+ *Git*  
+ После завершения этой операции указатель на общую таблицу интерфейса.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  

@@ -1,5 +1,5 @@
 ---
-title: HelpContext | Документы Microsoft
+title: HelpContext | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 317e204c7292c4a7cccb1f81f6bc9d2a2fbfd407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2089bca316fb37304765ac14475b73cadaf79342
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877219"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571364"
 ---
 # <a name="helpcontext"></a>helpcontext
 Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в файле справки.  
@@ -30,21 +30,20 @@ ms.locfileid: "33877219"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ helpcontext(  
+[ helpcontext(  
    id  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `id`  
- Идентификатор контекста справки. В разделе [HTML-справки: Справка по Context-Sensitive для ваших программ](../mfc/html-help-context-sensitive-help-for-your-programs.md) Дополнительные сведения о контексте идентификаторы.  
+### <a name="parameters"></a>Параметры  
+ *id*  
+ Идентификатор контекста справки. См. в разделе [HTML-справки: Context-Sensitive для ваших программ](../mfc/html-help-context-sensitive-help-for-your-programs.md) Дополнительные сведения о контексте идентификаторы.  
   
 ## <a name="remarks"></a>Примечания  
- **Helpcontext** языка C++ имеет ту же функциональность, что [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) языка MIDL.  
+ **Helpcontext** атрибут C++ имеет ту же функциональность, что [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [defaultvalue](../windows/defaultvalue.md) пример демонстрирует использование **helpcontext**.  
+ См. в примере [defaultvalue](../windows/defaultvalue.md) пример демонстрирует использование **helpcontext**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33877219"
   
 |||  
 |-|-|  
-|**Применение**|`interface`, `typedef`, **класса**, метод, свойство|  
+|**Применение**|**интерфейс**, **typedef**, **класс**, метод, свойство|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  
@@ -65,5 +64,5 @@ ms.locfileid: "33877219"
  [Атрибуты классов](../windows/class-attributes.md)   
  [Атрибуты метода](../windows/method-attributes.md)   
  [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Файл справки](../windows/helpfile.md)   
+ [HelpFile](../windows/helpfile.md)   
  [helpstring](../windows/helpstring.md)   

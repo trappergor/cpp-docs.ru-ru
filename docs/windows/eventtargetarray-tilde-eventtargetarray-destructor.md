@@ -1,5 +1,5 @@
 ---
-title: 'EventTargetArray:: ~ EventTargetArray деструктор | Документы Microsoft'
+title: 'EventTargetArray:: ~ EventTargetArray деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98f18c94a3e18a8e01e6ec58eddd8da702e4d97d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e2d817b803bb26c70390aa6f91c62ce5c28867
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871797"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571103"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>Деструктор EventTargetArray::~EventTargetArray
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,7 +34,7 @@ ms.locfileid: "33871797"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Деинициализирует текущий `EventTargetArray` класса.  
+ Деинициализирует текущий **EventTargetArray** класса.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  
@@ -42,5 +42,5 @@ ms.locfileid: "33871797"
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [Eventtargetarray-класс](../windows/eventtargetarray-class.md)   
+ [Класс EventTargetArray](../windows/eventtargetarray-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

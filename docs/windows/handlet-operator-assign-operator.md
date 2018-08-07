@@ -1,5 +1,5 @@
 ---
-title: HandleT::operator =-оператор | Документы Microsoft
+title: HandleT::operator =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab629946b9fc5acec6b0fb0ba8f573a3fa90a031
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873931"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570045"
 ---
 # <a name="handletoperator-operator"></a>Оператор HandleT::operator=
-Перемещение текущего объекта HandleT значение указанного объекта HandleT.  
+Перемещает значение указанного **HandleT** объект с текущим **HandleT** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HandleT& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `h`  
+### <a name="parameters"></a>Параметры  
+ *h*  
  Ссылка rvalue на дескриптор.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Ссылка на текущий объект HandleT.  
+ Ссылку на текущий **HandleT** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Эта операция делает недействительными объекта HandleT, заданного параметром `h`.  
+ Эта операция делает недействительным **HandleT** объекта, указанного параметром *h*.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: по умолчанию (C++) | Документы Microsoft
+title: по умолчанию (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872969"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570861"
 ---
 # <a name="default-c"></a>default (C++)
 Указывает, что настраиваемый или disp-интерфейс, определенный в коклассе, представляет интерфейс программирования по умолчанию.  
@@ -32,8 +32,7 @@ ms.locfileid: "33872969"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -54,9 +53,9 @@ ms.locfileid: "33872969"
  Атрибут **default** языка C++ имеет ту же функциональность, что и атрибут [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) языка MIDL. Атрибут **default** также используется вместе с атрибутом [case](../windows/case-cpp.md) .  
   
 ## <a name="example"></a>Пример  
- В приведенном далее коде показано использование атрибута **default** в определении кокласса для указания **ICustomDispatch** в качестве интерфейса программирования по умолчанию.  
+ В следующем коде показано, как **по умолчанию** используется в определении кокласса для указания `ICustomDispatch` качестве интерфейса программирования по умолчанию:  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -113,9 +112,9 @@ int main() {
   
 |||  
 |-|-|  
-|**Применение**|**класс**, `struct`, элемент данных|  
+|**Применение**|**Класс**, **структуры**, элемент данных|  
 |**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**кокласс** (при применении к **классу** или `struct`)|  
+|**Обязательные атрибуты**|**Компонентный класс** (при применении к **класс** или **структуры**)|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  

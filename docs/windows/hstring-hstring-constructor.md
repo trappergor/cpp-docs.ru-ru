@@ -1,5 +1,5 @@
 ---
-title: Конструктор HString::HString | Документы Microsoft
+title: Конструктор HString::HString | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3188e137d3a39fb26ca4151f72073306038e46f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96b77ec87e3219206d353f56293fc201c46f5d7e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876882"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568775"
 ---
 # <a name="hstringhstring-constructor"></a>Конструктор HString::HString
-Инициализирует новый экземпляр класса HString.  
+Инициализирует новый экземпляр класса **HString** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,16 +33,16 @@ HString(HString&& other) throw();
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `hstr`  
+ *HSTR*  
  Дескриптор HSTRING.  
   
- `other`  
- Существующий объект HString.  
+ *other*  
+ Существующий **HString** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Первый конструктор инициализирует новый объект HString, который является пустым.  
+ Первый конструктор инициализирует новый **HString** объект, который является пустым.  
   
- Второй конструктор инициализирует новый объект HString значение существующего `other` параметра, а затем удаляет `other` параметра.  
+ Второй конструктор инициализирует новый **HString** значение существующего *других* параметра, а затем удаляет *других* параметра.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
