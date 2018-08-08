@@ -1,7 +1,7 @@
 ---
 title: Перенос приложений из UNIX в Win32 | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/02/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628d032ff00205b3f511a613a866f025d62dc50a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08958de9f756ac005f966245e22a44afd7125bc0
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843292"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496679"
 ---
 # <a name="porting-from-unix-to-win32"></a>Перенос приложений из UNIX в Win32
 При миграции приложений из UNIX в Windows можно использовать несколько вариантов:  
@@ -42,13 +42,9 @@ ms.locfileid: "33843292"
  В следующем списке указаны ресурсы корпорации Майкрософт и сторонних производителей по переносу и поддержке миграции из UNIX в Visual C++:  
   
 ### <a name="unix-migration-guides"></a>Руководства по миграции из UNIX  
- Руководство по миграции настраиваемых приложений UNIX содержит технические рекомендации по миграции кода из UNIX в среду Win32.  
+ [Руководство по переносу настраиваемых приложений UNIX](https://technet.microsoft.com/library/bb656290.aspx) содержит технические рекомендации по переносу кода из UNIX в среду Win32.  
   
- [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
-  
- Руководство по проекту миграции из Unix дополняет руководство по миграции настраиваемых приложений UNIX и содержит высокоуровневую справку по миграции важных проектов из UNIX в Win32. Руководство содержит рекомендации, которые следует учитывать на каждом этапе миграции проекта. Данное руководство можно загрузить отсюда:  
-  
- [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
+ [Руководство по проекту переноса из Unix](https://technet.microsoft.com/library/bb656287.aspx) дополняет руководство по переносу настраиваемых приложений UNIX и содержит высокоуровневые справочные сведения о переносе важных проектов из UNIX в Win32. Руководство содержит рекомендации, которые следует учитывать на каждом этапе миграции проекта.
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Службы Microsoft Windows для UNIX (SFU)  
  Службы Microsoft Windows для UNIX (SFU) предоставляют полный диапазон кроссплатформенных служб для интеграции Windows в существующие среды на основе UNIX. Службы для UNIX предоставляют общий доступ к файлам, обеспечивают удаленный доступ и администрирование, выполняют синхронизацию паролей и общие функции управления каталогами, содержат общий набор служебных программ и оболочку.  
