@@ -1,5 +1,5 @@
 ---
-title: Конструктор Semaphore::Semaphore | Документы Microsoft
+title: Конструктор Semaphore::Semaphore | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc7ddd6279dbdf177c8e478b7c1350647ac4a7c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3646e13818297b636a888e1ad00c998a120e8379
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888663"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643664"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Конструктор Semaphore::Semaphore
-Инициализирует новый экземпляр класса Semaphore.  
+Инициализирует новый экземпляр класса **семафора** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,9 +39,9 @@ WRL_NOTHROW Semaphore(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `h`  
- Дескриптор или ссылка rvalue на объект Semaphore.  
+### <a name="parameters"></a>Параметры  
+ *h*  
+ Дескриптор или rvalue ссылка для **семафора** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

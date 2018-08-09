@@ -1,5 +1,5 @@
 ---
-title: Метод SyncLockWithStatusT::IsLocked | Документы Microsoft
+title: Метод SyncLockWithStatusT::IsLocked | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a564c4223b09d9295ff0ac3159e165944c4d885d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ebe723811efe62efa85a1cc2fa35736689306c7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892557"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645637"
 ---
 # <a name="synclockwithstatustislocked-method"></a>Метод SyncLockWithStatusT::IsLocked
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,10 +34,10 @@ bool IsLocked() const;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Указывает, владеет ли текущий объект SyncLockWithStatusT ресурса; SyncLockWithStatusT объект является *заблокирован*.  
+ Указывает ли текущий **SyncLockWithStatusT** объекта, которому принадлежит ресурс, то есть, **SyncLockWithStatusT** объект *заблокирован*.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если объекте SyncLockWithStatusT заблокирован; в противном случае — **false**.  
+ **значение true,** Если **SyncLockWithStatusT** объектов заблокирован; в противном случае — значение **false**.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

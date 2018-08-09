@@ -26,15 +26,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571289"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645400"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Настройка и изменение цветов (редактор изображений для значков)
-Редактор изображений [палитра цветов](../windows/colors-window-image-editor-for-icons.md) изначально отображает 16 стандартных цветов. В дополнение к отображаемым цветам вы можете создавать свои собственные цвета. После этого можно [сохранить и загрузить пользовательскую цветовую палитру](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+**Изображение** редактора [палитра цветов](../windows/colors-window-image-editor-for-icons.md) изначально отображает 16 стандартных цветов. В дополнение к отображаемым цветам вы можете создавать свои собственные цвета. После этого можно [сохранить и загрузить пользовательскую цветовую палитру](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>Изменение цветов в палитре цветов  
   
@@ -51,7 +51,6 @@ ms.locfileid: "39571289"
 5.  Нажмите кнопку **ОК** для добавления нового цвета.  
   
 ## <a name="requirements"></a>Требования  
-  
  Нет  
   
 ## <a name="see-also"></a>См. также  

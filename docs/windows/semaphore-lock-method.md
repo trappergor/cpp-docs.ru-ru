@@ -1,5 +1,5 @@
 ---
-title: Метод Semaphore::LOCK | Документы Microsoft
+title: Метод Semaphore::LOCK | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b4db212236da6c9fb320ff5a5e04f4e9f4a4c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 39f2fe48b1e7a1a7c6b875b988d861d5fb48698a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892479"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642150"
 ---
 # <a name="semaphorelock-method"></a>Метод Semaphore::Lock
-Ожидает, пока текущий объект или объект семафора, связанный с указанным дескриптором, не будет находиться в сигнальном состоянии или указанный интервал времени ожидания истечет.  
+Только после текущего объекта, или **семафора** объект, связанный с указанным дескриптором, находится в сигнальном состоянии или истечет указанный интервал времени ожидания.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,15 +40,15 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `milliseconds`  
+### <a name="parameters"></a>Параметры  
+ *в миллисекундах*  
  Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, что означает неограниченное время ожидания.  
   
- `h`  
- Дескриптор объекта семафора.  
+ *h*  
+ Дескриптор **семафора** объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Details::SyncLockWithStatusT\<HandleTraits::SemaphoreTraits >  
+ `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
@@ -56,5 +56,4 @@ static SyncLock Lock(
  **Пространство имен:** Microsoft::wrl:: wrappers  
   
 ## <a name="see-also"></a>См. также  
-[Класс Semaphore](../windows/semaphore-class.md)
- 
+ [Класс Semaphore](../windows/semaphore-class.md)

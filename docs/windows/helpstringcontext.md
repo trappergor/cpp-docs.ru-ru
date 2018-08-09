@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570003"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642338"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 Указывает идентификатор раздела справки в файл с расширением .hlp или .chm.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ helpstringcontext(  
    contextID  
 ) ]  
@@ -37,7 +37,7 @@ ms.locfileid: "39570003"
   
 ### <a name="parameters"></a>Параметры  
  *contextID*  
- Идентификатор контекста справки 32 бита в файле справки.  
+ В 32-разрядный идентификатор контекста справки в **помочь** файл.  
   
 ## <a name="remarks"></a>Примечания  
  **Helpstringcontext** атрибут C++ имеет ту же функциональность, что [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL-атрибут.  

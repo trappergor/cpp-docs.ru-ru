@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee338d4e90f94ed7cb7f9158235c66b72e9f2e52
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 439a118bbea5adce4c306298e573bed85da26291
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464750"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641908"
 ---
 # <a name="asyncbasecancel-method"></a>Метод AsyncBase::Cancel
 Отменяет асинхронную операцию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 STDMETHOD(  
    Cancel  
 )(void);  
@@ -39,7 +39,7 @@ STDMETHOD(
  По умолчанию всегда возвращает значение S_OK.  
   
 ## <a name="remarks"></a>Примечания  
- `Cancel()` — Это реализация по умолчанию `IAsyncInfo::Cancel`, а не фактические работает. Действительно отменить асинхронную операцию, переопределить `OnCancel()` чисто виртуального метода.  
+ **Cancel()** — это реализация по умолчанию `IAsyncInfo::Cancel`, а не фактические работает. Действительно отменить асинхронную операцию, переопределить `OnCancel()` чисто виртуального метода.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

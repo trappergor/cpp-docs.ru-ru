@@ -1,5 +1,5 @@
 ---
-title: Функция TerminateMap | Документы Microsoft
+title: Функция TerminateMap | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4787fec0a6b4b9f55c500b66786372945d9a523
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890353"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645942"
 ---
 # <a name="terminatemap-function"></a>Функция TerminateMap
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -36,18 +36,18 @@ inline bool TerminateMap(
     bool forceTerminate) throw()  
 ```  
   
-## <a name="parameters"></a>Параметры  
- `module`  
+### <a name="parameters"></a>Параметры  
+ *модуль*  
  Объект [модуль](../windows/module-class.md).  
   
- `serverName`  
- Имя подмножества фабрик классов в модуле, который указан в параметре `module`.  
+ *Имя_сервера*  
+ Имя подмножества фабрик классов в модуль, указанный параметром *модуль*.  
   
- `forceTerminate`  
- Значение `true`, если требуется завершить работу фабрик классов независимо от их активности; значение  `false`, чтобы не завершать работу фабрик классов, если какая-либо из них активна.  
+ *forceTerminate*  
+ **значение true,** завершить класс фабрик, независимо от того, они активны; **false** чтобы не завершать работу фабрик классов, если какая-либо активен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если работа всех фабрик классов была завершена; в противном случае — значение `false`.  
+ **значение true,** Если всех фабрик классов была завершена; в противном случае — значение **false**.  
   
 ## <a name="remarks"></a>Примечания  
  Завершает работу фабрик классов в указанном модуле.  

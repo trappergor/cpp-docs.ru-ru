@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Ftmbase::marshaller_ | Документы Microsoft
+title: Элемент данных Ftmbase::marshaller_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a221cc7d460ed7db2a9eab6cc1ac2ea0200bbf92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37ad18c3daf6aee24c2e7c0c4c08c35caf87a602
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872706"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642040"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>Элемент данных FtmBase::marshaller_
-Хранит ссылку на свободное упаковщик в режиме потока.  
+Хранит ссылку на бесплатный упаковщик.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;  
 ```  
   

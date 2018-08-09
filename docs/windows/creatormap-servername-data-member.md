@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Creatormap::servername | Документы Microsoft
+title: Элемент данных Creatormap::servername | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 48095aa9f6a561baa03b0a529702cf97bdfb9785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24188c74136f0326a30b0834c99a36d3fdb5eaf3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870940"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642180"
 ---
 # <a name="creatormapservername-data-member"></a>Элемент данных CreatorMap::serverName
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 const wchar_t* serverName;  
 ```  
   
@@ -42,5 +42,5 @@ const wchar_t* serverName;
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [CreatorMap-структура](../windows/creatormap-structure.md)   
+ [Creatormap-структура](../windows/creatormap-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

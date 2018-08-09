@@ -1,5 +1,5 @@
 ---
-title: Создание новых символов | Документы Microsoft
+title: Создание новых символов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dd895f130161174d457b974e822b02b5ed7e8e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76dec37ec908b40ed5cc6f32dd3d0c6bd3c149e4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872300"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642628"
 ---
 # <a name="creating-new-symbols"></a>Создание новых символов
 В начале работы над новым проектом может оказаться удобным спланировать необходимые имена символов перед созданием ресурсов, которым они будут назначены.  
@@ -44,10 +44,9 @@ ms.locfileid: "33872300"
   
  Если будет введено имя символа, которое уже существует, появится сообщение о том, что символ с таким именем уже определен. Нельзя определить два и несколько символов с одинаковыми именами, но можно определить разные символы с одинаковыми числовыми значениями. Дополнительные сведения см. в разделе [ограничения для имен символов](../windows/symbol-name-restrictions.md) и [ограничения для значений символов](../windows/symbol-value-restrictions.md).  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* . Сведения о том, как вручную добавлять файлы ресурсов в проекты управляемого кода, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. . Сведения о том, как вручную добавлять файлы ресурсов в проекты управляемого кода, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- Требования  
-  
+## <a name="requirements"></a>Требования  
  Win32  
   
 ## <a name="see-also"></a>См. также  

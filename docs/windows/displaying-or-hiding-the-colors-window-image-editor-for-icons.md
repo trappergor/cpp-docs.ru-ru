@@ -1,5 +1,5 @@
 ---
-title: Отображение или скрытие окна "цвета" (редактор изображений для значков) | Документы Microsoft
+title: Отображение или скрытие окна "цвета" (редактор изображений для значков) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872046"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645114"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Отображение или скрытие окна "Цвета" (редактор изображений для значков)
 ### <a name="to-display-colors-window"></a>Чтобы открыть окно "цвета"  
   
-1.  Щелкните правой кнопкой мыши **редактора изображений** панели и выберите **Показать окно выбора цвета** в контекстном меню.  
+1.  Щелкните правой кнопкой мыши в **редактор изображений** панели и выберите **Показать окно "цвета"** в контекстном меню.  
   
      \- или -  
   
-2.  Нажмите кнопку **Показать окно выбора цвета** на [меню "изображение"](../windows/image-menu-image-editor-for-icons.md).  
+2.  Нажмите кнопку **Показать окно "цвета"** на [меню "изображение"](../windows/image-menu-image-editor-for-icons.md).  
   
 ### <a name="to-hide-the-colors-window"></a>Чтобы скрыть окно "цвета"  
   
-1.  Открепите окно. Если не используется, это позволит окно автоматического скрытия.  
+1.  Открепите окно. Это позволит окно автоматического скрытия, если она не используется.  
   
  \- или -  
   
 -   Нажмите кнопку **закрыть** кнопки.  
   
- Требования  
-  
+## <a name="requirements"></a>Требования  
  Нет  
   
 ## <a name="see-also"></a>См. также  

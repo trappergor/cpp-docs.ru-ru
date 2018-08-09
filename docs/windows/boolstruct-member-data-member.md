@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Boolstruct::member | Документы Microsoft
+title: Элемент данных Boolstruct::member | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f01f2c642686c1cf7c01fe9322e06f165d5ada9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859817"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641119"
 ---
 # <a name="boolstructmember-data-member"></a>Элемент данных BoolStruct::Member
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 int Member;  
 ```  
   
@@ -42,5 +42,5 @@ int Member;
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [BoolStruct-структура](../windows/boolstruct-structure.md)   
+ [Boolstruct-структура](../windows/boolstruct-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

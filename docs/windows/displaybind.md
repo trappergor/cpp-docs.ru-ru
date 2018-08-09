@@ -1,5 +1,5 @@
 ---
-title: displaybind | Документы Microsoft
+title: displaybind | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879891"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641744"
 ---
 # <a name="displaybind"></a>displaybind
-Указывает свойство, которое должно отображаться пользователю как связываемое.  
+Указывает свойство, которое должно отображаться пользователю как связываемая.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Displaybind** языка C++ имеет ту же функциональность, что [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) языка MIDL.  
+ **Displaybind** атрибут C++ имеет ту же функциональность, что [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **displaybind**.  
+ См. в примере [bindable](../windows/bindable.md) пример демонстрирует использование **displaybind**.  
   
 ## <a name="requirements"></a>Требования  
   

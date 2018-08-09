@@ -1,5 +1,5 @@
 ---
-title: Конструктор WeakRef::WeakRef | Документы Microsoft
+title: Конструктор WeakRef::WeakRef | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891052"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641477"
 ---
 # <a name="weakrefweakref-constructor"></a>Конструктор WeakRef::WeakRef
-Инициализирует новый экземпляр класса WeakRef.  
+Инициализирует новый экземпляр класса **WeakRef** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,12 +52,12 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `ptr`  
- Указатель, ссылка или ссылка rvalue на существующий объект, который инициализирует текущий объект WeakRef.  
+### <a name="parameters"></a>Параметры  
+ *ptr*  
+ Указатель, ссылка или rvalue ссылка на существующий объект, который инициализирует текущий **WeakRef** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Первый конструктор инициализирует пустой объект WeakRef. Второй конструктор инициализирует объект WeakRef из указателя на интерфейс IWeakReference. Третий конструктор инициализирует объект WeakRef из ссылки на объект ComPtr\<IWeakReference > объекта. Четвертый и пятый конструкторы инициализирует объект WeakRef из другой объект WeakRef.  
+ Первый конструктор инициализирует пустой **WeakRef** объекта. Второй конструктор инициализирует **WeakRef** объекта из указателя на `IWeakReference` интерфейс. Третий конструктор инициализирует **WeakRef** объект из ссылки на `ComPtr<IWeakReference>` объекта. Инициализирует четвертый и пятый конструкторы **WeakRef** из другого объекта **WeakRef** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  

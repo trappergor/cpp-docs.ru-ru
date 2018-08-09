@@ -1,5 +1,5 @@
 ---
-title: Метод WeakReference::IncrementStrongReference | Документы Microsoft
+title: Метод WeakReference::IncrementStrongReference | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee53e068c13f52c01e997680b57915051a8efad8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f564f5d6197a640ef311cda8b2133ed583eec91e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890626"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642698"
 ---
 # <a name="weakreferenceincrementstrongreference-method"></a>Метод WeakReference::IncrementStrongReference
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -37,7 +37,7 @@ ULONG IncrementStrongReference();
  Счетчик увеличивается строгую ссылку.  
   
 ## <a name="remarks"></a>Примечания  
- Увеличивает счетчик строгую ссылку объекта WeakReference.  
+ Увеличивает счетчик строгую ссылку текущего **WeakReference** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
@@ -45,5 +45,5 @@ ULONG IncrementStrongReference();
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
-[Класс WeakReference](../windows/weakreference-class1.md)  
+ [Класс WeakReference](../windows/weakreference-class1.md)  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

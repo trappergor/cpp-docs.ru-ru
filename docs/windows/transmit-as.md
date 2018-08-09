@@ -1,5 +1,5 @@
 ---
-title: transmit_as | Документы Microsoft
+title: transmit_as | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890416"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642529"
 ---
 # <a name="transmitas"></a>transmit_as
-Указывает компилятору на необходимость связать тип представленных, управлять клиентских и серверных приложений, с типом передаваемых.  
+Указывает, что компилятор должен быть сопоставлен представленных тип, управлять клиентских и серверных приложений, передаваемых типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ transmit_as(  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `type`  
- Указывает тип данных, передаваемых между клиентом и сервером.  
+### <a name="parameters"></a>Параметры  
+ *type*  
+ Указывает тип данных, которые передаются между клиентом и сервером.  
   
 ## <a name="remarks"></a>Примечания  
- **Transmit_as** языка C++ имеет ту же функциональность, что [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) языка MIDL.  
+ **Transmit_as** атрибут C++ имеет ту же функциональность, что [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В следующем коде показано использование **transmit_as** атрибута:  
+ В следующем коде показано использование **transmit_as** атрибут:  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -80,7 +79,7 @@ struct _TREE_NODE_TYPE * right;
   
 |||  
 |-|-|  
-|**Применение**|`typedef`|  
+|**Применение**|**typedef**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

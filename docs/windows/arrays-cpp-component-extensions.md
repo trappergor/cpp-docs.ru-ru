@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461693"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645572"
 ---
 # <a name="arrays-c-component-extensions"></a>Массивы (расширения компонентов C++)
 `Platform::Array<T>` Тип в C + +/ CX, или **массива** ключевое слово в C + +/ CLI, объявляет массив указанного типа и начальное значение.  
@@ -52,7 +52,7 @@ ms.locfileid: "39461693"
   
  В первом примере синтаксиса используется **ref новый** агрегатное ключевое слово, чтобы выделить память для массива. Во втором примере объявляется локальный массив.  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39461693"
  Во время компиляции можно определить является ли тип массивом с подсчетом ссылок с `__is_ref_array(type)`. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/ZW**  
+ Параметр компилятора: `/ZW`  
   
 ### <a name="examples"></a>Примеры  
  В следующем примере создается одномерный массив из 100 элементов.  
@@ -106,7 +106,7 @@ int main() {
   
  В первом примере синтаксиса используется **gcnew** ключевое слово, чтобы выделить память для массива. Во втором примере объявляется локальный массив.  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>Примечания  
   
- `array` в [Platform, default и cli пространств имен](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) пространства имен.  
+ **Массив** в [Platform, default и cli пространств имен](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) пространства имен.  
   
  Как и в стандартной версии C++, индексы массива начинаются от нуля, и массив индексируется с помощью квадратных скобок ([]). В отличие от стандартной версии C++, индексы многомерного массива указываются в списке индексов каждого измерения вместо набора операторов квадратных скобок ([]) для каждого измерения. Например *идентификатор*[*index1*, *index2*] вместо *идентификатор*[*index1*] [ *index2*].  
   
@@ -152,7 +152,7 @@ int main() {
  Во время компиляции, можно определить, является ли тип массивом распространенных языка среды выполнения (CLR) с `__is_ref_array(type)`. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/clr**  
+ Параметр компилятора: `/clr`  
   
 ### <a name="examples"></a>Примеры  
  В следующем примере создается одномерный массив из 100 элементов и трехмерный массив с 3 элементами в первом измерении, 5 элементами во втором и 6 элементами в третьем.  

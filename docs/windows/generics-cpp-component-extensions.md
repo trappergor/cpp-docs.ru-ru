@@ -1,5 +1,5 @@
 ---
-title: Универсальные шаблоны (расширения компонентов C++) | Документы Microsoft
+title: Универсальные шаблоны (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 968ccdc38906f2b9c279821cb34d166d03211562
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b22a12dca79bc3cc5c505120f64b318e454e526e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878116"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643453"
 ---
 # <a name="generics--c-component-extensions"></a>Универсальные типы и методы (расширения компонентов C++)
 Универсальные шаблоны — это параметризованные типы и методы. В этом разделе указывается, какие универсальные функции поддерживаются как средой выполнения Windows, так и средой CLR, а какие — только средой CLR. Кроме того, рассматривается создание в Visual C++ собственных универсальных методов и типов, а также использование в Visual С++ универсальных типов, созданных на языке .NET Framework. Наконец, в этом разделе сравниваются универсальные шаблоны и шаблоны C++.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- **Поддерживаемые среды выполнения Windows и среда**  
+### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Поддержка средой выполнения Windows и средой CLR 
   
  [Обзор универсальных типов в Visual C++](../windows/overview-of-generics-in-visual-cpp.md)  
  Сведения об универсальных шаблонах, причины использования возможности языка, определения терминов, используемых для описания универсальных шаблонов, и сведения об использовании ссылочных типов и типов значений в качестве параметров типа для универсальных шаблонов.  
@@ -49,7 +49,7 @@ ms.locfileid: "33878116"
  [Универсальные типы и шаблоны (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
  Сравнение универсальных и обычных шаблонов, а также сведения о том, когда использовать каждый из них и как их эффективно объединять.  
   
- **Поддерживается средой CLR**  
+### <a name="supported-by-the-common-language-runtime"></a>Поддержка средой CLR
   
  [Универсальные функции (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
  Сведения об определении и использовании универсальных функций и методов.  
@@ -59,7 +59,7 @@ ms.locfileid: "33878116"
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Практическое руководство. Перебор элементов универсальной коллекции с использованием цикла for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
- С помощью [для каждой из них, в](../dotnet/for-each-in.md) ключевое слово в универсальной коллекции.  
+ С помощью [для каждого из них в](../dotnet/for-each-in.md) ключевое слово в универсальной коллекции.  
   
 ## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

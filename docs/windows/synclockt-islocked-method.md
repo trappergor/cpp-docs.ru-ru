@@ -1,5 +1,5 @@
 ---
-title: Метод SyncLockT::IsLocked | Документы Microsoft
+title: Метод SyncLockT::IsLocked | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 067b3763e10b2bbb310b213f7d748e953ba2a902
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfbd3418af731edf826debd9d6663095be706b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888479"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641523"
 ---
 # <a name="synclocktislocked-method"></a>Метод SyncLockT::IsLocked
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,10 +34,10 @@ bool IsLocked() const;
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если объект SyncLockT заблокирован; в противном случае — **false**.  
+ **значение true,** Если **SyncLockT** объектов заблокирован; в противном случае — значение **false**.  
   
 ## <a name="remarks"></a>Примечания  
- Указывает, владеет ли текущий объект SyncLockT ресурсом; Объект SyncLockT является *заблокирован*.  
+ Указывает ли текущий **SyncLockT** объекта, которому принадлежит ресурс, то есть, **SyncLockT** объект *заблокирован*.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

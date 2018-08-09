@@ -1,5 +1,5 @@
 ---
-title: Метод SyncLockT::Unlock | Документы Microsoft
+title: Метод SyncLockT::Unlock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4073d6e2b8924ae08e6af10a8e028f273f1fdfd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa03dd41b66bb36d5dc7059863e13267e5dd77bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892310"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642127"
 ---
 # <a name="synclocktunlock-method"></a>Метод SyncLockT::Unlock
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,7 +34,7 @@ void Unlock();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Передает управление ресурса, удерживаемого текущий объект SyncLockT, если таковые имеются.  
+ Управление ресурсы, удерживаемые текущим **SyncLockT** объекта, если таковые имеются.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

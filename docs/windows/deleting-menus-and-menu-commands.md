@@ -1,5 +1,5 @@
 ---
-title: Удаление меню и команды меню | Документы Microsoft
+title: Удаление меню и команд меню | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62074a586c336bf78280548eb12699b06abdd6f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ae62b4c16c30be5384b94053ea66aa127974a81
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871384"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642351"
 ---
 # <a name="deleting-menus-and-menu-commands"></a>Удаление меню и команд меню
 ### <a name="to-delete-a-menu-or-menu-command"></a>Удаление меню или команды меню  
@@ -34,10 +34,9 @@ ms.locfileid: "33871384"
     > [!NOTE]
     >  Аналогично, контекстное меню можно использовать для выполнения других действий, таких как: копирование, вырезание, вставка, создание и вставка, вставка разделителя, изменение идентификатора, просмотр в виде всплывающих элементов, проверка назначенных клавиш и т. д.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.*  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.  
   
- Требования  
-  
+## <a name="requirements"></a>Требования  
  Win32  
   
 ## <a name="see-also"></a>См. также  

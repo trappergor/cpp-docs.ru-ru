@@ -1,5 +1,5 @@
 ---
-title: Метод SimpleActivationFactory::GetTrustLevel | Документы Microsoft
+title: Метод SimpleActivationFactory::GetTrustLevel | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ce574a8370eb0029a702f8fa4a4b12c6e93c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22fa30a3662897b171245da194573ec17da2f64e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892622"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645192"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>Метод SimpleActivationFactory::GetTrustLevel
-Возвращает уровень доверия экземпляра класса, указанного параметром `Base` параметре шаблона класса.  
+Получает уровень доверия выполняемого экземпляра класса, указанного параметром `Base` параметре шаблона класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,12 +33,12 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `trustLvl`  
- После завершения операции уровня доверия для текущего объекта класса.  
+### <a name="parameters"></a>Параметры  
+ *trustLvl*  
+ После завершения операции, уровень доверия текущего объекта класса.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение S_OK.  
+ Всегда значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: typeid (расширения компонентов C++) | Документы Microsoft
+title: typeid (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3298ed426535ae7db93e5603dac8222bbe8f6470
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888371"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644077"
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (расширения компонентов C++)
-Возвращает значение, указывающее тип объекта.  
+Получает значение, указывающее тип объекта.  
   
 > [!WARNING]
->  Этот раздел относится к версии typeid расширений компонентов C++. Версии ISO C++ это ключевое слово, см. [оператор typeid](../cpp/typeid-operator.md).  
+>  Этот раздел относится к версии typeid расширений компонентов C++. Версии ISO C++ этого ключевого слова, см. в разделе [оператор typeid](../cpp/typeid-operator.md).  
   
 ## <a name="all-runtimes"></a>Все среды выполнения  
   
@@ -49,49 +49,46 @@ Platform::Type^ type = T::typeid;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Имя типа.  
   
 ### <a name="remarks"></a>Примечания  
- В C + +/ CX typeid возвращает [Platform::Type](../cppcx/platform-type-class.md) , создается на основе сведений о типе среды выполнения.  
+ В C + +/ CX, typeid возвращает [Platform::Type](../cppcx/platform-type-class.md) , созданный из сведений о типе среды выполнения.  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/ZW**  
+ Параметр компилятора: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Среда CLR 
- **Синтаксис**  
+### <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 type::typeid  
 ```  
   
- **Параметры**  
-  
+### <a name="parameters"></a>Параметры   
  *type*  
- Имя типа (абстрактный декларатор), для которого требуется объект System::Type.  
+ Имя типа (абстрактный декларатор), для которого требуется `System::Type` объекта.  
   
- **Заметки**  
+### <a name="remarks"></a>Примечания  
   
  `typeid` используется для получения <xref:System.Type> для типа во время компиляции.  
   
- `typeid` Аналогично получению System::Type для типа во время выполнения с помощью <xref:System.Type.GetType%2A> или <xref:System.Object.GetType%2A>. Однако typeid принимает только имя типа параметра.  Если вы хотите использовать для получения имени System::Type экземпляр типа, используйте GetType.  
+ `typeid` Аналогично получению System::Type для типа во время выполнения с помощью <xref:System.Type.GetType%2A> или <xref:System.Object.GetType%2A>. Тем не менее typeid принимает только имени типа параметра.  Если вы хотите использовать для получения имени System::Type экземпляр типа, используйте GetType.  
   
- `typeid` необходима возможность вычислять имени типа (тип) во время компиляции, в то время как GetType результатом является тип, возвращаемый во время выполнения.  
+ `typeid` должен иметь возможность оценить имени типа (тип) во время компиляции, тогда как GetType результатом является тип, возвращаемый во время выполнения.  
   
- `typeid` может принимать имя собственного типа или общий псевдоним языка среды выполнения для имени собственного типа; в разделе [эквиваленты C++ собственных типов .NET Framework (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) для получения дополнительной информации.  
+ `typeid` может занять имя собственного типа или общий псевдоним среды выполнения языка именем собственного типа; см. в разделе [эквиваленты в .NET Framework в собственные типы C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) Дополнительные сведения.  
   
- `typeid` Несмотря на то, что он будет по-прежнему возвращать System::Type также работает с собственных типов.  Чтобы получить структуру type_info, используйте [оператор typeid](../cpp/typeid-operator.md).  
+ `typeid` Несмотря на то, что он будет по-прежнему возвращать System::Type также работает с собственными типами.  Чтобы получить структуру type_info, используйте [оператор typeid](../cpp/typeid-operator.md).  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/clr**  
+ Параметр компилятора: `/clr`  
   
 ### <a name="examples"></a>Примеры  
- **Пример**  
   
- В следующем примере сравниваются ключевое слово typeid GetType() член.  
+ В следующем примере сравниваются ключевое слово typeid `GetType()` член.  
   
-```  
+```cpp  
 // keyword__typeid.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -121,14 +118,11 @@ typeid and GetType returned the same System::Type
 G  
   
 System.Single*  
-  
 ```  
   
- **Пример**  
+ Следующий пример показывает, что переменная типа System::Type можно использовать для получения атрибутов типа.  Он также показывает, что для некоторых типов, будет необходимо создать определение типа для использования `typeid`.  
   
- Следующий пример показывает, что переменная типа System::Type можно использовать для получения атрибутов типа.  Здесь также показано, что для некоторых типов, необходимо будет создать typedef для использования `typeid`.  
-  
-```  
+```cpp  
 // keyword__typeid_2.cpp  
 // compile with: /clr  
 using namespace System;  
