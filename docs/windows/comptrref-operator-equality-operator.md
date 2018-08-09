@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a36e3068bd5211f37e6fe1f0f2a82c923b4511a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463958"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650707"
 ---
 # <a name="comptrrefoperator-operator"></a>Оператор ComPtrRef::operator==
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -54,12 +54,12 @@ bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *a*  
- Ссылка на объект ComPtrRef.  
+ Ссылку на **ComPtrRef** объекта.  
   
  *b*  
- Ссылку на другой объект ComPtrRef, или указатель на анонимный тип (`void*`).  
+ Ссылка на другой **ComPtrRef** объект или указатель на анонимный тип (`void*`).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Первый оператор возвращает **true** Если объект *a* равен объекту *b*; в противном случае **false**.  
@@ -69,7 +69,7 @@ bool operator==(
  Четвертый и пятый операторы yield **true** Если объект *a* равен объекту *b*; в противном случае **false**.  
   
 ## <a name="remarks"></a>Примечания  
- Указывает, равны ли два объекта ComPtrRef.  
+ Указывает ли два **ComPtrRef** объекты равны.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
