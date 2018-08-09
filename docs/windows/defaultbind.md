@@ -1,5 +1,5 @@
 ---
-title: defaultbind | Документы Microsoft
+title: defaultbind | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871465"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644090"
 ---
 # <a name="defaultbind"></a>defaultbind
-Указывает, одиночное, связываемое свойство, которое представляет объект наилучшим образом.  
+Указывает единственное свойство, представляющим объект наилучшим образом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```cpp  
 [defaultbind]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Defaultbind** языка C++ имеет ту же функциональность, что [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) языка MIDL.  
+ **Defaultbind** атрибут C++ имеет ту же функциональность, что [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **defaultbind**.  
+ См. в примере [bindable](../windows/bindable.md) пример демонстрирует использование **defaultbind**.  
   
 ## <a name="requirements"></a>Требования  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод SRWLock::LockShared | Документы Microsoft
+title: Метод SRWLock::LockShared | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fccc72814ca5c4fff417e0b6221ef0f3c045a5bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8dfc50ae0732471f8cb91b2c380d4c4772350f47
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895753"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652130"
 ---
 # <a name="srwlocklockshared-method"></a>Метод SRWLock::LockShared
-Получает объект SRWLock в режиме общего доступа.  
+Получает **SRWLock** объект в режиме общего доступа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +37,12 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `lock`  
- Указатель на объект SRWLock.  
+### <a name="parameters"></a>Параметры  
+ *lock*  
+ Указатель на **SRWLock** объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект SRWLock в режиме общего доступа.  
+ **SRWLock** объект в режиме общего доступа.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

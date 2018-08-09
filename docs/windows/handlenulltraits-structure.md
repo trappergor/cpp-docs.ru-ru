@@ -1,5 +1,5 @@
 ---
-title: Структура HANDLENullTraits | Документы Microsoft
+title: Handlenulltraits-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b7daa319b927d168d39f0981c00b5fbe92063c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e009b31f95f2cdf80231021c38848fbc30ce20d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877882"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645442"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits - структура
 Определяет общие характеристики дескриптора неинициализированным.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 struct HANDLENullTraits;  
 ```  
   
@@ -37,13 +37,13 @@ struct HANDLENullTraits;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`Type`|Синоним для HANDLE.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод HANDLENullTraits::Close](../windows/handlenulltraits-close-method.md)|Закрывает указанный дескриптор.|  
 |[Метод HANDLENullTraits::GetInvalidValue](../windows/handlenulltraits-getinvalidvalue-method.md)|Представляет недопустимый дескриптор.|  

@@ -1,5 +1,5 @@
 ---
-title: usesgetlasterror | Документы Microsoft
+title: usesgetlasterror | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 399b9fbbcf4b449f5f91beaea89c403d120d0a21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e5d7144f7e2a6fa3bf6937a377ccad0a711f746
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890279"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647064"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
-Сообщает вызывающего объекта, если возникает ошибка при вызове этой функции, затем вызывающий объект может затем вызвать `GetLastError` для получения кода ошибки.  
+Вызывающий объект о том, есть ли ошибки при вызове этой функции, затем вызывающий объект затем можно вызвать `GetLastError` для получения кода ошибки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [usesgetlasterror]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Usesgetlasterror** языка C++ имеет ту же функциональность, что [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) языка MIDL.  
+ **Usesgetlasterror** атрибут C++ имеет ту же функциональность, что [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В разделе [idl_module](../windows/idl-module.md) примере образец демонстрирует использование **usesgetlasterror**.  
+ См. в разделе [idl_module](../windows/idl-module.md) примере образец демонстрирует использование **usesgetlasterror**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -47,7 +45,7 @@ ms.locfileid: "33890279"
   
 |||  
 |-|-|  
-|**Применение**|**модуль** атрибута|  
+|**Применение**|**модуль** атрибут|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

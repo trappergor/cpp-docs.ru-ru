@@ -1,5 +1,5 @@
 ---
-title: Метод SimpleActivationFactory::GetRuntimeClassName | Документы Microsoft
+title: Метод SimpleActivationFactory::GetRuntimeClassName | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e001d0269c21026bdd00abcdd4d257f11d601cf6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c6c6731c4c7787f3d81a4e67eac2861a46bfe1a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889037"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644412"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>Метод SimpleActivationFactory::GetRuntimeClassName
 
@@ -45,7 +45,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>Примечания
 
-Если &#95; &#95;WRL_STRICT&#95; &#95; будет определено, Ошибка утверждения создается, если класс, указанный `Base` параметре шаблона класса не является производным от [RuntimeClass](../windows/runtimeclass-class.md), или не настроен со WinRt или WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значение перечисления.
+Если &#95; &#95;WRL_STRICT&#95; &#95; будет определен, Ошибка утверждения создается, если класс, указанный `Base` параметре шаблона класса не является производным от [RuntimeClass](../windows/runtimeclass-class.md), или не настроен со WinRt или WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значение перечисления.
 
 ## <a name="requirements"></a>Требования
 
@@ -54,5 +54,4 @@ STDMETHOD( GetRuntimeClassName )(
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
-
-[Класс SimpleActivationFactory](../windows/simpleactivationfactory-class.md)
+ [Класс SimpleActivationFactory](../windows/simpleactivationfactory-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Comptrrefbase::ptr_ | Документы Microsoft
+title: Элемент данных Comptrrefbase::ptr_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883571"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644847"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>Элемент данных ComPtrRefBase::ptr_
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 T* ptr_;  
 ```  
   
@@ -37,7 +37,7 @@ T* ptr_;
  Указатель на тип, заданный текущим параметром шаблона.  
   
 ## <a name="remarks"></a>Примечания  
- `ptr_` является членом защищенных данных.  
+ **ptr_** входит защищенных данных.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  

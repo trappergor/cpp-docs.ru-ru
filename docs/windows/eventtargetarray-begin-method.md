@@ -1,5 +1,5 @@
 ---
-title: Метод EventTargetArray::Begin | Документы Microsoft
+title: Метод EventTargetArray::Begin | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef0c9726b089c798ff8b9a98a04da40099cf888a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b5dc081a24495fc8939f3069dc68bed4f75beaaf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871592"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642829"
 ---
 # <a name="eventtargetarraybegin-method"></a>Метод EventTargetArray::Begin
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 ComPtr<IUnknown>* Begin();  
 ```  
   
@@ -45,5 +45,5 @@ ComPtr<IUnknown>* Begin();
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [Eventtargetarray-класс](../windows/eventtargetarray-class.md)   
+ [Класс EventTargetArray](../windows/eventtargetarray-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

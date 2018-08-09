@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: faa2e1af556f0184fa88055bcbf154eb783e24e5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 35faad82357b0f449d407787840c865b798427f1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463601"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642013"
 ---
 # <a name="asyncbasefireprogress-method"></a>Метод AsyncBase::FireProgress
 Вызывает текущий обработчик событий процесса выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 void FireProgress(  
    const typename ProgressTraits::Arg2Type arg  
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *arg*  
  Метод обработчика событий для запуска.  
   

@@ -1,5 +1,5 @@
 ---
-title: Структура SemaphoreTraits | Документы Microsoft
+title: Semaphoretraits-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c5bdb20a765b56fd90a46389eba2a869890e4fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bcbb520ba92bdf15245b2401c74c3b271111034
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892609"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645728"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits - структура
-Определяет общие характеристики объекта семафора.  
+Определяет общие характеристики **семафора** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,9 +37,9 @@ struct SemaphoreTraits : HANDLENullTraits;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод SemaphoreTraits::Unlock](../windows/semaphoretraits-unlock-method.md)|Элемент управления выпуски общего ресурса.|  
+|[Метод SemaphoreTraits::Unlock](../windows/semaphoretraits-unlock-method.md)|Элемент управления выпусков общего ресурса.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `HANDLENullTraits`  

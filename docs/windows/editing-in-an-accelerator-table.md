@@ -1,5 +1,5 @@
 ---
-title: Редактирование в таблице сочетаний клавиш | Документы Microsoft
+title: Редактирование в таблице сочетаний клавиш | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5defa8cdd2e2fb96ceff0d333f06698154baf977
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0844ab8a4233e2204c42a8d165309c89026fb01
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871732"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646232"
 ---
 # <a name="editing-in-an-accelerator-table"></a>Редактирование в таблице сочетаний клавиш
 ### <a name="to-edit-in-an-accelerator-table"></a>Редактирование в таблице сочетаний клавиш  
@@ -41,12 +41,11 @@ ms.locfileid: "33871732"
   
     -   Для [ключ](../windows/accelerator-key-property.md), выберите из списка или введите новое.  
   
-    -   Для [тип](../windows/accelerator-type-property.md), выберите из списка ASCII или VIRTKEY.  
+    -   Для [тип](../windows/accelerator-type-property.md)выберите **ASCII** или **VIRTKEY** из списка.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.*  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.  
   
- **Требования**  
-  
+## <a name="requirements"></a>Требования  
  Win32  
   
 ## <a name="see-also"></a>См. также  

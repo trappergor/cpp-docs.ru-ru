@@ -18,24 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 589318286c48351e3eae6e3a83f42741a805ce68
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2dce9b2ce59eb98c59c7a6cf04be52f3d439fdb0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463760"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642855"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Добавление обработчиков событий для элементов управления диалоговых окон
 
 Для проекта диалоговых окон, которые уже связаны с классом можно воспользоваться преимуществами некоторые сочетания клавиш, при создании обработчиков событий. Можно быстро создать обработчик для события уведомления элемента управления по умолчанию или для любого соответствующего сообщения Windows.
 
-## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Чтобы создать обработчик для события уведомления элемента управления по умолчанию
+### <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Чтобы создать обработчик для события уведомления элемента управления по умолчанию
 
-1. Дважды щелкните элемент управления. Откроется редактор текста.
+1. Дважды щелкните элемент управления. **Текст** Откроется редактор.
 
-2. Добавьте код обработчика уведомлений в текстовом редакторе.
+2. Добавьте код обработчика уведомлений в **текст** редактора.
 
-## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Чтобы создать обработчик для любого соответствующего сообщения Windows
+### <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Чтобы создать обработчик для любого соответствующего сообщения Windows
 
 1. Щелкните элемент управления, для которого вы хотите обрабатывать событие уведомления.
 
@@ -52,12 +52,12 @@ ms.locfileid: "39463760"
     > [!NOTE]
     > Кроме того, диалоговое окно выбора и нажмите кнопку **события элемента управления** кнопку, чтобы открыть список общих событий Windows для всех элементов управления в диалоговом окне.
 
-3. В **свойства** щелкните столбец справа для обработки и затем выберите имя события предлагаемые уведомлений (например, **OnBnClickedOK** дескрипторы **BN_CLICKED** ).
+3. В **свойства** щелкните столбец справа для обработки и затем выберите имя события предлагаемые уведомлений (например, `OnBnClickedOK` обрабатывает BN_CLICKED).
 
     > [!NOTE]
     > Кроме того можно предоставить имя обработчика события выбор, а не выбрав имя обработчика событий по умолчанию.
 
-   После выбора события, Visual Studio открывает текстовый редактор и отображает код обработчика событий. Например, следующий код добавляется по умолчанию **OnBnClickedOK**:
+   После выбора события, Visual Studio открывает **текстовый редактор** и отображает код обработчика событий. Например, следующий код добавляется по умолчанию `OnBnClickedOK`:
 
     ```cpp
     void CAboutDlg::OnBnClickedOk(void)
@@ -68,19 +68,17 @@ ms.locfileid: "39463760"
 
 Если вы хотите добавить обработчик событий к классу отличное от того, реализует диалоговое окно, используйте [мастер обработчиков событий](../ide/event-handler-wizard.md). Дополнительные сведения см. в разделе [Добавление обработчика событий](../ide/adding-an-event-handler-visual-cpp.md).
 
-Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
-### <a name="requirements"></a>Требования
-
-Win32
+## <a name="requirements"></a>Требования
+ Win32
 
 ## <a name="see-also"></a>См. также
-
-[События по умолчанию элемента управления](../windows/default-control-events.md)  
-[Определение переменных-членов для элементов управления диалоговых окон](../windows/defining-member-variables-for-dialog-controls.md)  
-[Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)  
-[Добавление класса](../ide/adding-a-class-visual-cpp.md)  
-[Добавление функции-члена](../ide/adding-a-member-function-visual-cpp.md)  
-[Добавление переменной-члена](../ide/adding-a-member-variable-visual-cpp.md)  
-[Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)  
-[Обработчик сообщений MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+ [События по умолчанию элемента управления](../windows/default-control-events.md)  
+ [Определение переменных-членов для элементов управления диалоговых окон](../windows/defining-member-variables-for-dialog-controls.md)  
+ [Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)  
+ [Добавление класса](../ide/adding-a-class-visual-cpp.md)  
+ [Добавление функции-члена](../ide/adding-a-member-function-visual-cpp.md)  
+ [Добавление переменной-члена](../ide/adding-a-member-variable-visual-cpp.md)  
+ [Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)  
+ [Обработчик сообщений MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

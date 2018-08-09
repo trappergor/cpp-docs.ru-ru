@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 73b51afda48fe0653767a40120cc6c0cdc0e831b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465874"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644951"
 ---
 # <a name="callas"></a>call_as
 Позволяет [локального](../windows/local-cpp.md) функции для сопоставления с удаленной функции так, что при вызове удаленной функции локальной функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ call_as(  
    function  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *function*  
  Локальная функция, которую требуется вызывать при вызове удаленной функции.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "39465874"
  **Call_as** атрибут C++ имеет ту же функциональность, что [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- В следующем коде показано, как можно использовать **call_as** для сопоставления функции не поддерживающие удаленное взаимодействие (**f1**) функции удаленного взаимодействия (**Remf1**):  
+ В следующем коде показано, как можно использовать **call_as** для сопоставления функции не поддерживающие удаленное взаимодействие (`f1`) функции удаленного взаимодействия (`Remf1`):  
   
 ```cpp  
 // cpp_attr_ref_call_as.cpp  

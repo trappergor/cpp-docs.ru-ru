@@ -1,5 +1,5 @@
 ---
-title: Класс событий (библиотека шаблонов C++ среды выполнения Windows) | Документы Microsoft
+title: Класс событий (библиотека шаблонов C++ среды выполнения Windows) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12c9e5bfe01de0a9864ff1e94364e0c42178ad11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c07d58f244bf2e7e6c9329196bae7b5bb323ce12
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872930"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644168"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Класс Event (библиотека шаблонов C++ среды выполнения Windows)
 Представляет событие.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 class Event : public HandleT<HandleTraits::EventTraits>;  
 ```  
   
@@ -35,15 +35,15 @@ class Event : public HandleT<HandleTraits::EventTraits>;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор Event::Event (библиотека шаблонов C++ среды выполнения Windows)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Инициализирует новый экземпляр класса Event.|  
+|[Конструктор Event::Event (библиотека шаблонов C++ среды выполнения Windows)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Инициализирует новый экземпляр класса **событий** класса.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Оператор Event::operator=](../windows/event-operator-assign-operator.md)|Присваивает указанную ссылку на событие текущему экземпляру Event.|  
+|[Оператор Event::operator=](../windows/event-operator-assign-operator.md)|Назначает указанное **событий** ссылку на текущий **событий** экземпляра.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `HandleT`  

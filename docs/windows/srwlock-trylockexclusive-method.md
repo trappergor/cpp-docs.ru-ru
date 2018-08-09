@@ -1,5 +1,5 @@
 ---
-title: Метод SRWLock::TryLockExclusive | Документы Microsoft
+title: Метод SRWLock::TryLockExclusive | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cc9ee8a63d7403c3de408c924eeab07f1d0efa1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892661"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652774"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>Метод SRWLock::TryLockExclusive
-Пытается получить объект SRWLock в монопольном режиме для текущей или заданной объекта SRWLock. При успешном вызове вызывающий поток становится владельцем блокировки.  
+Пытается получить **SRWLock** объекта в монопольном режиме для текущей или заданной **SRWLock** объекта. Если вызов был успешным, вызывающий поток принимает владельца блокировки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +37,12 @@ static SyncLockExclusive TryLockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `lock`  
- Указатель на объект SRWLock.  
+### <a name="parameters"></a>Параметры  
+ *lock*  
+ Указатель на **SRWLock** объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- В случае успешного выполнения объекта SRWLock в монопольном режиме и что вызывающий поток становится владельцем блокировки. В противном случае SRWLock объекта, состояние которого является недопустимым.  
+ В случае успешного выполнения **SRWLock** объекта в монопольном режиме и вызывающий поток принимает владельца блокировки. В противном случае **SRWLock** объект, состояние которого является недопустимым.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

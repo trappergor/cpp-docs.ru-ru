@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30e408d127e73b111e6ff464ea7530ba01beece3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 29b892f3e120db183082d6af97f9374f89e9e647
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570747"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643060"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Практическое руководство. Завершение асинхронных операций с использованием WRL
 В этом документе показано, как использовать Windows шаблонов среды выполнения C++ Library (WRL) для запуска асинхронных операций и выполнения работы при завершении операций.  
@@ -40,7 +40,7 @@ ms.locfileid: "39570747"
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     В файле Windows.System.Threading.h объявлены типы, необходимые для использования асинхронного таймера.  
+     `Windows.System.Threading.h` Объявляет типы, необходимые для использования асинхронного таймера.  
   
      Рекомендуется использовать директиву `using namespace` в CPP-файле, чтобы сделать код более удобочитаемым.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "39570747"
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
 ### <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или вставьте его в файл с именем `wrl-consume-asyncOp.cpp` и выполните следующую команду в окне командной строки Visual Studio.  
+ Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или вставьте его в файл с именем `wrl-consume-asyncOp.cpp` и затем выполните следующую команду **Командная строка Visual Studio** окна.  
   
  `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`  
   

@@ -1,5 +1,5 @@
 ---
-title: Редактируемые типы файлов для ресурсов | Документы Microsoft
+title: Редактируемые типы файлов для ресурсов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870254"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648435"
 ---
 # <a name="editable-file-types-for-resources"></a>Редактируемые типы файлов для ресурсов
 Вы можете открывать файлы следующих типов и изменять ресурсы, которые они содержат.  
   
-|Имя файла|Описание|  
+|Имя файла|Описание:|  
 |---------------|-----------------|  
 |RC|Файлы описания ресурсов.|  
 |RCT|Файлы шаблонов ресурсов.|  
@@ -38,8 +38,6 @@ ms.locfileid: "33870254"
 |EXE|Исполняемые файлы.|  
 |DLL|Файлы библиотек динамической компоновки.|  
 |BMP, ICO, DIB и CUR|Файлы растровых изображений, значков, панелей инструментов и курсоров.|  
-  
-
   
 ## <a name="requirements"></a>Требования  
  Win32  

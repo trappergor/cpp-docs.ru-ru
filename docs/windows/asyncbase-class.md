@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dcf5a095167e48a52405978a105cadaddfa870f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466206"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647818"
 ---
 # <a name="asyncbase-class"></a>AsyncBase - класс
 Реализует асинхронный конечный автомат среды выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -44,7 +44,7 @@ template <
 class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Implements<IAsyncInfo>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *TComplete*  
  Обработчик событий, вызываемый при завершении асинхронной операции.  
   
@@ -52,7 +52,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
  Обработчик событий, вызываемый при асинхронной операции отображается ход выполнения текущей операции.  
   
  *Тип resultType*  
- Один из [AsyncResultType](../windows/asyncresulttype-enumeration.md) значений перечисления. По умолчанию — SingleResult.  
+ Один из [AsyncResultType](../windows/asyncresulttype-enumeration.md) значений перечисления. По умолчанию `SingleResult`.  
   
 ## <a name="members"></a>Участники  
   

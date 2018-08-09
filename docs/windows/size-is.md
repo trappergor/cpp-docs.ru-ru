@@ -1,5 +1,5 @@
 ---
-title: size_is | Документы Microsoft
+title: size_is | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f97bb82f3387e82be5bbf120db4fed9aaa092f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889677"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645455"
 ---
 # <a name="sizeis"></a>size_is
-Укажите объем памяти, выделенной для указателей, по размеру, размер указателей на указатели по размеру и одно - или многомерные массивы.  
+Укажите объем памяти, выделенной для размера указатели, размер указателей на указатели по размеру и одно - или многомерные массивы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ size_is(  
+[ size_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *Выражение*  
- Объем памяти, выделенной для указателей, по размеру.  
+ Размер памяти, выделенной для размера указателей.  
   
 ## <a name="remarks"></a>Примечания  
- **Size_is** языка C++ имеет ту же функциональность, что [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) языка MIDL.  
+ **Size_is** атрибут C++ имеет ту же функциональность, что [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [first_is](../windows/first-is.md) пример указания фрагмент массива.  
+ См. в примере [first_is](../windows/first-is.md) пример указания фрагмент массива.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -52,10 +51,10 @@ ms.locfileid: "33889677"
   
 |||  
 |-|-|  
-|**Применение**|Поле в `struct` или **объединение**, интерфейс параметр, метод|  
+|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**max_is**|  
+|**Недопустимые атрибуты**|`max_is`|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   

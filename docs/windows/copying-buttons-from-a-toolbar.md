@@ -1,5 +1,5 @@
 ---
-title: Копирование кнопок из панели инструментов | Документы Microsoft
+title: Копирование кнопок из панели инструментов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c006d243af78ea7f642ec36f49ce46fcfc732c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc7ea145b76f17ccd8b29b287faa3ef921e7dc73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880235"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646284"
 ---
 # <a name="copying-buttons-from-a-toolbar"></a>Копирование кнопок из панели инструментов
 ### <a name="to-copy-buttons-from-a-toolbar"></a>Копирование кнопок из панели инструментов  
   
-1.  Удерживайте клавишу **CTRL** ключа.  
+1.  Удерживая нажатой **Ctrl** ключ.  
   
-2.  В **инструментов представления** панели, перетащите кнопку либо новое место на панели инструментов или в папку на другой панели инструментов.  
+2.  В **инструментов представления** панели, перетащите кнопку либо новое место на панели инструментов или в расположение на другой панели инструментов.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Требования  
-  
+## <a name="requirements"></a>Требования  
  MFC или ATL  
   
 ## <a name="see-also"></a>См. также  
  [Создание, перемещение и редактирование кнопок панели инструментов](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Редактор панелей инструментов](../windows/toolbar-editor.md)
-

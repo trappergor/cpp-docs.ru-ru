@@ -15,26 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 225580be17afcc1bda6feab63d3efe79f932b757
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 1dcf129f551900792638018fa846557120e53e96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570328"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644356"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Явные переопределения (Расширения компонентов C++)
 В этом разделе описывается явно переопределить член базового класса или интерфейса. Именованное переопределение (явно) должен использоваться только для переопределения одного метода производном методе отличается от имени.  
   
 ## <a name="all-runtimes"></a>Все среды выполнения  
- **Синтаксис**  
+### <a name="syntax"></a>Синтаксис
   
-```  
+```cpp  
 overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
-  
- **Параметры**  
-  
+
+### <a name="parameters"></a>Параметры 
  *Переопределение функция декларатор*  
  Возвращаемый тип, имя и аргумент список переопределяющая функция.  Обратите внимание, что переопределяющая функция не обязательно иметь имя, совпадающее с именем переопределяемой функции.  
   
@@ -47,7 +46,7 @@ overriding-function-declarator = function { overriding-function-definition }
  *Переопределение function-definition*  
  Операторы тело функции, которые определяют переопределяющая функция.  
   
- **Заметки**  
+### <a name="remarks"></a>Примечания
   
  Чтобы создать псевдоним для сигнатуры метода, или можно определить разные реализации для методов witht такой же сигнатурой следует использовать явные переопределения.  
   
@@ -59,15 +58,14 @@ overriding-function-declarator = function { overriding-function-definition }
  Параметр компилятора: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Среда CLR 
- **Заметки**  
+### <a name="remarks"></a>Примечания
   
  Сведения о явных переопределений в машинный код или код компилируется с `/clr:oldSyntax`, см. в разделе [явное переопределение](../cpp/explicit-overrides-cpp.md).  
   
 ### <a name="requirements"></a>Требования  
  Параметр компилятора: `/clr`  
   
-### <a name="examples"></a>Примеры  
- **Пример**  
+### <a name="examples"></a>Примеры   
   
  В следующем примере кода показан простой, неявное override и реализацию члена в базовый интерфейс, неиспользование явного переопределения.  
   
@@ -91,13 +89,9 @@ int main() {
 }  
 ```  
   
- **Вывод**  
-  
 ```Output  
 X::f override of I1::f  
 ```  
-  
- **Пример**  
   
  В следующем примере кода показано, как реализовать все элементы интерфейса распространенных подписью, используя синтаксис явного переопределения.  
   
@@ -126,18 +120,14 @@ int main() {
 }  
 ```  
   
- **Вывод**  
-  
 ```Output  
 X::f override of I1::f and I2::f  
 X::f override of I1::f and I2::f  
 ```  
   
- **Пример**  
-  
  В следующем примере кода показано, как переопределения функции могут иметь другое имя из функции, которое он реализует.  
   
-```  
+```cpp  
 // explicit_override_3.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -157,13 +147,9 @@ int main() {
 }  
 ```  
   
- **Вывод**  
-  
 ```Output  
 X::g  
 ```  
-  
- **Пример**  
   
  В следующем примере кода показана реализация явный интерфейс, реализующий безопасный тип коллекции.  
   

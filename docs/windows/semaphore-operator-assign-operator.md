@@ -1,5 +1,5 @@
 ---
-title: Semaphore::operator =-оператор | Документы Microsoft
+title: Semaphore::operator =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892531"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651282"
 ---
 # <a name="semaphoreoperator-operator"></a>Оператор Semaphore::operator=
-Перемещает заданный дескриптор из объекта семафора для текущего объекта семафора.  
+Перемещает указанный дескриптор из **семафора** объект с текущим **семафора** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,12 +35,12 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `h`  
- Ссылка rvalue на объект Semaphore.  
+### <a name="parameters"></a>Параметры  
+ *h*  
+ Ссылка rvalue на **семафора** объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Ссылка на текущий объект семафора.  
+ Ссылку на текущий **семафора** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

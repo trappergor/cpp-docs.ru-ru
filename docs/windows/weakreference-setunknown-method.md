@@ -1,5 +1,5 @@
 ---
-title: Метод WeakReference::SetUnknown | Документы Microsoft
+title: Метод WeakReference::SetUnknown | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28b25645b21d3101e2f2b2004f02f29482320808
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2a46db38bf17b1af5ae748cf90689509d6d21b0d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891025"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647684"
 ---
 # <a name="weakreferencesetunknown-method"></a>Метод WeakReference::SetUnknown
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -35,12 +35,12 @@ void SetUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `unk`  
+### <a name="parameters"></a>Параметры  
+ *UNK*  
  Указатель на `IUnknown` интерфейс для объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Задает строгую ссылку текущего `WeakReference` объекта в заданный указатель интерфейса.  
+ Задает строгая ссылка текущего **WeakReference** объект в заданный указатель интерфейса.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
@@ -48,5 +48,5 @@ void SetUnknown(
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также
-[Класс WeakReference](../windows/weakreference-class1.md)  
+ [Класс WeakReference](../windows/weakreference-class1.md)  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

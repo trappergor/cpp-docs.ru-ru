@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568882"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645130"
 ---
 # <a name="generic-functions-ccli"></a>Универсальные функции (C++/CLI)
 Универсальная функция — это функция, объявляемая с параметрами типа. При ее вызове вместо параметров типа используются фактические типы.  
   
 ## <a name="all-platforms"></a>Все платформы  
- **Заметки**  
+### <a name="remarks"></a>Примечания
   
  Эта возможность применяется не для всех платформ.  
   
 ## <a name="windows-runtime"></a>Среда выполнения Windows  
- **Заметки**  
+### <a name="remarks"></a>Примечания
   
  Эта функция не поддерживается в среде выполнения Windows.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "39568882"
   
 ### <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  Параметр компилятора: `/clr`  
   
 ### <a name="examples"></a>Примеры  
- **Пример**  
   
  В следующем примере кода демонстрируется универсальная функция.  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **Пример**  
-  
  Универсальные функции могут перегружаться на основе сигнатуры или арности (количества параметров типа для функции). Кроме того универсальные функции могут перегружаться неуниверсальными функциями с тем же именем, до тех пор, пока функции отличаются некоторыми параметрами типа. Например, могут перегружаться следующие функции:  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **Пример**  
   
  В следующем примере используется универсальная функция, чтобы найти первый элемент массива. В примере объявляется класс `MyClass`, который наследуется от базового класса `MyBaseClass`. `MyClass` содержит универсальную функцию `MyFunction`, вызывающую другую универсальную функцию `MyBaseClassFunction` в базовом классе. В `main`, универсальная функция `MyFunction`, вызывается с помощью разных аргументов типа.  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **Вывод**  
   
 ```Output  
 My function returned an int: 2003  

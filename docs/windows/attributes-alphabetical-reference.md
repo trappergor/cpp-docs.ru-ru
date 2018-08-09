@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464893"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648182"
 ---
 # <a name="attributes-alphabetical-reference"></a>Алфавитный указатель атрибутов
 В Visual C++ доступны следующие атрибуты.  
@@ -118,7 +118,7 @@ ms.locfileid: "39464893"
 |[satype](../windows/satype.md)|Указывает тип данных `SAFEARRAY`.|  
 |[size_is](../windows/size-is.md)|Указывает объем памяти, выделенной для размера указатели, размер указателей на указатели по размеру и одно - или многомерные массивы.|  
 |[source](../windows/source-cpp.md)|Указывает, что член класса, свойство или метод является источником событий.|  
-|[string](../windows/string-cpp.md)|Указывает, что одномерный массив **char**, **wchar_t**, **байтов**, или эквивалентных массив или указатель на такой массив должен обрабатываться как строка.|  
+|[string](../windows/string-cpp.md)|Указывает, что одномерный массив **char**, **wchar_t**, `byte`, или эквивалентных массив или указатель на такой массив должен обрабатываться как строка.|  
 |[support_error_info](../windows/support-error-info.md)|Поддерживает об ошибках для целевого объекта.|  
 |[switch_is](../windows/switch-is.md)|Указывает выражение или идентификатор, действующий как объединения дискриминантный, который выбирает член объединения.|  
 |[switch_type](../windows/switch-type.md)|Определяет тип переменной, которая используется в качестве объединения дискриминантный.|  

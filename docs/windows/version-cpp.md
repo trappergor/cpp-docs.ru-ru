@@ -1,5 +1,5 @@
 ---
-title: версия (C++) | Документы Microsoft
+title: версия (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890613"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642283"
 ---
 # <a name="version-c"></a>version (C++)
-Определяет конкретную версию несколькими версиями класса.  
+Идентифицирует конкретную версию несколькими версиями класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ version(  
+[ version(  
    "version"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *version*  
- Номер версии компонентного класса. Если не указан, 1.0 помещается в IDL-файл.  
+ Номер версии `coclass`. Если не указан, 1.0 помещаются в IDL-файл.  
   
 ## <a name="remarks"></a>Примечания  
- **Версии** языка C++ имеет ту же функциональность, что [версии](http://msdn.microsoft.com/library/windows/desktop/aa367306) языка MIDL и передается через созданного IDL-файла.  
+ **Версии** атрибут C++ имеет ту же функциональность, что [версии](http://msdn.microsoft.com/library/windows/desktop/aa367306) описании атрибута MIDL и передается через созданного IDL-файла.  
   
 ## <a name="example"></a>Пример  
- В разделе [привязываемых](../windows/bindable.md) пример приведен пример использования **версии**.  
+ См. в разделе [bindable](../windows/bindable.md) пример для использовать **версии**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -53,7 +52,7 @@ ms.locfileid: "33890613"
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|**coclass**|  
 |**Недопустимые атрибуты**|Нет|  

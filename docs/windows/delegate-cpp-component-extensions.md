@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570367"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649511"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (расширения компонентов C++)
 Объявляет тип, представляющий указатель на функцию.  
@@ -68,7 +68,7 @@ delegate-type-identifier
  Используйте *идентификатор для типа делегата* для объявления события с тот же прототип, что делегат. Дополнительные сведения см. в разделе [делегаты (C + +/ CX)](../cppcx/delegates-c-cx.md).  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/ZW**  
+ Параметр компилятора: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Среда CLR  
  Среда CLR поддерживает делегаты со следующим синтаксисом.  
@@ -124,10 +124,9 @@ function_declaration
 -   [Универсальные делегаты (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/clr**  
+ Параметр компилятора: `/clr`  
   
 ### <a name="examples"></a>Примеры  
- **Пример**  
   
  Приведенный ниже показано, как объявить и инициализировать вызова делегатов.  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **Вывод**  
   
 ```Output  
 in func1 8  

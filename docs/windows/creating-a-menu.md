@@ -1,5 +1,5 @@
 ---
-title: Создание меню | Документы Microsoft
+title: Создание меню | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d9051e44216de9a64b68fc112fe8f17de112e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b220f51b0c5bf8bc139b3c7ccdb1953de310ec4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882080"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644061"
 ---
 # <a name="creating-a-menu"></a>Создание меню
 > [!NOTE]
->  Окно ресурсов недоступно в выпусках Express.  
+>  **Окно ресурсов** недоступна в выпусках Express.  
   
 ### <a name="to-create-a-standard-menu"></a>Создание стандартного меню  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33882080"
   
 2.  Выберите в строке меню поле **Новый элемент** (прямоугольник с надписью "Прототип для текста").  
   
-     ![Поле нового пункта в редакторе меню](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
+     ![«Новый элемент» в редакторе меню](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
 Поле "Новый элемент"  
   
 3.  Введите название нового меню, например "Файл".  
@@ -45,16 +45,15 @@ ms.locfileid: "33882080"
   
      Как только вы присвоите название новому меню в строке меню, поле нового элемента сдвинется вправо (чтобы вы могли добавить еще одно меню), а другое поле нового элемента откроется под первым меню, чтобы вы могли добавить в него команды.  
   
-     ![Развернутое поле нового элемента](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
+     ![Развернутое поле "новый элемент"](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
 Поле нового элемента со смещенным фокусом после ввода названия меню  
   
     > [!NOTE]
-    >  Чтобы создать меню с одним пунктом в строке меню, установите значение свойства "Контекстное меню" равным False.  
+    >  Чтобы создать меню с одним элементом в строке меню, задайте **всплывающее окно** свойства **False**.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- **Требования**  
-  
+## <a name="requirements"></a>Требования  
  Win32  
   
 ## <a name="see-also"></a>См. также  

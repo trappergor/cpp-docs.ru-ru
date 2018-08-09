@@ -1,5 +1,5 @@
 ---
-title: uidefault | Документы Microsoft
+title: uidefault | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890155"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651617"
 ---
 # <a name="uidefault"></a>uidefault
-Указывает, что элемент информации о типе является элементом по умолчанию, для отображения в пользовательском интерфейсе.  
+Указывает, что член сведений о типе элемента по умолчанию для отображения в пользовательском интерфейсе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Uidefault** языка C++ имеет ту же функциональность, что [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) языка MIDL.  
+ **Uidefault** атрибут C++ имеет ту же функциональность, что [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
  Следующий код показывает образец **uidefault**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

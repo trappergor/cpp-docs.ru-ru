@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eeaef23178829163725b78685b3460913f53f2c2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464880"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652803"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal - перечисление
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 enum AsyncStatusInternal;  
 ```  
   
@@ -37,20 +37,20 @@ enum AsyncStatusInternal;
  Задает сопоставление между внутренними перечислениями состояний асинхронных операций и перечислением `Windows::Foundation::AsyncStatus`.  
   
 ## <a name="members"></a>Участники  
- *_Created*  
- Эквивалентно ::Windows::Foundation::AsyncStatus::Created  
+ `_Created`  
+ Эквивалентно `::Windows::Foundation::AsyncStatus::Created`.  
   
- *_Started*  
- Эквивалентно ::Windows::Foundation::AsyncStatus::Started  
+ `_Started`  
+ Эквивалентно `::Windows::Foundation::AsyncStatus::Started`.  
   
- *_Completed*  
- Эквивалентно ::Windows::Foundation::AsyncStatus::Completed  
+ `_Completed`  
+ Эквивалентно `::Windows::Foundation::AsyncStatus::Completed`.  
   
- *_Cancelled*  
- Эквивалентно ::Windows::Foundation::AsyncStatus::Cancelled  
+ `_Cancelled`  
+ Эквивалентно `::Windows::Foundation::AsyncStatus::Cancelled`.  
   
- *_Сведения*  
- Эквивалентно ::Windows::Foundation::AsyncStatus::Error  
+ `_Error`  
+ Эквивалентно `::Windows::Foundation::AsyncStatus::Error`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

@@ -1,5 +1,5 @@
 ---
-title: строка (C++) | Документы Microsoft
+title: строка (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bdcdc6557253f8be9c6ecb20300f2338ab35d07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889024"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645413"
 ---
 # <a name="string-c"></a>string (C++)
-Указывает, что одномерный массив `char`, `wchar_t`, **байтов** (или эквивалентную) массив или указатель на такой массив должен рассматриваться как строка.  
+Указывает, что одномерный массив **char**, **wchar_t**, `byte` (или эквивалентную) массив или указатель на такой массив должен обрабатываться как строка.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [string]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Строка** языка C++ имеет ту же функциональность, что [строка](http://msdn.microsoft.com/library/windows/desktop/aa367270) языка MIDL.  
+ **Строка** атрибут C++ имеет ту же функциональность, что [строка](http://msdn.microsoft.com/library/windows/desktop/aa367270) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Следующий код показывает, как использовать **строки** в интерфейсе и на typedef:  
+ Ниже показано, как использовать **строка** в интерфейсе, а также на определение типа:  
   
-```  
+```cpp  
 // cpp_attr_ref_string.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

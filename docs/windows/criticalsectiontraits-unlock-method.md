@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b64f44e2188848a25e607c53171e25aa721e9bc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466014"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641370"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>Метод CriticalSectionTraits::Unlock
-Специализирует шаблон CriticalSection так, чтобы она поддерживала снятию владения объектом указанного критический раздел.  
+Специализируется `CriticalSection` шаблона, так что он поддерживает снятию владения объектом указанного критический раздел.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type cs  
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *cs*  
  Указатель на объект критической секции.  
   
 ## <a name="remarks"></a>Примечания  
- *Тип* модификатор определяется как `typedef CRITICAL_SECTION* Type;`.  
+ Модификатор `Type` определен как `typedef CRITICAL_SECTION* Type;`.  
   
- Дополнительные сведения см. в разделе «LeaveCriticalSection function» в разделе «Функции синхронизации» в документации по Windows API.  
+ Дополнительные сведения см. в разделе **функция LeaveCriticalSection** в **функций синхронизации** раздел документации Windows API.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

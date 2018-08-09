@@ -1,5 +1,5 @@
 ---
-title: Пространство имен Windows::Foundation | Документы Microsoft
+title: Пространство имен Windows::Foundation | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 439746381b0b5d4932edd5c8717b2d3555005416
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60eb32017e824397af6e4535efa5ec55f314c4b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891228"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646735"
 ---
 # <a name="windowsfoundation-namespace"></a>Пространство имен Windows::Foundation
-Включает фундаментальные функциональные возможности среды выполнения Windows, таких как создание объекта и фабрики.  
+Обеспечивает основные функциональные возможности среды выполнения Windows, например создание объекта и фабрики.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,9 +38,9 @@ namespace Windows::Foundation;
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Функция ActivateInstance](../windows/activateinstance-function.md)|Регистрирует и извлекает экземпляр заданного типа, определенного в идентификатор указанного класса.|  
+|[Функция ActivateInstance](../windows/activateinstance-function.md)|Регистрирует и возвращает экземпляр заданного типа, определенного в идентификатор указанного класса.|  
 |[Функция GetActivationFactory](../windows/getactivationfactory-function.md)|Извлекает фабрику активации для типа, указанного в параметре шаблона.|  
   
 ## <a name="requirements"></a>Требования  
@@ -49,4 +49,4 @@ namespace Windows::Foundation;
  **Пространство имен:** Windows  
   
 ## <a name="see-also"></a>См. также  
- [Пространства имен Windows](http://msdn.microsoft.com/en-us/45b08650-69cd-4f7f-a959-b7361476865c)
+ [Пространство имен Windows](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)

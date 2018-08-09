@@ -1,5 +1,5 @@
 ---
-title: Метод SRWLock::TryLockShared | Документы Microsoft
+title: Метод SRWLock::TryLockShared | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19ff9324f946f48f201678f9c9e7403ba774b2c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 289fa1fbec61140e213bef7219e440c8177e19e5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892287"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645816"
 ---
 # <a name="srwlocktrylockshared-method"></a>Метод SRWLock::TryLockShared
-Пытается получить объект SRWLock в режиме общего доступа для текущей или заданной объекта SRWLock.  
+Пытается получить **SRWLock** объект в режиме общего доступа для текущей или заданной **SRWLock** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,12 +36,12 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `lock`  
- Указатель на объект SRWLock.  
+### <a name="parameters"></a>Параметры  
+ *lock*  
+ Указатель на **SRWLock** объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- В случае успешного выполнения объекта SRWLock в режиме общего доступа и вызывающий поток становится владельцем блокировки. В противном случае SRWLock объекта, состояние которого является недопустимым.  
+ В случае успешного выполнения **SRWLock** объекта в режиме общего доступа и вызывающий поток принимает владельца блокировки. В противном случае **SRWLock** объект, состояние которого является недопустимым.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

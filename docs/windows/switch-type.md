@@ -1,5 +1,5 @@
 ---
-title: switch_type | Документы Microsoft
+title: switch_type | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1870e1ee623d8495e9f19dd8f32ea9382070bc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79aa2683948d54f900c92304cdff29647819a74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890187"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650600"
 ---
 # <a name="switchtype"></a>switch_type
-Определяет тип переменной, которая используется как дискриминантный объединения.  
+Определяет тип переменной, которая используется в качестве объединения дискриминантный.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [switch_type(  
 type  
 }]  
-  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `type`  
- Тип коммутатора, может быть целое число, символ, логическое значение, тип или тип перечисления.  
+### <a name="parameters"></a>Параметры  
+ *type*  
+ Тип коммутатора, может быть целое число, символ, логическое значение или перечисления типа.  
   
 ## <a name="remarks"></a>Примечания  
- **Switch_type** языка C++ имеет ту же функциональность, что [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) языка MIDL.  
+ **Switch_type** атрибут C++ имеет ту же функциональность, что [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) описании атрибута MIDL.  
   
- Атрибуты C++ не поддерживают [инкапсулированный объединения](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Nonencapsulated объединения](http://msdn.microsoft.com/library/windows/desktop/aa367119) поддерживается только в следующей форме:  
+ Атрибуты C++ не поддерживают [инкапсулированные объединения](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Nonencapsulated объединения](http://msdn.microsoft.com/library/windows/desktop/aa367119) поддерживаются только в следующей форме:  
   
-```  
+```cpp  
 // cpp_attr_ref_switch_type.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -64,7 +62,7 @@ struct SizedValue2 {
 ```  
   
 ## <a name="example"></a>Пример  
- В разделе [случай](../windows/case-cpp.md) пример приведен пример использования **switch_type**.  
+ См. в разделе [случай](../windows/case-cpp.md) пример для использовать **switch_type**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -72,7 +70,7 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**Применение**|`typedef`|  
+|**Применение**|**typedef**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

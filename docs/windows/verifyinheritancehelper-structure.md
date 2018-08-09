@@ -1,5 +1,5 @@
 ---
-title: Структура VerifyInheritanceHelper | Документы Microsoft
+title: Verifyinheritancehelper-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d758f4b44990d1f03ff698f0740c2aa8491367a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889707"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652940"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -41,11 +41,11 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `I`  
+### <a name="parameters"></a>Параметры  
+ *I*  
  Тип.  
   
- `Base`  
+ *Base*  
  Другой тип.  
   
 ## <a name="remarks"></a>Примечания  
@@ -55,9 +55,9 @@ struct VerifyInheritanceHelper<I, Nil>;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Проверяет два интерфейса, указанный параметрами шаблона и определяет, является ли один интерфейс является производным от другого.|  
+|[Метод VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Проверяет два интерфейса, указанные параметрами шаблона и определяет, является ли один интерфейс производным от другого.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `VerifyInheritanceHelper`  

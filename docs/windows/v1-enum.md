@@ -1,5 +1,5 @@
 ---
-title: v1_enum | Документы Microsoft
+title: v1_enum | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3156554f5d2b799a9e1ef5a067d1f2e8e600d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15e51719e1daecc440dc5945a54443e4bc5079ec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890665"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644369"
 ---
 # <a name="v1enum"></a>v1_enum
-Направляет передачи заданного перечислимого типа как сущность 32 бита, а не 16-разрядное значение по умолчанию.  
+Указывает, что заданного перечислимого типа, передаваться в объект 32-разрядной, а не по умолчанию 16-разрядное.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 [v1_enum]  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **V1_enum** языка C++ имеет ту же функциональность, что [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) языка MIDL.  
+ **V1_enum** атрибут C++ имеет ту же функциональность, что [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
  В следующем коде показано использование **v1_enum**:  
   
-```  
+```cpp  
 // cpp_attr_ref_v1_enum.cpp  
 // compile with: /LD  
 [module(name="MyLibrary")];  

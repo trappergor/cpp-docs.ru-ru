@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462073"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642842"
 ---
 # <a name="agileeventsource-class"></a>Класс AgileEventSource
 
@@ -30,7 +30,7 @@ ms.locfileid: "39462073"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
@@ -38,7 +38,6 @@ class AgileEventSource
 
 ## <a name="parameters"></a>Параметры  
  *TDelegateInterface*  
-
  Интерфейс делегат, представляющий обработчик событий.
 
  *TEventSourceOptions*  
@@ -64,7 +63,7 @@ class AgileEventSource
 
 |Имя|Описание:|
 |----------|-----------------|
-|[Метод AgileEventSource::Add](#add)|Добавляет обработчик событий agile, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего объекта AgileEventSource.|
+|[Метод AgileEventSource::Add](#add)|Добавляет обработчик событий agile, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего **AgileEventSource** объекта.|
 
 ## <a name="add"></a> Метод AgileEventSource::Add
 
@@ -85,7 +84,7 @@ HRESULT Add(
 Интерфейс для объекта делегата, который представляет обработчик событий.
 
 *Маркер*  
-После завершения операции представляет дескриптор события. Используйте этот маркер в качестве параметра в метод Remove() для удаления обработчика событий.
+После завершения операции представляет дескриптор события. Использовать этот маркер в качестве параметра `Remove()` метод для удаления обработчика событий.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

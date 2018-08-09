@@ -1,5 +1,5 @@
 ---
-title: Класс SimpleActivationFactory | Документы Microsoft
+title: Класс SimpleActivationFactory | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d10544a08fa6faebb1434cd00ca80ac30d4570a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97ad430bc0ab5a268ff428189da5987b6c45907d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889852"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650795"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory - класс
 Предоставляет основной механизм для создания базового класса среды выполнения Windows или классической модели COM.  
@@ -34,8 +34,8 @@ template<typename Base>
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `Base`  
+### <a name="parameters"></a>Параметры  
+ *Base*  
  Базовый класс.  
   
 ## <a name="remarks"></a>Примечания  
@@ -49,11 +49,11 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод SimpleActivationFactory::ActivateInstance](../windows/simpleactivationfactory-activateinstance-method.md)|Создает экземпляр указанного интерфейса.|  
-|[Метод SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Получает имя класса среды выполнения экземпляра класса, указанного в параметре шаблона класса `Base`.|  
-|[Метод SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Возвращает уровень доверия экземпляра класса, указанного параметром `Base` параметре шаблона класса.|  
+|[Метод SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Получает имя класса среды выполнения экземпляра класса, указанного параметром *базы* параметре шаблона класса.|  
+|[Метод SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Получает уровень доверия выполняемого экземпляра класса, указанного параметром *базы* параметре шаблона класса.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  

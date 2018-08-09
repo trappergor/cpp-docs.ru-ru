@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Synclockwithstatust::status_ | Документы Microsoft
+title: Элемент данных Synclockwithstatust::status_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a6d8fb587ed86063e19a44cd391ea04d75b2a68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d1dc6cbab11a41707aa60aa37d63ae0e5042ba5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888456"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652852"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>Элемент данных SyncLockWithStatusT::status_
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,7 +34,7 @@ DWORD status_;
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Содержит результат базовой операции ожидания после операции блокирования объекта, основанного на текущем объекте SyncLockWithStatusT.  
+ Содержит результат базовой операции ожидания после операции блокирования объекта на основе текущего **SyncLockWithStatusT** объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

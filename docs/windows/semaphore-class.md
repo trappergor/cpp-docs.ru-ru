@@ -1,5 +1,5 @@
 ---
-title: Класс Semaphore | Документы Microsoft
+title: Класс семафора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889473"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652640"
 ---
 # <a name="semaphore-class"></a>Semaphore - класс
 Представляет объект синхронизации, который управляет общим ресурсом и поддерживает ограниченное число пользователей.  
@@ -30,7 +30,6 @@ ms.locfileid: "33889473"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
@@ -38,33 +37,33 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|`SyncLock`|Синоним для класса, который поддерживает синхронные блокировки.|  
+|`SyncLock`|Синоним для класса, поддерживающего синхронной блокировки.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Конструктор Semaphore::Semaphore](../windows/semaphore-semaphore-constructor.md)|Инициализирует новый экземпляр класса Semaphore.|  
+|[Конструктор Semaphore::Semaphore](../windows/semaphore-semaphore-constructor.md)|Инициализирует новый экземпляр класса **семафора** класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод InvokeHelper::Invoke](../windows/invokehelper-invoke-method.md)|Вызывает обработчик событий, сигнатура которого содержит указанное число аргументов.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод Semaphore::Lock](../windows/semaphore-lock-method.md)|Ожидает, пока текущий объект или объект, связанный с указанным дескриптором находится в состоянии получения сигнала или истечении отведенного времени ожидания.|  
+|[Метод Semaphore::Lock](../windows/semaphore-lock-method.md)|Ожидает, пока текущий объект или объект, связанный с указанным дескриптором, находится в сигнальном состоянии или истечет указанный интервал времени ожидания.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Оператор Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Перемещает заданный дескриптор из объекта семафора для текущего объекта семафора.|  
+|[Оператор Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Перемещает указанный дескриптор из **семафора** объект с текущим **семафора** объекта.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `Semaphore`  
