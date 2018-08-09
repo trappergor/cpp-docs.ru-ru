@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ad1fb4dd281918b0d9ab3494c9a9f060468fc389
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604204"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018101"
 ---
 # <a name="local-c"></a>local (C++)
 При использовании в заголовке интерфейс позволяет использовать как генератор заголовка компилятора MIDL. При использовании в отдельной функции, обозначает локальной процедуры, для которого создаются без заглушек.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [local]  
 ```  
   

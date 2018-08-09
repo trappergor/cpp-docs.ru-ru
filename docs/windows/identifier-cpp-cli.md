@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603349"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018365"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 Включает использование ключевых слов Visual C++ в качестве идентификаторов.  
@@ -31,7 +31,7 @@ ms.locfileid: "39603349"
 ## <a name="all-platforms"></a>Все платформы  
 ### <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Visual_C++_keyword
 ### <a name="examples"></a>Примеры  
  **Пример**  
   
- В следующем примере класс с именем `template` создается на языке C# и распространяемых в виде библиотеки DLL. В программе Visual C++, который использует `template` класс, **__identifier** ключевое слово скрывает тот факт, **шаблона** является ключевым словом standard C++.  
+ В следующем примере класс с именем **шаблона** создается на языке C# и распространяемых в виде библиотеки DLL. В программе Visual C++, который использует **шаблона** класс, **__identifier** ключевое слово скрывает тот факт, **шаблона** является ключевым словом standard C++.  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>Примеры  
   
- В следующем примере класс с именем `template` создается на языке C# и распространяемых в виде библиотеки DLL. В программе Visual C++, который использует `template` класс, **__identifier** ключевое слово скрывает тот факт, **шаблона** является ключевым словом standard C++.  
+ В следующем примере класс с именем **шаблона** создается на языке C# и распространяемых в виде библиотеки DLL. В программе Visual C++, который использует **шаблона** класс, **__identifier** ключевое слово скрывает тот факт, **шаблона** является ключевым словом standard C++.  
   
 ```cs  
 // identifier_template.cs  

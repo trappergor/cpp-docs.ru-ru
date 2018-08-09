@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 054d91881d136564cdfb956f240789ca5a425ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 93cd229e93c4da36004c212cef0f09463926a0e5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642946"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015960"
 ---
 # <a name="variable-argument-lists--ccli"></a>Списки аргументов переменных (...) (C++/CLI)
 В этом примере показано, как можно использовать `...` синтаксис в Visual C++ для реализации функций с переменным числом аргументов.  
@@ -54,9 +54,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Вывод  
-  
-```  
+```Output  
 3  
 ```  
   

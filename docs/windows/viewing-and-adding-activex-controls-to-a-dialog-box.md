@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad663760efb5f969a7b7cf1b14d187b0382197b7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2939d5d99c0657e6caa68e8cc6fbb9e6361fcaf7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643982"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017046"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Просмотр элементов управления ActiveX и добавление их в диалоговое окно
 Среда разработки Visual Studio позволяет вставлять элементы ActiveX в диалоговое окно.  
@@ -51,7 +51,7 @@ ms.locfileid: "39643982"
     > [!CAUTION]
     >  Распространение всех элементов ActiveX в системе может быть незаконным. Эти вопросы освещены в лицензионном соглашении к программному обеспечению, которое обеспечивает установку элементов управления. Также можно обратиться к поставщику данного ПО.  
   
-     Для упрощения доступа элементы управления можно поместить в окно панели элементов. Дополнительные сведения см. в разделе [диалоговое окно «Настройка области элементов»](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
+     Можно поместить элементы управления в **элементов** окно для упрощения доступа. Дополнительные сведения см. в разделе [диалоговое окно «Настройка области элементов»](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
   
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   

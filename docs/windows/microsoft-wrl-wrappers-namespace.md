@@ -1,5 +1,5 @@
 ---
-title: 'Пространство имен Microsoft::wrl:: wrappers | Документы Microsoft'
+title: 'Пространство имен Microsoft::wrl:: wrappers | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa666c1a5de2962a4479b355966c1e8282f2989b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9667a3660f46db0a61991545108d66bf0cac9f38
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878285"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017800"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Пространство имен Microsoft::WRL::Wrappers
 Определяет оболочки типа "Получение ресурса есть инициализация" (RAII), которые упрощают управление временем существования объектов, строк и дескрипторов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers;  
 ```  
   
@@ -43,13 +43,13 @@ namespace Microsoft::WRL::Wrappers;
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Класс CriticalSection](../windows/criticalsection-class.md)|Представляет объект критической секции.|  
 |[Класс Event (библиотека шаблонов C++ среды выполнения Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)|Представляет событие.|  
 |[Класс HandleT](../windows/handlet-class.md)|Представляет дескриптор объекта.|  
-|[Класс HString](../windows/hstring-class.md)|Предоставляет поддержку для управления дескрипторов HSTRING.|  
-|[Класс HStringReference](../windows/hstringreference-class.md)|Представляет HSTRING, созданной из существующей строки.|  
+|[Класс HString](../windows/hstring-class.md)|Обеспечивает поддержку манипулирования дескрипторами HSTRING.|  
+|[Класс HStringReference](../windows/hstringreference-class.md)|Представляет HSTRING, созданный из существующей строки.|  
 |[Класс Mutex](../windows/mutex-class1.md)|Представляет объект синхронизации, который исключительно управляет общим ресурсом.|  
 |[Класс RoInitializeWrapper](../windows/roinitializewrapper-class.md)|Инициализирует среду выполнения Windows.|  
 |[Класс Semaphore](../windows/semaphore-class.md)|Представляет объект синхронизации, который управляет общим ресурсом и поддерживает ограниченное число пользователей.|  

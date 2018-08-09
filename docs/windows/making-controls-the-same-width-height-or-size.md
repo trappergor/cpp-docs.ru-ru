@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffbc9f7f6a242f119fd0cd164242883e904d7114
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 6ce5b1740d09f9d4eb0f90d96cc5a0f6fd70379b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607323"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020204"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Выравнивание элементов управления по размеру
 Вы можете изменить размер группы элементов управления в зависимости от размера главного элемента управления. Вы также можете [изменение размеров элемента управления на основе аналитик его заголовке](../windows/sizing-individual-controls.md).  
@@ -43,7 +43,6 @@ ms.locfileid: "39607323"
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
-  
  Win32  
   
 ## <a name="see-also"></a>См. также  

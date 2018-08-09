@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f374c945312e41fd54b525dc0cb7cd84ce84985d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608862"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018898"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Метод Implements::FillArrayWithIid
 Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 __forceinline static void FillArrayWithIid(  
    unsigned long &index,  
    _In_ IID* iids  

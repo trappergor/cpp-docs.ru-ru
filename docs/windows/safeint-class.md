@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e4ac8898b48c4b64d0b12b945ab45b1c5f1436
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a575538d2527aba25d62dff1a8ba4d89402f5cfb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606160"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019336"
 ---
 # <a name="safeint-class"></a>Класс SafeInt
 Расширяет примитивам целое число, чтобы помочь в предотвращении переполнения для целочисленного значения и позволяет сравнивать разные типы целых чисел.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>  
 class SafeInt;  
 ```  
@@ -193,19 +193,19 @@ class SafeInt;
   
  Будьте внимательны при использовании **SafeInt** класса вместе с `?:` троичный оператор. Рассмотрим следующую строку кода.  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
 ```  
   
  Компилятор преобразует его в это:  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
 ```  
   
  Если `flag` — **false**, компилятор создает исключение вместо присвоения значения от -1 до `x`. Таким образом Чтобы избежать этого, правильный код для использования является следующую строку.  
   
-```  
+```cpp  
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   

@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d4c00ef825274fc9db6c71522cdb789e07c3b05
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 923ff59044b57d22636c9997e6eb7268ade7860e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648669"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017143"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Установка курсора&#39;гиперобъект s (редактор изображений для значков)
-Активная точка [курсор](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) представляет собой точку на которую ссылается Windows при отслеживании позиции курсора. По умолчанию активная точка будет присвоено верхнего левого угла курсора (координаты 0,0). Свойство активную область в [окно "Свойства"](/visualstudio/ide/reference/properties-window) координаты активной точки отображаются.  
+Активная точка [курсор](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) представляет собой точку на которую ссылается Windows при отслеживании позиции курсора. По умолчанию активная точка будет присвоено верхнего левого угла курсора (координаты 0,0). **Хот-Спот** свойство в [окно "Свойства"](/visualstudio/ide/reference/properties-window) координаты активной точки отображаются.  
   
 ### <a name="to-set-a-cursors-hot-spot"></a>Чтобы задать активной точки курсора  
   
@@ -42,7 +42,6 @@ ms.locfileid: "39648669"
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
-  
  Нет  
   
 ## <a name="see-also"></a>См. также  

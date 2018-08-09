@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 056d20420484b29bd66827607432ebe2d6543c52
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 985dbf5ca03af3edae0ecf25796690059868ffc1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607362"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019540"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Вставка промежутка между кнопками в панели инструментов
 Как правило чтобы вставить промежутка между кнопками, просто перетащите их друг от друга на панели инструментов. Чтобы удалить пространство, перетащите их к друг с другом.  
@@ -41,7 +41,6 @@ ms.locfileid: "39607362"
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
-  
  MFC или ATL  
   
 ## <a name="see-also"></a>См. также  

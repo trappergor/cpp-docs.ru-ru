@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652205"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015615"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Просмотр меню в виде всплывающего меню
-Обычно при работе в редакторе меню ресурс меню отображается в виде строки меню. Однако у вас могут оказаться ресурсы, добавленные в строку меню приложения, во время работы программы.  
+Как правило, при работе **меню** редакторе меню ресурс отображается в виде строки меню. Однако у вас могут оказаться ресурсы, добавленные в строку меню приложения, во время работы программы.  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Отображение ресурса меню в виде всплывающего меню  
   

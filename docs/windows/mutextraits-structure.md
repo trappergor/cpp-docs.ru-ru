@@ -1,5 +1,5 @@
 ---
-title: Структура MutexTraits | Документы Microsoft
+title: Mutextraits-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0406ec7938a623be7b16e0535e9d2c0c769f8392
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: deebac1516724469882391c3c856a9ed7a588c88
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874594"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018982"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits - структура
 Определяет общие характеристики [мьютекс](../windows/mutex-class1.md) класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 struct MutexTraits : HANDLENullTraits;  
 ```  
   
@@ -37,9 +37,9 @@ struct MutexTraits : HANDLENullTraits;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Метод MutexTraits::Unlock](../windows/mutextraits-unlock-method.md)|Освобождает исключительный контроль общего ресурса.|  
+|[Метод MutexTraits::Unlock](../windows/mutextraits-unlock-method.md)|Освобождает управлением общего ресурса.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `HANDLENullTraits`  

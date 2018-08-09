@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 317fb846fa7c4f64545762b473233e87ca049173
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607528"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017699"
 ---
 # <a name="runtimeclassrelease-method"></a>Метод RuntimeClass::Release
 Выполняет операцию освобождения модели COM в текущем **RuntimeClass** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 STDMETHOD_(  
    ULONG,  
    Release  

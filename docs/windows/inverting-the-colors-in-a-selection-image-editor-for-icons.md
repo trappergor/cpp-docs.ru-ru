@@ -20,22 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b86fe4b06298f75321e8cd5aeae551b9d6fa368b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608921"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016396"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Преобразование цветов в выделенной области (редактор изображений для значков)
-Редактор изображений предоставляет удобный способ инвертирования цветов в выбранной части изображения, что позволяет увидеть, как будет выглядеть изображение в инвертированных цветах.  
+**Изображение** редактор предоставляет удобный способ инвертирования цветов в выбранной части изображения, что позволяет увидеть, как будет выглядеть изображение в инвертированных цветах.  
   
 ### <a name="to-invert-colors-in-the-current-selection"></a>Инвертирование цветов в выделенной области  
   
 1.  На **изображение** меню, щелкните **обратить цвета**.  
   
 ## <a name="requirements"></a>Требования  
-  
  Нет  
   
 ## <a name="see-also"></a>См. также  
