@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccab1e53fcbb407b6af7683b7aaaef75b0bb9789
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 50503f06c3617d046c86db7fdcfd56555c1b4b8b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606595"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011807"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Перемещение и копирование меню и команд меню
 Вы можете перемещать или копировать меню и команды меню с помощью метода перетаскивания или с помощью команд контекстного меню (щелкните правой кнопкой мыши меню).  
@@ -53,10 +53,9 @@ ms.locfileid: "39606595"
     > [!NOTE]
     >  Вы также можете перетаскивать, копировать и вставлять в другие меню в других окнах меню.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* . Сведения о том, как вручную добавлять файлы ресурсов в проекты управляемого кода, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. . Сведения о том, как вручную добавлять файлы ресурсов в проекты управляемого кода, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>Требования  
-  
  Win32  
   
 ## <a name="see-also"></a>См. также  

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9817c1f24490d333f1596292f3b9ea1aa3ba40ae
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9bafa66a382566ed096f70c752c461d8f3e2ca85
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606940"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010293"
 ---
 # <a name="modifying-the-layout-grid"></a>Изменение сетки макета
 При размещении или упорядочение элементов управления в диалоговом окне, можно использовать для более точного размещения сетки макета. Если сетка включена, чтобы «привязать» пунктирными линиями сетки как намагниченный отобразятся элементы управления. Можно включать эту функцию «прикрепить к сетке» и отключать и изменять размер ячеек сетки.  
@@ -35,7 +35,7 @@ ms.locfileid: "39606940"
   
 2.  В [диалоговое окно "Параметры направляющих"](../windows/guide-settings-dialog-box.md)установите или снимите **сетки** кнопки.  
   
-     Вы может по-прежнему управлять в отдельных диалоговых окнах редактора с помощью **сетка** кнопку [редактор диалоговых окон инструментов](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
+     Можно управлять сетки в отдельных **диалоговое окно** окон редактора с помощью **сетка** , нажмите кнопку [редактор диалоговых окон инструментов](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
 ### <a name="to-change-the-size-of-the-layout-grid"></a>Чтобы изменить размер сетки макета  
   
@@ -46,7 +46,6 @@ ms.locfileid: "39606940"
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
-  
  Win32  
   
 ## <a name="see-also"></a>См. также  

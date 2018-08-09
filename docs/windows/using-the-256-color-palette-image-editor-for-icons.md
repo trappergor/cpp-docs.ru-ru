@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0287d27d975ce93e88a7a4b70a683188901ca958
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645156"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011820"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Использование 256-цветной палитры (редактор изображений для значков)
-Чтобы рисовать, выбирая с 256-цветной палитры, вам потребуется выбрать цвета в палитре цветов [окно "цвета"](../windows/colors-window-image-editor-for-icons.md).  
+Чтобы рисовать, выбирая с 256-цветной палитры, вам потребуется выбирать цвета из **цвета** палитру в [окно "цвета"](../windows/colors-window-image-editor-for-icons.md).  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Чтобы выбрать цвет из 256-цветной палитры для крупные значки  
   
@@ -36,7 +36,7 @@ ms.locfileid: "39645156"
   
 2.  Выбрать цвет из 256 цветов, отображаемых в **цвета** палитру в **цвета** окна.  
   
-     Цвет становится текущий цвет в палитре цветов **цвета** окна.  
+     Цвет становится текущий цвет в **цвета** палитру в **цвета** окна.  
   
     > [!NOTE]
     >  Начальная палитру, используемую для 256-цветных изображений соответствие цветовой палитре, возвращенный `CreateHalftonePalette` Windows API. Все значки, предназначенные для оболочки Windows следует использовать в этой палитре, чтобы предотвратить мерцание при реализации палитры.  

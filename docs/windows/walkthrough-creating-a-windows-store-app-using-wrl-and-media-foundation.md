@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 480baaf12c332f0a293374fe2317110eb186cbdf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6db5f5eb080f9d802090dda61afd296bc4e6dc3b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648988"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015047"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Пошаговое руководство: Создание приложения универсальной платформы Windows, с использованием WRL и Media Foundation
 Сведения об использовании Windows шаблонов среды выполнения C++ Library (WRL), чтобы создать приложение универсальной платформы Windows (UWP), которое использует [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -59,17 +59,17 @@ ms.locfileid: "39648988"
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Использовать компонент изменять WRL для создания в оттенках серого Media Foundation  
   
-1.  В Visual Studio создайте **пустое решение** проекта. Например, назовите проект, `MediaCapture`.  
+1.  В Visual Studio создайте **пустое решение** проекта. Например, назовите проект, *MediaCapture*.  
   
-2.  Добавить **DLL (универсальные Windows)** проекта к решению. Например, назовите проект, `GrayscaleTransform`.  
+2.  Добавить **DLL (универсальные Windows)** проекта к решению. Например, назовите проект, *GrayscaleTransform*.  
   
-3.  Добавить **файл Midl (.idl)** файл в проект. Имя файла, например, `GrayscaleTransform.idl`.  
+3.  Добавить **файл Midl (.idl)** файл в проект. Имя файла, например, *GrayscaleTransform.idl*.  
   
 4.  Добавьте в файл GrayscaleTransform.idl следующий код:  
   
      [!code-cpp[wrl-media-capture#1](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]  
   
-5.  Замените содержимое файла pch.h следующим кодом:  
+5.  Используйте указанный ниже код, чтобы заменить содержимое `pch.h`.  
   
      [!code-cpp[wrl-media-capture#2](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]  
   
@@ -77,9 +77,9 @@ ms.locfileid: "39648988"
   
      [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]  
   
-7.  Файл GrayscaleTransform.h не используется в данном примере. Его можно удалить из проекта при необходимости.  
+7.  `GrayscaleTransform.h` в этом примере не используется. Его можно удалить из проекта при необходимости.  
   
-8.  Замените содержимое файла GrayscaleTransform.cpp следующим кодом:  
+8.  Используйте указанный ниже код, чтобы заменить содержимое `GrayscaleTransform.cpp`.  
   
      [!code-cpp[wrl-media-capture#4](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]  
   
@@ -92,7 +92,7 @@ ms.locfileid: "39648988"
        DllGetClassObject                   PRIVATE
    ```   
   
-10. Замените содержимое файла dllmain.cpp следующим кодом:  
+10. Используйте указанный ниже код, чтобы заменить содержимое `dllmain.cpp`.  
   
      [!code-cpp[wrl-media-capture#6](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]  
   
@@ -106,21 +106,21 @@ ms.locfileid: "39648988"
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Использование пользовательского компонента Media Foundation из приложения C# WRL  
   
-1.  Добавьте новый **C# пустое приложение (XAML)** проект `MediaCapture` решения. Например, назовите проект, `MediaCapture`.  
+1.  Добавьте новый **C# пустое приложение (XAML)** проект `MediaCapture` решения. Например, назовите проект, *MediaCapture*.  
   
 2.  В **MediaCapture** проекта, добавьте ссылку на `GrayscaleTransform` проекта. Чтобы узнать как это сделать, см. в разделе [как: Добавление и удаление ссылок с помощью диспетчера ссылок](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).  
   
-3.  В Package.appxmanifest на **возможности** выберите **"микрофон"** и **веб-камера**. Обе возможности необходимы для получения фотографий с веб-камеры.  
+3.  В `Package.appxmanifest`на **возможности** выберите **"микрофон"** и **веб-камера**. Обе возможности необходимы для получения фотографий с веб-камеры.  
   
-4.  В файле MainPage.xaml, добавьте следующий код к корню [сетки](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) элемент:  
+4.  В `MainPage.xaml`, добавьте следующий код к корню [сетки](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) элемент:  
   
      [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]  
   
-5.  Замените содержимое файла MainPage.xaml.cs следующим кодом:  
+5.  Используйте указанный ниже код, чтобы заменить содержимое `MainPage.xaml.cs`.  
   
      [!code-cs[wrl-media-capture#8](../windows/codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]  
   
- На следующем рисунке показано приложение MediaCapture.  
+ На следующем рисунке показано `MediaCapture app`.  
   
  ![Приложение mediacapture, захватывающее фотографию](../windows/media/wrl_media_capture.png "WRL_Media_Capture")  
   

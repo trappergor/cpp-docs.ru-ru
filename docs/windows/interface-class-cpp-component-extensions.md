@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604490"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012837"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (расширения компонентов C++)
 Объявляет интерфейс.  Сведения о собственных интерфейсов, см. в разделе [__interface](../cpp/interface.md).  
@@ -32,14 +32,13 @@ ms.locfileid: "39604490"
 
 ### <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>Параметры  
-  
  *interface_access*  
  Доступность интерфейса за пределы данной сборки.  Возможные значения: **открытый** и **частного**.  **закрытый** используется по умолчанию. Не может иметь вложенные интерфейсы *interface_access* спецификатор.  
   
@@ -75,7 +74,7 @@ interface class
  В среде разработки можно получить справку F1 о эти ключевые слова выделив ключевое слово (`interface class`, к примеру) и нажмите клавишу F1.  
   
 ## <a name="windows-runtime"></a>Среда выполнения Windows  
- **Заметки**  
+### <a name="remarks"></a>Примечания 
   
  (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).  
   
@@ -83,7 +82,7 @@ interface class
  Параметр компилятора: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Среда CLR 
- **Заметки**  
+### <a name="remarks"></a>Примечания
   
  (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде CLR).  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **Вывод**  
   
 ```Output  
 in Function_3  

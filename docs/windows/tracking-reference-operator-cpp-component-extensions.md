@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66d97de05956df985f4c0d699682210721b60c82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651835"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011846"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Оператор отслеживания ссылок (расширения компонентов C++)
 Объект *отслеживаемая ссылка* (`%`) ведет себя как обычная ссылка C++ (`&`) за исключением того, что при назначении объекту отслеживаемой ссылки, счетчик ссылок объекта увеличивается.  
@@ -46,7 +46,7 @@ ms.locfileid: "39651835"
 ## <a name="windows-runtime"></a>Среда выполнения Windows  
  Отслеживаемая ссылка ведет себя как стандартная ссылка C++, за исключением того, что % учитывается при подсчете ссылок. В следующем фрагменте кода показано, как выполнять преобразование между типами % и ^:  
   
-```  
+```cpp  
 Foo^ spFoo = ref new Foo();  
 Foo% srFoo = *spFoo;  
 Foo^ spFoo2 = %srFoo;  
@@ -54,7 +54,7 @@ Foo^ spFoo2 = %srFoo;
   
  В следующем примере показан способ передачи ^ в функцию, которая принимает %.  
   
-```  
+```cpp  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -139,8 +139,6 @@ int main() {
    Console::WriteLine(a[0]);  
 }  
 ```  
-  
- **Вывод**  
   
 ```Output  
 21  

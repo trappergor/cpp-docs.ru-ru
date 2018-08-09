@@ -1,5 +1,5 @@
 ---
-title: Ограничения для имен символов | Документы Microsoft
+title: Ограничения для имен символов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892339"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011452"
 ---
 # <a name="symbol-name-restrictions"></a>Ограничения для имен символов
 Существуют следующие ограничения на имена символов.  
@@ -53,12 +53,10 @@ ms.locfileid: "33892339"
 |Строки|IDS_|Строки в таблице строк|  
 |MFC|AFX_|Зарезервировано для предопределенных символов MFC.|  
   
-
-  
 ## <a name="requirements"></a>Требования  
  Win32  
   
 ## <a name="see-also"></a>См. также  
  [Изменение символа или символьного имени (идентификатор)](../windows/changing-a-symbol-or-symbol-name-id.md)   
- [Ограничения для значений символов](../windows/symbol-value-restrictions.md)   
+ [Ограничения для символьных значений](../windows/symbol-value-restrictions.md)   
  [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)

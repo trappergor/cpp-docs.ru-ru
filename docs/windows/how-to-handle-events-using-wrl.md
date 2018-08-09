@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570637"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012538"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Практическое руководство. Обработка событий с использованием WRL
 В этом документе демонстрируется использование Windows шаблонов среды выполнения C++ Library (WRL) и обрабатывать события объекта среды выполнения Windows.  
@@ -35,7 +35,7 @@ ms.locfileid: "39570637"
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     В файле Windows.Devices.Enumeration.h объявлены типы, необходимые для перечисления устройств.  
+     `Windows.Devices.Enumeration.h` Объявляет типы, которые требуются для перечисления устройств.  
   
      Рекомендуется использовать директиву `using namespace` в CPP-файле, чтобы сделать код более удобочитаемым.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "39570637"
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или вставьте его в файл с именем `wrl-consume-events.cpp` и выполните следующую команду в окне командной строки Visual Studio.  
+ Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или вставьте его в файл с именем `wrl-consume-events.cpp` и затем выполните следующую команду **Командная строка Visual Studio** окна.  
   
  `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   

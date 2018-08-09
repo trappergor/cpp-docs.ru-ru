@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b14684adcefcf975750f64a4a7402083943b9f71
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 1546beabadda06c5433450f67e340eaaabb0aa26
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604086"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012278"
 ---
 # <a name="manifest-resources"></a>Ресурсы манифеста
 Ресурсы манифеста — это XML-файлы, описывающие зависимости, которые использует приложение. Например, в Visual Studio файл манифеста, созданный мастером MFC, определяет, какие версии библиотек DLL общих элементов управления Windows (5.0 или 6.0), приложение должно использовать:  
   
-```  
+```xml  
 <description>Your app description here</description>   
 <dependency>   
     <dependentAssembly>   

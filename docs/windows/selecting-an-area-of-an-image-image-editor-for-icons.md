@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29877cf71d35f9c24001833a73192caa61f325be
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5ed8669a22be7e1a2b696ca9373c30e71f17c191
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606791"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012687"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Выбор области изображения (редактор изображений для значков)
 Инструменты выбора можно использовать для определения области изображения, которое требуется очистить, Вырезать, копировать, изменение размера, обратить или перемещение. С помощью **Прямоугольное выделение** средство можно определить и выбрать прямоугольную область изображения. С помощью **произвольное выделение** инструмент, можно нарисовать Рисованная линия структуры области, который требуется вырезать, копировать и другие операции.  
@@ -52,7 +52,6 @@ ms.locfileid: "39606791"
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
-  
  Нет  
   
 ## <a name="see-also"></a>См. также  

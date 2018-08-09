@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603492"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013565"
 ---
 # <a name="include-c"></a>include (C++)
 Указывает один или несколько файлов заголовка для включения в созданного IDL-файла.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ ms.locfileid: "39603492"
  **Включают** атрибут C++ имеет ту же функциональность, что [включают](http://msdn.microsoft.com/library/windows/desktop/aa367052) описании атрибута MIDL.  
   
 ## <a name="example"></a>Пример  
- Ниже показан пример использования **включают**. В этом примере include.h файл содержит только # оператор include.  
+ Ниже показан пример использования **включают**. В этом примере include.h файл содержит только `#include` инструкции.  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Мастер приложений Win32 | Документы Microsoft
+title: Мастер приложений Win32 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9aebf4e130c30e488ec348b67add5b600108991
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891429"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014225"
 ---
 # <a name="win32-application-wizard"></a>мастер приложений Win32
 Мастер приложений Win32 Visual C++ позволяет создавать любой из четырех типов проектов (указаны в заголовке таблицы ниже). В каждом случае можно указать дополнительные параметры, подходящие для открытого вами типа проекта. В таблице ниже показано, какие параметры доступны для каждого типа приложения.  
@@ -56,8 +56,8 @@ ms.locfileid: "33891429"
 > [!NOTE]
 >  Классы ATL добавить нельзя, а классы MFC можно добавить только в те типы классических приложений Windows, которые поддерживают MFC (см. предыдущую таблицу).  
   
- Файлы, созданные мастером для проекта, можно просмотреть в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [Типы файлов, создаваемых для проектов Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
+ Файлы, созданные мастером для проекта, можно просмотреть в **обозревателе решений**. Дополнительные сведения о файлах, мастер создает для проекта, см. в файле, созданном для проекта `ReadMe.txt`. Дополнительные сведения о типах файлов см. в разделе [Типы файлов, создаваемых для проектов Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание пустого классического приложения Windows](../windows/creating-an-empty-windows-desktop-application.md)   
+ [Создание классического приложения Windows пустой](../windows/creating-an-empty-windows-desktop-application.md)   
  [Типы проектов Visual C++](../ide/visual-cpp-project-types.md)

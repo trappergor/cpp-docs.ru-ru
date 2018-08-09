@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 6cb96b90a069c12e65c53158717d9a89fb0aed3d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606752"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014104"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 template<  
    typename I0  
 >  
@@ -69,7 +69,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 |[Метод InterfaceTraits::CastToBase](../windows/interfacetraits-casttobase-method.md)|Приводит определенный указатель к указателю на `Base`.|  
 |[Метод InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Приводит определенный указатель к указателю на `IUnknown`.|  
 |[Метод InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Назначает идентификатор интерфейса `Base` к элементу массива, указанного аргументом индекса.|  
-|[Метод InterfaceTraits::Verify](../windows/interfacetraits-verify-method.md)|Проверяет, что базовый правильно производный.|  
+|[Метод InterfaceTraits::Verify](../windows/interfacetraits-verify-method.md)|Проверяет, что `Base` должным образом является производным.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
