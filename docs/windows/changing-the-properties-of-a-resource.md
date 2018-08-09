@@ -1,5 +1,5 @@
 ---
-title: Изменение свойств ресурса | Документы Microsoft
+title: Изменение свойств ресурса | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 237eea6a468e983072ed300ff2a13f1cbc6ba363
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5a0b58e5adf95de44bbecb51cf56dbbfeaccacad
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861796"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648929"
 ---
 # <a name="changing-the-properties-of-a-resource"></a>Изменение свойств ресурса
 ### <a name="to-edit-the-properties-of-a-resource"></a>Изменение свойств ресурса  
   
-1.  В [представление ресурсов](../windows/resource-view-window.md), щелкните правой кнопкой мыши ресурс, который нужно изменить и выберите **свойства** в контекстном меню.  
+1.  В [представление ресурсов](../windows/resource-view-window.md), щелкните правой кнопкой мыши ресурс, нужно изменить и выберите **свойства** в контекстном меню.  
   
-     **Примечание** Если проект еще не содержит RC-файл, см. статью [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE] 
+     > Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  В [окно свойств](/visualstudio/ide/reference/properties-window), измените свойства ресурса.  
+2.  В [окно "Свойства"](/visualstudio/ide/reference/properties-window), изменение свойств ресурса.  
   
 ### <a name="to-undo-a-change-youve-made-to-the-properties-of-a-resource"></a>Отмена изменений, внесенных в свойства ресурса  
   
-1.  Убедитесь, что ресурс имеет фокус в представлении ресурсов.  
+1.  Убедитесь, что ресурс имеет фокус **представление ресурсов**.  
   
 2.  Выберите **отменить** из **изменить** меню.  
   
-
-  
- **Требования**  
-  
+## <a name="requirements"></a>Требования  
  Нет  
   
 ## <a name="see-also"></a>См. также  

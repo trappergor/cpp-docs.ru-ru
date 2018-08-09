@@ -1,5 +1,5 @@
 ---
-title: Редактор диалоговых окон, элементов | Документы Microsoft
+title: Редактор диалоговых окон вкладка, панель элементов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,25 +21,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40e0a13f9379200ee01e0279f9d069f1d58f3a60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882580"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649426"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Панель элементов, вкладка "Редактор диалоговых окон"
-Откроется редактор диалоговых окон в [окно панели элементов](/visualstudio/ide/reference/toolbox) при работе в редакторе диалоговых окон. Добавление элементов управления в новое диалоговое перетащите элементы управления из области элементов в диалоговое окно, вы создаете (Дополнительные сведения см. в разделе [Добавление элемента управления в диалоговое окно](adding-a-control-to-a-dialog-box.md)). Затем можно изменить местонахождение элементов управления или их размеры и форму.  
+**Редактор диалоговых окон** отображается вкладка [окно панели элементов](/visualstudio/ide/reference/toolbox) при работе **диалоговое окно** редактора. Добавление элементов управления в новое диалоговое окно, перетащите элементы управления из **элементов** в диалоговое окно, вы создаете (Дополнительные сведения см. в разделе [Добавление элемента управления в диалоговое окно](adding-a-control-to-a-dialog-box.md)). Затем можно изменить местонахождение элементов управления или их размеры и форму.  
   
- На панели элементов доступны следующие стандартные элементы управления:  
+ Стандартные элементы управления в **элементов** являются:  
   
--   [Button-элемент управления](../mfc/reference/cbutton-class.md)  
+-   [Элемент управления Button](../mfc/reference/cbutton-class.md)  
   
 -   [Элемент управления "флажок"](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
 -   [Поле со списком](../mfc/reference/ccombobox-class.md)  
   
--   [Элемент управления](../mfc/reference/cedit-class.md)  
+-   [Изменение элемента управления](../mfc/reference/cedit-class.md)  
   
 -   Группа  
   
@@ -47,15 +47,15 @@ ms.locfileid: "33882580"
   
 -   [Управления "переключатель"](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
--   [Статический текст элемента управления](../mfc/reference/cstatic-class.md)  
+-   [Статический элемент управления текст](../mfc/reference/cstatic-class.md)  
   
--   [Изображение элемента управления](../mfc/reference/cpictureholder-class.md)  
+-   [Управления изображения](../mfc/reference/cpictureholder-class.md)  
   
 -   [Элемент управления Rich Edit 2.0](../mfc/using-cricheditctrl.md)  
   
 -   [Полосы прокрутки](../mfc/reference/cscrollbar-class.md)  
   
- [Общие элементы управления Windows](../mfc/controls-mfc.md) на панели элементов предоставляют расширенные функциональные возможности приложения. В их число входят следующее.  
+ [Стандартных элементов управления Windows](../mfc/controls-mfc.md) в **элементов** предоставить расширенные функциональные возможности в приложении. В их число входят следующее.  
   
 -   [Элемент управления "ползунок"](../mfc/slider-control-styles.md)  
   
@@ -63,35 +63,35 @@ ms.locfileid: "33882580"
   
 -   [Элемент управления хода выполнения](../mfc/styles-for-the-progress-control.md)  
   
--   [Элемент управления горячие клавиши](../mfc/using-a-hot-key-control.md)  
+-   ["Горячий" ключа управления](../mfc/using-a-hot-key-control.md)  
   
--   [Список элементов управления](../mfc/list-control-and-list-view.md)  
+-   [Управления "список"](../mfc/list-control-and-list-view.md)  
   
--   [Управления "дерево"](../mfc/tree-control-styles.md)  
+-   [Дерево](../mfc/tree-control-styles.md)  
   
--   [Элемент управления вкладки](../mfc/tab-controls-and-property-sheets.md)  
+-   [Набор вкладок](../mfc/tab-controls-and-property-sheets.md)  
   
--   [Управления "анимация"](../mfc/using-an-animation-control.md)  
+-   [Анимация элемента управления](../mfc/using-an-animation-control.md)  
   
--   [Элемент времени выбора даты](../mfc/creating-the-date-and-time-picker-control.md)  
+-   [Элемент управления даты средство выбора времени](../mfc/creating-the-date-and-time-picker-control.md)  
   
 -   [Элемент управления месячного календаря](../mfc/month-calendar-control-examples.md)  
   
--   [Управление IP-адрес](../mfc/reference/cipaddressctrl-class.md)  
+-   [IP-адрес управления](../mfc/reference/cipaddressctrl-class.md)  
   
 -   [Расширенного элемента управления списком](../mfc/creating-an-extended-combo-box-control.md)  
   
 -   [Пользовательский элемент управления](custom-controls-in-the-dialog-editor.md)  
   
- Можно добавить пользовательские элементы управления в диалоговое окно, выбрав **пользовательский элемент управления** значок на панели элементов и перетащив его диалогового окна. Чтобы добавить элемент управления Syslink, добавьте пользовательский элемент управления, а затем изменить элемент управления **класса** свойства **Syslink**. Свойства обновятся, и появятся свойства элемента управления Syslink. Сведения о класс-оболочку MFC см. в разделе [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
+ Можно добавить пользовательские элементы управления в диалоговое окно, выбрав **пользовательский элемент управления** значок в **элементов** и перетащив его в диалоговое окно. Чтобы добавить **Syslink** управления, добавьте пользовательский элемент управления, а затем изменить элемент управления **класс** свойства **Syslink**. Это приведет к свойства для обновления и Показать **Syslink** свойства элемента управления. Сведения об оболочках MFC см. в разделе [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
   
- Кроме того, вы можете [добавить элементы управления ActiveX в диалоговое](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+ Кроме того, вы можете [Добавление элементов управления ActiveX в диалоговое окно](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
- Кроме того, можно настроить окно "Панель элементов", чтобы упростить работу с ним. Дополнительные сведения см. в разделе [Использование панели элементов](/visualstudio/ide/using-the-toolbox).  
+ Вы также можете настроить **элементов** окно, чтобы упростить работу. Дополнительные сведения см. в разделе [Использование панели элементов](/visualstudio/ide/using-the-toolbox).  
 
- Дополнительные сведения об использовании элемента управления RichEdit 1.0 с MFC см. в разделе [использование элемента управления RichEdit 1.0 с MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+ Дополнительные сведения об использовании **RichEdit 1.0** управления с MFC, см. в разделе [использование элемента управления RichEdit 1.0 с MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
  Win32  
@@ -104,4 +104,3 @@ ms.locfileid: "33882580"
  [Примеры элементов управления "Rich Edit"](../mfc/rich-edit-control-examples.md)   
  [Добавление обработчиков событий для элементов управления диалогового окна](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)
-

@@ -1,5 +1,5 @@
 ---
-title: 'SyncLockT:: ~ SyncLockT деструктор | Документы Microsoft'
+title: 'SyncLockT:: ~ SyncLockT деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892739"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646722"
 ---
 # <a name="synclocktsynclockt-destructor"></a>Деструктор SyncLockT::~SyncLockT
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,9 +34,9 @@ ms.locfileid: "33892739"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Отменяет инициализацию экземпляра класса SyncLockT.  
+ Отменяет инициализацию экземпляра **SyncLockT** класса.  
   
- Этот деструктор также разблокирует SyncLockT текущего экземпляра.  
+ Этот деструктор также разблокирует текущего **SyncLockT** экземпляра.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

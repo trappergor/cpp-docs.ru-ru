@@ -1,5 +1,5 @@
 ---
-title: Конструктор SyncLockT::SyncLockT | Документы Microsoft
+title: Конструктор SyncLockT::SyncLockT | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ceaafd6230e6497ed2b7636ad5070141546cb8d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889849"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648169"
 ---
 # <a name="synclocktsynclockt-constructor"></a>Конструктор SyncLockT::SyncLockT
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -39,17 +39,17 @@ explicit SyncLockT(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `other`  
- Ссылка rvalue на другой объект SyncLockT.  
+### <a name="parameters"></a>Параметры  
+ *other*  
+ Ссылка rvalue на другой **SyncLockT** объекта.  
   
- `sync`  
- Ссылка на другом объекте SyncLockWithStatusT.  
+ *sync*  
+ Ссылка на другой `SyncLockWithStatusT` объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Инициализирует новый экземпляр класса SyncLockT.  
+ Инициализирует новый экземпляр класса **SyncLockT** класса.  
   
- Первый конструктор инициализирует текущий объект SyncLockT из другого объекта SyncLockT, заданного параметром `other`, а затем становятся недействительными и другой объект SyncLockT. Второй конструктор не `protected`и инициализирует текущий объект SyncLockT в недопустимом состоянии.  
+ Первый конструктор инициализирует текущий **SyncLockT** из другого объекта **SyncLockT** объекта, указанного параметром *других*и затем недействительными другие  **SyncLockT** объекта. Второй конструктор является **защищенные**и инициализирует текущий **SyncLockT** объекта в недопустимом состоянии.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

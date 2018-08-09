@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569938"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646790"
 ---
 # <a name="eventreceiver"></a>event_receiver
 Создает приемник событий (получатель).  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *type*  
  Перечисление одного из следующих значений:  
   
@@ -50,13 +50,13 @@ ms.locfileid: "39569938"
   
 -   `com` для кода COM. Это значение требует включить следующие файлы заголовка:  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
+ *layout_dependent*  
  Укажите *layout_dependent* только если `type` = **com**. *layout_dependent* является логическое значение:  
   
 -   **значение true,** означает, что сигнатуры делегатов в приемник должен точно соответствуют тем, к которым они прикреплены событий источника событий. Имена обработчиков событий приемника должны совпадать с именами, указанных в интерфейсе источника соответствующего события. Необходимо использовать `coclass` при *layout_dependent* — **true**. Немного более эффективно, чтобы указать **true**.  
@@ -81,7 +81,7 @@ ms.locfileid: "39569938"
 |-|-|  
 |**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**Компонентный класс** при *layout_dependent*=**true**|  
+|**Обязательные атрибуты**|`coclass` Когда *layout_dependent*=**true**|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  

@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deda09913f2774a2b3b246a285df0c8b6f1c62eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569990"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652829"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 Позволяет задавать значение по умолчанию для типизированного необязательного параметра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ defaultvalue= value ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *значение*  
  Значение по умолчанию для параметра.  
   

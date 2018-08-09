@@ -1,5 +1,5 @@
 ---
-title: Оператор WeakRef::operator&amp; оператор | Документы Microsoft
+title: Оператор WeakRef::operator&amp; оператора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c8221b405618b1879f4e4c865115a227eb09857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890122"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649052"
 ---
 # <a name="weakrefoperatoramp-operator"></a>Оператор WeakRef::operator&amp; оператор
-Возвращает объект ComPtrRef, представляющий текущий объект WeakRef.  
+Возвращает `ComPtrRef` , представляющий текущий **WeakRef** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +34,7 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект ComPtrRef, представляющий текущий объект WeakRef.  
+ Объект `ComPtrRef` , представляющий текущий **WeakRef** объекта.  
   
 ## <a name="remarks"></a>Примечания  
  Это внутренний вспомогательный оператор, который не предназначен для использования в коде.  

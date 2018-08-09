@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7765ab5159f7cfd604f67b79a05fde8eaf57fad8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461537"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646709"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces - структура
 Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1,  
@@ -60,7 +60,7 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *I0*  
  (Обязательно) Идентификатор интерфейса 0.  
   
@@ -106,8 +106,8 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[Метод ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Указывает ли идентификатор указанный интерфейс может быть приведен к каждому из специализаций, определяемая параметрами шаблона ChainInterface.|  
-|[Метод ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Приведение указателя интерфейса типа, определенного с *I0* параметр шаблона в указатель на интерфейс IUnknown.|  
+|[Метод ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Указывает ли идентификатор указанный интерфейс может быть приведен к каждому из специализаций, определяется **ChainInterface** параметров шаблона.|  
+|[Метод ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Приведение указателя интерфейса типа, определенного с *I0* параметр шаблона в указатель на `IUnknown`.|  
 |[Метод ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Идентификатор интерфейса определяется хранилищ *I0* параметр шаблона в указанном расположении в указанном массиве идентификаторов интерфейсов.|  
 |[Метод ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Проверяет, что каждому интерфейсу, определяемая параметрами шаблона *I0* через *I9* наследует от `IUnknown` и/или `IInspectable`и что *I0* наследует от *I1* через *I9*.|  
   

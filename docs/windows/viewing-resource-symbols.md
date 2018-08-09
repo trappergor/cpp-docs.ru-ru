@@ -1,5 +1,5 @@
 ---
-title: Просмотр символов ресурсов | Документы Microsoft
+title: Просмотр символов ресурсов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea57af6ef6ff91b7149006f63963cff55f6eebc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9857ea9f12b74983b0af8933249450a61ed907c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891111"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649358"
 ---
 # <a name="viewing-resource-symbols"></a>Просмотр символов ресурсов
 ### <a name="to-view-resource-symbols"></a>Просмотр символов ресурсов  
@@ -37,12 +37,9 @@ ms.locfileid: "33891111"
 2.  Выберите **символы ресурсов** в контекстном меню, чтобы просмотреть таблицу символов ресурсов в [символы ресурсов-диалоговое окно](../windows/resource-symbols-dialog-box.md).  
   
     > [!NOTE]
-    >  Чтобы просмотреть предопределенные символы, установите флажок **Показать символы, доступные только для чтения** флажок.  
+    >  Чтобы просмотреть предопределенные символы, установите флажок **Показать символы, доступные только для чтения** "флажок".  
   
-
-  
- **Требования**  
-  
+## <a name="requirements"></a>Требования  
  Win32  
   
 ## <a name="see-also"></a>См. также  

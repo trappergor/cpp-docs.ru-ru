@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462710"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652377"
 ---
 # <a name="classfactorylockserver-method"></a>Метод ClassFactory::LockServer
 Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим **ClassFactory** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 STDMETHOD(  
    LockServer  
 )(BOOL fLock);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *fLock*  
  **значение true,** для увеличения числа отслеживаемых объектов. **false** для уменьшения числа отслеживаемых объектов.  
   
@@ -43,7 +43,7 @@ STDMETHOD(
  Значение S_OK, если операция завершилась успешно; в противном случае — значение E_FAIL.  
   
 ## <a name="remarks"></a>Примечания  
- ClassFactory следит за объектов в базовом экземпляре класса [модуль](../windows/module-class.md) класса.  
+ **ClassFactory** следит за объектов в базовом экземпляре класса [модуль](../windows/module-class.md) класса.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  

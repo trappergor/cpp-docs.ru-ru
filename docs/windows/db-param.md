@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6f9938f96e65053d396cdfb608bea1e21eb1df74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569447"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651386"
 ---
 # <a name="dbparam"></a>db_param
 Связывает указанный член переменной с входным или выходным параметром и разделяет переменной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
@@ -41,7 +41,7 @@ ms.locfileid: "39569447"
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *Порядковый номер*  
  Номер столбца (порядковый номер DBCOLUMNINFO), соответствующее полю в наборе строк, к которому требуется привязать данные.  
   

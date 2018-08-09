@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::CheckValidStateForDelegateCall | Документы Microsoft
+title: Метод AsyncBase::CheckValidStateForDelegateCall | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e3420304b0432f635d04a4892e7984dd38f144
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a03f0dcb8f6d35c1d5fc8aec5bf1cc899d575861
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859879"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653076"
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>Метод AsyncBase::CheckValidStateForDelegateCall
 Проверяет, является ли делегат свойства можно изменить в текущем состоянии асинхронной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 inline HRESULT CheckValidStateForDelegateCall();  
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если делегат свойства могут быть изменены; в противном случае E_ILLEGAL_METHOD_CALL.  
+ Значение S_OK, если делегат свойства можно изменить; в противном случае E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7c1f02c3791e75d3f42db6a942f5b2055234517
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d15c4cd43dd74b6c699027be9841f5f4a610518
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570614"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646115"
 ---
 # <a name="dbsource"></a>db_source
 Создает подключение к источнику данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ db_source(   
    db_source,   
    name,   
@@ -45,7 +45,7 @@ ms.locfileid: "39570614"
  При использовании **db_source** в классе, *имя* — это экземпляр объекта источника данных, имеющий **db_source** атрибут, примененный к нему (см. Пример 1). При использовании **db_source** , встроенный в реализации метода, *имя* — переменная (локальный метода), которая может использоваться для доступа к данным источника (см. Пример 2). Передать его *имя* для *source_name* параметр `db_command` должен быть сопоставлен команды в источнике данных.  
   
  *HRESULT* (необязательно)  
- Определяет переменную, которая будет получать `HRESULT` этой команды базы данных. Если переменная не существует, она будет автоматически внедрена с помощью атрибута.  
+ Определяет переменную, которая будет получать значение HRESULT, равное этой команды базы данных. Если переменная не существует, она будет автоматически внедрена с помощью атрибута.  
   
 ## <a name="remarks"></a>Примечания  
  **db_source** создает [CDataSource](../data/oledb/cdatasource-class.md) и [CSession](../data/oledb/csession-class.md) объект, который представляет соединение с источником данных потребитель OLE DB.  

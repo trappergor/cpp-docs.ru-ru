@@ -1,5 +1,5 @@
 ---
-title: Метод SRWLockSharedTraits::Unlock | Документы Microsoft
+title: Метод SRWLockSharedTraits::Unlock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95be5ae4c9db7bff4ecbfb4705904f4e48c160e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0a42d1e1010f63436951beeadbd833e2a9d445d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889362"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650528"
 ---
 # <a name="srwlocksharedtraitsunlock-method"></a>Метод SRWLockSharedTraits::Unlock
-Освобождает исключительный контроль указанного объекта SRWLock.  
+Освобождает управлением указанного `SRWLock` объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `srwlock`  
- Дескриптор объекта SRWLock.  
+### <a name="parameters"></a>Параметры  
+ *SRWLOCK*  
+ Дескриптор `SRWLock` объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   

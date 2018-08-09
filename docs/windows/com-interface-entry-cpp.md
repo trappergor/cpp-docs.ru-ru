@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462788"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646193"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 Добавляет запись интерфейс в карту COM целевого класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *COM_INTERFACE_ENTRY*  
  Строка, содержащая текст записи. Список возможных значений см. в разделе [Макросы COM_INTERFACE_ENTRY](../atl/reference/com-interface-entry-macros.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "39462788"
   
  Это ограничение является обязательным, так как ATL использует первый элемент в схему интерфейсов с удостоверением `IUnknown`; таким образом, элемент должен быть допустимый интерфейс. Например следующий код является недопустимым, поскольку первая запись в схему интерфейсов не содержит фактический интерфейс COM.  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  Полученная карта объект COM для `CMyBaseClass` выглядит следующим образом:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Да|  
-|**Обязательные атрибуты**|Один или несколько из следующих: **coclass**, **progid**или **vi_progid**.|  
+|**Обязательные атрибуты**|Один или несколько из следующих: `coclass`, `progid`, или `vi_progid`.|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  

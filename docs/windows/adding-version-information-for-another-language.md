@@ -1,5 +1,5 @@
 ---
-title: Добавление сведений о версии для другого языка | Документы Microsoft
+title: Добавление сведений о версии для другого языка | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 897dc9291c17e916be824915a467ec85a7770548
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857575"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650460"
 ---
 # <a name="adding-version-information-for-another-language"></a>Добавление сведений о версии для другого языка
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>Добавление сведений о версии для другого языка (новый блок сведений)  
@@ -42,13 +42,11 @@ ms.locfileid: "33857575"
   
 3.  В окне **Свойства** выберите для нового блока соответствующие язык и кодировку.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- **Требования**  
-  
+## <a name="requirements"></a>Требования 
  Win32  
   
 ## <a name="see-also"></a>См. также  
  [Редактор сведений о версии](../windows/version-information-editor.md)   
  [Сведения о версии (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

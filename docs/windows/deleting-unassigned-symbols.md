@@ -1,5 +1,5 @@
 ---
-title: Удаление неназначенных символов | Документы Microsoft
+title: Удаление неназначенных символов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 947249b4a0a9bd2233d76671b1b5bf05c70337db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93de27e028d0665cccc3ba373b26524d911607a0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882944"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648201"
 ---
 # <a name="deleting-unassigned-symbols"></a>Удаление неназначенных символов
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>Удаление неназначенного (неиспользуемого) символа  
@@ -32,14 +32,11 @@ ms.locfileid: "33882944"
     > [!NOTE]
     >  Перед удалением неиспользуемого символа в файле ресурсов убедитесь в том, что он не используется где-либо в программе или в файлах ресурсов, включаемых во время компиляции.  
   
-
-  
- **Требования**  
-  
+## <a name="requirements"></a>Требования  
  Win32  
   
 ## <a name="see-also"></a>См. также  
  [Изменение неназначенных символов](../windows/changing-unassigned-symbols.md)   
  [Ограничения для имен символов](../windows/symbol-name-restrictions.md)   
- [Ограничения для значений символов](../windows/symbol-value-restrictions.md)   
+ [Ограничения для символьных значений](../windows/symbol-value-restrictions.md)   
  [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)

@@ -1,5 +1,5 @@
 ---
-title: 'WeakRef:: ~ WeakRef деструктор | Документы Microsoft'
+title: 'WeakRef:: ~ WeakRef деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47752b861ab5974b60f62cdfaba620e60288d09a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2acc2e24b1030dc09529fdcad444e29f83ae11e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889892"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651669"
 ---
 # <a name="weakrefweakref-destructor"></a>Деструктор WeakRef::~WeakRef
-Деинициализирует текущий экземпляр класса WeakRef.  
+Деинициализирует текущий экземпляр **WeakRef** класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   

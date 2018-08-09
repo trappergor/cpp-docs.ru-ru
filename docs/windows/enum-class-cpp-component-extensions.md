@@ -13,25 +13,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 54c4e97458e1a7322d84e012ea5609d3e29bfb0a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570552"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647317"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (расширения компонентов C++)
 Объявляет перечисление в области видимости пространства имен, которое является определяемым пользователем типом, состоящим из ряда именованных констант, называемых перечислителями.  
   
 ## <a name="all-runtimes"></a>Все среды выполнения  
- **Заметки**  
+### <a name="remarks"></a>Примечания
   
  C + +/ CX и C + +/ CLI поддержка **открытый класс перечисления** и **класс закрытого перечисления** , подобные стандартного c++ **класс перечисления** , но с добавлением доступность спецификатор. В разделе **/CLR**, C ++ 11 **класс перечисления** типа разрешен, но будет создавать предупреждение C4472, предназначенное для обеспечения действительно требуется тип перечисления стандарта ISO, а не C + +/ CX и C + +/ CLI типа. Дополнительные сведения о C++ стандарта ISO **перечисления** ключевое слово, см. в разделе [перечисления](../cpp/enumerations-cpp.md).  
   
 ## <a name="windows-runtime"></a>Среда выполнения Windows  
- **Синтаксис**  
+### <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
       access  
       enum class  
       enumeration-identifier  
@@ -39,8 +39,7 @@ ms.locfileid: "39570552"
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];  
 ```  
   
- **Параметры**  
-  
+### <a name="parameters"></a>Параметры  
  *access*  
  Уровень доступа перечисления, который может быть **открытый** или **частного**.  
   
@@ -60,7 +59,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *var*  
  (Необязательно) Имя переменной типа перечисления.  
   
- **Заметки**  
+### <a name="remarks"></a>Примечания 
   
  Дополнительные сведения и примеры см. в разделе [Перечисления](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).  
   
@@ -73,19 +72,19 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 -   Если *underlying-type* является `char16`и значение перечисления в диапазоне от 0xD800 до 0xDFFF, то значение можно представить. Однако логически значение неверно, так как оно представляет половину пары символов-заместителей Юникода и не должно отображаться в изоляции.  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/ZW**  
+ Параметр компилятора: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Среда CLR 
- **Синтаксис**  
+### <a name="syntax"></a>Синтаксис
   
-```  
+```cpp  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
 accessenum structname [:type] { enumerator-list } var;  
 ```  
   
- **Параметры**  
+ ### <a name="parameters"></a>Параметры  
   
  *access*  
  Уровень доступа перечисления. Может быть либо **открытый** или **частного**.  
@@ -102,7 +101,7 @@ accessenum structname [:type] { enumerator-list } var;
  *var* (необязательно)  
  Имя переменной типа перечисления.  
   
- **Заметки**  
+### <a name="remarks"></a>Примечания 
   
  **enum class** и **enum struct** являются эквивалентными объявлениями.  
   
@@ -163,13 +162,13 @@ int main() {
   
  Этот код выдал бы в MSIL для сигнатуры функции следующее:  
   
-```  
+```cpp  
 void f(int32);  
 ```  
   
  Однако в текущих версиях компилятора стандартное перечисление выдается как управляемое перечисление с [NativeEnumAttribute], а в MSIL для сигнатуры функции выдается следующее:  
   
-```  
+```cpp  
 void f(E)  
 ```  
   
@@ -180,12 +179,9 @@ void f(E)
 -   [Базовый тип перечисления](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>Требования  
- Параметр компилятора: **/clr**  
+ Параметр компилятора: `/clr`  
   
 ### <a name="examples"></a>Примеры  
- **Пример**  
-  
- убыв.  
   
 ```cpp  
 // mcppv2_enum_2.cpp  
@@ -215,8 +211,6 @@ int main()
    System::Console::WriteLine(o);  
 }   
 ```  
-  
- **Вывод**  
   
 ```Output  
 no automatic conversion to int: b  

@@ -1,5 +1,5 @@
 ---
-title: Конструктор SyncLockWithStatusT::SyncLockWithStatusT | Документы Microsoft
+title: Конструктор SyncLockWithStatusT::SyncLockWithStatusT | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21ce2054cabf257594cb3fa376236b9a1e504a59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891354"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647759"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>Конструктор SyncLockWithStatusT::SyncLockWithStatusT
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -40,20 +40,20 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `other`  
- Ссылка rvalue на другом объекте SyncLockWithStatusT.  
+### <a name="parameters"></a>Параметры  
+ *other*  
+ Ссылка rvalue на другой **SyncLockWithStatusT** объекта.  
   
- `sync`  
- Ссылка на другом объекте SyncLockWithStatusT.  
+ *sync*  
+ Ссылка на другой **SyncLockWithStatusT** объекта.  
   
- `status`  
- Значение [status_](../windows/synclockwithstatust-status-data-member.md) данными-членом `other` параметр или `sync` параметра.  
+ *status*  
+ Значение [status_](../windows/synclockwithstatust-status-data-member.md) данными-членом *других* параметр или *синхронизации* параметра.  
   
 ## <a name="remarks"></a>Примечания  
- Инициализирует новый экземпляр класса SyncLockWithStatusT.  
+ Инициализирует новый экземпляр класса **SyncLockWithStatusT** класса.  
   
- Первый конструктор инициализирует текущий объект SyncLockWithStatusT из другой SyncLockWithStatusT, заданного параметром `other`, а затем становятся недействительными объекте SyncLockWithStatusT. Второй конструктор не `protected`и инициализирует текущий объект SyncLockWithStatusT в недопустимом состоянии.  
+ Первый конструктор инициализирует текущий **SyncLockWithStatusT** из другого объекта **SyncLockWithStatusT** заданный параметром *других*, а затем Делает недействительной другой **SyncLockWithStatusT** объекта. Второй конструктор является **защищенные**и инициализирует текущий **SyncLockWithStatusT** объекта в недопустимом состоянии.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
@@ -61,5 +61,5 @@ explicit SyncLockWithStatusT(
  **Пространство имен:** Microsoft::WRL::Wrappers::Details  
   
 ## <a name="see-also"></a>См. также  
- [SyncLockWithStatusT-класс](../windows/synclockwithstatust-class.md)   
+ [Класс SyncLockWithStatusT](../windows/synclockwithstatust-class.md)   
  [Метод SyncLockWithStatusT::GetStatus](../windows/synclockwithstatust-getstatus-method.md)

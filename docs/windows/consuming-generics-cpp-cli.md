@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cf1c7c0894eacc828a011c8c5f9fef8c2d78fba8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460495"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652517"
 ---
 # <a name="consuming-generics-ccli"></a>Использование универсальных типов (C++/CLI)
 Универсальные шаблоны, созданные на одном языке .NET, могут использоваться в других языках .NET. В отличие от обычных шаблонов, универсальный шаблон в скомпилированной сборке остается универсальным. Таким образом, экземпляр универсального типа можно создать в другой сборке и даже на языке, отличном от языка сборки, в которой был определен универсальный тип.  
@@ -114,9 +114,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Вывод  
-  
-```  
+```Output  
 90  
 80  
 70  

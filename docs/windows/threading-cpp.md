@@ -1,5 +1,5 @@
 ---
-title: Работа с потоками (C++) | Документы Microsoft
+title: Работа с потоками (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,50 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f21ea8c16b4e09a5ad1845a10797be00f91b0d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e0e8b13a74c5b232e2662f80fc1cc8f80a1ffc9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891328"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653005"
 ---
 # <a name="threading-c"></a>threading (C++)
-Указывает, что потоковая модель для COM-объекта.  
+Указывает потоковую модель для COM-объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      [ threading(  
+[ threading(  
    model=enumeration  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- ***модель*** (необязательно)  
- Одно из следующих потоковые модели:  
+### <a name="parameters"></a>Параметры  
+ *модель* (необязательно)  
+ Один из следующих моделей потоков:  
   
--   **подразделения** (потоковое)  
+-   `apartment` (потоковое)  
   
--   **нейтральный** (компоненты .NET Framework без интерфейса пользователя)  
+-   `neutral` (Компоненты .NET framework без интерфейса пользователя)  
   
--   **один** (Работа с потоками в простой)  
+-   `single` (простой threading)  
   
--   **Бесплатные** (освобождения потоков)  
+-   `free` (свободным созданием потоков)  
   
--   **оба** (подразделения и свободной потоковой модели)  
+-   `both` (подразделения и свободной потоковой модели)  
   
- Значение по умолчанию — **подразделения**.  
+ Значение по умолчанию — `apartment`.  
   
 ## <a name="remarks"></a>Примечания  
- **Работа с потоками** C++ атрибут не отображается в сгенерированный IDL-файл, но будет использоваться в реализации COM-объекта.  
+ **Threading** C++: атрибут не отображается в созданного IDL-файла, но будет использоваться в реализации COM-объекта.  
   
- В проекты ATL Если [coclass](../windows/coclass.md) присутствует также атрибут, потоковой модели, указанный *модель* передается как параметр шаблона [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) класса , вставленное методом **coclass** атрибута.  
+ В проектах ATL Если [coclass](../windows/coclass.md) присутствует также атрибут, потоковой модели, указанный *модели* передается как параметр-шаблон [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) класса , вставленные `coclass` атрибута.  
   
- **Работа с потоками** атрибута также защищает доступ к [event_source](../windows/event-source.md).  
+ **Threading** атрибут также защищает доступ к [event_source](../windows/event-source.md).  
   
 ## <a name="example"></a>Пример  
- В разделе [лицензированных](../windows/licensed.md) пример приведен пример использования **работа с потоками**.  
+ См. в разделе [Лицензированные](../windows/licensed.md) пример для использовать **threading**.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -68,7 +67,7 @@ ms.locfileid: "33891328"
   
 |||  
 |-|-|  
-|**Применение**|**class**, `struct`|  
+|**Применение**|**Класс**, **структуры**|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|**coclass**|  
 |**Недопустимые атрибуты**|Нет|  

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b3ad3ef6acb06eaef04197dc4ecffe27c2d7656d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570500"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650219"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Практическое руководство. Изменение языка или условий использования ресурса в процессе копирования
 Во время копирования ресурса можно изменить его свойство "язык" и (или) "условие".  
@@ -34,7 +34,7 @@ ms.locfileid: "39570500"
   
  Язык и условие ресурса отображаются в окне рабочей области в скобках после имени ресурса. В этом примере ресурс с именем IDD_AboutBox использует финский язык и его условие имеет значение XX33.  
   
-```  
+```cpp  
 IDD_AboutBox (Finnish - XX33)  
 ```  
   
@@ -51,7 +51,6 @@ IDD_AboutBox (Finnish - XX33)
     -   В **условие** введите условие.  
   
 ## <a name="requirements"></a>Требования  
-  
  Win32  
   
 ## <a name="see-also"></a>См. также  

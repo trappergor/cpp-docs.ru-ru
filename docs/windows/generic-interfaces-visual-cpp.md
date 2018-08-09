@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571179"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650057"
 ---
 # <a name="generic-interfaces-visual-c"></a>Универсальные интерфейсы (Visual C++)
 Ограничения, которые применяются к параметрам типа на классы являются те, которые применяются к параметрам типа на интерфейсах же (см. в разделе [универсальные классы (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  
@@ -34,14 +34,14 @@ ms.locfileid: "39571179"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
 ## <a name="remarks"></a>Примечания  
  *атрибуты* (необязательно)  
- Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе "Атрибуты".  
+ Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе **атрибуты**.  
   
  *ключ класса*  
  **Класс** или **typename**  

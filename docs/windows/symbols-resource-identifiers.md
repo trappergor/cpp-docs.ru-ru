@@ -1,5 +1,5 @@
 ---
-title: 'Символы: Идентификаторы ресурсов | Документы Microsoft'
+title: 'Символы: Идентификаторы ресурсов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c049aa192aeb253641ab473e5675b1ee5bd685a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ea83c97a5ee59e99b4ab743348ae2268d730e5c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891848"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650889"
 ---
 # <a name="symbols-resource-identifiers"></a>Символы: идентификаторы ресурсов
 Символ представляет собой идентификатор ресурса, состоящий из двух частей: текстовой строки (имени символа), сопоставленной с целочисленным значением (значением символа). Пример:  
@@ -66,13 +66,12 @@ IDC_EDITNAME = 5100
   
 - [просмотр предопределенных идентификаторов символов.](../windows/predefined-symbol-ids.md)  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
  Win32  
   
 ## <a name="see-also"></a>См. также  
- [Как: поиск символов в ресурсах](../windows/how-to-search-for-symbols-in-resources.md)   
+ [Практическое: поиск символов в ресурсах](../windows/how-to-search-for-symbols-in-resources.md)   
  [Редакторы ресурсов](../windows/resource-editors.md)   
  [Файлы ресурсов](../windows/resource-files-visual-studio.md)
-

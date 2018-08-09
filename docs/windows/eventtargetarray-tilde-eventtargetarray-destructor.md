@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e2d817b803bb26c70390aa6f91c62ce5c28867
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: f7faffafee4cf4a3528effa052ef8105cb9ebfed
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571103"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650671"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>Деструктор EventTargetArray::~EventTargetArray
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 ~EventTargetArray();  
 ```  
   

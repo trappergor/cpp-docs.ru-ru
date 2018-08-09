@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 640a28752a3bc37322737888ffc38706068118b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467096"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652715"
 ---
 # <a name="classfactoryqueryinterface-method"></a>Метод ClassFactory::QueryInterface
 Извлекает указатель на интерфейс, заданный параметром.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 STDMETHOD(  
    QueryInterface  
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *riid*  
  Идентификатор интерфейса.  
   

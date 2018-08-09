@@ -1,5 +1,5 @@
 ---
-title: Функция (библиотека шаблонов C++ среды выполнения Windows) Swap | Документы Microsoft
+title: Функция Swap (библиотека шаблонов C++ среды выполнения Windows) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b37a5e33b4d6a9e62510e79c7f72145ed0f1e128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63c28a18723ad1dc39669ee5a367c870451c9943
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889388"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651763"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Функция Swap (библиотека шаблонов C++ среды выполнения Windows)
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -34,17 +34,17 @@ WRL_NOTHROW inline void Swap(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `left`  
+### <a name="parameters"></a>Параметры  
+ *left*  
  Первый аргумент.  
   
- `right`  
+ *right*  
  Второй аргумент.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 ## <a name="remarks"></a>Примечания  
- Меняет местами значения двух указанных аргументов.  
+ Меняет местами значения двух заданных аргументов.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** internal.h  

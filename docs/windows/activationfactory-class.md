@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 43e4932f93c4b9954343df2aecd4db3b13ebc147
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461509"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649209"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory - класс
 Позволяет одному или нескольким классам быть активированными средой выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -38,7 +38,7 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *I0*  
  Интерфейс признаками.  
   
@@ -74,7 +74,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 |[Метод ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Увеличивает счетчик ссылок текущего **ActivationFactory** объекта.|  
 |[Метод ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Извлекает массив идентификаторов реализованного интерфейса.|  
 |[Метод ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Получает имя класса среды выполнения объекта, который текущего **ActivationFactory** создает экземпляр.|  
-|[Метод ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Возвращает объект, который создает экземпляр текущего ActivationFactory уровень доверия.|  
+|[Метод ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Получает уровень доверия объект, текущий **ActivationFactory** создает экземпляр.|  
 |[Метод ActivationFactory::QueryInterface](../windows/activationfactory-queryinterface-method.md)|Извлекает указатель на указанный интерфейс.|  
 |[Метод ActivationFactory::Release](../windows/activationfactory-release-method.md)|Уменьшает счетчик ссылок текущего **ActivationFactory** объекта.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Структура BoolStruct | Документы Microsoft
+title: Boolstruct-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af2827d85a1df647dca2c02c5c6ee5a12a416d51
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14e3d81ca273bf96b4812f08a46904c9d521c5cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860126"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650486"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 struct BoolStruct;  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Структура BoolStruct определяет, ли объект ComPtr управление временем существования объекта интерфейса. BoolStruct используется внутренним образом [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) оператор.  
+ **BoolStruct** структура определяет ли `ComPtr` управление временем существования объектов интерфейса. **BoolStruct** внутренне используется элементом [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) оператор.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Элемент данных BoolStruct::Member](../windows/boolstruct-member-data-member.md)|Указывает, что [ComPtr](../windows/comptr-class.md) является, или не, управление временем существования объектов интерфейса.|  
   
