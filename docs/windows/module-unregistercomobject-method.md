@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 240ab47099b9e97e9a6bb794083858fe042605d2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602634"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018699"
 ---
 # <a name="moduleunregistercomobject-method"></a>Метод Module::UnregisterCOMObject
 Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 virtual HRESULT UnregisterCOMObject(  
    const wchar_t* serverName,  
    DWORD* cookies,  

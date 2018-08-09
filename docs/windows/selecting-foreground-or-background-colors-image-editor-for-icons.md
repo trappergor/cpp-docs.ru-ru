@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e9dc6b75cfa408ececeb533fcd75dbad0f124fda
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605552"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018833"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Выбор основного цвета и цвета фона (редактор изображений для значков)
 За исключением **ластика**, инструменты на **редактор изображений** инструментов рисуют с использованием текущего переднего плана или фонового цвета при нажатии кнопки мыши влево или вправо, соответственно.  
@@ -39,7 +39,6 @@ ms.locfileid: "39605552"
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.  
   
 ## <a name="requirements"></a>Требования  
-  
  Нет  
   
 ## <a name="see-also"></a>См. также  

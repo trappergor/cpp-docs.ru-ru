@@ -1,5 +1,5 @@
 ---
-title: Предопределенные символы MFC | Документы Microsoft
+title: Предопределенные символы MFC | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882064"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018498"
 ---
 # <a name="mfc-predefined-symbols"></a>Предопределенные символы MFC
-Проекты MFC всегда содержат несколько файлов заголовков, которые поддерживают windows. Они добавляются через #include инструкции в файле StdAfx.h:  
+Проекты MFC всегда содержат несколько файлов заголовков, которые поддерживают windows. Они добавляются с помощью `#include` инструкций в `StdAfx.h` файла:  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  

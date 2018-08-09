@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42f274f01661927772a1a3a6551dcb5efa59ac40
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7fa3193e505480a0acb8616510d8c2cdbc4f5d94
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641864"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016357"
 ---
 # <a name="synclocktsync-data-member"></a>Элемент данных SyncLockT::sync_
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 typename SyncTraits::Type sync_;  
 ```  
   

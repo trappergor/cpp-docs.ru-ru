@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69775303c5a12f82ef2a31cc61112af4b14d3aad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: dd52dcdc5fed543d65311aaa7e8a61a9d2019b8a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606173"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020295"
 ---
 # <a name="removeiunknown-class"></a>Класс RemoveIUnknown
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 template <  
    typename T  
 >  

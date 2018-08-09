@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608271"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015591"
 ---
 # <a name="selecting-multiple-controls"></a>Выбор нескольких элементов управления
 ### <a name="to-select-multiple-controls"></a>Выбор нескольких элементов управления  
@@ -47,7 +47,7 @@ ms.locfileid: "39608271"
 1.  С группой выделенных элементов управления, удерживая нажатой **Shift** ключа и щелкните элемент управления, необходимо удалить или добавить в существующее выделение.  
   
     > [!NOTE]
-    >  Удерживая нажатой клавишу CTRL и щелкая элемент управления в составе будет убедитесь, что главный элемент управления в выбор. Дополнительные сведения см. в разделе [Задание главного элемента управления](../windows/specifying-the-dominant-control.md).  
+    >  Удерживая нажатой **Ctrl** ключ и щелкая элемент управления в составе сделает, которые управляют главного элемента управления в указанной области. Дополнительные сведения см. в разделе [Задание главного элемента управления](../windows/specifying-the-dominant-control.md).  
   
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   

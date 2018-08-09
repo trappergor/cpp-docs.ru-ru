@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: eb15dbd56656c72bc0f96491d24fc43fb96de84c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608056"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017816"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Перемещение или копирование элемента таблицы сочетаний клавиш в другой файл описания ресурсов
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Перемещение или копирование записи таблицы сочетаний клавиш в другой файл описания ресурсов  
@@ -45,7 +45,6 @@ ms.locfileid: "39608056"
     >  Для копирования и вставки можно также использовать сочетания клавиш.  
   
 ## <a name="requirements"></a>Требования  
-  
  Win32  
   
 ## <a name="see-also"></a>См. также  

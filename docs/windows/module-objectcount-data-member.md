@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Module::objectcount_ | Документы Microsoft
+title: Элемент данных Module::objectcount_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a9360a7b0ce0596e9fb1bffb71864526cf92e5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e73b11ae5a29289c44bf762082397dd4ed4f826
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875023"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016695"
 ---
 # <a name="moduleobjectcount-data-member"></a>Элемент данных Module::objectCount_
-Хранит список количества классов были созданы при помощи [сделать](../windows/make-function.md) функции.  
+Следит за сколько классы были созданы при помощи [сделать](../windows/make-function.md) функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 volatile long objectCount_;  
 ```  
   

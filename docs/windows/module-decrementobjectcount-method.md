@@ -1,5 +1,5 @@
 ---
-title: Метод Module::DecrementObjectCount | Документы Microsoft
+title: Метод Module::DecrementObjectCount | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adcd964f07426fcdcd3b0d68f946e3d8af6f389f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 075c1ae368df59e735d90d8d98d9e8fd23ac8ad9
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875959"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017348"
 ---
 # <a name="moduledecrementobjectcount-method"></a>Метод Module::DecrementObjectCount
 Уменьшает число объектов, отслеживаемых модулем.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 virtual long DecrementObjectCount();  
 ```  
   

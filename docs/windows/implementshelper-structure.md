@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: eca429578fd9b58a2a3229199d53812a494af045
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605621"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018352"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 template <  
    typename RuntimeClassFlagsT,  
    typename ILst,  
@@ -51,7 +51,7 @@ friend struct Details::ImplementsHelper;
 ## <a name="remarks"></a>Примечания  
  Помогает реализовать [реализует](../windows/implements-structure.md) структуры.  
   
- Этот шаблон обходит список интерфейсов и добавляет их в качестве базовых классов, а также как сведения, необходимые для включения QueryInterface.  
+ Этот шаблон, проходит через список интерфейсов и добавляет их в качестве базовых классов, а также как сведения, необходимые для включения `QueryInterface`.  
   
 ## <a name="members"></a>Участники  
   

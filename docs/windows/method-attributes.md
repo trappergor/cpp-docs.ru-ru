@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604285"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016860"
 ---
 # <a name="method-attributes"></a>Атрибуты метода
 Следующие атрибуты применяются к методам в классе, компонентный класс или интерфейс.  
@@ -39,8 +39,8 @@ ms.locfileid: "39604285"
 |[defaultbind](../windows/defaultbind.md)|Указывает единственное свойство, представляющим объект наилучшим образом.|  
 |[defaultcollelem](../windows/defaultcollelem.md)|Используется для оптимизации кода Visual Basic.|  
 |[displaybind](../windows/displaybind.md)|Указывает свойство, которое должно отображаться пользователю как связываемая.|  
-|[helpcontext](../windows/helpcontext.md)|Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в файле справки.|  
-|[helpfile](../windows/helpfile.md)|Задает имя файла справки для библиотеки типов.|  
+|[helpcontext](../windows/helpcontext.md)|Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в **помочь** файл.|  
+|[helpfile](../windows/helpfile.md)|Задает имя **помочь** файл для библиотеки типов.|  
 |[helpstring](../windows/helpstring.md)|Определяет строку символов, используемую для описания элемента, к которому оно применяется.|  
 |[helpstringcontext](../windows/helpstringcontext.md)|Указывает идентификатор раздела справки в файл с расширением .hlp или .chm.|  
 |[helpstringdll](../windows/helpstringdll.md)|Указывает имя библиотеки DLL для выполнения уточняющего запроса строки документа (локализации).|  

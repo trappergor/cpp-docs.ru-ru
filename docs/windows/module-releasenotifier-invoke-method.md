@@ -1,5 +1,5 @@
 ---
-title: 'Module::ReleaseNotifier:: Invoke-метод | Документы Microsoft'
+title: 'Module::ReleaseNotifier:: вызвать метод | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eb51d59d2f7f1adc934332cbfa5fead56bbef0a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 48e488188ed040d29ef70f273991d1df9cf1d63e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876206"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014613"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Метод Module::ReleaseNotifier::Invoke
-При реализации вызывает обработчик событий при освобождении последнего объекта в модуле.  
+При реализации, вызывает обработчик событий при освобождении последнего объекта в модуле.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 virtual void Invoke() = 0;  
 ```  
   

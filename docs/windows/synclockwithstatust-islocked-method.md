@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebe723811efe62efa85a1cc2fa35736689306c7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 80c744431fe7df32be705fcf91eef0a8691b8fa4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645637"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015802"
 ---
 # <a name="synclockwithstatustislocked-method"></a>Метод SyncLockWithStatusT::IsLocked
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 bool IsLocked() const;  
 ```  
   

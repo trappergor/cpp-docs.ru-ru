@@ -1,5 +1,5 @@
 ---
-title: Пространство имен Microsoft::WRL | Документы Microsoft
+title: Пространство имен Microsoft::WRL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,19 +24,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881654"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020256"
 ---
 # <a name="microsoftwrl-namespace"></a>Пространство имен Microsoft::WRL
 Определяет основные типы, составляющие библиотека шаблонов C++ среды выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 namespace Microsoft::WRL;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL;
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Класс ActivationFactory](../windows/activationfactory-class.md)|Позволяет одному или нескольким классам быть активированными средой выполнения Windows.|  
 |[Класс AsyncBase](../windows/asyncbase-class.md)|Реализует асинхронный конечный автомат среды выполнения Windows.|  
@@ -67,25 +67,25 @@ namespace Microsoft::WRL;
   
 ### <a name="structures"></a>Структуры  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Структура ChainInterfaces](../windows/chaininterfaces-structure.md)|Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.|  
-|[Структура CloakedIid](../windows/cloakediid-structure.md)|Указывает шаблонам RuntimeClass, Implements и ChainInterfaces, что заданный интерфейс недоступен в списке IID.|  
-|[Структура Implements](../windows/implements-structure.md)|Реализует QueryInterface и GetIid для указанных интерфейсов.|  
+|[Структура CloakedIid](../windows/cloakediid-structure.md)|Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, что заданный интерфейс недоступен в списке IID.|  
+|[Структура Implements](../windows/implements-structure.md)|Реализует `QueryInterface` и `GetIid` для указанных интерфейсов.|  
 |[Структура MixIn](../windows/mixin-structure.md)|Гарантирует, что класс среды выполнения является производным от интерфейсов среды выполнения Windows, если таковые имеются, а затем от интерфейсов классической модели COM.|  
-|[Структура RuntimeClassFlags](../windows/runtimeclassflags-structure.md)|Содержит тип экземпляра класса [RuntimeClass](../windows/runtimeclass-class.md).|  
+|[Структура RuntimeClassFlags](../windows/runtimeclassflags-structure.md)|Содержит тип для экземпляра [RuntimeClass](../windows/runtimeclass-class.md).|  
   
 ### <a name="enumerations"></a>Перечисления  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[Перечисление AsyncResultType](../windows/asyncresulttype-enumeration.md)|Указывает тип результата, возвращаемого методом GetResults().|  
+|[Перечисление AsyncResultType](../windows/asyncresulttype-enumeration.md)|Указывает тип результата, возвращенный `GetResults()` метод.|  
 |[Перечисление ModuleType](../windows/moduletype-enumeration.md)|Указывает, должен ли модуль поддерживать внутрипроцессный или внепроцессный сервер.|  
 |[Перечисление RuntimeClassType](../windows/runtimeclasstype-enumeration.md)|Указывает тип [RuntimeClass](../windows/runtimeclass-class.md) экземпляр, который поддерживается.|  
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Функция AsWeak](../windows/asweak-function.md)|Извлекает слабую ссылку на определенный экземпляр.|  
 |[Функция обратного вызова](../windows/callback-function-windows-runtime-cpp-template-library.md)|Создает объект, функция-член которого является методом обратного вызова.|  

@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14cad19c53e8cd741bf16bab49420169e93f6af6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b990046e4f43e70218fc1a7f6eb885638c2051bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606976"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015947"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Сохранение и загрузка различных цветовых палитр (редактор изображений для значков)
-Можно сохранить и загрузить палитру цветов, которая содержит [настраивать цвета](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (По умолчанию последняя использованная палитра цветов автоматически загружается при запуске Visual Studio.)  
+Можно сохранять и загружать **цвета** палитру, которая содержит [настраивать цвета](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (По умолчанию **цвета** последняя использованная палитра автоматически загружается при запуске Visual Studio.)  
   
 > [!TIP]
->  Поскольку в редакторе изображений отсутствуют средства для восстановления палитры цветов по умолчанию, следует сохранять такую палитру цветов под специальным именем, например, standard.pal или default.pal, чтобы можно было легко восстановить параметры по умолчанию.  
+>  Так как **изображение** редактор имеет отсутствуют средства для восстановления по умолчанию **цвета** палитры, следует сохранить значение по умолчанию **цвета** палитру под именем, например  *Standard.PAL* или *default.pal* таким образом, можно легко восстановить параметры по умолчанию.  
   
 ### <a name="to-save-a-custom-colors-palette"></a>Сохранение пользовательской палитры цветов  
   
@@ -46,10 +46,9 @@ ms.locfileid: "39606976"
   
 1.  Из **изображение** меню, выберите **Загрузка палитры**.  
   
-2.  В [Загрузка палитры цветов-диалоговое окно](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), перейдите в нужный каталог и выберите палитру, которую нужно загрузить. Палитры цветов сохраняются в файлах с расширением PAL.  
+2.  В [Загрузка палитры цветов-диалоговое окно](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), перейдите в нужный каталог и выберите палитру, которую нужно загрузить. **Цвет** палитры сохраняются с расширением PAL.  
   
 ## <a name="requirements"></a>Требования  
-  
  Нет  
   
 ## <a name="see-also"></a>См. также  
