@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fbf0b3c9db19e839d6832415cfd8ed6eb9b93a2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a1a90f0d72c824f3f4840728e34c01667e4aa026
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604122"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011608"
 ---
 # <a name="property--c-component-extensions"></a>property (расширения компонентов C++)
 Объявляет *свойство*, который является функцией-членом, который действует и доступна как элемент данных или элемент массива.  
@@ -209,8 +209,6 @@ int main() {
    Console::WriteLine(MyC->Property_Block);  
 }  
 ```  
-  
- **Вывод**  
   
 ```Output  
 test  

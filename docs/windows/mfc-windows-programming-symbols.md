@@ -1,5 +1,5 @@
 ---
-title: Символы программирования MFC Windows | Документы Microsoft
+title: Символы программирования MFC Windows | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882697"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012785"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Символы программирования MFC Windows
-Эти символы являются частью файлов поддержки MFC, но они поддерживают стандартные функции приложения Windows и действия. Эти символы используются главным образом с меню. При работе с меню в редакторе меню эти символы будут отображаться в окне свойств, связанных с часто используемых команд меню. Например, если приложение имеет меню Файл командой Exit, данная команда будет связана с символом ID_APP_EXIT в [окно свойств](/visualstudio/ide/reference/properties-window).  
+Эти символы также являются частью файлов поддержки MFC, но они поддерживают стандартные функции приложения Windows и действия. Эти символы используются главным образом с меню. При работе с меню в **редактор меню**, эти символы будут отображаться в **окно свойств** распространенные команды меню. Например если приложение имеет **файл** меню с **выхода** команды, что команда будет связана с символом ID_APP_EXIT в [окно "Свойства"](/visualstudio/ide/reference/properties-window).  
   
 ||||  
 |-|-|-|  
@@ -57,7 +57,7 @@ ms.locfileid: "33882697"
 |ID_VIEW_AUTOARRANGE|ID_VIEW_BYNAME|ID_VIEW_DETAILS|  
 |ID_VIEW_LARGEICON|ID_VIEW_LINEUP|ID_VIEW_LIST|  
 |ID_VIEW_REBAR|ID_VIEW_SMALLICON|ID_VIEW_STATUS_BAR|  
-|ID_VIEW_TOOLBAR|ID_WINDOW_ARRANGE|ID_WINDOW_CASCADE|  
+|СОБЫТИЯ ID_VIEW_TOOLBAR|ID_WINDOW_ARRANGE|ID_WINDOW_CASCADE|  
 |ID_WINDOW_NEW|ID_WINDOW_SPLIT|ID_WINDOW_TILE_HORIZ|  
 |ID_WINDOW_TILE_VERT|ID_WIZBACK|ID_WIZFINISH|  
 |ID_WIZNEXT|IDABORT|IDC_STATIC|  

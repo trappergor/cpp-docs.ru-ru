@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4c437035713634736a02afbce1325d14ba18229
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d097c5c1193b74aa3e4d6ecea755390b0885a8d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604415"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013064"
 ---
 # <a name="module-class"></a>Module - класс
 Представляет коллекцию связанных объектов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 template<ModuleType moduleType>  
 class Module;  
   
@@ -96,7 +96,7 @@ class Module<OutOfProc> : public Module<InProc>;
 |name|Описание:|  
 |----------|-----------------|  
 |[Элемент данных Module::objectCount_](../windows/module-objectcount-data-member.md)|Следит за сколько классы были созданы при помощи [сделать](../windows/make-function.md) функции.|  
-|[Элемент данных Module::releaseNotifier_](../windows/module-releasenotifier-data-member.md)|Содержит указатель на объект ReleaseNotifier.|  
+|[Элемент данных Module::releaseNotifier_](../windows/module-releasenotifier-data-member.md)|Содержит указатель на `ReleaseNotifier` объект.|  
   
 ### <a name="macros"></a>Макросы  
   

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: d80a5189e25542b344d5506ac1f69dfbec5514af
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569379"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012551"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Практическое руководство. Закрепление указателей и массивов
 Закрепление части объекта, определенной в управляемом объекте, имеет эффект закрепления всего объекта.  Например, если закреплен любой элемент массива, весь массив также закреплен. В языке нет расширений для объявления закрепленного массива. Чтобы закрепить массив, объявите закрепляющий указатель на тип элементов массива и закрепите один из элементов массива.  
@@ -49,8 +49,6 @@ int main() {
                          // will not move during call  
 }  
 ```  
-  
-### <a name="output"></a>Вывод  
   
 ```Output  
 ++  

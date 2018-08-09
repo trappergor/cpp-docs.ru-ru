@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604230"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012132"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Пространство имен Microsoft::WRL::Details
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[Структура ArgTraits](../windows/argtraits-structure.md)|Объявляет указанный делегат, интерфейс и анонимную функцию-член, имеющий указанное число параметров.|  
 |[Структура ArgTraitsHelper](../windows/argtraitshelper-structure.md)|Помогает определить общие характеристики аргументов делегата.|  
-|[Структура BoolStruct](../windows/boolstruct-structure.md)|Определяет, ли объект ComPtr управление временем существования объекта интерфейса. BoolStruct внутренне используется элементом [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) оператор.|  
+|[Структура BoolStruct](../windows/boolstruct-structure.md)|Определяет ли `ComPtr` управление временем существования объектов интерфейса. `BoolStruct` используется внутренним образом [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) оператор.|  
 |[Структура CreatorMap](../windows/creatormap-structure.md)|Содержит сведения о том, как инициализировать, регистрации и отмены регистрации объектов.|  
 |[Структура DerefHelper](../windows/derefhelper-structure.md)|Представляет разыменованный указатель на параметр шаблона `T*`.|  
 |[Структура EnableIf](../windows/enableif-structure.md)|Определяет данные-член типа, указанного в качестве второго параметра шаблона, если первый параметр шаблона, результатом которого является **true**.|  

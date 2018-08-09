@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcc6efe59c71314837ff9c47d9c86c5b7f36c608
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c8b4e7a66cff8c92164573259ebc59632b24283c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607236"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013682"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Элемент данных Module::MethodReleaseNotifier::object_
 Содержит указатель на объект, функция-член которого является обработчиком событий для текущего **Module::MethodReleaseNotifier** объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 T* object_;  
 ```  
   

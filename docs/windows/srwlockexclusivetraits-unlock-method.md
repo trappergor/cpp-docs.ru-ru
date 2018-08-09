@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1863acc925bf66aa10435f2dadd9d9d73a43300
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f30c2d10bd5a25a8241bc52913d675b98e23d88a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648026"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013103"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>Метод SRWLockExclusiveTraits::Unlock
 Освобождает управлением указанного `SRWLock` объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type srwlock  
 );  

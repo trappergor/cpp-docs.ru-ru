@@ -1,5 +1,5 @@
 ---
-title: Метод ModuleBase::IncrementObjectCount | Документы Microsoft
+title: Метод ModuleBase::IncrementObjectCount | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b0e0fd6ecfd4d30dd4921c99d873c23b533ee24
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ee6c71ba6de195386cda78f2e44902c43523143
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875478"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011079"
 ---
 # <a name="modulebaseincrementobjectcount-method"></a>Метод ModuleBase::IncrementObjectCount
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 virtual long IncrementObjectCount() = 0;  
 ```  
   
@@ -45,5 +45,5 @@ virtual long IncrementObjectCount() = 0;
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [ModuleBase-класс](../windows/modulebase-class.md)   
+ [Класс ModuleBase](../windows/modulebase-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

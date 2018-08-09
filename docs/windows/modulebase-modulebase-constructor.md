@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9d82f38e44f1d0c9562982da109a8deffa4fbff
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7d5a733c7a3e4481495424e4241f1b8a683e0f92
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608934"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011027"
 ---
 # <a name="modulebasemodulebase-constructor"></a>Конструктор ModuleBase::ModuleBase
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 ModuleBase();  
 ```  
   

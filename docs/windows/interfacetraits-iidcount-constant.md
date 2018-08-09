@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf8808074e347f70290498adc83f55f488a75790
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 1a6bf0635103ffee3dc3a6bf8604eda06c55049d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602731"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014543"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>Константа InterfaceTraits::IidCount
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 static const unsigned long IidCount = 1;  
 ```  
   

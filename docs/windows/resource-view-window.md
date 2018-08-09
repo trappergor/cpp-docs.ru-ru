@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608313"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012333"
 ---
 # <a name="resource-view-window"></a>Окно представления ресурсов
 > [!NOTE]
@@ -35,9 +35,9 @@ ms.locfileid: "39608313"
 >  Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Вы можете щелкнуть правой кнопкой мыши в окне представления ресурсов, чтобы открыть контекстное меню команд. Вы также можете дважды щелкнуть строку заголовка, чтобы закрепить или открепить окно. Щелчок правой кнопкой мыши в строке заголовка предоставит дополнительные команды, которые позволяют управлять поведением окна. Дополнительные сведения см. в разделе [управления Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Вы можете щелкнуть **представление ресурсов** окно, чтобы открыть контекстное меню команд. Вы также можете дважды щелкнуть строку заголовка, чтобы закрепить или открепить окно. Щелчок правой кнопкой мыши в строке заголовка предоставит дополнительные команды, которые позволяют управлять поведением окна. Дополнительные сведения см. в разделе [управления Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
-#### <a name="to-open-the-resource-view-window"></a>Открытие окна представления ресурсов  
+### <a name="to-open-the-resource-view-window"></a>Открытие окна представления ресурсов  
   
 1.  Нажмите кнопку **представление ресурсов** на **представление** меню.  
   

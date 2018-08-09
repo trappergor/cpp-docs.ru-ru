@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3bfd80e8c6f970fb55b681f193b4ce7c2c0df5a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 87fba12df4c41a49408ecfe6f0f251394dc4663a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648611"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011182"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>Деструктор WeakReference::~WeakReference
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 virtual ~WeakReference();  
 ```  
   

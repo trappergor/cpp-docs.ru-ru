@@ -1,5 +1,5 @@
 ---
-title: Метод HString::GetAddressOf | Документы Microsoft
+title: Метод HString::GetAddressOf | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d4804373045d12c2e251e2de61b7aefd52ec916
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ea49833107bf58443bf4a8238229d1d63a86742
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874672"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010351"
 ---
 # <a name="hstringgetaddressof-method"></a>Метод HString::GetAddressOf
 Извлекает указатель на базовый дескриптор HSTRING.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HSTRING* GetAddressOf() throw()  
 ```  
   

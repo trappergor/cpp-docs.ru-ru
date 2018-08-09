@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0f2f7fa3cd908612e912a58d8c789369f11fcc52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606466"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010377"
 ---
 # <a name="implements-c"></a>implements (C++)
 Указывает диспетчерские интерфейсы, которые нужно принудительно в качестве членов компонентного класса IDL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
@@ -44,7 +44,7 @@ ms.locfileid: "39606466"
  Разделенный запятыми список disp-интерфейс, который будет входить компонентного класса IDL. Метод сокращением для указания одного disp-интерфейс является **реализует (диспетчерских** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию в IDL: coclass добавляются только COM-интерфейсы, которые являются базовыми классами компонентного класса. **реализует** позволяет принудительно выполнять другие интерфейсы в качестве членов компонентного класса IDL.  
+ По умолчанию только COM-интерфейсы, которые являются базовые классы из `coclass` добавляются в компонентного класса IDL. **реализует** позволяет принудительно выполнять другие интерфейсы, чтобы быть IDL `coclass` членов.  
   
 ## <a name="requirements"></a>Требования  
   

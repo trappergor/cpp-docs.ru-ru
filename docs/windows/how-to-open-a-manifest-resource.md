@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: aa8777689581a3ba014d2fa777f6695ca3220db1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569951"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014355"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Практическое руководство. Открытие ресурса манифеста
-Если вы откроете ресурс манифеста из [представления ресурсов](../windows/resource-view-window.md), этот ресурс откроется в двоичном формате. Чтобы просмотреть содержимое ресурса манифеста в более удобном формате, необходимо открыть ресурс из обозревателя решений.  
+Если вы откроете ресурс манифеста из [представления ресурсов](../windows/resource-view-window.md), этот ресурс откроется в двоичном формате. Чтобы просмотреть содержимое ресурса манифеста в более удобном формате, необходимо открыть ресурс из **обозревателе решений**.  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>Открытие ресурса манифеста в текстовом редакторе  
   
@@ -32,7 +32,7 @@ ms.locfileid: "39569951"
   
 2.  Дважды щелкните файл с расширением MANIFEST.  
   
-     Ресурс манифеста откроется в текстовом редакторе.  
+     Ресурс манифеста откроется в **текстовый редактор**.  
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>Открытие ресурса манифеста в другом редакторе  
   
@@ -43,7 +43,6 @@ ms.locfileid: "39569951"
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.  
   
 ## <a name="requirements"></a>Требования  
-  
  Win32  
   
 ## <a name="see-also"></a>См. также  

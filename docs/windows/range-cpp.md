@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4bf4f02043f3cb11a47357ff91898da23ed03c22
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603446"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014212"
 ---
 # <a name="range-c"></a>range (C++)
 Указывает диапазон допустимых значений для полей, значения которых устанавливаются во время выполнения и аргументы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 [ range(  
    low,   
    high  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  *low*  
  Значение нижняя граница диапазона.  
   

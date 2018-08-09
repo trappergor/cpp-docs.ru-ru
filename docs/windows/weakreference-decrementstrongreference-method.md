@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c7e2161c5451fe82e12918f00e8cb2cde37d336
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 19dcb3e90faef86fd291381a7082e8b5bfa89069
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642319"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013461"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>Метод WeakReference::DecrementStrongReference
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 ULONG DecrementStrongReference();  
 ```  
   
