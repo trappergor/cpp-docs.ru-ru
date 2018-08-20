@@ -19,7 +19,7 @@ ms.locfileid: "33841573"
 |-|
 |[cv_status](#cv_status)|
 
-## Перечисление <a name="cv_status">cv_status</a>
+## Перечисление <a name="cv_status"></a>  cv_status
 
 Предоставляет символьные имена для возвращаемых значений методов класса шаблона [condition_variable](../standard-library/condition-variable-class.md).
 
