@@ -1,5 +1,5 @@
 ---
-title: __assume | Документы Microsoft
+title: __assume | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec83775a007e3a07582f218c5588ae4fe7909b20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340571"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541490"
 ---
 # <a name="assume"></a>__assume
 **Блок, относящийся только к системам Microsoft**  
@@ -49,7 +49,7 @@ __assume(
 > [!WARNING]
 >  Программа не должна содержать недействительный оператор `__assume` в достижимом пути. Если компилятор может достигнут недопустимого оператора `__assume`, программа может повести себя непредсказуемо и иметь потенциально опасное поведение.  
   
- `__assume` не является подлинным встроенная функция. Не объявлена как функция и не может использоваться в директиве `#pragma intrinsic`. Несмотря на то, что код не создается, изменяется код, созданный с помощью оптимизатора.  
+ `__assume` не является подлинной внутренние. Не объявлена как функция и не может использоваться в директиве `#pragma intrinsic`. Несмотря на то, что код не создается, изменяется код, созданный с помощью оптимизатора.  
   
  Используйте `__assume` в [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) только когда утверждение не может быть восстановлен. Не используйте `__assume` в assert, для которого имеется код восстановления после ошибки, поскольку компилятор может изменить оптимизацию кода обработки ошибок.  
   
@@ -59,7 +59,7 @@ __assume(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__assume`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__assume`|x86, ARM, x64|  
   
 ## <a name="example"></a>Пример  
   

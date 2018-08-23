@@ -1,5 +1,5 @@
 ---
-title: _AddressOfReturnAddress | Документы Microsoft
+title: _AddressOfReturnAddress | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdfe58f5b42b4c06b3eda3f641bb9f2a4c628cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0b259c730a7db343cc08ff077cf57043f292a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326915"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545868"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 **Блок, относящийся только к системам Microsoft**  
   
- Предоставляет адрес области памяти, хранящий адрес возврата текущей функции. Этот адрес не может использоваться для доступа к другим расположениям памяти (например, аргументов функции).  
+ Предоставляет адрес области памяти, содержащий обратный адрес текущей функции. Этот адрес не может использоваться для доступа к другим расположениям памяти (например, аргументов функции).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,12 +40,12 @@ void * _AddressOfReturnAddress();
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_AddressOfReturnAddress`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Когда `_AddressOfReturnAddress` используется в программе, которая скомпилирована с [/CLR](../build/reference/clr-common-language-runtime-compilation.md), функция, содержащая `_AddressOfReturnAddress` вызов скомпилирована как собственная функция. Когда функция скомпилирована как управляемые вызовы в функцию, содержащую `_AddressOfReturnAddress`, `_AddressOfReturnAddress` может вести себя неожиданным образом.  
+ Когда `_AddressOfReturnAddress` используется в программы, скомпилированной с [/CLR](../build/reference/clr-common-language-runtime-compilation.md), функция, содержащая `_AddressOfReturnAddress` вызов скомпилирована как собственная функция. Если функция скомпилирована как управляемые вызовы в функцию, содержащую `_AddressOfReturnAddress`, `_AddressOfReturnAddress` может вести себя непредусмотренным образом.  
   
  Эта процедура доступна только как встроенная функция.  
   

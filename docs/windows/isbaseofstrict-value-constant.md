@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ac49319dca429dcc0351393f73d711266cf764a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e7159e75b03c6440dfc5742de9f98d93da47d904
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010776"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583858"
 ---
 # <a name="isbaseofstrictvalue-constant"></a>Константа IsBaseOfStrict::value
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-static const bool value = __is_base_of(Base, Derived);  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Указывает, является ли один тип базовым для другого.  
-  
- **значение** — **true** Если тип `Base` является базовым классом типа `Derived`, в противном случае это **false**.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** internal.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Isbaseofstrict-структура](../windows/isbaseofstrict-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+static const bool value = __is_base_of(Base, Derived);
+```
+
+## <a name="remarks"></a>Примечания
+
+Указывает, является ли один тип базовым для другого.
+
+**значение** — **true** Если тип `Base` является базовым классом типа `Derived`, в противном случае это **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** internal.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура IsBaseOfStrict](../windows/isbaseofstrict-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

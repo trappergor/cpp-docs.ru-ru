@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33caa14a0a406b380ba53eb8ed92cf939581f862
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026962"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572392"
 ---
 # <a name="ccomcoclass-class"></a>Класс CComCoClass
 Этот класс предоставляет методы для создания экземпляров класса и получения его свойств.  
@@ -95,7 +95,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out] Адрес переменной указателя, получающей указатель запрошенный интерфейс в том случае, если успешно создана.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение HRESULT. См. в разделе [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) в пакете SDK для Windows, описание возможные возвращаемые значения.  
+ Стандартное значение HRESULT. См. в разделе [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) в пакете SDK для Windows, описание возможные возвращаемые значения.  
   
 ### <a name="remarks"></a>Примечания  
  Использовать первую перегрузку этой функции для создания типичных объекта; Используйте вторую перегрузку, когда просуммируйте создаваемый объект.  
@@ -107,7 +107,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  Обратите внимание, что интерфейс *Q* должен иметь связанный с ним IID, можно получить с помощью [__uuidof](../../cpp/uuidof-operator.md) оператор.  
   
 ### <a name="example"></a>Пример  
- В следующем примере `CDocument` созданный мастером ATL класс, производный от `CComCoClass` , реализующий `IDocument` интерфейс. Класс регистрируется в карте объектов с помощью макроса OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO, поэтому клиенты не смогут создавать экземпляры документа с помощью [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication` Представляет компонентный класс, предоставляющий метод на одном из собственных интерфейсов COM, для создания экземпляров класса документа. В коде ниже показан как просто его, чтобы создать экземпляры класса документа с использованием `CreateInstance` член наследуется от `CComCoClass` базового класса.  
+ В следующем примере `CDocument` созданный мастером ATL класс, производный от `CComCoClass` , реализующий `IDocument` интерфейс. Класс регистрируется в карте объектов с помощью макроса OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO, поэтому клиенты не смогут создавать экземпляры документа с помощью [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` Представляет компонентный класс, предоставляющий метод на одном из собственных интерфейсов COM, для создания экземпляров класса документа. В коде ниже показан как просто его, чтобы создать экземпляры класса документа с использованием `CreateInstance` член наследуется от `CComCoClass` базового класса.  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   

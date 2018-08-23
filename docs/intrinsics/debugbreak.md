@@ -1,5 +1,5 @@
 ---
-title: __debugbreak | Документы Microsoft
+title: __debugbreak | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340181"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544515"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Блок, относящийся только к системам Microsoft**  
@@ -40,13 +40,13 @@ void __debugbreak();
   
 |Встроенная функция|Архитектура|Header|  
 |---------------|------------------|------------|  
-|`__debugbreak`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<Intrin.h >|  
+|`__debugbreak`|x86, ARM, x64|\<Intrin.h >|  
   
 ## <a name="remarks"></a>Примечания  
- `__debugbreak` Компилятора встроенная функция, как и для [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), переносимый способ Win32 для создания точки останова.  
+ `__debugbreak` Компилятора встроенные, аналогичную [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), — это переносимые Win32 способ создания точки останова.  
   
 > [!NOTE]
->  При компиляции с параметром **/CLR**, функция, содержащая `__debugbreak` компилируются в MSIL-код. При использовании `asm int 3` функция компилируется в машинный код. Дополнительные сведения см. в разделе [__asm](../assembler/inline/asm.md).  
+>  При компиляции с параметром **/CLR**, функция, содержащая `__debugbreak` будет компилироваться в MSIL. При использовании `asm int 3` функция компилируется в машинный код. Дополнительные сведения см. в разделе [__asm](../assembler/inline/asm.md).  
   
  Пример:  
   

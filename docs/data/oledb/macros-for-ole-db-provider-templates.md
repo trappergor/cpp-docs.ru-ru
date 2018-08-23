@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5c9132325af7c05980aac0d7b6b7d53958e4a2b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338048"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572787"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Макросы для шаблонов поставщика OLE DB
 Макросы шаблонов поставщик данных OLE DB предоставляют функции в следующих категориях:  
@@ -159,11 +159,11 @@ BEGIN_PROPSET_MAP(Class)
  *Класс*  
  [in] Указывается класс, в котором значение этого свойства. Набор свойств можно задать следующие объекты OLE DB.  
   
--   [Объекты источника данных](https://msdn.microsoft.com/library/ms721278.aspx)  
+-   [Объекты источника данных](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
   
--   [Объекты сеанса](https://msdn.microsoft.com/library/ms711572.aspx)  
+-   [Объекты сеанса](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
   
--   [Команды](https://msdn.microsoft.com/library/ms724608.aspx)  
+-   [Команды](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
   
 #### <a name="example"></a>Пример  
  Ниже приведен пример карты набора свойств.  
@@ -228,10 +228,10 @@ PROPERTY_INFO_ENTRY(dwPropID)
   
 #### <a name="parameters"></a>Параметры  
  *dwPropID*  
- [in] Объект [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
+ [in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
   
 #### <a name="remarks"></a>Примечания  
- Этот макрос задает в качестве значения свойства типа `DWORD` значение по умолчанию, определенное в ATLDB.H. Чтобы задать свойству нужное вам значение, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Чтобы задать [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) и [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx) для свойства, в то же время, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ Этот макрос задает в качестве значения свойства типа `DWORD` значение по умолчанию, определенное в ATLDB.H. Чтобы задать свойству нужное вам значение, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Чтобы задать [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) и [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) для свойства, в то же время, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Пример  
  См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -247,13 +247,13 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
   
 #### <a name="parameters"></a>Параметры  
  *dwPropID*  
- [in] Объект [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
+ [in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
   
  *vt*  
  [in] [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) этой записи свойства.  
   
  *dwFlags*  
- [in] Объект [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx) значение, описывающее эту запись свойства.  
+ [in] Объект [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) значение, описывающее эту запись свойства.  
   
  *значение*  
  [входные данные] Значение свойства с типом `DWORD`.  
@@ -278,7 +278,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
   
 #### <a name="parameters"></a>Параметры  
  *dwPropID*  
- [in] Объект [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
+ [in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
   
  *значение*  
  [входные данные] Значение свойства с типом `DWORD`.  
@@ -355,7 +355,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
  [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
  *dbType*  
- [in] Тип данных в [DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx).  
+ [in] Тип данных в [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
  *Член*  
  [in] Переменная-член в `dataClass` , где хранятся данные.  
@@ -383,22 +383,22 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
  [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
  *flags*  
- [in] Указывает, каким образом данные возвращаются. См. в разделе `dwFlags` описание в [структуры DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Указывает, каким образом данные возвращаются. См. в разделе `dwFlags` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *colSize*  
  [in] Размер столбца.  
   
  *dbType*  
- [in] Указывает тип данных значения. См. в разделе `wType` описание в [структуры DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Указывает тип данных значения. См. в разделе `wType` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *precision*  
- [in] Указывающее точность для использования при получении данных, если *dbType* DBTYPE_NUMERIC или DBTYPE_DECIMAL. См. в разделе `bPrecision` описание в [структуры DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Указывающее точность для использования при получении данных, если *dbType* DBTYPE_NUMERIC или DBTYPE_DECIMAL. См. в разделе `bPrecision` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *Масштаб*  
- [in] Указывает шкалу для использования при получении данных, если тип dbType DBTYPE_NUMERIC или DBTYPE_DECIMAL. См. в разделе `bScale` описание в [структуры DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Указывает шкалу для использования при получении данных, если тип dbType DBTYPE_NUMERIC или DBTYPE_DECIMAL. См. в разделе `bScale` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *Идентификатор GUID*  
- GUID набора строк схемы. См. в разделе [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) в *Справочник программиста OLE DB по* список наборов строк схемы и их идентификаторы GUID.  
+ GUID набора строк схемы. См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по* список наборов строк схемы и их идентификаторы GUID.  
   
 #### <a name="remarks"></a>Примечания  
  Позволяет указать размер столбца, тип данных, точность, масштаб и GUID набора строк схемы.  
@@ -451,7 +451,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
  [in] Переменная-член в классе данных, в которой хранятся данные.  
   
 #### <a name="remarks"></a>Примечания  
- Используйте этот макрос, если столбец данных предполагается, что [DBTYPE_STR](https://msdn.microsoft.com/library/ms711251.aspx).  
+ Используйте этот макрос, если столбец данных предполагается, что [DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
 #### <a name="example"></a>Пример  
  См. в разделе [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).   
@@ -473,7 +473,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
  [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
  *dbType*  
- [in] Тип данных в [DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx).  
+ [in] Тип данных в [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
  *size*  
  [in] Размер столбца в байтах.  
@@ -504,7 +504,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
  [in] Переменная-член в классе данных, в которой хранятся данные.  
   
 #### <a name="remarks"></a>Примечания  
- Используйте этот макрос в том случае, когда данные столбца нулем строка в Юникоде, [DBTYPE_WSTR](https://msdn.microsoft.com/library/ms711251.aspx).  
+ Используйте этот макрос в том случае, когда данные столбца нулем строка в Юникоде, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 Обозначает начало карте схемы.  
@@ -520,7 +520,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
  Класс, содержащий Сопоставления. Как правило, это будет класс сеанса.  
   
 #### <a name="remarks"></a>Примечания  
- См. в разделе [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) в пакете SDK для Windows, Дополнительные сведения о наборах строк схемы.  
+ См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения о наборах строк схемы.  
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
 Обозначает конец схемы.  
@@ -546,7 +546,7 @@ SCHEMA_ENTRY(guid,
   
 #### <a name="parameters"></a>Параметры  
  *Идентификатор GUID*  
- GUID набора строк схемы. См. в разделе [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) в *Справочник программиста OLE DB по* список наборов строк схемы и их идентификаторы GUID.  
+ GUID набора строк схемы. См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по* список наборов строк схемы и их идентификаторы GUID.  
   
  *RowsetClass*  
  Класс, который будет создан для представления набора строк схемы.  
@@ -560,7 +560,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);  
 ```  
   
- Это `Execute` функция заполняет данные набора строк. Создает мастер проектов ATL, как описано в разделе [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) в *Справочник программиста OLE DB по*, три начальной наборы строк схемы в проекте для каждого из трех обязательной схемы OLE DB:  
+ Это `Execute` функция заполняет данные набора строк. Создает мастер проектов ATL, как описано в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по*, три начальной наборы строк схемы в проекте для каждого из трех обязательной схемы OLE DB:  
   
 -   DBSCHEMA_TABLES  
   

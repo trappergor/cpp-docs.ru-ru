@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonGalleryMenuButton | Документы Microsoft
+title: Класс CMFCRibbonGalleryMenuButton | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041264"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540097"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Класс CMFCRibbonGalleryMenuButton
 Реализует кнопку меню ленты, которая содержит коллекцию лент.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
    
 ## <a name="syntax"></a>Синтаксис  
   
@@ -136,25 +136,25 @@ CMFCRibbonGalleryMenuButton(
  Идентификатор команды кнопки. Это значение отправляется в сообщении WM_COMMAND, когда пользователь нажимает эту кнопку.  
   
  *iImage*  
- Индекс изображения, которое отображается с помощью кнопки меню коллекции. Изображения хранятся в *imagesPalette* параметра.  
+ Индекс изображения, отображаемого с помощью кнопки меню коллекции. Изображения сохраняются в *imagesPalette* параметра.  
   
  *lpszText*  
  Текст, отображаемый на кнопке меню.  
   
  *imagesPalette*  
- Содержит список изображений, отображаемых в галерее.  
+ Содержит список изображений, отображаемых в коллекции.  
   
  *uiImagesPaletteResID*  
- Идентификатор ресурса из списка изображений для изображения для отображения в коллекции.  
+ Идентификатор ресурса для изображений в списке изображений для отображения в коллекции.  
   
  *cxPaletteImage*  
- Задает ширину в пикселях изображение, отображаемое в коллекции.  
+ Задает ширину в пикселях изображения для отображения в коллекции.  
   
 ### <a name="remarks"></a>Примечания  
  Кнопка коллекции отображается в виде всплывающего меню со стрелкой. Когда пользователь нажимает эту кнопку, открывается коллекция изображений.  
   
 ### <a name="example"></a>Пример  
- Ниже приведен пример, как использовать конструктор `CMFCRibbonGalleryMenuButton` класса. Этот фрагмент кода является частью [MS Office 2007 демонстрационный пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует способы использования конструктора `CMFCRibbonGalleryMenuButton` класса. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   

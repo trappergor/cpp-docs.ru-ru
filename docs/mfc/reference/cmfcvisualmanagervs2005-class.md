@@ -1,5 +1,5 @@
 ---
-title: Класс преобразованный CMFCVisualManagerVS2005 | Документы Microsoft
+title: Класс CMFCVisualManagerVS2005 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7282730779360ecc0bb93f0ae827b46ddff19d0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e3ce4384ebce3140f8d3ccadf781f3d45b92340b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038065"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538915"
 ---
-# <a name="cmfcvisualmanagervs2005-class"></a>Класс преобразованный CMFCVisualManagerVS2005
-`CMFCVisualManagerVS2005` придает приложению внешний вид Microsoft Visual Studio 2005.  
+# <a name="cmfcvisualmanagervs2005-class"></a>Класс CMFCVisualManagerVS2005
+`CMFCVisualManagerVS2005` Придает приложению внешний вид Microsoft Visual Studio 2005.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,11 +70,11 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Этот метод вызывается платформой при рисовании область, в которой будет закреплено и с вкладками. (Переопределяет [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|Платформа вызывает этот метод, чтобы определить размер границы окна MDITabs, прежде чем он выводит окно. (Переопределяет [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  
+|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Этот метод вызывается платформой при рисовании область, в которой будет закреплен и с вкладками. (Переопределяет [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
+|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|Платформа вызывает этот метод, чтобы определить размер границы окна MDITabs, прежде чем выполняется рисование окна. (Переопределяет [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  
 |[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(Переопределяет [CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor).)|  
 |[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(Переопределяет [CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors).)|  
-|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Возвращает перекрываются ли кнопки автоматического скрытия в текущий диспетчер визуального представления. (Переопределяет [CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons).)|  
+|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Возвращает, перекрываются ли кнопки автоматического скрытия в текущем наглядный диспетчер. (Переопределяет [CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons).)|  
 |[CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|(Переопределяет [CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder).)|  
 |[CMFCVisualManagerVS2005::OnDrawCaptionButton](#ondrawcaptionbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`.)|  
 |[CMFCVisualManagerVS2005::OnDrawPaneCaption](#ondrawpanecaption)|(Переопределяет [CMFCVisualManagerOffice2003::OnDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption).)|  
@@ -88,12 +88,12 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(Переопределяет [CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|  
   
 ## <a name="remarks"></a>Примечания  
- Для изменения внешнего вида приложения пользующийся используется класс преобразованный CMFCVisualManagerVS2005 [!INCLUDE[vsprvsext](../../mfc/reference/includes/vsprvsext_md.md)].  
+ Класс CMFCVisualManagerVS2005 используется для изменения внешнего вида приложения, аналогично Microsoft Visual Studio 2005.  
   
- Все члены этого класса являются виртуальных функций, которые являются производными от предка этого класса [CMFCVisualManager класса](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Все члены этого класса являются виртуальных функций, которые являются производными от предка этого класса [класс CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать Диспетчер визуальных VS 2005. Этот фрагмент кода является частью [Desktop предупреждения демонстрационный пример](../../visual-cpp-samples.md).  
+ В следующем примере демонстрируется использование наглядный диспетчер VS 2005. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]  
   
@@ -398,6 +398,6 @@ virtual void OnUpdateSystemColors();
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Классы](../../mfc/reference/mfc-classes.md)   
  [Класс CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
- [Класс преобразованный CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
- [Класс преобразованный CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)   
+ [Класс CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
+ [Класс CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)   
  [Класс CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)

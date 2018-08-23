@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b29a5d0538cb3608ceeb5ec09bd629b1de18b4b6
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a39e4d600ab5bb209a74ce74dd37af2eb496de0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338224"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571814"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>Класс CDynamicParameterAccessor
 
@@ -304,7 +304,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
  [in] Параметр с номером (начиная с 1). Параметр 0 зарезервирован для возвращаемых значений. Параметр с номером является индексом параметра, в зависимости от их порядка SQL или вызов хранимой процедуры. См. в разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) пример.  
   
  *pStatus*  
- [out] Указатель на переменную, содержащую DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](https://msdn.microsoft.com/library/ms722617.aspx) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.  
+ [out] Указатель на переменную, содержащую DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.  
   
 ### <a name="remarks"></a>Примечания  
  Первое переопределение возвращает **true** в случае успешного выполнения или **false** в случае сбоя. Второе переопределение точек на буфер, содержащий состояние указанного параметра.
@@ -407,7 +407,7 @@ bool SetParam(TCHAR* pParamName,
  [in] Указатель на буфер, содержащий данные для записи в буфер.  
   
  *status*  
- [in] DBSTATUS состояние столбца. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](https://msdn.microsoft.com/library/ms722617.aspx) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.  
+ [in] DBSTATUS состояние столбца. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** в случае успешного выполнения или **false** в случае сбоя.  
@@ -449,7 +449,7 @@ bool SetParamStatus(DBORDINAL nParam,
  [in] Параметр с номером (начиная с 1). Параметр 0 зарезервирован для возвращаемых значений. Параметр с номером является индексом параметра, в зависимости от их порядка SQL или вызов хранимой процедуры. См. в разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) пример.  
   
  *status*  
- [in] DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](https://msdn.microsoft.com/library/ms722617.aspx) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.  
+ [in] DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.  
   
 ### <a name="remarks"></a>Примечания  
  Возвращает **true** в случае успешного выполнения или **false** в случае сбоя. 
@@ -475,7 +475,7 @@ bool SetParamString(DBORDINAL nParam,
  [in] Указатель на ANSI (**CHAR**) или Юникод (**WCHAR**) строковые данные указанного параметра. См. в разделе DBSTATUS в oledb.h.  
   
  *status*  
- [in] DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](https://msdn.microsoft.com/library/ms722617.aspx) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.  
+ [in] DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.  
   
 ### <a name="remarks"></a>Примечания  
  Возвращает **true** в случае успешного выполнения или **false** в случае сбоя.  

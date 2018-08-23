@@ -1,5 +1,5 @@
 ---
-title: float_control | Документы Microsoft
+title: float_control | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9b94e5b8eccdc63735c7cb25faa7eacb1e23670
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840359"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540668"
 ---
 # <a name="floatcontrol"></a>float_control
 Указывает поведение чисел с плавающей запятой для функции.  
@@ -35,21 +35,23 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>Флаги  
- `value`, `setting` **[принудительной]**  
- Указывает поведение чисел с плавающей запятой. `value` может быть **точный** или **за исключением**. Дополнительные сведения см. в разделе [/fp (определение поведения с плавающей запятой)](../build/reference/fp-specify-floating-point-behavior.md). `setting` может быть **на** или **off**.  
+ 
+*значение*, *параметр* *[Push-уведомлений]*  
+Указывает поведение чисел с плавающей запятой. *значение* может быть `precise` или `except`. Дополнительные сведения см. в разделе [/fp (определение поведения с плавающей запятой)](../build/reference/fp-specify-floating-point-behavior.md). *Установка* может быть `on` или `off`.  
   
- Если `value` — **точный**, параметры для **точный** и **за исключением** были указаны. **за исключением** можно присвоить только значение **на** при **точный** задается значение **на**.  
+Если *значение* — `precise`, параметры `precise` и `except` были указаны. `except` может устанавливаться только `on` при `precise` задается значение `on`.  
   
- Если необязательный **принудительной** добавлен токен, текущий параметр `value` помещается во внутренний стек компилятора.  
+Если необязательный *принудительной* маркер добавляется, текущий параметр для *значение* помещается во внутренний стек компилятора.  
   
- **push**  
- Текущий параметр `float_control` помещается во внутренний стек компилятора.  
+*push*  
+Текущий **float_control** задание на внутреннего стека компилятора  
   
- **pop**  
- Удаляет `float_control` из вверху внутреннего стека компилятора и делает это новый `float_control` параметр.  
+*pop*  
+Удаляет **float_control** из верхней части внутреннего стека компилятора и делает это новый **float_control** параметр.  
   
 ## <a name="remarks"></a>Примечания  
- Не удается включить `float_control precise` отключить **за исключением** включен. Аналогичным образом **точный** не может быть установлен в off при `fenv_access` включен. Чтобы перейти от строгой модели к быстродействующей с помощью прагма-директивы `float_control`, используйте следующий код:  
+ 
+При включенном `float_control precise` отключить `except` невозможно. Аналогично при включенном `precise` невозможно отключить `fenv_access`. Чтобы перейти от строгой модели к быстродействующей с **float_control** pragma, используйте следующий код:  
   
 ```  
 #pragma float_control(except, off)  
@@ -57,7 +59,7 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, off)  
 ```  
   
- Чтобы перейти от быстродействующей модели к строгой с помощью прагма-директивы `float_control`, используйте следующий код:  
+Чтобы перейти от быстродействующей модели к строгой с **float_control** pragma, используйте следующий код:  
   
 ```  
 #pragma float_control(precise, on)  
@@ -65,16 +67,17 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, on)  
 ```  
   
- Другие типы директив pragma для значений с плавающей запятой:  
+Другие типы директив pragma для значений с плавающей запятой:  
   
--   [fenv_access](../preprocessor/fenv-access.md)  
+- [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp_contract](../preprocessor/fp-contract.md)  
+- [fp_contract](../preprocessor/fp-contract.md)  
   
 ## <a name="example"></a>Пример  
- В следующем примере показан перехват исключения переполнения при операции с плавающей запятой с помощью прагма-директивы `float_control`.  
+ 
+Ниже приведен пример, как перехватить исключение переполнения с плавающей запятой с помощью директивы pragma **float_control**.  
   
-```  
+```cpp  
 // pragma_directive_float_control.cpp  
 // compile with: /EHa  
 #include <stdio.h>  
@@ -113,4 +116,5 @@ Pass
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  

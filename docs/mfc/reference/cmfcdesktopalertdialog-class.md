@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCDesktopAlertDialog | Документы Microsoft
+title: Класс CMFCDesktopAlertDialog | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040799"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544527"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>Класс CMFCDesktopAlertDialog
 `CMFCDesktopAlertDialog` Класс используется вместе с [класс CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) для отображения настраиваемого диалогового окна во всплывающем окне.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,7 +60,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
   
 2.  Создайте в ресурсах проекта шаблон дочернего диалогового окна.  
   
-3.  Вызовите [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) с Идентификатором ресурса шаблона диалогового окна и указатель на сведения класса среды выполнения производного класса в качестве параметров.  
+3.  Вызовите [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) с Идентификатором ресурса шаблона диалогового окна и указатель на время выполнения сведения о классе производного класса в качестве параметров.  
   
 4.  Создайте настраиваемое диалоговое окно для обработки всех уведомлений, поступающих от размещенных элементов управления, или размещенные элементы управления для обработки этих уведомлений напрямую.  
   

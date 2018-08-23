@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 42909a9ddc24131c759886c4d169c4fd7484ca98
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340421"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573264"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Ссылка на шаблоны поставщика OLE DB
 Классы и интерфейсы для шаблонов поставщика OLE DB могут быть сгруппированы в следующие категории. Справочные материалы также включает информацию о [макросы для шаблонов поставщика OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "39340421"
  Открывает и возвращает набор строк, который содержит все строки из одной базовой таблицы или индекса. Обязательный интерфейс для объекта сеанса.  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Реализует OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) интерфейс, позволяющий обновлять значения столбцов в существующих строках, удаление строк и вставки новых строк.  
+ Реализует OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) интерфейс, позволяющий обновлять значения столбцов в существующих строках, удаление строк и вставки новых строк.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
  Этот класс наследует от [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) и переопределяет [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` выполняет те же функции, что `IObjectWithSite` , но и обеспечивает свойства OLE DB `DBPROPCANSCROLLBACKWARDS` и `DBPROPCANFETCHBACKWARDS`.  
@@ -75,13 +75,13 @@ ms.locfileid: "39340421"
  Реализует свойства набора строк с помощью свойства набора карты, определенные в классе команды. Обязательный интерфейс наборов строк.  
   
  [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
- Реализует OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) интерфейс, который извлекает строки из набора строк. Поддерживает закладки OLE DB в наборе строк, чтобы наследовать от этого класса набора строк.  
+ Реализует OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) интерфейс, который извлекает строки из набора строк. Поддерживает закладки OLE DB в наборе строк, чтобы наследовать от этого класса набора строк.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Реализует широковещательных функции для в точке подключения `IID_IRowsetNotify` об изменениях содержимого набора строк. Реализовать потребителей, обработки уведомлений [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) и зарегистрируйте его на эту точку подключения.  
+ Реализует широковещательных функции для в точке подключения `IID_IRowsetNotify` об изменениях содержимого набора строк. Реализовать потребителей, обработки уведомлений [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) и зарегистрируйте его на эту точку подключения.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Реализует OLE DB [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) интерфейс, который позволяет потребителям приостановить передачу изменений, внесенных с [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) для источника данных и отменить изменения перед передачей.  
+ Реализует OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) интерфейс, который позволяет потребителям приостановить передачу изменений, внесенных с [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) для источника данных и отменить изменения перед передачей.  
   
 ## <a name="command-classes"></a>Классы команд  
  [ICommandImpl](../../data/oledb/icommandimpl-class.md)  
@@ -114,7 +114,7 @@ ms.locfileid: "39340421"
   
  [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Реализует OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) интерфейс, добавления записей и извлечения записей из элемента данных.  
+ Реализует OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) интерфейс, добавления записей и извлечения записей из элемента данных.  
   
 ## <a name="see-also"></a>См. также  
  [Ссылка на шаблоны OLE DB потребителя](../../data/oledb/ole-db-consumer-templates-reference.md)   

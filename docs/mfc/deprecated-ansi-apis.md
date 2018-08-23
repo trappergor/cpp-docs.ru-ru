@@ -1,5 +1,5 @@
 ---
-title: Устаревшие интерфейсы API ANSI | Документы Microsoft
+title: Устаревшие интерфейсы API ANSI | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342063"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539519"
 ---
 # <a name="deprecated-ansi-apis"></a>Нерекомендуемые API ANSI
-Библиотека Microsoft Foundation Class (MFC) переносит классы и методы, которые основаны на наборе символов Юникода. Следовательно несколько методов с MFC версии ANSI являются устаревшими. Используйте Юникод версии этих методов в будущие версии приложений.  
+Библиотеки Microsoft Foundation Class (MFC) переход к классы и методы, которые основаны на наборе символов Юникод. Следовательно являются устаревшими версии ANSI нескольких методов MFC. Используете версии Юникод этих методов в будущих приложениях.  
   
- Начиная с общих элементах управления Windows версии 6.1, которая включена в состав [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], рекомендуется использовать следующие методы ANSI.  
+ Начиная с общих элементов управления Windows версии 6.1, который поставляется в Windows Vista, являются устаревшими следующие методы ANSI.  
   
 ## <a name="cbutton-class"></a>Класс CButton  
   
@@ -60,7 +60,7 @@ AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
     BOOL fDrawIfFocused = FALSE);
 ```  
   
-## <a name="clinkctrl-class"></a>Класс классах-оболочках  
+## <a name="clinkctrl-class"></a>Класс CLinkCtrl  
  Весь класс является устаревшим.  
   
 ## <a name="clistctrl-class"></a>CListCtrl - класс  

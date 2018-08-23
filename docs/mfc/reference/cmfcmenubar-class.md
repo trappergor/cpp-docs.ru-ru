@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853781"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539512"
 ---
 # <a name="cmfcmenubar-class"></a>Класс CMFCMenuBar
 Строка меню, которая реализует закрепление.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  Ширина кнопки для поля со списком в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- **Помочь** похож на поле со списком **помочь** поле со списком в строке меню [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ **Помочь** похож на поле со списком **помочь** списком в строке меню Microsoft Word.  
   
  При вызове этого метода с *uiID* значение 0, этот метод скрывает поле со списком. В противном случае этот метод поле со списком автоматически отображается в правой части панели меню. После вызова этого метода вызовите [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) получить указатель на вставленный [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объекта.  
   

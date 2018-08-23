@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337726"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572864"
 ---
 # <a name="cbulkrowset-class"></a>Класс CBulkRowset
 Извлекает и управляет строк, чтобы работать с данными в пакетном режиме, получая несколько дескрипторов строк с помощью одного вызова.  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
-Вызовы [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) следует выполнить приращение счетчика ссылок для всех строк, в данный момент получить из набора строк bulk.  
+Вызовы [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) следует выполнить приращение счетчика ссылок для всех строк, в данный момент получить из набора строк bulk.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in] Число строк из закладки в строку. Если *lSkip* равен нулю, первая строка выборки представляет строке с закладкой. Если *lSkip* -1, первый выбранная строка является строкой после строке с закладкой. Если *lSkip* равно -1, первая строка выборки представляет закладками строки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- См. в разделе [IRowset::GetData](https://msdn.microsoft.com/library/ms716988.aspx) в *справочнике программиста OLE DB*. 
+ См. в разделе [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 Извлекает строки, начиная с долей позиции в наборе строк.  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- Где `RowsetSize` — это размер набора строк, измеряется строками. Точность по этой формуле, зависит от определенного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll::GetRowsAtRatio](https://msdn.microsoft.com/library/ms709602.aspx) в *Справочник программиста OLE DB по*.   
+ Где `RowsetSize` — это размер набора строк, измеряется строками. Точность по этой формуле, зависит от определенного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) в *Справочник программиста OLE DB по*.   
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
-Вызовы [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) для уменьшения числа ссылок для всех строк, в данный момент получить из набора строк bulk.  
+Вызовы [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) для уменьшения числа ссылок для всех строк, в данный момент получить из набора строк bulk.  
   
 ### <a name="syntax"></a>Синтаксис  
   

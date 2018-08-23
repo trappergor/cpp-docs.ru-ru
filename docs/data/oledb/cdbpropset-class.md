@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1b94898cbe4a041ac1bb9a5d01c55380ee496106
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337601"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572406"
 ---
 # <a name="cdbpropset-class"></a>Класс CDBPropSet
 Наследует от `DBPROPSET` структурировать и добавляет конструктор, который инициализирует ключевых полей, а также `AddProperty` доступ к методу.  
@@ -131,7 +131,7 @@ bool AddProperty(DWORD dwPropertyID,
  **значение true,** Если свойство было успешно добавлено. В противном случае **false**. 
 
 ## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
-Конструктор. Инициализирует `rgProperties`, `cProperties`, и `guidPropertySet` поля [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структуры.  
+Конструктор. Инициализирует `rgProperties`, `cProperties`, и `guidPropertySet` поля [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -161,7 +161,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>Параметры  
  *Идентификатор GUID*  
- [in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структуры.  
+ [in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры.  
   
 ### <a name="remarks"></a>Примечания  
  Это поле можно задать [конструктор](../../data/oledb/cdbpropset-cdbpropset.md) также.  
@@ -179,5 +179,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
  [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Ссылка на шаблоны OLE DB потребителя](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [Класс CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)   
- [Структуре DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)   
- [Структуры DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)
+ [Структуре DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
+ [Структуры DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec2a52949754e6b19730d5ef025f958d517f6fd0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 467fa4812af6957bea249d6f55701e1474a9382d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341040"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572385"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Обращение к свойству в поставщике
-Для свойства, которое требуется найти группы свойств и идентификатор свойства. Дополнительные сведения см. в разделе [свойства OLE DB](https://msdn.microsoft.com/library/ms722734.aspx) в *Справочник программиста OLE DB по*.  
+Для свойства, которое требуется найти группы свойств и идентификатор свойства. Дополнительные сведения см. в разделе [свойства OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) в *Справочник программиста OLE DB по*.  
   
  В следующем примере предполагается, что вы пытаетесь получить свойство из набора строк. Код для использования команды или сеанса, похоже, но используется другой интерфейс.  
   

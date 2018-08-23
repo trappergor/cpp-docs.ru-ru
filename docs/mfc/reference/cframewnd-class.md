@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337386"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540113"
 ---
 # <a name="cframewnd-class"></a>Класс CFrameWnd
 Реализует функции однодокументного интерфейса Windows (SDI) с наложенным или всплывающим фреймовым окном с элементами для управления окном.  
@@ -1010,7 +1010,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 ### <a name="remarks"></a>Примечания  
  Если значение *nStyle* параметр не является допустимым, этот метод проверочные утверждения в режиме отладки и вызывает [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) в режиме выпуска. В случае другие ошибки времени выполнения, этот метод, проверочные утверждения в режиме отладки и вызывает исключение, производный от [CException](../../mfc/reference/cexception-class.md) класса.  
   
- Этот метод воздействует на состояние меню в приложениях, написанных для [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] и более поздних версий.  
+ Этот метод воздействует на состояние меню в приложениях, написанных для Windows Vista и более поздних версий.  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  Вызывайте эту функцию для размещения строки в области строки состояния, который имеет идентификатор 0.  

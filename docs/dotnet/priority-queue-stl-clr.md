@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cb2ee3fa52612ee3c6abae7a57046564c10c8afb
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 573b365e0ca0d1c5b607144b1d143796e1ce927c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376041"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571805"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Класс шаблона описывает объект, управляющий переменной длины упорядоченную последовательность элементов, который имеет ограниченный доступ. Использование адаптера контейнера `priority_queue` для управления базового контейнера, как очереди с приоритетом.  

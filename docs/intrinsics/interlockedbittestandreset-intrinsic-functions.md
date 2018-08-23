@@ -1,5 +1,5 @@
 ---
-title: встроенные функции _interlockedbittestandreset | Документы Microsoft
+title: встроенные функции _interlockedbittestandreset | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c292d344727f2cc473dc444853a2c46d94150dd0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 433d4ba23cbf4ed7e2819a3752cd2155b7c20371
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340454"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540688"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>встроенные функции _interlockedbittestandreset
 **Блок, относящийся только к системам Microsoft**  
@@ -95,14 +95,14 @@ unsigned char _interlockedbittestandreset64_HLERelease(
   
 |Встроенная функция|Архитектура|Header|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<Intrin.h >|  
+|`_interlockedbittestandreset`|x86, ARM, x64|\<Intrin.h >|  
 |`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<Intrin.h >|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
-|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<Intrin.h >|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h >|  
+|`_interlockedbittestandreset64`|X64|\<Intrin.h >|  
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Примечания  
- На платформах процессоров x86 и [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], их встроенные функции используют инструкцию `lock btr`, которая считывает и задает нулевое значение указанного разряда в атомарной операции.  
+ На процессорах x86 и x64, эти встроенные функции используют `lock btr` инструкции, которая считывает и задает нулевое значение указанного разряда в атомарной операции.  
   
  На процессорах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции ARM с суффиксом `_nf` («без границ») не действуют как барьер памяти.  
   

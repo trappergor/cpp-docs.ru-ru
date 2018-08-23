@@ -1,5 +1,5 @@
 ---
-title: raw_interfaces_only | Документы Microsoft
+title: raw_interfaces_only | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4643181bf70bc92f4ef5e88b8a9add1ba7bdaad7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63097c9ac47f3b791ff7fd5949cece4d85e5ca1f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849305"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538330"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
 **Конкретных C++**  
   
- Подавляет создание функции-оболочки обработки ошибок и [свойство](../cpp/property-cpp.md) объявления, использующие эти функции-оболочки.  
+Отключает создание функций оболочки обработки ошибок и [свойство](../cpp/property-cpp.md) объявления, в которых используются такие функции оболочки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,12 +35,14 @@ raw_interfaces_only
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Атрибут `raw_interfaces_only` также вызывает удаление префикса по умолчанию, используемого для именования функций, отличных от свойств. Как правило, используется префикс **raw_**. Если этот атрибут задан, имена функций берутся непосредственно из библиотеки типов.  
+ 
+**Raw_interfaces_only** атрибут приводит также к префикс по умолчанию, используемое для именования удалены функции, не являющийся свойством. Как правило, используется префикс **raw_**. Если этот атрибут задан, имена функций берутся непосредственно из библиотеки типов.  
   
- Этот атрибут позволяет предоставлять только низкоуровневое содержимое библиотеки типов.  
+Этот атрибут позволяет предоставлять только низкоуровневое содержимое библиотеки типов.  
   
- **КОНЕЦ определенного C++**  
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

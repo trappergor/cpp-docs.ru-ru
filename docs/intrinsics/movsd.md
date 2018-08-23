@@ -1,5 +1,5 @@
 ---
-title: __movsd | Документы Microsoft
+title: __movsd | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 802e3845e72516e6dd0f09fd2a350a65565cd502
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 659da66ea74088247a9eb46ae25f9920050719a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326928"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541680"
 ---
 # <a name="movsd"></a>__movsd
 **Блок, относящийся только к системам Microsoft**  
   
- Создает строку, переместите (`rep movsd`) инструкции.  
+ Создает строку переместить (`rep movsd`) инструкции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,18 +48,18 @@ void __movsd(
  Источник операции.  
   
  [in] `Count`  
- Количество двойных слов для копирования.  
+ Число двойных слов для копирования.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__movsd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsd`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- В результате первый `Count` двойных слов, на который указывает `Source` копируются `Dest` строки.  
+ В результате первый `Count` двойных слов, на которые указывают `Source` копируются `Dest` строка.  
   
  Эта процедура доступна только как встроенная функция.  
   

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b28dc721b3131fc413248f6ba4a0b0612176cb67
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6cb88decfd69fd7fb81667164f651e934ee08775
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337584"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538755"
 ---
 # <a name="cdatabase-class"></a>Класс CDatabase
 Представляет подключение к источнику данных, с помощью которого можно получить доступ к данным.  
@@ -189,7 +189,7 @@ void Cancel();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Обратите внимание, что классам ODBC библиотеки MFC больше не использовать асинхронной обработки; для выполнения асинхронной операции, необходимо непосредственно вызвать функцию ODBC API [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Дополнительные сведения см. в разделе [асинхронное выполнение](https://msdn.microsoft.com/library/ms713563.aspx) в пакете Windows SDK.  
+ Обратите внимание, что классам ODBC библиотеки MFC больше не использовать асинхронной обработки; для выполнения асинхронной операции, необходимо непосредственно вызвать функцию ODBC API [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\)). Дополнительные сведения см. в разделе [асинхронное выполнение](/previous-versions/windows/desktop/ms713563\(v=vs.85\)) в пакете Windows SDK.  
   
 ##  <a name="cantransact"></a>  CDatabase::CanTransact  
  Вызывайте эту функцию члена, чтобы определить, допускает ли базы данных транзакций.  

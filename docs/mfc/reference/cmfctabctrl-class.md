@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852592"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540514"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl` Класс предоставляет функциональные возможности для набора вкладок. Элемент управления "вкладка" отображает закрепляемое окно с плоскими или трехмерными вкладками в верхней или нижней части. Вкладки могут отображать текст и изображение и могут изменять цвет, когда активны.  
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   Отделяемые окон с вкладками.  
   
- `CMFCTabCtrl` Класс может использоваться с диалоговым окном, предназначен для приложений, использующих закрепления элемента управления панели как [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] и [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Дополнительные сведения см. в разделе [класс CDockablePane](../../mfc/reference/cdockablepane-class.md).  
+ `CMFCTabCtrl` Класс может использоваться с диалоговым окном, но он предназначен для приложений, использующих закрепления элемента управления панели, таких как Microsoft Excel и Visual Studio. Дополнительные сведения см. в разделе [класс CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
  Выполните следующие шаги для добавления переменного размера, закрепление вкладок в приложении.  
   
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  Отсчитываемый от нуля индекс вкладки для отображения или -1, чтобы указать активной вкладки.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  

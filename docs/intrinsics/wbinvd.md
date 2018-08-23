@@ -1,5 +1,5 @@
 ---
-title: __wbinvd | Документы Microsoft
+title: __wbinvd | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74b466ed641474283e26217ae728c57f28edd8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ccee7703550bff7980e1cf07b30f29d284e2a3a5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326349"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541877"
 ---
 # <a name="wbinvd"></a>__wbinvd
 **Блок, относящийся только к системам Microsoft**  
@@ -39,12 +39,12 @@ void __wbinvd(void);
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__wbinvd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__wbinvd`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция доступна только в режиме ядра с уровнем привилегий (Диалогового) 0, а процедура доступна только как встроенная функция.  
+ Эта функция доступна только в режиме ядра с уровнем привилегий (CPL) 0 и процедура доступна только как встроенная.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

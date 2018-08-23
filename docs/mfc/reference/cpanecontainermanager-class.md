@@ -1,5 +1,5 @@
 ---
-title: Класс CPaneContainerManager | Документы Microsoft
+title: Класс CPaneContainerManager | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079381"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541878"
 ---
 # <a name="cpanecontainermanager-class"></a>Класс CPaneContainerManager
 `CPaneContainerManager` Класс управляет хранением и отображением текущего макета закрепления.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -191,9 +191,9 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>Примечания  
- Платформа автоматически создает экземпляры `CPaneContainerManager` объектов и внедряет их либо в [класса CPaneDivider](../../mfc/reference/cpanedivider-class.md) объектов или в [CMultiPaneFrameWnd класс](../../mfc/reference/cmultipaneframewnd-class.md) объектов.  
+ Платформа автоматически создает экземпляры `CPaneContainerManager` объектов и внедряет их либо в [класс CPaneDivider](../../mfc/reference/cpanedivider-class.md) объектов или в [класс CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md) объектов.  
   
- `CPaneContainerManager` Класс содержит указатель на корень двоичного дерева, построенного из [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) объектов.  
+ `CPaneContainerManager` Класс хранит указатель на корень двоичного дерева, построенного из [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) объектов.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как получить ссылку на `CPaneContainerManager` объекта. Этот фрагмент кода является частью [задать размер области пример](../../visual-cpp-samples.md).  
@@ -906,6 +906,6 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Классы](../../mfc/reference/mfc-classes.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)   
+ [Класс CObject](../../mfc/reference/cobject-class.md)   
  [Класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md)   
  [Класс CPaneDivider](../../mfc/reference/cpanedivider-class.md)

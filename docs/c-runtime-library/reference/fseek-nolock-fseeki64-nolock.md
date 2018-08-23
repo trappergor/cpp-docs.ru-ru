@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _fseek_nolock
@@ -39,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eca7e4944d74e8b86d5318702c954d86a3f54f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397357"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571889"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -67,7 +68,7 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*поток*<br/>
 Указатель на структуру **FILE**.
 
 *offset*<br/>
@@ -78,11 +79,11 @@ int _fseeki64_nolock(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-То же, что [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md)соответственно.
+Совпадение с кодом [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md), соответственно.
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции являются неблокирующей версии [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md)соответственно. Они идентичны [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md) за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+Эти функции являются неблокирующей версии [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md), соответственно. Они идентичны [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md) за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
 ## <a name="requirements"></a>Требования
 

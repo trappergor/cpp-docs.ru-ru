@@ -17,43 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72fa9523b850e5c7d76b587c37b181f21df25c0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c0903c4d6165ec511d35f7aac13deca06a704c31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013984"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42571280"
 ---
 # <a name="propputref"></a>propputref
-Задает функцию настройки свойства, которая использует ссылку вместо значения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[propputref]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Propputref** атрибут C++ имеет ту же функциональность, что [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) описании атрибута MIDL.  
-  
-## <a name="example"></a>Пример  
- См. в примере [bindable](../windows/bindable.md) использовать образец **propputref**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Метод|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|`propget`, `propput`|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [propget](../windows/propget.md)   
- [propput](../windows/propput.md)   
+
+Задает функцию настройки свойства, которая использует ссылку вместо значения.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[propputref]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Propputref** атрибут C++ имеет ту же функциональность, что [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [bindable](../windows/bindable.md) использовать образец **propputref**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Метод|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|`propget`, `propput`|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[propget](../windows/propget.md)  
+[propput](../windows/propput.md)  

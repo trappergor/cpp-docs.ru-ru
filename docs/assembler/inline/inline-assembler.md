@@ -1,5 +1,5 @@
 ---
-title: Встроенный ассемблер | Документы Microsoft
+title: Встроенный ассемблер | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5236bebdeef2db519556d3dace4c20d9529d0e23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4b45c55fbba37d27aa005480789cb490b891b103
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055044"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571989"
 ---
 # <a name="inline-assembler"></a>Встроенный сборщик
 **Блок, относящийся только к системам Microsoft**  
@@ -33,7 +33,7 @@ ms.locfileid: "32055044"
 > [!NOTE]
 >  Программы со встроенным кодом на языке ассемблера не всегда можно перенести на другие аппаратные платформы. При разработке переносимой версии старайтесь не использовать встроенный код ассемблера.  
   
- Встроенный код на ассемблере не поддерживается в процессорах ARM и [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  В следующих разделах объясняется, как использовать встроенный код на ассемблере в программах Visual C/C++ для процессоров x86.  
+ Встроенная сборка не поддерживается в ARM и x64 процессоров.  В следующих разделах объясняется, как использовать встроенный код на ассемблере в программах Visual C/C++ для процессоров x86.  
   
 -   [Обзор встроенного кода на ассемблере](../../assembler/inline/inline-assembler-overview.md)  
   

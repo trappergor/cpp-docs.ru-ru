@@ -19,32 +19,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d6f41967298169fcdf9637cafa1d9cfc8a3cf128
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644990"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575779"
 ---
 # <a name="changing-unassigned-symbols"></a>Изменение неназначенных символов
-При работе в [символы ресурсов-диалоговое окно](../windows/resource-symbols-dialog-box.md), можно редактировать или удалять существующие символы, которые не назначены ресурсу или объекту.  
-  
-### <a name="to-change-an-unassigned-symbol"></a>Изменение неназначенного символа  
-  
-1.  В **имя** поле, выберите неназначенный символ и нажмите кнопку **изменение**.  
-  
-2.  Измените имя символа или другие значения в соответствующих полях в **Изменение символа** диалоговое окно.  
-  
-    > [!NOTE]
-    >  Чтобы изменить символ, который *является* назначен ресурсу или объекту, необходимо использовать редактор ресурсов или **свойства** окно. Дополнительные сведения см. в разделе [Изменение символа или символьного имени](../windows/changing-a-symbol-or-symbol-name-id.md).  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.  
-  
-## <a name="requirements"></a>Требования  
- Win32  
-  
-## <a name="see-also"></a>См. также  
- [Просмотр символов ресурсов](../windows/viewing-resource-symbols.md)   
- [Ограничения для имен символов](../windows/symbol-name-restrictions.md)   
- [Ограничения для символьных значений](../windows/symbol-value-restrictions.md)   
- [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)
+
+При работе в [символы ресурсов-диалоговое окно](../windows/resource-symbols-dialog-box.md), можно редактировать или удалять существующие символы, которые не назначены ресурсу или объекту.
+
+### <a name="to-change-an-unassigned-symbol"></a>Изменение неназначенного символа
+
+1. В **имя** поле, выберите неназначенный символ и нажмите кнопку **изменение**.
+
+2. Измените имя символа или другие значения в соответствующих полях в **Изменение символа** диалоговое окно.
+
+   > [!NOTE]
+   > Чтобы изменить символ, который *является* назначен ресурсу или объекту, необходимо использовать редактор ресурсов или **свойства** окно. Дополнительные сведения см. в разделе [Изменение символа или символьного имени](../windows/changing-a-symbol-or-symbol-name-id.md).
+
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.
+
+## <a name="requirements"></a>Требования
+
+Win32
+
+## <a name="see-also"></a>См. также
+
+[Просмотр символов ресурсов](../windows/viewing-resource-symbols.md)  
+[Ограничения для имен символов](../windows/symbol-name-restrictions.md)  
+[Ограничения для символьных значений](../windows/symbol-value-restrictions.md)  
+[Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)

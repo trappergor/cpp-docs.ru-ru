@@ -1,5 +1,5 @@
 ---
-title: __sidt | Документы Microsoft
+title: __sidt | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e41b0edd9b2a3da1046888f16a55e19f2d9f20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96d20916210b0fe55817dceb86d388a33f8e238b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324516"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541668"
 ---
 # <a name="sidt"></a>__sidt
 **Блок, относящийся только к системам Microsoft**  
   
- Сохраняет значение регистра таблицы дескриптора прерываний (IDTR) в заданном расположении памяти.  
+ Сохраняет значение регистра таблицу дескриптора прерываний (IDTR) в указанной области памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +38,20 @@ void __sidt(
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `Destination`|Указатель на область памяти, в котором хранится IDTR.|  
+|[in] `Destination`|Указатель на область памяти, где хранится IDTR.|  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__sidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__sidt`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- `__sidt` Функция эквивалентна `SIDT` инструкции компьютера. Дополнительные сведения, выполните поиск документа, «руководство разработчика архитектуры Intel программного обеспечения, том 2: Справочник набор инструкций,» в [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__sidt` Функция эквивалентна `SIDT` инструкции компьютера. Дополнительные сведения см. в документе «Руководство разработчика архитектуры Intel программного обеспечения, том 2: ссылка на набор инструкций,» в [корпорации Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

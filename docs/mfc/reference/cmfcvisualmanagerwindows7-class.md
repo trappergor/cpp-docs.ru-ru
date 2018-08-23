@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849953"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539118"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Класс CMFCVisualManagerWindows7
-`CMFCVisualManagerWindows7` Придает приложению внешний вид [!INCLUDE[win7](../../build/includes/win7_md.md)] приложения.  
+`CMFCVisualManagerWindows7` Придает приложению внешний вид приложений Windows 7.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -103,7 +103,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetStyle`|Задает цветовую схему `CMFCVisualManagerWindows7` графического пользовательского интерфейса.|  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `CMFCVisualManagerWindows7` классе, чтобы изменить внешний вид приложения для имитации по умолчанию [!INCLUDE[win7](../../build/includes/win7_md.md)] приложения. Этот класс не может быть допустимым, если приложение работает под управлением версии Windows более ранней, чем [!INCLUDE[win7](../../build/includes/win7_md.md)]. В этом случае приложение использует наглядный диспетчер по умолчанию, определенные в [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Используйте `CMFCVisualManagerWindows7` классе, чтобы изменить внешний вид приложения для имитации приложение Windows 7 по умолчанию. Этот класс не может быть допустимым, если приложение работает под управлением версии Windows более ранней, чем Windows 7. В этом случае приложение использует наглядный диспетчер по умолчанию, определенные в [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
  CMFCVisualManagerWindows7 несколько методов наследует от [класс CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) и `CMFCVisualManager` класса. Методы, перечисленные в предыдущем разделе являются методами, которые знакомы с `CMFCVisualManagerWindows7` класса.  
   

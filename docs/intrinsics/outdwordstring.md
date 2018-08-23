@@ -1,5 +1,5 @@
 ---
-title: __outdwordstring | Документы Microsoft
+title: __outdwordstring | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942a98b9a9d43d349f6273b77c8d56967b927eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331764"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539898"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки `rep outsd` инструкции, которая отправляет `Count` двойных слов, начиная с `Buffer` исходящий порт ввода-вывода, заданные `Port`.  
+ Создает `rep outsd` инструкция, которая отправляет `Count` двойных слов, начиная с `Buffer` номера порта ввода-вывода, определяемое `Port`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,16 +45,16 @@ void __outdwordstring(
  Порт для отправки данных.  
   
  [in] `Buffer`  
- Указатель на данные для отправки указанный порт.  
+ Указатель на данные, которые будут отправлены для указанного порта.  
   
  [in] `Count`  
- Количество двойных слов для отправки.  
+ Число двойных слов для отправки.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__outdwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdwordstring`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

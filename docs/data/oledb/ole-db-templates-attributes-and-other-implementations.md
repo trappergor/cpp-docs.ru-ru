@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32d9356c5c223df723626cf6ac07a7b5fda368de
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16f7be95c36970ce96d04ff357831294f3a3faf1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340655"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571717"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Шаблоны, атрибуты и другие реализации OLE DB
 ## <a name="atl-ole-db-templates"></a>Шаблоны ATL OLE DB  
@@ -34,7 +34,7 @@ ms.locfileid: "39340655"
   
 -   **Шаблоны поставщика OLE DB** используется для реализации приложения сервера (поставщик) OLE DB.  
   
- Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. в разделе [Справочник программиста OLE DB по](https://msdn.microsoft.com/library/ms713643.aspx).  
+ Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. в разделе [Справочник программиста OLE DB по](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
   
  Дополнительные сведения вы можете:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "39340655"
   
 -   См. в списке [примеры шаблонов OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c).  
   
--   См. в разделе [справочнике программиста OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) (в Windows SDK).  
+-   См. в разделе [справочнике программиста OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (в Windows SDK).  
   
 ## <a name="ole-db-attributes"></a>Атрибуты OLE DB  
  [Атрибуты потребителя OLE DB](../../windows/ole-db-consumer-attributes.md) предоставляют удобный способ создания потребителей OLE DB. Эти атрибуты OLE DB внедряют код на основе [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) для создания рабочих потребителей OLE DB и поставщиков. Если вам нужно указать функциональные возможности, не поддерживаемые атрибуты, можно использовать шаблоны OLE DB в сочетании с атрибутами в коде.  
@@ -55,7 +55,7 @@ ms.locfileid: "39340655"
  Библиотека MFC содержит один класс [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), которая отображает записи базы данных в элементах управления. Представление — представление формы, который напрямую подключен к `CRowset` и отображает поля `CRowset` в элементах управления шаблона диалогового окна. Он также предоставляет реализацию по умолчанию для перехода к первой, далее, предыдущих или последних записей и интерфейс для обновления записи в данный момент в представлении. Дополнительные сведения см. в разделе `COleDBRecordView`.  
   
 ## <a name="ole-db-sdk-interfaces"></a>Интерфейсы OLE DB SDK  
- В случаях, когда шаблоны OLE DB не поддерживает функциональные возможности OLE DB необходимо использовать сами интерфейсы OLE DB. Дополнительные сведения см. в разделе [Справочник программиста OLE DB по](https://msdn.microsoft.com/library/ms713643.aspx) в пакете Windows SDK.  
+ В случаях, когда шаблоны OLE DB не поддерживает функциональные возможности OLE DB необходимо использовать сами интерфейсы OLE DB. Дополнительные сведения см. в разделе [Справочник программиста OLE DB по](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Программирование объектов OLE DB](../../data/oledb/ole-db-programming.md)   

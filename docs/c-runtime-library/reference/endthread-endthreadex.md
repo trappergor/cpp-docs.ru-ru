@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4588829b3ec1d348405be925a75c493f4e8594b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397757"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572311"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -66,17 +66,17 @@ void _endthreadex(
 
 ## <a name="remarks"></a>Примечания
 
-Можно вызвать **_endthread** или **_endthreadex** явным образом, чтобы завершить поток; Однако **_endthread** или **_endthreadex** вызывается автоматически при возврате потока из процедуры, переданный в качестве параметра для **_beginthread** или **_beginthreadex**. Завершение потока вызовом **endthread** или **_endthreadex** помогает обеспечить правильное восстановление ресурсов, выделяемых для потока.
+Можно вызвать **_endthread** или **_endthreadex** явным образом, чтобы завершить поток; Однако **_endthread** или **_endthreadex** называется автоматически при возврате потока из процедуры, передается в качестве параметра **_beginthread** или **_beginthreadex**. Завершение потока вызовом **endthread** или **_endthreadex** помогает обеспечить правильное восстановление ресурсов, выделяемых для потока.
 
 > [!NOTE]
-> Для исполняемого файла, связанного с Libcmt.lib, не следует вызывать функцию [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) API Win32. Это помешает системе времени выполнения освобождать выделенные ресурсы. **_endthread** и **_endthreadex** освобождают выделенные ресурсы потока и затем вызвать **ExitThread**.
+> Для исполняемого файла, связанного с Libcmt.lib, не следует вызывать функцию [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API Win32. Это помешает системе времени выполнения освобождать выделенные ресурсы. **_endthread** и **_endthreadex** освобождают выделенные ресурсы потока и затем вызвать **ExitThread**.
 
-**_endthread** автоматически закрывает дескриптор потока. (Это поведение отличается от Win32 **ExitThread** API.) Таким образом, при использовании **_beginthread** и **_endthread**, не следует явно закрывать дескриптор потока, вызывая функцию Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
+**_endthread** автоматически закрывает дескриптор потока. (Это поведение отличается от Win32 **ExitThread** API.) Таким образом, при использовании **_beginthread** и **_endthread**, не следует явно закрывать дескриптор потока вызовом Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
 
-Win32, например **ExitThread** API, **_endthreadex** не закрывает дескриптор потока. Таким образом, при использовании **_beginthreadex** и **_endthreadex**, необходимо закрыть дескриптор потока, вызывая функцию Win32 **CloseHandle** API.
+Win32, такие как **ExitThread** API, **_endthreadex** не закрывает дескриптор потока. Таким образом, при использовании **_beginthreadex** и **_endthreadex**, необходимо закрыть дескриптор потока вызовом Win32 **CloseHandle** API.
 
 > [!NOTE]
-> **_endthread** и **_endthreadex** блокируют вызов деструкторов C++, ожидающих в потоке не предназначен для вызова.
+> **_endthread** и **_endthreadex** деструкторов C++, ожидающих в потоке не для вызова.
 
 ## <a name="requirements"></a>Требования
 

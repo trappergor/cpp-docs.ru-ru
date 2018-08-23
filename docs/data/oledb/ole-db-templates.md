@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 425d404272ad21ad5c732a4db210379eedc7515f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339442"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572495"
 ---
 # <a name="ole-db-templates"></a>Шаблоны OLE DB
 Шаблоны OLE DB для упрощения доступа к данным OLE DB. Visual C++ предоставляет классов, реализующих многие часто используемые интерфейсы OLE DB. Можно использовать шаблоны потребителей Visual C++ для написания приложения клиент (потребитель) OLE DB и шаблонов поставщика написать приложение для сервера (поставщик).  
@@ -38,7 +38,7 @@ ms.locfileid: "39339442"
  [Общие сведения о программировании OLE DB](../../data/oledb/ole-db-programming-overview.md)  
  Описываются OLE DB — и универсального доступа к данным в OLE DB.  
   
- [Справочник программиста OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)  
+ [Справочник программиста OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
  Ссылки в документации пакета SDK для Windows OLE DB.  
   
  [Примеры шаблонов OLE DB](../../visual-cpp-samples.md)  

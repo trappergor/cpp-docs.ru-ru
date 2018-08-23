@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927ac1c73bee38257396a98a7f7ce1487d0c134d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026949"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540128"
 ---
 # <a name="coledispatchdriver-class"></a>Класс COleDispatchDriver
 Реализует автоматизацию OLE на стороне клиента.  
@@ -106,7 +106,7 @@ class COleDispatchDriver
  **Заголовок:** afxdisp.h  
   
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch  
- Функция-член `AttachDispatch` вызывается для того, чтобы присоединить указатель `IDispatch` к объекту `COleDispatchDriver` . Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Функция-член `AttachDispatch` вызывается для того, чтобы присоединить указатель `IDispatch` к объекту `COleDispatchDriver` . Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ```  
 void AttachDispatch(
@@ -147,17 +147,17 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
  Ссылаться на существующий `COleDispatchDriver` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Формы `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**) подключается [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) интерфейс.  
+ Формы `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**) подключается [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) интерфейс.  
   
  Формы `COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) копирует существующий `COleDispatchDriver` объекта и увеличивает счетчик ссылок.  
   
- Формы `COleDispatchDriver`() создает `COleDispatchDriver` объекта, но не подключается `IDispatch` интерфейс. Перед использованием `COleDispatchDriver`() без аргументов, необходимо подключить `IDispatch` к нему с помощью [COleDispatchDriver::CreateDispatch](#createdispatch) или [COleDispatchDriver::AttachDispatch](#attachdispatch). Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Формы `COleDispatchDriver`() создает `COleDispatchDriver` объекта, но не подключается `IDispatch` интерфейс. Перед использованием `COleDispatchDriver`() без аргументов, необходимо подключить `IDispatch` к нему с помощью [COleDispatchDriver::CreateDispatch](#createdispatch) или [COleDispatchDriver::AttachDispatch](#attachdispatch). Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ### <a name="example"></a>Пример  
   См. в примере [COleDispatchDriver::CreateDispatch](#createdispatch).  
   
 ##  <a name="createdispatch"></a>  COleDispatchDriver::CreateDispatch  
- Создает [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) объект интерфейса и присоединяет его к `COleDispatchDriver` объекта.  
+ Создает [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) объект интерфейса и присоединяет его к `COleDispatchDriver` объекта.  
   
 ```  
 BOOL CreateDispatch(
@@ -199,7 +199,7 @@ LPDISPATCH DetachDispatch();
 ### <a name="remarks"></a>Примечания  
  `IDispatch` Не освобождается.  
   
- Дополнительные сведения о типе LPDISPATCH см. в разделе [реализация интерфейса IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) в пакете Windows SDK.  
+ Дополнительные сведения о типе LPDISPATCH см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
@@ -244,7 +244,7 @@ void AFX_CDECL InvokeHelper(
  Задает вызываемый метод или свойство.  
   
  *wFlags*  
- Флаги, описывающие контекст вызова `IDispatch::Invoke`. . Список возможных значений см. в разделе *wFlags* параметр в [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) в пакете Windows SDK.  
+ Флаги, описывающие контекст вызова `IDispatch::Invoke`. . Список возможных значений см. в разделе *wFlags* параметр в [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) в пакете Windows SDK.  
   
  *vtRet*  
  Указывает тип возвращаемого значения. Возможные значения см. в разделе "Примечания".  
@@ -281,9 +281,9 @@ void AFX_CDECL InvokeHelper(
   
  *PbParamInfo* аргумент является разделенный пробелами список **VTS_** константы. Одно или несколько из этих значений, разделенных пробелами (не запятыми), составляют список параметров функции. Возможные значения перечислены с [EVENT_CUSTOM](event-maps.md#event_custom) макрос.  
   
- Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) метод. Если вызов `Invoke` завершается сбоем, эта функция создает исключение. Если SCODE (код состояния), возвращаемый `IDispatch::Invoke` является DISP_E_EXCEPTION, эта функция создает [COleException](../../mfc/reference/coleexception-class.md) объект; в противном случае создается исключение [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
+ Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) метод. Если вызов `Invoke` завершается сбоем, эта функция создает исключение. Если SCODE (код состояния), возвращаемый `IDispatch::Invoke` является DISP_E_EXCEPTION, эта функция создает [COleException](../../mfc/reference/coleexception-class.md) объект; в противном случае создается исключение [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
   
- Дополнительные сведения см. в разделе [VARIANTARG](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [реализация интерфейса IDispatch](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx), [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx), и [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в Windows SDK.  
+ Дополнительные сведения см. в разделе [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), и [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [COleDispatchDriver::CreateDispatch](#createdispatch).  
@@ -313,7 +313,7 @@ LPDISPATCH m_lpDispatch;
 ### <a name="remarks"></a>Примечания  
  `m_lpDispatch` Данные-член — это открытая переменная типа LPDISPATCH.  
   
- Дополнительные сведения см. в разделе [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [COleDispatchDriver::AttachDispatch](#attachdispatch).  
@@ -340,7 +340,7 @@ operator LPDISPATCH();
  [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]  
   
 ##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch  
- Выпуски `IDispatch` подключения. Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)  
+ Выпуски `IDispatch` подключения. Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)  
   
 ```  
 void ReleaseDispatch();

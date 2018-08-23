@@ -1,5 +1,5 @@
 ---
-title: Образец многопотоковой программы на C | Документы Microsoft
+title: Пример многопоточной программы на C | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1584d52f9ea543c95363a0f7f03cdad80442ee1c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687996"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541663"
 ---
 # <a name="sample-multithread-c-program"></a>Образец многопотоковой программы на C
-Bounce.c является образцом многопотоковой программы, которая создает новый поток каждый раз буквы **a** или **A** типизирован. Каждый поток будет передаваться довольны гарнитуру другого цвета по экрану. Могут быть созданы до 32 потоков. Нормальное завершение программы происходит при `q` или **Q** типизирован. Сведения о компиляции и компоновки Bounce.c см. в разделе [компиляция и компоновка многопоточной программы](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c является образцом многопотоковой программы, которая создает новый поток каждый раз, буквы `a` или `A` типизирован. Каждый поток отображается счастливое лицо определенного цвета на экране. Могут быть созданы до 32 потоков. Нормальное завершение программы происходит при `q` или `Q` типизирован. Сведения о компиляции и связывании в программе Bounce.c см. в разделе [компиляция и связывание в многопотоковых программах](../parallel/compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Пример  
   
 ### <a name="code"></a>Код  
   
-```  
+```c  
 // sample_multithread_c_program.c  
 // compile with: /c  
 //  
@@ -219,4 +219,5 @@ q
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)

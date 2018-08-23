@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 68f2e8e199fb22295ebd1fd25bbd3332c63e03b6
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027642"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538563"
 ---
 # <a name="colesafearray-class"></a>Класс COleSafeArray
 Класс для работы с массивами произвольных типов и измерений.  
@@ -379,7 +379,7 @@ VARIANT Detach();
  Базовый `VARIANT` значение в `COleSafeArray` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Функция отсоединяет данные в безопасном массиве, задав [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) объекта значение VT_EMPTY. Это обязанность вызывающего освобождение массива путем вызова функции Windows [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835).  
+ Функция отсоединяет данные в безопасном массиве, задав [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) объекта значение VT_EMPTY. Это обязанность вызывающего освобождение массива путем вызова функции Windows [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).  
   
  В случае ошибки функция выдает [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -607,7 +607,7 @@ void PutElement(
  Указатель на данные, которые требуется поместить в массив. Типы variant VT_DISPATCH VT_UNKNOWN и VT_BSTR являются указателями и не требуют других уровней косвенных обращений.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция автоматически вызывает функции Windows [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) и [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) до и после назначения элемента. Если строка, объект или вариант являются элементом данных, функция выполняет правильное копирование, а если существующим элементом — правильное удаление.  
+ Эта функция автоматически вызывает функции Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) и [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) до и после назначения элемента. Если строка, объект или вариант являются элементом данных, функция выполняет правильное копирование, а если существующим элементом — правильное удаление.  
   
  Обратите внимание, для массива можно настроить несколько блокировок, поэтому вы можете поместить в него элементы, недоступные для других операций.  
   

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7804513c45de1951935e0fdf2fd485b9457e2a5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885303"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572889"
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 Этот класс содержит методы для работы записей в системном реестре.  
@@ -876,7 +876,7 @@ LONG SetStringValue(
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращается код ненулевого значения ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) для записи значения в реестр.  
+ Этот метод использует [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) для записи значения в реестр.  
   
 ##  <a name="setvalue"></a>  CRegKey::SetValue  
  Вызовите этот метод для хранения данных в поле указанного значения [m_hKey](#m_hkey). Более ранних версиях этот метод больше не поддерживаются и помечаются как ATL_DEPRECATED.  

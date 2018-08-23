@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c77c8cc20588df8329951167db502a65a67b3756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849344"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541509"
 ---
 # <a name="coletemplateserver-class"></a>Класс COleTemplateServer
 Используется для OLE-серверов визуального редактирования, серверов автоматизации и контейнеров связей (приложений, поддерживающих ссылки на внедряемые объекты).  
@@ -162,7 +162,7 @@ void UpdateRegistry(
   
  Сведения в аргументах *rglpszRegister* и *rglpszOverwrite* записывается в реестр посредством вызова [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Сведения по умолчанию, который регистрируется, когда два аргумента имеют значение NULL, подходит для большинства приложений. Сведения о структуре информации из этих аргументов, см. в разделе `AfxOleRegisterServerClass`.  
   
- Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC HIERSVR](../../visual-cpp-samples.md)   

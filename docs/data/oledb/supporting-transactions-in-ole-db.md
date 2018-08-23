@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338714"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571816"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Поддержка транзакций в OLE DB
 Объект [транзакции](../../data/transactions-mfc-data-access.md) — это способ группирования или пакета, последовательность обновлений к источнику данных, либо все завершиться успешно и фиксируются одновременно, или (если какой-либо из них не работает) не завершаются, и выполняется откат всей транзакции. Этот процесс обеспечивает целостность результата в источнике данных.  
   
  OLE DB поддерживает транзакции с помощью следующих трех методов:  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
+-   [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
+-   [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Связь между сеансами и транзакциями  
  Объект источника данных можно создать один или несколько объектов сеанса, каждый из которых может быть внутри или за пределами области транзакции в определенный момент времени.  
@@ -55,7 +55,7 @@ ms.locfileid: "39338714"
  Вызов `ITransaction::Commit` или `ITransaction::Abort` завершает транзакцию. `Commit` вызывает все изменения в пределах области транзакции, применяемый к хранилищу данных. `Abort` причины, все изменения в области действия транзакции, отменяются и хранилище данных остается в состоянии его было до запуска транзакции.  
   
 ## <a name="nested-transactions"></a>Вложенные транзакции  
- Объект [вложенные транзакции](https://msdn.microsoft.com/library/ms716985.aspx) возникает при запуске новой локальной транзакции, если активная транзакция уже существует в сеансе. Новая транзакция запускается как вложенную транзакцию под текущей транзакцией. Если поставщик не поддерживает вложенных транзакций, при вызове метода `StartTransaction` при наличии активной транзакции в сеансе, возвращается значение XACT_E_XTIONEXISTS.  
+ Объект [вложенные транзакции](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) возникает при запуске новой локальной транзакции, если активная транзакция уже существует в сеансе. Новая транзакция запускается как вложенную транзакцию под текущей транзакцией. Если поставщик не поддерживает вложенных транзакций, при вызове метода `StartTransaction` при наличии активной транзакции в сеансе, возвращается значение XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Распределенные транзакции  
  Распределенная транзакция предназначена для обновления распределенных данных; то есть данные на нескольких компьютерах в сети. Если требуется для поддержки транзакций в распределенной системе, следует использовать .NET Framework, а не поддержку транзакций OLE DB.  

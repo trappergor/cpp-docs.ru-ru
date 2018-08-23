@@ -1,5 +1,5 @@
 ---
-title: __shiftright128 | Документы Microsoft
+title: __shiftright128 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 393138916bf29fd9adb5dceb0b8612b576b84e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339726"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539498"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Блок, относящийся только к системам Microsoft**  
@@ -55,7 +55,7 @@ unsigned __int64 __shiftright128(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__shiftright128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftright128`|X64|  
   
  **Файл заголовка** \<intrin.h >  
   
@@ -63,7 +63,7 @@ unsigned __int64 __shiftright128(
  Это значение `Shift` всегда берется по модулю 64, и, например, при вызове `__shiftright128(0, 1, 64)`, функция будет сдвигать вправо старшую часть `0` разрядов и возвращать младшую часть `0`, а не `1`, как в противном случае можно было ожидать.  
   
 ## <a name="example"></a>Пример  
- Пример см. в разделе [__shiftleft128](../intrinsics/shiftleft128.md).  
+ Например, см. в разделе [__shiftleft128](../intrinsics/shiftleft128.md).  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

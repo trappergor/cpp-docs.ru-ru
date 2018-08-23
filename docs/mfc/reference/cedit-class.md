@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339596"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539693"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Предоставляет функции элемента управления редактированием Windows.  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Для элементов управления одной строкой возвращаемое значение имеет длину, в TCHARs, текст в элементе управления.  
   
- Для элементов управления многострочное поле ввода, возвращается длина строки, номер, в TCHARs, *бота* параметра. Для [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] текст, длина — число байтов в строке; для текста в Юникоде, длина — число символов в строке. Длина не включает символ возврата каретки в конце строки.  
+ Для элементов управления многострочное поле ввода, возвращается длина строки, номер, в TCHARs, *бота* параметра. Для текста ANSI длина — число байтов в строке; для текста в Юникоде длина — число символов в строке. Длина не включает символ возврата каретки в конце строки.  
   
  Если *бота* параметр больше, чем количество символов в элементе управления, возвращаемое значение равно нулю.  
   

@@ -1,5 +1,5 @@
 ---
-title: __stosd | Документы Microsoft
+title: __stosd | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d00b5e3b39f17203ba915d6b4344438803db88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327136"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540318"
 ---
 # <a name="stosd"></a>__stosd
 **Блок, относящийся только к системам Microsoft**  
   
- Создает инструкцию строка хранилища (`rep stosd`).  
+ Создает инструкцию строка магазина (`rep stosd`).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +45,7 @@ void __stosd(
  Целевой для операции.  
   
  [in] `Data`  
- Для хранения данных.  
+ Сохраняемые данные.  
   
  [in] `Count`  
  Длина блока двойных слов для записи.  
@@ -54,12 +54,12 @@ void __stosd(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosd`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Результатом является то, что двойное `Data` записывается в блок `Count` двойных слов адресу памяти, на который указывает `Dest`.  
+ Результатом является то, что двойное `Data` записывается в блок `Count` двойных слов в области памяти, на которые указывают `Dest`.  
   
  Эта процедура доступна только как встроенная функция.  
   

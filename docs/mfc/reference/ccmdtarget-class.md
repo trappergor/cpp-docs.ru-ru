@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208693"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539342"
 ---
 # <a name="ccmdtarget-class"></a>Класс CCmdTarget
 Базовый класс для архитектуры схемы сообщений библиотеки классов Microsoft Foundation.  
@@ -301,7 +301,7 @@ virtual UINT GetTypeInfoCount();
  Число интерфейсов, сведения о типе.  
   
 ### <a name="remarks"></a>Примечания  
- По сути, эта функция-член реализуется [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
+ По сути, эта функция-член реализуется [IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).  
   
  Производные классы должны переопределить эту функцию для возврата числа интерфейсов сведения о типе (0 или 1). Если не переопределен, `GetTypeInfoCount` возвращает 0. Для переопределения используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeLib` и `GetTypeLibCache`.  
   

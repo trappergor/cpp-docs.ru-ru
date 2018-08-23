@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4d93d1042f48ae877e61692b095be9442f9a7917
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337181"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572216"
 ---
 # <a name="crestrictions-class"></a>Класс CRestrictions
 Универсальный класс, который позволяет указать ограничения для наборов строк схемы.  
@@ -96,7 +96,7 @@ HRESULT Open(const CSession& session,
 ### <a name="remarks"></a>Примечания  
  Можно указать максимум семь ограничений в наборе строк схемы.  
   
- См. в разделе [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) сведения об определенных ограничениях на все наборы строк схемы.  
+ См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) сведения об определенных ограничениях на все наборы строк схемы.  
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

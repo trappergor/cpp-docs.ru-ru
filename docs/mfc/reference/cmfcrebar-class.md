@@ -38,16 +38,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292de0795033e40d93a30840be620e10369f87ce
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c8af155401492e97be6a9e3a80b72c8c4e7fbd9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028220"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543207"
 ---
 # <a name="cmfcrebar-class"></a>Класс CMFCReBar
 Объект `CMFCReBar` объект является панель элементов управления, которая предоставляет макет, сохраняемость и сведения о состоянии для элементов управления "Главная панель".  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
 ## <a name="syntax"></a>Синтаксис  
   
 ```  

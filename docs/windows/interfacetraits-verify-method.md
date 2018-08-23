@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5b160a941343fce656313f588065573d7b00c90
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 8c6491968541a0015110c55edf2bede40c084947
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017952"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583448"
 ---
 # <a name="interfacetraitsverify-method"></a>Метод InterfaceTraits::Verify
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-__forceinline static void Verify();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Проверяет, что `Base` должным образом является производным.  
-  
- Дополнительные сведения о `Base`, см. в разделе **общедоступные определения типов** статьи [interfacetraits-структура](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Interfacetraits-структура](../windows/interfacetraits-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+__forceinline static void Verify();
+```
+
+## <a name="remarks"></a>Примечания
+
+Проверяет, что `Base` должным образом является производным.
+
+Дополнительные сведения о `Base`, см. в разделе **общедоступные определения типов** статьи [interfacetraits-структура](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

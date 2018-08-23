@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5699f4c8c49bd35e85479572e1b49f8080415e65
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
-ms.translationtype: HT
+ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884997"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572093"
 ---
 # <a name="ccomaggobject-class"></a>Класс CComAggObject
 Этот класс реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) интерфейс для объединенного объекта. По определению объединенного объекта содержится внутри внешнего объекта. `CComAggObject` Класс аналогичен [класс CComObject](../../atl/reference/ccomobject-class.md), за исключением того, что он предоставляет интерфейс, который доступен напрямую для внешних клиентов.  
@@ -63,7 +63,7 @@ class CComAggObject : public IUnknown,
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|Увеличивает счетчик ссылок на сводный объект.|  
-|[CComAggObject::CreateInstance](#createinstance)|Эта статическая функция позволяет создать новую **CComAggObject <** `contained` **>** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComAggObject::CreateInstance](#createinstance)|Эта статическая функция позволяет создать новую **CComAggObject <** `contained` **>** объекта без использования [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Выполняет окончательной инициализации `m_contained`.|  
 |[CComAggObject::FinalRelease](#finalrelease)|Выполняет окончательный деструкция `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Извлекает указатель на запрошенный интерфейс.|  
@@ -129,7 +129,7 @@ CComAggObject(void* pv);
  Освобождает все выделенные ресурсы, вызовы [FinalRelease](#finalrelease), и уменьшает счетчик блокировки модуля.  
   
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
- Эта статическая функция позволяет создать новую **CComAggObject <** `contained` **>** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Эта статическая функция позволяет создать новую **CComAggObject <** `contained` **>** объекта без использования [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ```
 static HRESULT WINAPI CreateInstance(

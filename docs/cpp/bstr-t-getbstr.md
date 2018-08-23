@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8863f3a6c37693ec28f931c2af4cb0d299788daa
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 56297f53aa40741a506ea65761d151dcab98c421
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402667"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572191"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Блок, относящийся только к системам Microsoft**  
@@ -38,7 +38,7 @@ BSTR& GetBSTR( );
  Начало строки `BSTR`, инкапсулированной объектом `_bstr_t`.  
   
 ## <a name="remarks"></a>Примечания  
- **GetBSTR** влияет на все `_bstr_t` объектов данной общей папки `BSTR`. Более одного `_bstr_t` могут совместно использовать `BSTR` при помощи конструктора копии и и **оператор =**.  
+ **GetBSTR** влияет на все `_bstr_t` объектов данной общей папки `BSTR`. Более одного `_bstr_t` могут совместно использовать `BSTR` при помощи конструктора копии и **оператор =**.  
   
 ## <a name="example"></a>Пример  
  См. в разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) в качестве примера использования **GetBSTR**.  

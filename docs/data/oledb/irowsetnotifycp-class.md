@@ -35,15 +35,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf7cde624eeaa8a65ba5d5a2b4729ee94847d0e9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e78caa689158f1820a5e146235bb1f2d506a925b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338185"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571715"
 ---
 # <a name="irowsetnotifycp-class"></a>Класс IRowsetNotifyCP
-Реализует поставщик сайта для точки подключения интерфейса [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx).  
+Реализует поставщик сайта для точки подключения интерфейса [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)).  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -91,7 +91,7 @@ class IRowsetNotifyCP :
  Подробные сведения о реализации уведомлений см. в разделе «Поддержка уведомления» в [Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md).  
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
-Осуществляет широковещательную передачу [OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) событие для уведомления пользователей об изменении значения столбца.  
+Осуществляет широковещательную передачу [OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) событие для уведомления пользователей об изменении значения столбца.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -106,10 +106,10 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) в *справочнике программиста OLE DB*. 
+ См. в разделе [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
-Осуществляет широковещательную передачу [OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) событий все прослушиватели в точке подключения `IID_IRowsetNotify` для уведомления потребителей изменений, влияющих на строки.  
+Осуществляет широковещательную передачу [OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) событий все прослушиватели в точке подключения `IID_IRowsetNotify` для уведомления потребителей изменений, влияющих на строки.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -123,10 +123,10 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
-Осуществляет широковещательную передачу [OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) событий все прослушиватели в точке подключения `IID_IRowsetNotify` для уведомления потребителей изменений, влияющих на весь набор строк.  
+Осуществляет широковещательную передачу [OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) событий все прослушиватели в точке подключения `IID_IRowsetNotify` для уведомления потребителей изменений, влияющих на весь набор строк.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -138,7 +138,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) в *справочнике программиста OLE DB*.
+ См. в разделе [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) в *справочнике программиста OLE DB*.
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

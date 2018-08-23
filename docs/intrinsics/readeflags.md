@@ -1,5 +1,5 @@
 ---
-title: __readeflags | Документы Microsoft
+title: __readeflags | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8233b949fc0ab06663e9f20fad8f47f633fadf6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6488cc42519bbbee8c8fefb242996144f6bb8a8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340103"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539703"
 ---
 # <a name="readeflags"></a>__readeflags
-Считывает сведения о состоянии и управления (EFLAGS) регистрации.  
+Считывает состояние программы и управления (EFLAGS) регистров.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,16 +34,16 @@ unsigned __int64 __readeflags(void);
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение регистра EFLAGS. Возвращаемое значение — 32 бита долго на 32-разрядной платформе и 64-разрядная долго на 64-разрядной платформе.  
+ Значение регистра EFLAGS. Возвращаемое значение — 32 бита, много времени, на 32-разрядной платформе и 64 бита много времени, на 64-разрядной платформе.  
   
 ## <a name="remarks"></a>Примечания  
- Эти процедуры доступны только как встроенные объекты.  
+ Эти процедуры доступны только как встроенные функции.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__readeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readeflags`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

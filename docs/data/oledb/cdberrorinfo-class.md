@@ -55,15 +55,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5bab5334cec33a84abe6b28dc40bd57bf8da432b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b7eaba589e729230c0392ac67eff2389d430f842
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337480"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572092"
 ---
 # <a name="cdberrorinfo-class"></a>Класс CDBErrorInfo
-Обеспечивает поддержку обработки ошибок OLE DB, использующий OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) интерфейс.  
+Обеспечивает поддержку обработки ошибок OLE DB, использующий OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -81,10 +81,10 @@ class CDBErrorInfo
 |||  
 |-|-|  
 |[GetAllErrorInfo](#getallerrorinfo)|Возвращает все сведения об ошибке, содержащиеся в записи об ошибке.|  
-|[GetBasicErrorInfo](#getbasicerrorinfo)|Вызовы [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/ms723907.aspx) для возврата основные сведения об указанной ошибке.|  
-|[GetCustomErrorObject](#getcustomerrorobject)|Вызовы [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/library/ms725417.aspx) для возврата указателя на интерфейс объекта пользовательских ошибок.|  
-|[GetErrorInfo](#geterrorinfo)|Вызовы [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) для возврата `IErrorInfo` указатель интерфейса на указанную запись.|  
-|[GetErrorParameters](#geterrorparameters)|Вызовы [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/ms715793.aspx) для определения параметров ошибки.|  
+|[GetBasicErrorInfo](#getbasicerrorinfo)|Вызовы [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) для возврата основные сведения об указанной ошибке.|  
+|[GetCustomErrorObject](#getcustomerrorobject)|Вызовы [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) для возврата указателя на интерфейс объекта пользовательских ошибок.|  
+|[GetErrorInfo](#geterrorinfo)|Вызовы [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) для возврата `IErrorInfo` указатель интерфейса на указанную запись.|  
+|[GetErrorParameters](#geterrorparameters)|Вызовы [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) для определения параметров ошибки.|  
 |[GetErrorRecords](#geterrorrecords)|Возвращает записи об ошибках для указанного объекта.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -127,7 +127,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
  [out] Указатель на строку, содержащую путь к файлу справки с описанием ошибки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK при успешном выполнении. См. в разделе [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) в *Справочник программиста OLE DB по* другие возвращаемые значения.  
+ Значение S_OK при успешном выполнении. См. в разделе [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) в *Справочник программиста OLE DB по* другие возвращаемые значения.  
   
 ### <a name="remarks"></a>Примечания  
  Выходное значение *pbstrDescription* внутренне получается путем вызова `IErrorInfo::GetDescription`, который задает значение, значение NULL, если языковой стандарт не поддерживается, или в том случае, если выполняются оба из следующих условий:  
@@ -137,7 +137,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 2.  значение *lcid* является значение, возвращенное GetUserDefaultLCID не равно. 
 
 ## <a name="getbasicerrorinfo"></a> CDBErrorInfo::GetBasicErrorInfo
-Вызовы [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/ms723907.aspx) для возврата основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.  
+Вызовы [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) для возврата основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -147,13 +147,13 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/ms723907.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
 
 ## <a name="getcustomerrorobject"></a> CDBErrorInfo::GetCustomErrorObject
-Вызовы [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/library/ms725417.aspx) для возврата указателя на интерфейс объекта пользовательских ошибок.  
+Вызовы [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) для возврата указателя на интерфейс объекта пользовательских ошибок.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -163,13 +163,13 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/library/ms725417.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
 
 ## <a name="geterrorinfo"></a> CDBErrorInfo::GetErrorInfo
-Вызовы [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) для возврата [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) указатель интерфейса на указанную запись.  
+Вызовы [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) для возврата [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) указатель интерфейса на указанную запись.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -179,13 +179,13 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
 
 ## <a name="geterrorparameters"></a> CDBErrorInfo::GetErrorParameters
-Вызовы [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/ms715793.aspx) для определения параметров ошибки.  
+Вызовы [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) для определения параметров ошибки.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -195,7 +195,7 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/ms715793.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  

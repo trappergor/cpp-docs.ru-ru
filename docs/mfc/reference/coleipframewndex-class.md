@@ -104,16 +104,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80244a328fb374c4302f068c3c8b64f5b5d5c676
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850138"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540516"
 ---
 # <a name="coleipframewndex-class"></a>Класс COleIPFrameWndEx
-Класс `COleIPFrameWndEx` реализует OLE-контейнер с поддержкой MFC. Необходимо создать встроенный класс окна фрейма для приложения, производный от класса `COleIPFrameWndEx` , вместо наследования его от класса [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
+Класс `COleIPFrameWndEx` реализует OLE-контейнер с поддержкой MFC. Необходимо создать встроенный класс окна фрейма для приложения, производный от класса `COleIPFrameWndEx` , вместо наследования его от класса [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.   
   
 ## <a name="syntax"></a>Синтаксис  
   

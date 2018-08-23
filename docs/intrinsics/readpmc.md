@@ -1,5 +1,5 @@
 ---
-title: __readpmc | Документы Microsoft
+title: __readpmc | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333795"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540105"
 ---
 # <a name="readpmc"></a>__readpmc
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки `rdpmc` инструкции, которая считывает производительность, наблюдение за счетчиком, определяемое `counter`.  
+ Создает `rdpmc` инструкция, которая считывает производительность, наблюдение за счетчиком, определяемое `counter`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,21 +40,21 @@ unsigned __int64 __readpmc(
   
 #### <a name="parameters"></a>Параметры  
  [in] `counter`  
- Счетчик производительности для чтения.  
+ Счетчик производительности, для чтения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение счетчика производительности.  
+ Значение указанный счетчик производительности.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Эта встроенная функция доступна только в режиме ядра и процедура доступна только как встроенная функция.  
+ Эта встроенная функция доступна только в режиме ядра и процедура доступна только как встроенная.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

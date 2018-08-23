@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c3c291c7eb9b6a9cd87330f4af5135037a1f31de
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027863"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538369"
 ---
 # <a name="chtmlview-class"></a>Класс CHtmlView
 Предоставляет функциональные возможности элемента управления WebBrowser в контексте архитектуры документов или представлений MFC.  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|Получает URL-адрес ресурса, который в данный момент отображается элементом управления WebBrowser.|  
 |[CHtmlView::GetMenuBar](#getmenubar)|Получает значение, указывающее, является ли строка меню видимой.|  
 |[CHtmlView::GetOffline](#getoffline)|Получает значение, указывающее, находится ли элемент управления в автономном режиме.|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|Получает указатель на интерфейс `IDispatch` . Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|Получает указатель на интерфейс `IDispatch` . Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|  
 |[CHtmlView::GetProperty](#getproperty)|Возвращает текущее значение свойства, связанного с данным объектом.|  
 |[CHtmlView::GetReadyState](#getreadystate)|Получает состояние готовности объекта веб-браузера.|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|Указывает, зарегистрирован ли элемент управления WebBrowser в качестве браузера верхнего уровня для разрешения целевых имен.|  
@@ -508,7 +508,7 @@ LPDISPATCH GetApplication() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `IDispatch` интерфейс объекта активного документа. Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Указатель на `IDispatch` интерфейс объекта активного документа. Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ### <a name="remarks"></a>Примечания  
  Применяется в Internet Explorer и WebBrowser.  

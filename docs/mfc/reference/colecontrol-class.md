@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 483584c7b38db05c920134cfc675538be36a3816
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0adcca7c8080d6603e4e4de8c2002b2ace6f9ad9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028025"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538724"
 ---
 # <a name="colecontrol-class"></a>Colecontrol-класс
 Мощный базовый класс для разработки элементов управления OLE.  
@@ -1129,7 +1129,7 @@ void FireKeyDown(
   
 ### <a name="parameters"></a>Параметры  
  *pnChar*  
- Указатель на значение виртуального кода клавиши нажатой клавише. Список стандартных кодов виртуального ключа см. в разделе Winuser.h  
+ Указатель на значение виртуального кода клавиши нажатой клавише. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h  
   
  *nShiftState*  
  Содержит сочетание следующих флагов:  
@@ -1174,7 +1174,7 @@ void FireKeyUp(
   
 ### <a name="parameters"></a>Параметры  
  *pnChar*  
- Указатель на значение виртуального кода клавиши выпущенные ключа. Список стандартных кодов виртуального ключа см. в разделе Winuser.h  
+ Указатель на значение виртуального кода клавиши выпущенные ключа. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h  
   
  *nShiftState*  
  Содержит сочетание следующих флагов:  

@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 317e953d4c1a4e2637c71891fabde542ca751c8e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 791b27e9ff5648a2616c92852a1d4f824d43127b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339713"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539531"
 ---
 # <a name="cdc-class"></a>Класс CDC
 Определяет класс объектов контекста устройства.  
@@ -2537,16 +2537,16 @@ DWORD GetCharacterPlacement(
  Указатель на обрабатываемую строку символов.  
   
  *nCount*  
- Указывает длину строки. Для версии ANSI это число БАЙТОВ, и для функции Юникода — число СЛОВ. Дополнительные сведения см. в разделе [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx).  
+ Указывает длину строки. Для версии ANSI это число БАЙТОВ, и для функции Юникода — число СЛОВ. Дополнительные сведения см. в разделе [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa).  
   
  *nMaxExtent*  
  Определяет максимальный масштаб (в логических единицах), в котором приводится строка. Символы, которые, при обработке бы за этот экстент, игнорируются. Вычисления для любого требуется упорядочения массивов глифов применяются только к включенным символам. Этот параметр используется только в том случае, если указано значение GCP_MAXEXTENT в *dwFlags* параметра. По мере обработки функцией входной строки, каждый символ и его экстент добавляются выходных данных, экстентов и другие массивы только в том случае, если суммарный экстент еще не превысил максимально. По достижении лимита обработка заканчивается.  
   
  lpResults  
- Указатель на [GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx) структуру, которая получает результаты функции.  
+ Указатель на [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) структуру, которая получает результаты функции.  
   
  *dwFlags*  
- Указывает способ обработки строки в требуемые массивы. Этот параметр может принимать одно или несколько значений, перечисленных в *dwFlags* раздел [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) раздела.  
+ Указывает способ обработки строки в требуемые массивы. Этот параметр может принимать одно или несколько значений, перечисленных в *dwFlags* раздел [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) раздела.  
   
  *str*  
  Указатель на [CString](../../atl-mfc-shared/reference/cstringt-class.md) для обработки.  
@@ -2557,7 +2557,7 @@ DWORD GetCharacterPlacement(
  Если функция выполняется неудачно, возвращается нулевое значение.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует работу функции [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx), как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует работу функции [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa), как описано в пакете Windows SDK.  
   
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths  
  Получает ширину последовательных знаков в указанном диапазоне из текущего шрифта TrueType.  

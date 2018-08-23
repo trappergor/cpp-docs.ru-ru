@@ -1,5 +1,5 @@
 ---
-title: Встроенная функция __outword | Документы Microsoft
+title: __outword | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f0e827b16b9743cb6bc7fe6906b4c74c3006864
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d118c26e79a462723f87e76672b2d9b9c1a76cb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331140"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541088"
 ---
 # <a name="outword"></a>Встроенная функция __outword
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки `out` инструкции, которая отправляет слово `Data` исходящий порт ввода-вывода, заданные `Port`.  
+ Создает `out` инструкция, которая отправляет слово `Data` номера порта ввода-вывода, определяемое `Port`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,7 +49,7 @@ void __outword(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__outword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outword`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

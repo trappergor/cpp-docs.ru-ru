@@ -1,5 +1,5 @@
 ---
-title: high_property_prefixes | Документы Microsoft
+title: high_property_prefixes | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7269301fed3892fbf4b7cf6427bacb82d9712ef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ce21958dbb928a29debe21fb7cfaed4b9036141
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849393"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539678"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
 **Конкретных C++**  
   
- Задает другие префиксы для трех методов свойств.  
+Задает другие префиксы для трех методов свойств.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,21 +34,23 @@ ms.locfileid: "33849393"
 high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `GetPrefix`  
- Префикс, используемый для **propget** методы.  
+### <a name="parameters"></a>Параметры  
+*GetPrefix*  
+Префикс, используемый для `propget` методы.  
   
- `PutPrefix`  
- Префикс, используемый для **propput** методы.  
+*PutPrefix*  
+Префикс, используемый для `propput` методы.  
   
- `PutRefPrefix`  
- Префикс, используемый для **propputref** методы.  
+*PutRefPrefix*  
+Префикс, используемый для `propputref` методы.  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию высокоуровневые способы обработки ошибок **propget**, **propput**, и **propputref** методы предоставляются функциями-членами, именам которых предшествуют префиксы **получить** , `Put`, и **PutRef**соответственно.  
+ 
+По умолчанию высокоуровневые обработки ошибок `propget`, `propput`, и `propputref` методы предоставляются функциями-членами, префиксы `Get`, `Put`, и `PutRef`, соответственно.  
   
- **КОНЕЦ определенного C++**  
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

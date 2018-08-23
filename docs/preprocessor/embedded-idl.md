@@ -1,5 +1,5 @@
 ---
-title: embedded_idl | Документы Microsoft
+title: embedded_idl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e0b594952e8e5be0a9be9c843877c8c4bb95eca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b41af8375249a48ac3a866af224370b19f071d28
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842720"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541643"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 **Конкретных C++**  
   
- Указывает, что библиотека типов записывается в файл .tlh с сохранением кода, созданного с атрибутами.  
+Указывает, что библиотека типов записывается в файл .tlh с сохранением кода, созданного с атрибутами.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,17 +34,17 @@ ms.locfileid: "33842720"
 embedded_idl[("param")]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `param`  
- Допустимо одно из двух значений:  
+### <a name="parameters"></a>Параметры  
+*param*  
+Допустимо одно из двух значений:  
   
--   emitidl: сведения о типах, импортированные из библиотеки типов, будут представлены в IDL-файле, созданном для помеченного атрибутом проекта.  Это значение по умолчанию, которое будет действовать, если параметр для `embedded_idl` не указан.  
+- emitidl: сведения о типах, импортированные из библиотеки типов, будут представлены в IDL-файле, созданном для помеченного атрибутом проекта.  Это значение по умолчанию, которое будет действовать, если параметр для `embedded_idl` не указан.  
   
--   no_emitidl: сведения о типах, импортированные из библиотеки типов, не будут представлены в IDL-файле, созданном для помеченного атрибутом проекта.  
+- no_emitidl: сведения о типах, импортированные из библиотеки типов, не будут представлены в IDL-файле, созданном для помеченного атрибутом проекта.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // import_embedded_idl.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -53,8 +53,10 @@ embedded_idl[("param")]
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **КОНЕЦ определенного C++**  
+ 
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

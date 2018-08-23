@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0a8ec3a7898f846af85614dec75c10c5a0393e24
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850895"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540313"
 ---
 # <a name="cmfctooltipinfo-class"></a>Класс CMFCToolTipInfo
 Хранит сведения о внешнем виде подсказок.  
@@ -222,7 +222,7 @@ BOOL m_bVislManagerTheme;
  Если `m_bVislManagerTheme` имеет значение TRUE, каждый подсказки запрашивает новый [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) из наглядный диспетчер приложения, прежде чем они отображаются на экране и использует значения в этом объекте, чтобы определить их внешний вид. Другие члены вашей [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) игнорируются.  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);

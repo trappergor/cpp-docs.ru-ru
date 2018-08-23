@@ -1,5 +1,5 @@
 ---
-title: __readmsr | Документы Microsoft
+title: __readmsr | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8196b25b1507c92542faa6dd8ca59b4632d8f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3be04079de11642b2641260fdfe997d3fcb48d6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335917"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539117"
 ---
 # <a name="readmsr"></a>__readmsr
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки `rdmsr` инструкции, которая считывает регистр конкретной модели, заданный в параметре `register` и возвращает его значение.  
+ Создает `rdmsr` инструкция, которая считывает регистр конкретной модели, определяемое `register` и возвращает его значение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,12 +49,12 @@ __int64 __readmsr(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__readmsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readmsr`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция доступна только в режиме ядра и процедура доступна только как встроенная функция.  
+ Эта функция доступна только в режиме ядра и процедура доступна только как встроенная.  
   
  Дополнительные сведения см. в документации AMD.  
   

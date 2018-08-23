@@ -1,5 +1,5 @@
 ---
-title: Встроенные функции _InterlockedExchangePointer | Документы Microsoft
+title: Встроенные функции _InterlockedExchangePointer | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8482b7d5b21c113001b702e00f406b9a3fcfd9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334942"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539709"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Встроенные функции _InterlockedExchangePointer
 **Блок, относящийся только к системам Microsoft**  
@@ -85,14 +85,14 @@ void * _InterlockedExchangePointer_HLERelease(
   
 |Встроенная функция|Архитектура|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<Intrin.h >|  
+|`_InterlockedExchangePointer`|x86, ARM, x64|\<Intrin.h >|  
 |`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<Intrin.h >|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] с поддержкой HLE|\<immintrin.h >|  
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 с поддержкой hle|\<immintrin.h >|  
   
  В архитектуре x86, `_InterlockedExchangePointer` есть макрос, вызывающий `_InterlockedExchange`.  
   
 ## <a name="remarks"></a>Примечания  
- Для 64-разрядной системы параметры 64-разрядные и должны быть выровнены по  64-разрядным границам; в противном случае функция завершается с ошибкой. Для 32-разрядной системы параметры 32-разрядные и должны быть выровнены по 32-разрядням границам. Дополнительные сведения см. в разделе [выравнивание](../cpp/align-cpp.md).  
+ Для 64-разрядной системы параметры 64-разрядные и должны быть выровнены по  64-разрядным границам; в противном случае функция завершается с ошибкой. Для 32-разрядной системы параметры 32-разрядные и должны быть выровнены по 32-разрядням границам. Дополнительные сведения см. в разделе [выровнять](../cpp/align-cpp.md).  
   
  На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенная функция с суффиксом `_nf` («без границ») не действует как ограничитель памяти.  
   

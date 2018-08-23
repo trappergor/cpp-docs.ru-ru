@@ -1,5 +1,5 @@
 ---
-title: 'Класс Platform::Collections:: vectorview | Документы Microsoft'
+title: 'Класс Platform::Collections:: vectorview | Документация Майкрософт'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 937342c340b085f2e2bdeef8ed7df21dae826152
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092914"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584110"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Класс Platform::Collections::VectorView
 Представляет доступное только для чтения представление упорядоченной коллекции объектов, в которой возможен доступ к каждому отдельному объекту по его индексу. Тип каждого объекта в коллекции задается параметром шаблона.  
@@ -39,25 +39,25 @@ template <typename T, typename E>
   
 #### <a name="parameters"></a>Параметры  
  `T`  
- Тип элементов, содержащихся в объекте `VectorView`.  
+ Тип элементов, содержащихся в объекте `VectorView` .  
   
  `E`  
  Определяет бинарный предикат для проверки равенства со значениями типа `T`. Значение по умолчанию — `std::equal_to<T>`.  
   
 ### <a name="remarks"></a>Примечания  
- `VectorView` Класс реализует [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411) интерфейс и поддержку итераторов библиотеки стандартных шаблонов.  
+ `VectorView` Класс реализует [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411) интерфейс, а также поддержку итераторов библиотеки стандартных шаблонов.  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[VectorView::VectorView](#ctor)|Инициализирует новый экземпляр класса VectorView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[VectorView::First](#first)|Возвращает итератор, указывающий первый элемент объекта VectorView.|  
 |[VectorView::GetAt](#getat)|Извлекает элемент текущего VectorView, указанный заданным индексом.|  
@@ -73,7 +73,7 @@ template <typename T, typename E>
   
  **Пространство имен:** Platform::Collections  
 
-## <a name="first"></a>  Vectorview::First-метод
+## <a name="first"></a>  Метод VectorView::First
 Возвращает итератор, указывающий первый элемент объекта VectorView.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -88,11 +88,11 @@ virtual Windows::Foundation::Collections::IIterator<T>^
  Итератор, указывающий первый элемент объекта VectorView.  
   
 ### <a name="remarks"></a>Примечания  
- Это удобный способ сохранения итератора, возвращаемого методом First(), — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевое слово выведения типа. Например, `auto x = myVectorView->First();`.  
+ Удобный способ сохранения итератора, возвращаемого методом First() — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевым словом вывода типа. Например, `auto x = myVectorView->First();`.  
   
 
 
-## <a name="getat"></a>  Vectorview::getat-метод
+## <a name="getat"></a>  Метод VectorView::GetAt
 Извлекает элемент текущего VectorView, указанный заданным индексом.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -109,11 +109,11 @@ T GetAt(
  Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте VectorView.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Элемент, заданный параметром `index`. Тип элемента указан параметром шаблона VectorView *T*.  
+ Элемент, заданный параметром `index`. Тип элемента указан параметром шаблона VectorView, *T*.  
   
 
 
-## <a name="getmany"></a>  Vectorview::getmany-метод
+## <a name="getmany"></a>  Метод VectorView::GetMany
 Извлекает последовательность элементов из текущего объекта VectorView, начиная с указанного индекса.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -131,14 +131,14 @@ virtual unsigned int GetMany(
  Отсчитываемый от нуля индекс начала элементов для извлечения.  
   
  `dest`  
- После завершения операции, массив элементов начинается с элемента, заданного параметром `startIndex` и заканчивается последним элементом объекта vectorview.  
+ После завершения операции, массив элементов начинается с элемента, указанного `startIndex` и заканчивается последним элементом объекта vectorview.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество извлеченных элементов.  
   
 
 
-## <a name="indexof"></a>  Vectorview::IndexOf-метод
+## <a name="indexof"></a>  Метод VectorView::IndexOf
 Выполняет поиск указанного элемента в текущем объекте VectorView и возвращает его индекс, если он найден.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -180,7 +180,7 @@ virtual property unsigned int Size;
   
 
 
-## <a name="ctor"></a>  Vectorview::vectorview-конструктор
+## <a name="ctor"></a>  Конструктор VectorView::VectorView
 Инициализирует новый экземпляр класса VectorView.  
   
 ### <a name="syntax"></a>Синтаксис  

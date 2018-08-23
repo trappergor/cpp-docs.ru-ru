@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e24c5286afbe20b1f5b71a67b0d10385f80874
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208800"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541506"
 ---
 # <a name="colecurrency-class"></a>Класс COleCurrency
 Инкапсулирует тип данных `CURRENCY` автоматизации OLE.  
@@ -137,11 +137,11 @@ COleCurrency(
   
 - COleCurrency (`curSrc`) создает `COleCurrency` из существующего `COleCurrency` объекта. Новый объект имеет такое же состояние, что и исходный объект.  
   
-- COleCurrency (`varSrc`) создает `COleCurrency` объекта. Пытается преобразовать [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) структуры или `COleVariant` в значение валюты (VT_CY). Если это преобразование выполнено успешно, преобразованное значение копируется в новый `COleCurrency` объекта. Если это не так, значение `COleCurrency` объекта имеет значение ноль (0) и его состояние на недопустимый.  
+- COleCurrency (`varSrc`) создает `COleCurrency` объекта. Пытается преобразовать [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) структуры или `COleVariant` в значение валюты (VT_CY). Если это преобразование выполнено успешно, преобразованное значение копируется в новый `COleCurrency` объекта. Если это не так, значение `COleCurrency` объекта имеет значение ноль (0) и его состояние на недопустимый.  
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency "объект из указанного числовых компонента. Если абсолютное значение дробной части больше 10 000, соответствующих настроек к единицам. Обратите внимание на то, что единицы и дробной части задаются значения со знаком длинное.  
   
- Дополнительные сведения см. в разделе [валюты](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) и [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) записей в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [валюты](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) и [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) записей в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующих примерах показано влияние конструкторы нулевой параметр и два параметра:  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **оператор = (** *varSrc* **)** Если преобразование `VARIANT` значение (или [COleVariant](../../mfc/reference/colevariant-class.md) объект) для валюты ( `VT_CY`) — в случае успешного выполнения преобразованное значение копируется в этот `COleCurrency` объекта и его состояние имеет значение на допустимое. Если преобразование не выполнено успешно, значение `COleCurrency` объект имеет значение 0, а его состояние на недопустимый.  
   
- Дополнительные сведения см. в разделе [валюты](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) и [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) записей в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [валюты](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) и [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) записей в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
@@ -450,7 +450,7 @@ throw(COleException*);
 ### <a name="remarks"></a>Примечания  
  Она использует местный язык спецификации (идентификаторы языковых стандартов) для значения нечисловые знаки в исходной строке.  
   
- Описание значений Идентификаторов языкового стандарта, см. в разделе [поддержка нескольких языков](http://msdn.microsoft.com/47dc5add-232c-4268-b977-43e12da81ede).  
+ Описание значений Идентификаторов языкового стандарта, см. в разделе [поддержка нескольких языков](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages).  
   
  Если строка успешно преобразован в валюту, значение, значение этого `COleCurrency` объекта имеет значение этого значения и его статус на допустимый.  
   

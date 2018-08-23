@@ -1,7 +1,7 @@
 ---
 title: ЭКСПОРТЫ | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322193"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42571737"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-Если имя, которое можно экспортировать из другой модуль, укажите имя экспорта в DLL с помощью *other_module.exported_name*. Например, если библиотека DLL экспортирует функцию `other_module.func1` и вы хотите, чтобы она вызывалась как функция `func2`, укажите следующее.
+Если имя, которое можно экспортировать из некоторых других модуля, укажите имя экспорта в DLL с помощью *other_module.exported_name*. Например, если библиотека DLL экспортирует функцию `other_module.func1` и вы хотите, чтобы она вызывалась как функция `func2`, укажите следующее.
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+Если имя, которое можно экспортировать из другого модуля, который экспортирует по порядковому номеру, укажите экспорта порядкового номера в библиотеке DLL с помощью *other_module. #ordinal_number*. Например, если библиотека DLL экспортирует функцию из другого модуля это порядковый номер 42, куда вы хотите вызывающим сторонам использовать его как `func2`, следует указать:
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 Так как компилятор Visual C++ использует Декорирование имен для функций C++, необходимо использовать декорированное имя internal_name или определить экспортируемые функции с помощью extern «C» в исходном коде. Компилятор также декорирует функции C, использующие [__stdcall](../../cpp/stdcall.md) соглашение о вызовах с подчеркивания (_) префиксом и суффиксом, состоящим из символа (@) за которым следует число байтов (в десятичном формате) в списке аргументов.  

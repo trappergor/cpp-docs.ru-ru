@@ -1,5 +1,5 @@
 ---
-title: __writegsbyte __writegsdword, __writegsqword __writegsword | Документы Microsoft
+title: __writegsbyte __writegsdword, __writegsqword __writegsword | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c9eec7bb0da65bfd327726078766ab1befacbde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5ae6f47009600c87cb260246fca474592a5e9c6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328280"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539699"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 **Блок, относящийся только к системам Microsoft**  
   
- Запись в папку, указанную в качестве смещения относительно начала GS сегмента памяти.  
+ Запись памяти в расположении, заданном в качестве смещения относительно начала сегмент GS.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -66,15 +66,15 @@ void __writegsqword(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__writegsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writegsbyte`|X64|  
+|`__writegsdword`|X64|  
+|`__writegsqword`|X64|  
+|`__writegsword`|X64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Эти встроенные функции доступны только в режиме ядра, и эти процедуры доступны только как встроенные объекты.  
+ Эти встроенные функции доступны только в режиме ядра, и эти процедуры доступны только как встроенные функции.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   
