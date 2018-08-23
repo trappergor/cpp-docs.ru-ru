@@ -20,42 +20,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c972f4038da4b4ed1d52fee0b8029b6f48ff3bb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0da05d9599767f52fa6e65cabb4614be191699e0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013877"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610793"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Изменение размера изображения (редактор изображений для значков)
-Поведение **изображение** редактора при изменении размера изображения, зависит ли [выбранного](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) изображение целиком или только его часть.  
-  
- Если выделение содержит только часть изображения, **изображение** редактор сокращает выделение, удалив строки или столбцы точек и заполнив освободившуюся область с текущим цветом фона, или она растягивается выделения на дублирование строк или столбцов пикселей.  
-  
- Если выделение содержит всего изображения, **изображение** редактора либо сжимается и растянуть изображение, или обрезает его, а затем расширяет его.  
-  
- Существует два механизма для изменения размеров изображения: маркеры и [окно "Свойства"](/visualstudio/ide/reference/properties-window). Можно перетащить маркеры изменения размера, чтобы изменить размер всех или части изображения. Маркеры, которые можно перетаскивать сплошной. Нельзя перетащить маркеры тянуть. Можно использовать **свойства** окно, чтобы изменить размер всего только, образ не выделенной области.  
-  
- ![Маркеры точечного рисунка](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
-Маркеры изменения размера  
-  
+
+Поведение **изображение** редактора при изменении размера изображения, зависит ли [выбранного](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) изображение целиком или только его часть.
+
+Если выделение содержит только часть изображения, **изображение** редактор сокращает выделение, удалив строки или столбцы точек и заполнив освободившуюся область с текущим цветом фона, или она растягивается выделения на дублирование строк или столбцов пикселей.
+
+Если выделение содержит всего изображения, **изображение** редактора либо сжимается и растянуть изображение, или обрезает его, а затем расширяет его.
+
+Существует два механизма для изменения размеров изображения: маркеры и [окно "Свойства"](/visualstudio/ide/reference/properties-window). Можно перетащить маркеры изменения размера, чтобы изменить размер всех или части изображения. Маркеры, которые можно перетаскивать сплошной. Нельзя перетащить маркеры тянуть. Можно использовать **свойства** окно, чтобы изменить размер всего только, образ не выделенной области.
+
+![Маркеры точечного рисунка](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
+Маркеры изменения размера
+
 > [!NOTE]
->  Если у вас есть **плитку сетки** параметра, выбранного в [диалоговое окно параметров сетки](../windows/grid-settings-dialog-box-image-editor-for-icons.md), затем изменение размера позволяет выполнить привязку к следующей строке сетки плитки. Если только **пиксельную сетку** параметр выбран (по умолчанию), изменение размера позволяет выполнить привязку к доступным точкам.  
-  
--   [Изменение размера всего изображения](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
-  
--   [Обрезание или расширение всего изображения](cropping-or-extending-an-entire-image-image-editor-for-icons.md)  
-  
--   [Растяжение всего изображения и сжатие](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)  
-  
--   [Растяжение и сжатие фрагмента изображения](../windows/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Требования  
- Нет  
-  
-## <a name="see-also"></a>См. также  
- [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Изменение графических ресурсов](../windows/editing-graphical-resources-image-editor-for-icons.md)   
- [Редактор изображений для значков](../windows/image-editor-for-icons.md)
+> Если у вас есть **плитку сетки** параметра, выбранного в [диалоговое окно параметров сетки](../windows/grid-settings-dialog-box-image-editor-for-icons.md), затем изменение размера позволяет выполнить привязку к следующей строке сетки плитки. Если только **пиксельную сетку** параметр выбран (по умолчанию), изменение размера позволяет выполнить привязку к доступным точкам.
+
+- [Изменение размера всего изображения](../windows/resizing-an-entire-image-image-editor-for-icons.md)
+
+- [Обрезание или расширение всего изображения](cropping-or-extending-an-entire-image-image-editor-for-icons.md)
+
+- [Растяжение всего изображения и сжатие](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)
+
+- [Растяжение и сжатие фрагмента изображения](../windows/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)
+
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Требования
+
+Нет
+
+## <a name="see-also"></a>См. также
+
+[Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Изменение графических ресурсов](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Редактор изображений для значков](../windows/image-editor-for-icons.md)

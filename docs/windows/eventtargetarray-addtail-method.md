@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e80bf6d4313be5c90b4b4486cb31f3705252f33
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6609bba6d7adbddda152007e4db45c82f8039bc0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651269"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603682"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>Метод EventTargetArray::AddTail
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-void AddTail(  
-   _In_ IUnknown* element  
-);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *Элемент*  
- Указатель на обработчик событий для добавления.  
-  
-## <a name="remarks"></a>Примечания  
- Добавляет указанный обработчик событий в конец внутреннего массива из обработчиков событий.  
-  
- **AddTail()** предназначен для использования в среде только `EventSource` класса.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Класс EventTargetArray](../windows/eventtargetarray-class.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void AddTail(
+   _In_ IUnknown* element
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Элемент*  
+Указатель на обработчик событий для добавления.
+
+## <a name="remarks"></a>Примечания
+
+Добавляет указанный обработчик событий в конец внутреннего массива из обработчиков событий.
+
+**AddTail()** предназначен для использования в среде только `EventSource` класса.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Класс EventTargetArray](../windows/eventtargetarray-class.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

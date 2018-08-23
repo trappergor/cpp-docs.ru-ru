@@ -30,16 +30,16 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eaf5425bab79d31391e6ccd82e03c667de1271c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016630"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610718"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Текст и строки в Visual C++
 Важным аспектом разработки приложений для международных рынков является адекватное представление локального кодировок. Кодировка ASCII определяет символы в диапазоне от 0x00 до 0x7F. Существуют другие кодировки, в основном европейские, которые определяют символы в диапазоне от 0x00 до 0x7F одинаково в набор символов ASCII, а также определяют расширенную кодировку от 0x80 до 0xFF. Таким образом 8-разрядное, однобайтовыми кодировки (SBCS) достаточно для представления набора символов ASCII, а также кодировки для большинства европейских языков. Тем не менее некоторые не европейские кодировки, например Кандзи (японский), включают намного больше символов, чем схема кодирования однобайтовые представления и поэтому для них многобайтовые кодировки (MBCS).  

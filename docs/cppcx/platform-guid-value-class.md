@@ -1,5 +1,5 @@
 ---
-title: Класс значения Platform::GUID | Документы Microsoft
+title: Класс значения Platform::GUID | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089455"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601258"
 ---
 # <a name="platformguid-value-class"></a>Класс значения Platform::Guid
 Представляет тип [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) в системе типов среды выполнения Windows.  
@@ -31,10 +31,10 @@ ms.locfileid: "33089455"
 public value struct Guid  
 ```  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
  Структура Guid имеет методы Equals(), GetHashCode() и ToString(), производные от [Platform::Object Class](../cppcx/platform-object-class.md), и метод GetTypeCode(), производный от [Platform::Type Class](../cppcx/platform-type-class.md). У структуры Guid также имеются следующие члены.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[Guid](#ctor)|Инициализирует новый экземпляр структуры Guid.|  
 |[operator==](#operator-equality)|Оператор равенства.|  
@@ -42,7 +42,7 @@ public value struct Guid
 |[operator()](#operator-call)|Преобразует Guid в GUID.|  
   
 ### <a name="remarks"></a>Примечания  
- Пример создания новой структуры Platform::Guid с использованием функции Windows [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx)см. в разделе [Компонент WinRT: как создать GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
+ Пример создания новой структуры Platform::Guid с помощью функции Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), см. в разделе [компонент WinRT: как создать GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
 ### <a name="requirements"></a>Требования  
  **Минимальный поддерживаемый клиент:** Windows 8  
@@ -125,7 +125,7 @@ public value struct Guid
   
 
 ## <a name="operator-equality"></a> GUID::operator ==-оператор
-Сравнивает два кода GUID.  
+Сравнивает два GUID.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -137,7 +137,7 @@ Platform::Guid::operator==
  Значение true, если GUID равны.
 
 ## <a name="operator-inequality"></a> GUID::operator! =-оператор
-Сравнивает два кода GUID.  
+Сравнивает два GUID.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -146,7 +146,7 @@ Platform::Guid::operator!=
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение true, если два кода GUID не равны.
+ Значение true, если GUID не равны.
 
 
 

@@ -15,46 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7620cee350ab69f55737e6336b275218a70b6891
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b07df3dc50704a87883e1a387fe9c842c1732b54
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607717"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610537"
 ---
 # <a name="hstringreferenceoperator-operator"></a>Оператор HStringReference::Operator==
-Указывает, равны ли два параметра.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline bool operator==(  
-               const HStringReference& lhs,   
-               const HStringReference& rhs) throw()  
-  
-inline bool operator==(  
-               const HSTRING& lhs,   
-               const HStringReference& rhs) throw()  
-  
-inline bool operator==(  
-               const HStringReference& lhs,   
+
+Указывает, равны ли два параметра.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline bool operator==(
+               const HStringReference& lhs,
+               const HStringReference& rhs) throw()
+
+inline bool operator==(
+               const HSTRING& lhs,
+               const HStringReference& rhs) throw()
+
+inline bool operator==(
+               const HStringReference& lhs,
                const HSTRING& rhs) throw()  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *lhs*  
- Первый параметр для сравнения. *LHS* может быть **HStringReference** объекта или дескриптором HSTRING.  
-  
- *правая часть*  
- Второй параметр для сравнения.  *правая часть* может быть **HStringReference** объекта или дескриптором HSTRING.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если *lhs* и *rhs* параметры равны; в противном случае — значение **false**.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HStringReference](../windows/hstringreference-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*lhs*  
+Первый параметр для сравнения. *LHS* может быть **HStringReference** объекта или дескриптором HSTRING.
+
+*правая часть*  
+Второй параметр для сравнения.  *правая часть* может быть **HStringReference** объекта или дескриптором HSTRING.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если *lhs* и *rhs* параметры равны; в противном случае — значение **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HStringReference](../windows/hstringreference-class.md)

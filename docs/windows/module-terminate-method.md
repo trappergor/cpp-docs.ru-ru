@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40d374219e6b9eb05a74f5b62f710691b4e9342a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7f89922fb107c1454ec81dfd8a9ac213608da962
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016896"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610847"
 ---
 # <a name="moduleterminate-method"></a>Метод Module::Terminate
-Приводит к завершению работы всех экземпляров фабрик, созданных модулем.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-void Terminate();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Освобождает фабрики в кэше.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс Module](../windows/module-class.md)
+
+Приводит к завершению работы всех экземпляров фабрик, созданных модулем.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void Terminate();
+```
+
+## <a name="remarks"></a>Примечания
+
+Освобождает фабрики в кэше.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс Module](../windows/module-class.md)

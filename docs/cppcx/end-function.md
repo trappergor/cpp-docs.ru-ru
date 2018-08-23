@@ -1,5 +1,5 @@
 ---
-title: End Function | Документы Microsoft
+title: End Function | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 771d7e83024f9c258df1437ff902d638bffc8478
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec25b92ca9ce21f72ff2fb573aae316ef1c19eac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086425"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596654"
 ---
 # <a name="end-function"></a>Функция end
 Возвращает итератор, указывающий на позицию после конечного элемента коллекции, для доступа к которой используется указанный параметр интерфейса.  
@@ -52,10 +52,10 @@ template <typename T>
  Параметр типа шаблона.  
   
  `v`  
- Коллекция вектора\<T > или VectorView\<T > объекты, к которым обращаются IVector\<T >, или IVectorView\<T > интерфейса.  
+ Коллекция вектор\<T > или VectorView\<T > объекты, к которым подключены IVector\<T >, или IVectorView\<T > интерфейс.  
   
  `i`  
- Коллекция произвольных среды выполнения Windows объектов осуществляется IIterable\<T > интерфейса.  
+ Коллекция произвольных среды выполнения Windows объекты, которым осуществляется через IIterable\<T > интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор, который указывает на позицию после конечного элемента коллекции.  

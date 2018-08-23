@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::COMException | Документы Microsoft
+title: Класс Platform::COMException | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090530"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597004"
 ---
 # <a name="platformcomexception-class"></a>Класс Platform::COMException
 Представляет ошибки COM, возникающие при выполнении приложения. COMException — базовый класс для набора предопределенных стандартных исключений.  
@@ -40,7 +40,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **Конструкторы**  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[COMException](#ctor)|Инициализирует новый экземпляр класса COMException.|  
   
@@ -52,7 +52,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  Класс COMException имеет следующие свойства.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|  
 |[Exception::Message](#message)|Сообщение с описанием исключения.|  
@@ -60,7 +60,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ## <a name="derived-exceptions"></a>Производные исключения  
  Следующие предопределенные исключения наследуются от класса COMException. Они отличаются от класса COMException только своими именами, именами своих конструкторов и значениями HRESULT.  
   
-|name|Значение HRESULT|Описание|  
+|name|Значение HRESULT|Описание:|  
 |----------|------------------------|-----------------|  
 |COMException|*Определяемое пользователем значение hresult*|Возникает при возвращении неизвестного значения HRESULT после вызова метода COM.|  
 |AccessDeniedException|E_ACCESSDENIED|Возникает при запрете доступа к ресурсу или функции.|  
@@ -85,7 +85,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **Метаданные:** platform.winmd  
 
-## <a name="ctor"></a> COMException::COMException-конструктор
+## <a name="ctor"></a> Конструктор COMException::COMException
 Инициализирует новый экземпляр класса COMException.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -100,7 +100,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a> COMException::HResult-свойство
+## <a name="hresult"></a> COMException::HRESULT-свойство
 Значение HRESULT, соответствующее исключению.  
   
 ### <a name="syntax"></a>Синтаксис  

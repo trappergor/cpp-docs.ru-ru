@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93de27e028d0665cccc3ba373b26524d911607a0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0ee2e0cdaca30099938422954ed0d29fc446610f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648201"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609229"
 ---
 # <a name="deleting-unassigned-symbols"></a>Удаление неназначенных символов
-### <a name="to-delete-an-unassigned-unused-symbol"></a>Удаление неназначенного (неиспользуемого) символа  
-  
-1.  В [символы ресурсов-диалоговое окно](../windows/resource-symbols-dialog-box.md), выберите символ, который требуется удалить и нажмите кнопку **удалить**.  
-  
-    > [!NOTE]
-    >  Перед удалением неиспользуемого символа в файле ресурсов убедитесь в том, что он не используется где-либо в программе или в файлах ресурсов, включаемых во время компиляции.  
-  
-## <a name="requirements"></a>Требования  
- Win32  
-  
-## <a name="see-also"></a>См. также  
- [Изменение неназначенных символов](../windows/changing-unassigned-symbols.md)   
- [Ограничения для имен символов](../windows/symbol-name-restrictions.md)   
- [Ограничения для символьных значений](../windows/symbol-value-restrictions.md)   
- [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)
+
+### <a name="to-delete-an-unassigned-unused-symbol"></a>Удаление неназначенного (неиспользуемого) символа
+
+1. В [символы ресурсов-диалоговое окно](../windows/resource-symbols-dialog-box.md), выберите символ, который требуется удалить и нажмите кнопку **удалить**.
+
+   > [!NOTE]
+   > Перед удалением неиспользуемого символа в файле ресурсов убедитесь в том, что он не используется где-либо в программе или в файлах ресурсов, включаемых во время компиляции.
+
+## <a name="requirements"></a>Требования
+
+Win32
+
+## <a name="see-also"></a>См. также
+
+[Изменение неназначенных символов](../windows/changing-unassigned-symbols.md)  
+[Ограничения для имен символов](../windows/symbol-name-restrictions.md)  
+[Ограничения для символьных значений](../windows/symbol-value-restrictions.md)  
+[Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)

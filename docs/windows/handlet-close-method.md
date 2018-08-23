@@ -17,31 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7cbe76cdea5c8fadef818ede1d63d88e4437bdae
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ab919b3aeba45462a15900429493225f00909d5a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651071"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602458"
 ---
 # <a name="handletclose-method"></a>Метод HandleT::Close
-Закрывает текущий **HandleT** объекта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-void Close();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Дескриптор, лежащий в основе текущего **HandleT** закрывается и **HandleT** присваивается недопустимое состояние.  
-  
- Если дескриптор не закрывается правильно, возникает исключение в вызывающем потоке.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HandleT](../windows/handlet-class.md)
+
+Закрывает текущий **HandleT** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void Close();
+```
+
+## <a name="remarks"></a>Примечания
+
+Дескриптор, лежащий в основе текущего **HandleT** закрывается и **HandleT** присваивается недопустимое состояние.
+
+Если дескриптор не закрывается правильно, возникает исключение в вызывающем потоке.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HandleT](../windows/handlet-class.md)

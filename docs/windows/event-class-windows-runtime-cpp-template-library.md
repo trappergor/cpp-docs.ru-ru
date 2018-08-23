@@ -15,45 +15,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c07d58f244bf2e7e6c9329196bae7b5bb323ce12
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b40e9c5e04c21cdbcc56581e02751edc84e4617d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644168"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606293"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Класс Event (библиотека шаблонов C++ среды выполнения Windows)
-Представляет событие.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-class Event : public HandleT<HandleTraits::EventTraits>;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Конструктор Event::Event (библиотека шаблонов C++ среды выполнения Windows)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Инициализирует новый экземпляр класса **событий** класса.|  
-  
-### <a name="public-operators"></a>Открытые операторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Оператор Event::operator=](../windows/event-operator-assign-operator.md)|Назначает указанное **событий** ссылку на текущий **событий** экземпляра.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `HandleT`  
-  
- `Event`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Представляет событие.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+class Event : public HandleT<HandleTraits::EventTraits>;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Конструктор Event::Event (библиотека шаблонов C++ среды выполнения Windows)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Инициализирует новый экземпляр класса **событий** класса.|
+
+### <a name="public-operators"></a>Открытые операторы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Оператор Event::operator=](../windows/event-operator-assign-operator.md)|Назначает указанное **событий** ссылку на текущий **событий** экземпляра.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`HandleT`
+
+`Event`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)

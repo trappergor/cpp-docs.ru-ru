@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a99eee63496632b8f0918ee888e6a824424b757d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8b2bc46f916e4aaaedc74e8b6d94faafa1ead3b9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649894"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595491"
 ---
 # <a name="asyncbaseputonprogress-method"></a>Метод AsyncBase::PutOnProgress
-Задает адрес обработчика событий процесса выполнения указанное значение.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-STDMETHOD(  
-   PutOnProgress  
-)(TProgress* progressHandler);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *progressHandler*  
- Адрес, задаваемое для обработчика событий процесса выполнения.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если выполнение прошло успешно; в противном случае E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Задает адрес обработчика событий процесса выполнения указанное значение.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(
+   PutOnProgress
+)(TProgress* progressHandler);
+```
+
+### <a name="parameters"></a>Параметры
+
+*progressHandler*  
+Адрес, задаваемое для обработчика событий процесса выполнения.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

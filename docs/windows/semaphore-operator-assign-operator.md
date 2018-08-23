@@ -17,35 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49405cda5ff7a9d3313ebafbda35b5fb6182febe
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: fbce88be7f7b83c22964438bc4ea7a783754fb63
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015511"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609012"
 ---
 # <a name="semaphoreoperator-operator"></a>Оператор Semaphore::operator=
-Перемещает указанный дескриптор из **семафора** объект с текущим **семафора** объекта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-Semaphore& operator=(  
-   _Inout_ Semaphore&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *h*  
- Ссылка rvalue на **семафора** объекта.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Ссылку на текущий **семафора** объекта.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers
- 
- ## <a name="see-also"></a>См. также
- [Класс Semaphore](../windows/semaphore-class.md)
+
+Перемещает указанный дескриптор из **семафора** объект с текущим **семафора** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+Semaphore& operator=(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*h*  
+Ссылка rvalue на **семафора** объекта.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Ссылку на текущий **семафора** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+[Класс Semaphore](../windows/semaphore-class.md)

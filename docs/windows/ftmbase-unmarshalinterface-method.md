@@ -17,43 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef462ae884aad4160ffbae1883485ac7e06d3aa5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644038"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610705"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>Метод FtmBase::UnmarshalInterface
-Инициализирует только что созданный прокси-сервер и возвращает указатель интерфейса для этого прокси-сервера.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-STDMETHODIMP UnmarshalInterface(  
-   __in IStream *pStm,  
-   __in REFIID riid,  
-   __deref_out void **ppv  
-) override;  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *pStm*  
- Указатель на поток, из которого должен быть неупакованный указатель на интерфейс.  
-  
- *riid*  
- Ссылка на идентификатор интерфейса необходимо распаковать.  
-  
- *ppv*  
- После завершения операции адрес переменной указателя, получающей указатель интерфейса, запрашиваемый в *riid*. Если операция выполнена успешно, **ppv* содержит запрошенный указатель интерфейса интерфейса необходимо распаковать.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если выполнение прошло успешно; в противном случае — значение E_NOINTERFACE или E_FAIL.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** ftm.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс FtmBase](../windows/ftmbase-class.md)
+
+Инициализирует только что созданный прокси-сервер и возвращает указатель интерфейса для этого прокси-сервера.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHODIMP UnmarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __deref_out void **ppv
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*pStm*  
+Указатель на поток, из которого должен быть неупакованный указатель на интерфейс.
+
+*riid*  
+Ссылка на идентификатор интерфейса необходимо распаковать.
+
+*ppv*  
+После завершения операции адрес переменной указателя, получающей указатель интерфейса, запрашиваемый в *riid*. Если операция выполнена успешно, **ppv* содержит запрошенный указатель интерфейса интерфейса необходимо распаковать.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае — значение E_NOINTERFACE или E_FAIL.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** ftm.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс FtmBase](../windows/ftmbase-class.md)

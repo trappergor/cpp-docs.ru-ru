@@ -13,30 +13,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb5735eeb9cd4048596588765468fbb9c5e07496
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 135c6d851be5de8f2eb976baf015f2ef449600c0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652605"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595977"
 ---
 # <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>Оператор ComPtr::operator Microsoft::WRL::Details::BoolType
-Указывает ли **ComPtr** управление временем существования объектов интерфейса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Если интерфейс связан с данным **ComPtr**, адрес [BoolStruct::Member](../windows/boolstruct-member-data-member.md) данные-член; в противном случае **nullptr**.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ComPtr](../windows/comptr-class.md)   
- [Метод ComPtr::Get](../windows/comptr-get-method.md)
+
+Указывает ли **ComPtr** управление временем существования объектов интерфейса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Если интерфейс связан с данным **ComPtr**, адрес [BoolStruct::Member](../windows/boolstruct-member-data-member.md) данные-член; в противном случае **nullptr**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtr](../windows/comptr-class.md)  
+[Метод ComPtr::Get](../windows/comptr-get-method.md)

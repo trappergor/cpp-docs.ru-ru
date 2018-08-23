@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::WriteOnlyArray | Документы Microsoft
+title: Класс Platform::WriteOnlyArray | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091491"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603350"
 ---
 # <a name="platformwriteonlyarray-class"></a>Класс Platform::WriteOnlyArray
 Представляет одномерный массив, который используется в качестве входного параметра, когда вызывающая сторона передает массив в метод для заполнения.  
@@ -43,13 +43,13 @@ private ref class WriteOnlyArray<T, 1>
 ### <a name="public-methods"></a>Открытые методы  
  Эти методы имеют внутреннюю доступность, то есть доступны только в компоненте или приложении С++.  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 
 |[WriteOnlyArray::begin](#begin)| Итератор, указывающий на первый элемент массива. |  
 |[WriteOnlyArray::Data](#data)| Указатель на буфер данных. |  
-|[WriteOnlyArray::end](#end)| Итератор, указывающий на элемент, следующий за последним элементом в массиве. |  
-|[WriteOnlyArray::FastPass](#fastpass)| Указывает, является ли массив использовать механизм FastPass, есть прозрачную оптимизацию, выполняемую системой. Не используйте его в коде |  
+|[WriteOnlyArray::end](#end)| Итератор, указывающий позицию, следующую за последним элементом в массиве. |  
+|[WriteOnlyArray::FastPass](#fastpass)| Указывает, может ли массив использовать механизм FastPass, который является прозрачную оптимизацию, выполняемую системой. Не используйте его в коде |  
 |[WriteOnlyArray::Length](#length)| Возвращает количество элементов в массиве. |  
 |[WriteOnlyArray::set](#set)| Присваивает заданному элементу заданное значение. |  
 
@@ -130,7 +130,7 @@ property bool FastPass{
   
 
 
-## <a name="get"></a>  Writeonlyarray::Get-метод
+## <a name="get"></a>  Метод WriteOnlyArray::get
 Возвращает элемент по указанному индексу.  
   
 ### <a name="syntax"></a>Синтаксис  

@@ -17,55 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b63e3784529edf8957654511af53373fd80799ae
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e9e45f64d8eda3e24fb7c85120f14e981963f7f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014264"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595789"
 ---
 # <a name="issame-structure"></a>IsSame - структура
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-template <  
-   typename T1,  
-   typename T2  
->  
-struct IsSame;  
-template <  
-   typename T1  
->  
-struct IsSame<T1, T1>;  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *T1*  
- Тип.  
-  
- *T2*  
- Другой тип.  
-  
-## <a name="remarks"></a>Примечания  
- Определяет, совпадают ли указанные типы друг с другом.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constants"></a>Открытые константы  
-  
-|name|Описание:|  
-|----------|-----------------|  
-|[Константа IsSame::value](../windows/issame-value-constant.md)|Указывает, совпадают ли заданные типы друг с другом.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `IsSame`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** internal.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template <
+   typename T1,
+   typename T2
+>
+struct IsSame;
+template <
+   typename T1
+>
+struct IsSame<T1, T1>;
+```
+
+### <a name="parameters"></a>Параметры
+
+*T1*  
+Тип.
+
+*T2*  
+Другой тип.
+
+## <a name="remarks"></a>Примечания
+
+Определяет, совпадают ли указанные типы друг с другом.
+
+## <a name="members"></a>Участники
+
+### <a name="public-constants"></a>Открытые константы
+
+|name|Описание:|
+|----------|-----------------|
+|[Константа IsSame::value](../windows/issame-value-constant.md)|Указывает, совпадают ли заданные типы друг с другом.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`IsSame`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** internal.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

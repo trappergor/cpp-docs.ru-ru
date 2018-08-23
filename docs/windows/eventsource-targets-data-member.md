@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea08cdc8657100e1c1e0157a8a542a44ea34cd4d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fcdcb759c90009410f76a4b10039a0d976ca0cc4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642377"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605119"
 ---
 # <a name="eventsourcetargets-data-member"></a>Элемент данных EventSource::targets_
-Массив из одного или нескольких обработчиков событий.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-ComPtr<Details::EventTargetArray> targets_;  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Когда события, представленного текущим **EventSource** объект встречается, обработчики событий вызываются.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс EventSource](../windows/eventsource-class.md)
+
+Массив из одного или нескольких обработчиков событий.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ComPtr<Details::EventTargetArray> targets_;
+```
+
+## <a name="remarks"></a>Примечания
+
+Когда события, представленного текущим **EventSource** объект встречается, обработчики событий вызываются.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс EventSource](../windows/eventsource-class.md)

@@ -20,23 +20,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b86fe4b06298f75321e8cd5aeae551b9d6fa368b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0b6630ce3f2bc9fc10e1a7e6cdf037369c60adb2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016396"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601082"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Преобразование цветов в выделенной области (редактор изображений для значков)
-**Изображение** редактор предоставляет удобный способ инвертирования цветов в выбранной части изображения, что позволяет увидеть, как будет выглядеть изображение в инвертированных цветах.  
-  
-### <a name="to-invert-colors-in-the-current-selection"></a>Инвертирование цветов в выделенной области  
-  
-1.  На **изображение** меню, щелкните **обратить цвета**.  
-  
-## <a name="requirements"></a>Требования  
- Нет  
-  
-## <a name="see-also"></a>См. также  
- [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)
+
+**Изображение** редактор предоставляет удобный способ инвертирования цветов в выбранной части изображения, что позволяет увидеть, как будет выглядеть изображение в инвертированных цветах.
+
+### <a name="to-invert-colors-in-the-current-selection"></a>Инвертирование цветов в выделенной области
+
+1. На **изображение** меню, щелкните **обратить цвета**.
+
+## <a name="requirements"></a>Требования
+
+Нет
+
+## <a name="see-also"></a>См. также
+
+[Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)

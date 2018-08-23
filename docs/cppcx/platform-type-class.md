@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::Type | Документы Microsoft
+title: Класс Platform::Type | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e4d2931df50c6bfac126bc8e8ab1c70d61bdfe39
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255542"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596705"
 ---
 # <a name="platformtype-class"></a>Класс Platform::Type
-Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получается вызовом [Object::GetType](../cppcx/platform-object-class.md#gettype) в любом объекте или или с помощью [typeid](../windows/typeid-cpp-component-extensions.md) оператора в имени класса или структуры.  
+Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получен путем вызова [Object::GetType](../cppcx/platform-object-class.md#gettype) любого объекта, или с помощью [typeid](../windows/typeid-cpp-component-extensions.md) оператор на имени класса или структуры.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,14 +35,14 @@ public ref class Platform::Type :
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Класс `Type` удобен в приложениях, где должна выполняться непосредственная обработка с использованием оператора `if` или `switch` , образующего ветви на основе типа объекта времени выполнения. Код типа, описывающий категорию типа, извлекается с помощью [Type::GetTypeCode](#gettypecode) функции-члена.  
+ Класс `Type` удобен в приложениях, где должна выполняться непосредственная обработка с использованием оператора `if` или `switch` , образующего ветви на основе типа объекта времени выполнения. Код типа, описывающий категорию типа извлекаются с помощью [Type::GetTypeCode](#gettypecode) функция-член.  
   
 ## <a name="public-methods"></a>Открытые методы  
   
 |||  
 |-|-|  
 |[Метод Type::GetTypeCode](#gettypecode)|Возвращает значение [Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) для объекта.| 
-|[Метод Type::ToString](#tostring)|Возвращает имя типа, указанного в метаданных.| 
+|[Метод Type::ToString](#tostring)|Возвращает имя типа, указанного в своих метаданных.| 
 
  
 ## <a name="public-properties"></a>Открытые свойства  
@@ -69,7 +69,7 @@ public ref class Platform::Type :
 
  
 ## <a name="fullname"></a> Свойство Type::FullName
-Получает полное имя текущего типа в виде `Namespace.Type`.  
+Извлекает полное имя текущего типа в виде `Namespace.Type`.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -108,10 +108,10 @@ Platform::TypeCode GetTypeCode();
  Одно из значений перечисления Platform::TypeCode.  
   
 ### <a name="remarks"></a>Примечания  
- Эквивалентом метода-члена GetTypeCode() является `typeid` свойства.
+ Является эквивалентом метода-члена GetTypeCode() `typeid` свойство.
 
 ## <a name="tostring"></a> Метод Type::ToString
-Получает имя типа.  
+Извлекает имя типа.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -120,7 +120,7 @@ Platform::String^ ToString();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Имя типа, указанного в метаданных.    
+ Имя типа, указанного в своих метаданных.    
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

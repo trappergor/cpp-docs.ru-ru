@@ -17,41 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63ffeedd172df74419ef28fa72dca2bd9927779e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a868d3a5b798b7ca237642d7f7d5e3acf6668926
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012616"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609849"
 ---
 # <a name="oleautomation"></a>oleautomation
-Указывает, что интерфейс совместим со службой автоматизации.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[oleautomation]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Oleautomation** атрибут C++ имеет ту же функциональность, что [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) описании атрибута MIDL.  
-  
-## <a name="example"></a>Пример  
- См. в примерах [defaultvalue](../windows/defaultvalue.md) и [nonextensible](../windows/nonextensible.md) использовать образец **oleautomation**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**interface**|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**dispinterface**|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
+
+Указывает, что интерфейс совместим со службой автоматизации.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[oleautomation]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Oleautomation** атрибут C++ имеет ту же функциональность, что [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примерах [defaultvalue](../windows/defaultvalue.md) и [nonextensible](../windows/nonextensible.md) использовать образец **oleautomation**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**interface**|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|**dispinterface**|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  

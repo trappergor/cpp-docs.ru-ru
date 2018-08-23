@@ -1,5 +1,5 @@
 ---
-title: 'Класс Platform::Collections:: | Документы Microsoft'
+title: 'Класс Platform::Collections:: mapview | Документация Майкрософт'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091535"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605475"
 ---
 # <a name="platformcollectionsmapview-class"></a>Класс Platform::Collections::MapView
 Представляет доступное только для чтения представление на *карте*, которое является коллекцией пар "ключ-значение".  
@@ -51,19 +51,19 @@ ref class MapView sealed;
  Тип, предоставляющий объект функции, который может сравнить значения двух элементов как ключи сортировки, чтобы определить их относительный порядок в объекте MapView. По умолчанию [std::less\<K >](../standard-library/less-struct.md).  
   
 ### <a name="remarks"></a>Примечания  
- MapView является конкретной реализацией C++ [Windows::Foundation:: Collections:: \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) , передаваемая через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
+ MapView — это конкретная реализация C++ [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) интерфейс, который передается через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[MapView::MapView](#ctor)|Инициализирует новый экземпляр класса MapView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[MapView::First](#first)|Возвращает итератор, который инициализируется первым элементом в представлении карты.|  
 |[MapView::HasKey](#haskey)|Определяет, содержит ли текущий объект MapView указанный ключ.|  
@@ -94,7 +94,7 @@ virtual Windows::Foundation::Collections::IIterator<
  Итератор, указывающий первый элемент в представлении сопоставления.  
   
 ### <a name="remarks"></a>Примечания  
- Это удобный способ сохранения итератора, возвращаемого методом First(), — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевое слово выведения типа. Например, `auto x = myMapView->First();`.  
+ Удобный способ сохранения итератора, возвращаемого методом First() — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевым словом вывода типа. Например, `auto x = myMapView->First();`.  
   
 
 
@@ -135,7 +135,7 @@ V Lookup(K key);
   
 
 
-##  <a name="ctor"></a> Mapview::mapview-конструктор
+##  <a name="ctor"></a> Конструктор MapView::MapView
 Инициализирует новый экземпляр класса MapView.  
   
 ### <a name="syntax"></a>Синтаксис  

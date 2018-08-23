@@ -17,43 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f83314de19548c93afa43feced8b2a877af00738
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 220adeb44e676937756cf8007647f7e381f7607f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019057"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597564"
 ---
 # <a name="out-c"></a>out (C++)
-Определяет параметры-указатели, которые возвращаются из вызываемой процедуры в вызывающую (от сервера к клиенту).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[out]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Атрибут **out** языка C++ имеет ту же функциональность, как и атрибут [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- Просмотрите пример с [bindable](../windows/bindable.md) , чтобы увидеть, как можно использовать **out**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Параметр интерфейса|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты параметра](../windows/parameter-attributes.md)   
- [DefaultValue](../windows/defaultvalue.md)   
- [id](../windows/id.md)   
+
+Определяет параметры-указатели, которые возвращаются из вызываемой процедуры в вызывающую (от сервера к клиенту).
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[out]
+```
+
+## <a name="remarks"></a>Примечания
+
+Атрибут **out** языка C++ имеет ту же функциональность, как и атрибут [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) языка MIDL.
+
+## <a name="example"></a>Пример
+
+Просмотрите пример с [bindable](../windows/bindable.md) , чтобы увидеть, как можно использовать **out**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Параметр интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты параметра](../windows/parameter-attributes.md)  
+[defaultvalue](../windows/defaultvalue.md)  
+[id](../windows/id.md)  

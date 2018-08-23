@@ -17,44 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 858232702367aef62d0228f2e8653774896bd87f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7979dd21d68c5b1e2606573a5271fc8deafdfb07
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647187"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604184"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback - функция
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(  
-   HSTRING activationId,  
-   IActivationFactory **ppFactory  
-);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *activationId*  
- Дескриптор строка, задающая имя класса среды выполнения.  
-  
- *ppFactory*  
- После завершения операции фабрику активации, соответствующее параметру *activationId*.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. Скорее всего, ошибочные значения HRESULT: CLASS_E_CLASSNOTAVAILABLE и E_INVALIDARG.  
-  
-## <a name="remarks"></a>Примечания  
- Возвращает фабрику активации для активации указанного идентификатора.  
-  
- Среда выполнения Windows вызывает эту функцию обратного вызова для запроса объекта, заданный его именем класса среды выполнения.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
+   HSTRING activationId,
+   IActivationFactory **ppFactory
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*activationId*  
+Дескриптор строка, задающая имя класса среды выполнения.
+
+*ppFactory*  
+После завершения операции фабрику активации, соответствующее параметру *activationId*.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. Скорее всего, ошибочные значения HRESULT: CLASS_E_CLASSNOTAVAILABLE и E_INVALIDARG.
+
+## <a name="remarks"></a>Примечания
+
+Возвращает фабрику активации для активации указанного идентификатора.
+
+Среда выполнения Windows вызывает эту функцию обратного вызова для запроса объекта, заданный его именем класса среды выполнения.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

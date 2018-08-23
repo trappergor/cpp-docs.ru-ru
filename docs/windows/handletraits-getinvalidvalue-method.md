@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4690daabd84b8127913af0a96d5b929ee986e77
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 82616b0fc8cda44ea501b87f6ac1c6e0eddbfb57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651237"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609366"
 ---
 # <a name="handletraitsgetinvalidvalue-method"></a>Метод HANDLETraits::GetInvalidValue
-Представляет недопустимый дескриптор.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline static HANDLE GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение INVALID_HANDLE_VALUE (INVALID_HANDLE_VALUE определяется Windows).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Структура HANDLETraits](../windows/handletraits-structure.md)
+
+Представляет недопустимый дескриптор.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline static HANDLE GetInvalidValue();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Всегда возвращает значение INVALID_HANDLE_VALUE (INVALID_HANDLE_VALUE определяется Windows).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Структура HANDLETraits](../windows/handletraits-structure.md)

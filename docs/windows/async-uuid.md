@@ -17,58 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0596b15daff5567e2572bf8c1f2b401cdf300a49
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7619868e131476143c144e695e842708d1b54a6b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642416"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606449"
 ---
 # <a name="asyncuuid"></a>async_uuid
-Указывает UUID, компилятор MIDL определить синхронные и асинхронные версии COM-интерфейса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[async_uuid (  
-   uuid  
-)]  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *uuid*  
- UUID, которое определяет версию интерфейса.  
-  
-## <a name="remarks"></a>Примечания  
- **Async_uuid** атрибут C++ имеет ту же функциональность, что [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) описании атрибута MIDL.  
-  
-## <a name="example"></a>Пример  
-  
-```cpp  
-// cpp_attr_ref_async_uuid.cpp  
-// compile with: /LD  
-#include <Windows.h>  
-[module(name="Test")];  
-[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb"),   
-async_uuid("e8583106-38fd-487e-912e-4fc8645c677e")]  
-__interface ICustom {  
-   HRESULT Custom([in] long l, [out, retval] long *pLong);  
-};  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|`interface`|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**двойной**, **disp-интерфейс**|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
+
+Указывает UUID, компилятор MIDL определить синхронные и асинхронные версии COM-интерфейса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[async_uuid (
+   uuid
+)]
+```
+
+### <a name="parameters"></a>Параметры
+
+*uuid*  
+UUID, которое определяет версию интерфейса.
+
+## <a name="remarks"></a>Примечания
+
+**Async_uuid** атрибут C++ имеет ту же функциональность, что [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+```cpp
+// cpp_attr_ref_async_uuid.cpp
+// compile with: /LD
+#include <Windows.h>
+[module(name="Test")];
+[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb"),
+async_uuid("e8583106-38fd-487e-912e-4fc8645c677e")]
+__interface ICustom {
+   HRESULT Custom([in] long l, [out, retval] long *pLong);
+};
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|`interface`|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|**двойной**, **disp-интерфейс**|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  

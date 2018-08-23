@@ -17,55 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ed375a30ddadf72b7eee8a2cc852dec6620a992
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6a7b101091cefcdca65518c2a62bd274f7af4607
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011121"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610259"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper - структура
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-template <  
-   typename I,  
-   typename Base  
->  
-struct VerifyInheritanceHelper;  
-template <  
-   typename I  
->  
-struct VerifyInheritanceHelper<I, Nil>;  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *I*  
- Тип.  
-  
- *Base*  
- Другой тип.  
-  
-## <a name="remarks"></a>Примечания  
- Проверяет, является ли один интерфейс является производным от другого интерфейса.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Метод VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Проверяет два интерфейса, указанные параметрами шаблона и определяет, является ли один интерфейс производным от другого.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `VerifyInheritanceHelper`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template <
+   typename I,
+   typename Base
+>
+struct VerifyInheritanceHelper;
+template <
+   typename I
+>
+struct VerifyInheritanceHelper<I, Nil>;
+```
+
+### <a name="parameters"></a>Параметры
+
+*I*  
+Тип.
+
+*Base*  
+Другой тип.
+
+## <a name="remarks"></a>Примечания
+
+Проверяет, является ли один интерфейс является производным от другого интерфейса.
+
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Проверяет два интерфейса, указанные параметрами шаблона и определяет, является ли один интерфейс производным от другого.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`VerifyInheritanceHelper`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

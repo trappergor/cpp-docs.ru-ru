@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99430222c0df705297f013381b4497730c7c9fa5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b786bb41e9f0667ebbb81329b2f0977525d4ba96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016240"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598066"
 ---
 # <a name="implementshelpercasttounknown-method"></a>Метод ImplementsHelper::CastToUnknown
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Указатель на базовый `IUnknown` интерфейс.  
-  
-## <a name="remarks"></a>Примечания  
- Возвращает указатель на базовый `IUnknown` интерфейса для текущего `Implements` структуры.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Implementshelper-структура](../windows/implementshelper-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Указатель на базовый `IUnknown` интерфейс.
+
+## <a name="remarks"></a>Примечания
+
+Возвращает указатель на базовый `IUnknown` интерфейса для текущего `Implements` структуры.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура ImplementsHelper](../windows/implementshelper-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

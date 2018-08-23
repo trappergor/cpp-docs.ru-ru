@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29ea5b440885d914b7b933ca0761a1e5f50a2503
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0394113fc2d47a97b14da2d9a4d4512351aa059c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015109"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591573"
 ---
 # <a name="runtimeclassruntimeclass-constructor"></a>Конструктор RuntimeClass::RuntimeClass
-Инициализирует текущий экземпляр **RuntimeClass** класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-RuntimeClass();  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс RuntimeClass](../windows/runtimeclass-class.md)
+
+Инициализирует текущий экземпляр **RuntimeClass** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+RuntimeClass();
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс RuntimeClass](../windows/runtimeclass-class.md)

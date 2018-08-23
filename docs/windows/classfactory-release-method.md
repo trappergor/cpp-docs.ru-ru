@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 313492990113ad1a1d6037c4c08e1baa464676d8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e1af266d769b950324a1a4a9b8023b6b8e164038
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651042"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606039"
 ---
 # <a name="classfactoryrelease-method"></a>Метод ClassFactory::Release
-Уменьшает счетчик ссылок для текущего **ClassFactory** объекта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-STDMETHOD_(  
-   ULONG,  
-   Release  
-)();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ClassFactory](../windows/classfactory-class.md)
+
+Уменьшает счетчик ссылок для текущего **ClassFactory** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ClassFactory](../windows/classfactory-class.md)

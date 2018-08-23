@@ -18,209 +18,216 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f9b5bc8568c3655d8c038d70d78f3887b2c3becc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012837"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607529"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (расширения компонентов C++)
-Объявляет интерфейс.  Сведения о собственных интерфейсов, см. в разделе [__interface](../cpp/interface.md).  
-  
-## <a name="all-runtimes"></a>Все среды выполнения  
 
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-interface_access  
-interface class  
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *interface_access*  
- Доступность интерфейса за пределы данной сборки.  Возможные значения: **открытый** и **частного**.  **закрытый** используется по умолчанию. Не может иметь вложенные интерфейсы *interface_access* спецификатор.  
-  
- *name*  
- Имя интерфейса.  
-  
- *inherit_access*  
- Доступность *base_interface*.  Единственными допустимыми специальных возможностей, для базового интерфейса **открытый** (по умолчанию).  
-  
- *base_interface* (необязательно)  
- Базовый интерфейс для интерфейса *имя*.  
-  
-### <a name="remarks"></a>Примечания  
-  
- **Структура интерфейса** эквивалентен **класс интерфейса**.  
-  
- Интерфейс может содержать объявления для функций, события и свойства.  Все члены интерфейса иметь доступность уровня public. Интерфейс также может содержать статические данные-члены, функции, события и свойства, и такие статические члены должны быть определены в интерфейсе.  
-  
- Интерфейс определяет, каким образом можно реализовать класс. Интерфейс не является классом и классы только могут реализовывать интерфейсы. Если класс определяет функцию, объявленную в интерфейсе, функция реализована не переопределен. Таким образом поиск по имени не включает элементы интерфейса.  
-  
- Класс или структура, который является производным от интерфейса должен реализовывать все члены интерфейса. При реализации интерфейса *имя* необходимо также реализовать интерфейсы `base_interface` списка.  
-  
- Дополнительные сведения:  
-  
--   [Статический конструктор интерфейса](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)  
-  
--   [Универсальные интерфейсы (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
-  
- Сведения о других типов среды CLR, см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
-  
- Можно определить во время компиляции, если тип является интерфейсом с `__is_interface_class(type)`. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
-  
- В среде разработки можно получить справку F1 о эти ключевые слова выделив ключевое слово (`interface class`, к примеру) и нажмите клавишу F1.  
-  
-## <a name="windows-runtime"></a>Среда выполнения Windows  
-### <a name="remarks"></a>Примечания 
-  
- (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).  
-  
-### <a name="requirements"></a>Требования  
- Параметр компилятора: `/ZW`  
-  
-## <a name="common-language-runtime"></a>Среда CLR 
+Объявляет интерфейс.  Сведения о собственных интерфейсов, см. в разделе [__interface](../cpp/interface.md).
+
+## <a name="all-runtimes"></a>Все среды выполнения
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+interface_access
+interface class
+ name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+```
+
+### <a name="parameters"></a>Параметры
+
+*interface_access*  
+Доступность интерфейса за пределы данной сборки.  Возможные значения: **открытый** и **частного**.  **закрытый** используется по умолчанию. Не может иметь вложенные интерфейсы *interface_access* спецификатор.
+
+*name*  
+Имя интерфейса.
+
+*inherit_access*  
+Доступность *base_interface*.  Единственными допустимыми специальных возможностей, для базового интерфейса **открытый** (по умолчанию).
+
+*base_interface* (необязательно)  
+Базовый интерфейс для интерфейса *имя*.
+
 ### <a name="remarks"></a>Примечания
-  
- (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде CLR).  
-  
-### <a name="requirements"></a>Требования  
- Параметр компилятора: `/clr`  
-  
-### <a name="examples"></a>Примеры  
-  
- В следующем примере кода показано, как интерфейс можно определить поведение функции часов.  
-  
-```cpp  
-// mcppv2_interface_class.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-public delegate void ClickEventHandler(int, double);  
-  
-// define interface with nested interface  
-public interface class Interface_A {  
-   void Function_1();  
-  
-   interface class Interface_Nested_A {  
-      void Function_2();  
-   };  
-};  
-  
-// interface with a base interface  
-public interface class Interface_B : Interface_A {  
-   property int Property_Block;  
-   event ClickEventHandler^ OnClick;     
-   static void Function_3() { Console::WriteLine("in Function_3"); }  
-};  
-  
-// implement nested interface  
-public ref class MyClass : public Interface_A::Interface_Nested_A {  
-public:  
-   virtual void Function_2() { Console::WriteLine("in Function_2"); }  
-};  
-  
-// implement interface and base interface  
-public ref class MyClass2 : public Interface_B {  
-private:  
-   int MyInt;  
-  
-public:  
-   // implement non-static function  
-   virtual void Function_1() { Console::WriteLine("in Function_1"); }  
-  
-   // implement property  
-   property int Property_Block {  
-      virtual int get() { return MyInt; }  
-      virtual void set(int value) { MyInt = value; }  
-   }  
-   // implement event  
-   virtual event ClickEventHandler^ OnClick;  
-  
-   void FireEvents() {  
-      OnClick(7, 3.14159);  
-   }  
-};  
-  
-// class that defines method called when event occurs  
-ref class EventReceiver {  
-public:  
-   void OnMyClick(int i, double d) {  
-      Console::WriteLine("OnClick: {0}, {1}", i, d);  
-   }  
-};  
-  
-int main() {  
-   // call static function in an interface  
-   Interface_B::Function_3();  
-  
-   // instantiate class that implements nested interface  
-   MyClass ^ x = gcnew MyClass;  
-   x->Function_2();  
-  
-   // instantiate class that implements interface with base interface  
-   MyClass2 ^ y = gcnew MyClass2;  
-   y->Function_1();  
-   y->Property_Block = 8;  
-   Console::WriteLine(y->Property_Block);  
-  
-   EventReceiver^ MyEventReceiver = gcnew EventReceiver();  
-  
-   // hook handler to event  
-   y->OnClick += gcnew ClickEventHandler(MyEventReceiver, &EventReceiver::OnMyClick);  
-  
-   // invoke events  
-   y->FireEvents();  
-  
-   // unhook handler to event  
-   y->OnClick -= gcnew ClickEventHandler(MyEventReceiver, &EventReceiver::OnMyClick);  
-  
-   // call implemented function via interface handle  
-   Interface_A^ hi = gcnew MyClass2();  
-   hi->Function_1();  
-}  
-```  
-  
-```Output  
-in Function_3  
-  
-in Function_2  
-  
-in Function_1  
-  
-8  
-  
-OnClick: 7, 3.14159  
-  
-in Function_1  
-```  
-  
- В следующем образце кода показано два способа реализации функций с одинаковыми сигнатурами, объявленных в нескольких интерфейсах и где эти интерфейсы используются каким-либо классом.  
-  
-```cpp  
-// mcppv2_interface_class_2.cpp  
-// compile with: /clr /c  
-interface class I {  
-   void Test();  
-   void Test2();  
-};  
-  
-interface class J : I {  
-   void Test();  
-   void Test2();  
-};  
-  
-ref struct R : I, J {  
-   // satisfies the requirement to implement Test in both interfaces  
-   virtual void Test() {}  
-  
-   // implement both interface functions with explicit overrides  
-   virtual void A() = I::Test2 {}  
-   virtual void B() = J::Test2 {}  
-};  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+
+**Структура интерфейса** эквивалентен **класс интерфейса**.
+
+Интерфейс может содержать объявления для функций, события и свойства.  Все члены интерфейса иметь доступность уровня public. Интерфейс также может содержать статические данные-члены, функции, события и свойства, и такие статические члены должны быть определены в интерфейсе.
+
+Интерфейс определяет, каким образом можно реализовать класс. Интерфейс не является классом и классы только могут реализовывать интерфейсы. Если класс определяет функцию, объявленную в интерфейсе, функция реализована не переопределен. Таким образом поиск по имени не включает элементы интерфейса.
+
+Класс или структура, который является производным от интерфейса должен реализовывать все члены интерфейса. При реализации интерфейса *имя* необходимо также реализовать интерфейсы `base_interface` списка.
+
+Дополнительные сведения:
+
+- [Статический конструктор интерфейса](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
+
+- [Универсальные интерфейсы (Visual C++)](../windows/generic-interfaces-visual-cpp.md)
+
+Сведения о других типов среды CLR, см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).
+
+Можно определить во время компиляции, если тип является интерфейсом с `__is_interface_class(type)`. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+
+В среде разработки можно получить справку F1 о эти ключевые слова выделив ключевое слово (`interface class`, к примеру) и нажмите клавишу F1.
+
+## <a name="windows-runtime"></a>Среда выполнения Windows
+
+### <a name="remarks"></a>Примечания
+
+(Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).
+
+### <a name="requirements"></a>Требования
+
+Параметр компилятора: `/ZW`
+
+## <a name="common-language-runtime"></a>Среда CLR
+
+### <a name="remarks"></a>Примечания
+
+(Отсутствуют комментарии для этой возможности языка, которая применяется только в среде CLR).
+
+### <a name="requirements"></a>Требования
+
+Параметр компилятора: `/clr`
+
+### <a name="examples"></a>Примеры
+
+В следующем примере кода показано, как интерфейс можно определить поведение функции часов.
+
+```cpp
+// mcppv2_interface_class.cpp
+// compile with: /clr
+using namespace System;
+
+public delegate void ClickEventHandler(int, double);
+
+// define interface with nested interface
+public interface class Interface_A {
+   void Function_1();
+
+   interface class Interface_Nested_A {
+      void Function_2();
+   };
+};
+
+// interface with a base interface
+public interface class Interface_B : Interface_A {
+   property int Property_Block;
+   event ClickEventHandler^ OnClick;
+   static void Function_3() { Console::WriteLine("in Function_3"); }
+};
+
+// implement nested interface
+public ref class MyClass : public Interface_A::Interface_Nested_A {
+public:
+   virtual void Function_2() { Console::WriteLine("in Function_2"); }
+};
+
+// implement interface and base interface
+public ref class MyClass2 : public Interface_B {
+private:
+   int MyInt;
+
+public:
+   // implement non-static function
+   virtual void Function_1() { Console::WriteLine("in Function_1"); }
+
+   // implement property
+   property int Property_Block {
+      virtual int get() { return MyInt; }
+      virtual void set(int value) { MyInt = value; }
+   }
+   // implement event
+   virtual event ClickEventHandler^ OnClick;
+
+   void FireEvents() {
+      OnClick(7, 3.14159);
+   }
+};
+
+// class that defines method called when event occurs
+ref class EventReceiver {
+public:
+   void OnMyClick(int i, double d) {
+      Console::WriteLine("OnClick: {0}, {1}", i, d);
+   }
+};
+
+int main() {
+   // call static function in an interface
+   Interface_B::Function_3();
+
+   // instantiate class that implements nested interface
+   MyClass ^ x = gcnew MyClass;
+   x->Function_2();
+
+   // instantiate class that implements interface with base interface
+   MyClass2 ^ y = gcnew MyClass2;
+   y->Function_1();
+   y->Property_Block = 8;
+   Console::WriteLine(y->Property_Block);
+
+   EventReceiver^ MyEventReceiver = gcnew EventReceiver();
+
+   // hook handler to event
+   y->OnClick += gcnew ClickEventHandler(MyEventReceiver, &EventReceiver::OnMyClick);
+
+   // invoke events
+   y->FireEvents();
+
+   // unhook handler to event
+   y->OnClick -= gcnew ClickEventHandler(MyEventReceiver, &EventReceiver::OnMyClick);
+
+   // call implemented function via interface handle
+   Interface_A^ hi = gcnew MyClass2();
+   hi->Function_1();
+}
+```
+
+```Output
+in Function_3
+
+in Function_2
+
+in Function_1
+
+8
+
+OnClick: 7, 3.14159
+
+in Function_1
+```
+
+В следующем образце кода показано два способа реализации функций с одинаковыми сигнатурами, объявленных в нескольких интерфейсах и где эти интерфейсы используются каким-либо классом.
+
+```cpp
+// mcppv2_interface_class_2.cpp
+// compile with: /clr /c
+interface class I {
+   void Test();
+   void Test2();
+};
+
+interface class J : I {
+   void Test();
+   void Test2();
+};
+
+ref struct R : I, J {
+   // satisfies the requirement to implement Test in both interfaces
+   virtual void Test() {}
+
+   // implement both interface functions with explicit overrides
+   virtual void A() = I::Test2 {}
+   virtual void B() = J::Test2 {}
+};
+```
+
+## <a name="see-also"></a>См. также
+
+[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

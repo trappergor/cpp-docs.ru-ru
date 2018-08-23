@@ -17,55 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b1dd40487a9d843fb81be1e0be65d76a86e1f9c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c8ac728c70b160b64b66ddc697c54e4c488320db
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013302"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607879"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper - структура
-Поддерживает инфраструктуру библиотека шаблонов C++ среды выполнения Windows и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-template <  
-   bool isWinRTInterface,  
-   typename I  
->  
-struct VerifyInterfaceHelper;  
-  
-template <  
-   typename I  
->  
-struct VerifyInterfaceHelper<false, I>;  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *I*  
- Интерфейс для проверки.  
-  
- *isWinRTInterface*  
-  
-## <a name="remarks"></a>Примечания  
- Проверяет, что интерфейс, указанный в параметре шаблона соответствует определенным требованиям.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Метод VerifyInterfaceHelper::Verify](../windows/verifyinterfacehelper-verify-method.md)||  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `VerifyInterfaceHelper`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру библиотека шаблонов C++ среды выполнения Windows и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template <
+   bool isWinRTInterface,
+   typename I
+>
+struct VerifyInterfaceHelper;
+
+template <
+   typename I
+>
+struct VerifyInterfaceHelper<false, I>;
+```
+
+### <a name="parameters"></a>Параметры
+
+*I*  
+Интерфейс для проверки.
+
+*isWinRTInterface*
+
+## <a name="remarks"></a>Примечания
+
+Проверяет, что интерфейс, указанный в параметре шаблона соответствует определенным требованиям.
+
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод VerifyInterfaceHelper::Verify](../windows/verifyinterfacehelper-verify-method.md)||
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`VerifyInterfaceHelper`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
