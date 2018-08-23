@@ -1,5 +1,5 @@
 ---
-title: Пространство имен Platform::Collections | Документы Microsoft
+title: Пространство имен Platform::Collections | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088041"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612535"
 ---
 # <a name="platformcollections-namespace"></a>Пространство имен Platform::Collections
 
@@ -28,7 +28,7 @@ ms.locfileid: "33088041"
 
 Можно создать Platform::Collections::Vector из [std::vector](../standard-library/vector-class.md) и [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) из [std::map](../standard-library/map-class.md).
 
-Кроме того, пространство имен Platform::Collections предоставляет поддержку вставкой и входных итераторов и `Vector` и `VectorView` итераторов.
+Кроме того, пространство имен Platform::Collections обеспечивает поддержку вставкой и входных итераторов и `Vector` и `VectorView` итераторы.
 
 Необходимо включить (`#include`) заголовок collection.h использовать типы в пространстве имен Platform::Collections.
 
@@ -43,7 +43,7 @@ using namespace Platform::Collections;
 
 Это пространство имен содержит следующие члены.
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[Класс Platform::Collections::BackInsertIterator](../cppcx/platform-collections-backinsertiterator-class.md)|Представляет итератор, который вставляет элемент в конец коллекции.|
 |[Класс Platform::Collections::InputIterator](../cppcx/platform-collections-inputiterator-class.md)|Представляет итератор, который вставляет элемент в начало коллекции.|

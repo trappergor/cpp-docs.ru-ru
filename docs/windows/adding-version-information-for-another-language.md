@@ -21,32 +21,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: db11dee47b51cf695a93489d4ab851be47c39144
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650460"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612662"
 ---
 # <a name="adding-version-information-for-another-language"></a>Добавление сведений о версии для другого языка
-### <a name="to-add-version-information-for-another-language-new-info-block"></a>Добавление сведений о версии для другого языка (новый блок сведений)  
-  
-1.  Откройте ресурс сведений о версии, дважды щелкнув его в [представлении ресурсов](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Щелкните правой кнопкой мыши внутри таблицы сведений о версии и выберите в контекстном меню пункт **Создать блок сведений о версии** .  
-  
-     Эта команда добавляет дополнительный блок сведений в текущий ресурс сведений о версии и открывает его соответствующие свойства в [окне "Свойства"](/visualstudio/ide/reference/properties-window).  
-  
-3.  В окне **Свойства** выберите для нового блока соответствующие язык и кодировку.  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Требования 
- Win32  
-  
-## <a name="see-also"></a>См. также  
- [Редактор сведений о версии](../windows/version-information-editor.md)   
- [Сведения о версии (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+### <a name="to-add-version-information-for-another-language-new-info-block"></a>Добавление сведений о версии для другого языка (новый блок сведений)
+
+1. Откройте ресурс сведений о версии, дважды щелкнув его в [представлении ресурсов](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).
+
+2. Щелкните правой кнопкой мыши внутри таблицы сведений о версии и выберите в контекстном меню пункт **Создать блок сведений о версии** .
+
+   Эта команда добавляет дополнительный блок сведений в текущий ресурс сведений о версии и открывает его соответствующие свойства в [окне "Свойства"](/visualstudio/ide/reference/properties-window).
+
+3. В окне **Свойства** выберите для нового блока соответствующие язык и кодировку.
+
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Требования
+
+Win32
+
+## <a name="see-also"></a>См. также
+
+[Редактор сведений о версии](../windows/version-information-editor.md)  
+[Сведения о версии (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

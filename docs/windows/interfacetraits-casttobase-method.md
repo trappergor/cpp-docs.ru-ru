@@ -17,45 +17,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32c45c5445b6258f1ed2e1da220b2899a76aa9c9
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 55a4d7487be5b3565ba3945630cab4388f287a68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017075"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611828"
 ---
 # <a name="interfacetraitscasttobase-method"></a>Метод InterfaceTraits::CastToBase
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-template<typename T>  
-static __forceinline Base* CastToBase(  
-   _In_ T* ptr  
-);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *T*  
- Тип параметра *ptr*.  
-  
- *ptr*  
- Указатель на тип *T*.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Указатель на `Base`.  
-  
-## <a name="remarks"></a>Примечания  
- Приводит определенный указатель к указателю на `Base`.  
-  
- Дополнительные сведения о `Base`, см. в разделе общедоступные определения типов в [interfacetraits-структура](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Interfacetraits-структура](../windows/interfacetraits-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<typename T>
+static __forceinline Base* CastToBase(
+   _In_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*  
+Тип параметра *ptr*.
+
+*ptr*  
+Указатель на тип *T*.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Указатель на `Base`.
+
+## <a name="remarks"></a>Примечания
+
+Приводит определенный указатель к указателю на `Base`.
+
+Дополнительные сведения о `Base`, см. в разделе общедоступные определения типов в [interfacetraits-структура](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

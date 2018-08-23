@@ -1,5 +1,5 @@
 ---
-title: Класс значения Platform::IntPtr | Документы Microsoft
+title: Класс значения Platform::IntPtr | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54facc94be3f43b500e38371e0eba9e00d130a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088158"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612133"
 ---
 # <a name="platformintptr-value-class"></a>Класс значения Platform::IntPtr
 Представляет указатель или дескриптор числа со знаком, размер которого зависит от платформы (32-разрядная или 64-разрядная).  
@@ -36,7 +36,7 @@ public value struct IntPtr
 ### <a name="members"></a>Участники  
  Класс IntPtr имеет следующие члены:  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[IntPtr::IntPtr](#ctor)|Инициализирует новый экземпляр класса IntPtr.|  
 |[Оператор IntPtr::op_explicit](#op-explicit)|Преобразует указанный параметр в объект IntPtr или указатель на значение IntPtr.|  
