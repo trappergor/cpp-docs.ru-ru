@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::String | Документы Microsoft
+title: Класс Platform::String | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -23,16 +23,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a7852140b26260b56bd4436c2ee4f7abd2300b3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094830"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587415"
 ---
 # <a name="platformstring-class"></a>Класс Platform::String
 Представляет упорядоченную коллекцию символов Юникода, используемую для представления текста. Дополнительные сведения и примеры см. в разделе [строки](../cppcx/strings-c-cx.md).  
@@ -50,7 +50,7 @@ public ref class String sealed : Object,
 ## <a name="iterators"></a>Итераторы  
  Две функции итераторов, не являющиеся членами класса String, можно использовать с функциями шаблона `std::for_each` для перечисления символов в объекте String.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`const char16* begin(String^ s)`|Возвращает указатель на начало указанного объекта String.|  
 |`const char16* end(String^ s)`|Возвращает указатель на позицию после окончания указанного объекта String.|  
@@ -62,7 +62,7 @@ public ref class String sealed : Object,
   
  **Конструкторы**  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[String::String](#ctor)|Инициализирует новый экземпляр класса String.|  
   
@@ -70,7 +70,7 @@ public ref class String sealed : Object,
   
  Класс String наследует методы Equals(), Finalize(), GetHashCode(), GetType(), MemberwiseClose() и ToString() от класса [Platform::Object Class](../cppcx/platform-object-class.md). Класс String содержит также следующие методы.  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[String::Begin](#begin)|Возвращает указатель на начало текущей строки.|  
 |[String::CompareOrdinal](#compareordinal)|Сравнивает два объекта `String` , оценивая числовые значения соответствующих символов в двух строковых значениях, представленных объектами.|  
@@ -81,7 +81,7 @@ public ref class String sealed : Object,
 |[String::Equals](#equals)|Указывает, равен ли указанный объект текущему объекту.|  
 |[String::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  
 |[String::IsEmpty](#isempty)|Указывает, является ли объект String пустым.|  
-|[String::IsFastPass](#isfastpass)|Указывает, участвует ли текущий объект String в операции *быстрой передачи* . В операции быстрой передачи подсчет ссылок приостанавливается.|  
+|[String::IsFastPass](#isfastpass)|Указывает, участвует ли текущий строковый объект в *быстрой передачи* операции. В операции быстрой передачи подсчет ссылок приостанавливается.|  
 |[String::Length](#length)|Получает длину текущего объекта String.|  
 |[String::ToString](#tostring)|Возвращает объект String, значение которого совпадает со значением текущей строки.|  
   
@@ -89,7 +89,7 @@ public ref class String sealed : Object,
   
  Класс String имеет следующие операторы.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[String::operator ==-оператор](#operator-equality)|Указывает, равны ли значения двух указанных объектов String.|  
 |[Оператор operator+](#operator-plus)|Сцепляет два объекта String в новый объект String.|  
@@ -188,7 +188,7 @@ const char16* Data()
  Указатель на начало `const char16` массива символов Юникода (`char16` является определением типа для `wchar_t`).  
   
 ### <a name="remarks"></a>Примечания  
- Используйте этот метод для преобразования из `Platform::String^` в `wchar_t*`. Когда объект `String` выходит за пределы области, указатель Data больше не является гарантированно допустимым. Для хранения данных после истечения времени жизни исходного `String` , используйте [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) для копирования массива в память, которую вы выделили самостоятельно.  
+ Используйте этот метод для преобразования из `Platform::String^` в `wchar_t*`. Когда объект `String` выходит за пределы области, указатель Data больше не является гарантированно допустимым. Для хранения данных вне пределов продолжительности исходного `String` , используйте [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) для копирования массива в память, которую вы выделили самостоятельно.  
   
 
 
@@ -241,7 +241,7 @@ bool String::Equals(String^ str);
  Значение `true`, если `str` равен текущему объекту; в противном случае — значение `false`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод эквивалентен методу [String::CompareOrdinal](#compareordinal). В первой перегрузке предполагается, что параметр `str` может быть приведен к объекту String^.  
+ Этот метод эквивалентен [String::CompareOrdinal](#compareordinal). В первой перегрузке предполагается, что параметр `str` может быть приведен к объекту String^.  
   
 
 
@@ -275,7 +275,7 @@ bool IsEmpty()
 
 
 ## <a name="isfastpass"></a>  Метод String::IsFastPass
-Указывает, участвует ли текущий объект String в операции *быстрой передачи* . В операции быстрой передачи подсчет ссылок приостанавливается.  
+Указывает, участвует ли текущий строковый объект в *быстрой передачи* операции. В операции быстрой передачи подсчет ссылок приостанавливается.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -316,7 +316,7 @@ int len = str->Length(); //len = 5
 
 
 ## <a name="operator-plus"></a>  Оператор String::operator +
-Сцепляет два [строка](../cppcx/platform-string-class.md) объекты в новый [строка](../cppcx/platform-string-class.md) объекта.
+Сцепляет два [строка](../cppcx/platform-string-class.md) объектов в новый [строка](../cppcx/platform-string-class.md) объекта.
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -465,7 +465,7 @@ String(char16* s, unsigned int n)
  Число, указывающее длину строки.  
   
 ### <a name="remarks"></a>Примечания  
- Если важна производительность и управления временем жизни строки исходного кода, можно использовать [Platform::StringReference](../cppcx/platform-stringreference-class.md) вместо String.  
+ Если важна производительность, и управления временем существования исходной строки, можно использовать [Platform::StringReference](../cppcx/platform-stringreference-class.md) вместо строки.  
 ### <a name="example"></a>Пример  
   
 ```cpp  

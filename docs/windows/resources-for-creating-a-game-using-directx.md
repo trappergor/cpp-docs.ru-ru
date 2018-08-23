@@ -1,5 +1,5 @@
 ---
-title: Ресурсы для создания игры с использованием DirectX | Документы Microsoft
+title: Ресурсы для создания игры с использованием DirectX | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/08/2018
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b2df54063c78b920f9c5e88df5348d31ec077d9
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: 19e36c51e255996e17ccd5ad4b1fc62057a064d7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253910"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590623"
 ---
 # <a name="resources-for-creating-a-game-using-directx"></a>Ресурсы для создания игры с использованием DirectX
 
-Для создания лучших игр для рабочего стола используйте Visual C++ вместе с DirectX.  
-  
+Для создания лучших игр для рабочего стола используйте Visual C++ вместе с DirectX.
+
 ## <a name="resources"></a>Ресурсы
 
-Visual C++ входит во всех выпусках Visual Studio, но не устанавливается по умолчанию. Сведения об установке Visual Studio и инструменты разработки C++ см. в разделе [поддержки Установка C++ в Visual Studio](../build/vscpp-step-0-installation.md).  
-  
-Windows 8.1 и более поздних версий пакет SDK DirectX входит в пакет Windows SDK. Не требуется загружать никаких дополнительных компонентов. Дополнительные сведения см. в разделе [где — пакет SDK DirectX?](http://msdn.microsoft.com/library/windows/desktop/ee663275.aspx).  
-  
-Создание приложений DirectX для Windows 7, Windows Vista или Windows XP, можно загрузить изолированного [пакет SDK DirectX](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).  
-  
-[Графики DirectX и игр](http://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx) содержит сведения и примеры, которые помогут вам начать работу с DirectX программирования.  
-  
-[Приложения Windows Win32](../windows/windows-desktop-applications-cpp.md) содержит статьи, в которых описывается, как создать простое классическое приложение Windows.  
-  
-[Разработка игр](http://msdn.microsoft.com/library/windows/apps/hh452744.aspx) рассматривается разработка игр на универсальной платформе Windows, но многие понятия также применимы к игр для рабочего стола.
+Visual C++ включается во всех выпусках Visual Studio, но он не устанавливается по умолчанию. Сведения об установке Visual Studio и средства разработки C++, см. в разделе [Установка поддержки C++ в Visual Studio](../build/vscpp-step-0-installation.md).
+
+Для Windows 8.1 и более поздних версиях DirectX SDK входит в пакет Windows SDK. Не требуется загружать никаких дополнительных компонентов. Дополнительные сведения см. в разделе [Where is DirectX SDK?](http://msdn.microsoft.com/library/windows/desktop/ee663275.aspx).
+
+Для создания приложений DirectX для Windows 7, Windows Vista или Windows XP, можно загрузить отдельный [DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+
+[DirectX Graphics and Gaming](http://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx) содержит сведения и примеры, которые помогут вам приступить к работе с DirectX программирования.
+
+[Приложения Windows Win32](../windows/windows-desktop-applications-cpp.md) содержит статьи, описывающие, как создать базовое приложение рабочего стола Windows.
+
+[Разработка игр](http://msdn.microsoft.com/library/windows/apps/hh452744.aspx) обсуждается Разработка игр для универсальной платформы Windows, но многие понятия также применяются к игр для рабочего стола.

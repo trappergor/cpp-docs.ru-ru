@@ -17,45 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1ec2924fa62370bdc0267cd860a9e2d37c140580
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644090"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588927"
 ---
 # <a name="defaultbind"></a>defaultbind
-Указывает единственное свойство, представляющим объект наилучшим образом.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[defaultbind]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Defaultbind** атрибут C++ имеет ту же функциональность, что [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) описании атрибута MIDL.  
-  
-## <a name="example"></a>Пример  
- См. в примере [bindable](../windows/bindable.md) пример демонстрирует использование **defaultbind**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Метод интерфейса|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [Атрибуты членов данных](../windows/data-member-attributes.md)   
- [displaybind](../windows/displaybind.md)   
- [immediatebind](../windows/immediatebind.md)   
- [requestedit](../windows/requestedit.md)   
+
+Указывает единственное свойство, представляющим объект наилучшим образом.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[defaultbind]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Defaultbind** атрибут C++ имеет ту же функциональность, что [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [bindable](../windows/bindable.md) пример демонстрирует использование **defaultbind**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[Атрибуты элементов данных](../windows/data-member-attributes.md)  
+[displaybind](../windows/displaybind.md)  
+[immediatebind](../windows/immediatebind.md)  
+[requestedit](../windows/requestedit.md)  

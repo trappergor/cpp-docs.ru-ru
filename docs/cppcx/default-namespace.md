@@ -1,5 +1,5 @@
 ---
-title: пространство имен по умолчанию | Документы Microsoft
+title: пространство имен по умолчанию | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,19 +7,19 @@ ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f4386d3636744a673a10dd9530fd3836fdb78e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87510fe7eee6a8027e5375f82f2b6ce7bf74ec3c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086954"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589738"
 ---
 # <a name="default-namespace"></a>Пространство имен default
-`default` Пространства имен охватывает встроенные типы, поддерживаемые в C + +/ CX.  
+`default` Пространство имен области встроенные типы, которые поддерживаются в C + +/ CX.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +39,7 @@ namespace default;
   
 ### <a name="built-in-types"></a>Встроенные типы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |`char16`|16-битовое нечисловое значение, представляющее кодовую точку Юникода (UTF-16).|  
 |`float32`|32-битовое число с плавающей запятой стандарта IEEE 754.|  

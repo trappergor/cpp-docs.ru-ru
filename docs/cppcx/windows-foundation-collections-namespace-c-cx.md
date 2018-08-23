@@ -1,5 +1,5 @@
 ---
-title: 'Пространство имен Windows::Foundation:: Collections (C + +/ CX) | Документы Microsoft'
+title: 'Пространство имен Windows::Foundation:: Collections (C + +/ CX) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d889f68db2c631921f8c34f63d21ee1f5859bd0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de406267a4c18cace88882b26f6b249fc5a0efa3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090826"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586715"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections - пространство имен (C++/CX)
-C + +/ CX дополняет пространство имен Windows::Foundation:: Collections функциями, которые упрощают использование классов коллекций Vector, VectorView, карты и MapView.  
+C + +/ CX дополняет пространство имен Windows::Foundation:: Collections функциями, которые упрощают использование классов коллекций Vector, VectorView, Map и MapView.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ namespace Windows {
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Функция back_inserter](../cppcx/back-inserter-function.md)|Возвращает итератор, который может использоваться для вставки значения в конец коллекции.|  
 |[Функция begin](../cppcx/begin-function.md)|Возвращает итератор, который указывает на начало коллекции.|  

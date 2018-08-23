@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efaf7b51da1e4a4e744133884b92ac78db3b3f66
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 988580a34c030c84c50adfff2741408be4b249cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017774"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586362"
 ---
 # <a name="implementscasttounknown-method"></a>Метод Implements::CastToUnknown
-Возвращает указатель на базовый `IUnknown` интерфейс.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-__forceinline IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Эта операция выполняется успешно и всегда возвращает `IUnknown` указатель.  
-  
-## <a name="remarks"></a>Примечания  
- Внутренняя вспомогательная функция.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Структура Implements](../windows/implements-structure.md)
+
+Возвращает указатель на базовый `IUnknown` интерфейс.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Эта операция выполняется успешно и всегда возвращает `IUnknown` указатель.
+
+## <a name="remarks"></a>Примечания
+
+Внутренняя вспомогательная функция.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Структура Implements](../windows/implements-structure.md)
