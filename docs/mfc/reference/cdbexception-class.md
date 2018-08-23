@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e45a5c97f0f25ed0bcb704b584de645bce18cb9
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e67dec2474d89e3daccf0bc0e59332c79080cc99
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338612"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541305"
 ---
 # <a name="cdbexception-class"></a>Класс CDBException
 Представляет условие исключения, поступающее от классов базы данных.  
@@ -132,7 +132,7 @@ class CDBException : public CException
 ### <a name="remarks"></a>Примечания  
  Строка имеет форму «состояние: % s, машинный код: % ld, источник: % s», где коды формата, в порядке, будут заменены значениями, которые описывают:  
   
--   SQLSTATE, заканчивающуюся нулем строку, содержащее код ошибки пяти символов, возвращаемых в *szSqlState* параметра функции ODBC `SQLError`. В приложении А перечислены значения SQLSTATE [коды ошибок ODBC](https://msdn.microsoft.com/library/ms714687.aspx)в *Справочник по программированию ODBC*. Пример: «S0022».  
+-   SQLSTATE, заканчивающуюся нулем строку, содержащее код ошибки пяти символов, возвращаемых в *szSqlState* параметра функции ODBC `SQLError`. В приложении А перечислены значения SQLSTATE [коды ошибок ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\))в *Справочник по программированию ODBC*. Пример: «S0022».  
   
 -   Машинный код ошибки, относящиеся к источнику данных, возвращаемых в *pfNativeError* параметр `SQLError` функции. Пример: 207.  
   
@@ -140,7 +140,7 @@ class CDBException : public CException
   
  Платформа framework интерпретирует строку ошибки и помещает его компоненты в `m_strStateNativeOrigin`; Если `m_strStateNativeOrigin` содержит сведения для более чем одна ошибка, ошибки разделяются символы новой строки. Платформа помещает текст ошибки буквенно-цифровых в `m_strError`.  
   
- Дополнительные сведения о кодах, используемых для этой строки, см. в разделе [SQLError](https://msdn.microsoft.com/library/ms716312.aspx) работать в *Справочник по программированию ODBC*.  
+ Дополнительные сведения о кодах, используемых для этой строки, см. в разделе [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) работать в *Справочник по программированию ODBC*.  
   
 ### <a name="example"></a>Пример  
   Из ODBC: «Состояние: S0022, машинный код: 207, источник: [Microsoft] [ODBC SQL Server Driver] [имя сервера SQL Server] Недопустимый столбец «ColName»»  

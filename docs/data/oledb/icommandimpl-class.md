@@ -63,15 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d6adec1a87463515f3fa87dfd4ca31fda650e902
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337798"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571817"
 ---
 # <a name="icommandimpl-class"></a>Класс ICommandImpl
-Предоставляет реализацию для [ICommand](https://msdn.microsoft.com/library/ms709737.aspx) интерфейс.  
+Предоставляет реализацию для [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\)) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -124,7 +124,7 @@ STDMETHOD(Cancel)();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [ICommand::Cancel](https://msdn.microsoft.com/library/ms714402.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 Отмена выполнения текущей команды.  
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ### <a name="remarks"></a>Примечания  
  Для создания более чем одному набору строк, или оставить свои собственные требования к созданию различных наборов строк, поместите различных вызовов `CreateRowset` изнутри `Execute`.  
   
- См. в разделе [ICommand::Execute](https://msdn.microsoft.com/library/ms718095.aspx) в *справочнике программиста OLE DB.*  
+ См. в разделе [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) в *справочнике программиста OLE DB.*  
 
 ## <a name="execute"></a> ICommandImpl::Execute
 Выполняет команду.  
@@ -194,7 +194,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ICommand::Execute](https://msdn.microsoft.com/library/ms718095.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
  Исходящий интерфейс, запрошенный будет получен из объекта набора строк, эта функция создает интерфейс.  
@@ -212,7 +212,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ICommand::GetDBSession](https://msdn.microsoft.com/library/ms719622.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
  Удобно использовать для извлечения свойств из сеанса.  

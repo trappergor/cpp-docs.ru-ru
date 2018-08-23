@@ -1,5 +1,5 @@
 ---
-title: Класс CPaneDivider | Документы Microsoft
+title: Класс CPaneDivider | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -94,17 +94,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079368"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544518"
 ---
 # <a name="cpanedivider-class"></a>Класс CPaneDivider
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
- `CPaneDivider` Класса делит две области, делит две группы областей или отделяет группу областей от клиентской области фрейма главного окна.  
+ `CPaneDivider` Класса делит две области, делит две группы областей или отделяет группу областей от клиентской области окна главного фрейма.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -163,27 +163,27 @@ class CPaneDivider : public CBasePane
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CPaneDivider::GetPanes](#getpanes)|Возвращает список панелей, которые находятся в [CPaneContainer класса](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|  
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|Возвращает список разделителей области, которые находятся в [CPaneContainer класса](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|  
+|[CPaneDivider::GetPanes](#getpanes)|Возвращает список панелей, которые находятся в [класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|  
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|Возвращает список панели разделители, которые находятся в [класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
 |name|Описание:|  
 |----------|-----------------|  
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Задает ширину по умолчанию в пикселях все разделители области в приложении.|  
-|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Содержит указатель на сведения о классе среды выполнения о `CPaneDivider`-производного объекта.|  
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Задает ширину по умолчанию в точках все разделители панели в приложении.|  
+|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Содержит указатель на сведения о классе среды выполнения о `CPaneDivider`-объект, производный от.|  
   
 ## <a name="remarks"></a>Примечания  
  Платформа создает `CPaneDivider` объектов автоматически, если панель закреплена.  
   
- Существует два вида панели разделителей.  
+ Существует два типа области разделителей:  
   
--   разделитель области по умолчанию создается при присоединении группы областей части фрейма главного окна. Разделитель области по умолчанию содержит указатель на [CPaneContainerManager класса](../../mfc/reference/cpanecontainermanager-class.md) и перенаправляет большинство операций на группу областей (например изменение размера панели или другого закрепления панели или контейнера) к диспетчеру контейнера. Каждая закрепляемую панель содержит указатель его разделитель по умолчанию.  
+-   разделитель области по умолчанию создается в том случае, когда группу областей подключено к стороне фрейма главного окна. Разделитель области по умолчанию содержит указатель на [класс CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) и перенаправляет большинство операций на группе панелей (такие как изменение размера окна или закрепления другой области или контейнера) для диспетчера контейнеров. Каждый закрепляемой области поддерживает указатель его разделитель по умолчанию.  
   
--   Разделитель регулярного панели просто делит две области в контейнере. Дополнительные сведения см. в разделе [CPaneContainer класса](../../mfc/reference/cpanecontainer-class.md).  
+-   Разделитель области регулярных просто делит две области в контейнере. Дополнительные сведения см. в разделе [класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере демонстрируется получение объекта `CPaneDivider` из объекта `CWorkspaceBar`. Этот фрагмент кода является частью [пример Demo вкладок MDI](../../visual-cpp-samples.md).  
+ В этом примере демонстрируется получение объекта `CPaneDivider` из объекта `CWorkspaceBar`. Этот фрагмент кода является частью [демонстрационного вкладок MDI](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]  
   
@@ -440,7 +440,7 @@ const CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers  
- Возвращает список разделителей области, которые находятся в [CPaneContainer класса](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.  
+ Возвращает список панели разделители, которые находятся в [класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.  
   
 ```  
 void GetPaneDividers(CObList& lstSliders);
@@ -451,7 +451,7 @@ void GetPaneDividers(CObList& lstSliders);
  Содержит список панели разделители, которые находятся в области контейнера.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод должен вызываться для только разделители области по умолчанию. Разделитель области по умолчанию является разделитель, который изменяет размер всей области контейнера.  
+ Этот метод должен вызываться для разделителей только по умолчанию области. Разделитель области по умолчанию является разделитель, который изменяет размер контейнера всей области.  
   
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle  
 
@@ -465,7 +465,7 @@ DWORD GetPaneDividerStyle() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes  
- Возвращает список панелей, которые находятся в [CPaneContainer класса](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для извлечения разделителей области по умолчанию.  
+ Возвращает список панелей, которые находятся в [класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для извлечения разделителей области по умолчанию.  
   
 ```  
 void GetPanes(CObList& lstBars);
@@ -476,7 +476,7 @@ void GetPanes(CObList& lstBars);
  Содержит список панелей, которые находятся в области контейнера.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод должен вызываться для только разделители области по умолчанию. Разделитель области по умолчанию является разделитель, который изменяет размер всей области контейнера.  
+ Этот метод должен вызываться для разделителей только по умолчанию области. Разделитель области по умолчанию является разделитель, который изменяет размер контейнера всей области.  
   
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect  
 
@@ -570,7 +570,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="m_ndefaultwidth"></a>  CPaneDivider::m_nDefaultWidth  
- Задает ширину по умолчанию в пикселях все разделители области в приложении.  
+ Задает ширину по умолчанию в пикселях все разделители панели в приложении.  
   
 ```  
 AFX_IMPORT_DATA static int m_nDefaultWidth;  
@@ -592,17 +592,17 @@ virtual void Move(
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="m_psliderrtc"></a>  CPaneDivider::m_pSliderRTC  
- Содержит указатель на сведения о классе среды выполнения о `CPaneDivider`-производного объекта.  
+ Содержит указатель на сведения о классе среды выполнения о `CPaneDivider`-объект, производный от.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Задайте переменную-член, если вы создаете разделитель настраиваемой области. Это позволяет инфраструктуре для создания вашего разделитель при отображении панели.  
+ Задайте переменную-член, при создании пользовательской области разделитель. Это позволяет инфраструктуре для создания вашего разделитель при рисовании области.  
   
 ### <a name="example"></a>Пример  
- Следующий пример показывает, как задать `m_pSliderRTC` переменной-члена:  
+ В следующем примере показано, как задать `m_pSliderRTC` переменную-член:  
   
 ```  
 class CMySplitter : public CPaneDivider  

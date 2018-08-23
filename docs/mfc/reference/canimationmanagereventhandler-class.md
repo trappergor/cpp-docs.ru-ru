@@ -1,5 +1,5 @@
 ---
-title: Класс CAnimationManagerEventHandler | Документы Microsoft
+title: Класс CAnimationManagerEventHandler | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: bfc64617002db0536dc3d62e70082c27b260802f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955652"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538363"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Класс CAnimationManagerEventHandler
 Реализует обратный вызов, используемый API анимации при изменении состояния диспетчера анимации.  
@@ -52,12 +52,12 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Создает экземпляр `CAnimationManagerEventHandler` объекта.|  
+|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Создает экземпляр класса `CAnimationManagerEventHandler` объекта.|  
 |[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Вызывается при изменении состояния диспетчера анимации. (Переопределяет `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Содержит указатель на контроллер анимации на маршруте события.|  
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Содержит указатель на контроллер анимации для маршрутизации события.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот обработчик событий, которое передается методу IUIAnimationManager::SetManagerEventHandler, при вызове CAnimationController::EnableAnimationManagerEvent.  
+ Этот обработчик событий создается и передается методу IUIAnimationManager::SetManagerEventHandler, при вызове CAnimationController::EnableAnimationManagerEvent.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CUIAnimationCallbackBase`  
@@ -70,7 +70,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
  **Заголовок:** afxanimationcontroller.h  
   
 ##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Требуется Visual Studio 2010 с пакетом обновления 1 (SP1).  
   
  Создает объект CAnimationManagerEventHandler.  
   
@@ -79,7 +79,7 @@ CAnimationManagerEventHandler();
 ```  
   
 ##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Требуется Visual Studio 2010 с пакетом обновления 1 (SP1).  
   
  Создает экземпляр объекта CAnimationManagerEventHandler.  
   
@@ -94,13 +94,13 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
  Указатель на контроллер анимации, который будет получать события.  
   
  *ppManagerEventHandler*  
- Выходные данные. Если метод выполнен успешно, он содержит указатель на COM-объект, обрабатывающий обновления состояния диспетчера анимации.  
+ Выходные данные. Если метод выполняется успешно, он содержит указатель на COM-объект, обрабатывающий обновления состояния диспетчера анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если метод выполнен успешно, возвращается значение S_OK. В противном случае возвращается код ошибки HRESULT.  
+ Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.  
   
 ##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Требуется Visual Studio 2010 с пакетом обновления 1 (SP1).  
   
  Вызывается при изменении состояния диспетчера анимации.  
   
@@ -121,9 +121,9 @@ IFACEMETHOD(OnManagerStatusChanged)(
  Текущая реализация всегда возвращает значение S_OK;  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Требуется Visual Studio 2010 с пакетом обновления 1 (SP1).  
   
- Содержит указатель на контроллер анимации на маршруте события.  
+ Содержит указатель на контроллер анимации для маршрутизации события.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);

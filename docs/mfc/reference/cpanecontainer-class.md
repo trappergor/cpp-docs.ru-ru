@@ -1,5 +1,5 @@
 ---
-title: Класс CPaneContainer | Документы Microsoft
+title: Класс CPaneContainer | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -130,17 +130,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de7cf11b6f328819a677d248647934619153fb7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079479"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538930"
 ---
 # <a name="cpanecontainer-class"></a>Класс CPaneContainer
-`CPaneContainer` Класса является основным компонентом модели закрепления, реализуемой MFC. Объект этого класса хранит указатели на две области закрепления или два экземпляра `CPaneContainer.` . Также он содержит указатель на разделитель, который разделяет области (или контейнеры). Вкладывая контейнеры внутрь контейнеров, платформа строит двоичное дерево, представляющее сложные макеты закрепления. Корень двоичного дерева хранится в [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) объекта.  
+`CPaneContainer` Класс — это базовый компонент модели закрепления, реализуемой MFC. Объект этого класса хранит указатели на две области закрепления или два экземпляра `CPaneContainer.` . Также он содержит указатель на разделитель, который разделяет области (или контейнеры). Вкладывая контейнеры внутрь контейнеров, платформа строит двоичное дерево, представляющее сложные макеты закрепления. Корень двоичного дерева хранится в [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) объекта.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
  
 ## <a name="syntax"></a>Синтаксис  
   
@@ -221,7 +221,7 @@ class CPaneContainer : public CObject
  `CPaneContainer` объекты создаются автоматически платформой.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как построить экземпляр объекта `CPaneContainer` класса. Этот фрагмент кода является частью [задать размер области пример](../../visual-cpp-samples.md).  
+ В следующем примере показано, как создать экземпляр `CPaneContainer` класса. Этот фрагмент кода является частью [задать размер области пример](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]  
@@ -389,7 +389,7 @@ CPaneContainer* FindSubPaneContainer(
   
 ### <a name="parameters"></a>Параметры  
  [in] *pObject*  
- [in] *Критерии_поиска*  
+ [in] *findCriteria*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -993,5 +993,5 @@ virtual int StretchPaneContainer(
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Классы](../../mfc/reference/mfc-classes.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)   
+ [Класс CObject](../../mfc/reference/cobject-class.md)   
  [Класс CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)

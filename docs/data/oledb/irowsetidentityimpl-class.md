@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55c9b4b7e14a9572f5a8922b65a41a9a92a0d688
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed8cc8fc2b61a3a85beb7297317c5b266557268c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337713"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573082"
 ---
 # <a name="irowsetidentityimpl-class"></a>Класс IRowsetIdentityImpl
-Реализует OLE DB [IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx) интерфейс, позволяющий тестирования для идентификации строки.  
+Реализует OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\)) интерфейс, позволяющий тестирования для идентификации строки.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -72,7 +72,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы сравнить дескрипторов строк, этот метод приводит `HROW` дескрипторы для `RowClass` члены и вызовы `memcmp` над указателями.  

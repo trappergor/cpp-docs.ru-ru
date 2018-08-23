@@ -17,31 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41a54713c562e522c3161b2f3def3afdc210e927
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: bbb5bfb19d56ae41d743de795788961690f327b0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645676"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583420"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>Обрезка или расширение всего изображения (редактор изображений для значков)
-Ниже показано, как обрезание или расширение всего изображения.  
-  
-### <a name="to-crop-or-extend-an-entire-image"></a>Обрезание или расширение всего изображения  
-  
-1.  Выберите все изображение.  
-  
-     Если выбрана часть изображения и вы хотите выбрать все изображение, щелкните в любом месте изображения за пределами текущего выделения.  
-  
-2.  Перетащите маркер изменения размера изображения по размеру.  
-  
- Как правило редактор изображений обрезает или увеличивает изображение при изменении размера путем перемещения маркера изменения размера. Удерживая нажатой **Shift** ключа при перемещении маркер изменения размера, редактор изображений [сокращает или растягивает](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md) изображение.  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Требования  
- Нет  
-  
-## <a name="see-also"></a>См. также  
- [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Изменение размера изображения](../windows/resizing-an-image-image-editor-for-icons.md)
+
+Ниже показано, как обрезание или расширение всего изображения.
+
+### <a name="to-crop-or-extend-an-entire-image"></a>Обрезание или расширение всего изображения
+
+1. Выберите все изображение.
+
+   Если выбрана часть изображения и вы хотите выбрать все изображение, щелкните в любом месте изображения за пределами текущего выделения.
+
+2. Перетащите маркер изменения размера изображения по размеру.
+
+Как правило редактор изображений обрезает или увеличивает изображение при изменении размера путем перемещения маркера изменения размера. Удерживая нажатой **Shift** ключа при перемещении маркер изменения размера, редактор изображений [сокращает или растягивает](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md) изображение.
+
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Требования
+
+Нет
+
+## <a name="see-also"></a>См. также
+
+[Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Изменение размера изображения](../windows/resizing-an-image-image-editor-for-icons.md)

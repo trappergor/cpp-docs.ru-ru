@@ -1,5 +1,5 @@
 ---
-title: TLBID | Документы Microsoft
+title: TLBID | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d651546733f42b1a714ac7a39992fa2d392c8fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ec0150e63209728cf2f02c854fe03702b8a45b4
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839872"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544498"
 ---
 # <a name="tlbid"></a>tlbid
 **Конкретных C++**  
   
- Позволяет загружать библиотеки, отличные от основной библиотеки типов.  
+Позволяет загружать библиотеки, отличные от основной библиотеки типов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,27 +34,29 @@ ms.locfileid: "33839872"
 tlbid(number)  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `number`  
- Номер библиотеки типов в файле с именем `filename`.  
+### <a name="parameters"></a>Параметры  
+*номер*  
+Номер библиотеки типов в файле с именем `filename`.  
   
 ## <a name="remarks"></a>Примечания  
- Если в одну библиотеку DLL встроено несколько библиотек типов, с помощью `tlbid` можно загружать библиотеки, отличные от основной библиотеки типов.  
+ 
+Если несколько библиотек типов встроены в одной библиотеки DLL, можно загружать библиотеки, отличные от основной библиотеки типов с помощью **tlbid**.  
   
- Пример:  
+Пример:  
   
 ```  
 #import <MyResource.dll> tlbid(2)  
 ```  
   
- эквивалентно выражению:  
+эквивалентно выражению:  
   
 ```  
 LoadTypeLib("MyResource.dll\\2");  
 ```  
   
- **КОНЕЦ определенного C++**  
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

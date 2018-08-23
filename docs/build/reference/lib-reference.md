@@ -1,5 +1,5 @@
 ---
-title: Справочник по LIB | Документы Microsoft
+title: Справочник по LIB | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a77056c6a3d0427c865658cd945e74e29d672b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371945"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572403"
 ---
 # <a name="lib-reference"></a>Справочник по LIB
-Диспетчер библиотек Майкрософт (LIB.exe) создает и управляет библиотеку общих объектов файла формат COFF объектных файлов. LIB также может использоваться для создания файлов экспорта и импорта библиотеки в экспортированные справочные определения.  
+Диспетчер библиотек Microsoft (LIB.exe) создает и управляет библиотеку общих объекта файла формат COFF объектных файлов. LIB может также использоваться для создания файлов экспорта и импорта библиотеки в экспортированные справочные определения.  
   
 > [!NOTE]
->  Это средство можно запустить только из командной строки [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. В системной командной строке или проводнике это невозможно.  
+>  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.  
   
 -   [Общие сведения о LIB](../../build/reference/overview-of-lib.md)  
   

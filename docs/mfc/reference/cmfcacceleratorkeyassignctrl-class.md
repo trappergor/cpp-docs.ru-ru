@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCAcceleratorKeyAssignCtrl | Документы Microsoft
+title: Класс CMFCAcceleratorKeyAssignCtrl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f3dfe9f728b01b175e897f1182c95e954969aaec
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037250"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539694"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>Класс CMFCAcceleratorKeyAssignCtrl
-`CMFCAcceleratorKeyAssignCtrl` Класс расширяет [класс CEdit](../../mfc/reference/cedit-class.md) для поддержки дополнительных системных клавиш, например ALT, CONTROL и SHIFT.  
+`CMFCAcceleratorKeyAssignCtrl` Класс расширяет [класс CEdit](../../mfc/reference/cedit-class.md) для поддержки дополнительных системных, таких как ALT, CONTROL и SHIFT.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,9 +63,9 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Сбрасывает сочетание клавиш.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс расширяет функциональность класса `CEdit` благодаря поддержке сочетаний клавиш. `CMFCAcceleratorKeyAssignCtrl` Функции как класса [класс CEdit](../../mfc/reference/cedit-class.md) и также может распознавать системные кнопки.  
+ Этот класс расширяет функциональность класса `CEdit` благодаря поддержке сочетаний клавиш. `CMFCAcceleratorKeyAssignCtrl` Класса функции как [класс CEdit](../../mfc/reference/cedit-class.md) и он также может распознавать системные клавиши.  
   
- Этот класс сопоставляет физические сочетания клавиш со строковыми значениями. Например, пусть сочетание клавиш ALT+B сопоставлено со строкой "Alt + B". Когда пользователь нажимает это сочетание клавиш в объекте `CMFCAcceleratorKeyAssignCtrl`, отображается строка "Alt + B". Дополнительные сведения о сопоставлении сочетаний клавиш и строк см. в разделе [класс CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md).  
+ Этот класс сопоставляет физические сочетания клавиш со строковыми значениями. Например, пусть сочетание клавиш ALT+B сопоставлено со строкой "Alt + B". Когда пользователь нажимает это сочетание клавиш в объекте `CMFCAcceleratorKeyAssignCtrl`, отображается строка "Alt + B". Дополнительные сведения о сопоставлении сочетаний клавиш и формат строки см. в разделе [класс CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md).  
   
 ## <a name="example"></a>Пример  
  В этом примере демонстрируется создание объекта `CMFCAcceleratorKeyAssignCtrl` и использование его метода `ResetKey` для сброса сочетания клавиш.  
@@ -104,10 +104,10 @@ ACCEL const* GetAccel() const;
  `ACCEL` Структура, описывающая сочетание клавиш.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте эту функцию для получения `ACCEL` структуру для сочетания клавиш, введенные пользователем в вашей `CMFCAcceleratorKeyAssignCtrl` объекта.  
+ Эта функция используется для получения `ACCEL` структуру для сочетания клавиш, введенные пользователем в вашей `CMFCAcceleratorKeyAssignCtrl` объекта.  
   
 ##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 BOOL IsFocused() const;  
@@ -125,13 +125,13 @@ BOOL IsKeyDefined() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если пользователь нажал уже допустимые сочетания клавиш, определяющие сочетания клавиш; в противном случае — 0.  
+ Ненулевое значение, если пользователь нажал уже является допустимым сочетанием клавиш, которые определяют сочетания клавиш; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция позволяет определить, является ли пользователь ввел допустимый сочетания клавиш в вашей `CMFCAcceleratorKeyAssignCtrl` объекта. Если существует сочетание клавиш, можно использовать [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) метод, чтобы получить `ACCEL` структур, связанных с этого сочетания клавиш.  
+ Эта функция позволяет определить, является ли пользователь ввел допустимый сочетания клавиш в вашей `CMFCAcceleratorKeyAssignCtrl` объекта. Если сочетание клавиш существует, вы можете использовать [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) метод, чтобы получить `ACCEL` структуры, связанные с этого сочетания клавиш.  
   
 ##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -152,7 +152,7 @@ void ResetKey();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Функция очищает текст элемента управления edit. Сюда входят все сочетания клавиш, нажата.  
+ Функция сбрасывает текст в элементе управления редактирования. Сюда входят любые сочетания клавиш, нажата.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

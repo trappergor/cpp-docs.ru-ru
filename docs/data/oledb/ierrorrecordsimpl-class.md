@@ -76,15 +76,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7339b345ad63f59a2db24251c06b80774305ab00
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 149508ee799ab2802dd2a106b503376851ac31cd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338123"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572105"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Класс IErrorRecordsImpl
-Реализует OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) интерфейс, добавления записей и извлечения записей из элемента данных ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) типа **CAtlArray <** `RecordClass`**>**.  
+Реализует OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) интерфейс, добавления записей и извлечения записей из элемента данных ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) типа **CAtlArray <** `RecordClass`**>**.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -122,7 +122,7 @@ class IErrorRecordsImpl : public IErrorRecords
 |[AddErrorRecord](#adderrorrecord)|Добавляет запись в объекте ошибки OLE DB.|  
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Возвращает основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.|  
 |[GetCustomErrorObject](#getcustomerrorobject)|Возвращает указатель на интерфейс объекта пользовательских ошибок.|  
-|[GetErrorInfo](#geterrorinfo)|Возвращает [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) указатель интерфейса на указанную запись.|  
+|[GetErrorInfo](#geterrorinfo)|Возвращает [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) указатель интерфейса на указанную запись.|  
 |[GetErrorParameters](#geterrorparameters)|Возвращает параметры ошибки.|  
 |[GetRecordCount](#getrecordcount)|Возвращает число записей в объекте запись OLE DB.|  
   
@@ -226,7 +226,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::AddErrorRecord](https://msdn.microsoft.com/library/ms725362.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="getbasicerrorinfo"></a> IErrorRecordsImpl::GetBasicErrorInfo
 Возвращает основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.  
@@ -239,7 +239,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/ms723907.aspx) в *справочнике программиста OLE DB*. 
+ См. в разделе [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="getcustomerrorobject"></a> IErrorRecordsImpl::GetCustomErrorObject
 Возвращает указатель на интерфейс объекта пользовательских ошибок.  
@@ -253,10 +253,10 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/library/ms725417.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="geterrorinfo"></a> IErrorRecordsImpl::GetErrorInfo
-Возвращает [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) указатель интерфейса на указанную запись.  
+Возвращает [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) указатель интерфейса на указанную запись.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -267,7 +267,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/library/ms711230.aspx) в *справочнике программиста OLE DB*.
+ См. в разделе [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) в *справочнике программиста OLE DB*.
 
 ## <a name="geterrorparameters"></a> IErrorRecordsImpl::GetErrorParameters
 Возвращает параметры ошибки.  
@@ -280,7 +280,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/ms715793.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="getrecordcount"></a> IErrorRecordsImpl::GetRecordCount
 Возвращает число записей в объекте запись OLE DB.  
@@ -292,7 +292,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IErrorRecords::GetRecordCount](https://msdn.microsoft.com/library/ms722724.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="rgerrors"></a> IErrorRecordsImpl::m_rgErrors
 Массив записей ошибок.  

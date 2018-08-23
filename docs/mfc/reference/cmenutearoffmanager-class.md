@@ -1,5 +1,5 @@
 ---
-title: Класс CMenuTearOffManager | Документы Microsoft
+title: Класс CMenuTearOffManager | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041017"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538923"
 ---
 # <a name="cmenutearoffmanager-class"></a>Класс CMenuTearOffManager
 Управление перемещаемыми меню. Перемещаемое меню — это меню в строке меню. Пользователь может удалить перемещаемое меню из строки меню, превращая перемещаемое меню в плавающее.  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
    
 ## <a name="syntax"></a>Синтаксис  
   
@@ -74,10 +74,10 @@ class CMenuTearOffManager : public CObject
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
   
 ## <a name="remarks"></a>Примечания  
- Чтобы использовать перемещаемые меню в приложении, необходимо иметь `CMenuTearOffManager` объекта. В большинстве случаев не будет создать или инициализировать `CMenuTearOffManager` объекта напрямую. Это выполняется при вызове [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) функции.  
+ Чтобы использовать перемещаемые меню в приложении, необходимо иметь `CMenuTearOffManager` объекта. В большинстве случаев не создать или инициализировать `CMenuTearOffManager` объекта напрямую. Это осуществляется автоматически при вызове [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) функции.  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как создать и инициализировать `CMenuTearOffManager` путем вызова метода `CWinAppEX::EnableTearOffMenus` метод. Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).  
+ В следующем примере показано, как для создания и инициализации `CMenuTearOffManager` путем вызова метода `CWinAppEX::EnableTearOffMenus` метод. Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
   
@@ -112,7 +112,7 @@ CMenuTearOffManager();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В большинстве случаев не следует создавать `CMenuTearOffManager` вручную. Платформа приложения создает `CMenuTearOffManager` объект при вызове [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
+ В большинстве случаев не следует создавать `CMenuTearOffManager` вручную. Платформа приложения создает `CMenuTearOffManager` объекта при вызове [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
   
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
@@ -137,19 +137,19 @@ BOOL Initialize(
   
 ### <a name="parameters"></a>Параметры  
  [in] *lpszRegEntry*  
- Строка, содержащая путь к записи реестра. Приложения сохраняет настройки перемещаемые полос в этой записи реестра.  
+ Строка, содержащая путь к записи реестра. Приложений сохраняет параметры для перемещаемой панелей в этой записи реестра.  
   
  [in] *uiTearOffMenuFirst*  
  Первый идентификатор меню перемещаемое меню.  
   
  [in] *uiTearOffMenuLast*  
- Последний идентификатор меню перемещаемое меню.  
+ Идентификатор последнего меню для перемещаемое меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Диапазон идентификаторов, меню из *uiTearOffMenuFirst* для *uiTearOffMenuLast* должен быть непрерывный интервал. Интервал определяет количество перемещаемые меню, появляющееся в то же время в приложении.  
+ Диапазон идентификаторов, меню из *uiTearOffMenuFirst* для *uiTearOffMenuLast* должен быть непрерывный интервал. Интервал определяет количество перемещаемые меню, которые могут присутствовать в то же время, в приложении.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 

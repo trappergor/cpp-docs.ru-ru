@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027818"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538954"
 ---
 # <a name="mfc-classes"></a>Классы MFC
 Классы в следующем списке содержатся в библиотеке Microsoft Foundation Class (MFC).  
@@ -852,7 +852,7 @@ ms.locfileid: "39027818"
  Имитирует внешний вид Microsoft Windows XP или Microsoft Vista, когда пользователь выбирает тему Windows XP или Vista.  
   
  [Класс CMFCVisualManagerWindows7](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- Предоставляет приложению внешний вид приложения [!INCLUDE[win7](../../build/includes/win7_md.md)] .  
+ Придает приложению внешний вид приложений Windows 7.  
   
  [Класс CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  Позволяет пользователю управлять дочерними окнами MDI в приложении MDI.  
@@ -1020,7 +1020,7 @@ ms.locfileid: "39027818"
  Используется в особых случаях в диалоговом окне OLE "Изменить ссылки", которое используется при необходимости обновления только существующих связанных или внедренных объектов в документе.  
   
  [Класс COleVariant](../../mfc/reference/colevariant-class.md)  
- Инкапсулирует [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) тип данных.  
+ Инкапсулирует [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) тип данных.  
   
  [Класс CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)  
  Класс `CPagerCtrl` создается элемент управления страничного навигатора Windows, который может выполнить прокрутку и отобразить содержащееся окно, которое не помещается в содержащее его окно.  

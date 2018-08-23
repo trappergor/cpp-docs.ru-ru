@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8c1fb739d5e6206297e52fd9103cbba98c5eef01
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463493"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42571736"
 ---
 # <a name="specifiers"></a>Спецификаторы
 В этом разделе описывается *decl-specifiers* (описатели объявления) компонент [объявление](declarations-and-definitions-cpp.md).  
@@ -34,9 +34,11 @@ ms.locfileid: "39463493"
   
  *спецификатор функция*  
   
- [friend](../cpp/friend-cpp.md)  
-  
- [typedef] ( [typedef](http://msdn.microsod) `(` *extended-decl-modifier-seq* `)`  
+ [friend](friend-cpp.md)  
+ 
+ [TypeDef](aliases-and-typedefs-cpp.md) `(` *extended-decl-modifier-seq* `)`  
+
+ [__declspec](declspec.md) `(` *extended-decl-modifier-seq* `)`  
   
 ## <a name="remarks"></a>Примечания  
  *Decl-specifiers* часть объявления является самой длинной последовательностью *decl-specifiers* которая может использоваться для обозначения имени типа, не включая указателя или ссылки модификаторы. Остальная часть объявления является *декларатор*, включая представленное имя.  

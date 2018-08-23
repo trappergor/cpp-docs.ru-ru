@@ -31,15 +31,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a20be1a92c93be38d901f58339bb02b24cf2661f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 771e35fecdf477aaaacb92c1ae34ba79e9aa2354
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339959"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573096"
 ---
 # <a name="irowsetnotifyimpl-class"></a>Класс IRowsetNotifyImpl
-Реализует и регистрирует [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) на объекте-получателе (также называется «приемник»), чтобы она могла обрабатывать уведомления.  
+Реализует и регистрирует [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) на объекте-получателе (также называется «приемник»), чтобы она могла обрабатывать уведомления.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -63,7 +63,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 ## <a name="remarks"></a>Примечания  
  См. в разделе [получение уведомлений](../../data/oledb/receiving-notifications.md) о реализации интерфейса точки подключения на объекте-получателе.  
   
- `IRowsetNotifyImpl` предоставляет реализацию для фиктивного `IRowsetNotify`, с пустым функциями для `IRowsetNotify` методы [OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx), [OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx), и [OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx). При наследовании от этого класса, при реализации `IRowsetNotify` интерфейс, можно реализовать только методы, которые требуются. Также необходимо самостоятельно обеспечить пустые реализации для других методов.  
+ `IRowsetNotifyImpl` предоставляет реализацию для фиктивного `IRowsetNotify`, с пустым функциями для `IRowsetNotify` методы [OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)), [OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)), и [OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)). При наследовании от этого класса, при реализации `IRowsetNotify` интерфейс, можно реализовать только методы, которые требуются. Также необходимо самостоятельно обеспечить пустые реализации для других методов.  
 
 ## <a name="onfieldchange"></a> IRowsetNotifyImpl::OnFieldChange
 Уведомляет объект-получатель о любом изменении значения столбца.  
@@ -82,13 +82,13 @@ STDMETHOD(OnFieldChange)(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) для описания параметров.  
+ См. в разделе [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) для описания параметров.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- См. в разделе [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) для возврата описания значений.  
+ См. в разделе [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) для возврата описания значений.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает оболочку для [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) метод. См. описание этого метода в справочнике программиста OLE DB для сведения.  
+ Этот метод создает оболочку для [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) метод. См. описание этого метода в справочнике программиста OLE DB для сведения.  
 
 ## <a name="onrowchange"></a> IRowsetNotifyImpl::OnRowChange
 Уведомляет объект-получатель о первом изменении строки или о любом изменении, влияет на всю строку.  
@@ -106,13 +106,13 @@ STDMETHOD(OnRowChange)(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) для описания параметров.  
+ См. в разделе [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) для описания параметров.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- См. в разделе [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) для возврата описания значений.  
+ См. в разделе [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) для возврата описания значений.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает оболочку для [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) метод. См. описание этого метода в справочнике программиста OLE DB для сведения. 
+ Этот метод создает оболочку для [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) метод. См. описание этого метода в справочнике программиста OLE DB для сведения. 
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyImpl::OnRowsetChange
 Уведомляет объект-получатель о любом изменении, влияющие на весь набор строк.  
@@ -128,16 +128,16 @@ STDMETHOD(OnRowsetChange)(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) для описания параметров.  
+ См. в разделе [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) для описания параметров.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- См. в разделе [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) для возврата описания значений.  
+ См. в разделе [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) для возврата описания значений.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает оболочку для [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) метод. См. описание этого метода в справочнике программиста OLE DB для сведения.
+ Этот метод создает оболочку для [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) метод. См. описание этого метода в справочнике программиста OLE DB для сведения.
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx)   
+ [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))   
  [Класс IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Класс CGlobalUtils | Документы Microsoft
+title: Класс CGlobalUtils | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952089"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539326"
 ---
 # <a name="cglobalutils-class"></a>Класс CGlobalUtils
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -216,7 +216,7 @@ BOOL DecimalFromString(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *десятичное число*  
+ [out] *decimal*  
  [in] *psz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -367,7 +367,7 @@ BOOL StringFromDecimal(
   
 ### <a name="parameters"></a>Параметры  
  [out] *str*  
- [in] *десятичное число*  
+ [in] *decimal*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   

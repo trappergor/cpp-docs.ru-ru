@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c8bc1962e946a48b6ebebaf072e4cb32559a6de
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e66c6791a55debeb411fd6058d4bbe44cb6637e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014712"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575876"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>Метод SimpleActivationFactory::GetRuntimeClassName
 
@@ -35,6 +35,7 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>Параметры
+
 *runtimeName*  
 После завершения операции представляет имя класса среды выполнения.
 
@@ -53,4 +54,5 @@ STDMETHOD( GetRuntimeClassName )(
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
- [Класс SimpleActivationFactory](../windows/simpleactivationfactory-class.md)
+
+[Класс SimpleActivationFactory](../windows/simpleactivationfactory-class.md)

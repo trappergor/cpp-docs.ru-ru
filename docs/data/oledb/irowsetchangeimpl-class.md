@@ -43,15 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0f77f9a33b0cf51ea54d16f89e86ea914640f627
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c64d6cc460d068a5d0acf90795cb405a920b867f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339602"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572304"
 ---
 # <a name="irowsetchangeimpl-class"></a>Класс IRowsetChangeImpl
-Реализация шаблонов OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) интерфейс в спецификации OLE DB.  
+Реализация шаблонов OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) интерфейс в спецификации OLE DB.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -114,7 +114,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 -   Глава 6 *справочнике программиста OLE DB*  
   
--   Также см. в разделе как `RUpdateRowset` класс используется в разделе Создание  
+-   Также см. в разделе как `RUpdateRowset` класс используется в [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) образца.  
   
 ## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
 Удаляет строки из набора строк.  
@@ -129,7 +129,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetChange::DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx) в *справочнике программиста OLE DB*. 
+ См. в разделе [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) в *справочнике программиста OLE DB*. 
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 Создает и инициализирует новую строку в наборе строк.  
@@ -144,7 +144,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetChange::InsertRow](https://msdn.microsoft.com/library/ms716921.aspx) в *справочнике программиста OLE DB*. 
+ См. в разделе [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="setdata"></a> IRowsetChangeImpl::SetData
 Задает значения данных в один или несколько столбцов.  
@@ -158,7 +158,7 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetChange::SetData](https://msdn.microsoft.com/library/ms721232.aspx) в *справочнике программиста OLE DB*. 
+ См. в разделе [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 Переопределенная поставщиком для фиксации данных в хранилище.  

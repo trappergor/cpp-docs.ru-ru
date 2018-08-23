@@ -1,5 +1,5 @@
 ---
-title: __readdr | Документы Microsoft
+title: __readdr | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee18591ea3729551f00267fef6e4594a45f673ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332979"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539514"
 ---
 # <a name="readdr"></a>__readdr
-Считывает значение регистра указанного отладки.  
+Считывает значение указанного отладки регистра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,19 +35,19 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
   
 #### <a name="parameters"></a>Параметры  
  [in] `DebugRegister`  
- Зарегистрировать константа от 0 до 7, определяющее отладки.  
+ Зарегистрируйте константой, от 0 до 7, определяет debug.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение регистра указанного отладки.  
   
 ## <a name="remarks"></a>Примечания  
- Эти встроенные функции доступны только в режиме ядра и процедуры доступны только как встроенные объекты.  
+ Эти встроенные функции доступны только в режиме ядра, а процедуры доступны только как встроенные функции.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readdr`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

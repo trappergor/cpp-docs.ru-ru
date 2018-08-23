@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336944"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572101"
 ---
 # <a name="cdbpropidset-class"></a>Класс CDBPropIDSet
 Наследует от `DBPROPIDSET` структурировать и добавляет конструктор, который инициализирует ключевых полей, а также [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) доступ к методу.  
@@ -80,7 +80,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[оператор =](#op_equal)|Назначает содержимого идентификатор свойства набора в другой.|  
   
 ## <a name="remarks"></a>Примечания  
- Использования потребителей OLE DB `DBPROPIDSET` структуры передается массив идентификаторов свойств, для которых необходимо получить сведения о свойстве. Свойств, идентифицированных в одном [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) структура принадлежат набору одно свойство.  
+ Использования потребителей OLE DB `DBPROPIDSET` структуры передается массив идентификаторов свойств, для которых необходимо получить сведения о свойстве. Свойств, идентифицированных в одном [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) структура принадлежат набору одно свойство.  
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 Добавляет идентификатор свойства идентификатор набора свойств.  
@@ -96,7 +96,7 @@ bool AddPropertyID(DBPROPID propid) throw();
  [in] Задайте идентификатор свойства, необходимо добавить идентификатор свойства.  
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
-Конструктор. Инициализирует `rgProperties`, `cProperties`и (необязательно) `guidPropertySet` поля [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) структуры.  
+Конструктор. Инициализирует `rgProperties`, `cProperties`и (необязательно) `guidPropertySet` поля [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) структуры.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>Параметры  
  *Идентификатор GUID*  
- [in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) структуры.  
+ [in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) структуры.  
   
 ### <a name="remarks"></a>Примечания  
  Это поле можно задать [конструктор](../../data/oledb/cdbpropidset-cdbpropidset.md) также. Эта функция вызывается в том случае, если вы используете конструктор по умолчанию для этого класса.  

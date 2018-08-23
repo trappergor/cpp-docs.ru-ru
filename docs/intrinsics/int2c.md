@@ -1,5 +1,5 @@
 ---
-title: __int2c | Документы Microsoft
+title: __int2c | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e163eabd802fdd33d9f90d3a3a111017188dd89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23727ed40b12506ddd47a03055eaf8514d5685c5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329411"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541315"
 ---
 # <a name="int2c"></a>__int2c
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки `int 2c` инструкции, которая запускает `2c` прерываний.  
+ Создает `int 2c` инструкция, которая запускает `2c` прерываний.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ void __int2c(void);
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__int2c`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__int2c`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

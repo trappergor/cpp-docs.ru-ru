@@ -1,5 +1,5 @@
 ---
-title: __writecr4 | Документы Microsoft
+title: __writecr4 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59949c031db6e33bbfb1ac56151c5bc57a972d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 097be395b26935b1c889a5ed542da3f544501ceb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326135"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541123"
 ---
 # <a name="writecr4"></a>__writecr4
 **Блок, относящийся только к системам Microsoft**  
   
- Записывает значение `Data` CR4 регистрацию.  
+ Записывает значение `Data` CR4 регистр.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ void writecr4(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__writecr4`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr4`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

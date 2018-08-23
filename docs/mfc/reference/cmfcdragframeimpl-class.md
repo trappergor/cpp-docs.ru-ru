@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCDragFrameImpl | Документы Microsoft
+title: Класс CMFCDragFrameImpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040952"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539494"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Класс CMFCDragFrameImpl
 `CMFCDragFrameImpl` Класс рисует прямоугольник перетаскивания, который появляется, когда пользователь перетаскивает область в стандартном режиме закрепления.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
    
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,9 +34,9 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Объект этого класса является внедренным в каждом [класса CPane](../../mfc/reference/cpane-class.md) объекта. Таким образом, для каждой области, который использует `CanFloat` метод отображает прямоугольника перетаскивания, когда пользователь перетаскивает его.  
+ Объект этого класса внедряется в каждом [класс CPane](../../mfc/reference/cpane-class.md) объекта. Таким образом, для каждой области, который использует `CanFloat` метод отображает прямоугольника перетаскивания, когда пользователь перетаскивает его.  
   
- Толщина прямоугольника перетаскивания можно контролировать с помощью [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) и [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
+ Ширина прямоугольника перетаскивания можно управлять с помощью [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) и [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  

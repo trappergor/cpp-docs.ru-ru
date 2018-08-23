@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853554"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539345"
 ---
 # <a name="cmonthcalctrl-class"></a>Cmonthcalctrl-класс
 Инкапсулирует функциональность элемента управления "календарь месяца".  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in] *cxyBorder*|Ширина границы в пикселях.|  
   
 ### <a name="remarks"></a>Примечания  
- Если этот метод выполняется успешно, ширину границы присваивается *cxyBorder* параметра. В противном случае ширину границы сбрасывается в значение по умолчанию, заданный текущим [темы](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), или нуль, если темы не используются.  
+ Если этот метод выполняется успешно, ширину границы присваивается *cxyBorder* параметра. В противном случае ширину границы сбрасывается в значение по умолчанию, заданный текущим [темы](/windows/desktop/Controls/visual-styles-overview), или нуль, если темы не используются.  
   
  Этот метод отправляет [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) сообщения, который описан в пакете Windows SDK.  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Ширина границы присвоено значение по умолчанию, заданный текущим [темы](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), или нуль, если темы не используются.  
+ Ширина границы присвоено значение по умолчанию, заданный текущим [темы](/windows/desktop/Controls/visual-styles-overview), или нуль, если темы не используются.  
   
  Этот метод отправляет [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) сообщения, который описан в пакете Windows SDK.  
   

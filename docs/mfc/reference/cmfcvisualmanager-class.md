@@ -354,17 +354,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 021b66393b37cdc83a514ca194baef8049f5c62f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853567"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539138"
 ---
 # <a name="cmfcvisualmanager-class"></a>Класс CMFCVisualManager
 Обеспечивает поддержку изменению внешнего вида приложений на глобальном уровне. Класс `CMFCVisualManager` работает совместно с классом, предоставляющим инструкции по рисованию элементов управления графического интерфейса пользователя приложения с использованием последовательного стиля. Эти другие классы называются визуальными диспетчерами и наследуются от `CMFCBaseVisualManager`.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   

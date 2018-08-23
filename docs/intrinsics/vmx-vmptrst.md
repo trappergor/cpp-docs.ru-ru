@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmptrst | Документы Microsoft
+title: __vmx_vmptrst | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad1b6587f4386565ae7de84a7b6a170da98b6df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2997ed93de7291c22ae4f147bdd2392b71385e6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328598"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538538"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Блок, относящийся только к системам Microsoft**  
   
- Хранит указатель на текущую структуру управления виртуальной машины (VMCS) по указанному адресу.  
+ Хранит указатель на текущий структуру управления виртуальной машины (VMCS) по указанному адресу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,18 +39,18 @@ void __vmx_vmptrst(
   
 #### <a name="parameters"></a>Параметры  
  [in] *`VmcsPhysicalAddress`  
- Адрес, где хранятся указатель текущей VMCS.  
+ Адрес, где хранится указатель текущей VMCS.  
   
 ## <a name="remarks"></a>Примечания  
- Указатель VMCS — это физический адрес 64-разрядной.  
+ Указатель VMCS — это 64-разрядный физический адрес.  
   
- `__vmx_vmptrst` Функция эквивалентна `VMPTRST` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__vmx_vmptrst` Функция эквивалентна `VMPTRST` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrst`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

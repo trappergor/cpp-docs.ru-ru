@@ -1,5 +1,5 @@
 ---
-title: __writeeflags | Документы Microsoft
+title: __writeeflags | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2885f2ea103ad43535b11c526b96ed42de45fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340532"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539705"
 ---
 # <a name="writeeflags"></a>__writeeflags
-Записывает указанное значение в программу регистрации состояния и управления (EFLAGS).  
+Записывает указанное значение в программу состояния и управления (EFLAGS) регистрации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ void __writeeflags(unsigned __int64 Value);
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `Value`|Значение для записи в EFLAGS регистр. `Value` Параметр — 32 бита, для 32-разрядной платформе и 64-разрядная для 64-разрядной платформе.|  
+|[in] `Value`|Значение для записи в EFLAGS регистр. `Value` Равен 32 бита времени для 32-разрядной платформе и 64 бита времени для 64-разрядной платформе.|  
   
 ## <a name="remarks"></a>Примечания  
- Эти процедуры доступны только как встроенные объекты.  
+ Эти процедуры доступны только как встроенные функции.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writeeflags`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

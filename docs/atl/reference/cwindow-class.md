@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a725ee9eb8d35ec947d21799c577243223f59ed4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a4f29cefa626928cb87ce7d72904a4b189113f05
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881270"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42575505"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 Этот класс предоставляет методы для управления окном.  
@@ -976,7 +976,7 @@ DWORD GetHotKey() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Виртуальному коду клавиши и модификаторы для сочетания клавиш, связанные с окном. Список возможных модификаторы, см. в разделе [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) в пакете Windows SDK. Список стандартных кодов виртуального ключа см. в разделе Winuser.h.  
+ Виртуальному коду клавиши и модификаторы для сочетания клавиш, связанные с окном. Список возможных модификаторы, см. в разделе [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) в пакете Windows SDK. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h.  
   
 ##  <a name="geticon"></a>  CWindow::GetIcon  
  Извлекает дескриптор окна больших или маленьких значка.  
@@ -2091,7 +2091,7 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
   
 ### <a name="parameters"></a>Параметры  
  *wVirtualKeyCode*  
- [in] Виртуального кода клавиши сочетания клавиш. Список стандартных кодов виртуального ключа см. в разделе Winuser.h.  
+ [in] Виртуального кода клавиши сочетания клавиш. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h.  
   
  *wModifiers*  
  [in] Модификаторы клавиш. Список возможных значений см. в разделе WM_SETHOTKEY в пакете Windows SDK.  

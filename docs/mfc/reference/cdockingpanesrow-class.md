@@ -1,5 +1,5 @@
 ---
-title: Класс CDockingPanesRow | Документы Microsoft
+title: Класс CDockingPanesRow | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955271"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543240"
 ---
 # <a name="cdockingpanesrow-class"></a>Класс CDockingPanesRow
 Управляет списком областей, которые находятся в той же горизонтальной или вертикальной строке (столбце) сайта закрепления.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -224,7 +224,7 @@ virtual void AddPaneFromRow(
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Упорядочивает закрепления панели в строке в соответствии с указанным полем и интервал между параметрами.  
+ Упорядочивает закрепления панели в строке в соответствии с заданного предела и интервал между параметрами.  
   
 ```  
 virtual void ArrangePanes(
@@ -783,6 +783,6 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Классы](../../mfc/reference/mfc-classes.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)   
+ [Класс CObject](../../mfc/reference/cobject-class.md)   
  [Класс CDockSite](../../mfc/reference/cdocksite-class.md)   
  [Класс CPane](../../mfc/reference/cpane-class.md)

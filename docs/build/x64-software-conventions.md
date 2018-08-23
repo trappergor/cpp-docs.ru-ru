@@ -1,5 +1,5 @@
 ---
-title: x64 соглашения о программном обеспечении | Документы Microsoft
+title: x64 программные соглашения | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2115b353f269ff59c107737eeb4fdb590ffd71b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 971f1fae3fe2d6733b0819f3a6e88db07612bce7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380892"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571716"
 ---
 # <a name="x64-software-conventions"></a>Программные соглашения x64
-В этом разделе описываются методология соглашение о вызовах Visual C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], расширение x86 64-разрядной архитектуры.  
+В этом разделе описываются Visual C++, методология соглашения о вызовах для x64, расширение x86 64-разрядной архитектуры.  
   
 -   [Общие сведения о соглашениях о вызовах для архитектуры x64](../build/overview-of-x64-calling-conventions.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32380892"
   
 -   [Формат образа](../build/image-format.md)  
   
- Следующий параметр компилятора позволяет оптимизировать приложение для [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
+ Следующий параметр компилятора помогает оптимизировать приложение для x64:  
   
 -   [/favor (оптимизация для особенностей архитектуры)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   

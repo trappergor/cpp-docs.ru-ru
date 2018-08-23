@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d211297d587fffcfc58ac57db6687dc8edde4344
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed63e89c2470691b677a234ba6b30e4f3ddd558d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336551"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571905"
 ---
 # <a name="ole-db-programming"></a>Программирование объектов OLE DB
 Microsoft OLE DB — это устаревшая технология; для новых приложений это требуется API доступа к данным для связанных серверов SQL. Все другие новые приложения должны использовать ODBC. Текущий поставщик OLE DB для SQL Server — SQLNCLI11. БИБЛИОТЕКА DLL. Поставщик по-прежнему продается в SQL Server 2016. Эта документация предназначена для разработчиков, которые поддержки существующих приложений, которые уже используют OLE DB.
@@ -39,7 +39,7 @@ Microsoft OLE DB — это устаревшая технология; для н
 |Использование шаблонов поставщика OLE DB (основные разделы)|[Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |Классы и макросы шаблонов OLE DB|[Ссылка на шаблоны OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Атрибуты пользователя OLE DB|[Атрибуты объекта-получателя OLE DB](../../windows/ole-db-consumer-attributes.md)|  
-|Интерфейсы OLE DB|[Справочник программиста OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) (в пакете Windows SDK)|  
+|Интерфейсы OLE DB|[Справочник программиста OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (в пакете Windows SDK)|  
 |Примеры шаблонов OLE DB|[Примеры шаблонов OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
 |Общие сведения о программировании доступа к данным (Visual C++)|[Программирование доступа к данным](../../data/data-access-programming-mfc-atl.md)|  
 |Основные разделы ODBC|[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)|  

@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028295"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540330"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Реализует область, которую можно закрепить на сайте закрепления или включить в область с вкладками.  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод для обработки закрепление плавающей панели.  
   
- Плавающие панели инструментов и закрепляемых панелей, которые используют режим закрепления DT_IMMEDIATE, платформа задерживает команду закрепления, чтобы пользователи могли переместить окно вне клиентской области родительского фрейма, прежде чем произойдет закрепления. Длительность задержки измеряется в миллисекундах и управляется [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) элемент данных... Значение по умолчанию [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) — 200. Это поведение эмулирует закрепления элемента [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ Плавающие панели инструментов и закрепляемых панелей, которые используют режим закрепления DT_IMMEDIATE, платформа задерживает команду закрепления, чтобы пользователи могли переместить окно вне клиентской области родительского фрейма, прежде чем произойдет закрепления. Длительность задержки измеряется в миллисекундах и управляется [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) элемент данных... Значение по умолчанию [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) — 200. Это поведение эмулирует закрепления элемента Microsoft Word 2007.  
   
  Для отложенного состояния закрепления (CS_DELAY_DOCK и CS_DELAY_DOCK_TO_TAB) платформа не выполняет закрепления, пока пользователь отпускает кнопку мыши. Если область использует режим закрепления DT_STANDARD, платформа отображает прямоугольник в проецируемых место закрепления. Если область использует режим закрепления DT_SMART, платформа отображает интеллектуальные маркеры стыковки и полупрозрачным прямоугольники в проецируемых место закрепления. Чтобы указать режим закрепления для своей области, вызовите [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) метод. Дополнительные сведения о смарт-закрепления, см. в разделе [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  Для эффекта анимации, быстрее уменьшите значение этого параметра. Медленнее эффект анимации Увеличьте это значение.  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

@@ -1,5 +1,5 @@
 ---
-title: __stosw | Документы Microsoft
+title: __stosw | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9f73b401d953c026c60d504fbb016838720b7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf41c1c91d8c0b5d2d7626d1fc0eee67aa96ff32
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329349"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539516"
 ---
 # <a name="stosw"></a>__stosw
 **Блок, относящийся только к системам Microsoft**  
   
- Создает инструкцию строка хранилища (`rep stosw`).  
+ Создает инструкцию строка магазина (`rep stosw`).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +45,7 @@ void __stosw(
  Целевой для операции.  
   
  [in] `Data`  
- Для хранения данных.  
+ Сохраняемые данные.  
   
  [in] `Count`  
  Длина блока слов для записи.  
@@ -54,12 +54,12 @@ void __stosw(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__stosw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosw`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Результат —, слово `Data` записывается в блок `Count` слова в `Dest` строку.  
+ Результатом является то, что слово `Data` записывается в блок `Count` ключевые слова в `Dest` строку.  
   
  Эта процедура доступна только как встроенная функция.  
   

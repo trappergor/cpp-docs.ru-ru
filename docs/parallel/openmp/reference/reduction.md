@@ -1,5 +1,5 @@
 ---
-title: Сокращение | Документы Microsoft
+title: Сокращение | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692539"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540875"
 ---
 # <a name="reduction"></a>reduction
-Указывает, что одна или несколько переменных, которые принадлежат каждому потоку субъект операцию редукции в конце параллельной области.  
+Указывает, что один или несколько переменных, которые принадлежат к каждому потоку предметом операцию редукции в конце область параллельной обработки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +36,13 @@ reduction(operation:var)
  где  
   
  `operation`  
- Оператор для операции для выполнения на переменные (`var`) в конце параллельной области.  
+ Оператор для операции для выполнения на переменные (`var`) в конце область параллельной обработки.  
   
  `var`  
- Один для получения дополнительных переменные для выполнения скалярная редукция. Если указано более одной переменной, разделяйте имена переменных запятыми.  
+ Одну или несколько переменных, по которым выполняется скалярная редукция. Если указано более одной переменной, разделите имена переменных запятыми.  
   
 ## <a name="remarks"></a>Примечания  
- `reduction` применяется к следующие директивы:  
+ `reduction` область применения следующих директив:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
@@ -127,10 +127,10 @@ int main( )
              "%d to %d, is %d\n", 1, 10, nSum);  
   
     if (bSucceed)  
-        printf_s("All of the the functions, func1 through "  
+        printf_s("All of the functions, func1 through "  
                  "func5 succeeded!\n");  
     else  
-        printf_s("One or more of the the functions, func1 "  
+        printf_s("One or more of the functions, func1 "  
                  "through func5 failed!\n");  
   
     if (nCount != NUM_THREADS)   
@@ -162,7 +162,7 @@ int main( )
 ```Output  
 The parallel section was executed 4 times in parallel.  
 The sum of the consecutive integers from 1 to 10, is 55  
-All of the the functions, func1 through func5 succeeded!  
+All of the functions, func1 through func5 succeeded!  
 ```  
   
 ## <a name="see-also"></a>См. также  

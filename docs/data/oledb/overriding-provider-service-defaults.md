@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 106d1991f5312065aa78330888e55383d1f9506a
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 5e54a44be0ad5b7b07311d102871e584770fc441
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337022"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572698"
 ---
 # <a name="overriding-provider-service-defaults"></a>Переопределение используемых по умолчанию параметров службы поставщика
-Значение реестра поставщика для OLEDB_SERVICES возвращается как значение по умолчанию для [DBPROP_INIT_OLEDBSERVICES, установить](https://msdn.microsoft.com/library/ms716898.aspx) свойство инициализации на объекте источника данных.  
+Значение реестра поставщика для OLEDB_SERVICES возвращается как значение по умолчанию для [DBPROP_INIT_OLEDBSERVICES, установить](/previous-versions/windows/desktop/ms716898\(v=vs.85\)) свойство инициализации на объекте источника данных.  
   
  Пока существует запись реестра, накапливаются объекты поставщика, и пользователь может переопределить поставщика по умолчанию для включенных служб, задав `DBPROP_INIT_OLEDBSERVICES` свойства до инициализации. Для включения или отключения определенной службы, пользователь обычно получает текущее значение `DBPROP_INIT_OLEDBSERVICES` свойства, задает или сбрасывает бит для конкретного свойства включить или отключить и свойство. `DBPROP_INIT_OLEDBSERVICES` можно задать непосредственно в OLE DB или в строке подключения, передаваемый ADO или `IDataInitialize::GetDatasource`. В следующей таблице перечислены соответствующие значения для включения или отключения отдельных служб.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "39337022"
  Если запись реестра не существует для поставщика, диспетчеры компонентов не будет выполнять статистическую обработку объекты поставщика и службы не будет вызываться, даже если это явно запрошено пользователем.  
   
 ## <a name="see-also"></a>См. также  
- [Создание пулов ресурсов](https://msdn.microsoft.com/library/ms713655.aspx)   
- [Как потребители используют Создание пулов ресурсов](https://msdn.microsoft.com/library/ms715907.aspx)   
- [Как поставщики эффективно работают с пулами ресурсов](https://msdn.microsoft.com/library/ms714906.aspx)   
+ [Создание пулов ресурсов](/previous-versions/windows/desktop/ms713655\(v=vs.85\))   
+ [Как потребители используют Создание пулов ресурсов](/previous-versions/windows/desktop/ms715907\(v=vs.85\))   
+ [Как поставщики эффективно работают с пулами ресурсов](/previous-versions/windows/desktop/ms714906\(v=vs.85\))   
  [Включение и отключение служб OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: faf782f4386cf2b2640ed65f3a2b24bbf4c5d693
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338344"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572003"
 ---
 # <a name="irowsetimpl-class"></a>Класс IRowsetImpl
 Предоставляет реализацию интерфейса `IRowset`.  
@@ -169,7 +169,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |[m_rgRowHandles](#rgrowhandles)|Список дескрипторов строк.|  
   
 ## <a name="remarks"></a>Примечания  
- [IRowset](https://msdn.microsoft.com/library/ms720986.aspx) — это базовый интерфейс набора строк.  
+ [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) — это базовый интерфейс набора строк.  
 
 ## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 Добавляет счетчик ссылок в дескриптор существующей строки.  
@@ -184,7 +184,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="createrow"></a> IRowsetImpl::CreateRow
 Вспомогательный метод, вызываемый [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) выделить новый `HROW`.  
@@ -222,7 +222,7 @@ STDMETHOD(GetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowset::GetData](https://msdn.microsoft.com/library/ms716988.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
  Некоторые параметры соответствуют *Справочник программиста OLE DB по* параметры разные имена, которые описаны в `IRowset::GetData`:  
   
@@ -251,7 +251,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
  Столбец, для которого запрашивается состояние.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) флаги для столбца. 
+ [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) флаги для столбца. 
 
 ## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 Последовательно извлекает строки с запоминанием предыдущей позиции.  
@@ -267,7 +267,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowset::GetNextRows](https://msdn.microsoft.com/library/ms709827.aspx) в *справочнике программиста OLE DB*. 
+ См. в разделе [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 Конструктор.  
@@ -295,7 +295,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  
@@ -314,7 +314,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 Перемещает позицию следующей выборки в его начальное положение; то есть его положение при первом набора строк создан.  
@@ -326,7 +326,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowset::RestartPosition](https://msdn.microsoft.com/library/ms712877.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
  Положение в наборе строк не определено до `GetNextRow` вызывается. Вы можете переместить назад в rowet путем вызова `RestartPosition` и затем выборку и прокрутку в обратном направлении.  
@@ -344,7 +344,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
   
 #### <a name="parameters"></a>Параметры  
  *statusFlags*  
- [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) флажки, которые нужно установить для столбца.  
+ [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) флажки, которые нужно установить для столбца.  
   
  *currentRow*  
  Текущая строка.  

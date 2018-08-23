@@ -1,5 +1,5 @@
 ---
-title: Класс CWindowDC | Документы Microsoft
+title: Класс CWindowDC | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121546"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540722"
 ---
 # <a name="cwindowdc-class"></a>Класс CWindowDC
 Производное от `CDC`.  
@@ -48,12 +48,12 @@ class CWindowDC : public CDC
   
 |name|Описание:|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|HWND, к которому `CWindowDC` присоединен.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|HWND, к которому `CWindowDC` подключен.|  
   
 ## <a name="remarks"></a>Примечания  
- Вызывает функцию Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)во время создания и [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) во время удаления. Это означает, что `CWindowDC` объект производит доступ к области весь экран [CWnd](../../mfc/reference/cwnd-class.md) (клиент и неклиентской областей).  
+ Вызывает функцию Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)во время создания и [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) во время уничтожения. Это означает, что `CWindowDC` объект производит доступ к целой области экрана [CWnd](../../mfc/reference/cwnd-class.md) (клиентские и неклиентские области).  
   
- Дополнительные сведения об использовании `CWindowDC`, в разделе [контексты устройств](../../mfc/device-contexts.md).  
+ Дополнительные сведения об использовании `CWindowDC`, см. в разделе [контексты устройств](../../mfc/device-contexts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -66,7 +66,7 @@ class CWindowDC : public CDC
  Заголовок: afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- Создает `CWindowDC` объект, который обращается к весь экран области (клиент и неклиентской) `CWnd` объекта, на который указывает *pWnd*.  
+ Создает `CWindowDC` объект, который обращается к целой области экрана (клиентские и неклиентские) `CWnd` объекта, на который указывает *pWnd*.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
@@ -74,12 +74,12 @@ explicit CWindowDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Параметры  
  *pWnd*  
- Окно которого клиентской области, будут обращаться к объект контекста устройства.  
+ Окно которого клиентской области, будут получать доступ к объекту контекста устройства.  
   
 ### <a name="remarks"></a>Примечания  
- Конструктор вызывает функции Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
+ Конструктор вызывает функцию Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
   
- Исключения (типа `CResourceException`) выдается, если Windows `GetWindowDC` вызов завершается с ошибкой. На контекст устройства не могут быть доступны в том случае, если Windows уже выделена все контексты его доступных устройств. Приложение конкурирует за пять общих отображения контексты, доступные в любой момент времени в Windows.  
+ Исключения (типа `CResourceException`) создается, если Windows `GetWindowDC` вызов завершается ошибкой. Контекст устройства не могут быть доступны в том случае, если Windows уже выделен все контексты его доступных устройств. Приложения конкурирует за пять общих отображения контексты, доступные в любой момент времени в группе Windows.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
@@ -95,9 +95,9 @@ HWND m_hWnd;
  `m_hWnd` является защищенной переменной типа HWND.  
   
 ### <a name="example"></a>Пример  
-  Далее приведен пример [CWindowDC::CWindowDC](#cwindowdc).  
+  См. в примере [CWindowDC::CWindowDC](#cwindowdc).  
   
 ## <a name="see-also"></a>См. также  
- [CDC-класс](../../mfc/reference/cdc-class.md)   
+ [Класс CDC](../../mfc/reference/cdc-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Класс CDC](../../mfc/reference/cdc-class.md)

@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81f2214ef6a3e33b573a88ac4e23ae6aad64ea01
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e993c58ea6fc84e0b4001b488632858e5251d67b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015694"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583975"
 ---
 # <a name="semaphoretraitsunlock-method"></a>Метод SemaphoreTraits::Unlock
-Элемент управления выпусков общего ресурса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *h*  
- Дескриптор **семафора** объекта.  
-  
-## <a name="remarks"></a>Примечания  
- Если обнаружено, операция разблокирования **Unlock()** выдает ошибку, которые указывают на причину сбоя.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Структура SemaphoreTraits](../windows/semaphoretraits-structure.md)
+
+Элемент управления выпусков общего ресурса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*h*  
+Дескриптор **семафора** объекта.
+
+## <a name="remarks"></a>Примечания
+
+Если обнаружено, операция разблокирования **Unlock()** выдает ошибку, которые указывают на причину сбоя.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Структура SemaphoreTraits](../windows/semaphoretraits-structure.md)

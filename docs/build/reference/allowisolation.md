@@ -1,5 +1,5 @@
 ---
-title: -ALLOWISOLATION | Документы Microsoft
+title: -ALLOWISOLATION | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb92a7f31d48dad4a7fb608703c71ccc661e176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9511ce2d94a426756581b87d863051da25a627b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368978"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571734"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 Задает поведение нахождения файлов манифеста.  
@@ -38,13 +38,13 @@ ms.locfileid: "32368978"
 ## <a name="remarks"></a>Примечания  
  **/ ALLOWISOLATION** вынуждает операционную систему на поиск и загрузку манифеста.  
   
- **/ ALLOWISOLATION** значение по умолчанию.  
+ **/ ALLOWISOLATION** используется по умолчанию.  
   
- **/ALLOWISOLATION:no** указывает, что исполняемые файлы загружаются, как если бы не манифеста и причины [Справочник ЕDITBIN](../../build/reference/editbin-reference.md) для задания `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` бит в необязательном заголовке `DllCharacteristics` поля.  
+ **/ALLOWISOLATION:no** указывает, что исполняемые файлы загружены, как если бы без манифеста, а также причины [Справочник ЕDITBIN](../../build/reference/editbin-reference.md) присвоить `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` бит в необязательном заголовке `DllCharacteristics` поля.  
   
- Если изоляция для исполняемого файла отключена, загрузчик Windows не пытается найти манифест приложения для нового процесса. Новый процесс не имеет контекста активации по умолчанию, даже если отсутствует манифест в исполняемом файле сам или если отсутствует манифест с именем *имя исполняемого файла*. exe.manifest.  
+ Если изоляция для исполняемого файла отключена, загрузчик Windows не пытается найти манифест приложения для нового процесса. Новый процесс не имеет контекста активации по умолчанию, даже в том случае, если отсутствует манифест в исполняемом файле сам или при наличии манифеста с именем *имя исполняемого файла*. exe.manifest.  
   
 ## <a name="see-also"></a>См. также  
  [Параметры EDITBIN](../../build/reference/editbin-options.md)   
  [/ ALLOWISOLATION (поиск манифеста)](../../build/reference/allowisolation-manifest-lookup.md)   
- [Ссылки на файлы манифеста](http://msdn.microsoft.com/library/aa375632.aspx)
+ [Ссылки на файлы манифеста](/windows/desktop/SbsCs/manifest-files-reference)

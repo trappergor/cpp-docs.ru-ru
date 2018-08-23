@@ -1,5 +1,5 @@
 ---
-title: no_smart_pointers | Документы Microsoft
+title: no_smart_pointers | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e4503ab027589f54c5b5bce60dc405a570dcc59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 345da5de492c33107effffb9c97b2fe60906e899
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849695"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544509"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
 **Конкретных C++**  
   
- Отключает создание интеллектуальных указателей для всех интерфейсов в библиотеке типов.  
+Отключает создание интеллектуальных указателей для всех интерфейсов в библиотеке типов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,12 @@ no_smart_pointers
 ```  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию при использовании директивы `#import` пользователь получает объявление интеллектуального указателя для всех интерфейсов в библиотеке типов. Эти интеллектуальные указатели имеют тип [класс _com_ptr_t](../cpp/com-ptr-t-class.md).  
+ 
+По умолчанию при использовании директивы `#import` пользователь получает объявление интеллектуального указателя для всех интерфейсов в библиотеке типов. Эти интеллектуальные указатели имеют тип [класс _com_ptr_t](../cpp/com-ptr-t-class.md).  
   
- **КОНЕЦ определенного C++**  
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

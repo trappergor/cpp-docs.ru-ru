@@ -54,17 +54,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6347c6c3cb5bd9499bbf84a2ef1cb33efeac76e1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852241"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541869"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd` Класс реализует функциональные возможности немодальное диалоговое окно, которое отображается на экране, чтобы информировать пользователей о событии.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.    
 ## <a name="syntax"></a>Синтаксис  
   
 ```  

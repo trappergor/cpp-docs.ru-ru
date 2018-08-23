@@ -1,5 +1,5 @@
 ---
-title: __movsb | Документы Microsoft
+title: __movsb | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9c72910a6b8084d015f151d7e701f6b63ffd1d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328231"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541495"
 ---
 # <a name="movsb"></a>__movsb
 **Блок, относящийся только к системам Microsoft**  
   
- Создает строку, переместите (`rep movsb`) инструкции.  
+ Создает строку переместить (`rep movsb`) инструкции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +45,7 @@ void __movsb(
  Указатель на место назначения копирования.  
   
  [in] `Source`  
- Указатель на исходной копии.  
+ Указатель на источник копирования.  
   
  [in] `Count`  
  Число байт для копирования.  
@@ -54,12 +54,12 @@ void __movsb(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsb`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- В результате первый `Count` байт, на который указывает `Source` копируются `Destination` строки.  
+ В результате первый `Count` байт, на которые указывают `Source` копируются `Destination` строка.  
   
  Эта процедура доступна только как встроенная функция.  
   

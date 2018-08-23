@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 661ac13acd1d8eac0ecde9af9fa08875b99153e3
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 0179bbc68bb6ed60f6fadf26f98be492c2eeb4c1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336984"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575518"
 ---
 # <a name="cutlprops-class"></a>Класс CUtlProps
 Реализует свойства для различных интерфейсов свойство OLE DB (например, `IDBProperties`, `IDBProperties`, и `IRowsetInfo`).  
@@ -123,7 +123,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
  Индекс в массиве набора свойств. нуль, если есть только одно свойство набор.  
   
  *pDBProp*  
- Идентификатор свойства и новое значение в [DBPROP](https://msdn.microsoft.com/library/ms717970.aspx) структуры.  
+ Идентификатор свойства и новое значение в [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT. По умолчанию возвращает значение S_OK.  
@@ -178,7 +178,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
  Индекс в массиве набора свойств. нуль, если есть только одно свойство набор.  
   
  *pDBProp*  
- Идентификатор свойства и новое значение в [DBPROP](https://msdn.microsoft.com/library/ms717970.aspx) структуры.  
+ Идентификатор свойства и новое значение в [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT. По умолчанию возвращает значение S_OK.  

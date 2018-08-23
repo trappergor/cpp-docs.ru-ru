@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3aa9b10b53f4b520ed6d42932ba3e73f11077fdc
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7554e7ee59f1d25344c61bd208fd0341add797a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337064"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571894"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Чтение строк в поставщике OLE DB
-`RMyProviderRowset::Execute` Функция открывает файл и считывает строки. Потребитель передает имя файла для поставщика путем вызова [ICommandText::SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx). Поставщик получает имя файла и сохраняет его в переменной-члена `m_szCommandText`. `Execute` считывает имя файла из `m_szCommandText`. Если имя файла является недопустимым или недоступен, файл `Execute` возвращает сообщение об ошибке. В противном случае он открывает файл и вызовы `fgets` для извлечения строк. Для каждого набора строк его чтение, `Execute` создает экземпляр пользовательской записи (`CAgentMan`) и помещает их в массив.  
+`RMyProviderRowset::Execute` Функция открывает файл и считывает строки. Потребитель передает имя файла для поставщика путем вызова [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). Поставщик получает имя файла и сохраняет его в переменной-члена `m_szCommandText`. `Execute` считывает имя файла из `m_szCommandText`. Если имя файла является недопустимым или недоступен, файл `Execute` возвращает сообщение об ошибке. В противном случае он открывает файл и вызовы `fgets` для извлечения строк. Для каждого набора строк его чтение, `Execute` создает экземпляр пользовательской записи (`CAgentMan`) и помещает их в массив.  
   
  Если не удается открыть файл, `Execute` должен возвращать DB_E_NOTABLE. Если вместо этого он возвращает E_FAIL, поставщик не будет работать с объектами-получателями и передавать OLE DB [проверка на совместимость с](../../data/oledb/testing-your-provider.md).  
   

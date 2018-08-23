@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4a1b08d82e915780817a47abddcf417fe5ab715
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c1934c7857e8c7813f653b6f12be0ba523ec63fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338250"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572597"
 ---
 # <a name="cdynamicaccessor-class"></a>Класс CDynamicAccessor
 Позволяет доступ к источнику данных, когда схема базы данных (базовая структура).  
@@ -165,7 +165,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|  
 |[AddBindEntry](#addbindentry)|При переопределении метода доступа по умолчанию добавляет запись привязки выходных столбцов.|  
 |[CDynamicAccessor](#cdynamicaccessor)|Создает и инициализирует `CDynamicAccessor` объекта.|  
-|[Закрыть](#close)|Отменяет привязку столбцов по, освобождает выделенную память и освобождает [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) указатель на интерфейс в классе.|  
+|[Закрыть](#close)|Отменяет привязку столбцов по, освобождает выделенную память и освобождает [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) указатель на интерфейс в классе.|  
 |[GetBlobHandling](#getblobhandling)|Извлекает BLOB-ОБЪЕКТОВ, обработки значения для текущей строки.|  
 |[GetBlobSizeLimit](#getblobsizelimit)|Получает максимальный размер большого двоичного ОБЪЕКТА в байтах.|  
 |[GetBookmark](#getbookmark)|Извлекает закладки для текущей строки.|  
@@ -202,7 +202,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
   
 #### <a name="parameters"></a>Параметры  
  *Сведения о*  
- [in] Объект `DBCOLUMNINFO` структура, содержащая сведения о столбце. См. в разделе «Структур DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) в *справочнике программиста OLE DB*.  
+ [in] Объект `DBCOLUMNINFO` структура, содержащая сведения о столбце. См. в разделе «Структур DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
@@ -233,7 +233,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
  Также можно указать как `CDynamicAccessor` обрабатывает столбец данных, определяемая как данные большого двоичного ОБЪЕКТА: он может обрабатывать данные большого двоичного ОБЪЕКТА по умолчанию; его можно пропустить (привязки) данных больших двоичных ОБЪЕКТОВ; или его можно привязать данные большого двоичного ОБЪЕКТА в память, выделенную поставщика.  
 
 ## <a name="close"></a> CDynamicAccessor::Close
-Отменяет привязку столбцов по, освобождает выделенную память и освобождает [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) указатель на интерфейс в классе.  
+Отменяет привязку столбцов по, освобождает выделенную память и освобождает [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) указатель на интерфейс в классе.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -311,7 +311,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
  [in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
   
  *pFlags*  
- [out] Указатель на Битовая маска, которая описывает характеристики столбца. См. в разделе «DBCOLUMNFLAGS перечисляемый тип» в [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) в *справочнике программиста OLE DB*.  
+ [out] Указатель на Битовая маска, которая описывает характеристики столбца. См. в разделе «DBCOLUMNFLAGS перечисляемый тип» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** Если характеристики столбца успешно получены. В противном случае возвращается значение **false**.  
@@ -333,13 +333,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
   
 #### <a name="parameters"></a>Параметры  
  *pRowset*  
- [in] Указатель на [IRowset](https://msdn.microsoft.com/library/ms720986.aspx) интерфейс.  
+ [in] Указатель на [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) интерфейс.  
   
  *pColumns*  
  [out] Указатель на буфер, в которой должна возвращаться количество столбцов в наборе строк. Этот номер столбца закладки он включается, если таковой имеется.  
   
  *ppColumnInfo*  
- [out] Указатель на область памяти, в которую будет возвращен массив `DBCOLUMNINFO` структуры. См. в разделе «Структур DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) в *справочнике программиста OLE DB*.  
+ [out] Указатель на область памяти, в которую будет возвращен массив `DBCOLUMNINFO` структуры. См. в разделе «Структур DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
  *ppStringsBuffer*  
  [out] Указатель на область памяти, в которую будет возвращен указатель в хранилище для всех строковых значений (имена используются как в пределах *columnid* или *pwszName*) в одном блоке распределения.  
@@ -348,7 +348,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) в *Справочник программиста OLE DB по* сведения о типах данных `DBORDINAL`, `DBCOLUMNINFO`, и `OLECHAR`.  
+ См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *Справочник программиста OLE DB по* сведения о типах данных `DBORDINAL`, `DBCOLUMNINFO`, и `OLECHAR`.  
 
 ## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
 Извлекает имя заданного столбца.  
@@ -465,7 +465,7 @@ bool GetStatus(const WCHAR* pColumnName,
  [in] Указатель на строку символов, содержащая имя столбца.  
   
  *pStatus*  
- [out] Указатель на переменную, содержащую состояние столбца. См. в разделе [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) в *Справочник программиста OLE DB по* Дополнительные сведения.  
+ [out] Указатель на переменную, содержащую состояние столбца. См. в разделе [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **true** при обнаружении указанного столбца. В противном случае эта функция возвращает **false**.  
@@ -607,7 +607,7 @@ bool SetStatus(const WCHAR* pColumnName,
  [in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
   
  *status*  
- [in] Состояние столбца. См. в разделе [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) в *Справочник программиста OLE DB по* Дополнительные сведения.  
+ [in] Состояние столбца. См. в разделе [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.  
   
  *pColumnName*  
  [in] Указатель на строку символов, содержащая имя столбца.  

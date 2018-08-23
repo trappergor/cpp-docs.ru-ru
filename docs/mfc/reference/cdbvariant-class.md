@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c79981b41bf7b74cb1aa44b98b44e0b5acbc90
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e1c3ccdba1de9191079630989facf154ccf62d7f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337925"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539125"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant-класс
 Представляет вариантный тип данных для классов MFC ODBC.  
@@ -200,7 +200,7 @@ void Clear();
 ### <a name="remarks"></a>Примечания  
  `m_pdate` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_pdate`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_DATE, затем `m_pdate` содержит допустимый указатель; в противном случае доступ к `m_pdate` создаст ненадежные результаты.  
   
- Дополнительные сведения о типе данных TIMESTAMP_STRUCT см. в разделе [типы данных C](https://msdn.microsoft.com/library/ms714556.aspx) в приложении D *Справочник по программированию ODBC* в пакете Windows SDK.  
+ Дополнительные сведения о типе данных TIMESTAMP_STRUCT см. в разделе [типы данных C](/previous-versions/windows/desktop/ms714556\(v=vs.85\)) в приложении D *Справочник по программированию ODBC* в пакете Windows SDK.  
   
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring  
  Содержит указатель на объект типа [CString](../../atl-mfc-shared/reference/cstringt-class.md).  

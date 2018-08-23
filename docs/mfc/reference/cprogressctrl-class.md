@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850161"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538769"
 ---
 # <a name="cprogressctrl-class"></a>Класс CProgressCtrl
 Предоставляет функциональные возможности стандартного элемента управления "индикатор выполнения" Windows.  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in] *clrBar*|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, которое указывает новый цвет индикатора индикатор хода выполнения. Укажите CLR_DEFAULT заставить индикатор хода выполнения использовать цвета по умолчанию.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Предыдущий цвет индикатора индикатор хода выполнения, представленное в виде [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение или CLR_DEFAULT, если цвет по умолчанию цвет индикатора индикатор хода выполнения.  
+
+Предыдущий цвет индикатора индикатор хода выполнения, представленное в виде [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение или CLR_DEFAULT, если цвет по умолчанию цвет индикатора индикатор хода выполнения.  
   
 ### <a name="remarks"></a>Примечания  
- `SetBarColor` Метод задает индикатор выполнения только если цвет [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] [темы](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx) не действует.  
+
+`SetBarColor` Метод задает индикатор выполнения только если цвет Windows Vista [темы](/windows/desktop/Controls/visual-styles-overview) не действует.  
   
  Этот метод отправляет [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) сообщения, который описан в пакете Windows SDK.  
   

@@ -1,5 +1,5 @@
 ---
-title: __stosb | Документы Microsoft
+title: __stosb | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16c9ede6d815c2c697c1ed03dc10476f6dd3bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8e5cefd7ba2b4816bf7e204cd4b3f97ee86974a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324578"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541130"
 ---
 # <a name="stosb"></a>__stosb
 **Блок, относящийся только к системам Microsoft**  
   
- Создает инструкцию строка хранилища (`rep stosb`).  
+ Создает инструкцию строка магазина (`rep stosb`).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +45,7 @@ void __stosb(
  Целевой для операции.  
   
  [in] `Data`  
- Для хранения данных.  
+ Сохраняемые данные.  
   
  [in] `Count`  
  Длина блока байтов для записи.  
@@ -54,12 +54,12 @@ void __stosb(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__stosb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosb`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Результат, не является знаком `Data` записывается в блок `Count` байтов в `Dest` строку.  
+ Результатом является то, что символ `Data` записывается в блок `Count` байтов в `Dest` строку.  
   
  Эта процедура доступна только как встроенная функция.  
   

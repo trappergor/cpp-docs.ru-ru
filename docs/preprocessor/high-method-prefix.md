@@ -1,5 +1,5 @@
 ---
-title: high_method_prefix | Документы Microsoft
+title: high_method_prefix | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f8e085f414134a11572063e5bd27ed830e1d95
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd645adc3ab37c2838a9abeadf4ee6eb62cc96dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913009"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538331"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
 **Конкретных C++**  
   
- Задает префикс, используемый при именовании высокоуровневых свойств и методов.  
+Задает префикс, используемый при именовании высокоуровневых свойств и методов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,15 +34,17 @@ ms.locfileid: "33913009"
 high_method_prefix("Prefix")  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `Prefix`  
- Префикс, который следует использовать.  
+### <a name="parameters"></a>Параметры  
+*Prefix*  
+Префикс, который следует использовать.  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию высокоуровневые свойства и методы обработки ошибок предоставляются функциями-членами с именами без префикса. Это имена из библиотеки типов.  
+ 
+По умолчанию высокоуровневые свойства и методы обработки ошибок предоставляются функциями-членами с именами без префикса. Это имена из библиотеки типов.  
   
- **КОНЕЦ определенного C++**  
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

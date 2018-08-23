@@ -1,5 +1,5 @@
 ---
-title: __outwordstring | Документы Microsoft
+title: __outwordstring | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc25fdc4d43b7454761787264583b5e4f8fa47e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abc221b81b6ace3afb165585b7e24655d348c2b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333698"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540111"
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки `rep outsw` инструкции, которая отправляет `Count` слова, начиная с `Buffer` исходящий порт ввода-вывода, заданные `Port`.  
+ Создает `rep outsw` инструкция, которая отправляет `Count` слова, начиная с `Buffer` номера порта ввода-вывода, определяемое `Port`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +45,7 @@ void __outwordstring(
  Порт для отправки данных.  
   
  [in] `Buffer`  
- Указатель на данные для отправки указанный порт.  
+ Указатель на данные, которые будут отправлены для указанного порта.  
   
  [in] `Count`  
  Число слов для отправки.  
@@ -54,7 +54,7 @@ void __outwordstring(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outwordstring`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

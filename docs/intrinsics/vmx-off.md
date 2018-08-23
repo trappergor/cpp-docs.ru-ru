@@ -1,5 +1,5 @@
 ---
-title: __vmx_off | Документы Microsoft
+title: __vmx_off | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82d94d1cd08d08a57cedf3709d18a46639e56925
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bae7d672cf592514d60c9ec68bbf4464507b94ff
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335410"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545864"
 ---
 # <a name="vmxoff"></a>__vmx_off
 **Блок, относящийся только к системам Microsoft**  
@@ -36,13 +36,13 @@ void __vmx_off();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `__vmx_off` Функция эквивалентна `VMXOFF` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__vmx_off` Функция эквивалентна `VMXOFF` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__vmx_off`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_off`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

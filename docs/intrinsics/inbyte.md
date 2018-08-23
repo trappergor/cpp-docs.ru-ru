@@ -1,5 +1,5 @@
 ---
-title: __inbyte | Документы Microsoft
+title: __inbyte | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2e02d4e1bc1ee5d1694769b2ec217cd7acbaba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7a659c9ac452d9ff42bb37d049e5cf44ff2c261
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329833"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541683"
 ---
 # <a name="inbyte"></a>__inbyte
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки `in` инструкции, возвращая один байт чтения из портом, указанным `Port`.  
+ Создает `in` инструкции, возвращая один байт чтения с портом, указанным `Port`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ unsigned char __inbyte(
   
 #### <a name="parameters"></a>Параметры  
  [in] `Port`  
- Порт, из которого выполняется чтение.  
+ Порт для чтения из.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Байт, считанный из указанного порта.  
@@ -49,7 +49,7 @@ unsigned char __inbyte(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__inbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbyte`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

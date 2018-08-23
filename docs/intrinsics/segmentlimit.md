@@ -1,5 +1,5 @@
 ---
-title: __segmentlimit | Документы Microsoft
+title: __segmentlimit | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fffacbaebc99d3298b5463a014db1e9117cd7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330756"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541692"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки `lsl` инструкций (предел сегмента нагрузки).  
+ Создает `lsl` инструкций (предел сегмента нагрузки).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,16 +39,16 @@ unsigned long __segmentlimit(
   
 #### <a name="parameters"></a>Параметры  
  [in] `a`  
- Константа, указывающая область выделения сегментов.  
+ Константа, задающая селекторе сегмента.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Предел сегмента сегмент селектора заданные `a`, при условии, что область выделения является допустимым и видны на текущем уровне разрешений.  
+ Ограничение размера сегмента средства выбора сегмента, определяемое `a`при условии, что селектор является допустимым и видимым, текущего уровня разрешений.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__segmentlimit`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

@@ -1,5 +1,5 @@
 ---
-title: raw_method_prefix | Документы Microsoft
+title: raw_method_prefix | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c9042393e4ff3de57bea83ad566c8b74d5d3b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb9178bc315385bab97cea473430745ad66d973
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839924"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541278"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
 **Конкретных C++**  
   
- Указывает другой префикс, чтобы избежать конфликтов имен.  
+Указывает другой префикс, чтобы избежать конфликтов имен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,18 +34,20 @@ ms.locfileid: "33839924"
 raw_method_prefix("Prefix")  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `Prefix`  
- Необходимый префикс.  
+### <a name="parameters"></a>Параметры  
+*Prefix*  
+Необходимый префикс.  
   
 ## <a name="remarks"></a>Примечания  
- Низкоуровневые свойства и методы предоставляются функциями-членами с именами с префиксом по умолчанию **raw_** во избежание конфликтов имен с помощью функции-члены высокого уровня обработки ошибок.  
+ 
+Низкоуровневые свойства и методы предоставляются функциями-членами с именами с префиксом по умолчанию **raw_** во избежание конфликтов имен с помощью функции-члены высокого уровня обработки ошибок.  
   
 > [!NOTE]
->  Эффекты `raw_method_prefix` атрибута не будут изменены наличием [raw_interfaces_only](#_predir_raw_interfaces_only) атрибута. `raw_method_prefix` всегда имеет приоритет над `raw_interfaces_only` в определении префикса. Если оба атрибута используются в одном и том же операторе `#import`, используется префикс, определяемый атрибутом `raw_method_prefix`.  
+> Последствия **raw_method_prefix** атрибута не изменяется при наличии [raw_interfaces_only](#_predir_raw_interfaces_only) атрибута. **Raw_method_prefix** всегда имеет приоритет над `raw_interfaces_only` в определении префикса. Если оба атрибута используются в том же `#import` инструкции, а затем префикс, определенный параметром **raw_method_prefix** используется атрибут.  
   
- **КОНЕЦ определенного C++**  
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

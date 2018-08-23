@@ -1,5 +1,5 @@
 ---
-title: Справочник ЕDITBIN | Документы Microsoft
+title: Справочник ЕDITBIN | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20191fdb133fe09ed4f6a462cd777098acd5f05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e1e9963328d328767d97b3af34e20b1d2a1840b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372312"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572307"
 ---
 # <a name="editbin-reference"></a>Справочник ЕDITBIN
-Двоичный редактор файла COFF корпорации Майкрософт (программа EDITBIN. (EXE) изменяет двоичные файлы общих объекта файла формат COFF. EDITBIN можно использовать для изменения объектных файлов, исполняемых файлов и библиотек динамической компоновки (DLL).  
+Двоичный редактор файла COFF Майкрософт ((программа EDITBIN). (EXE) изменяет двоичные файлы общих объекта файла формат COFF. (Программа EDITBIN) можно использовать для изменения объектных файлов, исполняемых файлов и библиотек динамической компоновки (DLL).  
   
 > [!NOTE]
->  Это средство можно запустить только из командной строки [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. В системной командной строке или проводнике это невозможно.  
+>  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.  
   
- EDITBIN не доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора. Изменения в двоичные файлы, созданные с параметром /GL будет осуществляться через компиляцию и компоновку.  
+ (Программа EDITBIN) недоступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора. Изменения в двоичные файлы, созданные с параметром /GL будет достигаться компиляцию и компоновку.  
   
 -   [Командная строка EDITBIN](../../build/reference/editbin-command-line.md)  
   

@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340733"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572089"
 ---
 # <a name="caccessorrowset-class"></a>Класс CAccessorRowset
 Инкапсулирует набор строк и его связанные методы доступа в одном классе.  
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|Конструктор.|  
 |[Закрыть](#close)|Закрывает набор строк и все методы доступа.|  
 |[FreeRecordMemory](#freerecordmemory)|Освобождает все столбцы в текущей записи, которые следует освободиться.|  
-|[GetColumnInfo](#getcolumninfo)|Реализует [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx).|  
+|[GetColumnInfo](#getcolumninfo)|Реализует [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|  
   
 ## <a name="remarks"></a>Примечания  
  Класс `TAccessor` управляет метода доступа. Класс *TRowset* управляет набора строк.  
@@ -141,7 +141,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
@@ -149,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>Примечания  
  Пользователь должен освободить сведения возвращаемого столбца и строки буфера. Использовать второй версии этого метода при использовании [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) и нужно переопределить привязок.  
   
- Дополнительные сведения см. в разделе [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) в *Справочник программиста OLE DB по*.  
+ Дополнительные сведения см. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *Справочник программиста OLE DB по*.  
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

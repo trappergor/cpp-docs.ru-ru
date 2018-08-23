@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208862"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42575535"
 ---
 # <a name="csid-class"></a>Класс CSid
 Этот класс является оболочкой для `SID` структуры (идентификатором безопасности).  
@@ -332,13 +332,13 @@ bool LoadAccount(
  Системное имя. Эта строка может быть имя удаленного компьютера. Если эта строка имеет значение NULL, вместо него используется локальной системе.  
   
  *pSid*  
- Указатель на [SID](http://msdn.microsoft.com/library/windows/desktop/aa379594\(v=vs.85\).aspx) структуры.  
+ Указатель на [SID](/windows/desktop/api/winnt/ns-winnt-_sid) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя. Чтобы получить расширенные сведения об ошибке, вызовите функцию `GetLastError`.  
   
 ### <a name="remarks"></a>Примечания  
- `LoadAccount` пытается найти идентификатор безопасности для указанного имени. См. в разделе [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) для получения дополнительных сведений.  
+ `LoadAccount` пытается найти идентификатор безопасности для указанного имени. См. в разделе [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) для получения дополнительных сведений.  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  Оператор присвоения.  

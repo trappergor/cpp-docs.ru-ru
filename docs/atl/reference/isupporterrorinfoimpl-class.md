@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849107cc9f0d0611eb3dc9259fc317f73a961407
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c2862945fa95ca45d8544eda0bb06080c5e45c2e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026177"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573284"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Класс ISupportErrorInfoImpl
-Этот класс предоставляет реализацию по умолчанию [ISupportErrorInfo интерфейс](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32) и может использоваться, когда только один интерфейс выдает ошибки для объекта.  
+Этот класс предоставляет реализацию по умолчанию [ISupportErrorInfo интерфейс](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) и может использоваться, когда только один интерфейс выдает ошибки для объекта.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 #### <a name="parameters"></a>Параметры  
  *piid*  
- Указатель на идентификатор IID интерфейса, поддерживающего [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447).  
+ Указатель на идентификатор IID интерфейса, поддерживающего [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).  
   
 ## <a name="members"></a>Участники  
   
@@ -51,10 +51,10 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Указывает, определяется ли интерфейс `riid` поддерживает [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) интерфейс.|  
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Указывает, определяется ли интерфейс `riid` поддерживает [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) интерфейс.|  
   
 ## <a name="remarks"></a>Примечания  
- [ISupportErrorInfo интерфейс](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32) гарантирует, что сведения об ошибке могут быть возвращены клиенту. Объекты, использующие `IErrorInfo` должен реализовывать `ISupportErrorInfo`.  
+ [ISupportErrorInfo интерфейс](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) гарантирует, что сведения об ошибке могут быть возвращены клиенту. Объекты, использующие `IErrorInfo` должен реализовывать `ISupportErrorInfo`.  
   
  Класс `ISupportErrorInfoImpl` предоставляет реализацию по умолчанию `ISupportErrorInfo` и может использоваться, когда только один интерфейс выдает ошибки для объекта. Пример:  
   
@@ -69,14 +69,14 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
  **Заголовок:** atlcom.h  
   
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
- Указывает, определяется ли интерфейс `riid` поддерживает [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) интерфейс.  
+ Указывает, определяется ли интерфейс `riid` поддерживает [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) интерфейс.  
   
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/a54ef18d-ee3f-4483-ac4a-99d758f0960a) в Windows SDK.  
+ См. в разделе [ISupportErrorInfo::InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) в Windows SDK.  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  Вызовите этот метод, чтобы получить число потоков в пуле.  

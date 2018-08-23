@@ -1,5 +1,5 @@
 ---
-title: Предопределенные правила | Документы Microsoft
+title: Предопределенные правила | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a21847bb9363099fa64825b45a90003de053da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52c9440a0320bbc59e5d2552a53e13fae5e29f05
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369764"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573178"
 ---
 # <a name="predefined-rules"></a>Предварительно определенные правила
-Предварительно определенных правилах определения использовать предоставленные NMAKE макросы команд и параметров.  
+Предварительно определенных правилах определения использовать макросы команду и параметры, предоставленные NMAKE.  
   
 |Правило|Команда|Значение по умолчанию<br /><br /> action|Batch<br /><br /> Правило|Платформа nmake работает на|  
 |----------|-------------|------------------------|--------------------|----------------------------|  
 |. asm.exe|$(AS) $(AFLAGS) $&LT;|ML $<|Нет|x86|  
 |. asm.obj|$(AS) $(AFLAGS) /c $<|ML /c $<|да|x86|  
-|. asm.exe|$(AS) $(AFLAGS) $&LT;|ML64 $<|Нет|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|. asm.obj|$(AS) $(AFLAGS) /c $<|/c ML64 $<|да|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|. asm.exe|$(AS) $(AFLAGS) $&LT;|ML64 $<|Нет|X64|  
+|. asm.obj|$(AS) $(AFLAGS) /c $<|ML64 /c $<|да|X64|  
 |. c.exe|$(CC) $(CFLAGS) $&LT;|CL $<|нет|все|  
 |. c.obj|$(CC) $(CFLAGS) /c $<|CL /c $<|да|все|  
 |. cc.exe|$(CC) $(CFLAGS) $&LT;|CL $<|нет|все|  

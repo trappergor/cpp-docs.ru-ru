@@ -1,5 +1,5 @@
 ---
-title: named_guids | Документы Microsoft
+title: named_guids | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2022f979205fed461f02e5886698d9455021a855
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fe616785c63602b5de9702cd3e6c7d80f9872fc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912853"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538326"
 ---
 # <a name="namedguids"></a>named_guids
 **Конкретных C++**  
   
- Указывает компилятору определять и инициализировать переменные GUID в старом стиле, в формате **LIBID_MyLib**, **CLSID_MyCoClass**, **IID_MyInterface**, и **DIID _MyDispInterface**.  
+Указывает компилятору определять и инициализировать переменные GUID в старом стиле, в форме `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, и `DIID_MyDispInterface`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,8 +35,10 @@ named_guids
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **КОНЕЦ определенного C++**  
+
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

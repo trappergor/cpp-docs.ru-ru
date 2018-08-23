@@ -248,16 +248,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825c761f920e48f31bab667790981e5c422f3612
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337494"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539717"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Реализует базовую функциональность для окон с вкладками.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -401,7 +401,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="remarks"></a>Примечания  
  Класс `CMFCBaseTabCtrl` является абстрактным. Это означает, что нельзя создать его экземпляр. Чтобы создать окно с вкладками, необходимо создать класс, производный от класса `CMFCBaseTabCtrl`. Библиотека MFC содержит несколько примеров производных классов, два из которых — [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) и [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md).  
   
- Начиная с [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)], этот класс поддерживает Microsoft Active Accessibility.  
+ Начиная с Visual Studio 2015, этот класс поддерживает Microsoft Active Accessibility.  
   
 ## <a name="customization-tips"></a>Советы по настройке  
  Следующие советы относятся к классу `CMFCBaseTabCtrl Class` и всем классам, наследующим от него.  

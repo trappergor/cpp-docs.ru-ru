@@ -1,5 +1,5 @@
 ---
-title: __svm_vmsave | Документы Microsoft
+title: __svm_vmsave | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b1a76d4dca7a7177a44c56fc7c25832ace89c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54cc51ee320c6b942c3ff0563f293cf48d1c34db
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329669"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541086"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Блок, относящийся только к системам Microsoft**  
@@ -39,18 +39,18 @@ void __svm_vmsave(
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `VmcbPhysicalAddress`|Физический адрес VMCB.|  
   
 ## <a name="remarks"></a>Примечания  
- `__svm_vmsave` Функция эквивалентна `VMSAVE` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения, выполните поиск документа, «AMD64 архитектура программист вручную тома 2: программирования системы» номер документа 24593, редакция 3.11 или более поздней версии в [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) сайта.  
+ `__svm_vmsave` Функция эквивалентна `VMSAVE` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер документа 24593, редакция 3.11 и более поздних версиях в [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) сайта.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__svm_vmsave`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmsave`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
