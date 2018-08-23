@@ -17,69 +17,75 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c490e21717e44ec3e772c01f84a0f5adb08471fd
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: deb100cfcbb8d2af14501b8b5cf90569a90c2d4d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012499"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600495"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory - класс
-Предоставляет основной механизм для создания базового класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-template<typename Base>  
-class SimpleClassFactory : public ClassFactory<>;  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *Base*  
- Базовый класс.  
-  
-## <a name="remarks"></a>Примечания  
- Базовый класс должен предоставлять конструктор по умолчанию.  
-  
- В следующем примере кода демонстрируется использование **SimpleClassFactory** с [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) макрос.  
-  
- `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Метод SimpleClassFactory::CreateInstance](../windows/simpleclassfactory-createinstance-method.md)|Создает экземпляр указанного интерфейса.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `ClassFactory`  
-  
- `SimpleClassFactory`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Предоставляет основной механизм для создания базового класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<typename Base>
+class SimpleClassFactory : public ClassFactory<>;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Base*  
+Базовый класс.
+
+## <a name="remarks"></a>Примечания
+
+Базовый класс должен предоставлять конструктор по умолчанию.
+
+В следующем примере кода демонстрируется использование **SimpleClassFactory** с [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) макрос.
+
+`ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
+
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод SimpleClassFactory::CreateInstance](../windows/simpleclassfactory-createinstance-method.md)|Создает экземпляр указанного интерфейса.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`RuntimeClassBase`
+
+`ImplementsHelper`
+
+`DontUseNewUseMake`
+
+`RuntimeClassFlags`
+
+`RuntimeClassBaseT`
+
+`RuntimeClass`
+
+`ClassFactory`
+
+`SimpleClassFactory`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

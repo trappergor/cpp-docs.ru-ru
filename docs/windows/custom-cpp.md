@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c0f4f04adb9ddc847b1c22485d10512a9d684d0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cb5a3ebbf3ecf1454745d507fc2f2b6f792768ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651899"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600425"
 ---
 # <a name="custom-c"></a>custom (C++)
-Определяет метаданные для объекта в библиотеке типов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[ custom(  
-   uuid,   
-   value  
-) ];  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *uuid*  
- Уникальный идентификатор.  
-  
- *значение*  
- Значение, которое можно поместить в тип variant.  
-  
-## <a name="remarks"></a>Примечания  
- **Пользовательских** атрибут C++ приведет к сведения, которые нужно поместить в библиотеке типов. Вам потребуется средство, которое считывает пользовательское значение из библиотеки типов.  
-  
- **Пользовательских** атрибут имеет ту же функциональность, что [пользовательских](http://msdn.microsoft.com/library/windows/desktop/aa366766) описании атрибута MIDL.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|COM не **интерфейс**, **класс**, **перечисления**s, `idl_module` методов, члены интерфейса, параметров интерфейса **typedef**s, **объединение**s, **структуры**s|  
-|**Повторяемый**|Да|  
-|**Обязательные атрибуты**|**Компонентный класс** (при использовании класса)|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
- [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Атрибуты параметра](../windows/parameter-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [Атрибуты классов](../windows/class-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
+
+Определяет метаданные для объекта в библиотеке типов.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ custom(
+   uuid,
+   value
+) ];
+```
+
+### <a name="parameters"></a>Параметры
+
+*uuid*  
+Уникальный идентификатор.
+
+*значение*  
+Значение, которое можно поместить в тип variant.
+
+## <a name="remarks"></a>Примечания
+
+**Пользовательских** атрибут C++ приведет к сведения, которые нужно поместить в библиотеке типов. Вам потребуется средство, которое считывает пользовательское значение из библиотеки типов.
+
+**Пользовательских** атрибут имеет ту же функциональность, что [пользовательских](http://msdn.microsoft.com/library/windows/desktop/aa366766) описании атрибута MIDL.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|COM не **интерфейс**, **класс**, **перечисления**s, `idl_module` методов, члены интерфейса, параметров интерфейса **typedef**s, **объединение**s, **структуры**s|
+|**Повторяемый**|Да|
+|**Обязательные атрибуты**|**Компонентный класс** (при использовании класса)|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Изолированные атрибуты](../windows/stand-alone-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты параметра](../windows/parameter-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  

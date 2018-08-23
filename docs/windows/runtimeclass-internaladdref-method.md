@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 925ebb50c571c37d5137a24539429d75469a5f9b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6e0d2b6d41598195b2615e4d6b4a8585d1ca1cf2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010755"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599729"
 ---
 # <a name="runtimeclassinternaladdref-method"></a>Метод RuntimeClass::InternalAddRef
-Увеличивает счетчик ссылок для текущего **RuntimeClass** объекта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-ULONG InternalAddRef();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Итоговый счетчик ссылок.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс RuntimeClass](../windows/runtimeclass-class.md)
+
+Увеличивает счетчик ссылок для текущего **RuntimeClass** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ULONG InternalAddRef();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Итоговый счетчик ссылок.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс RuntimeClass](../windows/runtimeclass-class.md)

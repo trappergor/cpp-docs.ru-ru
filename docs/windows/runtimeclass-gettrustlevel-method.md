@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adcec3f4a531a6c48e0995468994900124746e4b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c714f37a53e111c90333352610fd73532ac86fe7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015135"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599836"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>Метод RuntimeClass::GetTrustLevel
 
@@ -37,6 +37,7 @@ STDMETHOD(GetTrustLevel)(
 ```
 
 ### <a name="parameters"></a>Параметры
+
 *trustLvl*  
 После завершения операции, уровень доверия текущего **RuntimeClass** объекта.
 
@@ -55,4 +56,5 @@ STDMETHOD(GetTrustLevel)(
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
- [Класс RuntimeClass](../windows/runtimeclass-class.md)
+
+[Класс RuntimeClass](../windows/runtimeclass-class.md)

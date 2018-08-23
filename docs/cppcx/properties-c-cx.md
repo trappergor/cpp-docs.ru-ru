@@ -1,20 +1,20 @@
 ---
-title: Свойства (C + +/ CX) | Документы Microsoft
+title: Свойства (C + +/ CX) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6393b5e5849ab2198fa8d084c2c1d15838c69bdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089563"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600859"
 ---
 # <a name="properties-ccx"></a>Свойства (C++/CX)
 Типы среды выполнения Windows предоставляют открытые данные в виде свойств. Клиентский код обращается к свойству как открытым данным-членам. Внутренне свойство реализуется в виде блока, содержащего метод доступа get или set, или оба эти метода. С помощью методов доступа можно выполнять дополнительные действия до или после получения значения; например, можно вызывать события или выполнять проверки.  
