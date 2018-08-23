@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd166f39f28f01d2d6b30dce81080ec1b76fcad0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d5c15b03682fa96287db29d1160932135cea0186
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018404"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589263"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Элемент данных Module::GenericReleaseNotifier::callback_
-Содержит лямбда-выражения, функтором или обработчик событий указателя на функцию, связанный с текущим `Module::GenericReleaseNotifier` объекта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-T callback_;  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)
+
+Содержит лямбда-выражения, функтором или обработчик событий указателя на функцию, связанный с текущим `Module::GenericReleaseNotifier` объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+T callback_;
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)

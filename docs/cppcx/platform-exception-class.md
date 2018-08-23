@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::Exception | Документы Microsoft
+title: Класс Platform::Exception | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -14,16 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091564"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586639"
 ---
 # <a name="platformexception-class"></a>Класс Platform::Exception
 Представляет ошибки, происходящие во время выполнения приложения. Пользовательские классы исключений не могут быть производными от класса `Platform::Exception`. Если требуется пользовательское исключение, можно использовать класс `Platform::COMException` и указать относящееся к приложению значение HRESULT.  
@@ -41,21 +41,21 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 ### <a name="constructors"></a>Конструкторы  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[Exception::Exception](#ctor)|Инициализирует новый экземпляр класса `Exception`.|  
   
 ### <a name="methods"></a>Методы  
  Класс `Exception` наследует методы `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`и `ToString()` из [Platform::Object Class](../cppcx/platform-object-class.md). Класс `Exception` содержит также следующий метод.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[Exception::CreateException](#createexception)|Создает исключение, представляющее указанное значение HRESULT.|  
   
 ### <a name="properties"></a>Свойства  
  Класс Exception также содержит следующие свойства.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|  
 |[Exception::Message](#message)|Сообщение с описанием исключения. Это значение доступно только для чтения, его нельзя изменить после создания `Exception` .|  
@@ -69,7 +69,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **Метаданные:** platform.winmd  
 
-## <a name="createexception"></a> Exception::createexception-метод
+## <a name="createexception"></a> Метод Exception::CreateException
 Создает Platform::Exception^ из указанного значения HRESULT.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -81,7 +81,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 ### <a name="parameters"></a>Параметры  
  hr  
- Значение HRESULT, которое, как правило, получается из вызова метода COM. Если значение равно 0, что эквивалентно S_OK, этот метод создает [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) поскольку методы COM, которые завершились успешно, не должны возвращать исключения.  
+ Значение HRESULT, которое, как правило, получается из вызова метода COM. Если значение равно 0, что эквивалентно S_OK, этот метод вызывает исключение [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) поскольку методы COM, которые завершились успешно, не должны вызывать исключения.  
   
  сообщение  
  Строка с описанием ошибки.  
@@ -92,11 +92,11 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод для создания исключения из значения HRESULT, возвращаемого, например, из вызова интерфейса COM. Можно использовать перегруженный метод, принимающий параметр String^, чтобы предоставить пользовательское сообщение.  
   
- Это настоятельно рекомендуется использовать CreateException для создания строго типизированного исключения, а не создавать [Platform::COMException](../cppcx/platform-comexception-class.md) , просто содержит значение HRESULT.  
+ Настоятельно рекомендуется использовать CreateException для создания строго типизированного исключения вместо создания [Platform::COMException](../cppcx/platform-comexception-class.md) который просто содержит значение HRESULT.  
   
 
 
-## <a name="ctor"></a>  Exception::Exception-конструктор
+## <a name="ctor"></a>  Конструктор Exception::Exception
 Инициализирует новый экземпляр класса Exception.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -116,7 +116,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>  Exception::HRESULT-свойство
+## <a name="hresult"></a>  Свойство Exception::HRESULT
 Значение HRESULT, соответствующее исключению.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -146,7 +146,7 @@ public:property String^ Message;
  В исключениях, создаваемых в среде выполнения Windows, это предоставляемое системой описание ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- В Windows 8 это свойство доступно только для чтения, так как в этой версии среды выполнения Windows исключения передаются через интерфейс ABI только в качестве значения HRESULT. В Windows 8.1 через интерфейс ABI передается более подробная информация об исключениях, и можно задать пользовательское сообщение, к которому другие компоненты могут обращаться программным образом. Дополнительные сведения см. в разделе [исключения (C + +/ CX)](../cppcx/exceptions-c-cx.md).  
+ В Windows 8 это свойство доступно только для чтения, так как исключения в этой версии среды выполнения Windows передаются через интерфейс ABI только в качестве значения HRESULT. В Windows 8.1 через интерфейс ABI передается более подробная информация об исключениях, и можно задать пользовательское сообщение, к которому другие компоненты могут обращаться программным образом. Дополнительные сведения см. в разделе [исключения (C + +/ CX)](../cppcx/exceptions-c-cx.md).  
   
 
   

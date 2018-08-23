@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 397b5274c22acd3a136925495fa350c3aa40dece
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653218"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590298"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Пошаговое руководство: Создание традиционного приложения рабочего стола Windows (C++)
 
 В этом пошаговом руководстве показано, как создать традиционное классическое приложение Windows в Visual Studio. Вы создадите пример приложения использует Windows API для отображение «Hello, рабочий стол Windows!» "Hello, World!". Код, созданный в этом пошаговом руководстве, можно использовать в качестве шаблона для создания других классических приложений Windows.
 
-API Windows (также называется Win32 API, Windows Desktop API и Windows Classic API) — это платформа на основе языка C для создания приложений Windows. Он еще в 1980-е и использовался для создания приложений Windows в течение десятилетий. Более сложных и проще для программы платформы построенных на базе этого API, например платформ .NET, ATL и MFC. Даже самые современные код для приложения универсальной платформы Windows и Store написаны на C + +/ WinRT использует этот API под. Дополнительные сведения о Windows API, см. в разделе [индекс API Windows](https://msdn.microsoft.com/library/windows/desktop/ff818516.aspx). Существует много способов создания приложений Windows, но это был первым.
+API Windows (также называется Win32 API, Windows Desktop API и Windows Classic API) — это платформа на основе языка C для создания приложений Windows. Он еще в 1980-е и использовался для создания приложений Windows в течение десятилетий. Более сложных и проще для программы платформы построенных на базе этого API, например платформ .NET, ATL и MFC. Даже самые современные код для приложения универсальной платформы Windows и Store написаны на C + +/ WinRT использует этот API под. Дополнительные сведения о Windows API, см. в разделе [индекс API Windows](/windows/desktop/apiindex/windows-api-list). Существует много способов создания приложений Windows, но это был первым.
 
 > [!IMPORTANT]
 > Для краткости некоторые операторы кода, опущены в тексте. [Сборки кода](#build-the-code) в конце этого документа показан полный код.
@@ -570,4 +570,5 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 Поздравляем! Вы это пошаговое руководство успешно и создали традиционное классическое приложение Windows.
 
 ## <a name="see-also"></a>См. также
- [Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)
+
+[Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)

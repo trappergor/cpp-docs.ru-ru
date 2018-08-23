@@ -15,41 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2d42a108d461e3f0238612171b3445e28138194
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6b5273127b4f4329427f50c82f1bb15a4ad2634e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019619"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590213"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Функция Swap (библиотека шаблонов C++ среды выполнения Windows)
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-WRL_NOTHROW inline void Swap(  
-   _Inout_ T& left,  
-   _Inout_ T& right  
-);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *left*  
- Первый аргумент.  
-  
- *right*  
- Второй аргумент.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
-  
-## <a name="remarks"></a>Примечания  
- Меняет местами значения двух заданных аргументов.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** internal.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+WRL_NOTHROW inline void Swap(
+   _Inout_ T& left,
+   _Inout_ T& right
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*left*  
+Первый аргумент.
+
+*right*  
+Второй аргумент.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+## <a name="remarks"></a>Примечания
+
+Меняет местами значения двух заданных аргументов.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** internal.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

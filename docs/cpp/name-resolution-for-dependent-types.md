@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402690"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588221"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Разрешение имен зависимых типов
 Используйте **typename** для полных имен в определениях шаблонов, чтобы сообщить компилятору, что заданное полное имя определяет тип. Дополнительные сведения см. в разделе [typename](../cpp/typename.md).  
@@ -98,7 +98,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>Устранение неоднозначности шаблона  
- В [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] применяются стандартные правила C++98/03/11 для устранения неоднозначности, связанной с ключевым словом template. В следующем примере Visual C++ 2010 принимали несоответствующие строки и соответствующие строки.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] принимает только соответствующие строки.  
+ Visual Studio 2012 обеспечивает C ++ 98/03/11 стандартные правила для устранения неоднозначности с ключевым словом «шаблон». В следующем примере Visual C++ 2010 принимали несоответствующие строки и соответствующие строки.  Visual Studio 2012 принимает только соответствующие строки.  
   
 ```cpp  
 #include <iostream>  

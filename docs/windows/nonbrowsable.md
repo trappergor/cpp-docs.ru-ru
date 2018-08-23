@@ -17,54 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db563fb7e140aece589c4f13bfcfe82cf490c966
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d2537ba803d27cc3cf90d111e69778e9d6970770
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016727"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590149"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
-Указывает, что член интерфейса не должен отображаться в обозревателе свойств.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[nonbrowsable]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Недоступная для просмотра** атрибут C++ имеет ту же функциональность, что [недоступная для просмотра](http://msdn.microsoft.com/library/windows/desktop/aa367117) описании атрибута MIDL.  
-  
-## <a name="example"></a>Пример  
-  
-```cpp  
-// cpp_attr_ref_nonbrowsable.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLib")];  
-  
-[object, helpstring("help string"), helpstringcontext(1),   
-uuid="11111111-1111-1111-1111-111111111111"]   
-__interface IMyI  
-{  
-   [nonbrowsable] HRESULT xx();  
-};  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Метод интерфейса|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
+
+Указывает, что член интерфейса не должен отображаться в обозревателе свойств.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[nonbrowsable]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Недоступная для просмотра** атрибут C++ имеет ту же функциональность, что [недоступная для просмотра](http://msdn.microsoft.com/library/windows/desktop/aa367117) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+```cpp
+// cpp_attr_ref_nonbrowsable.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLib")];
+
+[object, helpstring("help string"), helpstringcontext(1),
+uuid="11111111-1111-1111-1111-111111111111"]
+__interface IMyI
+{
+   [nonbrowsable] HRESULT xx();
+};
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  

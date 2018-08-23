@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::ArrayReference | Документы Microsoft
+title: Класс Platform::ArrayReference | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8e4183c400cf45a23f24a98292b68f6df537da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7b2a0fd8c4903852e88fa80f12bc05894625888
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089118"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588315"
 ---
 # <a name="platformarrayreference-class"></a>Класс Platform::ArrayReference
 `ArrayReference` — тип оптимизации, который можно заменить на [Platform::Array^](../cppcx/platform-array-class.md) во входных параметрах, если требуется заполнить входными данными массив в стиле языка C.  
@@ -35,13 +35,13 @@ class ArrayReference
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[ArrayReference::ArrayReference](#ctor)|Инициализирует новый экземпляр класса `ArrayReference`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Оператор ArrayReference::operator()](#operator-call)|Преобразует этот объект `ArrayReference` в `Platform::Array<T>^*`.|  
 |[Оператор ArrayReference::operator=](#operator-assign)|Назначает содержимое другой ссылки `ArrayReference` этому экземпляру.|  
@@ -61,7 +61,7 @@ class ArrayReference
  **Заголовок:** vccorlib.h  
   
 ## <a name="ctor"></a>  Конструктор ArrayReference::ArrayReference
-Инициализирует новый экземпляр [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) класса.  
+Инициализирует новый экземпляр класса [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) класса.  
   
 ### <a name="syntax"></a>Синтаксис  
   
