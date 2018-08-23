@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32c59c00180b26a2856b1fc210302ffff0e72f0c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d81a3f29e99f49b03eb76f44af60c42d433e0bdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641308"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611236"
 ---
 # <a name="asyncbasestart-method"></a>Метод AsyncBase::Start
-Начинает асинхронную операцию.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-STDMETHOD(  
-   Start  
-)(void);  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция запускается или уже запущен; в противном случае E_ILLEGAL_STATE_CHANGE.  
-  
-## <a name="remarks"></a>Примечания  
- **Start()** — это реализация по умолчанию `IAsyncInfo::Start`, а не фактические работает. Чтобы фактически запускает асинхронную операцию, переопределите `OnStart()` чисто виртуального метода.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Начинает асинхронную операцию.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(
+   Start
+)(void);
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция запускается или уже запущен; в противном случае E_ILLEGAL_STATE_CHANGE.
+
+## <a name="remarks"></a>Примечания
+
+**Start()** — это реализация по умолчанию `IAsyncInfo::Start`, а не фактические работает. Чтобы фактически запускает асинхронную операцию, переопределите `OnStart()` чисто виртуального метода.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

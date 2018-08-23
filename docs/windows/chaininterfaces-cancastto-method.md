@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff24ac92e5e84cb85127ef6e33805928fabd6f60
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8398f0bd4d9fdc786926782b13ebcac913a6a351
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647535"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612874"
 ---
 # <a name="chaininterfacescancastto-method"></a>Метод ChainInterfaces::CanCastTo
-Указывает ли идентификатор указанный интерфейс может быть приведен к каждому из специализаций, определяемая параметрами шаблона не по умолчанию.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-__forceinline bool CanCastTo(  
-   REFIID riid,  
-   _Deref_out_ void **ppv  
-);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *riid*  
- Идентификатор интерфейса.  
-  
- *ppv*  
- Указатель на последний идентификатор интерфейса, который был приведен успешно.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если все операции приведения выполнена успешно; в противном случае **false**.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Структура ChainInterfaces](../windows/chaininterfaces-structure.md)
+
+Указывает ли идентификатор указанный интерфейс может быть приведен к каждому из специализаций, определяемая параметрами шаблона не по умолчанию.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+__forceinline bool CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*  
+Идентификатор интерфейса.
+
+*ppv*  
+Указатель на последний идентификатор интерфейса, который был приведен успешно.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если все операции приведения выполнена успешно; в противном случае **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Структура ChainInterfaces](../windows/chaininterfaces-structure.md)

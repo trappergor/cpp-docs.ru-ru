@@ -17,67 +17,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c45aa289b4b41ddfaf141dcaf790734284af7c8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: aaeb641fc7b2276567edfb30fd36c46db6cfc5ae
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643554"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613693"
 ---
 # <a name="comptrref-class"></a>ComPtrRef - класс
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-template <  
-   typename T  
->  
-class ComPtrRef : public ComPtrRefBase<T>;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *T*  
- Объект [ComPtr\<T >](../windows/comptr-class.md) тип или тип, производный от него, а не просто интерфейс, представленный `ComPtr`.  
-  
-## <a name="remarks"></a>Примечания  
- Представляет ссылку на объект типа `ComPtr<T>`.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Конструктор ComPtrRef::ComPtrRef](../windows/comptrref-comptrref-constructor.md)|Инициализирует новый экземпляр класса **ComPtrRef** класс из заданного указателя в другой **ComPtrRef** объекта.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Метод ComPtrRef::GetAddressOf](../windows/comptrref-getaddressof-method.md)|Извлекает адрес указателя на интерфейс, представленный текущим **ComPtrRef** объекта.|  
-|[Метод ComPtrRef::ReleaseAndGetAddressOf](../windows/comptrref-releaseandgetaddressof-method.md)|Удаляет текущий **ComPtrRef** и возвращает указатель на указатель на интерфейс, который был представлен **ComPtrRef** объекта.|  
-  
-### <a name="public-operators"></a>Открытые операторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Оператор ComPtrRef::operator InterfaceType**](../windows/comptrref-operator-interfacetype-star-star-operator.md)|Удаляет текущий **ComPtrRef** и возвращает указатель на указатель на интерфейс, который был представлен **ComPtrRef** объекта.|  
-|[Оператор ComPtrRef::operator T*](../windows/comptrref-operator-t-star-operator.md)|Возвращает значение [ptr_](../windows/comptrrefbase-ptr-data-member.md) данными-членом текущим объектом ComPtrRef.|  
-|[Оператор ComPtrRef::operator void**](../windows/comptrref-operator-void-star-star-operator.md)|Удаляет текущий **ComPtrRef** объекта, приведение указателя на интерфейс, который был представлен **ComPtrRef** объекта как указатель к указатель to **void**, а затем Возвращает указатель приведения.|  
-|[Оператор ComPtrRef::operator*](../windows/comptrref-operator-star-operator.md)|Извлекает указатель на интерфейс, представленный текущим **ComPtrRef** объекта.|  
-|[Оператор ComPtrRef::operator==](../windows/comptrref-operator-equality-operator.md)|Указывает ли два **ComPtrRef** объекты равны.|  
-|[Оператор ComPtrRef::operator!=](../windows/comptrref-operator-inequality-operator.md)|Указывает ли два **ComPtrRef** объекты не равны.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `ComPtrRefBase`  
-  
- `ComPtrRef`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template <
+   typename T
+>
+class ComPtrRef : public ComPtrRefBase<T>;
+```
+
+#### <a name="parameters"></a>Параметры
+
+*T*  
+Объект [ComPtr\<T >](../windows/comptr-class.md) тип или тип, производный от него, а не просто интерфейс, представленный `ComPtr`.
+
+## <a name="remarks"></a>Примечания
+
+Представляет ссылку на объект типа `ComPtr<T>`.
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Конструктор ComPtrRef::ComPtrRef](../windows/comptrref-comptrref-constructor.md)|Инициализирует новый экземпляр класса **ComPtrRef** класс из заданного указателя в другой **ComPtrRef** объекта.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод ComPtrRef::GetAddressOf](../windows/comptrref-getaddressof-method.md)|Извлекает адрес указателя на интерфейс, представленный текущим **ComPtrRef** объекта.|
+|[Метод ComPtrRef::ReleaseAndGetAddressOf](../windows/comptrref-releaseandgetaddressof-method.md)|Удаляет текущий **ComPtrRef** и возвращает указатель на указатель на интерфейс, который был представлен **ComPtrRef** объекта.|
+
+### <a name="public-operators"></a>Открытые операторы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Оператор ComPtrRef::operator InterfaceType**](../windows/comptrref-operator-interfacetype-star-star-operator.md)|Удаляет текущий **ComPtrRef** и возвращает указатель на указатель на интерфейс, который был представлен **ComPtrRef** объекта.|
+|[Оператор ComPtrRef::operator T*](../windows/comptrref-operator-t-star-operator.md)|Возвращает значение [ptr_](../windows/comptrrefbase-ptr-data-member.md) данными-членом текущим объектом ComPtrRef.|
+|[Оператор ComPtrRef::operator void**](../windows/comptrref-operator-void-star-star-operator.md)|Удаляет текущий **ComPtrRef** объекта, приведение указателя на интерфейс, который был представлен **ComPtrRef** объекта как указатель к указатель to **void**, а затем Возвращает указатель приведения.|
+|[Оператор ComPtrRef::operator*](../windows/comptrref-operator-star-operator.md)|Извлекает указатель на интерфейс, представленный текущим **ComPtrRef** объекта.|
+|[Оператор ComPtrRef::operator==](../windows/comptrref-operator-equality-operator.md)|Указывает ли два **ComPtrRef** объекты равны.|
+|[Оператор ComPtrRef::operator!=](../windows/comptrref-operator-inequality-operator.md)|Указывает ли два **ComPtrRef** объекты не равны.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`ComPtrRefBase`
+
+`ComPtrRef`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

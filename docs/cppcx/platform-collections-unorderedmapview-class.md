@@ -1,5 +1,5 @@
 ---
-title: 'Класс Platform::Collections:: unorderedmapview | Документы Microsoft'
+title: 'Класс Platform::Collections:: unorderedmapview | Документация Майкрософт'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092681"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613578"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Класс Platform::Collections::UnorderedMapView
 Представляет доступное только для чтения представление на *карте*, которое является коллекцией пар "ключ-значение".  
@@ -42,19 +42,19 @@ ref class UnorderedMapView sealed;
  Тип, предоставляющий объект функции, который может сравнивать два ключевых значения для определения равенства. По умолчанию [std::equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Примечания  
- UnorderedMapView — это конкретная реализация C++ из [Windows::Foundation:: Collections::\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) , передаваемая через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView — это конкретная реализация C++ [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) интерфейс, который передается через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[UnorderedMapView::UnorderedMapView](#ctor)|Инициализирует новый экземпляр класса UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[UnorderedMapView::First](#first)|Возвращает итератор, который инициализируется первым элементом в представлении карты.|  
 |[UnorderedMapView::HasKey](#haskey)|Определяет, содержит ли текущий объект UnorderedMapView указанный ключ.|  
@@ -85,7 +85,7 @@ virtual Windows::Foundation::Collections::IIterator<
  Итератор, указывающий первый элемент в представлении сопоставления.  
   
 ### <a name="remarks"></a>Примечания  
- Это удобный способ сохранения итератора, возвращаемого методом First(), — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевое слово выведения типа. Например, `auto x = myMapView->First();`.  
+ Удобный способ сохранения итератора, возвращаемого методом First() — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевым словом вывода типа. Например, `auto x = myMapView->First();`.  
   
 
 
@@ -126,7 +126,7 @@ V Lookup(K key);
 
 
 ## <a name="size"></a>  Метод UnorderedMapView::Size
-Возвращает число [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) в UnorderedMapView.  
+Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в UnorderedMapView.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -221,10 +221,10 @@ UnorderedMapView(
  Имя типа UnorderedMapView.  
   
  `H`  
- Объект функции, который может создать хэш-значение для ключа. По умолчанию используется значение [std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) для типов, `std::hash` поддерживает.  
+ Объект функции, который может создать хэш-значение для ключа. По умолчанию используется [std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) для типов, `std::hash` поддерживает.  
   
  `P`  
- Тип, предоставляющий объект функции, который может сравнивать два ключа с целью установления их равенства. По умолчанию используется значение [std::equal_to\<K >](../standard-library/equal-to-struct.md).  
+ Тип, предоставляющий объект функции, который может сравнивать два ключа с целью установления их равенства. По умолчанию используется [std::equal_to\<K >](../standard-library/equal-to-struct.md).  
   
  `m`  
  Ссылка или [значения lvalue и rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для [std::unordered_map](../standard-library/unordered-map-class.md) , используемый для инициализации UnorderedMapView.  

@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::MTAThreadAttribute | Документы Microsoft
+title: Класс Platform::MTAThreadAttribute | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089169"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613463"
 ---
 # <a name="platformmtathreadattribute-class"></a>Класс Platform::MTAThreadAttribute
 Указывает, что потоковая модель для приложения является многопотоковым подразделением (MTA).  
@@ -33,18 +33,18 @@ ms.locfileid: "33089169"
 public ref class MTAThreadAttribute sealed : Attribute  
 ```  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[1 конструктор MTAThreadAttribute](#ctor) конструктор|Инициализирует новый экземпляр класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
- Атрибут MTAThreadAttribute наследует от [класса Platform::Object](../cppcx/platform-object-class.md). Атрибут MTAThreadAttribute также перегружает или имеет следующие члены:  
+ Атрибут MTAThreadAttribute наследует от [Platform::Object Class](../cppcx/platform-object-class.md). Атрибут MTAThreadAttribute также перегружает или имеет следующие члены:  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[MTAThreadAttribute::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  

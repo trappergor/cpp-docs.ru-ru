@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642842"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611036"
 ---
 # <a name="agileeventsource-class"></a>Класс AgileEventSource
 
@@ -36,12 +36,13 @@ class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Параметры  
- *TDelegateInterface*  
- Интерфейс делегат, представляющий обработчик событий.
+## <a name="parameters"></a>Параметры
 
- *TEventSourceOptions*  
- [InvokeModeOptions](invokemodeoptions-structure.md) структура, поля которого invokeMode задается `InvokeMode::StopOnFirstError` или `InvokeMode::FireAll`.
+*TDelegateInterface*  
+Интерфейс делегат, представляющий обработчик событий.
+
+*TEventSourceOptions*  
+[InvokeModeOptions](invokemodeoptions-structure.md) структура, поля которого invokeMode задается `InvokeMode::StopOnFirstError` или `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Примечания
 
@@ -49,13 +50,14 @@ class AgileEventSource
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
- `EventSource` `AgileEventSource`
+`EventSource`
+`AgileEventSource`
 
 ## <a name="requirements"></a>Требования
 
- **Заголовок:** event.h
+**Заголовок:** event.h
 
- **Пространство имен:** Microsoft::WRL
+**Пространство имен:** Microsoft::WRL
 
 ## <a name="members"></a>Участники
 
@@ -92,4 +94,5 @@ HRESULT Add(
 
 
 ## <a name="see-also"></a>См. также
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
