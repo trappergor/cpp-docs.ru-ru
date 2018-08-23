@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f677557c81502a38caf7414abf71936ada456471
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2be87f336adeb156789bb8c0ae7c8d05c8de39a4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016305"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608641"
 ---
 # <a name="modulegetobjectcount-method"></a>Метод Module::GetObjectCount
-Извлекает количество объектов, управляемых этим модулем.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-virtual long GetObjectCount() const;  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Текущее количество объектов, управляемых этим модулем.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
+
+Извлекает количество объектов, управляемых этим модулем.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual long GetObjectCount() const;
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Текущее количество объектов, управляемых этим модулем.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
 ## <a name="see-also"></a>См. также
- [Класс Module](../windows/module-class.md)
+
+[Класс Module](../windows/module-class.md)

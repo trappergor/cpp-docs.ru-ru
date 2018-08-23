@@ -16,46 +16,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f84379e57dc5730227726d28c6947d0274b615c5
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 71cafe3d73204b6a318e731d0a95f2dfcc73fa5a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603918"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600127"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Спецификаторы переопределения (расширения компонентов C++)
-*Спецификаторы переопределения* изменяют поведение унаследованных типов и членов унаследованных типов ведут себя в производных типах.  
-  
-## <a name="all-runtimes"></a>Все среды выполнения  
-### <a name="remarks"></a>Примечания  
-  
- Дополнительные сведения о спецификаторах переопределения см. в разделах:  
-  
--   [abstract](../windows/abstract-cpp-component-extensions.md)  
-  
--   [New (новый слот в vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
-  
--   [override](../windows/override-cpp-component-extensions.md)  
-  
--   [sealed](../windows/sealed-cpp-component-extensions.md)  
-  
--   [Спецификаторы переопределения и компиляции в машинный код](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
-  
- **Абстрактный** и **запечатанный** относятся также и на объявления типа, где они не действуют как спецификаторы переопределения.  
-  
- Сведения о явного переопределения функции базового класса, см. в разделе [явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).  
-  
-## <a name="windows-runtime"></a>Среда выполнения Windows  
- (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).  
-  
-### <a name="requirements"></a>Требования  
- Параметр компилятора: `/ZW`  
-  
-## <a name="common-language-runtime"></a>Среда CLR  
- (Отсутствуют комментарии для этой функции языка, которая применяется только в среде CLR).  
-  
-### <a name="requirements"></a>Требования  
- Параметр компилятора: `/clr`  
-  
-## <a name="see-also"></a>См. также  
- [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+
+*Спецификаторы переопределения* изменяют поведение унаследованных типов и членов унаследованных типов ведут себя в производных типах.
+
+## <a name="all-runtimes"></a>Все среды выполнения
+
+### <a name="remarks"></a>Примечания
+
+Дополнительные сведения о спецификаторах переопределения см. в разделах:
+
+- [abstract](../windows/abstract-cpp-component-extensions.md)
+
+- [New (новый слот в vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+
+- [override](../windows/override-cpp-component-extensions.md)
+
+- [sealed](../windows/sealed-cpp-component-extensions.md)
+
+- [Спецификаторы переопределения и компиляции в машинный код](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)
+
+**Абстрактный** и **запечатанный** относятся также и на объявления типа, где они не действуют как спецификаторы переопределения.
+
+Сведения о явного переопределения функции базового класса, см. в разделе [явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).
+
+## <a name="windows-runtime"></a>Среда выполнения Windows
+
+(Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).
+
+### <a name="requirements"></a>Требования
+
+Параметр компилятора: `/ZW`
+
+## <a name="common-language-runtime"></a>Среда CLR
+
+(Отсутствуют комментарии для этой функции языка, которая применяется только в среде CLR).
+
+### <a name="requirements"></a>Требования
+
+Параметр компилятора: `/clr`
+
+## <a name="see-also"></a>См. также
+
+[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

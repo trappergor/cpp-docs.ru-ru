@@ -17,43 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc0dcba6597b6b8a3b37c240bf1c4a58f30b6b23
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e63b0b47dcc3f53ecd5af2d51505df844f66437a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020347"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599390"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-Запрещает компилятору вставку кода в результате использования атрибута.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[ no_injected_text(  
-   boolean  
-) ];  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *логическое* (необязательно)  
- **значение true,** Если нет кода, подставленного, **false** чтобы кода, которые следует вставить. **значение true,** используется по умолчанию.  
-  
-## <a name="remarks"></a>Примечания  
- Наиболее распространенное использование **no_injected_text** C++ атрибут должен быть, [/Fx](../build/reference/fx-merge-injected-code.md) параметр компилятора, который вставляет **no_injected_text** атрибут в MRG-файла.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|В любом месте|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты компилятора](../windows/compiler-attributes.md)   
+
+Запрещает компилятору вставку кода в результате использования атрибута.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ no_injected_text(
+   boolean
+) ];
+```
+
+### <a name="parameters"></a>Параметры
+
+*логическое* (необязательно)  
+**значение true,** Если нет кода, подставленного, **false** чтобы кода, которые следует вставить. **значение true,** используется по умолчанию.
+
+## <a name="remarks"></a>Примечания
+
+Наиболее распространенное использование **no_injected_text** C++ атрибут должен быть, [/Fx](../build/reference/fx-merge-injected-code.md) параметр компилятора, который вставляет **no_injected_text** атрибут в MRG-файла.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|В любом месте|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты компилятора](../windows/compiler-attributes.md)  
