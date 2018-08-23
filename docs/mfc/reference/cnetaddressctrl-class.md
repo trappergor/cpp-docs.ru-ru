@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852283"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538917"
 ---
 # <a name="cnetaddressctrl-class"></a>Класс CNetAddressCtrl
 Класс `CNetAddressCtrl` представляет элемент управления сетевого адреса, который можно использовать для ввода и проверки формата IPv4, IPv6 и именованных адресов DNS.  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  На следующем рисунке представлен диалог, содержащий элемент управления network address. Текстовое поле (1) для управления сетевым адресом содержит недопустимый сетевой адрес. (2) сообщения всплывающая подсказка отображается в том случае, если сетевой адрес является недопустимым.  
   
- ![Диалоговое окно с элементом управления сетевым адресом и подсказкой. ] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![Диалоговое окно с элементом управления сетевым адресом и подсказкой. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода приведен фрагмент диалогового окна проверки сетевого адреса. Обработчики событий для трех переключателей укажите, что сетевой адрес может принимать одно из трех типов адрес. Пользователь вводит адрес в текстовом поле элемента управления сети, а затем нажимает кнопку для проверки адреса. Если адрес является допустимым, отображается сообщение об успешном выполнении; в противном случае отображается сообщение об ошибке предопределенные подсказку.  
@@ -98,7 +98,7 @@ class CNetAddressCtrl : public CEdit
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
- Этот класс поддерживается в [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] и более поздних версий.  
+ Этот класс поддерживается в Windows Vista и более поздних версий.  
   
  Дополнительные требования для данного класса описаны в [построения требования для Windows Vista стандартные элементы управления](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
