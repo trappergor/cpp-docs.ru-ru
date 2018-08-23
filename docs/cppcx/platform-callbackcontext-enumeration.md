@@ -1,5 +1,5 @@
 ---
-title: Platform::callbackcontext-перечисление | Документы Microsoft
+title: Перечисление Platform::CallbackContext | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757de5f686bb809a5d2fb159a3ee547a20edc982
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b80fe7749fdb2f91e300cff007c01001edfa557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086957"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603042"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext - перечисление
 Указывает контекст потока, в котором выполняется функция обратного вызова (обработчик события).  
@@ -33,7 +33,7 @@ enum class CallbackContext {};
   
 ### <a name="members"></a>Участники  
   
-|Код типа|Описание|  
+|Код типа|Описание:|  
 |---------------|-----------------|  
 |Любой|Функция обратного вызова может выполняться в любом контексте потока.|  
 |То же|Функция обратного вызова может выполняться в контексте потока, запустившего асинхронную операцию.|  

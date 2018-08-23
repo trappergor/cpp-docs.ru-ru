@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::StringReference | Документы Microsoft
+title: Класс Platform::StringReference | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097514"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609667"
 ---
 # <a name="platformstringreference-class"></a>Класс Platform::StringReference
 Тип оптимизации, который можно использовать для передачи строковых данных из входных параметров `Platform::String^` в другие методы с минимальным числом операций копирования.  
@@ -39,13 +39,13 @@ class StringReference
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[StringReference::StringReference](#ctor)|Два конструктора для создания экземпляров `StringReference`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[StringReference::Data](#data)|Возвращает строковые данные как массив значений char16.|  
 |[StringReference::Length](#length)|Возвращает число символов в строке.|  
@@ -54,7 +54,7 @@ class StringReference
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[StringReference::operator=](#operator-assign)|Присваивает `StringReference` новому экземпляру `StringReference` .|  
 |[StringReference::operator()](#operator-call)|Преобразует `StringReference` в `Platform::String^`.|  
@@ -69,7 +69,7 @@ class StringReference
  **Заголовок:** vccorlib.h  
 
 ## <a name="data"></a>  Метод StringReference::Data
-Возвращает содержимое этого `StringReference` как массив значений char16.  
+Возвращает содержимое данного `StringReference` как массив значений char16.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -149,7 +149,7 @@ StringReference& operator=(const ::default::char16* __strArg);
  Ссылка на объект типа `StringReference`.  
   
 ### <a name="remarks"></a>Примечания  
- Поскольку `StringReference` является стандартным классом C++, а не ссылочным классом, он не отображается в **обозревателя объектов**.  
+ Так как `StringReference` является стандартным классом C++, а не ссылочным классом, он не отображается в **обозреватель объектов**.  
   
 
 

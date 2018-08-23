@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110025"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609353"
 ---
 # <a name="windows-operations-ccli"></a>Операции Windows (C++/CLI)
-Демонстрирует различные Windows задачи, связанные с [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Демонстрирует различные задачи конкретных Windows, с помощью пакета SDK для Windows.  
   
- В следующих разделах описываются различные операции Windows, выполняемые с [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] с помощью Visual C++.  
+ В следующих разделах описываются различные операции Windows, выполняемые с помощью пакета SDK Windows, с помощью Visual C++.  
 
 ## <a name="determine_shutdown"></a> Определить, запущена ли завершение работы
 В следующем примере кода показано, как определить, завершается ли в настоящее время приложение или .NET Framework. Это полезно для доступа к статических элементов в .NET Framework, поскольку во время завершения работы, эти конструкции являются завершается системой и не могут использоваться. Проверив <xref:System.Environment.HasShutdownStarted%2A> свойство во-первых, можно избежать потенциальных сбоев, не доступ к этим элементам.  

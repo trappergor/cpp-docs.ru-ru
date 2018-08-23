@@ -1,23 +1,23 @@
 ---
-title: Классы Array и WriteOnlyArray (C + +/ CX) | Документы Microsoft
+title: Классы Array и WriteOnlyArray (C + +/ CX) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c26ef4058cc3116d964740a93f7395c300b92b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089396"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606116"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Классы Array и WriteOnlyArray (C++/CX)
-Можно свободно использовать обычные массивы в стиле языка C или [std::array](../standard-library/array-class-stl.md) в C + +/ CX программы (хотя [std::vector](../standard-library/vector-class.md) часто является лучшим выбором), но любого API, который публикуется в метаданных, необходимо преобразовать массив в стиле C или вектора синхронизации в [Platform::Array](../cppcx/platform-array-class.md) или [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) типа, в зависимости от того, как он используется. Тип [Platform::Array](../cppcx/platform-array-class.md) не сравним по эффективности и широте возможностей с типом [std::vector](../standard-library/vector-class.md), поэтому в общем случае не рекомендуется использовать его во внутреннем коде, который выполняет множество операций над элементами массива.  
+Можно свободно использовать обычные массивы в стиле C или [std::array](../standard-library/array-class-stl.md) в C + +/ CX программы (несмотря на то что [std::vector](../standard-library/vector-class.md) часто является наиболее предпочтительной), но в любом API, который публикуется в метаданных, необходимо преобразовать массив в стиле C или вектора синхронизации в [Platform::Array](../cppcx/platform-array-class.md) или [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) типа в зависимости от того, как он используется. Тип [Platform::Array](../cppcx/platform-array-class.md) не сравним по эффективности и широте возможностей с типом [std::vector](../standard-library/vector-class.md), поэтому в общем случае не рекомендуется использовать его во внутреннем коде, который выполняет множество операций над элементами массива.  
   
  Следующие типы массивов могут передаваться через ABI:  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33089396"
   
 4.  возвращаемое значение Platform::Array^  
   
- Эти типы массивов следует использовать для реализации трех типов шаблонов массивов, которые определены в среде выполнения Windows.  
+ Использовать эти типы массивов для реализации трех типов шаблонов массивов, определяемые средой выполнения Windows.  
   
  PassArray  
  Используется, когда вызывающий объект передает массив методу. Тип входного параметра C++ — `const` [Platform::Array](../cppcx/platform-array-class.md)\<T >.  
@@ -50,7 +50,7 @@ ms.locfileid: "33089396"
  [!code-cpp[cx_arrays#01](../cppcx/codesnippet/CPP/js-array/class1.cpp#01)]  
   
 ## <a name="receivearray-pattern"></a>Шаблон ReceiveArray  
- В шаблоне ReceiveArray клиентский код объявляет массив и передает его методу, который выделяет память для массива и инициализирует его. Тип входного параметра C++ — указатель в виде "крышки": `Array<T>^*`. В следующем примере показано, как объявить объект массива в JavaScript и передать его функции C++, которая выделяет память, инициализирует элементы и возвращает массив в JavaScript. JavaScript обрабатывает выделенный массив в качестве возвращаемого значения, но функция C++ обрабатывает его как выходной параметр.  
+ В шаблоне ReceiveArray клиентский код объявляет массив и передает его методу, который выделяет память для массива и инициализирует его. Тип входного параметра C++ — указатель на крышки: `Array<T>^*`. В следующем примере показано, как объявить объект массива в JavaScript и передать его функции C++, которая выделяет память, инициализирует элементы и возвращает массив в JavaScript. JavaScript обрабатывает выделенный массив в качестве возвращаемого значения, но функция C++ обрабатывает его как выходной параметр.  
   
  [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]  
   

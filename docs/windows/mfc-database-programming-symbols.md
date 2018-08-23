@@ -1,5 +1,5 @@
 ---
-title: Символы программирования базы данных MFC | Документы Microsoft
+title: Символы программирования базы данных MFC | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2944200e8fbfe0a5b68bdcb5f82952dfda4f746b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50696d8f6ee0aa1c61374c0758905a5bb7063ab5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877609"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606941"
 ---
 # <a name="mfc-database-programming-symbols"></a>Символы программирования базы данных MFC
-Символы в этой таблице отображаются только в проекте MFC, когда была добавлена поддержка базы данных. Они поддерживают подключение MFC к серверам SQL и программированию базы данных.  
+Символы в этой таблице появляются только в проекте MFC при была добавлена поддержка баз данных. Они поддерживают подключение MFC для серверов SQL Server и программирования базы данных.
   
-|||  
-|-|-|  
-|AFX_IDP_SQL_API_CONFORMANCE|AFX_IDP_SQL_BOOKMARKS_ NOT_ENABLED|  
-|AFX_IDP_SQL_BOOKMARKS_ NOT_SUPPORTED|AFX_IDP_SQL_CONNECT_FAIL|  
-|AFX_IDP_SQL_DATA_TRUNCATED|AFX_IDP_SQL_DYNAMIC_CURSOR_ NOT_SUPPORTED|  
-|AFX_IDP_SQL_DYNASET_ NOT_SUPPORTED|AFX_IDP_SQL_EMPTY_COLUMN_LIST|  
-|AFX_IDP_SQL_FIELD_NOT_FOUND|НЕСООТВЕТСТВИЕ AFX_IDP_SQL_FILED_SCHEMA_|  
-|AFX_IDP_SQL_ILLEGAL_MODE|AFX_IDP_SQL_INCORRECT_ODBC|  
-|AFX_IDP_SQL_LOCK_MODE_ NOT_SUPPORTED|AFX_IDP_SQL_MULTIPLE_ ROWS_AFFECTED|  
-|AFX_IDP_SQL_NO_CURRENT_RECORD|AFX_IDP_SQL_NO_DATA_FOUND|  
-|AFX_IDP_SQL_NO_POSITIONED_ ОБНОВЛЕНИЙ|AFX_IDP_SQL_NO_ROWS_AFFECTED|  
-|AFX_IDP_SQL_ODBC_LOAD_FAILED|AFX_IDP_SQL_ODBC_V2_REQUIRED|  
-|AFX_IDP_SQL_RECORDSET_ FORWARD_ONLY|AFX_IDP_SQL_RECORDSET_READONLY|  
-|AFX_IDP_SQL_ROW_FETCH|AFX_IDP_SQL_ROW_UPDATE_ NOT_SUPPORTED|  
-|AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|  
-|AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|  
+|||
+|-|-|
+|AFX_IDP_SQL_API_CONFORMANCE|AFX_IDP_SQL_BOOKMARKS_ NOT_ENABLED|
+|AFX_IDP_SQL_BOOKMARKS_ NOT_SUPPORTED|AFX_IDP_SQL_CONNECT_FAIL|
+|AFX_IDP_SQL_DATA_TRUNCATED|AFX_IDP_SQL_DYNAMIC_CURSOR_ NOT_SUPPORTED|
+|AFX_IDP_SQL_DYNASET_ NOT_SUPPORTED|AFX_IDP_SQL_EMPTY_COLUMN_LIST|
+|AFX_IDP_SQL_FIELD_NOT_FOUND|НЕСООТВЕТСТВИЕ AFX_IDP_SQL_FILED_SCHEMA_|
+|AFX_IDP_SQL_ILLEGAL_MODE|AFX_IDP_SQL_INCORRECT_ODBC|
+|AFX_IDP_SQL_LOCK_MODE_ NOT_SUPPORTED|AFX_IDP_SQL_MULTIPLE_ ROWS_AFFECTED|
+|AFX_IDP_SQL_NO_CURRENT_RECORD|AFX_IDP_SQL_NO_DATA_FOUND|
+|AFX_IDP_SQL_NO_POSITIONED_ ОБНОВЛЕНИЙ|AFX_IDP_SQL_NO_ROWS_AFFECTED|
+|AFX_IDP_SQL_ODBC_LOAD_FAILED|AFX_IDP_SQL_ODBC_V2_REQUIRED|
+|AFX_IDP_SQL_RECORDSET_ FORWARD_ONLY|AFX_IDP_SQL_RECORDSET_READONLY|
+|AFX_IDP_SQL_ROW_FETCH|AFX_IDP_SQL_ROW_UPDATE_ NOT_SUPPORTED|
+|AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
+|AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
   
-## <a name="requirements"></a>Требования  
- MFC  
+## <a name="requirements"></a>Требования
+ MFC
   
-## <a name="see-also"></a>См. также  
- [Предопределенные символы MFC](../windows/mfc-predefined-symbols.md)   
+## <a name="see-also"></a>См. также
+ [Предопределенные символы MFC](../windows/mfc-predefined-symbols.md)  
  [Символы: идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)

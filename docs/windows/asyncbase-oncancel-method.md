@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b648718c715a43befbc5ead828c810dbfa92d120
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6297b2d9313a8bc2c7a4f90632affa054c49c662
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646878"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595271"
 ---
 # <a name="asyncbaseoncancel-method"></a>Метод AsyncBase::OnCancel
-При переопределении в производном классе отменяет асинхронную операцию.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-virtual void OnCancel(  
-   void  
-) = 0;  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Asyncbase-класс](../windows/asyncbase-class.md)   
- [Метод AsyncBase::Cancel](../windows/asyncbase-cancel-method.md)
+
+При переопределении в производном классе отменяет асинхронную операцию.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual void OnCancel(
+   void
+) = 0;
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)  
+[Метод AsyncBase::Cancel](../windows/asyncbase-cancel-method.md)

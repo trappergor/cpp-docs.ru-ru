@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 220e70158f6d1929bd120690f61325c45432fa08
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 861dcb15350955f6789e554b749ae1e6f26520ad
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649186"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597536"
 ---
 # <a name="handlenulltraitsgetinvalidvalue-method"></a>Метод HANDLENullTraits::GetInvalidValue
-Представляет недопустимый дескриптор.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает **nullptr**.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Структура HANDLENullTraits](../windows/handlenulltraits-structure.md)
+
+Представляет недопустимый дескриптор.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Всегда возвращает **nullptr**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Структура HANDLENullTraits](../windows/handlenulltraits-structure.md)

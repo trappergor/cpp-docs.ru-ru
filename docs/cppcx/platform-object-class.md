@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::Object | Документы Microsoft
+title: Класс Platform::Object | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091885"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601742"
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
-Определяет общее поведение для классов и структур ссылок в приложениях среды выполнения Windows. Все экземпляры классов ссылок и структур ссылок могут неявно преобразовываться в Platform::Object^ и переопределять его виртуальный метод ToString.  
+Определяет общее поведение для классов ссылок и структур ссылок в приложениях среды выполнения Windows. Все экземпляры классов ссылок и структур ссылок могут неявно преобразовываться в Platform::Object^ и переопределять его виртуальный метод ToString.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ public ref class Object : Object
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Object::Object](#ctor)|Инициализирует новый экземпляр класса Object.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Object::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
 |[Object::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  
@@ -99,12 +99,12 @@ public:int GetHashCode()
  Числовое значение, которое однозначно идентифицирует этот объект.  
   
 ### <a name="remarks"></a>Примечания  
- Можно использовать GetHashCode для создание ключей объектов в сопоставлениях. Хэш-коды можно сравнивать с помощью [Object::Equals](#equals). Если эта ветвь выполнения кода очень важна, а `GetHashCode` и `Equals` работают недостаточно быстро, можно перейти вниз на соответствующий уровень COM и выполнять сравнение указателей `IUnknown` в неуправляемом коде.  
+ Можно использовать GetHashCode для создание ключей объектов в сопоставлениях. Можно сравнить хэш-кодов с помощью [Object::Equals](#equals). Если эта ветвь выполнения кода очень важна, а `GetHashCode` и `Equals` работают недостаточно быстро, можно перейти вниз на соответствующий уровень COM и выполнять сравнение указателей `IUnknown` в неуправляемом коде.  
   
 
 
 ## <a name="gettype"></a>  Метод Object::GetType
-Возвращает [Platform::Type](../cppcx/platform-type-class.md) объекта, который описывает тип среды выполнения объекта.  
+Возвращает [Platform::Type](../cppcx/platform-type-class.md) , описывающий тип среды выполнения объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -114,14 +114,14 @@ Object::GetType()
 
   
 ### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение  
- Объект [Platform::Type](../cppcx/platform-type-class.md) объекта, который описывает тип среды выполнения объекта.  
+ Объект [Platform::Type](../cppcx/platform-type-class.md) , описывающий тип среды выполнения объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Статический [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) можно использовать для получения [перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) значение, которое представляет текущий тип. Это наиболее полезно для встроенных типов. Код типа для любого класса ссылок помимо [Platform::String](../cppcx/platform-string-class.md) — объект (1).  
+ Статический [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) может использоваться для получения [перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) значение, которое представляет текущий тип. Это наиболее полезно для встроенных типов. Код типа для любого класса ссылок помимо [Platform::String](../cppcx/platform-string-class.md) — объект (1).  
   
- [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) класс используется в API Windows как независимый от языка способ передачи сведений о типе между компонентами и приложениями Windows. T[класса Platform::Type](../cppcx/platform-type-class.md) содержит операторы для преобразования между `Type` и `TypeName`.  
+ [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) класс используется в API Windows как независимый от языка способ передачи сведений о типе между компонентами Windows и приложениями. T[класс Platform::Type](../cppcx/platform-type-class.md) имеет операторы для преобразования между `Type` и `TypeName`.  
   
- Используйте [typeid](../windows/typeid-cpp-component-extensions.md) оператора, возвращающего `Platform::Type` объект для имени класса, например при переходе между страницами XAML:  
+ Используйте [typeid](../windows/typeid-cpp-component-extensions.md) оператора для выборки `Platform::Type` для имени класса, например, при переходе между страницами XAML:  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
@@ -130,7 +130,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>См. также  
  [Класс Platform::Type](../cppcx/platform-type-class.md)   
  [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)   
- [Тип System] (.. /cppcx/Type-System-c-CX.md
+ [Система типов] (.. /cppcx/Type-System-c-CX.md
   
 ## <a name="ctor"></a>  Конструктор Object::Object
 Инициализирует новый экземпляр класса Object.  

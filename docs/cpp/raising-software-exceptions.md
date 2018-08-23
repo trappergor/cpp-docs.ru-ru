@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5b4469d7d53a7374f62e0ec232a7836e80ab75d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405192"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606419"
 ---
 # <a name="raising-software-exceptions"></a>Создание исключений программного обеспечения
 Некоторые из самых распространенных источников ошибок программы не отмечены системой как исключения. Например, при попытке выделить блок памяти при недостаточной памяти среда выполнения или функция API не создает исключение, но возвращает код ошибки.  
@@ -68,7 +68,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- Если требуется просто создать исключение, можно установить для трех последних параметров значение 0. Три последних параметра полезны при передаче дополнительной информации и установке флага, который запрещает обработчикам продолжать выполнение. См. в разделе [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) работать в [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] Дополнительные сведения.  
+ Если требуется просто создать исключение, можно установить для трех последних параметров значение 0. Три последних параметра полезны при передаче дополнительной информации и установке флага, который запрещает обработчикам продолжать выполнение. См. в разделе [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) функции в пакете SDK для Windows, Дополнительные сведения.  
   
  Затем можно проверить определенные коды в фильтрах обработки исключений. Пример:  
   

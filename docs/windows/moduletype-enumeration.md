@@ -17,38 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: fe8d41aded38db7cde5316e04cfa1689845aa4e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019934"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595476"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType - перечисление
-Указывает, должен ли модуль поддерживать внутрипроцессный или внепроцессный сервер.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-enum ModuleType;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="values"></a>Значения  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|`InProc`|Внутрипроцессный сервер.|  
-|`OutOfProc`|Сервер вне процесса.|  
-|`DisableCaching`|Отключите механизм кэширования для модуля.|  
-|`InProcDisableCaching`|Сочетание `InProc` и `DisableCaching`.|  
-|`OutOfProcDisableCaching`|Сочетание `OutOfProc` и `DisableCaching`.|  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Указывает, должен ли модуль поддерживать внутрипроцессный или внепроцессный сервер.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+enum ModuleType;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="values"></a>Значения
+
+|Имя|Описание:|
+|----------|-----------------|
+|`InProc`|Внутрипроцессный сервер.|
+|`OutOfProc`|Сервер вне процесса.|
+|`DisableCaching`|Отключите механизм кэширования для модуля.|
+|`InProcDisableCaching`|Сочетание `InProc` и `DisableCaching`.|
+|`OutOfProcDisableCaching`|Сочетание `OutOfProc` и `DisableCaching`.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

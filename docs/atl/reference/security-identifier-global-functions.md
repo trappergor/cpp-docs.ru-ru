@@ -1,5 +1,5 @@
 ---
-title: Глобальные функции идентификатор безопасности | Документы Microsoft
+title: Глобальные функции идентификатор безопасности | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,15 +47,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365159"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610237"
 ---
 # <a name="security-identifier-global-functions"></a>Глобальные функции идентификатор безопасности
-Эти функции возвращают общих хорошо известного SID объектов.  
+Эти функции возвращают распространенных хорошо известного SID объектов.  
   
 > [!IMPORTANT]
 >  Функции, перечисленные в следующей таблице, не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -196,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы включить пользователя NT AUTHORITY\NetworkService для чтения объект безопасности CPerfMon выполните NetworkService. Сетевая служба добавляет SecurityAttribute ATLServer код, который позволит DLL для входа в систему под учетной записью NetworkService на [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] и больше операционной системы.  
+ Позволяет включить пользователя NT AUTHORITY\NetworkService для чтения объект безопасности CPerfMon NetworkService. Сетевая служба добавляет SecurityAttribute ATLServer код, который позволит библиотеку DLL для входа в систему под учетной записью NetworkService на Windows XP Home Edition, Windows XP Professional, Windows Server 2003 и более операционной системы.  
   
- При создании пользовательского журнала счетчиков с помощью класса ATLServer CPerfMon в Perfmon MMC счетчики могут не отображаться при просмотре файла журнала, несмотря на то, что они будут правильно отображаться в режиме реального времени. CPerfMon пользовательские счетчики производительности не имеет необходимых разрешений для запуска от имени службы «Оповещения и журналы производительности» (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (или более поздней) операционных систем. Эта служба работает под учетной записью «NT AUTHORITY\NetworkService».  
+ При создании пользовательского журнала счетчиков с классом ATLServer CPerfMon в Perfmon MMC счетчики могут не отображаться при просмотре файла журнала, несмотря на то, что они будут правильно отображаться в режиме реального времени. CPerfMon пользовательские счетчики производительности не имеет необходимых разрешений для работы в службу «Журналы и оповещения производительности» (smlogsvc.exe) в Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (или выше) операционных систем. Эта служба выполняется под учетной записью «NT AUTHORITY\NetworkService».  
   
 ##  <a name="null"></a>  SIDs::NULL  
  Возвращает идентификатор безопасности SECURITY_NULL_RID.  

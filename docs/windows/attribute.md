@@ -20,201 +20,205 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 69ec1c9e1b3e30e68bf7199f7a70cb7d329ee040
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646323"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603645"
 ---
 # <a name="attribute"></a>Атрибут
-Позволяет создавать настраиваемый атрибут.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[ attribute(  
-   AllowOn,  
-   AllowMultiple=boolean,  
-   Inherited=boolean  
-) ]  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *AllowOn*  
- Указывает элементы языка, к которым можно применять настраиваемый атрибут. Значение по умолчанию — `System::AttributeTargets::All` (см. в разделе [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
-  
- *AllowMultiple*  
- Указывает ли настраиваемый атрибут может применяться многократно конструкции. Значение по умолчанию — FALSE.  
-  
- *Унаследованные*  
- Указывает, является ли атрибут наследуются подклассами. Компилятор не поддерживает специальные для использования этой функции; Это задание атрибута получатели (`Reflection`, например) следует учитывать эти сведения. Если *унаследованное* имеет значение TRUE, атрибут наследуется. Если *AllowMultiple* имеет значение TRUE, атрибут будет накапливаться в производный член; Если *AllowMultiple* имеет значение FALSE, атрибут будет переопределить (или замена) в наследовании. Если *унаследованное* имеет значение FALSE, атрибут не наследуется. Значение по умолчанию — TRUE.  
-  
-## <a name="remarks"></a>Примечания  
-  
+
+Позволяет создавать настраиваемый атрибут.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ attribute(
+   AllowOn,
+   AllowMultiple=boolean,
+   Inherited=boolean
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*AllowOn*  
+Указывает элементы языка, к которым можно применять настраиваемый атрибут. Значение по умолчанию — `System::AttributeTargets::All` (см. в разделе [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).
+
+*AllowMultiple*  
+Указывает ли настраиваемый атрибут может применяться многократно конструкции. Значение по умолчанию — FALSE.
+
+*Унаследованные*  
+Указывает, является ли атрибут наследуются подклассами. Компилятор не поддерживает специальные для использования этой функции; Это задание атрибута получатели (`Reflection`, например) следует учитывать эти сведения. Если *унаследованное* имеет значение TRUE, атрибут наследуется. Если *AllowMultiple* имеет значение TRUE, атрибут будет накапливаться в производный член; Если *AllowMultiple* имеет значение FALSE, атрибут будет переопределить (или замена) в наследовании. Если *унаследованное* имеет значение FALSE, атрибут не наследуется. Значение по умолчанию — TRUE.
+
+## <a name="remarks"></a>Примечания
+
 > [!NOTE]
->  **Атрибут** атрибут считается устаревшим.  Использовать общий атрибут среды выполнения языка `System.Attribute` к непосредственно для создания пользовательских attirbutes. Дополнительные сведения см. в разделе [определяемые пользователем атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md).  
-  
- Вы определите [настраиваемого атрибута](../windows/custom-attributes-cpp.md) , поместив **атрибут** атрибута в определении управляемого класса или структуры. Имя класса является настраиваемого атрибута. Пример:  
-  
-```cpp  
-[ attribute(Parameter) ]  
-public ref class MyAttr {};  
-```  
-  
- Определяет атрибут, именуемый `MyAttr` , которые могут быть применены для параметров функции. Класс должен быть открытым, если атрибут будет использоваться в других сборках.  
-  
+> **Атрибут** атрибут считается устаревшим.  Использовать общий атрибут среды выполнения языка `System.Attribute` к непосредственно для создания пользовательских attirbutes. Дополнительные сведения см. в разделе [определяемые пользователем атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md).
+
+Вы определите [настраиваемого атрибута](../windows/custom-attributes-cpp.md) , поместив **атрибут** атрибута в определении управляемого класса или структуры. Имя класса является настраиваемого атрибута. Пример:
+
+```cpp
+[ attribute(Parameter) ]
+public ref class MyAttr {};
+```
+
+Определяет атрибут, именуемый `MyAttr` , которые могут быть применены для параметров функции. Класс должен быть открытым, если атрибут будет использоваться в других сборках.
+
 > [!NOTE]
->  Во избежание конфликтов пространств имен, все имена атрибутов неявно заканчиваются словом «Attribute»; в этом примере атрибут и класс называется фактически `MyAttrAttribute`, но `MyAttr` и `MyAttrAttribute` взаимозаменяемы.  
-  
- Открытые конструкторы класса определения атрибута неименованные параметры. Перегруженные конструкторы разрешить несколько способов указания атрибута, чтобы настраиваемый атрибут, определенный следующим образом:  
-  
-```cpp  
-// cpp_attr_ref_attribute.cpp  
-// compile with: /c /clr  
-using namespace System;  
-[ attribute(AttributeTargets::Class) ]   // apply attribute to classes  
-public ref class MyAttr {  
-public:  
-   MyAttr() {}   // Constructor with no parameters  
-   MyAttr(int arg1) {}   // Constructor with one parameter  
-};  
-  
-[MyAttr]  
-ref class ClassA {};   // Attribute with no parameters  
-  
-[MyAttr(123)]  
-ref class ClassB {};   // Attribute with one parameter  
-```  
-  
- Открытые элементы данных и свойства класса являются необязательно именованные параметры атрибута:  
-  
-```cpp  
-// cpp_attr_ref_attribute_2.cpp  
-// compile with: /c /clr  
-using namespace System;  
-[ attribute(AttributeTargets::Class) ]  
-ref class MyAttr {  
-public:  
-   // Property Priority becomes attribute's named parameter Priority  
-    property int Priority {  
-       void set(int value) {}  
-       int get() { return 0;}  
-   }  
-   // Data member Version becomes attribute's named parameter Version  
-   int Version;  
-   MyAttr() {}   // constructor with no parameters  
-   MyAttr(int arg1) {}   // constructor with one parameter  
-};  
-  
-[MyAttr(123, Version=2)]   
-ref class ClassC {};  
-```  
-  
- Список допустимых типов параметров, см. в разделе [пользовательские атрибуты](../windows/custom-attributes-cpp.md).  
-  
- См. в разделе [определяемые пользователем атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md) обсуждение целевые объекты атрибутов.  
-  
- **Атрибут** атрибут имеет *AllowMultiple* параметр, указывающий, является ли настраиваемый атрибут однократного использования или multiuse, (могут отображаться несколько раз на ту же сущность).  
-  
-```cpp  
-// cpp_attr_ref_attribute_3.cpp  
-// compile with: /c /clr  
-using namespace System;  
-[ attribute(AttributeTargets::Class, AllowMultiple = true) ]  
-ref struct MyAttr {  
-   MyAttr(){}  
-};   // MyAttr is a multiuse attribute  
-  
-[MyAttr, MyAttr()]  
-ref class ClassA {};  
-```  
-  
- Классы настраиваемых атрибутов являются производными от прямо или косвенно <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, который упрощает задание определений атрибутов в метаданных и быстро. **Атрибут** атрибут подразумевает наследование от `System::Attribute`, поэтому нет необходимости явных наследование:  
-  
-```cpp  
-[ attribute(Class) ]  
-ref class MyAttr  
-```  
-  
- эквивалентно  
-  
-```cpp  
-[ attribute(Class) ]  
-ref class MyAttr : System::Attribute   // OK, but redundant.  
-```  
-  
- **атрибут** является псевдонимом для <xref:System.AttributeUsageAttribute?displayProperty=fullName> (не атрибут; это исключение из правила именования атрибут).  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**Класс ссылки**, **структура ссылки**|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="example"></a>Пример  
-  
-```cpp  
-// cpp_attr_ref_attribute_4.cpp  
-// compile with: /c /clr  
-using namespace System;  
-[attribute(AttributeTargets::Class)]  
-ref struct ABC {  
-   ABC(Type ^) {}  
-};  
-  
-[ABC(String::typeid)]   // typeid operator yields System::Type ^  
-ref class MyClass {};  
-```  
-  
-## <a name="example"></a>Пример  
- `Inherited` Именованный аргумент указывает ли настраиваемый атрибут, примененный в базовом классе будет отображаться на отражении производного класса.  
-  
-```cpp  
-// cpp_attr_ref_attribute_5.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Reflection;  
-  
-[attribute( AttributeTargets::Method, Inherited=false )]  
-ref class BaseOnlyAttribute { };  
-  
-[attribute( AttributeTargets::Method, Inherited=true )]  
-ref class DerivedTooAttribute { };  
-  
-ref struct IBase {  
-public:  
-   [BaseOnly, DerivedToo]  
-   virtual void meth() {}  
-};  
-  
-// Reflection on Derived::meth will show DerivedTooAttribute   
-// but not BaseOnlyAttribute.  
-ref class Derived : public IBase {  
-public:  
-   virtual void meth() override {}  
-};  
-  
-int main() {  
-   IBase ^ pIB = gcnew Derived;  
-  
-   MemberInfo ^ pMI = pIB->GetType( )->GetMethod( "meth" );  
-   array<Object ^> ^ pObjs = pMI->GetCustomAttributes( true );  
-   Console::WriteLine( pObjs->Length ) ;  
-}  
-```  
-  
-```Output  
-2  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель атрибутов](../windows/attributes-alphabetical-reference.md)   
- [Настраиваемые атрибуты](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+> Во избежание конфликтов пространств имен, все имена атрибутов неявно заканчиваются словом «Attribute»; в этом примере атрибут и класс называется фактически `MyAttrAttribute`, но `MyAttr` и `MyAttrAttribute` взаимозаменяемы.
+
+Открытые конструкторы класса определения атрибута неименованные параметры. Перегруженные конструкторы разрешить несколько способов указания атрибута, чтобы настраиваемый атрибут, определенный следующим образом:
+
+```cpp
+// cpp_attr_ref_attribute.cpp
+// compile with: /c /clr
+using namespace System;
+[ attribute(AttributeTargets::Class) ]   // apply attribute to classes
+public ref class MyAttr {
+public:
+   MyAttr() {}   // Constructor with no parameters
+   MyAttr(int arg1) {}   // Constructor with one parameter
+};
+
+[MyAttr]
+ref class ClassA {};   // Attribute with no parameters
+
+[MyAttr(123)]
+ref class ClassB {};   // Attribute with one parameter
+```
+
+Открытые элементы данных и свойства класса являются необязательно именованные параметры атрибута:
+
+```cpp
+// cpp_attr_ref_attribute_2.cpp
+// compile with: /c /clr
+using namespace System;
+[ attribute(AttributeTargets::Class) ]
+ref class MyAttr {
+public:
+   // Property Priority becomes attribute's named parameter Priority
+    property int Priority {
+       void set(int value) {}
+       int get() { return 0;}
+   }
+   // Data member Version becomes attribute's named parameter Version
+   int Version;
+   MyAttr() {}   // constructor with no parameters
+   MyAttr(int arg1) {}   // constructor with one parameter
+};
+
+[MyAttr(123, Version=2)]
+ref class ClassC {};
+```
+
+Список допустимых типов параметров, см. в разделе [пользовательские атрибуты](../windows/custom-attributes-cpp.md).
+
+См. в разделе [определяемые пользователем атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md) обсуждение целевые объекты атрибутов.
+
+**Атрибут** атрибут имеет *AllowMultiple* параметр, указывающий, является ли настраиваемый атрибут однократного использования или multiuse, (могут отображаться несколько раз на ту же сущность).
+
+```cpp
+// cpp_attr_ref_attribute_3.cpp
+// compile with: /c /clr
+using namespace System;
+[ attribute(AttributeTargets::Class, AllowMultiple = true) ]
+ref struct MyAttr {
+   MyAttr(){}
+};   // MyAttr is a multiuse attribute
+
+[MyAttr, MyAttr()]
+ref class ClassA {};
+```
+
+Классы настраиваемых атрибутов являются производными от прямо или косвенно <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, который упрощает задание определений атрибутов в метаданных и быстро. **Атрибут** атрибут подразумевает наследование от `System::Attribute`, поэтому нет необходимости явных наследование:
+
+```cpp
+[ attribute(Class) ]
+ref class MyAttr
+```
+
+эквивалентно
+
+```cpp
+[ attribute(Class) ]
+ref class MyAttr : System::Attribute   // OK, but redundant.
+```
+
+**атрибут** является псевдонимом для <xref:System.AttributeUsageAttribute?displayProperty=fullName> (не атрибут; это исключение из правила именования атрибут).
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**Класс ссылки**, **структура ссылки**|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="example"></a>Пример
+
+```cpp
+// cpp_attr_ref_attribute_4.cpp
+// compile with: /c /clr
+using namespace System;
+[attribute(AttributeTargets::Class)]
+ref struct ABC {
+   ABC(Type ^) {}
+};
+
+[ABC(String::typeid)]   // typeid operator yields System::Type ^
+ref class MyClass {};
+```
+
+## <a name="example"></a>Пример
+
+`Inherited` Именованный аргумент указывает ли настраиваемый атрибут, примененный в базовом классе будет отображаться на отражении производного класса.
+
+```cpp
+// cpp_attr_ref_attribute_5.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Reflection;
+
+[attribute( AttributeTargets::Method, Inherited=false )]
+ref class BaseOnlyAttribute { };
+
+[attribute( AttributeTargets::Method, Inherited=true )]
+ref class DerivedTooAttribute { };
+
+ref struct IBase {
+public:
+   [BaseOnly, DerivedToo]
+   virtual void meth() {}
+};
+
+// Reflection on Derived::meth will show DerivedTooAttribute
+// but not BaseOnlyAttribute.
+ref class Derived : public IBase {
+public:
+   virtual void meth() override {}
+};
+
+int main() {
+   IBase ^ pIB = gcnew Derived;
+
+   MemberInfo ^ pMI = pIB->GetType( )->GetMethod( "meth" );
+   array<Object ^> ^ pObjs = pMI->GetCustomAttributes( true );
+   Console::WriteLine( pObjs->Length ) ;
+}
+```
+
+```Output
+2
+```
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель атрибутов](../windows/attributes-alphabetical-reference.md)  
+[Настраиваемые атрибуты](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 223358d33fb7eab0663237e8eb8deb487b84109a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 071686e7ea4bf8a88beb340019b33d838e3aa806
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010442"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603517"
 ---
 # <a name="modulebasemodulebase-destructor"></a>Деструктор ModuleBase::~ModuleBase
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-virtual ~ModuleBase();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Деинициализирует текущий экземпляр **ModuleBase** класса.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Класс ModuleBase](../windows/modulebase-class.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual ~ModuleBase();
+```
+
+## <a name="remarks"></a>Примечания
+
+Деинициализирует текущий экземпляр **ModuleBase** класса.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Класс ModuleBase](../windows/modulebase-class.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

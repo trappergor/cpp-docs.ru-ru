@@ -1,20 +1,20 @@
 ---
-title: Разделяемые классы (C + +/ CX) | Документы Microsoft
+title: Разделяемые классы (C + +/ CX) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9457f3401ed03b13bf29f489b88472d11a4dd7a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd1d5f7559b88505929153ae1852fc42171e5208
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091859"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593030"
 ---
 # <a name="partial-classes-ccx"></a>Разделяемые классы (C++/CX)
 Разделяемый класс — это конструкция, предназначенная для ситуаций, когда вы изменяете часть определения класса, и программное обеспечение для автоматического построения кода (например, конструктор XAML) также изменяет код в этом классе. Использование разделяемых классов позволяет предотвратить изменение вашего кода конструктором. В проекте Visual Studio к сгенерированному файлу автоматически применяется модификатор `partial` .  

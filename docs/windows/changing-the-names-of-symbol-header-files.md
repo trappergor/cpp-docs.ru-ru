@@ -24,30 +24,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d1c3436190ff36724eba1601a51608371b8d0a4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2df697df91374b61b72b9093c8cf16e1ac613863
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649950"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605230"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>Изменение имен файлов символов заголовков
-Обычно все определения символов сохраняются в `Resource.h`. Однако может возникнуть необходимость изменить имя этого включаемого файла, чтобы, например, работать с несколькими файлами ресурсов, расположенными в одном каталоге.  
-  
-### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Изменение имени файла символов заголовков ресурсов  
-  
-1.  В [представление ресурсов](../windows/resource-view-window.md), щелкните правой кнопкой мыши RC-файл и выберите пункт [включения ресурсов](../windows/resource-includes-dialog-box.md) в контекстном меню.  
-  
-    > [!NOTE]
-    >  Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  В **файла символов заголовков** введите новое имя включаемого файла.  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.  
-  
-## <a name="requirements"></a>Требования  
- Win32  
-  
-## <a name="see-also"></a>См. также  
- [Просмотр символов ресурсов](../windows/viewing-resource-symbols.md)   
- [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)
+
+Обычно все определения символов сохраняются в `Resource.h`. Однако может возникнуть необходимость изменить имя этого включаемого файла, чтобы, например, работать с несколькими файлами ресурсов, расположенными в одном каталоге.
+
+### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Изменение имени файла символов заголовков ресурсов
+
+1. В [представление ресурсов](../windows/resource-view-window.md), щелкните правой кнопкой мыши RC-файл и выберите пункт [включения ресурсов](../windows/resource-includes-dialog-box.md) в контекстном меню.
+
+   > [!NOTE]
+   > Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).
+
+2. В **файла символов заголовков** введите новое имя включаемого файла.
+
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.
+
+## <a name="requirements"></a>Требования
+
+Win32
+
+## <a name="see-also"></a>См. также
+
+[Просмотр символов ресурсов](../windows/viewing-resource-symbols.md)  
+[Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)

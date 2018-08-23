@@ -1,5 +1,5 @@
 ---
-title: Настраиваемые атрибуты (C++) | Документы Microsoft
+title: Настраиваемые атрибуты (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5ca62b63cd09f2c5041efbbf36b01cc3b44f77c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2bbcd8fb0e1b04ec35520f154724b095762233b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887030"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608005"
 ---
 # <a name="custom-attributes-c"></a>Настраиваемые атрибуты (C++)
-Пользовательский атрибут представляет строго типизированный метод, который дает пользователю возможность расширять метаданные. В этом разделе описывается с помощью атрибутов: указания параметров и целевых объектов.  
-  
- Дополнительные сведения об определении новых пользовательских атрибутов см.  
-  
--   [Пользовательские атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md)  
-  
--   [атрибут](../windows/attribute.md) (устаревший синтаксис).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибут](../windows/attribute.md)   
- [Настраиваемые атрибуты (C++)](../windows/custom-attributes-cpp.md)
+
+Настраиваемый атрибут — это строго типизированный метод, который позволяет расширить метаданных. В этом разделе описывается с помощью атрибутов: указания параметров и целевых объектов.
+
+Дополнительные сведения об определении новых пользовательских атрибутов см. в разделе,
+
+- [Пользовательские атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md)
+
+- [атрибут](../windows/attribute.md) (устаревший синтаксис).
+
+## <a name="see-also"></a>См. также
+
+[attribute](../windows/attribute.md)  
+[Настраиваемые атрибуты (C++)](../windows/custom-attributes-cpp.md)

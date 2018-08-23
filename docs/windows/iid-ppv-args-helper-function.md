@@ -17,43 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 351e0755f786e69da1dea6a925b7afc7cb6d6bf1
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 3d22d6a7fce670f7da7740b5f0678eafaa49f519
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011644"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604027"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper - функция
-Проверяет, что тип заданного аргумента является производным от интерфейса `IUnknown`.  
-  
+
+Проверяет, что тип заданного аргумента является производным от интерфейса `IUnknown`.
+
 > [!IMPORTANT]
->  Данная специализация шаблона поддерживает инфраструктуру WRL и не предназначена для использования непосредственно из кода. Используйте [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) вместо этого.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-template<typename T>  
-void** IID_PPV_ARGS_Helper(  
-   _Inout_ Microsoft::WRL::Details::ComPtrRef<T> pp  
-);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *T*  
- Тип аргумента *pp*.  
-  
- *PP*  
- Двойной косвенный указатель.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Аргумент *pp* приведен указатель для указатель для **void**.  
-  
-## <a name="remarks"></a>Примечания  
- Ошибка времени компиляции создается в том случае, если параметр шаблона *T* не является производным от `IUnknown`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по (библиотека среды выполнения Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)
+> Данная специализация шаблона поддерживает инфраструктуру WRL и не предназначена для использования непосредственно из кода. Используйте [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) вместо этого.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<typename T>
+void** IID_PPV_ARGS_Helper(
+   _Inout_ Microsoft::WRL::Details::ComPtrRef<T> pp
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*  
+Тип аргумента *pp*.
+
+*PP*  
+Двойной косвенный указатель.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Аргумент *pp* приведен указатель для указатель для **void**.
+
+## <a name="remarks"></a>Примечания
+
+Ошибка времени компиляции создается в том случае, если параметр шаблона *T* не является производным от `IUnknown`.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+## <a name="see-also"></a>См. также
+
+[Справочник по (библиотека среды выполнения Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

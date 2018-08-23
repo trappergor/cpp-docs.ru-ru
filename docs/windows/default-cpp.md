@@ -19,107 +19,112 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbd2ab9481d8658bac75b62a4afa18f3ff77f0d5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fe924627b0b0f4f5d02fab0040a4037085d94738
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646261"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595587"
 ---
 # <a name="default-c"></a>default (C++)
-Указывает, что настраиваемый или disp-интерфейс, определенный в коклассе, представляет интерфейс программирования по умолчанию.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[ default(  
-   interface1,  
-   interface2  
-) ]  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *interface1*  
- Интерфейс по умолчанию, который будет доступен в средах разработки сценариев, где создаются объекты на основе класса, определенного с помощью атрибута **default** .  
-  
- Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первое вхождение неисходного интерфейса.  
-  
- *interface2*(необязательно)  
- Исходный интерфейс по умолчанию. Этот интерфейс также необходимо указать с помощью атрибута [source](../windows/source-cpp.md) .  
-  
- Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первый исходный интерфейс.  
-  
-## <a name="remarks"></a>Примечания  
- Атрибут **default** языка C++ имеет ту же функциональность, что и атрибут [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) языка MIDL. Атрибут **default** также используется вместе с атрибутом [case](../windows/case-cpp.md) .  
-  
-## <a name="example"></a>Пример  
- В следующем коде показано, как **по умолчанию** используется в определении кокласса для указания `ICustomDispatch` качестве интерфейса программирования по умолчанию:  
-  
-```cpp  
-// cpp_attr_ref_default.cpp  
-// compile with: /LD  
-#include "windows.h"  
-[module(name="MyLibrary")];  
-  
-[object, uuid("9E66A290-4365-11D2-A997-00C04FA37DDB")]  
-__interface ICustom {  
-   HRESULT Custom([in] long l, [out, retval] long *pLong);  
-};  
-  
-[dual, uuid("9E66A291-4365-11D2-A997-00C04FA37DDB")]   
-__interface IDual {  
-   HRESULT Dual([in] long l, [out, retval] long *pLong);  
-};  
-  
-[object, uuid("9E66A293-4365-11D2-A997-00C04FA37DDB")]  
-__interface ICustomDispatch : public IDispatch {  
-   HRESULT Dispatch([in] long l, [out, retval] long *pLong);  
-};  
-  
-[   coclass,  
-   default(ICustomDispatch),   
-   source(IDual),  
+
+Указывает, что настраиваемый или disp-интерфейс, определенный в коклассе, представляет интерфейс программирования по умолчанию.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ default(
+   interface1,
+   interface2
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*interface1*  
+Интерфейс по умолчанию, который будет доступен в средах разработки сценариев, где создаются объекты на основе класса, определенного с помощью атрибута **default** .
+
+Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первое вхождение неисходного интерфейса.
+
+*interface2*(необязательно)  
+Исходный интерфейс по умолчанию. Этот интерфейс также необходимо указать с помощью атрибута [source](../windows/source-cpp.md) .
+
+Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первый исходный интерфейс.
+
+## <a name="remarks"></a>Примечания
+
+Атрибут **default** языка C++ имеет ту же функциональность, что и атрибут [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) языка MIDL. Атрибут **default** также используется вместе с атрибутом [case](../windows/case-cpp.md) .
+
+## <a name="example"></a>Пример
+
+В следующем коде показано, как **по умолчанию** используется в определении кокласса для указания `ICustomDispatch` качестве интерфейса программирования по умолчанию:
+
+```cpp
+// cpp_attr_ref_default.cpp
+// compile with: /LD
+#include "windows.h"
+[module(name="MyLibrary")];
+
+[object, uuid("9E66A290-4365-11D2-A997-00C04FA37DDB")]
+__interface ICustom {
+   HRESULT Custom([in] long l, [out, retval] long *pLong);
+};
+
+[dual, uuid("9E66A291-4365-11D2-A997-00C04FA37DDB")]
+__interface IDual {
+   HRESULT Dual([in] long l, [out, retval] long *pLong);
+};
+
+[object, uuid("9E66A293-4365-11D2-A997-00C04FA37DDB")]
+__interface ICustomDispatch : public IDispatch {
+   HRESULT Dispatch([in] long l, [out, retval] long *pLong);
+};
+
+[   coclass,
+   default(ICustomDispatch),
+   source(IDual),
    uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")  
-]  
-class CClass : public ICustom, public IDual, public ICustomDispatch {  
-   HRESULT Custom(long l, long *pLong) { return(S_OK); }  
-   HRESULT Dual(long l, long *pLong) { return(S_OK); }  
-   HRESULT Dispatch(long l, long *pLong) { return(S_OK); }  
-};  
-  
-int main() {  
-#if 0 // Can't instantiate without implementations of IUnknown/IDispatch  
-   CClass *pClass = new CClass;  
-  
-   long llong;  
-  
-   pClass->custom(1, &llong);  
-   pClass->dual(1, &llong);  
-   pClass->dispinterface(1, &llong);  
-   pClass->dispatch(1, &llong);  
-  
-   delete pClass;  
-#endif  
-   return(0);  
-}  
-```  
-  
- Атрибут [source](../windows/source-cpp.md) также содержит пример использования атрибута **default**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**Класс**, **структуры**, элемент данных|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**Компонентный класс** (при применении к **класс** или **структуры**)|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты классов](../windows/class-attributes.md)   
- [coclass](../windows/coclass.md)   
+]
+class CClass : public ICustom, public IDual, public ICustomDispatch {
+   HRESULT Custom(long l, long *pLong) { return(S_OK); }
+   HRESULT Dual(long l, long *pLong) { return(S_OK); }
+   HRESULT Dispatch(long l, long *pLong) { return(S_OK); }
+};
+
+int main() {
+#if 0 // Can't instantiate without implementations of IUnknown/IDispatch
+   CClass *pClass = new CClass;
+
+   long llong;
+
+   pClass->custom(1, &llong);
+   pClass->dual(1, &llong);
+   pClass->dispinterface(1, &llong);
+   pClass->dispatch(1, &llong);
+
+   delete pClass;
+#endif
+   return(0);
+}
+```
+
+Атрибут [source](../windows/source-cpp.md) также содержит пример использования атрибута **default**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**Класс**, **структуры**, элемент данных|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|**Компонентный класс** (при применении к **класс** или **структуры**)|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты классов](../windows/class-attributes.md)  
+[coclass](../windows/coclass.md)  

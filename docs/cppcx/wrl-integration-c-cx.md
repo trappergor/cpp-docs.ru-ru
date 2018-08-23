@@ -1,36 +1,36 @@
 ---
-title: Интеграция с WRL (C + +/ CX) | Документы Microsoft
+title: Интеграция с WRL (C + +/ CX) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddefed444c447fbfd300a656c36be45899177b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090264"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598094"
 ---
 # <a name="wrl-integration-ccx"></a>Интеграция с WRL (C++/CX)
 
-Вы можете свободно сочетать код WRL с [!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) код. В той же записи преобразования можно использовать объекты, объявленные с помощью WRL дескриптор объекта (`^`) нотации и [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] интеллектуального указателя (`ComPtr<T>`) нотации. Однако необходимо вручную обрабатывать возвращаемые значения и [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] HRESULT коды ошибок и исключений WRL.
+Вы можете свободно сочетать код WRL с кодом библиотеки шаблонов C++ (WRL) среды выполнения Windows. В той же записи преобразования можно использовать объекты, объявленные с помощью WRL дескриптор объекта (`^`) нотации и WRL смарт-указатель (`ComPtr<T>`) нотации. Тем не менее необходимо вручную обрабатывать возвращаемые значения и коды ошибок WRL HRESULT и WRL исключения.
   
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>Разработка[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] 
+## <a name="wrl-development"></a>Разработка WRL
 
-Дополнительные сведения о разработке и использовании [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] компоненты, в разделе [библиотеки шаблонов C++ (WRL) среды выполнения Windows](../windows/windows-runtime-cpp-template-library-wrl.md).
+Дополнительные сведения о разработке и использовании компонентов WRL см. в разделе [библиотеки шаблонов C++ (WRL) среды выполнения Windows](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ### <a name="example"></a>Пример
 
-В следующем фрагменте кода показано использование WRL и [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] использовать [!INCLUDE[wrt](includes/wrt-md.md)] классов и анализа файла метаданных.
+В следующем фрагменте кода показано, с использованием WRL и WRL использовать классы среды выполнения Windows и анализа файла метаданных.
 
-Пример взят из фрагмента кода на форуме Microsoft Store построение приложения. Автор этого фрагмента кода приводит следующие замечания и оговорки:
+Пример взят из фрагмента кода в форуме по Microsoft Store для стандартных приложений. Автор этого фрагмента кода приводит следующие замечания и оговорки:
 
-1. C++ не предоставляет конкретные API для отражения типов [!INCLUDE[wrt](includes/wrt-md.md)] , но файлы метаданных Windows (с расширением WINMD) для типа полностью совместимы с файлами метаданных среды CLR. Windows предоставляет новые API обнаружения метаданных (RoGetMetaDataFile), позволяющие получить WINMD-файл для указанного типа. Однако возможности применения этих API при разработке в C++ ограничены, поскольку пользователь не может создать экземпляр класса.
+1. C++ не предоставляет конкретные API для отражения на типы среды выполнения Windows, но файлы метаданных Windows (с расширением winmd) для типа полностью совместимы с файлами метаданных среды CLR. Windows предоставляет новые API обнаружения метаданных (RoGetMetaDataFile), позволяющие получить WINMD-файл для указанного типа. Однако возможности применения этих API при разработке в C++ ограничены, поскольку пользователь не может создать экземпляр класса.
 
 1. После компиляции кода необходимо передать файлы Runtimeobject.lib и Rometadata.lib компоновщику.
 

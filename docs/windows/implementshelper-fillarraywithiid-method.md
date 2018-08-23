@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71fe5244ecf3f7e64192d86f25104daf1139a463
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 876f2bde68c53a27c1c40e9206b6285b8562bd91
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010280"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591143"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>Метод ImplementsHelper::FillArrayWithIid
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-void FillArrayWithIid(  
-   _Inout_ unsigned long *index,   
-   _Inout_ IID* iids) throw();  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *Индекс*  
- Отсчитываемый от нуля индекс, указывающий начальный элемент массива для этой операции. По завершении этой операции *индекс* увеличивается на 1.  
-  
- *идентификаторы IID*  
- Массив типа IID.  
-  
-## <a name="remarks"></a>Примечания  
- Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Implementshelper-структура](../windows/implementshelper-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void FillArrayWithIid(
+   _Inout_ unsigned long *index,
+   _Inout_ IID* iids) throw();
+```
+
+### <a name="parameters"></a>Параметры
+
+*Индекс*  
+Отсчитываемый от нуля индекс, указывающий начальный элемент массива для этой операции. По завершении этой операции *индекс* увеличивается на 1.
+
+*идентификаторы IID*  
+Массив типа IID.
+
+## <a name="remarks"></a>Примечания
+
+Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура ImplementsHelper](../windows/implementshelper-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

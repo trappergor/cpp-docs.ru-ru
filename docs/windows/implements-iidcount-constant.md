@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7334427d6620e5158a418cee454b8cec98198028
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ab5f5a3523a5566b57529a204cfe618e16af17c4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011001"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594445"
 ---
 # <a name="implementsiidcount-constant"></a>Константа Implements::IidCount
-Содержит число идентификаторов реализованного интерфейса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-static const unsigned long IidCount;  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Структура Implements](../windows/implements-structure.md)
+
+Содержит число идентификаторов реализованного интерфейса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+static const unsigned long IidCount;
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Структура Implements](../windows/implements-structure.md)

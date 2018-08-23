@@ -1,5 +1,5 @@
 ---
-title: -clr (компиляция CLR) | Документы Microsoft
+title: -clr (компиляция CLR) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379618"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606867"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (компиляция CLR)
 Позволяет приложениям и компонентам использовать возможности из среды CLR.  
@@ -50,7 +50,7 @@ ms.locfileid: "32379618"
   
  [Смешанные (собственные и управляемые) сборки](../../dotnet/mixed-native-and-managed-assemblies.md) и  
   
- [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md).  
+ [Практическое: Миграция в/CLR](../../dotnet/how-to-migrate-to-clr.md).  
   
  **/clr:pure**  
  /clr:pure не рекомендуется к использованию. Будущие версии компилятора могут не поддерживать этот параметр. Мы рекомендуем перенести код, который должен быть чистым кодом MSIL, на C#.  
@@ -68,7 +68,7 @@ ms.locfileid: "32379618"
  До выпуска Visual C++ 2005 параметр **/clr:noAssembly** требовал указания **/LD**. Теперь параметр **/LD** подразумевается при указании **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Позволяет приложению [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] работать в среде CLR версии 1. Если вы используете **initialAppDomain**, могут возникнуть некоторые проблемы, которые рассматриваются в [ошибки: исключение AppDomainUnloaded при использовании управляемых расширений для компонентов Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) Майкрософт Поддержка веб-сайта.  
+ Позволяет приложению Visual C++ для запуска в версии 1 среды CLR. Если вы используете **initialAppDomain**, могут возникнуть некоторые проблемы, которые рассматриваются в [ошибка: исключение AppDomainUnloaded при использовании управляемых расширений для компонентов Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) Майкрософт Поддержка веб-сайта.  
   
  Приложения, скомпилированные с использованием **initialAppDomain** , не должны использоваться приложением, которое применяет ASP.NET, так как этот компонент не поддерживается в версии 1 среды CLR.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "32379618"
   
  Приложение, скомпилированное с использованием **/clr** , может содержать или не содержать управляемые данные.  
   
- Для отладки управляемых приложений. в разделе [/ASSEMBLYDEBUG (Добавление атрибута DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
+ Чтобы включить отладку для управляемых приложений, см. в разделе [/ASSEMBLYDEBUG (Добавление атрибута DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
   
  В куче сбора мусора будут созданы экземпляры только типов среды CLR. Дополнительные сведения см. в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md). Для компиляции функции в машинный код используйте директиву `unmanaged` pragma. Дополнительные сведения см. в разделе [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md).  
   
  По умолчанию параметр **/clr** отключен. Если **/clr** включен, также действует и параметр **/MD** . Дополнительные сведения см. в разделе [/MD, /MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md). Параметр **/MD** гарантирует, что из файлов стандартных заголовков (H-файлов) выбираются динамически связанные, многопотоковые версии процедур среды выполнения. Многопоточность необходима для управляемого программирования, так как сборщик мусора CLR запускает методы завершения во вспомогательном потоке.  
   
- Если компиляция выполняется с помощью **/c**, можно указать тип среды CLR выходного файла с [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
+ Если компиляция выполняется с помощью **/c**, можно указать тип среды CLR выходного файла, задав [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
   
  **/clr** подразумевает указание **/EHa**, и никакие другие параметры **/EH** не поддерживаются для **/clr**. Дополнительные сведения см. в статье [/EH (модель обработки исключений)](../../build/reference/eh-exception-handling-model.md).  
   
@@ -131,7 +131,7 @@ class {} x;
     >   
     >  Кроме того, при отладке приложения **/clr** следует установить для свойства **Тип отладчика** значение **Смешанный** или **Только управляемый код**. Дополнительные сведения см. в разделе [параметры проекта для конфигурации отладки C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).  
   
-     Сведения о том, как создать модуль, в разделе [/NOASSEMBLY (Создание модуля MSIL)](../../build/reference/noassembly-create-a-msil-module.md).  
+     Сведения о том, как создать модуль, см. в разделе [/NOASSEMBLY (Создание модуля MSIL)](../../build/reference/noassembly-create-a-msil-module.md).  
   
 #### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   

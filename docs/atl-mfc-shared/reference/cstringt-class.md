@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2214067aae84d1c6aae0a93cf008463829fafda4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886054"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609503"
 ---
 # <a name="cstringt-class"></a>Класс CStringT
 Этот класс представляет `CStringT` объекта.  
@@ -298,9 +298,9 @@ BSTR AllocSysString() const;
  В приложениях MFC [класс CMemoryException](../../mfc/reference/cmemoryexception-class.md) возникает исключение, если существует нехватки памяти. В программах ATL [CAtlException](../../atl/reference/catlexception-class.md) возникает исключение. Эта функция обычно используется для возврата строки для автоматизации.  
   
 
- Обычно если эта строка передается в функцию COM как [in] параметр, то это требует, чтобы освободить строку участник. Это можно сделать с помощью [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx), как описано в пакете Windows SDK. Дополнительные сведения см. в разделе [распределение и освобождение памяти для BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
+ Обычно если эта строка передается в функцию COM как [in] параметр, то это требует, чтобы освободить строку участник. Это можно сделать с помощью [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), как описано в пакете Windows SDK. Дополнительные сведения см. в разделе [распределение и освобождение памяти для BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
   
- Дополнительные сведения о функции выделения OLE в Windows, см. в разделе [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx) в пакете Windows SDK.  
+ Дополнительные сведения о функции выделения OLE в Windows, см. в разделе [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) в пакете Windows SDK.  
 
   
 ### <a name="example"></a>Пример  
@@ -552,7 +552,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 - `CStringT`( `const unsigned char*` `psz` ): Позволяет создавать `CStringT` из указателя в **unsigned char**.  
   
 > [!NOTE]
->  Определить макрос _CSTRING_DISABLE_NARROW_WIDE_CONVERSION, чтобы отключить строку неявное преобразование между [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] и [!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] строки. Макрос исключаются из компиляции конструкторов, которые поддерживают преобразование.  
+>  Определите макрос _CSTRING_DISABLE_NARROW_WIDE_CONVERSION, чтобы отключить строку неявное преобразование между строк ANSI и Юникод. Макрос исключаются из компиляции конструкторов, которые поддерживают преобразование.  
   
  Обратите внимание, что *strSrc* параметр может быть либо `CStringT` или `CThisSimpleString` объекта. Для `CStringT`, используйте один из его экземпляров по умолчанию (`CString`, `CStringA`, или `CStringW`); для `CThisSimpleString`, использовать **это** указатель. `CThisSimpleString` Объявляет экземпляр [класс CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), меньшего размера класса строка с менее встроенных функциональных возможностей, чем `CStringT` класса.  
   

@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb6b6be87736d55eabc6b487101ec68fc16e378
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b467162d2f5cc5b04bc43a6d31019eb08e17e750
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646144"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595410"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>Метод FtmBase::DisconnectObject
-Принудительно освобождает все внешние подключения к объекту. Сервер объекта вызывает реализацию объекта этот метод перед завершением работы системы.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-STDMETHODIMP DisconnectObject(  
-   __in DWORD dwReserved  
-) override;  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *dwReserved*  
- Зарезервировано для будущего использования; должно иметь значение нуль.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** ftm.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс FtmBase](../windows/ftmbase-class.md)
+
+Принудительно освобождает все внешние подключения к объекту. Сервер объекта вызывает реализацию объекта этот метод перед завершением работы системы.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHODIMP DisconnectObject(
+   __in DWORD dwReserved
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*dwReserved*  
+Зарезервировано для будущего использования; должно иметь значение нуль.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** ftm.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс FtmBase](../windows/ftmbase-class.md)

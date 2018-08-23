@@ -17,47 +17,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98e3b9e78f46b14dfeca18a8e69538111d3ba219
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 391b30251235fdd15ec1e96304e956740cb58f1f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010319"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610152"
 ---
 # <a name="pointerdefault"></a>pointer_default
-Указывает атрибут указатель по умолчанию для всех указателей, за исключением верхнего уровня указателей, которые отображаются в списках параметров.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[ pointer_default(  
-   value  
-) ]  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *значение*  
- Значение, описывающее тип указателя: **ptr**, **ref**, или **уникальный**.  
-  
-## <a name="remarks"></a>Примечания  
- **Pointer_default** атрибут C++ имеет ту же функциональность, что [pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) описании атрибута MIDL.  
-  
-## <a name="example"></a>Пример  
- См. в примере [defaultvalue](../windows/defaultvalue.md) использовать образец **pointer_default**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**interface**|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
+
+Указывает атрибут указатель по умолчанию для всех указателей, за исключением верхнего уровня указателей, которые отображаются в списках параметров.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ pointer_default(
+   value
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*значение*  
+Значение, описывающее тип указателя: **ptr**, **ref**, или **уникальный**.
+
+## <a name="remarks"></a>Примечания
+
+**Pointer_default** атрибут C++ имеет ту же функциональность, что [pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [defaultvalue](../windows/defaultvalue.md) использовать образец **pointer_default**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**interface**|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  

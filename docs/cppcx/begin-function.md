@@ -1,5 +1,5 @@
 ---
-title: Функция начала | Документы Microsoft
+title: Функция BEGIN | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1a8c09e43613014b43ef4e3c075a54cdd90e08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4954e98c1e6f1da30e321aad0c0e37cc5c1ab994
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086516"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606536"
 ---
 # <a name="begin-function"></a>begin - функция
 Возвращает итератор, указывающий на начало коллекции, для доступа к которой используется указанный параметр интерфейса.  
@@ -52,10 +52,10 @@ template <typename T>
  Параметр типа шаблона.  
   
  `v`  
- Коллекция вектора\<T > или VectorView\<T > объекты, к которым обращаются IVector\<T > или IVectorView\<T > интерфейса.  
+ Коллекция вектор\<T > или VectorView\<T > объекты, к которым подключены IVector\<T > или IVectorView\<T > интерфейс.  
   
  `i`  
- Коллекция произвольных объектов среды выполнения Windows, к которым обращаются IIterable\<T > интерфейса.  
+ Коллекция произвольных объектов среды выполнения Windows, к которым подключены IIterable\<T > интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор, который указывает на начало коллекции.  
@@ -63,7 +63,7 @@ template <typename T>
 ### <a name="remarks"></a>Примечания  
  Первые две функции шаблона возвращают итераторы, а третья возвращает итератор ввода.  
   
- Объект VectorIterator, который возвращается методом begin, является итератором прокси-сервера, хранящего элементы типа VectorProxy\<T >. Однако объект прокси-сервера практически никогда не отображается в пользовательском коде. Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
+ Объект VectorIterator, объект, который возвращается методом begin, является итератором прокси-сервера, хранящего элементы типа VectorProxy\<T >. Однако объект прокси-сервера практически никогда не отображается в пользовательском коде. Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="requirements"></a>Требования  
  **Заголовок:** collection.h  

@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4609866b25f574f34b620d81de3a21d6b608db6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ca4391539e4f6987431e8b9b036053db02218007
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020330"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593059"
 ---
 # <a name="synclocktislocked-method"></a>Метод SyncLockT::IsLocked
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-bool IsLocked() const;  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если **SyncLockT** объектов заблокирован; в противном случае — значение **false**.  
-  
-## <a name="remarks"></a>Примечания  
- Указывает ли текущий **SyncLockT** объекта, которому принадлежит ресурс, то есть, **SyncLockT** объект *заблокирован*.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>См. также  
- [Класс SyncLockT](../windows/synclockt-class.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если **SyncLockT** объектов заблокирован; в противном случае — значение **false**.
+
+## <a name="remarks"></a>Примечания
+
+Указывает ли текущий **SyncLockT** объекта, которому принадлежит ресурс, то есть, **SyncLockT** объект *заблокирован*.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>См. также
+
+[Класс SyncLockT](../windows/synclockt-class.md)

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390f2a11b98a851b5f33b4e0a941a515421d5836
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011621"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604067"
 ---
 # <a name="support-for-using-wmain"></a>Поддержка использования wmain
 Visual C++ поддерживает определение **wmain** функция и передачи аргументов расширенных символов в Юникоде приложения. Формальные параметры для **wmain**, используя формат, аналогичный `main`. Затем можно передать в качестве аргументов "широкие" символы и указатель среды кодировки Юникод (необязательно) в программу. Параметры `argv` и `envp` для функции **wmain** относятся к типу `wchar_t*`. Пример:  

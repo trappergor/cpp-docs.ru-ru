@@ -17,69 +17,74 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95926c7e65210b7eaf366c0fe2a9df44fa9661d7
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 997b8bc01424b102551815f19ff9a487113e5f6b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016682"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601017"
 ---
 # <a name="registrationscript"></a>registration_script
-Выполняет указанную регистрацию пользовательский скрипт.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[ registration_script(   
-   script   
-) ]  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *сценарий*  
- Полный путь к файлу сценария (.rgs) регистрации. Значение **none**, такие как `script = "none"`, означает, что компонентный класс не требования для регистрации.  
-  
-## <a name="remarks"></a>Примечания  
- **Registration_script** атрибут C++ выполняет скрипт регистрации, определяемое *скрипт*. Если этот атрибут не указан, используется стандартный RGS-файл, (содержащий сведения о регистрации компонента). Дополнительные сведения о файлах .rgs, см. в разделе [компонент реестра ATL (регистратор)](../atl/atl-registry-component-registrar.md).  
-  
- Этот атрибут требует, чтобы атрибут [coclass](../windows/coclass.md), [progid](../windows/progid.md)или [vi_progid](../windows/vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу.  
-  
-## <a name="example"></a>Пример  
- Следующий код указывает, что компонент имеет сценарий реестра с именем cpp_attr_ref_registration_script.rgs.  
-  
-```cpp  
-// cpp_attr_ref_registration_script.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module (name="REG")];  
-  
-[object, uuid("d9cd196b-6836-470b-9b9b-5b04b828e5b0")]  
-__interface IFace {};  
-  
-// requires "cpp_attr_ref_registration_script.rgs"  
-// create sample .RGS file "cpp_attr_ref_registration_script.rgs" if it does not exist  
-[ coclass, registration_script(script="cpp_attr_ref_registration_script.rgs"),  
-  uuid("50d3ad42-3601-4f26-8cfe-0f1f26f98f67")]  
-class CMyClass:public IFace {};  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**Класс**, **структуры**|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Один или несколько из следующих: `coclass`, `progid`, или `vi_progid`.|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты COM](../windows/com-attributes.md)   
- [Атрибуты классов](../windows/class-attributes.md)   
- [rdx](../windows/rdx.md)   
+
+Выполняет указанную регистрацию пользовательский скрипт.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ registration_script(
+   script
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*сценарий*  
+Полный путь к файлу сценария (.rgs) регистрации. Значение **none**, такие как `script = "none"`, означает, что компонентный класс не требования для регистрации.
+
+## <a name="remarks"></a>Примечания
+
+**Registration_script** атрибут C++ выполняет скрипт регистрации, определяемое *скрипт*. Если этот атрибут не указан, используется стандартный RGS-файл, (содержащий сведения о регистрации компонента). Дополнительные сведения о файлах .rgs, см. в разделе [компонент реестра ATL (регистратор)](../atl/atl-registry-component-registrar.md).
+
+Этот атрибут требует, чтобы атрибут [coclass](../windows/coclass.md), [progid](../windows/progid.md)или [vi_progid](../windows/vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу.
+
+## <a name="example"></a>Пример
+
+Следующий код указывает, что компонент имеет сценарий реестра с именем cpp_attr_ref_registration_script.rgs.
+
+```cpp
+// cpp_attr_ref_registration_script.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module (name="REG")];
+
+[object, uuid("d9cd196b-6836-470b-9b9b-5b04b828e5b0")]
+__interface IFace {};
+
+// requires "cpp_attr_ref_registration_script.rgs"
+// create sample .RGS file "cpp_attr_ref_registration_script.rgs" if it does not exist
+[ coclass, registration_script(script="cpp_attr_ref_registration_script.rgs"),
+  uuid("50d3ad42-3601-4f26-8cfe-0f1f26f98f67")]
+class CMyClass:public IFace {};
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**Класс**, **структуры**|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Один или несколько из следующих: `coclass`, `progid`, или `vi_progid`.|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты COM](../windows/com-attributes.md)  
+[Атрибуты классов](../windows/class-attributes.md)  
+[rdx](../windows/rdx.md)  

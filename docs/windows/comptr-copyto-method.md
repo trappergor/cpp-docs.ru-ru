@@ -17,58 +17,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b387d52c9ab7b1d9033ce70d36e9f0aa5e5b33e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c295767070da04d0173e3299576338e700a1c6aa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642933"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597017"
 ---
 # <a name="comptrcopyto-method"></a>Метод ComPtr::CopyTo
-Копирует текущий или указанный интерфейс, связанный с этим **ComPtr** в заданный указатель.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-HRESULT CopyTo(  
-   _Deref_out_ InterfaceType** ptr  
-);  
-  
-HRESULT CopyTo(  
-   REFIID riid,  
-   _Deref_out_ void** ptr  
-) const;  
 
-template<typename U>  
-HRESULT CopyTo(  
-   _Deref_out_ U** ptr  
-) const;  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *U*  
- Имя типа.  
-  
- *ptr*  
- После завершения операции представляет указатель на запрошенный интерфейс.  
-  
- *riid*  
- Идентификатор интерфейса.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, указывающее, почему неявный `QueryInterface` не удалось выполнить операцию.  
-  
-## <a name="remarks"></a>Примечания  
- Первая функция возвращает копию указателя на интерфейс, связанный с данным **ComPtr**. Эта функция всегда возвращает значение S_OK.  
-  
- Вторая функция выполняет `QueryInterface` операции в интерфейсе, связанном с этим **ComPtr** для интерфейса, заданного параметром *riid* параметра.  
-  
- Третья функция выполняет `QueryInterface` операции в интерфейсе, связанном с этим **ComPtr** для базового интерфейса параметра *U* параметра.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ComPtr](../windows/comptr-class.md)
+Копирует текущий или указанный интерфейс, связанный с этим **ComPtr** в заданный указатель.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT CopyTo(
+   _Deref_out_ InterfaceType** ptr
+);
+
+HRESULT CopyTo(
+   REFIID riid,
+   _Deref_out_ void** ptr
+) const;
+
+template<typename U>
+HRESULT CopyTo(
+   _Deref_out_ U** ptr
+) const;
+```
+
+### <a name="parameters"></a>Параметры
+
+*U*  
+Имя типа.
+
+*ptr*  
+После завершения операции представляет указатель на запрошенный интерфейс.
+
+*riid*  
+Идентификатор интерфейса.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, указывающее, почему неявный `QueryInterface` не удалось выполнить операцию.
+
+## <a name="remarks"></a>Примечания
+
+Первая функция возвращает копию указателя на интерфейс, связанный с данным **ComPtr**. Эта функция всегда возвращает значение S_OK.
+
+Вторая функция выполняет `QueryInterface` операции в интерфейсе, связанном с этим **ComPtr** для интерфейса, заданного параметром *riid* параметра.
+
+Третья функция выполняет `QueryInterface` операции в интерфейсе, связанном с этим **ComPtr** для базового интерфейса параметра *U* параметра.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtr](../windows/comptr-class.md)

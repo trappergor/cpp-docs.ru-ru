@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2714c1418c5c9828322561ae1d7ca86dc6130a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 37309f9170a1fe78c7db802ca13cc81112be9cbb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647740"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607381"
 ---
 # <a name="helpfile"></a>helpfile
-Задает имя файла справки для библиотеки типов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[ helpfile(  
-   "filename"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *filename*  
- Имя файла, который содержит разделы справки.  
-  
-## <a name="remarks"></a>Примечания  
- **Helpfile** атрибут C++ имеет ту же функциональность, что [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) описании атрибута MIDL.  
-  
-## <a name="example"></a>Пример  
- См. в примере [модуль](../windows/module-cpp.md) пример демонстрирует использование **helpfile**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**интерфейс**, **typedef**, **класс**, метод, **свойство**|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
- [Атрибуты классов](../windows/class-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
- [HelpContext](../windows/helpcontext.md)   
- [helpstring](../windows/helpstring.md)   
+
+Задает имя файла справки для библиотеки типов.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ helpfile(
+   "filename"
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*filename*  
+Имя файла, который содержит разделы справки.
+
+## <a name="remarks"></a>Примечания
+
+**Helpfile** атрибут C++ имеет ту же функциональность, что [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [модуль](../windows/module-cpp.md) пример демонстрирует использование **helpfile**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**интерфейс**, **typedef**, **класс**, метод, **свойство**|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  
+[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[helpcontext](../windows/helpcontext.md)  
+[helpstring](../windows/helpstring.md)  

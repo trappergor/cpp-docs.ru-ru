@@ -15,32 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 157512ee556126291427c3db6578788a477505a6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c7bdf5c17fc9364eb69d86f067bbb00cf40ebc5d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016383"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595320"
 ---
 # <a name="hstringattach-method"></a>Метод HString::Attach
-Связывает указанный **HString** объект с текущим **HString** объекта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-void Attach(  
-       HSTRING hstr  
+
+Связывает указанный **HString** объект с текущим **HString** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void Attach(
+       HSTRING hstr
        ) throw()  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *HSTR*  
- Существующий **HString** объекта.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HString](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*HSTR*  
+Существующий **HString** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HString](../windows/hstring-class.md)

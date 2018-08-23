@@ -1,20 +1,20 @@
 ---
-title: Перечисления (C + +/ CX) | Документы Microsoft
+title: Перечисления (C + +/ CX) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96fa4e7194e262eec0be4cf5f7467c163530bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 725e2b9edb7ba2a84418e900ffb1aafe4c5064af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087385"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593968"
 ---
 # <a name="enums-ccx"></a>Перечисления (C++/CX)
 C + +/ CX поддерживает `public enum class` ключевое слово, которое является аналогом standard C++ `scoped  enum`. При использовании перечислителя, объявленного с помощью ключевого слова `public enum class` , необходимо использовать идентификатор перечисления, чтобы определить область каждого значения перечислителя.  
@@ -22,7 +22,7 @@ C + +/ CX поддерживает `public enum class` ключевое слов
 ### <a name="remarks"></a>Примечания  
  Объявление `public enum class` , не содержащее спецификатор доступа, например `public`, обрабатывается как стандартное [перечисление С++ с областью видимости](../cpp/enumerations-cpp.md).  
   
- Объект `public enum class` или `public enum struct` объявление может иметь базовый тип любого целочисленного типа, несмотря на то, что среда выполнения Windows требует тип int32 или uint32 для перечислений флагов использовался. Следующий синтаксис описывает части объявления `public enum class` или `public enum struct`.  
+ Объект `public enum class` или `public enum struct` объявление может иметь базовый тип любого целочисленного типа, несмотря на то, что в самой среде выполнения Windows требует тип int32 или uint32 для перечислений флагов. Следующий синтаксис описывает части объявления `public enum class` или `public enum struct`.  
   
  В этом примере показано, как определить открытый класс перечисления:  
   

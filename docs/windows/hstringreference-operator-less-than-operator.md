@@ -15,38 +15,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 489d97252dcb4d20b7ef2f8557991a4e6016743d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ee7edbee285df6da752e875ac4d86a74e8f7893d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605536"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594145"
 ---
 # <a name="hstringreferenceoperatorlt-operator"></a>Оператор HStringReference::Operator&lt; оператор
-Указывает, является ли первый параметр меньше значения второго параметра.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline bool operator<(  
-    const HStringReference& lhs,   
+
+Указывает, является ли первый параметр меньше значения второго параметра.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline bool operator<(
+    const HStringReference& lhs,
     const HStringReference& rhs) throw()  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *lhs*  
- Первый параметр для сравнения. *LHS* можно ссылаться на **HStringReference**.  
-  
- *правая часть*  
- Второй параметр для сравнения.  *правая часть* можно ссылаться на **HStringReference**.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если *lhs* параметр меньше, чем *rhs* параметра; в противном случае **false**.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HStringReference](../windows/hstringreference-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*lhs*  
+Первый параметр для сравнения. *LHS* можно ссылаться на **HStringReference**.
+
+*правая часть*  
+Второй параметр для сравнения.  *правая часть* можно ссылаться на **HStringReference**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если *lhs* параметр меньше, чем *rhs* параметра; в противном случае **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HStringReference](../windows/hstringreference-class.md)

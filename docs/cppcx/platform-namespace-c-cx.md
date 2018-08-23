@@ -1,5 +1,5 @@
 ---
-title: Пространство имен Platform (C + +/ CX) | Документы Microsoft
+title: Пространство имен Platform (C + +/ CX) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform Namespace (C++/CX)
 ms.assetid: b160e822-d424-43d2-ba60-57b0e81f259c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 348bedcde953cbcd6084023d6f7117c7f7f001f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d88b40d53dbae737822ca31e6fa9cf15c947970
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091963"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607332"
 ---
 # <a name="platform-namespace-ccx"></a>Пространство имен Platform (C++/CX)
 Содержит встроенные типы, совместимые со средой выполнения Windows.  
@@ -36,7 +36,7 @@ using namespace Platform;
   
  Пространство имен Platform содержит атрибуты, классы, перечисления, интерфейсы и структуры. Platform также содержит вложенные пространства имен.  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |Флаги|Указывает, что перечисление может обрабатываться как битовое поле (т. е. набор флагов).|  
 |MTAThread|Указывает, что потоковая модель для приложения является многопотоковым подразделением (MTA).|  
@@ -46,7 +46,7 @@ using namespace Platform;
   
  Пространство имен Platform содержит следующие классы.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |[Класс Platform::AccessDeniedException](../cppcx/platform-accessdeniedexception-class.md)|Возникает при запрете доступа к ресурсу или функции.|  
 |[Класс Platform::Agile](../cppcx/platform-agile-class.md)|Представляет объект, отличный от Agile, как объект Agile.|  
@@ -84,7 +84,7 @@ using namespace Platform;
   
  Пространство имен Platform определяет следующие интерфейсы.  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |[Интерфейс Platform::IBox](../cppcx/platform-ibox-interface.md)|Используется для передачи типов значений в функции, параметры которых имеют тип Platform::Object^.|  
 |[Интерфейс Platform::IBoxArray](../cppcx/platform-iboxarray-interface.md)|Интерфейс, используемый для передачи массивов типов значений в функции, параметры которых имеют тип Platform::Array.|  
@@ -94,7 +94,7 @@ using namespace Platform;
   
  Пространство имен Platform содержит следующие перечисления.  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |[Перечисление Platform::CallbackContext](../cppcx/platform-callbackcontext-enumeration.md)|Перечисление, используемое в качестве параметра конструктора делегата. Определяет, следует ли маршалировать обратный вызов в исходный поток или в поток вызывающего объекта.|  
 |[Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md)|Указывает категорию чисел, представляющую встроенный тип.|  
@@ -103,7 +103,7 @@ using namespace Platform;
   
  Пространство имен Platform содержит следующие структуры.  
   
-|Структура|Описание|  
+|Структура|Описание:|  
 |---------------|-----------------|  
 |[Класс Platform::Enum](../cppcx/platform-enum-class.md)|Представляет константу с именем.|  
 |[Класс значения Platform::Guid](../cppcx/platform-guid-value-class.md)|Представляет идентификатор GUID.|  
@@ -114,5 +114,5 @@ using namespace Platform;
 ## <a name="see-also"></a>См. также  
  [Пространство имен Platform::Collections](../cppcx/platform-collections-namespace.md)   
  [Пространство имен Platform::Runtime:: CompilerServices](../cppcx/platform-runtime-compilerservices-namespace.md)   
- [Пространство имен Platform::Runtime::InteropServices](../cppcx/platform-runtime-interopservices-namespace.md)   
+ [Пространство имен Platform::Runtime:: InteropServices](../cppcx/platform-runtime-interopservices-namespace.md)   
  [Пространство имен Platform::Metadata](../cppcx/platform-metadata-namespace.md)

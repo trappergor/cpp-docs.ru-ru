@@ -1,5 +1,5 @@
 ---
-title: 'Многопоточность: Создание потоков пользовательского интерфейса | Документы Microsoft'
+title: 'Многопоточность: Создание потоков пользовательского интерфейса | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 480839316cc8d47b2af4be1cd81c0d02f09fad25
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0223e342bf2312919247d42564445a9e116ca59b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688873"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607399"
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Многопоточность. Создание потоков пользовательского интерфейса
-Поток пользовательского интерфейса обычно используется для обработки входных данных пользователя и реагировать на события пользователя независимо от потоков, выполняющихся на другие части приложения. Основной поток приложения (в вашей `CWinApp`-производный класс) создается и запускается автоматически. В этом разделе описаны шаги, необходимые для создания пользовательского интерфейса дополнительных потоков.  
+Поток пользовательского интерфейса обычно используется для обработки ввода и реагировать на события пользователя независимо от потоков, выполняющих другие части приложения. Основной поток приложения (в вашей `CWinApp`-производного класса) создается и запускается автоматически. В этом разделе описываются действия, необходимые для создания пользовательского интерфейса дополнительных потоков.  
   
- Первое, что необходимо сделать при создании потока пользовательского интерфейса — производный класс [CWinThread](../mfc/reference/cwinthread-class.md). Необходимо объявить и реализовать класс с помощью [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) и [IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) макросы. Этот класс должен переопределять некоторые функции и может переопределить некоторые другие. В следующей таблице представлены эти функции и что следует делать.  
+Первое, что необходимо сделать при создании потока пользовательского интерфейса — это производный от класса [CWinThread](../mfc/reference/cwinthread-class.md). Должна быть объявлена и реализовать это с помощью [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) и [IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) макросы. Этот класс необходимо переопределить некоторые функции и можно переопределить другими пользователями. Эти функции и какие действия следует они представлены в следующей таблице.  
   
 ### <a name="functions-to-override-when-creating-a-user-interface-thread"></a>Переопределяемые функции при создании потока пользовательского интерфейса  
   
@@ -39,34 +39,35 @@ ms.locfileid: "33688873"
 |--------------|-------------|  
 
 |[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)| Выполните очистку после завершения потока. Обычно переопределяется. |  
-|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)| Выполните инициализацию экземпляра для потока. Должен быть переопределен. |  
-|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)| Выполните обработку времени простоя для конкретного потока. Обычно не переопределяется. |  
-|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)| Фильтровать сообщения перед их передачей **TranslateMessage** и **DispatchMessage**. Обычно не переопределяется. |  
-|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)| Перехвата необработанных исключений, обработчиками команд и сообщений в потоке. Обычно не переопределяется. |  
-|[Запустите](../mfc/reference/cwinthread-class.md#run)| Функции управления для потока. Содержит цикл обработки сообщений. Переопределяется редко. |  
+|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)| Выполните инициализацию экземпляра для потока. Должен переопределяться. |  
+|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)| Выполните обработку времени простоя определенного потока. Обычно не переопределяется. |  
+|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)| Фильтровать сообщения перед их отправкой к `TranslateMessage` и `DispatchMessage`. Обычно не переопределяется. |  
+|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)| Перехват необработанных исключений выданных потока сообщением или обработчиками команд. Обычно не переопределяется. |  
+|[Запустите](../mfc/reference/cwinthread-class.md#run)| Функции управления для потока. Содержит конвейер сообщений. Переопределяется редко. |  
 
   
- MFC предоставляет две версии `AfxBeginThread` посредством параметра перегрузки:, можно создать только рабочие потоки и который может создаваться пользовательского интерфейса и рабочие потоки. Чтобы запустить поток пользовательского интерфейса, вызовите вторую перегрузку [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), указав следующие сведения:  
+MFC предоставляет две версии `AfxBeginThread` через перегрузку параметра: один, можно создать только рабочих потоков и, который может создаваться пользовательского интерфейса и рабочие потоки. Чтобы запустить поток пользовательского интерфейса, вызовите вторую перегрузку [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), указав следующие сведения:  
   
--   [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) класса, производным от `CWinThread`.  
+- [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) класса, производного от `CWinThread`.  
   
--   (Необязательно) Уровень необходимый приоритет. Значение по умолчанию используется обычный приоритет. Дополнительные сведения о доступных уровнях приоритета см. в разделе [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) в [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+- (Необязательно) Уровень желаемый приоритет. Значение по умолчанию используется обычный приоритет. Дополнительные сведения о доступных уровнях приоритета см. в разделе [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) в пакете Windows SDK.  
   
--   (Необязательно) Размер требуемой стека для потока. По умолчанию используется тот же размер стека, что и для создания потока.  
+- (Необязательно) Желаемый размер стека для потока. По умолчанию используется тот же размер стека, что и для создания потока.  
   
--   (Необязательно) **CREATE_SUSPENDED** Если требуется, чтобы поток мог быть создан в приостановленном состоянии. Значение по умолчанию равно 0 или запустить поток в обычном режиме.  
+- (Необязательно) CREATE_SUSPENDED, если необходимо создать в приостановленном состоянии потока. По умолчанию равно 0 или запустите потока в обычном режиме.  
   
--   (Необязательно) Атрибуты требуемой безопасности. Значение по умолчанию — такой же доступ, как родительского потока. Дополнительные сведения о формате информации о безопасности см. в разделе [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) в [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+- (Необязательно) Желаемые атрибуты безопасности. По умолчанию используется тот же уровень доступа как родительского потока. Дополнительные сведения о формате информации о безопасности см. в разделе [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) в пакете Windows SDK.  
   
- `AfxBeginThread` выполняет большую часть работы. Она создает новый объект класса, инициализирует его с данные вводятся и вызывает [функцию CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) для запуска выполнения потока. Проверяет вносятся во всей процедуры, убедитесь, что все объекты, освобожденных должным образом вызывать любую часть создания.  
+`AfxBeginThread` выполняет большую часть работы. Она создает новый объект класса, инициализирует его с информацией, вы предоставляете и вызовы [функцию CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) для запуска выполнения потока. Проверки выполняются на протяжении процедуры, чтобы убедиться в том, что все объекты, освобожденные должным образом вызывать любую часть создания.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
   
--   [Многопоточность. Завершение потоков](../parallel/multithreading-terminating-threads.md)  
+- [Многопоточность. Завершение потоков](../parallel/multithreading-terminating-threads.md)  
   
--   [Многопоточность. Создание рабочих потоков](../parallel/multithreading-creating-worker-threads.md)  
+- [Многопоточность. Создание рабочих потоков](../parallel/multithreading-creating-worker-threads.md)  
   
--   [Процессы и потоки](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
+- [Процессы и потоки](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
   
 ## <a name="see-also"></a>См. также  
- [Реализация многопоточности на языке C++ с помощью классов MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ 
+[Реализация многопоточности на языке C++ с помощью классов MFC](../parallel/multithreading-with-cpp-and-mfc.md)

@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d63b90bb3622129589fca41c029f548a07ec21b8
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e0459c729368dc182de955f85afda514b2ff5071
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017660"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591866"
 ---
 # <a name="modulemodule-constructor"></a>Конструктор Module::Module
-Инициализирует новый экземпляр класса **модуль** класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-Module();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Этот конструктор является защищенным и не может вызываться с **новый** ключевое слово. Вместо этого вызовите [метод Module::GetModule](../windows/module-getmodule-method.md) или [метод Module::Create](../windows/module-create-method.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс Module](../windows/module-class.md)
+
+Инициализирует новый экземпляр класса **модуль** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+Module();
+```
+
+## <a name="remarks"></a>Примечания
+
+Этот конструктор является защищенным и не может вызываться с **новый** ключевое слово. Вместо этого вызовите [метод Module::GetModule](../windows/module-getmodule-method.md) или [метод Module::Create](../windows/module-create-method.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс Module](../windows/module-class.md)

@@ -1,5 +1,5 @@
 ---
-title: '-FU (имя принудительно #using файла) | Документы Microsoft'
+title: '-FU (имя принудительно #using файл) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9a27d8c689b198bde47047969d38cf14b41c46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a92e8d30d2c15ac07bc5a6ff3e6438da46438674
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375679"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597505"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (именование файла с принудительно используемым атрибутом #using)
 Параметр компилятора, который можно использовать в качестве альтернативы передачи имени файла для [# директива using](../../preprocessor/hash-using-directive-cpp.md) в исходном коде.  
@@ -38,18 +38,18 @@ ms.locfileid: "32375679"
   
 ## <a name="arguments"></a>Аргументы  
  `file`  
- Задает файл метаданных для ссылки в данной компиляции.  
+ Указывает файл метаданных и ссылка в данной компиляции.  
   
 ## <a name="remarks"></a>Примечания  
  /FU коммутатора принимает только одно имя файла. Чтобы указать несколько файлов, используйте /FU с каждой из них.  
   
- Если вы используете [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] и ссылаются метаданные, которые используются [дружественных сборок](../../dotnet/friend-assemblies-cpp.md) функции, нельзя использовать **/FU**. Должна ссылаться на метаданные в коде с помощью `#using`— вместе с `[as friend]` атрибута. Дружественные сборки не поддерживаются в [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]).  
+ При использовании C + +/ CLI и ссылающихся на метаданных для использования [дружественных сборок](../../dotnet/friend-assemblies-cpp.md) функции нельзя использовать **/FU**. Должна ссылаться на метаданные в коде с помощью `#using`— вместе с `[as friend]` атрибута. Дружественные сборки не поддерживаются в расширения компонентов Visual C++ C + +/ CX.  
   
- Сведения о создании сборки или модуля для общеязыковой среды выполнения (CLR) см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md). Дополнительные сведения о построении [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], в разделе [построение приложений и библиотек](../../cppcx/building-apps-and-libraries-c-cx.md).  
+ Сведения о создании сборки или модуля для общеязыковой среды выполнения (CLR), см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md). Сведения о построении в C + +/ CX, см. в разделе [построение приложений и библиотек](../../cppcx/building-apps-and-libraries-c-cx.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
 2.  Выберите **C/C++** папки.  
   

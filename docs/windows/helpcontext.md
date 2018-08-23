@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c505d6ebf62e6c01ecd3c2f750cec1c95775f53d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8d782246f44148805f9acc8d912b0fbf554227f7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642432"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595732"
 ---
 # <a name="helpcontext"></a>helpcontext
-Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в **помочь** файл.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[ helpcontext(  
-   id  
-) ]  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *id*  
- Идентификатор контекста справки. См. в разделе [HTML-справки: Context-Sensitive для ваших программ](../mfc/html-help-context-sensitive-help-for-your-programs.md) Дополнительные сведения о контексте идентификаторы.  
-  
-## <a name="remarks"></a>Примечания  
- **Helpcontext** атрибут C++ имеет ту же функциональность, что [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) описании атрибута MIDL.  
-  
-## <a name="example"></a>Пример  
- См. в примере [defaultvalue](../windows/defaultvalue.md) пример демонстрирует использование **helpcontext**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**интерфейс**, **typedef**, **класс**, метод, свойство|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
- [Атрибуты классов](../windows/class-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
- [HelpFile](../windows/helpfile.md)   
- [helpstring](../windows/helpstring.md)   
+
+Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в **помочь** файл.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ helpcontext(
+   id
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*id*  
+Идентификатор контекста справки. См. в разделе [HTML-справки: Context-Sensitive для ваших программ](../mfc/html-help-context-sensitive-help-for-your-programs.md) Дополнительные сведения о контексте идентификаторы.
+
+## <a name="remarks"></a>Примечания
+
+**Helpcontext** атрибут C++ имеет ту же функциональность, что [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [defaultvalue](../windows/defaultvalue.md) пример демонстрирует использование **helpcontext**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**интерфейс**, **typedef**, **класс**, метод, свойство|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  
+[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[helpfile](../windows/helpfile.md)  
+[helpstring](../windows/helpstring.md)  

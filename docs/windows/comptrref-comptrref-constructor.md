@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 621f852728cb40ea88a916b37147c28d8bb0db38
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 606f9560f6d490e1d50d94dd12103713781c4f1b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644466"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603764"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>Конструктор ComPtrRef::ComPtrRef
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-ComPtrRef(  
-   _In_opt_ T* ptr  
-);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *ptr*  
- Базовое значение другого **ComPtrRef** объекта.  
-  
-## <a name="remarks"></a>Примечания  
- Инициализирует новый экземпляр класса **ComPtrRef** класс из заданного указателя в другой **ComPtrRef** объекта.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Comptrref-класс](../windows/comptrref-class.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ComPtrRef(
+   _In_opt_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*ptr*  
+Базовое значение другого **ComPtrRef** объекта.
+
+## <a name="remarks"></a>Примечания
+
+Инициализирует новый экземпляр класса **ComPtrRef** класс из заданного указателя в другой **ComPtrRef** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtrRef](../windows/comptrref-class.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

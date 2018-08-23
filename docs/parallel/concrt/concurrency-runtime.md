@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208393"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608271"
 ---
 # <a name="concurrency-runtime"></a>Среда выполнения с параллелизмом
 Исполняющая среда с параллелизмом для C++ помогает создавать надежные, масштабируемые, быстро реагирующие параллельные приложения. Она повышает уровень абстракции, чтобы пользователю не приходилось управлять подробностями инфраструктуры, связанными с параллелизмом. Ее также можно использовать для указания политик планирования, соответствующих требованиям качества обслуживания приложений. Эти ресурсы помогут вам начать работу с исполняющей средой с параллелизмом.  
@@ -111,7 +111,7 @@ ms.locfileid: "39208393"
 |[Примеры кода для среды выполнения с параллелизмом и библиотеки параллельных шаблонов в Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Примеры приложений и утилит, демонстрирующих исполняющую среду с параллелизмом.|  
 |[Параллельное программирование в блоге машинного кода](http://go.microsoft.com/fwlink/p/?linkid=183873)|Содержит дополнительные подробные статьи о параллельном программировании в среде выполнения с параллелизмом.|  
 |[Parallel Computing in C++ and Native Code форум](http://go.microsoft.com/fwlink/p/?linkid=183874)|Позволяет участвовать в обсуждениях сообщества о среде выполнения с параллелизмом.|  
-|[Параллельное программирование](/dotnet/standard/parallel-programming/index)|Описывает модель параллельного программирования, доступную в [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)].|  
+|[Параллельное программирование](/dotnet/standard/parallel-programming/index)|Содержит сведения о модель параллельного программирования, который доступен в .NET Framework.|  
   
 ## <a name="see-also"></a>См. также  
  [Ссылки](../../parallel/concrt/reference/reference-concurrency-runtime.md)

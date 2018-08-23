@@ -13,35 +13,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb3a23f53dee82dd83f7b1b096702788d69d1f8e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 22886621760ed53649d26180877b1463ec2d3f2d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015892"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592168"
 ---
 # <a name="hstringreferencecopyto-method"></a>Метод HStringReference::CopyTo
-Копирует текущий **HStringReference** объект в объект HSTRING.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-HRESULT CopyTo(  
-   _Out_ HSTRING *str  
-   ) const throw();  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *str*  
- HSTRING, который получает копию.  
-  
-## <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) функции.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HStringReference](../windows/hstringreference-class.md)
+
+Копирует текущий **HStringReference** объект в объект HSTRING.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT CopyTo(
+   _Out_ HSTRING *str
+   ) const throw();
+```
+
+### <a name="parameters"></a>Параметры
+
+*str*  
+HSTRING, который получает копию.
+
+## <a name="remarks"></a>Примечания
+
+Этот метод вызывает метод [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) функции.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HStringReference](../windows/hstringreference-class.md)

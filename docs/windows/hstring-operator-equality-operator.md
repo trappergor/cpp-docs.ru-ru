@@ -15,54 +15,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c21e9f79673cc888f8661803a8cc4bb9053870c4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ed3a93ac964841028b252aa09a6b70c18ed202e9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604568"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602992"
 ---
 # <a name="hstringoperator-operator"></a>Оператор HString::Operator==
-Указывает, равны ли два параметра.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline bool operator==(  
-               const HString& lhs,   
-               const HString& rhs) throw()  
-  
-inline bool operator==(  
-                const HString& lhs,   
-                const HStringReference& rhs) throw()  
-  
-inline bool operator==(  
-                const HStringReference& lhs,   
-                const HString& rhs) throw()  
-  
-inline bool operator==(  
-                 const HSTRING& lhs,   
-                 const HString& rhs) throw()  
-  
-inline bool operator==(  
-                 const HString& lhs,   
+
+Указывает, равны ли два параметра.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline bool operator==(
+               const HString& lhs,
+               const HString& rhs) throw()
+
+inline bool operator==(
+                const HString& lhs,
+                const HStringReference& rhs) throw()
+
+inline bool operator==(
+                const HStringReference& lhs,
+                const HString& rhs) throw()
+
+inline bool operator==(
+                 const HSTRING& lhs,
+                 const HString& rhs) throw()
+
+inline bool operator==(
+                 const HString& lhs,
                  const HSTRING& rhs) throw()  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *lhs*  
- Первый параметр для сравнения. *LHS* может быть **HString** или `HStringReference` объекта или дескриптором HSTRING.  
-  
- *правая часть*  
- Второй параметр для сравнения. *rhs* может быть **HString** или `HStringReference` объекта или дескриптором HSTRING.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если *lhs* и *rhs* параметры равны; в противном случае — значение **false**.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HString](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*lhs*  
+Первый параметр для сравнения. *LHS* может быть **HString** или `HStringReference` объекта или дескриптором HSTRING.
+
+*правая часть*  
+Второй параметр для сравнения. *rhs* может быть **HString** или `HStringReference` объекта или дескриптором HSTRING.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если *lhs* и *rhs* параметры равны; в противном случае — значение **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HString](../windows/hstring-class.md)

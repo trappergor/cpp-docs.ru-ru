@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4bdbf1b2615a87b39797f2ff4e6e188c338dd5e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d2972938b28f2a5bef9fdc648591cea3101d5e7a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015863"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597914"
 ---
 # <a name="srwlocksrwlock-constructor"></a>Конструктор SRWLock::SRWLock
-Инициализирует новый экземпляр класса **SRWLock** класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-SRWLock();  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс SRWLock](../windows/srwlock-class.md)
+
+Инициализирует новый экземпляр класса **SRWLock** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+SRWLock();
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс SRWLock](../windows/srwlock-class.md)

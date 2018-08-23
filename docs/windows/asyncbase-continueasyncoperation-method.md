@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a335d379c1797e6152ea1b6011830423082693bb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b83d7a0bb5eadede42d2572d5ebc5a02a0fe9a0e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648052"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607189"
 ---
 # <a name="asyncbasecontinueasyncoperation-method"></a>Метод AsyncBase::ContinueAsyncOperation
-Определяет, должны продолжать обработку асинхронной операции или следует остановить.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline bool ContinueAsyncOperation();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если текущее состояние асинхронной операции *работы*, который означает, что операция должна продолжаться. В противном случае **false**, который означает, что операция следует остановить.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Определяет, должны продолжать обработку асинхронной операции или следует остановить.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline bool ContinueAsyncOperation();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если текущее состояние асинхронной операции *работы*, который означает, что операция должна продолжаться. В противном случае **false**, который означает, что операция следует остановить.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

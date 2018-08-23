@@ -15,38 +15,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0a19635b635b80d65e0da99b8f50606154a5b4b2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608960"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594772"
 ---
 # <a name="inspectableclass-macro"></a>Макрос InspectableClass
-Задает уровень имя и доверия класса среды выполнения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-InspectableClass(  
-   runtimeClassName,   
+
+Задает уровень имя и доверия класса среды выполнения.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+InspectableClass(
+   runtimeClassName,
    trustLevel)  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *runtimeClassName*  
- Полное текстовое имя класса среды выполнения.  
-  
- *trustLevel*  
- Один из [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) значений перечисления.  
-  
-## <a name="remarks"></a>Примечания  
- **InspectableClass** макрос может использоваться только с типами среды выполнения Windows.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс RuntimeClass](../windows/runtimeclass-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*runtimeClassName*  
+Полное текстовое имя класса среды выполнения.
+
+*trustLevel*  
+Один из [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) значений перечисления.
+
+## <a name="remarks"></a>Примечания
+
+**InspectableClass** макрос может использоваться только с типами среды выполнения Windows.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс RuntimeClass](../windows/runtimeclass-class.md)
