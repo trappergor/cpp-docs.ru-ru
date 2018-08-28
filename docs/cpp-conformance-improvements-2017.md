@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571443"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900704"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -1680,6 +1680,8 @@ struct S : Base<T> {
 ```
 
 Чтобы исправить эту ошибку, измените инструкцию `return` на `return this->base_value;`.
+
+**Примечание.** В библиотеке Boost.Python в течение долгого времени был описан способ обходного решения исключительно для MVV для объявления о переадресации шаблона в [unind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). В режиме [/permissive-](build/reference/permissive-standards-conformance.md), начиная с Visual Studio 2017 версии 15.8 (_MSC_VER=1915), компилятор MSVC корректно выполняет поиск в зависимости от аргументов (ADL) и согласуется с другими компиляторами, делая условие обходного решения ненужным. Чтобы избежать ошибки *C3861: 'unwind_type': идентификатор не найден*, см. [PR 229](https://github.com/boostorg/python/pull/229) в репозитории Boostorg для обновления файла заголовка. Пакет Boost [vcpkg](vcpkg.md) уже исправлен, поэтому при получении или обновлении источника Boost из vcpkg не нужно применять отдельное исправление.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>Опережающие объявления и определения в пространстве имен std
 
