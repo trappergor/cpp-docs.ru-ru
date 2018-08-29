@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5df81fa3d47005fc80bdb3b1c78cba050775cda6
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ab667e372c8118a83b7a93444abbfbc5c19b6e0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540280"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131522"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>Компиляция и компоновка многопоточных программ
-В программе Bounce.c впервые появился в [Пример многопоточной программы на C](../parallel/sample-multithread-c-program.md).  
+В программе Bounce.c впервые появился в [Пример многопоточной программы на C](sample-multithread-c-program.md).  
   
 Скомпилированные программы многопоточных по умолчанию.  
   
@@ -54,4 +54,4 @@ ms.locfileid: "42540280"
   
 ## <a name="see-also"></a>См. также
 
-[Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)
+[Реализация многопоточности на языке C с помощью функций Win32](multithreading-with-c-and-win32.md)
