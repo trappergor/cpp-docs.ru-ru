@@ -1,7 +1,7 @@
 ---
 title: Перечисления (C++) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/01/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 00a1b940ad6c792abbb13ec91b7376b73b2be16b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406257"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130954"
 ---
 # <a name="enumerations-c"></a>Перечисления (C++)
 Перечисление — это пользовательский тип, состоящий из набора целочисленных констант, называемых перечислителями.  
@@ -149,7 +149,8 @@ namespace ScopedEnumConversions
   
  Обратите внимание, что в строке `hand = account_num;` по-прежнему содержится ошибка, которая происходит при использовании неограниченных перечислений, как показано выше. Эта ошибка устраняется с помощью явного приведения. Однако при использовании ограниченных перечислений попытка преобразования в следующем операторе — `account_num = Suit::Hearts;` — больше не будет разрешена без явного приведения. 
 
-## <a name="enums-with-no-enumerators"></a>Перечисления атрибутом не перечислителей
+## <a name="no_enumerators"></a> Перечисления атрибутом не перечислителей
+
 **Visual Studio 2017 версии 15.3 и более поздние версии** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): путем определения перечисления (обычный или областью действия) с помощью явного базового типа и не перечислители, вы можете фактически представлен новый тип целочисленный тип, который не имеет неявного преобразования к любому другому типу. С помощью этого типа вместо встроенных базового типа, можно исключить вероятность ошибкам из-за случайных неявные преобразования.  
 
 

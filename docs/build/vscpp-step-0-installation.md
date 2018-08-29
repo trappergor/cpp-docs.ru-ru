@@ -1,5 +1,5 @@
 ---
-title: Установка поддержки C++ в Visual Studio | Документация Майкрософт
+title: Установка поддержки C++ в Visual Studio 2017 | Документация Майкрософт
 description: Поддержка Visual C++ в Visual Studio
 ms.custom: mvc
 ms.date: 06/21/2018
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572087"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130895"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Установка поддержки C++ в Visual Studio
 
-Если вы еще не скачали и установлен на компьютере Visual Studio и инструментов Visual C++, вот как приступить к работе.
+Если вы еще не скачали и установлен на компьютере Visual Studio 2017 и инструменты Visual C++, вот как приступить к работе.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -35,7 +35,13 @@ ms.locfileid: "42572087"
 
 Дополнительные сведения о дисковом пространстве и требования к операционной системе, см. в разделе [Visual Studio семейства требования к системе продуктов](/visualstudio/productinfo/vs2017-system-requirements-vs). Установщик сообщает, сколько места на диске необходим для выбранных параметров.
 
-## <a name="installation"></a>Установка
+## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 установки
+
+ Чтобы установить Visual Studio 2015, перейдите к [загрузить более ранние версии Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Запустите программу установки и выберите **Выборочная установка** и выберите компонент C++. 
+
+ Как правило настоятельно рекомендуется использовать Visual Studio 2017, даже если вам нужно скомпилировать код, с помощью компилятора Visual Studio 2015. Дополнительные сведения см. в разделе [Использование собственного многоплатформенного нацеливания в Visual Studio для сборки старых проектов](../porting/use-native-multi-targeting.md).
+
+## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 установки
 
 1. Скачайте последнюю версию установщика Visual Studio 2017 для Windows.
 

@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 08a5e75092aaa467c6e1f937cc00a541aaf24bfa
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541663"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131340"
 ---
 # <a name="sample-multithread-c-program"></a>Образец многопотоковой программы на C
-Bounce.c является образцом многопотоковой программы, которая создает новый поток каждый раз, буквы `a` или `A` типизирован. Каждый поток отображается счастливое лицо определенного цвета на экране. Могут быть созданы до 32 потоков. Нормальное завершение программы происходит при `q` или `Q` типизирован. Сведения о компиляции и связывании в программе Bounce.c см. в разделе [компиляция и связывание в многопотоковых программах](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c является образцом многопотоковой программы, которая создает новый поток каждый раз, буквы `a` или `A` типизирован. Каждый поток отображается счастливое лицо определенного цвета на экране. Могут быть созданы до 32 потоков. Нормальное завершение программы происходит при `q` или `Q` типизирован. Сведения о компиляции и связывании в программе Bounce.c см. в разделе [компиляция и связывание в многопотоковых программах](compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -220,4 +220,4 @@ q
   
 ## <a name="see-also"></a>См. также  
 
-[Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)
+[Реализация многопоточности на языке C с помощью функций Win32](multithreading-with-c-and-win32.md)

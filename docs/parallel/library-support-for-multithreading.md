@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f775cbb78ff81ba6f1c2761d7969feabd932bd7
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b433befdec72b000bc83d2087bc5eb15e2d00496
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545855"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131923"
 ---
 # <a name="library-support-for-multithreading"></a>Поддержка многопоточности библиотеками
 Все версии библиотек CRT теперь поддерживают многопоточность за исключением неблокирующих версий некоторых функций. См. в разделе [производительность многопоточных библиотек](../c-runtime-library/multithreaded-libraries-performance.md) Дополнительные сведения.  
@@ -29,4 +29,4 @@ ms.locfileid: "42545855"
   
 ## <a name="see-also"></a>См. также  
 
-[Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)
+[Реализация многопоточности на языке C с помощью функций Win32](multithreading-with-c-and-win32.md)
