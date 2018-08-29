@@ -3,12 +3,16 @@ layout: HubPage
 ms.topic: hub-page
 title: Документация по Visual C++ | Документы Майкрософт
 description: Узнайте, как использовать C++ для разработки приложений, служб и средств для платформ и устройств.
-ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c4ae5b3f4ffed0c41c3d519a99b7608893813872
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29794200"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "43130681"
 ---
 <div id="main" class="v2">
     <div class="container">

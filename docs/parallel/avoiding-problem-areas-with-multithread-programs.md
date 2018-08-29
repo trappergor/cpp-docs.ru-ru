@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 97a69c52adb5094c7c7841a93b73b1a83cd786d9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539681"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131066"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Устранение потенциальных проблем при работе с многопотоковыми программами
-Существует несколько проблем, которые могут возникнуть в создании, связывание или выполнении многопоточной программы на C. В следующей таблице описываются некоторые из наиболее распространенных проблем. (Описание аналогичных проблем с точки зрения MFC см. в разделе [Многопоточность: советы по программированию](../parallel/multithreading-programming-tips.md).)  
+Существует несколько проблем, которые могут возникнуть в создании, связывание или выполнении многопоточной программы на C. В следующей таблице описываются некоторые из наиболее распространенных проблем. (Описание аналогичных проблем с точки зрения MFC см. в разделе [Многопоточность: советы по программированию](multithreading-programming-tips.md).)  
   
 |Проблема|Возможная причина|  
 |-------------|--------------------|  
@@ -34,4 +34,4 @@ ms.locfileid: "42539681"
   
 ## <a name="see-also"></a>См. также  
 
-[Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)
+[Реализация многопоточности на языке C с помощью функций Win32](multithreading-with-c-and-win32.md)

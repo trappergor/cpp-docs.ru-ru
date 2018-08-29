@@ -1,7 +1,7 @@
 ---
 title: Поддержка многопоточности для устаревшего кода (Visual C++) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539685"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132106"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Поддержка многопоточности для устаревшего кода (Visual C++)
 Visual C++ позволяет иметь несколько параллельных потоков выполнения, работающих одновременно. С помощью многопоточности можно выполнять фоновые задачи, управлять одновременными потоками ввода, управления пользовательского интерфейса и многое другое.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  
-[Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)  
+[Реализация многопоточности на языке C с помощью функций Win32](multithreading-with-c-and-win32.md)  
 Предоставляет поддержку для создания многопоточных приложений в Microsoft Windows  
   
-[Реализация многопоточности на языке C++ с помощью классов MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+[Реализация многопоточности на языке C++ с помощью классов MFC](multithreading-with-cpp-and-mfc.md)  
 Описывает процессы и потоки, и подход MFC к многопоточности является.  
   
-[Многопоточность и языковые стандарты](../parallel/multithreading-and-locales.md)  
+[Многопоточность и языковые стандарты](multithreading-and-locales.md)  
 Описывает проблемы, возникающие при использовании функций языковых стандартов библиотеки времени выполнения C и стандартной библиотеки C++ в многопоточных приложениях.  
   
 ## <a name="related-sections"></a>Связанные разделы  

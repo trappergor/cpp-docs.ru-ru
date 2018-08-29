@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540284"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131858"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Функции управления потоками в библиотеке времени выполнения C
 Все программы Win32 имеют по крайней мере один поток. Любой поток может создавать дополнительные потоки. Поток может завершаться и остановите или оставаться активным в течение жизненного цикла программы.  
@@ -54,4 +54,4 @@ ms.locfileid: "42540284"
   
 ## <a name="see-also"></a>См. также  
  
-[Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)
+[Реализация многопоточности на языке C с помощью функций Win32](multithreading-with-c-and-win32.md)

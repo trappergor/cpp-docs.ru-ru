@@ -1,5 +1,5 @@
 ---
-title: 'Затраченное время: Классы общего назначения | Документы Microsoft'
+title: 'Затраченное время: Классы общего назначения | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7ef11bb20124a05e2e85c408ce27de8f982546
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98e3c07522ead22467455ce2d601270e7b624be0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354270"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131618"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>Затраченное время: Классы общего назначения
-Ниже показано, как вычислить разницу между двумя `CTime` объектов и get `CTimeSpan` результат.  
-  
-#### <a name="to-calculate-elapsed-time"></a>Для вычисления истекшего времени  
-  
-1.  Используйте `CTime` и `CTimeSpan` объекты для вычисления истекшего времени, следующим образом:  
+Ниже показано, как вычислить разницу между двумя `CTime` объектов и получите `CTimeSpan` результат. Используйте `CTime` и `CTimeSpan` объекты для вычисления истекшего времени, следующим образом:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]  
   
-     После вычисляется `elapsedTime`, можно использовать функции-члены `CTimeSpan` для извлечения компонентов значения затраченного времени.  
-  
-## <a name="see-also"></a>См. также  
- [Дата и время. Классы общего назначения](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+После вычисления `elapsedTime`, можно использовать функции-члены `CTimeSpan` для извлечения компонентов значения затраченного времени.  
 

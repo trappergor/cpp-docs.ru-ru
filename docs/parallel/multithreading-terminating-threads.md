@@ -1,7 +1,7 @@
 ---
-title: 'Многопоточность: Завершение потоков | Документация Майкрософт'
+title: 'Многопоточность: Завершение потоков в MFC | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608848"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131949"
 ---
-# <a name="multithreading-terminating-threads"></a>Многопоточность. Завершение потоков
+# <a name="multithreading-terminating-threads-in-mfc"></a>Многопоточность: Завершение потоков в MFC
 Завершение потока вызвать двух случаях: контролирующей функции или поток не разрешено выполняться до завершения. При использовании текстовым процессором потока для печати в фоновом режиме функцию управления завершается при успешном выполнении задания печати. Если пользователю необходимо отменить печать, однако фоновый поток печати должен быть преждевременно. В этом разделе объясняется, как реализовать каждой ситуации и способы получения кода выхода из потока после его завершения.  
   
 - [Обычное завершение потока](#_core_normal_thread_termination)  
@@ -67,7 +67,7 @@ ms.locfileid: "42608848"
   
 ## <a name="see-also"></a>См. также  
  
-[Реализация многопоточности на языке C++ с MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+[Реализация многопоточности на языке C++ с MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

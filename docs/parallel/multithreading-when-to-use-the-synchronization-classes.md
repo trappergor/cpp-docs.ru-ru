@@ -1,7 +1,7 @@
 ---
-title: 'Многопоточность: Использование классов синхронизации | Документация Майкрософт'
+title: 'Многопоточность: Использование классов синхронизации MFC | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3556bace6c578edec8eaedffb528d21cb1644f5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d88bb98388aaedac9499ab91ad94bef085c0b702
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606068"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132270"
 ---
-# <a name="multithreading-when-to-use-the-synchronization-classes"></a>Многопоточность. Использование классов синхронизации
+# <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Многопоточность: Использование классов синхронизации MFC
 Многопоточные классы, предоставляемые MFC делятся на две категории: объекты синхронизации ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), и [CEvent](../mfc/reference/cevent-class.md)) и синхронизации доступ к объектам ([CMultiLock](../mfc/reference/cmultilock-class.md) и [CSingleLock](../mfc/reference/csinglelock-class.md)).  
   
 Классы синхронизации используются в том случае, когда необходимо контролировать доступ к ресурсу для обеспечения целостности ресурса. Классы синхронного доступа используются для получения доступа к этим ресурсам управляемой. В этом разделе приводится описание использования каждого класса.  
@@ -61,8 +61,8 @@ ms.locfileid: "42606068"
  
 Выбор используемого класса доступа синхронизации использовать еще проще. Если приложение отвечает за доступ к только один управляемый ресурс, используйте `CSingleLock`. Если ему требуется доступ к одному из нескольких управляемых ресурсов, используйте `CMultiLock`. В примере 1 `CSingleLock` будет использоваться, так как в каждом конкретном случае требуется только один ресурс в любой момент времени.  
   
-Сведения об использовании классов синхронизации, см. в разделе [Многопоточность: Практическое использование классов синхронизации](../parallel/multithreading-how-to-use-the-synchronization-classes.md). Сведения о синхронизации см. в разделе [синхронизации](http://msdn.microsoft.com/library/windows/desktop/ms686353) в пакете Windows SDK. Сведения о поддержке многопоточности в MFC, см. в разделе [многопоточность с помощью C++ и MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Сведения об использовании классов синхронизации, см. в разделе [Многопоточность: Практическое использование классов синхронизации](multithreading-how-to-use-the-synchronization-classes.md). Сведения о синхронизации см. в разделе [синхронизации](/windows/desktop/Sync/synchronization) в пакете Windows SDK. Сведения о поддержке многопоточности в MFC, см. в разделе [многопоточность с помощью C++ и MFC](multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>См. также  
  
-[Реализация многопоточности на языке C++ с помощью классов MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Реализация многопоточности на языке C++ с помощью классов MFC](multithreading-with-cpp-and-mfc.md)
