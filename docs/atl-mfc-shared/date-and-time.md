@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5eadb13e71e65e07c807812ad00fc1989c3a19f9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879563"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132211"
 ---
 # <a name="date-and-time"></a>Дата и время
 MFC поддерживает несколько различных способов работы с датами и временем. Сюда входит следующее.  
@@ -34,8 +34,6 @@ MFC поддерживает несколько различных способ�
 -   Поддержка автоматизации [тип данных DATE](../atl-mfc-shared/date-type.md). Дата поддерживает даты, времени и значений даты и времени. [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) и [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) классы инкапсулируют эту функцию. Они работают с [COleVariant](../mfc/reference/colevariant-class.md) используя Поддержка модели автоматизации.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений  
-  
--   [Дата и время. Классы общего назначения](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 -   [Дата и время. Поддержка SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
