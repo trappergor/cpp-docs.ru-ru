@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540516"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217045"
 ---
 # <a name="coleipframewndex-class"></a>Класс COleIPFrameWndEx
 Класс `COleIPFrameWndEx` реализует OLE-контейнер с поддержкой MFC. Необходимо создать встроенный класс окна фрейма для приложения, производный от класса `COleIPFrameWndEx` , вместо наследования его от класса [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.   
@@ -929,7 +929,7 @@ virtual void WinHelp(
  Указывает данные, необходимые для тип справки, определяемое *nCmd*.  
   
  [in] *nCmd*  
- Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе [функция WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) в пакете Windows SDK.  
+ Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе [функция WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
   
