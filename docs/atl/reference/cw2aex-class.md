@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30031a4da36e4efdf91177c983691dda38b426f4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 13b6531dd1299235a125b1c25b0b1d84781755ed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882680"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217844"
 ---
 # <a name="cw2aex-class"></a>Класс CW2AEX
 Этот класс используется, макросы преобразования строк CT2AEX, CW2TEX, CW2CTEX и CT2CAEX и typedef CW2A.  
@@ -110,7 +110,7 @@ CW2AEX(LPCWSTR psz) throw(...);
  Текстовая строка для преобразования.  
   
  *nCodePage*  
- Кодовую страницу, используемую для выполнения преобразования. См. в обсуждении параметр кода страницы для функции Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) для получения дополнительных сведений.  
+ Кодовую страницу, используемую для выполнения преобразования. См. в обсуждении параметр кода страницы для функции Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) для получения дополнительных сведений.  
   
 ### <a name="remarks"></a>Примечания  
  Выделяет буфера, используемого в процессе перевода.  

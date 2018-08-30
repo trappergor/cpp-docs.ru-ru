@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028178"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220510"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Элементы управления ActiveX в MFC. Оптимизация
 Здесь объясняются методы, которые можно использовать для оптимизации элементов управления ActiveX для повышения производительности.  
@@ -53,7 +53,7 @@ ms.locfileid: "39028178"
 |**Мыши уведомления указателя мыши при неактивной** "флажок"|Выбрать|[Обеспечение взаимодействия с мышью в неактивном режиме](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Оптимизированный код отрисовки** "флажок"|Выбрать|[Оптимизация рисования элементов управления](../mfc/optimizing-control-drawing.md)|  
   
- Подробные сведения о функциях-членах, которые реализуют эти оптимизации см. в разделе [COleControl](../mfc/reference/colecontrol-class.md). Функции-члены, перечислены по использования, такие как [без окон операций](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) и [неактивного указатель функции, обработка](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Подробные сведения о функциях-членах, которые реализуют эти оптимизации см. в разделе [COleControl](../mfc/reference/colecontrol-class.md).  
   
  Дополнительные сведения:  
   

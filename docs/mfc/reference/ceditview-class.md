@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bcc4af6f4aeb6c7a0df005d164729cf87065f613
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338500"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220834"
 ---
 # <a name="ceditview-class"></a>Класс CEditView
 Тип класса представления, который предоставляет функциональные возможности элемента управления "поле ввода" Windows и может использоваться для реализации простой функциональности текстового редактора.  
@@ -120,7 +120,7 @@ class CEditView : public CCtrlView
   
  Реализация по умолчанию класса `CEditView` обрабатывает следующие команды: ID_EDIT_SELECT_ALL, ID_EDIT_FIND, ID_EDIT_REPLACE, ID_EDIT_REPEAT и ID_FILE_PRINT.  
   
- Максимальное количество знаков по умолчанию для `CEditView` является (1024 \* 1024-1 = 1048575). Это можно изменить путем вызова функции EM_LIMITTEXT базового элемента управления edit. Однако ограничения различаются в зависимости от операционной системы и тип элемента управления edit (одинарную или многострочный). Дополнительные сведения об этих ограничениях см. в разделе [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607).  
+ Максимальное количество знаков по умолчанию для `CEditView` является (1024 \* 1024-1 = 1048575). Это можно изменить путем вызова функции EM_LIMITTEXT базового элемента управления edit. Однако ограничения различаются в зависимости от операционной системы и тип элемента управления edit (одинарную или многострочный). Дополнительные сведения об этих ограничениях см. в разделе [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).  
   
  Чтобы изменить это ограничение в элементе управления, переопределите `OnCreate()` работать для вашего `CEditView` класса и вставьте следующую строку кода:  
   

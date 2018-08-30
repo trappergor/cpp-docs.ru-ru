@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d1911a8bd8a7f3079497ec66ea1de59aff480a0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d84eef4c91442eedc830fdee836dc5d950b5eae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604054"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209594"
 ---
 # <a name="creating-new-symbols"></a>Создание новых символов
 
@@ -45,7 +45,7 @@ ms.locfileid: "42604054"
 
 Если будет введено имя символа, которое уже существует, появится сообщение о том, что символ с таким именем уже определен. Нельзя определить два и несколько символов с одинаковыми именами, но можно определить разные символы с одинаковыми числовыми значениями. Дополнительные сведения см. в разделе [ограничения для имен символов](../windows/symbol-name-restrictions.md) и [ограничения для значений символов](../windows/symbol-value-restrictions.md).
 
-Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. . Сведения о том, как вручную добавлять файлы ресурсов в проекты управляемого кода, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам отображать статические ресурсы и назначение ресурсов строки свойства.
 
 ## <a name="requirements"></a>Требования
 

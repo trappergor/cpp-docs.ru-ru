@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7becd9e27294c81ce6144d08c79cfac52636fbf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848269"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217887"
 ---
 # <a name="interfaces-atl"></a>Интерфейсы (ATL)
 Интерфейс является способом, в котором объект предоставляющее свои функции с внешним миром. В модели COM интерфейс — это таблица указателей (таких как C++ vtable) для функций, реализованных данным объектом. Таблица представляет интерфейс, и функции, на которые он указывает являются методы этого интерфейса. Объект может предоставлять любое количество интерфейсов, он выбирает.  
@@ -34,5 +34,5 @@ ms.locfileid: "37848269"
   
 ## <a name="see-also"></a>См. также  
  [Введение в модель COM](../atl/introduction-to-com.md)   
- [COM-объекты и интерфейсы](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [COM-объекты и интерфейсы](/windows/desktop/com/com-objects-and-interfaces)
 

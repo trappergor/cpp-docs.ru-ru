@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcabd0659e98d25cbe28ce233b89dccc3585d61
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 15719f93fbcfde8e6684373f99c924132af9d288
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336190"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215444"
 ---
 # <a name="cdaoexception-class"></a>Класс CDaoException
 Представляет условие исключения, поступающее от классов базы данных MFC на базе объектов доступа к данным (DAO).  
@@ -201,7 +201,7 @@ void GetErrorInfo(int nIndex);
 ### <a name="remarks"></a>Примечания  
  Это кодом OLE. Редко необходимо будет использовать это значение, поскольку почти во всех случаях более подробных сведений об ошибке MFC или DAO доступна в другом `CDaoException` данные-члены.  
   
- Сведения о SCODE, см. в разделе [структура OLE кодов ошибок](http://msdn.microsoft.com/library/windows/desktop/ms690088) в пакете Windows SDK. Тип данных SCODE сопоставляется тип данных значения HRESULT.  
+ Сведения о SCODE, см. в разделе [структура OLE кодов ошибок](/windows/desktop/com/structure-of-com-error-codes) в пакете Windows SDK. Тип данных SCODE сопоставляется тип данных значения HRESULT.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CException](../../mfc/reference/cexception-class.md)   

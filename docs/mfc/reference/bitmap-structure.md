@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339351"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220765"
 ---
 # <a name="bitmap-structure"></a>Структура BITMAP
 **Точечного РИСУНКА** структура определяет высоту, ширину, формат цвета и значения битов Битовая карта логических **.**  
@@ -85,7 +85,7 @@ typedef struct tagBITMAP {  /* bm */
   
  Все устройства поддерживают точечные рисунки, срок действия набора RC_BITBLT бит в индекс RASTERCAPS [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) функция-член.  
   
- Каждое устройство имеет свой собственный уникальный цвет формат. Чтобы передать точечный рисунок с одного устройства в другую, используйте [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) и [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) функции Windows.  
+ Каждое устройство имеет свой собственный уникальный цвет формат. Чтобы передать точечный рисунок с одного устройства в другую, используйте [GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits) и [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) функции Windows.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** wingdi.h  

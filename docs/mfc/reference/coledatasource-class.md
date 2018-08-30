@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839068647a6f4d118e1536f5fb4e0852657d963f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d67165d3869ffdd60eff86fa8c33abf275e070b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027785"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209781"
 ---
 # <a name="coledatasource-class"></a>Класс COleDataSource
 Играет роль кэша, в который приложение помещает данные, которые оно будет предлагать во время операций передачи данных, таких как операции с буфером обмена или операции перетаскивания.  
@@ -92,7 +92,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="remarks"></a>Примечания  
  Можно создать источники данных OLE напрямую. Кроме того [COleClientItem](../../mfc/reference/coleclientitem-class.md) и [COleServerItem](../../mfc/reference/coleserveritem-class.md) классы создавать источники данных OLE в ответ на их `CopyToClipboard` и `DoDragDrop` функций-членов. См. в разделе [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) краткое описание. Переопределить `OnGetClipboardData` созданные функции-члена класса клиента элемента или сервера элемента будут добавляться дополнительные форматы буфера обмена данные в источнике данных OLE для `CopyToClipboard` или `DoDragDrop` функция-член.  
   
- Каждый раз, когда вы хотите подготовить данные для передачи, необходимо создать объект этого класса и заполнить его данные с помощью наиболее подходящий метод для ваших данных. Способ вставки в источник данных непосредственно зависит от ли данные, предоставляются немедленно (немедленное отрисовки) или по требованию (отложенная отрисовка). Для каждого формата буфера обмена, в котором данные предоставляются путем передачи формат буфера обмена для использования (и, при необходимости [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры), вызовите [DelayRenderData](#delayrenderdata).  
+ Каждый раз, когда вы хотите подготовить данные для передачи, необходимо создать объект этого класса и заполнить его данные с помощью наиболее подходящий метод для ваших данных. Способ вставки в источник данных непосредственно зависит от ли данные, предоставляются немедленно (немедленное отрисовки) или по требованию (отложенная отрисовка). Для каждого формата буфера обмена, в котором данные предоставляются путем передачи формат буфера обмена для использования (и, при необходимости [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры), вызовите [DelayRenderData](#delayrenderdata).  
   
  Дополнительные сведения об источниках данных и передачи данных см. в статье [объекты данных и источники данных (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Кроме того, статьи [разделы буфер обмена](../../mfc/clipboard.md) Описание механизма буфера обмена OLE.  
   
@@ -118,26 +118,26 @@ void CacheData(
   
 ### <a name="parameters"></a>Параметры  
  *cfFormat*  
- Формат буфера обмена, в котором данные является доступным. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ Формат буфера обмена, в котором данные является доступным. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) функции.  
   
  *lpStgMedium*  
- Указывает на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуру, содержащую данные в указанном формате.  
+ Указывает на [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) структуру, содержащую данные в указанном формате.  
   
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором данные является доступным. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, описывающие формат, в котором данные является доступным. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
   
 ### <a name="remarks"></a>Примечания  
  Необходимо указать данные, так как эта функция предоставляет его с помощью интерпретации отрисовки. Данные кэшируются, пока они не понадобятся.  
   
- Предоставьте данные с помощью [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуры. Можно также использовать `CacheGlobalData` настолько мало, будет передаваться эффективно используя HGLOBAL функция-член, если объем данных, вы указали.  
+ Предоставьте данные с помощью [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) структуры. Можно также использовать `CacheGlobalData` настолько мало, будет передаваться эффективно используя HGLOBAL функция-член, если объем данных, вы указали.  
   
  После вызова `CacheData` `ptd` членом `lpFormatEtc` и содержание *lpStgMedium* принадлежат объекту данных, не вызывающим объектом.  
   
  Чтобы использовать отложенной подготовки к просмотру, вызовите [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структур в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) и [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структур в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) в пакете Windows SDK.  
   
 ##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
  Вызывайте эту функцию, чтобы указать формат, в котором данные предлагается данных операций передачи.  
@@ -151,22 +151,22 @@ void CacheGlobalData(
   
 ### <a name="parameters"></a>Параметры  
  *cfFormat*  
- Формат буфера обмена, в котором данные является доступным. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ Формат буфера обмена, в котором данные является доступным. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) функции.  
   
  *hGlobal*  
  Дескриптор к глобальной памяти блок, содержащий данные в указанном формате.  
   
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором данные является доступным. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, описывающие формат, в котором данные является доступным. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция предоставляет данные с помощью интерпретации визуализации, поэтому данные необходимо предоставить при вызове функции; данные кэшируются, пока они не понадобятся. Используйте `CacheData` функция-член, если вы указали большой объем данных или если требуется средний структурированного хранилища.  
   
  Чтобы использовать отложенной подготовки к просмотру, вызовите [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) в пакете Windows SDK.  
   
 ##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  Создает объект `COleDataSource`.  
@@ -186,10 +186,10 @@ void DelayRenderData(
   
 ### <a name="parameters"></a>Параметры  
  *cfFormat*  
- Формат буфера обмена, в котором данные является доступным. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ Формат буфера обмена, в котором данные является доступным. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) функции.  
   
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором данные является доступным. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, описывающие формат, в котором данные является доступным. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция предоставляет данные с помощью отложенной обработки, поэтому данные не предоставляются немедленно. [OnRenderData](#onrenderdata) или [OnRenderGlobalData](#onrenderglobaldata) функция-член вызывается для запроса данных.  
@@ -198,9 +198,9 @@ void DelayRenderData(
   
  Чтобы использовать немедленное отрисовки, вызовите [CacheData](#cachedata) или [CacheGlobalData](#cacheglobaldata) функция-член.  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) в пакете Windows SDK.  
   
 ##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
  Вызывайте эту функцию, чтобы указать формат, в котором данные предлагается данных операций передачи.  
@@ -213,10 +213,10 @@ void DelayRenderFileData(
   
 ### <a name="parameters"></a>Параметры  
  *cfFormat*  
- Формат буфера обмена, в котором данные является доступным. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ Формат буфера обмена, в котором данные является доступным. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) функции.  
   
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором данные является доступным. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, описывающие формат, в котором данные является доступным. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция предоставляет данные с помощью отложенной обработки, поэтому данные не предоставляются немедленно. [OnRenderFileData](#onrenderfiledata) функция-член вызывается для запроса данных.  
@@ -225,9 +225,9 @@ void DelayRenderFileData(
   
  Чтобы использовать немедленное отрисовки, вызовите [CacheData](#cachedata) или [CacheGlobalData](#cacheglobaldata) функция-член.  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) в пакете Windows SDK.  
   
 ##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  Вызывайте эту функцию, поддерживающих изменение содержимого источника данных.  
@@ -240,17 +240,17 @@ void DelaySetData(
   
 ### <a name="parameters"></a>Параметры  
  *cfFormat*  
- Формат буфера обмена, в котором будет размещаться данные. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ Формат буфера обмена, в котором будет размещаться данные. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) функции.  
   
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором данные являются заменяемого. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, описывающие формат, в котором данные являются заменяемого. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если это значение NULL, используются значения по умолчанию для других полей в `FORMATETC` структуры.  
   
 ### <a name="remarks"></a>Примечания  
  [OnSetData](#onsetdata) вызывается платформой, когда это происходит. Это используется, только когда из источника данных, то платформа возвращает [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Если `DelaySetData` не вызывается, ваш `OnSetData` никогда не будет вызвана функция. `DelaySetData` должен вызываться для каждого буфера обмена или `FORMATETC` формата, поддерживаются.  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) в пакете Windows SDK.  
   
 ##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop  
  Вызовите `DoDragDrop` функцию-член для операции перетаскивания и вставки для этого источника данных, обычно в виде [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) обработчика.  
@@ -294,7 +294,7 @@ DROPEFFECT DoDragDrop(
   
 -   Перетащите Windows 95/98 задержка времени хранится в кэшированной версии WIN. INI.  
   
- Для перетащите Дополнительные сведения о том, как задержки сведения хранятся в реестре или. INI-файл, см. в разделе [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) в пакете Windows SDK.  
+ Для перетащите Дополнительные сведения о том, как задержки сведения хранятся в реестре или. INI-файл, см. в разделе [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) в пакете Windows SDK.  
   
  Дополнительные сведения см. в статье [путем перетаскивания: реализация источника Drop](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
@@ -308,7 +308,7 @@ void Empty();
 ### <a name="remarks"></a>Примечания  
  Оба кэшируются и форматов подготовки к просмотру задержки очищаются, поэтому они могут использоваться повторно.  
   
- Дополнительные сведения см. в разделе [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) в пакете Windows SDK.  
   
 ##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  Выполняет визуализацию данных, который находится в буфере обмена, а затем позволяет вставлять данные из буфера обмена, после завершения работы вашего приложения.  
@@ -341,10 +341,10 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>Параметры  
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором запрашиваются сведения.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структура, задающая формат, в котором запрашиваются сведения.  
   
  *lpStgMedium*  
- Указывает на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуры, в котором они должны быть возвращены.  
+ Указывает на [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) структуры, в котором они должны быть возвращены.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -356,7 +356,7 @@ virtual BOOL OnRenderData(
   
  Существует расширенная переопределяемый. Переопределите эту функцию для предоставления данных в затребованном формате и средний. В зависимости от данных может потребоваться переопределить один из других версий эта функция вместо этого. Если данные находятся в малых и фиксированный размер, переопределить `OnRenderGlobalData`. Если данные находятся в файле, или имеет переменный размер, переопределить `OnRenderFileData`.  
   
- Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) тип перечисления, и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в Windows SDK.  
+ Дополнительные сведения см. в разделе [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) и [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) тип перечисления, и [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) в Windows SDK.  
   
 ##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
  Вызывается платформой для извлечения данных в указанном формате при заданную среду хранения является файлом.  
@@ -369,7 +369,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>Параметры  
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором запрашиваются сведения.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структура, задающая формат, в котором запрашиваются сведения.  
   
  *pFile*  
  Указывает на [CFile](../../mfc/reference/cfile-class.md) объект, в котором должен быть прорисован данные.  
@@ -382,7 +382,7 @@ virtual BOOL OnRenderFileData(
   
  Существует расширенная переопределяемый. Переопределите эту функцию для предоставления данных в затребованном формате и средний. В зависимости от данных может потребоваться переопределить один из других версий эта функция вместо этого. Если вы хотите обрабатывать несколько носителей, переопределить [OnRenderData](#onrenderdata). Если данные находятся в файле, или имеет переменный размер, переопределить `OnRenderFileData`. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры и [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) в пакете Windows SDK.  
   
 ##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  Вызывается платформой для извлечения данных в указанном формате, при глобальной памяти, заданную среду хранения.  
@@ -395,7 +395,7 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>Параметры  
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором запрашиваются сведения.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структура, задающая формат, в котором запрашиваются сведения.  
   
  *phGlobal*  
  Указывает дескриптор глобальной памяти, в котором они должны быть возвращены. Если один еще не был выделен, этот параметр может иметь значение NULL.  
@@ -410,7 +410,7 @@ virtual BOOL OnRenderGlobalData(
   
  Существует расширенная переопределяемый. Переопределите эту функцию для предоставления данных в затребованном формате и средний. В зависимости от данных может потребоваться переопределить один из других версий эта функция вместо этого. Если вы хотите обрабатывать несколько носителей, переопределить [OnRenderData](#onrenderdata). Если данные находятся в файле, или имеет переменный размер, переопределить [OnRenderFileData](#onrenderfiledata). Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры и [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) в пакете Windows SDK.  
   
 ##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  Вызывается платформой для задания или замены данных в `COleDataSource` объекта в указанном формате.  
@@ -424,10 +424,10 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>Параметры  
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором заменяется данных.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структура, задающая формат, в котором заменяется данных.  
   
  *lpStgMedium*  
- Указывает на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуру, содержащую данные, который заменяет текущее содержимое `COleDataSource` объекта.  
+ Указывает на [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) структуру, содержащую данные, который заменяет текущее содержимое `COleDataSource` объекта.  
   
  *bRelease*  
  Указывает, кто является владельцем среды хранения после завершения вызова функции. Вызывающая сторона решает, кто отвечает за освобождение ресурсов, выделенной среду хранения. Вызывающий объект устанавливается не *bRelease*. Если *bRelease* имеет ненулевое значение, источник данных принимает владение, освободить среду после завершения его использования. Когда *bRelease* равно 0, вызывающий объект сохраняет владение и источника данных можно использовать среду хранения только на протяжении всего вызова.  
@@ -436,11 +436,11 @@ virtual BOOL OnSetData(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Источник данных не вступят в владение данных он успешно получил его. То есть он не стать владельцем `OnSetData` возвращает 0. Если источник данных принимает владельца, он освобождает среду хранения, вызвав [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) функции.  
+ Источник данных не вступят в владение данных он успешно получил его. То есть он не стать владельцем `OnSetData` возвращает 0. Если источник данных принимает владельца, он освобождает среду хранения, вызвав [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) функции.  
   
  Реализация по умолчанию не выполняет никаких действий. Переопределите эту функцию для замены данных в указанном формате. Существует расширенная переопределяемый.  
   
- Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структур и [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) и [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) функции в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) и [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структур и [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) и [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) функции в пакете Windows SDK.  
   
 ##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
  Помещает данные, содержащиеся в `COleDataSource` объект в буфере обмена после вызова одного из следующих функций: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), или [DelayRenderFileData](#delayrenderfiledata).  

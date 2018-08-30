@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e6a7a45fc119309ce99640ab74006ae44a05bf
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bed3e80534a651e1e5a3d7228d0746ef8f552a9a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339137"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208845"
 ---
 # <a name="cimagelist-class"></a>Класс CImageList
 Предоставляет функциональные возможности стандартного элемента управления "список изображений" Windows.  
@@ -260,7 +260,7 @@ CImageList();
 ```  
   
 ##  <a name="copy"></a>  CImageList::Copy  
- Эта функция-член реализует поведение функции Win32 [ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение функции Win32 [ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy), как описано в пакете Windows SDK.  
   
 ```  
 BOOL Copy(
@@ -588,16 +588,16 @@ BOOL DrawEx(
  Место, в котором для рисования в заданном контексте устройства.  
   
  *sz*  
- Размер части изображения для рисования, относительно верхнего левого угла изображения. См. в разделе *dx* и *dy* в [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) в пакете Windows SDK.  
+ Размер части изображения для рисования, относительно верхнего левого угла изображения. См. в разделе *dx* и *dy* в [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) в пакете Windows SDK.  
   
  *clrBk*  
- Цвет фона изображения. См. в разделе *rgbBk* в [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) в пакете Windows SDK.  
+ Цвет фона изображения. См. в разделе *rgbBk* в [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) в пакете Windows SDK.  
   
  *clrFg*  
- Основной цвет изображения. См. в разделе *rgbFg* в [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) в пакете Windows SDK.  
+ Основной цвет изображения. См. в разделе *rgbFg* в [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) в пакете Windows SDK.  
   
  *nStyle*  
- Флаг, указывающий стиль рисования. См. в разделе *fStyle* в [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) в пакете Windows SDK.  
+ Флаг, указывающий стиль рисования. См. в разделе *fStyle* в [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -632,7 +632,7 @@ BOOL DrawIndirect(
   
 ### <a name="parameters"></a>Параметры  
  *pimldp*  
- Указатель на [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) структуру, содержащую сведения об операции рисования.  
+ Указатель на [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) структуру, содержащую сведения об операции рисования.  
   
  *основного контроллера домена*  
  Указатель на контексте устройства назначения. Необходимо удалить это [CDC](../../mfc/reference/cdc-class.md) объекта, когда вы закончите с ним.  
@@ -641,23 +641,23 @@ BOOL DrawIndirect(
  Отсчитываемый от нуля индекс изображения для отрисовки.  
   
  *pt*  
- Объект [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структура, содержащая координаты x и y-где рисуется изображение.  
+ Объект [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, содержащая координаты x и y-где рисуется изображение.  
   
  *sz*  
- Объект [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структура, указывающая размер изображения для отрисовки.  
+ Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структура, указывающая размер изображения для отрисовки.  
   
  *ptOrigin*  
- Объект [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структура, содержащая координаты x и y-указание верхнего левого угла операции рисования по отношению к само изображение. Изображения, которые расположены слева координаты x и более поздних версий координату по оси y не пикселов.  
+ Объект [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, содержащая координаты x и y-указание верхнего левого угла операции рисования по отношению к само изображение. Изображения, которые расположены слева координаты x и более поздних версий координату по оси y не пикселов.  
   
  *fStyle*  
  Флаг, указывающий стиль рисования и, возможно, изображение для наложения. В разделе "Примечания" сведения на изображение для наложения. Реализация по умолчанию MFC, ILD_NORMAL, Рисует изображение, используя цвет фона для списка изображений. Если цвет фона имеет значение CLR_NONE, рисуется изображение явным образом с помощью маски.  
   
- В разделе описаны другие возможные стили *fStyle* членом [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) структуры.  
+ В разделе описаны другие возможные стили *fStyle* членом [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) структуры.  
   
  *dwRop*  
  Значение, указывающее код растровая операция. Эти коды определяют, как будут объединены данные о цвете для исходного прямоугольника с помощью данных о цвете для прямоугольника назначения для достижения с окончательным цветом. Реализация по умолчанию MFC, SRCCOPY, копирует исходного прямоугольника непосредственно целевого прямоугольника. Этот параметр учитывается, если *fStyle* не содержит флаг ILD_ROP.  
   
- Другие возможные значения описаны в разделе *dwRop* членом [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) структуры.  
+ Другие возможные значения описаны в разделе *dwRop* членом [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) структуры.  
   
  *rgbBack*  
  Цвет фона изображения по умолчанию CLR_DEFAULT. Этот параметр может иметь значение определяется приложением RGB или одно из следующих значений:  
@@ -688,7 +688,7 @@ BOOL DrawIndirect(
  При использовании с ILS_APLHA, этот элемент содержит значение альфа-канала. Это значение может быть от 0 до 255, 0 остается полностью прозрачным и 255, полностью непрозрачными.  
   
  *crEffect*  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, используемое для свечения и теневых эффектов.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) значение, используемое для свечения и теневых эффектов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если успешно рисуется изображение; в противном случае — значение FALSE.  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>Примечания  
  Используйте первую версию, если вы хотите заполнить структуру Win32 самостоятельно. Если вы хотите воспользоваться преимуществами один или несколько аргументов по умолчанию MFC или избежать управления структурой, используйте второй версии.  
   
- Наложение изображения — это изображение, рисуется поверх основного образа, указанные в этой функцией-членом, *изображение* параметра. Рисование с помощью маски наложения [рисования](#draw) функцию-член с отсчитываемый от единицы индекс маски наложения, указанные с помощью [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) макрос.  
+ Наложение изображения — это изображение, рисуется поверх основного образа, указанные в этой функцией-членом, *изображение* параметра. Рисование с помощью маски наложения [рисования](#draw) функцию-член с отсчитываемый от единицы индекс маски наложения, указанные с помощью [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) макрос.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -729,7 +729,7 @@ HICON ExtractIcon(int nImage);
  Дескриптор значка, если выполнение прошло успешно; в противном случае имеет значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует поведение [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) макрос для значка. Ссылаться на [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) макрос Дополнительные сведения о создании значок и очистки.  
+ Этот метод использует поведение [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) макрос для значка. Ссылаться на [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) макрос Дополнительные сведения о создании значок и очистки.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
@@ -798,7 +798,7 @@ static CImageList* PASCAL GetDragImage(
   
 ### <a name="parameters"></a>Параметры  
  *lpPoint*  
- Адрес [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуры, который получает текущий перетащите позиции.  
+ Адрес [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуры, который получает текущий перетащите позиции.  
   
  *lpPointHotSpot*  
  Адрес `POINT` структуру, которая получает смещение изображение перетаскивания относительно положения перетаскивания.  
@@ -833,7 +833,7 @@ BOOL GetImageInfo(
  Отсчитываемый от нуля индекс изображения.  
   
  *pImageInfo*  
- Указатель на [IMAGEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761393) структуры, получающий сведения об образе. Сведения в этой структуре можно использовать для прямого управления для изображения, точечные рисунки.  
+ Указатель на [IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-_imageinfo) структуры, получающий сведения об образе. Сведения в этой структуре можно использовать для прямого управления для изображения, точечные рисунки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -994,7 +994,7 @@ BOOL SetDragCursorImage(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Так как функции перетаскивания используют новый образ во время операции перетаскивания, следует использовать Windows [функция ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) функции, чтобы скрыть курсор мыши после вызова метода `CImageList::SetDragCursorImage`. В противном случае система может показаться имеют два курсора мыши в течение операции перетаскивания.  
+ Так как функции перетаскивания используют новый образ во время операции перетаскивания, следует использовать Windows [функция ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) функции, чтобы скрыть курсор мыши после вызова метода `CImageList::SetDragCursorImage`. В противном случае система может показаться имеют два курсора мыши в течение операции перетаскивания.  
   
 ##  <a name="setimagecount"></a>  CImageList::SetImageCount  
  Вызовите эту функцию-член для сброса количеству изображений в `CImageList` объекта.  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7424581c277e7b20132fd5e667acb77a4a95789e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598654"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220469"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -65,10 +65,10 @@ DLL-файл, содержащий экспорта.
 Идентификатор справки для этой библиотеки типов.
 
 *скрытые* (необязательно)  
-Параметр, который запрещает отображение библиотеки. Дополнительные сведения см. в описании атрибута MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .
+Параметр, который запрещает отображение библиотеки. См. в разделе [скрытые](/windows/desktop/Midl/hidden) описании атрибута MIDL Дополнительные сведения.
 
 *ограниченные* (необязательно)  
-Элементы библиотеки нельзя вызывать произвольным образом. Дополнительные сведения см. в описании атрибута MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .
+Элементы библиотеки нельзя вызывать произвольным образом. См. в разделе [ограниченных](/windows/desktop/Midl/restricted) описании атрибута MIDL Дополнительные сведения.
 
 *объявление функции*  
 Функция, которую вы создадите.
@@ -77,7 +77,7 @@ DLL-файл, содержащий экспорта.
 
 **Idl_module** C++ атрибут позволяет указать точку входа в DLL-файл, который можно импортировать из файла DLL.
 
-**Idl_module** атрибут имеет функциональность, аналогичную [модуль](http://msdn.microsoft.com/library/windows/desktop/aa367099) описании атрибута MIDL.
+**Idl_module** атрибут имеет функциональность, аналогичную [модуль](/windows/desktop/Midl/module) описании атрибута MIDL.
 
 Никаких действий можно экспортировать из COM-объект, который можно экспортировать из DLL-файл, поместив точки входа библиотеки DLL в блок library IDL-файле.
 

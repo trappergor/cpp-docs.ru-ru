@@ -1,5 +1,5 @@
 ---
-title: Ошибка построения проекта PRJ0013 | Документы Microsoft
+title: Ошибка построения проекта PRJ0013 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d055043d5c7e7b030557ab03ceb7181c664ce01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aeb0ac9011697c440667a538bd1805780810fb4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318780"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221563"
 ---
 # <a name="project-build-error-prj0013"></a>Ошибка построения проекта PRJ0013
 Не удалось создать канал, необходимый для запуска построения. Вероятно, ресурсы системы находятся на критически низкой отметке.  
   
  Эта ошибка указывает на нехватку системных ресурсов. Чтобы устранить эту ошибку, следует снизить использование системных ресурсов другими процессами или приложениями.  
   
- Эта ошибка также может возникать, если уровень безопасности недостаточен для создания каналов (см. [CreatePipe](http://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).
+ Эта ошибка также может возникать, если уровень безопасности недостаточен для создания каналов (см. в разделе [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).

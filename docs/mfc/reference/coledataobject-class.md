@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f64902f4636d7933a368e28cac42a27abb440c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 67a4f03db6a7c4cf37e59e05464865016d836097
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852412"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215012"
 ---
 # <a name="coledataobject-class"></a>Класс COleDataObject
 Используется в передаче данных для извлечения данных в разных форматах из буфера обмена путем перетаскивания или из встроенного элемента OLE.  
@@ -84,7 +84,7 @@ class COleDataObject
   
  Этот класс позволяет определить, существует ли данные в указанном формате. Можно также Перечислить доступные форматы данных или проверьте, доступен ли заданного формата и затем получить данные в нужный формат. Получение объекта можно выполнить несколькими способами, включая использование [CFile](../../mfc/reference/cfile-class.md), HGLOBAL, или это `STGMEDIUM` структуры.  
   
- Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) структуры в пакете Windows SDK.  
   
  Дополнительные сведения об использовании объектов данных в приложении см. в статье [объекты данных и источники данных (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
@@ -111,7 +111,7 @@ void Attach(
  Значение TRUE, если данные OLE-объекта должен быть выпущен, когда `COleDataObject` объект уничтожено; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) в пакете Windows SDK.  
   
 ##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
  Вызывайте эту функцию для присоединения объекта данных, который используется в настоящий момент в буфере обмена для `COleDataObject` объекта.  
@@ -126,7 +126,7 @@ BOOL AttachClipboard();
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Вызов этой функции блокирует буфера обмена, пока этот объект данных. Объект данных будет выпущен в деструктор для `COleDataObject`. Дополнительные сведения см. в разделе [OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) и [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) в документации Win32.  
+>  Вызов этой функции блокирует буфера обмена, пока этот объект данных. Объект данных будет выпущен в деструктор для `COleDataObject`. Дополнительные сведения см. в разделе [OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard) и [CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) в документации Win32.  
   
 ##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
  Вызывайте эту функцию, чтобы подготовить для последующих вызовов `GetNextFormat` для получения списка форматов данных из элемента.  
@@ -140,7 +140,7 @@ void BeginEnumFormats();
   
  Чтобы проверить доступность данных в заданном формате, используйте [COleDataObject::IsDataAvailable](#isdataavailable).  
   
- Дополнительные сведения см. в разделе [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) в пакете Windows SDK.  
   
 ##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
  Создает объект `COleDataObject`.  
@@ -179,21 +179,21 @@ BOOL GetData(
   
 ### <a name="parameters"></a>Параметры  
  *cfFormat*  
- Формат, в которой используются данные, должны быть возвращены. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ Формат, в которой используются данные, должны быть возвращены. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) функции.  
   
  *lpStgMedium*  
- Указывает на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуру, которая будет получать данные.  
+ Указывает на [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) структуру, которая будет получать данные.  
   
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в которой используются данные, должны быть возвращены. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если он имеет значение NULL, значения по умолчанию используются для других полей в `FORMATETC` структуры.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, описывающие формат, в которой используются данные, должны быть возвращены. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если он имеет значение NULL, значения по умолчанию используются для других полей в `FORMATETC` структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium), и [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) в пакете Windows SDK.  
   
 ##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
  Вызывайте эту функцию для создания `CFile` или `CFile`-объект, производной от и для получения данных в указанном формате в `CFile` указатель.  
@@ -206,10 +206,10 @@ CFile* GetFileData(
   
 ### <a name="parameters"></a>Параметры  
  *cfFormat*  
- Формат, в которой используются данные, должны быть возвращены. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ Формат, в которой используются данные, должны быть возвращены. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) функции.  
   
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в которой используются данные, должны быть возвращены. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если он имеет значение NULL, значения по умолчанию используются для других полей в `FORMATETC` структуры.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, описывающие формат, в которой используются данные, должны быть возвращены. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если он имеет значение NULL, значения по умолчанию используются для других полей в `FORMATETC` структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новый `CFile` или `CFile`-производный объект, содержащий данные, если успешно; в противном случае — NULL.  
@@ -220,9 +220,9 @@ CFile* GetFileData(
 > [!NOTE]
 >  `CFile` Принадлежит вызывающий объект, к которому возвращаемое значение функции. Он отвечает за вызывающему объекту **удалить** `CFile` объекта, тем самым закрытия файла.  
   
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) в пакете Windows SDK.  
   
 ##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
  Вызывайте эту функцию для выделения блока глобальной памяти и для извлечения данных в указанном формате в HGLOBAL.  
@@ -235,18 +235,18 @@ HGLOBAL GetGlobalData(
   
 ### <a name="parameters"></a>Параметры  
  *cfFormat*  
- Формат, в которой используются данные, должны быть возвращены. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ Формат, в которой используются данные, должны быть возвращены. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) функции.  
   
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в которой используются данные, должны быть возвращены. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если он имеет значение NULL, значения по умолчанию используются для других полей в `FORMATETC` структуры.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, описывающие формат, в которой используются данные, должны быть возвращены. Укажите значение для этого параметра, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если он имеет значение NULL, значения по умолчанию используются для других полей в `FORMATETC` структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор блока глобальной памяти, содержащего данные, если выполнение прошло успешно; в противном случае имеет значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) в пакете Windows SDK.  
   
 ##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
  Вызовите эту функцию для получения всех форматов, доступных для извлечения данных из элемента.  
@@ -257,7 +257,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
 ### <a name="parameters"></a>Параметры  
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуру, которая получает сведения о форматировании при возвращении вызова функции.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуру, которая получает сведения о форматировании при возвращении вызова функции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если доступен другой формат; в противном случае 0.  
@@ -280,10 +280,10 @@ BOOL IsDataAvailable(
   
 ### <a name="parameters"></a>Параметры  
  *cfFormat*  
- Формат данных буфера обмена для использования в структуре, на которые указывают *lpFormatEtc*. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ Формат данных буфера обмена для использования в структуре, на которые указывают *lpFormatEtc*. Этот параметр может принимать одно из стандартных форматов буфера обмена, или значение, возвращенное собственный Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) функции.  
   
  *lpFormatEtc*  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающий нужный формат. Укажите значение для этого параметра только в том случае, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если он имеет значение NULL, значения по умолчанию используются для других полей в `FORMATETC` структуры.  
+ Указывает на [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры, описывающий нужный формат. Укажите значение для этого параметра только в том случае, если вы хотите указать дополнительный формат сведений, чем формат буфера обмена, определяемое *cfFormat*. Если он имеет значение NULL, значения по умолчанию используются для других полей в `FORMATETC` структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если данные недоступны в указанном формате; в противном случае 0.  
@@ -291,22 +291,22 @@ BOOL IsDataAvailable(
 ### <a name="remarks"></a>Примечания  
  Эта функция полезна, перед вызовом `GetData`, `GetFileData`, или `GetGlobalData`.  
   
- Дополнительные сведения см. в разделе [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata) и [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
   
 ##  <a name="release"></a>  COleDataObject::Release  
- Эта функция вызывается для освобождения владения [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) объект, который был ранее связан с `COleDataObject` объекта.  
+ Эта функция вызывается для освобождения владения [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) объект, который был ранее связан с `COleDataObject` объекта.  
   
 ```  
 void Release();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `IDataObject` Был связан с параметром `COleDataObject` путем вызова `Attach` или `AttachClipboard` явным образом или платформой. Если *bAutoRelease* параметр `Attach` имеет значение FALSE, `IDataObject` объект не будет освобожден. В этом случае вызывающий объект несет ответственность за освобождение `IDataObject` путем вызова [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ `IDataObject` Был связан с параметром `COleDataObject` путем вызова `Attach` или `AttachClipboard` явным образом или платформой. Если *bAutoRelease* параметр `Attach` имеет значение FALSE, `IDataObject` объект не будет освобожден. В этом случае вызывающий объект несет ответственность за освобождение `IDataObject` путем вызова [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release).  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC HIERSVR](../../visual-cpp-samples.md)   

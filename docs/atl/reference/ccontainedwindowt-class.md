@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7e77238478e32fd5b45f96cdd8a86c2205eef7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882849"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207200"
 ---
 # <a name="ccontainedwindowt-class"></a>Класс CContainedWindowT
 Этот класс реализует окно, содержатся внутри другого объекта.  
@@ -115,7 +115,7 @@ class CContainedWindowT : public TBase
 |Создание элементов управления|[Учебник по ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Использование окон в ATL|[Классы окон ATL](../../atl/atl-window-classes.md)|  
 |Мастер проектов ATL|[Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) и последующие разделы в пакете SDK для Windows|  
+|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) и последующие разделы в пакете SDK для Windows|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `TBase`  
@@ -214,22 +214,22 @@ HWND Create(
  [in] Дескриптор окна родительского или владельца.  
   
  *Rect*  
- [in] Объект [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий положение окна. `RECT` Могут передаваться, указателем или по ссылке.  
+ [in] Объект [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий положение окна. `RECT` Могут передаваться, указателем или по ссылке.  
   
  *szWindowName*  
  [in] Задает имя окна. Значение по умолчанию имеет значение NULL.  
   
  *dwStyle*  
- [in] Стиль окна. Значение по умолчанию — WS_CHILD &#124; WS_VISIBLE. Список возможных значений см. в разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
+ [in] Стиль окна. Значение по умолчанию — WS_CHILD &#124; WS_VISIBLE. Список возможных значений см. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
   
  *dwExStyle*  
- [in] Стиль окна расширенного. Значение по умолчанию — 0, то есть без расширенного стиля. Список возможных значений см. в разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ [in] Стиль окна расширенного. Значение по умолчанию — 0, то есть без расширенного стиля. Список возможных значений см. в разделе [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
   
  *MenuOrID*  
  [in] Для дочернего окна, окна идентификатор. Для окна верхнего уровня, дескриптор меню для окна. Значение по умолчанию — **0U**.  
   
  *lpCreateParam*  
- [in] Указатель на окно создания данных. Полное описание см. в описании для конечного параметра для [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Указатель на окно создания данных. Полное описание см. в описании для конечного параметра для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В случае успешного выполнения дескриптор вновь созданного окна. в противном случае — значение NULL.  
@@ -268,7 +268,7 @@ LRESULT DefWindowProc(
  Результат обработки сообщения.  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию `DefWindowProc` вызовы [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) функцию Win32 для отправки сведений сообщение процедуре окна, указанный в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ По умолчанию `DefWindowProc` вызовы [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) функцию Win32 для отправки сведений сообщение процедуре окна, указанный в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  Возвращает текущее сообщение (`m_pCurrentMsg`).  

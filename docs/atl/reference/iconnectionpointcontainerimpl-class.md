@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d70989be8e8535336c831cb59fb9422c6e2c63e0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 43f4405ad66ff2d6048056780ba7c1581f7b7497
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212538"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>Класс IConnectionPointContainerImpl
 Этот класс реализует контейнер точек соединения, чтобы управлять коллекцией [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) объектов.  
@@ -77,7 +77,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) в Windows SDK.  
+ См. в разделе [IConnectionPointContainer::EnumConnectionPoints](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) в Windows SDK.  
   
 ##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint  
  Извлекает указатель интерфейса на точку подключения, который поддерживает указанный идентификатор IID.  
@@ -87,8 +87,8 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) в Windows SDK.  
+ См. в разделе [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
- [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)   
+ [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

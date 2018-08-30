@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9522db579641d79b8b77cc870cd1df6f03c0413
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a790887f54e01cea835c6110e3d81e1c2d3afeaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607677"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206705"
 ---
 # <a name="importlib"></a>importlib
 
@@ -43,7 +43,7 @@ ms.locfileid: "42607677"
 
 ## <a name="remarks"></a>Примечания
 
-**Importlib** C++ атрибут приводит к `importlib` инструкцию, чтобы поместить в блок library созданного IDL-файла. **Importlib** атрибут имеет ту же функциональность, что [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) описании атрибута MIDL.
+**Importlib** C++ атрибут приводит к `importlib` инструкцию, чтобы поместить в блок library созданного IDL-файла. **Importlib** атрибут имеет ту же функциональность, что [importlib](/windows/desktop/Midl/importlib) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 

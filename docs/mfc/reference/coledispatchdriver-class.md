@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e25684e0adcace0510f74bdc98968ef52ad6d797
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540128"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209572"
 ---
 # <a name="coledispatchdriver-class"></a>Класс COleDispatchDriver
 Реализует автоматизацию OLE на стороне клиента.  
@@ -283,7 +283,7 @@ void AFX_CDECL InvokeHelper(
   
  Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) метод. Если вызов `Invoke` завершается сбоем, эта функция создает исключение. Если SCODE (код состояния), возвращаемый `IDispatch::Invoke` является DISP_E_EXCEPTION, эта функция создает [COleException](../../mfc/reference/coleexception-class.md) объект; в противном случае создается исключение [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
   
- Дополнительные сведения см. в разделе [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), и [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в Windows SDK.  
+ Дополнительные сведения см. в разделе [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), и [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes) в Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [COleDispatchDriver::CreateDispatch](#createdispatch).  
@@ -298,7 +298,7 @@ BOOL m_bAutoRelease;
 ### <a name="remarks"></a>Примечания  
  По умолчанию `m_bAutoRelease` имеет значение TRUE в конструкторе.  
   
- Дополнительные сведения о освобождения COM-объектов, см. в разделе [реализации подсчет ссылок](http://msdn.microsoft.com/library/windows/desktop/ms693431) и [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) в пакете Windows SDK.  
+ Дополнительные сведения о освобождения COM-объектов, см. в разделе [реализации подсчет ссылок](/windows/desktop/com/implementing-reference-counting) и [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]  

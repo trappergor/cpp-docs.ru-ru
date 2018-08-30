@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e07fd632459e1d668d0201c821065bfaeea72c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e4bdae31c3a2f84dd959baf49fae7e43a6cc9eb0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572609"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206401"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -93,7 +93,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 Список аргументов для передачи к новому обсуждению, или **NULL**.
 
 *Безопасность*<br/>
-Указатель на структуру [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) определяет, может ли возвращаемый дескриптор быть унаследован дочерними процессами. Если *безопасности* — **NULL**, дескриптор не наследуется. Должно быть **NULL** для приложений Windows 95.
+Указатель на структуру [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) определяет, может ли возвращаемый дескриптор быть унаследован дочерними процессами. Если *безопасности* — **NULL**, дескриптор не наследуется. Должно быть **NULL** для приложений Windows 95.
 
 *initflag*<br/>
 Флаги, управляющие начальным состоянием нового потока. Задайте *initflag* 0 для немедленного запуска, или **CREATE_SUSPENDED** создать поток в приостановленном состоянии использовать [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) для выполнения потока. Задайте *initflag* для **STACK_SIZE_PARAM_IS_A_RESERVATION** флаг для использования *stack_size* как начальный Резервируемый размер стека в байтах; Если этот флаг не указан, *stack_size* задает выделенный размер.
@@ -131,7 +131,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 Можно вызвать [_endthread](endthread-endthreadex.md) или **_endthreadex** явным образом, чтобы завершить поток; Однако **_endthread** или **_endthreadex** называется автоматически при возврате потока из процедуры, что передается в качестве параметра. Завершение потока вызовом **_endthread** или **_endthreadex** помогает обеспечить правильное восстановление ресурсов, выделяемых для потока.
 
-**_endthread** автоматически закрывает дескриптор потока, тогда как **_endthreadex** — нет. Таким образом, при использовании **_beginthread** и **_endthread**, не следует явно закрывать дескриптор потока вызовом Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Это поведение отличается от функции API Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) .
+**_endthread** автоматически закрывает дескриптор потока, тогда как **_endthreadex** — нет. Таким образом, при использовании **_beginthread** и **_endthread**, не следует явно закрывать дескриптор потока вызовом Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Это поведение отличается от функции API Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) .
 
 > [!NOTE]
 > Для исполняемого файла, связанного с Libcmt.lib, не следует вызывать Win32 **ExitThread** API, чтобы не помешать системе времени выполнения освобождать выделенные ресурсы. **_endthread** и **_endthreadex** освобождают выделенные ресурсы потока и затем вызвать **ExitThread**.
@@ -335,4 +335,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread, _endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
-- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
+- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

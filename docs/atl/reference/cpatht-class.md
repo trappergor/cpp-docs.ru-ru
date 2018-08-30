@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7b19cff6e4f90485946521824bb0fd2f6358372
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a953f94e48f3093b1c61a1567252e04d98c1beb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885240"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208547"
 ---
 # <a name="cpatht-class"></a>Класс CPathT
 Этот класс представляет собой путь.  
@@ -176,7 +176,7 @@ void AddBackslash();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
+ Дополнительные сведения см. в разделе [PathAddBackSlash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).  
   
 ##  <a name="addextension"></a>  CPathT::AddExtension  
  Вызовите этот метод, чтобы добавить расширение файла в путь.  
@@ -193,7 +193,7 @@ BOOL AddExtension(PCXSTR pszExtension);
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
+ Дополнительные сведения см. в разделе [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).  
   
 ##  <a name="append"></a>  CPathT::Append  
  Вызовите этот метод, чтобы добавить строку к текущему пути.  
@@ -210,7 +210,7 @@ BOOL Append(PCXSTR pszMore);
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
+ Дополнительные сведения см. в разделе [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).  
   
 ##  <a name="buildroot"></a>  CPathT::BuildRoot  
  Вызовите этот метод, чтобы создать корневой путь из числа данного диска.  
@@ -224,7 +224,7 @@ void BuildRoot(int iDrive);
  Номер (0 — ответ, 1 — б и т. д.).  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
+ Дополнительные сведения см. в разделе [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).  
   
 ##  <a name="canonicalize"></a>  CPathT::Canonicalize  
  Вызовите этот метод для преобразования пути в канонической форме.  
@@ -234,7 +234,7 @@ void Canonicalize();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
+ Дополнительные сведения см. в разделе [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).  
   
 ##  <a name="combine"></a>  CPathT::Combine  
  Этот метод используется для сцепления строка, представляющая имя каталога и строка, представляющая путь к файлу в один путь.  
@@ -251,7 +251,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  Путь к файлу.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).  
+ Дополнительные сведения см. в разделе [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).  
   
 ##  <a name="commonprefix"></a>  CPathT::CommonPrefix  
  Вызовите этот метод, чтобы определить, использует ли указанный путь Общий префикс совместно с по текущему пути.  
@@ -268,7 +268,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  Возвращает общий префикс.  
   
 ### <a name="remarks"></a>Примечания  
- Префикс является одним из этих типов: «C:\\\\«,». «,».. «,».. \\\\". Дополнительные сведения см. в разделе [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
+ Префикс является одним из этих типов: «C:\\\\«,». «,».. «,».. \\\\". Дополнительные сведения см. в разделе [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).  
   
 ##  <a name="compactpath"></a>  CPathT::CompactPath  
  Этот метод используется для усечения путь к файлу в соответствии с размерами ширину данного точек, заменив компоненты пути на кнопку с многоточием.  
@@ -288,7 +288,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
+ Дополнительные сведения см. в разделе [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).  
   
 ##  <a name="compactpathex"></a>  CPathT::CompactPathEx  
  Этот метод используется для усечения путь к файлу в соответствии с размерами указанного числа символов, заменив компоненты пути на кнопку с многоточием.  
@@ -308,7 +308,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
+ Дополнительные сведения см. в разделе [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).  
   
 ##  <a name="cpatht"></a>  CPathT::CPathT  
  Конструктор.  
@@ -337,7 +337,7 @@ BOOL FileExists() const;
  Возвращает значение TRUE, если файл существует, или FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
+ Дополнительные сведения см. в разделе [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).  
   
 ##  <a name="findextension"></a>  CPathT::FindExtension  
  Вызовите этот метод, чтобы найти позицию расширение файла в пути.  
@@ -350,7 +350,7 @@ int FindExtension() const;
  Возвращает позицию «.» перед расширением. Не найдено, возвращается значение -1.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
+ Дополнительные сведения см. в разделе [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).  
   
 ##  <a name="findfilename"></a>  CPathT::FindFileName  
  Вызовите этот метод, чтобы определить позицию имени файла в пути.  
@@ -363,7 +363,7 @@ int FindFileName() const;
  Возвращает позицию имени файла. Имя файла не найден, возвращается значение -1.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
+ Дополнительные сведения см. в разделе [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).  
   
 ##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber  
  Вызовите этот метод для поиска пути для букву диска в диапазоне от «A» до «Z» и возвращает соответствующий номер диска.  
@@ -376,7 +376,7 @@ int GetDriveNumber() const;
  Возвращает номер диска как целое число от 0 до 25 (соответствующие на «A» до «Z»), если путь содержит букву диска или -1, в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
+ Дополнительные сведения см. в разделе [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).  
   
 ##  <a name="getextension"></a>  CPathT::GetExtension  
  Этот метод используется для получения расширения файла из пути.  
@@ -399,7 +399,7 @@ BOOL IsDirectory() const;
  Возвращает ненулевое значение (16), если путь является каталогом, и FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).  
+ Дополнительные сведения см. в разделе [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).  
   
 ##  <a name="isfilespec"></a>  CPathT::IsFileSpec  
  Вызовите этот метод для поиска пути для любые символы, разделив их пути (например, ":" или "\\"). Если никакие символы разделителя пути присутствует, путь считается являться путем файловой спецификации.  
@@ -412,7 +412,7 @@ BOOL IsFileSpec() const;
  Возвращает значение TRUE, если нет символов, разделив их пути в пути, или значение FALSE, если присутствуют символы разделителя пути.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
+ Дополнительные сведения см. в разделе [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).  
   
 ##  <a name="isprefix"></a>  CPathT::IsPrefix  
  Вызовите этот метод, чтобы определить, содержит ли путь допустимый префикс типа, передаваемый по *pszPrefix*.  
@@ -429,7 +429,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
  Возвращает значение TRUE, если путь содержит префикс, или FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
+ Дополнительные сведения см. в разделе [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).  
   
 ##  <a name="isrelative"></a>  CPathT::IsRelative  
  Этот метод используется для определения того, если путь является относительным.  
@@ -442,7 +442,7 @@ BOOL IsRelative() const;
  Возвращает значение TRUE, если путь является относительным, или значение FALSE, если он является абсолютным.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
+ Дополнительные сведения см. в разделе [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).  
   
 ##  <a name="isroot"></a>  CPathT::IsRoot  
  Вызовите этот метод, чтобы определить, является ли путь корневом каталоге.  
@@ -455,7 +455,7 @@ BOOL IsRoot() const;
  Возвращает значение TRUE, если путь является корнем, или FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
+ Дополнительные сведения см. в разделе [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).  
   
 ##  <a name="issameroot"></a>  CPathT::IsSameRoot  
  Вызовите этот метод, чтобы определить, имеет ли другой путь общий корневой компонент с по текущему пути.  
@@ -472,7 +472,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
  Возвращает значение TRUE, если обе строки имеют одного корневого компонента, или FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
+ Дополнительные сведения см. в разделе [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).  
   
 ##  <a name="isunc"></a>  CPathT::IsUNC  
  Вызовите этот метод, чтобы определить, является ли путь допустимым путем UNC (соглашения об универсальных именах) для сервера и совместного использования.  
@@ -485,7 +485,7 @@ BOOL IsUNC() const;
  Возвращает значение TRUE, если путь допустимый UNC-путь, или FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
+ Дополнительные сведения см. в разделе [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).  
   
 ##  <a name="isuncserver"></a>  CPathT::IsUNCServer  
  Вызовите этот метод, чтобы определить, является ли путь допустимым путем UNC (соглашения об универсальных именах) для сервера только.  
@@ -498,7 +498,7 @@ BOOL IsUNCServer() const;
  Возвращает значение TRUE, является ли строка допустимый UNC-путь к серверу только (отсутствует имя общего ресурса), или FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
+ Дополнительные сведения см. в разделе [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).  
   
 ##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare  
  Вызовите этот метод, чтобы определить, является ли путь допустимым путем UNC (соглашения об универсальных именах) общий ресурс, \\ \  *server*\ *совместно использовать*.  
@@ -511,7 +511,7 @@ BOOL IsUNCServerShare() const;
  Возвращает значение TRUE, если путь в форме \\ \  *server*\ *совместно использовать*, или FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
+ Дополнительные сведения см. в разделе [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).  
   
 ##  <a name="m_strpath"></a>  CPathT::m_strPath  
  Путь.  
@@ -534,7 +534,7 @@ BOOL MakePretty();
  В противном случае возвращает значение TRUE, если путь был преобразован, или значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
+ Дополнительные сведения см. в разделе [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).  
   
 ##  <a name="matchspec"></a>  CPathT::MatchSpec  
  Вызовите этот метод для поиска пути для строка, содержащая тип совпадения подстановочный знак.  
@@ -551,7 +551,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
  В противном случае возвращает значение TRUE, если строка соответствует, или значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
+ Дополнительные сведения см. в разделе [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).  
   
 ##  <a name="operator_add_eq"></a>  CPathT::operator +=  
  Этот оператор добавляет строку к пути.  
@@ -625,7 +625,7 @@ void QuoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
+ Дополнительные сведения см. в разделе [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).  
   
 ##  <a name="relativepathto"></a>  CPathT::RelativePathTo  
  Этот метод используется для создания относительный путь из одного файла или папки в другую.  
@@ -655,7 +655,7 @@ BOOL RelativePathTo(
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
+ Дополнительные сведения см. в разделе [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).  
   
 ##  <a name="removeargs"></a>  CPathT::RemoveArgs  
  Вызовите этот метод, чтобы удалить любые аргументы командной строки из пути.  
@@ -665,7 +665,7 @@ void RemoveArgs();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
+ Дополнительные сведения см. в разделе [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).  
   
 ##  <a name="removebackslash"></a>  CPathT::RemoveBackslash  
  Этот метод используется для удаления из пути обратную косую черту.  
@@ -675,7 +675,7 @@ void RemoveBackslash();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
+ Дополнительные сведения см. в разделе [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).  
   
 ##  <a name="removeblanks"></a>  CPathT::RemoveBlanks  
  Вызовите этот метод, чтобы удалить все начальные и конечные пробелы из пути.  
@@ -685,7 +685,7 @@ void RemoveBlanks();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
+ Дополнительные сведения см. в разделе [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).  
   
 ##  <a name="removeextension"></a>  CPathT::RemoveExtension  
  Вызовите этот метод, чтобы удалить расширение файла из пути, если таковой имеется.  
@@ -695,7 +695,7 @@ void RemoveExtension();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
+ Дополнительные сведения см. в разделе [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).  
   
 ##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec  
  Этот метод для удаления из пути, в конце имени файла и обратной косой черты при их наличии.  
@@ -708,7 +708,7 @@ BOOL RemoveFileSpec();
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
+ Дополнительные сведения см. в разделе [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).  
   
 ##  <a name="renameextension"></a>  CPathT::RenameExtension  
  Этот метод используется для замены нового расширения расширение имени файла в пути. Если имя файла не содержит расширения, расширение будет вложен в конец пути.  
@@ -725,7 +725,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
+ Дополнительные сведения см. в разделе [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).  
   
 ##  <a name="skiproot"></a>  CPathT::SkipRoot  
  Вызовите этот метод для синтаксического анализа пути, игнорируя букву диска или части пути UNC (соглашения об универсальных именах) сервера или общей папки.  
@@ -738,7 +738,7 @@ int SkipRoot() const;
  Возвращает позицию начала субконтура, соответствует корню (букву диска или UNC сервера или общей папки).  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
+ Дополнительные сведения см. в разделе [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).  
   
 ##  <a name="strippath"></a>  CPathT::StripPath  
  Вызовите этот метод, чтобы удалить часть пути полный путь и имя файла.  
@@ -748,7 +748,7 @@ void StripPath();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
+ Дополнительные сведения см. в разделе [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).  
   
 ##  <a name="striptoroot"></a>  CPathT::StripToRoot  
  Вызовите этот метод, чтобы удалить все части пути, за исключением сведений о корневом.  
@@ -761,7 +761,7 @@ BOOL StripToRoot();
  Возвращает значение TRUE, если буква диска был найден в пути, и FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
+ Дополнительные сведения см. в разделе [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).  
   
 ##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces  
  Этот метод используется для удаления кавычек в начале и конце пути.  
@@ -771,7 +771,7 @@ void UnquoteSpaces();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
+ Дополнительные сведения см. в разделе [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).  
   
 ##  <a name="xchar"></a>  CPathT::XCHAR  
  Тип символа.  

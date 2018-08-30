@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9b739a2c4388877bc463a6345dcfe347d8638b27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571629"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206376"
 ---
 # <a name="ccompolyobject-class"></a>Класс CComPolyObject
 Этот класс реализует `IUnknown` для суммирования или неагрегированные объекта.  
@@ -76,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|Делегаты `IUnknown` вызывает внешняя Неизвестная строка, если объект является статистическим или `IUnknown` объекта, если объект не является агрегатом.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComPolyObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) для суммирования или неагрегированные объекта.  
+ `CComPolyObject` реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) для суммирования или неагрегированные объекта.  
   
  При создании экземпляра класса `CComPolyObject` создается значение внешнего проверяется unknown. Если он равен NULL, `IUnknown` реализуется для объекта неагрегированные. Если внешняя Неизвестная строка не равно NULL, `IUnknown` реализуется для объединенного объекта.  
   

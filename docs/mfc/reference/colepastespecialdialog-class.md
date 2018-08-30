@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f4a45dc2b49b784f74175203e892c253ea1f5e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c3dff52e3607125493c956d46e1bd38c399565e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851437"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213343"
 ---
 # <a name="colepastespecialdialog-class"></a>Класс COlePasteSpecialDialog
 Используется для диалогового окна OLE "Вставить специальный объект".  
@@ -85,7 +85,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="remarks"></a>Примечания  
  Создайте объект класса `COlePasteSpecialDialog` при необходимости вызвать это диалоговое окно. После `COlePasteSpecialDialog` объект был создан, можно использовать [AddFormat](#addformat) и [AddStandardFormats](#addstandardformats) функции-члены для добавления форматы буфера обмена в диалоговое окно. Можно также использовать [m_ps](#m_ps) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_ps` Структуры имеет тип OLEUIPASTESPECIAL.  
   
- Дополнительные сведения см. в разделе [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) структуры в пакете Windows SDK.  
   
  Дополнительные сведения о конкретных OLE диалоговым окнам см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -157,9 +157,9 @@ void AddFormat(
 ### <a name="remarks"></a>Примечания  
  Эта функция может вызываться для добавления стандартных форматах, например CF_TEXT или CF_TIFF либо пользовательских форматов, зарегистрированных в системе приложения. Дополнительные сведения о вставке данных объектов в приложении см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) тип перечисления и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) тип перечисления и [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) перечислимый тип в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) перечислимый тип в пакете Windows SDK.  
   
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  Добавляет новую запись в список поддерживаемых форматов буфера обмена.  
@@ -173,7 +173,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
  Формат буфера обмена для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) структуру, содержащую сведения для новой записи связи.  
+ [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) структуру, содержащую сведения для новой записи связи.  
   
 ##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
  Вызывайте эту функцию, чтобы добавить следующие форматы буфера обмена в список форматов, которые приложение может поддерживать в Специальная вставка операции:  
@@ -231,7 +231,7 @@ COlePasteSpecialDialog(
 ### <a name="remarks"></a>Примечания  
  Эта функция только создает `COlePasteSpecialDialog` объекта. Чтобы отобразить диалоговое окно, вызовите [DoModal](#domodal) функции.  
   
- Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) перечислимый тип в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) перечислимый тип в пакете Windows SDK.  
   
 ##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
  Создает новый элемент, которая была выбрана в диалоговом окне Специальная вставка.  
@@ -264,7 +264,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, если пользователь отменил диалоговое окно.  
   
-- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите `COleDialog::GetLastError` функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIPasteSpecial](http://msdn.microsoft.com/library/windows/desktop/ms694512) функции в пакете Windows SDK.  
+- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите `COleDialog::GetLastError` функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIPasteSpecial](/windows/desktop/api/oledlg/nf-oledlg-oleuipastespeciala) функции в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Если вы хотите инициализировать различных диалоговых путем определения участников [m_ps](#m_ps) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
@@ -288,7 +288,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Примечания  
  Только вызывайте эту функцию после [DoModal](#domodal) возвращает IDOK.  
   
- Дополнительные сведения о рисовании аспект, см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в пакете Windows SDK.  
+ Дополнительные сведения о рисовании аспект, см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры в пакете Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  Получает метафайл, связанный с элементом, выбранного пользователем.  
@@ -311,7 +311,7 @@ int GetPasteIndex() const;
  Индекс в массиве `OLEUIPASTEENTRY` структур, выбранные пользователем. Формат, который соответствует выбранного индекса следует использовать при выполнении операции вставки.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTEENTRY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipasteentrya) структуры в пакете Windows SDK.  
   
 ##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  Определяет тип выбора, сделанного пользователем.  
@@ -355,7 +355,7 @@ OLEUIPASTESPECIAL m_ps;
 ### <a name="remarks"></a>Примечания  
  Члены этой структуры можно изменить непосредственно или с помощью функций-членов.  
   
- Дополнительные сведения см. в разделе [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) структуры в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC OCLIENT](../../visual-cpp-samples.md)   

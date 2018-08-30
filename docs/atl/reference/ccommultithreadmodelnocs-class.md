@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f8021bdc16dcfb2c4d1aa69936f27cfe7ac1df
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09e209a7b3e81ac232d2c0441a84e55ded8faecf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884822"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212861"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Класс CComMultiThreadModelNoCS
 `CComMultiThreadModelNoCS` Предоставляет методы поточно ориентированные увеличивать и уменьшать значение переменной, без критический раздел блокировки или разблокировки функциональные возможности.  
@@ -117,7 +117,7 @@ typedef CComFakeCriticalSection CriticalSection;
  См. в разделе [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement  
- Эта статическая функция вызывает функцию Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), который уменьшает значение переменной, на которые указывают *p*.  
+ Эта статическая функция вызывает функцию Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), который уменьшает значение переменной, на которые указывают *p*.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -134,7 +134,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
  **InterlockedDecrement** запрещает использовать эту переменную, одновременно более одного потока.  
   
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment  
- Эта статическая функция вызывает функцию Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), которая увеличивает значение переменной, на которые указывают *p*.  
+ Эта статическая функция вызывает функцию Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), которая увеличивает значение переменной, на которые указывают *p*.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359a7ff75b2036960d8d8ffd40200f9175ccc21c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c0fbc3914f10bacdd286fe89c3e82de78b726cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960704"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216865"
 ---
 # <a name="coledatetime-class"></a>Класс COleDateTime
 Инкапсулирует `DATE` тип данных, который используется в OLE-автоматизации.  
@@ -74,7 +74,7 @@ class COleDateTime
 |----------|-----------------|  
 |[COleDateTime::Format](#format)|Создает форматированное строковое представление `COleDateTime` объекта.|  
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Вызовите этот метод для получения времени в `COleDateTime` объекта в виде `DBTIMESTAMP` структуру данных.|  
-|[COleDateTime::GetAsSystemTime](#getassystemtime)|Вызовите этот метод для получения времени в `COleDateTime` объекта в виде [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру данных.|  
+|[COleDateTime::GetAsSystemTime](#getassystemtime)|Вызовите этот метод для получения времени в `COleDateTime` объекта в виде [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру данных.|  
 |[COleDateTime::GetAsUDATE](#getasudate)|Вызовите этот метод для получения времени в `COleDateTime` как `UDATE` структуру данных.|  
 |[COleDateTime::GetCurrentTime](#getcurrenttime)|Создает `COleDateTime` объект, представляющий текущее время (статическая функция-член).|  
 |[COleDateTime::GetDay](#getday)|Возвращает день, это `COleDateTime` представляет (1-31).|  
@@ -217,7 +217,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
  Объект `SYSTEMTIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта.  
   
  *filetimeSrc*  
- Объект `FILETIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта. Обратите внимание, что `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. См. в разделе [времени файлов](http://msdn.microsoft.com/library/windows/desktop/ms724290) в пакете SDK для Windows, Дополнительные сведения.  
+ Объект `FILETIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта. Обратите внимание, что `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.  
   
  *nYear*, *nMonth*, *nDay*, *основе Nчас*, *Nмин.*, *nSec*  
  Указать значения даты и времени, который необходимо скопировать в новый `COleDateTime` объекта.  
@@ -256,7 +256,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
 - `COleDateTime(` *systimeSrc* **)** создает `COleDateTime` объекта из `SYSTEMTIME` значение.  
   
-- `COleDateTime(` `filetimeSrc` **)** Создает `COleDateTime` объекта из `FILETIME` значение. . Обратите внимание, что `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. См. в разделе [времени файлов](http://msdn.microsoft.com/library/windows/desktop/ms724290) в пакете SDK для Windows, Дополнительные сведения.  
+- `COleDateTime(` `filetimeSrc` **)** Создает `COleDateTime` объекта из `FILETIME` значение. . Обратите внимание, что `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.  
   
 - `COleDateTime(` `nYear``nMonth`, `nDay`, `nHour`, `nMin`, `nSec` **)** Создает `COleDateTime` объект из указанного числовые значения.  
   
@@ -264,7 +264,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
  Дополнительные сведения о `time_t` тип данных, см. в разделе [время](../../c-runtime-library/reference/time-time32-time64.md) работать в *Справочник по библиотеке времени выполнения*.  
   
- Дополнительные сведения см. в разделе [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) и [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структур в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) и [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структур в пакете Windows SDK.  
   
  Дополнительные сведения о граничные значения для `COleDateTime` значения, см. в статье [даты и времени: Поддержка модели автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
@@ -294,7 +294,7 @@ CString Format(UINT nFormatID) const;
 - VAR_DATEVALUEONLY пропускать части времени во время синтаксического анализа.  
   
  *lcid*  
- Указывает идентификатор языкового стандарта для использования для преобразования. Дополнительные сведения об идентификаторах языков см. в разделе [идентификаторы языка](http://msdn.microsoft.com/library/windows/desktop/dd318691).  
+ Указывает идентификатор языкового стандарта для использования для преобразования. Дополнительные сведения об идентификаторах языков см. в разделе [идентификаторы языка](/windows/desktop/Intl/language-identifiers).  
   
  *lpszFormat*  
  Форматирование строки аналогичную `printf` форматирования строки. Каждый форматирование кода, предшествует процента ( `%`) выполните вход, заменен соответствующим `COleDateTime` компонента. Другие символы в строке формата копируются без изменений возвращаемой строки. Функции времени выполнения см. в разделе [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Дополнительные сведения. Значение и значение коды форматирования для `Format` являются:  
@@ -359,7 +359,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
   
 ### <a name="parameters"></a>Параметры  
  *sysTime*  
- Ссылку на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения преобразованного даты и времени по максимуму `COleDateTime` объекта.  
+ Ссылку на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения преобразованного даты и времени по максимуму `COleDateTime` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если выполнение прошло успешно; Значение FALSE, если преобразование завершается неудачей, или если `COleDateTime` объект имеет значение NULL или недопустим.  
@@ -772,17 +772,17 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
 - **оператор = (** `timeSrc` **)** `time_t` или `__time64_t` преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый.  
   
-- **оператор = (** *systimeSrc* **)** [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый.  
+- **оператор = (** *systimeSrc* **)** [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый.  
   
 - **оператор = (** `udate` **)** `UDATE` преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый. Объект `UDATE` структура представляет дату «распакованы». См. в разделе функция [VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) для получения дополнительных сведений.  
   
-- **оператор = (** `filetimeSrc` **)** [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; в противном случае оно устанавливается на недопустимый. `FILETIME` использует всеобщее скоординированное время (UTC), поэтому, если передать время в формате UTC в структуре, результаты преобразуется из времени в формате UTC в местное время и будет храниться в виде варианта времени. Это происходит так же, как и в Visual C++ 6.0 и Visual C++ .NET 2003 с пакетом обновления 2. См. в разделе [времени файлов](http://msdn.microsoft.com/library/windows/desktop/ms724290) в пакете SDK для Windows, Дополнительные сведения.  
+- **оператор = (** `filetimeSrc` **)** [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; в противном случае оно устанавливается на недопустимый. `FILETIME` использует всеобщее скоординированное время (UTC), поэтому, если передать время в формате UTC в структуре, результаты преобразуется из времени в формате UTC в местное время и будет храниться в виде варианта времени. Это происходит так же, как и в Visual C++ 6.0 и Visual C++ .NET 2003 с пакетом обновления 2. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.  
   
  Дополнительные сведения см. в разделе [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) запись в пакете Windows SDK.  
   
  Дополнительные сведения о `time_t` тип данных, см. в разделе [время](../../c-runtime-library/reference/time-time32-time64.md) работать в *Справочник по библиотеке времени выполнения*.  
   
- Дополнительные сведения см. в разделе [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) и [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структур в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) и [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структур в пакете Windows SDK.  
   
  Дополнительные сведения о граничные значения для `COleDateTime` значения, см. в статье [даты и времени: Поддержка модели автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).  
   

@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337491"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207828"
 ---
 # <a name="cframewndex-class"></a>Класс CFrameWndEx
 Реализует функции однодокументного интерфейса Windows (SDI) с наложенным или всплывающим фреймовым окном, а также предоставляет элементы для управления окном. Он расширяет [CFrameWnd](../../mfc/reference/cframewnd-class.md) класса.  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|Вызывается платформой, после создания фрейма.|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|Вызвано структурой при уничтожении окна.|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Вызывается платформой, когда приложение рисует изображение, связанное с элементом меню.|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Вызывается платформой при `CMFCPopupMenu` объекта процессов [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) сообщения.|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Вызывается платформой при `CMFCPopupMenu` объекта процессов [WM_PAINT](/windows/desktop/gdi/wm-paint) сообщения.|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Вызывается платформой при композиции диспетчера окон рабочего стола (DWM) была включена или отключена.|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Вызывается платформой при остановке кадр, перемещении или изменении размера.|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Вызывается платформой, когда изменяется размер фрейма для задания ограничений на окно измерения.|  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  Дескриптор структуру, содержащую позиции несколько окон. .  
   
 ### <a name="remarks"></a>Примечания  
- Структура hdwp инициализируется путем [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) метод.  
+ Структура hdwp инициализируется путем [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) метод.  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  Задает меню, рамки и обновляет его при бездействии обработки команд.  
@@ -1093,7 +1093,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="parameters"></a>Параметры  
  [in] *lpMMI*  
- Указатель на [MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605) структуры.  
+ Указатель на [MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605) структуры.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1129,7 +1129,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>Параметры  
  [in] *nFlags*  
- Указывает, нажал ли пользователь клавиши-модификаторы. Возможные значения см. параметр *wParam* в [WM_LBUTTONDOWN уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+ Указывает, нажал ли пользователь клавиши-модификаторы. Возможные значения см. параметр *wParam* в [WM_LBUTTONDOWN уведомления](/windows/desktop/inputdev/wm-lbuttondown).  
   
  [in] *точки*  
  Указывает координат x и y указателя, относительно верхнего левого угла окна.  
@@ -1147,7 +1147,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>Параметры  
  [in] *nFlags*  
- Указывает, нажал ли пользователь клавиши-модификаторы. Возможные значения см. параметр *wParam* в [WM_LBUTTONUP уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+ Указывает, нажал ли пользователь клавиши-модификаторы. Возможные значения см. параметр *wParam* в [WM_LBUTTONUP уведомления](/windows/desktop/inputdev/wm-lbuttonup).  
   
  [in] *точки*  
  Указывает координат x и y указателя, относительно верхнего левого угла окна.  
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>Параметры  
  [in] *nFlags*  
- Указывает, является ли пользователь нажал клавиши-модификаторы. Возможные значения см. параметр *wParam* в [WM_MOUSEMOVE уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+ Указывает, является ли пользователь нажал клавиши-модификаторы. Возможные значения см. параметр *wParam* в [WM_MOUSEMOVE уведомления](/windows/desktop/inputdev/wm-mousemove).  
   
  [in] *точки*  
  Указывает x и y координаты указателя относительно верхнего левого угла окна.  
@@ -1290,7 +1290,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  Расположение указателя в координатах экрана.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель попадание перечисляемое значение. Список возможных значений см. в разделе [уведомлением WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Указатель попадание перечисляемое значение. Список возможных значений см. в разделе [уведомлением WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>Параметры  
  [in] *nHitTest*  
- Указатель попадание перечисляемое значение. Список возможных значений см. в разделе [уведомлением WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Указатель попадание перечисляемое значение. Список возможных значений см. в разделе [уведомлением WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).  
   
  [in] *точки*  
  Расположение указателя в координатах экрана.  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>Параметры  
  [in] *wp*  
- События управления питанием. Список возможных значений см. в разделе [сообщения WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
+ События управления питанием. Список возможных значений см. в разделе [сообщения WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast).  
   
  [in] *lp*  
  Этот параметр не используется.  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  Указатель на текст для окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение, возвращаемое из вызова [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Значение, возвращаемое из вызова [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572).  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1518,7 +1518,7 @@ afx_msg void OnSize(
   
 ### <a name="parameters"></a>Параметры  
  [in] *nType*  
- Тип изменения размера. Возможные значения см. параметр *wParam* в [уведомлений WM_SIZE](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+ Тип изменения размера. Возможные значения см. параметр *wParam* в [уведомлений WM_SIZE](/windows/desktop/winmsg/wm-size).  
   
  [in] *cx*  
  Новая ширина окна в пикселях.  
@@ -1539,7 +1539,7 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>Параметры  
  [in] *fwSide*  
- Край кадра, который перемещается. См. параметр *wParam* в [WM_SIZING уведомления](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+ Край кадра, который перемещается. См. параметр *wParam* в [WM_SIZING уведомления](/windows/desktop/winmsg/wm-sizing).  
   
  [in, out] *pRect*  
  Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](../../mfc/reference/rect-structure1.md) структура, содержащая координаты экрана.  
@@ -1896,10 +1896,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Параметры  
  *dwData*  
- Данные, зависящие от *nCmd* параметра. Список возможных значений см. в разделе [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Данные, зависящие от *nCmd* параметра. Список возможных значений см. в разделе [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
  *nCmd*  
- Команда help. Список возможных значений см. в разделе [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Команда help. Список возможных значений см. в разделе [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
 ### <a name="remarks"></a>Примечания  
   

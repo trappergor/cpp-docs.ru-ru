@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541887"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222098"
 ---
 # <a name="cmfcfontinfo-class"></a>Класс CMFCFontInfo
 `CMFCFontInfo` Класс описывает имя и другие атрибуты шрифта.  
@@ -95,16 +95,16 @@ CMFCFontInfo(const CMFCFontInfo& src);
   
 ### <a name="parameters"></a>Параметры  
  [in] *lpszName*  
- Имя шрифта. Дополнительные сведения см. в разделе `lfFaceName` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
+ Имя шрифта. Дополнительные сведения см. в разделе `lfFaceName` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
   
  [in] *lpszScript*  
  Имя шрифта сценарий (набор символов).  
   
  [in] *nCharSet*  
- Значение, указывающее набор символов (скрипт) шрифта. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
+ Значение, указывающее набор символов (скрипт) шрифта. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
   
  [in] *nPitchAndFamily*  
- Значение, указывающее шаг и семейство шрифта. Дополнительные сведения см. в разделе `lfPitchAndFamily` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
+ Значение, указывающее шаг и семейство шрифта. Дополнительные сведения см. в разделе `lfPitchAndFamily` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
   
  [in] *nType*  
  Значение, указывающее тип шрифта. Этот параметр может иметь битовую комбинацию (OR) значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- В этой документации используются термины *кодировку* и *скрипт* являются взаимозаменяемыми. Объект *сценарий*, который также называется систему письма, — это коллекция символы и правила для записи этих символов в один или несколько языков. Коллекция символов включает алфавит и знаки препинания, используемые в скрипте. Например латинском алфавите используется для английского языка, его содержимого в США, а его алфавита включает символы от A до Z. `lfCharSet` Членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структура указывает набор символов. Например значение ANSI_CHARSET указывает набора символов ANSI, включая букв латинского алфавита.  
+ В этой документации используются термины *кодировку* и *скрипт* являются взаимозаменяемыми. Объект *сценарий*, который также называется систему письма, — это коллекция символы и правила для записи этих символов в один или несколько языков. Коллекция символов включает алфавит и знаки препинания, используемые в скрипте. Например латинском алфавите используется для английского языка, его содержимого в США, а его алфавита включает символы от A до Z. `lfCharSet` Членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структура указывает набор символов. Например значение ANSI_CHARSET указывает набора символов ANSI, включая букв латинского алфавита.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Возвращает сцепленные имена шрифт и его набора (скрипт).  

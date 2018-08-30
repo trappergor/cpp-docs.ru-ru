@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eb40b5b886407a87e0633052cde67868d756a88
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7ec04a1113cd14824db8e354653f5f7fcb108742
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883649"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215347"
 ---
 # <a name="iviewobjecteximpl-class"></a>Класс IViewObjectExImpl
-Этот класс реализует `IUnknown` и предоставляет реализацию по умолчанию [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), и [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375) интерфейсов.  
+Этот класс реализует `IUnknown` и предоставляет реализацию по умолчанию [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), и [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) интерфейсов.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -71,13 +71,13 @@ class ATL_NO_VTABLE IViewObjectExImpl
 |[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|Предоставляет подсказки контейнера по объект, который используется при изменении размеров его.|  
 |[IViewObjectExImpl::GetRect](#getrect)|Возвращает прямоугольник, описывающий запрошенный вид рисования. Реализация ATL возвращает E_NOTIMPL.|  
 |[IViewObjectExImpl::GetViewStatus](#getviewstatus)|Возвращает информацию о размытости объекта и поддерживаемых способах рисования.|  
-|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|Проверяет, если указанная точка находится в указанный прямоугольник и возвращает [HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187) значение в `pHitResult`.|  
+|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|Проверяет, если указанная точка находится в указанный прямоугольник и возвращает [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) значение в `pHitResult`.|  
 |[IViewObjectExImpl::QueryHitRect](#queryhitrect)|Проверяет ли прямоугольник отображения элемента управления перекрывается любой точки в указанное расположение прямоугольника и возвращает значение HITRESULT в `pHitResult`.|  
 |[IViewObjectExImpl::SetAdvise](#setadvise)|Настраивает подключение между элементом управления и приемника уведомлений, чтобы приемник может получать уведомления об изменениях в представлении элемента управления.|  
 |[IViewObjectExImpl::Unfreeze](#unfreeze)|Снимает формируемого представление элемента управления. Реализация ATL возвращает E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Примечания  
- [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), и [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375) интерфейсы позволяют элемент управления отображать себя напрямую, а также для создания и управления приемника уведомлений для уведомления контейнер для изменения отображения элемента управления. `IViewObjectEx` Интерфейс обеспечивает поддержку для функций расширенного элемента управления, таких как рисование без мелькания, непрямоугольные и прозрачные элементы управления и нажатия (например, насколько близко щелчка кнопкой мыши необходимо следует учитывать в элементе управления). Класс `IViewObjectExImpl` предоставляет стандартную реализацию этих интерфейсов и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
+ [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), и [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) интерфейсы позволяют элемент управления отображать себя напрямую, а также для создания и управления приемника уведомлений для уведомления контейнер для изменения отображения элемента управления. `IViewObjectEx` Интерфейс обеспечивает поддержку для функций расширенного элемента управления, таких как рисование без мелькания, непрямоугольные и прозрачные элементы управления и нажатия (например, насколько близко щелчка кнопкой мыши необходимо следует учитывать в элементе управления). Класс `IViewObjectExImpl` предоставляет стандартную реализацию этих интерфейсов и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IViewObjectEx`  
@@ -106,7 +106,7 @@ STDMETHOD(Draw)(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает метод `CComControl::OnDrawAdvanced` которое в свою очередь вызывает класс элемента управления `OnDraw` метод. `OnDraw` Автоматически добавляется метод к классу элемента управления при создании элемента управления с помощью мастера управления ATL. По умолчанию мастер `OnDraw` рисует прямоугольник с надписью «ATL 3.0».  
   
- См. в разделе [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) в Windows SDK.  
+ См. в разделе [IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw) в Windows SDK.  
   
 ##  <a name="freeze"></a>  IViewObjectExImpl::Freeze  
  Замораживает формируемого представление элемента управления, поэтому он не изменится до `Unfreeze`. Реализация ATL возвращает E_NOTIMPL.  
@@ -120,7 +120,7 @@ STDMETHOD(Freeze)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IViewObject::Freeze](http://msdn.microsoft.com/library/windows/desktop/ms688728) в Windows SDK.  
+ См. в разделе [IViewObject::Freeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-freeze) в Windows SDK.  
   
 ##  <a name="getadvise"></a>  IViewObjectExImpl::GetAdvise  
  Извлекает существующее соединение приемнике уведомлений на элементе управления, если таковой имеется.  
@@ -135,7 +135,7 @@ STDMETHOD(GetAdvise)(
 ### <a name="remarks"></a>Примечания  
  Приемник хранится в данные-член класса элемента управления [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink).  
   
- См. в разделе [IViewObject::GetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692772) в Windows SDK.  
+ См. в разделе [IViewObject::GetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getadvise) в Windows SDK.  
   
 ##  <a name="getcolorset"></a>  IViewObjectExImpl::GetColorSet  
  Возвращает логическую палитру, используемые элементом управления для рисования. Реализация ATL возвращает E_NOTIMPL.  
@@ -151,7 +151,7 @@ STDMETHOD(GetColorSet)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IViewObject::GetColorSet](http://msdn.microsoft.com/library/windows/desktop/ms686553) в Windows SDK.  
+ См. в разделе [IViewObject::GetColorSet](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getcolorset) в Windows SDK.  
   
 ##  <a name="getextent"></a>  IViewObjectExImpl::GetExtent  
  Получает отображаемый размер элемента управления в единицах HIMETRIC (0,01 мм на единицу) из данные-член класса элемента управления [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
@@ -165,7 +165,7 @@ STDMETHOD(GetExtent)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) в Windows SDK.  
+ См. в разделе [IViewObject2::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-iviewobject2-getextent) в Windows SDK.  
   
 ##  <a name="getnaturalextent"></a>  IViewObjectExImpl::GetNaturalExtent  
  Предоставляет подсказки контейнера по объект, который используется при изменении размеров его.  
@@ -183,7 +183,7 @@ STDMETHOD(GetNaturalExtent)(
 ### <a name="remarks"></a>Примечания  
  Если `dwAspect` — DVASPECT_CONTENT и *pExtentInfo "->" dwExtentMode* является DVEXTENT_CONTENT, задает * `psizel` на данные-член класса элемента управления [CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural). В противном случае возвращает ошибку HRESULT.  
   
- См. в разделе [IViewObjectEx::GetNaturalExtent](http://msdn.microsoft.com/library/windows/desktop/ms683718) в Windows SDK.  
+ См. в разделе [IViewObjectEx::GetNaturalExtent](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) в Windows SDK.  
   
 ##  <a name="getrect"></a>  IViewObjectExImpl::GetRect  
  Возвращает прямоугольник, описывающий запрошенный вид рисования. Реализация ATL возвращает E_NOTIMPL.  
@@ -193,7 +193,7 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IViewObjectEx::GetRect](http://msdn.microsoft.com/library/windows/desktop/ms695246) в Windows SDK.  
+ См. в разделе [IViewObjectEx::GetRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getrect) в Windows SDK.  
   
 ##  <a name="getviewstatus"></a>  IViewObjectExImpl::GetViewStatus  
  Возвращает информацию о размытости объекта и поддерживаемых способах рисования.  
@@ -203,12 +203,12 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию задает ATL `pdwStatus` для указания, что элемент управления поддерживает VIEWSTATUS_OPAQUE (возможные значения приведены в [Просмотр СОСТОЯНИЯ](http://msdn.microsoft.com/library/windows/desktop/ms687201) перечисления).  
+ По умолчанию задает ATL `pdwStatus` для указания, что элемент управления поддерживает VIEWSTATUS_OPAQUE (возможные значения приведены в [Просмотр СОСТОЯНИЯ](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) перечисления).  
   
- См. в разделе [IViewObjectEx::GetViewStatus](http://msdn.microsoft.com/library/windows/desktop/ms693371) в Windows SDK.  
+ См. в разделе [IViewObjectEx::GetViewStatus](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) в Windows SDK.  
   
 ##  <a name="queryhitpoint"></a>  IViewObjectExImpl::QueryHitPoint  
- Проверяет, если указанная точка находится в указанный прямоугольник и возвращает [HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187) значение в `pHitResult`.  
+ Проверяет, если указанная точка находится в указанный прямоугольник и возвращает [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) значение в `pHitResult`.  
   
 ```
 STDMETHOD(QueryHitPoint)(
@@ -222,12 +222,12 @@ STDMETHOD(QueryHitPoint)(
 ### <a name="remarks"></a>Примечания  
  Значение может быть HITRESULT_HIT или HITRESULT_OUTSIDE.  
   
- Если `dwAspect` равно [DVASPECT_CONTENT](http://msdn.microsoft.com/library/windows/desktop/ms690318), метод возвращает значение S_OK. В противном случае метод возвращает значение E_FAIL.  
+ Если `dwAspect` равно [DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), метод возвращает значение S_OK. В противном случае метод возвращает значение E_FAIL.  
   
- См. в разделе [IViewObjectEx::QueryHitPoint](http://msdn.microsoft.com/library/windows/desktop/ms691209) в Windows SDK.  
+ См. в разделе [IViewObjectEx::QueryHitPoint](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) в Windows SDK.  
   
 ##  <a name="queryhitrect"></a>  IViewObjectExImpl::QueryHitRect  
- Проверяет ли прямоугольник отображения элемента управления перекрывается любой точки в указанное расположение прямоугольника и возвращает [HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187) значение в `pHitResult`.  
+ Проверяет ли прямоугольник отображения элемента управления перекрывается любой точки в указанное расположение прямоугольника и возвращает [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) значение в `pHitResult`.  
   
 ```
 STDMETHOD(QueryHitRect)(
@@ -241,9 +241,9 @@ STDMETHOD(QueryHitRect)(
 ### <a name="remarks"></a>Примечания  
  Значение может быть HITRESULT_HIT или HITRESULT_OUTSIDE.  
   
- Если `dwAspect` равно [DVASPECT_CONTENT](http://msdn.microsoft.com/library/windows/desktop/ms690318), метод возвращает значение S_OK. В противном случае метод возвращает значение E_FAIL.  
+ Если `dwAspect` равно [DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), метод возвращает значение S_OK. В противном случае метод возвращает значение E_FAIL.  
   
- См. в разделе [IViewObjectEx::QueryHitRect](http://msdn.microsoft.com/library/windows/desktop/ms693797) в Windows SDK.  
+ См. в разделе [IViewObjectEx::QueryHitRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) в Windows SDK.  
   
 ##  <a name="setadvise"></a>  IViewObjectExImpl::SetAdvise  
  Настраивает подключение между элементом управления и приемника уведомлений, чтобы приемник может получать уведомления об изменениях в представлении элемента управления.  
@@ -257,10 +257,10 @@ STDMETHOD(SetAdvise)(
   
 ### <a name="remarks"></a>Примечания  
 
- Указатель на [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) интерфейс в приемнике уведомлений, хранится в данные-член класса элемента управления [CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).  
+ Указатель на [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) интерфейс в приемнике уведомлений, хранится в данные-член класса элемента управления [CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).  
 
   
- См. в разделе [IViewObject::SetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms683950) в Windows SDK.  
+ См. в разделе [IViewObject::SetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-setadvise) в Windows SDK.  
   
 ##  <a name="unfreeze"></a>  IViewObjectExImpl::Unfreeze  
  Снимает формируемого представление элемента управления. Реализация ATL возвращает E_NOTIMPL.  
@@ -270,7 +270,7 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IViewObject::Unfreeze](http://msdn.microsoft.com/library/windows/desktop/ms686641) в Windows SDK.  
+ См. в разделе [IViewObject::Unfreeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-unfreeze) в Windows SDK.  
   
 ##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
  Реализуйте этот метод, чтобы закрыть дескриптор, связанный с данным объектом.  
@@ -321,7 +321,7 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
   
 ## <a name="see-also"></a>См. также  
  [Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
- [Интерфейсы, элементы управления ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)   
  [Учебник](../../atl/active-template-library-atl-tutorial.md)   
  [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2c53ceb50057e789856aa8e7f67c9f788aa5a0a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ebbb33a4f17f5b4d458c4add4d59040d698dd4b8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42544513"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222198"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Использование объектов accelerator и accelerator_view
 Можно использовать [accelerator](../../parallel/amp/reference/accelerator-class.md) и [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) классы для определения устройства или эмулятора для выполнения кода C++ AMP. Система может иметь несколько устройств или эмуляторов, которые отличаются объемом памяти, поддержкой общей памяти, поддержку отладки или поддержкой двойной точности. C++ Accelerated Massive Parallelism (C++ AMP) предоставляет API, которые можно использовать для проверки доступных ускорителей, задать один по умолчанию, укажите несколько представлений ускорителей для множественных вызовов parallel_for_each и выполнять специальные задачи отладки.  
@@ -184,7 +184,7 @@ bool pick_accelerator()
   
 ## <a name="interoperability"></a>Взаимодействие  
  
-Среда выполнения C++ AMP поддерживает взаимодействие между `accelerator_view` класс и Direct3D [исходного интерфейса ID3D11Device](http://go.microsoft.com/fwlink/p/?linkId=248488). [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) альбома `IUnknown` и возвращающий `accelerator_view` объекта. [Get_device](http://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) альбома `accelerator_view` объекта и возвращает `IUknown` интерфейс.  
+Среда выполнения C++ AMP поддерживает взаимодействие между `accelerator_view` класс и Direct3D [исходного интерфейса ID3D11Device](http://go.microsoft.com/fwlink/p/?linkId=248488). [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) альбома `IUnknown` и возвращающий `accelerator_view` объекта. [Get_device](https://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) альбома `accelerator_view` объекта и возвращает `IUknown` интерфейс.  
   
 ## <a name="see-also"></a>См. также  
  

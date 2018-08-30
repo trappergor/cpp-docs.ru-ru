@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f82245e8e2fa338ed4abca0b97c53d653427cce
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 046ce538dafe90b172096eb37bf2309f8c75db1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027876"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206255"
 ---
 # <a name="editing-a-message-handler"></a>Редактирование обработчика сообщений
 После определения обработчика сообщений, можно перейти к определению функции-члена для добавления или изменения кода.  
   
  Для перехода к определение функции-члена из [редактор диалоговых окон](../../windows/dialog-editor.md), дважды щелкните элемент управления, для которого обработчик уже определен. Переход к файлу, в котором определен обработчик сообщений выбранного элемента управления.  
   
- Для перехода к определение функции-члена из [представление классов](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), дважды щелкните имя функции в представлении классов.  
+ Для перехода к определение функции-члена из [представление классов](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), дважды щелкните имя функции в представлении классов.  
   
 ## <a name="see-also"></a>См. также  
  [Сопоставление сообщений с функциями](../../mfc/reference/mapping-messages-to-functions.md)   

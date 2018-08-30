@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880707"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206645"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-класс
 Этот класс предоставляет методы для создания модальное или немодальное диалоговое окно.  
@@ -102,7 +102,7 @@ template <class T,
 |Создание элементов управления|[Учебник по ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |С помощью диалоговых окон в ATL|[Классы окон ATL](../../atl/atl-window-classes.md)|  
 |Мастер проектов ATL|[Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Диалоговые окна|[Диалоговые окна](http://msdn.microsoft.com/library/windows/desktop/ms632588) и последующие разделы в пакете SDK для Windows|  
+|Диалоговые окна|[Диалоговые окна](https://msdn.microsoft.com/library/windows/desktop/ms632588) и последующие разделы в пакете SDK для Windows|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
@@ -126,7 +126,7 @@ HWND Create(
  [in] Дескриптор окна-владельца.  
   
  **RECT &** *rect*  
- [in] Объект [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий размер и положение диалогового окна.  
+ [in] Объект [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий размер и положение диалогового окна.  
   
  *dwInitParam*  
  [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Параметры  
  *hWndParent*  
- [in] Дескриптор окна-владельца. Значение по умолчанию — возвращаемое значение [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) функции Win32.  
+ [in] Дескриптор окна-владельца. Значение по умолчанию — возвращаемое значение [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) функции Win32.  
   
  *dwInitParam*  
  [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.  

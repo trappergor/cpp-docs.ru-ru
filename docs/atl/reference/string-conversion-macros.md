@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8d9c4c43098d7f0ca8a5e9588a69a47d6e98a066
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885159"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210059"
 ---
 # <a name="string-conversion-macros"></a>Макросы преобразования строк
 
@@ -38,7 +38,7 @@ ms.locfileid: "37885159"
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE и макросы преобразования строк TEXTMETRIC
 
-Эти макросы создать копию [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) или [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) структурировать и преобразования строк в новую структуру в новый строковый тип. Макросы выделить память в стеке для новой структуры и возвращают указатель на структуру нового.  
+Эти макросы создать копию [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) или [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) структурировать и преобразования строк в новую структуру в новый строковый тип. Макросы выделить память в стеке для новой структуры и возвращают указатель на структуру нового.  
   
 ```cpp
 MACRONAME( address_of_structure )

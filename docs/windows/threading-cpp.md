@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 700e8915535a38233b1cd1e55669c1e3c5f372dd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19f49951cad65d3dbf15c406af9ac78a28408d4b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591557"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221818"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -84,4 +84,4 @@ ms.locfileid: "42591557"
 [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
 [Атрибуты классов](../windows/class-attributes.md)  
 [Поддержка многопоточности для устаревшего кода (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)  
-[Нейтральный подразделения](http://msdn.microsoft.com/library/windows/desktop/ms681813)  
+[Нейтральный подразделения](/windows/desktop/cossdk/neutral-apartments)  

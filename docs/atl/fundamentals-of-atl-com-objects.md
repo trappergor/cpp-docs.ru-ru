@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaaad259fa0c864a72feaff3222f683563c8ca91
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1b9dc87340d567f876d91abc4d8ebfa1d6353cad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852321"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209991"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Основы COM-объектов ATL
 На следующем рисунке показана связь между классы и интерфейсы, которые используются для определения ATL COM-объекта.  
@@ -40,7 +40,7 @@ ms.locfileid: "37852321"
   
  Так как клиент не проходят через внешний объект для взаимодействия с внутренний объект, объединенные объекты обычно более эффективны. Кроме того внешний объект не нужно знать функциональность агрегированные объекта, учитывая, что интерфейс агрегированные объекта непосредственно доступен клиенту. Тем не менее может быть статистически вычислена не все объекты. Выполнить статистическую обработку объекта она должна разрабатываться с помощью статистической обработки в виду.  
   
- Реализует ATL [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) состоит из двух этапов:  
+ Реализует ATL [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) состоит из двух этапов:  
   
 -   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), или [CComPolyObject](../atl/reference/ccompolyobject-class.md) реализует `IUnknown` методы.  
   

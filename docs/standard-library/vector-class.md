@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c2f3897f7fb1876ac684e2e6c77cc47f6f67ee
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539108"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199499"
 ---
 # <a name="vector-class"></a>Класс vector
 
@@ -120,7 +120,7 @@ class vector
  Тип данных элементов, сохраняемых в векторе.
 
 *Распределитель*  
- Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении и отмене распределения памяти для вектора. Этот аргумент является необязательным, и значение по умолчанию — **распределителя***\<тип>.*
+ Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении и отмене распределения памяти для вектора. Этот аргумент является необязательным, и значением по умолчанию является `allocator<Type>`.
 
 ## <a name="remarks"></a>Примечания
 
@@ -1561,7 +1561,8 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val* значение для назначения на элемент, добавляемый в конец вектора.
+*Val*<br/>
+ Значение, назначаемое элементу, который добавляется в конец вектора.
 
 ### <a name="example"></a>Пример
 

@@ -1,5 +1,5 @@
 ---
-title: . OBJ-файлы в качестве входных данных компоновщика | Документы Microsoft
+title: . OBJ-файлы в качестве входных данных компоновщика | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -19,26 +19,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57907beaa30418ce31e6c46202149048d5c9dea1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffbc1d7fc7f74121c37c9e80a538ec60f2265701
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372982"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219566"
 ---
 # <a name="obj-files-as-linker-input"></a>OBJ-файлы в качестве входных файлов компоновщика
 
-Инструмент-компоновщик (ссылка. (EXE) принимает OBJ-файлы, которые в общих объекта файла формат COFF.
+Компоновщик (ссылка. (EXE) принимает OBJ-файлы, которые находятся в общих объекта файла формат COFF.
 
 ## <a name="remarks"></a>Примечания
 
-Корпорация Майкрософт предоставляет полное описание формате. Дополнительные сведения см. в разделе [формата PE](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+Корпорация Майкрософт предоставляет полное описание в формате. Дополнительные сведения см. в разделе [формата PE](/windows/desktop/Debug/pe-format).
 
 ## <a name="unicode-support"></a>Поддержка Юникода
 
-Начиная с Visual Studio 2005, компилятор Microsoft Visual C++ поддерживает символы Юникода в идентификаторах в соответствии с определением ISO/IEC C и C++ стандартов. Предыдущие версии компилятора поддерживается только символы ASCII в качестве идентификаторов. Поддержка Юникода в именах функций, классов и статических переменных, компилятор и компоновщик используют кодировку Юникод UTF-8 для символов COFF в OBJ-файлы. Кодировка UTF-8 восходящая совместим с кодировкой ASCII, используемой в более ранних версиях Visual Studio.
+Начиная с Visual Studio 2005, компилятор Microsoft Visual C++ поддерживает символы Юникода в идентификаторах в соответствии с определением ISO/IEC C и стандартов C++. Предыдущие версии компилятора поддерживали только символы ASCII в идентификаторах. Реализована поддержка Юникода в именах функций, классов и статических элементов, компилятор и компоновщик используют кодировку Юникода UTF-8 для символов COFF в OBJ-файлы. Кодировка UTF-8 восходящая совместим с кодировкой ASCII, используемой в более ранних версиях Visual Studio.
 
-Дополнительные сведения о компиляторе и компоновщике см. в разделе [поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Дополнительные сведения о стандарте Юникод см. в разделе [Юникода](http://go.microsoft.com/fwlink/p/?linkid=37123) организации.
+Дополнительные сведения о компиляторе и компоновщике см. в разделе [поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Дополнительные сведения о стандарте Юникода, см. в разделе [Юникода](http://go.microsoft.com/fwlink/p/?linkid=37123) организации.
 
 ## <a name="see-also"></a>См. также
 
@@ -47,4 +47,4 @@ ms.locfileid: "32372982"
 [Поддержка Юникода](../../text/support-for-unicode.md)  
 [Поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
 [Стандарт Юникод](http://go.microsoft.com/fwlink/p/?linkid=37123)  
-[Формат PE](https://msdn.microsoft.com/library/windows/desktop/ms680547)  
+[Формат PE](/windows/desktop/Debug/pe-format)  

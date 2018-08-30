@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8217ee5bdcad15a2c0b89f95000360b979e094ea
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3443c85ce7f3f12e334e074e1ce37c9cab2ce9d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883623"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213618"
 ---
 # <a name="cimage-class"></a>Класс CImage
 `CImage` Предоставляет улучшенную поддержку растровых изображений, включая возможность загрузки и сохранения изображений в формате JPEG, GIF, BMP и Portable Network Graphics (PNG).  
@@ -263,7 +263,7 @@ BOOL AlphaBlend(
  Функция альфа смешения источника и конечного точечных рисунков, глобальное альфа-значение для применения к весь исходный точечный рисунок, а также сведения о формате для исходного растрового изображения. Функции blend источника и назначения, в настоящее время ограничены AC_SRC_OVER.  
   
  *pointDest*  
- Ссылку на [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структура, определяющая в верхнем левом углу целевого прямоугольника, в логических единицах.  
+ Ссылку на [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, определяющая в верхнем левом углу целевого прямоугольника, в логических единицах.  
   
  *nDestWidth*  
  Ширина в логических единицах прямоугольника назначения.  
@@ -284,7 +284,7 @@ BOOL AlphaBlend(
  Высота в логических единицах исходного прямоугольника.  
   
  *rectDest*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определение назначения.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определение назначения.  
   
  *rectSrc*  
  Ссылку на `RECT` структура, определение источника.  
@@ -363,10 +363,10 @@ BOOL BitBlt(
  Логические Координата y верхнего левого угла прямоугольника назначения.  
   
  *dwROP*  
- Выполняемая операция растровые. Коды растровых операций определяют, как объединяются в биты источника, назначения и шаблон (в соответствии с выбранной кисти) в место назначения. См. в разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в пакете SDK для Windows, список другие коды растровых операций и их описания.  
+ Выполняемая операция растровые. Коды растровых операций определяют, как объединяются в биты источника, назначения и шаблон (в соответствии с выбранной кисти) в место назначения. См. в разделе [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) в пакете SDK для Windows, список другие коды растровых операций и их описания.  
   
  *pointDest*  
- Объект [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структура, указывающая в верхнем левом углу целевого прямоугольника.  
+ Объект [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, указывающая в верхнем левом углу целевого прямоугольника.  
   
  *nDestWidth*  
  Ширина в логических единицах прямоугольника назначения.  
@@ -381,7 +381,7 @@ BOOL BitBlt(
  Логические Координата y верхнего левого угла исходного прямоугольника.  
   
  *rectDest*  
- Объект [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, указывающая целевого прямоугольника.  
+ Объект [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, указывающая целевого прямоугольника.  
   
  *pointSrc*  
  Объект `POINT` структура, указывающая в верхнем левом углу исходного прямоугольника.  
@@ -390,7 +390,7 @@ BOOL BitBlt(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) в пакете Windows SDK.  
   
 ##  <a name="cimage"></a>  CImage::CImage  
  Создает объект `CImage`.  
@@ -469,7 +469,7 @@ BOOL CreateEx(
 - BI_BITFIELDS формат без сжатия и таблицы цветов состоит из трех маски цвет DWORD, определяющие красного, зеленого и синего компонентов, соответственно, каждого пикселя. Это допустимо, при использовании с 16 и 32 bpp точечных рисунков.  
   
  *pdwBitfields*  
- Используется, только если *eCompression* задается для BI_BITFIELDS, в противном случае он должен иметь значение NULL. Указатель на массив из трех DWORD битовой маски, указав, какие биты каждого пикселя, используются для красного, зеленого и синего компонентов цвета, соответственно. Сведения об ограничениях для битовые поля, см. в разделе [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) в пакете Windows SDK.  
+ Используется, только если *eCompression* задается для BI_BITFIELDS, в противном случае он должен иметь значение NULL. Указатель на массив из трех DWORD битовой маски, указав, какие биты каждого пикселя, используются для красного, зеленого и синего компонентов цвета, соответственно. Сведения об ограничениях для битовые поля, см. в разделе [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) в пакете Windows SDK.  
   
  *dwFlags*  
  Указывает, если объект растровое изображение содержит альфа-канал. Может представлять собой сочетание нуля или более из следующих значений:  
@@ -578,13 +578,13 @@ BOOL Draw(
  Высота в логических единицах исходного прямоугольника.  
   
  *rectDest*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определение назначения.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определение назначения.  
   
  *rectSrc*  
  Ссылку на `RECT` структура, определение источника.  
   
  *pointDest*  
- Ссылку на [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структура, определяющая в верхнем левом углу целевого прямоугольника, в логических единицах.  
+ Ссылку на [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, определяющая в верхнем левом углу целевого прямоугольника, в логических единицах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -623,7 +623,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>Примечания  
  Это значение определяет количество битов, которые определяют каждый пиксель и максимальное число цветов в точечном рисунке.  
   
- Бит на пиксель, обычно является 1, 4, 8, 16, 24 или 32. См. в разделе `biBitCount` членом [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) в пакете SDK для Windows, Дополнительные сведения об этом значении.  
+ Бит на пиксель, обычно является 1, 4, 8, 16, 24 или 32. См. в разделе `biBitCount` членом [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) в пакете SDK для Windows, Дополнительные сведения об этом значении.  
   
 ##  <a name="getcolortable"></a>  CImage::GetColorTable  
  Извлекает цветовых значений красного, зеленого и синего (RGB) из диапазона записей в палитре в разделе DIB.  
@@ -642,7 +642,7 @@ void GetColorTable(UINT iFirstColor,
  Число извлекаемых записей цвет таблицы.  
   
  *prgbColors*  
- Указатель на массив [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) структур для получения цвет таблицы записей.  
+ Указатель на массив [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) структур для получения цвет таблицы записей.  
   
 ##  <a name="getdc"></a>  CImage::GetDC  
  Извлекает контекст устройства, в котором в данный момент образ, выбранный в него.  
@@ -1179,10 +1179,10 @@ BOOL PlgBlt(
  Координата по оси y верхнего левого угла монохромный растрового изображения.  
   
  *rectSrc*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий координаты исходного прямоугольника.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий координаты исходного прямоугольника.  
   
  *pointMask*  
- Объект [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структура, указывающая в верхнем левом углу точечного рисунка маски.  
+ Объект [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, указывающая в верхнем левом углу точечного рисунка маски.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если успешно, иначе — 0.  
@@ -1190,7 +1190,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>Примечания  
  Если *hbmMask* определяет недопустимый монохромный точечный рисунок, `PlgBit` использует это растровое изображение, чтобы маскировать биты данных о цвете из исходного прямоугольника.  
   
- Этот метод применим к Windows NT версии 4.0 и более поздних версий. См. в разделе [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) в пакете SDK Windows для получения дополнительных сведений.  
+ Этот метод применим к Windows NT версии 4.0 и более поздних версий. См. в разделе [PlgBlt](/windows/desktop/api/wingdi/nf-wingdi-plgblt) в пакете SDK Windows для получения дополнительных сведений.  
   
 ##  <a name="releasedc"></a>  CImage::ReleaseDC  
  Освобождает контекст устройства.  
@@ -1268,7 +1268,7 @@ void SetColorTable(
  Количество записей таблицы цветов для задания.  
   
  *prgbColors*  
- Указатель на массив [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) структуры, чтобы задать цвет таблицы записей.  
+ Указатель на массив [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) структуры, чтобы задать цвет таблицы записей.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод поддерживает только растровые изображения DIB раздела.  
@@ -1408,10 +1408,10 @@ BOOL StretchBlt(
  Высота в логических единицах прямоугольника назначения.  
   
  *dwROP*  
- Выполняемая операция растровые. Коды растровых операций определяют, как объединяются в биты источника, назначения и шаблон (в соответствии с выбранной кисти) в место назначения. См. в разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в пакете SDK для Windows, список другие коды растровых операций и их описания.  
+ Выполняемая операция растровые. Коды растровых операций определяют, как объединяются в биты источника, назначения и шаблон (в соответствии с выбранной кисти) в место назначения. См. в разделе [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) в пакете SDK для Windows, список другие коды растровых операций и их описания.  
   
  *rectDest*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определение назначения.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определение назначения.  
   
  *xSrc*  
  Координата x, в логических единицах верхнего левого угла исходного прямоугольника.  
@@ -1432,7 +1432,7 @@ BOOL StretchBlt(
  Ненулевое значение, если успешно, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) в пакете Windows SDK.  
   
 ##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  Копирует точечный рисунок из исходного контекста устройства этот текущий контекст устройства.  
@@ -1490,7 +1490,7 @@ BOOL TransparentBlt(
  В исходный точечный рисунок должен рассматриваться как прозрачный цвет. По умолчанию CLR_INVALID, указывает, что следует использовать цвета, в настоящее время установлено как прозрачный цвет изображения.  
   
  *rectDest*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определение назначения.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определение назначения.  
   
  *xSrc*  
  Координата x, в логических единицах верхнего левого угла исходного прямоугольника.  
@@ -1548,10 +1548,10 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ## <a name="see-also"></a>См. также  
  [Пример MMXSwarm](../../visual-cpp-samples.md)   
  [Образце SimpleImage](../../visual-cpp-samples.md)   
- [Аппаратно независимых точечных рисунков](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md) [аппаратно независимых точечных рисунков](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
+ [Аппаратно независимых точечных рисунков](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+ [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md) [аппаратно независимых точечных рисунков](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: ПАРАМЕТР (MASM) | Документы Microsoft
+title: ПАРАМЕТР (MASM) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80291c805cad3ef041fffc58983ff399da07c9d9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4a2dcbc55d6a2d033cde3b6189618afd67bdc3fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057725"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221513"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
-Включает и отключает функции код на языке ассемблера.  
+Включает и выключает функции ассемблер.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +48,7 @@ optionlist
 |**PROC**|**ПРОЛОГ**|**ТОЛЬКО ДЛЯ ЧТЕНИЯ**|**NOREADONLY**|  
 |**ОБЛАСТЬЮ ДЕЙСТВИЯ**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|  
   
- Синтаксис языка **параметр языка: *** x*, где *x* является одним из C, SYSCALL, STDCALL, языка PASCAL, FORTRAN или BASIC.  SYSCALL, языка PASCAL, FORTRAN и BASIC не поддерживает с [. МОДЕЛЬ](../../assembler/masm/dot-model.md) ПЛОСКОЙ.  
+ Синтаксис языка **параметр языка:**<em>x</em>, где *x* является одним из C, SYSCALL, STDCALL, PASCAL, FORTRAN или BASIC.  SYSCALL, PASCAL, FORTRAN и BASIC не поддерживает с [. МОДЕЛЬ](../../assembler/masm/dot-model.md) ПЛОСКИМИ.  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по директивам](../../assembler/masm/directives-reference.md)

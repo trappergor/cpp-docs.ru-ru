@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cf9133965a9009421c28f64c1f4157b4a6a6d6b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610718"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223299"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Текст и строки в Visual C++
 Важным аспектом разработки приложений для международных рынков является адекватное представление локального кодировок. Кодировка ASCII определяет символы в диапазоне от 0x00 до 0x7F. Существуют другие кодировки, в основном европейские, которые определяют символы в диапазоне от 0x00 до 0x7F одинаково в набор символов ASCII, а также определяют расширенную кодировку от 0x80 до 0xFF. Таким образом 8-разрядное, однобайтовыми кодировки (SBCS) достаточно для представления набора символов ASCII, а также кодировки для большинства европейских языков. Тем не менее некоторые не европейские кодировки, например Кандзи (японский), включают намного больше символов, чем схема кодирования однобайтовые представления и поэтому для них многобайтовые кодировки (MBCS).  
@@ -64,7 +64,7 @@ ms.locfileid: "42610718"
  [Интернационализация](../c-runtime-library/internationalization.md)  
  Описывает поддержку интернационализации в библиотеке времени выполнения C.  
   
- [Международные примеры](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [Международные примеры](https://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
  Ссылки на примеры, показывающие интернационализации в Visual C++.  
   
  [Locale Names, Languages, and Country/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md) (Строки страны или региона и языка)  

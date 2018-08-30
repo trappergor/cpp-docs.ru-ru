@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc498b96dad089276b248fbb2e420dde3c0bc514
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027142"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211809"
 ---
 # <a name="cdocobjectserveritem-class"></a>Класс CDocObjectServerItem
 Реализует команды OLE-сервера специально для серверов DocObject.  
@@ -62,7 +62,7 @@ class CDocObjectServerItem : public COleServerItem
 |[CDocObjectServerItem::OnShow](#onshow)|Вызывается платформой, чтобы сделать DocObject элемента на месте active. Если элемент не DocObject, вызывает [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Примечания  
- `CDocObjectServerItem` Определяет функции является переопределяемым элементом: [OnHide](#onhide), [OnOpen](http://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), и [OnShow](#onshow).  
+ `CDocObjectServerItem` Определяет функции является переопределяемым элементом: [OnHide](#onhide), [OnOpen](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), и [OnShow](#onshow).  
   
  Для использования `CDocObjectServerItem`, убедиться, что [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) в переопределите вашей `COleServerDoc`-производном классе возвращает новый `CDocObjectServerItem` объекта. Если вам нужно изменить функциональные возможности элемента, можно создать новый экземпляр собственного `CDocObjectServerItem`-производного класса.  
   

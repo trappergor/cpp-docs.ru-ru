@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54b8e4fdfbbfd282475ed0ca6e221d826953cad
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d784d7f3c03b18d2f81d6eec8bc9e4b76c7ee8da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216773"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>Класс ISpecifyPropertyPagesImpl
-Этот класс реализует `IUnknown` и предоставляет реализацию по умолчанию [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) интерфейс.  
+Этот класс реализует `IUnknown` и предоставляет реализацию по умолчанию [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) интерфейс.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 |[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Заполняет значения подсчета массив UUID. Каждый UUID соответствует CLSID для одного из страницы свойств, которые могут отображаться в окне свойств объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) интерфейс позволяет клиенту получить список идентификаторов CLSID для страниц свойств, поддерживаемых объектом. Класс `ISpecifyPropertyPagesImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
+ [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) интерфейс позволяет клиенту получить список идентификаторов CLSID для страниц свойств, поддерживаемых объектом. Класс `ISpecifyPropertyPagesImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
 > [!NOTE]
 >  Не предоставляйте `ISpecifyPropertyPages` интерфейс, если объект поддерживает страницы свойств.  
@@ -70,7 +70,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  **Заголовок:** atlcom.h  
   
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
- Заполняет массив [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) структуру с CLSID для страниц свойств, которые могут отображаться в окне свойств объекта.  
+ Заполняет массив [CAUUID](/windows/desktop/api/ocidl/ns-ocidl-tagcauuid) структуру с CLSID для страниц свойств, которые могут отображаться в окне свойств объекта.  
   
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
@@ -79,7 +79,7 @@ STDMETHOD(GetPages)(CAUUID* pPages);
 ### <a name="remarks"></a>Примечания  
  ATL использует сопоставление свойств объекта для получения каждого CLSID.  
   
- См. в разделе [ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) в Windows SDK.  
+ См. в разделе [ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)   

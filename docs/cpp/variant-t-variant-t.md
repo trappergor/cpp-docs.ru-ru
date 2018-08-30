@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95b0931438afe8ff151d3c9f6c4727013df79478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464166"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209346"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Блок, относящийся только к системам Microsoft**  
@@ -210,7 +210,7 @@ _variant_t(
   
 -   **_variant_t (VARIANT &***varSrc***)** создает `_variant_t` объекта из копии `VARIANT` объекта.     Тип variant сохранен.  
   
--   **_variant_t (VARIANT\****pVarSrc***)** создает `_variant_t` объекта из копии `VARIANT` объекта.     Тип variant сохранен.  
+-   **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** создает `_variant_t` объекта из копии `VARIANT` объекта.     Тип variant сохранен.  
   
 -   **_variant_t (_variant_t &***var_t_Src***)** создает `_variant_t` из другого объекта `_variant_t` объекта.     Тип variant сохранен.  
   
@@ -228,15 +228,15 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** создает `_variant_t` объект типа VT_BSTR из `_bstr_t` объекта.     Выделяется новый параметр `BSTR`.  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** создает `_variant_t` объект типа VT_BSTR из строки Юникода.   Выделяется новый параметр `BSTR`.  
+-   **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc***)** создает `_variant_t` объект типа VT_BSTR из строки Юникода.   Выделяется новый параметр `BSTR`.  
   
--   **_variant_t (char\***`strSrc`**)** создает `_variant_t` объект типа VT_BSTR из строки.     Выделяется новый параметр `BSTR`.  
+-   **_variant_t (char**<strong>\*</strong>`strSrc`**)** создает `_variant_t` объект типа VT_BSTR из строки.     Выделяется новый параметр `BSTR`.  
   
 -   **_variant_t (bool**`bSrc`**)** создает `_variant_t` объект введите VT_BOOL из **bool** значение.      
   
--   **_variant_t (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` объект типа VT_UNKNOWN из указателя на интерфейс COM. .       Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову `Release` , будет выполняться при `_variant_t` уничтожении объекта. Это следует вызвать метод `Release` в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает владение предоставленном указателе на интерфейс; не следует вызывать `Release` в предоставленном указателе на интерфейс.  
+-   **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` тип объекта VT_UNKNOWN из указателя интерфейса СОМ.       Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову `Release` , будет выполняться при `_variant_t` уничтожении объекта. Это следует вызвать метод `Release` в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает владение предоставленном указателе на интерфейс; не следует вызывать `Release` в предоставленном указателе на интерфейс.  
   
--   **_variant_t (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` объект типа VT_DISPATCH COM-интерфейса указатель.       Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову `Release` , будет выполняться при `_variant_t` уничтожении объекта. Это следует вызвать метод `Release` в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает владение предоставленном указателе на интерфейс; не следует вызывать `Release` в предоставленном указателе на интерфейс.  
+-   **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` объект Тип VT_DISPATCH из указателя интерфейса СОМ.       Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову `Release` , будет выполняться при `_variant_t` уничтожении объекта. Это следует вызвать метод `Release` в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает владение предоставленном указателе на интерфейс; не следует вызывать `Release` в предоставленном указателе на интерфейс.  
   
 -   **_variant_t (DECIMAL &**`decSrc`**)** создает `_variant_t` объект введите VT_DECIMAL из `DECIMAL` значение.      
   

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878d8a1f7f6ee313c58f92ea3f14b86265006581
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d543ca2d908f59487572f5abc68dc5b04223b88f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541478"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207619"
 ---
 # <a name="concurrentunorderedset-class"></a>Класс concurrent_unordered_set
 `concurrent_unordered_set` Класс представляет собой безопасный в отношении параллелизма контейнер, управляющий последовательностью элементов типа K. переменной длины Последовательность представлена таким образом, что позволяет параллельно безопасно присоединения, доступ к элементам, итератор и выполнять операции обхода итератора.  
@@ -293,7 +293,7 @@ std::pair<const_iterator,
  Значение ключа для поиска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [пары](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) где первый элемент — итератор, указывающий на начало, а второй элемент — итератор, указывающий конец диапазона.  
+ Объект [пары](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) где первый элемент — итератор, указывающий на начало, а второй элемент — итератор, указывающий конец диапазона.  
   
 ### <a name="remarks"></a>Примечания  
  Параллельные операции вставки вызвать дополнительные ключи, вставляемый после начала итератора и перед конечный итератор возможна.  

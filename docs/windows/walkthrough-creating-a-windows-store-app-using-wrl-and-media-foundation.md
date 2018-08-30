@@ -13,16 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4967be81e45e52ce7c321ceb552b13a1dc59bd0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604894"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214835"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Пошаговое руководство: Создание приложения универсальной платформы Windows, с использованием WRL и Media Foundation
 
-Сведения об использовании Windows шаблонов среды выполнения C++ Library (WRL), чтобы создать приложение универсальной платформы Windows (UWP), которое использует [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).
+Сведения об использовании Windows шаблонов среды выполнения C++ Library (WRL), чтобы создать приложение универсальной платформы Windows (UWP), которое использует [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 В этом примере создается пользовательский объект Media Foundation, который применяет эффект "оттенки серого" к изображениям, полученным с веб-камеры. Приложение использует C++ для определения пользовательского преобразования и C# для использования компонента и выполнения преобразования захваченного изображения.
 
@@ -36,7 +36,7 @@ ms.locfileid: "42604894"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Благодаря [среды выполнения Windows](http://msdn.microsoft.com/library/windows/apps/br211377.aspx).
+- Благодаря [среды выполнения Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 
 - опыт работы с моделью COM;
 
@@ -52,7 +52,7 @@ ms.locfileid: "42604894"
 
 - [InspectableClass](../windows/inspectableclass-macro.md) макрос реализует базовую функциональность модели COM, такую как подсчет ссылок и `QueryInterface` метод и задает имя класса среды выполнения и уровень доверия.
 
-- Использовать Microsoft::WRL::[класс модуля](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US) для реализации функций DLL точки входа, такие как [DllGetActivationFactory](http://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), и [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Использовать Microsoft::WRL::[класс модуля](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US) для реализации функций DLL точки входа, такие как [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), и [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
 - Необходимо установить связь между компонентом DLL и runtimeobject.lib. Также укажите [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) в строке компоновщика для создания метаданных Windows.
 
@@ -113,7 +113,7 @@ ms.locfileid: "42604894"
 
 3. В `Package.appxmanifest`на **возможности** выберите **"микрофон"** и **веб-камера**. Обе возможности необходимы для получения фотографий с веб-камеры.
 
-4. В `MainPage.xaml`, добавьте следующий код к корню [сетки](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) элемент:
+4. В `MainPage.xaml`, добавьте следующий код к корню [сетки](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) элемент:
 
    [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
@@ -132,5 +132,5 @@ ms.locfileid: "42604894"
 ## <a name="see-also"></a>См. также
 
 [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197)  
+[Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)  
 [Пример расширений мультимедиа](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

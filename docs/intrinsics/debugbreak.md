@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9884cd8aec09bfcefaa8455457a3a4d3bb5b3d3d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544515"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219235"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Блок, относящийся только к системам Microsoft**  
@@ -43,7 +43,7 @@ void __debugbreak();
 |`__debugbreak`|x86, ARM, x64|\<Intrin.h >|  
   
 ## <a name="remarks"></a>Примечания  
- `__debugbreak` Компилятора встроенные, аналогичную [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), — это переносимые Win32 способ создания точки останова.  
+ `__debugbreak` Компилятора встроенные, аналогичную [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), — это переносимые Win32 способ создания точки останова.  
   
 > [!NOTE]
 >  При компиляции с параметром **/CLR**, функция, содержащая `__debugbreak` будет компилироваться в MSIL. При использовании `asm int 3` функция компилируется в машинный код. Дополнительные сведения см. в разделе [__asm](../assembler/inline/asm.md).  

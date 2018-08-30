@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd0aba0637101f7895be89b9d5531f77ee45b76
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539496"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222780"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Класс CMFCShellTreeCtrl
 `CMFCShellTreeCtrl` Класс расширяет [класс CTreeCtrl](../../mfc/reference/ctreectrl-class.md) функциональные возможности, отображая иерархию элементов оболочки.  
@@ -62,7 +62,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Включает или отключает контекстное меню.|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|Возвращает сочетание флагов, которые передаются [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|Возвращает сочетание флагов, которые передаются [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|Извлекает путь к элементу.|  
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|Возвращает указатель на [класс CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) объект, который используется вместе с это `CMFCShellTreeCtrl` объект для создания окна проводника.|  
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Эта функция-член вызывается родительского окна в том случае, когда он получает сообщение уведомления, которое подходит к этому окну. (Переопределяет [CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify).)|  
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
  Задайте значение DWORD, указывающее сочетание флагов, в настоящее время.  
   
 ### <a name="remarks"></a>Примечания  
- Флаги установлены `CMFCShellTreeCtrl` отправляются в метод [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066) каждый раз, когда объект обновляется. Можно изменить флаги, с помощью [CMFCShellTreeCtrl::SetFlags](#setflags) метод.  
+ Флаги установлены `CMFCShellTreeCtrl` отправляются в метод [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066) каждый раз, когда объект обновляется. Можно изменить флаги, с помощью [CMFCShellTreeCtrl::SetFlags](#setflags) метод.  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  Получает путь элемента в [класс CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.  
@@ -254,7 +254,7 @@ void SetFlags(
  Логическое значение, указывающее ли `CMFCShellTreeCtrl` должен быть обновлен немедленно.  
   
 ### <a name="remarks"></a>Примечания  
- `CMFCShellTreeCtrl` Передает все значение флагов [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066). Дополнительные сведения о значениях различных флагов см. в разделе [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).  
+ `CMFCShellTreeCtrl` Передает все значение флагов [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Дополнительные сведения о значениях различных флагов см. в разделе [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  Связывает [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) со [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.  

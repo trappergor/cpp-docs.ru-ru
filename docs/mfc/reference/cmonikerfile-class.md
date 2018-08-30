@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b3aab8fe3dac8cb58884861a83e41d09b493a375
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853651"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212121"
 ---
 # <a name="cmonikerfile-class"></a>Класс CMonikerFile
-Представляет поток данных ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) с именем, [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+Представляет поток данных ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) с именем, [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -74,7 +74,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile` не может использоваться для привязки к отличным от потока. Если вы хотите выполнить привязку в хранилище или объекта, необходимо использовать `IMoniker` взаимодействует напрямую.  
   
- Дополнительные сведения о потоках и моникеров, см. в разделе [COleStreamFile](../../mfc/reference/colestreamfile-class.md) в *Справочник по библиотеке MFC* и [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) и [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) в Windows SDK.  
+ Дополнительные сведения о потоках и моникеров, см. в разделе [COleStreamFile](../../mfc/reference/colestreamfile-class.md) в *Справочник по библиотеке MFC* и [IStream](/windows/desktop/api/objidl/nn-objidl-istream) и [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) в Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
  Указатель на исключение файлов. В случае ошибки он устанавливается на причину.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на контекст привязки [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) для привязки с, если успешно; в противном случае — NULL. Если экземпляр был открыт с помощью `IBindHost` интерфейс, контекст привязки, извлекается из `IBindHost`. Если нет `IBindHost` интерфейс или не возвращает контекст привязки, создается контекст привязки. Описание [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) интерфейсом, см. в Windows SDK.  
+ Указатель на контекст привязки [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) для привязки с, если успешно; в противном случае — NULL. Если экземпляр был открыт с помощью `IBindHost` интерфейс, контекст привязки, извлекается из `IBindHost`. Если нет `IBindHost` интерфейс или не возвращает контекст привязки, создается контекст привязки. Описание [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) интерфейсом, см. в Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Контекст привязки — это объект, который хранит сведения об операциях привязки к конкретной моникер. Можно переопределить эту функцию для предоставления контекста пользовательские привязки.  
@@ -144,10 +144,10 @@ IMoniker* GetMoniker() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на текущий моникер интерфейс ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
+ Указатель на текущий моникер интерфейс ( [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)).  
   
 ### <a name="remarks"></a>Примечания  
- Так как `CMonikerFile` не является интерфейсом, возвращенный указатель не увеличивает счетчик ссылок (через [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), и моникер освобождается при `CMonikerFile` объект освобождается. Если вы хотите удержать моникер или освободите его самостоятельно, вы должны `AddRef` его.  
+ Так как `CMonikerFile` не является интерфейсом, возвращенный указатель не увеличивает счетчик ссылок (через [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)), и моникер освобождается при `CMonikerFile` объект освобождается. Если вы хотите удержать моникер или освободите его самостоятельно, вы должны `AddRef` его.  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
  Вызов этой функции-члена для открытия файла или моникер объекта.  

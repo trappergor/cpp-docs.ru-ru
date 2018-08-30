@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993bef01eb5468b837cc0b8a51ae4b08f76ee398
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 04c2717aa5ec59241d470737f99ce2ed5f9df714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881075"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219414"
 ---
 # <a name="catlservicemodulet-class"></a>Класс CAtlServiceModuleT
 Этот класс реализует службу.  
@@ -233,7 +233,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
  Необязательный дополнительный строки для записи в журнал событий.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод записывает сведения в журнал событий, используя функцию [reportevent из комплекта](http://msdn.microsoft.com/library/windows/desktop/aa363679). Если служба не работает, строка отправляется на консоль.  
+ Этот метод записывает сведения в журнал событий, используя функцию [reportevent из комплекта](/windows/desktop/api/winbase/nf-winbase-reporteventa). Если служба не работает, строка отправляется на консоль.  
   
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService  
  Флаг, указывающий, что программа выполняется как служба.  
@@ -263,7 +263,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) структура содержит сведения о службе.  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) структура содержит сведения о службе.  
   
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status  
  Структура информации о состоянии текущей службы хранения переменной-члена.  
@@ -273,7 +273,7 @@ SERVICE_STATUS m_status;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) структура содержит сведения о службе.  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) структура содержит сведения о службе.  
   
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName  
  Имя регистрируемой службы.  
@@ -391,7 +391,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>Параметры  
  *nShowCmd*  
- Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) раздел. Значение по умолчанию — SW_HIDE.  
+ Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел. Значение по умолчанию — SW_HIDE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
@@ -427,7 +427,7 @@ void SetServiceStatus(DWORD dwState) throw();
   
 ### <a name="parameters"></a>Параметры  
  *dwState*  
- Новое состояние. См. в разделе [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241) возможные значения.  
+ Новое состояние. См. в разделе [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) возможные значения.  
   
 ### <a name="remarks"></a>Примечания  
  Обновляет сведения о состоянии диспетчера управления службами для службы. Он вызывается методом [CAtlServiceModuleT::Run](#run), [CAtlServiceModuleT::ServiceMain](#servicemain) и другие методы обработчика. Состояние также сохраняется в переменной-члене [CAtlServiceModuleT::m_status](#m_status).  
@@ -441,7 +441,7 @@ HRESULT Start(int nShowCmd) throw();
   
 ### <a name="parameters"></a>Параметры  
  *nShowCmd*  
- Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) раздел.  
+ Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
@@ -491,7 +491,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>Параметры  
  *nShowCmd*  
- Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) раздел.  
+ Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает возвращаемое значение службы.  

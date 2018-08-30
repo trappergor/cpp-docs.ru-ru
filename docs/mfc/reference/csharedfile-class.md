@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38267ed5755b99bd97e4c923611d297673fcc41e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853732"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215587"
 ---
 # <a name="csharedfile-class"></a>Класс CSharedFile
 [CMemFile](../../mfc/reference/cmemfile-class.md)-производный класс, который поддерживает общие файлы памяти.  
@@ -56,7 +56,7 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Примечания  
  Файлы памяти ведут себя как файлы на диске, за исключением того, что файл хранится в ОЗУ, а не на диске. Файл памяти полезно для обеспечивается быстродействие временного хранилища или для передачи необработанные байты или сериализованных объектов между независимые процессы.  
   
- Файлы общей памяти отличаются от других файлов в памяти, что память для них выделяется с помощью [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) функции Windows. `CSharedFile` Класс хранит данные в глобально выделенного блока памяти (созданные с помощью `GlobalAlloc`), и этот блок памяти может совместно с помощью DDE, буфер обмена или других OLE/COM универсальный операций передачи данных, например, с помощью `IDataObject`.  
+ Файлы общей памяти отличаются от других файлов в памяти, что память для них выделяется с помощью [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) функции Windows. `CSharedFile` Класс хранит данные в глобально выделенного блока памяти (созданные с помощью `GlobalAlloc`), и этот блок памяти может совместно с помощью DDE, буфер обмена или других OLE/COM универсальный операций передачи данных, например, с помощью `IDataObject`.  
   
  `GlobalAlloc` Возвращает HGLOBAL обработки, а не указатель на буфер, такие как указатель, возвращенный [malloc](../../c-runtime-library/reference/malloc.md). Дескриптор HGLOBAL необходима в некоторых приложениях. Например чтобы поместить данные в буфере обмена необходимо дескриптор HGLOBAL.  
   
@@ -89,7 +89,7 @@ CSharedFile(
   
 ### <a name="parameters"></a>Параметры  
  *nAllocFlags*  
- Флаги, указывающие, как память будет выделяться. См. в разделе [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) список допустимых значений флагов.  
+ Флаги, указывающие, как память будет выделяться. См. в разделе [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) список допустимых значений флагов.  
   
  *nGrowBytes*  
  Приращение выделения памяти в байтах.  

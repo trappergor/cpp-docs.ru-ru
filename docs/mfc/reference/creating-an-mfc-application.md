@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5907006fcff607ad91f9cf579e5bf022c02b8f0
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9ba0930d0d1441801d18152a5ece4ace70f70425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026995"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207341"
 ---
 # <a name="creating-an-mfc-application"></a>Создание приложения MFC
 Приложение MFC является исполняемым приложением для Windows на основе библиотеки Microsoft Foundation Class (MFC). Наиболее простым способом создания приложения MFC является использование мастера приложений MFC.  
@@ -59,8 +59,8 @@ ms.locfileid: "39026995"
  После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>См. также  
- [Подготовка к отладке: Приложения Windows Visual C++](http://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [Подготовка к отладке: Приложения Windows Visual C++](https://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Страницы свойств](../../ide/property-pages-visual-cpp.md)   
- [Развертывание приложений](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Развертывание приложений](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

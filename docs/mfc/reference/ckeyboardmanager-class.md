@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338995"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212895"
 ---
 # <a name="ckeyboardmanager-class"></a>Класс CKeyboardManager
 Управляет таблицами клавиш быстрого доступа для окна главного и дочерних фреймов.  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |Параметр|Описание:|  
 |[in] *nKey*|Проверяемый ключ.|  
-|[in] *fVirt*|Задает поведение сочетания клавиш. Список возможных значений см. в разделе [УСКОРЕНИЕ структуры](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *fVirt*|Задает поведение сочетания клавиш. Список возможных значений см. в разделе [УСКОРЕНИЕ структуры](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
 |[in] *pWndFrame*|Окно фрейма. Этот метод определяет, обрабатывается ли сочетания клавиш в данном фрейме.|  
 |[in] *bIsDefaultFrame*|Логический параметр, указывает ли *pWndFrame* – окно рамки по умолчанию.|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  Ненулевое значение Если печатный символ, нуль, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод завершается ошибкой, если в вызове [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) завершается ошибкой.  
+ Этот метод завершается ошибкой, если в вызове [GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299) завершается ошибкой.  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  Указывает, является ли меню отображаются все сочетания клавиш, связанные с помощью команд меню или сочетания клавиш по умолчанию.  

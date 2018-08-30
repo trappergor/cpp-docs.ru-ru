@@ -1,5 +1,5 @@
 ---
-title: Исключения (C/C++) | Документы Microsoft
+title: Исключения (C/C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 819f9424b2439cc49517afe54d62a8ed4f06d22d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40a3a9e1cf1384603d6b7d95fa5960e951f932ef
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373391"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216887"
 ---
 # <a name="exceptions-cc"></a>Исключения (C/C++)
 Два кода исключения могут возникать при возникновении ошибок:  
@@ -46,11 +46,11 @@ ms.locfileid: "32373391"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- Коды исключений, который создается — это стандартная VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и значения VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передается указатель **DelayLoadInfo** структуры в значении LPDWORD, можно получить с **GetExceptionInformation** в [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) Структура поля ExceptionInformation [0].  
+ Исключение кодами исключений — это стандартный VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и значения VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передает указатель на **DelayLoadInfo** структуры в значении LPDWORD, можно получить с **GetExceptionInformation** в [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) Структура, поле ExceptionInformation [0].  
   
- Кроме того Если в поле grAttrs заданы неверные bits, ERROR_INVALID_PARAMETER исключение. Это исключение, в качестве исчезнувшим, Неустранимая.  
+ Кроме того Если в поле grAttrs неверные биты, ERROR_INVALID_PARAMETER исключение. Это исключение, для всех, Собрав Неустранимая.  
   
- В разделе [определение структуры и константы](../../build/reference/structure-and-constant-definitions.md) для получения дополнительной информации.  
+ См. в разделе [определение структуры и константы](../../build/reference/structure-and-constant-definitions.md) Дополнительные сведения.  
   
 ## <a name="see-also"></a>См. также  
  [Обработка ошибок и предупреждений](../../build/reference/error-handling-and-notification.md)

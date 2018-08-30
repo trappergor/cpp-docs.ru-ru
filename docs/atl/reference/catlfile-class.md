@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: afbb4600098591900491e7c1ec6f256bc58c26a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885277"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220653"
 ---
 # <a name="catlfile-class"></a>Класс CAtlFile
 Этот класс предоставляет тонкую оболочку Windows API обработки файлов.  
@@ -132,7 +132,7 @@ HRESULT Create(
  Имя файла.  
   
  *dwDesiredAccess*  
- Необходимый доступ. См. в разделе *dwDesiredAccess* в [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) в пакете Windows SDK.  
+ Необходимый доступ. См. в разделе *dwDesiredAccess* в [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) в пакете Windows SDK.  
   
  *dwShareMode*  
  Режим общего доступа. См. в разделе *dwShareMode* в `CreateFile`.  
@@ -153,7 +153,7 @@ HRESULT Create(
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) для создания или открытия файла.  
+ Вызовы [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) для создания или открытия файла.  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
  Этот метод используется для очистки буферов для файла и потере всех буферизованных данных для записи в файл.  
@@ -166,7 +166,7 @@ HRESULT Flush() throw();
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) сквозной буферизированные данные в файл.  
+ Вызовы [FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers) сквозной буферизированные данные в файл.  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Этот метод используется для получения результатов операции перекрывающегося на файле.  
@@ -180,7 +180,7 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>Параметры  
  *pOverlapped*  
- Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) в пакете Windows SDK.  
+ Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) в пакете Windows SDK.  
   
  *dwBytesTransferred*  
  Число переданных байтов. См. в разделе *lpNumberOfBytesTransferred* в `GetOverlappedResult`.  
@@ -192,7 +192,7 @@ HRESULT GetOverlappedResult(
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) для получения результатов операции перекрывающегося на файле.  
+ Вызовы [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) для получения результатов операции перекрывающегося на файле.  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Этот метод используется для получения текущего положения указателя файла.  
@@ -209,7 +209,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) для получения текущего положения указателя файла.  
+ Вызовы [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) для получения текущего положения указателя файла.  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  Вызовите этот метод, чтобы получить размер файла в байтах.  
@@ -226,7 +226,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) для получения размера файла в байтах.  
+ Вызовы [GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize) для получения размера файла в байтах.  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Вызовите этот метод, чтобы заблокировать регион, в файле, чтобы запретить доступ к нему другими процессами.  
@@ -246,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) снять блокировку с области в файле. Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Вы можете заблокировать более одной области файла, но разрешены не перекрывающихся областей. При снятии блокировки области, с помощью [CAtlFile::UnlockRange](#unlockrange), диапазон байтов должен точно соответствовать регион, который ранее был заблокирован. `LockRange` не объединяет смежные разделы; Если два заблокированных раздела являются смежными, чтобы разблокировать каждого отдельно.  
+ Вызовы [LockFile](/windows/desktop/api/fileapi/nf-fileapi-lockfile) снять блокировку с области в файле. Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Вы можете заблокировать более одной области файла, но разрешены не перекрывающихся областей. При снятии блокировки области, с помощью [CAtlFile::UnlockRange](#unlockrange), диапазон байтов должен точно соответствовать регион, который ранее был заблокирован. `LockRange` не объединяет смежные разделы; Если два заблокированных раздела являются смежными, чтобы разблокировать каждого отдельно.  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Указатель на `CAtlTransactionManager` объект.  
@@ -293,16 +293,16 @@ HRESULT Read(
  Количество прочитанных байтов.  
   
  *pOverlapped*  
- Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) в пакете Windows SDK.  
+ Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) в пакете Windows SDK.  
   
  *pfnCompletionRoutine*  
- Подпрограммы завершения. См. в разделе *lpCompletionRoutine* в [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) в пакете Windows SDK.  
+ Подпрограммы завершения. См. в разделе *lpCompletionRoutine* в [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Первые три формы вызвать [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), последний [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) для чтения данных из файла. Используйте [CAtlFile::Seek](#seek) для перемещения указателя файла.  
+ Первые три формы вызвать [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile), последний [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) для чтения данных из файла. Используйте [CAtlFile::Seek](#seek) для перемещения указателя файла.  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
  Этот метод используется для перемещения файла указателя файла.  
@@ -324,7 +324,7 @@ HRESULT Seek(
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) для перемещения указателя файла.  
+ Вызовы [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) для перемещения указателя файла.  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
  Вызовите этот метод, чтобы задать размер файла.  
@@ -341,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) и [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) для установки размера файла. При возвращении указатель файла находится в конце файла.  
+ Вызовы [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) и [SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile) для установки размера файла. При возвращении указатель файла находится в конце файла.  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Вызовите этот метод, чтобы разблокировать область файла.  
@@ -361,7 +361,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) для разблокировки область файла.  
+ Вызовы [UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile) для разблокировки область файла.  
   
 ##  <a name="write"></a>  CAtlFile::Write  
  Этот метод используется для записи данных в файл, начиная с позиции, указанной проверкой указатель файла.  
@@ -392,10 +392,10 @@ HRESULT Write(
  Число байтов, передаваемых из буфера.  
   
  *pOverlapped*  
- Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) в пакете Windows SDK.  
+ Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) в пакете Windows SDK.  
   
  *pfnCompletionRoutine*  
- Подпрограммы завершения. См. в разделе *lpCompletionRoutine* в [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) в пакете Windows SDK.  
+ Подпрограммы завершения. См. в разделе *lpCompletionRoutine* в [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) в пакете Windows SDK.  
   
  *pnBytesWritten*  
  Байты для записи.  
@@ -404,7 +404,7 @@ HRESULT Write(
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Первые три формы вызвать [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), последний вызовы [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) для записи данных в файл. Используйте [CAtlFile::Seek](#seek) для перемещения указателя файла.  
+ Первые три формы вызвать [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile), последний вызовы [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) для записи данных в файл. Используйте [CAtlFile::Seek](#seek) для перемещения указателя файла.  
   
 ## <a name="see-also"></a>См. также  
  [Пример бегущей строки](../../visual-cpp-samples.md)   

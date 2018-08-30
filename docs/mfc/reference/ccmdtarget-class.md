@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: bb4d7a06d728bddfd4ba1ee355cb4d1e0b5b9fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539342"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221714"
 ---
 # <a name="ccmdtarget-class"></a>Класс CCmdTarget
 Базовый класс для архитектуры схемы сообщений библиотеки классов Microsoft Foundation.  
@@ -163,19 +163,19 @@ BOOL DoOleVerb(
  Числовой идентификатор команды.  
   
  *lpMsg*  
- Указатель на [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) структуру, описывающую событие (например, как двойной щелчок), которое вызвало команду.  
+ Указатель на [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) структуру, описывающую событие (например, как двойной щелчок), которое вызвало команду.  
   
  *hWndParent*  
  Дескриптор окна документа, содержащего объект.  
   
  *lpRect*  
- Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая координаты в пикселях, определяющие ограничивающий прямоугольник в *hwndParent*.  
+ Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая координаты в пикселях, определяющие ограничивающий прямоугольник в *hwndParent*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если успешно, в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член, по сути, представляет собой реализацию [функция IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508). Перечисление возможных действий по [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
+ Эта функция-член, по сути, представляет собой реализацию [функция IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb). Перечисление возможных действий по [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  Вызывайте эту функцию, чтобы включить OLE-автоматизации для объекта.  
@@ -229,13 +229,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
 ### <a name="parameters"></a>Параметры  
  *ppenumOleVerb*  
- Указатель на указатель на [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) интерфейс.  
+ Указатель на указатель на [IEnumOLEVERB](/windows/desktop/api/oleidl/nn-oleidl-ienumoleverb) интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если объект поддерживает по крайней мере один команды OLE (в этом случае \* *ppenumOleVerb* указывает `IEnumOLEVERB` интерфейс перечислителя), в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член, по сути, представляет собой реализацию [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
+ Эта функция-член, по сути, представляет собой реализацию [IOleObject::EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs).  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  Вызывайте эту функцию для сопоставления `IDispatch` указатель, полученные от автоматизации функций-членов класса, в `CCmdTarget` объект, реализующий интерфейсы `IDispatch` объекта.  
@@ -263,7 +263,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
 ### <a name="parameters"></a>Параметры  
  *pIID*  
- Указатель на идентификатор интерфейса ( [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)).  
+ Указатель на идентификатор интерфейса ( [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если успешно, в противном случае — значение FALSE. В случае успешного выполнения \* *pIID* присваивается идентификатор диспетчера основной интерфейс.  
@@ -288,7 +288,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
  `IDispatch` Указатель, связанный с объектом.  
   
 ### <a name="remarks"></a>Примечания  
- Для объектов этого вызова `EnableAutomation` их конструкторы, что делает их автоматизации включена, эта функция возвращает указатель на реализацию в классе Foundation `IDispatch` , используемый клиентами, которые обмениваются данными через `IDispatch` интерфейс. Вызов этой функции автоматически добавляет ссылку на указатель, поэтому нет необходимости для выполнения вызова к [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
+ Для объектов этого вызова `EnableAutomation` их конструкторы, что делает их автоматизации включена, эта функция возвращает указатель на реализацию в классе Foundation `IDispatch` , используемый клиентами, которые обмениваются данными через `IDispatch` интерфейс. Вызов этой функции автоматически добавляет ссылку на указатель, поэтому нет необходимости для выполнения вызова к [IUnknown::AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref).  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  Возвращает число интерфейсов сведения о типе, предоставляемых объектом.  
@@ -320,7 +320,7 @@ HRESULT GetTypeInfoOfGuid(
  Код языка ( `LCID`).  
   
  *Идентификатор GUID*  
- [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) описания типа.  
+ [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) описания типа.  
   
  *ppTypeInfo*  
  Указатель на указатель на `ITypeInfo` интерфейс.  

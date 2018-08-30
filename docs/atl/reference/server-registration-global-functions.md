@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2cc139fa0aa933131e4e19b8efa397e4bddee50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883284"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209232"
 ---
 # <a name="server-registration-global-functions"></a>Глобальные функции регистрации серверов
 Эти функции обеспечивают поддержку для регистрации и отмены регистрации серверных объектов в карте объектов.  
@@ -113,10 +113,10 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
  Указатель на COM-модуля.  
   
  *dwClsContext*  
- Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. См. в разделе [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) для получения дополнительных сведений.  
+ Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. См. в разделе [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) для получения дополнительных сведений.  
   
  *dwFlags*  
- Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. См. в разделе [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) для получения дополнительных сведений.  
+ Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. См. в разделе [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) для получения дополнительных сведений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  

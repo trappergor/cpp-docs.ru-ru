@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fdcec255c7d2398e1bb0efa7f86a31fc5dd938e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336336"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210207"
 ---
 # <a name="cctrlview-class"></a>Класс CCtrlView
 Адаптирует архитектуру "документ-представление" для распространенных элементов управления, поддерживаемых Windows 98 и Windows NT (версии 3.51 и более поздние).  
@@ -140,7 +140,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
 ### <a name="parameters"></a>Параметры  
  *cs*  
- Объект [CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603) структуры.  
+ Объект [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если следует продолжить создание окна; 0, указывающее на ошибку создания.  

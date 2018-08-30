@@ -1,5 +1,5 @@
 ---
-title: Создание определяемых владельцем вкладок | Документы Microsoft
+title: Создание определяемых владельцем вкладок | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72192bdfb47fecb1588c3a36e402795468d527be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb8e7566c16abdd4540426d0c56e24c648fd0bcd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346507"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208697"
 ---
 # <a name="making-owner-drawn-tabs"></a>Создание определяемых владельцем вкладок
-Можно определить отдельные элементы управления "Вкладка" ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) до определяемых владельцем элементов. Дополнительные сведения см. в разделе [Owner-Drawn вкладки](http://msdn.microsoft.com/library/windows/desktop/bb760550) в Windows SDK.  
+Можно определить отдельные элементы элемента управления вкладки ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) быть владельцем элементы. Дополнительные сведения см. в разделе [Owner-Drawn вкладки](/windows/desktop/Controls/tab-controls) в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Использование CTabCtrl](../mfc/using-ctabctrl.md)   

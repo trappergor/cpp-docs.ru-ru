@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf5041e6e3faa8c495d52c31d86ff25c903a174
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 50c7b6a8e62aa957c54f66ebaf87fcd86df458fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600724"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199347"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>оператор Windows::UI::Xaml::Interop::TypeName
-Включает преобразование из `Platform::Type` в [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
+Включает преобразование из `Platform::Type` для [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,10 +26,10 @@ Operator TypeName(Platform::Type^ type)
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) при получении `Platform::Type^`.  
+ Возвращает [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) при получении `Platform::Type^`.  
   
 ### <a name="remarks"></a>Примечания  
- `TypeName` является независимой от языка структурой среды выполнения Windows для представления сведений о типе. [Platform::Type](../cppcx/platform-type-class.md) используется только в C++ и не передается через двоичный интерфейс приложений (ABI). Ниже представлен один из способов использования `TypeName`в функции [Navigate](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx) .  
+ `TypeName` является независимой от языка структурой среды выполнения Windows для представления сведений о типе. [Platform::Type](../cppcx/platform-type-class.md) используется только в C++ и не передается через двоичный интерфейс приложений (ABI). Вот один из способов использования `TypeName`в [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) функции:  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45624c094d7ae656c50b55cc932762b7f9aa6476
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 97e08ca5e8fcf78215edd80ae053c5576b6bc95f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854074"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207482"
 ---
 # <a name="cmfcpropertysheet-class"></a>Класс CMFCPropertySheet
 Класс `CMFCPropertySheet` поддерживает таблицу свойств, каждая страница свойств в которой обозначается вкладкой, кнопкой панели инструментов, узлом элемента управления «Дерево» или элементом списка.  
@@ -91,9 +91,9 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Инициализирует появление текущего элемента управления «Страница свойств».|  
 |[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Вызывается платформой при включении страницы свойств.|  
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Вызывается платформой для отрисовки пользовательского заголовка страницы свойств.|  
-|`CMFCPropertySheet::OnInitDialog`|Обрабатывает [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) сообщения. (Переопределяет [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
+|`CMFCPropertySheet::OnInitDialog`|Обрабатывает [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) сообщения. (Переопределяет [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Вызывается платформой для удаления страницы свойств из элемента управления «Дерево».|  
-|`CMFCPropertySheet::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет `CPropertySheet::PreTranslateMessage`.)|  
+|`CMFCPropertySheet::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет `CPropertySheet::PreTranslateMessage`.)|  
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Удаляет узел из элемента управления «Дерево».|  
 |[CMFCPropertySheet::RemovePage](#removepage)|Удаляет страницу свойств из таблицы свойств.|  
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Указывает список изображений, используемых в элементе управления навигации панели Outlook.|  

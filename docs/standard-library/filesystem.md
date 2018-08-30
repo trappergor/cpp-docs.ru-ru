@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85c19e4f23f7c6e9454793ac86a574614ec2fae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847251"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207927"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -39,7 +39,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> В выпуске Visual Studio 2017 г \<filesystem > заголовок еще не стандарта C++. Visual C++ 2017 реализует окончательный проект стандарта, который находится в [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> В выпуске Visual Studio 2017 \<filesystem > заголовок еще не был стандартом C++. Visual C++ 2017 реализует окончательный проект стандарта, который находится в [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Этот заголовок поддерживает файловые системы одного из двух широких классов операционных систем размещения: Microsoft Windows и Posix.
 
@@ -101,7 +101,7 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="classes"></a>Классы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Класс directory_entry](../standard-library/directory-entry-class.md)|Описывает объект, возвращаемый `directory_iterator` или `recursive_directory_iterator`, и содержит путь.|
 |[Класс directory_iterator](../standard-library/directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы.|
@@ -112,7 +112,7 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="structs"></a>Структуры
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[Структура space_info](../standard-library/space-info-structure.md)|Содержит сведения о томе.|
 
@@ -126,9 +126,9 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>Перечисления
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60), которое определяет поведение в случае, если конечный файл уже существует.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60), которое определяет поведение в случае, если конечный файл уже существует.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Перечисление, указывающее параметры итераторов каталога.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Перечисление для типов файлов.|
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|

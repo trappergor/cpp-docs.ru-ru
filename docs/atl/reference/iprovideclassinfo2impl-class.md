@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d67f00b88be88e1cb2691414b0666bd298977dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880626"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220184"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Класс IProvideClassInfo2Impl
-Этот класс предоставляет реализацию по умолчанию [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) и [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) методы.  
+Этот класс предоставляет реализацию по умолчанию [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) и [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) методы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 |[IProvideClassInfo2Impl::_tih](#_tih)|Управляет сведения о типе для компонентного класса.|  
   
 ## <a name="remarks"></a>Примечания  
- [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) интерфейс расширяет [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) , добавив `GetGUID` метод. Этот метод позволяет клиенту получить объекта исходящего интерфейса IID для набора событий его по умолчанию. Класс `IProvideClassInfo2Impl` предоставляет реализацию по умолчанию `IProvideClassInfo` и `IProvideClassInfo2` методы.  
+ [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) интерфейс расширяет [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) , добавив `GetGUID` метод. Этот метод позволяет клиенту получить объекта исходящего интерфейса IID для набора событий его по умолчанию. Класс `IProvideClassInfo2Impl` предоставляет реализацию по умолчанию `IProvideClassInfo` и `IProvideClassInfo2` методы.  
   
  `IProvideClassInfo2Impl` содержит статический член типа `CComTypeInfoHolder` , управляющий сведения о типе для компонентного класса.  
   
@@ -105,7 +105,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) в Windows SDK.  
+ См. в разделе [IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) в Windows SDK.  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
  Извлекает идентификатор GUID исходящего объекта disp-интерфейса.  
@@ -117,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) в Windows SDK.  
+ См. в разделе [IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) в Windows SDK.  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  Конструктор.  

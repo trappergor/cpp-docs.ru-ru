@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65375b764c0d8d8673a59fcfb47b4eecaf730cb5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 817875dd32457fa47eafca9d634bc2e7cc8e079d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879961"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206574"
 ---
 # <a name="csacl-class"></a>Класс CSacl
 Этот класс является оболочкой для структуры системный список управления ДОСТУПОМ (системный список управления доступом).  
@@ -72,7 +72,7 @@ class CSacl : public CAcl
   
  Используйте методы класса, позволяет добавлять, удалять, создавать и удалять элементы управления доступом из `SACL` объекта. См. также [AtlGetSacl](security-global-functions.md#atlgetsacl) и [AtlSetSacl](security-global-functions.md#atlsetsacl).  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -131,7 +131,7 @@ bool AddAuditAce(
 ### <a name="remarks"></a>Примечания  
  Объект `CSacl` объект содержит элементы управления доступом (ACE), указывающих типы попыток доступа, формирующих записи аудита в журнале событий безопасности. Этот метод добавляет такие ACE для `CSacl` объекта.  
   
- См. в разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Описание различных флагов, которые можно задать в *AceFlags* параметра.  
+ См. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) Описание различных флагов, которые можно задать в *AceFlags* параметра.  
   
 ##  <a name="csacl"></a>  CSacl::CSacl  
  Конструктор.  
@@ -208,7 +208,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>См. также  
  [Класс CAcl](../../atl/reference/cacl-class.md)   
- [Списки управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [Элементы управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Списки управления доступом](/windows/desktop/SecAuthZ/access-control-lists)   
+ [Элементы управления доступом](/windows/desktop/SecAuthZ/access-control-entries)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

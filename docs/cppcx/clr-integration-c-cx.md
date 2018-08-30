@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527ce8beaf5fb08d0642026336be193e3b39d73b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581128"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212992"
 ---
 # <a name="clr-integration-ccx"></a>Интеграция со средой CLR (C++/CX)
 Некоторые типы среды выполнения Windows получают специальную обработку в C + +/ CX и языки, которые основаны на общеязыковой среды выполнения (CLR). В этой статье рассматривается сопоставление определенных типов в одном языке с другим языком. Например, среда CLR сопоставляет Windows.Foundation.IVector с System.Collections.IList, Windows.Foundation.IMap с System.Collections.IDictionary и т. д. Аналогичным образом, C + +/ CX специально сопоставляет такие типы, такие как Platform::Delegate и Platform::String.  
@@ -22,7 +22,7 @@ ms.locfileid: "42581128"
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>Сопоставление среды выполнения Windows на C + +/ CX  
  Когда C + +/ CX считывает файл метаданных (с расширением winmd) Windows, компилятор автоматически сопоставляет общие пространства имен среды выполнения Windows и типы C + +/ CX пространств имен и типов. Например, числовой тип среды выполнения Windows `UInt32` автоматически сопоставляется с `default::uint32`.  
   
- C + +/ CX сопоставляет несколько других типов среды выполнения Windows, чтобы **платформы** пространства имен. Например **Windows::Foundation** дескриптор HSTRING, который представляет доступный только для чтения текстовую строку Юникода, сопоставляется C + +/ CX `Platform::String` класса. Когда операция среды выполнения Windows возвращает ошибку HRESULT, она сопоставляется C + +/ CX `Platform::Exception`. Для получения дополнительной информации см. [Built-in Types](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C + +/ CX сопоставляет несколько других типов среды выполнения Windows, чтобы **платформы** пространства имен. Например **Windows::Foundation** дескриптор HSTRING, который представляет доступный только для чтения текстовую строку Юникода, сопоставляется C + +/ CX `Platform::String` класса. Когда операция среды выполнения Windows возвращает ошибку HRESULT, она сопоставляется C + +/ CX `Platform::Exception`. Дополнительные сведения см. в разделе [встроенные типы](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f).  
   
  C + +/ CX также сопоставляет определенные типы в пространствах имен среды выполнения Windows, чтобы расширить функциональность типа. Для этих типов C + +/ CX предоставляет вспомогательные конструкторы и методы, относящиеся к C++ и недоступны в стандартном winmd-файле этого типа.  
   

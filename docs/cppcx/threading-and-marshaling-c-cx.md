@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b9e008b586b1a312770d7cdfc43dc500932158
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611449"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221373"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Работа с потоками и маршалинг (C++/CX)
 В подавляющем большинстве случаев экземпляры классов среды выполнения Windows, как и стандартные объекты C++, может осуществляться из любого потока. Такие классы называются "гибкими". Тем не менее небольшое количество классов среды выполнения Windows, входящие в состав Windows, не являются гибкими и должны использоваться скорее как COM-объекты, чем стандартные объекты C++. Для работы с негибкими классами не нужно быть специалистом по COM, однако нужно учитывать модель потоков классов и их механизмы маршалинга. В этой статье приведены общие сведения и инструкции по реализации редких сценариев, в которых приходится использовать экземпляры негибких классов.  
@@ -100,7 +100,7 @@ ref class MyOptions
  В Visual C++ при создании ссылки в класс среды выполнения Windows в процессе, имеющий поведение маршалинга «None», компилятор выдает предупреждение C4451, но не предлагает рассмотреть использование `Platform::Agile<T>`.  Компилятор не может ничем помочь помимо этого предупреждения, поэтому вам необходимо самостоятельно обеспечить надлежащую работу класса и убедиться, что код вызывает компоненты однопотокового подразделения (STA) только из потока пользовательского интерфейса, а компоненты многопотокового подразделения (MTA) — только из фонового потока.  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>Разработка гибких компонентов среды выполнения Windows  
- При определении ссылочного класса в C + +/ CX, он является гибким по умолчанию — то есть он имеет `ThreadingModel`= Both и `MarshallingType`= Agile.  Если вы используете библиотека шаблонов C++ среды выполнения Windows, необходимо сделать класс agile путем наследования от `FtmBase`, которая использует `FreeThreadedMarshaller`.  Создавая класс с атрибутами `ThreadingModel`=Both или `ThreadingModel`=MTA, убедитесь, что он является потокобезопасным. Дополнительные сведения см. в разделе [Создание и использование объектов (WRL)](http://msdn.microsoft.com/en-us/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
+ При определении ссылочного класса в C + +/ CX, он является гибким по умолчанию — то есть он имеет `ThreadingModel`= Both и `MarshallingType`= Agile.  Если вы используете библиотека шаблонов C++ среды выполнения Windows, необходимо сделать класс agile путем наследования от `FtmBase`, которая использует `FreeThreadedMarshaller`.  Создавая класс с атрибутами `ThreadingModel`=Both или `ThreadingModel`=MTA, убедитесь, что он является потокобезопасным. Дополнительные сведения см. в разделе [Создание и использование объектов (WRL)](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
   
  Потоковую модель и поведение маршалинга класса ссылки можно изменять. Однако если внести изменения, которые делают класс негибким, необходимо четко понимать их последствия.  
   
@@ -127,5 +127,5 @@ public ref class MySTAClass
  Работа с потоками и маршалинг сведения, необходимые в компонент среды выполнения Windows сторонних указан в сведениях о регистрации манифеста приложения для компонента. Мы рекомендуем внести все компоненты среды выполнения Windows agile. Это гарантирует, что клиентский код сможет вызывать компонент из любого потока приложения, и улучшает производительность таких вызовов, поскольку они являются прямыми вызовами без маршалирования. Если создать класс таким образом, клиентскому коду не придется применять `Platform::Agile<T>` , чтобы использовать этот класс.  
   
 ## <a name="see-also"></a>См. также  
- [ThreadingModel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
- [MarshallingBehavior](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+ [ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
+ [MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604283"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206721"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Общие сведения о программировании на C++ в Windows
 
@@ -58,7 +58,7 @@ Windows 10 позволяет запускать приложения как н�
 
 ##  <a name="BK_Native"></a> Классические и серверные приложения
 
-Основы создания клиентских приложений Windows для настольного компьютера см. в разделах [Developing Windows Applications in C++](http://msdn.microsoft.com/vstudio//hh304489) (Разработка приложений для Windows на языке C++) и [Introduction to Windows Programming in C++](http://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)(Введение в программирование для Windows на языке C++).
+Основы создания клиентских приложений Windows для настольных систем, см. в разделе [разработка приложений Windows в C++](https://msdn.microsoft.com/vstudio//hh304489) и [введение в программирование Windows в C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
 
 В Windows 10 можно использовать Visual C++ можно создавать различные типы программ для настольных систем:
 

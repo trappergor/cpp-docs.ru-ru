@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 162abbae937e6eeae62dd9dfcd924af44dfd7270
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f946a0e24790fd894e4eb908e77163306130e46a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610044"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214640"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Облачное и веб-программирование в Visual C++
 
@@ -27,7 +27,7 @@ ms.locfileid: "42610044"
 
 - [Мобильные службы Microsoft Azure](http://www.windowsazure.com/develop/mobile/)
 
-   Предоставляет собственный API, которые можно использовать в приложениях универсальной платформы Windows (UWP) или классических приложениях Windows для подключения к мобильным службам Windows Azure. Хотя большинство примеров на веб-сайте написаны на C#, также можно использовать и C++. Дополнительные сведения см. в разделе [Краткое руководство. Добавление мобильной службы с помощью C++](http://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
+   Предоставляет собственный API, которые можно использовать в приложениях универсальной платформы Windows (UWP) или классических приложениях Windows для подключения к мобильным службам Windows Azure. Хотя большинство примеров на веб-сайте написаны на C#, также можно использовать и C++. Дополнительные сведения см. в разделе [краткое руководство: Добавление мобильной службы с помощью C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
 
 - [Клиентская библиотека хранилища Microsoft Azure для C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -54,7 +54,7 @@ ms.locfileid: "42610044"
 
    Поддерживает Windows Desktop (7 +), Windows Server (2012 или более поздней), универсальной платформы Windows, Linux, OSX, Android и iOS. 
 
-- [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/en-us/library/windows/apps/windows.web.http.httpclient.aspx)
+- [Windows::Web::http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
    Клиентский класс HTTP среды выполнения Windows, основанный на классе .NET Framework с тем же именем в пространстве имен System.Web. `HttpClient` полностью поддерживает асинхронной отправку и загрузку по протоколу HTTP, а также фильтры конвейера, позволяющие вставлять пользовательские обработчики HTTP в конвейер. Пакет Windows SDK содержит примеры фильтров для лимитных сетей, проверки подлинности OAuth и т. д. Для приложений, предназначенных для универсальной платформы Windows, мы рекомендуем использовать `Windows::Web:HttpClient` класса. 
 
@@ -62,7 +62,7 @@ ms.locfileid: "42610044"
 
    Предоставляет собственный интерфейс COM, что можно использовать в приложениях среды выполнения Windows или классических приложениях Windows для подключения к Интернету по протоколу HTTP, и вызывать команду GET, PUT и других команд HTTP. Дополнительные сведения см. в разделе [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [Windows Internet (WinInet)](http://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)
+- [Windows Internet (WinInet)](https://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)
 
    Windows API, который можно использовать в классических приложениях Windows для подключения к Интернету.
 

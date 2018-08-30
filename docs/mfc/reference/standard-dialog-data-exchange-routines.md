@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338412780116201b40e51ff38c4805097add4e3c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 770d110a5acd66b307e675d8c71a7de108bae6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885980"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198501"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Стандартные программы обмена данных диалоговых окон
 В этом разделе перечислены стандартные данные exchange (DDX) диалоговых окон для стандартных элементов управления диалогового окна MFC.  
@@ -159,7 +159,7 @@ void AFXAPI DDX_Check(
  Ссылка на переменную-член диалоговое окно, представлении формы или объекте представления элемента управления, обмен данными с помощью которого осуществляется.  
   
 ### <a name="remarks"></a>Примечания  
- Когда `DDX_Check` вызове *значение* присваивается текущее состояние элемента управления "флажок". Список значений возможные состояния, см. в разделе [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) в пакете Windows SDK.  
+ Когда `DDX_Check` вызове *значение* присваивается текущее состояние элемента управления "флажок". Список значений возможные состояния, см. в разделе [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) в пакете Windows SDK.  
   
  Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
   
@@ -296,7 +296,7 @@ void AFXAPI DDX_IPAddress(
 |1|16 до 23|  
 |0|24 до 31|  
   
- Использование Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) для чтения значение, или использовать [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) для заполнения значения. В пакет SDK для Windows описываются эти сообщения.  
+ Использование Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress) для чтения значение, или использовать [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress) для заполнения значения. В пакет SDK для Windows описываются эти сообщения.  
   
 ### <a name="remarks"></a>Примечания  
  При `DDX_IPAddress` вызове *значение* считывается либо из элемента управления IP-адрес или *значение* записывается в элемент управления, в зависимости от направления exchange.  
@@ -488,7 +488,7 @@ void AFXAPI DDX_Scroll(
  Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
   
 ### <a name="remarks"></a>Примечания  
- Когда `DDX_Scroll` вызове *значение* присваивается текущее положение элемента управления thumb. Дополнительные сведения о значениях, связанных с текущей позиции элемента управления thumb, см. в разделе [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) в пакете Windows SDK.  
+ Когда `DDX_Scroll` вызове *значение* присваивается текущее положение элемента управления thumb. Дополнительные сведения о значениях, связанных с текущей позиции элемента управления thumb, см. в разделе [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) в пакете Windows SDK.  
   
  Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
   

@@ -9,22 +9,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b8a36573e72b173180e89b48403829a9387d4ee8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613034"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212509"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Получение указателей на буферы данных (C++/CX)
-В среде выполнения Windows интерфейс [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) предоставляет не зависящий от языка и основанный на потоках механизм доступа к буферам данных. В C++ можно получить необработанный указатель на базовый массив байтов с помощью интерфейса IBufferByteAccess библиотеки среды выполнения Windows, определенный в файле robuffer.h. Благодаря такому подходу можно изменить массив байтов на месте без создания лишний копий данных.  
+В среде выполнения Windows [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) интерфейс предоставляет не зависящий от языка и основанный способ доступа к буферам данных. В C++ можно получить необработанный указатель на базовый массив байтов с помощью интерфейса IBufferByteAccess библиотеки среды выполнения Windows, определенный в файле robuffer.h. Благодаря такому подходу можно изменить массив байтов на месте без создания лишний копий данных.  
   
- На следующей схеме показан элемент изображения XAML, источником которого является [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Клиентские приложения, написанные на любом языке, могут передавать ссылку на `WriteableBitmap` в код C++, а затем код C++ может использовать эту ссылку для обращения к соответствующему буферу. В приложении универсальной платформы Windows, которое создается на языке C++ можно использовать функцию в следующем примере непосредственно в исходном коде без упаковки в компонент среды выполнения Windows.  
+ В примере ниже показан элемент изображения XAML, источником которого является [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Клиентские приложения, написанные на любом языке, могут передавать ссылку на `WriteableBitmap` в код C++, а затем код C++ может использовать эту ссылку для обращения к соответствующему буферу. В приложении универсальной платформы Windows, которое создается на языке C++ можно использовать функцию в следующем примере непосредственно в исходном коде без упаковки в компонент среды выполнения Windows.  
   
  ![C&#43; &#43; кодом, напрямую обращается к данным пикселя](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
- Следующий метод принимает [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) и возвращает необработанный указатель на соответствующий массив байтов. Чтобы вызвать функцию, передайте свойство [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) .  
+ Следующий метод принимает [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) и возвращает необработанный указатель на соответствующий массив байтов. Чтобы вызвать функцию, передайте [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) свойство.  
   
 ```  
   

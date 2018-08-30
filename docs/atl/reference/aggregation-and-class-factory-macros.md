@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4995779a7f5595eca9dc47a29ea11d875995e959
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d964e844e8be4b741628397bf8a63bbd109820d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881231"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210946"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Агрегирование и макросов фабрики класса
 Эти макросы обеспечивают способы управления агрегирования и фабрик классов объявления.  
@@ -86,7 +86,7 @@ DECLARE_CLASSFACTORY()
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
 ##  <a name="ccomclassfactory_class"></a>  Класс CComClassFactory  
- Этот класс реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейс.  
+ Этот класс реализует [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) интерфейс.  
   
 ```
 class CComClassFactory : public IClassFactory,
@@ -94,7 +94,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `CComClassFactory` реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейс, который содержит методы для создания объекта определенного CLSID, а также для блокировки фабрики классов в памяти, позволяющие быстрее создавать новые объекты. `IClassFactory` должен быть реализован для каждого класса, который зарегистрирован в системном реестре и в которой назначения CLSID.  
+ `CComClassFactory` реализует [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) интерфейс, который содержит методы для создания объекта определенного CLSID, а также для блокировки фабрики классов в памяти, позволяющие быстрее создавать новые объекты. `IClassFactory` должен быть реализован для каждого класса, который зарегистрирован в системном реестре и в которой назначения CLSID.  
   
  Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс включает макрос [DECLARE_CLASSFACTORY](#declare_classfactory), который объявляет `CComClassFactory` как фабрики класса по умолчанию. Чтобы переопределить это поведение по умолчанию, укажите один из DECLARE_CLASSFACTORY*XXX* макросы в определении класса. Например [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) макрос использует указанный класс фабрики класса:  
   
@@ -147,7 +147,7 @@ DECLARE_CLASSFACTORY2( lic )
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
 ##  <a name="ccomclassfactory2_class"></a>  Класс CComClassFactory2  
- Этот класс реализует [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) интерфейс.  
+ Этот класс реализует [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) интерфейс.  
   
 ```
 template <class license>
@@ -160,14 +160,14 @@ class  CComClassFactory2 : public IClassFactory2,
  *лицензии*  
  Класс, реализующий следующие статические функции:  
   
-- **статические VerifyLicenseKey BOOL (BSTR** `bstr` **);**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **статические GetLicenseKey BOOL (DWORD** `dwReserved` **, BSTR\***  `pBstr` **);**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **статические BOOL IsLicenseValid ();**  
+- `static BOOL IsLicenseValid( );`  
   
 ### <a name="remarks"></a>Примечания  
- `CComClassFactory2` реализует [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) интерфейс, который представляет собой расширение из [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). `IClassFactory2` Создание элементов управления объекта через лицензию. Класс фабрики выполнение лицензированного компьютера можно предоставить ключ лицензии времени выполнения. Этот ключ лицензии позволяет приложению создавать экземпляры объектов, если лицензия весь компьютер не существует.  
+ `CComClassFactory2` реализует [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) интерфейс, который представляет собой расширение из [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2` Создание элементов управления объекта через лицензию. Класс фабрики выполнение лицензированного компьютера можно предоставить ключ лицензии времени выполнения. Этот ключ лицензии позволяет приложению создавать экземпляры объектов, если лицензия весь компьютер не существует.  
   
  Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс включает макрос [DECLARE_CLASSFACTORY](#declare_classfactory), который объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) как фабрики класса по умолчанию. Чтобы использовать `CComClassFactory2`, укажите [DECLARE_CLASSFACTORY2](#declare_classfactory2) макроса в определении класса объекта. Пример:  
   
@@ -195,7 +195,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
 ##  <a name="ccomclassfactoryautothread_class"></a>  Класс CComClassFactoryAutoThread  
- Этот класс реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейс и позволяет создавать в нескольких подразделениях объекты.  
+ Этот класс реализует [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) интерфейс и позволяет создавать в нескольких подразделениях объекты.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -334,7 +334,7 @@ DECLARE_VIEW_STATUS( statusFlags )
   
 ### <a name="parameters"></a>Параметры  
  *statusFlags*  
- [in] Просмотр СОСТОЯНИЯ флаги. См. в разделе [Просмотр СОСТОЯНИЯ](http://msdn.microsoft.com/library/windows/desktop/ms687201) список флагов.  
+ [in] Просмотр СОСТОЯНИЯ флаги. См. в разделе [Просмотр СОСТОЯНИЯ](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) список флагов.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]  

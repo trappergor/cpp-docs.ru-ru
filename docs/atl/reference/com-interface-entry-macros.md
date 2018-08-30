@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa450436bee52aa9cd13803e3bf51c6a500fa0e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 43d6d1ace739c50d471c7e57b8670d010319ae1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883379"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196051"
 ---
 # <a name="cominterfaceentry-macros"></a>Макросы COM_INTERFACE_ENTRY  
  Эти макросы ввести интерфейсы объекта в его сопоставления COM, таким образом, чтобы они обращаются `QueryInterface`. Порядок записей в карте COM является интерфейсов порядок будет проверяться сопоставления IID во время `QueryInterface`.  
@@ -48,7 +48,7 @@ ms.locfileid: "37883379"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Совпадение с кодом [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), за исключением того, что запрос любой IID приводит пересылки запрос, чтобы *punk*.|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Совпадение с кодом [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), кроме *punk* имеет значение NULL, он автоматически создает статистическое выражение, описываемое *clsid*.|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Совпадение с кодом [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрос любой IID приводит пересылки запрос, чтобы *punk*и если *punk* имеет значение NULL, автоматически создавая статистическое выражение, описываемое *clsid*.|  
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Выполняется вызов [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе указанный интерфейс.|  
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Выполняется вызов [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе указанный интерфейс.|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Сохраняет данные на уровне интерфейса для каждого экземпляра.|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Представляет перемещаемые интерфейсы.|  
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Выполняет сопоставление COM базового класса, когда будет достигнут эту запись в карту COM.|  
@@ -229,7 +229,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
- Выполняется вызов [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе указанный интерфейс.  
+ Выполняется вызов [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе указанный интерфейс.  
   
 ```
 COM_INTERFACE_ENTRY_BREAK(x)

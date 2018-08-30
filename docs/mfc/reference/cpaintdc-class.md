@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 49681f240d6cee257e48c2cf1c5d2479b3678135
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848919"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208374"
 ---
 # <a name="cpaintdc-class"></a>Cpaintdc-класс
 Класс контекста устройства, производный от [CDC](../../mfc/reference/cdc-class.md).  
@@ -61,7 +61,7 @@ class CPaintDC : public CDC
 ## <a name="remarks"></a>Примечания  
  Он выполняет [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) во время создания и [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) во время уничтожения.  
   
- Объект `CPaintDC` объект может использоваться только при ответе на [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) сообщения, обычно в вашей `OnPaint` функция-член обработчика сообщений.  
+ Объект `CPaintDC` объект может использоваться только при ответе на [WM_PAINT](/windows/desktop/gdi/wm-paint) сообщения, обычно в вашей `OnPaint` функция-член обработчика сообщений.  
   
  Дополнительные сведения об использовании `CPaintDC`, см. в разделе [контексты устройств](../../mfc/device-contexts.md).  
   
@@ -87,7 +87,7 @@ explicit CPaintDC(CWnd* pWnd);
  Указывает на `CWnd` объект, к которому `CPaintDC` принадлежит объект.  
   
 ### <a name="remarks"></a>Примечания  
- Исключения (типа `CResourceException`) создается, если Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) вызов завершается ошибкой. Контекст устройства не могут быть доступны в том случае, если Windows уже выделен все контексты его доступных устройств. Приложения конкурирует за пять общих отображения контексты, доступные в любой момент времени в группе Windows.  
+ Исключения (типа `CResourceException`) создается, если Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) вызов завершается ошибкой. Контекст устройства не могут быть доступны в том случае, если Windows уже выделен все контексты его доступных устройств. Приложения конкурирует за пять общих отображения контексты, доступные в любой момент времени в группе Windows.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  

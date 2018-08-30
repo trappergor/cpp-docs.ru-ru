@@ -1,5 +1,5 @@
 ---
-title: Элементы управления (MFC) | Документы Microsoft
+title: Элементы управления (MFC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd841b6bc3c55ed58db101c6226bbc24819b248f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1226584d52d9f09b34e9dae8d00095fc923396fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353688"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206879"
 ---
 # <a name="controls-mfc"></a>Элементы управления (MFC)
 Элементы управления — это объекты, используемые для ввода данных и работы с ними. Как правило, они отображаются в диалоговых окнах и на панелях инструментов. В этом документе рассматриваются три основных типа элементов управления.  
@@ -54,7 +54,7 @@ ms.locfileid: "33353688"
   
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Стандартные элементы управления Windows и классы MFC  
   
-|Элемент управления|Класс MFC|Описание|Новые возможности в Windows 95|  
+|Элемент управления|Класс MFC|Описание:|Новое в Windows 95|  
 |-------------|---------------|-----------------|------------------------|  
 |[анимация](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Отображение последовательных кадров видеоролика AVI.|Да|  
 |button|[CButton](../mfc/reference/cbutton-class.md)|Кнопки, вызывающие действия; также используется для флажков, переключателей и полей групп.|Нет|  
@@ -81,7 +81,7 @@ ms.locfileid: "33353688"
 |[подсказка](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Небольшое всплывающее окно с описанием назначения кнопки панели инструментов или другого инструмента.|Да|  
 |[дерево](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Окно, в котором отображается иерархический список элементов.|Да|  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
+### <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений  
   
 -   Отдельный элемент управления: см. таблицу [Стандартные элементы управления Windows и классы MFC](#_core_windows_common_controls_and_mfc_classes) в этом разделе, содержащую ссылки на все элементы управления.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "33353688"
   
 -   [Примеры](../mfc/common-control-sample-list.md)  
   
- Сведения об общих элементах управления Windows в Windows SDK см. в разделе [стандартные элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Сведения о стандартных элементах управления Windows в пакете SDK для Windows, см. в разделе [стандартные элементы управления](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>См. также  
  [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b1ba0c95a87ce1743d225fd6af4bffee148d6ab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601897"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219956"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -43,7 +43,7 @@ ms.locfileid: "42601897"
 
 ## <a name="remarks"></a>Примечания
 
-**Helpstringdll** атрибут C++ имеет ту же функциональность, что [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) описании атрибута MIDL.
+**Helpstringdll** атрибут C++ имеет ту же функциональность, что [helpstringdll](/windows/desktop/Midl/helpstringdll) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 

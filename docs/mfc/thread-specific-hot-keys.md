@@ -1,5 +1,5 @@
 ---
-title: Сочетания клавиш для определенного потока | Документы Microsoft
+title: Сочетания клавиш для определенного потока | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14da7f0e5b0adbe72b6705700c1e9298751bc345
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f480b293e9c57e7fa189c6427ab39147681cfdaf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953613"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206864"
 ---
 # <a name="thread-specific-hot-keys"></a>Сочетания клавиш для определенного потока
-Приложение задает сочетание клавиш потоках ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) с помощью Windows `RegisterHotKey` функции. Когда пользователь нажимает сочетание клавиш потоках, Windows отправляет [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) сообщение из начала очереди сообщений для определенного потока. WM_HOTKEY сообщение содержит виртуального кода клавиши, состояние сдвига и определяемых пользователем идентификатор определенного сочетания клавиш, которая была нажата. Список стандартных кодов виртуального ключа см. в разделе Winuser.h. Дополнительные сведения в этом методе см. в разделе [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+Приложение задает сочетания клавиш определенного потока ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) с помощью Windows `RegisterHotKey` функции. Когда пользователь нажимает клавишу конкретного потока, Windows отправляет [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) сообщение в начале очереди сообщений в определенном потоке. Сообщение WM_HOTKEY содержит виртуального кода клавиши, состояние сдвига и определяемые пользователем идентификатор конкретного сочетания клавиш, которая была нажата. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h. Дополнительные сведения об этом методе см. в разделе [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
- Обратите внимание, что флаги состояния сдвига при вызове `RegisterHotKey` не совпадают, возвращаемыми [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) функция-член; вам придется преобразовать эти флаги перед вызовом `RegisterHotKey`.  
+ Обратите внимание, что состояние сдвига помечает используемые в вызове `RegisterHotKey` не совпадают, возвращаемыми [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) функция-член; вам придется преобразовать эти флаги перед вызовом `RegisterHotKey`.  
   
 ## <a name="see-also"></a>См. также  
  [Использование CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

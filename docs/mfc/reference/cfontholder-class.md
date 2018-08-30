@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c110c0addfe14ed8ba9018345eb1f4e61fd5182
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e6991d7ca545eef671720a38907088dc6a534d1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338624"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216812"
 ---
 # <a name="cfontholder-class"></a>Класс CFontHolder
 Реализует свойство Font и инкапсулирует функциональность объекта шрифта Windows и интерфейса `IFont` .  
@@ -171,7 +171,7 @@ void InitializeFont(
   
 ### <a name="parameters"></a>Параметры  
  *pFontDesc*  
- Указатель на структуру описание шрифта ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)), указывающий характеристики шрифта.  
+ Указатель на структуру описание шрифта ( [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)), указывающий характеристики шрифта.  
   
  *pFontDispAmbient*  
  Указатель на внешнее свойство шрифт контейнера.  
@@ -199,7 +199,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
   
 ### <a name="parameters"></a>Параметры  
  *lptm*  
- Указатель на [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) структуру, которая будет получать сведения.  
+ Указатель на [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) структуру, которая будет получать сведения.  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
  Эта функция отключается `CFontHolder` объекта из его `IFont` интерфейс.  

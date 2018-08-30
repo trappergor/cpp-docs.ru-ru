@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 223359e10ef0e64860a611079abf9e7e83a26fe1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598081"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222812"
 ---
 # <a name="attributed-programming-concepts"></a>Основные понятия атрибутивного программирования
 
 Visual C++ включает множество материалов, которые помогут вам использовать атрибуты в программах. Атрибуты, новая функция в Visual C++, предназначены для упрощения программирования в модели COM и .NET Framework среды выполнения разработки языка. При включении атрибутов в исходных файлах, компилятор работает с поставщиком библиотек динамической компоновки (DLL) для вставки кода или изменения кода в файлах объектов. Существуют атрибуты, которые помогают выполнять создание IDL-файлы, интерфейсы, библиотеки типов и другие элементы COM. В интегрированной среде разработки (IDE) атрибуты поддерживаются мастером и окно «Свойства».
 
-Хотя атрибуты исключить некоторые из подробные создание кода, необходимые для написания COM-объектов, вам потребуется фона в [COM fundamentals](http://msdn.microsoft.com/library/windows/desktop/ms694363) лучше всего использовать их.
+Хотя атрибуты исключить некоторые из подробные создание кода, необходимые для написания COM-объектов, вам потребуется фона в [COM fundamentals](/windows/desktop/com/the-component-object-model) лучше всего использовать их.
 
 ## <a name="in-this-section"></a>В этом разделе
 

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f5b99266d465629853361c07ea16f9ae620b0e24
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853073"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210832"
 ---
 # <a name="colebusydialog-class"></a>Класс COleBusyDialog
 Используется для диалоговых окон OLE "Сервер не отвечает" или "Сервер занят".  
@@ -67,7 +67,7 @@ class COleBusyDialog : public COleDialog
 > [!NOTE]
 >  Контейнер, созданный мастером код приложения использует этот класс.  
   
- Дополнительные сведения см. в разделе [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) структуры в пакете Windows SDK.  
   
  Дополнительные сведения о конкретных OLE диалоговым окнам см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleBusyDialog(
 ### <a name="remarks"></a>Примечания  
  Чтобы отобразить диалоговое окно, вызовите [DoModal](#domodal).  
   
- Дополнительные сведения см. в разделе [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) структуры в пакете Windows SDK.  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  Вызывайте эту функцию для отображения диалогового окна OLE сервер занят "или" сервер не отвечает.  
@@ -138,7 +138,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, если пользователь отменил диалоговое окно.  
   
-- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите `COleDialog::GetLastError` функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) функции в пакете Windows SDK.  
+- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите `COleDialog::GetLastError` функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIBusy](/windows/desktop/api/oledlg/nf-oledlg-oleuibusya) функции в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Если вы хотите инициализировать различных диалоговых путем определения участников [m_bz](#m_bz) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
@@ -184,7 +184,7 @@ OLEUIBUSY m_bz;
 ### <a name="remarks"></a>Примечания  
  Члены этой структуры можно изменить непосредственно или с помощью функций-членов.  
   
- Дополнительные сведения см. в разделе [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) структуры в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс COleDialog](../../mfc/reference/coledialog-class.md)   

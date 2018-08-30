@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0be744b8f703bfdc6487995e4a082e5b4c1561c3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606844"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206465"
 ---
 # <a name="event--c-component-extensions"></a>event (расширения компонентов C++)
 
@@ -85,7 +85,7 @@ modifiereventdelegate^ event_name
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [события (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Дополнительные сведения см. в разделе [события (C + +/ CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
 
 Если вы собираетесь добавить и затем удалить обработчик событий, необходимо сохранить структуру EventRegistrationToken, возвращаемую операцией добавления. Затем в операции удаления необходимо использовать сохраненную структуру EventRegistrationToken для определения удаляемого обработчика событий.
 

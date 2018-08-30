@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b0f46724dd552639c215093f74d8eb14d8afdd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539145"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221360"
 ---
 # <a name="cstatusbarctrl-class"></a>Класс CStatusBarCtrl
 Предоставляет функциональные возможности стандартного элемента управления "индикатор статуса" Windows.  
@@ -133,10 +133,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- Задает стиль управления строкой состояния. Применить любое сочетание строки стили элемента управления, перечисленные в состояния [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) в пакете Windows SDK. Этот параметр должен содержать стиль WS_CHILD. Она также должна включать WS_VISIBLE стиль.  
+ Задает стиль управления строкой состояния. Применить любое сочетание строки стили элемента управления, перечисленные в состояния [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK. Этот параметр должен содержать стиль WS_CHILD. Она также должна включать WS_VISIBLE стиль.  
   
  *Rect*  
- Задает размер и положение управления строкой состояния. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
+ Задает размер и положение управления строкой состояния. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
   
  *pParentWnd*  
  Указывает состояние панели родительскому окну элемента управления, обычно `CDialog`. Он не должен иметь значение NULL.  
@@ -171,13 +171,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
   
  *dwStyle*  
- Задает стиль управления строкой состояния. Применить любое сочетание строки стили элемента управления, перечисленные в состояния [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) в пакете Windows SDK. Этот параметр должен содержать стиль WS_CHILD. Она также должна включать WS_VISIBLE стиль.  
+ Задает стиль управления строкой состояния. Применить любое сочетание строки стили элемента управления, перечисленные в состояния [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK. Этот параметр должен содержать стиль WS_CHILD. Она также должна включать WS_VISIBLE стиль.  
   
  *Rect*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
   
  *pParentWnd*  
  Указатель на окно, которое является родительским для элемента управления.  
@@ -207,7 +207,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Параметры  
  *lpDrawItemStruct*  
- Длинный указатель на [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) структуру, содержащую сведения о типе документа требуется.  
+ Длинный указатель на [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) структуру, содержащую сведения о типе документа требуется.  
   
 ### <a name="remarks"></a>Примечания  
  `itemAction` Членом `DRAWITEMSTRUCT` структура определяет рисования действие, которое должно быть выполнено.  
@@ -267,7 +267,7 @@ HICON GetIcon(int iPart) const;
  Дескриптор значка, если метод успешно; в противном случае — значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [SB_GETICON](/windows/desktop/Controls/sb-geticon) сообщения, который описан в пакете Windows SDK.  
   
  Элемент управления строка состояния состоит из строки панелей вывода текста, которые также называются частей. Дополнительные сведения о строке состояния, см. в разделе [реализация строки состояния в MFC](../../mfc/status-bar-implementation-in-mfc.md) и [Установка режима объекта CStatusBarCtrl](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
   
@@ -320,7 +320,7 @@ BOOL GetRect(
  Отсчитываемый от нуля индекс части которого ограничивающий прямоугольник которой требуется извлечь.  
   
  *lpRect*  
- Адрес [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает ограничивающий прямоугольник.  
+ Адрес [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает ограничивающий прямоугольник.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -411,7 +411,7 @@ CString GetTipText(int nPane) const;
  Объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект, содержащий текст, используемый в подсказке.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [SB_GETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760751), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [SB_GETTIPTEXT](/windows/desktop/Controls/sb-gettiptext), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
@@ -427,7 +427,7 @@ BOOL IsSimple() const;
  Ненулевое значение, если элемент управления окна состояния в простом режиме; в противном случае значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [SB_ISSIMPLE](/windows/desktop/Controls/sb-issimple), как описано в пакете Windows SDK.  
   
 ##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  Задает цвет фона в строке состояния.  
@@ -441,10 +441,10 @@ COLORREF SetBkColor(COLORREF cr);
  Значение COLORREF, которое указывает новый цвет фона. Укажите значение, CLR_DEFAULT требуется привести к строке состояния, чтобы использовать цвета фона по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, которое представляет предыдущий цвет фона по умолчанию.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) значение, которое представляет предыдущий цвет фона по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [SB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760754), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [SB_SETBKCOLOR](/windows/desktop/Controls/sb-setbkcolor), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
@@ -469,7 +469,7 @@ BOOL SetIcon(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [SB_SETICON](http://msdn.microsoft.com/library/windows/desktop/bb760755), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [SB_SETICON](/windows/desktop/Controls/sb-seticon), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CStatusBarCtrl::SetBkColor](#setbkcolor).  
@@ -576,7 +576,7 @@ void SetTipText(
  Указатель на строку, содержащую текст подсказки.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [SB_SETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760759), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [SB_SETTIPTEXT](/windows/desktop/Controls/sb-settiptext), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  

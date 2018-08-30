@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1f1e19ac51e36b04dd8ecfe89dbb7e3d592d869
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611966"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207606"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (расширения компонентов C++)
 
@@ -65,7 +65,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения и примеры см. в разделе [Перечисления](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Дополнительные сведения и примеры см. в разделе [перечисления](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
 
 Обратите внимание, что компилятор выводит сообщения об ошибках, если константное выражение, задающее значение перечислителя, не может быть представлено *underlying-type*.  Однако компилятор не сообщает об ошибке для значения, недопустимого для базового типа. Пример:
 

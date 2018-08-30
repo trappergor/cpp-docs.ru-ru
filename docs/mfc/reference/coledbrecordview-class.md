@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 424ee48e683bc22870900805aacd32f31fb12949
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853697"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218232"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView-класс
 Представление, которое отображает записи базы данных в элементах управления.  
@@ -56,7 +56,7 @@ class COleDBRecordView : public CFormView
 ## <a name="remarks"></a>Примечания  
  Представление — представление формы, который напрямую подключен к `CRowset` объекта. Представление создается на основе ресурса шаблона диалоговых окон и отображает поля `CRowset` в элементах управления шаблона диалогового окна. `COleDBRecordView` Объект использует обмен данными диалоговых окон (DDX) и навигационные функции встроены в `CRowset`, чтобы автоматизировать движение данных между полями набора строк и элементов управления на форме. `COleDBRecordView` также предоставляет реализацию по умолчанию для перехода к первой, далее, предыдущих или последних записей и интерфейс для обновления записи в данный момент в представлении.  
   
- Можно использовать функции DDX с `COleDbRecordView` для получения данных непосредственно из набора записей базы данных и отображения его в элемент управления диалогового окна. Следует использовать **DDX_\***  методы (такие как `DDX_Text`), а не **DDX_Field\***  функции (такие как `DDX_FieldText`) с `COleDbRecordView`. `DDX_FieldText` не будет работать с `COleDbRecordView` поскольку `DDX_FieldText` принимает дополнительный аргумент типа **CRecordset\***  (для `CRecordView`) или **CDaoRecordset\***  (для `CDaoRecordView`).  
+ Можно использовать функции DDX с `COleDbRecordView` для получения данных непосредственно из набора записей базы данных и отображения его в элемент управления диалогового окна. Следует использовать `DDX_*` методы (такие как `DDX_Text`), а не `DDX_Field*` функции (такие как `DDX_FieldText`) с `COleDbRecordView`. `DDX_FieldText` не будет работать с `COleDbRecordView` поскольку `DDX_FieldText` принимает дополнительный аргумент типа `CRecordset*` (для `CRecordView`) или `CDaoRecordset*` (для `CDaoRecordView`).  
   
 > [!NOTE]
 >  Если вы работаете с классами объектов доступа к данным (DAO) вместо классов шаблонов потребителей OLE DB, используйте класс [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) вместо этого. Дополнительные сведения см. в статье [Обзор: программирования баз данных,](../../data/data-access-programming-mfc-atl.md).  

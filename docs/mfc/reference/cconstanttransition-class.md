@@ -1,5 +1,5 @@
 ---
-title: Класс CConstantTransition | Документы Microsoft
+title: Класс CConstantTransition | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48a8ccb49001b93ded52edc732fc59222775e6f8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: dc7e4104e6555ada88483336917708db943be2a0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954031"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210583"
 ---
 # <a name="cconstanttransition-class"></a>Класс CConstantTransition
 Инкапсулирует постоянный переход.  
@@ -44,22 +44,22 @@ class CConstantTransition : public CBaseTransition;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CConstantTransition::CConstantTransition](#cconstanttransition)|Создает объект перехода и инициализирует его длительности.|  
+|[CConstantTransition::CConstantTransition](#cconstanttransition)|Создает объект перехода и инициализирует его длительность.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CConstantTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CConstantTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CConstantTransition::m_duration](#m_duration)|Продолжительность перехода.|  
+|[CConstantTransition::m_duration](#m_duration)|Длительность перехода.|  
   
 ## <a name="remarks"></a>Примечания  
- Во время перехода константой значение переменной анимации остается в исходное значение на протяжении перехода. Так как автоматически очищаются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока, то возвращается значение NULL. Изменение переменных-членов, после создания этот объект COM не оказывает влияния.  
+ Во время перехода константа значение переменной анимации остается в начальное значение на протяжении перехода. Так как автоматически удаляются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока то возвращается значение NULL. Изменение переменных-членов, после создания COM-объекта не оказывает влияния.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -72,7 +72,7 @@ class CConstantTransition : public CBaseTransition;
  **Заголовок:** afxanimationcontroller.h  
   
 ##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
- Создает объект перехода и инициализирует его длительности.  
+ Создает объект перехода и инициализирует его длительность.  
   
 ```  
 CConstantTransition (UI_ANIMATION_SECONDS duration);
@@ -80,10 +80,10 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
   
 ### <a name="parameters"></a>Параметры  
  *Длительность*  
- Продолжительность перехода.  
+ Длительность перехода.  
   
 ##  <a name="create"></a>  CConstantTransition::Create  
- Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM.  
+ Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта.  
   
 ```  
 virtual BOOL Create(
@@ -93,13 +93,13 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *pLibrary*  
- Указатель на [IUIAnimationTransitionLibrary интерфейс](https://msdn.microsoft.com/library/windows/desktop/dd371897), который определяет библиотеку стандартных переходов.  
+ Указатель на [IUIAnimationTransitionLibrary интерфейс](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.  
 
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.  
   
 ##  <a name="m_duration"></a>  CConstantTransition::m_duration  
- Продолжительность перехода.  
+ Длительность перехода.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  

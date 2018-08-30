@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9367e92110ba7fb232e89b9d950e491e5e8da5c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b8dda27c3f1c535f60856bd9d4a3abb9a51a1a32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407173"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219924"
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
 **Блок, относящийся только к системам Microsoft**  
@@ -38,7 +38,7 @@ const TCHAR * ErrorMessage( ) const throw( );
  Возвращает строковое сообщение для HRESULT записанного в `_com_error` объекта. Если значение HRESULT равно сопоставлен 16-битный [wCode](../cpp/com-error-wcode.md), универсальное сообщение "`IDispatch error #<wCode>`" возвращается. Если сообщение не найдено, возвращается универсальное сообщение "`Unknown error #<hresult>`". Возвращаемая строка является Юникода или многобайтовая строка, в зависимости от состояния макроса _UNICODE.  
   
 ## <a name="remarks"></a>Примечания  
- Извлекает соответствующий текст системного сообщения для HRESULT записанного в `_com_error` объекта. Текст системного сообщения получается путем вызова Win32 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) функции. Возвращаемая строка выделяется API `FormatMessage`; эта строка освобождается при уничтожении объекта `_com_error`.  
+ Извлекает соответствующий текст системного сообщения для HRESULT записанного в `_com_error` объекта. Текст системного сообщения получается путем вызова Win32 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) функции. Возвращаемая строка выделяется API `FormatMessage`; эта строка освобождается при уничтожении объекта `_com_error`.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

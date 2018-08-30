@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42f637c487e27b8658bcd09389eec940bb1df05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b4e82671973f2d841c6c0797fb73ad582ce203f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880220"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214351"
 ---
 # <a name="string-data-management"></a>Управление строковыми данными
 Visual C++ предоставляет несколько способов управления строковыми данными.  
@@ -67,7 +67,7 @@ Visual C++ предоставляет несколько способов упр
  Объект `CString` объект может хранить до INT_MAX (2 147 483 647) символов. Тип данных TCHAR используется для получения или задания отдельных символов внутри `CString` объекта. В отличие от массивов знаков `CString` класс имеет возможность распределения встроенной памяти. Это позволяет `CString` объектов автоматически увеличиваться по мере необходимости (то есть не нужно беспокоиться о растет `CString` объекта в соответствии с более длинные строки).  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> CStrings и указатели const char  
- Объект `CString` объект также может действовать как строковый литерал стиля C ( `PCXSTR`, который является таким же, как **const char\***  if не в Юникоде). [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) оператор преобразования позволяет `CString` объектов должен быть замещен свободно указателей символов в вызовах функций. **CString (LPCWSTR** `pszSrc` **)** конструктор позволяет указателей символов должен быть замещен `CString` объектов.  
+ Объект `CString` объект также может действовать как строковый литерал стиля C ( `PCXSTR`, который является таким же, как **const char** <strong>\*</strong> if не в Юникоде). [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) оператор преобразования позволяет `CString` объектов должен быть замещен свободно указателей символов в вызовах функций. **CString (LPCWSTR** `pszSrc` **)** конструктор позволяет указателей символов должен быть замещен `CString` объектов.  
   
  Попытки не сверток `CString` объектов. Если два `CString` объектов содержащий `Chicago`, например символы в `Chicago` хранятся в двух местах. (Это может оказаться true будущих версий MFC, поэтому не следует полагаться на него.)  
   

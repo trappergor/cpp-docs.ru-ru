@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572876"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215615"
 ---
 # <a name="cenumeratoraccessor-class"></a>Класс CEnumeratorAccessor
 Используемые [CEnumerator](../../data/oledb/cenumerator-class.md) доступ к данным из перечислитель набора строк.  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|Переменная, указывающее, является ли строка описывает источник данных или перечислителя.|  
 |[m_szDescription](#szdescription)|Описание источника данных или перечислителя.|  
 |[m_szName](#szname)|Имя источника данных или перечислителя.|  
-|[m_szParseName](#szparsename)|Строка, передаваемая для [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) для получения моникера для источника данных или перечислителя.|  
+|[m_szParseName](#szparsename)|Строка, передаваемая для [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) для получения моникера для источника данных или перечислителя.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот набор строк состоит из источников данных и перечислители, отображается в текущий перечислитель.  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.  
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
-Строка, передаваемая для [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) для получения моникера для источника данных или перечислителя.  
+Строка, передаваемая для [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) для получения моникера для источника данных или перечислителя.  
   
 ### <a name="syntax"></a>Синтаксис  
   
