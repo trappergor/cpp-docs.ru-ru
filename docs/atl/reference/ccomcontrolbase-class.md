@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ace66d9528534b382eda02160372bfc56aced0f5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4b505b9f6164566a1e196c601bdfe3eab4b4a991
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882999"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208586"
 ---
 # <a name="ccomcontrolbase-class"></a>Класс CComControlBase
 Этот класс предоставляет методы для создания и управления элементами управления ATL.  
@@ -198,11 +198,11 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_rcPos](#m_rcpos)|Позиция элемента управления, выраженная в координатах контейнера в пикселях.|  
 |[CComControlBase::m_sizeExtent](#m_sizeextent)|Область элемента управления в единицах HIMETRIC (каждая единица равна 0,01 мм) для отображения.|  
 |[CComControlBase::m_sizeNatural](#m_sizenatural)|Физический размер элемента управления в единицах HIMETRIC (каждая единица равна 0,01 мм).|  
-|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Прямой указатель на вспомогательного соединения в контейнере (контейнера [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).|  
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Прямой указатель на вспомогательного соединения в контейнере (контейнера [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).|  
 |[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|Объект `CComDispatchDriver` объект, который позволяет получать и задавать свойства контейнера через `IDispatch` указатель.|  
 |[CComControlBase::m_spClientSite](#m_spclientsite)|Указатель на сайте клиента элемента управления в контейнере.|  
 |[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Предоставляет стандартный средства и сохраним вспомогательных соединений между объектами данных приемниками уведомлений.|  
-|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Указатель на контейнера [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) указатель на интерфейс.|  
+|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Указатель на контейнера [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), или [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) указатель на интерфейс.|  
 |[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Предоставляет стандартную реализацию способ сохранения вспомогательных соединений.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если элемент управления оконные, `~CComControlBase` уничтожает его путем вызова [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682).  
+ Если элемент управления оконные, `~CComControlBase` уничтожает его путем вызова [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682).  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
@@ -447,7 +447,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
   
 ### <a name="parameters"></a>Параметры  
  *ppFont*  
- Указатель на контейнер окружения [IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673) интерфейс.  
+ Указатель на контейнер окружения [IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont) интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
@@ -464,7 +464,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
   
 ### <a name="parameters"></a>Параметры  
  *ppFont*  
- Указатель на контейнер окружения [IFontDisp](http://msdn.microsoft.com/library/windows/desktop/ms692695) интерфейс диспетчеризации.  
+ Указатель на контейнер окружения [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) интерфейс диспетчеризации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
@@ -762,7 +762,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- При добавлении **Авторазмер** параметр [свойства запасов](../../atl/reference/stock-properties-atl-control-wizard.md) вкладке Мастер элементов управления ATL, мастер автоматически создает эти данные-член в классе элемента управления, создает put и получения методы для свойства и поддерживает [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) автоматическое уведомление контейнера при изменении свойства.  
+ При добавлении **Авторазмер** параметр [свойства запасов](../../atl/reference/stock-properties-atl-control-wizard.md) вкладке Мастер элементов управления ATL, мастер автоматически создает эти данные-член в классе элемента управления, создает put и получения методы для свойства и поддерживает [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) автоматическое уведомление контейнера при изменении свойства.  
   
 ##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
  Флаг, указывающий, что `IDataObjectImpl::GetData` и `CComControlBase::GetZoomInfo` должен устанавливать размер элемента управления из `m_sizeNatural` , а не из `m_sizeExtent`.  
@@ -814,7 +814,7 @@ unsigned m_bInPlaceSiteEx:1;
 > [!NOTE]
 >  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Элемент данных `m_spInPlaceSite` указывает [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) интерфейс, в зависимости от значения `m_bWndLess` и `m_bInPlaceSiteEx` флаги. (Элемент данных `m_bNegotiatedWnd` должно быть значение TRUE для `m_spInPlaceSite` указатель недействителен.)  
+ Элемент данных `m_spInPlaceSite` указывает [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), или [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) интерфейс, в зависимости от значения `m_bWndLess` и `m_bInPlaceSiteEx` флаги. (Элемент данных `m_bNegotiatedWnd` должно быть значение TRUE для `m_spInPlaceSite` указатель недействителен.)  
   
  Если `m_bWndLess` имеет значение FALSE и `m_bInPlaceSiteEx` имеет значение TRUE, `m_spInPlaceSite` является `IOleInPlaceSiteEx` указатель на интерфейс. См. в разделе [m_spInPlaceSite](#m_spinplacesite) для таблицы, показывающая отношение между эти элементы три данных.  
   
@@ -844,7 +844,7 @@ unsigned m_bRecomposeOnResize:1;
 > [!NOTE]
 >  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Этот флаг установлен по [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) и, если значение равно TRUE, `SetExtent` уведомляет контейнер, изменения представления. Если этот флаг установлен, OLEMISC_RECOMPOSEONRESIZE бит в [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) перечисления также должен быть установлен.  
+ Этот флаг установлен по [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) и, если значение равно TRUE, `SetExtent` уведомляет контейнер, изменения представления. Если этот флаг установлен, OLEMISC_RECOMPOSEONRESIZE бит в [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) перечисления также должен быть установлен.  
   
 ##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  Флаг, указывающий, что элемент управления был изменен с момента последнего сохранения.  
@@ -935,7 +935,7 @@ unsigned m_bWndLess:1;
 > [!NOTE]
 >  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Элемент данных `m_spInPlaceSite` указывает [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) интерфейс, в зависимости от значения `m_bWndLess` и [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) флаги. (Элемент данных [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) должно быть значение TRUE для [CComControlBase::m_spInPlaceSite](#m_spinplacesite) указатель недействителен.)  
+ Элемент данных `m_spInPlaceSite` указывает [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), или [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) интерфейс, в зависимости от значения `m_bWndLess` и [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) флаги. (Элемент данных [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) должно быть значение TRUE для [CComControlBase::m_spInPlaceSite](#m_spinplacesite) указатель недействителен.)  
   
  Если `m_bWndLess` имеет значение TRUE, `m_spInPlaceSite` является `IOleInPlaceSiteWindowless` указатель на интерфейс. См. в разделе [CComControlBase::m_spInPlaceSite](#m_spinplacesite) таблицу с указанием на полный соотношение этих элементах данных.  
   
@@ -1008,7 +1008,7 @@ SIZE m_sizeNatural;
  Вы можете преобразовать размер пикселей с помощью глобальной функции [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).  
   
 ##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink  
- Прямой указатель на вспомогательного соединения в контейнере (контейнера [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).  
+ Прямой указатель на вспомогательного соединения в контейнере (контейнера [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).  
   
 ```
 CComPtr<IAdviseSink>
@@ -1058,12 +1058,12 @@ CComPtr<IDataAdviseHolder>
 > [!NOTE]
 >  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Объект данных является элементом управления, который может передавать данные, реализующий [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421), методы которого укажите среду формат и передачи данных.  
+ Объект данных является элементом управления, который может передавать данные, реализующий [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject), методы которого укажите среду формат и передачи данных.  
   
- Интерфейс `m_spDataAdviseHolder` реализует [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) и [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) методы для установки и удаления вспомогательных соединений в контейнер. Контейнер элемента управления должен реализовывать приемника уведомлений, поддерживая [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) интерфейс.  
+ Интерфейс `m_spDataAdviseHolder` реализует [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) и [IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) методы для установки и удаления вспомогательных соединений в контейнер. Контейнер элемента управления должен реализовывать приемника уведомлений, поддерживая [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) интерфейс.  
   
 ##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite  
- Указатель на контейнера [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) указатель на интерфейс.  
+ Указатель на контейнера [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), или [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) указатель на интерфейс.  
   
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1098,7 +1098,7 @@ CComPtr<IOleAdviseHolder>
 > [!NOTE]
 >  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Интерфейс `m_spOleAdviseHolder` реализует [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) и [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) методы для установки и удаления вспомогательных соединений в контейнер. Контейнер элемента управления должен реализовывать приемника уведомлений, поддерживая [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) интерфейс.  
+ Интерфейс `m_spOleAdviseHolder` реализует [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) и [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) методы для установки и удаления вспомогательных соединений в контейнер. Контейнер элемента управления должен реализовывать приемника уведомлений, поддерживая [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) интерфейс.  
   
 ##  <a name="ondraw"></a>  CComControlBase::OnDraw  
  Переопределите этот метод для рисования элемента управления.  
@@ -1291,7 +1291,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
   
 ### <a name="parameters"></a>Параметры  
  *ADVF*  
- Флаги, указывающие способ вызова [IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283) выполняется. Значения: от [ADVF](http://msdn.microsoft.com/library/windows/desktop/ms693742) перечисления.  
+ Флаги, указывающие способ вызова [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) выполняется. Значения: от [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) перечисления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
@@ -1344,7 +1344,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `SendOnViewChange` вызовы [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337). Только значение *индекс* в настоящее время поддерживается является -1, означающее, что всего представления представляет интерес.  
+ `SendOnViewChange` вызовы [IAdviseSink::OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange). Только значение *индекс* в настоящее время поддерживается является -1, означающее, что всего представления представляет интерес.  
   
 ##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
  Задает или удаляет фокус клавиатуры на или из элемента управления.  
@@ -1361,7 +1361,7 @@ BOOL SetControlFocus(BOOL bGrab);
  Возвращает значение TRUE, если элемент управления успешно получает фокус; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Для оконного элемента управления, функции Windows API [SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312) вызывается. Для элемента управления без окон [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745) вызывается. Через этот вызов безоконный элемент управления получает фокус клавиатуры и может отвечать на сообщения окна.  
+ Для оконного элемента управления, функции Windows API [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) вызывается. Для элемента управления без окон [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) вызывается. Через этот вызов безоконный элемент управления получает фокус клавиатуры и может отвечать на сообщения окна.  
   
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty  
  Задает элемент данных `m_bRequiresSave` значению *bDirty*.  

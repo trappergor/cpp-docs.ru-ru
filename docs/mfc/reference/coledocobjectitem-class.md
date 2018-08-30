@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e4d51687f1f005ad6c6e655e243275508d1529
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bebc146994e440d4dbfbd0bd3a5e29f597140d8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849780"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216334"
 ---
 # <a name="coledocobjectitem-class"></a>Класс COleDocObjectItem
 Реализует хранение активных документов.  
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
  Идентификатор команды для выполнения. Должна входить в группу, идентифицируемый *параметром pguidCmdGroup*.  
   
  *nCmdExecOpt*  
- Указывает параметры выполнения команды. По умолчанию, чтобы выполнить команду без подтверждения пользователя. См. в разделе [перечислений OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) список значений.  
+ Указывает параметры выполнения команды. По умолчанию, чтобы выполнить команду без подтверждения пользователя. См. в разделе [перечислений OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) список значений.  
   
  *параметром pguidCmdGroup*  
  Уникальный идентификатор группы команд. По умолчанию NULL, которое указывает стандартной группы. Команда переданный *nCmdID* должны принадлежать к группе.  
@@ -172,7 +172,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455) интерфейс текущему активному представлению. Если нет текущего представления, возвращается значение NULL.  
+ Указатель на [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) интерфейс текущему активному представлению. Если нет текущего представления, возвращается значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
  Счетчик ссылок в возвращенном `IOleDocumentView` указатель не увеличивается, возвращаемую этой функцией.  
@@ -255,19 +255,19 @@ HRESULT QueryCommand(
  Идентификатор команды, для которого запрашивается.  
   
  *pdwStatus*  
- Указатель на флаги, возвращаемые в результате запроса. Список возможных значений см. в разделе [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
+ Указатель на флаги, возвращаемые в результате запроса. Список возможных значений см. в разделе [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).  
   
  *pCmdText*  
- Указатель на [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) структуры, в которую будет возвращено имя и сведения о состоянии одной команды. Может иметь значение NULL, чтобы указать, что ему нужны эти сведения.  
+ Указатель на [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext) структуры, в которую будет возвращено имя и сведения о состоянии одной команды. Может иметь значение NULL, чтобы указать, что ему нужны эти сведения.  
   
  *параметром pguidCmdGroup*  
  Уникальный идентификатор группы команд; может иметь значение NULL для указания стандартной группы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Полный список возвращаемых значений, см. в разделе [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) в пакете Windows SDK.  
+ Полный список возвращаемых значений, см. в разделе [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) метод, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) метод, как описано в пакете Windows SDK.  
   
 ##  <a name="release"></a>  COleDocObjectItem::Release  
  Освобождает соединение для связанного элемента OLE и закрывается, если он был открыт. Уничтожает элемент клиента.  
