@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539310"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217093"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Класс CMFCVisualManagerOffice2003
 `CMFCVisualManagerOffice2003` Придает приложению внешний вид Microsoft Office 2003.  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Платформа вызывает этот метод при рисовании выделенный quick Настройка кнопки меню. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Этот метод вызывается платформой при рисовании команды выделенного меню. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Эта функция вызывается платформой при изменении системных цветов. (Переопределяет `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Указывает, что следует использовать глобальные темы Windows XP.|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Указывает, использует ли наглядный диспетчер глобальной темы.|  
   
@@ -451,10 +451,10 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="parameters"></a>Параметры  
  [in] *clrBaseGroupBackground*  
- Ссылка на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) для задания цвета фона.  
+ Ссылка на [COLORREF](/windows/desktop/gdi/colorref) для задания цвета фона.  
   
  [in] *clrBaseGroupBorder*  
- Ссылка на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) устанавливать цвет границы.  
+ Ссылка на [COLORREF](/windows/desktop/gdi/colorref) устанавливать цвет границы.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -466,7 +466,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , содержащий цвет выделения тон.  
+ Возвращает [COLORREF](/windows/desktop/gdi/colorref) , содержащий цвет выделения тон.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -491,7 +491,7 @@ virtual void GetTabFrameColors(
  Указатель на окно с вкладками, где кадр Рисует вкладку.  
   
  [out] *clrDark*  
- Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, где этот метод сохраняет цвет темной границей вкладки.  
+ Ссылку на [COLORREF](/windows/desktop/gdi/colorref) параметр, где этот метод сохраняет цвет темной границей вкладки.  
   
  [out] *clrBlack*  
  Ссылка на параметр COLORREF, где этот метод сохраняет цвет для границы вкладки окна. Цвет по умолчанию для границы черного.  
@@ -536,7 +536,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , содержащий цвет отключен.  
+ Возвращает [COLORREF](/windows/desktop/gdi/colorref) , содержащий цвет отключен.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1095,7 +1095,7 @@ virtual COLORREF OnDrawPaneCaption(
  Прямоугольник, который указывает границы кнопок заголовка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста заголовка.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет текста заголовка.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1208,7 +1208,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Указатель на заголовок окна. Рисует наглядный диспетчер, это [класс CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста в заголовке окна.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет текста в заголовке окна.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить внешний вид строки заголовка для категории ленты.  
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  Платформа вызывает этот метод как часть обработки WM_SYSCOLORCHANGE сообщения. Переопределите этот метод в производном наглядный диспетчер, если вы хотите выполнять пользовательский код, при изменении цветов в приложении.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
