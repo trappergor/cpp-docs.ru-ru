@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ebcfda85c82d10f2493234bb340a68129f779a28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849877"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198116"
 ---
 # <a name="cmultilock-class"></a>Класс CMultiLock
 Класс представляет механизм контроля доступа к ресурсам в многопоточных программах.  
@@ -128,7 +128,7 @@ DWORD Lock(
  Указывает, должны принять сигнал для ожидания всех объектов, в то же время перед возвратом. Если значение равно FALSE, `Lock` возвращает, если один из объектов, для ожидания переводится в сигнальное состояние.  
   
  *dwWakeMask*  
- Указывает другие условия, которые могут прервать ожидание. Полный список доступных параметров для этого параметра, см. в разделе [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) в пакете Windows SDK.  
+ Указывает другие условия, которые могут прервать ожидание. Полный список доступных параметров для этого параметра, см. в разделе [MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если `Lock` завершается ошибкой, возвращается - 1. В случае успешного выполнения возвращает одно из следующих значений:  

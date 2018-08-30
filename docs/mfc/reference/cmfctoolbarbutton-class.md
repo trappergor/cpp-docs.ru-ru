@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79c2260b03d0530595100ba8f4c42a392900aa7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851383"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210854"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Класс CMFCToolBarButton
 Предоставляет функции кнопок панели инструментов.  
@@ -230,19 +230,19 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|Определяет, является ли кнопка владельца предоставленным дескриптором окна.|  
 |[CMFCToolBarButton::IsVisible](#isvisible)|Определяет, видима ли кнопка панели инструментов.|  
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|Определяет, отображается ли базовый дескриптор окна, кнопки.|  
-|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Указывает, обрабатывает ли кнопки [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщения.|  
+|[CMFCToolBarButton::NotifyCommand](#notifycommand)|Указывает, обрабатывает ли кнопки [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщения.|  
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|Вызывается платформой при добавлении кнопки **Настройка** диалоговое окно.|  
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|Указывает, можно ли перетаскивать кнопки.|  
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|Указывает ли пользователь может удалить кнопку на панели инструментов целевой объект.|  
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Вызывается платформой для вычисления размера кнопки для заданного контекста устройств и состояние закрепления.|  
-|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Вызывается платформой для обработки [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) сообщения.|  
+|[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Вызывается платформой для обработки [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) сообщения.|  
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Вызывается платформой при вставке кнопки в панели инструментов.|  
 |[CMFCToolBarButton::OnClick](#onclick)|Вызывается платформой, когда пользователь нажимает кнопку мыши.|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Вызывается платформой, когда пользователь отпускает кнопку мыши.|  
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Вызывается платформой, когда родительский инструментов обрабатывает сообщение WM_HELPHITTEST.|  
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Вызывается платформой, когда родительский инструментов обрабатывает wm_ctlcolor-сообщение.|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Позволяет кнопку, чтобы изменить указанное меню, когда приложение отображает контекстное меню на панели инструментов родительского.|  
-|[CMFCToolBarButton::OnDblClk](#ondblclk)|Вызывается платформой при обработке родительского инструментов [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) сообщения.|  
+|[CMFCToolBarButton::OnDblClk](#ondblclk)|Вызывается платформой при обработке родительского инструментов [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) сообщения.|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|Вызывается платформой для отрисовки кнопки с использованием указанных стилей и параметров.|  
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Вызывается платформой для отрисовки кнопки **команды** области **Настройка** диалоговое окно.|  
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|Вызывается платформой для извлечения текста пользовательскую подсказку для кнопки.|  
@@ -446,7 +446,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
  Установите этот параметр в значение true, чтобы Включение ввода, или значение false, чтобы отключить входных данных.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод `EnableWindow` функция для включения или отключения входных данных. Дополнительные сведения см. в разделе [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) в пакете Windows SDK.  
+ Этот метод вызывает метод `EnableWindow` функция для включения или отключения входных данных. Дополнительные сведения см. в разделе [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) в пакете Windows SDK.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  Копирует текст панели инструментов в меню.  
@@ -884,7 +884,7 @@ CString m_strText;
  Этот элемент данных содержит текстовую подпись кнопки. Текстовая подпись может быть пустым.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
- Указывает, обрабатывает ли кнопки [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщения.  
+ Указывает, обрабатывает ли кнопки [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщения.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -898,7 +898,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Этот метод возвращает значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой, когда он собирается отправить [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) родительское окно.  
+ Этот метод вызывается платформой, когда он собирается отправить [WM_COMMAND](/windows/desktop/menurc/wm-command) родительское окно.  
   
  По умолчанию этот метод возвращает значение FALSE. Переопределите этот метод для возвращают значение TRUE, если вы хотите обработать сообщение WM_COMMAND или FALSE, чтобы указать, что на родительской панели инструментов должен обрабатывать сообщения.  
   
@@ -977,14 +977,14 @@ virtual SIZE OnCalculateSize(
  Переопределите этот метод, если вы хотите предоставить размер нестандартные кнопки (например, кнопка «Изменить поле»).  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
- Вызывается платформой для обработки [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) сообщения.  
+ Вызывается платформой для обработки [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) сообщения.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этот метод не выполняет никаких действий. Переопределите этот метод, если вы хотите обрабатывать [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) сообщения.  
+ Реализация по умолчанию этот метод не выполняет никаких действий. Переопределите этот метод, если вы хотите обрабатывать [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) сообщения.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  Вызывается платформой при вставке кнопки в панели инструментов.  
@@ -1104,7 +1104,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
  Реализация по умолчанию не выполняет никаких действий и возвращает значение FALSE. Переопределите этот метод и возвращают ненулевое значение, если вы хотите изменить содержимое предоставленного меню.  
   
 ##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
- Вызывается платформой при обработке родительского инструментов [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) сообщения.  
+ Вызывается платформой при обработке родительского инструментов [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) сообщения.  
   
 ```  
 virtual void OnDblClk(CWnd* pWnd);
@@ -1115,7 +1115,7 @@ virtual void OnDblClk(CWnd* pWnd);
  -   Родительское окно кнопки.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается `CMFCToolBar::OnLButtonDblClk` метод при обработке родительского инструментов [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) сообщения.  
+ Этот метод вызывается `CMFCToolBar::OnLButtonDblClk` метод при обработке родительского инструментов [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) сообщения.  
   
  Реализация по умолчанию этот метод не выполняет никаких действий.  
   

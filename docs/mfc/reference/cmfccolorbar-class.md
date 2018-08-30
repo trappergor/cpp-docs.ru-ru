@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3da308e92554bd573e9efccdd47aa6e6fd71e26a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 08d7edc11584f7a7c6d2b218d9bfbbcf8d3020a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850239"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212108"
 ---
 # <a name="cmfccolorbar-class"></a>Класс CMFCColorBar
 `CMFCColorBar` Класс представляет закрепляемую панель элементов управления, которая может выбирать цвета в документ или приложение.  
@@ -161,11 +161,11 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_BoxSize`|Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) , указывающий размер ячейки в сетке цветовой полосы.|  
 |`m_bShowDocColorsWhenDocked`|Логическое значение, указывающее, следует ли отображать цвета документа при присоединении цветовой полосы. Дополнительные сведения см. в разделе [CMFCColorBar::SetDocumentColors](#setdocumentcolors).|  
 |`m_bStdColorDlg`|Логическое значение, указывающее, следует ли отображать диалоговое окно стандартный системный цвет или [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) диалоговое окно. Дополнительные сведения см. в разделе [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
-|`m_ColorAutomatic`|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , в котором хранится текущий цвет автоматической. Дополнительные сведения см. в разделе [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
+|`m_ColorAutomatic`|Объект [COLORREF](/windows/desktop/gdi/colorref) , в котором хранится текущий цвет автоматической. Дополнительные сведения см. в разделе [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
 |`m_ColorNames`|[CMap](../../mfc/reference/cmap-class.md) объект, который связывает набор RGB цветов с их именами.|  
-|`m_colors`|Объект [CArray](../../mfc/reference/carray-class.md) из [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значения, которые содержит цвета, отображаемые в элементе управления цветовой полосы.|  
-|`m_ColorSelected`|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, которое является цвет, который пользователь выбрал в настоящее время из элемента управления цветовой полосы.|  
-|`m_lstDocColors`|Объект [CList](../../mfc/reference/clist-class.md) из [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значения, которые содержит цвета, которые в настоящее время используются в документе.|  
+|`m_colors`|Объект [CArray](../../mfc/reference/carray-class.md) из [COLORREF](/windows/desktop/gdi/colorref) значения, которые содержит цвета, отображаемые в элементе управления цветовой полосы.|  
+|`m_ColorSelected`|Объект [COLORREF](/windows/desktop/gdi/colorref) значение, которое является цвет, который пользователь выбрал в настоящее время из элемента управления цветовой полосы.|  
+|`m_lstDocColors`|Объект [CList](../../mfc/reference/clist-class.md) из [COLORREF](/windows/desktop/gdi/colorref) значения, которые содержит цвета, которые в настоящее время используются в документе.|  
 |`m_nCommandID`|Целое число без знака, являющееся Идентификатором команды, цвет кнопки.|  
 |`m_nHorzMargin`|Целое число, является горизонтального поля между кнопками цвет в сетке цветов.|  
 |`m_nHorzOffset`|Целое число, является смещение по горизонтали относительно центральной части кнопку цвета. Это значение важно в том случае, если кнопка отображает текст или изображение, а также цвет.|  

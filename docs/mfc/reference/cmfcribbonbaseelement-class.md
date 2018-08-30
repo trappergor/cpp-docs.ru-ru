@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac1ae7ba40ead2217fd2404a243f0e02664177a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028399"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213666"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Класс CMFCRibbonBaseElement
 `CMFCRibbonBaseElement` Класс является базовым классом для всех элементов, которые можно добавить к [панель ленты](../../mfc/reference/cmfcribbonbar-class.md). Примеры элементов ленты — кнопки ленты, флажки ленты и поля со списком на ленте.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Указатель на родительское окно для элемента ленты, если метод был выполнен успешно; в противном случае — значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Родительское окно для элемента ленты — [класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) или [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ Родительское окно для элемента ленты — [класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) или [CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Извлекает указатель на элемент ленты, если пользователь нажимает ее сейчас.  
@@ -1686,7 +1686,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод перерисовывает прямоугольник отображения для элемента ленты, вызвав [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) с флагами RDW_INVALIDATE RDW_ERASE и RDW_UPDATENOW значение.  
+ Этот метод перерисовывает прямоугольник отображения для элемента ленты, вызвав [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) с флагами RDW_INVALIDATE RDW_ERASE и RDW_UPDATENOW значение.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonBaseElement::SetACCData  
  Задает данные специальных возможностей для элемента ленты.  

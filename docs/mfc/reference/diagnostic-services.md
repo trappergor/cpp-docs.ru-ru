@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3fbc85ee6068c6e45f2847ae7ba45a425db8e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538362"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214683"
 ---
 # <a name="diagnostic-services"></a>Диагностические службы
 Библиотека Microsoft Foundation Class предоставляет множество служб диагностики, которые упрощают отладку программ. Эти службы включают в себя макросы и глобальные функции, позволяющие отслеживать выделение памяти для программы, записывать дамп содержимого объектов во время выполнения и печатать сообщения отладки во время выполнения. Макросы и глобальные функции диагностических служб сгруппированы в следующие категории:  
@@ -605,7 +605,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  Для успешного использования этой функции:  
   
--   Файл IMAGEHLP. Библиотеки DLL должны находиться в пути. Если у вас нет этой библиотеки DLL, функция отобразит сообщение об ошибке. См. в разделе [библиотеки справки образа](http://msdn.microsoft.com/library/windows/desktop/ms680321) сведения о наборе функций, предоставляемых IMAGEHLP.  
+-   Файл IMAGEHLP. Библиотеки DLL должны находиться в пути. Если у вас нет этой библиотеки DLL, функция отобразит сообщение об ошибке. См. в разделе [библиотеки справки образа](/windows/desktop/Debug/image-help-library) сведения о наборе функций, предоставляемых IMAGEHLP.  
   
 -   Модули, которые имеют кадров в стеке необходимо включить отладочную информацию. Если они не содержат сведения об отладке, функция по-прежнему создает трассировку стека, но трассировка будет менее подробным.  
 ### <a name="requirements"></a>Требования  

@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0494b22d3166ebfd75a6aeaceba839f80b84bc1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9a74b7d759cd0ed7f576276f4c7948a07e161892
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884409"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220745"
 ---
 # <a name="csize-class"></a>Класс CSize
-Аналог структуры [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) в ОС Windows, реализующий относительные координаты или положение.  
+Аналогичную Windows [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, реализующий относительные координаты или положение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -91,7 +91,7 @@ CSize( DWORD dwSize) throw();
  Наборы `cy` член для `CSize`.  
   
  *initSize*  
- [РАЗМЕР](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или `CSize` объект, используемый для инициализации `CSize`.  
+ [РАЗМЕР](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или `CSize` объект, используемый для инициализации `CSize`.  
   
  *initPt*  
  [ТОЧКА](../../mfc/reference/point-structure1.md) структуры или `CPoint` объект, используемый для инициализации `CSize`.  
@@ -165,9 +165,9 @@ CRect operator+(const RECT* lpRect) const throw();
   
 - **оператор + (** `size` **)** эта операция добавляет два `CSize` значения.  
   
-- **оператор + (** `point` **)** эта операция смещений (перемещается) [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) (или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) значение в данном `CSize` значение. **Cx** и **cy** элементов этой `CSize` значение добавляются к **x** и **y** данные-члены **ТОЧКИ**  значение. Он аналогичен версии [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) , принимающий [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
+- **оператор + (** `point` **)** эта операция смещений (перемещается) [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) (или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) значение в данном `CSize` значение. **Cx** и **cy** элементов этой `CSize` значение добавляются к **x** и **y** данные-члены **ТОЧКИ**  значение. Он аналогичен версии [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) , принимающий [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
   
-- **оператор + (** `lpRect` **)** эта операция смещений (перемещается) [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) (или [CRect](../../atl-mfc-shared/reference/crect-class.md)) значение в данном `CSize` значение. **Cx** и **cy** элементов этой `CSize` значение добавляются к **левой**, **верхней**, **справа**, и **нижней** данные-члены `RECT` значение. Он аналогичен версии [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) , принимающий [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
+- **оператор + (** `lpRect` **)** эта операция смещений (перемещается) [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (или [CRect](../../atl-mfc-shared/reference/crect-class.md)) значение в данном `CSize` значение. **Cx** и **cy** элементов этой `CSize` значение добавляются к **левой**, **верхней**, **справа**, и **нижней** данные-члены `RECT` значение. Он аналогичен версии [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) , принимающий [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]  
@@ -187,9 +187,9 @@ CSize operator-() const throw();
   
 - **оператор-(** `size` **)** эта операция Находит разность двух `CSize` значения.  
   
-- **оператор-(** `point` **)** эта операция смещений (перемещается) [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) значение аддитивную инверсию `CSize` значение. **Cx** и **cy** этого `CSize` значение вычитается из **x** и **y** данные-члены **ТОЧКИ**  значение. Он аналогичен версии [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) , принимающий [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
+- **оператор-(** `point` **)** эта операция смещений (перемещается) [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) значение аддитивную инверсию `CSize` значение. **Cx** и **cy** этого `CSize` значение вычитается из **x** и **y** данные-члены **ТОЧКИ**  значение. Он аналогичен версии [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) , принимающий [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
   
-- **оператор-(** `lpRect` **)** эта операция смещений (перемещается) [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) или [CRect](../../atl-mfc-shared/reference/crect-class.md) значение аддитивную инверсию `CSize` значение. **Cx** и **cy** элементов этой `CSize` значение вычитается из **левой**, **верхней**, **справа**, и **нижней** данные-члены `RECT` значение. Он аналогичен версии [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) , принимающий [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
+- **оператор-(** `lpRect` **)** эта операция смещений (перемещается) [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) или [CRect](../../atl-mfc-shared/reference/crect-class.md) значение аддитивную инверсию `CSize` значение. **Cx** и **cy** элементов этой `CSize` значение вычитается из **левой**, **верхней**, **справа**, и **нижней** данные-члены `RECT` значение. Он аналогичен версии [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) , принимающий [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
   
 - **оператор-()** эта операция Возвращает аддитивную инверсию `CSize` значение.  
   

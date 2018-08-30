@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2b9e09ed536d30729d39d53dc983d02cf0c6d7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4c63eda0bbe734bd7c9f0a972e6756a444369123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849692"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212434"
 ---
 # <a name="coleconvertdialog-class"></a>Класс COleConvertDialog
-Дополнительные сведения см. в разделе [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) структуры в пакете Windows SDK.  
+Дополнительные сведения см. в разделе [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) структуры в пакете Windows SDK.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -135,7 +135,7 @@ explicit COleConvertDialog (
 ### <a name="remarks"></a>Примечания  
  Чтобы отобразить диалоговое окно, вызовите [DoModal](#domodal) функции.  
   
- Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) и [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) структуры.  
+ Дополнительные сведения см. в разделе [раздел CLSID](/windows/desktop/com/clsid-key-hklm) и [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) структуры.  
   
 ##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  Вызывайте эту функцию после успешного возврата из [DoModal](#domodal), либо для преобразования или активировать объект типа [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
@@ -168,7 +168,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, если пользователь отменил диалоговое окно.  
   
-- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) функции в пакете Windows SDK.  
+- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIConvert](/windows/desktop/api/oledlg/nf-oledlg-oleuiconverta) функции в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Если вы хотите инициализировать различных диалоговых путем определения участников [m_cv](#m_cv) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
@@ -188,7 +188,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция только после вызова [DoModal](#domodal) возвращает IDOK.  
   
- Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [раздел CLSID](/windows/desktop/com/clsid-key-hklm) в пакете Windows SDK.  
   
 ##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  Вызывайте эту функцию, чтобы определить, что выбрал пользователь для отображения выбранного элемента в виде значка.  
@@ -207,7 +207,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция только после вызова [DoModal](#domodal) возвращает IDOK.  
   
- Дополнительные сведения о рисовании аспект, см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры данных в пакете Windows SDK.  
+ Дополнительные сведения о рисовании аспект, см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры данных в пакете Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  Вызывайте эту функцию для получения дескриптора метафайл, содержащий аспект, преобразованного в значок выбранного элемента.  
@@ -258,7 +258,7 @@ OLEUICONVERT m_cv;
 ### <a name="remarks"></a>Примечания  
  Члены этой структуры можно изменить напрямую или с помощью функций-членов.  
   
- Дополнительные сведения см. в разделе [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) структуры в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс COleDialog](../../mfc/reference/coledialog-class.md)   

@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 2bed0b93b2c9643a19aa8fd97c0e52da2ba1f8be
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572311"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198794"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -71,7 +71,7 @@ void _endthreadex(
 > [!NOTE]
 > Для исполняемого файла, связанного с Libcmt.lib, не следует вызывать функцию [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API Win32. Это помешает системе времени выполнения освобождать выделенные ресурсы. **_endthread** и **_endthreadex** освобождают выделенные ресурсы потока и затем вызвать **ExitThread**.
 
-**_endthread** автоматически закрывает дескриптор потока. (Это поведение отличается от Win32 **ExitThread** API.) Таким образом, при использовании **_beginthread** и **_endthread**, не следует явно закрывать дескриптор потока вызовом Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
+**_endthread** автоматически закрывает дескриптор потока. (Это поведение отличается от Win32 **ExitThread** API.) Таким образом, при использовании **_beginthread** и **_endthread**, не следует явно закрывать дескриптор потока вызовом Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
 
 Win32, такие как **ExitThread** API, **_endthreadex** не закрывает дескриптор потока. Таким образом, при использовании **_beginthreadex** и **_endthreadex**, необходимо закрыть дескриптор потока вызовом Win32 **CloseHandle** API.
 

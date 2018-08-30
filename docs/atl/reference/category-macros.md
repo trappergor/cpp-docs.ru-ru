@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1fff338bfce32f8233cd58aa7c0790508ce542c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4fdf98e41b552fa759f1aed3e67d531e02bc7f58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206779"
 ---
 # <a name="category-macros"></a>Макросы категорий
 Эти макросы определяют категории карт.  
@@ -76,7 +76,7 @@ BEGIN_CATEGORY_MAP(theClass)
 > [!NOTE]
 >  ATL использует диспетчер категорий стандартных компонентов для регистрации категорий компонентов. Если диспетчер отсутствует в системе, при регистрации модуля, регистрация выполняется успешно, но категорий компонентов не будут регистрироваться для этого класса.  
   
- Дополнительные сведения о категории компонентов, см. в разделе [Каковы категорий компонентов и как они работают](http://msdn.microsoft.com/library/windows/desktop/ms694322) в пакете Windows SDK.  
+ Дополнительные сведения о категории компонентов, см. в разделе [Каковы категорий компонентов и как они работают](/windows/desktop/com/component-categories-and-how-they-work) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -107,7 +107,7 @@ IMPLEMENTED_CATEGORY(catID)
   
  Клиенты могут использовать сведения о категории, зарегистрированные для класса, чтобы определить его возможности и требования без необходимости создавать его экземпляр.  
   
- Дополнительные сведения о категории компонентов, см. в разделе [Каковы категорий компонентов и как они работают](http://msdn.microsoft.com/library/windows/desktop/ms694322) в пакете Windows SDK.  
+ Дополнительные сведения о категории компонентов, см. в разделе [Каковы категорий компонентов и как они работают](/windows/desktop/com/component-categories-and-how-they-work) в пакете Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Выбор из стандартных категорий  
   
@@ -119,7 +119,7 @@ IMPLEMENTED_CATEGORY(catID)
 |простую привязку данных|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Сложные методы связывания данных|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Элементы управления без окон|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Объекты с поддержкой Интернета|См. в разделе [виду объектов Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) в пакете Windows SDK для простого списка.||  
+|Объекты с поддержкой Интернета|См. в разделе [виду объектов Internet](/windows/desktop/com/internet-aware-objects) в пакете Windows SDK для простого списка.||  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -140,7 +140,7 @@ REQUIRED_CATEGORY( catID )
   
  Клиенты могут использовать сведения о категории, зарегистрированные для класса, чтобы определить его возможности и требования без необходимости создавать его экземпляр. Например элемент управления может потребоваться, что контейнер поддерживают привязку данных. Контейнер можно выяснить наличие возможности, необходимые для размещения элемента управления, запрашивая диспетчер категорий для категорий, необходимые для этого элемента управления. Если контейнер не поддерживает функцию, необходимую, она может отклонить для размещения COM-объекта.  
   
- Дополнительные сведения о категории компонентов, включая список примеров, см. в разделе [Каковы категорий компонентов и как они работают](http://msdn.microsoft.com/library/windows/desktop/ms694322) в пакете Windows SDK.  
+ Дополнительные сведения о категории компонентов, включая список примеров, см. в разделе [Каковы категорий компонентов и как они работают](/windows/desktop/com/component-categories-and-how-they-work) в пакете Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Выбор из стандартных категорий  
   
@@ -152,7 +152,7 @@ REQUIRED_CATEGORY( catID )
 |простую привязку данных|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Сложные методы связывания данных|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Элементы управления без окон|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Объекты с поддержкой Интернета|См. в разделе [виду объектов Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) в пакете Windows SDK для простого списка.||  
+|Объекты с поддержкой Интернета|См. в разделе [виду объектов Internet](/windows/desktop/com/internet-aware-objects) в пакете Windows SDK для простого списка.||  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  

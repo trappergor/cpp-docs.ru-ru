@@ -1,5 +1,5 @@
 ---
-title: Выравнивание заголовка определяемых владельцем элементов управления | Документы Microsoft
+title: Выравнивание заголовка определяемых владельцем элементов управления | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10315395e9699e2a93c802001ba920dcac1440f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345260"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214737"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Создание определяемых владельцем элементов управления "Заголовок"
-Можно определить отдельные элементы управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) до определяемых владельцем элементов. Дополнительные сведения см. в разделе [управления заголовков Owner-Drawn](http://msdn.microsoft.com/library/windows/desktop/bb775238) в Windows SDK.  
+Можно определить отдельные элементы управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) быть владельцем элементы. Дополнительные сведения см. в разделе [элементы управления заголовка Owner-Drawn](/windows/desktop/Controls/header-controls) в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)   

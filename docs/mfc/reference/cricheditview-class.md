@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ece09b51dba7be272a208478d48196024189180e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2f2be7e74de20c1ecac2ea0a58c167cd7384e89a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853528"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212362"
 ---
 # <a name="cricheditview-class"></a>Класс CRichEditView
 С помощью [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) и [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), предоставляет функции элемента управления форматированным редактированием в контексте архитектуры представлений документов MFC.  
@@ -344,16 +344,16 @@ CHARFORMAT2& GetCharFormatSelection();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) структуру, которая содержит символ форматирования атрибуты текущего выделенного фрагмента.  
+ Объект [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) структуру, которая содержит символ форматирования атрибуты текущего выделенного фрагмента.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) сообщение и [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat) сообщение и [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) структуры в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
 ##  <a name="getclipboarddata"></a>  CRichEditView::GetClipboardData  
- Платформа вызывает эту функцию как часть обработки [IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315).  
+ Платформа вызывает эту функцию как часть обработки [IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata).  
   
 ```  
 virtual HRESULT GetClipboardData(
@@ -365,7 +365,7 @@ virtual HRESULT GetClipboardData(
   
 ### <a name="parameters"></a>Параметры  
  *lpchrg*  
- Указатель на [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) структуры, указывающий диапазон символов (и элементы OLE), чтобы скопировать в объект данных, определяемое *lplpdataobj*.  
+ Указатель на [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) структуры, указывающий диапазон символов (и элементы OLE), чтобы скопировать в объект данных, определяемое *lplpdataobj*.  
   
  *dwReco*  
  Флаг операции буфера обмена. Может принимать одно из следующих значений.  
@@ -381,23 +381,23 @@ virtual HRESULT GetClipboardData(
 - RECO_PASTE вставить из буфера обмена.  
   
  *lpRichDataObj*  
- Указатель на [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) объект, содержащий данные из буфера обмена из широкий набор функций элемента управления edit ( [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341)).  
+ Указатель на [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) объект, содержащий данные из буфера обмена из широкий набор функций элемента управления edit ( [IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)).  
   
  *lplpdataobj*  
  Указатель на указатель на переменную, которая получает адрес `IDataObject` объект, представляющий диапазон, указанный в *lpchrg* параметра. Значение *lplpdataobj* учитывается, если возвращается ошибка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, сообщение об успехе операции. Дополнительные сведения о HRESULT см. в разделе [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в пакете Windows SDK.  
+ Значение HRESULT, сообщение об успехе операции. Дополнительные сведения о HRESULT см. в разделе [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes) в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Если возвращаемое значение указывает на успешное завершение, `IRichEditOleCallback::GetClipboardData` возвращает `IDataObject` осуществляется *lplpdataobj*; в противном случае он возвращает из них, доступ к *lpRichDataObj*. Переопределите эту функцию, чтобы указать собственные данные буфера обмена. Реализация по умолчанию эта функция возвращает E_NOTIMPL.  
   
  Существует расширенная переопределяемый.  
   
- Дополнительные сведения см. в разделе [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341), [IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315), и [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) в Windows SDK и см. в разделе [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) в Windows SDK.  
+ Дополнительные сведения см. в разделе [IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata), [IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata), и [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) в Windows SDK и см. в разделе [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) в Windows SDK.  
   
 ##  <a name="getcontextmenu"></a>  CRichEditView::GetContextMenu  
- Платформа вызывает эту функцию как часть обработки [IRichEditOleCallback::GetContextMenu](http://msdn.microsoft.com/library/windows/desktop/bb774317).  
+ Платформа вызывает эту функцию как часть обработки [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu).  
   
 ```  
 virtual HMENU GetContextMenu(
@@ -414,7 +414,7 @@ virtual HMENU GetContextMenu(
  Указатель на `OLEOBJECT` структуры, указывающий первый выбранный объект OLE, если выделение содержит один или несколько элементов OLE. Если выделение не содержит элементов, *lpoleobj* имеет значение NULL. `OLEOBJECT` Структура содержит указатель на объект OLE v таблицу.  
   
  *lpchrg*  
- Указатель на [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) структуру, содержащую текущее выделение.  
+ Указатель на [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) структуру, содержащую текущее выделение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор в контекстном меню.  
@@ -436,7 +436,7 @@ virtual HMENU GetContextMenu(
   
  Реализация по умолчанию возвращает значение NULL. Существует расширенная переопределяемый.  
   
- Дополнительные сведения см. в разделе [IRichEditOleCallback::GetContextMenu](http://msdn.microsoft.com/library/windows/desktop/bb774317) и [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) и [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) в пакете Windows SDK.  
   
  Дополнительные сведения о `OLEOBJECT` введите, см. в статье структур OLE данных и структура распределения *OLE знаний*.  
   
@@ -504,10 +504,10 @@ PARAFORMAT2& GetParaFormatSelection();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) структуры, который содержит атрибуты текущего выделенного фрагмента форматирования абзаца.  
+ Объект [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) структуры, который содержит атрибуты текущего выделенного фрагмента форматирования абзаца.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) сообщение и [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat) сообщение и [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) структуры в пакете Windows SDK.  
   
 ##  <a name="getprintrect"></a>  CRichEditView::GetPrintRect  
  Вызывайте эту функцию для получения границы области печати в прямоугольнике страницы.  
@@ -576,7 +576,7 @@ long GetTextLengthEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwFlags*  
- Значение, указывающее метод, используемый для определения длины текста. Этот член может иметь одно или несколько значений, перечисленных в элемент флаги [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) описано в пакете Windows SDK.  
+ Значение, указывающее метод, используемый для определения длины текста. Этот член может иметь одно или несколько значений, перечисленных в элемент флаги [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-_gettextlengthex) описано в пакете Windows SDK.  
   
  *uCodePage*  
  Кодовая страница для перевода (CP_ACP для кодовой страницы ANSI, 1200 для Юникода).  
@@ -585,7 +585,7 @@ long GetTextLengthEx(
  Число символов или байтов в элементе управления. Если были заданы несовместимые флаги в *dwFlags*, эта функция-член возвращает значение E_INVALIDARG.  
   
 ### <a name="remarks"></a>Примечания  
- `GetTextLengthEx` предоставляет дополнительные способы определения длину текста. Он поддерживает функциональные возможности Rich Edit 2.0. Дополнительные сведения см. в разделе [о элементами управления Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) в пакете Windows SDK.  
+ `GetTextLengthEx` предоставляет дополнительные способы определения длину текста. Он поддерживает функциональные возможности Rich Edit 2.0. Дополнительные сведения см. в разделе [о элементами управления Rich Edit](/windows/desktop/Controls/about-rich-edit-controls) в пакете Windows SDK.  
   
 ##  <a name="insertfileasobject"></a>  CRichEditView::InsertFileAsObject  
  Вызывайте эту функцию для вставки в указанный файл (как [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) объекта) в расширенных изменить представление.  
@@ -613,7 +613,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
  Значение HRESULT, указывающее на успешное вставки.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о HRESULT см. в разделе [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в пакете Windows SDK.  
+ Дополнительные сведения о HRESULT см. в разделе [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes) в пакете Windows SDK.  
   
 ##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat  
  Вызывайте эту функцию, чтобы определить, если *cf* — это формат буфера обмена, текста, форматированного текста или форматированного текста с помощью элементов OLE.  
@@ -691,7 +691,7 @@ void OnCharEffect(
 ### <a name="remarks"></a>Примечания  
  Каждый вызов этой функции переключает указанный эффекты форматирования для текущего выделения.  
   
- Дополнительные сведения о *dwMask* и *dwEffect* параметры и их возможные значения см. в разделе соответствующие члены данных [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) в пакете Windows SDK.  
+ Дополнительные сведения о *dwMask* и *dwEffect* параметры и их возможные значения см. в разделе соответствующие члены данных [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
@@ -745,7 +745,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
   
 ### <a name="parameters"></a>Параметры  
  *lpStg*  
- Указатель на [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) объекта.  
+ Указатель на [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если выполнение прошло успешно; в противном случае — 0;  
@@ -755,7 +755,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
   
  Существует расширенная переопределяемый.  
   
- Дополнительные сведения см. в разделе [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) в пакете Windows SDK.  
   
 ##  <a name="onparaalign"></a>  CRichEditView::OnParaAlign  
  Вызывайте эту функцию для изменения выравнивания абзаца для выделенных абзацев.  
@@ -864,9 +864,9 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
  Текст, который не был найден.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите эту функцию, чтобы изменить выходные данные уведомления [MessageBeep](http://msdn.microsoft.com/library/windows/desktop/ms680356).  
+ Переопределите эту функцию, чтобы изменить выходные данные уведомления [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep).  
   
- Дополнительные сведения см. в разделе [MessageBeep](http://msdn.microsoft.com/library/windows/desktop/ms680356) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#157](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]  
@@ -894,7 +894,7 @@ void OnUpdateCharEffect(
 ### <a name="remarks"></a>Примечания  
  Маска *dwMask* указывает, какой знак атрибуты форматирования для проверки. Флаги *dwEffect* список атрибутов для набора или Очистить форматирование символов.  
   
- Дополнительные сведения о *dwMask* и *dwEffect* параметры и их возможные значения см. в разделе соответствующие члены данных [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) в пакете Windows SDK.  
+ Дополнительные сведения о *dwMask* и *dwEffect* параметры и их возможные значения см. в разделе соответствующие члены данных [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
@@ -1003,7 +1003,7 @@ virtual HRESULT QueryAcceptData(
   
 ### <a name="parameters"></a>Параметры  
  *lpdataobj*  
- Указатель на [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) для запроса.  
+ Указатель на [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) для запроса.  
   
  *lpcfFormat*  
  Указатель на формат допустимые данные.  
@@ -1023,7 +1023,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию для обработки различных организации COM элементов в документ в производном классе. Существует расширенная переопределяемый.  
   
- Дополнительные сведения о HRESULT и `IDataObject`, см. в разделе [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) и [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421), соответственно, в пакете Windows SDK.  
+ Дополнительные сведения о HRESULT и `IDataObject`, см. в разделе [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes) и [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject), соответственно, в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#160](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]  
@@ -1037,12 +1037,12 @@ void SetCharFormat(CHARFORMAT2 cf);
   
 ### <a name="parameters"></a>Параметры  
  *CF*  
- [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) структуру, содержащую новый символ по умолчанию атрибуты форматирования.  
+ [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) структуру, содержащую новый символ по умолчанию атрибуты форматирования.  
   
 ### <a name="remarks"></a>Примечания  
  Только атрибуты, указанные фильтром `dwMask` членом *cf* изменяются при помощи этой функции.  
   
- Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) сообщение и [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) сообщение и [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) структуры в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
@@ -1092,7 +1092,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
   
 ### <a name="parameters"></a>Параметры  
  *Общая папка*  
- [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) атрибуты форматирования абзаца структура, содержащая новое значение по умолчанию.  
+ [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) атрибуты форматирования абзаца структура, содержащая новое значение по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если выполнение прошло успешно; в противном случае — 0.  
@@ -1100,7 +1100,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="remarks"></a>Примечания  
  Только атрибуты, указанные фильтром `dwMask` членом *pf* изменяются при помощи этой функции.  
   
- Дополнительные сведения см. в разделе [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) сообщение и [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat) сообщение и [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) структуры в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#162](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]  

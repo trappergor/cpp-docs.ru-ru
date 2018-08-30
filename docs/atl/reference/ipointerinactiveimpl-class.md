@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d916d2e2f8f42a4162966a1d0ddc7de55eb6bd4b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5d7c4ed7634cc1818250d8945a057f97c53edffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883584"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223203"
 ---
 # <a name="ipointerinactiveimpl-class"></a>Класс IPointerInactiveImpl
-Этот класс реализует `IUnknown` и [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) методы интерфейса.  
+Этот класс реализует `IUnknown` и [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) методы интерфейса.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -59,7 +59,7 @@ class IPointerInactiveImpl
 ## <a name="remarks"></a>Примечания  
  Неактивные объекта — это просто загрузке или выполнении. В отличие от активного объекта неактивные объекта не может принимать сообщения клавиатуры и мыши Windows. Таким образом Неактивные объекты используют меньше ресурсов и обычно более эффективны.  
   
- [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) интерфейс позволяет объекту для поддержки минимальный уровень взаимодействия с мышью, оставаясь неактивной. Эта функция особенно полезна для элементов управления.  
+ [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) интерфейс позволяет объекту для поддержки минимальный уровень взаимодействия с мышью, оставаясь неактивной. Эта функция особенно полезна для элементов управления.  
   
  Класс `IPointerInactiveImpl` реализует `IPointerInactive` методы, с помощью простого возврата E_NOTIMPL. Тем не менее, он реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
@@ -84,7 +84,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) в Windows SDK.  
+ См. в разделе [IPointerInactive::GetActivationPolicy](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) в Windows SDK.  
   
 ##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove  
  Уведомляет объект, указатель мыши наведен на его, указав объект срабатывают события мыши.  
@@ -101,7 +101,7 @@ HRESULT OnInactiveMouseMove(
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) в Windows SDK.  
+ См. в разделе [IPointerInactive::OnInactiveMouseMove](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) в Windows SDK.  
   
 ##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor  
  Задает указатель мыши для неактивного объекта.  
@@ -119,7 +119,7 @@ HRESULT OnInactiveSetCursor(
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) в Windows SDK.  
+ См. в разделе [IPointerInactive::OnInactiveSetCursor](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

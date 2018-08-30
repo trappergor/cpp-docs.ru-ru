@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ee49dede1a71e8bd2a01e98a3bdd2dd53ef63d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: fbabd502ca6d9d81c569831f9dcb0b344523bb3e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42543201"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215332"
 ---
 # <a name="cmfccolorbutton-class"></a>Класс CMFCColorButton
 `CMFCColorButton` И [класс CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) классы используются совместно для реализации управление палитрой.  
@@ -112,10 +112,10 @@ class CMFCColorButton : public CMFCButton
 |`m_bAltColorDlg`|Логическое значение. Если значение равно TRUE, платформа отображает [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) цвет-диалоговое окно при *других* кнопки, или если значение равно FALSE, система цвета диалоговое окно. Значение по умолчанию — TRUE. Дополнительные сведения см. в разделе [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
 |`m_bAutoSetFocus`|Логическое значение. Значение TRUE, если framework устанавливает фокус на меню «цвет», когда меню отображается, или если значение равно FALSE, не изменяет фокус. Значение по умолчанию — TRUE.|  
 |[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|Указывает, включен ли режим настройки для «цвет».|  
-|`m_Color`|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение. Содержит выбранный цвет.|  
-|`m_ColorAutomatic`|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение. Содержит цвет выбранного по умолчанию.|  
-|`m_Colors`|Объект [CArray](../../mfc/reference/carray-class.md) из [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значения. Содержит в настоящее время доступных цветов.|  
-|`m_lstDocColors`|Объект [CList](../../mfc/reference/clist-class.md) из [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значения. Содержит цвета для текущего документа.|  
+|`m_Color`|Объект [COLORREF](/windows/desktop/gdi/colorref) значение. Содержит выбранный цвет.|  
+|`m_ColorAutomatic`|Объект [COLORREF](/windows/desktop/gdi/colorref) значение. Содержит цвет выбранного по умолчанию.|  
+|`m_Colors`|Объект [CArray](../../mfc/reference/carray-class.md) из [COLORREF](/windows/desktop/gdi/colorref) значения. Содержит в настоящее время доступных цветов.|  
+|`m_lstDocColors`|Объект [CList](../../mfc/reference/clist-class.md) из [COLORREF](/windows/desktop/gdi/colorref) значения. Содержит цвета для текущего документа.|  
 |`m_nColumns`|Значение типа integer. Содержит количество столбцов для отображения в сетке цветов в меню выбора цвета.|  
 |`m_pPalette`|Указатель на [CPalette](../../mfc/reference/cpalette-class.md). Содержит цвета, которые доступны в меню выбора цвета.|  
 |`m_pPopup`|Указатель на [класс CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md) объекта. Меню выбора цвета, который отображается при нажатии кнопки цвет.|  
@@ -439,7 +439,7 @@ virtual void UpdateColor(COLORREF color);
  [Класс CMFCButton](../../mfc/reference/cmfcbutton-class.md)   
  [Класс CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)   
  [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
  [Класс CPalette](../../mfc/reference/cpalette-class.md)   
  [CArray-класс](../../mfc/reference/carray-class.md)   
  [Класс CList](../../mfc/reference/clist-class.md)   

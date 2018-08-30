@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3492f71ab119bb272576fe8c67bc6d05163785fb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6eee23ebbfc25d76ca255505322f609973f79f57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883148"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222876"
 ---
 # <a name="catltemporaryfile-class"></a>Класс CAtlTemporaryFile
 Этот класс предоставляет методы для создания и использования временных файлов.  
@@ -143,10 +143,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
   
 ### <a name="parameters"></a>Параметры  
  *pszDir*  
- Путь для временного файла. Если имеет значение NULL, [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992) будет вызываться для присвоения пути.  
+ Путь для временного файла. Если имеет значение NULL, [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) будет вызываться для присвоения пути.  
   
  *dwDesiredAccess*  
- Необходимый доступ. См. в разделе *dwDesiredAccess* в [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) в пакете Windows SDK.  
+ Необходимый доступ. См. в разделе *dwDesiredAccess* в [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
@@ -334,7 +334,7 @@ LPCTSTR TempFileName() throw();
  Возвращает LPCTSTR, указывающий на имя файла.  
   
 ### <a name="remarks"></a>Примечания  
- Имя файла создается в [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) вызовом [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)функции пакета SDK для Windows. Расширение файла всегда будет «TFR» для временного файла.  
+ Имя файла создается в [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) вызовом [GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)функции пакета SDK для Windows. Расширение файла всегда будет «TFR» для временного файла.  
   
 ##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
  Вызовите этот метод, чтобы разблокировать область временного файла.  

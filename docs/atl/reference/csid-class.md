@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 265da6a072c1b33a0ebbe8f485af7588521bcdea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42575535"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218032"
 ---
 # <a name="csid-class"></a>Класс CSid
 Этот класс является оболочкой для `SID` структуры (идентификатором безопасности).  
@@ -105,7 +105,7 @@ class CSid
   
  Приложения не следует изменять `SID` структура напрямую, но вместо этого используйте методы, предоставленные в этот класс-оболочка. См. также [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), и [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
@@ -121,7 +121,7 @@ LPCTSTR AccountName() const throw(...);
  Возвращает LPCTSTR, указывающий на имя учетной записи.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод пытается найти имя для указанного `SID` (идентификатором безопасности). Дополнительные сведения см. в разделе [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166).  
+ Этот метод пытается найти имя для указанного `SID` (идентификатором безопасности). Дополнительные сведения см. в разделе [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).  
   
  Если нет имени учетной записи для `SID` можно найти, `AccountName` возвращает пустую строку. Это может произойти, если время ожидания сети предотвращающее нахождение имя этого метода. Она также проводится для идентификаторов безопасности без соответствующего имени учетной записи, такие как имя входа `SID` , идентифицирующий сеанс входа в систему.  
   
@@ -202,7 +202,7 @@ LPCTSTR Domain() const throw(...);
  Возвращает `LPCTSTR` указывает на домен.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод пытается найти имя для указанного `SID` (идентификатором безопасности). Дополнительные сведения см. в разделе [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166).  
+ Этот метод пытается найти имя для указанного `SID` (идентификатором безопасности). Дополнительные сведения см. в разделе [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).  
   
  Если нет имени учетной записи для `SID` можно найти, `Domain` Возвращает домен, как пустая строка. Это может произойти, если время ожидания сети предотвращающее нахождение имя этого метода. Она также проводится для идентификаторов безопасности без соответствующего имени учетной записи, такие как имя входа `SID` , идентифицирующий сеанс входа в систему.  
   
@@ -222,7 +222,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) в пакете SDK Windows для получения дополнительных сведений.  
+ См. в разделе [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) в пакете SDK Windows для получения дополнительных сведений.  
   
 ##  <a name="getlength"></a>  CSid::GetLength  
  Возвращает длину `CSid` объекта.  
@@ -487,7 +487,7 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `SID` структура в виде строки в формате, удобном для отображения, сохранения или передачи. Эквивалентно [функция ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
+ Возвращает `SID` структура в виде строки в формате, удобном для отображения, сохранения или передачи. Эквивалентно [функция ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida).  
   
 ##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  Возвращает описание состояния `CSid` объекта.  

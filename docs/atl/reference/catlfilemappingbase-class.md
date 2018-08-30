@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883249"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218166"
 ---
 # <a name="catlfilemappingbase-class"></a>Класс CAtlFileMappingBase
 Этот класс представляет файл, размещенный в памяти.  
@@ -76,7 +76,7 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>Примечания  
  Файл сопоставления представляет собой взаимосвязь содержимого файла с частью виртуального адресного пространства процесса. Этот класс предоставляет методы для создания объектов сопоставления файлов, которые разрешают приложениям легко получить доступ к и совместно использовать данные.  
   
- Дополнительные сведения см. в разделе [сопоставление файла](http://msdn.microsoft.com/library/windows/desktop/aa366556) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [сопоставление файла](/windows/desktop/Memory/file-mapping) в пакете Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlfile.h  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  Смещение файла, в котором начинается сопоставление. Значение смещения должно быть кратно гранулярность выделения памяти системы.  
   
  *dwMappingProtection*  
- Защита, требуемого для представления файла, при сопоставлении файла. См. в разделе *flProtect* в [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) в пакете Windows SDK.  
+ Защита, требуемого для представления файла, при сопоставлении файла. См. в разделе *flProtect* в [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) в пакете Windows SDK.  
   
  *dwViewDesiredAccess*  
- Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.  
+ Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- После создания объект сопоставления файлов, размер файла не должен превышать размер объекта сопоставления файлов; в этом случае не все содержимое файла будут доступны для совместного использования. Дополнительные сведения см. в разделе [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) и [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.  
+ После создания объект сопоставления файлов, размер файла не должен превышать размер объекта сопоставления файлов; в этом случае не все содержимое файла будут доступны для совместного использования. Дополнительные сведения см. в разделе [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) и [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  См. в примере [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  Указывает на значение BOOL, которой присваивается значение TRUE, если объект сопоставления уже существует.  
   
  *lpsa*  
- Указатель на `SECURITY_ATTRIBUTES` структуру, которая указывает, может ли возвращаемый дескриптор быть унаследован дочерними процессами. См. в разделе *lpAttributes* в [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) в пакете Windows SDK.  
+ Указатель на `SECURITY_ATTRIBUTES` структуру, которая указывает, может ли возвращаемый дескриптор быть унаследован дочерними процессами. См. в разделе *lpAttributes* в [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) в пакете Windows SDK.  
   
  *dwMappingProtection*  
  Защита, требуемого для представления файла, при сопоставлении файла. См. в разделе *flProtect* в `CreateFileMapping` в пакете Windows SDK.  
   
  *dwViewDesiredAccess*  
- Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.  
+ Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `MapShareMem` позволяет существующий объект сопоставления файлов, созданных [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), чтобы быть совместно использоваться несколькими процессами.  
+ `MapShareMem` позволяет существующий объект сопоставления файлов, созданных [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga), чтобы быть совместно использоваться несколькими процессами.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Вызовите этот метод, чтобы открыть объект сопоставления файлов с именем для указанного файла.  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  Смещение файла, в котором начинается сопоставление. Значение смещения должно быть кратно гранулярность выделения памяти системы.  
   
  *dwViewDesiredAccess*  
- Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.  
+ Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) в пакете SDK Windows для получения дополнительных сведений.  
+ См. в разделе [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) в пакете SDK Windows для получения дополнительных сведений.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)   

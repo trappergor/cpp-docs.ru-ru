@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd66c7c0637b4874f6a40bd77b3387191f00d35
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 93427eb8e842687e9bba3dc1eef12bcd07e7e167
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881205"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208015"
 ---
 # <a name="cdacl-class"></a>Класс CDacl
 Этот класс является оболочкой для структуры DACL (список управления доступом).  
@@ -74,7 +74,7 @@ class CDacl : public CAcl
   
  Используйте методы класса, который позволяет создавать, добавлять, удалять и удалить элементы управления доступом из `CDacl` объекта. См. также [AtlGetDacl](security-global-functions.md#atlgetdacl) и [AtlSetDacl](security-global-functions.md#atlsetdacl).  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -123,7 +123,7 @@ bool AddAllowedAce(
 ### <a name="remarks"></a>Примечания  
  Объект `CDacl` объект содержит ноль или более записей ACE (элементы управления доступом), которые определяют пользователей и группы, которым разрешен доступ к объекту. Этот метод добавляет элемент управления ДОСТУПОМ, которое разрешает доступ к `CDacl` объекта.  
   
- См. в разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Описание различных флагов, которые можно задать в `AceFlags` параметра.  
+ См. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) Описание различных флагов, которые можно задать в `AceFlags` параметра.  
   
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  Добавляет запрещенный ACE (записи управления доступом) `CDacl` объекта.  
@@ -164,7 +164,7 @@ bool AddDeniedAce(
 ### <a name="remarks"></a>Примечания  
  Объект `CDacl` объект содержит ноль или более записей ACE (элементы управления доступом), которые определяют пользователей и группы, которым разрешен доступ к объекту. Этот метод добавляет элемент управления ДОСТУПОМ, которое запрещает доступ к `CDacl` объекта.  
   
- См. в разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Описание различных флагов, которые можно задать в `AceFlags` параметра.  
+ См. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) Описание различных флагов, которые можно задать в `AceFlags` параметра.  
   
 ##  <a name="cdacl"></a>  CDacl::CDacl  
  Конструктор.  
@@ -245,7 +245,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>См. также  
  [Образец безопасности](../../visual-cpp-samples.md)   
  [Класс CAcl](../../atl/reference/cacl-class.md)   
- [Списки управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [Элементы управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Списки управления доступом](/windows/desktop/SecAuthZ/access-control-lists)   
+ [Элементы управления доступом](/windows/desktop/SecAuthZ/access-control-entries)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

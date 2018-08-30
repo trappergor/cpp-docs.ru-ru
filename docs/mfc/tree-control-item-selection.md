@@ -1,5 +1,5 @@
 ---
-title: Выбор элемента управления дерева | Документы Microsoft
+title: Выбор элемента управления дерева | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc533046695db409067ff603e30cedbe11ad5ca4
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: fd6632a44dd4806b8f13683b50cad76b5eebe27a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953561"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212585"
 ---
 # <a name="tree-control-item-selection"></a>Выбор элемента древовидного элемента управления
-При изменении выбора одного элемента к другому дерево ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) отправляет [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) и [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) сообщений уведомления. Оба уведомления содержат значение, указывающее, является ли изменения в результате щелчка кнопкой мыши или нажатие клавиши. Уведомления также содержат сведения о элемента, которая получает выделение и элемент, который теряет выделение. Эти сведения можно использовать для задания атрибутов элемента, зависящих от состояния выбора элемента. Возвращение **TRUE** в ответ на `TVN_SELCHANGING` предотвращает изменение; Выбор возвращение **FALSE** можно изменить.  
+При изменении выбора от одного элемента к другому, дерево ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) отправляет [TVN_SELCHANGING](/windows/desktop/Controls/tvn-selchanging) и [TVN_SELCHANGED](/windows/desktop/Controls/tvn-selchanged) сообщений уведомления. Оба уведомления содержат значение, указывающее, находится ли изменение в результате щелчка кнопкой мыши или нажатие клавиши. Уведомления также содержат сведения о элемент, который приобретает все выделения и элемент, который теряет выделение. Эти сведения можно использовать для задания атрибутов элемента, которые зависят от состояния выбора элемента. Возвращение **TRUE** в ответ на `TVN_SELCHANGING` предотвращает изменение; Выбор возвращение **FALSE** разрешает изменение.  
   
- Этот выбор можно изменить приложение, вызвав [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) функции-члена.  
+ Выбор приложения можно изменить путем вызова [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) функция-член.  
   
 ## <a name="see-also"></a>См. также  
  [Использование CTreeCtrl](../mfc/using-ctreectrl.md)   

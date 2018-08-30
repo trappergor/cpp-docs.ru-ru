@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3dc1743b0c0b795d7aaa10a7a47689de2336094
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac5e03b7a9453b4b33c4a495842465b16a186543
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600399"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219196"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Практическое руководство. Активация и использование компонента среды выполнения Windows с помощью WRL
 
@@ -46,7 +46,7 @@ ms.locfileid: "42600399"
 
    Рекомендуется использовать директиву `using namespace` в CPP-файле, чтобы сделать код более удобочитаемым.
 
-2. Инициализируйте поток, в котором выполняется приложение. Каждое приложение должно инициализировать свой поток и потоковую модель. В этом примере используется [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) класса для инициализации среды выполнения Windows и указывает [RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) качестве потоковой модели. Класс `RoInitializeWrapper` вызывает `Windows::Foundation::Initialize` при создании и `Windows::Foundation::Uninitialize` при удалении.
+2. Инициализируйте поток, в котором выполняется приложение. Каждое приложение должно инициализировать свой поток и потоковую модель. В этом примере используется [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) класса для инициализации среды выполнения Windows и указывает [RO_INIT_MULTITHREADED](https://msdn.microsoft.com/library/windows/apps/br224661.aspx) качестве потоковой модели. Класс `RoInitializeWrapper` вызывает `Windows::Foundation::Initialize` при создании и `Windows::Foundation::Uninitialize` при удалении.
 
    [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
@@ -76,7 +76,7 @@ ms.locfileid: "42600399"
 
    [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) функция получает базовый формат Юникода строки URI.
+   [WindowsGetStringRawBuffer](https://msdn.microsoft.com/library/windows/apps/br224636.aspx) функция получает базовый формат Юникода строки URI.
 
 Ниже приведен полный пример.
 

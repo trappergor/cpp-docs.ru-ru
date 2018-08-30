@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec4de071df8dcca960a0f1cb802375e5553ceb3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3646a640cb3873ec32f6284f8d2be99469ef7633
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880308"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220907"
 ---
 # <a name="ioleobjectimpl-class"></a>Класс IOleObjectImpl
 Этот класс реализует `IUnknown` и — это основной интерфейс, через который контейнер взаимодействует с элементом управления.  
@@ -131,7 +131,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[IOleObjectImpl::Update](#update)|Обновляет элемент управления. Реализация ATL, возвращается значение s_ок.|  
   
 ## <a name="remarks"></a>Примечания  
- [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709) это основной интерфейс, через который контейнер взаимодействует с элементом управления. Класс `IOleObjectImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
+ [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject) это основной интерфейс, через который контейнер взаимодействует с элементом управления. Класс `IOleObjectImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
  **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -153,7 +153,7 @@ STDMETHOD(Advise)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) в Windows SDK.  
+ См. в разделе [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) в Windows SDK.  
   
 ##  <a name="close"></a>  IOleObjectImpl::Close  
  Изменяет состояние элемента управления «выполняется» на загруженных.  
@@ -167,7 +167,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  Указатели, хранящиеся в данные-члены класса элемента управления [CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) и [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) освобождаются и данные-члены [CComControlBase:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless), и [CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) имеют значение FALSE.  
   
- См. в разделе [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) в Windows SDK.  
+ См. в разделе [IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) в Windows SDK.  
   
 ##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  Сообщает родительскому элементу для выполнения одной из его перечисленные действия.  
@@ -196,7 +196,7 @@ STDMETHOD(DoVerb)(
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|  
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|  
   
- См. в разделе [функция IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) в Windows SDK.  
+ См. в разделе [функция IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) в Windows SDK.  
   
 ##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  Сообщает родительскому элементу, чтобы отменить все состояния отмены, это субъект.  
@@ -250,7 +250,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Активирует элемент управления на месте, вызвав [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Если элемент данных класса элемента управления `m_bWindowOnly` имеет значение TRUE, `DoVerbInPlaceActivate` сначала попытается выполнить активацию элемента управления без окна (возможно только в том случае, если контейнер поддерживает [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)). В случае неудачи функция пытается активировать элемент управления с помощью расширенных функций (возможно только в том случае, если контейнер поддерживает [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). В случае неудачи функция пытается активировать элемент управления без расширенных функций (возможно только в том случае, если контейнер поддерживает [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). При успешной активации функции уведомляет контейнер, что элемент управления был активирован.  
+ Активирует элемент управления на месте, вызвав [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Если элемент данных класса элемента управления `m_bWindowOnly` имеет значение TRUE, `DoVerbInPlaceActivate` сначала попытается выполнить активацию элемента управления без окна (возможно только в том случае, если контейнер поддерживает [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). В случае неудачи функция пытается активировать элемент управления с помощью расширенных функций (возможно только в том случае, если контейнер поддерживает [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)). В случае неудачи функция пытается активировать элемент управления без расширенных функций (возможно только в том случае, если контейнер поддерживает [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)). При успешной активации функции уведомляет контейнер, что элемент управления был активирован.  
   
 ##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  Элемент управления можно изменять открытым в отдельном окне.  
@@ -331,7 +331,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) в Windows SDK.  
+ См. в разделе [IOleObject::EnumAdvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumadvise) в Windows SDK.  
   
 ##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  Предоставляет перечисление зарегистрированных действий (команды) для данного элемента управления путем вызова `OleRegEnumVerbs`.  
@@ -343,7 +343,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ### <a name="remarks"></a>Примечания  
  Можно добавить команды в RGS-файл проекта. Например см. в разделе CIRCCTL. RGS в [Кр](../../visual-cpp-samples.md) образца.  
   
- См. в разделе [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) в Windows SDK.  
+ См. в разделе [IOleObject::EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) в Windows SDK.  
   
 ##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  Наведение указателя мыши в элементе управления класс данных [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) в *ppClientSite* и увеличивает счетчик ссылок для указателя.  
@@ -353,7 +353,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) в Windows SDK.  
+ См. в разделе [IOleObject::GetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclientsite) в Windows SDK.  
   
 ##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  Извлекает данные из буфера обмена.  
@@ -368,7 +368,7 @@ STDMETHOD(GetClipboardData)(
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) в Windows SDK.  
+ См. в разделе [IOleObject::GetClipboardData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) в Windows SDK.  
   
 ##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  Извлекает отображаемый размер элемента, работающей в единицах HIMETRIC (0,01 мм на единицу).  
@@ -382,7 +382,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>Примечания  
  Размер хранится в данные-член класса элемента управления [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
   
- См. в разделе [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) в Windows SDK.  
+ См. в разделе [IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) в Windows SDK.  
   
 ##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  Возвращает указатель на сведения о зарегистрированных состоянии для элемента управления путем вызова `OleRegGetMiscStatus`.  
@@ -396,7 +396,7 @@ STDMETHOD(GetMiscStatus)(
 ### <a name="remarks"></a>Примечания  
  Сведения о состоянии включают поведения, поддерживаемых данными, управления и представление. Сведения о состоянии можно добавить к RGS-файл проекта.  
   
- См. в разделе [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) в Windows SDK.  
+ См. в разделе [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) в Windows SDK.  
   
 ##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  Получает моникер элемента управления.  
@@ -412,7 +412,7 @@ STDMETHOD(GetMoniker)(
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) в Windows SDK.  
+ См. в разделе [IOleObject::GetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmoniker) в Windows SDK.  
   
 ##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  Возвращает идентификатор класса элемента управления.  
@@ -422,7 +422,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) в Windows SDK.  
+ См. в разделе [IOleObject::GetUserClassID](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getuserclassid) в Windows SDK.  
   
 ##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  Возвращает имя пользовательского типа элемента управления путем вызова `OleRegGetUserType`.  
@@ -436,7 +436,7 @@ STDMETHOD(GetUserType)(
 ### <a name="remarks"></a>Примечания  
  Имя пользовательского типа используется для отображения в элементах пользовательских интерфейсов, например меню и диалоговые окна. Можно изменить имя пользовательского типа в RGS-файл проекта.  
   
- См. в разделе [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) в Windows SDK.  
+ См. в разделе [IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) в Windows SDK.  
   
 ##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  Инициализирует элемент управления из выбранных данных.  
@@ -452,7 +452,7 @@ STDMETHOD(InitFromData)(
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) в Windows SDK.  
+ См. в разделе [IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) в Windows SDK.  
   
 ##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  Проверяет, является ли элемент управления в актуальном состоянии.  
@@ -465,7 +465,7 @@ STDMETHOD(IsUpToDate)(void);
  Возвращает значение S_OK.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) в Windows SDK.  
+ См. в разделе [IOleObject::IsUpToDate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) в Windows SDK.  
   
 ##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  Вызывается средой [DoVerbDiscardUndo](#doverbdiscardundo) после отбрасывания состояния отмены.  
@@ -633,7 +633,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ### <a name="remarks"></a>Примечания  
  Затем метод возвращает значение S_OK.  
   
- См. в разделе [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) в Windows SDK.  
+ См. в разделе [IOleObject::SetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setclientsite) в Windows SDK.  
   
 ##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  Рекомендует цветовую схему для приложения элемента управления, если таковые имеются.  
@@ -646,7 +646,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) в Windows SDK.  
+ См. в разделе [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) в Windows SDK.  
   
 ##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  Задает степень область отображения элемента управления.  
@@ -664,7 +664,7 @@ STDMETHOD(SetExtent)(
   
  Если член данных класса элемента управления [CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) имеет значение TRUE, `SetExtent` вызовы `SendOnDataChange` и `SendOnViewChange` для уведомления все приемники зарегистрировано владелец advise размера элемента управления с изменить.  
   
- См. в разделе [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) в Windows SDK.  
+ См. в разделе [IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) в Windows SDK.  
   
 ##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  Сообщает родительскому элементу, имена приложения-контейнера и документе-контейнере.  
@@ -677,7 +677,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
  Возвращает значение S_OK.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) в Windows SDK.  
+ См. в разделе [IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) в Windows SDK.  
   
 ##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  Сообщает родительскому элементу Каково его моникер.  
@@ -692,7 +692,7 @@ STDMETHOD(SetMoniker)(
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) в Windows SDK.  
+ См. в разделе [IOleObject::SetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setmoniker) в Windows SDK.  
   
 ##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  Удаляет вспомогательное соединение, хранящихся в классе элемента управления `m_spOleAdviseHolder` элемент данных.  
@@ -702,7 +702,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) в Windows SDK.  
+ См. в разделе [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) в Windows SDK.  
   
 ##  <a name="update"></a>  IOleObjectImpl::Update  
  Обновляет элемент управления.  
@@ -715,9 +715,9 @@ STDMETHOD(Update)(void);
  Возвращает значение S_OK.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleObject::Update](http://msdn.microsoft.com/library/windows/desktop/ms679699) в Windows SDK.  
+ См. в разделе [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
- [Интерфейсы, элементы управления ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

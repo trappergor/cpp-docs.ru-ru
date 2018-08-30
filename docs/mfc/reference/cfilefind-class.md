@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82639ff7d4c4f6c6e33778b47509a2744cb12f13
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 796a717faf86d10e789dec8ea0ca0e77517414a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337399"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215284"
 ---
 # <a name="cfilefind-class"></a>Класс CFileFind
 Выполняет поиск локального файла и является базовым классом для [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) и [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), которые выполняют поиск файлов Интернета.  
@@ -207,7 +207,7 @@ virtual BOOL FindFile(
  Зарезервированные, чтобы сделать `FindFile` полиморфным производных классов. Должно быть 0.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Примечания  
  После вызова метода `FindFile` для начала поиска файла, вызовите [FindNextFile](#findnextfile) для извлечения последующих файлов. Необходимо вызвать `FindNextFile` по крайней мере один раз перед вызовом любой из следующих атрибутов функции-члены:  
@@ -234,7 +234,7 @@ virtual BOOL FindFile(
   
 - [IsCompressed](#iscompressed)  
   
-- [IsDirectory](#isdirectory)  
+- [IsDirectory](#isdirectory) (является каталогом);  
   
 - [IsDots](#isdots)  
   
@@ -261,7 +261,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, при наличии нескольких файлов; нуль, если найден файл является последним в каталоге или если возникает ошибка. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Если файл найден последнего файла в каталоге, или если соответствующие файлы можно найти, `GetLastError` функция возвращает ERROR_NO_MORE_FILES.  
+ Ненулевое значение, при наличии нескольких файлов; нуль, если найден файл является последним в каталоге или если возникает ошибка. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Если файл найден последнего файла в каталоге, или если соответствующие файлы можно найти, `GetLastError` функция возвращает ERROR_NO_MORE_FILES.  
   
 ### <a name="remarks"></a>Примечания  
  Необходимо вызвать `FindNextFile` по крайней мере один раз перед вызовом любой из следующих атрибутов функции-члены:  
@@ -288,7 +288,7 @@ virtual BOOL FindNextFile();
   
 - [IsCompressed](#iscompressed)  
   
-- [IsDirectory](#isdirectory)  
+- [IsDirectory](#isdirectory) (является каталогом);  
   
 - [IsDots](#isdots)  
   
@@ -304,7 +304,7 @@ virtual BOOL FindNextFile();
   
 - [MatchesMask](#matchesmask)  
   
- `FindNextFile` Создает оболочку для функции Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
+ `FindNextFile` Создает оболочку для функции Win32 [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).  
   
 ### <a name="example"></a>Пример  
   См. в примере [CFileFind::IsDirectory](#isdirectory).  
@@ -319,7 +319,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Параметры  
  *pTimeStamp*  
- Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время создания файла.  
+ Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время создания файла.  
   
  *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
@@ -331,7 +331,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `GetCreationTime`.  
   
 > [!NOTE]
->  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API Дополнительные сведения.  
+>  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API Дополнительные сведения.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CFileFind::GetLength](#getlength).  
@@ -439,7 +439,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
   
  *pTimeStamp*  
- Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последнего доступа к файлу.  
+ Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последнего доступа к файлу.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если выполнение прошло успешно; 0, если операция завершилась неудачей. `GetLastAccessTime` Возвращает 0 только в том случае, если [FindNextFile](#findnextfile) никогда не был вызван на это `CFileFind` объекта.  
@@ -448,7 +448,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `GetLastAccessTime`.  
   
 > [!NOTE]
->  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API Дополнительные сведения.  
+>  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API Дополнительные сведения.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CFileFind::GetLength](#getlength).  
@@ -463,7 +463,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Параметры  
  *pTimeStamp*  
- Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последней операции записи файла.  
+ Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последней операции записи файла.  
   
  *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
@@ -475,7 +475,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `GetLastWriteTime`.  
   
 > [!NOTE]
->  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_Find_Data](http://msdn.microsoft.com/library/windows/desktop/aa365740) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API Дополнительные сведения.  
+>  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API Дополнительные сведения.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CFileFind::GetLength](#getlength).  
@@ -493,7 +493,7 @@ ULONGLONG GetLength() const;
 ### <a name="remarks"></a>Примечания  
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `GetLength`.  
   
- `GetLength` используется структура Win32 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) для получения и возврата значения размер файла в байтах.  
+ `GetLength` используется структура Win32 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) для получения и возврата значения размер файла в байтах.  
   
 > [!NOTE]
 >  Начиная с MFC 7.0 `GetLength` поддерживает 64-разрядными целочисленными типами. Ранее существующий код, созданный с помощью этой новой версии библиотеки может привести предупреждения об усечении.  
@@ -530,7 +530,7 @@ BOOL IsArchived() const;
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Приложения пометить файл архива, который является для резервного копирования или удаления, с FILE_ATTRIBUTE_ARCHIVE, атрибут файла, указанного в [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуры.  
+ Приложения пометить файл архива, который является для резервного копирования или удаления, с FILE_ATTRIBUTE_ARCHIVE, атрибут файла, указанного в [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структуры.  
   
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `IsArchived`.  
   
@@ -550,7 +550,7 @@ BOOL IsCompressed() const;
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Сжатый файл помечается FILE_ATTRIBUTE_COMPRESSED, идентифицирован файлового атрибута [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуры. Для файла этот атрибут указывает, что все данные в файле сжата. Для каталога этот атрибут указывает, что сжатие используется по умолчанию для вновь создаваемых файлов и подкаталогов.  
+ Сжатый файл помечается FILE_ATTRIBUTE_COMPRESSED, идентифицирован файлового атрибута [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структуры. Для файла этот атрибут указывает, что все данные в файле сжата. Для каталога этот атрибут указывает, что сжатие используется по умолчанию для вновь создаваемых файлов и подкаталогов.  
   
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `IsCompressed`.  
   
@@ -570,7 +570,7 @@ BOOL IsDirectory() const;
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Файл, который является каталогом помечается FILE_ATTRIBUTE_DIRECTORY атрибут файла, заданный в [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуры.  
+ Файл, который является каталогом помечается FILE_ATTRIBUTE_DIRECTORY атрибут файла, заданный в [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структуры.  
   
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `IsDirectory`.  
   
@@ -608,7 +608,7 @@ BOOL IsHidden() const;
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Скрытые файлы, которые помечены с FILE_ATTRIBUTE_HIDDEN, атрибут файла, заданный в [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуры. Скрытый файл не включается в обычный список каталога.  
+ Скрытые файлы, которые помечены с FILE_ATTRIBUTE_HIDDEN, атрибут файла, заданный в [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структуры. Скрытый файл не включается в обычный список каталога.  
   
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `IsHidden`.  
   
@@ -628,7 +628,7 @@ BOOL IsNormal() const;
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Файлы с FILE_ATTRIBUTE_NORMAL, атрибут файла, заданный в [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуры. Обычный файл имеет другие атрибуты не установлены. Все другие атрибуты файла переопределить этот атрибут.  
+ Файлы с FILE_ATTRIBUTE_NORMAL, атрибут файла, заданный в [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структуры. Обычный файл имеет другие атрибуты не установлены. Все другие атрибуты файла переопределить этот атрибут.  
   
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `IsNormal`.  
   
@@ -648,7 +648,7 @@ BOOL IsReadOnly() const;
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Файл, доступный только для чтения помечается FILE_ATTRIBUTE_READONLY, идентифицирован файлового атрибута [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуры. Приложения могут читать такой файл, но не могут записывать данные в него и удалите его.  
+ Файл, доступный только для чтения помечается FILE_ATTRIBUTE_READONLY, идентифицирован файлового атрибута [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структуры. Приложения могут читать такой файл, но не могут записывать данные в него и удалите его.  
   
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `IsReadOnly`.  
   
@@ -668,7 +668,7 @@ BOOL IsSystem() const;
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Системный файл помечается FILE_ATTRIBUTE_SYSTEM, атрибут файла, заданный в [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуры. Системный файл является частью, или используется исключительно, операционной системой.  
+ Системный файл помечается FILE_ATTRIBUTE_SYSTEM, атрибут файла, заданный в [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структуры. Системный файл является частью, или используется исключительно, операционной системой.  
   
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `IsSystem`.  
   
@@ -688,7 +688,7 @@ BOOL IsTemporary() const;
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Временный файл помечается FILE_ATTRIBUTE_TEMPORARY, идентифицирован файлового атрибута [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуры. Временный файл используется для временного хранения. Приложения следует записать в файл только в том случае, если это абсолютно необходимо. Большая часть файла данных остается в памяти без, записываемых на носитель, так как файл скоро будет удален.  
+ Временный файл помечается FILE_ATTRIBUTE_TEMPORARY, идентифицирован файлового атрибута [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структуры. Временный файл используется для временного хранения. Приложения следует записать в файл только в том случае, если это абсолютно необходимо. Большая часть файла данных остается в памяти без, записываемых на носитель, так как файл скоро будет удален.  
   
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `IsTemporary`.  
   
@@ -715,7 +715,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
   
 ### <a name="parameters"></a>Параметры  
  *dwMask*  
- Указывает один или несколько атрибутов файла, указанного в [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуру для найденного файла. Для поиска нескольких атрибутов, используйте операцию побитового или (&#124;) оператор. Допустимо любое сочетание следующих атрибутов:  
+ Указывает один или несколько атрибутов файла, указанного в [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структуру для найденного файла. Для поиска нескольких атрибутов, используйте операцию побитового или (&#124;) оператор. Допустимо любое сочетание следующих атрибутов:  
   
 -   FILE_ATTRIBUTE_ARCHIVE файл представляет собой файл архива. Приложения используют этот атрибут для пометки файлов для резервного копирования или удаления.  
   
@@ -734,7 +734,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 -   FILE_ATTRIBUTE_TEMPORARY файл используется для временного хранения. Приложения следует записать в файл только в том случае, если это абсолютно необходимо. Большая часть файла данных остается в памяти без, записываемых на носитель, так как файл скоро будет удален.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Примечания  
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `MatchesMask`.  

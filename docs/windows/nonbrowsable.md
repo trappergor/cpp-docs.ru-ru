@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2537ba803d27cc3cf90d111e69778e9d6970770
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d7a888ac987e8928a0e9667f2011ef7afe3075ca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590149"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209057"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -36,7 +36,7 @@ ms.locfileid: "42590149"
 
 ## <a name="remarks"></a>Примечания
 
-**Недоступная для просмотра** атрибут C++ имеет ту же функциональность, что [недоступная для просмотра](http://msdn.microsoft.com/library/windows/desktop/aa367117) описании атрибута MIDL.
+**Недоступная для просмотра** атрибут C++ имеет ту же функциональность, что [недоступная для просмотра](/windows/desktop/Midl/nonbrowsable) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 

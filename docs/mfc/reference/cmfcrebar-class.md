@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8af155401492e97be6a9e3a80b72c8c4e7fbd9e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8910a1742bf50f178c75b5c78f250b8c1f103b04
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543207"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217981"
 ---
 # <a name="cmfcrebar-class"></a>Класс CMFCReBar
 Объект `CMFCReBar` объект является панель элементов управления, которая предоставляет макет, сохраняемость и сведения о состоянии для элементов управления "Главная панель".  
@@ -69,7 +69,7 @@ class CMFCReBar : public CPane
 |[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Предоставляет прямой доступ к базовому объекту [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) общего элемента управления.|  
 |[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Переопределяет [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
 |[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Переопределяет [CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|  
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Переопределяет [CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77).)|  
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Переопределяет [CBasePane::OnUpdateCmdUI](https://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77).)|  
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Переопределяет [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|  
   
 ## <a name="remarks"></a>Примечания  
@@ -120,7 +120,7 @@ BOOL AddBar(
  Указывает битовую карту для отображения на заднем плане главной панели.  
   
  [in] *dwStyle*  
- Содержит стиль, применяемый к полосе. Полный список стилей аппаратного контроллера управления, см. в описании для `fStyle` в [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) структуры в документации по Windows SDK.  
+ Содержит стиль, применяемый к полосе. Полный список стилей аппаратного контроллера управления, см. в описании для `fStyle` в [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) структуры в документации по Windows SDK.  
   
  [in] *clrFore*  
  Представляет цвет переднего плана для главной панели.  
@@ -147,7 +147,7 @@ BOOL Create(
  Указатель на родительское окно элемента управления "Главная панель".  
   
  [in] *dwCtrlStyle*  
- Задает стиль для элемента управления "Главная панель". Значение по умолчанию стиль — **RBS_BANDBORDERS**, который отображает ограничить строки для разделения смежные полосами в элементе управления "Главная панель". Список допустимых стили, см. в разделе [стили элемента управления главной панели](http://msdn.microsoft.com/library/windows/desktop/bb774377) в документации по Windows SDK.  
+ Задает стиль для элемента управления "Главная панель". Значение по умолчанию стиль — **RBS_BANDBORDERS**, который отображает ограничить строки для разделения смежные полосами в элементе управления "Главная панель". Список допустимых стили, см. в разделе [стили элемента управления главной панели](/windows/desktop/Controls/rebar-control-styles) в документации по Windows SDK.  
   
  [in] *dwStyle*  
  Стиль окна элемента управления "Главная панель". Список допустимых стили, см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  

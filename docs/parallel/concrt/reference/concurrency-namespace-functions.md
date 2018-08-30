@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e385f965ab3036d6ccf2383fd4ae6f420eb548
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541080"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219583"
 ---
 # <a name="concurrency-namespace-functions"></a>функции пространства имен Concurrency
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  Интерфейс `IResourceManager`.  
   
 ### <a name="remarks"></a>Примечания  
- Несколько последующие вызовы этого метода будет возвращать один и тот же экземпляр диспетчера ресурсов. Каждый вызов метода увеличивает ссылку подсчета с помощью Resource Manager и должен совпадать с вызовом [IResourceManager::Release](http://msdn.microsoft.com/en-us/5d1356ec-fbd3-4284-a361-1e9e20bbb522) метод, когда планировщик завершает взаимодействует с диспетчером ресурсов.  
+ Несколько последующие вызовы этого метода будет возвращать один и тот же экземпляр диспетчера ресурсов. Каждый вызов метода увеличивает ссылку подсчета с помощью Resource Manager и должен совпадать с вызовом [IResourceManager::Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522) метод, когда планировщик завершает взаимодействует с диспетчером ресурсов.  
   
  [unsupported_os](unsupported-os-class.md) возникает исключение, если операционная система не поддерживается средой выполнения с параллелизмом.  
   
 ##  <a name="create_task"></a>  create_task  
- Создает объект PPL [задачи](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.  
+ Создает объект PPL [задачи](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.  
   
 ```
 template<typename T>

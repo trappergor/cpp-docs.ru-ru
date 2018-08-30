@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b77254c78dbb84d546e080ca5bc275919aac64a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1f67107b17f304c5a9c4d6f68d68797370502065
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42545862"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221731"
 ---
 # <a name="clistbox-class"></a>CListBox-класс
 Предоставляет функции списка Windows.  
@@ -644,7 +644,7 @@ DWORD_PTR GetItemData(int nIndex) const;
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
- Извлекает значение 32-разрядных предоставленную приложением, связанное с элементом указанного списка как указатель ( **void\***).  
+ Извлекает значение 32-разрядных предоставленную приложением, связанное с элементом указанного списка как указатель (**void** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -710,7 +710,7 @@ DWORD GetListBoxInfo() const;
  Число элементов на столбце `CListBox` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LB_GETLISTBOXINFO](/windows/desktop/Controls/lb-getlistboxinfo) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getlocale"></a>  CListBox::GetLocale  
  Возвращает языковой стандарт, используемый в списке.  
@@ -1144,7 +1144,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
- Задает 32-разрядное значение, связанное с указанным элементом в поле со списком, чтобы быть заданный указатель ( **void\***).  
+ Задает 32-разрядное значение, связанное с указанным элементом в поле со списком, чтобы быть заданный указатель ( **void** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(

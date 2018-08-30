@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 690c7bd36046161fb39a560b7aa2f7bf13c55828
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 06bb7101524a51872ca4d329fbe9db6b13b6b8bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339625"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214950"
 ---
 # <a name="cgopherfilefind-class"></a>Класс CGopherFileFind
 Помогает в поиске файлов Интернета на серверах gopher.  
@@ -162,7 +162,7 @@ virtual BOOL FindFile(
 -   INTERNET_FLAG_USE_EXISTING Если это возможно, повторно использовать существующие подключения к серверу для новых `FindFile` запросы, а не создавать новый сеанс для каждого запроса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Примечания  
  После вызова метода `FindFile` для получения первого объекта gopher, можно вызвать [FindNextFile](#findnextfile) для получения файлов последующих gopher.  
@@ -175,7 +175,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, при наличии нескольких файлов; нуль, если найден файл является последним в каталоге или если возникает ошибка. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Если файл найден последнего файла в каталоге, или если соответствующие файлы можно найти, `GetLastError` функция возвращает ERROR_NO_MORE_FILES.  
+ Ненулевое значение, при наличии нескольких файлов; нуль, если найден файл является последним в каталоге или если возникает ошибка. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Если файл найден последнего файла в каталоге, или если соответствующие файлы можно найти, `GetLastError` функция возвращает ERROR_NO_MORE_FILES.  
   
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime  
  Получает время создания текущего файла.  
@@ -187,7 +187,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Параметры  
  *pTimeStamp*  
- Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время создания файла.  
+ Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время создания файла.  
   
  *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
@@ -199,7 +199,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `GetCreationTime`.  
   
 > [!NOTE]
->  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API Дополнительные сведения.  
+>  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API Дополнительные сведения.  
   
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime  
  Получает время последнего обращения к указанному файлу.  
@@ -214,7 +214,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
   
  *pTimeStamp*  
- Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последнего доступа к файлу.  
+ Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последнего доступа к файлу.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если выполнение прошло успешно; 0, если операция завершилась неудачей. `GetLastAccessTime` Возвращает 0 только в том случае, если [FindNextFile](#findnextfile) никогда не был вызван на это `CGopherFileFind` объекта.  
@@ -223,7 +223,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `GetLastAccessTime`.  
   
 > [!NOTE]
->  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API Дополнительные сведения.  
+>  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API Дополнительные сведения.  
   
 ##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime  
  Получает время последнего изменения файла.  
@@ -235,7 +235,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Параметры  
  *pTimeStamp*  
- Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последней операции записи файла.  
+ Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последней операции записи файла.  
   
  *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  Необходимо вызвать [FindNextFile](#findnextfile) по крайней мере один раз перед вызовом `GetLastWriteTime`.  
   
 > [!NOTE]
->  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API Дополнительные сведения.  
+>  Не все файловые системы используйте ту же семантику, чтобы реализовать отметку времени, возвращаемое этой функцией. Эта функция может возвращать же значение, возвращенное другие функции отметку времени, если базовой файловой системы или сервер не поддерживает сохранение атрибут времени. См. в разделе [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) структура сведения о форматах времени. В некоторых операционных системах возвращаемое значение времени — времени, были зоны локальной машине, что он находится. См. в разделе Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API Дополнительные сведения.  
   
 ##  <a name="getlength"></a>  CGopherFileFind::GetLength  
  Эта функция члена получить длину в байтах, найденного файла.  
@@ -260,7 +260,7 @@ virtual ULONGLONG GetLength() const;
  Длина найденного файла в байтах.  
   
 ### <a name="remarks"></a>Примечания  
- `GetLength` используется структура Win32 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) для получения значения от размера файла в байтах.  
+ `GetLength` используется структура Win32 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) для получения значения от размера файла в байтах.  
   
 > [!NOTE]
 >  Начиная с MFC 7.0 `GetLength` поддерживает 64-разрядными целочисленными типами. Ранее существовавшие кода, созданного с помощью этой новой версии библиотеки может привести предупреждения об усечении.  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852293"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214786"
 ---
 # <a name="example-implementing-a-property-page"></a>Пример: Реализация страницы свойств
 В этом примере показано, как создать страницу свойств, отображающий (и позволяет изменять) свойства [классы документов](../mfc/document-classes.md) интерфейс.  
@@ -70,7 +70,7 @@ ms.locfileid: "37852293"
  Эти элементы управления будет использоваться для отображения имени файла документа и его состояние только для чтения.  
   
 > [!NOTE]
->  Ресурс диалогового окна не включает кадра или команды кнопок и не имеет с вкладками внешний вид, можно было бы ожидать. Эти возможности предоставляются фрейма страницы свойств, например в каталог, созданных вызывающими [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  Ресурс диалогового окна не включает кадра или команды кнопок и не имеет с вкладками внешний вид, можно было бы ожидать. Эти возможности предоставляются фрейма страницы свойств, например в каталог, созданных вызывающими [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).  
   
 ##  <a name="vcconadding_message_handlers"></a> Добавление обработчиков сообщений  
  С помощью элементов управления, в месте можно добавить обработчики сообщений, чтобы обновить состояние "грязные" страницы, при изменении значения любого элемента управления:  

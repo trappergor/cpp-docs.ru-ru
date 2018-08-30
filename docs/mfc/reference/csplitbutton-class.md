@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538931"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207645"
 ---
 # <a name="csplitbutton-class"></a>Класс CSplitButton
 `CSplitButton` Класс представляет элемент управления split button. Элемент управления "кнопка разделения" реализует поведение по умолчанию, когда пользователь щелкает основную часть кнопки, и отображает раскрывающееся меню, когда пользователь щелкает раскрывающуюся стрелку кнопки.  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|Обрабатывает уведомление BCN_DROPDOWN, система отправляет, когда пользователь щелкает стрелку раскрывающегося списка для текущего управления SplitButton.|  
   
 ## <a name="remarks"></a>Примечания  
- `CSplitButton` Класс является производным от [CButton](../../mfc/reference/cbutton-class.md) класса. Элемент управления split button является элементом управления кнопки, стиль которого является BS_SPLITBUTTON. Пользовательское меню отображается в том случае, когда пользователь щелкает стрелку раскрывающегося списка. Дополнительные сведения см. в разделе стили BS_SPLITBUTTON и BS_DEFSPLITBUTTON [стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ `CSplitButton` Класс является производным от [CButton](../../mfc/reference/cbutton-class.md) класса. Элемент управления split button является элементом управления кнопки, стиль которого является BS_SPLITBUTTON. Пользовательское меню отображается в том случае, когда пользователь щелкает стрелку раскрывающегося списка. Дополнительные сведения см. в разделе стили BS_SPLITBUTTON и BS_DEFSPLITBUTTON [стили кнопок](/windows/desktop/Controls/button-styles).  
   
  На следующем рисунке представлен диалоговое окно, которое содержит элемент управления страничного навигатора и элемент управления button (1) разбиения. (2) стрелку раскрывающегося списка уже был выполнен щелчок, и отображается меню (3).  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Побитовое сочетание (OR) стили элемента управления к элементу управления. Дополнительные сведения см. в разделе [стили кнопок](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|  
+|[in] *rect*|Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|  
 |[in] *pParentWnd*|Ненулевой указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления.|  
 |[in] *nID*|Идентификатор элемента управления.|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Указатель на [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) структуру, содержащую сведения о [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) уведомлений.|  
-|[out] *pResult*|(Не используется; значение не возвращается). Возвращаемое значение [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) уведомлений.|  
+|[in] *pNMHDR*|Указатель на [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) структуру, содержащую сведения о [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|  
+|[out] *pResult*|(Не используется; значение не возвращается). Возвращаемое значение [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|  
   
 ### <a name="remarks"></a>Примечания  
  Когда пользователь щелкает стрелку раскрывающегося списка на элемент управления split button, система отправляет уведомление BCN_DROPDOWN сообщения, в котором `OnDropDown` метод обрабатывает. Тем не менее `CSplitButton` объекта не перенаправляет уведомление BCN_DROPDOWN, чтобы элемент управления, содержащий элемент управления split button. Следовательно содержащегося элемента управления не поддерживает настраиваемое действие в ответ на уведомление.  

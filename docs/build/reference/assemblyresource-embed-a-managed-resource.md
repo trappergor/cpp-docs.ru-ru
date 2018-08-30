@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYRESOURCE (внедрение управляемого ресурса) | Документы Microsoft
+title: -ASSEMBLYRESOURCE (внедрение управляемого ресурса) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acb7b173ffd22e65e20dcc9cceef61b2e2131c83
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372182"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213405"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (внедрение управляемого ресурса)
 ```  
@@ -43,13 +43,13 @@ ms.locfileid: "32372182"
  Кроме того можно указать, если этот файл должен быть закрытым в манифесте сборки. По умолчанию *имя* является открытым в сборке.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте параметр/ASSEMBLYRESOURCE для внедрения ресурса в сборку.  
+ Используйте параметр/ASSEMBLYRESOURCE для внедрения ресурса в сборке.  
   
- Ресурсы в сборке при создании с помощью компоновщика открыты. Компоновщик не позволяет переименовать ресурсом в сборке.  
+ Ресурсы в сборку при создании с ключом компоновщика открыты. Компоновщик не поддерживает переименование ресурса в сборке.  
   
- Если *filename* — это файл ресурсов (RESOURCES) .NET Framework, созданным, например, с [генератор файлов ресурсов (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) или в среде разработки, он может осуществляться с помощью членов **System.Resources** пространства имен (в разделе [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx) для получения дополнительной информации). Другие ресурсы, используйте **GetManifestResource** \* методы в **System.Reflection.Assembly** класса доступа к ресурсам во время выполнения.  
+ Если *filename* является файлом ресурсов (RESOURCES) платформы .NET Framework, созданным, например, по [генератор файлов ресурсов (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) или в среде разработки, он может осуществляться с помощью членов пространства **System.Resources** пространства имен (см. в разделе [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) Дополнительные сведения). Все прочие ресурсы, используйте **GetManifestResource** \* методы в **System.Reflection.Assembly** класс для доступа к ресурсу во время выполнения.  
   
- Доступны следующие параметры компоновщика, влияющие на создание сборки.  
+ Доступны следующие параметры компоновщика, которые влияют на создание сборки.  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -67,13 +67,13 @@ ms.locfileid: "32372182"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).  
   
 2.  Нажмите кнопку **компоновщика** папки.  
   
 3.  Нажмите кнопку **ввода** страницу свойств.  
   
-4.  Изменить **внедрить управляемый файл ресурсов** свойство.  
+4.  Изменить **внедренный файл управляемых ресурсов** свойство.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   

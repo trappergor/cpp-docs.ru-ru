@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6c186302c1c59e73e63e20ae29aa665f600fe23
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 72fd8530a05bb0b61af266ca78a1c2fa6716ee6b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880337"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206620"
 ---
 # <a name="ctokengroups-class"></a>Класс CTokenGroups
 Этот класс является оболочкой для `TOKEN_GROUPS` структуры.  
@@ -75,11 +75,11 @@ class CTokenGroups
 |[CTokenGroups::operator =](#operator_eq)|Оператор присвоения.|  
   
 ## <a name="remarks"></a>Примечания  
- [Маркер доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows.  
+ [Маркер доступа](/windows/desktop/SecAuthZ/access-tokens) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows.  
   
- `CTokenGroups` Класс является оболочкой для [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) структура, содержащая сведения о идентификаторы безопасности (SID) группы в маркере доступа.  
+ `CTokenGroups` Класс является оболочкой для [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) структура, содержащая сведения о идентификаторы безопасности (SID) группы в маркере доступа.  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
@@ -100,7 +100,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
  Атрибуты, связываемые с `CSid` объекта.  
   
  *rTokenGroups*  
- Объект [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) структуры.  
+ Объект [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) структуры.  
   
 ### <a name="remarks"></a>Примечания  
  Эти методы позволяют добавить один или несколько `CSid` объекты и связанные с ними атрибуты для `CTokenGroups` объекта.  
@@ -116,7 +116,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
   
 ### <a name="parameters"></a>Параметры  
  *правая часть*  
- `CTokenGroups` Объекта или [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) структуры с помощью которого создается `CTokenGroups` объекта.  
+ `CTokenGroups` Объекта или [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) структуры с помощью которого создается `CTokenGroups` объекта.  
   
 ### <a name="remarks"></a>Примечания  
  `CTokenGroups` Объекта при необходимости могут создаваться с использованием `TOKEN_GROUPS` структуры или ранее определенную `CTokenGroups` объекта.  
@@ -180,7 +180,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Извлекает указатель на [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) структуры, принадлежащих `CTokenGroups` объекта маркера доступа.  
+ Извлекает указатель на [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) структуры, принадлежащих `CTokenGroups` объекта маркера доступа.  
   
 ##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes  
  Извлекает `CSid` объектов и (необязательно) атрибуты, относящиеся к `CTokenGroups` объекта.  
@@ -233,7 +233,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
   
 ### <a name="parameters"></a>Параметры  
  *правая часть*  
- `CTokenGroups` Объекта или [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) структуры, чтобы назначить `CTokenGroups` объекта.  
+ `CTokenGroups` Объекта или [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) структуры, чтобы назначить `CTokenGroups` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CTokenGroups` объекта.  
@@ -246,7 +246,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Приводит значение к указателю на [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) структуры.  
+ Приводит значение к указателю на [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) структуры.  
   
 ## <a name="see-also"></a>См. также  
  [Образец безопасности](../../visual-cpp-samples.md)   

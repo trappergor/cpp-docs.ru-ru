@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c756de90967b4c9178d5e6a584990cc53ad7786c
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900942"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206896"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Переопределение для выполнения обработки времени простоя приложения.|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Вызывается платформой для открытия документа из файла.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Выполняет синтаксический анализ отдельных параметров и флагов в командной строке.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Фильтрует сообщения перед их отправкой в функции Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Фильтрует сообщения перед их отправкой в функции Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Перехватывает определенных сообщений, прежде чем они достигнут приложения.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Обрабатывает аргументы командной строки и флаги.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Перехватывает все необработанные исключения, порождаемые сообщения приложения и обработчиков команд.|
@@ -860,7 +860,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Параметры
 
 *pPrintDlg*  
-Указатель на [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) структуры.
+Указатель на [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -912,7 +912,7 @@ BOOL GetProfileBinary(
 > `GetProfileBinary` выделяет буфер и возвращает его адрес в \* *ppData*. Вызывающий объект отвечает за освобождение буфера с помощью **delete []**.
 
 > [!IMPORTANT]
-> Данные, возвращаемые этой функцией не обязательно NULL завершается, и вызывающий объект должен выполнять проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Данные, возвращаемые этой функцией не обязательно NULL завершается, и вызывающий объект должен выполнять проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Пример
 
@@ -953,7 +953,7 @@ UINT GetProfileInt(
 Эта функция-член не должен учитываться регистр, поэтому строки в *lpszSection* и *lpszEntry* параметры отличаться только регистром.
 
 > [!IMPORTANT]
-> Данные, возвращаемые этой функцией не обязательно NULL завершается, и вызывающий объект должен выполнять проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Данные, возвращаемые этой функцией не обязательно NULL завершается, и вызывающий объект должен выполнять проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Пример
 
@@ -990,7 +990,7 @@ CString GetProfileString(
 ### <a name="remarks"></a>Примечания
 
 > [!IMPORTANT]
-> Данные, возвращаемые этой функцией не обязательно NULL завершается, и вызывающий объект должен выполнять проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Данные, возвращаемые этой функцией не обязательно NULL завершается, и вызывающий объект должен выполнять проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Пример
 
@@ -1073,7 +1073,7 @@ virtual BOOL InitInstance();
 Переопределить `InitInstance` для инициализации каждого нового экземпляра приложения под управлением Windows. Как правило, можно переопределить `InitInstance` для создания объекта главного окна и задания `CWinThread::m_pMainWnd` данные-член для указания этого окна. Дополнительные сведения о переопределении эта функция-член, см. в разделе [CWinApp: класс приложений](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> MFC-приложения должны инициализироваться как однопотоковое подразделение (STA). При вызове метода [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) в вашей `InitInstance` переопределения, укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED). Дополнительные сведения см. в статье PRB: MFC приложение перестает отвечать на запросы при инициализации приложения в качестве многопотокового подразделения (828643) в [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+> MFC-приложения должны инициализироваться как однопотоковое подразделение (STA). При вызове метода [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) в вашей `InitInstance` переопределения, укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED). Дополнительные сведения см. в статье PRB: MFC приложение перестает отвечать на запросы при инициализации приложения в качестве многопотокового подразделения (828643) в [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
 
 ### <a name="example"></a>Пример
 
@@ -1109,7 +1109,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 Указатель на заканчивающуюся нулем строку, содержащую имя ресурса курсора. Можно использовать `CString` для этого аргумента.
 
 *nIDResource*  
-Идентификатор ресурса курсора. Список ресурсов, см. в разделе [LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) в пакете Windows SDK.
+Идентификатор ресурса курсора. Список ресурсов, см. в разделе [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1152,7 +1152,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 Можно использовать [LoadStandardIcon](#loadstandardicon) или [LoadOEMIcon](#loadoemicon) функции-члена для доступа к предварительно определенных значков Windows.
 
 > [!NOTE]
-> Эта функция-член вызывает функцию Win32 API [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), который может загружать только значок, размер которого соответствует значения метрик системы SM_CXICON и SM_CYICON.
+> Эта функция-член вызывает функцию Win32 API [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), который может загружать только значок, размер которого соответствует значения метрик системы SM_CXICON и SM_CYICON.
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1262,7 +1262,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Параметры
 
 *lpszIconName*  
-Манифеста идентификатор константы, указывающее предопределенные значок Windows. Эти идентификаторы определяются в WINDOWS. З. Список возможных стандартных значений и их описания, см. в разделе *lpIconName* параметр в [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) в пакете Windows SDK.
+Манифеста идентификатор константы, указывающее предопределенные значок Windows. Эти идентификаторы определяются в WINDOWS. З. Список возможных стандартных значений и их описания, см. в разделе *lpIconName* параметр в [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1444,7 +1444,7 @@ LPCTSTR m_pszAppName;
 
 Имя приложения могут поступать из параметров, переданных [CWinApp](#cwinapp) конструктор, или, если не указан, в строку ресурса с Идентификатором AFX_IDS_APP_TITLE. Если имя приложения не найден в ресурсе, он поступает из программы. Имя файла EXE.
 
-Возвращаемый функцией глобального [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName` — это открытая переменная типа **const char\***.
+Возвращаемый функцией глобального [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName` — это открытая переменная типа **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Если присвоить значение `m_pszAppName`, он должен быть динамически выделен в куче. `CWinApp` Вызовы деструктора **бесплатный**() этого указателя. Многие будет использоваться `_tcsdup`()-функция библиотеки времени выполнения для выполнения распределения. Кроме того освободите память, связанную с текущим указателем перед назначением ему новое значение. Пример:
@@ -1465,7 +1465,7 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>Примечания
 
-В отличие от [m_pszAppName](#m_pszappname), это имя не может содержать пробелы. `m_pszExeName` — это открытая переменная типа **const char\***.
+В отличие от [m_pszAppName](#m_pszappname), это имя не может содержать пробелы. `m_pszExeName` — это открытая переменная типа **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Если присвоить значение `m_pszExeName`, он должен быть динамически выделен в куче. `CWinApp` Вызовы деструктора **бесплатный**() этого указателя. Многие будет использоваться `_tcsdup`()-функция библиотеки времени выполнения для выполнения распределения. Кроме того освободите память, связанную с текущим указателем перед назначением ему новое значение. Пример:
@@ -1482,7 +1482,7 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию инициализирует платформу `m_pszHelpFilePath` имя приложения с «. HLP» добавлен. Чтобы изменить имя файла справки, установите `m_pszHelpFilePath` указывал на строка, содержащая полное имя файла справки нужное. — Удобное место для этого в приложении [InitInstance](#initinstance) функции. `m_pszHelpFilePath` — это открытая переменная типа **const char\***.
+По умолчанию инициализирует платформу `m_pszHelpFilePath` имя приложения с «. HLP» добавлен. Чтобы изменить имя файла справки, установите `m_pszHelpFilePath` указывал на строка, содержащая полное имя файла справки нужное. — Удобное место для этого в приложении [InitInstance](#initinstance) функции. `m_pszHelpFilePath` — это открытая переменная типа **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Если присвоить значение `m_pszHelpFilePath`, он должен быть динамически выделен в куче. `CWinApp` Вызовы деструктора **бесплатный**() этого указателя. Многие будет использоваться `_tcsdup`()-функция библиотеки времени выполнения для выполнения распределения. Кроме того освободите память, связанную с текущим указателем перед назначением ему новое значение. Пример:
@@ -1499,7 +1499,7 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>Примечания
 
-`m_pszProfileName` — это открытая переменная типа **const char\***.
+`m_pszProfileName` — это открытая переменная типа **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Если присвоить значение `m_pszProfileName`, он должен быть динамически выделен в куче. `CWinApp` Вызовы деструктора **бесплатный**() этого указателя. Многие будет использоваться `_tcsdup`()-функция библиотеки времени выполнения для выполнения распределения. Кроме того освободите память, связанную с текущим указателем перед назначением ему новое значение. Пример:
@@ -1794,7 +1794,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-Переопределите эту функцию для фильтрации сообщений окон до их передачи функциям Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) реализация по умолчанию выполняет сочетания клавиш перевод, поэтому необходимо вызвать `CWinApp::PreTranslateMessage` функция-член в переопределенные версии.
+Переопределите эту функцию для фильтрации сообщений окон до их передачи функциям Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) реализация по умолчанию выполняет сочетания клавиш перевод, поэтому необходимо вызвать `CWinApp::PreTranslateMessage` функция-член в переопределенные версии.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -2131,7 +2131,7 @@ void SelectPrinter(
 Дескриптор [DEVNAMES](../../mfc/reference/devnames-structure.md) структура, определяющая драйвера, устройства, а также имена портов выходные данные конкретного принтера.
 
 *hDevMode*  
-Дескриптор [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) структуру, которая указывает сведения об инициализации устройства и среде принтера.
+Дескриптор [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) структуру, которая указывает сведения об инициализации устройства и среде принтера.
 
 *bFreeOld*  
 Освобождает ранее выбранный принтер.
@@ -2270,7 +2270,7 @@ virtual void WinHelp(
 Указывает дополнительные данные. Значение, используемое зависит от значения *nCmd* параметра.
 
 *nCmd*  
-Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) функции Windows.
+Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) функции Windows.
 
 ### <a name="remarks"></a>Примечания
 

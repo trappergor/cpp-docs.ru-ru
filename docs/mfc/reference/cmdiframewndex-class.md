@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7a95327430b4d0bbfda173c83b7631af822060
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339245"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216292"
 ---
 # <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
 Расширяет функциональность [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), окно фрейма Windows многодокументного интерфейса (MDI).  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Вызывается платформой при активации меню с перемещаемой панелью.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Вызывается платформой для обновления меню фрейма. (Переопределяет `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Возвращает закрепляемой области, содержащей заданную точку.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) .  (Переопределяет `CMDIFrameWnd::PreTranslateMessage`.)|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows.  (Переопределяет `CMDIFrameWnd::PreTranslateMessage`.)|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Вызывается платформой для повторно рассчитать макет окна фрейма. (Переопределяет [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Отменяет регистрацию область и удаляет его из диспетчера закрепления.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Сохраняет текущий макет групп с вкладками MDI и список ранее открывавшихся документов.|  
@@ -1341,7 +1341,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  Кнопка панели инструментов.  
   
  [out] *pTI*  
- Указатель на [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) структуры.  
+ Указатель на [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если приложение заполняет *pTI* параметра. Реализация по умолчанию возвращает значение FALSE.  
@@ -1790,7 +1790,7 @@ virtual void WinHelp(
  Указывает данные, необходимые для тип справки, определяемое *nCmd*.  
   
  [in] *nCmd*  
- Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе [функция WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) в пакете Windows SDK.  
+ Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе [функция WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

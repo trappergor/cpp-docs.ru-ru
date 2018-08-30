@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5d51bfeb18b51be5a54c51046e3cd420fb1cb8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9f522635c170af784b5bd9f2bb7011fd51e345b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852111"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211612"
 ---
 # <a name="coleupdatedialog-class"></a>Класс COleUpdateDialog
 Используется в особых случаях в диалоговом окне OLE "Изменить ссылки", которое используется при необходимости обновления только существующих связанных или внедренных объектов в документе.  
@@ -114,7 +114,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, если ни один из связанных или внедренных элементов в текущем документе необходимо обновить.  
   
-- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) функции в пакете Windows SDK.  
+- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) функции в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Все ссылки и (или) векторные представления обновляются, если пользователь выбирает кнопки "Отмена".  

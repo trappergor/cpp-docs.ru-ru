@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540514"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199850"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl` Класс предоставляет функциональные возможности для набора вкладок. Элемент управления "вкладка" отображает закрепляемое окно с плоскими или трехмерными вкладками в верхней или нижней части. Вкладки могут отображать текст и изображение и могут изменять цвет, когда активны.  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Вызывается платформой, когда курсор сначала перетаскивается в окне элемента управления tab.|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Вызывается платформой при выполнении операции перетаскивания при перемещении указателя мыши по окна цели перетаскивания. (Переопределяет [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Отображает всплывающее меню окон с вкладками, ожидает, когда пользователь выбирает вкладку и делает активной вкладкой выбранной вкладки.|  
-|`CMFCTabCtrl::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
 |`CMFCTabCtrl::RecalcLayout`|Повторно вычисляет внутренний макет элемента управления вкладки. (Переопределяет [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Задает текущей вкладке набор вкладок в качестве активной вкладки в нескольких группе вкладок интерфейс документа.|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Активирует вкладку. (Переопределяет [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
@@ -784,7 +784,7 @@ virtual DROPEFFECT OnDragEnter(
  Указывает объект данных, содержащий данные, перетаскиваемые пользователем.  
   
  [in] *dwKeyState*  
- Содержит состояние клавиши-модификаторы. Этот параметр представляет собой битовую комбинацию (OR) из следующих значений: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе **параметры сообщения** раздел [о ввод от мыши](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Содержит состояние клавиши-модификаторы. Этот параметр представляет собой битовую комбинацию (OR) из следующих значений: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе **параметры сообщения** раздел [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *точки*  
  Содержит текущее положение курсора в координатах клиентской области окна.  
@@ -812,7 +812,7 @@ virtual DROPEFFECT OnDragOver(
  Указатель на [COleDataObject](../../mfc/reference/coledataobject-class.md) объект, перетаскиваемый в цель перетаскивания.  
   
  [in] *dwKeyState*  
- Состояние клавиши-модификаторы, который представляет собой битовую комбинацию (OR), MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе «Параметры сообщения» в [о ввод от мыши](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Состояние клавиши-модификаторы, который представляет собой битовую комбинацию (OR), MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе «Параметры сообщения» в [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *точки*  
  Текущее положение мыши.  
@@ -1000,7 +1000,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
   
 ### <a name="parameters"></a>Параметры  
  [out] *pScrollInfo*  
- Указатель на [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) структуру или значение NULL. При возвращении данного метода, а если этот параметр не имеет значение NULL, структура содержит все параметры полосы прокрутки. Значение по умолчанию имеет значение NULL.  
+ Указатель на [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) структуру или значение NULL. При возвращении данного метода, а если этот параметр не имеет значение NULL, структура содержит все параметры полосы прокрутки. Значение по умолчанию имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  

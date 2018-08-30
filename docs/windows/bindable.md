@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c529abb1ade786bf7ec0a2d5cff5c49f6197be7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0ce7cffb397aaa170f13bac9fc1f4c1693d25f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601593"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214856"
 ---
 # <a name="bindable"></a>bindable
 
@@ -36,15 +36,15 @@ ms.locfileid: "42601593"
 
 ## <a name="remarks"></a>Примечания
 
-**Bindable** атрибут C++ имеет ту же функциональность, что [bindable](http://msdn.microsoft.com/library/windows/desktop/aa366738) описании атрибута MIDL. Его можно использовать на свойства, определенные с [propget](../windows/propget.md), [propput](../windows/propput.md), или [propputref](../windows/propputref.md) атрибуты, или можно вручную определить метод привязки.
+**Bindable** атрибут C++ имеет ту же функциональность, что [bindable](/windows/desktop/Midl/bindable) описании атрибута MIDL. Его можно использовать на свойства, определенные с [propget](../windows/propget.md), [propput](../windows/propput.md), или [propputref](../windows/propputref.md) атрибуты, или можно вручную определить метод привязки.
 
 В следующих примерах MFC показано использование **bindable**:
 
-- [Примеры элементов управления: Элементы управления ActiveX на основе MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+- [Примеры элементов управления: Элементы управления ActiveX на основе MFC](https://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
 
-- [Кр образец: Элемент управления ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+- [Кр образец: Элемент управления ActiveX](https://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
 
-- [Образец TESTHELP: Элемент управления ActiveX с помощью подсказки и помощь](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+- [Образец TESTHELP: Элемент управления ActiveX с помощью подсказки и помощь](https://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
 
 ## <a name="example"></a>Пример
 

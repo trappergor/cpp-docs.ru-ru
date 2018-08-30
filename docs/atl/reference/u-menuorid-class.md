@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211191"
 ---
 # <a name="umenuorid-class"></a>Класс _U_MENUorID
 Этот класс предоставляет оболочки для `CreateWindow` и `CreateWindowEx`.  
@@ -55,7 +55,7 @@ class _U_MENUorID
 ## <a name="remarks"></a>Примечания  
  Этот класс адаптера аргумент позволяет идентификаторы (единицы) или дескрипторы меню (HMENUs) для передачи в функцию без необходимости явного приведения, со стороны вызывающего объекта.  
   
- Этот класс предназначен для реализации оболочки Windows API, особенно [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) и [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) функции, которые принимают аргумент дескриптора HMENU, возможно, дочернее окно идентификатор (целое число без знака), а не дескриптор меню. Например, можно увидеть этот класс используется в качестве параметра [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Этот класс предназначен для реализации оболочки Windows API, особенно [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) и [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) функции, которые принимают аргумент дескриптора HMENU, возможно, дочернее окно идентификатор (целое число без знака), а не дескриптор меню. Например, можно увидеть этот класс используется в качестве параметра [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
  Этот класс определяет две перегрузки конструктора: один принимает аргумент целое число без знака, а другой принимает аргумент дескриптора HMENU. Целое число без знака аргумент просто привести к HMENU конструктора и результата, хранимого в единый данные-член класса, [m_hMenu](#_u_menuorid__m_hmenu). Аргумент для конструктора HMENU хранится непосредственно без преобразования.  

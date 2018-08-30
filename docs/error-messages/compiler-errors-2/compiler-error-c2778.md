@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2778 | Документы Microsoft
+title: Ошибка компилятора C2778 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f8747c0f2d0434f034ac0a0b84dcce510de0e96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d68180e2fc0c7c33e742f0ffdb3776baa50976f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235095"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209717"
 ---
 # <a name="compiler-error-c2778"></a>Ошибка компилятора C2778
 неправильно сформированный GUID в __declspec(uuid())  
   
- Передан неправильный GUID [uuid](../../cpp/uuid-cpp.md) дополнительных атрибутов.  
+ Передан неверный GUID [uuid](../../cpp/uuid-cpp.md) расширенный атрибут.  
   
  Идентификатор GUID должен быть строкой шестнадцатеричных чисел в следующем формате:  
   
@@ -37,7 +37,7 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};  
 ```  
   
- `uuid` Расширенный атрибут принимает строку, распознанную [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589), с или без разделителей фигурную скобку.  
+ `uuid` Расширенный атрибут принимает строку, распознаваемые [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring), с разделителями или без скобок.  
   
  Следующий пример приводит к возникновению ошибки C2778:  
   

@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8ab76252c355bb56a1e2157e0e025a4eddb0d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596540"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214625"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchangePointer
 **Блок, относящийся только к системам Microsoft**  
@@ -110,7 +110,7 @@ long _InterlockedCompareExchangePointer_rel (
 ## <a name="remarks"></a>Примечания  
  `_InterlockedCompareExchangePointer` выполняет атомарное сравнение значения `Destination` адрес с `Comparand` адрес. Если адрес `Destination` равен адресу `Comparand`, адрес `Exchange` сохраняется в адресе, указанном в `Destination`. В противном случае операция не выполняется.  
   
- `_InterlockedCompareExchangePointer` предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) функции.  
+ `_InterlockedCompareExchangePointer` предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) функции.  
   
  Пример использования `_InterlockedCompareExchangePointer`, см. в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   

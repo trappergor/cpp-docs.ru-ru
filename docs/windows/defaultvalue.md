@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70be45d1a7221590912ea71b38d3aa4404197df1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4df3f6f72ec7a83186cc3d96b2dda837bdd1cfff
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599132"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208000"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -41,7 +41,7 @@ ms.locfileid: "42599132"
 
 ## <a name="remarks"></a>Примечания
 
-**Defaultvalue** атрибут C++ имеет ту же функциональность, что [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) описании атрибута MIDL.
+**Defaultvalue** атрибут C++ имеет ту же функциональность, что [defaultvalue](/windows/desktop/Midl/defaultvalue) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fe930ba0616e27b06aee863285638613f7e31d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b90a96816855e08610d0f63f3ab5c237d564453
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858933"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217953"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "33858933"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|Функция|Описание:|
 |-|-|
 |[addressof](../standard-library/memory-functions.md#addressof)|Получает истинный адрес объекта.|
 |[align](../standard-library/memory-functions.md#align)|Возвращает указатель на диапазон заданного размера на основе указанного выравнивания и начального адреса.|
@@ -69,7 +69,7 @@ ms.locfileid: "33858933"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор!=](../standard-library/memory-operators.md#op_neq)|Проверяет на неравенство между объектами распределителя указанного класса.|
 |[оператор==](../standard-library/memory-operators.md#op_eq_eq)|Проверяет на равенство объекты распределителя указанного класса.|
@@ -81,11 +81,11 @@ ms.locfileid: "33858933"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Класс шаблона описывает объект, который управляет выделением и освобождением памяти для массивов объектов типа **тип**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Описывает объект, определяющий все сведения, необходимые контейнеру с распределителем.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|Класс шаблона описывает объект, в котором хранится указатель на объект типа **Type \***, для которого выделена память, гарантирующий, что объект, на который он указывает, удаляется при удалении элемента auto_ptr, в который он входит.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|Класс шаблона описывает объект, который хранит указатель на выделенный объект типа **тип** <strong>\*</strong> , гарантирующий, что объект, на которое он указывает, удаляется при получении его включающего auto_ptr уничтожить.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Сообщает о необрабатываемом исключении weak_ptr.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Помогает сформировать `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Предоставляет данные, необходимые объекту класса шаблонов `allocator_traits` для описания распределителя с типом указателя `Ptr`.|

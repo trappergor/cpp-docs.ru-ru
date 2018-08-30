@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881935"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221105"
 ---
 # <a name="ccomallocator-class"></a>Класс CComAllocator
 Этот класс предоставляет методы для управления памяти с помощью COM памяти подпрограммы.  
@@ -67,7 +67,7 @@ static void* Allocate(size_t nBytes) throw();
  Возвращает указатель void на выделенное пространство или значение NULL, если памяти недостаточно.  
   
 ### <a name="remarks"></a>Примечания  
- Выделяет память. См. в разделе [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) для получения дополнительных сведений.  
+ Выделяет память. См. в разделе [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) для получения дополнительных сведений.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
  Вызовите эту статическую функцию, чтобы освободить выделенную память.  
@@ -81,7 +81,7 @@ static void Free(void* p) throw();
  Указатель на выделенную область памяти.  
   
 ### <a name="remarks"></a>Примечания  
- Освобождает выделенную память. См. в разделе [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) для получения дополнительных сведений.  
+ Освобождает выделенную память. См. в разделе [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) для получения дополнительных сведений.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  Вызовите эту статическую функцию для повторного выделения памяти.  
@@ -101,7 +101,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  Возвращает указатель void на выделенное пространство или значение NULL, если недостаточно памяти  
   
 ### <a name="remarks"></a>Примечания  
- Изменяет объем выделенной памяти. См. в разделе [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) для получения дополнительных сведений.  
+ Изменяет объем выделенной памяти. См. в разделе [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) для получения дополнительных сведений.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   

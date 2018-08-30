@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3a1470c544e624de4ef9fb570859dca9b282edde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406667"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208070"
 ---
 # <a name="new-and-delete-operators"></a>Операторы new и delete
 
@@ -55,7 +55,7 @@ char *pch = new char[BUFFER_SIZE];
 |**:: оператор new**|Global|  
 |*Имя класса* **:: оператор new**|Класс|  
   
- Первый аргумент **оператор new** должен иметь тип `size_t` (типа, определенного в \<stddef.h >), и тип возвращаемого значения всегда **void \*** .  
+ Первый аргумент **оператор new** должен иметь тип `size_t` (типа, определенного в \<stddef.h >), и тип возвращаемого значения всегда **void** <strong>\*</strong>.  
   
  Глобальный **оператор new** функция вызывается, когда **новый** оператор используется для выделения объектов встроенных типов, объектов типа класса, не содержащих определяемых пользователем **оператор new** функций и массивов любого типа. При **новый** оператор используется для выделения объектов типа класса где **оператор new** определен, этот класс **оператор new** вызывается.  
   

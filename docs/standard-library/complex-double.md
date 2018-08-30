@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f7b6e352240498f921c9aa5c3d1a990da34813
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6008d97b0fab437a9ba2e6b8e0af8d3bc111532a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955433"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218961"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-Описывает объект, который хранит упорядоченную пару объектов типа **двойной***,* первый представляет вещественную часть комплексного числа, а второй — мнимую.
+Описывает объект, который хранит упорядоченную пару объектов типа **двойные**, первый представляет вещественную часть комплексного числа, а второй мнимую.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,11 +46,14 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*RealVal* значение типа **двойные** для вещественной части конструируемого комплексного числа.
+*RealVal*<br/>
+Значение типа **double** для вещественной части конструируемого комплексного числа.
 
-*ImagVal* значение типа **двойные** для мнимой части конструируемого комплексного числа.
+*ImagVal*<br/>
+Значение типа **double** для мнимой части конструируемого комплексного числа.
 
-*complexNum* комплексное число типа **float** или типа **long double** , и действительная и мнимая части которого используются для инициализации комплексное число типа **двойной**конструируемого.
+*complexNum*<br/>
+Комплексное число типа **float** или типа **long double** , и действительная и мнимая части которого используются для инициализации комплексное число типа **двойные** конструируемого.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -104,7 +107,7 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi
         << " degrees." << endl;
 }
-\* Output:
+/* Output:
 Specifying initial real & imaginary parts,
  as type double gives c1 = (4,5)
 Implicit conversion from type float to type double,
@@ -114,7 +117,7 @@ Explicit conversion from type float to type double,
 The modulus of c3 is recovered from c3 using: abs ( c3 ) = 6.40312
 Argument of c3 is recovered from c3 using:
  arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Требования

@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d1b32fe880a278bc2b737148a90afa5bd2ad6e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592086"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211101"
 ---
 # <a name="working-with-resource-files"></a>Работа с файлами ресурсов
 
 > [!WARNING]
-> Этот раздел относится к классическим приложениям Windows, написанным на C++. Сведения о ресурсах в приложениях универсальной платформы Windows, написанного на языке C++ см. в разделе [определение ресурсов приложения](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Этот раздел относится к классическим приложениям Windows, написанным на C++. Сведения о ресурсах в приложениях универсальной платформы Windows, написанного на языке C++ см. в разделе [определение ресурсов приложения](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Сведения о добавлении ресурсов в C + +/ CLI проектов, см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.
 
@@ -53,7 +53,7 @@ ms.locfileid: "42592086"
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Ссылки на документацию по Visual C++.
 
-[Знакомство с Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+[Знакомство с Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
 Описание полного набора средств разработки, которые используют одну интегрированную среду разработки (IDE), что позволяет им совместно использовать инструменты и создавать решения на разных языках.
 
 [Обращайтесь к нам](/visualstudio/ide/talk-to-us)  
@@ -62,4 +62,4 @@ ms.locfileid: "42592086"
 ## <a name="see-also"></a>См. также
 
 [Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)  
-[Меню и другие ресурсы](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Меню и другие ресурсы](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

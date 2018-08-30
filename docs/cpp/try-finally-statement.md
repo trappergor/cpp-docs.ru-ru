@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464864"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215535"
 ---
 # <a name="try-finally-statement"></a>Оператор try-finally
 **Блок, относящийся только к системам Microsoft**  
@@ -90,7 +90,7 @@ __finally {
 ## <a name="abnormal-termination"></a>Аварийное завершение  
  Выход из **try-finally** инструкции, использующей [longjmp](../c-runtime-library/reference/longjmp.md) функции времени выполнения считается ненормальным завершением. Не допускается для перехода в **__try** инструкции, но допустим для выход из него. Все **__finally** инструкций, которые активны между отправным пунктом точкой (нормальном завершении **__try** блок) и назначение ( **__except** блокировать, обрабатывает исключение) должна выполняться. Это называется "локальной раскруткой".  
   
- Если **попробуйте** блок завершается преждевременно по любой причине, включая выход из блока, система выполняет связанный **наконец** блока как часть процесса очистки стека. В таких случаях [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) возвращает **true** Если вызывается из **наконец** block; в противном случае возвращается **false**.  
+ Если **попробуйте** блок завершается преждевременно по любой причине, включая выход из блока, система выполняет связанный **наконец** блока как часть процесса очистки стека. В таких случаях [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) возвращает **true** Если вызывается из **наконец** block; в противном случае возвращается **false**.  
   
  Обработчик завершения не вызывается, если процесс удален во время выполнения **try-finally** инструкции.  
   
@@ -100,4 +100,4 @@ __finally {
  [Написание обработчика завершения](../cpp/writing-a-termination-handler.md)   
  [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
  [Ключевые слова](../cpp/keywords-cpp.md)   
- [Синтаксис обработчика завершения](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [Синтаксис обработчика завершения](/windows/desktop/Debug/termination-handler-syntax)

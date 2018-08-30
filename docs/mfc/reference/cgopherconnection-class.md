@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad48c78d46928a34a43fab5bbe660750928baf51
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 176dfc9027951f06f55dd04757b9acb7c7d8a2ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336765"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199629"
 ---
 # <a name="cgopherconnection-class"></a>Класс CGopherConnection
 Управление подключением к интернет-серверу gopher.  
@@ -158,7 +158,7 @@ static CGopherLocator CreateLocator(
  Указатель на строка селектора, которые нужно отправить на сервер gopher для извлечения объекта. *pstrSelectorString* может иметь значение NULL.  
   
  *dwGopherType*  
- Этот параметр указывает ли *pstrSelectorString* ссылается на каталог или документа, и является ли запрос gopher или gopher +. Просмотреть атрибуты для структуры [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) в пакете Windows SDK.  
+ Этот параметр указывает ли *pstrSelectorString* ссылается на каталог или документа, и является ли запрос gopher или gopher +. Просмотреть атрибуты для структуры [GOPHER_FIND_DATA](/windows/desktop/api/wininet/ns-wininet-gopher_find_dataa) в пакете Windows SDK.  
   
  *pstrLocator*  
  Указатель на строку, определяющую нужный файл. Как правило, эта строка возвращается из вызова [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
@@ -197,7 +197,7 @@ BOOL GetAttribute(
  Ссылку на [CString](../../atl-mfc-shared/reference/cstringt-class.md) , получающий тип указателя.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.  
+ Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.  
   
 ##  <a name="openfile"></a>  CGopherConnection::OpenFile  
  Вызов этой функции-члена для открытия файла на сервере gopher.  

@@ -17,35 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e56f71a427fda2444992cc0ed2c3b6166993af1d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 612050c74cf33d128f108962fab54ef6c0e8e5d9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341027"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214569"
 ---
 # <a name="cdynamicstringaccessora-class"></a>Класс CDynamicStringAccessorA
-Позволяет доступ к источнику данных, когда схема базы данных (базовая структура).  
-  
+
+Позволяет доступ к источнику данных, когда схема базы данных (базовая структура).
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Они оба запроса, что поставщик получить все данные из хранилища данных в виде строковых данных, но `CDynamicStringAccessor` запросы ANSI строковые данные.  
-  
- `CDynamicStringAccessorA` наследует `GetString` и `SetString` из `CDynamicStringAccessor`. При использовании этих методов в `CDynamicStringAccessorA` объекта, ***BaseType*** — **CHAR**.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
-  
-## <a name="see-also"></a>См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны OLE DB потребителя](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Класс CAccessor](../../data/oledb/caccessor-class.md)   
- [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [Класс CManualAccessor](../../data/oledb/cmanualaccessor-class.md)   
- [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
- [Класс CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)
+typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
+```
+
+## <a name="remarks"></a>Примечания
+
+Они оба запроса, что поставщик получить все данные из хранилища данных в виде строковых данных, но `CDynamicStringAccessor` запросы ANSI строковые данные.
+
+`CDynamicStringAccessorA` наследует `GetString` и `SetString` из `CDynamicStringAccessor`. При использовании этих методов в `CDynamicStringAccessorA` объекта, `BaseType` — **CHAR**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atldbcli.h
+
+## <a name="see-also"></a>См. также
+
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Класс CAccessor](../../data/oledb/caccessor-class.md)<br/>
+[Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[Класс CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>
+[Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[Класс CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)<br/>

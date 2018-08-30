@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540330"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223069"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Реализует область, которую можно закрепить на сайте закрепления или включить в область с вкладками.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Указывает, расположены ли вкладки в верхней или нижней части панели.|  
 |[CDockablePane::IsTracked](#istracked)|Указывает ли область перетаскиваемый пользователем.|  
 |[CDockablePane::IsVisible](#isvisible)|Определяет, является ли видимым в текущей области.|  
-|[CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Используется внутренним образом.|  
+|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Используется внутренним образом.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Вызывается платформой при изменении родительского элемента области. (Переопределяет [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Вызывается платформой при закрепляет с плавающей запятой закрепляемую панель в окне фрейма.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Вызывается платформой, когда родительской области. (Переопределяет [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  

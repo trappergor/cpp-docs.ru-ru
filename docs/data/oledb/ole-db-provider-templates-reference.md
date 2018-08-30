@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 04ee2d36d269d3bc9324b10dffd8840f9f68a8ab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573264"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220891"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Ссылка на шаблоны поставщика OLE DB
 Классы и интерфейсы для шаблонов поставщика OLE DB могут быть сгруппированы в следующие категории. Справочные материалы также включает информацию о [макросы для шаблонов поставщика OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "42573264"
  Реализует OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) интерфейс, позволяющий обновлять значения столбцов в существующих строках, удаление строк и вставки новых строк.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Этот класс наследует от [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) и переопределяет [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` выполняет те же функции, что `IObjectWithSite` , но и обеспечивает свойства OLE DB `DBPROPCANSCROLLBACKWARDS` и `DBPROPCANFETCHBACKWARDS`.  
+ Этот класс наследует от [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) и переопределяет [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). `IRowsetCreatorImpl` выполняет те же функции, что `IObjectWithSite` , но и обеспечивает свойства OLE DB `DBPROPCANSCROLLBACKWARDS` и `DBPROPCANFETCHBACKWARDS`.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  Реализует `IRowsetIdentity` интерфейс, который позволяет сравнивать ли две строки данных идентичны, или нет.  

@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTDEPENDENCY (указать зависимости манифеста) | Документы Microsoft
+title: -MANIFESTDEPENDENCY (указать зависимости манифеста) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9b2de39f5b5340eff22c7e22244aca3d05af67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d486047b708e0c3412aa63e0a0b026a2a4204f71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213903"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Указать зависимости манифеста)
 ```  
@@ -31,25 +31,25 @@ ms.locfileid: "32376576"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- / MANIFESTDEPENDENCY позволяет указать атрибуты, которые будут помещены в \<зависимостей > раздел файла манифеста.  
+ / Параметр MANIFESTDEPENDENCY разрешает Задание атрибутов, которые будут помещены в \<зависимостей > раздел файла манифеста.  
   
- В разделе [параметр/MANIFEST (Создание Side-by-Side манифеста сборки)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) сведения о том, как создать файл манифеста.  
+ См. в разделе [/MANIFEST (Создание Side-by-Side манифеста сборки)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) сведения о том, как создать файл манифеста.  
   
- Дополнительные сведения о \<зависимостей > раздел файла манифеста, в разделе [файлов конфигурации издателя](http://msdn.microsoft.com/library/aa375682).  
+ Дополнительные сведения о \<зависимостей > раздел файла манифеста см. в разделе [файлов конфигурации издателя](/windows/desktop/SbsCs/publisher-configuration-files).  
   
- / MANIFESTDEPENDENCY информация может быть передана в компоновщик одним из двух способов:  
+ / MANIFESTDEPENDENCY информацию можно передать в компоновщик, одним из двух способов:  
   
--   Непосредственно в командной строке (или в файле ответов) с помощью параметра/MANIFESTDEPENDENCY.  
+-   Непосредственно в командной строке (или в файле ответов) с помощью/MANIFESTDEPENDENCY.  
   
--   Через [комментарий](../../preprocessor/comment-c-cpp.md) pragma.  
+-   С помощью [комментарий](../../preprocessor/comment-c-cpp.md) директивы pragma.  
   
- В следующем примере показано комментария/MANIFESTDEPENDENCY, переданная с помощью директивы pragma  
+ В следующем примере показано комментария/MANIFESTDEPENDENCY, переданные с помощью директивы pragma  
   
 ```  
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")  
 ```  
   
- что приводит к следующей записи в файл манифеста:  
+ что приводит к следующей записи в файле манифеста:  
   
 ```  
 <dependency>  
@@ -59,19 +59,19 @@ ms.locfileid: "32376576"
 </dependency>  
 ```  
   
- Одинаковые примечания/MANIFESTDEPENDENCY может быть передан в командной строке следующим образом:  
+ Точно такие же комментарии/MANIFESTDEPENDENCY может быть передан в командной строке следующим образом:  
   
 ```  
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"  
 ```  
   
- Компоновщик соберет примечания/MANIFESTDEPENDENCY, удалит повторяющиеся записи и затем добавьте результирующую строку XML в файл манифеста.  Если компоновщик обнаруживает конфликтующие записи, файл манифеста будет поврежден и приложение не запустится (будет добавлена запись в журнал событий, указывающий источник сбоя).  
+ Компоновщик будет собирать/MANIFESTDEPENDENCY комментарии, исключить повторяющиеся записи и затем добавьте результирующую строку XML в файл манифеста.  Если компоновщик обнаруживает конфликтующие записи, файл манифеста будет поврежден и приложение не запускается (запись могут добавляться в журнал событий, указывающий источник сбоя).  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Разверните **свойства конфигурации** узла.  
+2.  Разверните узел **Свойства конфигурации**.  
   
 3.  Разверните **компоновщика** узла.  
   

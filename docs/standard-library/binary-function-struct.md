@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6019f2bb3d425b8ebfa4c49c3b6623d331fa5534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964162"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212572"
 ---
 # <a name="binaryfunction-struct"></a>Структура binary_function
 
@@ -41,11 +41,9 @@ struct binary_function {
 
 Структура шаблона выступает в качестве основы для классов, в которых определяются функции-члены в виде:
 
-**result_type operator()**( **constfirst_argument_type&**,
+> *result_type* ** operator() (const ** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**&) const**
 
-**const second_argument_type&** ) **const**
-
-Все такие бинарные функции могут ссылаться на тип своего первого аргумента, как `first_argument_type`, тип второго аргумента как `second_argument_type`и возвращаемый тип как ***result_type***.
+Все такие бинарные функции могут ссылаться на тип своего первого аргумента как *first_argument_type*, тип второго аргумента как *second_argument_type* и возвращаемый тип как *result_type*.
 
 ## <a name="example"></a>Пример
 

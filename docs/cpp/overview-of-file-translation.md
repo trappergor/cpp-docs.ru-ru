@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e6ef9a28af02cbb22eb4e3d2ceaad206a94d6309
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406849"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199396"
 ---
 # <a name="overview-of-file-translation"></a>Общие сведения о трансляции файлов
 Программы на языке C++ подобно программам на языке C состоят из одного или нескольких файлов. Каждый из этих файлов преобразуется в указанном ниже концептуальном порядке (реальный порядок соответствует правилу "как если бы": преобразование должно происходить так, как если бы соблюдался следующий порядок действий).  
@@ -54,7 +54,7 @@ ms.locfileid: "39406849"
   
 - Один предустановленный макрос `__cplusplus`, определяется только для C++. См. в разделе [предустановленные макросы](../preprocessor/predefined-macros.md) в *справочника по препроцессору* Дополнительные сведения.  
   
-- Препроцессор C не распознает операторы C++: **.\*** , **-> \***, и `::`. См. в разделе [операторы](../cpp/cpp-built-in-operators-precedence-and-associativity.md) и [выражения](../cpp/expressions-cpp.md), Дополнительные сведения об операторах.  
+- Препроцессор C не распознает операторы C++: **.** <strong>\*</strong>, **->** <strong>\*</strong>, и **::**. См. в разделе [операторы](../cpp/cpp-built-in-operators-precedence-and-associativity.md) и [выражения](../cpp/expressions-cpp.md), Дополнительные сведения об операторах.  
   
 ## <a name="see-also"></a>См. также  
  [Лексические соглашения](../cpp/lexical-conventions.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849754"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216265"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Класс CMFCToolBarFontComboBox
 Кнопка панели инструментов, которая содержит поле со списком, позволяющий пользователю выбрать шрифт из списка системных шрифтов.  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  Чтобы синхронизировать шрифта документа с помощью шрифта, выбранного в поле со списком, используйте [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) метод для получения атрибутов выбранного шрифта и использовать эти атрибуты для создания [ Класс CFont](../../mfc/reference/cfont-class.md) объекта.  
   
- Кнопка поле со списком шрифта вызывает функцию Win32 [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) для определения шрифтов экрана и принтера, доступных в системе.  
+ Кнопка поле со списком шрифта вызывает функцию Win32 [EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa) для определения шрифтов экрана и принтера, доступных в системе.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] *nCharSet*  
- Если задано DEFAULT_CHARSET, поле со списком содержит все уникальность имен шрифтов во всех наборах символов. (При наличии двух шрифтов с одинаковым именем, поле со списком содержит один из них.) Если задано значение допустимым символом, поле со списком содержит только шрифты в набор знаков. См. в разделе [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) список возможных символов задает.  
+ Если задано DEFAULT_CHARSET, поле со списком содержит все уникальность имен шрифтов во всех наборах символов. (При наличии двух шрифтов с одинаковым именем, поле со списком содержит один из них.) Если задано значение допустимым символом, поле со списком содержит только шрифты в набор знаков. См. в разделе [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) список возможных символов задает.  
   
  [in] *dwStyle*  
  Стиль поля со списком. (см. в разделе [поле со списком стилей](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

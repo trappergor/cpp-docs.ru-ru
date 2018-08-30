@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcd45226c85238ddd9e3d6d5a35460f0bb58916
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538360"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214995"
 ---
 # <a name="cpaneframewnd-class"></a>Класс CPaneFrameWnd
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Вызывается платформой при скрытии или отображении панели в окне области.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Возвращает панель, если она содержит предоставленную пользователем точку в пределах окна области.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) .|  
+|`CPaneFrameWnd::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Перерисовывает все окна областей.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Вызывается платформой для удаления недопустимых панелей.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Удаляет панель из окна области.|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  Высота в пикселях окна области.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовите этот метод для определения высоты окна области. По умолчанию высота присваивается SM_CYSMCAPTION. Дополнительные сведения см. в разделе [функцию GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Вызовите этот метод для определения высоты окна области. По умолчанию высота присваивается SM_CYSMCAPTION. Дополнительные сведения см. в разделе [функцию GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Вычисляет ограничивающий прямоугольник заголовка окна области.  

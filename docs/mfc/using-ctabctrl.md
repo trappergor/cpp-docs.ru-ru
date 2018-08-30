@@ -1,5 +1,5 @@
 ---
-title: Использование CTabCtrl | Документы Microsoft
+title: Использование CTabCtrl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fd34d88a035e4180eff955238004a18d9af09a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9918bfa73249812a55ce2b8f5718a53ee9cec087
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383686"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217926"
 ---
 # <a name="using-ctabctrl"></a>Использование CTabCtrl
-«Вкладка» является аналогом разделителей в записной книжке или с меткой папок в картотеке. Используйте элемент управления вкладки, представленный классом [CTabCtrl](../mfc/reference/ctabctrl-class.md), чтобы показать несколько страниц данных или элементов управления для пользователей, одновременно в формате, который предлагает одноранговых или логическую связь между каждой страницы.  
+«Вкладка» является аналогом разделителей в записной книжке, так и с метками папки CAB-файла. Используйте элемент управления вкладки, представленный классом [CTabCtrl](../mfc/reference/ctabctrl-class.md), чтобы показать несколько страниц данных или элементов управления в отношении пользователя, поочередно и в формате, который предлагает однорангового узла или логическую связь между каждой страницы.  
   
- Дополнительные сведения о вкладок в разделе [вкладок](http://msdn.microsoft.com/library/windows/desktop/bb760550) в Windows SDK.  
+ Дополнительные сведения о табуляции элементов управления, см. в разделе [вкладок](/windows/desktop/Controls/tab-controls) в пакете Windows SDK.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений  
   
 -   [Элементы управления "Вкладка" и страницы свойств](../mfc/tab-controls-and-property-sheets.md)  
   

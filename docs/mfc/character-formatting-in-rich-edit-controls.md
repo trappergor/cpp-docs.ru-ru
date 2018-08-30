@@ -1,5 +1,5 @@
 ---
-title: Форматирование знаков в элементы управления Rich Edit | Документы Microsoft
+title: Форматирование символов в элементы управления Rich Edit | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02165635e8715c1fcac28b9fbee72612b72c1f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7b56570a2821cef3cd2d2676a5260f42bc2ffaf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349484"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210774"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Форматирование знаков с использованием элементов управления "Rich Edit"
-Можно использовать функции-члены элемента управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) для форматирования символов и получить сведения о форматировании. Для символов можно указать шрифта, размера, цвета и эффекты, такие как полужирный, курсив и protected.  
+Можно использовать функции-члены элемента управления форматированным редактированием ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) для форматирования символов и получить сведения о форматировании. Для символов можно указать шрифт, размер, цвет и эффекты, например полужирный шрифт, курсив и защищены.  
   
- Можно применить форматирование символов с помощью [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) и [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) функции-члены. Чтобы определить текущий символ форматирование для выделенного текста, используйте [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) функции-члена. [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) использовать структуру с такие функции-члены для указания атрибутов символов. Одно из важные члены **CHARFORMAT** — **dwMask**. В `SetSelectionCharFormat` и `SetWordCharFormat`, **dwMask** указывает, какие атрибуты символов установит этот вызов функции. `GetSelectionCharFormat` Выводит атрибуты первого символа в выделенном фрагменте; **dwMask** указывает атрибуты, которые они единообразны во всем выделение.  
+ Можно применить форматирование символов с помощью [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) и [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) функций-членов. Чтобы определить текущий символ форматирование для выделенного текста, используйте [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) функция-член. [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) структура будет использована в эти функции-члены для указания атрибутов символов. Один из важные члены **CHARFORMAT** — **dwMask**. В `SetSelectionCharFormat` и `SetWordCharFormat`, **dwMask** указывает, какие атрибуты символ установит этим вызовом функции. `GetSelectionCharFormat` Представляет атрибуты первого символа в выделенном фрагменте; **dwMask** указывает атрибуты, которые они единообразны во всем выделения.  
   
- Можно также получить и задать «по умолчанию форматирование символов,» это форматирование, применяемое к любой впоследствии вставленные символы. Например если приложение задает символ по умолчанию форматирование будут выводиться полужирным шрифтом, а затем пользователем символ, символ выделено полужирным шрифтом. Чтобы получить и форматирование по умолчанию, используйте [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) и [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) функции-члены.  
+ Можно также получить и «по умолчанию форматирование,» это форматирование, применяемое к любой впоследствии вставленные символы. Например если приложение устанавливает символ по умолчанию форматирование будут выводиться полужирным шрифтом, а затем вводе символа, этот символ имеет полужирное начертание. Чтобы получить и форматирование по умолчанию, используйте [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) и [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) функций-членов.  
   
- Атрибут «защищенные» знаков не изменяет внешний вид текста. Если пользователь пытается изменить защищенный текст, в элементе управления rich edit отправляет родительского окна **EN_PROTECTED** сообщение уведомления, позволяя родительского окна разрешить или запретить изменение. Чтобы получить это сообщение уведомления, необходимо включить его с помощью [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) функции-члена. Дополнительные сведения о маску события. в разделе [уведомления от элемент управления Rich Edit](../mfc/notifications-from-a-rich-edit-control.md)далее в этом разделе.  
+ Атрибут «защищенной» символ не изменяет внешний вид текста. Если пользователь пытается изменить защищенный текст, в элементе управления rich edit отправляет своему родительскому окну **EN_PROTECTED** сообщение уведомления, позволяя родительского окна, можно разрешить или запретить изменение. Чтобы получить это сообщение уведомления, необходимо включить его с помощью [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) функция-член. Дополнительные сведения о маску события, см. в разделе [уведомления от изменить элемент управления форматированием](../mfc/notifications-from-a-rich-edit-control.md)далее в этом разделе.  
   
- Цвет переднего плана является атрибутом символа, но цвет фона является свойством элемента управления rich edit. Чтобы задать цвет фона, используйте [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) функции-члена.  
+ Цвет переднего плана является атрибутом символа, но цвет фона является свойством элемента управления форматированным редактированием. Чтобы задать цвет фона, используйте [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) функция-член.  
   
 ## <a name="see-also"></a>См. также  
  [Использование CRichEditCtrl](../mfc/using-cricheditctrl.md)   

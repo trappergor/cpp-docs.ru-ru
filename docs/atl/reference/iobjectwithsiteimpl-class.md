@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9403ed1a4ba82a1e60c42ed0e57e975e73d1dd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d4e2b1fe58ab7ea408438b703b9fe803996fa791
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219042"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Класс IObjectWithSiteImpl
 Этот класс предоставляет методы, что объект, для взаимодействия со своим сайтом.  
@@ -60,7 +60,7 @@ template <class T>
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Управляет веб-узла `IUnknown` указатель.|  
   
 ## <a name="remarks"></a>Примечания  
- [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) интерфейс позволяет объекту обмениваться данными со своим сайтом. Класс `IObjectWithSiteImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
+ [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) интерфейс позволяет объекту обмениваться данными со своим сайтом. Класс `IObjectWithSiteImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
  `IObjectWithSiteImpl` Указывает два метода. Клиент вызывает первый `SetSite`, передав сайта `IUnknown` указатель. Этот указатель хранится в объекте и более поздней версии можно получить путем вызова `GetSite`.  
   
@@ -86,7 +86,7 @@ STDMETHOD(GetSite)(
 ### <a name="remarks"></a>Примечания  
  Если сайт поддерживает этот интерфейс, через возвращается указатель `ppvSite`. В противном случае `ppvSite` имеет значение NULL.  
   
- См. в разделе [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) в Windows SDK.  
+ См. в разделе [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) в Windows SDK.  
   
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  Управляет веб-узла `IUnknown` указатель.  
@@ -120,7 +120,7 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) в Windows SDK.  
+ См. в разделе [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

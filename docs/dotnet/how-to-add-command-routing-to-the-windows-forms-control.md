@@ -1,5 +1,5 @@
 ---
-title: 'Как: Добавление команды управления маршрутизации в Windows Forms | Документы Microsoft'
+title: 'Практическое: Добавление команды управления маршрутизации для Windows Forms | Документация Майкрософт'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4c13b0bedf7c81431449aaed8d4fa8f067cdf3d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d3fc2fdcbc1c0947319ce3e13b7cd3006296606
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133653"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210615"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) направляет команды и сообщения пользовательского интерфейса команды update в пользовательский элемент управления, чтобы тот мог обрабатывать команды MFC (например, элементы меню и кнопки панели инструментов).  
   
- Пользовательский элемент управления использует [ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize) для хранения ссылки на объект источника команды в `m_CmdSrc`, как показано в следующем примере. Для использования `ICommandTarget` необходимо добавить ссылку на библиотеку mfcmifc80.dll.  
+ Пользовательский элемент управления использует [ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize) для хранения ссылки на объект источника команды в `m_CmdSrc`, как показано в следующем примере. Чтобы использовать `ICommandTarget` необходимо добавить ссылку на библиотеку mfcmifc80.dll.  
   
- `CWinFormsView` обрабатывает несколько общих уведомлений MFC, перенаправляя их в управляемый пользовательский элемент управления. Эти уведомления включают [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) и [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) методы.  
+ `CWinFormsView` обрабатывает несколько общих уведомлений MFC, перенаправляя их в управляемый пользовательский элемент управления. Эти уведомления входят [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) и [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) методы.  
   
- В этом разделе предполагается, вы выполнили ранее [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) и [как: Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+ В этом разделе предполагается, вы выполнили ранее [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) и [как: Создание пользовательского элемента управления и представление главного приложения MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
 ### <a name="to-create-the-mfc-host-application"></a>Создание ведущего приложения MFC  
   
-1.  Открытие библиотеки элементов управления Windows Forms, созданный в [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
+1.  Откройте Библиотека элементов управления Windows Forms, которые вы создали в [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
   
-2.  Добавьте ссылку на библиотеку mfcmifc80.dll, это можно сделать, щелкнув правой кнопкой мыши узел проекта в **обозревателе решений**, выбрав **добавить**, **ссылки**и затем перейдите в Microsoft Visual Studio 10.0\VC\atlmfc\lib.  
+2.  Добавьте ссылку на библиотеку mfcmifc80.dll, можно сделать, щелкнув правой кнопкой мыши узел проекта в **обозревателе решений**, выбрав **добавить**, **ссылку**и затем перейдите в Microsoft Visual Studio 10.0\VC\atlmfc\lib.  
   
-3.  Откройте файл UserControl1.Designer.cs и добавьте следующий код с помощью инструкции:  
+3.  Откройте файл UserControl1.Designer.cs и добавьте следующий оператор using:  
   
     ```  
     using Microsoft.VisualC.MFC;  
     ```  
   
-4.  Кроме того в файл UserControl1.Designer.cs, измените следующую строку:  
+4.  Кроме того в файле UserControl1.Designer.cs измените следующую строку:  
   
     ```  
     partial class UserControl1  
     ```  
   
-     на эту:  
+     На эту:  
   
     ```  
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget  
@@ -62,7 +62,7 @@ ms.locfileid: "33133653"
     private ICommandSource m_CmdSrc;  
     ```  
   
-6.  Добавьте следующие определения метода в `UserControl1` (в следующем шаге создается идентификатор элемента управления MFC):  
+6.  Добавьте следующие определения метода в `UserControl1` (на следующем шаге создается идентификатор элемента управления MFC):  
   
     ```  
     public void Initialize (ICommandSource cmdSrc)  
@@ -79,26 +79,25 @@ ms.locfileid: "33133653"
     }  
     ```  
   
-7.  Откройте приложение MFC, созданные в [как: Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+7.  Откройте приложение MFC, созданное в [как: Создание пользовательского элемента управления и представление главного приложения MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
-8.  Добавьте пункт меню, который будет вызывать `singleMenuHandler`.  
+8.  Добавьте пункт меню, которое вызовет `singleMenuHandler`.  
   
-     Последовательно выберите пункты **представление ресурсов** (Ctrl + Shift + E), разверните **меню** папку и дважды щелкните **IDR_MFC02TYPE**. Откроется редактор меню.  
+     Перейдите к **представление ресурсов** (Ctrl + Shift + E), разверните **меню** папку и дважды щелкните **IDR_MFC02TYPE**. Откроется редактор меню.  
   
-     Добавьте пункт меню в нижней части **представление** меню. Обратите внимание, идентификатор пункта меню в **свойства** окна. Сохраните файл.  
+     Добавьте пункт меню в нижней части **представление** меню. Запишите или запомните идентификатор пункта меню в **свойства** окна. Сохраните файл.  
   
-     В **обозревателе решений**, откройте файл Resource.h, скопируйте значение идентификатора для добавленного пункта меню и вставьте это значение в качестве первого параметра в `m_CmdSrc.AddCommandHandler` вызов в проект C# `Initialize` метод (заменив `32771` при необходимости).  
+     В **обозревателе решений**, откройте файл Resource.h, скопируйте значение идентификатора для добавленного пункта меню и вставьте это значение в качестве первого параметра для `m_CmdSrc.AddCommandHandler` вызова в проекте C# `Initialize` метод (заменив `32771` при необходимости).  
   
 9. Постройте и запустите проект.  
   
      В меню **Сборка** выберите **Собрать решение**.  
   
-     На **отладки** меню, нажмите кнопку **Запуск без отладки**.  
+     На **Отладка** меню, щелкните **Запуск без отладки**.  
   
-     Выберите добавленный пункт меню. Обратите внимание, что вызывается метод в DLL-файл.  
+     Выберите добавленный пункт меню. Обратите внимание на то, что вызывается метод в DLL-файл.  
   
 ## <a name="see-also"></a>См. также  
  [Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   
- [Интерфейс руководство.](../mfc/reference/icommandsource-interface.md)   
+ [Интерфейс ICommandSource](../mfc/reference/icommandsource-interface.md)   
  [Интерфейс ICommandTarget](../mfc/reference/icommandtarget-interface.md)   
- [CommandHandler](http://msdn.microsoft.com/Library/22096734-e074-4aca-8523-4b15590109f9)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed63e89c2470691b677a234ba6b30e4f3ddd558d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5d5804a7437dabd688abab04ebdd50a79decbaaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571905"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198773"
 ---
 # <a name="ole-db-programming"></a>Программирование объектов OLE DB
 Microsoft OLE DB — это устаревшая технология; для новых приложений это требуется API доступа к данным для связанных серверов SQL. Все другие новые приложения должны использовать ODBC. Текущий поставщик OLE DB для SQL Server — SQLNCLI11. БИБЛИОТЕКА DLL. Поставщик по-прежнему продается в SQL Server 2016. Эта документация предназначена для разработчиков, которые поддержки существующих приложений, которые уже используют OLE DB.
@@ -40,7 +40,7 @@ Microsoft OLE DB — это устаревшая технология; для н
 |Классы и макросы шаблонов OLE DB|[Ссылка на шаблоны OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Атрибуты пользователя OLE DB|[Атрибуты объекта-получателя OLE DB](../../windows/ole-db-consumer-attributes.md)|  
 |Интерфейсы OLE DB|[Справочник программиста OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (в пакете Windows SDK)|  
-|Примеры шаблонов OLE DB|[Примеры шаблонов OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
+|Примеры шаблонов OLE DB|[Примеры шаблонов OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
 |Общие сведения о программировании доступа к данным (Visual C++)|[Программирование доступа к данным](../../data/data-access-programming-mfc-atl.md)|  
 |Основные разделы ODBC|[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)|  
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208870"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Класс CMFCPropertyGridFontProperty
 `CMFCPropertyGridFileProperty` Класс поддерживает элемент управления списка свойств, который открывает диалоговое окно выбора шрифта.  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  Структура логического шрифта, которая определяет атрибуты шрифта.  
   
  [in] *dwFontDialogFlags*  
- Стили, которые применяются в диалоговом окне шрифта, который отображается при нажатии кнопки раскрывающегося списка значение свойства. Значение по умолчанию — битовую комбинацию (OR) флагов CF_EFFECTS и CF_SCREENFONTS. Дополнительные сведения см. в разделе *флаги* параметр [структуры CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Стили, которые применяются в диалоговом окне шрифта, который отображается при нажатии кнопки раскрывающегося списка значение свойства. Значение по умолчанию — битовую комбинацию (OR) флагов CF_EFFECTS и CF_SCREENFONTS. Дополнительные сведения см. в разделе *флаги* параметр [структуры CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
  [in] *lpszDescr*  
  Описание свойства шрифта. Значение по умолчанию имеет значение NULL.  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуру, которая описывает шрифт.  
+ Указатель на [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуру, которая описывает шрифт.  
   
 ### <a name="remarks"></a>Примечания  
   

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884367"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209329"
 ---
 # <a name="cdebugreporthook-class"></a>Класс CDebugReportHook
 Этот класс используется для отправки отчетов отладки именованного канала.  
@@ -61,7 +61,7 @@ class CDebugReportHook
 ## <a name="remarks"></a>Примечания  
  Создайте экземпляр этого класса в отладочных сборках, служб и приложений для отправки отчетов отладки именованного канала. Отладка отчеты создаются путем вызова [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) или с помощью оболочки для этой функции, например [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) и [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) макросы.  
   
- Используйте данный класс позволяет осуществлять интерактивную отладку компонентов, работающих в пакетном [рабочих станциях](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
+ Используйте данный класс позволяет осуществлять интерактивную отладку компонентов, работающих в пакетном [рабочих станциях](/windows/desktop/winstation/window-stations).  
   
  Обратите внимание на то, что выполнять отладку отчетов отправляются с помощью базового контекст безопасности потока. Олицетворение временно отключено, чтобы выполнять отладку отчетов, которые можно просмотреть в ситуациях, где олицетворения пользователей с низким уровнем привилегий выполняется, например, в веб-приложениях.  
   

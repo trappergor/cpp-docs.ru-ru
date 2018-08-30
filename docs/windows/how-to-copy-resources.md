@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9cef186c18622dc361f97bd65e7bd264a6f03cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2abd889584ce39627153d6eac59db9240367ba20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599588"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214395"
 ---
 # <a name="how-to-copy-resources"></a>Практическое руководство. Копирование ресурсов
 
@@ -37,7 +37,7 @@ ms.locfileid: "42599588"
 Можно легко скопировать ресурсы из существующего ресурса или исполняемого файла в текущий файл ресурсов. Чтобы сделать это, откройте оба файла, которая содержит ресурсы, в то же время и перетащите элементы из одного файла в другой, или скопируйте и вставьте между двумя файлами. Этот метод работает для RC-файлов ресурсов и файлов ресурсов (.rct) шаблона, а также исполняемых файлов (.exe).
 
 > [!NOTE]
-> Visual C++ содержит примеры файлов ресурсов, которые можно использовать в приложении. Дополнительные сведения см. в разделе [CLIPART: общие ресурсы](http://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
+> Visual C++ содержит примеры файлов ресурсов, которые можно использовать в приложении. Дополнительные сведения см. в разделе [CLIPART: общие ресурсы](https://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
 
 Можно использовать метод перетаскивания и вставки между RC-файлов, открытых [вне проекта](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 

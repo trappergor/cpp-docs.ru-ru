@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00204e283feb14e6b8e831a12e8bd9ad3e352adc
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f0863e00d95c4056d988198b4978eb16597111f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572991"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222554"
 ---
 # <a name="introduction-to-com-and-atl"></a>Введение в модель COM и ATL
 Этот раздел содержит краткое введение в COM и ATL.  
@@ -34,7 +34,7 @@ ms.locfileid: "42572991"
  Описание, кратко, Active Template Library (ATL) был разработан для библиотеки шаблонов и ATL номера версий. Содержит рекомендации по выбору между ATL и MFC.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Модель COM](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ [Модель COM](/windows/desktop/com/the-component-object-model)  
  Пакет Windows SDK материала на COM.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b7ac87241e9089cc8c0152a6d0c3966dc32fa08
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9b5250a730b0ce80cbbe9698b4b5e636a85986b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600246"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223190"
 ---
 # <a name="id"></a>id
 
@@ -43,7 +43,7 @@ ms.locfileid: "42600246"
 
 ## <a name="remarks"></a>Примечания
 
-**Идентификатор** атрибут C++ имеет ту же функциональность, что [идентификатор](http://msdn.microsoft.com/library/windows/desktop/aa367040) описании атрибута MIDL.
+**Идентификатор** атрибут C++ имеет ту же функциональность, что [идентификатор](/windows/desktop/Midl/id) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 

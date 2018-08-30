@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab7207abac26d85faf27a0ed3d33dadadbdc9d27
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d302d625f0f87eaec39bc1de35885f6d6b6a9ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583769"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198055"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -36,7 +36,7 @@ ms.locfileid: "42583769"
 
 ## <a name="remarks"></a>Примечания
 
-**Requestedit** атрибут C++ имеет ту же функциональность, что [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) описании атрибута MIDL.
+**Requestedit** атрибут C++ имеет ту же функциональность, что [requestedit](/windows/desktop/Midl/requestedit) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 

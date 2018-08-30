@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 236fd1809fa012262f3a98f0f1856f3bbff6b454
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340868"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213832"
 ---
 # <a name="using-manual-accessors"></a>Использование методов ручного доступа
 Существует четыре какие действия можно выполнить при обработке Неизвестная команда:  
@@ -53,7 +53,7 @@ ms.locfileid: "39340868"
   
 6.  Вызовите `GetNextResult` для определения того, если доступны дополнительные наборы строк. Повторите шаги 2 – 5.  
   
- Пример метода доступа вручную, см. в разделе `CDBListView::CallProcedure` в [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) образца.  
+ Пример метода доступа вручную, см. в разделе `CDBListView::CallProcedure` в [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) образца.  
   
 ## <a name="see-also"></a>См. также  
  [Использование методов доступа](../../data/oledb/using-accessors.md)

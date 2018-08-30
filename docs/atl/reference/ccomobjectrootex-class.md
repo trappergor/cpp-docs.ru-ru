@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55da0705027d6625d4140691b1b91912fb94c555
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027531"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219177"
 ---
 # <a name="ccomobjectrootex-class"></a>Класс CComObjectRootEx
 Этот класс предоставляет методы для обработки объекта управления счетчиками ссылок для объектов неагрегированные и объединены.  
@@ -99,7 +99,7 @@ class CComObjectRootEx : public CComObjectRootBase
   
  Преимущество использования `CComPolyObject` — избежать обеих `CComAggObject` и `CComObject` в модуле для обработки вариантов, статистические и неагрегированные. Один `CComPolyObject` объект обрабатывает в обоих случаях. Таким образом только одна копия таблицы vtable и одна копия функции существуют в модуле. Если в таблице vtable имеет большой размер, это может значительно снизить размер вашего модуля. Тем не менее, если в таблице vtable невелик, с помощью `CComPolyObject` может привести к немного больший размер модуля, поскольку метод не оптимизирован для суммирования или неагрегированные объекта, так как `CComAggObject` и `CComObject`.  
   
- Если объект является статистическим, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) реализуется `CComAggObject` или `CComPolyObject`. Эти классы делегировать `QueryInterface`, `AddRef`, и `Release` вызовы `CComObjectRootEx` `OuterQueryInterface`, `OuterAddRef`, и `OuterRelease` переслать внешняя Неизвестная строка. Как правило, можно переопределить `CComObjectRootEx::FinalConstruct` в классе позволяет создать все объединенные объекты и переопределить `CComObjectRootEx::FinalRelease` чтобы освободить все статистическая обработка объектов.  
+ Если объект является статистическим, [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) реализуется `CComAggObject` или `CComPolyObject`. Эти классы делегировать `QueryInterface`, `AddRef`, и `Release` вызовы `CComObjectRootEx` `OuterQueryInterface`, `OuterAddRef`, и `OuterRelease` переслать внешняя Неизвестная строка. Как правило, можно переопределить `CComObjectRootEx::FinalConstruct` в классе позволяет создать все объединенные объекты и переопределить `CComObjectRootEx::FinalRelease` чтобы освободить все статистическая обработка объектов.  
   
  Если объект не является агрегатом, `IUnknown` реализуется `CComObject` или `CComPolyObject`. В этом случае вызовы `QueryInterface`, `AddRef`, и `Release` делегируются `CComObjectRootEx` `InternalQueryInterface`, `InternalAddRef`, и `InternalRelease` для выполнения фактических операций.  
   
@@ -222,7 +222,7 @@ ULONG InternalRelease();
  Если модель является многопоточным, `InterlockedDecrement` используется для предотвращения изменения счетчик ссылок в то же время более одного потока.  
   
 ##  <a name="lock"></a>  CComObjectRootEx::Lock  
- Если модель является многопоточным, этот метод вызывает функцию интерфейса API Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), которого ожидает, пока поток может стать владельцем объект критической секции, полученные через закрытый элемент данных.  
+ Если модель является многопоточным, этот метод вызывает функцию интерфейса API Win32 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection), которого ожидает, пока поток может стать владельцем объект критической секции, полученные через закрытый элемент данных.  
   
 ```
 void Lock();
@@ -279,7 +279,7 @@ IUnknown*
  Если объект является статистическим, указатель на внешняя Неизвестная строка сохраняется в `m_pOuterUnknown`. Если объект не является статистическим, счетчик ссылок осуществляется `AddRef` и `Release` хранится в [m_dwRef](#m_dwref).  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- Для каждого класса, перечисленного в [карте объектов](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), эта функция вызывается один раз при инициализации модуля, и еще раз при его выполнение завершается.  
+ Для каждого класса, перечисленного в [карте объектов](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), эта функция вызывается один раз при инициализации модуля, и еще раз при его выполнение завершается.  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);
@@ -292,7 +292,7 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Примечания  
  Значение *bStarting* параметр указывает, является ли модуль инициализируется или завершен. Реализация по умолчанию `ObjectMain` не выполняет никаких действий, но эту функцию можно переопределить в классе для инициализации или очистки ресурсов, которые нужно выделить для класса. Обратите внимание, что `ObjectMain` вызывается перед запрашиваются все экземпляры класса.  
   
- `ObjectMain` вызывается из точки входа библиотеки DLL, поэтому тип операции, которая может выполнять функцию точки входа ограничен. Дополнительные сведения об этих ограничениях см. в разделе [библиотеки DLL и Visual C++ поведение библиотеки времени выполнения](../../build/run-time-library-behavior.md) и [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain` вызывается из точки входа библиотеки DLL, поэтому тип операции, которая может выполнять функцию точки входа ограничен. Дополнительные сведения об этих ограничениях см. в разделе [библиотеки DLL и Visual C++ поведение библиотеки времени выполнения](../../build/run-time-library-behavior.md) и [DllMain](/windows/desktop/Dlls/dllmain).  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
@@ -335,7 +335,7 @@ ULONG OuterRelease();
  В неотладочных сборках всегда возвращает 0. В отладочных сборках возвращает значение, которое может быть полезно для диагностики или тестирования.  
   
 ##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
- Если модель является многопоточным, этот метод вызывает функцию интерфейса API Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), какие выпуски владение объект критической секции, полученные через закрытый элемент данных.  
+ Если модель является многопоточным, этот метод вызывает функцию интерфейса API Win32 [LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection), какие выпуски владение объект критической секции, полученные через закрытый элемент данных.  
   
 ```
 void Unlock();

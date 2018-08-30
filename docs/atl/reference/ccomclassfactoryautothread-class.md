@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a38f3320a507b8bd4ce3095ed2c7a02b7bf573
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: dbd258761bef7789e73fe61ac288b414902d2af8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883064"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214078"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Класс CComClassFactoryAutoThread
-Этот класс реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейс и позволяет создавать в нескольких подразделениях объекты.  
+Этот класс реализует [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) интерфейс и позволяет создавать в нескольких подразделениях объекты.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -114,7 +114,7 @@ STDMETHODIMP LockServer(BOOL fLock);
  Вызов `LockServer` позволяет клиенту, чтоб фабрику класса для создания нескольких объектов можно быстро.  
   
 ## <a name="see-also"></a>См. также  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [Класс CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)   
  [Класс CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   

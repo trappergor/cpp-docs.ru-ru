@@ -1,5 +1,5 @@
 ---
-title: 'Пошаговое руководство: Адаптация существующего кода для использования упрощенных задач | Документы Microsoft'
+title: 'Пошаговое руководство: Адаптация существующего кода для использования упрощенных задач | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fe3bb4b576bd1f9160b4a3cdc3142be5cdff05
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b4a48720a55487531e7dcfc2c38c9a0bf54c88a8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688548"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214335"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Пошаговое руководство. Адаптация существующего кода для использования упрощенных задач
-В этом разделе показано, как адаптировать имеющийся код, который использует Windows API для создания и выполнения потока, в котором используется упрощенная задача.  
+В этом разделе показано, как адаптировать имеющийся код, использующее Windows API для создания и выполнения потока используется упрощенная задача.  
   
- Объект *упрощенной задачи* — это задача, планируемая непосредственно из [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) или [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) объекта. Упрощенные задачи полезны при адаптации существующего кода к использованию функциональных возможностей планирования среды выполнения с параллелизмом.  
+ Объект *упрощенная задача* — это задача, планируемая непосредственно из [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) или [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) объекта. Упрощенные задачи полезны при адаптации существующего кода к использованию функциональных возможностей планирования среды выполнения с параллелизмом.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Перед выполнением этого пошагового руководства, следует ознакомиться с разделом [планировщик](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
+ Прежде чем приступать к этому руководству, прочитайте статью [планировщик](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
- В следующем примере показано типичное использование API Windows для создания и выполнения потока. В этом примере используется [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) функции, вызываемой `MyThreadFunction` в отдельном потоке.  
+### <a name="description"></a>Описание:  
+ В следующем примере демонстрируется типичное использование API Windows для создания и выполнения потока. В этом примере используется [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) функция, вызываемая `MyThreadFunction` в отдельном потоке.  
   
 ### <a name="code"></a>Код  
  [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]  
@@ -45,15 +45,15 @@ ms.locfileid: "33688548"
 Parameters = 50, 100  
 ```  
   
- Ниже показано, как адаптировать в примере кода для использования среды выполнения с параллелизмом для выполнения этой задачи.  
+ Ниже показано, как адаптировать в примере кода для использования среды выполнения с параллелизмом для выполнения той же задачи.  
   
 ### <a name="to-adapt-the-example-to-use-a-lightweight-task"></a>Чтобы адаптировать этот пример для использования упрощенных задач  
   
-1.  Добавить `#include` директив для файла заголовка concrt.h.  
+1.  Добавление `#include` директив для файла заголовка concrt.h.  
   
  [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]  
   
-2.  Добавить `using` директивы `concurrency` пространства имен.  
+2.  Добавить `using` директив для `concurrency` пространства имен.  
   
  [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]  
   
@@ -81,7 +81,7 @@ Parameters = 50, 100
   
  [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]  
   
-9. В конце `MyThreadFunction` вызовите метод [Concurrency::Event:: set](reference/event-class.md#set) метод, чтобы сообщить главному приложению, что задача завершена.  
+9. В конце `MyThreadFunction` вызовите метод [Concurrency::Event:: set](reference/event-class.md#set) метод для указания главному приложению, что задача завершена.  
   
  [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]  
   
@@ -89,8 +89,8 @@ Parameters = 50, 100
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
- В следующем полном примере показан код, который использует упрощенную задачу для вызова `MyThreadFunction` функции.  
+### <a name="description"></a>Описание:  
+ Завершенные пример кода, использующего упрощенной задачи вызовите `MyThreadFunction` функции.  
   
 ### <a name="code"></a>Код  
  [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]  

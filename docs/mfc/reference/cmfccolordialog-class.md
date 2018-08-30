@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214156"
 ---
 # <a name="cmfccolordialog-class"></a>Класс CMFCColorDialog
 `CMFCColorDialog` Класс представляет диалоговое окно выбора цвета.  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Возвращает текущий выбранный цвет.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Возвращает цветовую палитру.|  
-|`CMFCColorDialog::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. Синтаксис и Дополнительные сведения см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Переопределяет `CDialogEx::PreTranslateMessage`.)|  
+|`CMFCColorDialog::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. Синтаксис и Дополнительные сведения см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Переопределяет `CDialogEx::PreTranslateMessage`.)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Является производным палитры из системной палитры.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Задает текущий выбранный цвет.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Задает цвет, наиболее эквивалентно указанное значение RGB.|  
@@ -149,7 +149,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, содержащее данные RGB для цвета, выбранного в диалоговом окне цвет.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) значение, содержащее данные RGB для цвета, выбранного в диалоговом окне цвет.  
   
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию после вызова метода `DoModal` метод.  
@@ -196,7 +196,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="parameters"></a>Параметры  
  [in] *rgb*  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , указывающее цвета RGB.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) , указывающее цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
   

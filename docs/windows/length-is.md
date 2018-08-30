@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b3792bc5377d90acb6f5ddf619e888ddd606e1e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1852e765ed859f95f6de5319a1e9d8fa364f7681
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594097"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207067"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -43,7 +43,7 @@ ms.locfileid: "42594097"
 
 ## <a name="remarks"></a>Примечания
 
-**Length_is** атрибут C++ имеет ту же функциональность, что [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) описании атрибута MIDL.
+**Length_is** атрибут C++ имеет ту же функциональность, что [length_is](/windows/desktop/Midl/length-is) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 

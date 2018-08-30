@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf101fdb0e93ef206ae61c29b636c973fa58a825
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593981"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211708"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Библиотека шаблонов C++ среды выполнения Windows (WRL)
 
@@ -63,7 +63,7 @@ C + +/ CX является высокого уровня, на основе яз
 В этой статье демонстрируется использование библиотека шаблонов C++ среды выполнения Windows, чтобы подписаться на и обрабатывать события объекта среды выполнения Windows.
 
 [Пошаговое руководство. Создание приложения UWP с использованием WRL и Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
-Сведения о создании приложения UWP, которое использует [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).
+Сведения о создании приложения UWP, которое использует [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 [Практическое: создание классического компонента COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
 Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для создания базового компонента COM и простой способ регистрации и использования COM-компонент из классического приложения.

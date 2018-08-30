@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e07849c151cf2e361324a83b86bf98c24525f4ce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601580"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220690"
 ---
 # <a name="resource-files-visual-studio"></a>Файлы ресурсов (Visual Studio)
 
 > [!NOTE]
-> Этот материал относится к классическим приложениям Windows. Сведения о ресурсах в приложениях универсальной платформы Windows см. в разделе [определение ресурсов приложения](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Этот материал относится к классическим приложениям Windows. Сведения о ресурсах в приложениях универсальной платформы Windows см. в разделе [определение ресурсов приложения](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 >
@@ -97,4 +97,4 @@ Win32
 
 [Редакторы ресурсов](../windows/resource-editors.md)  
 [Работа с файлами ресурсов](../windows/working-with-resource-files.md)  
-[Меню и другие ресурсы](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Меню и другие ресурсы](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
