@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b88f2c295ae4fa31a0afd2093251c94e1c6b79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853866"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204884"
 ---
 # <a name="crgn-class"></a>Crgn-класс
 Инкапсулирует область интерфейса графических устройств Windows (GDI).  
@@ -678,7 +678,7 @@ operator HRGN() const;
 ### <a name="remarks"></a>Примечания  
  Этот оператор — оператор приведения, который поддерживает непосредственное использование объекта HRGN.  
   
- Дополнительные сведения об использовании графических объектов см. в статье [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в пакете Windows SDK.  
+ Дополнительные сведения об использовании графических объектов см. в статье [объектов график](/windows/desktop/gdi/graphic-objects) в пакете Windows SDK.  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  Проверяет ли точки, заданной параметром *x* и *y* находится в регионе, хранящиеся в `CRgn` объекта.  

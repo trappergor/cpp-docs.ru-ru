@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295fb6944c3c18c2e7794ca13ad5ab93b788a776
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6d87a3b0e4ed9c5c558c90a2935c538b4fb826be
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883483"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201684"
 ---
 # <a name="message-map-macros-atl"></a>Макросы схемы сообщений (ATL)
 Эти макросы определяют схемы сообщений и записей.  
@@ -346,7 +346,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  **Заголовок:** atlwin.h   
   
 ##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
- Аналогичную [COMMAND_HANDLER](#command_handler), но сопоставляет [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщения на основе только код уведомления.  
+ Аналогичную [COMMAND_HANDLER](#command_handler), но сопоставляет [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщения на основе только код уведомления.  
   
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -380,7 +380,7 @@ COMMAND_HANDLER(id, code, func)
  [in] Имя функции обработчика сообщений.  
   
 ### <a name="remarks"></a>Примечания  
- Сопоставляет COMMAND_HANDLER [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщение для указанного обработчика функции, в зависимости от кода уведомления и идентификатор элемента управления. Пример:  
+ Сопоставляет COMMAND_HANDLER [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщение для указанного обработчика функции, в зависимости от кода уведомления и идентификатор элемента управления. Пример:  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -401,7 +401,7 @@ COMMAND_HANDLER(id, code, func)
  **Заголовок:** atlwin.h   
   
 ##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
- Аналогичную [COMMAND_HANDLER](#command_handler), но сопоставляет [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщение только на основе идентификатора элемента меню, элемент управления или сочетаний клавиш.  
+ Аналогичную [COMMAND_HANDLER](#command_handler), но сопоставляет [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщение только на основе идентификатора элемента меню, элемент управления или сочетаний клавиш.  
   
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -418,7 +418,7 @@ COMMAND_ID_HANDLER(id, func)
  **Заголовок:** atlwin.h   
   
 ##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
- Аналогичную [COMMAND_RANGE_HANDLER](#command_range_handler), но сопоставляет [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщений с кодом уведомления из диапазона элементов управления к одному обработчику функции.  
+ Аналогичную [COMMAND_RANGE_HANDLER](#command_range_handler), но сопоставляет [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщений с кодом уведомления из диапазона элементов управления к одному обработчику функции.  
   
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -444,7 +444,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
  **Заголовок:** atlwin.h   
   
 ##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
- Аналогичную [COMMAND_HANDLER](#command_handler), но сопоставляет [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщений из диапазона элементов управления к одному обработчику функции.  
+ Аналогичную [COMMAND_HANDLER](#command_handler), но сопоставляет [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщений из диапазона элементов управления к одному обработчику функции.  
   
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -553,7 +553,7 @@ MESSAGE_HANDLER( msg, func )
 > [!NOTE]
 >  Всегда начинаются схему сообщения со [BEGIN_MSG_MAP](#begin_msg_map). Затем можно объявить схемы последующих альтернативный сообщений с [ALT_MSG_MAP](#alt_msg_map). [END_MSG_MAP](#end_msg_map) макрос отмечает конец схемы сообщений. Каждая схема сообщения должен иметь ровно один экземпляр BEGIN_MSG_MAP и END_MSG_MAP.  
   
- Помимо MESSAGE_HANDLER, можно использовать [COMMAND_HANDLER](#command_handler) и [NOTIFY_HANDLER](#notify_handler) для сопоставления [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) и [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) сообщений , соответственно.  
+ Помимо MESSAGE_HANDLER, можно использовать [COMMAND_HANDLER](#command_handler) и [NOTIFY_HANDLER](#notify_handler) для сопоставления [WM_COMMAND](/windows/desktop/menurc/wm-command) и [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) сообщений , соответственно.  
   
  Дополнительные сведения об использовании схемы сообщений библиотеки ATL, см. в разделе [схемы сообщений](../../atl/message-maps-atl.md).  
   
@@ -584,7 +584,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
  **Заголовок:** atlwin.h   
   
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
- Аналогичную [NOTIFY_HANDLER](#notify_handler), но сопоставляет [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) сообщения на основе только код уведомления.  
+ Аналогичную [NOTIFY_HANDLER](#notify_handler), но сопоставляет [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) сообщения на основе только код уведомления.  
   
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -618,7 +618,7 @@ NOTIFY_HANDLER( id, cd, func )
  [in] Имя функции обработчика сообщений.  
   
 ### <a name="remarks"></a>Примечания  
- Сопоставляет NOTIFY_HANDLER [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) сообщение для указанного обработчика функции, в зависимости от кода уведомления и идентификатор элемента управления.  
+ Сопоставляет NOTIFY_HANDLER [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) сообщение для указанного обработчика функции, в зависимости от кода уведомления и идентификатор элемента управления.  
   
  Любая функция, указанных в макросе NOTIFY_HANDLER должны быть определены следующим образом:  
   
@@ -640,7 +640,7 @@ NOTIFY_HANDLER( id, cd, func )
  **Заголовок:** atlwin.h   
   
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
- Аналогичную [NOTIFY_HANDLER](#notify_handler), но сопоставляет [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) сообщения на основе только идентификатор элемента управления.  
+ Аналогичную [NOTIFY_HANDLER](#notify_handler), но сопоставляет [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) сообщения на основе только идентификатор элемента управления.  
   
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -657,7 +657,7 @@ NOTIFY_ID_HANDLER( id, func )
  **Заголовок:** atlwin.h   
   
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
- Аналогичную [NOTIFY_RANGE_HANDLER](#notify_range_handler), но сопоставляет [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) сообщений с кодом уведомления из диапазона элементов управления к одному обработчику функции.  
+ Аналогичную [NOTIFY_RANGE_HANDLER](#notify_range_handler), но сопоставляет [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) сообщений с кодом уведомления из диапазона элементов управления к одному обработчику функции.  
   
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -683,7 +683,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
  **Заголовок:** atlwin.h   
   
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
- Аналогичную [NOTIFY_HANDLER](#notify_handler), но сопоставляет [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) сообщений из диапазона элементов управления к одному обработчику функции.  
+ Аналогичную [NOTIFY_HANDLER](#notify_handler), но сопоставляет [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) сообщений из диапазона элементов управления к одному обработчику функции.  
   
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

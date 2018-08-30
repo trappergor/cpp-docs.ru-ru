@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1bd8abd7971c112f0d9e872df73b431c78259981
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131949"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205426"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Многопоточность: Завершение потоков в MFC
 Завершение потока вызвать двух случаях: контролирующей функции или поток не разрешено выполняться до завершения. При использовании текстовым процессором потока для печати в фоновом режиме функцию управления завершается при успешном выполнении задания печати. Если пользователю необходимо отменить печать, однако фоновый поток печати должен быть преждевременно. В этом разделе объясняется, как реализовать каждой ситуации и способы получения кода выхода из потока после его завершения.  
@@ -43,7 +43,7 @@ ms.locfileid: "43131949"
  
 Для рабочего потока, обычное завершение потока прост: завершить контролирующую функцию и возвращает значение, обозначающее причину завершения. Можно использовать либо [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) функции или **возвращают** инструкции. Как правило 0 означает успешное выполнение, но это вы.  
   
-Поток пользовательского интерфейса происходит так же просто: из в UI-потоке, вызвать [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) в пакете Windows SDK. Единственным параметром, `PostQuitMessage` — это код выхода из потока. Как и для рабочих потоков 0 обычно означает успешное завершение.  
+Поток пользовательского интерфейса происходит так же просто: из в UI-потоке, вызвать [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) в пакете Windows SDK. Единственным параметром, `PostQuitMessage` — это код выхода из потока. Как и для рабочих потоков 0 обычно означает успешное завершение.  
   
 ##  <a name="_core_premature_thread_termination"></a> Преждевременное завершение потока  
  
@@ -53,7 +53,7 @@ ms.locfileid: "43131949"
   
 ##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Извлечение кода выхода потока  
  
-Чтобы получить код выхода из рабочего потока или потока пользовательского интерфейса, вызовите [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) функции. Сведения об этой функции см. в разделе Windows SDK. Эта функция принимает дескриптор потока (хранящиеся в `m_hThread` данными-членом `CWinThread` объекты) и адрес DWORD.  
+Чтобы получить код выхода из рабочего потока или потока пользовательского интерфейса, вызовите [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) функции. Сведения об этой функции см. в разделе Windows SDK. Эта функция принимает дескриптор потока (хранящиеся в `m_hThread` данными-членом `CWinThread` объекты) и адрес DWORD.  
   
 Если поток по-прежнему активна, `GetExitCodeThread` помещает STILL_ACTIVE в предоставленный адрес DWORD; в противном случае код завершения помещается в этот адрес.  
   
@@ -70,4 +70,4 @@ ms.locfileid: "43131949"
 [Реализация многопоточности на языке C++ с MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
-[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)

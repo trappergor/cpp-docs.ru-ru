@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e63a464b68267c8202cdf47717fd1cd81db639c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: cb0b50170de0ba5a5c38c1850369092d8453445a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884047"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203204"
 ---
 # <a name="csocketaddr-class"></a>Класс CSocketAddr
 Этот класс предоставляет методы для преобразования имен узлов для адресов узла, которые поддерживают форматы IPv4 и IPV6.  
@@ -60,7 +60,7 @@ class CSocketAddr
 ## <a name="remarks"></a>Примечания  
  Этот класс предоставляет версию IP, зависит от подход для поиска сетевых адресов для использования с Windows sockets функций API и оболочки сокета в библиотеках.  
   
- Члены этого класса, которые используются для поиска адресов сети используйте функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
+ Члены этого класса, которые используются для поиска адресов сети используйте функцию Win32 API [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo).  
   
  Этот класс поддерживает оба адреса IPv4 andIPv6 сети.  
   
@@ -124,7 +124,7 @@ int FindAddr(
  Возвращает нуль, если адрес вычисляется успешно. Возвращает ненулевой код ошибки Windows Socket в случае сбоя. Если в случае успешного выполнения, вычисляемые адрес хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Примечания  
- Параметр имени узла может быть в формате IPv4 или IPv6. Этот метод вызывает функцию интерфейса API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
+ Параметр имени узла может быть в формате IPv4 или IPv6. Этот метод вызывает функцию интерфейса API Win32 [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) для выполнения преобразования.  
   
 ##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
  Этот метод используется для преобразования имени узла IPv4 в адрес узла.  
@@ -154,7 +154,7 @@ int FindINET4Addr(
  Возвращает нуль, если адрес вычисляется успешно. Возвращает ненулевой код ошибки Windows Socket в случае сбоя. Если в случае успешного выполнения, вычисляемые адрес хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает функцию интерфейса API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
+ Этот метод вызывает функцию интерфейса API Win32 [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) для выполнения преобразования.  
   
 ##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  Этот метод используется для преобразования имени узла IPv6 в адрес узла.  
@@ -184,7 +184,7 @@ int FindINET6Addr(
  Возвращает нуль, если адрес вычисляется успешно. Возвращает ненулевой код ошибки Windows Socket в случае сбоя. Если в случае успешного выполнения, вычисляемые адрес хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает функцию интерфейса API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
+ Этот метод вызывает функцию интерфейса API Win32 [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) для выполнения преобразования.  
   
 ##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
  Вызовите этот метод для возврата указателя на определенный элемент в `addrinfo` списка.  
@@ -195,7 +195,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
   
 ### <a name="parameters"></a>Параметры  
  *nIndex*  
- Ссылка на определенный элемент в [addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530) списка.  
+ Ссылка на определенный элемент в [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на `addrinfo` ссылается структура *nIndex* в связанный список, содержащий ответ сведения об узле.  

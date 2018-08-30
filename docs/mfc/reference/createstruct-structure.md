@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 594f71d5166261dbb1bb08422a564157bfce2721
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848474"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203665"
 ---
 # <a name="createstruct-structure"></a>Структура CREATESTRUCT
 `CREATESTRUCT` Структура определяет параметры инициализации, передаваемые в процедуру окна приложения.  
@@ -77,7 +77,7 @@ typedef struct tagCREATESTRUCT {
  Указатель на заканчивающуюся нулем строку, указывающее имя нового окна.  
   
  *lpszClass*  
- Указывает на заканчивающуюся нулем строку, указывающее имя класса новое окно Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) структуры; Дополнительные сведения см. в Windows SDK).  
+ Указывает на заканчивающуюся нулем строку, указывающее имя класса новое окно Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) структуры; Дополнительные сведения см. в Windows SDK).  
   
  *dwExStyle*  
  Указывает [расширенный стиль](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) для нового окна.  

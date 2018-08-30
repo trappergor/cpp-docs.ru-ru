@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83cf5f7cbe9b903f9cdc7a96b2fa046ff3f9eab5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541134"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205149"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Класс CMFCToolBarMenuButton
 Кнопка панели инструментов, содержащая всплывающее меню.  
@@ -154,7 +154,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||  
 |[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|Указывает, можно ли перетаскивать кнопки. (Переопределяет [CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|  
 |[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Вызывается платформой для вычисления размера кнопки для заданного контекста устройств и состояние закрепления. (Переопределяет [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Вызывается платформой для обработки [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) сообщения. (Переопределяет [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
+|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Вызывается платформой для обработки [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) сообщения. (Переопределяет [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|  
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Вызывается платформой при вставке кнопки в панели инструментов. (Переопределяет [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|Вызывается платформой, когда пользователь нажимает кнопку мыши. (Переопределяет [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Вызывается платформой, когда пользователь выбирает пункт контекстного меню.|  

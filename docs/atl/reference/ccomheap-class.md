@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45a999f777a2d497542544c2d3c7f079b7a32b0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c456aaa6f3448cf4386e0556773f2a9839702ccd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881608"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202426"
 ---
 # <a name="ccomheap-class"></a>Класс CComHeap
 Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функции выделения памяти COM.  
@@ -52,7 +52,7 @@ class CComHeap : public IAtlMemMgr
 |[CComHeap::Reallocate](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComHeap` реализует функции выделения памяти, с помощью функции выделения COM, включая [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)и [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Максимальный объем памяти, выделяемой равно INT_MAX (2147483647) байт.  
+ `CComHeap` реализует функции выделения памяти, с помощью функции выделения COM, включая [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)и [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc). Максимальный объем памяти, выделяемой равно INT_MAX (2147483647) байт.  
   
 ## <a name="example"></a>Пример  
  См. в примере [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -82,7 +82,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Примечания  
  Вызовите [CComHeap::Free](#free) или [CComHeap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.  
   
- Реализовано с помощью [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
+ Реализовано с помощью [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).  
   
 ##  <a name="free"></a>  CComHeap::Free  
  Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.  
@@ -96,7 +96,7 @@ virtual void Free(void* p) throw();
  Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.  
   
 ### <a name="remarks"></a>Примечания  
- Реализовано с помощью [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
+ Реализовано с помощью [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree).  
   
 ##  <a name="getsize"></a>  CComHeap::GetSize  
  Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.  
@@ -113,7 +113,7 @@ virtual size_t GetSize(void* p) throw();
  Возвращает размер выделенного блока памяти в байтах.  
   
 ### <a name="remarks"></a>Примечания  
- Реализовано с помощью [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
+ Реализовано с помощью [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).  
   
 ##  <a name="reallocate"></a>  CComHeap::Reallocate  
  Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.  
@@ -135,7 +135,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>Примечания  
  Вызовите [CComHeap::Free](#free) для освобождения памяти, выделенной с помощью этого метода.  
   
- Реализовано с помощью [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
+ Реализовано с помощью [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc).  
   
 ## <a name="see-also"></a>См. также  
  [Образец DynamicConsumer](../../visual-cpp-samples.md)   

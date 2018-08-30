@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ba67a990b027ff4cd770a0583f6d857a0ee7c725
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881062"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201045"
 ---
 # <a name="ccomcontainedobject-class"></a>Класс CComContainedObject
-Этот класс реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) делегируя владельца объекта `IUnknown`.  
+Этот класс реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) делегируя владельца объекта `IUnknown`.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -67,7 +67,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|Уменьшает счетчик ссылок на объект владельца.|  
   
 ## <a name="remarks"></a>Примечания  
- Использует ATL `CComContainedObject` в классах [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), и [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) делегируя владельца объекта `IUnknown`. (Им является внешний объект статистической обработки, или объект, для которого создается интерфейсом перемещаемой.) `CComContainedObject` вызовы `CComObjectRootEx` `OuterQueryInterface`, `OuterAddRef`, и `OuterRelease`, наследуемых через `Base`.  
+ Использует ATL `CComContainedObject` в классах [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), и [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) делегируя владельца объекта `IUnknown`. (Им является внешний объект статистической обработки, или объект, для которого создается интерфейсом перемещаемой.) `CComContainedObject` вызовы `CComObjectRootEx` `OuterQueryInterface`, `OuterAddRef`, и `OuterRelease`, наследуемых через `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `Base`  

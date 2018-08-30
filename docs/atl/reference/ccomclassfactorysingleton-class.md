@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ee594cb3cfef5ebc67b953b62d05b933b71f9f1d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c70347c7226df804acd894b6271c4673ec81f72d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884198"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201159"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>Класс CComClassFactorySingleton
 Этот класс является производным от [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) и использует [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) для создания объекта.  
@@ -109,7 +109,7 @@ CComPtr<IUnknown> m_spObj;
  Обратите внимание, что текущий способ `m_spObj` представляет критическое изменение из-за способа, `CComClassFactorySingleton` работали в предыдущих версиях библиотеки ATL. В предыдущих версиях `CComClassFactorySingleton` объект был создан в то же время, так как фабрика класса, при инициализации сервера. В Visual C++ .NET 2003 создается объект неактивно, при первом запросе. Это изменение может привести к ошибкам в программ, использующих ранних инициализации.  
   
 ## <a name="see-also"></a>См. также  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [Класс CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)   
  [Класс CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   

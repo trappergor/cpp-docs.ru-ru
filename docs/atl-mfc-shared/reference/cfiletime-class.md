@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 3ab0e457f90f3130295d287ae9a32d18ab212d50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208667"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202607"
 ---
 # <a name="cfiletime-class"></a>Класс CFileTime
 Этот класс предоставляет методы для управления значений даты и времени, связанного с файлом.  
@@ -107,7 +107,7 @@ class CFileTime :  public FILETIME
 |Day|Час \* 24|  
 |Неделя|День \* 7|  
   
- **Примечание** не всем файловым системам можно записать создания и время последнего доступа и не все файловые системы запись их таким же образом. Для примера, в файловой системе FAT Windows NT, создать времени имеет разрешение 10 миллисекунд, время записи с разрешением 2 секунды и время доступа с разрешением 1 день (дата доступа). Для файловой системы NTFS время доступа с разрешением 1 час. Кроме того FAT записывает время на диске в формате местного времени, но NTFS записывает время на диске в формате UTC. Дополнительные сведения см. в разделе [времени файлов](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
+ **Примечание** не всем файловым системам можно записать создания и время последнего доступа и не все файловые системы запись их таким же образом. Для примера, в файловой системе FAT Windows NT, создать времени имеет разрешение 10 миллисекунд, время записи с разрешением 2 секунды и время доступа с разрешением 1 день (дата доступа). Для файловой системы NTFS время доступа с разрешением 1 час. Кроме того FAT записывает время на диске в формате местного времени, но NTFS записывает время на диске в формате UTC. Дополнительные сведения см. в разделе [времени файлов](/windows/desktop/SysInfo/file-times).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `FILETIME`  
@@ -128,7 +128,7 @@ CFileTime(ULONGLONG nTime) throw();
   
 ### <a name="parameters"></a>Параметры  
  *FT*  
- Объект [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуры.  
+ Объект [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуры.  
   
  *nTime*  
  Дата и время, выраженное как 64-разрядное значение.  
@@ -418,7 +418,7 @@ static const ULONGLONG Week = Day* 7;
  См. в примере [CFileTime::Millisecond](#millisecond).  
   
 ## <a name="see-also"></a>См. также  
- [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [Класс CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

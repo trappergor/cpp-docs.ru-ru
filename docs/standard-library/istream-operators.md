@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1fdad6f34fed49ec851f027cba4c53ea08b48902
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961117"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195407"
 ---
 # <a name="ltistreamgt-operators"></a>Операторы &lt;istream&gt;
 
@@ -90,7 +90,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 извлекает до *N* − 1 элементов и сохраняет их в массив, начиная с _ *Str*. Если `Istr`. [width](../standard-library/ios-base-class.md#width) больше нуля, *N* имеет значение `Istr`. **Ширина**; в противном случае это будет размер самого большого массива из `Elem` , могут быть объявлены. Функция всегда сохраняет значение `Elem()` после сохранения всех извлеченных элементов сохраняется. Извлечение останавливается досрочно при достижении конца файла, на символе со значением **Elem**(0) (который не извлекается), или на любом элементе (который не извлекается), который будет отклонен [ws](../standard-library/istream-functions.md#ws). Если функция не извлекает ни один элемент, она вызывает `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае она вызывает `Istr`. **Ширина**(0) и возвращает *Istr*.
 
-**Примечание по безопасности** нулем строка, извлекаемая из входного потока не должна превышать размер буфера назначения *str*. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Примечание по безопасности** нулем строка, извлекаемая из входного потока не должна превышать размер буфера назначения *str*. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 Функция-шаблон:
 
@@ -110,7 +110,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```
 
-возвращает `Istr` >> (`char`**\***) `str`.
+Возвращает `Istr >> ( char * ) str`.
 
 Функция-шаблон:
 
@@ -120,7 +120,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char& Ch);
 ```
 
-возвращает `Istr` >> (**char&**) `Ch`.
+Возвращает `Istr >> ( char& ) Ch`.
 
 Функция-шаблон:
 
@@ -130,7 +130,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```
 
-возвращает `Istr` >> (**char \***) `str`.
+Возвращает `Istr >> ( char * ) str`.
 
 Функция-шаблон:
 
@@ -140,7 +140,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char& Ch);
 ```
 
-возвращает `Istr` >> (**char&**) `Ch`.
+Возвращает `Istr >> ( char& ) Ch`.
 
 Функция-шаблон:
 
@@ -151,7 +151,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-возвращает `Istr` `>>` `val` (и в процессе преобразует `rvalue reference` в `Istr` в `lvalue`).
+Возвращает `Istr >> val` (и преобразует ссылка rvalue на `Istr` для lvalue в процессе).
 
 ### <a name="example"></a>Пример
 

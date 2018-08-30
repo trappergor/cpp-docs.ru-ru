@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a5604a1b1c469272889aa7b4e283b3ee6f23bf
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c2b2f8ab8828c994b729180805be0a51a83b3487
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882800"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203630"
 ---
 # <a name="ccomenumimpl-class"></a>Класс CComEnumImpl
 Этот класс предоставляет реализацию интерфейса перечислителя COM, где хранятся перечисляемых элементов в массиве.  
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 #### <a name="parameters"></a>Параметры  
  *Base*  
- Перечислителя COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) интерфейса.  
+ COM-интерфейса перечислителя. См. в разделе [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) пример. 
   
  *piid*  
  Указатель на идентификатор интерфейса интерфейса перечислителя.  
@@ -72,11 +72,11 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CComEnumImpl::Clone](#clone)|Реализация [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
+|[CComEnumImpl::Clone](#clone)|Реализация **клона** метода интерфейса перечисления.|  
 |[CComEnumImpl::Init](#init)|Инициализирует перечислитель.|  
-|[CComEnumImpl::Next](#next)|Реализация [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx).|  
-|[CComEnumImpl::Reset](#reset)|Реализация [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx).|  
-|[CComEnumImpl::Skip](#skip)|Реализация [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx).|  
+|[CComEnumImpl::Next](#next)|Реализация **Далее**.|  
+|[CComEnumImpl::Reset](#reset)|Реализация **сбросить**.|  
+|[CComEnumImpl::Skip](#skip)|Реализация **Skip**.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|`IUnknown` Указатель объекта, указав перебора коллекции.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComEnumImpl` предоставляет реализацию для COM-интерфейс перечислителя, где хранятся перечисляемых элементов в массиве. Этот класс является аналогом `IEnumOnSTLImpl` , предоставляющего реализацию интерфейса перечислителя на основе контейнера стандартной библиотеки C++.  
+См. в разделе [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) пример реализации метода. `CComEnumImpl` предоставляет реализацию для COM-интерфейс перечислителя, где хранятся перечисляемых элементов в массиве. Этот класс является аналогом `IEnumOnSTLImpl` , предоставляющего реализацию интерфейса перечислителя на основе контейнера стандартной библиотеки C++.  
   
 > [!NOTE]
 >  Дополнительные сведения о дальнейшей различия между `CComEnumImpl` и `IEnumOnSTLImpl`, см. в разделе [CComEnumImpl::Init](#init).  
@@ -175,7 +175,7 @@ enum CComEnumFlags
 >  Прототип объекта этот метод указывает элементы массива, как оно принадлежит к типу `T`, где `T` была определена как параметр шаблона для класса. Это тот же тип, который предоставляется с помощью метода интерфейса COM [CComEnumImpl::Next](#next). Это то, что в отличие от [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), этот класс не поддерживает различные хранилища и представлены типы данных. Тип данных элементов в массиве должен быть таким же, как тип данных, предоставляемый посредством COM-интерфейса.  
   
 ##  <a name="clone"></a>  CComEnumImpl::Clone  
- Этот метод предоставляет реализацию [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) метод путем создания объекта типа `CComEnum`, инициализировав его с тем же массива и итератор, используемый текущим объектом и возвращает интерфейс в вновь созданный объект.  
+ Этот метод предоставляет реализацию **клона** метод путем создания объекта типа `CComEnum`, инициализировав его с тем же массива и итератор, используемый текущим объектом и возврат на только что созданный интерфейс объект.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -227,7 +227,7 @@ DWORD m_dwFlags;
 ```  
   
 ##  <a name="next"></a>  CComEnumImpl::Next  
- Этот метод предоставляет реализацию [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) метод.  
+ Этот метод предоставляет реализацию **Далее** метод.  
   
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,7 +247,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
  Стандартное значение HRESULT.  
   
 ##  <a name="reset"></a>  CComEnumImpl::Reset  
- Этот метод предоставляет реализацию [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) метод.  
+ Этот метод предоставляет реализацию **Сброс** метод.  
   
 ```
 STDMETHOD(Reset)(void);
@@ -257,7 +257,7 @@ STDMETHOD(Reset)(void);
  Стандартное значение HRESULT.  
   
 ##  <a name="skip"></a>  CComEnumImpl::Skip  
- Этот метод предоставляет реализацию [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) метод.  
+ Этот метод предоставляет реализацию **Skip** метод.  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

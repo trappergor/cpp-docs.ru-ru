@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209174"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196064"
 ---
 # <a name="cdrawingmanager-class"></a>Класс CDrawingManager
 `CDrawingManager` Класс реализует сложные алгоритмы рисования.  
@@ -169,7 +169,7 @@ static HBITMAP __stdcall CreateBitmap_32(
  Дескриптор вновь созданного точечного DIB, если этот метод выполнен успешно; в противном случае имеет значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о способах создания растрового изображения DIB см. в разделе [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
+ Дополнительные сведения о способах создания растрового изображения DIB см. в разделе [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap).  
   
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
  Отображает точечным рисункам, имеющим прозрачным или полупрозрачным пикселей.  
@@ -196,7 +196,7 @@ void DrawAlpha(
  Исходного прямоугольника.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод выполняет альфа смешения для двух растровых изображений. Дополнительные сведения об альфа смешения, см. в разделе [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) в пакете Windows SDK.  
+ Этот метод выполняет альфа смешения для двух растровых изображений. Дополнительные сведения об альфа смешения, см. в разделе [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) в пакете Windows SDK.  
   
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
  Рисование эллипса с предоставленным цвета заливки и границы.  

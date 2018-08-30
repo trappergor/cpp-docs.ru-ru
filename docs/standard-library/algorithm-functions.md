@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3314921d528624e5f08d9053f44f171d5c45b7f2
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: f51bac0f5865a6f985436f3713d3a81abd44cddb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132234"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203968"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;функции&gt; алгоритмов
 
@@ -2645,7 +2645,7 @@ bool is_sorted(
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-шаблон возвращает [is_sorted_until](http://msdn.microsoft.com/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. `operator<` Функция выполняет сравнение порядка.
+Первая функция-шаблон возвращает [is_sorted_until](https://msdn.microsoft.com/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. `operator<` Функция выполняет сравнение порядка.
 
 Вторая функция-шаблон возвращает `is_sorted_until( first, last , comp ) == last`. *Comp* функции предиката выполняет сравнение порядка.
 

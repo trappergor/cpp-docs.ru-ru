@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 15f0b26c5c86d023d98d6a13e6b92518756a3179
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883012"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206210"
 ---
 # <a name="ienumonstlimpl-class"></a>Класс IEnumOnSTLImpl
 Этот класс определяет перечислитель интерфейс на основе коллекции стандартной библиотеки C++.  
@@ -45,7 +45,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 #### <a name="parameters"></a>Параметры  
  *Base*  
- Перечислителя COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) интерфейса.  
+ COM-перечислитель. См. в разделе [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) пример.
   
  *piid*  
  Указатель на идентификатор интерфейса интерфейса перечислителя.  
@@ -65,11 +65,11 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::Clone](#clone)|Реализация [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
+|[IEnumOnSTLImpl::Clone](#clone)|Реализация **клона**.|  
 |[IEnumOnSTLImpl::Init](#init)|Инициализирует перечислитель.|  
-|[IEnumOnSTLImpl::Next](#next)|Реализация [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx).|  
-|[IEnumOnSTLImpl::Reset](#reset)|Реализация [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx).|  
-|[IEnumOnSTLImpl::Skip](#skip)|Реализация [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx).|  
+|[IEnumOnSTLImpl::Next](#next)|Реализация **Далее**.|  
+|[IEnumOnSTLImpl::Reset](#reset)|Реализация **сбросить**.|  
+|[IEnumOnSTLImpl::Skip](#skip)|Реализация **Skip**.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
@@ -122,7 +122,7 @@ HRESULT Init(
  Этот метод необходимо вызвать перед тем как передать указатель на интерфейс перечисления любой клиентам.  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- Этот метод предоставляет реализацию [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) метод путем создания объекта типа `CComEnumOnSTL`, инициализировав его с одной и той же коллекции и итератор, используемый текущим объектом и возвращает интерфейс в вновь созданный объект.  
+ Этот метод предоставляет реализацию **клона** метод путем создания объекта типа `CComEnumOnSTL`, инициализировав его с одной и той же коллекции и итератор, используемый текущим объектом и возврат интерфейса на вновь созданный объект.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -163,7 +163,7 @@ CollType::iterator m_iter;
 ```  
   
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next  
- Этот метод предоставляет реализацию [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) метод.  
+ Этот метод предоставляет реализацию **Далее** метод.  
   
 ```
 STDMETHOD(Next)(
@@ -186,7 +186,7 @@ STDMETHOD(Next)(
  Стандартное значение HRESULT.  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
- Этот метод предоставляет реализацию [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) метод.  
+ Этот метод предоставляет реализацию **Сброс** метод.  
   
 ```
 STDMETHOD(Reset)(void);
@@ -196,7 +196,7 @@ STDMETHOD(Reset)(void);
  Стандартное значение HRESULT.  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
- Этот метод предоставляет реализацию [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) метод.  
+ Этот метод предоставляет реализацию **Skip** метод.  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ae5547e2cc650c65b4a67d9734f00cf88b76c8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 69d25b87c03216b151a29c7688e61fcc278d0dd7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885618"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199173"
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 Этот класс является оболочкой для маркера доступа.  
@@ -140,9 +140,9 @@ class CAccessToken
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Вызовите этот метод для установки на основную группу `CAccessToken` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- [Маркер доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows.  
+ [Маркер доступа](/windows/desktop/SecAuthZ/access-tokens) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows.  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
@@ -212,13 +212,13 @@ bool CreateImpersonationToken(
  Указатель на новый `CAccessToken` объекта.  
   
  *инвентаризацию программного обеспечения*  
- Указывает [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) перечислимый тип, который предоставляет уровень олицетворения новый маркер.  
+ Указывает [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) перечислимый тип, который предоставляет уровень олицетворения новый маркер.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `CreateImpersonationToken` вызовы [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) создать новый маркер олицетворения.  
+ `CreateImpersonationToken` вызовы [DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616) создать новый маркер олицетворения.  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  Этот метод используется для создания нового основного маркера.  
@@ -235,16 +235,16 @@ bool CreatePrimaryToken(
  Указатель на новый `CAccessToken` объекта.  
   
  *dwDesiredAccess*  
- Указывает права доступа, запрошенный для нового токена. По умолчанию, MAXIMUM_ALLOWED, запрашивает все права доступа, которые являются допустимыми для вызывающего объекта. См. в разделе [права доступа и масок доступа](http://msdn.microsoft.com/library/windows/desktop/aa374902) дополнительные права на доступ.  
+ Указывает права доступа, запрошенный для нового токена. По умолчанию, MAXIMUM_ALLOWED, запрашивает все права доступа, которые являются допустимыми для вызывающего объекта. См. в разделе [права доступа и масок доступа](/windows/desktop/SecAuthZ/access-rights-and-access-masks) дополнительные права на доступ.  
   
  *pTokenAttributes*  
- Указатель на [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового токена и определяет, могут ли дочерние процессы наследуют маркер. Если *pTokenAttributes* имеет значение NULL, маркер возвращает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.  
+ Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового токена и определяет, могут ли дочерние процессы наследуют маркер. Если *pTokenAttributes* имеет значение NULL, маркер возвращает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `CreatePrimaryToken` вызовы [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) для создания нового основного маркера.  
+ `CreatePrimaryToken` вызовы [DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617) для создания нового основного маркера.  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  Вызовите этот метод для создания нового процесса в контексте безопасности пользователя, представленного `CAccessToken` объекта.  
@@ -271,22 +271,22 @@ bool CreateProcessAsUser(
  Указатель на заканчивающуюся нулем строку, которая указывает командную строку для выполнения.  
   
  *pProcessInformation*  
- Указатель на [PROCESS_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/ms684873) структуру, которая получает идентификационную информацию о новом процессе.  
+ Указатель на [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information) структуру, которая получает идентификационную информацию о новом процессе.  
   
  *pStartupInfo*  
- Указатель на [STARTUPINFO](http://msdn.microsoft.com/library/windows/desktop/ms686331) структуру, которая указывает, как должно выглядеть главного окна для нового процесса.  
+ Указатель на [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) структуру, которая указывает, как должно выглядеть главного окна для нового процесса.  
   
  *dwCreationFlags*  
- Задает дополнительные флаги, определяющие с приоритетом и создание процесса. Функция Win32 см. в разделе [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429) список флагов.  
+ Задает дополнительные флаги, определяющие с приоритетом и создание процесса. Функция Win32 см. в разделе [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) список флагов.  
   
  *bLoadProfile*  
- Значение TRUE, если профиль пользователя загружен с [LoadUserProfile](http://msdn.microsoft.com/library/windows/desktop/bb762281).  
+ Значение TRUE, если профиль пользователя загружен с [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).  
   
  *pProcessAttributes*  
- Указатель на [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового процесса и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pProcessAttributes* имеет значение NULL, процесс получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.  
+ Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового процесса и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pProcessAttributes* имеет значение NULL, процесс получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.  
   
  *pThreadAttributes*  
- Указатель на [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового потока и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pThreadAttributes* имеет значение NULL, поток получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.  
+ Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового потока и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pThreadAttributes* имеет значение NULL, поток получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.  
   
  *bInherit*  
  Указывает, является ли новый процесс наследует маркеры из вызывающего процесса. Значение TRUE, если каждый наследуемые открытый дескриптор в вызывающий процесс наследуется новый процесс. Унаследованные дескрипторы обладают теми же привилегиями значение и доступа исходные дескрипторы.  
@@ -298,7 +298,7 @@ bool CreateProcessAsUser(
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `CreateProcessAsUser` использует `CreateProcessAsUser` функцию Win32 для создания нового процесса, который выполняется в контексте безопасности пользователя, представленного `CAccessToken` объекта. См. в описании [CreateProcessAsUser](http://msdn.microsoft.com/library/windows/desktop/ms682429) функция полное описание параметров, необходимых.  
+ `CreateProcessAsUser` использует `CreateProcessAsUser` функцию Win32 для создания нового процесса, который выполняется в контексте безопасности пользователя, представленного `CAccessToken` объекта. См. в описании [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) функция полное описание параметров, необходимых.  
   
  Для успешного выполнения этого метода `CAccessToken` должен храниться в объекте AssignPrimaryToken (если он является ограниченным маркером) и IncreaseQuota привилегии.  
   
@@ -330,7 +330,7 @@ bool CreateRestrictedToken(
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `CreateRestrictedToken` использует [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) функцию Win32 для создания нового `CAccessToken` объект с ограничениями.  
+ `CreateRestrictedToken` использует [CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) функцию Win32 для создания нового `CAccessToken` объект с ограничениями.  
   
 > [!IMPORTANT]
 >  При использовании `CreateRestrictedToken`, проверьте следующие: существующий маркер является допустимым (и не введенное пользователем) и *SidsToDisable* и *PrivilegesToDelete* допустимым (и не введенное пользователем). Если метод возвращает значение FALSE, запретите функциональные возможности.  
@@ -486,7 +486,7 @@ bool GetImpersonationLevel(
   
 ### <a name="parameters"></a>Параметры  
  *pImpersonationLevel*  
- Указатель на [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) тип перечисления, который будет получать информацию об уровне олицетворения.  
+ Указатель на [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) тип перечисления, который будет получать информацию об уровне олицетворения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
@@ -500,7 +500,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>Параметры  
  *pluid*  
- Указатель на [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) которого будет получать идентификатор сеанса входа в систему.  
+ Указатель на [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) которого будет получать идентификатор сеанса входа в систему.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
@@ -591,7 +591,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) функции Win32.  
+ Вызовы [OpenProcessToken](https://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) функции Win32.  
   
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile  
  Вызовите этот метод, чтобы получить дескриптор, указывающий на профиль пользователя, связанный с `CAccessToken` объекта.  
@@ -612,7 +612,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
   
 ### <a name="parameters"></a>Параметры  
  *pSource*  
- Указатель на [TOKEN_SOURCE](http://msdn.microsoft.com/library/windows/desktop/aa379631) структуры.  
+ Указатель на [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
@@ -626,7 +626,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
   
 ### <a name="parameters"></a>Параметры  
  *pStatistics*  
- Указатель на [TOKEN_STATISTICS](http://msdn.microsoft.com/library/windows/desktop/aa379632) структуры.  
+ Указатель на [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
@@ -679,7 +679,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
   
 ### <a name="parameters"></a>Параметры  
  *pluid*  
- Указатель на [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) которого будет получать идентификатор маркера.  
+ Указатель на [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) которого будет получать идентификатор маркера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
@@ -693,7 +693,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
   
 ### <a name="parameters"></a>Параметры  
  *pType*  
- Адрес [TOKEN_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379633) переменную, которая, в случае успешного выполнения получает тип токена.  
+ Адрес [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) переменную, которая, в случае успешного выполнения получает тип токена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
@@ -805,16 +805,16 @@ bool LogonUser(
  Указатель на заканчивающуюся нулем строку, указывающее пароль для учетной записи пользователя, открытый текст *pszUserName*.  
   
  *dwLogonType*  
- Указывает тип выполняемой операции входа в систему. См. в разделе [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) для получения дополнительных сведений.  
+ Указывает тип выполняемой операции входа в систему. См. в разделе [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) для получения дополнительных сведений.  
   
  *dwLogonProvider*  
- Указывает поставщика входа в систему. См. в разделе [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) для получения дополнительных сведений.  
+ Указывает поставщика входа в систему. См. в разделе [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) для получения дополнительных сведений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Доступа, маркеров полученный в результате входа в систему будет связан с `CAccessToken`. Для успешного выполнения этого метода `CAccessToken` привилегии SE_TCB_NAME, идентификации держателя как часть базового доверенного компьютера должен храниться в объекте. См. в разделе [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) Дополнительные сведения о необходимых прав.  
+ Доступа, маркеров полученный в результате входа в систему будет связан с `CAccessToken`. Для успешного выполнения этого метода `CAccessToken` привилегии SE_TCB_NAME, идентификации держателя как часть базового доверенного компьютера должен храниться в объекте. См. в разделе [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) Дополнительные сведения о необходимых прав.  
   
 ##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken  
  Вызов этого метода в COM-сервера, обрабатывающего вызов от клиента, чтобы инициализировать `CAccessToken` с маркером доступа COM-клиент.  
@@ -834,7 +834,7 @@ bool OpenCOMClientToken(
  Значение TRUE, если текущий поток будет олицетворять вызывающий клиент COM, если этот вызов завершается успешно. Если значение равно FALSE, маркер доступа будет открыт, но поток не получит маркер олицетворения после завершения этого вызова.  
   
  *bOpenAsSelf*  
- Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) метода или в контексте безопасности процесса для вызывающего потока.  
+ Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) метода или в контексте безопасности процесса для вызывающего потока.  
   
  Если этот параметр имеет значение FALSE, проверка доступа выполняется с помощью контекста безопасности для вызывающего потока. Если олицетворение потока выполняется в клиент, этот контекст безопасности может быть имя клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа с помощью контекст безопасности процесса для вызывающего потока.  
   
@@ -866,7 +866,7 @@ bool OpenNamedPipeClientToken(
  Значение TRUE, если текущий поток будет олицетворять вызывающий клиент канала, если этот вызов завершается успешно. Если значение равно FALSE, маркер доступа будет открыт, но поток не получит маркер олицетворения после завершения этого вызова.  
   
  *bOpenAsSelf*  
- Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) метода или в контексте безопасности процесса для вызывающего потока.  
+ Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) метода или в контексте безопасности процесса для вызывающего потока.  
   
  Если этот параметр имеет значение FALSE, проверка доступа выполняется с помощью контекста безопасности для вызывающего потока. Если олицетворение потока выполняется в клиент, этот контекст безопасности может быть имя клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа с помощью контекст безопасности процесса для вызывающего потока.  
   
@@ -898,7 +898,7 @@ bool OpenRPCClientToken(
  Значение TRUE, если текущий поток будет олицетворять вызывающий клиент RPC, если этот вызов завершается успешно. Если значение равно FALSE, маркер доступа будет открыт, но поток не получит маркер олицетворения после завершения этого вызова.  
   
  *bOpenAsSelf*  
- Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) метода или в контексте безопасности процесса для вызывающего потока.  
+ Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) метода или в контексте безопасности процесса для вызывающего потока.  
   
  Если этот параметр имеет значение FALSE, проверка доступа выполняется с помощью контекста безопасности для вызывающего потока. Если олицетворение потока выполняется в клиент, этот контекст безопасности может быть имя клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа с помощью контекст безопасности процесса для вызывающего потока.  
   
@@ -927,12 +927,12 @@ bool OpenThreadToken(
  Значение TRUE, если поток остается на уровне запрошенного олицетворения после завершения этого метода. Если значение равно FALSE, поток вернется к исходный уровень олицетворения.  
   
  *bOpenAsSelf*  
- Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](http://msdn.microsoft.com/library/windows/desktop/ms683182) метода или в контексте безопасности процесса для вызывающего потока.  
+ Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) метода или в контексте безопасности процесса для вызывающего потока.  
   
  Если этот параметр имеет значение FALSE, проверка доступа выполняется с помощью контекста безопасности для вызывающего потока. Если олицетворение потока выполняется в клиент, этот контекст безопасности может быть имя клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа с помощью контекст безопасности процесса для вызывающего потока.  
   
  *инвентаризацию программного обеспечения*  
- Указывает [SECURITY_IMPERSONATION_LEVEL](http://msdn.microsoft.com/library/windows/desktop/aa379572) перечислимый тип, который предоставляет уровень олицетворения маркера.  
+ Указывает [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) перечислимый тип, который предоставляет уровень олицетворения маркера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
@@ -953,7 +953,7 @@ bool PrivilegeCheck(
   
 ### <a name="parameters"></a>Параметры  
  *RequiredPrivileges*  
- Указатель на [PRIVILEGE_SET](http://msdn.microsoft.com/library/windows/desktop/aa379307) структуры.  
+ Указатель на [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set) структуры.  
   
  *pbResult*  
  Указатель на значение задает метод, чтобы указать любые или все из заданного права, включены ли в `CAccessToken` объекта.  
@@ -962,7 +962,7 @@ bool PrivilegeCheck(
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Когда `PrivilegeCheck` возвращении `Attributes` члены каждой [подробности](http://msdn.microsoft.com/library/windows/desktop/aa379263) структуры присваивается SE_PRIVILEGE_USED_FOR_ACCESS, если включен соответствующий привилегий. Этот метод вызывает метод [PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) функции Win32.  
+ Когда `PrivilegeCheck` возвращении `Attributes` члены каждой [подробности](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) структуры присваивается SE_PRIVILEGE_USED_FOR_ACCESS, если включен соответствующий привилегий. Этот метод вызывает метод [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) функции Win32.  
   
 ##  <a name="revert"></a>  CAccessToken::Revert  
  Вызовите этот метод, чтобы остановить поток из используется маркер олицетворения.  
@@ -1034,5 +1034,5 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
   
 ## <a name="see-also"></a>См. также  
  [Пример ATLSecurity](../../visual-cpp-samples.md)   
- [Маркеры доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [Маркеры доступа](/windows/desktop/SecAuthZ/access-tokens)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

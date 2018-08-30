@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeba73be12fdf8e068800d192cef7df9462aa4fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6600706690dea3573f8eb1aa47f68b592b3bff1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402791"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200311"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
 
@@ -78,11 +78,11 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **mbchar** не **NULL** и, если объект, *mbchar* forms указывает допустимый Многобайтовый символ **mbtowc** возвращает длину в байт многобайтового символа. Если *mbchar* — **NULL** или объект, который он указывает является нулевым символом Юникода (L «\0»), функция возвращает значение 0. Если объект, *mbchar* указывает не образует допустимый Многобайтовый символ в первых *число* символов, возвращается значение -1.
+Если **mbchar** не **NULL** и, если объект, *mbchar* допустимый Многобайтовый символ, указывающий forms **mbtowc** возвращает длину в байт многобайтового символа. Если *mbchar* — **NULL** или объект, который он указывает — это двухбайтовая нуль-символом (L '\0'), функция возвращает значение 0. Если объект, *mbchar* точек не образует допустимый Многобайтовый символ в первых *число* символов, возвращается значение -1.
 
 ## <a name="remarks"></a>Примечания
 
-**Mbtowc** функция преобразует *число* или меньшее число байтов, который указывает *mbchar*, если *mbchar* не **значениеNULL**, в соответствующий расширенный символ. **mbtowc** сохраняет полученный расширенный символ в *тип данных wchar,* Если *wchar* не **NULL**. **mbtowc** не проверяет более **MB_CUR_MAX** байт. **mbtowc** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbtowc_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**Mbtowc** функция преобразует *число* или меньше байт, на которые указывают *mbchar*, если *mbchar* не **NULL**, соответствующий расширенный символ. **mbtowc** сохраняет результирующий расширенный символ в *wchar,* Если *wchar* не **NULL**. **mbtowc** не проверяет более **MB_CUR_MAX** байт. **mbtowc** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbtowc_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>См. также
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Языковой стандарт](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

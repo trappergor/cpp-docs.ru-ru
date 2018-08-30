@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff939abc93c38be198bf6edb21cbb3e3dc9fbaa
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900856"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202399"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -837,7 +837,7 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает метод [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) прежде, чем возвращает значение S_OK.
+Этот метод вызывает метод [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) прежде, чем возвращает значение S_OK.
 
 Переопределите этот метод в производном классе, чтобы реализовать пользовательское поведение.
 
@@ -1619,7 +1619,7 @@ HRESULT TaskDialogCallback(
 |TDN_CREATED|Не используется.|Не используется.|
 |TDN_NAVIGATED|Не используется.|Не используется.|
 |TDN_BUTTON_CLICKED|Кнопки идентификатора элемента управления.|Не используется.|
-|TDN_HYPERLINK_CLICKED|Не используется.|Объект [LPCWSTR](http://msdn.microsoft.com/library/windows/desktop/aa383751) структуру, содержащую ссылку.|
+|TDN_HYPERLINK_CLICKED|Не используется.|Объект [LPCWSTR](/windows/desktop/WinProg/windows-data-types) структуру, содержащую ссылку.|
 |TDN_TIMER|Время в миллисекундах с момента `CTaskDialog` был создан или сброса таймера.|Не используется.|
 |TDN_DESTROYED|Не используется.|Не используется.|
 |TDN_RADIO_BUTTON_CLICKED|Идентификатор кнопки радио|Не используется.|

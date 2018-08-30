@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d16279b4de6c0cca0d37161a37ce5e39b85b7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b0e961ecf45458dc039b932bdcc96c3bcc6f7521
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339362"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196336"
 ---
 # <a name="casyncmonikerfile-class"></a>Класс CAsyncMonikerFile
 Предоставляет функции для использования асинхронных моникеров в элементах управления ActiveX (ранее элементах управления OLE).  
@@ -89,7 +89,7 @@ class CAsyncMonikerFile : public CMonikerFile
 |[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|Вызывается, когда асинхронная передача остановлена.|  
   
 ## <a name="remarks"></a>Примечания  
- Производный от [CMonikerFile](../../mfc/reference/cmonikerfile-class.md), который в свою очередь является производным от [COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` использует [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) интерфейс для доступа к любой поток данных асинхронно включая асинхронную загрузку файлов из URL-адрес. Файлы могут быть свойства пути к данным элементов управления ActiveX.  
+ Производный от [CMonikerFile](../../mfc/reference/cmonikerfile-class.md), который в свою очередь является производным от [COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` использует [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) интерфейс для доступа к любой поток данных асинхронно включая асинхронную загрузку файлов из URL-адрес. Файлы могут быть свойства пути к данным элементов управления ActiveX.  
   
  Асинхронные моникеры используются главным образом в Интернет-приложений и элементов управления ActiveX для предоставления отклика пользовательского интерфейса во время передачи файлов. Хорошим примером этого является использование [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) для предоставления асинхронного свойств для элементов управления ActiveX. `CDataPathProperty` Объекта несколько раз получит обратный вызов для указания доступности новых данных во время длительных свойство exchange.  
   
@@ -156,7 +156,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  [CAsyncMonikerFile::Open](#open) вызовы `CreateBindStatusCallback`.  
   
- Дополнительные сведения об асинхронных моникеров и асинхронной привязки см. в разделе [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060) интерфейс и [как асинхронной привязки и рабочего хранилища](http://msdn.microsoft.com/library/windows/desktop/aa379152). Описание статистической обработки, см. в разделе [статистической обработки](http://msdn.microsoft.com/library/windows/desktop/ms686558). Все три раздела предназначены в пакете Windows SDK.  
+ Дополнительные сведения об асинхронных моникеров и асинхронной привязки см. в разделе [IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060) интерфейс и [как асинхронной привязки и рабочего хранилища](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work). Описание статистической обработки, см. в разделе [статистической обработки](/windows/desktop/com/aggregation). Все три раздела предназначены в пакете Windows SDK.  
   
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  Вызывается из клиенту асинхронным моникером сообщить асинхронный моникер, в том, как ему нужно привязать.  
@@ -196,7 +196,7 @@ FORMATETC* GetFormatEtc() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на структуру Windows [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) открытое потока. Возвращает значение NULL, если моникер не привязан, если он не является асинхронным, или в том случае, если асинхронная операция не было начато.  
+ Указатель на структуру Windows [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) открытое потока. Возвращает значение NULL, если моникер не привязан, если он не является асинхронным, или в том случае, если асинхронная операция не было начато.  
   
 ##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  Вызывается из клиента асинхронным моникером начинает процесс привязки получают приоритет потока для операции привязки.  
@@ -206,7 +206,7 @@ virtual LONG GetPriority() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Приоритет, по которому асинхронная передача будет выполняться. Один из флагов приоритет стандартных потоков: THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, наинизший, THREAD_PRIORITY_NORMAL и THREAD_PRIORITY_TIME_CRITICAL. См. в разделе Windows функция [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) описание из следующих значений.  
+ Приоритет, по которому асинхронная передача будет выполняться. Один из флагов приоритет стандартных потоков: THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, наинизший, THREAD_PRIORITY_NORMAL и THREAD_PRIORITY_TIME_CRITICAL. См. в разделе Windows функция [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) описание из следующих значений.  
   
 ### <a name="remarks"></a>Примечания  
  `GetPriority` не следует вызывать напрямую. THREAD_PRIORITY_NORMAL возвращается в реализации по умолчанию.  

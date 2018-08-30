@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9131a1cc1f8d0c66f2eb3616f4903db74ea4bdf0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6de7ee0ede844ce05b59b13e2f8acd7e6068220b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881377"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204512"
 ---
 # <a name="iquickactivateimpl-class"></a>Класс IQuickActivateImpl
 Этот класс объединяет инициализации элемента управления контейнеры в один вызов.  
@@ -58,7 +58,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 |[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Информирует элемент управления контейнера, были назначены какой объем места на экране.|  
   
 ## <a name="remarks"></a>Примечания  
- [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146) интерфейс помогает избежать задержек при загрузке элементов управления путем объединения инициализации в одном вызове контейнеры. `QuickActivate` Метод позволяет контейнеру передавать указатель на [QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630) требуется структура, которая хранит указатели на все интерфейсы управления. При возвращении управления передает указатель на [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) структуру, которая хранит указатели на собственных интерфейсов, которые используются в качестве контейнера. Класс `IQuickActivateImpl` предоставляет реализацию по умолчанию `IQuickActivate` и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
+ [IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate) интерфейс помогает избежать задержек при загрузке элементов управления путем объединения инициализации в одном вызове контейнеры. `QuickActivate` Метод позволяет контейнеру передавать указатель на [QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer) требуется структура, которая хранит указатели на все интерфейсы управления. При возвращении управления передает указатель на [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) структуру, которая хранит указатели на собственных интерфейсов, которые используются в качестве контейнера. Класс `IQuickActivateImpl` предоставляет реализацию по умолчанию `IQuickActivate` и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
  **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -80,7 +80,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 ### <a name="remarks"></a>Примечания  
  Размер для полной подготовки к просмотру элемента управления и указывается в единицах HIMETRIC.  
   
- См. в разделе [IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) в Windows SDK.  
+ См. в разделе [IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) в Windows SDK.  
   
 ##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate  
  Выполняет быстрый инициализацию загружаемых элементов управления.  
@@ -92,9 +92,9 @@ STDMETHOD(QuickActivate)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта структура содержит указатели на интерфейсы, необходимые для управления и значения некоторых свойств окружения. При возврате управления передает указатель на [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) структуру, которая содержит указатели на собственных интерфейсов, необходимых для контейнера, а также дополнительные сведения о состоянии.  
+ Эта структура содержит указатели на интерфейсы, необходимые для управления и значения некоторых свойств окружения. При возврате управления передает указатель на [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) структуру, которая содержит указатели на собственных интерфейсов, необходимых для контейнера, а также дополнительные сведения о состоянии.  
   
- См. в разделе [IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) в Windows SDK.  
+ См. в разделе [IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) в Windows SDK.  
   
 ##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent  
  Информирует элемент управления контейнера, были назначены какой объем места на экране.  
@@ -106,7 +106,7 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 ### <a name="remarks"></a>Примечания  
  Размер указывается в единицах HIMETRIC.  
   
- См. в разделе [IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) в Windows SDK.  
+ См. в разделе [IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComControl](../../atl/reference/ccomcontrol-class.md)   

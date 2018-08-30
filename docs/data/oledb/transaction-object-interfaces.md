@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b2d84d9a072d3eeaa84246a6692487be5c71679c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 758208de2ee27dba64808c60b1d94bed5bdeafa4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194578"
 ---
 # <a name="transaction-object-interfaces"></a>Интерфейсы объекта транзакции
 Объект транзакции определяет атомарной единицей работы над источником данных и определяет, каким образом эти единицы работы связаны друг с другом. Этот объект не поддерживается напрямую с помощью шаблонов поставщика OLE DB (то есть необходимо создать собственный объект).  
@@ -34,7 +34,7 @@ ms.locfileid: "42573268"
   
 |Интерфейс|Обязательный?|Реализовано с помощью шаблонов OLE DB?|  
 |---------------|---------------|--------------------------------------|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Обязательный|Нет|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Обязательный|Нет|  
 |[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|Обязательный|Нет|  
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|Нет|  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19046cc825fabd2a3a41020a9f4c141dc98489e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 095d0d74fe5ff6eb30866b619e201a029b754d38
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882823"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202180"
 ---
 # <a name="ca2wex-class"></a>Класс CA2WEX
 Этот класс используется, макросы преобразования строк CA2TEX, CA2CTEX, CT2WEX и CT2CWEX и typedef CA2W.  
@@ -110,7 +110,7 @@ CA2WEX(LPCSTR psz) throw(...);
  Текстовая строка для преобразования.  
   
  *nCodePage*  
- Кодовую страницу, используемую для выполнения преобразования. См. в обсуждении параметр кода страницы для функции Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) для получения дополнительных сведений.  
+ Кодовую страницу, используемую для выполнения преобразования. См. в обсуждении параметр кода страницы для функции Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) для получения дополнительных сведений.  
   
 ### <a name="remarks"></a>Примечания  
  Выделяет буфера, используемого в процессе перевода.  

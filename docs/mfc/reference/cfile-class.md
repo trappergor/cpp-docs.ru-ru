@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20a254e6d5a6e3e04dfd013c1f7ae3e8e2c9100e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1d3422923075f1c9546da1f8d2430e2e2f2c4bbc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337275"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203060"
 ---
 # <a name="cfile-class"></a>Класс CFile
 Базовый класс для файловых классов Microsoft Foundation Class.  
@@ -363,7 +363,7 @@ virtual CString GetFileTitle() const;
  Название базового файла.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) извлекаемого название файла. При успешном выполнении метод возвращает строку, система будет использовать для отображения имени файла для пользователя. В противном случае вызывает метод [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) для извлечения имени файла (включая расширение файла) базового файла. Таким образом расширение файла будет не всегда быть включен в строку заголовка возвращенного файла. Дополнительные сведения см. в разделе [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924) и [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) в пакете Windows SDK.  
+ Этот метод вызывает метод [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) извлекаемого название файла. При успешном выполнении метод возвращает строку, система будет использовать для отображения имени файла для пользователя. В противном случае вызывает метод [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) для извлечения имени файла (включая расширение файла) базового файла. Таким образом расширение файла будет не всегда быть включен в строку заголовка возвращенного файла. Дополнительные сведения см. в разделе [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) и [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) в пакете Windows SDK.  
   
  Чтобы вернуть весь путь к файлу, включая имя, вызовите [GetFilePath](#getfilepath). Чтобы вернуть только имя файла, вызовите [GetFileName](#getfilename).  
   
@@ -568,7 +568,7 @@ virtual BOOL Open(
  [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
 ##  <a name="operator_handle"></a>  CFile::operator ДЕСКРИПТОР  
- Этот оператор используется для передачи дескриптора `CFile` объекта функции, такие как [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) и [функции GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320) которые предполагают `HANDLE`.  
+ Этот оператор используется для передачи дескриптора `CFile` объекта функции, такие как [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) и [функции GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) которые предполагают `HANDLE`.  
   
 ```  
 operator HANDLE() const;  

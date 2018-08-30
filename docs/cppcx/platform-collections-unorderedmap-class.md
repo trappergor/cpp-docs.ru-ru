@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d86e5e36c7219a79b77d79fe02e6b2ae811ccabc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612722"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205817"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Класс Platform::Collections::UnorderedMap
 
@@ -112,7 +112,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Метод UnorderedMap::First
 
-Возвращает итератор, задающий первый [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) элемент в неупорядоченном сопоставлении.
+Возвращает итератор, задающий первый [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) элемент в неупорядоченном сопоставлении.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -223,7 +223,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
 
-Объект [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , содержащий сведения об объекте, который вызвал событие и типе произошедшего изменения. См. также [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) и [CollectionChange Enumeration](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Объект [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , содержащий сведения об объекте, который вызвал событие и типе произошедшего изменения. См. также [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) и [CollectionChange Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
@@ -247,7 +247,7 @@ virtual void Remove(
 
 ## <a name="size"></a>  Метод UnorderedMap::Size
 
-Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в объекте UnorderedMap.
+Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в объекте UnorderedMap.
 
 ### <a name="syntax"></a>Синтаксис
 

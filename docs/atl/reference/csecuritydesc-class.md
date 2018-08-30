@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9968a3601e366628b3539343dde34e956387356a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ea4bfc278e0912248c437123bd1510002a5c3829
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201631"
 ---
 # <a name="csecuritydesc-class"></a>Класс CSecurityDesc
 Этот класс является оболочкой для `SECURITY_DESCRIPTOR` структуры.  
@@ -115,7 +115,7 @@ class CSecurityDesc
   
  Приложения не следует изменять `SECURITY_DESCRIPTOR` структура напрямую, а вместо этого следует использовать методы класса, предоставляемые.  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
   
 ### <a name="parameters"></a>Параметры  
  *pstr*  
- Указатель на заканчивающуюся нулем строку, которая содержит [формат строки дескриптора безопасности](http://msdn.microsoft.com/library/windows/desktop/aa379570) для преобразования.  
+ Указатель на заканчивающуюся нулем строку, которая содержит [формат строки дескриптора безопасности](/windows/desktop/SecAuthZ/security-descriptor-string-format) для преобразования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true при успешном выполнении. Вызывает исключение в случае сбоя.  
@@ -163,7 +163,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Примечания  
  Строки могут быть созданы с помощью [CSecurityDesc::ToString](#tostring). Преобразование дескриптора безопасности в строку упрощает для хранения и передачи.  
   
- Этот метод вызывает метод [функция ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Этот метод вызывает метод [функция ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).  
   
 ##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  Извлекает контролировать данные из дескриптора безопасности.  
@@ -180,7 +180,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  Возвращает значение true, если метод выполнен успешно, значение false в случае неудачи.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
+ Этот метод вызывает метод [GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  Извлекает сведения о списке (DACL) для управления доступом из дескриптора безопасности.  
@@ -251,7 +251,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) структуры.  
+ Возвращает указатель на [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) структуры.  
   
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  Извлекает сведения о системе управления доступом список управления ДОСТУПОМ из дескриптора безопасности.  
@@ -428,7 +428,7 @@ bool IsSelfRelative() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если дескриптор безопасности в относительном формате с все сведения о безопасности в непрерывном блоке памяти. Возвращает значение false, если дескриптор безопасности в абсолютном формате. Дополнительные сведения см. в разделе [абсолютное и дескрипторы безопасности Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Возвращает значение true, если дескриптор безопасности в относительном формате с все сведения о безопасности в непрерывном блоке памяти. Возвращает значение false, если дескриптор безопасности в абсолютном формате. Дополнительные сведения см. в разделе [абсолютное и дескрипторы безопасности Self-Relative](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  Вызовите этот метод, чтобы преобразовать дескриптор безопасности в абсолютном формате.  
@@ -441,7 +441,7 @@ bool MakeAbsolute() throw(...);
  Возвращает значение true, если метод выполнен успешно, значение false в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дескриптор безопасности в абсолютном формате содержит указатели на сведения, содержащиеся в ней, а не сами сведения. Дескриптор безопасности в относительном формате сведения в непрерывном блоке памяти. В дескрипторе безопасности относительный `SECURITY_DESCRIPTOR` структуры всегда начинается информацию, но дескриптор безопасности и другие компоненты могут иметь структуру, в любом порядке. Вместо использования адресов памяти, компоненты дескриптора безопасности относительный идентифицируются по смещения от начала дескриптор безопасности. Этот формат удобен в тех случаях, когда дескриптор безопасности должен быть на диске или передаются с помощью протокола связи. Дополнительные сведения см. в разделе [абсолютное и дескрипторы безопасности Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Дескриптор безопасности в абсолютном формате содержит указатели на сведения, содержащиеся в ней, а не сами сведения. Дескриптор безопасности в относительном формате сведения в непрерывном блоке памяти. В дескрипторе безопасности относительный `SECURITY_DESCRIPTOR` структуры всегда начинается информацию, но дескриптор безопасности и другие компоненты могут иметь структуру, в любом порядке. Вместо использования адресов памяти, компоненты дескриптора безопасности относительный идентифицируются по смещения от начала дескриптор безопасности. Этот формат удобен в тех случаях, когда дескриптор безопасности должен быть на диске или передаются с помощью протокола связи. Дополнительные сведения см. в разделе [абсолютное и дескрипторы безопасности Self-Relative](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  Вызовите этот метод, чтобы преобразовать дескриптор безопасности в относительном формате.  
@@ -454,7 +454,7 @@ bool MakeSelfRelative() throw(...);
  Возвращает значение true, если метод выполнен успешно, значение false в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Дескриптор безопасности в абсолютном формате содержит указатели на сведения, содержащиеся в ней, а не самой информацией. Дескриптор безопасности в относительном формате сведения в непрерывном блоке памяти. В дескрипторе безопасности относительный `SECURITY_DESCRIPTOR` структуры всегда начинается информацию, но дескриптор безопасности и другие компоненты могут иметь структуру, в любом порядке. Вместо использования адресов памяти, компоненты дескриптора безопасности, идентифицируются по смещения от начала дескриптор безопасности. Этот формат удобен в тех случаях, когда дескриптор безопасности должен быть на диске или передаются с помощью протокола связи. Дополнительные сведения см. в разделе [абсолютное и дескрипторы безопасности Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Дескриптор безопасности в абсолютном формате содержит указатели на сведения, содержащиеся в ней, а не самой информацией. Дескриптор безопасности в относительном формате сведения в непрерывном блоке памяти. В дескрипторе безопасности относительный `SECURITY_DESCRIPTOR` структуры всегда начинается информацию, но дескриптор безопасности и другие компоненты могут иметь структуру, в любом порядке. Вместо использования адресов памяти, компоненты дескриптора безопасности, идентифицируются по смещения от начала дескриптор безопасности. Этот формат удобен в тех случаях, когда дескриптор безопасности должен быть на диске или передаются с помощью протокола связи. Дополнительные сведения см. в разделе [абсолютное и дескрипторы безопасности Self-Relative](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  Оператор присвоения.  
@@ -489,7 +489,7 @@ bool SetControl(
   
 ### <a name="parameters"></a>Параметры  
  *ControlBitsOfInterest*  
- Маска SECURITY_DESCRIPTOR_CONTROL, которая указывает управляющие биты для задания. Список флагов, которые можно задать, см. в разделе [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Маска SECURITY_DESCRIPTOR_CONTROL, которая указывает управляющие биты для задания. Список флагов, которые можно задать, см. в разделе [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
  *ControlBitsToSet*  
  SECURITY_DESCRIPTOR_CONTROL маску, которая указывает новые значения управляющих битов, заданных *ControlBitsOfInterest* маски. Этот параметр может быть сочетанием флагов, указанных для *ControlBitsOfInterest* параметра.  
@@ -498,7 +498,7 @@ bool SetControl(
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Этот метод вызывает метод [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl  
  Задает информацию в список управления доступом (DACL). Если список DACL в дескрипторе безопасности уже присутствует, он заменяется.  
@@ -592,7 +592,7 @@ bool ToString(
   
 ### <a name="parameters"></a>Параметры  
  *pstr*  
- Указатель на заканчивающуюся нулем строку, которая получит [формат строки дескриптора безопасности](http://msdn.microsoft.com/library/windows/desktop/aa379570).  
+ Указатель на заканчивающуюся нулем строку, которая получит [формат строки дескриптора безопасности](/windows/desktop/SecAuthZ/security-descriptor-string-format).  
   
  *SI*  
  Задает сочетание SECURITY_INFORMATION битовых флагов, чтобы указать компоненты для включения в выходной строке дескриптора безопасности.  
@@ -614,12 +614,12 @@ bool ToString(
   
  Если бит управления SE_DACL_PRESENT устанавливается в значение входного дескриптора безопасности списка DACL имеет значение NULL, происходит сбой метода.  
   
- Если список DACL равно NULL, а бит управления SE_DACL_PRESENT не установлен в значение входного дескриптора безопасности, результирующие строки дескриптора безопасности не имеет компонент D:. См. в разделе [строковый формат дескриптора безопасности](http://msdn.microsoft.com/library/windows/desktop/aa379570) для получения дополнительных сведений.  
+ Если список DACL равно NULL, а бит управления SE_DACL_PRESENT не установлен в значение входного дескриптора безопасности, результирующие строки дескриптора безопасности не имеет компонент D:. См. в разделе [строковый формат дескриптора безопасности](/windows/desktop/SecAuthZ/security-descriptor-string-format) для получения дополнительных сведений.  
   
- Этот метод вызывает метод [функция ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Этот метод вызывает метод [функция ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).  
   
 ## <a name="see-also"></a>См. также  
  [Образец безопасности](../../visual-cpp-samples.md)   
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

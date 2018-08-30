@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ea64180a9f7abf37f379e3e8feccc4ee41fd44
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850200"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200658"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Класс CMFCDropDownToolbarButton
 Тип кнопки панели инструментов, который при нажатии ведет себя как обычная кнопка. Тем не менее, он открывает панель инструментов с раскрывающимся ( [класс CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) Если пользователь нажимает и удерживает кнопку панели инструментов.  
@@ -90,7 +90,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 |[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Определяет, является ли в настоящее время открытым раскрывающегося списка на панели инструментов.|  
 |[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Определяет, может ли отображаться кнопки с расширенной границей. (Переопределяет [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
 |[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Вызывается платформой для вычисления размера кнопки для заданного контекста устройств и состояние закрепления. (Переопределяет [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|`CMFCDropDownToolbarButton::OnCancelMode`|Вызывается платформой для обработки [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) сообщения. (Переопределяет `CMCToolBarButton::OnCancelMode`.)|  
+|`CMFCDropDownToolbarButton::OnCancelMode`|Вызывается платформой для обработки [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) сообщения. (Переопределяет `CMCToolBarButton::OnCancelMode`.)|  
 |[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Вызывается платформой при вставке кнопки в панели инструментов. (Переопределяет [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCDropDownToolbarButton::OnClick](#onclick)|Вызывается платформой, когда пользователь нажимает кнопку мыши. (Переопределяет [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Вызывается платформой, когда пользователь отпускает кнопку мыши. (Переопределяет [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  

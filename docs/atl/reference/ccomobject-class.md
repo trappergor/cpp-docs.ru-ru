@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 37c8140d3579fc5d629b10c8e3ae5459e6492920
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571513"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198664"
 ---
 # <a name="ccomobject-class"></a>Класс CComObject
 Этот класс реализует `IUnknown` неагрегированные объекта.  
@@ -62,7 +62,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Уменьшает счетчик ссылок на объект.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) неагрегированные объекта. Тем не менее, вызовы `QueryInterface`, `AddRef`, и `Release` делегируются `CComObjectRootEx`.  
+ `CComObject` реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) неагрегированные объекта. Тем не менее, вызовы `QueryInterface`, `AddRef`, и `Release` делегируются `CComObjectRootEx`.  
   
  Дополнительные сведения об использовании `CComObject`, см. в статье [основы объекта ATL COM-объекты](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -92,8 +92,8 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- **void\***  
- [in] Этот параметр без имени не используется. Он существует для симметрии с другими **CCom***XXX*`Object`*XXX* конструкторы.  
+ <em>void\*</em>  
+ [in] Этот параметр без имени не используется. Он существует для согласованности с другими `CComXXXObjectXXX` конструкторы.  
   
 ### <a name="remarks"></a>Примечания  
  Деструктор уменьшает его.  

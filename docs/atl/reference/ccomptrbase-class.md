@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ae23f641becea5a7bdb47eefbdee59e18c2f27a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572601"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205599"
 ---
 # <a name="ccomptrbase-class"></a>Класс CComPtrBase
 Этот класс предоставляет основу для классов интеллектуальных указателей, использование памяти на основе COM-подпрограммы.  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  CLSID, связанный с данными и кодом, который будет использоваться для создания объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK при успешном выполнении или ошибкой REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING или E_NOINTERFACE в случае сбоя. См. в разделе [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) и [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) описание этих ошибок.  
+ Возвращает значение S_OK при успешном выполнении или ошибкой REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING или E_NOINTERFACE в случае сбоя. См. в разделе [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) и [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) описание этих ошибок.  
   
 ### <a name="remarks"></a>Примечания  
- Если в первой форме метода вызывается, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) используется для восстановления CLSID. Затем вызовите обе формы [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
+ Если в первой форме метода вызывается, [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) используется для восстановления CLSID. Затем вызовите обе формы [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
  В отладочных сборках, произойдет ошибка утверждения, если [CComPtrBase::p](#p) не равно NULL.  
   
@@ -339,7 +339,7 @@ template <class Q> HRESULT QueryInterface(Q
  Возвращает значение S_OK в случае успеха или E_NOINTERFACE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [IUnknown::QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
+ Этот метод вызывает метод [IUnknown::QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).  
   
  В отладочных сборках, произойдет ошибка утверждения, если *pp* не равно NULL.  
   

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3ec6fb0d54cd748b707c81b88e09fb7d846aaa2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881533"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194428"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Класс CFirePropNotifyEvent
 Этот класс предоставляет методы для уведомления контейнера приемник об изменениях свойств элемента управления.  
@@ -60,7 +60,7 @@ class CFirePropNotifyEvent
  **Заголовок:** atlctl.h  
   
 ##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- Уведомляет все подключенные [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейсы (на все точки подключения объекта), свойство указанного объекта изменилось.  
+ Уведомляет все подключенные [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) интерфейсы (на все точки подключения объекта), свойство указанного объекта изменилось.  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -80,7 +80,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
  Эту функцию можно вызывать, даже если элемент управления не поддерживает точки подключения.  
   
 ##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- Уведомляет все подключенные [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейсы (на все точки подключения объекта), свойство указанного объекта будет изменена.  
+ Уведомляет все подключенные [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) интерфейсы (на все точки подключения объекта), свойство указанного объекта будет изменена.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);

@@ -1,7 +1,7 @@
 ---
-title: Предупреждение (уровень 1) C4325 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4325 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936433987f823ae7d5d22cfd075f188dd5d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd265938afb51cc402dc84f38b7e95188c6292a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277648"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197489"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Предупреждение компилятора (уровень 1) C4325
-**атрибутов для стандартной секции "**   
- ***раздел* "игнорируется**  
-  
- Не допускается изменение атрибутов стандартного раздела. Пример:  
-  
-```  
-#pragma section(".sdata", long)  
-```  
-  
- Это привело бы к перезаписи `.sdata` стандартного раздела, который использует **короткие** тип данных с **длинные** тип данных.  
-  
- Включает стандартные разделы, атрибуты которого не может быть изменен,  
-  
--   .Data  
-  
--   .sdata  
-  
--   .BSS  
-  
--   .SBSS  
-  
--   .Text  
-  
--   .const  
-  
--   .sconst  
-  
--   .rdata  
-  
--   .srdata  
-  
- Дополнительные разделы могут быть добавлены позже.  
-  
-## <a name="see-also"></a>См. также  
- [section](../../preprocessor/section.md)
+
+> атрибуты для стандартного раздела "*разделе*" игнорируется
+
+## <a name="remarks"></a>Примечания
+
+Не может изменять атрибуты из стандартного раздела. Пример:
+
+```cpp
+#pragma section(".sdata", long)
+```
+
+Перезаписывается `.sdata` стандартного раздела, который использует **короткие** тип данных с **long** тип данных.
+
+Включают стандартные разделы, атрибуты которого не может быть изменен,
+
+- .Data
+
+- .sdata
+
+- .BSS
+
+- .SBSS
+
+- .Text
+
+- .const
+
+- .sconst
+
+- .rdata
+
+- .srdata
+
+Дополнительные разделы могут быть добавлены позже.
+
+## <a name="see-also"></a>См. также
+
+[section](../../preprocessor/section.md)

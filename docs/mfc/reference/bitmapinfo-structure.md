@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b1bd896157d7f11792a5a6514e30ecd3d46a19
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0bc5adbb62e70a012d9dff4f9a390a46476aaa36
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200260"
 ---
 # <a name="bitmapinfo-structure"></a>Структура BITMAPINFO
 `BITMAPINFO` Структура определяет измерения и сведения о цвете для Windows аппаратно независимый точечный рисунок (DIB).  
@@ -37,10 +37,10 @@ typedef struct tagBITMAPINFO {
   
 #### <a name="parameters"></a>Параметры  
  *bmiHeader*  
- Указывает [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) структуру, содержащую сведения об измерениях и цвет формат аппаратно независимый точечный рисунок.  
+ Указывает [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) структуру, содержащую сведения об измерениях и цвет формат аппаратно независимый точечный рисунок.  
   
  *bmiColors*  
- Указывает массив [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) или типы данных DWORD, определяющие цвета в точечном рисунке.  
+ Указывает массив [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) или типы данных DWORD, определяющие цвета в точечном рисунке.  
   
 ## <a name="remarks"></a>Примечания  
  Аппаратно независимый точечный рисунок состоит из двух отдельных частей: `BITMAPINFO` структуру, которая содержит описание измерений и цветов точечного рисунка и массив байтов, определяющих пиксели в точечном рисунке. Группируется биты в массиве, но каждой строки должен быть нули для нее закончится **LONG** границ. При положительном высоту исходного растрового изображения является нижнего левого угла. Если высота отрицательное, то источником является верхнего левого угла.  
@@ -49,11 +49,11 @@ typedef struct tagBITMAPINFO {
   
  Дополнительные сведения о `BITMAPINFO` структурировать и соответствующие значения для членов `BITMAPINFOHEADER` и `RGBQUAD` структур, см. в следующих разделах электронной документации по Windows SDK.  
   
-- [Структура BITMAPINFO](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
+- [Структура BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)  
   
-- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) структуры  
+- [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) структуры  
   
-- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) структуры  
+- [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) структуры  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** wingdi.h  
@@ -61,6 +61,6 @@ typedef struct tagBITMAPINFO {
 ## <a name="see-also"></a>См. также  
  [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CBrush::CreateDIBPatternBrush](../../mfc/reference/cbrush-class.md#createdibpatternbrush)   
- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)   
- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)
+ [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376)   
+ [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)
 

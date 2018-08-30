@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572093"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202479"
 ---
 # <a name="ccomaggobject-class"></a>Класс CComAggObject
-Этот класс реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) интерфейс для объединенного объекта. По определению объединенного объекта содержится внутри внешнего объекта. `CComAggObject` Класс аналогичен [класс CComObject](../../atl/reference/ccomobject-class.md), за исключением того, что он предоставляет интерфейс, который доступен напрямую для внешних клиентов.  
+Этот класс реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) интерфейс для объединенного объекта. По определению объединенного объекта содержится внутри внешнего объекта. `CComAggObject` Класс аналогичен [класс CComObject](../../atl/reference/ccomobject-class.md), за исключением того, что он предоставляет интерфейс, который доступен напрямую для внешних клиентов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|Делегаты `IUnknown` вызовы внешняя Неизвестная строка.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComAggObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) для объединенного объекта. `CComAggObject` имеет свой собственный `IUnknown` интерфейс, отдельно от внешнего объекта `IUnknown` интерфейс и сохраняет свой собственный счетчик ссылок.  
+ `CComAggObject` реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) для объединенного объекта. `CComAggObject` имеет свой собственный `IUnknown` интерфейс, отдельно от внешнего объекта `IUnknown` интерфейс и сохраняет свой собственный счетчик ссылок.  
   
  Дополнительные сведения о статистической обработке см. в статье [основы объекта ATL COM-объекты](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Параметры  
  *PP*  
- [out] Указатель на **CComAggObject\<*** содержится* **>** указатель. Если `CreateInstance` завершилась неудачно, *pp* имеет значение NULL.  
+ [out] Указатель на **CComAggObject\<**<em>содержится</em> **>** указатель. Если `CreateInstance` завершилась неудачно, *pp* имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  

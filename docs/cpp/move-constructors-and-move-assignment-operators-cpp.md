@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f414871477e8d263546833cb71496f5795dd4671
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204991"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Конструкторы move и операторы присваивания move (C++)
 В этом разделе описывается создание *конструктор перемещения* и оператор присваивания перемещения для класса C++. Конструктор перемещения позволяет ресурсы, принадлежащие объекте rvalue должна быть перемещена в другую lvalue без копирования. Дополнительные сведения о семантике перемещения см. в разделе [декларатор ссылки Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -317,4 +317,4 @@ MemoryBlock(MemoryBlock&& other)
   
 ## <a name="see-also"></a>См. также  
  [Декларатор ссылки rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<Служебная программа > переместить](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<Служебная программа > переместить](https://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

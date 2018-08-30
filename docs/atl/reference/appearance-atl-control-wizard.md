@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7b3db7fbcf190aa2dda05cabd2d1553824fb076e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572197"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194731"
 ---
 # <a name="appearance-atl-control-wizard"></a>Внешний вид, мастер элементов управления ATL
 Вставьте здесь «Результаты поиска» сводки.  
@@ -32,7 +32,7 @@ ms.locfileid: "42572197"
 **Просмотр состояния**  
 Задает внешний вид элемента управления в контейнере.  
   
- -   **Непрозрачный**: задает VIEWSTATUS_OPAQUE, бит в [Просмотр СОСТОЯНИЯ](http://msdn.microsoft.com/library/windows/desktop/ms687201) перечисления и рисует прямоугольник весь элемент управления, переданный в [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) метод. Элемент управления отображается непрозрачным, а контейнеры показывает за элемента управления.      
+ -   **Непрозрачный**: задает VIEWSTATUS_OPAQUE, бит в [Просмотр СОСТОЯНИЯ](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) перечисления и рисует прямоугольник весь элемент управления, переданный в [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) метод. Элемент управления отображается непрозрачным, а контейнеры показывает за элемента управления.      
       
         Этот параметр помогает быстрее нарисуйте элемент управления контейнера. Если этот параметр не выбран, элемент управления может содержать прозрачного частей.  
       
@@ -82,7 +82,7 @@ ms.locfileid: "42572197"
   
  -   **Невидимым во время выполнения**: задает этот элемент управления будет невидимым во время выполнения. Невидимые элементы управления можно использовать для выполнения операций в фоновом режиме, например для срабатывания событий через определенные интервалы.  
       
- -   **Действует как кнопка**: задает OLEMISC_ACTSLIKEBUTTON, бит в [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) перечисление, чтобы разрешить элементу управления действовать как кнопка. Если контейнер пометил сайта клиентского элемента управления как кнопка по умолчанию, этот параметр позволяет включить элемент управления кнопки отображаться как кнопка по умолчанию путем рисования самого полужирным фреймом. См. в разделе [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Дополнительные сведения.  
+ -   **Действует как кнопка**: задает OLEMISC_ACTSLIKEBUTTON, бит в [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) перечисление, чтобы разрешить элементу управления действовать как кнопка. Если контейнер пометил сайта клиентского элемента управления как кнопка по умолчанию, этот параметр позволяет включить элемент управления кнопки отображаться как кнопка по умолчанию путем рисования самого полужирным фреймом. См. в разделе [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Дополнительные сведения.  
       
   -   **Выступает в качестве метки**: задает OLEMISC_ACTSLIKELABEL бит в перечислении OLEMISC, чтобы включить элемент управления заменить контейнера. Контейнер определяет то, что делать с этим флагом, во всяком случае.  
   

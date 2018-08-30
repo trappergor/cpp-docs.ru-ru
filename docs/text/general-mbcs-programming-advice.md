@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596799"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201126"
 ---
 # <a name="general-mbcs-programming-advice"></a>Общие советы по программированию многобайтовой кодировки
 Следуйте приведенным ниже советам:  
@@ -41,7 +41,7 @@ ms.locfileid: "42596799"
   
 -   Будьте внимательны при Выбор шрифтов для вашего приложения, так как некоторые шрифты доступны не во всех системах.  
   
--   При выборе шрифт для диалоговых окон, использовать [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) вместо MS Sans Serif или Helvetica. MS Shell Dlg заменяется нужный шрифт в системе перед созданием диалоговое окно. С помощью MS Shell Dlg гарантирует, что любые изменения в операционной системе для работы с данным шрифтом, автоматически становятся доступными. (MFC заменяет MS Shell Dlg DEFAULT_GUI_FONT или системного шрифта в Windows 95, Windows 98 и Windows NT 4, так как эти системы не обрабатывают MS Shell Dlg правильно.)  
+-   При выборе шрифт для диалоговых окон, использовать [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) вместо MS Sans Serif или Helvetica. MS Shell Dlg заменяется нужный шрифт в системе перед созданием диалоговое окно. С помощью MS Shell Dlg гарантирует, что любые изменения в операционной системе для работы с данным шрифтом, автоматически становятся доступными. (MFC заменяет MS Shell Dlg DEFAULT_GUI_FONT или системного шрифта в Windows 95, Windows 98 и Windows NT 4, так как эти системы не обрабатывают MS Shell Dlg правильно.)  
   
 -   При разработке приложения, решите, какие строки могут быть локализованы. В случае сомнений, предполагается, что все строки будет локализовано. Таким образом не следует смешивать строки, которые можно локализовать теми значениями, которые нельзя.  
   

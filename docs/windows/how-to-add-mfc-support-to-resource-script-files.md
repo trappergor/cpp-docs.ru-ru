@@ -20,18 +20,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85f4930e1d0a84091686729bacccf6a62977de6f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f84f343a5a742e37deb776f20c9038ea7f90576e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608087"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198439"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Практическое руководство. Добавление поддержки MFC в файлы описания ресурсов
 
 Как правило, при создании приложения MFC для Windows с помощью [мастер приложений MFC](../mfc/reference/mfc-application-wizard.md), мастер создает базовый набор файлов (включая RC-файл ресурсов), который включает основные функции Microsoft Foundation классы (MFC). Однако при редактировании RC-файла для приложения Windows, в основе которого не лежит MFC, будут недоступны следующие возможности, предназначенные для платформы MFC.
 
-- Мастеры кода MFC (прежнее название — "[мастер классов MFC](http://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)«)
+- Мастеры кода MFC (прежнее название — "[мастер классов MFC](https://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)«)
 
 - Строки подсказок для меню.
 

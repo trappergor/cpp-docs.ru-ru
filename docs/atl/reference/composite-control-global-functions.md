@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882436"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203720"
 ---
 # <a name="composite-control-global-functions"></a>Глобальные функции составного элемента управления
 Эти функции обеспечивают поддержку для создания диалоговых окон, а также для создания, размещения и лицензирование элементов управления ActiveX.  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in] Идентифицирует экземпляр модуля, исполняемый файл содержит шаблон диалогового окна.  
   
  *lpTemplateName*  
- [in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) макрос для создания этого значения.  
+ [in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) макрос для создания этого значения.  
   
  *hWndParent*  
  [in] Определяет окно, которому принадлежит диалоговое окно.  
   
  *lpDialogProc*  
- [in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Дополнительные сведения о редактировании ресурсов см. в разделе [как: открытие файла описания ресурсов в текстовом формате](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Дополнительные сведения об инструкциях определения ресурсов элемента управления, см. в разделе [общих параметров управления](http://msdn.microsoft.com/library/windows/desktop/aa380902) в разделе Windows SDK *: SDK Tools*.  
+ Дополнительные сведения о редактировании ресурсов см. в разделе [как: открытие файла описания ресурсов в текстовом формате](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Дополнительные сведения об инструкциях определения ресурсов элемента управления, см. в разделе [общих параметров управления](/windows/desktop/menurc/common-control-parameters) в разделе Windows SDK *: SDK Tools*.  
   
- Дополнительные сведения в диалоговых окнах в целом см. [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) и [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) в пакете Windows SDK.  
+ Дополнительные сведения в диалоговых окнах в целом см. [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) и [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) в пакете Windows SDK.  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Создает немодальное диалоговое окно на основе шаблона диалогового окна, предоставленного пользователем.  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in] Идентифицирует экземпляр модуля, исполняемый файл содержит шаблон диалогового окна.  
   
  *lpTemplateName*  
- [in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) макрос для создания этого значения.  
+ [in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) макрос для создания этого значения.  
   
  *hWndParent*  
  [in] Определяет окно, которому принадлежит диалоговое окно.  
   
  *lpDialogProc*  
- [in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>Примечания  
  Открывшемся диалоговом окне может содержать элементы управления ActiveX.  
   
- См. в разделе [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) и [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) в Windows SDK.  
+ См. в разделе [CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga) и [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) в Windows SDK.  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Создает элемент управления ActiveX, инициализирует его и размещает в указанном окне.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Ненулевое значение, если выполнена инициализация код размещения элемента управления; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Эту функцию необходимо вызывать перед использованием элемента управления ATL, интерфейс API размещения. После вызова этой функции **«AtlAxWin»** класс окна может использоваться в вызовах [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) или [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), как описано в пакете Windows SDK.  
+ Эту функцию необходимо вызывать перед использованием элемента управления ATL, интерфейс API размещения. После вызова этой функции **«AtlAxWin»** класс окна может использоваться в вызовах [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) или [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), как описано в пакете Windows SDK.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Эта функция отменяет инициализацию элемента управления ATL кода размещения **«AtlAxWin80»** и **«AtlAxWinLic80»** классов окон.  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  Всегда возвращает значение TRUE.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция просто вызывает [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) как описано в пакете Windows SDK.  
+ Эта функция просто вызывает [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) как описано в пакете Windows SDK.  
   
  Вызывайте эту функцию для очистки после всех существующих окон узла уничтожены, если вызван [AtlAxWinInit](#atlaxwininit) и больше не требуется создавать узла windows. Если вы не вызываете эту функцию, класс окна будет отменена автоматически при прекращении процесса.  
   

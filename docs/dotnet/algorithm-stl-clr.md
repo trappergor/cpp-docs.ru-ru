@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 353044389b6be308eca2fae65f21eeae4e78532a
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 93bbc86e32d75e81c342a0a0a71b823b87df62b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376154"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196769"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Определяет шаблонные функции контейнера STL/CLR, которые выполняют алгоритмы.  
@@ -287,7 +287,7 @@ template<class _InIt, class _OutIt> inline
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция ведет себя так же, как функция стандартной библиотеки C++ `copy`. Дополнительные сведения см. в разделе [копирования](http://msdn.microsoft.com/Library/f1fec7da-e01b-40f1-b5bd-6b81e304cae1). 
+ Эта функция ведет себя так же, как функция стандартной библиотеки C++ `copy`. Дополнительные сведения см. в разделе [копирования](../standard-library/algorithm-functions.md#copy). 
 
 ## <a name="copy_backward"></a> copy_backward (STL/CLR)
 Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в обратном направлении.  
@@ -826,7 +826,7 @@ template<class _FwdIt, class _Ty> inline
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция ведет себя так же, как функция стандартной библиотеки C++ `remove`. Дополнительные сведения см. в разделе [удалить](http://msdn.microsoft.com/Library/77e2585c-441e-448d-bd1d-c893d1356ed8).  
+ Эта функция ведет себя так же, как функция стандартной библиотеки C++ `remove`. Дополнительные сведения см. в разделе [удалить](../standard-library/algorithm-functions.md#remove).  
 
 ## <a name="remove_copy"></a> remove_copy (STL/CLR)
 Копирует элементы из исходного диапазона в диапазон назначения за исключением того, что элементы с заданным значением не копируются, не нарушая порядок остальных элементов и возвращая конец нового диапазона назначения.  
@@ -1149,7 +1149,7 @@ template<class _BidIt, class _Pr> inline
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция ведет себя так же, как функция стандартной библиотеки C++ `swap`. Дополнительные сведения см. в разделе [замены](http://msdn.microsoft.com/Library/b471a2de-035e-4aff-b1c7-345d85d93972).  
+ Эта функция ведет себя так же, как функция стандартной библиотеки C++ `swap`. Дополнительные сведения см. в разделе [замены](../standard-library/algorithm-functions.md#swap).  
 
 ## <a name="swap_ranges"></a> swap_ranges (STL/CLR)
 Меняет местами элементы одного диапазона с элементами другого диапазона такого же размера.  

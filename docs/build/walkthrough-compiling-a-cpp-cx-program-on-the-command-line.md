@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67d30ce301ec1a0b8952b780f52a5627e90df38
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bc4e6dbf3023256a6a0db556c02e08453bb1a730
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573173"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194279"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Пошаговое руководство. Компиляция программы на языке C++/CX из командной строки
-Можно создавать программы Visual C++ для среды выполнения Windows и компилировать их в командной строке. Visual C++ поддерживает расширения компонентов Visual C++ (C++/CX) с дополнительными типами и операторами, предназначенными для программной модели среды выполнения Windows. Можно использовать C + +/ CX для создания приложений для универсальной платформы Windows (UWP), Windows Phone 8.1 и Windows desktop. Дополнительные сведения см. в разделе [Обзор из c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) и [расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md).  
+Можно создавать программы Visual C++ для среды выполнения Windows и компилировать их в командной строке. Visual C++ поддерживает расширения компонентов Visual C++ (C++/CX) с дополнительными типами и операторами, предназначенными для программной модели среды выполнения Windows. Можно использовать C + +/ CX для создания приложений для универсальной платформы Windows (UWP), Windows Phone 8.1 и Windows desktop. Дополнительные сведения см. в разделе [Обзор из c + +/ CX](https://msdn.microsoft.com/magazine/dn166929.aspx) и [расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md).  
   
  В этом руководстве мы используем текстовый редактор для создания простой программы C++/CX, а затем компилируем эту программу в командной строке. (Можно использовать вашу собственную программу C++/CX вместо ввода показанной здесь, или же можно использовать образец кода C++/CX из другой статьи справки. Эта методика полезна для сборки и тестирования небольших модулей, не содержащих элементы пользовательского интерфейса.)  
   

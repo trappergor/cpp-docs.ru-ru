@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fae4e4fd130e8cb61554f7e2d41595070ee819
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0c0f72fd7a359654ffdb32ae0030a82216384207
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852287"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197617"
 ---
 # <a name="cmfcfontcombobox-class"></a>Класс CMFCFontComboBox
 `CMFCFontComboBox` Класс создает поле со списком, содержащее список шрифтов.  
@@ -59,7 +59,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|Вызывается платформой для рисования заданного элемента в элементе управления текущего поля со списком шрифта. (Переопределяет [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|Извлекает сведения о выбранный шрифт.|  
 |`CMFCFontComboBox::MeasureItem`|Вызывается платформой для информирования Windows из измерений в списке в текущий шрифт поле со списком. (Переопределяет [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
-|`CMFCFontComboBox::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCFontComboBox::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|Выбирает шрифт, который соответствует заданному условию, из поля со списком шрифта.|  
 |[CMFCFontComboBox::Setup](#setup)|Инициализирует список элементов в поле со списком шрифта.|  
   
@@ -139,7 +139,7 @@ BOOL SelectFont(
  Задает имя шрифта.  
   
  [in] *nCharSet*  
- Задает набор символов. Значение по умолчанию — DEFAULT_CHARSET. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
+ Задает набор символов. Значение по умолчанию — DEFAULT_CHARSET. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если элемент в поле со списком шрифтов на соответствующий объект описания указанного шрифта или имя шрифта и charset; в противном случае — значение FALSE.  

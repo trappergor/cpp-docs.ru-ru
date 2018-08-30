@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17da583b770fcab1d682868c38c04e0aa97155dd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 348f25718fe22e056da5097bca0d67013a56c4c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026437"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203153"
 ---
 # <a name="cmemorystate-structure"></a>Структура CMemoryState
 Предоставляет удобный способ для обнаружения утечек памяти в приложении.  
@@ -172,7 +172,7 @@ void DumpStatistics() const;
   
 -   общий объем памяти, которое используется в программе (в байтах)  
   
- Свободные блоки — это число блоков, освобождение которых задерживается, если `afxMemDF` было присвоено `delayFreeMemDF`. Дополнительные сведения см. в разделе [afxMemDF](diagnostic-services.md#afxmemdf), в разделе «Макросы MFC и глобальные». См. в разделе [типы блоков в отладочной куче](http://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5) для Дополнительные сведения об этих типов блоков.  
+ Свободные блоки — это число блоков, освобождение которых задерживается, если `afxMemDF` было присвоено `delayFreeMemDF`. Дополнительные сведения см. в разделе [afxMemDF](diagnostic-services.md#afxmemdf), в разделе «Макросы MFC и глобальные». См. в разделе [типы блоков в отладочной куче](https://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5) для Дополнительные сведения об этих типов блоков.  
   
 ### <a name="example"></a>Пример  
   Следующий код должен быть помещен в *projname*файле App.cpp. Определите следующие глобальные переменные:  

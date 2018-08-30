@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e9d212e74f77d21efa1b2ed030f8a1446d111fc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882953"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202938"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Поддержка Юникода и многобайтовой кодировки
 
@@ -67,9 +67,9 @@ ms.locfileid: "37882953"
 
    - Использовать TCHAR, вы можете использовать **char**.
 
-   - Использовать LPTSTR, вы можете использовать **char\***.
+   - Использовать LPTSTR, вы можете использовать **char**<strong>\*</strong>.
 
-   - Использования LPCTSTR, вы можете использовать **const char\***. `CString` предоставляет оператор LPCTSTR для преобразования между `CString` и LPCTSTR.
+   - Использования LPCTSTR, вы можете использовать **const char**<strong>\*</strong>. `CString` предоставляет оператор LPCTSTR для преобразования между `CString` и LPCTSTR.
 
 `CString` также предоставляет Юникод конструкторы, операторы присваивания и операторы сравнения.
 
@@ -101,7 +101,7 @@ ms.locfileid: "37882953"
 
 Сопоставления универсальных текстовых функций для все подпрограммы обработки строк во время выполнения, рассматриваются в [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md). Список, см. в разделе [интернационализации](../c-runtime-library/internationalization.md).
 
-Аналогичным образом `CString` методы реализуются с помощью сопоставления типов универсальных данных. Чтобы включить многобайтовой Кодировки и Юникода, MFC использует TCHAR для **char** или `wchar_t`, LPTSTR для **char\***  или `wchar_t*`и LPCTSTR для **const char\***  или `const wchar_t*`. Позволяют проверить правильного сопоставления для MBCS или Юникод.
+Аналогичным образом `CString` методы реализуются с помощью сопоставления типов универсальных данных. Чтобы включить многобайтовой Кодировки и Юникода, MFC использует TCHAR для **char** или `wchar_t`, LPTSTR для **char** <strong>\*</strong> или `wchar_t*`и LPCTSTR для **const char** <strong>\*</strong> или `const wchar_t*`. Позволяют проверить правильного сопоставления для MBCS или Юникод.
 
 ## <a name="see-also"></a>См. также
 

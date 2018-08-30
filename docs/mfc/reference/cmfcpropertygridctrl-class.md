@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e1bf852b10ace3dca8014e54f2b0070328da64e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 16bebe3beeecf48fb2601f0feee56e5168de83ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539916"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205099"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Класс CMFCPropertyGridCtrl
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
@@ -246,7 +246,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Указывает ли платформа перерисовывает столбцов name и значение текущего элемента управления сетки свойств, если пользователь изменяет размер столбцов.|  
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Указывает, является ли внешний вид элемента управления сетки свойств в стиле, который используется платформой VS .NET.|  
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Указывает способ отображения измененных свойств.|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Удаляет все объекты свойств элемента управления сетки свойств.|  
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Для восстановления первоначальных значений всех свойств.|  
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Задает или сбрасывает алфавитном порядке.|  

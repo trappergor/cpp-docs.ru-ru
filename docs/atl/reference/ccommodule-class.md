@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae4218d6c6446554d5fb45d680588127ec3e0ee
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e1ee6ee76840774fd750df95f73c105c059cae59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883096"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196525"
 ---
 # <a name="ccommodule-class"></a>CComModule-класс
 По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
@@ -346,10 +346,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Параметры  
  *dwClsContext*  
- [in] Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. Описание этих значений, см. в разделе [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) в пакете Windows SDK.  
+ [in] Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. Описание этих значений, см. в разделе [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) в пакете Windows SDK.  
   
  *dwFlags*  
- [in] Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. Описание этих значений, см. в разделе [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) в пакете Windows SDK.  
+ [in] Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. Описание этих значений, см. в разделе [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  

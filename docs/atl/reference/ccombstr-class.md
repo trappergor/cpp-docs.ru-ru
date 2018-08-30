@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f00bfbcb02e05ac2c0eeac5aed9485607e0309a4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 246ca30c63596dd463889947a4dba9c350d449e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954946"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202213"
 ---
 # <a name="ccombstr-class"></a>Класс CComBSTR
 Этот класс является оболочкой для строк BSTR.  
@@ -411,7 +411,7 @@ bool LoadString(UINT nID) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- См. в разделе [LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) в Windows SDK.  
+ См. в разделе [LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если строка успешно загружены; в противном случае возвращает значение FALSE.  
@@ -604,7 +604,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>Параметры  
  *pStream*  
- [in] Указатель на [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) интерфейса на поток, содержащий данные.  
+ [in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейса на поток, содержащий данные.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  
@@ -650,7 +650,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>Параметры  
  *pStream*  
- [in] Указатель на [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) интерфейса в потоке.  
+ [in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейса в потоке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  

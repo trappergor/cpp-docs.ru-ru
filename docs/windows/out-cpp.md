@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 220adeb44e676937756cf8007647f7e381f7607f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88e5960b4f809b9c0a43e10fa8fbb69544c9d9bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597564"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194921"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "42597564"
 
 ## <a name="remarks"></a>Примечания
 
-Атрибут **out** языка C++ имеет ту же функциональность, как и атрибут [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) языка MIDL.
+**Out** атрибут C++ имеет ту же функциональность, что [out](/windows/desktop/Midl/out-idl) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 

@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539897"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204216"
 ---
 # <a name="cmfcpopupmenu-class"></a>Класс CMFCPopupMenu
 Реализует возможности всплывающего меню Windows и расширяет его, добавляя такие возможности как перемещаемые меню и подсказки.
@@ -510,7 +510,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
  Значение TRUE, чтобы включить звук, в противном случае FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Если вы включите звук, платформа вызывает [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) метод, когда пользователь открывает всплывающего меню или выбирает команду меню. Эта функция включена по умолчанию.  
+ Если вы включите звук, платформа вызывает [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) метод, когда пользователь открывает всплывающего меню или выбирает команду меню. Эта функция включена по умолчанию.  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 

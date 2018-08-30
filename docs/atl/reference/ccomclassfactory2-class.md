@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ee8ab5fe6e410cf812c7c147f4673803b81903
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fe4ddaab8de2369c7cb1b31132f686bc6037676b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880194"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205529"
 ---
 # <a name="ccomclassfactory2-class"></a>Класс CComClassFactory2
-Этот класс реализует [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) интерфейс.  
+Этот класс реализует [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,11 +45,11 @@ class CComClassFactory2 : public IClassFactory2,
  *лицензии*  
  Класс, реализующий следующие статические функции:  
   
-- **статические VerifyLicenseKey BOOL (BSTR** `bstr` **);**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **статические GetLicenseKey BOOL (DWORD** `dwReserved` **, BSTR\***  `pBstr` **);**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **статические BOOL IsLicenseValid ();**  
+- `static BOOL IsLicenseValid( );`  
   
 ## <a name="members"></a>Участники  
   
@@ -64,7 +64,7 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Создает и возвращает лицензионный ключ.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComClassFactory2` реализует [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) интерфейс, который представляет собой расширение из [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). `IClassFactory2` Создание элементов управления объекта через лицензию. Класс фабрики выполнение лицензированного компьютера можно предоставить ключ лицензии времени выполнения. Этот ключ лицензии позволяет приложению создавать экземпляры объектов, если лицензия весь компьютер не существует.  
+ `CComClassFactory2` реализует [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) интерфейс, который представляет собой расширение из [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2` Создание элементов управления объекта через лицензию. Класс фабрики выполнение лицензированного компьютера можно предоставить ключ лицензии времени выполнения. Этот ключ лицензии позволяет приложению создавать экземпляры объектов, если лицензия весь компьютер не существует.  
   
  Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс включает макрос [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), который объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) как фабрики класса по умолчанию. Чтобы использовать `CComClassFactory2`, укажите [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) макроса в определении класса объекта. Пример:  
   
@@ -149,7 +149,7 @@ STDMETHOD(CreateInstanceLic)(
  Вы можете получить ключа лицензии с помощью [RequestLicKey](#requestlickey). Чтобы создать объект на машине без лицензии, необходимо вызвать `CreateInstanceLic`.  
   
 ##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
- Заполняет [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) структуры со сведениями, описывающими фабрики класса рамках лицензионных возможности.  
+ Заполняет [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo) структуры со сведениями, описывающими фабрики класса рамках лицензионных возможности.  
   
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -185,7 +185,7 @@ STDMETHOD(LockServer)(BOOL fLock);
  Вызов `LockServer` позволяет клиенту, чтоб фабрику класса для создания нескольких объектов можно быстро.  
   
 ##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
- Создает и возвращает лицензионный ключ, при условии, что `fRuntimeKeyAvail` членом [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) структура имеет значение TRUE.  
+ Создает и возвращает лицензионный ключ, при условии, что `fRuntimeKeyAvail` членом [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo) структура имеет значение TRUE.  
   
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);

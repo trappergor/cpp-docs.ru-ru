@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09ed632f22ec78e6b2fd8d5bf0a64cec1512ba8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c865fdce61af5b5bbce6e8b8b8658946ffbf5e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028126"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204303"
 ---
 # <a name="adding-an-mfc-class"></a>Добавление класса MFC
-Чтобы добавить классы, производные от классов библиотеки Microsoft Foundation Class (MFC) в проект, используйте **Добавление класса** команд, доступных из [представление классов](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Укажите имя нового класса, выберите базовый класс и выберите идентификатор диалоговое окно, с которым он связан (если таковые имеются). Мастера кода создает файл заголовка и файл реализации и добавляет их в проект.  
+Чтобы добавить классы, производные от классов библиотеки Microsoft Foundation Class (MFC) в проект, используйте **Добавление класса** команд, доступных из [представление классов](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Укажите имя нового класса, выберите базовый класс и выберите идентификатор диалоговое окно, с которым он связан (если таковые имеются). Мастера кода создает файл заголовка и файл реализации и добавляет их в проект.  
   
 > [!NOTE]
 >  Классы MFC можно добавить к приложению ATL COM, если вы изначально [создано приложение с поддержкой MFC](../../atl/reference/mfc-support-in-atl-projects.md). Классы MFC можно также добавить в проекты Win32 с поддержкой MFC.  

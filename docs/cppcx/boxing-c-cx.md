@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70b908bddbf7034e1d60f16cb0e492c0a707586
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598884"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203596"
 ---
 # <a name="boxing-ccx"></a>Упаковка-преобразование (C++/CX)
-*Упаковка* — это заключение переменной типа значения, например [Windows::Foundation::DateTime](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx), или базового скалярного типа, например `int`, в ссылочный класс при передаче переменной методу, который в качестве входного типа принимает [Platform::Object^](../cppcx/platform-object-class.md) .  
+*Упаковка-преобразование* — это заключение переменной типа значения, например [Windows::Foundation:: DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— или базового скалярного типа, таких как `int`— в ссылочный класс при передаче переменной методу, который принимает [ Platform::Object ^](../cppcx/platform-object-class.md) качестве входного типа.  
   
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Передача типа значения параметру Object^  
  Хотя явным образом упаковывать переменную для ее передачи в параметр метода типа [Platform::Object^](../cppcx/platform-object-class.md)не требуется, необходимо выполнять явное приведение к исходному типу при получении значений, которые до этого были упакованы.  

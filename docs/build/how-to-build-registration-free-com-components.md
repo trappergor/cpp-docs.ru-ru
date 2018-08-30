@@ -1,5 +1,5 @@
 ---
-title: 'Как: сборки COM без регистрации компонентов | Документы Microsoft'
+title: 'Практическое: построение без регистрации COM-компонентов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54327344d61cc70e68b528c5f88f3d30f5d185a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1eaf9417f4d2b3b825933589556055772b84e057
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367863"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197417"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>Практическое руководство. Сборка не требующих регистрации компонентов COM
-Без регистрации COM-компонентами являются компоненты COM, манифесты которых встроены в библиотеки DLL.  
+Без регистрации COM-компонентами являются компоненты COM, содержащие манифесты, встроенные в библиотеки DLL.  
   
-### <a name="to-build-manifests-into-com-components"></a>Встраивание манифеста в компоненты COM  
+### <a name="to-build-manifests-into-com-components"></a>Для создания манифестов в COM-компонентов  
   
 1.  Откройте страницы свойств проекта для COM-компонента.  
   
 2.  Разверните **свойства конфигурации** узел, а затем разверните **инструмент манифеста** узла.  
   
-3.  Выберите **входной и выходной** страницу свойств, а затем задайте **внедренный манифест** значения свойства **Да**.  
+3.  Выберите **входные и выходные данные** страницу свойств, а затем задайте **внедренный манифест** равным **Да**.  
   
 4.  Нажмите кнопку **ОК**.  
   
 5.  Постройте решение.  
   
 ## <a name="see-also"></a>См. также  
- [Изолированные приложения](http://msdn.microsoft.com/library/aa375190)   
- [О сборках Side-by-Side](http://msdn.microsoft.com/library/ff951640)   
+ [Изолированные приложения](/windows/desktop/SbsCs/isolated-applications)   
+ [О сборках Side-by-Side](/windows/desktop/SbsCs/about-side-by-side-assemblies-)   
  [Практическое руководство. Сборка изолированных приложений, использующих компоненты СОМ](../build/how-to-build-isolated-applications-to-consume-com-components.md)

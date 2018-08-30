@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6abf906d9fa0e5866b28a0c617e68edead8378
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2772ec96558c4aa1d1f5fcb573166a37a31c0592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852254"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201209"
 ---
 # <a name="cminiframewnd-class"></a>Класс CMiniFrameWnd
 Представляет фреймовое окно половинной высоты по сравнению с тем, которое стандартно отображается на плавающих панелях инструментов.  
@@ -165,7 +165,7 @@ virtual BOOL CreateEx(
  Задает расширенный стиль `CMiniFrameWnd` создания. Применения любого из [расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) в окно.  
   
  *lpClassName*  
- Указывает на строку нуль-символом, который содержит класс Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) структуры). Имя класса может быть любое имя, зарегистрированное с глобальным [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) функции или какие-либо имена предопределенных класс элемента управления. Он не должен иметь значение NULL.  
+ Указывает на строку нуль-символом, который содержит класс Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) структуры). Имя класса может быть любое имя, зарегистрированное с глобальным [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) функции или какие-либо имена предопределенных класс элемента управления. Он не должен иметь значение NULL.  
   
  *lpWindowName*  
  Указывает строку символов с завершающим нулем, которая содержит имя окна.  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e4ab4e209b53e33586346495715548cffd4df2e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0a7c3ee4f621e58e0ab7c01b409fdd80ed464051
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42587562"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197382"
 ---
 # <a name="creating-a-console-application"></a>Создание консольного приложения
 
@@ -46,4 +46,4 @@ ms.locfileid: "42587562"
 [Консольные проекты](/visualstudio/debugger/debugging-preparation-console-projects)  
 [Добавление функциональных возможностей с помощью мастеров кода](../ide/adding-functionality-with-code-wizards-cpp.md)  
 [Страницы свойств](../ide/property-pages-visual-cpp.md)  
-[Развертывание приложений](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+[Развертывание приложений](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

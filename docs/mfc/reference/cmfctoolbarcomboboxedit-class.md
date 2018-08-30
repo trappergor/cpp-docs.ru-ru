@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCToolBarComboBoxEdit | Документы Microsoft
+title: Класс CMFCToolBarComboBoxEdit | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c287d30a2a54b6e300f34ca83703baf154b36bf
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aa01a9cb38de2297ebf1282f0d86333218861a0a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042512"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195490"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>Класс CMFCToolBarComboBoxEdit
-Платформа использует `CMFCToolBarComboBoxEdit` класса, чтобы создать кнопку панели инструментов, который ведет себя как редактируемые поле со списком.  
+Инфраструктура использует `CMFCToolBarComboBoxEdit` класс, чтобы создать кнопку панели инструментов, который ведет себя как редактируемые поле со списком.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,10 +47,10 @@ class CMFCToolBarComboBoxEdit : public CEdit
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Преобразует сообщения окна перед их передачей [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
   
 ### <a name="remarks"></a>Примечания  
- Производный класс `CMFCToolBarComboBoxEdit` классе, чтобы настроить его операций редактирования.  
+ Наследуйте класс от `CMFCToolBarComboBoxEdit` класс для настройки его операций редактирования.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,10 +75,10 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
   
 ### <a name="parameters"></a>Параметры  
  [in] *поле со списком*  
- Ссылку на [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объект, используемый в кнопке панели инструментов, который содержит поле со списком.  
+ Ссылку на [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объект, являющийся кнопки панели инструментов, содержащий поле со списком.  
   
 ### <a name="example"></a>Пример  
- Следующий пример демонстрирует создание объекта `CMFCToolBarComboBoxEdit` класса. Этот фрагмент кода является частью [IE демонстрационный пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует создание объекта класса `CMFCToolBarComboBoxEdit` класса. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]  
   

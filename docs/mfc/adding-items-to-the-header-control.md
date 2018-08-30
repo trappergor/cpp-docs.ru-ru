@@ -1,5 +1,5 @@
 ---
-title: Добавление элементов управления заголовка | Документы Microsoft
+title: Добавление элементов управления заголовка | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d64265a94df2770e3a234ab992130b4809f9e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6450d99b8df436c64337e52fc14244ecbb0edfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342739"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206151"
 ---
 # <a name="adding-items-to-the-header-control"></a>Добавление элементов в элемент управления "Заголовок"
-После создания элемента управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) в его родительском окне добавить столько «заголовок элементов» необходимо: как правило, каждого столбца.  
+После создания элемента управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) в его родительского окна, добавьте «заголовка произвольное число условий фильтра» необходимо: обычно по одному на столбец.  
   
 ### <a name="to-add-a-header-item"></a>Чтобы добавить элемент заголовка  
   
-1.  Подготовка [HD_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) структуры.  
+1.  Подготовка [HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) структуры.  
   
 2.  Вызовите [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), передачи структуры.  
   
 3.  Повторите шаги 1 и 2 для дополнительных элементов.  
   
- Дополнительные сведения см. в разделе [Добавление элемента управления заголовка](http://msdn.microsoft.com/library/windows/desktop/bb775238) в Windows SDK.  
+ Дополнительные сведения см. в разделе [Добавление элемента управления заголовка](/windows/desktop/Controls/header-controls) в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)   

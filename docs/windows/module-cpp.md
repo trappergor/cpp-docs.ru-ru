@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e25f33e882769219200e6b9a6f8a0949a01d661
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593361"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200222"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -73,7 +73,7 @@ ms.locfileid: "42593361"
 Уникальный идентификатор для библиотеки. Если этот параметр опущен, идентификатор для библиотеки будет создан автоматически. Может потребоваться получить *uuid* для блока библиотеки, что можно сделать с помощью идентификатора **__uuidof (** *Имя_библиотеки* **)**.
 
 *lcid*  
-Параметр локализации. Дополнительные сведения см. в описании [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .
+Параметр локализации. См. в разделе [lcid](/windows/desktop/Midl/lcid) Дополнительные сведения.
 
 *элемент управления* (необязательно)  
 Указывает, что все коклассы в библиотеке являются элементами управления.
@@ -82,7 +82,7 @@ ms.locfileid: "42593361"
 Указывает библиотеку типов.
 
 *helpstringdll* (необязательно)  
-Задает имя DLL-файла, используемого для выполнения уточняющего запроса строки документа. Дополнительные сведения см. в описании [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .
+Задает имя DLL-файла, используемого для выполнения уточняющего запроса строки документа. См. в разделе [helpstringdll](/windows/desktop/Midl/helpstringdll) Дополнительные сведения.
 
 *HelpFile* (необязательно)  
 Имя **помочь** файл для библиотеки типов.
@@ -94,10 +94,10 @@ ms.locfileid: "42593361"
 Дополнительные сведения см. в описании [helpstringcontext](../windows/helpstringcontext.md) .
 
 *скрытые* (необязательно)  
-Запрещает отображение всей библиотеки. Этот режим предназначен для использования с элементами управления. Узлы должны создать новую библиотеку типов, инкапсулирующую элемент управления с расширенными свойствами. Дополнительные сведения см. в описании атрибута MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .
+Запрещает отображение всей библиотеки. Этот режим предназначен для использования с элементами управления. Узлы должны создать новую библиотеку типов, инкапсулирующую элемент управления с расширенными свойствами. См. в разделе [скрытые](/windows/desktop/Midl/hidden) описании атрибута MIDL Дополнительные сведения.
 
 *ограниченные* (необязательно)  
-Элементы библиотеки нельзя вызывать произвольным образом. Дополнительные сведения см. в описании атрибута MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .
+Элементы библиотеки нельзя вызывать произвольным образом. См. в разделе [ограниченных](/windows/desktop/Midl/restricted) описании атрибута MIDL Дополнительные сведения.
 
 *пользовательские* (необязательно)  
 Один или несколько атрибутов; аналогично атрибуту [custom](../windows/custom-cpp.md) . Первый параметр для *пользовательских* является идентификатором GUID атрибута. Пример:
@@ -124,15 +124,15 @@ ms.locfileid: "42593361"
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) используется в качестве базового класса и стандартных точек входа библиотеки DLL, необходимых для COM-сервера. Это точки входа: [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368)и [DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) используется в качестве базового класса и стандартных точек входа библиотеки DLL, необходимых для COM-сервера. Это точки входа: [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), и [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) используется в качестве базового класса и стандартной точки входа исполняемого файла [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) используется в качестве базового класса и стандартной исполняемый файл точки входа [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) используется в качестве базового класса и стандартной точки входа исполняемого файла [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) используется в качестве базового класса и стандартной исполняемый файл точки входа [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **unspecified**
 
@@ -193,7 +193,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 [Изолированные атрибуты](../windows/stand-alone-attributes.md)  
 [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
 [usesgetlasterror](../windows/usesgetlasterror.md)  
-[Библиотека](http://msdn.microsoft.com/library/windows/desktop/aa367069)  
+[Библиотека](/windows/desktop/Midl/library)  
 [helpcontext](../windows/helpcontext.md)  
 [helpstring](../windows/helpstring.md)  
 [helpfile](../windows/helpfile.md)  
