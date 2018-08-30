@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b90e1f40a4de3331dfb712d8dd0f113df5e9f9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606116"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203756"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Классы Array и WriteOnlyArray (C++/CX)
 Можно свободно использовать обычные массивы в стиле C или [std::array](../standard-library/array-class-stl.md) в C + +/ CX программы (несмотря на то что [std::vector](../standard-library/vector-class.md) часто является наиболее предпочтительной), но в любом API, который публикуется в метаданных, необходимо преобразовать массив в стиле C или вектора синхронизации в [Platform::Array](../cppcx/platform-array-class.md) или [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) типа в зависимости от того, как он используется. Тип [Platform::Array](../cppcx/platform-array-class.md) не сравним по эффективности и широте возможностей с типом [std::vector](../standard-library/vector-class.md), поэтому в общем случае не рекомендуется использовать его во внутреннем коде, который выполняет множество операций над элементами массива.  
@@ -82,12 +82,12 @@ ms.locfileid: "42606116"
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>Используйте ArrayReference, чтобы избежать копирования данных  
  В некоторых сценариях, где данные передаются через ABI в [Platform::Array](../cppcx/platform-array-class.md), и в конечном счете должны обрабатываться в массиве в стиле C для большей эффективности, можно использовать [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) , чтобы избежать дополнительного копирования. При передаче [ArrayReference](../cppcx/platform-arrayreference-class.md) в качестве аргумента в параметр, который принимает значение `Platform::Array`, `ArrayReference` сохранит данные непосредственно в указанном массиве в стиле C. Просто учтите, что `ArrayReference` не блокирует исходные данные, и если данные изменяются или удаляются в другом потоке до завершения вызова, результаты будут неопределенными.  
   
- В следующем фрагменте кода показано, как скопировать результаты операции [DataReader](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) в `Platform::Array` (стандартный подход), а затем заменить `ArrayReference` , чтобы скопировать данные непосредственно в массив в стиле C.  
+ В следующем фрагменте кода показано, как скопировать результаты операции [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) операции в `Platform::Array` (стандартный подход), а затем заменить `ArrayReference` для копирования данных непосредственно в массив в стиле C:  
   
  [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]  
   
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Избегайте использования типа Array в качестве свойства  
- Как правило, следует избегать предоставления доступа к типу `Platform::Array` как к свойству в ссылочном классе, потому что массив возвращается целиком, даже если код клиента пытается получить доступ только к одному элементу. При необходимости предоставить доступ к контейнеру последовательности как к свойству открытого ссылочного класса лучше использовать класс [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) . В закрытых и внутренних API (которые не публикуются в метаданных) рекомендуется использовать стандартный контейнер C++, такой как [std::vector](../standard-library/vector-class.md).  
+ Как правило, следует избегать предоставления доступа к типу `Platform::Array` как к свойству в ссылочном классе, потому что массив возвращается целиком, даже если код клиента пытается получить доступ только к одному элементу. При необходимости предоставить доступ к контейнеру последовательности как к свойству открытого класса ссылки, [Windows::Foundation:: ivector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) является лучшим выбором. В закрытых и внутренних API (которые не публикуются в метаданных) рекомендуется использовать стандартный контейнер C++, такой как [std::vector](../standard-library/vector-class.md).  
   
 ## <a name="see-also"></a>См. также  
  [Система типов](../cppcx/type-system-c-cx.md)   

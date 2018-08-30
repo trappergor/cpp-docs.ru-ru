@@ -1,5 +1,5 @@
 ---
-title: Настройка Visual C++ для 64-разрядных x64 цели | Документы Microsoft
+title: Настройка Visual C++ для 64-разрядная версия, x64 целевых объектов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eaae71fb55b176ee4903978a6b4b5a8624dc049
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1054343d5e6afbc739fe302870b43eb9526f7d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366813"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196993"
 ---
-# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Настройка Visual C++ для 64-разрядных x64 целевые объекты
+# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Настройка Visual C++ для 64-разрядная версия, x64 целевых объектов
 
-Этот раздел содержит подразделы о предназначенных для 64-разрядных x64 средства построения оборудования с помощью Visual C++.  
+Этот раздел содержит разделы о предназначенных для 64-разрядных x64 средства сборки оборудования с помощью Visual C++.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
@@ -49,7 +49,7 @@ ms.locfileid: "32366813"
   
 [/favor (оптимизация для особенностей архитектуры)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-[Руководство по программированию для 64-разрядной версии Windows](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
+[Руководство по программированию для 64-разрядной Windows](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)  
   
 [MASM для x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
   

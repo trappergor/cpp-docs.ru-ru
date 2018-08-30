@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b75016c6c783ae19d8e0f6739adaa34b8da977db
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed0603482ffccf1bcb827d67b174768cfd3e3168
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338441"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196801"
 ---
 # <a name="clongbinary-class"></a>Класс CLongBinary
 Упрощает работу с очень большими объектами двоичных данных (BLOB-объектами) в базе данных.  
@@ -86,7 +86,7 @@ SQLULEN m_dwDataLength;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот размер может быть меньше, чем размер блока памяти, выделенного для данных. Вызов Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) функцию, чтобы получить выделенный размер.  
+ Этот размер может быть меньше, чем размер блока памяти, выделенного для данных. Вызов Win32 [GLobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize) функцию, чтобы получить выделенный размер.  
   
 ##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  Сохраняет дескриптор Windows HGLOBAL фактический большой двоичный объект данных.  

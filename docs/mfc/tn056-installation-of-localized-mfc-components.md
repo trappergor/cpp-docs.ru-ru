@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44c285e3ff50100dc34c4859c412d58ca8d084dc
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4618efd8ad79a4f9b27bd3845aec20c5264788b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027116"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194525"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056. Установка локализированных компонентов MFC
 Этот технический нота, каковой обсуждается установка локализованных компонентов MFC, теперь является устаревшим.  
   
- **См. в разделе**[развертывание приложений](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4) для дополнительных **сведения о распространении приложений Visual C++.   Также см. в разделе** [57 краткие](../mfc/tn057-localization-of-mfc-components.md) Дополнительные сведения о локализации приложений MFC.  
+ **См. в разделе**[развертывание приложений](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4) для дополнительных **сведения о распространении приложений Visual C++. Также см. в разделе** [57 краткие](../mfc/tn057-localization-of-mfc-components.md) Дополнительные сведения о локализации приложений MFC.  
   
 ## <a name="see-also"></a>См. также  
  [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   

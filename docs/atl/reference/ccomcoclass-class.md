@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572392"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204347"
 ---
 # <a name="ccomcoclass-class"></a>Класс CComCoClass
 Этот класс предоставляет методы для создания экземпляров класса и получения его свойств.  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Статический) Переопределите для возврата описание объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComCoClass` Предоставляет методы для получения CLSID объекта, настройки сведений об ошибках и создания экземпляров класса. Любой класс зарегистрирован в [карте объектов](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) должен быть производным от `CComCoClass`.  
+ `CComCoClass` Предоставляет методы для получения CLSID объекта, настройки сведений об ошибках и создания экземпляров класса. Любой класс зарегистрирован в [карте объектов](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) должен быть производным от `CComCoClass`.  
   
  `CComCoClass` также определяет модель по умолчанию класс фабрики и статистическую обработку для объекта. `CComCoClass` использует следующие два макроса:  
   

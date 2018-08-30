@@ -1,7 +1,7 @@
 ---
-title: Ошибка построения проекта PRJ0021 | Документы Microsoft
+title: Ошибка построения проекта PRJ0021 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1695a9bf75fe5b3f0fa05b42245067f98c5e1655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6697fbfd23dbf07a66292ca7d15ca8ef3b064cd9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324461"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203343"
 ---
 # <a name="project-build-error-prj0021"></a>Ошибка построения проекта PRJ0021
-Инструмент «инструмент», свойство «свойство» содержит неверное имя файла.  
-  
- Имя файла, указанное в свойстве ***свойство***, программы, ***средство***, недопустим.  
-  
- Использовать Неизвестный или недопустимый макрос.  
-  
- В разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md) сведения о том, как получить доступ к свойствам проекта.
+
+> Средство "*средство*", свойство "*свойство*" содержит неверное имя файла.
+
+Имя файла, указанное в свойстве *свойство* по средству *средство* был недопустимым.
+
+Возможно, был использован неизвестный или недопустимый макрос.
+
+См. в разделе [параметр свойств проекта Visual C++](../../ide/working-with-project-properties.md) сведения о том, как получить доступ к свойствам проекта.

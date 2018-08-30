@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 257573bad0650f7e721c2d584ed8f22ba7b2d31b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e176742295b0e2f40e19c063aae38079ac3537
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026228"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196224"
 ---
 # <a name="coleinsertdialog-class"></a>Класс COleInsertDialog
 Используется для диалогового окна OLE "Вставить объект".  
@@ -82,7 +82,7 @@ class COleInsertDialog : public COleDialog
 > [!NOTE]
 >  Контейнер, созданный мастером код приложения использует этот класс.  
   
- Дополнительные сведения см. в разделе [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) структуры в пакете Windows SDK.  
   
  Дополнительные сведения о конкретных OLE диалоговым окнам см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -184,7 +184,7 @@ INT_PTR
   
 -   IDCANCEL, если пользователь отменил диалоговое окно.  
   
--   IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) функции в пакете Windows SDK.  
+-   IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIInsertObject](/windows/desktop/api/oledlg/nf-oledlg-oleuiinsertobjecta) функции в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Если вы хотите инициализировать различных диалоговых путем определения участников [m_io](#m_io) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
@@ -202,7 +202,7 @@ REFCLSID GetClassID() const;
  Возвращает идентификатор CLSID, связанный с выбранным элементом.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [раздел CLSID](/windows/desktop/com/clsid-key-hklm) в пакете Windows SDK.  
   
 ##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  Вызывайте эту функцию, чтобы определить, если пользователь решает отображения выбранного элемента в виде значка.  
@@ -221,7 +221,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Примечания  
  Вызовите этот, только если функция [DoModal](#domodal) возвращает IDOK.  
   
- Дополнительные сведения о рисовании аспект, см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры данных в пакете Windows SDK.  
+ Дополнительные сведения о рисовании аспект, см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры данных в пакете Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  Вызывайте эту функцию для получения дескриптора метафайл, содержащий аспект, преобразованного в значок выбранного элемента.  
@@ -282,7 +282,7 @@ OLEUIINSERTOBJECT m_io;
 ### <a name="remarks"></a>Примечания  
  Члены этой структуры можно изменить напрямую или с помощью функций-членов.  
   
- Дополнительные сведения см. в разделе [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) структуры в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC OCLIENT](../../visual-cpp-samples.md)   

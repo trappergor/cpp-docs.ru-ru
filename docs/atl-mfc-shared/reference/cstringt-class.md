@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 481b50fa99e367859eab51b41a1c5e37d8602341
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609503"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197937"
 ---
 # <a name="cstringt-class"></a>Класс CStringT
 Этот класс представляет `CStringT` объекта.  
@@ -705,7 +705,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage` пытается выделить системную память для вновь форматируемой строки. Если эта попытка завершается неудачей, исключение памяти автоматически вызывается исключение.  
   
- Каждой операции вставки должен иметь соответствующий следующий параметр *pszFormat* или *nFormatID* параметра. В тексте сообщения несколько escape-последовательности поддерживаются для динамического форматирования сообщения. Дополнительные сведения см. в разделе Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) функции в пакете Windows SDK.  
+ Каждой операции вставки должен иметь соответствующий следующий параметр *pszFormat* или *nFormatID* параметра. В тексте сообщения несколько escape-последовательности поддерживаются для динамического форматирования сообщения. Дополнительные сведения см. в разделе Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) функции в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -730,7 +730,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV` вызовы [CStringT::FormatMessage](#formatmessage), который пытается выделить системную память для вновь форматируемой строки. Если эта попытка завершается неудачей, исключение памяти автоматически вызывается исключение.  
   
- Дополнительные сведения см. в разделе Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) функции в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) функции в пакете Windows SDK.  
   
 ##  <a name="formatv"></a>  CStringT::FormatV  
  Форматирует строку сообщения, используя переменное число аргументов.  

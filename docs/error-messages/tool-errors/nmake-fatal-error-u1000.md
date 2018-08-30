@@ -1,7 +1,7 @@
 ---
-title: Неустранимая ошибка NMAKE U1000 | Документы Microsoft
+title: Неустранимая ошибка NMAKE U1000 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a8d4e0f150d82482dd8391efa1f2251ac37bc8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69909c542a02baf8aa261c8ef78413a877a223a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325270"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194892"
 ---
 # <a name="nmake-fatal-error-u1000"></a>Неустранимая ошибка NMAKE U1000
-Синтаксическая ошибка: ")" отсутствует в макровызове  
-  
- Левая круглая скобка, **(**, возникшей без соответствующей правой скобки **)**, в вызове макроса. Неверный формат — **$(***имя***)**; `$` *n* допускается для односимвольных имен.
+
+> Синтаксическая ошибка: ")" отсутствует в макровызове
+
+Левая круглая скобка **(**, отображающийся без соответствующей правой скобки, **)**, в вызове макроса. Правильной формой является **$(**<em>имя</em>**)**; **$** <em>n</em> допускается для имен одного символа.

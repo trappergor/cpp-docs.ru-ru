@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539717"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198572"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Реализует базовую функциональность для окон с вкладками.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Повторно вычисляет внутренний макет окна с вкладками.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Удаляет все вкладки из окна.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Удаляет вкладку из окна.|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, указывающее цвет фона активной вкладки.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) значение, указывающее цвет фона активной вкладки.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию цвет фона активной вкладки — COLOR_WINDOW. Можно изменить цвет фона для активной вкладки с помощью метода [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, указывающее цвет текста активной вкладки.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) значение, указывающее цвет текста активной вкладки.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию цвет текста для активных вкладок является COLOR_WINDOWTEXT. Можно изменить цвет текста с помощью метода [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на массив [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значения, [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объект использует автоматическую цветовую маркировку вкладок.  
+ Ссылка на массив [COLORREF](/windows/desktop/gdi/colorref) значения, [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объект использует автоматическую цветовую маркировку вкладок.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию платформа инициализирует массив цветов, определяемое библиотекой цветов. Можно указать пользовательские массив цветов путем вызова метода [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, указывающее цвет фона указанной вкладки; -1, если *iTab* выходит за пределы диапазона.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) значение, указывающее цвет фона указанной вкладки; -1, если *iTab* выходит за пределы диапазона.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Извлекает размер границ вкладки в набор вкладок в наборе.  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста указанной вкладки; -1, если *iTab* выходит за пределы диапазона.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет текста указанной вкладки; -1, если *iTab* выходит за пределы диапазона.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Возвращает указатель на область, расположенную на указанной вкладки.  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Указывает новый цвет фона.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа получает цвет фона по умолчанию для активных вкладок из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)метод.  
+ Платформа получает цвет фона по умолчанию для активных вкладок из [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)метод.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Задает цвет текста для активных вкладок.  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Параметры  
  [in] *clr*  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, который указывает новый цвет текста.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, который указывает новый цвет текста.  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию платформа получает цвет текста из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Этот цвет по умолчанию переопределяется с помощью `SetActiveTabTextColor` метод.  
+ По умолчанию платформа получает цвет текста из [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Этот цвет по умолчанию переопределяется с помощью `SetActiveTabTextColor` метод.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Задает цвета элемента управления вкладками, она используется в режиме автоматической цветовой.  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  Ширина каждого изображения в пикселях.  
   
  [in] *clrTransp*  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий прозрачный цвет изображения.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий прозрачный цвет изображения.  
   
  [in] *hImageList*  
  Дескриптор к списку предварительно загруженные изображения.  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  Отсчитываемый от нуля индекс вкладки.  
   
  [in] *цвет*  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, который указывает новый цвет текста.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, который указывает новый цвет текста.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если выполнение прошло успешно; в противном случае 0.  

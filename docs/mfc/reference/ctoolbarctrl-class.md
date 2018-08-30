@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8a958ac670f91edfccdfced43fce311bc29c04
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539890"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196595"
 ---
 # <a name="ctoolbarctrl-class"></a>Класс CToolBarCtrl
 Предоставляет функциональные возможности стандартного элемента управления "панель инструментов" Windows.  
@@ -242,7 +242,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::GetButtonSize](#getbuttonsize)|Извлекает текущую ширину и высоту кнопок панели инструментов, в пикселях.|  
 |[CToolBarCtrl::GetColorScheme](#getcolorscheme)|Возвращает цветовую схему текущего элемента управления панели инструментов.|  
 |[CToolBarCtrl::GetDisabledImageList](#getdisabledimagelist)|Извлекает список изображений, элемент управления панели инструментов используется для отображения отключен кнопок.|  
-|[CToolBarCtrl::GetDropTarget](#getdroptarget)|Извлекает [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) интерфейс для элемента управления панели инструментов.|  
+|[CToolBarCtrl::GetDropTarget](#getdroptarget)|Извлекает [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) интерфейс для элемента управления панели инструментов.|  
 |[CToolBarCtrl::GetExtendedStyle](#getextendedstyle)|Извлекает расширенные стили для элемента управления панели инструментов.|  
 |[CToolBarCtrl::GetHotImageList](#gethotimagelist)|Извлекает список изображений, элемент управления панель инструментов используется для отображения кнопки «горячие». Кнопку в активном состоянии выделяется, когда указатель мыши находится над ним.|  
 |[CToolBarCtrl::GetHotItem](#gethotitem)|Извлекает индекс элемента, "Горячий" в панели инструментов.|  
@@ -289,7 +289,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetCmdID](#setcmdid)|Задает идентификатор команды, отправляемые окну-владельцу при нажатии указанную кнопку.|  
 |[CToolBarCtrl::SetColorScheme](#setcolorscheme)|Задает цветовую схему текущего элемента управления панели инструментов.|  
 |[CToolBarCtrl::SetDisabledImageList](#setdisabledimagelist)|Задает список изображений, будет использоваться элементом управления панели инструментов для отображения отключен кнопок.|  
-|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Задает флаги в функции Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), который используется для рисования текста в указанном прямоугольнике, отформатированный согласно установке флаги.|  
+|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Задает флаги в функции Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), который используется для рисования текста в указанном прямоугольнике, отформатированный согласно установке флаги.|  
 |[CToolBarCtrl::SetExtendedStyle](#setextendedstyle)|Задает расширенные стили для элемента управления панели инструментов.|  
 |[CToolBarCtrl::SetHotImageList](#sethotimagelist)|Задает список изображений, панели инструментов будет использоваться для отображения кнопки «горячие».|  
 |[CToolBarCtrl::SetHotItem](#sethotitem)|Задает элемент "Горячий" в панели инструментов.|  
@@ -386,7 +386,7 @@ int AddBitmap(
  Отсчитываемый от нуля индекс первого новый образ, если выполнение прошло успешно; в противном случае - 1.  
   
 ### <a name="remarks"></a>Примечания  
- Вы можете использовать Windows API [CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467) для сопоставления цветов перед добавлением растрового изображения на панель инструментов. Если передать указатель на `CBitMap` объекта, необходимо убедиться, что точечный рисунок не уничтожается до, после уничтожения панели инструментов.  
+ Вы можете использовать Windows API [CreateMappedBitmap](/windows/desktop/api/commctrl/nf-commctrl-createmappedbitmap) для сопоставления цветов перед добавлением растрового изображения на панель инструментов. Если передать указатель на `CBitMap` объекта, необходимо убедиться, что точечный рисунок не уничтожается до, после уничтожения панели инструментов.  
   
 ##  <a name="addbuttons"></a>  CToolBarCtrl::AddButtons  
  Добавляет одну или несколько кнопок в элемент управления toolbar.  
@@ -541,7 +541,7 @@ BOOL ChangeBitmap(
 ### <a name="remarks"></a>Примечания  
  Если этот метод выполняется успешно, система отображает указанное изображение в указанную кнопку.  
   
- Этот метод отправляет [TB_CHANGEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787301) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_CHANGEBITMAP](/windows/desktop/Controls/tb-changebitmap) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода изменяется растрового изображения для **сохранения файла** кнопку, чтобы растровое изображение для **о** кнопки.  
@@ -602,7 +602,7 @@ virtual BOOL Create(
  Задает стиль элемента управления панели инструментов. Панели инструментов всегда должен иметь стиль WS_CHILD. Кроме того, можно указать любое сочетание стили окна и панели инструментов, как описано в разделе **"Примечания"**.  
   
  *Rect*  
- При необходимости указывает размер и положение элемента управления панели инструментов. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
+ При необходимости указывает размер и положение элемента управления панели инструментов. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
   
  *pParentWnd*  
  Указывает родительскому окну элемента управления панели инструментов. Он не должен иметь значение NULL.  
@@ -622,11 +622,11 @@ virtual BOOL Create(
   
 - WS_DISABLED редко  
   
- См. в разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK для Windows, описание стили окна.  
+ См. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK для Windows, описание стили окна.  
   
- При необходимости применить сочетание [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498), как описано в пакете Windows SDK.  
+ При необходимости применить сочетание [общие стили элемента управления](/windows/desktop/Controls/common-control-styles), как описано в пакете Windows SDK.  
   
- Применить сочетание стили панели инструментов на элемент управления или кнопки, сами. Стили, описаны в разделе [панели инструментов и стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb760439) в пакете Windows SDK.  
+ Применить сочетание стили панели инструментов на элемент управления или кнопки, сами. Стили, описаны в разделе [панели инструментов и стили кнопок](/windows/desktop/Controls/toolbar-control-and-button-styles) в пакете Windows SDK.  
   
  Чтобы использовать стили расширенных панели инструментов, вызовите [SetExtendedStyle](#setextendedstyle) после вызова метода `Create`. Чтобы создать панель инструментов с расширенные стили окна, вызовите [CToolBarCtrl::CreateEx](#createex) вместо `Create`.  
   
@@ -646,13 +646,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
   
  *dwStyle*  
  Задает стиль элемента управления панели инструментов. Панели инструментов всегда должен иметь стиль WS_CHILD. Кроме того, можно указать любое сочетание стили окна и панели инструментов, как описано в разделе **"Примечания"** раздел [создать](#create).  
   
  *Rect*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
   
  *pParentWnd*  
  Указатель на окно, которое является родительским для элемента управления.  
@@ -664,7 +664,7 @@ virtual BOOL CreateEx(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте `CreateEx` вместо [создать](#create) применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_**. `CreateEx` Создает элемент управления с помощью расширенных стилей Windows, определяемое *dwExStyle*. Расширенные стили, определенные для элемента управления с помощью набора [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` такие стили заданы как WS_EX_CONTEXTHELP, но используют `SetExtendedStyle` должны стать TBSTYLE_EX_DRAWDDARROWS подобные стили. Дополнительные сведения см. в разделе стили, описанные в [расширенные стили панели инструментов](http://msdn.microsoft.com/library/windows/desktop/bb760430) в пакете Windows SDK.  
+ Используйте `CreateEx` вместо [создать](#create) применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_**. `CreateEx` Создает элемент управления с помощью расширенных стилей Windows, определяемое *dwExStyle*. Расширенные стили, определенные для элемента управления с помощью набора [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` такие стили заданы как WS_EX_CONTEXTHELP, но используют `SetExtendedStyle` должны стать TBSTYLE_EX_DRAWDDARROWS подобные стили. Дополнительные сведения см. в разделе стили, описанные в [расширенные стили панели инструментов](/windows/desktop/Controls/toolbar-extended-styles) в пакете Windows SDK.  
   
 ##  <a name="ctoolbarctrl"></a>  CToolBarCtrl::CToolBarCtrl  
  Создает объект `CToolBarCtrl`.  
@@ -737,7 +737,7 @@ BOOL GetAnchorHighlight() const;
  Если значение ненулевое, включено выделение привязки. Если значение равно нулю, выделение привязки будет отключено.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-getanchorhighlight), как описано в пакете Windows SDK.  
   
 ##  <a name="getbitmap"></a>  CToolBarCtrl::GetBitmap  
  Извлекает индекс растровое изображение, связанное с кнопкой на панели инструментов.  
@@ -754,7 +754,7 @@ int GetBitmap(int nID) const;
  Возвращает индекс точечного рисунка, если успешно, или нуль, в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Реализует функции [TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315) в пакете Windows SDK.  
+ Реализует функции [TB_GETBITMAP](/windows/desktop/Controls/tb-getbitmap) в пакете Windows SDK.  
   
 ##  <a name="getbitmapflags"></a>  CToolBarCtrl::GetBitmapFlags  
  Извлекает флаги растрового изображения на панели инструментов.  
@@ -812,13 +812,13 @@ int GetButtonInfo(
  Идентификатор кнопки.  
   
  *ptbbi*  
- Указатель на [TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478) структуру, которая получает сведения о кнопке.  
+ Указатель на [TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa) структуру, которая получает сведения о кнопке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс кнопки, если выполнение прошло успешно; в противном случае-1.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETBUTTONINFO](/windows/desktop/Controls/tb-getbuttoninfo), как описано в пакете Windows SDK.  
   
 ##  <a name="getbuttonsize"></a>  CToolBarCtrl::GetButtonSize  
  Получает размер кнопки панели инструментов.  
@@ -847,7 +847,7 @@ CString GetButtonText(int idButton) const;
  Объект [CString](../../atl-mfc-shared/using-cstring.md) , содержащий отображаемый текст от указанной кнопки.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_GETBUTTONTEXT](/windows/desktop/Controls/tb-getbuttontext) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getcolorscheme"></a>  CToolBarCtrl::GetColorScheme  
  Возвращает цветовую схему текущего элемента управления панели инструментов.  
@@ -860,13 +860,13 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Указатель на [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) структуру, которая получает сведения о схеме цвет. При возвращении данного метода структура описывает цветом и цветом тени панели инструментов.|  
+|[out] *lpColorScheme*|Указатель на [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) структуру, которая получает сведения о схеме цвет. При возвращении данного метода структура описывает цветом и цветом тени панели инструментов.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
 Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_GETCOLORSCHEME](/windows/desktop/Controls/tb-getcolorscheme) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getdisabledimagelist"></a>  CToolBarCtrl::GetDisabledImageList  
  Извлекает список изображений, элемент управления панели инструментов используется для отображения отключен кнопок.  
@@ -879,10 +879,10 @@ CImageList* GetDisabledImageList() const;
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объекта, или значение NULL, если список изображений отключено не задано.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329), как описано в пакете Windows SDK. Реализация MFC `GetDisabledImageList` использует `CImageList` образы объект, содержащий кнопку панели инструментов, вместо того чтобы дескриптор списка изображений.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-getdisabledimagelist), как описано в пакете Windows SDK. Реализация MFC `GetDisabledImageList` использует `CImageList` образы объект, содержащий кнопку панели инструментов, вместо того чтобы дескриптор списка изображений.  
   
 ##  <a name="getdroptarget"></a>  CToolBarCtrl::GetDropTarget  
- Извлекает [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) интерфейс для элемента управления панели инструментов.  
+ Извлекает [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) интерфейс для элемента управления панели инструментов.  
   
 ```  
 HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;  
@@ -890,13 +890,13 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
   
 ### <a name="parameters"></a>Параметры  
  *ppDropTarget*  
- Указатель на [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) указатель на интерфейс. Если возникает ошибка, указатель NULL помещается в этот адрес.  
+ Указатель на [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) указатель на интерфейс. Если возникает ошибка, указатель NULL помещается в этот адрес.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение HRESULT указывает на успешное или неуспешное выполнение операции.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETOBJECT](/windows/desktop/Controls/tb-getobject), как описано в пакете Windows SDK.  
   
 ##  <a name="getextendedstyle"></a>  CToolBarCtrl::GetExtendedStyle  
  Извлекает расширенные стили для элемента управления панели инструментов.  
@@ -906,10 +906,10 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение типа DWORD, представляющее расширенные стили в настоящий момент для элемента управления панели инструментов. Список стилей, см. в разделе [расширенные стили панели инструментов](http://msdn.microsoft.com/library/windows/desktop/bb760430), в пакете Windows SDK.  
+ Значение типа DWORD, представляющее расширенные стили в настоящий момент для элемента управления панели инструментов. Список стилей, см. в разделе [расширенные стили панели инструментов](/windows/desktop/Controls/toolbar-extended-styles), в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETEXTENDEDSTYLE](/windows/desktop/Controls/tb-getextendedstyle), как описано в пакете Windows SDK.  
   
 ##  <a name="gethotimagelist"></a>  CToolBarCtrl::GetHotImageList  
  Извлекает список изображений, элемент управления панель инструментов используется для отображения кнопки «горячие». Кнопку в активном состоянии выделяется, когда указатель мыши находится над ним.  
@@ -922,7 +922,7 @@ CImageList* GetHotImageList() const;
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объекта, или значение NULL, если список изображений отключено не задано.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334), как описано в пакете Windows SDK. Кнопку в активном состоянии выделяется, когда указатель мыши находится над ним.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETHOTIMAGELIST](/windows/desktop/Controls/tb-gethotimagelist), как описано в пакете Windows SDK. Кнопку в активном состоянии выделяется, когда указатель мыши находится над ним.  
   
 ##  <a name="gethotitem"></a>  CToolBarCtrl::GetHotItem  
  Извлекает индекс элемента, "Горячий" в панели инструментов.  
@@ -935,7 +935,7 @@ int GetHotItem() const;
  Отсчитываемый от нуля индекс элемента, "Горячий" в панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETHOTITEM](/windows/desktop/Controls/tb-gethotitem), как описано в пакете Windows SDK.  
   
 ##  <a name="getimagelist"></a>  CToolBarCtrl::GetImageList  
  Извлекает список изображений, элемент управления панель инструментов используется для отображения кнопки в состоянии по умолчанию.  
@@ -948,7 +948,7 @@ CImageList* GetImageList() const;
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объекта, или значение NULL, если список изображений не задано.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETIMAGELIST](/windows/desktop/Controls/tb-getimagelist), как описано в пакете Windows SDK.  
   
 ##  <a name="getinsertmark"></a>  CToolBarCtrl::GetInsertMark  
  Извлекает текущий знак вставки для панели инструментов.  
@@ -959,10 +959,10 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
   
 ### <a name="parameters"></a>Параметры  
  *ptbim*  
- Указатель на [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) структуру, которая получает знак вставки.  
+ Указатель на [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) структуру, которая получает знак вставки.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETINSERTMARK](/windows/desktop/Controls/tb-getinsertmark), как описано в пакете Windows SDK.  
   
 ##  <a name="getinsertmarkcolor"></a>  CToolBarCtrl::GetInsertMarkColor  
  Получает цвет, используемый для рисования знак вставки для панели инструментов.  
@@ -975,7 +975,7 @@ COLORREF GetInsertMarkColor() const;
  Значение COLORREF, содержащее текущий цвет знака вставки.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETINSERTMARKCOLOR](/windows/desktop/Controls/tb-getinsertmarkcolor), как описано в пакете Windows SDK.  
   
 ##  <a name="getitemrect"></a>  CToolBarCtrl::GetItemRect  
  Возвращает ограничивающий прямоугольник, кнопки в элементе управления панели инструментов.  
@@ -991,7 +991,7 @@ BOOL GetItemRect(
  Отсчитываемый от нуля индекс кнопки, для которого требуется извлечь сведения.  
   
  *lpRect*  
- Адрес [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, получающий координаты ограничивающего прямоугольника.  
+ Адрес [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, получающий координаты ограничивающего прямоугольника.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -1008,13 +1008,13 @@ BOOL GetMaxSize(LPSIZE pSize) const;
   
 ### <a name="parameters"></a>Параметры  
  *pSize*  
- Указатель на [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, которая получает размер элементов.  
+ Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, которая получает размер элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETMAXSIZE](/windows/desktop/Controls/tb-getmaxsize), как описано в пакете Windows SDK.  
   
 ##  <a name="getmaxtextrows"></a>  CToolBarCtrl::GetMaxTextRows  
  Извлекает максимальное количество строк текста, отображаемый на кнопке панели инструментов.  
@@ -1035,10 +1035,10 @@ void GetMetrics(LPTBMETRICS ptbm) const;
   
 ### <a name="parameters"></a>Параметры  
  *ptbm*  
- Указатель на [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482) структуры `CToolBarCtrl` объекта.  
+ Указатель на [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics) структуры `CToolBarCtrl` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [TB_GETMETRICS](/windows/desktop/Controls/tb-getmetrics) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getpadding"></a>  CToolBarCtrl::GetPadding  
  Возвращает горизонтальные и вертикальные заполнение текущего элемента управления панели инструментов.  
@@ -1060,7 +1060,7 @@ BOOL GetPadding(
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_GETPADDING](/windows/desktop/Controls/tb-getpadding) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getpressedimagelist"></a>  CToolBarCtrl::GetPressedImageList  
  Извлекает список изображений, текущего элемента управления панель инструментов используется для представления кнопки в состоянии нажатия.  
@@ -1073,7 +1073,7 @@ CImageList* GetPressedImageList();
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) , содержащий список изображений для текущего элемента управления, или значение NULL, если такой список изображений не установлен.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_GETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-getpressedimagelist) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getrect"></a>  CToolBarCtrl::GetRect  
  Получает ограничивающий прямоугольник для указанной кнопки панели инструментов.  
@@ -1089,13 +1089,13 @@ BOOL GetRect(
  Идентификатор кнопки.  
   
  *lpRect*  
- Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру для получения ограничивающего прямоугольника сведения.  
+ Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру для получения ограничивающего прямоугольника сведения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если успешно; в противном случае — FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETRECT](/windows/desktop/Controls/tb-getrect), как описано в пакете Windows SDK.  
   
 ##  <a name="getrows"></a>  CToolBarCtrl::GetRows  
  Возвращает число строк, кнопок, отображаемых элементом управления панели инструментов.  
@@ -1158,7 +1158,7 @@ int GetString(
  Длина строки, в случае успешного выполнения -1, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_GETSTRING](/windows/desktop/Controls/tb-getstring), как описано в пакете Windows SDK.  
   
 ##  <a name="getstyle"></a>  CToolBarCtrl::GetStyle  
  Получает стили, примененные к элементу управления панели инструментов.  
@@ -1168,7 +1168,7 @@ DWORD GetStyle() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- DWORD, содержащее сочетание [стили элемента управления панели инструментов](http://msdn.microsoft.com/library/windows/desktop/bb760439), как описано в пакете Windows SDK.  
+ DWORD, содержащее сочетание [стили элемента управления панели инструментов](/windows/desktop/Controls/toolbar-control-and-button-styles), как описано в пакете Windows SDK.  
   
 ##  <a name="gettooltips"></a>  CToolBarCtrl::GetToolTips  
  Извлекает дескриптор элемента управления всплывающей подсказки, если имеется, сопоставленный с элементом управления панели инструментов.  
@@ -1192,7 +1192,7 @@ int HitTest(LPPOINT ppt) const;
   
 ### <a name="parameters"></a>Параметры  
  *PPT*  
- Указатель на [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, содержащую Координата по оси x для проверки нажатия в `x` член и Координата y в которой произведен щелчок тестирования в `y` член. Координаты указываются относительно клиентской области панели инструментов.  
+ Указатель на [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, содержащую Координата по оси x для проверки нажатия в `x` член и Координата y в которой произведен щелчок тестирования в `y` член. Координаты указываются относительно клиентской области панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Целое число, указывающее расположение точки на панели инструментов. Если значение равно 0 или положительное значение, возвращаемое значение — это отсчитываемый от нуля индекс элемента nonseparator, в которой находится точка.  
@@ -1200,7 +1200,7 @@ int HitTest(LPPOINT ppt) const;
  Если возвращаемое значение отрицательное, точку выйдет за пределы кнопки. Абсолютное значение возвращаемого значения является индекс элемент разделителя или ближайший элемент nonseparator.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_HITTEST](/windows/desktop/Controls/tb-hittest), как описано в пакете Windows SDK.  
   
 ##  <a name="hidebutton"></a>  CToolBarCtrl::HideButton  
  Скрытие или отображение указанную кнопку в элементе управления панели инструментов.  
@@ -1279,16 +1279,16 @@ BOOL InsertMarkHitTest(
   
 ### <a name="parameters"></a>Параметры  
  *PPT*  
- Указатель на [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, содержащую нажатия координаты относительно клиентской области панели инструментов.  
+ Указатель на [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, содержащую нажатия координаты относительно клиентской области панели инструментов.  
   
  *ptbim*  
- Указатель на [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) структуры, получающий сведения знак вставки.  
+ Указатель на [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) структуры, получающий сведения знак вставки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_INSERTMARKHITTEST](/windows/desktop/Controls/tb-insertmarkhittest), как описано в пакете Windows SDK.  
   
 ##  <a name="isbuttonchecked"></a>  CToolBarCtrl::IsButtonChecked  
  Определяет, проверяется ли указанную кнопку в элементе управления панели инструментов.  
@@ -1415,7 +1415,7 @@ void LoadImages(
  Дескриптор экземпляра программы вызывающему приложению. Этот параметр может быть HINST_COMMCTRL для загрузки списка стандартного образа.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_LOADIMAGES](/windows/desktop/Controls/tb-loadimages), как описано в пакете Windows SDK.  
   
 ##  <a name="mapaccelerator"></a>  CToolBarCtrl::MapAccelerator  
  Сопоставляет символ сочетаний клавиш для кнопки панели инструментов.  
@@ -1437,7 +1437,7 @@ BOOL MapAccelerator(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_MAPACCELERATOR](/windows/desktop/Controls/tb-mapaccelerator), как описано в пакете Windows SDK.  
   
 ##  <a name="markbutton"></a>  CToolBarCtrl::MarkButton  
  Задает состояние выделения указанной кнопки в элементе управления панели инструментов.  
@@ -1459,7 +1459,7 @@ BOOL MarkButton(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_MARKBUTTON](/windows/desktop/Controls/tb-markbutton), как описано в пакете Windows SDK.  
   
 ##  <a name="movebutton"></a>  CToolBarCtrl::MoveButton  
  Перемещает кнопки из одного индекса в другую.  
@@ -1481,7 +1481,7 @@ BOOL MoveButton(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_MOVEBUTTON](/windows/desktop/Controls/tb-movebutton), как описано в пакете Windows SDK.  
   
 ##  <a name="pressbutton"></a>  CToolBarCtrl::PressButton  
  Нажимает или отпускает указанную кнопку в элементе управления панели инструментов.  
@@ -1503,7 +1503,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ### <a name="remarks"></a>Примечания  
  Если вы хотите изменить несколько состояний кнопки, рассмотрите возможность вызова [SetState](#setstate) вместо этого.  
   
- Этот метод отправляет [TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_PRESSBUTTON](/windows/desktop/Controls/tb-pressbutton) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="replacebitmap"></a>  CToolBarCtrl::ReplaceBitmap  
  Заменяет существующий растрового изображения в текущий элемент управления панели инструментов новое растровое изображение.  
@@ -1516,13 +1516,13 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Указатель на [TBREPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb760484) структура, описывающая точечный рисунок заменяемого и новая Битовая карта.|  
+|[in] *pReplaceBitmap*|Указатель на [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) структура, описывающая точечный рисунок заменяемого и новая Битовая карта.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TB_REPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787391) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_REPLACEBITMAP](/windows/desktop/Controls/tb-replacebitmap) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода заменяет растрового изображения для стандартной панели инструментов разных растрового изображения.  
@@ -1600,7 +1600,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
  Предыдущее значение привязки. Если выделение было включено, это значение не равно нулю. Если выделение не был включен, это значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод реализует поведение сообщение Win32 [TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396), как описано в пакете Windows SDK.  
+ Этот метод реализует поведение сообщение Win32 [TB_SETANCHORHIGHLIGHT](/windows/desktop/Controls/tb-setanchorhighlight), как описано в пакете Windows SDK.  
   
 ##  <a name="setbitmapsize"></a>  CToolBarCtrl::SetBitmapSize  
  Задает размер фактического точечных рисунков, добавляемый в элемент управления toolbar.  
@@ -1633,13 +1633,13 @@ BOOL SetButtonInfo(
  Идентификатор кнопки.  
   
  *ptbbi*  
- Указатель на [TBBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb760478) структуру, которая получает сведения о кнопке.  
+ Указатель на [TBBUTTONINFO](/windows/desktop/api/commctrl/ns-commctrl-tbbuttoninfoa) структуру, которая получает сведения о кнопке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член реализует поведение сообщение Win32 [TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413), как описано в пакете Windows SDK.  
+ Функция-член реализует поведение сообщение Win32 [TB_SETBUTTONINFO](/windows/desktop/Controls/tb-setbuttoninfo), как описано в пакете Windows SDK.  
   
 ##  <a name="setbuttonsize"></a>  CToolBarCtrl::SetButtonSize  
  Задает размер кнопок в панели инструментов.  
@@ -1697,7 +1697,7 @@ BOOL SetButtonWidth(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_SETBUTTONWIDTH](/windows/desktop/Controls/tb-setbuttonwidth), как описано в пакете Windows SDK.  
   
 ##  <a name="setcmdid"></a>  CToolBarCtrl::SetCmdID  
  Задает идентификатор команды, которое будет отправляться окну-владельцу, при нажатии кнопки указанного.  
@@ -1729,12 +1729,12 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Указатель на [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) структура, описывающая цвет выделения и цвет тени элемента управления панели инструментов.|  
+|[in] *lpColorScheme*|Указатель на [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) структура, описывающая цвет выделения и цвет тени элемента управления панели инструментов.|  
   
 ### <a name="remarks"></a>Примечания  
  Если задано значение тему Windows Vista, этот метод игнорируется.  
   
- Этот метод отправляет [TB_SETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787421) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_SETCOLORSCHEME](/windows/desktop/Controls/tb-setcolorscheme) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода задает цветовую схему текущего элемента управления панели инструментов. В примере кода делает синий левом и верхнем края кнопки каждый инструмент красный и краями вправо и вниз. Когда пользователь нажимает кнопку, красный края кнопки синим цветом и краям синий красным цветом.  
@@ -1756,10 +1756,10 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объект, который ранее использовался с элементом управления для отображения неактивных изображения кнопки панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423), как описано в пакете Windows SDK. Реализация MFC `SetDisabledImageList` использует `CImageList` образы объект, содержащий кнопку панели инструментов в отключенном состоянии, а не дескриптор списка изображений.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_SETDISABLEDIMAGELIST](/windows/desktop/Controls/tb-setdisabledimagelist), как описано в пакете Windows SDK. Реализация MFC `SetDisabledImageList` использует `CImageList` образы объект, содержащий кнопку панели инструментов в отключенном состоянии, а не дескриптор списка изображений.  
   
 ##  <a name="setdrawtextflags"></a>  CToolBarCtrl::SetDrawTextFlags  
- Задает флаги в функции Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), который используется для рисования текста в указанном прямоугольнике, отформатированный согласно установке флаги.  
+ Задает флаги в функции Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), который используется для рисования текста в указанном прямоугольнике, отформатированный согласно установке флаги.  
   
 ```  
 DWORD SetDrawTextFlags(
@@ -1769,7 +1769,7 @@ DWORD SetDrawTextFlags(
   
 ### <a name="parameters"></a>Параметры  
  *dwMask*  
- Сочетание одного или нескольких флагов DT_, указанные в функции Win32 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498), указывающий, что биты *dwDTFlags* будет использоваться при рисовании текста.  
+ Сочетание одного или нескольких флагов DT_, указанные в функции Win32 [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext), указывающий, что биты *dwDTFlags* будет использоваться при рисовании текста.  
   
  *dwDTFlags*  
  Сочетание одного или нескольких флагов DT_, указанные в функции Win32 `DrawText`, которые указывают, как будут отображаться на кнопке отображается надпись. Это значение передается `DrawText` рисованием текста кнопки.  
@@ -1778,7 +1778,7 @@ DWORD SetDrawTextFlags(
  DWORD, содержащее рисования флаги предыдущего текста.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425), как описано в пакете Windows SDK. Эта функция-член задает флаги в функции Win32 `DrawText`, которая рисует текст в указанном прямоугольнике, отформатированный согласно установке флаги.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_SETDRAWTEXTFLAGS](/windows/desktop/Controls/tb-setdrawtextflags), как описано в пакете Windows SDK. Эта функция-член задает флаги в функции Win32 `DrawText`, которая рисует текст в указанном прямоугольнике, отформатированный согласно установке флаги.  
   
 ##  <a name="setextendedstyle"></a>  CToolBarCtrl::SetExtendedStyle  
  Задает расширенные стили для элемента управления панели инструментов.  
@@ -1792,10 +1792,10 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
  Значение, определяющее новые расширенные стили. Этот параметр может представлять собой сочетание расширенные стили панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение типа DWORD, представляющий предыдущий расширенные стили. Список стилей, см. в разделе [расширенные стили панели инструментов](http://msdn.microsoft.com/library/windows/desktop/bb760430), в пакете Windows SDK.  
+ Значение типа DWORD, представляющий предыдущий расширенные стили. Список стилей, см. в разделе [расширенные стили панели инструментов](/windows/desktop/Controls/toolbar-extended-styles), в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_SETEXTENDEDSTYLE](/windows/desktop/Controls/tb-setextendedstyle), как описано в пакете Windows SDK.  
   
 ##  <a name="sethotimagelist"></a>  CToolBarCtrl::SetHotImageList  
  Задает список изображений, панели инструментов будет использоваться для отображения кнопки «горячие».  
@@ -1812,7 +1812,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объект, который ранее использовался элементом управления панели инструментов для отображения изображений кнопку в активном состоянии.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_SETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787429), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_SETHOTIMAGELIST](/windows/desktop/Controls/tb-sethotimagelist), как описано в пакете Windows SDK.  
   
  Реализация MFC `SetHotImageList` использует `CImageList` образы объект, содержащий кнопку панели инструментов в активном состоянии, а не дескриптор списка изображений. Кнопку в активном состоянии выделяется, когда указатель находится над ним.  
   
@@ -1831,7 +1831,7 @@ int SetHotItem(int nHot);
  Индекс предыдущего элемента "Горячий" или -1, если не было "Горячий" элемента.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_SETHOTITEM](/windows/desktop/Controls/tb-sethotitem), как описано в пакете Windows SDK.  
   
 ##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList  
  Задает список изображений, панели инструментов будет использоваться для отображения кнопок, которые находятся в состоянии по умолчанию.  
@@ -1848,7 +1848,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объект, который ранее использовался элементом управления панели инструментов для отображения изображения кнопки в состоянии по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787433), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_SETIMAGELIST](/windows/desktop/Controls/tb-setimagelist), как описано в пакете Windows SDK.  
   
  Реализация MFC `SetImageList` использует `CImageList` образы объект, содержащий кнопку панели инструментов, вместо того чтобы дескриптор списка изображений.  
   
@@ -1875,10 +1875,10 @@ void SetInsertMark(TBINSERTMARK* ptbim);
   
 ### <a name="parameters"></a>Параметры  
  *ptbim*  
- Указатель на [TBINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb760480) структуру, содержащую знак вставки.  
+ Указатель на [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) структуру, содержащую знак вставки.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_SETINSERTMARK](/windows/desktop/Controls/tb-setinsertmark), как описано в пакете Windows SDK.  
   
 ##  <a name="setinsertmarkcolor"></a>  CToolBarCtrl::SetInsertMarkColor  
  Задает цвет, используемый для рисования знак вставки для панели инструментов.  
@@ -1895,7 +1895,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
  Значение COLORREF, содержащий предыдущий цвет знака вставки.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TB_SETINSERTMARKCOLOR](/windows/desktop/Controls/tb-setinsertmarkcolor), как описано в пакете Windows SDK.  
   
 ##  <a name="setmaxtextrows"></a>  CToolBarCtrl::SetMaxTextRows  
  Задает максимальное количество строк текста, отображаемый на кнопке панели инструментов.  
@@ -1920,10 +1920,10 @@ void SetMetrics(LPTBMETRICS ptbm);
   
 ### <a name="parameters"></a>Параметры  
  *ptbm*  
- Указатель на [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482) структуры `CToolBarCtrl` объекта.  
+ Указатель на [TBMETRICS](/windows/desktop/api/commctrl/ns-commctrl-tbmetrics) структуры `CToolBarCtrl` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [TB_SETMETRICS](/windows/desktop/Controls/tb-setmetrics) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="setowner"></a>  CToolBarCtrl::SetOwner  
  Задает владельца окна панели инструментов.  
@@ -1959,7 +1959,7 @@ DWORD SetPadding(
  Значение типа DWORD, младшее слово содержит предыдущее значение заполнения по горизонтали, а, старшее слово предыдущее значение вертикальный отступ. Заполнение значения измеряются в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TB_SETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787448) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_SETPADDING](/windows/desktop/Controls/tb-setpadding) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода задает величину заполнения горизонтальные и вертикальные текущего элемента управления панели инструментов до 20 пикселей.  
@@ -1986,7 +1986,7 @@ CImagelist* SetPressedImageList(
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) , содержащий предыдущий список изображений для текущего элемента управления, или значение NULL, если такой список изображений не было задано.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TB_SETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787453) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TB_SETPRESSEDIMAGELIST](/windows/desktop/Controls/tb-setpressedimagelist) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода задает список изображений, нажатия должны совпадать как список изображений по умолчанию.  
@@ -2011,7 +2011,7 @@ void SetRows(
  Указывает, следует ли использовать несколько строк или меньше строк, если размер панели инструментов не может быть изменен запрашиваемое количество строк.  
   
  *lpRect*  
- Указывает на [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, который получит новый ограничивающий прямоугольник на панели инструментов.  
+ Указывает на [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, который получит новый ограничивающий прямоугольник на панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
  Если панель инструментов не может сама изменять размер запрошенного числа или строки, он будет сама изменять размер либо Далее большего размера или Далее меньше допустимого размера; в зависимости от значения *bLarger*. Если *bLarger* имеет значение TRUE, новому числу строк будет больше запрошенного числа. Если *bLarger* имеет значение FALSE, новому числу строк будет меньше запрошенного числа.  
@@ -2057,7 +2057,7 @@ void SetStyle(DWORD dwStyle);
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- DWORD, содержащее сочетание [стили элемента управления панели инструментов](http://msdn.microsoft.com/library/windows/desktop/bb760439), как описано в пакете Windows SDK.  
+ DWORD, содержащее сочетание [стили элемента управления панели инструментов](/windows/desktop/Controls/toolbar-control-and-button-styles), как описано в пакете Windows SDK.  
   
 ##  <a name="settooltips"></a>  CToolBarCtrl::SetToolTips  
  Связывает элемент управления всплывающей подсказки с элементом управления панели инструментов.  
@@ -2085,7 +2085,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  Возвращаемое значение не используется.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [TB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb787465) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [TB_SETWINDOWTHEME](/windows/desktop/Controls/tb-setwindowtheme) сообщения, как описано в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Образец CMNCTRL1 MFC](../../visual-cpp-samples.md)   

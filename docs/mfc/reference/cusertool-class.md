@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541691"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202980"
 ---
 # <a name="cusertool-class"></a>Класс CUserTool
 Пользовательский инструмент — это пункт меню, который запускает внешнее приложение. **Средства** вкладке **Настройка** диалоговое окно ( [класс CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) позволяет пользователю добавить пользовательские средства, а также указать имя, команду, аргументы, и исходный каталог для каждого пользовательского средства.  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  Ненулевое значение, если команда была выполнена успешно; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) для выполнения команды, связанной с средство пользовательской среды. Функция завершается с ошибкой, если команда является пустым или [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) завершается ошибкой.  
+ Вызовы [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) для выполнения команды, связанной с средство пользовательской среды. Функция завершается с ошибкой, если команда является пустым или [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) завершается ошибкой.  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Загружает значок по умолчанию для пользовательского средства.  

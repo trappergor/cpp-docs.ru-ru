@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b775b14cb2f6b0f87bca1c81938c1a4c05c1304
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2c539feaac9cac5bca3a41868cc03379a63bf6bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335673"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204363"
 ---
 # <a name="rgndata-structure"></a>Структура RGNDATA
 `RGNDATA` Структура содержит заголовок и массив прямоугольников, которые составляют регион. Эти прямоугольники, отсортированный сверху вниз слева направо, не перекрываются.  
@@ -37,9 +37,9 @@ typedef struct _RGNDATA { /* rgnd */
   
 #### <a name="parameters"></a>Параметры  
  *rdh*  
- Указывает [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) структуры. (Дополнительные сведения об этой структуре см. в разделе Windows SDK.) Члены этой структуры укажите тип области (если он является прямоугольной или форме трапеции), количеством прямоугольников, составляющие области, размер буфера, который содержит прямоугольник структуры, и так далее.  
+ Указывает [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) структуры. (Дополнительные сведения об этой структуре см. в разделе Windows SDK.) Члены этой структуры укажите тип области (если он является прямоугольной или форме трапеции), количеством прямоугольников, составляющие области, размер буфера, который содержит прямоугольник структуры, и так далее.  
   
- *Буфер*  
+ *буфер*  
  Указывает буфер произвольного размера, который содержит [RECT](../../mfc/reference/rect-structure1.md) структур, составляющих области.  
   
 ## <a name="requirements"></a>Требования  

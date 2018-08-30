@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c570bd05edd81fc08f49785a1bc50668953553b0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d7d31203069fe6916c485586fdfb62ee48559727
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539684"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195892"
 ---
 # <a name="concurrentunorderedmap-class"></a>Класс concurrent_unordered_map
 Класс `concurrent_unordered_map` представляет собой безопасный в отношении параллелизма контейнер, управляющий последовательностью элементов типа `std::pair<const K, _Element_type>` переменной длины. Последовательность представлена таким образом, что позволяет параллельно-безопасно выполнять операции присоединения, получения доступа к элементу, доступа к итератору и обхода итератора.  
@@ -328,7 +328,7 @@ std::pair<const_iterator,
  Значение ключа для поиска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [пары](http://msdn.microsoft.com/en-us/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) где первый элемент — итератор, указывающий на начало, а второй элемент — итератор, указывающий конец диапазона.  
+ Объект [пары](https://msdn.microsoft.com/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) где первый элемент — итератор, указывающий на начало, а второй элемент — итератор, указывающий конец диапазона.  
   
 ### <a name="remarks"></a>Примечания  
  Параллельные операции вставки вызвать дополнительные ключи, вставляемый после начала итератора и перед конечный итератор возможна.  

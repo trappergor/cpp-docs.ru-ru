@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a6d1e618dc9345266cb3c0d618fda1c4f78c44
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b3a80cf072a4f95885ef0bc9a0b28a385fde085f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339466"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206087"
 ---
 # <a name="cdhtmldialog-class"></a>Класс CDHtmlDialog
 Используется для создания диалоговых окон, использующих HTML вместо ресурсов диалогового окна для своей реализации интерфейса пользователя.  
@@ -171,7 +171,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|Извлекает запрошенного свойства указанного элемента управления ActiveX.|  
 |[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|Извлекает унифицированный указатель ресурса (URL), связанный с текущим документом.|  
 |[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|Извлекает интерфейс IHTMLDocument2 на текущем загруженном документе HTML.|  
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Вызвано элемента управления WebBrowser в контейнере, при его использовании в качестве целевого объекта перетаскивания позволяет диалогового окна, чтобы предоставить альтернативный интерфейс [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Вызвано элемента управления WebBrowser в контейнере, при его использовании в качестве целевого объекта перетаскивания позволяет диалогового окна, чтобы предоставить альтернативный интерфейс [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|  
 |[CDHtmlDialog::GetElement](#getelement)|Возвращает интерфейс на HTML-элемент.|  
 |[CDHtmlDialog::GetElementHtml](#getelementhtml)|Извлекает `innerHTML` свойство HTML-элемента.|  
 |[CDHtmlDialog::GetElementInterface](#getelementinterface)|Извлекает указатель на запрошенный интерфейс из HTML-элемент.|  
@@ -678,7 +678,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
  Стандартный HRESULT. Возвращает значение S_OK при успешном выполнении.  
   
 ##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget  
- Вызвано элемента управления WebBrowser в контейнере, при его использовании в качестве целевого объекта перетаскивания позволяет диалогового окна, чтобы предоставить альтернативный интерфейс [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).  
+ Вызвано элемента управления WebBrowser в контейнере, при его использовании в качестве целевого объекта перетаскивания позволяет диалогового окна, чтобы предоставить альтернативный интерфейс [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).  
   
 ```  
 STDMETHOD(GetDropTarget)(

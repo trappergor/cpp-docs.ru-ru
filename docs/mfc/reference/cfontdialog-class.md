@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f82988e8756a6894464c9d95ae47fe6baf922
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6ef5728a20cc97d330540b10c2de325f62583b69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336817"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203080"
 ---
 # <a name="cfontdialog-class"></a>Класс CFontDialog
 Позволяет включить диалоговое окно выбора шрифтов в приложение.  
@@ -96,13 +96,13 @@ class CFontDialog : public CCommonDialog
   
  Для создания `CFontDialog` объекта, используйте предоставленный конструктор, или получение нового подкласса и использовать собственный пользовательский конструктор.  
   
- Один раз `CFontDialog` объект был создан, можно использовать `m_cf` структуры для инициализации значения или состояния элементов управления в диалоговом окне. [M_cf](#m_cf) структуры имеет тип [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Дополнительные сведения об этой структуре см. в разделе Windows SDK.  
+ Один раз `CFontDialog` объект был создан, можно использовать `m_cf` структуры для инициализации значения или состояния элементов управления в диалоговом окне. [M_cf](#m_cf) структуры имеет тип [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta). Дополнительные сведения об этой структуре см. в разделе Windows SDK.  
   
  После инициализации объекта диалогового окна элементы управления, вызовите `DoModal` функция-член отображается диалоговое окно и позволяет пользователю выбрать шрифт. `DoModal` Возвращает, является ли пользователь выбрал кнопку ОК (IDOK) или Отмена (IDCANCEL).  
   
  Если `DoModal` возвращает IDOK, можно использовать один из `CFontDialog`в функции-члены для получения сведений, введенное пользователем.  
   
- Можно использовать Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) функция для определения, произошла ли ошибка во время инициализации диалогового окна и Дополнительные сведения об ошибке. Дополнительные сведения по этой функции см. в разделе Windows SDK.  
+ Можно использовать Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) функция для определения, произошла ли ошибка во время инициализации диалогового окна и Дополнительные сведения об ошибке. Дополнительные сведения по этой функции см. в разделе Windows SDK.  
   
  `CFontDialog` использует COMMDLG. DLL-файл, который поставляется с Windows 3.1 и более поздних версиях.  
   
@@ -147,13 +147,13 @@ CFontDialog(
   
 ### <a name="parameters"></a>Параметры  
  *plfInitial*  
- Указатель на [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структура данных, которая позволяет настроить некоторые характеристики шрифта.  
+ Указатель на [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структура данных, которая позволяет настроить некоторые характеристики шрифта.  
   
  *charFormat*  
- Указатель на [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структура данных, которая позволяет настроить некоторые характеристики шрифта в форматированного текста элемента управления edit.  
+ Указатель на [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) структура данных, которая позволяет настроить некоторые характеристики шрифта в форматированного текста элемента управления edit.  
   
  *dwFlags*  
- Указывает один или несколько флагов выбора шрифта. Одно или несколько предустановленных значений можно объединить с помощью побитового оператора OR. Если вы изменяете член структуры `m_cf.Flag`, используйте оператор OR в изменениях, чтобы сохранить поведение по умолчанию. Сведения о каждом из этих флагов см. в описании [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) структуры в пакете Windows SDK.  
+ Указывает один или несколько флагов выбора шрифта. Одно или несколько предустановленных значений можно объединить с помощью побитового оператора OR. Если вы изменяете член структуры `m_cf.Flag`, используйте оператор OR в изменениях, чтобы сохранить поведение по умолчанию. Сведения о каждом из этих флагов см. в описании [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) структуры в пакете Windows SDK.  
   
  *pdcPrinter*  
  Указатель на контекст принтера. Если этот параметр задан, он указывает на контекст принтера, для которого выбираются шрифты.  
@@ -178,7 +178,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- IDOK и IDCANCEL. Если возвращается IDCANCEL, вызовите Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) функцию, чтобы определить, произошла ли ошибка.  
+ IDOK и IDCANCEL. Если возвращается IDCANCEL, вызовите Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) функцию, чтобы определить, произошла ли ошибка.  
   
  IDOK и IDCANCEL являются константы, указывающие, является ли пользователь выбрал кнопку ОК или "Отмена".  
   
@@ -199,7 +199,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
   
 ### <a name="parameters"></a>Параметры  
  *CF*  
- Объект [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структуру, содержащую сведения о форматировании символов выбранного шрифта.  
+ Объект [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) структуру, содержащую сведения о форматировании символов выбранного шрифта.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  
  Вызывайте эту функцию для получения цвет выбранного шрифта.  
@@ -215,7 +215,7 @@ COLORREF GetColor() const;
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
 ##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
- Вызывайте эту функцию для назначения характеристики выбранный шрифт членами [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
+ Вызывайте эту функцию для назначения характеристики выбранный шрифт членами [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
   
 ```  
 void GetCurrentFont(LPLOGFONT lplf);
@@ -348,7 +348,7 @@ CHOOSEFONT m_cf;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- После построения `CFontDialog` объекта, можно использовать `m_cf` для изменения различных аспектов диалоговом окне перед вызовом `DoModal` функция-член. Дополнительные сведения об этой структуре см. в разделе [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) в пакете Windows SDK.  
+ После построения `CFontDialog` объекта, можно использовать `m_cf` для изменения различных аспектов диалоговом окне перед вызовом `DoModal` функция-член. Дополнительные сведения об этой структуре см. в разделе [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  

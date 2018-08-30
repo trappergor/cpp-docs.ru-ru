@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 11f61e89ab888b678bf54f65b999c0fd4394dbea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879839"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201666"
 ---
 # <a name="cwndclassinfo-class"></a>Класс CWndClassInfo
 Этот класс предоставляет методы для регистрации сведений о для класса окна.  
@@ -79,7 +79,7 @@ class CWndClassInfo
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- Дополнительные сведения о классах окна см. в разделе [классы окон](http://msdn.microsoft.com/library/windows/desktop/ms632596) в пакете Windows SDK.  
+ Дополнительные сведения о классах окна см. в разделе [классы окон](https://msdn.microsoft.com/library/windows/desktop/ms632596) в пакете Windows SDK.  
   
  Дополнительные сведения об использовании windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).  
   
@@ -138,7 +138,7 @@ TCHAR m_szAutoName[13];
  `CWndClassInfo` использует `m_szAutoName` только в том случае, если передается значение NULL `WndClassName` параметр [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) или [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . ATL создают имя при регистрации класса окна.  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
- Хранит сведения о классе окна в [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) структуры.  
+ Хранит сведения о классе окна в [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577) структуры.  
   
 ```
 WNDCLASSEX m_wc;

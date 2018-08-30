@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ebfbd7e8cedd522c324743abc5c28c6ac3e9f2b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571815"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200392"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (укажите подсистему)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42571815"
 ```  
   
  BOOT_APPLICATION  
- Приложение, которое выполняется в среде загрузки Windows. Дополнительные сведения о приложениях загрузки см. в разделе [о BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
+ Приложение, которое выполняется в среде загрузки Windows. Дополнительные сведения о приложениях загрузки см. в разделе [о BCD](/previous-versions/windows/desktop/bcd/about-bcd).  
   
  CONSOLE  
  Приложения символьного режима Win32. Операционная система предоставляет консоль для консольных приложений. Если `main` или `wmain` определяется для машинного кода, `int main(array<String ^> ^)` определяется для управляемого кода, или полностью построить приложение с помощью `/clr:safe`, КОНСОЛИ используется по умолчанию.  

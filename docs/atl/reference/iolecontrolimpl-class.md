@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6e3ba537568ba59c241378aeba83450db536511a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879287"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201341"
 ---
 # <a name="iolecontrolimpl-class"></a>Класс IOleControlImpl
 Этот класс предоставляет реализацию по умолчанию `IOleControl` интерфейса и реализует `IUnknown`.  
@@ -57,7 +57,7 @@ class IOleControlImpl
 |[IOleControlImpl::OnMnemonic](#onmnemonic)|Информирует элемент управления о том, что пользователь нажал на указанный нажатие клавиши. Реализация ATL возвращает E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Примечания  
- Класс `IOleControlImpl` предоставляет реализацию по умолчанию [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
+ Класс `IOleControlImpl` предоставляет реализацию по умолчанию [IOleControl](/windows/desktop/api/ocidl/nn-ocidl-iolecontrol) интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
  **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -79,7 +79,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ### <a name="remarks"></a>Примечания  
  `FreezeEvents` Возвращает значение S_OK.  
   
- См. в разделе [метод интерфейса IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) в Windows SDK.  
+ См. в разделе [метод интерфейса IOleControl::FreezeEvents](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-freezeevents) в Windows SDK.  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  Заполняет сведения о поведении элемента управления клавиатуры.  
@@ -89,7 +89,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) в Windows SDK.  
+ См. в разделе [IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает E_NOTIMPL.  
@@ -105,7 +105,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
  Возвращает значение S_OK.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) в Windows SDK.  
+ См. в разделе [IOleControl::OnAmbientPropertyChange](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) в Windows SDK.  
   
 ##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  Информирует элемент управления о том, что пользователь нажал на указанный нажатие клавиши.  
@@ -118,9 +118,9 @@ HRESULT OnMnemonic(LPMSG pMsg);
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) в Windows SDK.  
+ См. в разделе [IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)   
- [Интерфейсы, элементы управления ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

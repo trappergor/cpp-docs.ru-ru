@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572114"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204427"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -108,8 +108,8 @@ int _CrtDbgReportW(
 
 |Режим отчета|Файл отчета|**_CrtDbgReport**, **_CrtDbgReportW** поведение|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|Неприменимо|Записывает сообщение, используя [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API Windows.|
-|**_CRTDBG_MODE_WNDW**|Неприменимо|Вызывает API Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) для создания окна сообщения, в котором будет отображаться сообщение вместе с кнопками **Прервать**, **Повторить** и **Пропустить**. Если пользователь щелкает **прервать**, **_CrtDbgReport** или **_CrtDbgReport** немедленно прерывается. Если пользователь нажимает кнопку **Повторить**, функция возвращает значение 1. Если пользователь щелкает **пропустить**, выполнение продолжается и **_CrtDbgReport** и **_CrtDbgReportW** возвращают 0. Учтите, что нажатие кнопки **Пропустить** при наличии условия ошибки часто приводит к возникновению "неопределенного поведения".|
+|**_CRTDBG_MODE_DEBUG**|Неприменимо|Записывает сообщение, используя [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API Windows.|
+|**_CRTDBG_MODE_WNDW**|Неприменимо|Вызывает API Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) для создания окна сообщения, в котором будет отображаться сообщение вместе с кнопками **Прервать**, **Повторить** и **Пропустить**. Если пользователь щелкает **прервать**, **_CrtDbgReport** или **_CrtDbgReport** немедленно прерывается. Если пользователь нажимает кнопку **Повторить**, функция возвращает значение 1. Если пользователь щелкает **пропустить**, выполнение продолжается и **_CrtDbgReport** и **_CrtDbgReportW** возвращают 0. Учтите, что нажатие кнопки **Пропустить** при наличии условия ошибки часто приводит к возникновению "неопределенного поведения".|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|Записывает сообщение в предоставляемый пользователем **ОБРАБАТЫВАТЬ**, с помощью Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API и не проверяет допустимость дескриптора файла; приложение отвечает за открытие файла отчета и передачу допустимого файла дескриптор.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Записывает сообщение в **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Записывает сообщение в **stdout**.|

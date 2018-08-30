@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199925"
 ---
 # <a name="styles-used-by-mfc"></a>Стили, используемые MFC  
   
@@ -308,7 +308,7 @@ ms.locfileid: "42541865"
   
 ## <a name="edit-styles"></a>  Изменение стилей  
   
-Изменить стили применяются к [класс CEdit](../../mfc/reference/cedit-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CEdit::Create](../../mfc/reference/cedit-class.md#create). Дополнительные сведения о стили редактирования элемента управления в Windows, см. в разделе [изменение стилей элемента управления (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Изменить стили применяются к [класс CEdit](../../mfc/reference/cedit-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CEdit::Create](../../mfc/reference/cedit-class.md#create). Дополнительные сведения о стили редактирования элемента управления в Windows, см. в разделе [изменение стилей элемента управления (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
 |Стиль|Описание:|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ ms.locfileid: "42541865"
   
 ## <a name="scroll-bar-styles"></a> Стили полосы прокрутки  
   
-Стили полосы прокрутки применяются к [класс CScrollBar](../../mfc/reference/cscrollbar-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Дополнительные сведения о полосы стили элемента управления в Windows, см. в разделе [стили элемента управления полосы прокрутки (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Стили полосы прокрутки применяются к [класс CScrollBar](../../mfc/reference/cscrollbar-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Дополнительные сведения о полосы стили элемента управления в Windows, см. в разделе [стили элемента управления полосы прокрутки (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
 |Стиль|Описание:|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ ms.locfileid: "42541865"
   
 ## <a name="static-styles"></a> Статические стили  
   
-Статические стили применяются к [класс CStatic](../../mfc/reference/cstatic-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Дополнительные сведения о стилях статический элемент управления в Windows см. в разделе [статические стили элемента управления (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Статические стили применяются к [класс CStatic](../../mfc/reference/cstatic-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Дополнительные сведения о стилях статический элемент управления в Windows см. в разделе [статические стили элемента управления (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
 |Стиль|Описание:|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ ms.locfileid: "42541865"
 |WS_EX_CONTEXTHELP|Включает в себя вопросительного знака в строке заголовка окна. Когда пользователь щелкает вопросительный знак, курсор изменяется с вопросительным знаком с указателем. Если пользователь щелкает дочернее окно, это окно получает сообщение WM_HELP.|  
 |WS_EX_CONTROLPARENT|Позволяет пользователю переходить от одного дочерних окон окна с помощью клавиши TAB.|  
 |WS_EX_DLGMODALFRAME|Назначает окно с двойной границей, (при необходимости) могут быть созданы с помощью заголовка окна при указании флага стиль WS_CAPTION в *dwStyle* параметра.|  
-|WS_EX_LAYERED|Окно [многоуровневых окон](http://msdn.microsoft.com/library/ms632599.aspx#layered). Этот стиль не может использоваться, если окно имеет [стиль класса](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) CS_OWNDC или CS_CLASSDC. Тем не менее Microsoft Windows 8 поддерживает WS_EX_LAYERED стиль для дочерних окон, где предыдущие версии Windows поддерживают его только для окон верхнего уровня.|  
+|WS_EX_LAYERED|Окно [многоуровневых окон](/windows/desktop/winmsg/window-features). Этот стиль не может использоваться, если окно имеет [стиль класса](/windows/desktop/winmsg/about-window-classes) CS_OWNDC или CS_CLASSDC. Тем не менее Microsoft Windows 8 поддерживает WS_EX_LAYERED стиль для дочерних окон, где предыдущие версии Windows поддерживают его только для окон верхнего уровня.|  
 |WS_EX_LEFT|Предоставляет свойства универсального по левому краю окна. Это значение по умолчанию.|  
 |WS_EX_LEFTSCROLLBAR|Помещает вертикальная полоса прокрутки слева от клиентской области.|  
 |WS_EX_LTRREADING|Отображает окно текст, использующий слева направо считывание свойств заказа. Это значение по умолчанию.|  
@@ -524,14 +524,14 @@ ms.locfileid: "42541865"
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [Стили кнопок (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [Стили поля со списком (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Изменение стилей элемента управления (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[Изменение стилей элемента управления (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [Стили окна (Windows) список](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [функции MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[стили элемента управления полосы прокрутки (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Стили статический элемент управления (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[стили элемента управления полосы прокрутки (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[Стили статический элемент управления (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [Стили окна (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [Расширенные стили окна (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  

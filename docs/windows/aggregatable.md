@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595246"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200572"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ ms.locfileid: "42595246"
 
 ## <a name="remarks"></a>Примечания
 
-**Статистическую обработку** атрибут C++ имеет ту же функциональность, что [статистическую обработку](http://msdn.microsoft.com/library/windows/desktop/aa366721) описании атрибута MIDL. Это означает, что компилятор пройдет **статистическую обработку** через атрибут для созданного IDL-файла.
+**Статистическую обработку** атрибут C++ имеет ту же функциональность, что [статистическую обработку](/windows/desktop/Midl/aggregatable) описании атрибута MIDL. Это означает, что компилятор пройдет **статистическую обработку** через атрибут для созданного IDL-файла.
 
 Этот атрибут требует, чтобы атрибут [coclass](../windows/coclass.md), [progid](../windows/progid.md)или [vi_progid](../windows/vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если `progid` применяется, `vi_progid` и `coclass` также применяются.
 
@@ -97,4 +97,4 @@ class CMyClass {};
 [Атрибуты IDL](../windows/idl-attributes.md)  
 [Атрибуты классов](../windows/class-attributes.md)  
 [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Статистическая обработка](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
+[Статистическая обработка](/windows/desktop/com/aggregation)  

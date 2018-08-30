@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881309"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204858"
 ---
 # <a name="worker-archetype"></a>Рабочий Архетип
 Классы, которые соответствуют *рабочих* архетипа предоставить код для обработки рабочих элементов в очередь в пуле потоков.  
@@ -31,8 +31,8 @@ ms.locfileid: "37881309"
 |Метод|Описание:|  
 |------------|-----------------|  
 |[Initialize](#initialize)|Вызывается для инициализации объекта рабочей роли, прежде чем все запросы передаются [Execute](#execute).|  
-|[Выполнение](#execute)|Вызывается для обработки рабочего элемента.|  
-|[завершить](#terminate)|Для отмены инициализации рабочий объект после все запросы были переданы вызванной [Execute](#execute).|  
+|[Execute](#execute)|Вызывается для обработки рабочего элемента.|  
+|[Terminate](#terminate)|Для отмены инициализации рабочий объект после все запросы были переданы вызванной [Execute](#execute).|  
   
 |Typedef|Описание:|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  Пользовательский параметр, воспринимаемый рабочий класс. Также передается `WorkerArchetype::Initialize` и `Terminate`.  
   
  *pOverlapped*  
- Указатель на [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) структура, используемая для создания очереди, на какие рабочие элементы были поставлены в очередь.  
+ Указатель на [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) структура, используемая для создания очереди, на какие рабочие элементы были поставлены в очередь.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 Вызывается для инициализации объекта рабочей роли, прежде чем все запросы передаются `WorkerArchetype::Execute`.  

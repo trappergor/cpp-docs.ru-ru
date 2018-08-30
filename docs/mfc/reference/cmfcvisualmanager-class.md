@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539138"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203646"
 ---
 # <a name="cmfcvisualmanager-class"></a>Класс CMFCVisualManager
 Обеспечивает поддержку изменению внешнего вида приложений на глобальном уровне. Класс `CMFCVisualManager` работает совместно с классом, предоставляющим инструкции по рисованию элементов управления графического интерфейса пользователя приложения с использованием последовательного стиля. Эти другие классы называются визуальными диспетчерами и наследуются от `CMFCBaseVisualManager`.  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  Указатель на кнопка автоматического скрытия.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, определяющий цвет текста *pButton*.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, определяющий цвет текста *pButton*.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить цвет текста кнопки автоматического скрытия в приложении. Чтобы сделать это, возвращают цвет, который требуется обновлять приложение для использования в качестве цвета текста.  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  Указатель на заголовок окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста в *pBar*.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет текста в *pBar*.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе позволяет настроить цвет текста для строки заголовка. В переопределенном методе возвращать нужный цвет.  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  Указатель на список свойств, который рисует платформы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет фона *pPropList*.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет фона *pPropList*.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, чтобы настроить цвет фона списка свойств в приложении.  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  Указатель на список свойств.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста в списке свойств.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет текста в списке свойств.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, чтобы настроить цвет текста в список свойств в приложении.  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  Указатель на окно с вкладками, где кадр Рисует вкладку.  
   
  [out] *clrDark*  
- Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, где этот метод сохраняет цвет темной границей вкладки.  
+ Ссылку на [COLORREF](/windows/desktop/gdi/colorref) параметр, где этот метод сохраняет цвет темной границей вкладки.  
   
  [out] *clrBlack*  
  Ссылка на параметр COLORREF, где этот метод сохраняет цвет для границы вкладки окна. Цвет по умолчанию для границы черного.  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  Перечислимое значение, указывающее состояние кнопки.  
   
  [out] *clrText*  
- Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметра. Это зарезервированное значение, используемого в данный момент.  
+ Ссылку на [COLORREF](/windows/desktop/gdi/colorref) параметра. Это зарезервированное значение, используемого в данный момент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если успешно; в противном случае — FALSE.  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  Прямоугольник, который указывает границы кнопок заголовка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста заголовка.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет текста заголовка.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном наглядный диспетчер для настройки внешнего вида области субтитров.  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Указатель на заголовок окна. Рисует наглядный диспетчер, это [класс CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста в заголовке окна.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет текста в заголовке окна.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить внешний вид строки заголовка для категории ленты. Дополнительные сведения о строке заголовка, см. в разделе [класс CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  Текущий ход выполнения для индикатора выполнения.  
   
  [in] *clrBar*  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет индикатора выполнения. Значение равно либо начала цветным градиентом, либо полный цвет индикатора хода выполнения.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет индикатора выполнения. Значение равно либо начала цветным градиентом, либо полный цвет индикатора хода выполнения.  
   
  [in] *clrProgressBarDest*  
  Параметр COLORREF, указывающий конец цветным градиентом индикатор хода выполнения. Если *clrProgressBarDest* равно -1, платформа не отрисовки индикатора как цветным градиентом. Вместо этого он заполнял всю индикатор цветом, указанным по *clrBar*.  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  Прямоугольник, который указывает границы заголовка окна.  
   
  [out] *clrText*  
- Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметра. Метод записывает цвет текста в заголовке окна для данного параметра.  
+ Ссылку на [COLORREF](/windows/desktop/gdi/colorref) параметра. Метод записывает цвет текста в заголовке окна для данного параметра.  
   
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию этот метод заполняет заголовок с цвет тени в зависимости от текущего обложки. Переопределите этот метод в производном наглядный диспетчер, чтобы настроить цвет заголовка окна Outlook.  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  Логический параметр, который указывает, нажата ли кнопка.  
   
  [out] *clrText*  
- Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметра. Этот метод хранит цвет текста кнопки страницы, outlook, в этом параметре.  
+ Ссылку на [COLORREF](/windows/desktop/gdi/colorref) параметра. Этот метод хранит цвет текста кнопки страницы, outlook, в этом параметре.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию в производном наглядный диспетчер, чтобы настроить внешний вид кнопок страниц Outlook.  

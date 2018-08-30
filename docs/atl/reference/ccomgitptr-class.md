@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a45866226f06b20d0805b7c4e294ff6d2d65506e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884178"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197924"
 ---
 # <a name="ccomgitptr-class"></a>Класс CComGITPtr
 Этот класс предоставляет методы для обработки указателей интерфейса и глобальной таблицы интерфейсов (GIT).  
@@ -254,6 +254,6 @@ HRESULT Revoke() throw();
   
 ## <a name="see-also"></a>См. также  
  [Упаковщик в режиме свободного](../../atl/atl-and-the-free-threaded-marshaler.md)   
- [Доступ к интерфейсам между подразделениями](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
- [Когда следует использовать глобальной таблицы интерфейсов](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
+ [Доступ к интерфейсам между подразделениями](/windows/desktop/com/accessing-interfaces-across-apartments)   
+ [Когда следует использовать глобальной таблицы интерфейсов](/windows/desktop/com/when-to-use-the-global-interface-table)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

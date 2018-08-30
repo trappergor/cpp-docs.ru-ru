@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15623673651e2c1aa02a5c1b5baa779789961e2b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205291"
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
 Предоставляет функции поля со списком Windows.  
@@ -286,7 +286,7 @@ int AddString(LPCTSTR lpszString);
  Если поле со списком не был создан с помощью [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) стиль, строка добавляется в конец списка. В противном случае строка вставляется в списке, и список отсортирован.  
   
 > [!NOTE]
->  Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в пакете Windows SDK.  
+>  Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) в пакете Windows SDK.  
   
  Чтобы вставить строку в определенное место в пределах списка, используйте [InsertString](#insertstring) функция-член.  
   
@@ -493,7 +493,7 @@ int Dir(
  Если возвращаемое значение больше или равно 0, это отсчитываемый от нуля индекс последнего имени файла, добавляемого в список. Возвращает значение CB_ERR при возникновении ошибки; Возвращаемое значение является CB_ERRSPACE, если недостаточно места для хранения новых строк.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в пакете Windows SDK.  
+ Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
@@ -537,7 +537,7 @@ int FindString(
  Если возвращаемое значение больше или равно 0, это начинающийся с нуля индекс элемента сопоставления. Это CB_ERR, если поиск завершился неудачей.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в пакете Windows SDK.  
+ Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
@@ -576,13 +576,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
   
 ### <a name="parameters"></a>Параметры  
  *pcbi*  
- Указатель на [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) структуры.  
+ Указатель на [COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getcount"></a>  CComboBox::GetCount  
  Вызовите эту функцию-член для получения числа элементов в списке части поле со списком.  
@@ -625,7 +625,7 @@ BOOL GetCueBanner(
 ### <a name="remarks"></a>Примечания  
  Текст подсказки является запрос, который отображается в области ввода поле со списком. Текст подсказки отображается, пока пользователь не предоставит входных данных.  
   
- Этот метод отправляет [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  Вызывайте эту функцию члена, чтобы определить, какой элемент в поле со списком выбран.  
@@ -754,13 +754,13 @@ DWORD_PTR GetItemData(int nIndex) const;
  Значение 32-разрядной, связанное с элементом, или CB_ERR при возникновении ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- 32-разрядное значение можно задать *dwItemData* параметр [SetItemData](#setitemdata) вызова функции-члена. Используйте `GetItemDataPtr` функция-член, если указатель является 32-разрядное значение извлекаемого ( **void\***).  
+ 32-разрядное значение можно задать *dwItemData* параметр [SetItemData](#setitemdata) вызова функции-члена. Используйте `GetItemDataPtr` функция-член, если указатель является 32-разрядное значение извлекаемого (**void** <strong>\*</strong>).  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
- Извлекает значение 32-разрядных предоставляемую приложением, связанный с элементом указанного поле со списком как указатель ( **void\***).  
+ Извлекает значение 32-разрядных предоставляемую приложением, связанный с элементом указанного поле со списком как указатель (**void** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -869,7 +869,7 @@ int GetMinVisible() const;
  Минимальное число видимых элементов в текущем списке раскрывающегося списка.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  Возвращает отсчитываемый от нуля индекс первой видимой позиции в списке части поля со списком.  
@@ -939,7 +939,7 @@ int InsertString(
  В отличие от [AddString](#addstring) функции-члена `InsertString` функция-член не ведет список с [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) стилем.  
   
 > [!NOTE]
->  Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в пакете Windows SDK.  
+>  Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 ### <a name="remarks"></a>Примечания  
  Текст подсказки является запрос, который отображается в области ввода поле со списком. Текст подсказки отображается, пока пользователь не предоставит входных данных.  
   
- Этот метод отправляет [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная *m_combobox*, который используется для программного доступа к поле со списком. Эта переменная используется в следующем примере.  
@@ -1133,7 +1133,7 @@ BOOL SetEditSel(
  Позиции отсчитываются от нуля. Чтобы выбрать первый символ в элемент управления редактирования, необходимо указать начальную позицию 0. Конечная позиция — для символа сразу после последнего символа для выбора. Например чтобы выбрать первые четыре символа элемента управления, используется начальная позиция 0 и конечной позициями 4.  
   
 > [!NOTE]
->  Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) в пакете Windows SDK.  
+>  Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CComboBox::GetEditSel](#geteditsel).  
@@ -1207,7 +1207,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
- Задает 32-разрядное значение, связанное с указанным элементом в поле со списком, чтобы быть заданный указатель ( **void\***).  
+ Задает 32-разрядное значение, связанное с указанным элементом в поле со списком, чтобы быть заданный указатель (**void** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(
@@ -1297,7 +1297,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная *m_combobox*, который используется для программного доступа к поле со списком. Эта переменная используется в следующем примере.  

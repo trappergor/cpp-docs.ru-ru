@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8df8ef2a0846f5ac90a2adfc53fa64da92930f3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8879c1d304e6d46b7ae3c8c2f1ed535526a5390e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881244"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202466"
 ---
 # <a name="cbindstatuscallback-class"></a>Класс CBindStatusCallback
 Этот класс реализует интерфейс `IBindStatusCallback`.  
@@ -101,10 +101,10 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Общее число считанных байтов.|  
 |[CBindStatusCallback::m_pFunc](#m_pfunc)|Указатель на функцию вызывается, когда данные недоступны.|  
 |[CBindStatusCallback::m_pT](#m_pt)|Указатель на объекте, запрашивающем асинхронная передача данных.|  
-|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Указатель на [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) интерфейс для текущей операции привязки.|  
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Указатель на [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) интерфейс для текущей операции привязки.|  
 |[CBindStatusCallback::m_spBinding](#m_spbinding)|Указатель на `IBinding` интерфейс для текущей операции привязки.|  
-|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Указатель на [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) интерфейс для URL-адрес для использования.|  
-|[CBindStatusCallback::m_spStream](#m_spstream)|Указатель на [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) интерфейс для передачи данных.|  
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Указатель на [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) интерфейс для URL-адрес для использования.|  
+|[CBindStatusCallback::m_spStream](#m_spstream)|Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейс для передачи данных.|  
   
 ## <a name="remarks"></a>Примечания  
  Класс `CBindStatusCallback` реализует интерфейс `IBindStatusCallback`. `IBindStatusCallback` должен быть реализован в приложении, что она позволяет получать уведомления из асинхронная передача данных. Использует асинхронный моникер, предоставляемые системой `IBindStatusCallback` методы для отправки и получения сведения об асинхронных данных передачу объекта.  
@@ -278,7 +278,7 @@ T* m_pT;
  `CBindStatusCallback` Шаблонизируется в объект класса этого объекта.  
   
 ##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx  
- Указатель на [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) интерфейс, который предоставляет доступ к контексту привязки (объект, который хранит сведения об операциях привязки к конкретной моникер).  
+ Указатель на [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) интерфейс, который предоставляет доступ к контексту привязки (объект, который хранит сведения об операциях привязки к конкретной моникер).  
   
 ```
 CComPtr<IBindCtx> m_spBindCtx;
@@ -298,7 +298,7 @@ CComPtr<IBinding> m_spBinding;
  Инициализируется в `OnStartBinding` и выпущенном в `OnStopBinding`.  
   
 ##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker  
- Указатель на [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) интерфейс для URL-адрес для использования.  
+ Указатель на [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) интерфейс для URL-адрес для использования.  
   
 ```
 CComPtr<IMoniker> m_spMoniker;
@@ -308,7 +308,7 @@ CComPtr<IMoniker> m_spMoniker;
  Инициализируется в `StartAsyncDownload`.  
   
 ##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream  
- Указатель на [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) интерфейс текущей операции привязки.  
+ Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейс текущей операции привязки.  
   
 ```
 CComPtr<IStream> m_spStream;
@@ -336,10 +336,10 @@ STDMETHOD(
  [in] Совокупное объем (в байтах) данных, доступных с начала выполнения привязки. Может быть 0, указывающее, что объем данных, не соответствующие или стала доступной, не определенный срок.  
   
  *pFormatEtc*  
- [in] Указатель на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682242) структуру, содержащую формат доступных данных. Если формат не существует, может быть CF_NULL.  
+ [in] Указатель на [FORMATETC](/windows/desktop/com/the-formatetc-structure) структуру, содержащую формат доступных данных. Если формат не существует, может быть CF_NULL.  
   
  *pstgmed*  
- [in] Указатель на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms695269) структура, которая содержит фактические данные теперь доступна.  
+ [in] Указатель на [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure) структура, которая содержит фактические данные теперь доступна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  

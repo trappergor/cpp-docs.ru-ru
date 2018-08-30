@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8eb030bb6827fd8df5a7f4826c4c1e4b3b47b5a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337174"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197443"
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
 
@@ -237,7 +237,7 @@ DWORD_PTR GetContext() const;
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
-Эта функция-член реализует поведение функции Win32 [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710), как описано в пакете Windows SDK.
+Эта функция-член реализует поведение функции Win32 [InternetGetCookie](/windows/desktop/api/wininet/nf-wininet-internetgetcookiea), как описано в пакете Windows SDK.
 
 ```cpp
 static BOOL GetCookie(
@@ -269,7 +269,7 @@ static BOOL GetCookie(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В противном случае возвращает значение TRUE, если успешно, или значение FALSE. Если вызов завершается неудачно, вызывается функция Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) для определения причины ошибки. Применяются следующие значения ошибок:
+В противном случае возвращает значение TRUE, если успешно, или значение FALSE. Если вызов завершается неудачно, вызывается функция Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) для определения причины ошибки. Применяются следующие значения ошибок:
 
 - ERROR_NO_MORE_ITEMS имеется cookie не для указанного URL-адреса и все его родительские элементы.
 
@@ -476,7 +476,7 @@ virtual void OnStatusCallback(
 |INTERNET_STATUS_RESPONSE_RECEIVED|Успешно получил ответ от сервера. *LpvStatusInformation* параметр имеет значение NULL.|
 |INTERNET_STATUS_CLOSING_CONNECTION|Закрытие подключения к серверу. *LpvStatusInformation* параметр имеет значение NULL.|
 |INTERNET_STATUS_CONNECTION_CLOSED|Успешно закрыл подключение к серверу. *LpvStatusInformation* параметр имеет значение NULL.|
-|INTERNET_STATUS_HANDLE_CREATED|Функция Win32 API [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) для указания, что он создан новый маркер. Это позволяет функции вызова Win32 приложения [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) из другого потока, если подключение выполняется слишком долго. Дополнительные сведения об этих функциях см. Windows SDKfor.|
+|INTERNET_STATUS_HANDLE_CREATED|Функция Win32 API [InternetConnect](/windows/desktop/api/wininet/nf-wininet-internetconnecta) для указания, что он создан новый маркер. Это позволяет функции вызова Win32 приложения [InternetCloseHandle](/windows/desktop/api/wininet/nf-wininet-internetclosehandle) из другого потока, если подключение выполняется слишком долго. Дополнительные сведения об этих функциях см. Windows SDKfor.|
 |INTERNET_STATUS_HANDLE_CLOSING|Успешно завершены, это значение дескриптора.|
 
 Переопределите эту функцию-член требуется какое-либо действие, прежде чем будет выполнено подпрограммы обратного вызова состояния.
@@ -589,7 +589,7 @@ static BOOL SetCookie(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член реализует поведение сообщение Win32 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), как описано в пакете Windows SDK.
+Эта функция-член реализует поведение сообщение Win32 [InternetSetCookie](/windows/desktop/api/wininet/nf-wininet-internetsetcookiea), как описано в пакете Windows SDK.
 
 ## <a name="setoption"></a>  CInternetSession::SetOption
 
@@ -612,7 +612,7 @@ BOOL SetOption(
 ### <a name="parameters"></a>Параметры
 
 *dwOption*  
-Параметр Internet. См. в разделе [флаги параметров](http://msdn.microsoft.com/library/windows/desktop/aa385328) в Windows SDKfor список возможных вариантов.
+Параметр Internet. См. в разделе [флаги параметров](/windows/desktop/WinInet/option-flags) в Windows SDKfor список возможных вариантов.
 
 *lpBuffer*  
 Буфер, содержащий значение параметра.
@@ -632,7 +632,7 @@ DWORD, содержащее значение параметра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если операция выполнена успешно, возвращается значение TRUE. Если произошла ошибка, возвращается значение FALSE. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Если операция выполнена успешно, возвращается значение TRUE. Если произошла ошибка, возвращается значение FALSE. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
 
 ## <a name="see-also"></a>См. также
 

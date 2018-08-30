@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850050"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199205"
 ---
 # <a name="cscrollbar-class"></a>Класс CScrollBar
 Предоставляет функции элемента управления полосой прокрутки Windows.  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>Параметры  
  *pScrollInfo*  
- Указатель на [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) структуры.  
+ Указатель на [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Извлекает данные о полосе прокрутки, содержащиеся в структуре `SCROLLINFO`.  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>Параметры  
  *lpScrollInfo*  
- Указатель на [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) структуры. См. в Windows SDK, Дополнительные сведения об этой структуре.  
+ Указатель на [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) структуры. См. в Windows SDK, Дополнительные сведения об этой структуре.  
   
  *nMask*  
  Параметры панели прокрутки для извлечения. Типичное применение SIF_ALL, задает сочетание SIF_PAGE, SIF_POS, SIF_TRACKPOS и SIF_RANGE. См. в разделе `SCROLLINFO` Дополнительные сведения о nMask значения.  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>Примечания  
  `GetScrollInfo` позволяет приложениям использовать позиции прокрутки 32-разрядной.  
   
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) структура содержит сведения о полосы прокрутки, включая минимальной и максимальной прокрутки положения, размера страницы и положение ползунка полосы прокрутки (бегунка). См. в разделе `SCROLLINFO` раздел структуры в пакете SDK для Windows, Дополнительные сведения об изменении структуры значения по умолчанию.  
+ [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) структура содержит сведения о полосы прокрутки, включая минимальной и максимальной прокрутки положения, размера страницы и положение ползунка полосы прокрутки (бегунка). См. в разделе `SCROLLINFO` раздел структуры в пакете SDK для Windows, Дополнительные сведения об изменении структуры значения по умолчанию.  
   
  Обработчики, которые указывают расположение полосы прокрутки, сообщения MFC Windows [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) и [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), предоставляют только 16 битов данных позиции. `GetScrollInfo` и `SetScrollInfo` предоставляют 32 бита полосы данных позиции прокрутки. Таким образом, приложение может вызвать `GetScrollInfo` при обработке либо `CWnd::OnHScroll` или `CWnd::OnVScroll` для получения данных положение панели прокрутки 32-разрядной.  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>Параметры  
  *lpScrollInfo*  
- Указатель на [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) структуры.  
+ Указатель на [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) структуры.  
   
  *bRedraw*  
  Указывает, следует ли заново полосу прокрутки, с учетом новых данных. Если *bRedraw* имеет значение TRUE, перерисовывается полосу прокрутки. Если он имеет значение FALSE, он не будет перерисован. По умолчанию перерисовывается полосу прокрутки.  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>Примечания  
  Необходимо указать значения, необходимые `SCROLLINFO` структуру параметров, включая значения флага.  
   
- `SCROLLINFO` Структура содержит сведения о полосы прокрутки, включая минимальной и максимальной прокрутки положения, размера страницы и положение ползунка полосы прокрутки (бегунка). См. в разделе [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) раздел структуры в пакете SDK для Windows, Дополнительные сведения об изменении структуры значения по умолчанию.  
+ `SCROLLINFO` Структура содержит сведения о полосы прокрутки, включая минимальной и максимальной прокрутки положения, размера страницы и положение ползунка полосы прокрутки (бегунка). См. в разделе [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) раздел структуры в пакете SDK для Windows, Дополнительные сведения об изменении структуры значения по умолчанию.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

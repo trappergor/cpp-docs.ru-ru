@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964474"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200032"
 ---
 # <a name="basicistream-class"></a>Класс basic_istream
 
@@ -521,7 +521,7 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-извлекает поле и преобразует его в числовое значение путем вызова `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Здесь **InIt** определяется как `istreambuf_iterator` \< **Elem**, **Tr**>, и `val` имеет тип **long**,**unsigned long**, или **void \***  при необходимости.
+извлекает поле и преобразует его в числовое значение путем вызова `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Здесь **InIt** определяется как `istreambuf_iterator` \< **Elem**, **Tr**>, и `val` имеет тип **long**, **unsigned long**, или **void** <strong>\*</strong> при необходимости.
 
 Если преобразованное значение невозможно представить как тип `val`, эта функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). В любом случае эта функция возвращает **\*this**.
 

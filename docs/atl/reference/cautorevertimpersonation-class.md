@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d4c752dc2a139d1e0bac38d9c307154cdc32fe6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885325"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196323"
 ---
 # <a name="cautorevertimpersonation-class"></a>Класс CAutoRevertImpersonation
 Этот класс возвращает [CAccessToken](../../atl/reference/caccesstoken-class.md) объектов nonimpersonating состояние, когда оно выходит за пределы области.  
@@ -55,11 +55,11 @@ class CAutoRevertImpersonation
 |[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Возвращает значение текущего маркера доступа, связанный с данным объектом.|  
   
 ## <a name="remarks"></a>Примечания  
- [Маркер доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows NT или Windows 2000. Эти маркеры доступа может быть представлено с `CAccessToken` класса.  
+ [Маркер доступа](/windows/desktop/SecAuthZ/access-tokens) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows NT или Windows 2000. Эти маркеры доступа может быть представлено с `CAccessToken` класса.  
   
  Иногда бывает необходимо олицетворять маркеры доступа. Этот класс предоставляется для удобства, но он не выполняет олицетворение маркеров доступа; выполняет только автоматическое редакция nonimpersonated состояние. Это обусловлено олицетворение маркер доступа можно выполнить несколькими способами.  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
@@ -130,5 +130,5 @@ const CAccessToken* GetAccessToken() throw();
   
 ## <a name="see-also"></a>См. также  
  [Пример ATLSecurity](../../visual-cpp-samples.md)   
- [Маркеры доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [Маркеры доступа](/windows/desktop/SecAuthZ/access-tokens)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

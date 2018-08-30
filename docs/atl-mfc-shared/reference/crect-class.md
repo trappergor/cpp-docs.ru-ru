@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1b968e09ed40959c30a649d4d4e17baea28703
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3d49b7a96f98c701c2748379ed880267bff3fa5a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881091"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196652"
 ---
 # <a name="crect-class"></a>Класс CRect
 Аналогичную Windows [RECT](../../mfc/reference/rect-structure1.md) структуры.  
@@ -375,7 +375,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
  Указывает количество единиц для deflate верхней и нижней части `CRect`.  
   
  *size*  
- Объект [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](csize-class.md) , указывающий число единиц для deflate `CRect`. `cx` Значение указывает количество единиц для deflate левую и правую части и `cy` значение указывает количество единиц для deflate сверху и снизу.  
+ Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](csize-class.md) , указывающий число единиц для deflate `CRect`. `cx` Значение указывает количество единиц для deflate левую и правую части и `cy` значение указывает количество единиц для deflate сверху и снизу.  
   
  *lpRect*  
  Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или `CRect` , указывающее количество единиц для каждой стороны deflate.  
@@ -494,7 +494,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  Указывает количество единиц, на которую увеличится верхней и нижней части `CRect`.  
   
  *size*  
- Объект [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](csize-class.md) , указывающий число единиц, на которую увеличится `CRect`. `cx` Значение указывает количество единиц, на которую увеличится левую и правую части и `cy` значение указывает количество единиц, на которую увеличится сверху и снизу.  
+ Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](csize-class.md) , указывающий число единиц, на которую увеличится `CRect`. `cx` Значение указывает количество единиц, на которую увеличится левую и правую части и `cy` значение указывает количество единиц, на которую увеличится сверху и снизу.  
   
  *lpRect*  
  Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или `CRect` , указывающий число единиц, на которую увеличится каждой стороны.  
@@ -753,7 +753,7 @@ void OffsetRect(SIZE size) throw();
  Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](cpoint-class.md) объект, указывающий обоим измерениям, которое требуется переместить.  
   
  *size*  
- Содержит [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) объект, указывающий обоим измерениям, которое требуется переместить.  
+ Содержит [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) объект, указывающий обоим измерениям, которое требуется переместить.  
   
 ### <a name="remarks"></a>Примечания  
  Перемещает `CRect` *x* единиц по оси и *y* единиц по оси y. *x* и *y* параметры являются значения со знаком, так что `CRect` можно переместить влево или вправо и вверх или вниз.  
@@ -919,7 +919,7 @@ void operator+=(LPCRECT lpRect) throw();
  Объект [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](cpoint-class.md) , указывающий число единиц для перемещения прямоугольника.  
   
  *size*  
- Объект [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения прямоугольника.  
+ Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения прямоугольника.  
   
  *lpRect*  
  Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или `CRect` , содержащий число единиц, на которую увеличится каждой стороне `CRect`.  
@@ -958,7 +958,7 @@ void operator-=(LPCRECT lpRect) throw();
  Объект [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](cpoint-class.md) , указывающий число единиц для перемещения прямоугольника.  
   
  *size*  
- Объект [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения прямоугольника.  
+ Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения прямоугольника.  
   
  *lpRect*  
  Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или `CRect` , содержащий число единиц для каждой из сторон deflate `CRect`.  
@@ -1050,7 +1050,7 @@ CRect operator+(SIZE size) const throw();
  Объект [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](cpoint-class.md) , указывающий число единиц для перемещения возвращаемое значение.  
   
  *size*  
- Объект [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения возвращаемое значение.  
+ Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения возвращаемое значение.  
   
  *lpRect*  
  Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или `CRect` , содержащий число единиц, на которую увеличится каждой стороны возвращаемого значения.  
@@ -1089,7 +1089,7 @@ CRect operator-(LPCRECT lpRect) const throw();
  Объект [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или `CPoint` , указывающий число единиц для перемещения возвращаемое значение.  
   
  *size*  
- Объект [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или `CSize` , указывающий число единиц для перемещения возвращаемое значение.  
+ Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или `CSize` , указывающий число единиц для перемещения возвращаемое значение.  
   
  *lpRect*  
  Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или `CRect` , содержащий число единиц для deflate каждой стороны возвращаемого значения.  

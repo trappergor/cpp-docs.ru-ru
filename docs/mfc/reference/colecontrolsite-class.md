@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850359"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202859"
 ---
 # <a name="colecontrolsite-class"></a>Класс COleControlSite
 Обеспечивает поддержку пользовательских интерфейсов клиентских элементов управления.  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Размеры элемента управления узла.|  
   
 ## <a name="remarks"></a>Примечания  
- Эта поддержка является основным средством, по которому внедренный элемент управления ActiveX получает информацию о местонахождении и экстент его сайта отображения, его моникер, его пользовательский интерфейс, его внешние свойства и другие ресурсы, предоставленных его контейнером. `COleControlSite` полностью реализует [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) интерфейсов. Кроме того также реализован интерфейс IDispatch (поддержки свойства окружающей среды и приемники событий).  
+ Эта поддержка является основным средством, по которому внедренный элемент управления ActiveX получает информацию о местонахождении и экстент его сайта отображения, его моникер, его пользовательский интерфейс, его внешние свойства и другие ресурсы, предоставленных его контейнером. `COleControlSite` полностью реализует [IOleControlSite](/windows/desktop/api/ocidl/nn-ocidl-iolecontrolsite), [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite), [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) интерфейсов. Кроме того также реализован интерфейс IDispatch (поддержки свойства окружающей среды и приемники событий).  
   
  Чтобы создать сайт элемента управления ActiveX с помощью `COleControlSite`, являются производными от класса `COleControlSite`. В вашей `CWnd`-переопределения в производном классе для контейнера (например, диалогового окна) `CWnd::CreateControlSite` функции.  
   
@@ -406,7 +406,7 @@ virtual HRESULT DoVerb(
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывает непосредственно через свойство элемента управления `IOleObject` интерфейс для выполнения указанной команды. Если исключение возникает в результате этого вызова функции, возвращается код ошибки HRESULT.  
   
- Дополнительные сведения см. в разделе [функция IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [функция IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) в пакете Windows SDK.  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  Включает подключения для сайта управления источников данных.  
@@ -676,7 +676,7 @@ CONTROLINFO m_ctlInfo;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эти сведения хранятся в [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) структуры.  
+ Эти сведения хранятся в [CONTROLINFO](/windows/desktop/api/ocidl/ns-ocidl-tagcontrolinfo) структуры.  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  Содержит файл cookie точку подключения из приемника событий элемента управления.  
@@ -693,10 +693,10 @@ DWORD m_dwMiscStatus;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)в пакете Windows SDK.  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- Содержит [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) файла cookie.  
+ Содержит [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) файла cookie.  
   
 ```  
 DWORD m_dwPropNotifySink;  
@@ -731,7 +731,7 @@ UINT m_nID;
 ```  
   
 ##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- Содержит [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) интерфейса элемента управления.  
+ Содержит [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) интерфейса элемента управления.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
@@ -745,7 +745,7 @@ COleControlContainer* m_pCtrlCont;
 ```  
   
 ##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- Содержит `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) интерфейса элемента управления.  
+ Содержит `IOleInPlaceObject` [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) интерфейса элемента управления.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
@@ -759,7 +759,7 @@ LPOLEOBJECT m_pObject;
 ```  
   
 ##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- Содержит `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) интерфейса элемента управления.  
+ Содержит `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) интерфейса элемента управления.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Стили, которые добавлены из текущего стили окна.  
   
  *nFlags*  
- Окно позиционирования флаги. Список возможных значений см. в разделе [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) функции в пакете Windows SDK.  
+ Окно позиционирования флаги. Список возможных значений см. в разделе [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) функции в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если стили изменяются, в противном случае — нуль.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Примечания  
  Элемент управления stock свойство Enabled будут изменены в соответствии с параметром для WS_DISABLED. Стандартное свойство стиль границы элемента управления будет изменен в соответствии с необходимых настроек для WS_BORDER. Все другие стили применяются непосредственно к дескриптор окна элемента управления, если таковой имеется.  
   
- Изменение стилей окна элемента управления. Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) функции в пакете SDK для Windows, сведения о стилях доступное окно.  
+ Изменение стилей окна элемента управления. Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) функции в пакете SDK для Windows, сведения о стилях доступное окно.  
   
  Если *nFlags* не равно нулю, `ModifyStyle` вызывает функцию Win32 `SetWindowPos`и перерисовывает окна путем объединения *nFlags* с использованием следующих четырех флагов:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Расширенные стили нужно добавить стили текущего окна.  
   
  *nFlags*  
- Окно позиционирования флаги. Список возможных значений см. в разделе [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) функции в пакете Windows SDK.  
+ Окно позиционирования флаги. Список возможных значений см. в разделе [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) функции в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если стили изменяются, в противном случае — нуль.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Примечания  
  Биржевая элемента управления свойства внешнего вида будут изменены в соответствии с параметром для WS_EX_CLIENTEDGE. Все другие расширенные стили окна применяются непосредственно к дескриптор окна элемента управления, если таковой имеется.  
   
- Изменяет расширенные стили объекта сайта элемента управления окна. Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) функции в пакете SDK для Windows, сведения о стилях доступное окно.  
+ Изменяет расширенные стили объекта сайта элемента управления окна. Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) функции в пакете SDK для Windows, сведения о стилях доступное окно.  
   
  Если *nFlags* не равно нулю, `ModifyStyleEx` вызывает функцию Win32 `SetWindowPos`и перерисовывает окна путем объединения *nFlags* с использованием следующих четырех флагов:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  Новая высота окна.  
   
  *nFlags*  
- Указывает окно изменения размеров и положения флаги. Возможные значения см. в разделе "Примечания" для [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) в пакете Windows SDK.  
+ Указывает окно изменения размеров и положения флаги. Возможные значения см. в разделе "Примечания" для [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успешного выполнения, в противном случае — нуль.  

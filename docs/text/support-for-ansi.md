@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde8693009cda20b59262034679aea1a73543401
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a6dca289631f3289a7976b6dc3482770bf5f3fe7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595666"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200622"
 ---
 # <a name="support-for-ansi"></a>Поддержка ANSI
 Большинство классов и методов MFC поддерживает набор символов ANSI, несмотря на то, что платформа MFC в целом постепенно развивается в сторону поддержку только Юникод набор символов. Из-за текущих усовершенствований в Windows Vista и элементах управления Windows версии 6.1 будет прекращена поддержка некоторых ANSI и методов.  Дополнительные сведения см. в разделе [рекомендуется использовать интерфейсы API ANSI](../mfc/deprecated-ansi-apis.md) и [поддержка Юникода](../text/support-for-unicode.md).  
@@ -29,4 +29,4 @@ ms.locfileid: "42595666"
 ## <a name="see-also"></a>См. также  
  [Поддержка Юникода](../text/support-for-unicode.md)   
  [Нерекомендуемые API ANSI](../mfc/deprecated-ansi-apis.md)   
- [Оболочка и версии общих элементов управления](http://msdn.microsoft.com/library/windows/desktop/bb776779)
+ [Оболочка и версии общих элементов управления](https://msdn.microsoft.com/library/windows/desktop/bb776779)

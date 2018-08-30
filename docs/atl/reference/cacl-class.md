@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3408e098b7d7b29ff9ee82775954734e3e768dcb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 066f9ac076d4371692331231b5f6f212947b2001
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879986"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196488"
 ---
 # <a name="cacl-class"></a>Класс CAcl
 Этот класс является оболочкой для `ACL` структуры (список управления доступом).  
@@ -92,7 +92,7 @@ class CAcl
 |[CAcl::operator =](#operator_eq)|Оператор присвоения.|  
   
 ## <a name="remarks"></a>Примечания  
- `ACL` Структуры является заголовком списков ACL (список управления доступом). Список ACL содержит последовательный список из нуля или более [записи ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868) (элементы управления доступом). Отдельные ACE в списке ACL нумеруются от 0 до *n-1*, где *n* — количество записей ACE в списке управления Доступом. При редактировании ACL, приложение обращается к записи управления доступом (ACE) в список управления Доступом по его индексу.  
+ `ACL` Структуры является заголовком списков ACL (список управления доступом). Список ACL содержит последовательный список из нуля или более [записи ACE](/windows/desktop/SecAuthZ/access-control-entries) (элементы управления доступом). Отдельные ACE в списке ACL нумеруются от 0 до *n-1*, где *n* — количество записей ACE в списке управления Доступом. При редактировании ACL, приложение обращается к записи управления доступом (ACE) в список управления Доступом по его индексу.  
   
  Существует два типа ACL:  
   
@@ -104,9 +104,9 @@ class CAcl
   
  Объект также может иметь сведения системного уровня безопасности, связанные с ним, в форме системы ACL, управляются системным администратором. Список управления Доступом системы можно разрешить системному администратору, чтобы любые попытки получить доступ к объекту аудита.  
   
- Дополнительные сведения см. в разделе [ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872) обсуждения в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [ACL](/windows/desktop/SecAuthZ/access-control-lists) обсуждения в пакете Windows SDK.  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
@@ -129,7 +129,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Это определение типа задает тип массива, используемый для определения флагов управления конкретного типа управления доступом управления доступом. См. в разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) определение для получения полного списка флаги.  
+ Это определение типа задает тип массива, используемый для определения флагов управления конкретного типа управления доступом управления доступом. См. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) определение для получения полного списка флаги.  
   
 ##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray  
  Массив байтов.  
@@ -139,7 +139,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Это определение типа задает тип массива, используемый для определения природы управления доступом (ACE) запись такие объекты, как ACCESS_ALLOWED_ACE_TYPE или ACCESS_DENIED_ACE_TYPE. См. в разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) определения для получения полного списка возможных типов.  
+ Это определение типа задает тип массива, используемый для определения природы управления доступом (ACE) запись такие объекты, как ACCESS_ALLOWED_ACE_TYPE или ACCESS_DENIED_ACE_TYPE. См. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) определения для получения полного списка возможных типов.  
   
 ##  <a name="cacl"></a>  CAcl::CAcl  
  Конструктор.  
@@ -205,7 +205,7 @@ void GetAclEntries(
   
  Содержимое каждого массива соответствуют друг к другу, то есть первый элемент `CAccessMaskArray` соответствует на первый элемент в массиве `CSidArray` массива и т. д.  
   
- См. в разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Дополнительные сведения о типах элементов управления ДОСТУПОМ и флагами.  
+ См. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) Дополнительные сведения о типах элементов управления ДОСТУПОМ и флагами.  
   
 ##  <a name="getaclentry"></a>  CAcl::GetAclEntry  
  Извлекает все сведения о записи в списке управления доступом (ACL).  
@@ -246,7 +246,7 @@ void GetAclEntry(
 ### <a name="remarks"></a>Примечания  
  Этот метод извлечет все сведения об отдельных ACE, предоставляя больше информации, чем [CAcl::GetAclEntries](#getaclentries) отдельно делает доступными.  
   
- См. в разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Дополнительные сведения о типах элементов управления ДОСТУПОМ и флагами.  
+ См. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) Дополнительные сведения о типах элементов управления ДОСТУПОМ и флагами.  
   
 ##  <a name="getlength"></a>  CAcl::GetLength  
  Возвращает длину в список управления доступом (ACL).  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 065c7296982bc715d35431a441be5b0e8506e1fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852540"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197307"
 ---
 # <a name="event-handling-principles"></a>Принципы обработки событий
 Существует три действия, общие для всех событий обработки. Вам потребуется:  
@@ -41,13 +41,13 @@ ms.locfileid: "37852540"
   
  О том, источник события можно разделить на три этапа:  
   
--   Объект источника [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
+-   Объект источника [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).  
   
--   Вызовите [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) передав идентификатор IID интерфейса событий, которая вас интересует. Если в случае успешного выполнения возвращается [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) интерфейса на объект точки подключения.  
+-   Вызовите [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) передав идентификатор IID интерфейса событий, которая вас интересует. Если в случае успешного выполнения возвращается [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) интерфейса на объект точки подключения.  
   
--   Вызовите [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) передачи `IUnknown` приемника событий. Если в случае успешного выполнения возвращается `DWORD` куки-файл, представляющий соединение.  
+-   Вызовите [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) передачи `IUnknown` приемника событий. Если в случае успешного выполнения возвращается `DWORD` куки-файл, представляющий соединение.  
   
- После успешной регистрации ваш интерес к получение событий методы интерфейса событий объекта будет вызываться в соответствии с события, инициируемые исходного объекта. При вам больше не нужно получать события, можно передать файл cookie обратно в точку подключения с помощью [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Это приведет к разрыву подключения между источником и приемником.  
+ После успешной регистрации ваш интерес к получение событий методы интерфейса событий объекта будет вызываться в соответствии с события, инициируемые исходного объекта. При вам больше не нужно получать события, можно передать файл cookie обратно в точку подключения с помощью [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Это приведет к разрыву подключения между источником и приемником.  
   
  Будьте внимательны и избегайте ссылку циклами при обработке событий.  
   

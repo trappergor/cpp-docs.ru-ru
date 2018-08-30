@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40774d6307eb9b423ebd4fd303a48acbd87eda24
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 213a7c32204b8f96969b4ad7a94683916b66db10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200846"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Ограничения библиотек DLL, загружаемых с задержкой
 Существует ряд ограничений, связанных с отложенной загрузкой файлов импорта.  
@@ -42,9 +42,9 @@ ms.locfileid: "42572112"
   
 ## <a name="see-also"></a>См. также  
  [Поддержка компоновщика для DLLs, загружаемых с задержкой](../../build/reference/linker-support-for-delay-loaded-dlls.md)   
- [Функции LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
- [Функция GetModuleHandle](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
- [GetProcAddress-функция](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
+ [Функции LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
+ [Функция GetModuleHandle](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
+ [GetProcAddress-функция](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
  [Функцию TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
  [Функция TlsFree](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
  [Функция TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   

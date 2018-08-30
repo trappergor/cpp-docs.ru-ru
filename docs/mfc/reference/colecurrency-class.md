@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 46c12c29fcee310e8bd1d484743b754a830541d7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541506"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196116"
 ---
 # <a name="colecurrency-class"></a>Класс COleCurrency
 Инкапсулирует тип данных `CURRENCY` автоматизации OLE.  
@@ -133,7 +133,7 @@ COleCurrency(
   
 - Конструкции COleCurrency() `COleCurrency` объект инициализируется значением 0 (ноль).  
   
-- COleCurrency (`cySrc`) создает `COleCurrency` объекта из [валюты](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) значение.  
+- COleCurrency (`cySrc`) создает `COleCurrency` объекта из [валюты](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) значение.  
   
 - COleCurrency (`curSrc`) создает `COleCurrency` из существующего `COleCurrency` объекта. Новый объект имеет такое же состояние, что и исходный объект.  
   
@@ -141,7 +141,7 @@ COleCurrency(
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency "объект из указанного числовых компонента. Если абсолютное значение дробной части больше 10 000, соответствующих настроек к единицам. Обратите внимание на то, что единицы и дробной части задаются значения со знаком длинное.  
   
- Дополнительные сведения см. в разделе [валюты](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) и [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) записей в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [валюты](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) и [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) записей в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующих примерах показано влияние конструкторы нулевой параметр и два параметра:  
@@ -230,14 +230,14 @@ enum CurrencyStatus {
  [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
 ##  <a name="m_cur"></a>  COleCurrency::m_cur  
- Базовый [валюты](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) структуры для этого `COleCurrency` объекта.  
+ Базовый [валюты](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) структуры для этого `COleCurrency` объекта.  
   
 ### <a name="remarks"></a>Примечания  
   
 > [!CAUTION]
 >  Изменение значения в `CURRENCY` структуры осуществляется указатель, возвращаемый этой функцией изменится значение этой `COleCurrency` объекта. Это не приводит к изменению состояния этого `COleCurrency` объекта.  
   
- Дополнительные сведения см. в разделе [валюты](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) запись в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [валюты](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) запись в пакете Windows SDK.  
   
 ##  <a name="m_status"></a>  COleCurrency::m_status  
  Тип этого элемента данных является перечисляемым типом `CurrencyStatus`, который определен в `COleCurrency` класса.  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **оператор = (** *varSrc* **)** Если преобразование `VARIANT` значение (или [COleVariant](../../mfc/reference/colevariant-class.md) объект) для валюты ( `VT_CY`) — в случае успешного выполнения преобразованное значение копируется в этот `COleCurrency` объекта и его состояние имеет значение на допустимое. Если преобразование не выполнено успешно, значение `COleCurrency` объект имеет значение 0, а его состояние на недопустимый.  
   
- Дополнительные сведения см. в разделе [валюты](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) и [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) записей в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [валюты](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) и [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) записей в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  

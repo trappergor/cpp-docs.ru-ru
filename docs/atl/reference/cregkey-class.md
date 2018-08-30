@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1fe661f48c583cfb82e52b6c125f6cf7fce2e714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572889"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203562"
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 Этот класс содержит методы для работы записей в системном реестре.  
@@ -132,10 +132,10 @@ class CRegKey
   
  `CRegKey` предоставляет интерфейс программирования для системного реестра для данного компьютера. Например, чтобы открыть определенного раздела реестра, вызвать `CRegKey::Open`. Чтобы получить или изменять значения данных, вызовите `CRegKey::QueryValue` или `CRegKey::SetValue`, соответственно. Чтобы закрыть ключ, вызовите `CRegKey::Close`.  
   
- Если закрыть ключ, его данные реестра записывается (Сброс) на жесткий диск. Этот процесс может занять несколько секунд. Если приложение должно явным образом записывать данные реестра на жесткий диск, можно вызвать [функция RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) функции Win32. Тем не менее `RegFlushKey` использует много системных ресурсов и должен вызываться только в том случае, если это абсолютно необходимо.  
+ Если закрыть ключ, его данные реестра записывается (Сброс) на жесткий диск. Этот процесс может занять несколько секунд. Если приложение должно явным образом записывать данные реестра на жесткий диск, можно вызвать [функция RegFlushKey](/windows/desktop/api/winreg/nf-winreg-regflushkey) функции Win32. Тем не менее `RegFlushKey` использует много системных ресурсов и должен вызываться только в том случае, если это абсолютно необходимо.  
   
 > [!IMPORTANT]
->  Все методы, позволяющие вызывающему объекту указать расположение в реестре существует возможность считывать данные, которые не могут быть доверенными. Методы, которые позволяют использовать [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) следует принять во внимание, что эта функция явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
+>  Все методы, позволяющие вызывающему объекту указать расположение в реестре существует возможность считывать данные, которые не могут быть доверенными. Методы, которые позволяют использовать [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) следует принять во внимание, что эта функция явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
@@ -189,13 +189,13 @@ LONG Create(
  Указывает класс ключа, который требуется создать или открыть. Значение по умолчанию — REG_NONE.  
   
  *dwOptions*  
- Параметры для ключа. Значение по умолчанию — REG_OPTION_NON_VOLATILE. Список возможных значений и описаний, см. в разделе [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) в пакете Windows SDK.  
+ Параметры для ключа. Значение по умолчанию — REG_OPTION_NON_VOLATILE. Список возможных значений и описаний, см. в разделе [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) в пакете Windows SDK.  
   
  *samDesired*  
  Безопасный доступ для ключа. Значение по умолчанию — KEY_READ &#124; KEY_WRITE. Список возможных значений и описаний, см. в разделе `RegCreateKeyEx`.  
   
  *lpSecAttr*  
- Указатель на [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) структуру, которая указывает, может ли дескриптор ключа наследоваться дочерним процессом. По умолчанию этот параметр имеет значение NULL (что означает, что дескриптор не наследуется).  
+ Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структуру, которая указывает, может ли дескриптор ключа наследоваться дочерним процессом. По умолчанию этот параметр имеет значение NULL (что означает, что дескриптор не наследуется).  
   
  *lpdwDisposition*  
  [out] Если не NULL, извлекает REG_CREATED_NEW_KEY (если ключ не существовал и был создан) или REG_OPENED_EXISTING_KEY (если ключ существовал и был открыт).  
@@ -308,7 +308,7 @@ LONG EnumKey(
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращается код ненулевого значения ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы пронумеровать подключи, вызовите `CRegKey::EnumKey` с нулевой индекс. Увеличьте значение индекса и повторите этот метод возвращает ERROR_NO_MORE_ITEMS. Дополнительные сведения см. в разделе [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) в пакете Windows SDK.  
+ Чтобы пронумеровать подключи, вызовите `CRegKey::EnumKey` с нулевой индекс. Увеличьте значение индекса и повторите этот метод возвращает ERROR_NO_MORE_ITEMS. Дополнительные сведения см. в разделе [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) в пакете Windows SDK.  
   
 ##  <a name="flush"></a>  CRegKey::Flush  
  Вызовите этот метод для записи всех атрибутов открыть раздел реестра в реестр.  
@@ -321,7 +321,7 @@ LONG Flush() throw();
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращается код ненулевого значения ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) в пакете Windows SDK.  
   
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  Вызовите этот метод, чтобы извлечь копию дескриптора безопасности, защищающий ключ открыть реестр.  
@@ -335,7 +335,7 @@ LONG GetKeySecurity(
   
 ### <a name="parameters"></a>Параметры  
  *SI*  
- [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) значение, указывающее сведения запрошенного типа безопасности.  
+ [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) значение, указывающее сведения запрошенного типа безопасности.  
   
  *PSD*  
  Указатель на буфер, получающий копию дескриптора запрошенного типа безопасности.  
@@ -347,7 +347,7 @@ LONG GetKeySecurity(
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращаемое значение — ненулевой код ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
+ Дополнительные сведения см. в разделе [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity).  
   
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  Содержит дескриптор раздела реестра, связанные с `CRegKey` объекта.  
@@ -404,7 +404,7 @@ LONG NotifyChangeKeyValue(
 > [!NOTE]
 >  Этот метод не уведомляет вызывающего объекта, если указанный ключ удаляется.  
   
- Дополнительные сведения и пример программы, см. в разделе [RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
+ Дополнительные сведения и пример программы, см. в разделе [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue).  
   
 ##  <a name="open"></a>  CRegKey::Open  
  Вызовите этот метод, чтобы открыть указанный ключ и значение [m_hKey](#m_hkey) для обработки этого ключа.  
@@ -424,7 +424,7 @@ LONG Open(
  Указывает имя ключа для создания или открытия. Это имя должно быть подразделом *hKeyParent*.  
   
  *samDesired*  
- Безопасный доступ для ключа. Значение по умолчанию — KEY_ALL_ACCESS. Список возможных значений и описаний, см. в разделе [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) в пакете Windows SDK.  
+ Безопасный доступ для ключа. Значение по умолчанию — KEY_ALL_ACCESS. Список возможных значений и описаний, см. в разделе [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В случае успешного выполнения возвращает ERROR_SUCCESS; в противном случае — значение ошибки, определенные в WINERROR. З.  
@@ -482,10 +482,10 @@ LONG QueryBinaryValue(
  Если метод завершается успешно, возвращается ERROR_SUCCESS. Если не удается прочитать значение метод, он возвращает код ненулевого значения ошибки, определенный в WINERROR. З. Если соответствующими данными не типа REG_BINARY, возвращается ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) для получения дополнительных сведений.  
+ Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) для получения дополнительных сведений.  
   
 > [!IMPORTANT]
->  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
+>  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
   
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  Этот метод используется для получения данных DWORD для имени указанного значения.  
@@ -507,10 +507,10 @@ LONG QueryDWORDValue(
  Если метод завершается успешно, возвращается ERROR_SUCCESS. Если не удается прочитать значение метод, он возвращает код ненулевого значения ошибки, определенный в WINERROR. З. Если соответствующими данными не типа REG_DWORD, возвращается ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) для получения дополнительных сведений.  
+ Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) для получения дополнительных сведений.  
   
 > [!IMPORTANT]
->  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
+>  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
   
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  Этот метод используется для получения данных GUID для имени указанного значения.  
@@ -532,7 +532,7 @@ LONG QueryGUIDValue(
  Если метод завершается успешно, возвращается ERROR_SUCCESS. Если не удается прочитать значение метод, он возвращает код ненулевого значения ошибки, определенный в WINERROR. З. Если данных не является допустимым идентификатором GUID, возвращается ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует `CRegKey::QueryStringValue` и преобразует строку в идентификатор GUID с помощью [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589).  
+ Этот метод использует `CRegKey::QueryStringValue` и преобразует строку в идентификатор GUID с помощью [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring).  
   
 > [!IMPORTANT]
 >  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным.  
@@ -561,10 +561,10 @@ LONG QueryMultiStringValue(
  Если метод завершается успешно, возвращается ERROR_SUCCESS. Если не удается прочитать значение метод, он возвращает код ненулевого значения ошибки, определенный в WINERROR. З. Если данных не имеет тип REG_MULTI_SZ, возвращается ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) для получения дополнительных сведений.  
+ Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) для получения дополнительных сведений.  
   
 > [!IMPORTANT]
->  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
+>  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
   
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  Этот метод используется для получения данных QWORD для имени указанного значения.  
@@ -586,10 +586,10 @@ LONG QueryQWORDValue(
  Если метод завершается успешно, возвращается ERROR_SUCCESS. Если не удается прочитать значение метод, он возвращает код ненулевого значения ошибки, определенный в WINERROR. З. Если данных не имеет тип REG_QWORD, возвращается ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) для получения дополнительных сведений.  
+ Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) для получения дополнительных сведений.  
   
 > [!IMPORTANT]
->  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
+>  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
   
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  Этот метод используется для извлечения строковых данных для имени указанного значения.  
@@ -615,10 +615,10 @@ LONG QueryStringValue(
  Если метод завершается успешно, возвращается ERROR_SUCCESS. Если не удается прочитать значение метод, он возвращает код ненулевого значения ошибки, определенный в WINERROR. З. Если данных не имеет тип REG_SZ, возвращается ERROR_INVALID_DATA. Если метод возвращает ERROR_MORE_DATA, *pnChars* равно нулю, не необходимый размер буфера в байтах.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) для получения дополнительных сведений.  
+ Этот метод использует `RegQueryValueEx` и подтверждает, что возвращается правильный тип данных. См. в разделе [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) для получения дополнительных сведений.  
   
 > [!IMPORTANT]
->  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
+>  Этот метод позволяет вызывающему объекту указывать любое расположение реестра, возможно чтение данных, который не может быть доверенным. Кроме того [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) функция, используемая этим методом явно не обрабатывает строки, которые являются НУЛЕВЫМ байтом. Оба условия должны проверяться вызывающим кодом.  
   
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  Вызовите этот метод для извлечения данных для поля указанное значение [m_hKey](#m_hkey). Более ранних версиях этот метод больше не поддерживаются и помечаются как ATL_DEPRECATED.  
@@ -717,7 +717,7 @@ LONG SetBinaryValue(
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращается код ненулевого значения ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) для записи значения в реестр.  
+ Этот метод использует [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) для записи значения в реестр.  
   
 ##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  Вызовите этот метод, чтобы задать значение DWORD раздела реестра.  
@@ -737,7 +737,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращается код ненулевого значения ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) для записи значения в реестр.  
+ Этот метод использует [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) для записи значения в реестр.  
   
 ##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  Этот метод используется для задания значения GUID раздела реестра.  
@@ -757,7 +757,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращается код ненулевого значения ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует `CRegKey::SetStringValue` и преобразует GUID в строку с помощью [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
+ Этот метод использует `CRegKey::SetStringValue` и преобразует GUID в строку с помощью [StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2).  
   
 ##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  Этот метод используется для хранения данных в поле заданное значение указанного ключа.  
@@ -801,16 +801,16 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|Задает список управления доступом для ключа (DACL). Ключ должен иметь доступа WRITE_DAC или вызывающий процесс должен быть владельцем объекта.|  
 |GROUP_SECURITY_INFORMATION|Задает ключ основной групповой идентификатор безопасности (SID). Ключ должен иметь доступ WRITE_OWNER или вызывающий процесс должен быть владельцем объекта.|  
 |OWNER_SECURITY_INFORMATION|Задает владельца для ключа безопасности. Ключ должен иметь доступ WRITE_OWNER или вызывающий процесс должен быть владельцем объекта или иметь активировать права SE_TAKE_OWNERSHIP_NAME.|  
-|SACL_SECURITY_INFORMATION|Задает список управления доступом (SACL) для ключа системы. Ключ должен иметь доступ ACCESS_SYSTEM_SECURITY. Правильный способ получить такой доступ является возможность SE_SECURITY_NAME [привилегий](http://msdn.microsoft.com/library/windows/desktop/aa379306) в вызывающей стороны текущего маркера доступа, открыть дескриптор ACCESS_SYSTEM_SECURITY доступ, а затем отключить привилегии.|  
+|SACL_SECURITY_INFORMATION|Задает список управления доступом (SACL) для ключа системы. Ключ должен иметь доступ ACCESS_SYSTEM_SECURITY. Правильный способ получить такой доступ является возможность SE_SECURITY_NAME [привилегий](https://msdn.microsoft.com/library/windows/desktop/aa379306) в вызывающей стороны текущего маркера доступа, открыть дескриптор ACCESS_SYSTEM_SECURITY доступ, а затем отключить привилегии.|  
   
  *PSD*  
- Указатель на [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) структура, задающая атрибуты безопасности для задания для указанного ключа.  
+ Указатель на [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) структура, задающая атрибуты безопасности для задания для указанного ключа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращается код ненулевого значения ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Задает атрибуты для ключа безопасности. См. в разделе [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) для получения дополнительных сведений.  
+ Задает атрибуты для ключа безопасности. См. в разделе [RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity) для получения дополнительных сведений.  
   
 ##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  Этот метод используется для задания multistring значения раздела реестра.  
@@ -830,7 +830,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращается код ненулевого значения ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) для записи значения в реестр.  
+ Этот метод использует [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) для записи значения в реестр.  
   
 ##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  Этот метод используется для задания значения реестра QWORD.  
@@ -850,7 +850,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
  Если метод завершается успешно, возвращаемое значение равно ERROR_SUCCESS. При сбое метода, возвращается код ненулевого значения ошибки, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) для записи значения в реестр.  
+ Этот метод использует [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) для записи значения в реестр.  
   
 ##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  Вызовите этот метод, чтобы задать строковое значение реестра.  
@@ -945,7 +945,7 @@ ATL_DEPRECATED LONG SetValue(
 ### <a name="remarks"></a>Примечания  
  Две исходные версии `SetValue` отмечены как ATL_DEPRECATED и больше не используется. Компилятор выдаст предупреждение, если используются эти формы.  
   
- Третий метод вызовы [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923).  
+ Третий метод вызовы [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa).  
   
 ## <a name="see-also"></a>См. также  
  [Образец DCOM](../../visual-cpp-samples.md)   

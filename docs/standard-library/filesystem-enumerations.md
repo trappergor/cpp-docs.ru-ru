@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 22e4cf19ec3b85d14d346bd56697f4bcc4ff687b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025943"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194472"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Перечисления &lt;filesystem&gt;
 
@@ -38,7 +38,7 @@ ms.locfileid: "39025943"
 
 ## <a name="copy_options"></a>  copy_options
 
-Перечисление значений битовой маски, используемое с функциями [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) и [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60), чтобы указать поведение.
+Перечисление значений битовой маски, используемое с функциями [copy](filesystem-functions.md#copy) и [copy_file](filesystem-functions.md#copy_file), чтобы указать поведение.
 
 ### <a name="syntax"></a>Синтаксис
 

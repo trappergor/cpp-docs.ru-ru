@@ -1,5 +1,5 @@
 ---
-title: Точки подключения ATL | Документы Microsoft
+title: Точки подключения ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179f4329d55261d71d3d122e6a2601ce7e805c0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec0e902f2b01e33ac460c6210d51c5e0637c3282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354672"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202924"
 ---
 # <a name="atl-connection-points"></a>Точки подключения ATL
 Доступный для подключения объект поддерживает исходящие интерфейсы. Исходящий интерфейс позволяет объекту обмениваться данными с клиентом. Для каждого исходящего интерфейса доступный для подключения объект предоставляет точку подключения. Каждый исходящий интерфейс реализуется клиентов для объекта, который называется приемником.  
   
  ![Точки подключения](../atl/media/vc2zw31.gif "vc2zw31")  
   
- Каждая точка подключения поддерживает [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) интерфейса. Доступный для соединения объект предоставляет свои точки подключения клиенту через [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857) интерфейса.  
+ Каждая точка подключения поддерживает [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) интерфейс. Доступный для соединения объект предоставляет свои точки подключения клиенту через [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer) интерфейс.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Классы точки подключения библиотеки ATL](../atl/atl-connection-point-classes.md)  

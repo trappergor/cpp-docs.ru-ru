@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882115"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203875"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Класс CComCachedTearOffObject
-Этот класс реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) для перемещаемой интерфейса.  
+Этот класс реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) для перемещаемой интерфейса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|Объект `CComContainedObject` объект, производный от класса перемещаемой (класс `contained`).|  
   
 ## <a name="remarks"></a>Примечания  
- `CComCachedTearOffObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) для перемещаемой интерфейса. Этот класс отличается от `CComTearOffObject` в том, что `CComCachedTearOffObject` имеет свой собственный `IUnknown`, отдельно от владельца объекта `IUnknown` (владелец — это объект, для которого перемещаемой, создается). `CComCachedTearOffObject` есть собственный количество ссылок на его `IUnknown` и удаляет себя, когда его счетчик ссылок равен нулю. Тем не менее, при выполнении запроса для любого из его перемещаемые интерфейсы, количество ссылок на объект владельца `IUnknown` увеличивается.  
+ `CComCachedTearOffObject` реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) для перемещаемой интерфейса. Этот класс отличается от `CComTearOffObject` в том, что `CComCachedTearOffObject` имеет свой собственный `IUnknown`, отдельно от владельца объекта `IUnknown` (владелец — это объект, для которого перемещаемой, создается). `CComCachedTearOffObject` есть собственный количество ссылок на его `IUnknown` и удаляет себя, когда его счетчик ссылок равен нулю. Тем не менее, при выполнении запроса для любого из его перемещаемые интерфейсы, количество ссылок на объект владельца `IUnknown` увеличивается.  
   
  Если `CComCachedTearOffObject` объекта реализация перемещаемой уже создан, а интерфейс перемещаемой запрашивается снова, одним и тем же `CComCachedTearOffObject` объект используется повторно. Напротив, если реализованный интерфейсом перемещаемой `CComTearOffObject` снова запрашивается через объект владельца другой `CComTearOffObject` будет создан экземпляр.  
   

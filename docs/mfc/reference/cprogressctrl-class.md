@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538769"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196194"
 ---
 # <a name="cprogressctrl-class"></a>Класс CProgressCtrl
 Предоставляет функциональные возможности стандартного элемента управления "индикатор выполнения" Windows.  
@@ -143,14 +143,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- Задает стиль окна хода выполнения. Применить любое сочетание stylesdescribed окно в [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK для Windows, кроме следующих индикатора выполнения стили элемента управления, к элементу управления:  
+ Задает стиль окна хода выполнения. Применить любое сочетание stylesdescribed окно в [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK для Windows, кроме следующих индикатора выполнения стили элемента управления, к элементу управления:  
   
 - PBS_VERTICAL отображает сведения о выполнении вертикально, сверху вниз. Без этого флага индикатор выполнения отображается горизонтально, слева направо.  
   
 - Отображает PBS_SMOOTH постепенного, плавное заполнение индикатора. Без этого флага элемент управления будет заполнить блоки.  
   
  *Rect*  
- Задает размер и положение окна хода выполнения. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Так как элемент управления должен быть дочернего окна, указанной координаты указываются относительно клиентской области *pParentWnd*.  
+ Задает размер и положение окна хода выполнения. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Так как элемент управления должен быть дочернего окна, указанной координаты указываются относительно клиентской области *pParentWnd*.  
   
  *pParentWnd*  
  Указывает ход родительскому окну элемента управления, обычно `CDialog`. Он не должен иметь значение NULL.  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
   
  *dwStyle*  
- Задает стиль окна хода выполнения. Применить любое сочетание стилей окна, описанные в [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
+ Задает стиль окна хода выполнения. Применить любое сочетание стилей окна, описанные в [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
   
  *Rect*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
   
  *pParentWnd*  
  Указатель на окно, которое является родительским для элемента управления.  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Цвет текущий индикатор хода выполнения, представленное в виде [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение или CLR_DEFAULT, если цвет по умолчанию является цвет панели индикатор хода выполнения.  
+ Цвет текущий индикатор хода выполнения, представленное в виде [COLORREF](/windows/desktop/gdi/colorref) значение или CLR_DEFAULT, если цвет по умолчанию является цвет панели индикатор хода выполнения.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [PBM_GETBARCOLOR](/windows/desktop/Controls/pbm-getbarcolor) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  Получает цвет фона индикатора хода выполнения на текущем компьютере.  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Цвет фона текущего индикатора хода выполнения, представленное в виде [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение.  
+ Цвет фона текущего индикатора хода выполнения, представленное в виде [COLORREF](/windows/desktop/gdi/colorref) значение.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [PBM_GETBKCOLOR](/windows/desktop/Controls/pbm-getbkcolor) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  Извлекает текущее положение индикатора выполнения.  
@@ -282,7 +282,7 @@ int GetState() const;
 |PBST_PAUSED|Приостановлено|  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [PBM_GETSTATE](/windows/desktop/Controls/pbm-getstate) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная `m_progressCtrl`, используемая для программного доступа к элементу управления "Индикатор выполнения". Эта переменная используется в следующем примере.  
@@ -307,7 +307,7 @@ int GetStep() const;
 ### <a name="remarks"></a>Примечания  
  Шаг приращения, — это величина, на которую вызов [CProgressCtrl::StepIt](#stepit) увеличивает текущее положение индикатора выполнения.  
   
- Этот метод отправляет [PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [PBM_GETSTEP](/windows/desktop/Controls/pbm-getstep) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная `m_progressCtrl`, используемая для программного доступа к элементу управления "Индикатор выполнения". Эта переменная используется в следующем примере.  
@@ -347,17 +347,17 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] *clrBar*|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, которое указывает новый цвет индикатора индикатор хода выполнения. Укажите CLR_DEFAULT заставить индикатор хода выполнения использовать цвета по умолчанию.|  
+|[in] *clrBar*|Объект [COLORREF](/windows/desktop/gdi/colorref) значение, которое указывает новый цвет индикатора индикатор хода выполнения. Укажите CLR_DEFAULT заставить индикатор хода выполнения использовать цвета по умолчанию.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
 
-Предыдущий цвет индикатора индикатор хода выполнения, представленное в виде [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение или CLR_DEFAULT, если цвет по умолчанию цвет индикатора индикатор хода выполнения.  
+Предыдущий цвет индикатора индикатор хода выполнения, представленное в виде [COLORREF](/windows/desktop/gdi/colorref) значение или CLR_DEFAULT, если цвет по умолчанию цвет индикатора индикатор хода выполнения.  
   
 ### <a name="remarks"></a>Примечания  
 
 `SetBarColor` Метод задает индикатор выполнения только если цвет Windows Vista [темы](/windows/desktop/Controls/visual-styles-overview) не действует.  
   
- Этот метод отправляет [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [PBM_SETBARCOLOR](/windows/desktop/Controls/pbm-setbarcolor) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная `m_progressCtrl`, используемая для программного доступа к элементу управления "Индикатор выполнения". Эта переменная используется в следующем примере.  
@@ -381,7 +381,7 @@ COLORREF SetBkColor(COLORREF clrNew);
  Значение COLORREF, которое указывает новый цвет фона. Укажите значение CLR_DEFAULT, используемое по умолчанию цвет фона для индикатора выполнения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, указывающее предыдущий цвет фона, то есть CLR_DEFAULT, если цвет фона цвет по умолчанию.  
+ [COLORREF](/windows/desktop/gdi/colorref) значение, указывающее предыдущий цвет фона, то есть CLR_DEFAULT, если цвет фона цвет по умолчанию.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -408,7 +408,7 @@ BOOL SetMarquee(
 ### <a name="remarks"></a>Примечания  
  Когда включен режим бегущей строки, анимированный индикатор хода выполнения и прокручивает элемент управления, такие как вход на бегущую строку.  
   
- Этот метод отправляет [PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [PBM_SETMARQUEE](/windows/desktop/Controls/pbm-setmarquee) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная `m_progressCtrl`, используемая для программного доступа к элементу управления "Индикатор выполнения". Эта переменная используется в следующем примере.  
@@ -484,7 +484,7 @@ int SetState(int iState);
  Предыдущее состояние текущего элемента управления "Индикатор выполнения".  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [PBM_SETSTATE](/windows/desktop/Controls/pbm-setstate) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная `m_progressCtrl`, используемая для программного доступа к элементу управления "Индикатор выполнения". Эта переменная используется в следующем примере.  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00265d3ce0f8ea867021500777d93991d245be47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848798"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204817"
 ---
 # <a name="atl-collections-and-enumerators"></a>Коллекции и перечислители ATL
 Объект `collection` является COM-объектом, который предоставляет интерфейс, обеспечивающий доступ к группе элементов данных (необработанных данных или другие объекты). Интерфейс, который соответствует стандартам, для предоставления доступа к группе объектов называется *интерфейс коллекции*.  
@@ -31,7 +31,7 @@ ms.locfileid: "37848798"
   
  `enumerator` Является COM-объектом, который предоставляет интерфейс для итерационного перебора элементов коллекции. Интерфейсы перечислителя предоставляют последовательного доступа к элементам коллекции с помощью четырех требуемые методы: `Next`, `Skip`, `Reset`, и `Clone`.  
   
- Дополнительные сведения об интерфейсах перечислителя с изучения классическом (но полностью воображаемого) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) интерфейс.  
+ Дополнительные сведения о интерфейсы перечислителя, считывая справочные материалы по такие как [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) интерфейс.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Классы коллекций и перечислителей ATL](../atl/atl-collection-and-enumerator-classes.md)  

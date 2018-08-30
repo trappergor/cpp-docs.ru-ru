@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b862d6b0fc99184232621432ec1c2a1027f8a9d5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f71ed0ca185d7806c12ce089589ce4fad7a26e61
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881507"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202620"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Класс IPersistStreamInitImpl
-Этот класс реализует `IUnknown` и предоставляет реализацию по умолчанию [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) интерфейс.  
+Этот класс реализует `IUnknown` и предоставляет реализацию по умолчанию [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) интерфейс.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -64,7 +64,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 |[IPersistStreamInitImpl::Save](#save)|Сохраняет свойства объекта в указанный поток.|  
   
 ## <a name="remarks"></a>Примечания  
- [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) интерфейс позволяет клиенту запросить, что объект загружает и сохраняет его постоянных данных в один поток. Класс `IPersistStreamInitImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
+ [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) интерфейс позволяет клиенту запросить, что объект загружает и сохраняет его постоянных данных в один поток. Класс `IPersistStreamInitImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
  **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -84,7 +84,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) в Windows SDK.  
+ См. в разделе [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) в Windows SDK.  
   
 ##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
  Возвращает размер потока, необходимого для сохранения данных объекта.  
@@ -97,7 +97,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) в Windows SDK.  
+ См. в разделе [IPersistStreamInit::GetSizeMax](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) в Windows SDK.  
   
 ##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew  
  Инициализирует только что созданный объект.  
@@ -107,7 +107,7 @@ STDMETHOD(InitNew)();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) в Windows SDK.  
+ См. в разделе [IPersistStreamInit::InitNew](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) в Windows SDK.  
   
 ##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
  Проверяет, изменялся ли данные объекта с момента последнего сохранения.  
@@ -117,7 +117,7 @@ STDMETHOD(IsDirty)();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) в Windows SDK.  
+ См. в разделе [IPersistStreamInit::IsDirty](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) в Windows SDK.  
   
 ##  <a name="load"></a>  IPersistStreamInitImpl::Load  
  Загружает свойства объекта из указанного потока.  
@@ -129,7 +129,7 @@ STDMETHOD(Load)(LPSTREAM pStm);
 ### <a name="remarks"></a>Примечания  
  ATL использует сопоставление свойств объекта для извлечения этой информации.  
   
- См. в разделе [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) в Windows SDK.  
+ См. в разделе [IPersistStreamInit::Load](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-load) в Windows SDK.  
   
 ##  <a name="save"></a>  IPersistStreamInitImpl::Save  
  Сохраняет свойства объекта в указанный поток.  
@@ -141,8 +141,8 @@ STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 ### <a name="remarks"></a>Примечания  
  ATL использует сопоставление свойств объекта для хранения подобной информации.  
   
- См. в разделе [IPersistStreamInit::Save](http://msdn.microsoft.com/library/windows/desktop/ms694439) в Windows SDK.  
+ См. в разделе [IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-save) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
- [Хранилищ и потоков](http://msdn.microsoft.com/library/windows/desktop/aa380352)   
+ [Хранилищ и потоков](/windows/desktop/Stg/storages-and-streams)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

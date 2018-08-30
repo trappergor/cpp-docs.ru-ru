@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337020"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195856"
 ---
 # <a name="cbitmap-class"></a>Класс CBitmap
 Инкапсулирует растровое изображение интерфейса графических устройств Windows (GDI) и предоставляет функции-члены для манипулирования этим растровым изображением.  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Примечания  
  Несмотря на то, что точечный рисунок невозможно напрямую выбрать для устройства отображения, ее можно выбрать как текущую битовую карту для контекста устройства памяти с помощью [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) и скопировать в любой совместимый контекст устройства с помощью [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) или [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) функции. ( [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) функции можно скопировать растрового изображения для текущей кисти непосредственно для контекста устройства отображения.)  
   
- Если `BITMAP` структуры, на которые указывают *lpBitmap* параметр будет заполнен с помощью `GetObject` функция, биты растрового изображения не указаны и растровое изображение не инициализирована. Для инициализации растрового изображения, приложение может использовать функции например [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) или [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Копировать биты из растрового изображения, идентифицируемый первый параметр `CGdiObject::GetObject` к растровому изображению, созданные `CreateBitmapIndirect`.  
+ Если `BITMAP` структуры, на которые указывают *lpBitmap* параметр будет заполнен с помощью `GetObject` функция, биты растрового изображения не указаны и растровое изображение не инициализирована. Для инициализации растрового изображения, приложение может использовать функции например [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) или [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) Копировать биты из растрового изображения, идентифицируемый первый параметр `CGdiObject::GetObject` к растровому изображению, созданные `CreateBitmapIndirect`.  
   
  После завершения работы с `CBitmap` объект, созданный с помощью `CreateBitmapIndirect` функцию, сначала выберите битовую карту из контекста устройства, а затем удалить `CBitmap` объекта.  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Примечания  
  По умолчанию `LoadMappedBitmap` сопоставит цветов, обычно используемых в кнопку глифов.  
   
- Сведения о создании сопоставленной точечного рисунка, см. в разделе Windows функция [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) и [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) структуры в пакете Windows SDK.  
+ Сведения о создании сопоставленной точечного рисунка, см. в разделе Windows функция [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) и [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) структуры в пакете Windows SDK.  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Загружает предварительно определенных растровое изображение, используемые Windows.  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>Примечания  
  Этот оператор — оператор приведения, которая поддерживает прямое использование `HBITMAP` объекта.  
   
- Дополнительные сведения об использовании графических объектов см. в разделе [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в пакете Windows SDK.  
+ Дополнительные сведения об использовании графических объектов см. в разделе [объектов график](/windows/desktop/gdi/graphic-objects) в пакете Windows SDK.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Задает биты растрового изображения для битовых значений, предоставляемых *lpBits*.  
