@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a2652730c981313ee3e168aca4a36a91fadde47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883454"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198459"
 ---
 # <a name="ccomcontrol-class"></a>Класс CComControl
 Этот класс предоставляет методы для создания и управления элементами управления ATL.  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Если класса элемента управления является производным от [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), этот метод вызывает метод [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного элемента управления Свойство изменилось. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK. 
+ Если класса элемента управления является производным от [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), этот метод вызывает метод [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного элемента управления Свойство изменилось. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK. 
   
  Этот метод можно вызвать, даже если элемент управления не поддерживает точки подключения.  
   
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Если класса элемента управления является производным от [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), этот метод вызывает метод [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного как изменить свойства элемента управления. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK.  
+ Если класса элемента управления является производным от [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), этот метод вызывает метод [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного как изменить свойства элемента управления. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK.  
 
   
  Этот метод можно вызвать, даже если элемент управления не поддерживает точки подключения.  
@@ -205,10 +205,10 @@ int MessageBox(
  Заголовок диалогового окна. Если значение NULL (по умолчанию), заголовок, используемый «Error».  
   
  *nType*  
- Указывает содержимое и поведение диалогового окна. См. в разделе [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) запись в документации по Windows SDK для получения списка доступных полей другое сообщение. Значение по умолчанию предоставляет простой **ОК** кнопки.  
+ Указывает содержимое и поведение диалогового окна. См. в разделе [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) запись в документации по Windows SDK для получения списка доступных полей другое сообщение. Значение по умолчанию предоставляет простой **ОК** кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение типа integer, указав одно из значений пунктов меню, списке [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) в документации по Windows SDK.  
+ Возвращает значение типа integer, указав одно из значений пунктов меню, списке [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) в документации по Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  `MessageBox` полезно как во время разработки, так и с легкостью для отображения ошибки или сообщение с предупреждением для пользователя.  

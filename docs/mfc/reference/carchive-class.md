@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e76347e197469e4e4fa490d4ddfc42ef0fbd71
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b76525c6e10284109952ede7f5e7c70132684d75
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338086"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210968"
 ---
 # <a name="carchive-class"></a>CArchive-класс
 Позволяет сохранить сложную сеть объектов в перманентной двоичной форме (обычно диск хранения), сохраняющейся даже после удаления объектов.  
@@ -561,7 +561,7 @@ CRuntimeClass* ReadClass(
   
  Класс среды выполнения необходимо использовать [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); в противном случае `ReadClass` вызовет [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Если *pSchema* имеет значение NULL, со схемой хранимой класса можно получить, вызвав [CArchive::GetObjectSchema](#getobjectschema); в противном случае **\**** pSchema* будет содержит схему класса во время выполнения, который был ранее сохранен.  
+ Если *pSchema* имеет значение NULL, со схемой хранимой класса можно получить, вызвав [CArchive::GetObjectSchema](#getobjectschema); в противном случае <strong>\*</strong>  *pSchema* будет содержать схему класса во время выполнения, который был ранее сохранен.  
   
  Можно использовать [SerializeClass](#serializeclass) вместо `ReadClass`, которая обрабатывает чтение и запись ссылки на класс.  
   
