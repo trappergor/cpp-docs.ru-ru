@@ -1,7 +1,7 @@
 ---
 title: Класс CMFCButton | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
+ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217513"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43352720"
 ---
 # <a name="cmfcbutton-class"></a>Класс CMFCButton
 `CMFCButton` Класс расширяет его функциональные возможности [CButton](../../mfc/reference/cbutton-class.md) класс, например выравнивание текста кнопки, объединение текста кнопки и изображения, выбор курсора и задание подсказки.  
@@ -165,12 +165,17 @@ class CMFCButton : public CButton
   
 |name|Описание:|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Указывает, следует ли нарисовать прямоугольник фокуса вокруг кнопки.|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Указывает, следует ли выделять BS_CHECKBOX-стиль кнопки при наведении курсора.|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|Указывает, следует ли отображать изображение справа от кнопки.|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|Указывает, является ли кнопка прозрачным.|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Задает выравнивание текста кнопки.|  
+|[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Указывает, следует ли использовать темы Windows XP.|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Указывает, следует ли нарисовать прямоугольник фокуса вокруг кнопки.| 
 |[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Задает стиль кнопки, например без рамки, плоский, с плоского или 3D.|  
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|Если значение равно TRUE, включает кнопку в отключенном состоянии которые изображаются в виде закрашены серым.|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Указывает, следует ли выделять BS_CHECKBOX-стиль кнопки при наведении курсора.|  
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|Указывает, следует ли реагировать на события нажатия кнопки.|
+|[CMFCButton::m_bRightImage](#m_brightimage)|Указывает, следует ли отображать изображение справа от кнопки.|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| Указывает, является ли изображение поверх кнопки.|
+|[CMFCButton::m_bTransparent](#m_btransparent)|Указывает, является ли кнопка прозрачным.|  
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| Указывает, было ли последний щелкните событие двойным щелчком.|
   
 ## <a name="remarks"></a>Примечания  
  Другие типы кнопок являются производными от `CMFCButton` класс, например [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) класс, который поддерживает гиперссылки, и `CMFCColorButton` класс, который поддерживает диалоговое окно выбора цвета.  
@@ -376,7 +381,16 @@ static BOOL IsWindowsThemingEnabled();
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если стиль границы кнопки соответствует текущей темы Windows; в противном случае — значение FALSE.  
-  
+
+
+
+## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+Указывает, следует ли использовать темы Windows XP при рисовании кнопки.
+
+```  
+BOOL m_bDontUseWinXPTheme;  
+```
+
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  Указывает, следует ли нарисовать прямоугольник фокуса вокруг кнопки.  
   
@@ -388,7 +402,15 @@ BOOL m_bDrawFocus;
  Задайте `m_bDrawFocus` член значение TRUE, чтобы указать, что платформа будет прямоугольник фокуса вокруг текст кнопки и изображения, если кнопка получает фокус.  
   
  `CMFCButton` Конструктор инициализирует этот член значение true.  
-  
+
+##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+Если значение равно TRUE, включает кнопку в отключенном состоянии которые изображаются в виде закрашены серым.
+
+
+```  
+BOOL m_bGrayDisabled;  
+```
+
 ##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  Указывает, следует ли выделять BS_CHECKBOX-стиль кнопки при наведении курсора.  
   
@@ -398,14 +420,29 @@ BOOL m_bHighlightChecked;
   
 ### <a name="remarks"></a>Примечания  
  Задайте `m_bHighlightChecked` член значение true, чтобы указать, что платформа будет выделено BS_CHECKBOX-стиль кнопки при наведении указателя мыши.  
-  
+
+##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+Указывает, следует ли реагировать на события нажатия кнопки.
+
+```  
+BOOL m_bResponseOnButtonDown;  
+```  
+
 ##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  Указывает, следует ли отображать изображение справа от кнопки.  
   
 ```  
 BOOL m_bRightImage;  
 ```  
-  
+
+
+##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
+Указывает, является ли изображение поверх кнопки.
+
+```  
+BOOL m_bTopImage;  
+```
+
 ### <a name="remarks"></a>Примечания  
  Задайте `m_bRightImage` член значение true, чтобы указать, что платформа будет отображаться изображение кнопки справа от кнопки текстовую метку.  
   
@@ -436,7 +473,14 @@ AlignStyle m_nAlignStyle;
 |ALIGN_RIGHT|Кнопка текст выравнивается по правой части кнопки.|  
   
  `CMFCButton` Конструктор инициализирует этот член для ALIGN_CENTER.  
-  
+
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) | 
+Указывает, была ли последний щелкните событие двойным щелчком. |
+
+```  
+BOOL m_bWasDblClk;  
+```  
+
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  Задает стиль кнопки, например без рамки, плоский, с плоского или 3D.  
   
