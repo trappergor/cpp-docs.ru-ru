@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f816e4fd83439b528e6f2ab92212c763d769bed
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bf937f11118cfbea26db11ba48ea0ed65d903af6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853060"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217159"
 ---
 # <a name="coblist-class"></a>Класс cObList
 упорядоченные списки неуникальный fSupports `CObject` указатели доступны последовательно или по значению указателей.  
@@ -160,8 +160,8 @@ void AddHead(CObList* pNewList);
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ AddHead (void\***  `newElement` **);**<br /><br /> **void AddHead (CPtrList\***  `pNewList` **);**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ AddHead (const CString &** `newElement` **);**<br /><br /> **ПОЗИЦИЯ AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList\***  `pNewList` **);**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead (CPtrList** <strong>\*</strong> `pNewList` **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ AddHead (const CString &** `newElement` **);**<br /><br /> **ПОЗИЦИЯ AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|  
   
 ### <a name="remarks"></a>Примечания  
  Список может быть пустым, перед выполнением операции.  
@@ -204,8 +204,8 @@ void AddTail(CObList* pNewList);
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**AddTail ПОЗИЦИИ (void\***  `newElement` **);**<br /><br /> **void AddTail (CPtrList\***  `pNewList` **);**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**AddTail ПОЗИЦИИ (const CString &** `newElement` **);**<br /><br /> **AddTail ПОЗИЦИИ (LPCTSTR** `newElement` **);**<br /><br /> **void AddTail (CStringList\***  `pNewList` **);**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**AddTail ПОЗИЦИИ (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail (CPtrList** <strong>\*</strong> `pNewList` **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**AddTail ПОЗИЦИИ (const CString &** `newElement` **);**<br /><br /> **AddTail ПОЗИЦИИ (LPCTSTR** `newElement` **);**<br /><br /> **void AddTail (CStringList** <strong>\*</strong> `pNewList` **);**|  
   
 ### <a name="example"></a>Пример  
   См. в разделе [CObList::CObList](#coblist) список `CAge` класса.  
@@ -276,7 +276,7 @@ POSITION Find(
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Найти ПОЗИЦИЮ (void\***  `searchValue` **, положение** `startAfter` **= NULL) const;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Найти ПОЗИЦИЮ (void** <strong>\*</strong> `searchValue` **, положение** `startAfter` **= NULL) const;**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Найти ПОЗИЦИИ (LPCTSTR** `searchValue` **, положение** `startAfter` **= NULL) const;**|  
   
 ### <a name="example"></a>Пример  
@@ -598,7 +598,7 @@ POSITION InsertAfter(
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ InsertAfter (ПОЗИЦИЯ** *позиции* **, void\***  `newElement` **);**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ InsertAfter (ПОЗИЦИЯ** *позиции* **, void** <strong>\*</strong> `newElement` **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ InsertAfter (ПОЗИЦИЯ** *позиции* **, const CString &** `newElement` **);**<br /><br /> **ПОЗИЦИЯ InsertAfter (ПОЗИЦИЯ** *позиции* **, LPCTSTR** `newElement` **);**|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -642,7 +642,7 @@ POSITION InsertBefore(
   
 |Класс|Функция-член|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ InsertBefore (ПОЗИЦИЯ** *позиции* **, void\***  `newElement` **);**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ InsertBefore (ПОЗИЦИЯ** *позиции* **, void** <strong>\*</strong> `newElement` **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ InsertBefore (ПОЗИЦИЯ** *позиции* **, const CString &** `newElement` **);**<br /><br /> **ПОЗИЦИЯ InsertBefore (ПОЗИЦИЯ** *позиции* **, LPCTSTR** `newElement` **);**|  
   
 ### <a name="example"></a>Пример  

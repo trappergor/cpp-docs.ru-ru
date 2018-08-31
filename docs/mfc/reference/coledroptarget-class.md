@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d54a22bd215a80f3e7cab3770a4ba12cd7baffb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 218b03ed1e1c69dd7b365e9c2526aef5b1145aed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027446"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218493"
 ---
 # <a name="coledroptarget-class"></a>Класс COleDropTarget
 Предоставляет механизм взаимодействия между окном и библиотеками OLE.  
@@ -138,7 +138,7 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, чтобы разрешить выполнение операций перетаскивания в окне. По умолчанию реализация вызывает [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), который просто возвращает DROPEFFECT_NONE по умолчанию.  
   
- Дополнительные сведения см. в разделе [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) в пакете Windows SDK.  
   
 ##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  Вызывается платформой, когда курсор покидает окно, пока действует операцию перетаскивания.  
@@ -154,7 +154,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если требуется специальное поведение, когда операция перетаскивания выходит за пределы указанного окна. Реализация по умолчанию эта функция вызывает [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
   
- Дополнительные сведения см. в разделе [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDropTarget::DragLeave](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragleave) в пакете Windows SDK.  
   
 ##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  Вызывается платформой, когда курсор перемещается над окном.  
@@ -196,7 +196,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>Примечания  
  Разрешить выполнение операций перетаскивания в окне, следует переопределить эту функцию. Реализация по умолчанию эта функция вызывает [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), который возвращает DROPEFFECT_NONE по умолчанию. Так как эта функция вызывается часто во время операции перетаскивания и вставки, ее следует оптимизировать насколько это возможно.  
   
- Дополнительные сведения см. в разделе [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
@@ -275,7 +275,7 @@ virtual BOOL OnDrop(
   
  Реализация по умолчанию `COleDropTarget::OnDrop` вызовы [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), который просто возвращает значение FALSE по умолчанию.  
   
- Дополнительные сведения см. в разделе [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) в пакете Windows SDK.  
   
 ##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  Вызывается платформой при операции перетаскивания.  
@@ -325,7 +325,7 @@ virtual DROPEFFECT OnDropEx(
   
  - DROPEFFECT_SCROLL указывает, что операции перетаскивания прокрутки о или происходит в целевом объекте.  
   
- Дополнительные сведения см. в разделе [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) в пакете Windows SDK.  
   
 ##  <a name="register"></a>  COleDropTarget::Register  
  Эта функция вызывается для регистрации вашего окна OLE библиотек DLL как допустимым конечным расположением сброса.  
@@ -344,7 +344,7 @@ BOOL Register(CWnd* pWnd);
 ### <a name="remarks"></a>Примечания  
  Эту функцию необходимо вызывать для операции удаления принятия.  
   
- Дополнительные сведения см. в разделе [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RegisterDragDrop](/windows/desktop/api/ole2/nf-ole2-registerdragdrop) в пакете Windows SDK.  
   
 ##  <a name="revoke"></a>  COleDropTarget::Revoke  
  Вызывайте эту функцию перед удалением любого окна, который был зарегистрирован в качестве целевого объекта перетаскивания путем вызова [зарегистрировать](#register) Чтобы удалить его из списка мест назначения перетаскивания.  
@@ -356,7 +356,7 @@ virtual void Revoke();
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается автоматически из [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) обработчик для окна, которое было зарегистрировано, поэтому он обычно нет необходимости явно вызов этой функции.  
   
- Дополнительные сведения см. в разделе [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [RevokeDragDrop](/windows/desktop/api/ole2/nf-ole2-revokedragdrop) в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC HIERSVR](../../visual-cpp-samples.md)   

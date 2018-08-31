@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: b1a15397ee74c94c0d3af088a7b6eb80bd21c66d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572116"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195342"
 ---
 # <a name="cwin32heap-class"></a>Класс CWin32Heap
 Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функций выделения кучи Win32.  
@@ -73,7 +73,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|Дескриптор объекта кучи.|  
   
 ## <a name="remarks"></a>Примечания  
- `CWin32Heap` реализует методы распределения памяти, с помощью функций выделения кучи Win32, включая [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) и [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). В отличие от других классов кучи `CWin32Heap` требует действительным дескриптором кучи предоставляться до выделения памяти: другие классы по умолчанию используют кучу процесса. Дескриптор может предоставляться конструктору, или к [CWin32Heap::Attach](#attach) метод. См. в разделе [CWin32Heap::CWin32Heap](#cwin32heap) метод для получения дополнительных сведений.  
+ `CWin32Heap` реализует методы распределения памяти, с помощью функций выделения кучи Win32, включая [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc) и [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree). В отличие от других классов кучи `CWin32Heap` требует действительным дескриптором кучи предоставляться до выделения памяти: другие классы по умолчанию используют кучу процесса. Дескриптор может предоставляться конструктору, или к [CWin32Heap::Attach](#attach) метод. См. в разделе [CWin32Heap::CWin32Heap](#cwin32heap) метод для получения дополнительных сведений.  
   
 ## <a name="example"></a>Пример  
  См. в примере [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -103,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Примечания  
  Вызовите [CWin32Heap::Free](#free) или [CWin32Heap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.  
   
- Реализовано с помощью [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
+ Реализовано с помощью [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc).  
   
 ##  <a name="attach"></a>  CWin32Heap::Attach  
  Присоединяет объект кучи в существующую кучу.  

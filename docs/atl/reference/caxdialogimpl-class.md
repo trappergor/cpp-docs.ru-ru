@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd019112e846875bfa8e27faac5088fbcf1cdaef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 88cb742464507fe7040b38d88355ab473b366bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881991"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196014"
 ---
 # <a name="caxdialogimpl-class"></a>Класс CAxDialogImpl
 Этот класс реализует диалоговое окно (модальное или немодальное), на котором размещены элементы управления ActiveX.  
@@ -170,7 +170,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Параметры  
  *hWndParent*  
- [in] Дескриптор окна-владельца. Значение по умолчанию — возвращаемое значение [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) функции Win32.  
+ [in] Дескриптор окна-владельца. Значение по умолчанию — возвращаемое значение [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) функции Win32.  
   
  *dwInitParam*  
  [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.  
@@ -235,7 +235,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
   
 ### <a name="parameters"></a>Параметры  
  *pMsg*  
- Указатель на [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) структуру, содержащую сообщения для проверки.  
+ Указатель на [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) структуру, содержащую сообщения для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если сообщение был обработан, и FALSE в противном случае.  

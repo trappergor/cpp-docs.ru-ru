@@ -1,5 +1,5 @@
 ---
-title: Элементы управления Rich Edit "без дна" | Документы Microsoft
+title: Управляет неограниченные Rich Edit | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2b08f6c04d345b4ae3ab32c6d0f17a1d8a4647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e3115000b7b45d9b48a1ac0d274eb32c11f4d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343315"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218883"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Элементы управления "Rich Edit" "без дна"
-Приложение может изменить размер элемента управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) при необходимости, чтобы он всегда совпадает с размером его содержимого. Элемента управления rich edit поддерживает эти так называемые «без дна» функциональные возможности, отправляя родительского окна [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) уведомление при каждом изменении размера его содержимого.  
+Приложения можно изменить размер элемента управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) при необходимости, так как это всегда совпадает с размером его содержимого. Элемент управления форматированным редактированием поддерживает данную так называемые «без дна» функцию, отправив своему родительскому окну [EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize) уведомление при каждом изменении размера его содержимое.  
   
- При обработке **EN_REQUESTRESIZE** сообщение уведомления, приложения должны изменяться размеры элемента управления к измерениям в указанном [REQRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787950) структуры. Приложение также может перемещать все сведения, рядом с элементом управления, чтобы вместить изменение высоты элемента управления. Чтобы изменить размер элемента управления, можно использовать `CWnd` функция [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
+ При обработке **EN_REQUESTRESIZE** сообщение уведомления, приложения должны изменяться размеры элемента управления к измерениям в указанном [REQRESIZE](/windows/desktop/api/richedit/ns-richedit-_reqresize) структуры. Приложение также может перемещать данные рядом с элементом управления для размещения элемента управления изменение высоты. Чтобы изменить размер элемента управления, можно использовать `CWnd` функция [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
   
- Можно принудительно элемента управления "без дна rich edit" для отправки **EN_REQUESTRESIZE** сообщение уведомления с помощью [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) функции-члена. Это сообщение может быть полезен в [OnSize](../mfc/reference/cwnd-class.md#onsize) обработчика.  
+ Вы можете принудительно элементе управления "без дна rich edit" для отправки **EN_REQUESTRESIZE** сообщение уведомления с помощью [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) функция-член. Это сообщение может быть полезно в [OnSize](../mfc/reference/cwnd-class.md#onsize) обработчика.  
   
- Для получения **EN_REQUESTRESIZE** сообщений уведомлений, необходимо включить уведомления с помощью `SetEventMask` функции-члена.  
+ Для получения **EN_REQUESTRESIZE** сообщений уведомлений, необходимо включить уведомления с помощью `SetEventMask` функция-член.  
   
 ## <a name="see-also"></a>См. также  
  [Использование CRichEditCtrl](../mfc/using-cricheditctrl.md)   

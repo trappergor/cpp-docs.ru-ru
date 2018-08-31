@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96c01326056a5fd3a106e09db94d2a84435f32e3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6c9fd7cedc1e16c6f784edebf35faf055b09ed82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879669"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217192"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Класс CPrivateObjectSecurityDesc
 Этот класс представляет объект дескриптора безопасности закрытый объект.  
@@ -65,7 +65,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="remarks"></a>Примечания  
  Этот класс производным от [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), предоставляет методы для создания и управления дескриптор безопасности закрытого объекта.  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)  
@@ -97,13 +97,13 @@ bool ConvertToAutoInherit(
  Указывает, является ли новый объект может содержать другие объекты. Значение true указывает, что новый объект является контейнером. Значение false указывает, что новый объект не является контейнером.  
   
  *GenericMapping*  
- Указатель на [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) структуру, которая задает сопоставление каждой универсального направо особые права для объекта.  
+ Указатель на [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) структуру, которая задает сопоставление каждой универсального направо особые права для объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод пытается определить, перечислены ли записи ACE в управления доступом (DACL) и системный список управления доступом (SACL) текущего дескриптора безопасности, унаследованные из родительского дескриптора безопасности. Он вызывает [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) функции.  
+ Этот метод пытается определить, перечислены ли записи ACE в управления доступом (DACL) и системный список управления доступом (SACL) текущего дескриптора безопасности, унаследованные из родительского дескриптора безопасности. Он вызывает [ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403) функции.  
   
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  Конструктор.  
@@ -160,7 +160,7 @@ bool Create(
  Ссылка на [CAccessToken](../../atl/reference/caccesstoken-class.md) объекта для процесса клиента, от имени которого создается объект.  
   
  *GenericMapping*  
- Указатель на [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) структуру, которая задает сопоставление каждой универсального направо особые права для объекта.  
+ Указатель на [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) структуру, которая задает сопоставление каждой универсального направо особые права для объекта.  
   
  *Тип объекта*  
  Указатель на `GUID` структура, определяющая тип объекта, связанного с текущим объектом. Задайте *ObjectType* значение NULL, если объект не является идентификатором GUID.  
@@ -169,13 +169,13 @@ bool Create(
  Указывает, является ли новый объект может содержать другие объекты. Значение true указывает, что новый объект является контейнером. Значение false указывает, что новый объект не является контейнером.  
   
  *AutoInheritFlags*  
- Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) для получения дополнительных сведений.  
+ Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) для получения дополнительных сведений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) или [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
+ Этот метод вызывает метод [CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405) или [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
  Второй метод позволяет указать идентификатор GUID типа объекта нового объекта или управление как элементы управления доступом наследуются.  
   
@@ -193,7 +193,7 @@ bool Get(
   
 ### <a name="parameters"></a>Параметры  
  *SI*  
- Набор битовых флагов, указывающие части для получения дескриптора безопасности. Это значение может представлять собой сочетание [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) битовые флаги.  
+ Набор битовых флагов, указывающие части для получения дескриптора безопасности. Это значение может представлять собой сочетание [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) битовые флаги.  
   
  *pResult*  
  Указатель на [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) , получающий копию запрошенные сведения из указанного дескриптора безопасности.  
@@ -238,19 +238,19 @@ bool Set(
   
 ### <a name="parameters"></a>Параметры  
  *SI*  
- Набор битовых флагов, указывающие части дескриптора безопасности. Это значение может представлять собой сочетание [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) битовые флаги.  
+ Набор битовых флагов, указывающие части дескриптора безопасности. Это значение может представлять собой сочетание [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) битовые флаги.  
   
  *Изменения*  
  Указатель на [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) объекта. Указывает части данного дескриптора безопасности *si* параметра применяются в дескрипторе безопасности объекта.  
   
  *GenericMapping*  
- Указатель на [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) структуру, которая задает сопоставление каждой универсального направо особые права для объекта.  
+ Указатель на [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) структуру, которая задает сопоставление каждой универсального направо особые права для объекта.  
   
  *Маркер*  
  Ссылка на [CAccessToken](../../atl/reference/caccesstoken-class.md) объекта для процесса клиента, от имени которого создается объект.  
   
  *AutoInheritFlags*  
- Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) для получения дополнительных сведений.  
+ Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) для получения дополнительных сведений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
@@ -259,7 +259,7 @@ bool Set(
  Второй метод позволяет указать идентификатор GUID типа объекта объекта или управление как элементы управления доступом наследуются.  
   
 ## <a name="see-also"></a>См. также  
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)   
  [Класс CSecurityDesc](../../atl/reference/csecuritydesc-class.md)
