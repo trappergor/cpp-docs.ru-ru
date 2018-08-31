@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd6dae49eb655856247ea70e61582e16228db454
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387503"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578214"
 ---
 # <a name="main-function-and-program-execution"></a>Функция main и выполнение программ
 Все программы, написанные на языке C, содержат основную функцию, которая должна иметь имя **main**. Если код соответствует модели программирования Юникода, можно использовать версию функции **main** для многобайтовых символов с именем **wmain**. Функция **main** является начальной точкой для выполнения программы. Она обычно управляет выполнением программы, вызывая другие ее функции. Как правило, выполнение программы завершается в конце функции **main**, но по разным причинам это может случиться и в других местах программы. Иногда (возможно, при обнаружении некоторой ошибки) может потребоваться принудительно завершить программу. Для этого используйте функцию **exit**. Сведения о функции [exit](../c-runtime-library/reference/exit-exit-exit.md) и пример ее использования см. в *Справочнике по библиотеке времени выполнения*.  
@@ -45,4 +45,5 @@ main( int argc, char *argv[ ], char *envp[ ] )
  Описание версии [main](../c-language/using-wmain.md) для расширенных символов см. в статье **Использование wmain**.  
   
 ## <a name="see-also"></a>См. также  
- [Функция main: запуск программы](../cpp/main-program-startup.md)
+ [Функция main: запуск программы](../cpp/main-program-startup.md)   
+ [Анализ аргументов командной строки C](../c-language/parsing-c-command-line-arguments.md)
