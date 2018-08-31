@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef7db05e8e8eb0a723354bcd6f53fb283aebe0c8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4a2684a3aab8480738d4d64a79681f1930113c71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880889"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218931"
 ---
 # <a name="idataobjectimpl-class"></a>Класс IDataObjectImpl
 Этот класс предоставляет методы для поддержки унифицированная передача данных и управление подключениями.  
@@ -72,9 +72,9 @@ class IDataObjectImpl
 |[IDataObjectImpl::SetData](#setdata)|Передает данные от клиента к объекту данных. Реализация ATL возвращает E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Примечания  
- [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) интерфейс предоставляет методы для поддержки унифицированная передача данных. `IDataObject` использует стандартный формат структуры [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) и [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) для получения и хранения данных.  
+ [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) интерфейс предоставляет методы для поддержки унифицированная передача данных. `IDataObject` использует стандартный формат структуры [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) и [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) для получения и хранения данных.  
   
- `IDataObject` также управляет соединениями с вспомогательными приемникам обрабатывать уведомления об изменении данных. Чтобы клиенту получать уведомления об изменении данных из объекта данных, должен реализовать клиент, [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) интерфейса на объект с именем приемника уведомлений. Когда клиент вызывает метод `IDataObject::DAdvise`, установить соединение между объектом данных и приемником уведомлений.  
+ `IDataObject` также управляет соединениями с вспомогательными приемникам обрабатывать уведомления об изменении данных. Чтобы клиенту получать уведомления об изменении данных из объекта данных, должен реализовать клиент, [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) интерфейса на объект с именем приемника уведомлений. Когда клиент вызывает метод `IDataObject::DAdvise`, установить соединение между объектом данных и приемником уведомлений.  
   
  Класс `IDataObjectImpl` предоставляет реализацию по умолчанию `IDataObject` и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
@@ -104,7 +104,7 @@ HRESULT DAdvise(
   
  Чтобы разорвать соединение, вызовите [DUnadvise](#dunadvise).  
   
- См. в разделе [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) в Windows SDK.  
+ См. в разделе [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) в Windows SDK.  
   
 ##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
  Завершает соединение, установленное ранее при помощи [DAdvise](#dadvise).  
@@ -114,7 +114,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) в Windows SDK.  
+ См. в разделе [IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) в Windows SDK.  
   
 ##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise  
  Создает перечислитель для итерации по текущим вспомогательным соединениям.  
@@ -128,7 +128,7 @@ HRESULT DAdvise(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) в Windows SDK.  
+ См. в разделе [IDataObject::EnumDAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-enumdadvise) в Windows SDK.  
   
 ##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
  Создает перечислитель для перебора `FORMATETC` структуры, поддерживаемые объектом данных.  
@@ -140,7 +140,7 @@ HRESULT EnumFormatEtc(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) в Windows SDK.  
+ См. в разделе [IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает E_NOTIMPL.  
@@ -166,7 +166,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) в Windows SDK.  
+ См. в разделе [IDataObject::GetCanonicalFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-getcanonicalformatetc) в Windows SDK.  
   
 ##  <a name="getdata"></a>  IDataObjectImpl::GetData  
  Передает данные из объекта данных клиенту.  
@@ -180,7 +180,7 @@ HRESULT GetData(
 ### <a name="remarks"></a>Примечания  
  *PformatetcIn* параметра необходимо указать тип среды хранения TYMED_MFPICT.  
   
- См. в разделе [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) в Windows SDK.  
+ См. в разделе [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) в Windows SDK.  
   
 ##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
  Аналогичную `GetData`, за исключением, что клиент должен выделить `STGMEDIUM` структуры.  
@@ -195,7 +195,7 @@ HRESULT GetDataHere(
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) в Windows SDK.  
+ См. в разделе [IDataObject::GetDataHere](/windows/desktop/api/objidl/nf-objidl-idataobject-getdatahere) в Windows SDK.  
   
 ##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
  Определяет, поддерживает ли объект данных определенного `FORMATETC` структуры для передачи данных.  
@@ -208,7 +208,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) в Windows SDK.  
+ См. в разделе [IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata) в Windows SDK.  
   
 ##  <a name="setdata"></a>  IDataObjectImpl::SetData  
  Передает данные от клиента к объекту данных.  
@@ -224,7 +224,7 @@ HRESULT SetData(
  Возвращает E_NOTIMPL.  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) в Windows SDK.  
+ См. в разделе [IDataObject::SetData](/windows/desktop/api/objidl/nf-objidl-idataobject-setdata) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

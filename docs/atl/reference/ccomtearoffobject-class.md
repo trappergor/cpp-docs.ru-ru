@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: eb505ac53c6a8b3b05edfc99bad813ebe2c341d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885043"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218569"
 ---
 # <a name="ccomtearoffobject-class"></a>Класс CComTearOffObject
 Этот класс реализует интерфейс перемещаемой.  
@@ -46,7 +46,7 @@ class CComTearOffObject : public Base
  *Base*  
  Ваш перемещаемой класс, производный от `CComTearOffObjectBase` и интерфейсы объекта перемещаемой для поддержки.  
   
- ATL реализует его перемещаемые интерфейсы в два этапа — `CComTearOffObjectBase` методы обрабатывают счетчик ссылок и `QueryInterface`, хотя `CComTearOffObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
+ ATL реализует его перемещаемые интерфейсы в два этапа — `CComTearOffObjectBase` методы обрабатывают счетчик ссылок и `QueryInterface`, хотя `CComTearOffObject` реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).  
   
 ## <a name="members"></a>Участники  
   

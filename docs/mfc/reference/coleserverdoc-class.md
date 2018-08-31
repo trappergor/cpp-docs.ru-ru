@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67920590979c4b9bf3099e8c64c142aeb813b1ce
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a02ade5beb9c3a8480672211fff4b9d23fe48562
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851662"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217593"
 ---
 # <a name="coleserverdoc-class"></a>Класс COleServerDoc
 Базовый класс для серверной документации OLE.  
@@ -296,7 +296,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Извлекает указатель на базовый [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) интерфейс.  
+ Извлекает указатель на базовый [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite) интерфейс.  
   
 ##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  Переопределите эту функцию для создания нового `CDocObjectServer` элемента и возвращают указатель на него.  
@@ -492,7 +492,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ### <a name="remarks"></a>Примечания  
  По умолчанию реализация вызывает `CDocument::OnCloseDocument`.  
   
- Дополнительные сведения и дополнительные значения, см. в разделе [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) в пакете Windows SDK.  
+ Дополнительные сведения и дополнительные значения, см. в разделе [OLECLOSE](/windows/desktop/api/oleidl/ne-oleidl-tagoleclose) в пакете Windows SDK.  
   
 ##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  Вызывается платформой, когда пользователь делает неактивным внедренного или связанного элемента, который активен в данный момент на месте.  
@@ -668,7 +668,7 @@ virtual void OnResizeBorder(
 ### <a name="remarks"></a>Примечания  
  Эта функция изменяет размер и настройка панелей инструментов и других элементов пользовательского интерфейса в соответствии с нового размера окна.  
   
- Дополнительные сведения см. в разделе [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) в пакете Windows SDK.  
   
  Существует расширенная переопределяемый.  
   

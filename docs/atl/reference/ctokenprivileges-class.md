@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa48af82fb5b6119e1efc14081c6851eafb85fa5
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 23c8776e462c2b275b0c7620e01b4bc82e7ad7ed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208706"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195748"
 ---
 # <a name="ctokenprivileges-class"></a>Класс CTokenPrivileges
 Этот класс является оболочкой для `TOKEN_PRIVILEGES` структуры.  
@@ -79,13 +79,13 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|Оператор присвоения.|  
   
 ## <a name="remarks"></a>Примечания  
- [Маркер доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows.  
+ [Маркер доступа](/windows/desktop/SecAuthZ/access-tokens) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows.  
   
- Маркер доступа используется для описания различных прав безопасности, предоставленные каждому пользователю. Права доступа состоит из 64-разрядное число, вызывается локальный уникальный идентификатор ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) и дескриптора строки.  
+ Маркер доступа используется для описания различных прав безопасности, предоставленные каждому пользователю. Права доступа состоит из 64-разрядное число, вызывается локальный уникальный идентификатор ( [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)) и дескриптора строки.  
   
- `CTokenPrivileges` Класс является оболочкой для [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуру и содержит 0 или больше прав доступа. Можно добавить привилегии, удаляется или запрашиваемые, используя предоставленный класс методы.  
+ `CTokenPrivileges` Класс является оболочкой для [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) структуру и содержит 0 или больше прав доступа. Можно добавить привилегии, удаляется или запрашиваемые, используя предоставленный класс методы.  
   
- Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
@@ -106,7 +106,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  Значение true, если включена право доступа. Если значение равно false, привилегии отключен.  
   
  *rPrivileges*  
- Ссылка на [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры. Права и атрибуты, копируемых из этой структуры и добавляются в `CTokenPrivileges` объекта.  
+ Ссылка на [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) структуры. Права и атрибуты, копируемых из этой структуры и добавляются в `CTokenPrivileges` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В первой форме этот метод возвращает значение true, если привилегии успешно добавлены, значение false в противном случае.  
@@ -125,7 +125,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  `CTokenPrivileges` Объекта, чтобы назначить новый объект.  
   
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры, чтобы назначить новый `CTokenPrivileges` объекта.  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) структуры, чтобы назначить новый `CTokenPrivileges` объекта.  
   
 ### <a name="remarks"></a>Примечания  
  `CTokenPrivileges` Объекта при необходимости могут создаваться с использованием `TOKEN_PRIVILEGES` структуры или ранее определенную `CTokenPrivileges` объекта.  
@@ -214,7 +214,7 @@ void GetLuidsAndAttributes(
   
 ### <a name="parameters"></a>Параметры  
  *pPrivileges*  
- Указатель на массив [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) объектов. `CLUIDArray` typedef определяется как `CAtlArray<LUID> CLUIDArray`.  
+ Указатель на массив [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) объектов. `CLUIDArray` typedef определяется как `CAtlArray<LUID> CLUIDArray`.  
   
  *pAttributes*  
  Указатель на массив объектов типа DWORD. Если этот параметр опущен или имеет значение NULL, то атрибуты не извлекаются. `CAttributes` typedef определяется как `CAtlArray <DWORD> CAttributes`.  
@@ -251,7 +251,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры.  
+ Возвращает указатель на [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) структуры.  
   
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  Получает атрибут, связанный с именем конкретное право доступа.  
@@ -282,7 +282,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
   
 ### <a name="parameters"></a>Параметры  
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры, чтобы назначить `CTokenPrivileges` объекта.  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) структуры, чтобы назначить `CTokenPrivileges` объекта.  
   
  *правая часть*  
  `CTokenPrivileges` Для присваивания объекту.  
@@ -298,12 +298,12 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Приводит значение к указателю на [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры.  
+ Приводит значение к указателю на [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) структуры.  
   
 ## <a name="see-also"></a>См. также  
  [Образец безопасности](../../visual-cpp-samples.md)   
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
- [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
- [ПОДРОБНОСТИ](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
+ [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
+ [ПОДРОБНОСТИ](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

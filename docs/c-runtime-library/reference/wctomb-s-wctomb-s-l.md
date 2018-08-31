@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c5bdc05f903c1313d4844be8d5fc4fa619505670
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450912"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195123"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -101,11 +101,11 @@ errno_t _wctomb_s_l(
 
 ## <a name="remarks"></a>Примечания
 
-**Wctomb_s** функция преобразует его *wchar* аргумент, соответствующий Многобайтовый символ и сохраняет результат в *mbchar*. Эту функцию можно вызывать из любой точки в любой программе.
+**Wctomb_s** функция преобразует его *wchar* аргумент в соответствующий Многобайтовый символ и сохраняет результат в *mbchar*. Эту функцию можно вызывать из любой точки в любой программе.
 
-Если **wctomb_s** преобразует расширенный символ Многобайтовый символ, он помещает число байтов (никогда не, превышающий **MB_CUR_MAX**) в расширенных символов в целое число со знаком, который указывает *pRetValue*. Если *wchar* является нуль-символ Юникода (L '\0'), **wctomb_s** заполняет *pRetValue* с 1. Если целевой указатель *mbchar* — **NULL**, **wctomb_s** помещает 0 в *pRetValue*. Если преобразование не поддерживается в текущем языковом стандарте, **wctomb_s** помещается значение -1 *pRetValue*.
+Если **wctomb_s** преобразует расширенный символ в Многобайтовый символ, он помещает число байтов (которое больше никогда не **MB_CUR_MAX**) в расширенном символе в целое число, на которые указывают *pRetValue*. Если *wchar* является нуль-символ Юникода (L '\0'), **wctomb_s** заполняет *pRetValue* с 1. Если целевой указатель *mbchar* — **NULL**, **wctomb_s** помещает 0 в *pRetValue*. Если преобразование не поддерживается в текущем языковом стандарте, **wctomb_s** помещается значение -1 *pRetValue*.
 
-**wctomb_s** использует текущий языковой стандарт для сведений о зависящего от языкового стандарта; **_wctomb_s_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**wctomb_s** использует текущий языковой стандарт для сведений о зависящих от языкового стандарта; **_wctomb_s_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -152,4 +152,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
