@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3600e5541c095b3879fe60404c9a5994c2a91088
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330301"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578217"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Подготовка тестового компьютера для выполнения исполняемого файла отладки
 Чтобы подготовить компьютер к тестированию отладочной версии приложения, созданного с помощью Visual C++, нужно развернуть отладочные версии библиотек DLL Visual C++, от которых зависит приложение. Чтобы определить, какие библиотеки DLL нужно развернуть, выполните действия, описанные в разделе [Основные сведения о зависимостях приложения Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Как правило, отладочные версии библиотек DLL Visual C++ имеют имена, заканчивающиеся на "d". Например, отладочная версия msvcr100.dll называется msvcr100d.dll.  
@@ -43,5 +43,5 @@ ms.locfileid: "33330301"
 ## <a name="see-also"></a>См. также  
  
  [Развертывание в Visual C++](../ide/deployment-in-visual-cpp.md)   
- [Параметры командной строки установщика Windows](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
+ [Параметры командной строки установщика Windows](/windows/desktop/Msi/command-line-options)   
  [Примеры развертывания](../ide/deployment-examples.md) [Удаленная отладка](/visualstudio/debugger/remote-debugging.md)

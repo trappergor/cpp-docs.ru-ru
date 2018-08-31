@@ -16,6 +16,8 @@ apilocation:
 - msvcr90.dll
 - msvcrt.dll
 - msvcr110_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - cgetws
@@ -35,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 91ae4f6bcd3b32f2d97362d340fad3ef6995802c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451202"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578301"
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Возвращает строку символов из консоли. Существуют более безопасные версии этих функций; см. статью [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
