@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207764"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197964"
 ---
 # <a name="midl-property-pages-advanced"></a>Страницы свойств MIDL: Дополнительно
 Страница свойств **Дополнительно** в папке **MIDL** указывает следующие параметры компилятора MIDL:  
   
--   Разрешить проверку ошибок ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Разрешить проверку ошибок ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка ошибок нехватки памяти ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверка ошибок нехватки памяти ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка границ ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверка границ ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка границ перечислений ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверка границ перечислений ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка указателей ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверка указателей ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверках данных-заглушек ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверках данных-заглушек ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка параметров ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
+-   Проверка параметров ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
--   Выравнивание членов структур ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   Выравнивание членов структур ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Перенаправить вывод ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Перенаправить вывод ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   Параметры препроцессора C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   Параметры препроцессора C ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   Отменить определения препроцессора ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   Отменить определения препроцессора ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \* /robust предназначен для использования только при сборке для компьютера с Windows 2000 или более поздней версии. Если вы выполняете сборку проекта ATL и хотите использовать /robust, измените следующую строку в файле dlldatax.c:  
   

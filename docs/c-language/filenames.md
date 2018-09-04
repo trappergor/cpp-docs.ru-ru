@@ -12,19 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b13c8ddcaed382483eb96172e93da99ad0133eac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7b1eb1b8a9bf04260a317d21df558e6f49fd78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382319"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213937"
 ---
 # <a name="filenames"></a>Имена файлов
 **ANSI 4.9.3** Правила составления допустимых имен файлов  
   
  Спецификация файла может содержать необязательную букву диска (с обязательным двоеточием после нее), последовательность необязательных имен каталогов (разделенных обратными косыми чертами) и имя файла.  
   
- Дополнительные сведения см. в статье [Именование файлов](http://msdn.microsoft.com/library/windows/desktop/aa365247).  
+ Дополнительные сведения см. в статье [Именование файлов](/windows/desktop/FileIO/naming-a-file).  
   
 ## <a name="see-also"></a>См. также  
  [Функции библиотеки](../c-language/library-functions.md)

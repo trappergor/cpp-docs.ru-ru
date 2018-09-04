@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c43619fcb1d684d7e0d2d6645b7a5feaac61e472
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340545"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195199"
 ---
 # <a name="implement-interface-wizard"></a>Мастер реализации интерфейсов
 Этот мастер реализует интерфейс для COM-объекта. Реализации многих интерфейсов включены в библиотеки COM, доступные в Visual Studio и Windows. Реализация интерфейса связывается с объектом при создании экземпляра этого объекта, а также предоставляет те же службы, что и объект.  
   
- Сведения об интерфейсах и реализациях см. в разделе [Интерфейсы и их реализации](http://msdn.microsoft.com/library/windows/desktop/ms694356) для Windows SDK.  
+ Сведения об интерфейсах и реализациях см. в разделе [Интерфейсы и их реализации](/windows/desktop/com/interfaces-and-interface-implementations) для Windows SDK.  
   
  **Реализовать интерфейс из**  
  Указывает расположение библиотеки типов, из которой создается интерфейс.  

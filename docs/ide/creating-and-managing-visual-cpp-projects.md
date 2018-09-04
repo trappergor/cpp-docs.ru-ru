@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332427"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222247"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Создание проектов Visual C++ на основе MSBuild и управление ими
 MSBuild — это собственная система сборки для Visual C++, которая обычно лучше всего подходит для приложений UWP, а также классических приложений, использующих библиотеки MFC или ATL. MSBuild тесно интегрирована с интегрированной средой разработки Visual Studio и системой проектов, но ее можно использовать и из командной строки. Начиная с Visual Studio 2017 Visual C++ поддерживает [CMake и другие отличные от MSBuild системы посредством функции "Открыть папку"](non-msbuild-projects.md).
@@ -68,8 +68,8 @@ MSBuild — это собственная система сборки для Vis
  [Сборка программ C/C++](../build/building-c-cpp-programs.md)  
  Содержит ссылки на статьи, в которых описывается процесс сборки программы из командной строки или из интегрированной среды разработки Visual Studio.  
   
- [Справочник по Visual C++](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ [Справочник по Visual C++](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
  Ссылки на разделы с описанием языков C и C++, библиотек, предоставляемых с Visual C++ и объектной моделью расширяемости Visual C++, и ассемблера Microsoft Macro Assembler (MASM).  
   
 ## <a name="see-also"></a>См. также  
- [SDK для Visual Studio](http://msdn.microsoft.com/vstudio/extend)
+ [Пакет SDK для Visual Studio](https://msdn.microsoft.com/vstudio/extend)
