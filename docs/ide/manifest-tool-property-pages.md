@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16a5033a2656cea3f1cecea1e5b97f4ad9c117ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321991"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222211"
 ---
 # <a name="manifest-tool-property-pages"></a>Страницы свойств средства манифестов
 Используйте страницы свойств **Инструмент манифеста**, чтобы задать параметры сборки для mt.exe.  
   
- Дополнительные сведения об инструменте манифеста см. в разделе [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Дополнительные сведения об инструменте манифеста см. в разделе [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
  [Диалоговое окно страниц свойств \<Имя_проекта> "Свойства конфигурации", "Инструмент манифеста", "Общие"](../ide/general-manifest-tool-configuration-properties.md)  
   

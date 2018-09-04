@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 20a20002397e285680927fe519e4eac7b68cc343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323619"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216566"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Выполнение приложения C++ с параметром /clr в более ранней версии среды выполнения
 Если не указано иное, приложение .NET Framework на C++ предназначено для запуска в версии среды CLR, используемой компилятором для сборки приложения. Однако приложение EXE, созданное для одной версии среды выполнения, может запускаться в другой версии, если она предоставляет необходимые функции.  
@@ -37,7 +37,7 @@ ms.locfileid: "33323619"
   
  Если указано несколько версий среды выполнения и приложение выполняется на компьютере с несколькими установленными версиями среды выполнения, приложение использует первую версию, которая указана в файле конфигурации и установлена.  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Настройка приложения для назначения версии .NET Framework](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
+ Дополнительные сведения см. в разделе [Практическое руководство. Настройка приложения для назначения версии .NET Framework](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717).  
   
  Для запуска в версии 1.0 или 1.1 среды CLR приложение, созданное компилятором Visual C++, должно быть скомпилировано с параметром [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md).  
   

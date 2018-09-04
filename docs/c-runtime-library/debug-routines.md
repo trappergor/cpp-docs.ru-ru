@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4efef4c7dfb907120778390874a5e56222889350
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46018d2ec8747b1fac459e1ac1d28b59eea2385b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392306"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203476"
 ---
 # <a name="debug-routines"></a>Подпрограммы отладки
 
@@ -73,7 +73,7 @@ ms.locfileid: "32392306"
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Выделяет указанное количество блоков памяти в куче с дополнительным местом для отладочного заголовка и буферов перезаписи|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Изменяет размер указанного блока памяти в куче, увеличивая его или сжимая|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Освобождает блок памяти в куче|
-|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Создает абсолютный или полный путь для указанного относительного имени пути, используя [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) для выделения памяти.|[System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)|
+|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Создает абсолютный или полный путь для указанного относительного имени пути, используя [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) для выделения памяти.|[System::IO::File::Create](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
 |[_getcwd_dbg, _wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|Получает текущий рабочий каталог, используя [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) для выделения памяти.|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Выделяет блок памяти в куче с дополнительным местом для отладочного заголовка и буферов перезаписи|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Вычисляет размер блока памяти в куче|

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332771"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211216"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Реализация интерфейса (Visual C++)
 Для реализации интерфейса нужно создать проект как COM-приложение ATL или как приложение MFC с поддержкой ATL. Вы можете использовать [Мастер проектов ATL](../atl/reference/atl-project-wizard.md), чтобы создать приложение ATL, или [добавить объект ATL в свое приложение MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md), чтобы реализовать поддержку ATL для приложения MFC.  
@@ -46,7 +46,7 @@ ms.locfileid: "33332771"
 4.  В представлении класса разверните узел "Базы и интерфейсы" объекта, чтобы увидеть реализованный интерфейс, а затем разверните узел этого интерфейса, чтобы просмотреть его доступные свойства, методы и события.  
   
     > [!NOTE]
-    >  Вы также можете использовать [Обозреватель объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) для просмотра членов интерфейса.  
+    >  Вы также можете использовать [Обозреватель объектов](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) для просмотра членов интерфейса.  
   
 ## <a name="see-also"></a>См. также  
  [Создание интерфейса COM](../ide/creating-a-com-interface-visual-cpp.md)   

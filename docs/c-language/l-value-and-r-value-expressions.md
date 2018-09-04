@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8003997d82c59d42813d7852e6c3fadb8f12fb26
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208912"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Выражения L-Value и R-Value
 Выражения, которые ссылаются на адреса памяти, называются выражениями l-значения. L-значение представляет значение locator или left области хранения, что означает, что оно может отображаться слева от знака равенства (**=**). L-значения часто являются идентификаторами.  
@@ -39,7 +39,7 @@ ms.locfileid: "32386268"
   
 -   Выражение выбора члена (**->** или **.**)  
   
--   Унарное косвенное выражение (**\***), которое не ссылается на массив.  
+-   Унарное косвенное выражение (<strong>\*</strong>), которое не ссылается на массив.  
   
 -   Выражение l-значения в скобках.  
   
