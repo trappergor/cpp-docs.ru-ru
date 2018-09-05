@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d62669ffef0ae1e5788dcf4086a1c5b58e7728ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207961"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683356"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Распространение элементов управления ActiveX в Visual C++
 В Visual C++ 6.0 представлены элементы управления ActiveX, которые можно использовать в распространяемых приложениях. Эти элементы управления больше не входят в Visual C++. Согласно лицензионным соглашениям для Visual C++ 6.0, вы можете распространять эти элементы управления с приложениями, разработанными на Visual C++.  
@@ -43,8 +43,6 @@ ms.locfileid: "39207961"
 -   Stdole2.tlb  
   
  Если эти библиотеки DLL отсутствуют в конечной системе, нужно обновить их с помощью установленного механизма для обновления соответствующей операционной системы. Актуальные пакеты обновления для операционных систем Windows можно скачать по адресу [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com).  
-  
- Если приложение использует один из элементов управления ActiveX, подключающийся к базе данных, нужно установить на целевой системе компоненты доступа к данным MDAC. Дополнительные сведения см. в разделе [Распространение файлов поддержки базы данных](../ide/redistributing-database-support-files.md).  
   
  При использовании элемента управления ActiveX, подключающегося к базе данных, также нужно реплицировать имя источника данных на конечном компьютере. Это можно сделать программно с помощью таких функций, как `ConfigDSN`.  
   

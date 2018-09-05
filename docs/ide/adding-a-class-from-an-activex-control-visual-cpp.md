@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b676e35dcf98ef7ae1f41e4a91922d689bd40409
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 505d982d0418e3dfd33b1989e42885e8336aafa8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202143"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687391"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>Добавление класса из элемента управления ActiveX (Visual C++)
 Этот мастер используется для создания класса MFC из интерфейса в доступном элементе управления ActiveX. Вы можете добавить класс MFC для [приложения MFC](../mfc/reference/creating-an-mfc-application.md), [библиотеки DLL MFC](../mfc/reference/creating-an-mfc-dll-project.md) или [элемента управления ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "43202143"
   
 ### <a name="to-add-an-mfc-class-from-an-activex-control"></a>Добавление класса MFC из элемента управления ActiveX  
   
-1.  В **обозревателе решений** или [представлении классов](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) щелкните правой кнопкой мыши имя проекта, куда вы хотите добавить класс элемента управления ActiveX.  
+1.  В **обозревателе решений** или [представлении классов](/visualstudio/ide/viewing-the-structure-of-code) щелкните правой кнопкой мыши имя проекта, куда вы хотите добавить класс элемента управления ActiveX.  
   
 2.  В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.  
   

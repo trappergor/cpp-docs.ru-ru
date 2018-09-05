@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82a290eb7695bbcd7c03cda0351445519352e80a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213537"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677728"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Развертывание с помощью технологии ClickOnce для приложений Visual C++
 Visual Studio предоставляет две различных технологии развертывания приложений Windows: ClickOnce и [установщик Windows](/windows/desktop/Msi/windows-installer-portal).  
@@ -53,7 +53,6 @@ Visual Studio предоставляет две различных технол�
  [Makecert.exe (средство создания сертификатов)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [Развертывание классических приложений](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Развертывание с помощью установщика Windows](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Создание пакетов загрузчика](/visualstudio/deployment/creating-bootstrapper-packages)   
  [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   

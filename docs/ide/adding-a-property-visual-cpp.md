@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e121cf9738910b105f5bb1933592e67d334f8937
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212799"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685330"
 ---
 # <a name="adding-a-property-visual-c"></a>Добавление свойства (Visual C++)
 Вы можете использовать [мастер добавления свойства](../ide/names-add-property-wizard.md) для добавления свойства в интерфейс в проекте.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Добавление свойства в объект  
   
-1.  В [представлении классов](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) щелкните правой кнопкой мыши имя интерфейса, в который нужно добавить свойство.  
+1.  В [представлении классов](/visualstudio/ide/viewing-the-structure-of-code) щелкните правой кнопкой мыши имя интерфейса, в который нужно добавить свойство.  
   
     > [!NOTE]
     >  Вы также можете добавлять свойства в disp-интерфейсы, которые, если только проект не имеет атрибуты, вложены в узел библиотеки.  

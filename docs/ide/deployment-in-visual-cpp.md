@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7e82a384e3b2e8ca446843c91984e78754d6cc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 468ce7d65e31a70192e1a48bf21126dd96a1936e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204064"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678916"
 ---
 # <a name="deployment-in-visual-c"></a>Развертывание в Visual C++
 
@@ -58,7 +58,7 @@ ms.locfileid: "43204064"
 
 ## <a name="troubleshooting-deployment-issues"></a>Устранение неполадок развертывания
 
-Порядок загрузки библиотек Visual C++ зависит от системы. Чтобы выявить причины неполадок загрузчика, используйте средство depends.exe или where.exe. Дополнительные сведения см. в разделе [Порядок поиска библиотеки динамической компоновки (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx).
+Порядок загрузки библиотек Visual C++ зависит от системы. Чтобы выявить причины неполадок загрузчика, используйте средство depends.exe или where.exe. Дополнительные сведения см. в разделе [Порядок поиска библиотеки динамической компоновки (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order).
 
 ## <a name="see-also"></a>См. также
 

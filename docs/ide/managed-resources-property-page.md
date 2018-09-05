@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2fe0896a8fbd8b8c0a8f68847ee138017eaa36b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e88f7ccf6f510ad5bcc7178af87714ca22a97252
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215505"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688615"
 ---
 # <a name="managed-resources-property-page"></a>страница свойств управляемых ресурсов
 Включает параметры для компилятора ресурсов.  
@@ -42,6 +42,6 @@ ms.locfileid: "43215505"
  Сведения о доступе к страницам свойств **Управляемые ресурсы** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>См. также  
- [Использование компилятора ресурсов (командная строка RC)](https://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [Использование компилятора ресурсов (командная строка RC)](/windows/desktop/menurc/using-rc-the-rc-command-line-)   
  [Страницы свойств](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (внедрение управляемого ресурса)](../build/reference/assemblyresource-embed-a-managed-resource.md)
