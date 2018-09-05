@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a7f6ad0620591e51d1382cd1199c52dde222ac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b3776f95db1a1e6fad8f885e23bb0dc8836a31ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882771"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681662"
 ---
 # <a name="catltransactionmanager-class"></a>Класс CAtlTransactionManager
 Класс CAtlTransactionManager предоставляет оболочку для функции диспетчера транзакций ядра (KTM).  
@@ -58,14 +58,14 @@ class CAtlTransactionManager;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[~ CAtlTransactionManager](#dtor)|Деструктор CAtlTransactionManager.|  
 |[CAtlTransactionManager](#catltransactionmanager)|Конструктор CAtlTransactionManager.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Закрыть](#close)|Закрывает один дескриптор транзакции.|  
 |[Фиксации](#commit)|Запросы, что транзакция быть зафиксирована.|  
@@ -86,7 +86,7 @@ class CAtlTransactionManager;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[m_bFallback](#m_bfallback)|Значение TRUE, если резервный вариант поддерживается; Значение FALSE в противном случае.|  
 |[m_hTransaction](#m_htransaction)|Дескриптор транзакции.|  
@@ -397,7 +397,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*открываемый раздел hKey*|Дескриптор, чтобы открыть раздел реестра.|  
 |*lpSubKey*|Имя ключа для удаления.|  
@@ -467,7 +467,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  Имя файла или каталога.  
   
  *dwAttributes*  
- Атрибуты файла, которые следует задать для файла. Дополнительные сведения см. в разделе [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699).  
+ Атрибуты файла, которые следует задать для файла. Дополнительные сведения см. в разделе [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda).  
   
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `SetFileAttributesTransacted` функции.  
