@@ -9,16 +9,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131724"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680543"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Новые возможности Visual C++ в Visual Studio 2017
 
-В Visual Studio 2017 реализовано множество изменений и исправлений для среды Visual C++. Мы исправили более 250 ошибок и сообщили о проблемах с компилятором и средствами, многие из которых были отправлены клиентами с помощью инструментов [Сообщить о проблеме](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) и [Отправить предложение](https://visualstudio.uservoice.com/) в разделе **Отправить отзыв**. Спасибо, что сообщаете нам об ошибках! Дополнительные сведения о новых возможностях всех компонентов Visual Studio см. на странице [Новые возможности в Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=834481).
+В Visual Studio 2017 реализовано множество изменений и исправлений для среды Visual C++. Мы исправили более 250 ошибок и сообщили о проблемах с компилятором и средствами, многие из которых были отправлены клиентами с помощью инструментов [Сообщить о проблеме](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) и [Отправить предложение](https://visualstudio.uservoice.com/) в разделе **Отправить отзыв**. Спасибо, что сообщаете нам об ошибках! Дополнительные сведения о новых возможностях всех компонентов Visual Studio см. на странице [Новые возможности в Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio).
 
 <!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 

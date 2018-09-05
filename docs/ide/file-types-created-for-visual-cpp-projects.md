@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc0bc1789e4fc4f11b9d0becfda656a42d0ec95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 29ab603001405056626af0debbde7b6f8ef78704
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214200"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690579"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Типы файлов, создаваемых для проектов Visual C++
 В этом разделе описываются все типы файлов, связанных с проектами Visual C++ для классических приложений. То, какие файлы фактически войдут в ваш проект, зависит от типа проекта и параметров, выбранных при работе с мастером.  
@@ -73,7 +73,7 @@ ms.locfileid: "43214200"
 |HXC|Проект|Файл справки проекта.|  
 |ICO|Ресурс|Растровый графический файл значка.|  
 |IDB|Компиляция|Файл состояния, содержащий информацию о зависимостях между файлами исходного кода и определениями классов, которые могут использоваться компилятором в ходе минимального перепостроения и добавочной компиляции. Для задания имени IDB-файла используйте параметр компилятора [/Fd](../build/reference/fd-program-database-file-name.md) . Дополнительные сведения см. в разделе [/Gm (включение минимального перепостроения)](../build/reference/gm-enable-minimal-rebuild.md) .|  
-|IDL|Компиляция|Файл языка определения интерфейса. Дополнительные сведения см. в разделе [Файл определения интерфейса (IDL-файл)](https://msdn.microsoft.com/library/windows/desktop/aa378712) для пакета Windows SDK.|  
+|IDL|Компиляция|Файл языка определения интерфейса. Дополнительные сведения см. в разделе [Файл определения интерфейса (IDL-файл)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) для пакета Windows SDK.|  
 |ILK|Компоновка|Файл инкрементной компоновки. Дополнительные сведения см. в разделе [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) .|  
 |MAP|Компоновка|Текстовый файл, содержащий информацию для компоновщика. Для задания имени MAP-файла используйте параметр компилятора [/Fm](../build/reference/fm-name-mapfile.md) . Дополнительные сведения см. в разделе [/MAP](../build/reference/map-generate-mapfile.md) .|  
 |MFCRIBBON-MS|Ресурс|Файл ресурсов, содержащий код XML, который определяет кнопки, элементы управления и атрибуты в ленте. Дополнительные сведения см. в разделе [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
@@ -81,7 +81,7 @@ ms.locfileid: "43214200"
 |PCH|Отладка|Файл предкомпилированных заголовков.|  
 |RC, RC2|Ресурс|[Файлы скриптов ресурсов](../windows/working-with-resource-files.md) для генерации ресурсов.|  
 |SBR|Компиляция|Промежуточный файл обозревателя исходного кода. Входной файл для [BSCMAKE](../build/reference/bscmake-options.md).|  
-|.SLN|Решение|Файл [решения](https://msdn.microsoft.com/a45c299d-69f5-4b67-879d-1383417df0a7).|  
+|.SLN|Решение|Файл [решения](/visualstudio/ide/solutions-and-projects-in-visual-studio).|  
 |SUO|Решение|Файл параметров решения.|  
 |TXT|Ресурс|Текстовый файл, обычно README-файл.|  
 |VAP|Проект|Файл проекта Visual Studio Analyzer.|  

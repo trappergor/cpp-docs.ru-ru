@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53d87c6f0109708023f57e2d30ae38fa4f4f574b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222664"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677332"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Параметры приложения, мастер проекта Makefile
 Укажите сведения для проекта. Заданные параметры отображаются на [странице свойств](../ide/working-with-project-properties.md) проекта. Создав проект, вы можете просматривать и изменять каждый из следующих параметров на странице **Nmake** страницы свойств проекта.  
@@ -44,4 +44,4 @@ ms.locfileid: "43222664"
  [Типы проектов Visual C++](../ide/visual-cpp-project-types.md)   
  [Создание проектов для рабочего стола с помощью мастеров приложений](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Страницы свойств](../ide/property-pages-visual-cpp.md)   
- [Развертывание приложений](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ 
