@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cecde0bfd829cd55fb15e53fb07aa8b6645fce0e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cb6010d47be6fe2c771ac407bff26729c772f14
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678411"
 ---
 # <a name="cwnd-class"></a>Класс CWnd
 
@@ -849,13 +849,13 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWnd::CWnd](#cwnd)|Создает объект `CWnd`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWnd::accDoDefaultAction](#accdodefaultaction)|Вызывается платформой для выполнения объектом действия по умолчанию.|
 |[CWnd::accHitTest](#acchittest)|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана.|
@@ -1098,7 +1098,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWnd::Default](#default)|Вызывает процедуру окна по умолчанию, обеспечивающую стандартную обработку любых сообщений окна, не обработанных приложением.|
 |[CWnd::DefWindowProc](#defwindowproc)|Вызывает процедуру окна по умолчанию, обеспечивающую стандартную обработку любых сообщений окна, не обработанных приложением.|
@@ -1234,8 +1234,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|Вызывается при изменении размера клиентской области окна буфера обмена.|
 |[CWnd::OnSizing](#onsizing)|Указывает, что пользователь изменят размер прямоугольника.|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|Вызывается из диспетчера печати при каждом добавлении задачи в очередь диспетчера или удалении задания из нее.|
-|[CWnd::OnStyleChanged](#onstylechanged)|Указывает, что [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) функции Windows был изменен один или несколько стилей окон.|
-|[CWnd::OnStyleChanging](#onstylechanging)|Указывает, что [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) функции Windows будет изменена один или несколько стилей окон.|
+|[CWnd::OnStyleChanged](#onstylechanged)|Указывает, что [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) функции Windows был изменен один или несколько стилей окон.|
+|[CWnd::OnStyleChanging](#onstylechanging)|Указывает, что [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) функции Windows будет изменена один или несколько стилей окон.|
 |[CWnd::OnSysChar](#onsyschar)|Вызывается, когда нажатие клавиши преобразуется в системный символ.|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|Вызывается для всех окон верхнего уровня при изменении параметра системного цвета.|
 |[CWnd::OnSysCommand](#onsyscommand)|Вызывается, когда пользователь выбирает команду в оконном меню или нажимает кнопку развертывания или свертывания.|
@@ -1247,7 +1247,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTimer](#ontimer)|Вызывается после каждого интервала, указанного в [SetTimer](#settimer).|
 |[CWnd::OnTouchInput](#ontouchinput)|Обработка одного ввода Windows touch.|
 |[CWnd::OnTouchInputs](#ontouchinputs)|Обработка входных данных Windows touch.|
-|[CWnd::OnUniChar](#onunichar)|Вызывается при нажатии клавиши. То есть текущее окно имеет фокус клавиатуры и [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) преобразовываются сообщение [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) функции.|
+|[CWnd::OnUniChar](#onunichar)|Вызывается при нажатии клавиши. То есть текущее окно имеет фокус клавиатуры и [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) преобразовываются сообщение [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) функции.|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|Вызывается при уничтожении раскрывающегося меню или подменю.|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|Вызывается, чтобы изменить состояние пользовательского интерфейса указанного окна и всех его дочерних окон.|
 |[CWnd::OnUserChanged](#onuserchanged)|Вызывается при входе пользователя в систему или выходе из нее.|
@@ -1269,7 +1269,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWnd::operator HWND](#operator_hwnd)|Вызывается для получения дескриптора окна.|
 |[CWnd::operator! =](#operator_neq)|Определяет, если окно не совпадает с дескриптором окна [m_hWnd](#m_hwnd).|
@@ -1277,7 +1277,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWnd::m_hWnd](#m_hwnd)|Указывает дескриптор HWND, прикрепленный к этому `CWnd`.|
 
@@ -2244,7 +2244,7 @@ void CreateGrayCaret(
 
 Параметры *nWidth* и *nHeight* задать ширину и высоту (в логических единицах) курсор; точные значения ширины и высоты (в пикселях) зависят от режима сопоставления.
 
-Граница окна ширины или высоты системы можно получить с [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) функции Windows с индексами SM_CXBORDER и SM_CYBORDER. С помощью границы окна ширины или высоты гарантирует, что курсор будет отображаться на экране с высоким разрешением.
+Граница окна ширины или высоты системы можно получить с [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) функции Windows с индексами SM_CXBORDER и SM_CYBORDER. С помощью границы окна ширины или высоты гарантирует, что курсор будет отображаться на экране с высоким разрешением.
 
 `CreateGrayCaret` Автоматически функция-член уничтожает предыдущую фигуру курсор, если таковое имеется, независимо от того, какое окно является владельцем курсора. После создания курсор является изначально скрытым. Для отображения курсора, [ShowCaret](#showcaret) необходимо вызвать функцию-член.
 
@@ -2278,7 +2278,7 @@ void CreateSolidCaret(
 
 Параметры *nWidth* и *nHeight* задать ширину и высоту (в логических единицах) курсор; точные значения ширины и высоты (в пикселях) зависят от режима сопоставления.
 
-Граница окна ширины или высоты системы можно получить с [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) функции Windows с индексами SM_CXBORDER и SM_CYBORDER. С помощью границы окна ширины или высоты гарантирует, что курсор будет отображаться на экране с высоким разрешением.
+Граница окна ширины или высоты системы можно получить с [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) функции Windows с индексами SM_CXBORDER и SM_CYBORDER. С помощью границы окна ширины или высоты гарантирует, что курсор будет отображаться на экране с высоким разрешением.
 
 `CreateSolidCaret` Автоматически функция-член уничтожает предыдущую фигуру курсор, если таковое имеется, независимо от того, какое окно является владельцем курсора. После создания курсор является изначально скрытым. Для отображения курсора, [ShowCaret](#showcaret) необходимо вызвать функцию-член.
 
@@ -2767,7 +2767,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>Примечания
 
-Поддержка Active Accessibility MFC по умолчанию достаточно для стандартных окон и элементов управления, включая элементы управления ActiveX; Тем не менее если ваш `CWnd`-производный класс содержит элементы пользовательского интерфейса nonwindowed, MFC не имеет возможности узнать о них. В этом случае необходимо переопределить соответствующий [функции-члены Active Accessibility](https://msdn.microsoft.com/68af04ac-4eb9-4b7d-b33f-c45512097a74) в вашем классе, и необходимо вызвать `EnableActiveAccessibility` в конструктор класса.
+Поддержка Active Accessibility MFC по умолчанию достаточно для стандартных окон и элементов управления, включая элементы управления ActiveX; Тем не менее если ваш `CWnd`-производный класс содержит элементы пользовательского интерфейса nonwindowed, MFC не имеет возможности узнать о них. В этом случае необходимо переопределить соответствующий [функции-члены Active Accessibility](/windows/desktop/winauto/sdk-components) в вашем классе, и необходимо вызвать `EnableActiveAccessibility` в конструктор класса.
 
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout
 
@@ -5011,7 +5011,7 @@ CDC* GetWindowDC();
 
 `GetWindowDC` предназначен для использования для рисования специальных эффектов в `CWnd` неклиентской области. Рисование в неклиентской области любого периода не рекомендуется.
 
-[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) Windows функция может использоваться для получения размеры различные части неклиентской области, такие как заголовок окна, меню и полосы прокрутки.
+[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows функция может использоваться для получения размеры различные части неклиентской области, такие как заголовок окна, меню и полосы прокрутки.
 
 После завершения рисования [ReleaseDC](#releasedc) необходимо вызвать функцию-член для освобождения контекста отображения. Сбой при освобождении контекста отображения серьезно повлияет на рисование запрашивается приложением из-за ограничений на количество контексты устройств, которые могут быть открыты одновременно.
 
@@ -5441,7 +5441,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 Когда `IsDialogMessage` функция обрабатывает сообщение, он проверяет наличие сообщений клавиатуры и преобразует их в команды выбора для соответствующее диалоговое окно. Например клавиши TAB выбирает следующий элемент управления или группа элементов управления и Стрелка вниз выбирает следующий элемент управления в группе.
 
-Нельзя передавать сообщения, обрабатываемые `IsDialogMessage` для [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) или [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows, так как он уже обработан.
+Нельзя передавать сообщения, обрабатываемые `IsDialogMessage` для [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) или [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows, так как он уже обработан.
 
 ##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked
 
@@ -5738,9 +5738,9 @@ BOOL ModifyStyle(
 
 ### <a name="remarks"></a>Примечания
 
-Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или (&#124;) оператор. См. в разделах [стили окна](https://msdn.microsoft.com/library/windows/desktop/ms632600) и [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK для Windows, сведения о стилях доступное окно.
+Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или (&#124;) оператор. См. в разделах [стили окна](https://msdn.microsoft.com/library/windows/desktop/ms632600) и [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете SDK для Windows, сведения о стилях доступное окно.
 
-Если *nFlags* не равно нулю, `ModifyStyle` вызывает функцию Windows API [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) и перерисовывает окна путем объединения *nFlags* с помощью следующие четыре стиля флаги:
+Если *nFlags* не равно нулю, `ModifyStyle` вызывает функцию Windows API [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) и перерисовывает окна путем объединения *nFlags* с помощью следующие четыре стиля флаги:
 
 - SWP_NOSIZE сохраняет текущий размер.
 
@@ -5787,9 +5787,9 @@ BOOL ModifyStyleEx(
 
 ### <a name="remarks"></a>Примечания
 
-Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или (&#124;) оператор. См. в разделах [расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) в этой книге и [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете SDK для Windows, сведения о доступных расширенные стили
+Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или (&#124;) оператор. См. в разделах [расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) в этой книге и [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете SDK для Windows, сведения о доступных расширенные стили
 
-Если *nFlags* не равно нулю, `ModifyStyleEx` вызывает функцию Windows API [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) и перерисовывает окна путем объединения *nFlags* с помощью следующие четыре стиля флаги:
+Если *nFlags* не равно нулю, `ModifyStyleEx` вызывает функцию Windows API [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) и перерисовывает окна путем объединения *nFlags* с помощью следующие четыре стиля флаги:
 
 - SWP_NOSIZE сохраняет текущий размер.
 
@@ -5983,7 +5983,7 @@ afx_msg void OnAppCommand(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *pWnd*|Указатель на `CWnd` объект, который представляет окно, где пользователь нажал кнопку команд или нажал клавишу команды. Это окно может быть дочернего окна, окна получения сообщения.|
 |[in] *nCmd*|Указывает команду приложения. Список возможных значений см. в разделе команд в *cmd* раздел *lParam* параметр [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
@@ -6271,7 +6271,7 @@ afx_msg void OnColorizationColorChanged(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *dwColorizationColor*|Указывает новый цвет раскраски.<br /><br /> Формат цвета — шестнадцатеричное число из 0xAARRGGBB форму, где каждый из четырех компонентов в диапазоне от 0x00 до 0xFF. Компонент AA является альфа-значение, RR имеет красный цвет, GG отображается зеленым цветом и BB — синий.|
 |[in] *bOpacity*|Значение TRUE, если новый цвет смешивается с прозрачностью; Значение FALSE, если это не так.|
@@ -6556,7 +6556,7 @@ afx_msg void OnDeadChar(
 *nFlags*  
 Указывает код сканирования, код ключа перехода, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |0-7|Сканирование кода (значение зависит от изготовителя Оборудования). Младший байт старшее слово.|
 |8|Расширенные ключа, например функциональной клавиши или клавиши на цифровой клавиатуре (1, если он представляет собой расширенный ключ; в противном случае — 0).|
@@ -7125,7 +7125,7 @@ afx_msg void OnHotKey(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nHotKeyId*|Идентификатор для сочетания клавиш, которая создала сообщение. Если сообщение было создано системный сочетания клавиш, этот параметр будет иметь одно из следующих значений:<br /><br /> Была нажата клавиша "Горячий" - IDHOT_SNAPDESKTOP - desktop оснастки.<br />Была нажата клавиша "Горячий" - IDHOT_SNAPWINDOW - окно оснастки.|
 |[in] *nKey1*|Побитовое сочетание (OR) флагов, которое указывает ключи, которые были нажаты в сочетании с ключом, заданным по *nKey2* параметра. Допустимые значения:<br /><br /> -Удерживании MOD_ALT - либо клавишу ALT.<br />-Удерживании MOD_CONTROL - либо клавишу CTRL.<br />-Удерживании MOD_SHIFT - либо клавишу SHIFT.<br />-MOD_WIN - или ключ WINDOWS оставалась на удержании. Эти ключи обозначены логотипом Microsoft Windows.|
@@ -7319,7 +7319,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *uFlag*|Этот флаг может содержать следующие значения:<br /><br /> Новое устройство - GIDC_ARRIVAL - объект был добавлен в систему.<br />Устройства - GIDC_REMOVAL - объект был удален из системы.|
 
@@ -7342,7 +7342,7 @@ afx_msg void OnInputLangChange(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nCharSet*|Набор символов нового языкового стандарта. Дополнительные сведения см. в разделе *азиатских языков* параметр [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.|
 |[in] *nLocaleId*|Идентификатор языка ввода. Дополнительные сведения см. в разделе [константы идентификатор языка и строк](/windows/desktop/Intl/language-identifier-constants-and-strings).|
@@ -7366,7 +7366,7 @@ afx_msg void OnInputLangChangeRequest(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nFlags*|Побитовое сочетание (OR) флагов, указывающие на новый язык был выбран из предыдущей или следующей языкового стандарта в списке установленных языковых стандартов, или что новый язык ввода раскладки клавиатуры может использоваться с набором символов системы.<br /><br /> Возможными значениями являются INPUTLANGCHANGE_BACKWARD INPUTLANGCHANGE_FORWARD и INPUTLANGCHANGE_SYSCHARSET.|
 |[in] *nLocaleId*|Идентификатор языка ввода. Дополнительные сведения см. в разделе [константы идентификатор языка и строк](/windows/desktop/Intl/language-identifier-constants-and-strings).|
@@ -7400,7 +7400,7 @@ afx_msg void OnKeyDown(
 *nFlags*  
 Указывает код сканирования, код ключа перехода, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |0-7|Сканирование кода (значение зависит от изготовителя Оборудования).|
 |8|Расширенные ключа, например функциональной клавиши или клавиши на цифровой клавиатуре (1, если он представляет собой расширенный ключ).|
@@ -7445,7 +7445,7 @@ afx_msg void OnKeyUp(
 *nFlags*  
 Указывает код сканирования, код ключа перехода, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |0-7|Сканирование кода (значение зависит от изготовителя Оборудования). Младший байт старшее слово.|
 |8|Расширенные ключа, например функциональной клавиши или клавиши на цифровой клавиатуре (1, если он представляет собой расширенный ключ; в противном случае — 0).|
@@ -7798,7 +7798,7 @@ afx_msg UINT OnMenuDrag(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nPos*|Индекс позиции элемента меню, когда начинается операция перетаскивания.|
 |[in] *pMenu*|Указатель на [CMenu](../../mfc/reference/cmenu-class.md) , содержащий элемент меню.|
@@ -7827,7 +7827,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *pMenu*|Указатель на [MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo) структуру, содержащую сведения о меню и перетащите указатель мыши находится на.|
 
@@ -7857,7 +7857,7 @@ afx_msg void OnMenuRButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nPos*|Индекс позиции элемента меню правой кнопки мыши на момент выпуска.|
 |[in] *pMenu*|Указатель на [CMenu](../../mfc/reference/cmenu-class.md) , содержащий элемент меню.|
@@ -7975,7 +7975,7 @@ afx_msg void OnMouseHover(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nFlags*|Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
 |[in] *точки*|Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
@@ -7986,7 +7986,7 @@ afx_msg void OnMouseHover(
 
 *NFlags* параметр может быть сочетания клавиш, перечисленные в следующей таблице. Дополнительные сведения см. в разделе [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).
 
-|Клавиша-модификатор|Описание:|
+|Клавиша-модификатор|Описание|
 |------------------|-----------------|
 |MK_CONTROL|Клавиша CTRL нажата.|
 |MK_LBUTTON|Нажата левая кнопка мыши.|
@@ -8012,7 +8012,7 @@ afx_msg void OnMouseHWheel(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nFlags*|Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.<br /><br /> Список флагов, см. в разделе «Параметры сообщения» подзаголовка в [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).|
 |[in] *zDelta*|Указывает расстояние, на которое поворачивается колесико мыши, выраженное в кратные или подразделения WHEEL_DELTA, который является 120. Положительное значение указывает, что колесико вращается вправо; отрицательное значение указывает, что колесико вращается слева.|
@@ -8113,7 +8113,7 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="remarks"></a>Примечания
 
-Если это не переопределено, `OnMouseWheel` вызывает значение по умолчанию [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel). Windows автоматически направляет сообщение в окно элемента управления или дочернего, имеющий фокус. Функция Win32 [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) распространяет сообщение по родительской цепочке для окна, обрабатывает его.
+Если это не переопределено, `OnMouseWheel` вызывает значение по умолчанию [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel). Windows автоматически направляет сообщение в окно элемента управления или дочернего, имеющий фокус. Функция Win32 [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) распространяет сообщение по родительской цепочке для окна, обрабатывает его.
 
 *ZDelta* параметр кратно WHEEL_DELTA, которая установлена на уровне 120. Это значение равно пороговое значение для действия, которые должны выполняться, и одна такая операция (например, прокрутку вперед на одно деление) должны происходить для каждого разностные.
 
@@ -8439,7 +8439,7 @@ afx_msg void OnNcMouseHover(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nHitTest*|Значение проверки нажатия, возвращенное [CWnd::DefWindowProc](#defwindowproc) функционировать в результате обработки [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) сообщения.|
 |[in] *точки*|Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
@@ -8584,7 +8584,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *bIsRendering*|Значение TRUE, если отрисовка диспетчера окон рабочего стола (DWM) включена в неклиентской области окна. Значение FALSE, если отключена подготовки к просмотру.|
 
@@ -8608,7 +8608,7 @@ void OnNcXButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nHitTest*|Значение проверки нажатия, возвращенное [CWnd::DefWindowProc](#defwindowproc) функционировать в результате обработки [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) сообщения.|
 |[in] *nButton*|Значение XBUTTON1 при двойном щелчке по первой кнопки Microsoft Intellimouse X или xbutton2, когда если второй кнопки X выполнен двойной щелчок.|
@@ -8634,7 +8634,7 @@ afx_msg void OnNcXButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nHitTest*|Значение проверки нажатия, возвращенное [CWnd::DefWindowProc](#defwindowproc) функционировать в результате обработки [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) сообщения.|
 |[in] *nButton*|Значение XBUTTON1, если нажата первая кнопка мыши X или xbutton2, когда при втором нажатии кнопки X.|
@@ -8660,7 +8660,7 @@ afx_msg void OnNcXButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nHitTest*|Значение проверки нажатия, возвращенное [CWnd::DefWindowProc](#defwindowproc) функционировать в результате обработки [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) сообщения.|
 |[in] *nButton*|Значение XBUTTON1 Если выпущена первая кнопка мыши X или xbutton2, когда если второй кнопки мыши X.|
@@ -8685,7 +8685,7 @@ afx_msg void OnNextMenu(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nKey*|Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.<br /><br /> Список флагов, см. в разделе «Параметры сообщения» подзаголовка в [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).|
 |[in] *lpMdiNextMenu*|Указатель на [MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu) структуру, содержащую сведения о меню, чтобы активировать.|
@@ -8743,7 +8743,7 @@ afx_msg UINT OnNotifyFormat(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *pWnd*|Указатель на `CWnd` , представляющий окно отправку [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) сообщения.<br /><br /> Этот параметр является указатель на элемент управления, если *nCommand* параметр является NF_QUERY или указатель на родительское окно элемента управления, если *nCommand* является NF_REQUERY.|
 |[in] *nCommand*|Значение команды, специализирующейся WM_NOTIFY-сообщение. Допустимые значения:<br /><br /> -NF_QUERY-<br />     Сообщение является запрос, чтобы определить, следует ли использовать в сообщении WM_NOTIFY структуры формата ANSI или Юникода. Это сообщение отправляется из элемента управления своему родительскому окну при создании элемента управления и в ответ на форму NF_REQUERY этого сообщения.<br />-NF_REQUERY-<br />     Сообщение — это запрос для отправки формы NF_QUERY сообщения своему родительскому окну элемента управления. Этот запрос отправляется из родительского окна с запросом, элемент управления для запроса родительского о типе структуры для использования в сообщении WM_NOTIFY. Если *nCommand* параметр равен NF_REQUERY, возвращаемое значение является результатом операции обновление.|
@@ -8908,7 +8908,7 @@ afx_msg UINT OnPowerBroadcast(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nPowerEvent*|Событие управления питанием.|
 |[in] *nEventData*|Данные событий.|
@@ -9020,7 +9020,7 @@ afx_msg void OnRawInput(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nInputCode*|Укажите код, указывающее, произошла ли входные данные, когда приложение находилось в фоновом режиме, или нет. В любом случае приложение должно вызвать [CWnd::DefWindowProc](#defwindowproc) , система может выполнить очистку.<br /><br /> Этот параметр может принимать одно из следующих значений:<br /><br /> Выполнен - RIM_INPUT - ввод, когда приложение находилось на переднем плане.<br />Приложение не было на переднем плане произошла - RIM_INPUTSINK - ввода.|
 |[in] *hRawInput*|Дескриптор [RAWINPUT](https://msdn.microsoft.com/library/windows/desktop/ms645562) структуру, содержащую необработанные входные данные с устройства.|
@@ -9206,7 +9206,7 @@ afx_msg void OnSessionChange(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nSessionState*|Код состояния описывает изменение состояния сеанса.|
 |[in] *nId*|Идентификатор сеанса.|
@@ -9464,7 +9464,7 @@ afx_msg void OnSpoolerStatus(
 
 ##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged
 
-Платформа вызывает эту функцию-член после [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) функции был изменен один или несколько стилей окон.
+Платформа вызывает эту функцию-член после [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) функции был изменен один или несколько стилей окон.
 
 ```
 afx_msg void OnStyleChanged(
@@ -9491,7 +9491,7 @@ afx_msg void OnStyleChanged(
 
 ##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging
 
-Платформа вызывает эту функцию-член при [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) функция может изменить один или несколько стилей окон.
+Платформа вызывает эту функцию-член при [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) функция может изменить один или несколько стилей окон.
 
 ```
 afx_msg void OnStyleChanging(
@@ -9853,7 +9853,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 ### <a name="remarks"></a>Примечания
 
-[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows функция отправляет [WM_TIMER](/windows/desktop/winmsg/wm-timer) сообщения при отсутствии других сообщений в очередь сообщений приложения.
+[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows функция отправляет [WM_TIMER](/windows/desktop/winmsg/wm-timer) сообщения при отсутствии других сообщений в очередь сообщений приложения.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
@@ -9960,7 +9960,7 @@ virtual BOOL OnTouchInputs(
 
 ##  <a name="onunichar"></a>  CWnd::OnUniChar
 
-Эта функция-член вызывается платформой при нажатии клавиши. То есть текущее окно имеет фокус клавиатуры и [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) преобразовываются сообщение [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) функции.
+Эта функция-член вызывается платформой при нажатии клавиши. То есть текущее окно имеет фокус клавиатуры и [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) преобразовываются сообщение [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) функции.
 
 ```
 afx_msg void OnUniChar(
@@ -9971,7 +9971,7 @@ afx_msg void OnUniChar(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nChar*|Указывает код символа нажатой клавише.|
 |[in] *nRepCnt*|Указывает число повторов для текущего сообщения. Значение — количество раз, когда нажатие клавиши является autorepeated в результате пользователь, удерживая нажатой клавишу. Если нажатие клавиши удерживается достаточно длинным, отправляются несколько сообщений. Тем не менее число повторов не является накопительным.|
@@ -9996,7 +9996,7 @@ afx_msg void OnUnInitMenuPopup(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *pMenu*|Указатель на [CMenu](../../mfc/reference/cmenu-class.md) , представляющий меню или подменю.|
 |[in] *nFlags*|Меню, который был удален. В настоящее время он может быть только меню «Окно» MF_SYSMENU.|
@@ -10194,7 +10194,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *bIsMaximized*|Значение TRUE, если текущее окно разворачиваться и значение FALSE, если это не так.|
 
@@ -10207,7 +10207,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged
 
-Платформа вызывает эту функцию-член, при изменении размера, положения или Z-порядка в результате вызова [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) функция-член или другой функции управления окнами.
+Платформа вызывает эту функцию-член, при изменении размера, положения или Z-порядка в результате вызова [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функция-член или другой функции управления окнами.
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10227,7 +10227,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 
 ##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging
 
-Платформа вызывает эту функцию-член, когда размера, положения или Z-порядок собирается измениться в результате вызова [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) функция-член или другой функции управления окнами.
+Платформа вызывает эту функцию-член, когда размера, положения или Z-порядок собирается измениться в результате вызова [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функция-член или другой функции управления окнами.
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10322,7 +10322,7 @@ afx_msg void OnXButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nFlags*|Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
 |[in] *nButton*|Значение XBUTTON1 при двойном щелчке по первой кнопки Microsoft Intellimouse X или xbutton2, когда если второй кнопки X выполнен двойной щелчок.|
@@ -10334,7 +10334,7 @@ afx_msg void OnXButtonDblClk(
 
 *NFlags* параметр может быть сочетания клавиш, перечисленные в следующей таблице. Дополнительные сведения см. в разделе [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).
 
-|Клавиша-модификатор|Описание:|
+|Клавиша-модификатор|Описание|
 |------------------|-----------------|
 |MK_CONTROL|Клавиша CTRL нажата.|
 |MK_LBUTTON|Нажата левая кнопка мыши.|
@@ -10360,7 +10360,7 @@ afx_msg void OnXButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nFlags*|Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
 |[in] *nButton*|Значение XBUTTON1, если была нажата первая кнопка Microsoft Intellimouse X или xbutton2, когда если второй была нажата кнопка X.|
@@ -10372,7 +10372,7 @@ afx_msg void OnXButtonDown(
 
 *NFlags* параметр может быть сочетания клавиш, перечисленные в следующей таблице. Дополнительные сведения см. в разделе [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).
 
-|Клавиша-модификатор|Описание:|
+|Клавиша-модификатор|Описание|
 |------------------|-----------------|
 |MK_CONTROL|Клавиша CTRL нажата.|
 |MK_LBUTTON|Нажата левая кнопка мыши.|
@@ -10398,7 +10398,7 @@ afx_msg void OnXButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |[in] *nFlags*|Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
 |[in] *nButton*|Значение XBUTTON1, если первая кнопка Microsoft Intellimouse X был выполнен двойной щелчок или xbutton2, когда если второй кнопки X был выполнен двойной щелчок.|
@@ -10410,7 +10410,7 @@ afx_msg void OnXButtonUp(
 
 *NFlags* параметр может быть сочетания клавиш, перечисленные в следующей таблице. Дополнительные сведения см. в разделе [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).
 
-|Клавиша-модификатор|Описание:|
+|Клавиша-модификатор|Описание|
 |------------------|-----------------|
 |MK_CONTROL|Клавиша CTRL нажата.|
 |MK_LBUTTON|Нажата левая кнопка мыши.|
@@ -10602,7 +10602,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows.
+Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11056,7 +11056,7 @@ int ScrollWindowEx(
 
 Если [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) и [SW_ERASE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) не указаны, `ScrollWindowEx` функция-член не делает недействительными вышел из области. Если любой из этих флагов, `ScrollWindowEx` делает недействительным этой области. Области не обновляется, пока приложение не вызовет [UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow) функция-член, вызывает [RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) функция-член (указание [RDW_UPDATENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow) или [ RDW_ERASENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)), или получает [WM_PAINT](/windows/desktop/gdi/wm-paint) сообщения из очереди приложения.
 
-Если окно имеет [WS_CLIPCHILDREN](https://msdn.microsoft.com/library/windows/desktop/ms632679) стиль, возвращенный областях, указанных по *prgnUpdate* и *lpRectUpdate* представляют общей области прокручиваемого окна, которое необходимо обновить, включая все области в дочерние окна, которые необходимо обновить.
+Если окно имеет [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) стиль, возвращенный областях, указанных по *prgnUpdate* и *lpRectUpdate* представляют общей области прокручиваемого окна, которое необходимо обновить, включая все области в дочерние окна, которые необходимо обновить.
 
 Если [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) установлен флаг, Windows не будут правильно экрана Если вышел за частью дочернего окна. В части прокручиваемого дочернего окна, который находится за пределами исходного прямоугольника, не удаляются и не будет правильно перерисовываться в поле нового назначения. Используйте [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) функцию Windows для перемещения дочерних окон, которые не находятся в полностью *lpRectScroll* прямоугольник. Курсор перемещен в том случае, если установлен флаг SW_SCROLLCHILDREN и прямоугольника курсор пересекает прямоугольник прокрутки.
 
@@ -11497,7 +11497,7 @@ BOOL SetLayeredWindowAttributes(
 Альфа-значение, используемое для описания непрозрачности слоистых окон. Дополнительные сведения см. в разделе `SourceConstantAlpha` членом [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) структуры. Когда *bAlpha* равно 0, окно является полностью прозрачным. Когда *bAlpha* составляет 255, окна является непрозрачным.
 
 *dwFlags*  
-Указывает действия, предпринимаемые. Этот параметр может быть один или несколько из следующих значений. Список возможных значений см. в разделе [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540).
+Указывает действия, предпринимаемые. Этот параметр может быть один или несколько из следующих значений. Список возможных значений см. в разделе [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -11505,7 +11505,7 @@ BOOL SetLayeredWindowAttributes(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член эмулирует работу функции [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540), как описано в пакете Windows SDK.
+Эта функция-член эмулирует работу функции [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes), как описано в пакете Windows SDK.
 
 ##  <a name="setmenu"></a>  CWnd::SetMenu
 
