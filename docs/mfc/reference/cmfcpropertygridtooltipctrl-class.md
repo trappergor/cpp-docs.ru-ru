@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 574da3d370a403aa74ba8c438b7c175bee19f198
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211969"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676784"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Класс CMFCPropertyGridToolTipCtrl
 Реализует подсказку, управления, [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) используется для отображения подсказки.  
@@ -52,7 +52,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Создает объект `CMFCPropertyGridToolTipCtrl`.|  
 |`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Деструктор.|  
   
@@ -60,12 +60,12 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCPropertyGridToolTipCtrl::Create](#create)|Создает окно для элемента управления tooltip.|  
 |[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Отключает и скрывает элемент управления tooltip.|  
 |[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Возвращает координаты последней позиции элемента управления tooltip.|  
 |[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Скрывает элемент управления tooltip.|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Задает расстояние между текстом всплывающей подсказки и границы окна всплывающей подсказки.|  
 |[CMFCPropertyGridToolTipCtrl::Track](#track)|Отображает элемент управления tooltip.|  
   

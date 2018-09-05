@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 598b5f6fcfefa03fe733ac7b6e5a8417278e6f01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584110"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690611"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Класс Platform::Collections::VectorView
 Представляет доступное только для чтения представление упорядоченной коллекции объектов, в которой возможен доступ к каждому отдельному объекту по его индексу. Тип каждого объекта в коллекции задается параметром шаблона.  
@@ -45,19 +45,19 @@ template <typename T, typename E>
  Определяет бинарный предикат для проверки равенства со значениями типа `T`. Значение по умолчанию — `std::equal_to<T>`.  
   
 ### <a name="remarks"></a>Примечания  
- `VectorView` Класс реализует [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411) интерфейс, а также поддержку итераторов библиотеки стандартных шаблонов.  
+ `VectorView` Класс реализует [Windows::Foundation::Collections::IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) интерфейс, а также поддержку итераторов библиотеки стандартных шаблонов.  
   
 ### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[VectorView::VectorView](#ctor)|Инициализирует новый экземпляр класса VectorView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[VectorView::First](#first)|Возвращает итератор, указывающий первый элемент объекта VectorView.|  
 |[VectorView::GetAt](#getat)|Извлекает элемент текущего VectorView, указанный заданным индексом.|  

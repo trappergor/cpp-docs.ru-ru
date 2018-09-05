@@ -1,7 +1,7 @@
 ---
-title: . LISTMACRO | Документы Microsoft
+title: . LISTMACRO | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74228abccf70b969c0d1feed6a987baf35c8171
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4df49ef00b07f3e95b9acbcd02aa4ae023a1ea87
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050965"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676486"
 ---
 # <a name="listmacro"></a>.LISTMACRO
-Запускает перечисление инструкций расширения макроса, создание кода или данных.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-.LISTMACRO  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Это значение по умолчанию. То же, что [. XALL](../../assembler/masm/dot-xall.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Начнет подстановку инструкций расширения макросов, создание кода или данных.
+
+## <a name="syntax"></a>Синтаксис
+
+> .LISTMACRO
+
+## <a name="remarks"></a>Примечания
+
+Это значение по умолчанию. Совпадение с кодом [. XALL](../../assembler/masm/dot-xall.md).
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

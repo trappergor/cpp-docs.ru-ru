@@ -1,7 +1,7 @@
 ---
-title: OWORD | Документы Microsoft
+title: OWORD | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2244266311649b0405a31edc9ec01b1e3dbaa183
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: eeab88ec8594eb09d829c2867c7d238045b508a6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053247"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687503"
 ---
 # <a name="oword"></a>OWORD
-При необходимости 16-разрядный тип данных, используется как спецификатор типа.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-OWORD  
-  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Используется как спецификатор типа, когда требуется 16-разрядный тип данных.
+
+## <a name="syntax"></a>Синтаксис
+
+> OWORD
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

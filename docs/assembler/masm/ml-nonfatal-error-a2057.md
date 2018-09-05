@@ -1,7 +1,7 @@
 ---
-title: Некритичная ошибка ML A2057 | Документы Microsoft
+title: Некритичная ошибка ML A2057 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b397b47e3761613e1a412af2d5a82ff56f10aac0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8f90298295e7ee68cbdaed9cd12a0865c413333d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054514"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685270"
 ---
 # <a name="ml-nonfatal-error-a2057"></a>Некритичная ошибка ML A2057
-**принудительно ошибка: пустая строка**  
-  
- Ошибка условной директивы [. ERRB](../../assembler/masm/dot-errb.md) использовался для создания этой ошибки.  
-  
-## <a name="see-also"></a>См. также  
- [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)
+
+**принудительно ошибка: пустая строка**
+
+Conditional-error-директива [. ERRB](../../assembler/masm/dot-errb.md) использовался для создания этой ошибки.
+
+## <a name="see-also"></a>См. также
+
+[Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

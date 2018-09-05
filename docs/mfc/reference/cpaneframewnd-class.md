@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214995"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682860"
 ---
 # <a name="cpaneframewnd-class"></a>Класс CPaneFrameWnd
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
@@ -164,7 +164,7 @@ class CPaneFrameWnd : public CWnd
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPaneFrameWnd::AddPane](#addpane)|Добавляет панель.|  
 |[CPaneFrameWnd::AddRemovePaneFromGlobalList](#addremovepanefromgloballist)|Добавляет панель в глобальный список или удаляет из него.|  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Вызывается платформой при скрытии или отображении панели в окне области.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Возвращает панель, если она содержит предоставленную пользователем точку в пределах окна области.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Перерисовывает все окна областей.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Вызывается платформой для удаления недопустимых панелей.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Удаляет панель из окна области.|  
@@ -231,14 +231,14 @@ class CPaneFrameWnd : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPaneFrameWnd::OnCheckRollState](#oncheckrollstate)|Определяет, требуется ли свертывание или развертывание окна области.|  
 |[CPaneFrameWnd::OnDrawBorder](#ondrawborder)|Рисует границы окна области.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Указывает, следует ли регистрация класса окна со стилем класса CS_SAVEBITS.|  
   
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  Высота в пикселях окна области.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовите этот метод для определения высоты окна области. По умолчанию высота присваивается SM_CYSMCAPTION. Дополнительные сведения см. в разделе [функцию GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Вызовите этот метод для определения высоты окна области. По умолчанию высота присваивается SM_CYSMCAPTION. Дополнительные сведения см. в разделе [функцию GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Вычисляет ограничивающий прямоугольник заголовка окна области.  

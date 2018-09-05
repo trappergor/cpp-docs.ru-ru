@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467842"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685080"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Блок, относящийся только к системам Microsoft**  
@@ -36,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **/GS** компилятора предписывает компилятору проверять на переполнение буфера путем вставки проверок безопасности в стеке. Типы структур данных, которые являются законным объектом для проверок безопасности описаны в [/GS (проверка безопасности буфера)](../build/reference/gs-buffer-security-check.md). Дополнительные сведения об обнаружении переполнения буфера см. в разделе [компилятора комплексные проверки безопасности](http://go.microsoft.com/fwlink/p/?linkid=7260) на сайте MSDN.  
+ **/GS** компилятора предписывает компилятору проверять на переполнение буфера путем вставки проверок безопасности в стеке. Типы структур данных, которые являются законным объектом для проверок безопасности описаны в [/GS (проверка безопасности буфера)](../build/reference/gs-buffer-security-check.md). Дополнительные сведения об обнаружении переполнения буфера см. в разделе [функции безопасности в MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).  
   
  Экспертная проверка кода вручную или внешний анализ могут показать, что функция безопасна с точки зрения переполнения буфера. В этом случае можно отключить проверки безопасности для функции, применив **__declspec(safebuffers)** ключевое слово в объявлении функции.  
   

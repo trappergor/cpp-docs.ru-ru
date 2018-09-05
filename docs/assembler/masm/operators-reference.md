@@ -1,7 +1,7 @@
 ---
-title: Справочник по операторам MASM | Документы Microsoft
+title: Справочник по операторам MASM | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -15,86 +15,89 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00391f7ceaf95038c5c52db396e60cbec234099
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057556"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688180"
 ---
 # <a name="masm-operators-reference"></a>Справочник по операторам MASM
 
-## <a name="arithmetic"></a>Арифметические операции  
-  
-||||  
-|-|-|-|  
-|[*](../../assembler/masm/operator-multiply.md)|[+](../../assembler/masm/operator-add.md)|[-](../../assembler/masm/operator-subtract-2.md)|  
-|[.](../../assembler/masm/operator-dot.md)|[/](../../assembler/masm/operator-subtract-1.md)|[&#91;&#93;](../../assembler/masm/operator-brackets.md)|  
-|[ОСТАТОК ОТ ДЕЛЕНИЯ](../../assembler/masm/operator-mod.md)|||  
-  
-## <a name="control-flow"></a>Управление ходом выполнения  
-  
-||||  
-|-|-|-|  
-|[\!](../../assembler/masm/operator-logical-not-masm.md)|[\!=](../../assembler/masm/operator-not-equal-masm.md)|[&](../../assembler/masm/operator-logical-and-masm.md)|  
-|[&&](../../assembler/masm/operator-logical-and-masm-run-time.md)|[<](../../assembler/masm/operator-less-than-masm-run-time.md)|[\<=](../../assembler/masm/operator-less-or-equal-masm-run-time.md)|  
-|[==](../../assembler/masm/operator-equal-masm-run-time.md)|[>](../../assembler/masm/operator-greater-than-masm-run-time.md)|[>=](../../assembler/masm/operator-greater-or-equal-masm-run-time.md)|  
-|[&#124;&#124;](../../assembler/masm/operator-logical-or.md)|||  
-  
-## <a name="logical-and-shift"></a>Логические и Shift  
-  
-||||  
-|-|-|-|  
-|[И](../../assembler/masm/operator-and.md)|[НЕ](../../assembler/masm/operator-not.md)|[ИЛИ](../../assembler/masm/operator-or.md)|  
-|[SHL](../../assembler/masm/operator-shl.md)|[SHR](../../assembler/masm/operator-shr.md)|[XOR](../../assembler/masm/operator-xor.md)|  
-  
-## <a name="macro"></a>Макрос  
-  
-||||  
-|-|-|-|  
-|[\!](../../assembler/masm/operator-logical-not-masm-run-time.md)|[%](../../assembler/masm/operator-percent.md)|[&](../../assembler/masm/operator-bitwise-and.md)|  
-|[;;](../../assembler/masm/operator-semicolons.md)|[<>](../../assembler/masm/operator-literal.md)||  
-  
-## <a name="miscellaneous"></a>Прочее  
-  
-||||  
-|-|-|-|  
-|[' '](../../assembler/masm/operator-single-quote.md)|[" "](../../assembler/masm/operator-double-quote.md)|[:](../../assembler/masm/operator-colon.md)|  
-|[::](../../assembler/masm/operator-semicolons.md)|[;](../../assembler/masm/operator-semicolon.md)|[ВЫПОЛНЕНИЕ?](../../assembler/masm/operator-carry-q.md)|  
-|[DUP](../../assembler/masm/operator-dup.md)|[ПЕРЕПОЛНЕНИЕ?](../../assembler/masm/operator-overflow-q.md)|[ЧЕТНОСТЬ?](../../assembler/masm/operator-parity-q.md)|  
-|[ВХОД?](../../assembler/masm/operator-sign-q.md)|[НОЛЬ?](../../assembler/masm/operator-zero-q.md)||  
-  
-## <a name="record"></a>Запись  
-  
-|||  
-|-|-|  
-|[MASK](../../assembler/masm/operator-mask.md)|[ШИРИНА](../../assembler/masm/operator-width.md)|  
-  
-## <a name="relational"></a>Реляционный  
-  
-||||  
-|-|-|-|  
-|[EQ](../../assembler/masm/operator-eq.md)|[GE](../../assembler/masm/operator-ge.md)|[GT](../../assembler/masm/operator-gt.md)|  
-|[LE](../../assembler/masm/operator-le.md)|[LT](../../assembler/masm/operator-lt.md)|[NE](../../assembler/masm/operator-ne.md)|  
-  
-## <a name="segment"></a>Сегмент  
-  
-|||  
-|-|-|  
-|[:](../../assembler/masm/operator-colon.md)|[IMAGEREL](../../assembler/masm/operator-imagerel.md)|  
-|[LROFFSET](../../assembler/masm/operator-lroffset.md)|[СМЕЩЕНИЕ](../../assembler/masm/operator-offset.md)|  
-|[SECTIONREL](../../assembler/masm/operator-sectionrel.md)|[SEG](../../assembler/masm/operator-seg.md)|  
-  
-## <a name="type"></a>Тип  
-  
-||||  
-|-|-|-|  
-|[HIGH](../../assembler/masm/operator-high.md)|[HIGH32](../../assembler/masm/operator-high32.md)|[HIGHWORD](../../assembler/masm/operator-highword.md)|  
-|[ДЛИНА](../../assembler/masm/operator-length.md)|[LENGTHOF](../../assembler/masm/operator-lengthof.md)|[НИЗКИЙ](../../assembler/masm/operator-low.md)|  
-|[LOW32](../../assembler/masm/operator-low32.md)|[LOWWORD](../../assembler/masm/operator-lowword.md)|[OPATTR](../../assembler/masm/operator-opattr.md)|  
-|[PTR](../../assembler/masm/operator-ptr.md)|[SHORT](../../assembler/masm/operator-short.md)|[РАЗМЕР](../../assembler/masm/operator-size.md)|  
-|[SIZEOF](../../assembler/masm/operator-sizeof.md)|[ЭТО](../../assembler/masm/operator-this.md)|[ТИП](../../assembler/masm/operator-type.md)|  
-  
-## <a name="see-also"></a>См. также  
+## <a name="arithmetic"></a>арифметические операции
 
-[Справочные материалы по ассемблеру Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+||||
+|-|-|-|
+|[* (умножение)](operator-multiply.md)|[+ (сложение)](operator-add.md)|[-(вычитание или Инвертировать)](operator-subtract-2.md)|
+|[. (поле)](operator-dot.md)|[/ (деление)](operator-subtract-1.md)|[&#91;&#93;(индекс)](operator-brackets.md)|
+|[MOD (остаток от деления)](operator-mod.md)|||
+
+## <a name="control-flow"></a>Управление ходом выполнения
+
+||||
+|-|-|-|
+|[! (логическое не среды выполнения)](operator-logical-not-masm-run-time.md)|[! = (среда выполнения не равно)](operator-not-equal-masm.md)|[&#124;&#124;(среда выполнения логического или)](operator-logical-or.md)|
+|[& & (среда выполнения логического и)](operator-logical-and-masm-run-time.md)|[< (среда выполнения меньше, чем)](operator-less-than-masm-run-time.md)|[\<= (среда выполнения, меньше или равно)](operator-less-or-equal-masm-run-time.md)|
+|[== (равно среда выполнения)](operator-equal-masm-run-time.md)|[> (больше, чем среда выполнения)](operator-greater-than-masm-run-time.md)|[> = (среда выполнения больше или равно)](operator-greater-or-equal-masm-run-time.md)|
+|[& (среда выполнения побитовое и)](operator-bitwise-and.md)|||
+|[CARRY? (тестирование переносом среды выполнения)](operator-carry-q.md)|[OVERFLOW? (проверка переполнения среды выполнения)](operator-overflow-q.md)|[ЧЕТНОСТЬ? (проверка четности среды выполнения)](operator-parity-q.md)|
+|[РЕГИСТРАЦИЯ? (среда выполнения знаковый тест)](operator-sign-q.md)|[НОЛЬ? (тестирование нулю среда выполнения)](operator-zero-q.md)||
+
+## <a name="logical-and-shift"></a>Логическое and -Shift
+
+||||
+|-|-|-|
+|[И (побитовое и)](operator-and.md)|[НЕ (побитовое не)](operator-not.md)|[OR (побитовое или)](operator-or.md)|
+|[SHL (сдвига битов влево)](operator-shl.md)|[SHR (shift бит справа)](operator-shr.md)|[XOR (побитовое исключающее или)](operator-xor.md)|
+
+## <a name="macro"></a>Макрос
+
+||||
+|-|-|-|
+|[! (символьного литерала)](operator-logical-not-masm.md)|[% (Power BI как текст)](operator-percent.md)||
+|[;; (следует считать комментария)](operator-semicolons.md)|[&lt; &gt; (следует считать один литерал)](operator-literal.md)|[& & (замените значение параметра)](operator-logical-and-masm.md)|
+
+## <a name="miscellaneous"></a>Прочее
+
+||||
+|-|-|-|
+|["" (обрабатывать как строка)](operator-single-quote.md)|["" (обрабатывать как строка)](operator-double-quote.md)||
+|: (локальный метки определение)|:: (регистрация сегмента и смещения)|:: (глобальные метки определение)|
+|[; (следует считать комментария)](operator-semicolon.md)|[DUP (повторите объявление)](operator-dup.md)||
+
+## <a name="record"></a>Запись
+
+|||
+|-|-|
+|[Маска (получить битовой маски записи или поля)](operator-mask.md)|[Ширина (получить ширины поля или записи)](operator-width.md)|
+
+## <a name="relational"></a>Реляционный
+
+||||
+|-|-|-|
+|[EQ (равно)](operator-eq.md)|[GE (больше или равно)](operator-ge.md)|[GT (больше)](operator-gt.md)|
+|[LE (меньше или равно)](operator-le.md)|[LT (меньше)](operator-lt.md)|[NE (не равно)](operator-ne.md)|
+
+## <a name="segment"></a>Сегмент
+
+|||
+|-|-|
+|[: (сегмент переопределения)](operator-colon.md)|:: (регистрация сегмента и смещения)|
+|[IMAGEREL (относительное смещение изображения)](operator-imagerel.md)|[LROFFSET (загрузчик устранения смещения)](operator-lroffset.md)|
+|[СМЕЩЕНИЕ (относительное смещение сегмента)](operator-offset.md)|[SECTIONREL (относительное смещение раздела)](operator-sectionrel.md)|
+|[SEG (сегмент get)](operator-seg.md)||
+
+## <a name="type"></a>Тип
+
+||||
+|-|-|-|
+|[HIGH (высокий уровень 8 бит младшие 16 битов)](operator-high.md)|[HIGH32 (старшие 32 разряда 64 бита)](operator-high32.md)|[HIGHWORD (старшие 16 разрядов наименьшее 32 бита)](operator-highword.md)|
+|[Длина (число элементов в массиве)](operator-length.md)|[LENGTHOF (количество элементов в массиве)](operator-lengthof.md)|[LOW (низкий 8 бит)](operator-low.md)|
+|[LOW32 (младшие 32 бита)](operator-low32.md)|[LOWWORD (младшие 16 разрядов)](operator-lowword.md)|[OPATTR (информация о типе аргумента get)](operator-opattr.md)|
+|[PTR (указатель или тип)](operator-ptr.md)|[КОРОТКОЕ (короткий метка типов)](operator-short.md)|[РАЗМЕР (размер типа или переменной)](operator-size.md)|
+|[SIZEOF (размер типа или переменной)](operator-sizeof.md)|[Это (местоположение)](operator-this.md)|[Get выражение (тип)](operator-type.md)|
+|[. ТИП (информация о типе аргумента get)](operator-dot-type.md)|||
+
+## <a name="see-also"></a>См. также
+
+[Справочные материалы по ассемблеру Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)<br/>

@@ -19,16 +19,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cec86d276732bd7273d0f5585de5093f0cd01f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685549"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Пошаговое руководство: Обновление приложения MFC Scribble (часть 1)
 
-В этом пошаговом руководстве показано, как изменить существующее приложение MFC использовать пользовательский интерфейс ленты. Visual Studio поддерживает ленты Office 2007 и ленты Scenic Windows 7. Дополнительные сведения о пользовательском интерфейсе Ribbon, см. в разделе [лент](http://go.microsoft.com/fwlink/p/?linkid=129233) на сайте MSDN.
+В этом пошаговом руководстве показано, как изменить существующее приложение MFC использовать пользовательский интерфейс ленты. Visual Studio поддерживает ленты Office 2007 и ленты Scenic Windows 7. Дополнительные сведения о пользовательском интерфейсе Ribbon, см. в разделе [лент](/windows/desktop/uxguide/cmd-ribbons).
 
 В этом пошаговом руководстве изменяет классический пример Scribble 1.0 MFC, который позволяет создавать рисунки строки с помощью мыши. Этой части пошагового руководства показано, как изменить примера Scribble на базе, чтобы он отображал панели ленты. [Часть 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) добавляет дополнительные кнопки на ленте.
 

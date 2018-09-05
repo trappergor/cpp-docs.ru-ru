@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9ada8396f9d5473213f726acd27691a97a59847
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219177"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684797"
 ---
 # <a name="ccomobjectrootex-class"></a>Класс CComObjectRootEx
 Этот класс предоставляет методы для обработки объекта управления счетчиками ссылок для объектов неагрегированные и объединены.  
@@ -279,7 +279,7 @@ IUnknown*
  Если объект является статистическим, указатель на внешняя Неизвестная строка сохраняется в `m_pOuterUnknown`. Если объект не является статистическим, счетчик ссылок осуществляется `AddRef` и `Release` хранится в [m_dwRef](#m_dwref).  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- Для каждого класса, перечисленного в [карте объектов](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), эта функция вызывается один раз при инициализации модуля, и еще раз при его выполнение завершается.  
+ Для каждого класса, перечисленного в карте объектов, эта функция вызывается один раз при инициализации модуля, и еще раз при его выполнение завершается.  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);

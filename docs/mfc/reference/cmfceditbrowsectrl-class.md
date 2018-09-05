@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9799021942cbb8a505cc993ff97f5f42e6d0f20f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222372"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693976"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Класс CMFCEditBrowseCtrl
 `CMFCEditBrowseCtrl` Класс поддерживает управления обзор редактирования, который является редактируемых текстовых полей, которые дополнительно содержат кнопку обзора. Когда пользователь нажимает кнопку обзора, элемент управления выполняет настраиваемое действие или отображает стандартное диалоговое окно, содержащее браузер файла или папки в браузере.  
@@ -56,14 +56,14 @@ class CMFCEditBrowseCtrl : public CEdit
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Конструктор по умолчанию.|  
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Включает или отключает (скрытие) кнопку обзора.|  
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Активирует кнопку обзора и помещает Обзор элемента управления редактирования в *Обзор файлов* режим.|  
@@ -74,7 +74,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Перерисовывает текущего элемента управления обзора редактирования.|  
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Вызвано структурой для прорисовки кнопки обзора.|  
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Вызывается платформой, если было введено недопустимое имя файла в элементе управления.|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. Синтаксис и Дополнительные сведения см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. Синтаксис и Дополнительные сведения см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Задает пользовательский образ для кнопки "Обзор".|  
   
 ## <a name="remarks"></a>Примечания  
@@ -198,7 +198,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
  В следующей таблице перечислены возможные возвращаемые значения.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`BrowseMode_Default`|**пользовательский режим**. Действия, определяемые программистом выполняются.|  
 |`BrowseMode_File`|**режим файла**. Откроется диалоговое окно браузера стандартный файл.|  

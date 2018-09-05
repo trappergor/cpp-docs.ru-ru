@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa01a9cb38de2297ebf1282f0d86333218861a0a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 35fa804c7cdcff8a2005a3c91176209e8cc96219
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195490"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680178"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>Класс CMFCToolBarComboBoxEdit
 Инфраструктура использует `CMFCToolBarComboBoxEdit` класс, чтобы создать кнопку панели инструментов, который ведет себя как редактируемые поле со списком.  
@@ -38,16 +38,16 @@ class CMFCToolBarComboBoxEdit : public CEdit
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit](#cmfctoolbarcomboboxedit)|Создает объект `CMFCToolBarComboBoxEdit`.|  
 |`CMFCToolBarComboBoxEdit::~CMFCToolBarComboBoxEdit`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
   
 ### <a name="remarks"></a>Примечания  
  Наследуйте класс от `CMFCToolBarComboBoxEdit` класс для настройки его операций редактирования.  

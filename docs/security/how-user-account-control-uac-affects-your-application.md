@@ -17,21 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23266ca4b4d32146ed8627c6ce3ab1cc878d59cd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c313a72a3c76b65476659e463076d61383dd43a5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600656"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682087"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Влияние контроля учетных записей на приложение
 Возможность контроля учетных записей в Windows Vista используется для назначения учетным записям ограниченных привилегий. Подробные сведения о функции контроля учетных записей см. на следующих веб-сайтах:  
   
--   [Пошаговое руководство контролю учетных записей Windows Vista пользователя](http://go.microsoft.com/fwlink/p/?linkid=53781)  
-  
--   [Передовые методики и рекомендации для приложений в среде с минимальными привилегиями](http://go.microsoft.com/fwlink/p/?linkid=82444)  
-  
--   [Освоение и настройка контроля учетных записей в Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
+-   [Передовые методики и рекомендации для приложений в среде с минимальными привилегиями](/windows/desktop/uxguide/winenv-uac)  
   
 ## <a name="building-projects-after-enabling-uac"></a>Сборка проектов после включения контроля учетных записей  
  Чтобы обеспечить корректную работу проекта Visual C++ для Windows Vista, собранного при отключенном контроле учетных записей, после включения контроля следует выполнить очистку и повторную сборку проекта.  

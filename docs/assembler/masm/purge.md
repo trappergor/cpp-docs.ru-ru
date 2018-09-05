@@ -1,7 +1,7 @@
 ---
-title: ОЧИСТКА | Документы Microsoft
+title: ОЧИСТКА | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7db2fb8eb52575892510d9286dca0a01c719c5
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ee00632561ce58ef9585a71f31cebfb3e406f1b3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053042"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689636"
 ---
 # <a name="purge"></a>PURGE
-Удаляет указанный макросы из памяти.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-PURGE macroname [[, macroname]]...  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Удаляет указанный макросы из памяти.
+
+## <a name="syntax"></a>Синтаксис
+
+> Имя макроса ОЧИСТКИ [[, имя макроса]]...
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

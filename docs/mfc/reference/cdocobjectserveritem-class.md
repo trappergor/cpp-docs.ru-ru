@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 985333deaeceeed594e11223c417f3217e8b0322
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211809"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682047"
 ---
 # <a name="cdocobjectserveritem-class"></a>Класс CDocObjectServerItem
 Реализует команды OLE-сервера специально для серверов DocObject.  
@@ -44,25 +44,26 @@ class CDocObjectServerItem : public COleServerItem
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Создает объект `CDocObjectServerItem`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocObjectServerItem::GetDocument](#getdocument)|Извлекает указатель на документ, который содержит элемент.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Создает исключение, если платформа пытается скрыть элемент DocObject.|
 |[CDocObjectServerItem::OnHide](#onhide)|Создает исключение, если платформа пытается скрыть элемент DocObject.|  
 |[CDocObjectServerItem::OnShow](#onshow)|Вызывается платформой, чтобы сделать DocObject элемента на месте active. Если элемент не DocObject, вызывает [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Примечания  
- `CDocObjectServerItem` Определяет функции является переопределяемым элементом: [OnHide](#onhide), [OnOpen](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), и [OnShow](#onshow).  
+ `CDocObjectServerItem` Определяет функции является переопределяемым элементом: [OnHide](#onhide), [OnDoVerb](#ondoverb), и [OnShow](#onshow).  
   
  Для использования `CDocObjectServerItem`, убедиться, что [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) в переопределите вашей `COleServerDoc`-производном классе возвращает новый `CDocObjectServerItem` объекта. Если вам нужно изменить функциональные возможности элемента, можно создать новый экземпляр собственного `CDocObjectServerItem`-производного класса.  
   

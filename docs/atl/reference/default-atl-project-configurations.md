@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c6a7b077c66940f98ce37c0d4b07bbab3dfd9ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 617f4703b72ff2a077a20b61fe17851144672ef7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201945"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687302"
 ---
 # <a name="default-atl-project-configurations"></a>Конфигурации проектов ATL по умолчанию
 Мастер проектов ATL по умолчанию создает две конфигурации проекта:  
@@ -35,6 +35,6 @@ ms.locfileid: "43201945"
 ## <a name="see-also"></a>См. также  
  [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Работа со свойствами проектов](../../ide/working-with-project-properties.md)   
- [Диалоговое окно «Диспетчер конфигурации»](https://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [Диалоговое окно «Диспетчер конфигурации»](/visualstudio/ide/understanding-build-configurations)   
  [Компилирование и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

@@ -1,7 +1,7 @@
 ---
-title: . NOLISTIF | Документы Microsoft
+title: . NOLISTIF | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6c7d426cdc0b67ebac2ff8a6068cba650ab152
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3648baeeab2f801b3ef6a803b84a68f15b2f62af
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052929"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681347"
 ---
 # <a name="nolistif"></a>.NOLISTIF
-Подавляет перечень условных блоков которого условие имеет значение false (0).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-.NOLISTIF  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Это значение по умолчанию. То же, что [. SFCOND](../../assembler/masm/dot-sfcond.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Подавляет список условных блоков, условие которого имеет значение false (0).
+
+## <a name="syntax"></a>Синтаксис
+
+> .NOLISTIF
+
+## <a name="remarks"></a>Примечания
+
+Это значение по умолчанию. Совпадение с кодом [. SFCOND](../../assembler/masm/dot-sfcond.md).
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

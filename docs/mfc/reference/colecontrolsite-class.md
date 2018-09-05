@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202859"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678013"
 ---
 # <a name="colecontrolsite-class"></a>Класс COleControlSite
 Обеспечивает поддержку пользовательских интерфейсов клиентских элементов управления.  
@@ -136,13 +136,13 @@ class COleControlSite : public CCmdTarget
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControlSite::COleControlSite](#colecontrolsite)|Создает объект `COleControlSite`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControlSite::BindDefaultProperty](#binddefaultproperty)|Привязывает свойство по умолчанию размещенного элемента управления к источнику данных.|  
 |[COleControlSite::BindProperty](#bindproperty)|Привязывает свойство размещенного элемента управления к источнику данных.|  
@@ -179,13 +179,13 @@ class COleControlSite : public CCmdTarget
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControlSite::GetControlInfo](#getcontrolinfo)|Извлекает сведения клавиатуры и назначенные клавиши для размещаемого элемента управления.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControlSite::m_bIsWindowless](#m_biswindowless)|Определяет, является ли размещенный элемент управления элемента управления без окна.|  
 |[COleControlSite::m_ctlInfo](#m_ctlinfo)|Содержит сведения о для элемента управления для обработки событий клавиатуры.|  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Стили, которые добавлены из текущего стили окна.  
   
  *nFlags*  
- Окно позиционирования флаги. Список возможных значений см. в разделе [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) функции в пакете Windows SDK.  
+ Окно позиционирования флаги. Список возможных значений см. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функции в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если стили изменяются, в противном случае — нуль.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Примечания  
  Элемент управления stock свойство Enabled будут изменены в соответствии с параметром для WS_DISABLED. Стандартное свойство стиль границы элемента управления будет изменен в соответствии с необходимых настроек для WS_BORDER. Все другие стили применяются непосредственно к дескриптор окна элемента управления, если таковой имеется.  
   
- Изменение стилей окна элемента управления. Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) функции в пакете SDK для Windows, сведения о стилях доступное окно.  
+ Изменение стилей окна элемента управления. Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) функции в пакете SDK для Windows, сведения о стилях доступное окно.  
   
  Если *nFlags* не равно нулю, `ModifyStyle` вызывает функцию Win32 `SetWindowPos`и перерисовывает окна путем объединения *nFlags* с использованием следующих четырех флагов:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Расширенные стили нужно добавить стили текущего окна.  
   
  *nFlags*  
- Окно позиционирования флаги. Список возможных значений см. в разделе [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) функции в пакете Windows SDK.  
+ Окно позиционирования флаги. Список возможных значений см. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функции в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если стили изменяются, в противном случае — нуль.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Примечания  
  Биржевая элемента управления свойства внешнего вида будут изменены в соответствии с параметром для WS_EX_CLIENTEDGE. Все другие расширенные стили окна применяются непосредственно к дескриптор окна элемента управления, если таковой имеется.  
   
- Изменяет расширенные стили объекта сайта элемента управления окна. Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) функции в пакете SDK для Windows, сведения о стилях доступное окно.  
+ Изменяет расширенные стили объекта сайта элемента управления окна. Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функции в пакете SDK для Windows, сведения о стилях доступное окно.  
   
  Если *nFlags* не равно нулю, `ModifyStyleEx` вызывает функцию Win32 `SetWindowPos`и перерисовывает окна путем объединения *nFlags* с использованием следующих четырех флагов:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  Новая высота окна.  
   
  *nFlags*  
- Указывает окно изменения размеров и положения флаги. Возможные значения см. в разделе "Примечания" для [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) в пакете Windows SDK.  
+ Указывает окно изменения размеров и положения флаги. Возможные значения см. в разделе "Примечания" для [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успешного выполнения, в противном случае — нуль.  

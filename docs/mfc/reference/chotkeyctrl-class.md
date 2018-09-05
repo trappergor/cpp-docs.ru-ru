@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a7f5cee986ad82790870bfa7684a99c60dc462e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206270"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681629"
 ---
 # <a name="chotkeyctrl-class"></a>Класс CHotKeyCtrl
 Предоставляет функциональные возможности стандартного элемента управления "горячая клавиша" Windows.  
@@ -52,13 +52,13 @@ class CHotKeyCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHotKeyCtrl::CHotKeyCtrl](#chotkeyctrl)|Создает объект `CHotKeyCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHotKeyCtrl::Create](#create)|Создает элемент управления "Горячий" ключа и присоединяет его к `CHotKeyCtrl` объекта.|  
 |[CHotKeyCtrl::CreateEx](#createex)|Создает элемент управления "Горячий" ключа с указанным расширенные стили Windows и присоединяет его к `CHotKeyCtrl` объекта.|  
@@ -144,7 +144,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Задает стиль "Горячий" ключа элемента управления. Примените любое сочетание стилей элемента управления. Дополнительные сведения см. в разделе [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK.  

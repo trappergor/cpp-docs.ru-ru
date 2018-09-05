@@ -1,7 +1,7 @@
 ---
-title: SWORD | Документы Microsoft
+title: SWORD | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f3e50db7c9ac7358190885d9e5b453126c8487
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a004148476f6eb0d63e91dfac5ebcc4ca2c8ad92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057394"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676162"
 ---
 # <a name="sword"></a>SWORD
-Выделяет и при необходимости инициализирует знаком word (2 байта) хранилища для каждого `initializer`. Можно также использовать как спецификатор типа в любом является допустимым типом.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-name SWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)   
- [WORD](../../assembler/masm/word.md)
+
+Выделяет и при необходимости инициализирует со знаком word (2 байта) хранилища для каждого `initializer`. Можно также использовать как спецификатор типа в любом является допустимым типом.
+
+## <a name="syntax"></a>Синтаксис
+
+> Инициализатор ПОМЕХОЙ имя [[, инициализатор]]...
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[WORD](../../assembler/masm/word.md)<br/>

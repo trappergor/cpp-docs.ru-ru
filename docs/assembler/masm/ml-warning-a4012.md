@@ -1,7 +1,7 @@
 ---
-title: Предупреждение ML A4012 | Документы Microsoft
+title: Предупреждение ML A4012 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b6afb6d5dd8fb8e5d7d6205a525bae2f7c934
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 083a0cd7687bc182aa9e387d6d575fa718b1b50c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056984"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682159"
 ---
 # <a name="ml-warning-a4012"></a>Предупреждение ML A4012
-**сведения о номерах строк для сегмента без класса «Код»**  
-  
- Отсутствуют инструкции в сегменте, но не имеют имени класса, которое заканчивается на «CODE». Код на языке ассемблера не привел к созданию Информация CodeView эти инструкции.  
-  
- CodeView не удается обработать модули с кодом в сегменты с имена классов, которые не начинаются с «CODE».  
-  
-## <a name="see-also"></a>См. также  
- [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)
+
+**Информация о номере строки для сегмента без класса «Код»**
+
+Обнаружены инструкции в сегменте, но не имеют имени класса, который заканчивается на «Код». Ассемблер не привел к созданию Информация CodeView для этих инструкций.
+
+CodeView не удается обработать модули с кодом в сегментах с именами классов, которые не заканчиваются «Код».
+
+## <a name="see-also"></a>См. также
+
+[Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

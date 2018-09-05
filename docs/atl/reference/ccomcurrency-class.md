@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d3d845f51f59e6072bd0425f34c63e0049dd31
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1b556e724e75bb6eabc832893350126a27ad511a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202541"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678438"
 ---
 # <a name="ccomcurrency-class"></a>Класс CComCurrency
 `CComCurrency` содержит методы и операторы для создания объекта CURRENCY и управления им.  
@@ -45,13 +45,13 @@ class CComCurrency
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComCurrency::CComCurrency](#ccomcurrency)|Конструктор объекта `CComCurrency`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|Возвращает адрес элемента данных `m_currency`.|  
 |[CComCurrency::GetFraction](#getfraction)|Вызовите этот метод для возврата дробной части объекта `CComCurrency`.|  
@@ -62,7 +62,7 @@ class CComCurrency
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComCurrency::operator-](#operator_-)|Этот оператор используется для вычитания объекта `CComCurrency`.|  
 |[CComCurrency::operator! =](#operator_neq)|Проверяет неравенство двух объектов `CComCurrency`.|  
@@ -83,7 +83,7 @@ class CComCurrency
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComCurrency::m_currency](#m_currency)|Переменная валюты, созданные экземпляром класса.|  
   
@@ -559,5 +559,5 @@ HRESULT SetInteger(LONGLONG nInteger);
   
 ## <a name="see-also"></a>См. также  
  [Класс COleCurrency](../../mfc/reference/colecurrency-class.md)   
- [ВАЛЮТА](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)   
+ [ВАЛЮТА](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)

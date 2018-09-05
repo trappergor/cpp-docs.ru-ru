@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60eed80d9f26ad33ce7f2af48cfca0a90c7d26b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210255"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679251"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 Предоставляет функциональные возможности стандартного элемента управления "представление в виде дерева" Windows.  
@@ -192,13 +192,13 @@ class CTreeCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Создает объект `CTreeCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CTreeCtrl::Create](#create)|Создает дерево и присоединяет его к `CTreeCtrl` объекта.|  
 |[CTreeCtrl::CreateDragImage](#createdragimage)|Создает растровое изображение перетаскивания для указанного представления элемента дерева.|  
@@ -318,7 +318,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- Задает стиль элемента управления иерархического представления. Применение стилей окна, описанные в [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)и любое сочетание [стили элемента управления представления дерева](/windows/desktop/Controls/tree-view-control-window-styles) как описано в пакете Windows SDK.  
+ Задает стиль элемента управления иерархического представления. Применение стилей окна, описанные в [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)и любое сочетание [стили элемента управления представления дерева](/windows/desktop/Controls/tree-view-control-window-styles) как описано в пакете Windows SDK.  
   
  *Rect*  
  Задает размер и положение элемента управления иерархического представления. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
@@ -356,10 +356,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
- Задает стиль элемента управления иерархического представления. Применение стилей окна, описанные в [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)и любое сочетание [стили элемента управления представления дерева](/windows/desktop/Controls/tree-view-control-window-styles) как описано в пакете Windows SDK.  
+ Задает стиль элемента управления иерархического представления. Применение стилей окна, описанные в [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)и любое сочетание [стили элемента управления представления дерева](/windows/desktop/Controls/tree-view-control-window-styles) как описано в пакете Windows SDK.  
   
  *Rect*  
  Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
@@ -463,7 +463,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *fCancelWithoutSave*|Значение TRUE, чтобы отменить изменения элемента представления дерева, прежде чем закончить операции редактирования, или значение FALSE, чтобы сохранить изменения для элемента представления дерева, прежде чем закончить операцию.|  
   
@@ -730,7 +730,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *hItem*|Дескриптор элемента управления представления дерева.|  
   
@@ -796,7 +796,7 @@ BOOL GetItemPartRect(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *hItem*|Дескриптор элемента управления представления дерева.|  
 |[in] *nPart*|Идентификатор для части. Должно быть присвоено TVGIPR_BUTTON.|  
@@ -877,7 +877,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *hItem*|Дескриптор элемента управления представления дерева.|  
   
@@ -1320,7 +1320,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *uAccId*|Идентификатор элемента в элементе представления дерева специальных возможностей.|  
   
@@ -1351,7 +1351,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *hItem*|Дескриптор элемента представления дерева в элементе управления. Дополнительные сведения см. в разделе *hItem* членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|  
   
@@ -1472,7 +1472,7 @@ BOOL SetAutoscrollInfo(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *uPixelsPerSec*|Количество пикселей, в секунду для прокрутки.|  
 |[in] *uUpdateTime*|Интервал времени между обновлениями элемента управления.|  
@@ -1553,7 +1553,7 @@ DWORD SetExtendedStyle(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *dwExMask*|Битовая маска, указывает, какие стили в текущий элемент управления представления дерева затрагиваются этим методом. Если этот параметр равен нулю, он игнорируется и значение *dwExStyles* присваивается элементу управления представления дерева.<br /><br /> Укажите ноль или побитовое сочетание (OR) стили, описанные в [стили расширенных элементов управления представления дерева](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
 |[in] *dwExStyles*|Битовая маска, указывает, какие стили в виде дерева управления установите или снимите флажок.<br /><br /> Чтобы задать сочетание стили, укажите битовую комбинацию (OR) из стилей, описанные в [стили расширенных элементов управления представления дерева](/windows/desktop/Controls/tree-view-control-window-extended-styles). Чтобы очистить набор стилей, укажите ноль.|  
@@ -1745,7 +1745,7 @@ BOOL SetItemExpandedImageIndex(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *hItem*|Дескриптор элемента управления представления дерева.|  
 |[in] *iExpandedImage*|Индекс изображения, отображаемого, если указанный элемент находится в развернутом состоянии.|  
@@ -1856,7 +1856,7 @@ BOOL SetItemStateEx(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *hItem*|Дескриптор элемента управления представления дерева.|  
 |[in] *uStateEx*|Расширенные состояние элемента. Дополнительные сведения см. в разделе `uStateEx` членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|  
@@ -1982,7 +1982,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *hItem*|Дескриптор элемента представления дерева в элементе управления. Дополнительные сведения см. в разделе `hItem` членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|  
   

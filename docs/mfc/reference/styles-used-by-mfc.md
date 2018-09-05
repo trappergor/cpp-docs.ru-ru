@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 043a046209d5e52439ed61165557cc6596db48e8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199925"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689325"
 ---
 # <a name="styles-used-by-mfc"></a>Стили, используемые MFC  
   
@@ -219,13 +219,13 @@ ms.locfileid: "43199925"
   
 ## <a name="button-styles"></a> Стили кнопок  
   
-Стили кнопок применяются к [класс CButton](../../mfc/reference/cbutton-class.md) проверьте объекты, такие как переключатели, поля и кнопок. Укажите сочетание стилей в *dwStyle* параметр [CButton::Create](../../mfc/reference/cbutton-class.md#create). Дополнительные сведения о стилях кнопки в Windows, см. в разделе [стили кнопок (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
+Стили кнопок применяются к [класс CButton](../../mfc/reference/cbutton-class.md) проверьте объекты, такие как переключатели, поля и кнопок. Укажите сочетание стилей в *dwStyle* параметр [CButton::Create](../../mfc/reference/cbutton-class.md#create). Дополнительные сведения о стилях кнопки в Windows, см. в разделе [стили кнопок (Windows)](/windows/desktop/Controls/button-styles).  
   
 ### <a name="button-types"></a>Типы кнопок  
   
 В следующей таблице перечислены типы кнопок. При необходимости можно выбрать одно из следующих. Если вы не укажете тип кнопки, по умолчанию используется BS_PUSHBUTTON.  
   
-|Тип|Описание:|  
+|Тип|Описание|  
 |----------|-----------------|  
 |BS_3STATE|Создает флажок с тремя состояниями: BST_CHECKED BST_INDETERMINATE и BST_UNCHECKED. При нажатии кнопки отправляет уведомление BN_CLICKED окну-владельцу, но не изменяет состояние кнопки. По умолчанию связанный текст отображается справа от флажка. Для отображения текста слева от флажка используйте стиль BS_LEFTTEXT или BS_RIGHTBUTTON.|  
 |BS_AUTO3STATE|Создает флажок с тремя состояниями: BST_CHECKED BST_INDETERMINATE и BST_UNCHECKED. При нажатии кнопки отправляет уведомление BN_CLICKED окну-владельцу и изменяет состояние кнопки. Кнопка состояний цикл порядке BST_CHECKED BST_INDETERMINATE и BST_UNCHECKED. По умолчанию связанный текст отображается справа от флажка. Для отображения текста слева от флажка используйте стиль BS_LEFTTEXT или BS_RIGHTBUTTON.|  
@@ -247,7 +247,7 @@ ms.locfileid: "43199925"
   
 В следующей таблице перечислены примеры, относящиеся к переключатели и флажки. Эти стили игнорируются во всех других типах кнопки. При необходимости можно выбрать один или несколько из следующих.  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |BS_LEFTTEXT|В сочетании со стилем переключателя кнопку или флажок текст отображается в левой части переключателя или флажка.|  
 |BS_RIGHTBUTTON|В сочетании со стилем переключателя кнопку или флажок текст отображается в левой части переключателя или флажка. Этот стиль идентичен стилю BS_LEFTTEXT.|  
@@ -257,7 +257,7 @@ ms.locfileid: "43199925"
   
 В следующей таблице перечислены горизонтальные и вертикальные параметры выравнивания. При необходимости можно выбрать одно из следующих.  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |BS_LEFT|По левому краю в прямоугольнике кнопки. Тем не менее, если кнопка "флажок" или "переключатель", не поддерживает стиль BS_RIGHTBUTTON, текст остается выравниваются по правой части флажка или переключателя.|  
 |BS_RIGHT|По правому текста в прямоугольнике кнопки. Тем не менее если кнопка "флажок" или "переключатель", не поддерживает стиль BS_RIGHTBUTTON, текст выравнивается по правому краю в правой части флажка или переключателя.|  
@@ -270,7 +270,7 @@ ms.locfileid: "43199925"
   
 Ниже перечислены параметры, которые указывают, что отображается на кнопке. Эти стили игнорируют типы кнопок, которые только отображают текст. При необходимости можно выбрать одно из следующих.  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |BS_BITMAP|Указывает, что кнопка отображает точечный рисунок.|  
 |BS_ICON|Указывает, что кнопка отображает значок.|  
@@ -280,7 +280,7 @@ ms.locfileid: "43199925"
   
 В следующей таблице перечислены дополнительные параметры, которые можно использовать с любым типом кнопок. При необходимости можно выбрать один или несколько из следующих.  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |BS_FLAT|Указывает, что кнопка двухмерна и не рисуется с затенением по умолчанию для создания трехмерный изображение.|  
 |BS_MULTILINE|Переносит текст кнопки на несколько строк, если текстовая строка умещается на одной строке в прямоугольнике кнопки.|  
@@ -288,9 +288,9 @@ ms.locfileid: "43199925"
   
 ## <a name="combo-box-styles"></a>  Поле со списком стилей  
   
-В MFC доступны перечисленные далее стили полей со списками. Дополнительные сведения о стилях поле со списком в Windows см. в разделе [стили поля со списком (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
+В MFC доступны перечисленные далее стили полей со списками. Дополнительные сведения о стилях поле со списком в Windows см. в разделе [стили поля со списком (Windows)](/windows/desktop/Controls/combo-box-styles).  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |CBS_AUTOHSCROLL|Автоматическая прокрутка текста в элементе управления вправо при вводе символа в конце строки. Если этот стиль не задан, допускается только текст, который умещается в прямоугольной области.|  
 |CBS_DISABLENOSCROLL|Отображается отключенная вертикальная полоса прокрутки при списке содержится недостаточно элементов для прокрутки. Если этот стиль не задан, полоса прокрутки будет скрыта при недостаточном количестве элементов в списке.|  
@@ -308,9 +308,9 @@ ms.locfileid: "43199925"
   
 ## <a name="edit-styles"></a>  Изменение стилей  
   
-Изменить стили применяются к [класс CEdit](../../mfc/reference/cedit-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CEdit::Create](../../mfc/reference/cedit-class.md#create). Дополнительные сведения о стили редактирования элемента управления в Windows, см. в разделе [изменение стилей элемента управления (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Изменить стили применяются к [класс CEdit](../../mfc/reference/cedit-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CEdit::Create](../../mfc/reference/cedit-class.md#create). Дополнительные сведения о стили редактирования элемента управления в Windows, см. в разделе [изменение стилей элемента управления (Windows)](/windows/desktop/Controls/edit-control-styles).  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |ES_AUTOHSCROLL|Автоматическая прокрутка текста справа по 10 символов, при вводе символа в конце строки. Когда пользователь нажимает клавишу ВВОД, элемент управления прокручивается весь текст в положение 0.|  
 |ES_AUTOVSCROLL|Автоматическая прокрутка текста вверх на одну страницу, при нажатии клавиши ВВОД в последней строке.|  
@@ -331,7 +331,7 @@ ms.locfileid: "43199925"
   
 Стили окна фрейма применяются к [класс CFrameWnd](../../mfc/reference/cframewnd-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create).  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |FWS_ADDTOTITLE|Указывает сведения для добавления в конец заголовка фрейма окна. Например, «Microsoft рисования — рисование в Документ1». Можно указать строки, показанные на вкладке "строки шаблонов документов" в мастере приложений. Если вам нужно отключить этот параметр, переопределить `CWnd::PreCreateWindow` функция-член.|  
 |FWS_PREFIXTITLE|Отображает имя документа перед именем приложения в заголовке окна фрейма. Например, «WordPad — документ». Можно указать строки, показанные на вкладке "строки шаблонов документов" в мастере приложений. Если вам нужно отключить этот параметр, переопределить `CWnd::PreCreateWindow` функция-член.|  
@@ -339,9 +339,9 @@ ms.locfileid: "43199925"
   
 ## <a name="list-box-styles"></a> Стили списков  
   
-Стили списков применяются к [класс CListBox](../../mfc/reference/clistbox-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Дополнительные сведения о списке стили окна в Windows, см. в разделе [стили окна списка (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
+Стили списков применяются к [класс CListBox](../../mfc/reference/clistbox-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Дополнительные сведения о списке стили окна в Windows, см. в разделе [стили окна списка (Windows)](/windows/desktop/Controls/list-box-styles).  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |LBS_DISABLENOSCROLL|Отображается отключенная вертикальная полоса прокрутки при списке содержится недостаточно элементов для прокрутки. Если этот стиль не задан, полоса прокрутки будет скрыта при недостаточном количестве элементов в списке.|  
 |LBS_EXTENDEDSEL|Пользователь может выбрать несколько элементов, используя клавишу SHIFT и мышь или специальные сочетания клавиш.|  
@@ -362,13 +362,13 @@ ms.locfileid: "43199925"
   
 ##<a name="message-box-styles"></a>  Стили окна сообщений  
   
-Стили окна сообщений применяются к [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) элементов. Укажите сочетание стилей в *nType* параметр `AfxMessageBox`. Дополнительные сведения о стили окна сообщений в Windows, см. в разделе [функции MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
+Стили окна сообщений применяются к [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) элементов. Укажите сочетание стилей в *nType* параметр `AfxMessageBox`. Дополнительные сведения о стили окна сообщений в Windows, см. в разделе [функции MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).  
   
 Доступны следующие стили окна сообщений.  
   
 ### <a name="message-box-types"></a>Типы окна сообщений  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |MB_ABORTRETRYIGNORE|Окно сообщения содержит три кнопок: Abort, повторных попыток и игнорировать.|  
 |MB_OK|Окно сообщения содержит один pushbutton: ОК.|  
@@ -379,7 +379,7 @@ ms.locfileid: "43199925"
   
 ### <a name="message-box-modality"></a>Модальности окна сообщения  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |MB_APPLMODAL|Пользователи должны отреагировать на окно сообщения, прежде чем продолжать работу в текущем окне. Тем не менее пользователь может перемещать окна других приложений и работы в них. Если не указаны ни MB_SYSTEMMODAL, ни MB_TASKMODAL по умолчанию используется MB_APPLMODAL.|  
 |MB_SYSTEMMODAL|Все приложения будут приостановлены, пока пользователь не ответит в окне сообщения. Системное модальное сообщение поля используются для уведомления пользователя о серьезных, потенциально опасными ошибки, которые требуют немедленного вмешательства и следует использовать с осторожностью.|  
@@ -387,7 +387,7 @@ ms.locfileid: "43199925"
   
 ### <a name="message-box-icons"></a>Значки окна сообщений  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |MB_ICONEXCLAMATION|В окне сообщения отобразится восклицательный знак.|  
 |MB_ICONINFORMATION|В окне сообщения отображается значок состоящий из «I» в кружке.|  
@@ -395,7 +395,7 @@ ms.locfileid: "43199925"
 |MB_ICONSTOP|В окне сообщения отображается значок Стоп.|  
 ### <a name="message-box-default-buttons"></a>Кнопки окна сообщения по умолчанию  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |MB_DEFBUTTON1|Первая кнопка по умолчанию. Обратите внимание, что первая кнопка всегда по умолчанию, если не указан MB_DEFBUTTON2 или MB_DEFBUTTON3.|  
 |MB_DEFBUTTON2|Вторая кнопка используется по умолчанию.|  
@@ -403,9 +403,9 @@ ms.locfileid: "43199925"
   
 ## <a name="scroll-bar-styles"></a> Стили полосы прокрутки  
   
-Стили полосы прокрутки применяются к [класс CScrollBar](../../mfc/reference/cscrollbar-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Дополнительные сведения о полосы стили элемента управления в Windows, см. в разделе [стили элемента управления полосы прокрутки (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Стили полосы прокрутки применяются к [класс CScrollBar](../../mfc/reference/cscrollbar-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Дополнительные сведения о полосы стили элемента управления в Windows, см. в разделе [стили элемента управления полосы прокрутки (Windows)](/windows/desktop/Controls/scroll-bar-control-styles).  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |SBS_BOTTOMALIGN|Используется с SBS_HORZ стиль. Нижнего края полосу прокрутки выравнивается по нижней границе прямоугольник, задаваемый в `Create` функция-член. Полоса прокрутки имеет высоту по умолчанию для системы полосы прокрутки.|  
 |SBS_HORZ|Задает горизонтальную полосу прокрутки. Если указан стиль SBS_TOPALIGN ни SBS_BOTTOMALIGN, полоса прокрутки имеет высоту, ширину и позиции, заданной `Create` функция-член.|  
@@ -420,9 +420,9 @@ ms.locfileid: "43199925"
   
 ## <a name="static-styles"></a> Статические стили  
   
-Статические стили применяются к [класс CStatic](../../mfc/reference/cstatic-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Дополнительные сведения о стилях статический элемент управления в Windows см. в разделе [статические стили элемента управления (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Статические стили применяются к [класс CStatic](../../mfc/reference/cstatic-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Дополнительные сведения о стилях статический элемент управления в Windows см. в разделе [статические стили элемента управления (Windows)](/windows/desktop/Controls/static-control-styles).  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |SS_BITMAP|Указывает, что точечный рисунок для отображения в статического элемента управления. Данный текст является имя точечного рисунка (не имя файла), определенный в другом месте в файле ресурсов. Стиль игнорирует параметры nWidth и nHeight; элемент управления автоматически изменяет свой размер в соответствии с растрового изображения.|  
 |SS_BLACKFRAME|Указывает окно с кадром, нарисованных при помощи цвет рамки окон. Значением по умолчанию является Black.|  
@@ -456,7 +456,7 @@ ms.locfileid: "43199925"
   
 Стили окна применяются к [класс CWnd](../../mfc/reference/cwnd-class.md) объектов. Укажите сочетание стилей в *dwStyle* параметр [CWnd::Create](../../mfc/reference/cwnd-class.md#create) или [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Дополнительные сведения о стили окна в Windows, см. в разделе [стили окна (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |WS_BORDER|Создает окно с границей вокруг него.|  
 |WS_CAPTION|Создает окно, которое имеет заголовок окна (подразумевает стиль WS_BORDER). Не может использоваться со стилем WS_DLGFRAME.|  
@@ -488,9 +488,9 @@ ms.locfileid: "43199925"
   
 ## <a name="extended-window-styles"></a> Расширенные стили окна  
   
-Расширенные стили окна применяются к [класс CWnd](../../mfc/reference/cwnd-class.md) объектов. Укажите сочетание стилей в *dwExStyle* параметр [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Дополнительные сведения о расширенные стили окна в Windows, см. в разделе [расширенные стили окна (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
+Расширенные стили окна применяются к [класс CWnd](../../mfc/reference/cwnd-class.md) объектов. Укажите сочетание стилей в *dwExStyle* параметр [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Дополнительные сведения о расширенные стили окна в Windows, см. в разделе [расширенные стили окна (Windows)](/windows/desktop/winmsg/extended-window-styles).  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |WS_EX_ACCEPTFILES|Указывает, что с окном, созданным при использовании этого стиля принимает и перетаскивать файлы.|  
 |WS_EX_APPWINDOW|Заставляет окна верхнего уровня на панели задач, если окно является видимым.|  
@@ -524,14 +524,14 @@ ms.locfileid: "43199925"
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
-[Стили кнопок (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
-[Стили поля со списком (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Изменение стилей элемента управления (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[Стили окна (Windows) список](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
-[функции MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[стили элемента управления полосы прокрутки (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Стили статический элемент управления (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)  
+[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)  
+[Стили кнопок (Windows)](/windows/desktop/Controls/button-styles)  
+[Стили поля со списком (Windows)](/windows/desktop/Controls/combo-box-styles)  
+[Изменение стилей элемента управления (Windows)](/windows/desktop/Controls/edit-control-styles)  
+[Стили окна (Windows) список](/windows/desktop/Controls/list-box-styles) 
+[функции MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox) 
+[стили элемента управления полосы прокрутки (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)  
+[Стили статический элемент управления (Windows)](/windows/desktop/Controls/static-control-styles)  
 [Стили окна (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-[Расширенные стили окна (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
+[Расширенные стили окна (Windows)](/windows/desktop/winmsg/extended-window-styles)  

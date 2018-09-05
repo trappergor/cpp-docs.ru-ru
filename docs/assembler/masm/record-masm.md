@@ -1,7 +1,7 @@
 ---
-title: ЗАПИСЬ (MASM) | Документы Microsoft
+title: ЗАПИСЬ (MASM) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e726053a9146cf88ed4e84045118d19b7094ed37
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d08f4abbdaba59969c85bd0e9907e80014033b4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057268"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687164"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
-Объявляет тип записи, состоящий из указанного поля. *FieldName* имена полей, *ширина* указывает количество битов, и *выражение* предоставляет его начального значения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-   recordname RECORD fieldname:width [[= expression]]   
-[[, fieldname:width [[= expression]]]]...  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Объявляет тип записи, состоящий из указанного поля. *FieldName* имена поле *ширины* указывает количество битов, и *выражение* предоставляет ее исходное значение.
+
+## <a name="syntax"></a>Синтаксис
+
+> *имя_записи* записи *fieldname*:*ширины* [[= *выражение*]] [[, *fieldname*:*ширины* [[= *выражение*]]]]...
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

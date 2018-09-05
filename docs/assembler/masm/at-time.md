@@ -1,7 +1,7 @@
 ---
-title: '@Time | Документы Microsoft'
+title: '@Time | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09f2ee96a59e9a94c5fd3f9344fdc258f4a410c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 34028f5f95cb54acc7fa25786614d67d921d8191
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049262"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693104"
 ---
 # <a name="time"></a>@Time
-Системное время в 24-часовом чч (макрос текста).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-@Time  
-  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по символам](../../assembler/masm/symbols-reference.md)
+
+Системное время в формате чч: мм: 24-часовом (макрос text).
+
+## <a name="syntax"></a>Синтаксис
+
+> @Time
+
+## <a name="see-also"></a>См. также
+
+[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>

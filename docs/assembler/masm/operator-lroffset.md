@@ -1,7 +1,7 @@
 ---
-title: оператор LROFFSET | Документы Microsoft
+title: оператор LROFFSET | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245dc24b56557c26134712ca28c75945bdd97f5a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd04a306e85fbb3627729355dc05d55197d91134
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678536"
 ---
 # <a name="operator-lroffset"></a>Оператор LROFFSET
-Возвращает смещение *выражение*. То же, что **СМЕЩЕНИЕ**, но он приводит к возникновению ошибки разрешить смещение загрузчика, что позволяет Windows переместить сегменты кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-LROFFSET expression  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает смещение *выражение*. Совпадение с кодом **СМЕЩЕНИЕ**, но он создает устранения смещения загрузчика, что позволяет Windows переместить сегменты кода.
+
+## <a name="syntax"></a>Синтаксис
+
+> Выражение LROFFSET
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

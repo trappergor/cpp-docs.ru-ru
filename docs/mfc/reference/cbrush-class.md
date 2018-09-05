@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e835da146cb609abc873e7e53eb617b8635af0e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215739"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689111"
 ---
 # <a name="cbrush-class"></a>Класс CBrush
 Инкапсулирует кисть интерфейса графических устройств Windows (GDI).  
@@ -54,13 +54,13 @@ class CBrush : public CGdiObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBrush::CBrush](#cbrush)|Создает объект `CBrush`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBrush::CreateBrushIndirect](#createbrushindirect)|Инициализирует кисти с стиль, цвет и шаблону, заданному в [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) структуры.|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Инициализирует кисти с шаблону, указанному аппаратно независимый точечный рисунок (DIB).|  
@@ -73,7 +73,7 @@ class CBrush : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[HBRUSH CBrush::operator](#operator_hbrush)|Возвращает дескриптор Windows, подключенный к `CBrush` объекта.|  
   
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>Параметры  
  *nIndex*  
- Указывает индекс цветов. Это значение соответствует цвет, используемый для закрашивания один из элементов 21 окна. См. в разделе [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) в пакете Windows SDK для списка значений.  
+ Указывает индекс цветов. Это значение соответствует цвет, используемый для закрашивания один из элементов 21 окна. См. в разделе [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) в пакете Windows SDK для списка значений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  

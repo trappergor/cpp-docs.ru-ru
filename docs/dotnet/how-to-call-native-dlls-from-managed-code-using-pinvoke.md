@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1e3d9d3d08ef0386a1ab85e0e5b6860f5d504cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195672"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681285"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Практическое руководство. Вызов неуправляемых библиотек DLL из управляемого кода с помощью PInvoke
 Функции, реализованные в неуправляемых библиотек DLL могут вызываться из управляемого кода с помощью функциональной возможности вызова неуправляемого кода (P/Invoke). Если исходный код для библиотеки DLL не доступен, P/Invoke является единственным для взаимодействия. Тем не менее в отличие от других языков .NET, Visual C++ предоставляет альтернативу P/Invoke. Дополнительные сведения см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода используется Win32 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) функции для получения текущего разрешения экрана в пикселях.  
+ В следующем примере кода используется Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) функции для получения текущего разрешения экрана в пикселях.  
   
  Для функций, используйте только внутренние типы как аргументы и возвращаемые значения дополнительные действия не требуется. Другие типы данных, например указатели функций, массивы и структуры, требуются дополнительные атрибуты, чтобы обеспечить правильный маршалинг данных.  
   

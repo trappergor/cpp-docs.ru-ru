@@ -1,7 +1,7 @@
 ---
-title: '@WordSize | Документы Microsoft'
+title: '@WordSize | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f417d44d31160b4d933d8dccd7285285f873ac9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1ed26b168aafb2c4ecc6b8652b5b3ccc8d5e4225
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050107"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680074"
 ---
 # <a name="wordsize"></a>@WordSize
-Два сегмента 16-разрядное или четыре 32-разрядных сегмента (уравнять числовое).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-@WordSize  
-  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по символам](../../assembler/masm/symbols-reference.md)
+
+Два 16-разрядное сегмента или четыре для 32-разрядных сегмент (уравнять числовые).
+
+## <a name="syntax"></a>Синтаксис
+
+> @WordSize
+
+## <a name="see-also"></a>См. также
+
+[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>

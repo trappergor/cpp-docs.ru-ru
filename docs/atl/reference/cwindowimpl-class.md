@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27ce284bee21d17101c9e93627841f2dcd6c00d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197205"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678632"
 ---
 # <a name="cwindowimpl-class"></a>Класс CWindowImpl
 Предоставляет методы для создания или создание подкласса для окна.  
@@ -62,7 +62,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWindowImpl::Create](#create)|Создает окно.|  
   
@@ -156,16 +156,16 @@ HWND Create(
  [in] Задает имя окна. Значение по умолчанию имеет значение NULL.  
   
  *dwStyle*  
- [in] Стиль окна. Это значение объединяется со стилем, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
+ [in] Стиль окна. Это значение объединяется со стилем, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.  
   
  *dwExStyle*  
- [in] Стиль окна расширенного. Это значение объединяется со стилем, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ [in] Стиль окна расширенного. Это значение объединяется со стилем, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *MenuOrID*  
  [in] Для дочернего окна, окна идентификатор. Для окна верхнего уровня, дескриптор меню для окна. Значение по умолчанию — **0U**.  
   
  *lpCreateParam*  
- [in] Указатель на окно создания данных. Полное описание см. в описании для конечного параметра для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Указатель на окно создания данных. Полное описание см. в описании для конечного параметра для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В случае успешного выполнения дескриптор для созданного окна. В противном случае — значение NULL.  
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Тип окна|Процедура окна|  
 |--------------------|----------------------|  
-|Окно на основании нового класса окна, заданные с помощью [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) макрос.|[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) функции Win32.|  
+|Окно на основании нового класса окна, заданные с помощью [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) макрос.|[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) функции Win32.|  
 |На основе окна в класс окна, который изменяет существующий класс, заданные с помощью [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос.|Процедура окна существующий класс окон.|  
 |Окно, выведенных в подклассы.|Окно выведенных в подклассы исходную процедуру окна.|  
   

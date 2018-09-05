@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ac4213587137552fa51505b73edd7387a98c5cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538533"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687557"
 ---
 # <a name="ud2"></a>__ud2
 **Блок, относящийся только к системам Microsoft**  
@@ -38,7 +38,7 @@ void __ud2();
 ## <a name="remarks"></a>Примечания  
  Если выполняется инструкция, не определено процессора приводит к появлению исключения недопустимый код операции.  
   
- `__ud2` Функция эквивалентна `UD2` инструкции компьютера и доступна только в режиме ядра. Дополнительные сведения см. в документе «Руководство разработчика архитектуры Intel программного обеспечения, том 2: ссылка на набор инструкций,» в [корпорации Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__ud2` Функция эквивалентна `UD2` инструкции компьютера и доступна только в режиме ядра. Дополнительные сведения см. в документе «Руководство разработчика архитектуры Intel программного обеспечения, том 2: ссылка на набор инструкций,» в [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.  
   
 ## <a name="requirements"></a>Требования  
   

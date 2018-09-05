@@ -1,7 +1,7 @@
 ---
-title: . NOLISTMACRO | Документы Microsoft
+title: . NOLISTMACRO | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b1ba3123f3a306ad476f7d9802656df005ef0d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4cc26959cbc8ea95fc6922468093a04b32bb98b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052655"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681071"
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
-Подавляет перечень расширения макросов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-.NOLISTMACRO  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- То же, что [. SALL](../../assembler/masm/dot-sall.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Подавляет список расширения макроса.
+
+## <a name="syntax"></a>Синтаксис
+
+> .NOLISTMACRO
+
+## <a name="remarks"></a>Примечания
+
+Совпадение с кодом [. SALL](../../assembler/masm/dot-sall.md).
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

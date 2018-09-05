@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eef4c0e7e32b85e26fbdc6adb7a2ebd26850b2ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573275"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691739"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Практическое руководство. Изменение требуемой версии .NET Framework и набора средств платформы
 Можно изменить параметры проекта Visual C++ для зависящий от версии платформы .NET Framework и использования других наборов средств платформы. По умолчанию система проектов использует версию платформы .NET Framework и версию набора инструментов, соответствующие версии Visual Studio, используемой для создания проекта. Целевой набор инструментов платформы можно изменить путем задания других свойств проекта. Для задания другой требуемой версии .NET Framework можно изменить файл проекта (VCXPROJ). Для каждого целевого объекта компиляции не требуется поддерживать отдельную базу кода.  
@@ -34,7 +34,7 @@ ms.locfileid: "42573275"
 > [!NOTE]
 >  Чтобы изменить набор инструментов целевой платформы, нужно установить связанную версию Visual Studio или Windows Platform SDK. Например, для использования платформы Itanium с набором средств платформы **Windows7.1 SDK** , необходимо иметь установленный пакет [Microsoft Windows SDK для Windows 7 и .NET Framework 4 с пакетом обновления 1 (SP1)](http://www.microsoft.com/download/details.aspx?id=8279) ; однако для выполнения задач по разработке можно использовать другую совместимую версию Visual Studio при условии использования правильной версии Framework и набора средств платформы.  
   
- Создавая пользовательские наборы инструментов платформы, можно расширить поддержку целевой платформы. Дополнительные сведения см. в разделе [C++ Нативное многоплатформенное нацеливание](http://go.microsoft.com/fwlink/p/?linkid=196619) в блоге Visual C++.  
+ Создавая пользовательские наборы инструментов платформы, можно расширить поддержку целевой платформы. Дополнительные сведения см. в разделе [C++ Нативное многоплатформенное нацеливание](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) в блоге Visual C++.  
   
 ### <a name="to-change-the-target-framework"></a>Изменение требуемой версии .NET Framework  
   

@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16bebe3beeecf48fb2601f0feee56e5168de83ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25e1c3fdad045b17b83f7562256592114a5c6e72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205099"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680657"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Класс CMFCPropertyGridCtrl
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
@@ -182,14 +182,14 @@ class CMFCPropertyGridCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Создает объект `CMFCPropertyGridCtrl`.|  
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCPropertyGridCtrl::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
 |`CMFCPropertyGridCtrl::accLocation`|Вызывается платформой для получения текущего положения указанного объекта на экране. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
@@ -246,7 +246,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Указывает ли платформа перерисовывает столбцов name и значение текущего элемента управления сетки свойств, если пользователь изменяет размер столбцов.|  
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Указывает, является ли внешний вид элемента управления сетки свойств в стиле, который используется платформой VS .NET.|  
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Указывает способ отображения измененных свойств.|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Удаляет все объекты свойств элемента управления сетки свойств.|  
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Для восстановления первоначальных значений всех свойств.|  
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Задает или сбрасывает алфавитном порядке.|  
@@ -262,7 +262,7 @@ class CMFCPropertyGridCtrl : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Перерисовывает элемента управления сетки свойств и его свойства.|  
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Вызывается элементом управления сетки свойств сортировки свойств.|  
@@ -289,7 +289,7 @@ class CMFCPropertyGridCtrl : public CWnd
   
  В следующей таблице перечислены четыре типа свойства выбора:  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |[Класс CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Свойство общего назначения, которое используется для указания значения строки, логические значения, дат и т. д.|  
 |[Класс CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Свойство, которое используется для выбора значения цвета.|  
@@ -426,7 +426,7 @@ virtual int CompareProps(
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-|Возвращаемое значение|Описание:|  
+|Возвращаемое значение|Описание|  
 |------------------|-----------------|  
 |< 0|Имя *pProp1* параметра меньше, чем имя *pProp2* параметра.|  
 |0|Имя *pProp1* совпадают имя *pProp2* параметра.|  
@@ -1146,7 +1146,7 @@ virtual void OnChangeSelection(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *pNewSel*|Указатель на только что выбранного свойства.|  
 |[in] *pOldSel*|Указатель на ранее выбранного свойства.|  
@@ -1469,7 +1469,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *pProp*|Указатель на свойство. Этот параметр не используется.|  
   

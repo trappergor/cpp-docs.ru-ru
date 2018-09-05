@@ -1,7 +1,7 @@
 ---
-title: . UNTILCXZ | Документы Microsoft
+title: . UNTILCXZ | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e002406ff2198ecca392b6d4954c903a32cb8d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1eb605e4804519da8ffd04058058c39107256e26
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682584"
 ---
 # <a name="untilcxz"></a>.UNTILCXZ
-В разделе [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+См. в разделе [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md).
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

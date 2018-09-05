@@ -1,7 +1,7 @@
 ---
-title: . LISTALL | Документы Microsoft
+title: . LISTALL | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 525f7af2b4b0fe7dce2e4adacfa8b01f862c46bc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e5fa0f90abeaae6b0b24ec780de7108bec58dd66
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057294"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691179"
 ---
 # <a name="listall"></a>.LISTALL
-Запускает перечисление всех инструкций.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-.LISTALL  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Эквивалентно комбинации [. СПИСОК](../../assembler/masm/dot-list.md), [. LISTIF](../../assembler/masm/dot-listif.md), и [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Запускает перечисление всех инструкций.
+
+## <a name="syntax"></a>Синтаксис
+
+> .LISTALL
+
+## <a name="remarks"></a>Примечания
+
+Эквивалентно комбинации [. СПИСОК](../../assembler/masm/dot-list.md), [. LISTIF](../../assembler/masm/dot-listif.md), и [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

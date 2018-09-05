@@ -1,7 +1,7 @@
 ---
-title: ЛОКАЛЬНЫЙ (MASM) | Документы Microsoft
+title: ЛОКАЛЬНЫЙ (MASM) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed9926d23f2e1e8636f31a6f586609ae22d38acd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e8105bc8168ce28d468a1378c5cf7889907a7c9f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053575"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685067"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
-В директиве первого макроса **ЛОКАЛЬНОГО** определяет метки, которые являются уникальными для каждого экземпляра макроса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      LOCAL localname [[, localname]]...  
-LOCAL label [[ [count ] ]] [[:type]] [[, label [[ [count] ]] [[type]]]]...  
-```  
-  
-## <a name="remarks"></a>Примечания  
- В директиве второй в определении процедуры (**PROC**), **ЛОКАЛЬНОГО** создает стековую переменные, которые существуют во время процедуры. *Метка* может быть простой переменной или массив, содержащий *число* элементов.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+В первой директиве макроса **ЛОКАЛЬНОГО** определяет метки, которые являются уникальными для каждого экземпляра макроса.
+
+## <a name="syntax"></a>Синтаксис
+
+> ЛОКАЛЬНЫЙ *localname* [[, *localname*]]...
+
+> ЛОКАЛЬНЫЙ *метка* [[[*число*]]] [[:*тип*]] [[, *метка* [[[*число*]]] [[ *Тип*]]]]...
+
+## <a name="remarks"></a>Примечания
+
+В директиве второй в определении процедуры (**PROC**), **ЛОКАЛЬНОГО** создает переменные на основе стека, которые существуют во время процедуры. *Метка* может быть простой переменной или массив, содержащий *число* элементов.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

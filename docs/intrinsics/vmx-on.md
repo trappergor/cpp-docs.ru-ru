@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e01be3d3f7db075116782b64e8b92ba12fb02f1d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4321a082efa71ecc81963099317ad3600ce8b36f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539113"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676202"
 ---
 # <a name="vmxon"></a>__vmx_on
 **Блок, относящийся только к системам Microsoft**  
@@ -50,7 +50,7 @@ unsigned char __vmx_on(
 |2|Сбой операции без сведений о состоянии.|  
   
 ## <a name="remarks"></a>Примечания  
- `__vmx_on` Соответствует функции `VMXON` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__vmx_on` Соответствует функции `VMXON` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.  
   
 ## <a name="requirements"></a>Требования  
   

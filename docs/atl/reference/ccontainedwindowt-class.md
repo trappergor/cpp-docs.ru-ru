@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78867405627a870f68e5411b7e577b563a605c75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207200"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690950"
 ---
 # <a name="ccontainedwindowt-class"></a>Класс CContainedWindowT
 Этот класс реализует окно, содержатся внутри другого объекта.  
@@ -66,13 +66,13 @@ class CContainedWindowT : public TBase
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|Конструктор. Инициализирует элементы данных, чтобы указать, какие схемы сообщений будет обрабатывать содержащееся окно сообщения.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CContainedWindowT::Create](#create)|Создает окно.|  
 |[CContainedWindowT::DefWindowProc](#defwindowproc)|Обеспечивает обработку сообщений по умолчанию.|  
@@ -85,7 +85,7 @@ class CContainedWindowT : public TBase
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CContainedWindowT::m_dwMsgMapID](#m_dwmsgmapid)|Определяет, какие схемы сообщений будет обрабатывать содержащееся окно сообщения.|  
 |[CContainedWindowT::m_lpszClassName](#m_lpszclassname)|Задает имя используемого существующий класс окон, на котором будет основан новый класс окна.|  
@@ -220,16 +220,16 @@ HWND Create(
  [in] Задает имя окна. Значение по умолчанию имеет значение NULL.  
   
  *dwStyle*  
- [in] Стиль окна. Значение по умолчанию — WS_CHILD &#124; WS_VISIBLE. Список возможных значений см. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
+ [in] Стиль окна. Значение по умолчанию — WS_CHILD &#124; WS_VISIBLE. Список возможных значений см. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.  
   
  *dwExStyle*  
- [in] Стиль окна расширенного. Значение по умолчанию — 0, то есть без расширенного стиля. Список возможных значений см. в разделе [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ [in] Стиль окна расширенного. Значение по умолчанию — 0, то есть без расширенного стиля. Список возможных значений см. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *MenuOrID*  
  [in] Для дочернего окна, окна идентификатор. Для окна верхнего уровня, дескриптор меню для окна. Значение по умолчанию — **0U**.  
   
  *lpCreateParam*  
- [in] Указатель на окно создания данных. Полное описание см. в описании для конечного параметра для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Указатель на окно создания данных. Полное описание см. в описании для конечного параметра для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В случае успешного выполнения дескриптор вновь созданного окна. в противном случае — значение NULL.  

@@ -1,7 +1,7 @@
 ---
-title: оператор THIS | Документы Microsoft
+title: оператор THIS | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37304563b1a986b81eec05778c420a002e75fa9f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ae20d8f2abc7740d1716155f626c6a69316ca3fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057127"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692577"
 ---
 # <a name="operator-this"></a>Оператор THIS
-Возвращает указанный операнд `type` , смещение и сегмент значения равны значения счетчика текущего расположения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-THIS type  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает указанный операнд `type` , смещение и сегмент значения равны значения счетчика текущего расположения.
+
+## <a name="syntax"></a>Синтаксис
+
+> Этот тип
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216292"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678818"
 ---
 # <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
 Расширяет функциональность [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), окно фрейма Windows многодокументного интерфейса (MDI).  
@@ -186,7 +186,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Повторно вычисляет макет активным элементом.|  
 |`CMDIFrameWndEx::AddDockSite`|Этот метод не используется.|  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Вызывается платформой при активации меню с перемещаемой панелью.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Вызывается платформой для обновления меню фрейма. (Переопределяет `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Возвращает закрепляемой области, содержащей заданную точку.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows.  (Переопределяет `CMDIFrameWnd::PreTranslateMessage`.)|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows.  (Переопределяет `CMDIFrameWnd::PreTranslateMessage`.)|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Вызывается платформой для повторно рассчитать макет окна фрейма. (Переопределяет [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Отменяет регистрацию область и удаляет его из диспетчера закрепления.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Сохраняет текущий макет групп с вкладками MDI и список ранее открывавшихся документов.|  
@@ -268,7 +268,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Определяет, возможно ли преобразование закрепляемых панелей для дочерних окон интерфейса MDI.|  
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Включает или отключает оптимизации перерисовки для дочерних окон интерфейса MDI.|  

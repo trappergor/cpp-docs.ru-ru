@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 475a4f4d5f39f7fdfa569441fb2cb0fc72b745a0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204347"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677886"
 ---
 # <a name="ccomcoclass-class"></a>Класс CComCoClass
 Этот класс предоставляет методы для создания экземпляров класса и получения его свойств.  
@@ -50,7 +50,7 @@ class CComCoClass
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComCoClass::CreateInstance](#createinstance)|(Статический) Создает экземпляр класса и запросы для интерфейса.|  
 |[CComCoClass::Error](#error)|(Статический) Возвращает сведения об ошибке клиенту.|  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Статический) Переопределите для возврата описание объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComCoClass` Предоставляет методы для получения CLSID объекта, настройки сведений об ошибках и создания экземпляров класса. Любой класс зарегистрирован в [карте объектов](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) должен быть производным от `CComCoClass`.  
+ `CComCoClass` Предоставляет методы для получения CLSID объекта, настройки сведений об ошибках и создания экземпляров класса. Любой класс, который зарегистрирован в карте объектов должен быть производным от `CComCoClass`.  
   
  `CComCoClass` также определяет модель по умолчанию класс фабрики и статистическую обработку для объекта. `CComCoClass` использует следующие два макроса:  
   

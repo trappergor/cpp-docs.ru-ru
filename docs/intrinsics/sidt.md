@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96d20916210b0fe55817dceb86d388a33f8e238b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 202e982d30fd0877814fa0c0fe967091057f920f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541668"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685981"
 ---
 # <a name="sidt"></a>__sidt
 **Блок, относящийся только к системам Microsoft**  
@@ -38,7 +38,7 @@ void __sidt(
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] `Destination`|Указатель на область памяти, где хранится IDTR.|  
   
@@ -51,7 +51,7 @@ void __sidt(
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- `__sidt` Функция эквивалентна `SIDT` инструкции компьютера. Дополнительные сведения см. в документе «Руководство разработчика архитектуры Intel программного обеспечения, том 2: ссылка на набор инструкций,» в [корпорации Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__sidt` Функция эквивалентна `SIDT` инструкции компьютера. Дополнительные сведения см. в документе «Руководство разработчика архитектуры Intel программного обеспечения, том 2: ссылка на набор инструкций,» в [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

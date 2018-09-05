@@ -1,7 +1,7 @@
 ---
-title: MMWORD | Документы Microsoft
+title: MMWORD. | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97b1e58116d633519b1a780928e05862ac1771d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7314c6d0861195e312c7f72481d2e195e041965d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054784"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679238"
 ---
 # <a name="mmword"></a>MMWORD
-Используется для мультимедиа операндов 64-разрядных инструкций MMX и SSE (XMM).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-MMWORD  
-```  
-  
-## <a name="remarks"></a>Примечания  
- `MMWORD` — Это тип.  Перед добавлением MASM MMWORD можно достичь эквивалентную функциональность с:  
-  
-```  
-mov mm0, qword ptr [ebx]  
-```  
-  
- Хотя обе инструкции работают на 64-разрядных операндов, `QWORD` является типом для 64-разрядных целых чисел без знака и `MMWORD` является типом для 64-разрядное значение мультимедиа.  
-  
- `MMWORD` представляет тот же тип, что [__m64](../../cpp/m64.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-movq     mm0, mmword ptr [ebx]  
+
+Используется для 64-разрядные операнды мультимедиа с инструкциями MMX и SSE (XMM).
+
+## <a name="syntax"></a>Синтаксис
+
+> MMWORD
+
+## <a name="remarks"></a>Примечания
+
+`MMWORD` — Это тип.  До MMWORD, добавляемый MASM удалось добиться аналогичных функциональных возможностей с:
+
+```asm
+    mov mm0, qword ptr [ebx]
+```
+
+Хотя обе инструкции работать на 64-разрядных операндов, `QWORD` является типом для 64-разрядных целых беззнаковых чисел и `MMWORD` является типом для 64-разрядное значение мультимедиа.
+
+`MMWORD` представляет тот же тип, что [__m64](../../cpp/m64.md).
+
+## <a name="example"></a>Пример
+
+```asm
+    movq     mm0, mmword ptr [ebx]
 ```

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db05d1b19a67fc54a148d407fd90992a6d37c4c6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25ec172fb38fb3b200086c5f9317ccd8e5e54281
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213591"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691484"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -36,16 +36,16 @@ ms.locfileid: "43213591"
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Специализация `basic_streambuf` , использующий **char** в качестве параметров шаблона.|
 |[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Специализация `basic_streambuf` , использующий **wchar_t** в качестве параметров шаблона.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
-|[Класс basic_streambuf](https://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|Этот класс шаблона описывает абстрактный базовый класс для получения буфера потока, который управляет передачей элементов в определенное представление потока и из него.|
+|[Класс basic_streambuf](basic-streambuf-class.md)|Этот класс шаблона описывает абстрактный базовый класс для получения буфера потока, который управляет передачей элементов в определенное представление потока и из него.|
 
 ## <a name="see-also"></a>См. также
 

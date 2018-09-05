@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e2456eed4f55fe5a5f68552cfe91e5785fc99cf5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2728c88e320fab192563f21ebcdde934be9da84
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687116"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Макросы для шаблонов поставщика OLE DB
 Макросы шаблонов поставщик данных OLE DB предоставляют функции в следующих категориях:  
@@ -231,7 +231,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
  [in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
   
 #### <a name="remarks"></a>Примечания  
- Этот макрос задает в качестве значения свойства типа `DWORD` значение по умолчанию, определенное в ATLDB.H. Чтобы задать свойству нужное вам значение, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Чтобы задать [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) и [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) для свойства, в то же время, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ Этот макрос задает в качестве значения свойства типа `DWORD` значение по умолчанию, определенное в ATLDB.H. Чтобы задать свойству нужное вам значение, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Чтобы задать `VARTYPE` и [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) для свойства, в то же время, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Пример  
  См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -250,7 +250,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
  [in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
   
  *vt*  
- [in] [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) этой записи свойства.  
+ [in] `VARTYPE` Этой записи свойства. (Определяется в файле wtypes.h)  
   
  *dwFlags*  
  [in] Объект [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) значение, описывающее эту запись свойства.  

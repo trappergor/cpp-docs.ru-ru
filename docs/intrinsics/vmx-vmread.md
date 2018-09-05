@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eee9c82487159b9233999d17ff36c4aad3ef6445
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d6f03ea1ea39b9202d4bb7b850bb81354a4a47f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540094"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677384"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Блок, относящийся только к системам Microsoft**  
@@ -40,7 +40,7 @@ unsigned char __vmx_vmread(
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] `Field`|Поле VMCS для чтения.|  
 |[in] `FieldValue`|Указатель на расположение для хранения значения чтения из VMCS поле, указанное параметром `Field` параметр.|  
@@ -54,7 +54,7 @@ unsigned char __vmx_vmread(
 |2|Сбой операции без сведений о состоянии.|  
   
 ## <a name="remarks"></a>Примечания  
- `__vmx_vmread` Функция эквивалентна `VMREAD` инструкции компьютера. Значение `Field` параметр является индекс кодировке поля, который описан в документации Intel. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта, а затем см. в приложении С этим документом .  
+ `__vmx_vmread` Функция эквивалентна `VMREAD` инструкции компьютера. Значение `Field` параметр является индекс кодировке поля, который описан в документации Intel. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта, а затем см. в приложении С этим документом .  
   
 ## <a name="requirements"></a>Требования  
   

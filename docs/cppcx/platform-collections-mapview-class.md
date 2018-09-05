@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1dfbcff7e9e470992b0799aac1c87984b52ed50
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605475"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689475"
 ---
 # <a name="platformcollectionsmapview-class"></a>Класс Platform::Collections::MapView
 Представляет доступное только для чтения представление на *карте*, которое является коллекцией пар "ключ-значение".  
@@ -51,19 +51,19 @@ ref class MapView sealed;
  Тип, предоставляющий объект функции, который может сравнить значения двух элементов как ключи сортировки, чтобы определить их относительный порядок в объекте MapView. По умолчанию [std::less\<K >](../standard-library/less-struct.md).  
   
 ### <a name="remarks"></a>Примечания  
- MapView — это конкретная реализация C++ [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) интерфейс, который передается через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
+ MapView — это конкретная реализация C++ [Windows::Foundation::Collections::IMapView \<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) интерфейс, который передается через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[MapView::MapView](#ctor)|Инициализирует новый экземпляр класса MapView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[MapView::First](#first)|Возвращает итератор, который инициализируется первым элементом в представлении карты.|  
 |[MapView::HasKey](#haskey)|Определяет, содержит ли текущий объект MapView указанный ключ.|  

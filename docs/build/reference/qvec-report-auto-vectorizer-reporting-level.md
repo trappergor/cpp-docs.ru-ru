@@ -1,5 +1,5 @@
 ---
-title: -Qvec-report (уровень отчетности автоматического Векторизатора) | Документы Microsoft
+title: -Qvec-report (уровень отчетности автоматического Векторизатора) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddbb68c20ade9f66215d3a60f2db7ea545409a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85f9d1c63f41b28982018bbe4507ff6bf87158fb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377491"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685857"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (уровень отчетности автоматического векторизатора)
-Включает функцию создания отчетов компилятора [автоматический Векторизатор](../../parallel/auto-parallelization-and-auto-vectorization.md) и указывает уровень информационных сообщений, выводимых при компиляции.  
+Включает функцию отчетов компилятора [— Диагностика автоматического Векторизатора](../../parallel/auto-parallelization-and-auto-vectorization.md) и указывает уровень информационных сообщений для выходных данных во время компиляции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,10 +30,10 @@ ms.locfileid: "32377491"
   
 ## <a name="remarks"></a>Примечания  
  **/ Qvec-report: 1**  
- Выводит информационное сообщение для циклов, которые являются векторизован.  
+ Выводит информационное сообщение для циклов, которые будут преобразованы в векторный формат.  
   
  **/ Qvec-report: 2**  
- Выводит информационное сообщение для циклов, которые являются векторизован и циклы, которые не являются векторизован, с указанием кода причины.  
+ Выводит информационное сообщение для циклов, которые будут преобразованы в векторный формат, а также для циклов, которые являются не преобразованы в векторный формат, с указанием кода причины.  
   
  Сведения о кодах причин и сообщениях см. в разделе [сообщения Векторизатора и Параллелизатора](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
@@ -53,4 +53,4 @@ ms.locfileid: "32377491"
  [Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md)   
  [Параметры компилятора](../../build/reference/compiler-options.md)   
  [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
- [Параллельное программирование в машинном коде](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Параллельное программирование в машинном коде](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

@@ -1,7 +1,7 @@
 ---
-title: оператор LENGTH | Документы Microsoft
+title: оператор LENGTH | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e4f94859bd42e47595110817604288030015862
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 24f20c13e07d1e06de0a8fbd196a95c5f373bef9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057176"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682693"
 ---
 # <a name="operator-length"></a>Оператор LENGTH
-Возвращает число элементов данных в *переменной* создан первый инициализатором.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-LENGTH variable  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает число элементов данных в *переменной* созданные первый инициализатор.
+
+## <a name="syntax"></a>Синтаксис
+
+> Переменной ДЛИНЫ
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

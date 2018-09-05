@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ef60fc542b38c7619ce7b65cc7f39db79ed1b228
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597004"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679028"
 ---
 # <a name="platformcomexception-class"></a>Класс Platform::COMException
 Представляет ошибки COM, возникающие при выполнении приложения. COMException — базовый класс для набора предопределенных стандартных исключений.  
@@ -40,7 +40,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **Конструкторы**  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[COMException](#ctor)|Инициализирует новый экземпляр класса COMException.|  
   
@@ -52,7 +52,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  Класс COMException имеет следующие свойства.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|  
 |[Exception::Message](#message)|Сообщение с описанием исключения.|  
@@ -60,7 +60,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ## <a name="derived-exceptions"></a>Производные исключения  
  Следующие предопределенные исключения наследуются от класса COMException. Они отличаются от класса COMException только своими именами, именами своих конструкторов и значениями HRESULT.  
   
-|name|Значение HRESULT|Описание:|  
+|name|Значение HRESULT|Описание|  
 |----------|------------------------|-----------------|  
 |COMException|*Определяемое пользователем значение hresult*|Возникает при возвращении неизвестного значения HRESULT после вызова метода COM.|  
 |AccessDeniedException|E_ACCESSDENIED|Возникает при запрете доступа к ресурсу или функции.|  
@@ -113,7 +113,7 @@ public:property int HResult {    int get();}
  Значение HRESULT, задающее ошибку.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения об интерпретации значения HRESULT см. в разделе [структуры из кодов ошибок модели COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Дополнительные сведения об интерпретации значения HRESULT см. в разделе [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes).  
 
 ## <a name="message"></a> COMException::Message-свойство
 Сообщение с описанием исключения.  

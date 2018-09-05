@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211558"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693471"
 ---
 # <a name="cheaderctrl-class"></a>Класс CHeaderCtrl
 Предоставляет функциональные возможности стандартного элемента управления "заголовок" Windows.  
@@ -94,13 +94,13 @@ class CHeaderCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Создает объект `CHeaderCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Удаляет все фильтры для заголовка элемента управления.|  
 |[CHeaderCtrl::ClearFilter](#clearfilter)|Удаляет фильтр для заголовка элемента управления.|  
@@ -283,7 +283,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Стиль заголовка элемента управления. Описание заголовка стили элемента управления, см. в разделе [стили элемента управления заголовка](/windows/desktop/Controls/header-control-styles) в пакете Windows SDK. См. в разделе [создать](#create) список дополнительные стили.  
@@ -488,7 +488,7 @@ BOOL GetItemDropDownRect(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *iItem*|Отсчитываемый от нуля индекс, стиль которого является HDF_SPLITBUTTON ю элемента заголовка. Дополнительные сведения см. в разделе `fmt` членом [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) структуры.|  
 |[out] *lpRect*|Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру для получения ограничивающего прямоугольника сведения.|  
@@ -565,7 +565,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[out] *lpRect*|Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает данные ограничивающий прямоугольник.|  
   
@@ -596,7 +596,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in, out] *phdhti*|Указатель на [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) структура, которая указывает точка для проверки и получает результаты теста.|  
   
@@ -724,7 +724,7 @@ BOOL SetFocusedItem(int iItem);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *iItem*|Отсчитываемый от нуля индекс элемента заголовка.|  
   

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201008"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690425"
 ---
 # <a name="clinkctrl-class"></a>Класс CLinkCtrl
 Предоставляет функциональные возможности стандартного элемента управления SysLink Windows.  
@@ -64,13 +64,13 @@ class CLinkCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CLinkCtrl::CLinkCtrl](#clinkctrl)|Создает объект `CLinkCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CLinkCtrl::Create](#create)|Создает элемент управления связями и присоединяет его к `CLinkCtrl` объекта.|  
 |[CLinkCtrl::CreateEx](#createex)|Создает элемент управления связями с помощью расширенных стилей и присоединяет его к `CLinkCtrl` объекта.|  
@@ -189,7 +189,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
  Указатель на строку с завершающим нулевым символом, содержащий помеченной текст для отображения. Дополнительные сведения см. в разделе «Доступ разметки и ссылку» в разделе [Обзор управления SysLink](/windows/desktop/Controls/syslink-overview).  
   
  *dwExStyle*  
- Указывает расширенный стиль элемента управления ссылки. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль элемента управления ссылки. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Задает стиль ссылки элемента управления. Примените любое сочетание стилей элемента управления. Дополнительные сведения см. в разделе [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK.  
@@ -235,7 +235,7 @@ int GetIdealSize(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *cxMaxWidth*|Максимальная ширина ссылки, в пикселях.|  
 |[out] \* *pSize*|Указатель на Windows [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры. При возвращении данного метода *cy* членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, который задается параметром *cxMaxWidth*. *Cx* член структуры содержит ширину текста ссылки, которая фактически требуется.|  

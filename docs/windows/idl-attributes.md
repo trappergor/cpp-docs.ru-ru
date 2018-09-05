@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a5fcfe550fbcab7ffc872cd2a802906e1416a24
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5b4207549a5b9992f3c9ac4f99c0b0cac0275772
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196638"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679899"
 ---
 # <a name="idl-attributes"></a>Атрибуты IDL
 
@@ -40,7 +40,7 @@ ms.locfileid: "43196638"
 
 Обратите внимание, что [idl_quote](../windows/idl-quote.md) позволяет использовать MIDL конструкции, которые не поддерживаются в текущей версии Visual C++. Это и другие атрибуты, такие как [importlib](../windows/importlib.md) и [includelib](../windows/includelib-cpp.md) позволяют использовать существующие IDL-файлы в текущем проекте Visual C++.
 
-|Атрибут|Описание:|
+|Атрибут|Описание|
 |---------------|-----------------|
 |[aggregatable](../windows/aggregatable.md)|Указывает, что элемент управления может быть статистически вычислен другим элементом управления.|
 |[appobject](../windows/appobject.md)|Идентифицирует сокласс как объект приложения, который связан с полной exe-приложения и указывает, что функциях и свойствах компонентного класса доступны глобально в этой библиотеки типов.|
@@ -126,4 +126,3 @@ ms.locfileid: "43196638"
 ## <a name="see-also"></a>См. также
 
 [Список атрибутов по группам](../windows/attributes-by-group.md)  
-[Ограничения атрибутов](https://msdn.microsoft.com/6e6c4329-f667-4869-b991-cbe9cb7a8f61)

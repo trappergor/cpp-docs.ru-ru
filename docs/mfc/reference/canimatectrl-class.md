@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e921faf20fd7c2bbac967bf73b62dd33c8220a4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213773"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688232"
 ---
 # <a name="canimatectrl-class"></a>Canimatectrl-класс
 Предоставляет функциональные возможности стандартного элемента управления анимациями Windows.  
@@ -54,13 +54,13 @@ class CAnimateCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimateCtrl::CAnimateCtrl](#canimatectrl)|Создает объект `CAnimateCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimateCtrl::Close](#close)|Закрывает AVI-файла.|  
 |[CAnimateCtrl::Create](#create)|Создает элемент управления анимации и присоединяет его к `CAnimateCtrl` объекта.|  
@@ -193,7 +193,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Задает стиль элемента управления анимации. Применить любое сочетание окна и Стили анимации элемента управления, описанных в [стили элемента управления анимации](/windows/desktop/Controls/animation-control-styles) в пакете Windows SDK.  

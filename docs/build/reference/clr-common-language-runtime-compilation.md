@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff46958afea8825f29941d9f3cbead20c533c76c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606867"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676989"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (компиляция CLR)
 Позволяет приложениям и компонентам использовать возможности из среды CLR.  
@@ -68,9 +68,7 @@ ms.locfileid: "42606867"
  До выпуска Visual C++ 2005 параметр **/clr:noAssembly** требовал указания **/LD**. Теперь параметр **/LD** подразумевается при указании **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Позволяет приложению Visual C++ для запуска в версии 1 среды CLR. Если вы используете **initialAppDomain**, могут возникнуть некоторые проблемы, которые рассматриваются в [ошибка: исключение AppDomainUnloaded при использовании управляемых расширений для компонентов Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) Майкрософт Поддержка веб-сайта.  
-  
- Приложения, скомпилированные с использованием **initialAppDomain** , не должны использоваться приложением, которое применяет ASP.NET, так как этот компонент не поддерживается в версии 1 среды CLR.  
+ Позволяет приложению Visual C++ для запуска в версии 1 среды CLR.  Приложения, скомпилированные с использованием **initialAppDomain** , не должны использоваться приложением, которое применяет ASP.NET, так как этот компонент не поддерживается в версии 1 среды CLR.  
   
  **/clr:nostdlib**  
  Указывает компилятору игнорировать каталог \clr по умолчанию. Компилятор выдает ошибки при включении нескольких версий библиотеки DLL, например System.dll. При использовании этого параметра вы можете указать конкретную платформу для компиляции.  

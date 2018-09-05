@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d762aef0dd48f3eac8eaeeddee558c4f237b29f
-ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
+ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43352743"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677461"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA - структура
 Структура `AFX_GLOBAL_DATA` содержит поля и методы, используемые для управления платформой или настройки внешнего вида и поведения приложения.  
@@ -85,14 +85,14 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|Создает структуру `AFX_GLOBAL_DATA` .|  
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::Cleanup](#cleanup)|Освобождает ресурсы, выделенные платформой, например кисти, шрифты и библиотеки DLL.|  
 |[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|Создает преобразование вращения, осуществляющее поворот на указанный угол вокруг указанной точки.|  
@@ -118,7 +118,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Регистрирует указанный класс окна MFC.|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Освобождает интерфейсы, полученные через методы GetITaskbarList и GetITaskbarList3.|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|Повторно инициализирует Внутренние указатели функции, которые обращаются к методам, которые поддерживают Windows [темы и визуальные стили](/windows/desktop/Controls/visual-styles-overview).|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Предоставляет простой способ для вызова Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) метод.|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Предоставляет простой способ для вызова Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) метод.|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Создает указанный логический шрифт.|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Создает и инициализирует объект элемента оболочки из имени синтаксического анализа.|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Повторно инициализирует логические шрифты, используемые платформой.|  
@@ -126,7 +126,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|Включает или отключает поддержку Microsoft Active Accessibility. Active Accessibility предлагает надежные методы для предоставления информации об элементах пользовательского интерфейса.|  
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|Указывает, включена ли поддержка Microsoft Active Accessibility.|  
@@ -134,7 +134,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Указывает, поддерживает ли текущая операционная система альфа-смешение.|  
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|Указывает, выполняется ли приложение в ОС Windows 7 или более поздней версии.|  
@@ -371,7 +371,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>Параметры   
  [in] *nColor*  
- Значение, указывающее элемент пользовательского интерфейса, цвет которого извлекается. Список допустимых значений см. в разделе *nIndex* параметр [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) метод.  
+ Значение, указывающее элемент пользовательского интерфейса, цвет которого извлекается. Список допустимых значений см. в разделе *nIndex* параметр [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение цвета RGB указанного элемента пользовательского интерфейса. Дополнительные сведения см. в разделе "Замечания".  
@@ -381,7 +381,7 @@ COLORREF GetColor(int nColor);
   
 ### <a name="see-also"></a>См. также  
 
- [Функция GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [Функция GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)   
  [COLORREF](/windows/desktop/gdi/colorref)   
  [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
@@ -697,7 +697,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  Имя класса окна для регистрации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Полное имя зарегистрированного класса, если этот метод выполнен успешно; в противном случае [исключение ресурсов](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
+ Полное имя зарегистрированного класса, если этот метод выполнен успешно; в противном случае [исключение ресурсов](exception-processing.md#afxthrowresourceexception).  
   
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение — это список разделенных запятой *lpszClassNamePrefix* строки параметра, а также шестнадцатеричное текстовое представления дескрипторов текущего экземпляра приложения; курсор приложения, который представляет стрелку курсор, идентификатор которого равен IDC_ARROW; и кисть фона. Дополнительные сведения о регистрации классов окна MFC см. в разделе [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
@@ -721,7 +721,7 @@ BOOL Resume();
  Этот метод вызывается, когда платформа получает [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast) сообщения.  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-Предоставляет простой способ для вызова Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540) метод.  
+Предоставляет простой способ для вызова Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) метод.  
   
   
 ```  
@@ -750,7 +750,7 @@ BOOL SetLayeredAttrib(
  
 ### <a name="see-also"></a>См. также   
  [COLORREF](/windows/desktop/gdi/colorref)   
- [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 Создает указанный логический шрифт.  

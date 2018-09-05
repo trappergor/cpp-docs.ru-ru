@@ -1,7 +1,7 @@
 ---
-title: 'IFNDEF: | Документы Microsoft'
+title: IFNDEF | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ef6c8446b2e7d7461dd1572186378f551442c23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 548d680ddab9eaeab8c07e95e26c04e837f78141
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056152"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680327"
 ---
 # <a name="ifndef"></a>IFNDEF
-Предоставляет сборку, если *имя* не был определен.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-IFNDEF name  
-```  
-  
-## <a name="remarks"></a>Примечания  
- В разделе [IF](../../assembler/masm/if-masm.md) сложный синтаксис.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Предоставляет сборку, если *имя* не был определен.
+
+## <a name="syntax"></a>Синтаксис
+
+> IFNDEF имя
+
+## <a name="remarks"></a>Примечания
+
+См. в разделе [IF](../../assembler/masm/if-masm.md) сложный синтаксис.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

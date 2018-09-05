@@ -1,5 +1,5 @@
 ---
-title: -Qpar-report (уровень отчетности автоматического Параллелизатора) | Документы Microsoft
+title: -Qpar-report (уровень отчетности автоматического Параллелизатора) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a9db6d02b9233c51a49cf506a664c9be0f821e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70ac8433b4692586880648d6c5d5d83f1cbb15fd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376018"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681699"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (уровень отчетности автоматического параллелизатора)
-Включает функцию создания отчетов компилятора [автоматического Параллелизатора](../../parallel/auto-parallelization-and-auto-vectorization.md) и указывает уровень информационных сообщений, выводимых при компиляции.  
+Включает функцию отчетности компилятора [автоматического Параллелизатора](../../parallel/auto-parallelization-and-auto-vectorization.md) и указывает уровень информационных сообщений для выходных данных во время компиляции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,4 +53,4 @@ ms.locfileid: "32376018"
  [Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md)   
  [Параметры компилятора](../../build/reference/compiler-options.md)   
  [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
- [Параллельное программирование в машинном коде](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Параллельное программирование в машинном коде](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

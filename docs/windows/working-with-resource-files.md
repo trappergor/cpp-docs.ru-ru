@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0cbc2e88bc123b4de82ca69a41a17a41729bb4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211101"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691196"
 ---
 # <a name="working-with-resource-files"></a>Работа с файлами ресурсов
 
 > [!WARNING]
-> Этот раздел относится к классическим приложениям Windows, написанным на C++. Сведения о ресурсах в приложениях универсальной платформы Windows, написанного на языке C++ см. в разделе [определение ресурсов приложения](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Этот раздел относится к классическим приложениям Windows, написанным на C++. Сведения о ресурсах в приложениях универсальной платформы Windows, написанного на языке C++ см. в разделе [определение ресурсов приложения](/windows/uwp/app-resources/).
 >
 > Сведения о добавлении ресурсов в C + +/ CLI проектов, см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.
 
@@ -52,9 +52,6 @@ ms.locfileid: "43211101"
 
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Ссылки на документацию по Visual C++.
-
-[Знакомство с Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
-Описание полного набора средств разработки, которые используют одну интегрированную среду разработки (IDE), что позволяет им совместно использовать инструменты и создавать решения на разных языках.
 
 [Обращайтесь к нам](/visualstudio/ide/talk-to-us)  
 Ссылки на сведения об использовании документации, обращении в службу поддержки и использовании специальных возможностей.

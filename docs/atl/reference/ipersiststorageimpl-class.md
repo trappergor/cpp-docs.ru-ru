@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7a337743ece9edfa71a052ee9d6e19728b0c051
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223217"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693720"
 ---
 # <a name="ipersiststorageimpl-class"></a>Класс IPersistStorageImpl
 Этот класс реализует [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) интерфейс.  
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IPersistStorageImpl::GetClassID](#getclassid)|Извлекает идентификатор CLSID объекта.|  
 |[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|Указывает, что объект освободить все объекты хранилища и перейти в режим HandsOff. Реализация ATL, возвращается значение s_ок.|  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="remarks"></a>Примечания  
  `IPersistStorageImpl` реализует [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) интерфейс, который позволяет клиенту для запроса, нагрузки объекта и сохранить постоянные данные с помощью хранилища.  
   
- Реализации этого класса требуется класс `T` чтобы сделать реализацию `IPersistStreamInit` интерфейс, доступный через `QueryInterface`. Обычно это означает, что класс `T` должен быть производным от [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), предоставить запись для `IPersistStreamInit` в [COM карты](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)и использовать [сопоставление свойств](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427) для описания класса постоянных данных.  
+ Реализации этого класса требуется класс `T` чтобы сделать реализацию `IPersistStreamInit` интерфейс, доступный через `QueryInterface`. Обычно это означает, что класс `T` должен быть производным от [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), предоставить запись для `IPersistStreamInit` в [COM карты](com-map-macros.md)и использовать [сопоставление свойств](property-map-macros.md) для описания класса постоянных данных.  
   
  **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)  
   

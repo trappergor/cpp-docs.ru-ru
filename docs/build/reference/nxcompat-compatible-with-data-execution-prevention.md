@@ -1,5 +1,5 @@
 ---
-title: / NXCOMPAT (совместимо с предотвращением исполнения данных) | Документы Microsoft
+title: / NXCOMPAT (совместимо с предотвращением выполнения данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb4f8a91545a196bc92fdc0ec44e89a7d5680185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f6e2c3f1c297493b2af72f280ac5eabcb6f17ce
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374808"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690323"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (совместимо с предотвращением исполнения данных (DEP))
 
-Указывает, что исполняемый файл является совместимую с функцией предотвращения исполнения данных Windows.
+Указывает, что исполняемый файл совместим с функцией предотвращения исполнения данных Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,19 +36,19 @@ ms.locfileid: "32374808"
 
 По умолчанию **/NXCOMPAT** включен.
 
-**: No** можно использовать для явного указания исполняемый файл как несовместимый с предотвращением исполнения данных.
+**: No** можно использовать для явного указания исполняемый файл как несовместимые с предотвращением выполнения данных.
 
-Дополнительные сведения о Предотвращение выполнения данных см. статьи:
+Дополнительные сведения о Предотвращение выполнения данных см. в статьях:
 
-- [Подробное описание функции предотвращения выполнения данных (DEP)](http://go.microsoft.com/fwlink/p/?linkid=157771)
+- [Подробное описание функции предотвращения выполнения данных (DEP)](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [Предотвращение выполнения данных](http://go.microsoft.com/fwlink/p/?linkid=157770)
+- [Предотвращение выполнения данных](/windows/desktop/Memory/data-execution-prevention)
 
-- [Предотвращение выполнения данных (Windows Embedded)](http://go.microsoft.com/fwlink/p/?linkid=157768)
+- [Предотвращение выполнения данных (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Настройка этого параметра компоновщика в Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
 

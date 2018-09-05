@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f946a0e24790fd894e4eb908e77163306130e46a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214640"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683369"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Облачное и веб-программирование в Visual C++
 
@@ -62,7 +62,7 @@ ms.locfileid: "43214640"
 
    Предоставляет собственный интерфейс COM, что можно использовать в приложениях среды выполнения Windows или классических приложениях Windows для подключения к Интернету по протоколу HTTP, и вызывать команду GET, PUT и других команд HTTP. Дополнительные сведения см. в разделе [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [Windows Internet (WinInet)](https://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)
+- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
 
    Windows API, который можно использовать в классических приложениях Windows для подключения к Интернету.
 

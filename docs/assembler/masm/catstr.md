@@ -1,7 +1,7 @@
 ---
-title: CATSTR | Документы Microsoft
+title: CATSTR | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d0fbe41d81671b509eef6d0724fd8a4b6880484
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 975d3a0776a6b2228dedba54cbd47a18d363921b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049641"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689384"
 ---
 # <a name="catstr"></a>CATSTR
-Сцепляет элементы текста.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-name CATSTR [[textitem1 [[, textitem2]] ...]]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Каждый элемент текста может быть строковым литералом предшествующим константа `%`, или строку, возвращаемую функцией макрос.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Сцепляет элементы текста.
+
+## <a name="syntax"></a>Синтаксис
+
+> Назовите CATSTR [[textitem1 [[, textitem2]]...]]
+
+## <a name="remarks"></a>Примечания
+
+Каждый элемент текста может быть строковый литерал, константа предшествует `%`, или строка, возвращаемая функцией макрос.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

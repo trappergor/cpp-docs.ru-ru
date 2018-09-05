@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6cb76b2802b1f582621e3e0bacb565a974894d75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610057"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693349"
 ---
 # <a name="security-best-practices-for-c"></a>Рекомендации по безопасности для C++
 
@@ -78,7 +78,8 @@ ms.locfileid: "42610057"
 -   Безопасность  
   
 ## <a name="windows-application-verifier"></a>Средство проверки приложений Windows  
- Верификатор приложений (AppVerifier) может помочь выявить потенциальные проблемы совместимости, стабильности и безопасности приложений.  
+ [Application Verifier (AppVerifier)](/windows-hardware/drivers/debugger/application-verifier
+) может помочь выявить потенциальные проблемы совместимости, стабильности и безопасности приложений.  
   
  Средство AppVerifier контролирует использование операционной системы приложением. Он следит за файловой системой, реестром, памятью и API-интерфейсами во время работы приложения, а при обнаружении ошибок выдает рекомендации по исправлению исходного кода.  
   
@@ -89,8 +90,6 @@ ms.locfileid: "42610057"
 -   Исследовать приложения для определения утечек памяти.  
 
 -   Выявлять потенциальные проблемы безопасности в приложениях.  
-  
- AppVerifier является частью Application Compatibility Toolkit, которое доступно из [совместимости приложений](http://go.microsoft.com/fwlink/p/?linkid=91277) веб-сайте TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Учетные записи пользователей Windows  

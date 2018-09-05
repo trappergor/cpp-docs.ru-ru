@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bd20852f1dfd278d4ae58cc6c67d6047579cd08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215361"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693196"
 ---
 # <a name="csliderctrl-class"></a>Класс CSliderCtrl
 Предоставляет функциональные возможности стандартного элемента управления "ползунок" Windows.  
@@ -104,13 +104,13 @@ class CSliderCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Создает объект `CSliderCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSliderCtrl::ClearSel](#clearsel)|Очищает текущее выделение в элементе управления "ползунок".|  
 |[CSliderCtrl::ClearTics](#cleartics)|Удаляет текущий делений из элемента управления "ползунок".|  
@@ -241,7 +241,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Задает стиль элемента управления "ползунок". Применить любое сочетание [стили элемента управления "ползунок"](/windows/desktop/Controls/trackbar-control-styles), описанные в пакет SDK для Windows, к элементу управления.  
@@ -631,7 +631,7 @@ void SetThumbLength(int nLength);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *nLength*|Длина ползунка в пикселях.|  
   

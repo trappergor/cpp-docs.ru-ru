@@ -1,7 +1,7 @@
 ---
-title: оператор MOD | Документы Microsoft
+title: оператор MOD | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cd35fa3f1d136cf19a82d840b02e53f4f40abb
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f03739ab1b2b4bb931e045222b869b7aa5d7676d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054462"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680442"
 ---
 # <a name="operator-mod"></a>Оператор MOD
-Возвращает целочисленное значение остатка (остаток от деления) при делении *expression1* по *expression2*.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-expression1 MOD expression2  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает целочисленное значение остатка (остаток от деления), при делении *expression1* по *expression2*.
+
+## <a name="syntax"></a>Синтаксис
+
+> expression1 MOD expression2
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

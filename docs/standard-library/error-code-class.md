@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ea90d30a492fc19020a3309a994f885ab5916be2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690551"
 ---
 # <a name="errorcode-class"></a>Класс error_code
 
@@ -52,19 +52,19 @@ class error_code;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[error_code](#error_code)|Создает объект типа `error_code`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[assign](#assign)|Присваивает коду ошибки значение кода ошибки и категорию.|
 |[category](#category)|Возвращает категорию ошибки.|
@@ -74,7 +74,7 @@ class error_code;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор==](#op_eq_eq)|Проверяет равенство между объектами `error_code`.|
 |[оператор!=](#op_neq)|Проверяет неравенство между объектами `error_code`.|
@@ -98,7 +98,7 @@ void assign(value_type val, const error_category& _Cat);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Val*|Значение кода ошибки для хранения в `error_code`.|
 |*_Cat*|Категория ошибки для хранения в `error_code`.|
@@ -162,7 +162,7 @@ error_code(_Enum _Errcode,
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Val*|Значение кода ошибки для хранения в `error_code`.|
 |*_Cat*|Категория ошибки для хранения в `error_code`.|
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 Первый конструктор сохраняет нулевое значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Второй конструктор сохраняет *val* как значение кода ошибки и указатель на [error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Второй конструктор сохраняет *val* как значение кода ошибки и указатель на [error_category](../standard-library/error-category-class.md).
 
 Третий конструктор сохраняет `(value_type)_Errcode` как значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -202,7 +202,7 @@ bool operator==(const error_code& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Объект для проверки на равенство.|
 
@@ -224,7 +224,7 @@ bool operator!=(const error_code& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Объект для проверки на неравенство.|
 
@@ -238,7 +238,7 @@ bool operator!=(const error_code& right) const;
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-Проверяет, меньше ли объект [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) переданного для сравнения объекта `error_code`.
+Проверяет, меньше ли объект `error_code` переданного для сравнения объекта `error_code`.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -246,7 +246,7 @@ bool operator<(const error_code& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Объект error_code для сравнения.|
 
@@ -260,7 +260,7 @@ bool operator<(const error_code& right) const;
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-Присваивает новое значение перечисления объекту [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31).
+Присваивает новое значение перечисления объекту `error_code`.
 
 ```cpp
 template <class _Enum>
@@ -271,7 +271,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*_Errcode*|Значение перечисления для присвоения объекту `error_code`.|
 

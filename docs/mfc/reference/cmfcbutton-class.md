@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
-ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
+ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43352720"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690879"
 ---
 # <a name="cmfcbutton-class"></a>Класс CMFCButton
 `CMFCButton` Класс расширяет его функциональные возможности [CButton](../../mfc/reference/cbutton-class.md) класс, например выравнивание текста кнопки, объединение текста кнопки и изображения, выбор курсора и задание подсказки.  
@@ -110,14 +110,14 @@ class CMFCButton : public CButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCButton::CMFCButton`|Конструктор по умолчанию.|  
 |`CMFCButton::~CMFCButton`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCButton::CleanUp](#cleanup)|Сбрасывает внутренних переменных и высвобождает выделенные ресурсы, такие как изображения, точечные рисунки и значки.|  
 |`CMFCButton::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|Указывает, является ли кнопка типа "переключатель".|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Указывает, соответствует ли стиль границы кнопки текущей темы Windows.|  
 |`CMFCButton::OnDrawParentBackground`|Рисует фон родительского объекта в заданной области. (Переопределяет [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCButton::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Задает кнопку в режим автоматического повтора.|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|Задает изображение для нажатой кнопки.|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|Задает цвет фона для текста кнопки.|  
@@ -152,7 +152,7 @@ class CMFCButton : public CButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCButton::OnDraw](#ondraw)|Вызвано структурой для отображения кнопки.|  
 |[CMFCButton::OnDrawBorder](#ondrawborder)|Вызывается платформой для рисования границы кнопки.|  
@@ -163,7 +163,7 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Задает выравнивание текста кнопки.|  
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Указывает, следует ли использовать темы Windows XP.|
@@ -466,7 +466,7 @@ AlignStyle m_nAlignStyle;
 ### <a name="remarks"></a>Примечания  
  Используйте один из следующих `CMFCButton::AlignStyle` значений перечисления, чтобы задать выравнивание текста кнопки:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ALIGN_CENTER|(По умолчанию) Выравнивание текста кнопки в центр кнопки.|  
 |ALIGN_LEFT|Кнопка текст выравнивается по левой кнопки.|  
@@ -491,7 +491,7 @@ FlatStyle  m_nFlatStyle;
 ### <a name="remarks"></a>Примечания  
  В следующей таблице перечислены `CMFCButton::m_nFlatStyle` значений перечисления, определяющих внешний вид кнопки.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |BUTTONSTYLE_3D|(По умолчанию) Кнопка для высокого уровня, трехмерного стороны. При нажатии кнопки, кнопка нажимаемые в глубокого отступа.|  
 |BUTTONSTYLE_FLAT|Когда указатель мыши не задержите кнопки, кнопки кажется двухмерной и не имеет вызванное сторон. Когда указатель мыши находится над кнопкой, кнопка на низкий, трехмерного стороны. При нажатии кнопки, кнопка нажимаемые в неполную отступа.|  

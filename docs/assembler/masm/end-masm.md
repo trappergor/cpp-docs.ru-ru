@@ -1,7 +1,7 @@
 ---
-title: END (MASM) | Документы Microsoft
+title: END (MASM) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a38d8e116f5a3bf018f4edecccb887dd9533407d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3d82b875e44a363ed6d70edaa81457f75531cc44
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050913"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693442"
 ---
 # <a name="end-masm"></a>END (MASM)
-Помечает конец модуля и при необходимости задает точку входа программы *адрес*.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-END [[address]]  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Помечает конец модуля и при необходимости задает точку входа программы *адрес*.
+
+## <a name="syntax"></a>Синтаксис
+
+> END [[адрес]]
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

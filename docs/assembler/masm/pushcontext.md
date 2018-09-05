@@ -1,7 +1,7 @@
 ---
-title: PUSHCONTEXT | Документы Microsoft
+title: PUSHCONTEXT | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c16d0de0848a9ceb61330498b12a9a4322e6604
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16a76f80f72ab2d7f1ec0cfc86c102249330bf16
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056383"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677432"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
-Сохранение всех или части текущего `context`: регистр предполагает значение основание системы счисления, перечисление и cref флаги или значения процессора/сопроцессора. `context` Может быть **ПРЕДПОЛАГАЕТСЯ, что**, `RADIX`, **ВЫВОД**, **ЦП**, или **все**.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-PUSHCONTEXT context  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Сохранение всех или части текущего `context`: регистр предполагается значение основания системы счисления, флаги "список" и "cref или значения процессора/сопроцессора. `context` Может быть **ПРЕДПОЛАГАЕТСЯ, что**, `RADIX`, **ЛИСТИНГ**, **ЦП**, или **все**.
+
+## <a name="syntax"></a>Синтаксис
+
+> PUSHCONTEXT контекста
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

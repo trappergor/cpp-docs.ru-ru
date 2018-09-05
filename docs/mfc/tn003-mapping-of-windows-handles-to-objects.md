@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211766"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692452"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003. Сопоставление дескрипторов Windows с объектами
 Эта заметка описывает MFC подпрограммы, которые поддерживает сопоставление Windows объекта дескрипторы для объектов C++.  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Это делает запись в постоянное сопоставление связывание *myWnd* и *hWnd*. Вызов `CWnd::FromHandle(hWnd)` теперь возвращает указатель на *myWnd*. При *myWnd* будет удален, деструктор будет автоматически уничтожена *hWnd* путем вызова Windows [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) функции. Если это нежелательно, *hWnd* необходимо отсоединить от *myWnd* перед *myWnd* уничтожении (обычно в том случае, при выходе из область, в которой *myWnd*был определен). `Detach` Метод делает следующее.  
+ Это делает запись в постоянное сопоставление связывание *myWnd* и *hWnd*. Вызов `CWnd::FromHandle(hWnd)` теперь возвращает указатель на *myWnd*. При *myWnd* будет удален, деструктор будет автоматически уничтожена *hWnd* путем вызова Windows [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) функции. Если это нежелательно, *hWnd* необходимо отсоединить от *myWnd* перед *myWnd* уничтожении (обычно в том случае, при выходе из область, в которой *myWnd*был определен). `Detach` Метод делает следующее.  
   
 ```  
 myWnd.Detach();

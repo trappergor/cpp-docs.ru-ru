@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196194"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690156"
 ---
 # <a name="cprogressctrl-class"></a>Класс CProgressCtrl
 Предоставляет функциональные возможности стандартного элемента управления "индикатор выполнения" Windows.  
@@ -72,13 +72,13 @@ class CProgressCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CProgressCtrl::CProgressCtrl](#cprogressctrl)|Создает объект `CProgressCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CProgressCtrl::Create](#create)|Создает элемент управления хода выполнения и присоединяет его к `CProgressCtrl` объекта.|  
 |[CProgressCtrl::CreateEx](#createex)|Создает элемент управления хода выполнения с указанной расширенные стили Windows и присоединяет его к `CProgressCtrl` объекта.|  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- Задает стиль окна хода выполнения. Применить любое сочетание stylesdescribed окно в [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK для Windows, кроме следующих индикатора выполнения стили элемента управления, к элементу управления:  
+ Задает стиль окна хода выполнения. Применить любое сочетание stylesdescribed окно в [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете SDK для Windows, кроме следующих индикатора выполнения стили элемента управления, к элементу управления:  
   
 - PBS_VERTICAL отображает сведения о выполнении вертикально, сверху вниз. Без этого флага индикатор выполнения отображается горизонтально, слева направо.  
   
@@ -181,10 +181,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
- Задает стиль окна хода выполнения. Применить любое сочетание стилей окна, описанные в [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
+ Задает стиль окна хода выполнения. Применить любое сочетание стилей окна, описанные в [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.  
   
  *Rect*  
  Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
@@ -345,7 +345,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *clrBar*|Объект [COLORREF](/windows/desktop/gdi/colorref) значение, которое указывает новый цвет индикатора индикатор хода выполнения. Укажите CLR_DEFAULT заставить индикатор хода выполнения использовать цвета по умолчанию.|  
   
@@ -397,7 +397,7 @@ BOOL SetMarquee(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *fMarqueeMode*|Значение true, чтобы включить режим бегущей строки Вкл "или" значение FALSE, чтобы отключить режим бегущей строки.|  
 |[in] *nInterval*|Время в миллисекундах между обновлениями анимации области выделения.|  
@@ -476,7 +476,7 @@ int SetState(int iState);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *iState*|Состояние, устанавливаемое для индикатора выполнения. Необходимо использовать одно из следующих значений.<br /><br /> -PBST_NORMAL - выполняется<br />-PBST_ERROR - ошибка<br />-PBST_PAUSED - приостановлена|  
   
