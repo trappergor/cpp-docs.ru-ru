@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b505b9f6164566a1e196c601bdfe3eab4b4a991
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51f39d26e8998ab48c01961659a4da45de21ea9c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679864"
 ---
 # <a name="ccomcontrolbase-class"></a>Класс CComControlBase
 Этот класс предоставляет методы для создания и управления элементами управления ATL.  
@@ -113,20 +113,20 @@ class ATL_NO_VTABLE CComControlBase
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComControlBase::AppearanceType](#appearancetype)|Переопределить, если ваш `m_nAppearance` не стандартное свойство типа **короткие**.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Конструктор.|  
 |[CComControlBase:: ~ CComControlBase](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|  
 |[CComControlBase::DoesVerbActivate](#doesverbactivate)|Проверяет, что *iVerb* параметра, используемого методом `IOleObjectImpl::DoVerb` либо активирует элемента управления пользовательского интерфейса (*iVerb* равно OLEIVERB_UIACTIVATE), определяет действие, выполняемое при двойном щелчке элемент управления (*iVerb* равно OLEIVERB_PRIMARY), отображает элемент управления (*iVerb* равно OLEIVERB_SHOW), или активирует элемент управления (*iVerb* равно OLEIVERB _INPLACEACTIVATE).|  
@@ -177,7 +177,7 @@ class ATL_NO_VTABLE CComControlBase
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComControlBase::m_bAutoSize](#m_bautosize)|Флаг, указывающий, что элемент управления не может быть любой другой размер.|  
 |[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Флаг, указывающий, что `IDataObjectImpl::GetData` и `CComControlBase::GetZoomInfo` должен устанавливать размер элемента управления из `m_sizeNatural` , а не из `m_sizeExtent`.|  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если элемент управления оконные, `~CComControlBase` уничтожает его путем вызова [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682).  
+ Если элемент управления оконные, `~CComControlBase` уничтожает его путем вызова [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow).  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
