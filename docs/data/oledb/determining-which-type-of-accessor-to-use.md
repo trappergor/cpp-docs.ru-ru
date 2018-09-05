@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef3da102cd01fa970fa50d687f6cfea57ac64325
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199755"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679728"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Выбор подходящего метода доступа
 Можно определить типы данных для набора строк во время компиляции или во время выполнения.  
@@ -38,7 +38,7 @@ ms.locfileid: "43199755"
 |`CDynamicAccessor`|Автоматически.|Нет.|Полезно, если вы не знаете тип данных в наборе строк.|  
 |`CDynamicParameterAccessor`|Автоматически, но может быть [переопределении](../../data/oledb/overriding-a-dynamic-accessor.md).|Да, если поставщик поддерживает `ICommandWithParameters`. Автоматическая привязка параметров.|Медленнее, чем `CDynamicAccessor` но полезен для вызова универсальных хранимых процедур.|  
 |`CDynamicStringAccessor[A,W]`|Автоматически.|Нет.|Извлекает данные из хранилища данных в виде строковых данных.|  
-|`CManualAccessor`|Вручную с помощью `AddBindEntry`.|Вручную с помощью `AddParameterEntry`.|Очень быстро; только один раз привязка параметров и столбцов. Можно определить тип данных для использования. (См. в разделе [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) образец пример.) Требует больше кода, чем `CDynamicAccessor` или `CAccessor`. Она больше напоминает прямой вызов OLE DB.|  
+|`CManualAccessor`|Вручную с помощью `AddBindEntry`.|Вручную с помощью `AddParameterEntry`.|Очень быстро; только один раз привязка параметров и столбцов. Можно определить тип данных для использования. (См. в разделе [DBVIEWER](https://github.com/Microsoft/VCSamples) образец пример.) Требует больше кода, чем `CDynamicAccessor` или `CAccessor`. Она больше напоминает прямой вызов OLE DB.|  
 |`CXMLAccessor`|Автоматически.|Нет.|Извлекает данные из хранилища данных в виде строковых данных и форматирование данных в XML-тегами.|  
   
 ## <a name="see-also"></a>См. также  

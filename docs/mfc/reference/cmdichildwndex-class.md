@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4779b832eaff7a322184adf1734f69d266c05331
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219113"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677695"
 ---
 # <a name="cmdichildwndex-class"></a>Класс CMDIChildWndEx
 `CMDIChildWndEx` Класс предоставляет функциональные возможности Windows дочернего окна многодокументного интерфейса (MDI). Он расширяет функциональные возможности [класс CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Платформа требует этот класс, если приложение MDI использует определенные классы MFC.  
@@ -145,7 +145,7 @@ class CMDIChildWndEx : public CMDIChildWnd
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Вызывается внутренне платформой активация рамки верхнего уровня в том случае, если приложение следует активировать из вкладки панели задач.|  
 |`CMDIChildWndEx::AddDockSite`|Этот метод не используется и не реализован.|  
@@ -192,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Вызывается платформой, когда это необходимо растянуть Битовая карта для Windows 7 панель задач вкладку эскиз дочерней MDI-формы.|  
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Вызывается платформой для обновления заголовка фрейма. (Переопределяет `CMDIChildWnd::OnUpdateFrameTitle`.)|  
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Возвращает область, содержащее заданную точку.|  
-|`CMDIChildWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMDIChildWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Повторно вычисляет макет окна.|  
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Регистрирует дочерней формы MDI с вкладками панели задач Windows 7.|  
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Удаляет панель из диспетчере закрепления.|  

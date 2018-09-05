@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c610e8dcd8cf5b06dfb22540c304e84446c75438
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 96ecae8445368357da3bc7b271156f961c1c1dca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687150"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Создание элемента управления ActiveX MFC
 Программы управления ActiveX являются модульные программы, разработанные для предоставления определенной функциональности в родительское приложение. Например можно создать элемент управления, например кнопки для использования в диалоговом окне или панели инструментов для использования на веб-странице.  
@@ -49,5 +49,5 @@ ms.locfileid: "43198692"
 ## <a name="see-also"></a>См. также  
  [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Страницы свойств](../../ide/property-pages-visual-cpp.md)   
- [Развертывание приложений](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

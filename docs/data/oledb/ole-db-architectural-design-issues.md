@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b080945309732bec06c63eb665bbf6dd5f4acb5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2b0a5c568a774d0aed05d702454664e653989401
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340567"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676840"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Вопросы проектирования архитектуры OLE DB
 Перед запуском приложения OLE DB необходимо учитывать следующие вопросы:  
@@ -39,15 +39,9 @@ ms.locfileid: "39340567"
  **У вас есть устаревшего кода с использованием другой технологии доступа к данным (ADO, ODBC или DAO)?**  
  Учитывая возможные сочетания технологий (например, с помощью компонентов ADO с компонентами OLE DB и перенос кода ODBC OLE DB), охватывающий все ситуации выходит за рамки документации Visual C++. Однако множество статей, в которых рассматриваются различные сценарии доступны на следующих веб-сайтах Microsoft:  
   
--   [Центр справки и поддержки Майкрософт](http://go.microsoft.com/fwlink/p/?linkid=148218)  
+-   [Центр справки и поддержки Майкрософт](https://support.microsoft.com/)  
   
--   [Обзор технических статей для доступа к данным Microsoft](http://go.microsoft.com/fwlink/p/?linkid=148217)  
-  
--   [Центр решений Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=148215)  
-  
--   [Поиск по Microsoft.com](http://search.microsoft.com/)  
-  
- При выполнении поиска, введите сочетание ключевых слов, которая оптимально подходит для вашего сценария; Например: Если вы используете объекты ADO с поставщиком OLE DB, попробуйте логического поиска с **ADO и «OLE DB»**. Если вы хотите перенести устаревшего кода DAO для ODBC, выберите «все слова» и укажите строки, например **перенос DAO**.  
+-   [Обзор технических статей для доступа к данным Microsoft](https://msdn.microsoft.com/en-us/library/ms810811.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Программирование объектов OLE DB](../../data/oledb/ole-db-programming.md)   

@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd480e7b1ffb0923e33361c545bca68202ec3f4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687720"
 ---
 # <a name="ccomboboxex-class"></a>Класс CComboBoxEx
 Расширяет элемент управления "поле со списком", предоставляя поддержку списков изображений.  
@@ -66,13 +66,13 @@ class CComboBoxEx : public CComboBox
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Создает объект `CComboBoxEx`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComboBoxEx::Create](#create)|Создает поле со списком и присоединяет его к `CComboBoxEx` объекта.|  
 |[CComboBoxEx::CreateEx](#createex)|Создает поле со списком с указанным расширенные стили Windows и присоединяет его к `ComboBoxEx` объекта.|  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Стиль элемента управления поля со списком. См. в разделе [создать](#create) список стилей.  
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объект, содержащий изображения, ранее используемые `CComboBoxEx` элемента управления. Значение NULL, если список изображений не был ранее установлен.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует функциональные возможности сообщения [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), как описано в пакете Windows SDK. Если изменить высоту элемента управления по умолчанию, вызовите функцию Win32 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) для изменения размеров элемента управления, после вызова метода `SetImageList`, или он будет отображаться правильно.  
+ Эта функция-член реализует функциональные возможности сообщения [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), как описано в пакете Windows SDK. Если изменить высоту элемента управления по умолчанию, вызовите функцию Win32 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) для изменения размеров элемента управления, после вызова метода `SetImageList`, или он будет отображаться правильно.  
   
  `CImageList` Объект, на которые указывает возвращаемое значение является временным и разрушается во время следующей обработки время простоя.  
   

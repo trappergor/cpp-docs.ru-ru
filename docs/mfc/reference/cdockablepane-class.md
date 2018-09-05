@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223069"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679468"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Реализует область, которую можно закрепить на сайте закрепления или включить в область с вкладками.  
@@ -162,13 +162,13 @@ class CDockablePane : public CPane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDockablePane::CDockablePane](#cdockablepane)|Создает и инициализирует объект `CDockablePane`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Присоединяет панели на другую панель. При этом создается области с вкладками.|  
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Возвращает размер области прямоугольника.|  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Указывает, расположены ли вкладки в верхней или нижней части панели.|  
 |[CDockablePane::IsTracked](#istracked)|Указывает ли область перетаскиваемый пользователем.|  
 |[CDockablePane::IsVisible](#isvisible)|Определяет, является ли видимым в текущей области.|  
-|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Используется внутренним образом.|  
+|[CDockablePane::LoadState](#loadstate)|Используется внутренним образом.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Вызывается платформой при изменении родительского элемента области. (Переопределяет [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Вызывается платформой при закрепляет с плавающей запятой закрепляемую панель в окне фрейма.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Вызывается платформой, когда родительской области. (Переопределяет [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
@@ -238,7 +238,7 @@ class CDockablePane : public CPane
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Определяет, скрыт ли закрепляемой области (в режиме автоматического скрытия).|  
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Определяет, когда автоматическое скрытие закрепляемой области следует остановить скользящий.|  
@@ -248,7 +248,7 @@ class CDockablePane : public CPane
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Указывает, отключен ли анимация автоматического скрытия закрепляемую панель.|  
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Определяет поведение области, если панель находится в режиме автоматического скрытия.|  
@@ -627,7 +627,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ### <a name="remarks"></a>Примечания  
  *dwAlignment* может быть любым из следующих значений:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |CBRS_ALIGN_TOP|Области закрепляется в верхнюю часть клиентской области окна фрейма.|  
 |CBRS_ALIGN_BOTTOM|Области закрепляется в нижнюю часть клиентской области окна фрейма.|  
@@ -735,7 +735,7 @@ virtual BOOL DockPaneContainer(
 ### <a name="remarks"></a>Примечания  
  *dwAlignment* может быть любым из следующих значений:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |CBRS_ALIGN_TOP|Контейнер закрепляется в верхней части области.|  
 |CBRS_ALIGN_BOTTOM|Контейнер закрепляется в нижней части области.|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  Если закрепляемую панель находится в режиме автоматического скрытия и `IsHideInAutoHideMode` возвращает значение TRUE, состояние видимости зависит от состояния видимости панели инструментов связанных автоматического скрытия.  
   
  Если закрепляемую панель не находится в режиме автоматического скрытия, состояние видимости определяется [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) метод.  
-  
+
+## ##  <a name="loadstate"></a>  CDockablePane::LoadState  
+Только для внутреннего использования. Дополнительные сведения см. в исходном коде, расположенном в папке VC\atlmfc\src\mfc каталога установки Visual Studio.
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  Указывает, отключен ли анимация автоматического скрытия закрепляемую панель.  
   

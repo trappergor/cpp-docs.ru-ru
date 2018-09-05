@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251703307c5f6ed5787227a4def42dfbcd3fc18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203032"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684013"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Класс Platform::Collections::UnorderedMapView
 Представляет доступное только для чтения представление на *карте*, которое является коллекцией пар "ключ-значение".  
@@ -42,19 +42,19 @@ ref class UnorderedMapView sealed;
  Тип, предоставляющий объект функции, который может сравнивать два ключевых значения для определения равенства. По умолчанию [std::equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Примечания  
- UnorderedMapView — это конкретная реализация C++ [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) интерфейс, который передается через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView — это конкретная реализация C++ [Windows::Foundation::Collections::IMapView\<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) интерфейс, который передается через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[UnorderedMapView::UnorderedMapView](#ctor)|Инициализирует новый экземпляр класса UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[UnorderedMapView::First](#first)|Возвращает итератор, который инициализируется первым элементом в представлении карты.|  
 |[UnorderedMapView::HasKey](#haskey)|Определяет, содержит ли текущий объект UnorderedMapView указанный ключ.|  
@@ -221,7 +221,7 @@ UnorderedMapView(
  Имя типа UnorderedMapView.  
   
  `H`  
- Объект функции, который может создать хэш-значение для ключа. По умолчанию используется [std::hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) для типов, `std::hash` поддерживает.  
+ Объект функции, который может создать хэш-значение для ключа. По умолчанию используется [std::hash\<K >](../standard-library/hash-class.md) для типов, `std::hash` поддерживает.  
   
  `P`  
  Тип, предоставляющий объект функции, который может сравнивать два ключа с целью установления их равенства. По умолчанию используется [std::equal_to\<K >](../standard-library/equal-to-struct.md).  
@@ -237,4 +237,4 @@ UnorderedMapView(
    
 ## <a name="see-also"></a>См. также  
  [Пространство имен Platform::Collections](../cppcx/platform-collections-namespace.md)   
- [Windows::Foundation::IMapView](http://go.microsoft.com/fwlink/p/?LinkId=262409)
+ [Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)

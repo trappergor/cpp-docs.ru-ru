@@ -1,7 +1,7 @@
 ---
-title: оператор XOR | Документы Microsoft
+title: оператор XOR | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c81b05f46f9be6bb84b7f853121d9d6129f33969
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c4bf250821f2a04e5b1099f2f33dfe28c3ff916d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057381"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677778"
 ---
 # <a name="operator-xor"></a>Оператор XOR
-Возвращает результат побитовой операции **XOR** операции для *expression1* и *expression2*.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-expression1 XOR expression2  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает результат побитовой **XOR** операции для *expression1* и *expression2*.
+
+## <a name="syntax"></a>Синтаксис
+
+> expression1 XOR expression2
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3f29d5b2c4343ea156d1ccd1dfbf347026a127b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04401180cfcd82f3a699f71ba594523cf0f9cb9b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202280"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681727"
 ---
 # <a name="accelerator-editor"></a>Редактор сочетаний клавиш
 
@@ -35,7 +35,7 @@ ms.locfileid: "43202280"
 
 Обычно сочетания клавиш используются для ускорения доступа к командам программы, также доступным в меню или на панели инструментов. Но таблицу сочетаний клавиш можно также использовать, чтобы определить сочетания клавиш для команд, с которыми не связаны никакие объекты пользовательского интерфейса.
 
-Можно использовать [представление классов](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) для подключения команд сочетаний клавиш к коду.
+Можно использовать [представление классов](/visualstudio/ide/viewing-the-structure-of-code) для подключения команд сочетаний клавиш к коду.
 
 С помощью **Accelerator** редактор, вы можете:
 

@@ -1,7 +1,7 @@
 ---
-title: оператор LENGTHOF | Документы Microsoft
+title: оператор LENGTHOF | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be32d102d41cccf4c4bc2ac239b4c140151e7c95
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 553a64730f63db54944cfa01662cd455ac3a081e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676189"
 ---
 # <a name="operator-lengthof"></a>Оператор LENGTHOF
-Возвращает число объектов данных в *переменной*.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-LENGTHOF variable  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает число объектов данных в *переменной*.
+
+## <a name="syntax"></a>Синтаксис
+
+> Переменная LENGTHOF
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

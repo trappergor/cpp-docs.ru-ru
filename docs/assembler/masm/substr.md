@@ -1,7 +1,7 @@
 ---
-title: SUBSTR | Документы Microsoft
+title: SUBSTR | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dec1d1b1de47aa645147419a8bf96ad870cc21b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8ecd5a56b00ae663eeaacbedbdbefdecab36438f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056620"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687373"
 ---
 # <a name="substr"></a>SUBSTR
-Возвращает подстроку *textitem*, начиная с *позиции*. *Textitem* может быть строковым литералом предшествующим константа `%`, или строку, возвращаемую функцией макрос.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-name SUBSTR textitem, position [[, length]]  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Возвращает подстроку *textitem*, начиная с *позиции*. *Textitem* может быть строковый литерал, константа предшествует `%`, или строка, возвращаемая функцией макрос.
+
+## <a name="syntax"></a>Синтаксис
+
+> Назовите SUBSTR textitem, позиции [[, длина]]
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

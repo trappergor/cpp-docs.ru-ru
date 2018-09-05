@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198572"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693930"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Реализует базовую функциональность для окон с вкладками.  
@@ -269,7 +269,7 @@ class CMFCBaseTabCtrl : public CWnd
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||  
 |[CMFCBaseTabCtrl::AddTab](#addtab)|Добавляет новую вкладку в окно с вкладками.|  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Повторно вычисляет внутренний макет окна с вкладками.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Удаляет все вкладки из окна.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Удаляет вкладку из окна.|  
@@ -387,13 +387,13 @@ class CMFCBaseTabCtrl : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Создает оболочку для объекта, производного от класса [CWnd](../../mfc/reference/cwnd-class.md) и не являющегося производным от `CDockablePane`. Чтобы закрепить объект `CMFCBaseTabCtrl` , каждый внедренный элемент управления должен иметь закрепляющую оболочку или быть производным от `CDockablePane`.<br /><br /> Класс оболочки задается с помощью `SetDockingBayWrapperRTC`.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Указывает, выбираются вкладки щелчком левой или правой кнопкой мыши.|  
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Указывает, будут ли автоматически уничтожаться области, входящие во вкладки.|  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Указывает новый цвет фона.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа получает цвет фона по умолчанию для активных вкладок из [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)метод.  
+ Платформа получает цвет фона по умолчанию для активных вкладок из [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)метод.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Задает цвет текста для активных вкладок.  
@@ -1858,7 +1858,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
  Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, который указывает новый цвет текста.  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию платформа получает цвет текста из [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Этот цвет по умолчанию переопределяется с помощью `SetActiveTabTextColor` метод.  
+ По умолчанию платформа получает цвет текста из [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Этот цвет по умолчанию переопределяется с помощью `SetActiveTabTextColor` метод.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Задает цвета элемента управления вкладками, она используется в режиме автоматической цветовой.  

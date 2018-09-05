@@ -1,7 +1,7 @@
 ---
-title: Некритичная ошибка ML A2037 | Документы Microsoft
+title: Некритичная ошибка ML A2037 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36290d99bcab0932716f718e89b8900279f2f3f7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2aca76fb846fce5b683a2ed8783a29fb7b1ced75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055672"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693789"
 ---
 # <a name="ml-nonfatal-error-a2037"></a>Некритичная ошибка ML A2037
-**инструкцию нельзя использовать внутри определения структуры**  
-  
- Определение структуры содержит недопустимую инструкцию.  
-  
- Структуры не могут содержать инструкции, метки, процедуры, директивы управления потоком [. При ЗАПУСКЕ](../../assembler/masm/dot-startup.md), или [. Выход](../../assembler/masm/dot-exit.md).  
-  
-## <a name="see-also"></a>См. также  
- [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)
+
+**инструкцию нельзя использовать внутри определения структуры**
+
+Определение структуры содержится недопустимый оператор.
+
+Структура не может содержать инструкции, метки, процедуры, поток управления директивах [. ЗАПУСКА](../../assembler/masm/dot-startup.md), или [. Выход](../../assembler/masm/dot-exit.md).
+
+## <a name="see-also"></a>См. также
+
+[Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

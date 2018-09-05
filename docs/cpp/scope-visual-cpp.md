@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220094"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679701"
 ---
 # <a name="scope-c"></a>Область (C++)
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > Повторное использование имен идентификаторов считается плохим стилем программирования, как показано в следующем примере.
 
- Дополнительные сведения об указателях см. в разделе [производные типы](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Сведения об объявлении и инициализации объектов классов см. в разделе [классов, структур и объединений](../cpp/classes-and-structs-cpp.md). Дополнительные сведения об использовании **новый** и **удалить** операторов свободного хранилища, см. в разделе [новых и удаленных операторах](new-and-delete-operators.md).
+Сведения об объявлении и инициализации объектов классов см. в разделе [классов, структур и объединений](../cpp/classes-and-structs-cpp.md). Дополнительные сведения об использовании **новый** и **удалить** операторов свободного хранилища, см. в разделе [новых и удаленных операторах](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Скрытие имен в глобальной области видимости
 

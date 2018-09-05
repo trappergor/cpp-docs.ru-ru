@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88e44100e20ce40b343a82c7caed66387ca1bcd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207927"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681044"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -101,7 +101,7 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="classes"></a>Классы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Класс directory_entry](../standard-library/directory-entry-class.md)|Описывает объект, возвращаемый `directory_iterator` или `recursive_directory_iterator`, и содержит путь.|
 |[Класс directory_iterator](../standard-library/directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы.|
@@ -112,7 +112,7 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="structs"></a>Структуры
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Структура space_info](../standard-library/space-info-structure.md)|Содержит сведения о томе.|
 
@@ -126,9 +126,10 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>Перечисления
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60), которое определяет поведение в случае, если конечный файл уже существует.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file), которое определяет поведение в случае, если конечный файл уже существует.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file), которое определяет поведение в случае, если конечный файл уже существует.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Перечисление, указывающее параметры итераторов каталога.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Перечисление для типов файлов.|
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|

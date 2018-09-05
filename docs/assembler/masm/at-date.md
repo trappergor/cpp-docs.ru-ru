@@ -1,7 +1,7 @@
 ---
-title: '@Date | Документы Microsoft'
+title: '@Date | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fb69d16b69537d051aa4080c94525d7ce461c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c24d78c7de05281a3bb14cf4459e230ee69fa421
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049614"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678781"
 ---
 # <a name="date"></a>@Date
-Системную дату в формате мм/дд/гг (макрос текста).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-@Date  
-  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по символам](../../assembler/masm/symbols-reference.md)
+
+Системную дату в формате мм/дд/гг (макрос text).
+
+## <a name="syntax"></a>Синтаксис
+
+> @Date
+
+## <a name="see-also"></a>См. также
+
+[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>

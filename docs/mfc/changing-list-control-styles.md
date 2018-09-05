@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197998"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676771"
 ---
 # <a name="changing-list-control-styles"></a>Изменение стилей элемента управления "Список"
 Можно изменить стиль окна элемента управления списка ([CListCtrl](../mfc/reference/clistctrl-class.md)) в любое время после его создания. Можно изменить стиль окна, измените тип представления, которые использует элемент управления. Например, для эмуляции в обозревателе, можно предоставить пункты меню или кнопки панели инструментов для переключения управления между различными представлениями: значки, представление списка и т. д.  
   
- Например, когда пользователь выбирает элемент меню, позволяющих улучшить вызов [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) для получения текущего стиля элемента управления, а затем вызвать [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) сбросить стиль. Дополнительные сведения см. в разделе [с помощью элементов управления представления списком](/windows/desktop/Controls/using-list-view-controls) в пакете Windows SDK.  
+ Например, когда пользователь выбирает элемент меню, позволяющих улучшить вызов [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) для получения текущего стиля элемента управления, а затем вызвать [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) сбросить стиль. Дополнительные сведения см. в разделе [с помощью элементов управления представления списком](/windows/desktop/Controls/using-list-view-controls) в пакете Windows SDK.  
   
  Доступные стили, перечислены в [создать](../mfc/reference/clistctrl-class.md#create). Стили **только**, **LVS_SMALLICON**, **LVS_LIST**, и **LVS_REPORT** назначить четыре списки управления.  
   

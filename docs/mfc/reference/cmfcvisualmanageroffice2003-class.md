@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33054190e94ca7d136e319b2afc9e28c9080de05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217093"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677980"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Класс CMFCVisualManagerOffice2003
 `CMFCVisualManagerOffice2003` Придает приложению внешний вид Microsoft Office 2003.  
@@ -122,7 +122,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCVisualManagerOffice2003::DrawComboBorderWinXP](#drawcomboborderwinxp)|Рисует границу поле со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboBorderWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcomboborderwinxp).)|  
 |[CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|Рисует кнопку раскрывающегося списка поле со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Платформа вызывает этот метод при рисовании выделенный quick Настройка кнопки меню. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Этот метод вызывается платформой при рисовании команды выделенного меню. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Эта функция вызывается платформой при изменении системных цветов. (Переопределяет `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Указывает, что следует использовать глобальные темы Windows XP.|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Указывает, использует ли наглядный диспетчер глобальной темы.|  
   
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  Платформа вызывает этот метод как часть обработки WM_SYSCOLORCHANGE сообщения. Переопределите этот метод в производном наглядный диспетчер, если вы хотите выполнять пользовательский код, при изменении цветов в приложении.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf8c5bf4336df95caabd26d5ba4a395190c9591a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203720"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677852"
 ---
 # <a name="composite-control-global-functions"></a>Глобальные функции составного элемента управления
 Эти функции обеспечивают поддержку для создания диалоговых окон, а также для создания, размещения и лицензирование элементов управления ActiveX.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Ненулевое значение, если выполнена инициализация код размещения элемента управления; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Эту функцию необходимо вызывать перед использованием элемента управления ATL, интерфейс API размещения. После вызова этой функции **«AtlAxWin»** класс окна может использоваться в вызовах [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) или [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), как описано в пакете Windows SDK.  
+ Эту функцию необходимо вызывать перед использованием элемента управления ATL, интерфейс API размещения. После вызова этой функции **«AtlAxWin»** класс окна может использоваться в вызовах [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) или [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), как описано в пакете Windows SDK.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Эта функция отменяет инициализацию элемента управления ATL кода размещения **«AtlAxWin80»** и **«AtlAxWinLic80»** классов окон.  

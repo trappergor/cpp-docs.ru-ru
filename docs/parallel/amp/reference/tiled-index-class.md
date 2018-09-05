@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209437"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680199"
 ---
 # <a name="tiledindex-class"></a>Класс tiled_index
 Предоставляет индекс в [tiled_extent](tiled-extent-class.md) объекта. Этот класс содержит свойства для доступа к элементам относительно локального начального положения плитки и относительно глобального начального положения. Дополнительные сведения о замощенных пространствах см. в разделе [с помощью плитки](../../../parallel/amp/using-tiles.md).  
@@ -75,14 +75,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[tiled_index конструктор](#ctor)|Инициализирует новый экземпляр класса `tile_index`.|  
 
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[get_tile_extent](#tiled_index__get_tile_extent)|Возвращает [экстент](extent-class.md) объект, имеющий значения `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|  
 
@@ -90,11 +90,11 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Барьер константа](#tiled_index__barrier)|Магазины [tile_barrier](tile-barrier-class.md) , представляющий барьер в текущей мозаике потоков.|  
 |||  
-|[Глобальная константа](#tiled_index__global)|Магазины [индекс](index-class.md) ранга 1, 2 или 3, представляющий глобальный индекс в [сетки](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) объекта.|  
+|[Глобальная константа](#tiled_index__global)|Магазины [индекс](index-class.md) ранга 1, 2 или 3, представляющий глобальный указатель в объект сетки.|  
 |[локальная константа](#tiled_index__local)|Магазины `index` ранга 1, 2 или 3, представляющий относительный индекс в текущей мозаике объекта [tiled_extent](tiled-extent-class.md) объекта.|  
 |[Ранг константа](#tiled_index__rank)|Хранит ранг объекта `tiled_index` объекта.|  
 |[Tile-константа](#tiled_index__tile)|Магазины `index` ранга 1, 2 или 3, представляющий координаты текущей мозаики объекта `tiled_extent` объекта.|  
@@ -106,7 +106,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[tile_extent](#tile_extent)|Получает [экстент](extent-class.md) объект, имеющий значения `tiled_index` аргументов шаблона `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|  
 
@@ -162,7 +162,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|name|Описание:|  
+|name|Описание|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Инициализирует новый экземпляр класса `tile_index` класс из индекса плитки в глобальных координатах и относительной позиции в плитке в локальных координатах. `_Global` И `_Tile_origin` вычисляются параметры.|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Инициализирует новый экземпляр класса `tile_index` посредством копирования указанного `tiled_index` объекта.|  
 

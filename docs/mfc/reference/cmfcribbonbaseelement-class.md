@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213666"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678102"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Класс CMFCRibbonBaseElement
 `CMFCRibbonBaseElement` Класс является базовым классом для всех элементов, которые можно добавить к [панель ленты](../../mfc/reference/cmfcribbonbar-class.md). Примеры элементов ленты — кнопки ленты, флажки ленты и поля со списком на ленте.  
@@ -268,7 +268,7 @@ class CMFCRibbonBaseElement : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Добавляет массив подсказки клавиш клавишную подсказку для элемента ленты.|  
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Добавляет элемент ленты к окну списка команд указанной ленты.|  
@@ -384,7 +384,7 @@ class CMFCRibbonBaseElement : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Вызывается платформой, когда пользователь нажимает сочетание клавиш.|  
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Вызывается платформой, когда элемент ленты, Получает или теряет фокус ввода.|  
@@ -825,7 +825,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `RibbonElementLocation` значение перечисления. В следующей таблице перечислены возможные значения.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`RibbonElementNotInGroup`|Элемента ленты не содержится в группу ленты.|  
 |`RibbonElementSingleInGroup`|Элемент ленты отображается как единственный элемент в группу ленты.|  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Указатель на родительское окно для элемента ленты, если метод был выполнен успешно; в противном случае — значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Родительское окно для элемента ленты — [класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) или [CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ Родительское окно для элемента ленты — [класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) или [CMFCRibbonPanelMenuBar](internal-classes.md).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Извлекает указатель на элемент ленты, если пользователь нажимает ее сейчас.  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4c659262d11d929e94958cee687103648270db23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573277"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679285"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Возвращение к C++ (современный C++)
 C++ является одним из наиболее широко используемых языков программирования в мире. Грамотно сконструированные программы на языках C++ быстры и эффективны. Язык является более гибким, чем другие языки, поскольку его можно использовать для создания широкого спектра приложений — от интересных и ярких игр до высокопроизводительного научного программного обеспечения и драйверов устройств, внедренных приложений и клиентских приложений Windows. Более 20 лет C++ используется для решения подобных и многих других задач. Возможно, вы не знаете, что все больше программистов С++ отказались от программирования вчерашнего дня в C-стиле и перешли к современной модели программирования С++.  
@@ -133,7 +133,7 @@ void f()
   
 -   [Переносимость на границах API](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Дополнительные сведения см. в статье StackOverflow [какие идиомы C++ являются нерекомендуемыми в C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Дополнительные сведения см. в статье StackOverflow [какие идиомы C++ являются нерекомендуемыми в C ++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по языку C++](../cpp/cpp-language-reference.md)   

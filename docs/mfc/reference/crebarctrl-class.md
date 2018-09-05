@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656a19b6cddfb7e8353bb0eabf8975c733129a52
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207914"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693884"
 ---
 # <a name="crebarctrl-class"></a>Класс CReBarCtrl
 Инкапсулирует функциональность элемента управления "главная панель ", который представляет собой контейнер для дочернего окна.  
@@ -128,13 +128,13 @@ class CReBarCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CReBarCtrl::CReBarCtrl](#crebarctrl)|Создает объект `CReBarCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CReBarCtrl::BeginDrag](#begindrag)|Помещает элемент управления "Главная панель" в режим перетаскивания и вставки.|  
 |[CReBarCtrl::Create](#create)|Создает элемент управления "Главная панель" и присоединяет его к `CReBarCtrl` объекта.|  
@@ -293,7 +293,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Задает сочетание стилей элемента управления "Главная панель" применен к элементу управления. Список поддерживаемых стили, см. в разделе [стили элемента управления главной панели](/windows/desktop/Controls/rebar-control-styles) в пакете Windows SDK.  
@@ -764,7 +764,7 @@ BOOL SetBandWidth(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *uBand*|Отсчитываемый от нуля индекс зону главной панели.|  
 |[in] *cxWidth*|Новая ширина элемента зону главной панели, в пикселях.|  
@@ -844,7 +844,7 @@ DWORD SetExtendedStyle(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *dwMask*|Побитовое сочетание (OR) флагов, определяющих, какие флаги в *dwStyleEx* применить параметр. Используйте один или несколько из следующих значений:<br /><br /> RBS_EX_SPLITTER: По умолчанию отображать разделителя внизу в режиме по горизонтали, а справа в режиме по вертикали.<br /><br /> RBS_EX_TRANSPARENT: Пересылать [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) родительское окно.|  
 |[in] *dwStyleEx*|Побитовое сочетание (OR) флагов, которые определяют стили для применения. Чтобы задать стиль, укажите флаг, используемый в *dwMask* параметра. Чтобы сбросить стиль, укажите двоичный нуль.|  

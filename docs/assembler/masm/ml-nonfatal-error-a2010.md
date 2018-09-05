@@ -1,7 +1,7 @@
 ---
-title: Некритичная ошибка ML A2010 | Документы Microsoft
+title: Некритичная ошибка ML A2010 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f11e9398e0ac629a4b4d8b5602f7b11650fff00d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 99d7d90142f0415347e52f4386de8338697d8d79
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055604"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684932"
 ---
 # <a name="ml-nonfatal-error-a2010"></a>Некритичная ошибка ML A2010
-**Недопустимый тип выражения**  
-  
- Операнд [THIS](../../assembler/masm/operator-this.md) или [PTR](../../assembler/masm/operator-ptr.md) не является допустимым типом выражением.  
-  
-## <a name="see-also"></a>См. также  
- [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)
+
+**Недопустимый тип выражения**
+
+Операнд [THIS](../../assembler/masm/operator-this.md) или [PTR](../../assembler/masm/operator-ptr.md) не является выражением допустимого типа.
+
+## <a name="see-also"></a>См. также
+
+[Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

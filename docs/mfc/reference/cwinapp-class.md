@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206896"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688549"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -223,13 +223,13 @@ class CWinApp : public CWinThread
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinApp::CWinApp](#cwinapp)|Создает объект `CWinApp`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinApp::AddDocTemplate](#adddoctemplate)|Добавляет шаблон документа список шаблонов документов, доступных в приложения.|
 |[CWinApp::AddToRecentFileList](#addtorecentfilelist)|Добавляет имя файла в списке недавно использованных файлов (MRU).|
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Переопределение для выполнения обработки времени простоя приложения.|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Вызывается платформой для открытия документа из файла.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Выполняет синтаксический анализ отдельных параметров и флагов в командной строке.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Фильтрует сообщения перед их отправкой в функции Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Фильтрует сообщения перед их отправкой в функции Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Перехватывает определенных сообщений, прежде чем они достигнут приложения.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Обрабатывает аргументы командной строки и флаги.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Перехватывает все необработанные исключения, порождаемые сообщения приложения и обработчиков команд.|
@@ -297,7 +297,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinApp::EnableShellOpen](#enableshellopen)|Позволяет пользователю открывать файлы данных в диспетчере файлов Windows.|
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Загружает standard. Параметры INI-файла и включает MRU файла списка компонентов.|
@@ -316,7 +316,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|Указывает, является ли пользователь режим контекста справки (обычно вызывается с помощью клавиши SHIFT + F1).|
 |[CWinApp::m_eHelpType](#m_ehelptype)|Указывает тип справки, используемый приложением.|
@@ -333,7 +333,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Флаги, которые определяют поведение диспетчера перезапуска.|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|Продолжительность времени в миллисекундах между преждевременном прекращении работы.|
@@ -1315,7 +1315,7 @@ DWORD m_dwRestartManagerSupportFlags;
 
 |||
 |-|-|
-|Flag|Описание:|
+|Flag|Описание|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|Приложение регистрируется с помощью [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Диспетчер перезапуска несет ответственность за перезапуска приложения, если она неожиданно завершает работу.|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Приложение регистрируется с диспетчером перезапуска и диспетчер перезапуска вызывает функцию обратного вызова восстановления, после его перезапуска приложения. Функция обратного вызова для восстановления по умолчанию является [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Включена функция автоматического сохранения и преждевременном прекращении работы диспетчера перезапуска открытые документы при повторном запуске приложения.|
@@ -1794,7 +1794,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-Переопределите эту функцию для фильтрации сообщений окон до их передачи функциям Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) реализация по умолчанию выполняет сочетания клавиш перевод, поэтому необходимо вызвать `CWinApp::PreTranslateMessage` функция-член в переопределенные версии.
+Переопределите эту функцию для фильтрации сообщений окон до их передачи функциям Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) реализация по умолчанию выполняет сочетания клавиш перевод, поэтому необходимо вызвать `CWinApp::PreTranslateMessage` функция-член в переопределенные версии.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1972,7 +1972,7 @@ virtual HRESULT RegisterWithRestartManager(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |[in] *bRegisterRecoveryCallback*|Значение TRUE указывает, что этот экземпляр приложения использует функцию обратного вызова восстановления; Значение FALSE указывает, что это не так. Платформа вызывает функцию обратного вызова восстановления, когда приложение неожиданно завершает работу. Дополнительные сведения см. в разделе [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |[in] *strRestartIdentifier*|Уникальная строка, определяющая данного экземпляра диспетчера перезапуска. Идентификатор диспетчера перезапуска является уникальным для каждого экземпляра приложения.|
 |[in] *pwzCommandLineArgs*|Строка, содержащая все лишние аргументы из командной строки.|

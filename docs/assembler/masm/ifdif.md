@@ -1,7 +1,7 @@
 ---
-title: IFDIF] | Документы Microsoft
+title: IFDIF] | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f28485cfb8749c40741f5067689ef7a8ee494a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 38a6510a339ec07b32e873aec072d8124138c6ac
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050806"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690798"
 ---
 # <a name="ifdif"></a>IFDIF]
-Предоставляет сборки, если различаются текстовых элементов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-IFDIF[[I]] textitem1, textitem2  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Если **я** — имея, сравнение выполняется без учета регистра. В разделе [IF](../../assembler/masm/if-masm.md) сложный синтаксис.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Предоставляет сборку, если текстовые элементы отличаются.
+
+## <a name="syntax"></a>Синтаксис
+
+> IFDIF [[I]] textitem1, textitem2
+
+## <a name="remarks"></a>Примечания
+
+Если **я** — учитывая, сравнение выполняется без учета регистра. См. в разделе [IF](../../assembler/masm/if-masm.md) сложный синтаксис.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

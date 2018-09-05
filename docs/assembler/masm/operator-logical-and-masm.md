@@ -1,7 +1,7 @@
 ---
-title: оператор &amp; &amp; (MASM) | Документы Microsoft
+title: Оператор подстановки (MASM) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,25 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e285e5b691b2fdd24216a1156e8fe3708afe23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a5af8bbb4f01e31493ebeb73c425b1ace031ddf1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055759"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683474"
 ---
-# <a name="operator-ampamp-masm"></a>оператор &amp; &amp; (MASM)
-Заменяет `parameter` с его соответствующее значение аргумента.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-&  
-parameter  
-&  
-  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+# <a name="substitution-operator-masm"></a>Оператор подстановки (MASM)
+
+Заменяет *параметр* соответствующим значением аргумента.
+
+## <a name="syntax"></a>Синтаксис
+
+> &*Параметр*&
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

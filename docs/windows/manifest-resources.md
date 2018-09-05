@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1520cd301fa46fb4d9521fd6d4180ebd3710f67
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0f06e2d430867d04600547312fbc484ec6257c53
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218254"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685156"
 ---
 # <a name="manifest-resources"></a>Ресурсы манифеста
 
@@ -45,9 +45,9 @@ ms.locfileid: "43218254"
 
 Для приложений Windows XP или Windows Vista ресурс манифеста не только определяет приложение использовать последнюю версию общих элементов управления Windows (версии 6.0, см. выше), но также поддерживает [управления Syslink](/windows/desktop/Controls/syslink-overview).
 
-Чтобы узнать версию и введите сведения, содержащиеся в ресурсе манифеста, можно открыть файл в средстве просмотра XML или в Visual Studio [текстовый редактор](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1). Дополнительные сведения см. в статье [Открытие ресурса манифеста в текстовом редакторе Visual Studio](../windows/how-to-open-a-manifest-resource.md).
+Чтобы узнать версию и введите сведения, содержащиеся в ресурсе манифеста, можно открыть файл в средстве просмотра XML или в текстовом редакторе Visual Studio. Дополнительные сведения см. в статье [Открытие ресурса манифеста в текстовом редакторе Visual Studio](../windows/how-to-open-a-manifest-resource.md).
 
-Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Пошаговое руководство: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.
 
 ## <a name="limitations"></a>Ограничения
 

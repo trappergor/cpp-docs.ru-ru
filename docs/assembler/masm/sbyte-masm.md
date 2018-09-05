@@ -1,7 +1,7 @@
 ---
-title: SBYTE (MASM) | Документы Microsoft
+title: SBYTE (MASM) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8d9def44f027255df77d1e2f160450501857147
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 24703e88c63c04b7f0e3681744e5409622a83078
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057972"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692003"
 ---
 # <a name="sbyte-masm"></a>SBYTE (MASM)
-Выделяет и при необходимости инициализирует байт со знаком хранилища для каждого `initializer`. Можно также использовать как спецификатор типа в любом является допустимым типом.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-name SBYTEinitializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)   
- [БАЙТ](../../assembler/masm/byte-masm.md)   
- [DB](../../assembler/masm/db.md)
+
+Выделяет и при необходимости инициализирует байт со знаком из хранилища для каждого `initializer`. Можно также использовать как спецификатор типа в любом является допустимым типом.
+
+## <a name="syntax"></a>Синтаксис
+
+> Имя SBYTEinitializer [[, инициализатор]]...
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[BYTE](../../assembler/masm/byte-masm.md)<br/>
+[DB](../../assembler/masm/db.md)<br/>

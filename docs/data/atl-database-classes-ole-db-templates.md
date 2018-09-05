@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6df13353b61347455cc5d707f099086429d46f6f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677873"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Классы баз данных библиотеки ATL (шаблоны OLE DB)
 Корпорация Майкрософт предоставляет несколько реализаций OLE DB, набор COM-интерфейсов, обеспечивающих унифицированный доступ к данным в различных источниках и форматах.  OLE DB обычно не используется; Данный документ предназначен для разработчиков, которые Поддержка устаревшего кода. Новые приложения должны использовать ODBC для подключения к источникам данных SQL.
@@ -39,11 +39,11 @@ ms.locfileid: "43218992"
   
  Обратите внимание, что библиотека MFC содержит один класс [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), которая отображает записи базы данных в элементах управления. Представление — представление формы, который напрямую подключен к `CRowset` и отображает поля `CRowset` в элементах управления шаблона диалогового окна.  
   
- Дополнительные сведения см. в разделе [OLE DB программирования](../data/oledb/ole-db-programming.md) и [Руководство программиста OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548).  
+ Дополнительные сведения см. в разделе [OLE DB программирования](../data/oledb/ole-db-programming.md) и [Руководство программиста OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
   
 ## <a name="see-also"></a>См. также  
  [Создание объекта-получателя OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   
  [Создание поставщика OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
  [Ссылка на шаблоны OLE DB потребителя](../data/oledb/ole-db-consumer-templates-reference.md)   
  [Ссылка на шаблоны поставщика OLE DB](../data/oledb/ole-db-provider-templates-reference.md)   
- [Примеры шаблонов OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [Примеры шаблонов OLE DB](https://github.com/Microsoft/VCSamples)

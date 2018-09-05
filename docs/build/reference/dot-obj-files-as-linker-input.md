@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbc1d7fc7f74121c37c9e80a538ec60f2265701
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219566"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691755"
 ---
 # <a name="obj-files-as-linker-input"></a>OBJ-файлы в качестве входных файлов компоновщика
 
@@ -38,7 +38,7 @@ ms.locfileid: "43219566"
 
 Начиная с Visual Studio 2005, компилятор Microsoft Visual C++ поддерживает символы Юникода в идентификаторах в соответствии с определением ISO/IEC C и стандартов C++. Предыдущие версии компилятора поддерживали только символы ASCII в идентификаторах. Реализована поддержка Юникода в именах функций, классов и статических элементов, компилятор и компоновщик используют кодировку Юникода UTF-8 для символов COFF в OBJ-файлы. Кодировка UTF-8 восходящая совместим с кодировкой ASCII, используемой в более ранних версиях Visual Studio.
 
-Дополнительные сведения о компиляторе и компоновщике см. в разделе [поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Дополнительные сведения о стандарте Юникода, см. в разделе [Юникода](http://go.microsoft.com/fwlink/p/?linkid=37123) организации.
+Дополнительные сведения о компиляторе и компоновщике см. в разделе [поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Дополнительные сведения о стандарте Юникода, см. в разделе [Юникода](http://www.unicode.org/) организации.
 
 ## <a name="see-also"></a>См. также
 
@@ -46,5 +46,5 @@ ms.locfileid: "43219566"
 [Параметры компоновщика](../../build/reference/linker-options.md)  
 [Поддержка Юникода](../../text/support-for-unicode.md)  
 [Поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Стандарт Юникод](http://go.microsoft.com/fwlink/p/?linkid=37123)  
+[Стандарт Юникод](http://www.unicode.org/)  
 [Формат PE](/windows/desktop/Debug/pe-format)  

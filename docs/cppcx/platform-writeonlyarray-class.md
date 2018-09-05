@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 44beeca9b860e2010b092739d8c39044ad0bb5b1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603350"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680929"
 ---
 # <a name="platformwriteonlyarray-class"></a>Класс Platform::WriteOnlyArray
 Представляет одномерный массив, который используется в качестве входного параметра, когда вызывающая сторона передает массив в метод для заполнения.  
@@ -43,7 +43,7 @@ private ref class WriteOnlyArray<T, 1>
 ### <a name="public-methods"></a>Открытые методы  
  Эти методы имеют внутреннюю доступность, то есть доступны только в компоненте или приложении С++.  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 
 |[WriteOnlyArray::begin](#begin)| Итератор, указывающий на первый элемент массива. |  
@@ -187,7 +187,7 @@ T& set(
 
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения об интерпретации значения HRESULT см. в разделе [структуры из кодов ошибок модели COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Дополнительные сведения об интерпретации значения HRESULT см. в разделе [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes).  
   
   
 ## <a name="see-also"></a>См. также  

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a220f0dc2c979676ad2e28fd504ef80e0925f74d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678454"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Вызов неуправляемых функций из управляемого кода
 Среда CLR предоставляет службы вызова неуправляемого или PInvoke, которая позволяет управляемому коду вызывать функции C-стиля в собственные библиотеки динамической компоновки (DLL). Такой же маршалинг данных применяется и для COM-взаимодействие со средой выполнения и для механизма «It Just Works» или IJW.  
@@ -35,8 +35,6 @@ ms.locfileid: "43195692"
 -   [Использование явного вызова Pinvoke в C++ (атрибут DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
 -   [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
-  
--   [Подробный обзор вызова неуправляемого кода](https://msdn.microsoft.com/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  В этом разделе примерах как `PInvoke` может использоваться. `PInvoke` может упростить маршалинг подготовленных данных, поскольку при этом предоставляется информация о маршалинге декларативно в атрибутах вместо написания кода процедуры маршалинга.  
   

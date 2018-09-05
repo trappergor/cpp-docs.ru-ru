@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a285cc8c0d24e36d6c00f336d0b3724a31c7af82
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3c8cca379b9b9ba6498908469761acefce189117
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211304"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686992"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Атрибуты Typedef, Enum, Union и Struct
 
-Следующие атрибуты применяются к [typedef](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [структуры](../cpp/struct-cpp.md), и [перечисления](../cpp/enumerations-cpp.md) ключевые слова C++.
+Следующие атрибуты применяются к [typedef](../cpp/aliases-and-typedefs-cpp.md), [структуры](../cpp/struct-cpp.md), и [перечисления](../cpp/enumerations-cpp.md) ключевые слова C++.
 
 ### <a name="typedef"></a>typedef
 
-|Атрибут|Описание:|
+|Атрибут|Описание|
 |---------------|-----------------|
 |[case](../windows/case-cpp.md)|Используется с [switch_type](../windows/switch-type.md) атрибут в **объединение**.|
 |[Custom](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|
@@ -52,7 +52,7 @@ ms.locfileid: "43211304"
 
 ### <a name="enum"></a>перечисление
 
-|Атрибут|Описание:|
+|Атрибут|Описание|
 |---------------|-----------------|
 |[Custom](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|
 |[export](../windows/export.md)|В результате структуру данных, должно быть помещено в IDL-файла.|
@@ -61,7 +61,7 @@ ms.locfileid: "43211304"
 
 ### <a name="union"></a>union
 
-|Атрибут|Описание:|
+|Атрибут|Описание|
 |---------------|-----------------|
 |[Custom](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|
 |[export](../windows/export.md)|В результате структуру данных, должно быть помещено в IDL-файла.|
@@ -75,14 +75,14 @@ ms.locfileid: "43211304"
 
 ### <a name="nonencapsulated-union"></a>Nonencapsulated union
 
-|Атрибут|Описание:|
+|Атрибут|Описание|
 |---------------|-----------------|
 |[ms_union](../windows/ms-union.md)|Управляет выравниванием представление данных сети nonencapsulated объединений.|
 |[no_injected_text](../windows/no-injected-text.md)|Запрещает компилятору вставку кода в результате использования атрибута.|
 
 ### <a name="struct"></a>структура
 
-|Атрибут|Описание:|
+|Атрибут|Описание|
 |---------------|-----------------|
 |[aggregatable](../windows/aggregatable.md)|Указывает, что класс поддерживает агрегирование.|
 |[aggregates](../windows/aggregates.md)|Указывает, что элемент управления использует статистическую функцию целевого класса.|

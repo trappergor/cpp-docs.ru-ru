@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96219173186b578e2469c769ade62c388d8c3c07
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84f62346d12c978a466de14357352f78345e99f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201480"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691112"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Класс CMFCOutlookBarPane
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
@@ -72,14 +72,14 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCOutlookBarPane::CMFCOutlookBarPane`|Конструктор по умолчанию.|  
 |`CMFCOutlookBarPane::~CMFCOutlookBarPane`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCOutlookBarPane::AddButton](#addbutton)|Добавляет кнопку область панели Outlook.|  
 |[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Определяет, закреплением области к другой панели или окне фрейма. (Переопределяет [CBasePane::CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|  
@@ -107,7 +107,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCOutlookBarPane::EnableContextMenuItems](#enablecontextmenuitems)|Указывает, какие пункты контекстного меню отображаются в режим настройки.|  
 |[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Удаляет все кнопки из область панели Outlook. (Переопределяет [CMFCToolBar::RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|  
@@ -323,7 +323,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
  Текущий цвет текста как значение RGB.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте [CMFCOutlookBarPane::SetTextColor](#settextcolor) задать текущий цвет текста (обычные и выбранного) панели Outlook. Цвет текста по умолчанию можно получить, вызвав [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) функции с индексом COLOR_WINDOW.  
+ Используйте [CMFCOutlookBarPane::SetTextColor](#settextcolor) задать текущий цвет текста (обычные и выбранного) панели Outlook. Цвет текста по умолчанию можно получить, вызвав [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) функции с индексом COLOR_WINDOW.  
   
 ##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  Определяет, существует ли фоновое изображение загружается для область панели Outlook.  

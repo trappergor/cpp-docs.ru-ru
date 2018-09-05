@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5bb14f9581a521345772cd72348b40db3f80496a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220690"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678375"
 ---
 # <a name="resource-files-visual-studio"></a>Файлы ресурсов (Visual Studio)
 
 > [!NOTE]
-> Этот материал относится к классическим приложениям Windows. Сведения о ресурсах в приложениях универсальной платформы Windows см. в разделе [определение ресурсов приложения](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Этот материал относится к классическим приложениям Windows. Сведения о ресурсах в приложениях универсальной платформы Windows см. в разделе [определение ресурсов приложения](/windows/uwp/app-resources/).
 >
 > Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 >

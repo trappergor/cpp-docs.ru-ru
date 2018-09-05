@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 333bdbd88d554e3fe3e3f233ce9968df75d73dfc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690894"
 ---
 # <a name="umenuorid-class"></a>Класс _U_MENUorID
 Этот класс предоставляет оболочки для `CreateWindow` и `CreateWindowEx`.  
@@ -42,20 +42,20 @@ class _U_MENUorID
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[_U_MENUorID::_U_MENUorID](#_u_menuorid___u_menuorid)|Конструктор.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Дескриптор для меню.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот класс адаптера аргумент позволяет идентификаторы (единицы) или дескрипторы меню (HMENUs) для передачи в функцию без необходимости явного приведения, со стороны вызывающего объекта.  
   
- Этот класс предназначен для реализации оболочки Windows API, особенно [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) и [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) функции, которые принимают аргумент дескриптора HMENU, возможно, дочернее окно идентификатор (целое число без знака), а не дескриптор меню. Например, можно увидеть этот класс используется в качестве параметра [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Этот класс предназначен для реализации оболочки Windows API, особенно [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) и [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функции, которые принимают аргумент дескриптора HMENU, возможно, дочернее окно идентификатор (целое число без знака), а не дескриптор меню. Например, можно увидеть этот класс используется в качестве параметра [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
  Этот класс определяет две перегрузки конструктора: один принимает аргумент целое число без знака, а другой принимает аргумент дескриптора HMENU. Целое число без знака аргумент просто привести к HMENU конструктора и результата, хранимого в единый данные-член класса, [m_hMenu](#_u_menuorid__m_hmenu). Аргумент для конструктора HMENU хранится непосредственно без преобразования.  

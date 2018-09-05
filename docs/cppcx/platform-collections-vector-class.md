@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 550a1e40d3fee80b4c9666457a60772ed49b580a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aeaed487db1063efd14dddbca28480a169b13522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590239"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686658"
 ---
 # <a name="platformcollectionsvector-class"></a>Класс Platform::Collections::Vector
 
@@ -77,13 +77,13 @@ template <typename T, typename E>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Vector::Vector](#ctor)|Инициализирует новый экземпляр класса Vector.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Vector::Append](#append)|Вставляет указанный элемент после последнего элемента текущего объекта Vector.|
 |[Vector::Clear](#clear)|Удаляет все элементы текущего объекта Vector.|
@@ -103,8 +103,8 @@ template <typename T, typename E>
 
 |||
 |-|-|
-|name|Описание:|
-|событие [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Происходит при изменении объекта Vector.|
+|name|Описание|
+|событие [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Происходит при изменении объекта Vector.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

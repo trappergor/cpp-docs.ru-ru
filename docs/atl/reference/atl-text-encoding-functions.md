@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061bfc2f083061d352fa7f93bb572456a5a23451
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a63caaa23fa59356a5904740cf03b8c36a909930
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218376"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688576"
 ---
 # <a name="atl-text-encoding-functions"></a>Функции кодировки текста ATL
 Эти функции поддерживают текст кодирования и декодирования.
@@ -451,7 +451,7 @@ inline BOOL QPDecode(
  Указатель на переменную, которая содержит длину в байтах *szDest*. Если функция выполняется успешно, переменная получает число байтов, записанных в буфер. Если функция завершается с ошибкой, переменная получает требуемую длину в байтах буфера.  
   
  [in] *dwFlags*  
- Флаги, описывающие, каким образом будет осуществляться преобразование. См. в разделе [флаги ATLSMTP_QPENCODE](https://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4).  
+ ATLSMTP_QPENCODE флаги, описывающие, каким образом будет осуществляться преобразование.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  

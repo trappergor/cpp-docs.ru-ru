@@ -1,7 +1,7 @@
 ---
-title: оператор LOW32 | Документы Microsoft
+title: оператор LOW32 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b079237508ca61ff3e7bc48e1d9b01a60e660a9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 81779243c61e304989abf60517dc2dd26d297b61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057407"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693552"
 ---
 # <a name="operator-low32"></a>Оператор LOW32
-Возвращает младшие 32 разряда *выражение*. Выражения MASM являются 64-разрядными значениями.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-LOW32 expression  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает младшие 32 разряда *выражение*. Выражения MASM являются 64-разрядными значениями.
+
+## <a name="syntax"></a>Синтаксис
+
+> Выражение LOW32
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

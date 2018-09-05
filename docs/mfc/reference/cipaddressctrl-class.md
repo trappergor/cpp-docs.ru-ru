@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0177d350d37b7fb1afe27d8aa4aad98dd985ec13
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222342"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679182"
 ---
 # <a name="cipaddressctrl-class"></a>Класс CIPAddressCtrl
 Предоставляет функциональные возможности стандартного элемента управления "IP-адрес" Windows.  
@@ -54,13 +54,13 @@ class CIPAddressCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|Создает объект `CIPAddressCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CIPAddressCtrl::ClearAddress](#clearaddress)|Очищает содержимое контроль IP-адресов.|  
 |[CIPAddressCtrl::Create](#create)|Создает элемент управления адрес IP-адрес и присоединяет его к `CIPAddressCtrl` объекта.|  
@@ -120,7 +120,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- Стиль элемента управления IP-адрес. Примените сочетание стилей окна. Стиль WS_CHILD необходимо включить, так как элемент управления должен быть дочернего окна. См. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK Windows для получения списка стили windows.  
+ Стиль элемента управления IP-адрес. Примените сочетание стилей окна. Стиль WS_CHILD необходимо включить, так как элемент управления должен быть дочернего окна. См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете SDK Windows для получения списка стили windows.  
   
  *Rect*  
  Ссылка на размер и положение контроль IP-адресов. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
@@ -157,10 +157,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
- Стиль элемента управления IP-адрес. Примените сочетание стилей окна. Стиль WS_CHILD необходимо включить, так как элемент управления должен быть дочернего окна. См. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK Windows для получения списка стили windows.  
+ Стиль элемента управления IP-адрес. Примените сочетание стилей окна. Стиль WS_CHILD необходимо включить, так как элемент управления должен быть дочернего окна. См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете SDK Windows для получения списка стили windows.  
   
  *Rect*  
  Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  

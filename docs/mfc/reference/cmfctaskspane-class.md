@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7f83175e2bf3fe1e69ef02192749916e566edd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215257"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686461"
 ---
 # <a name="cmfctaskspane-class"></a>Класс CMFCTasksPane
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
@@ -226,13 +226,13 @@ class CMFCTasksPane : public CDockablePane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCTasksPane::CMFCTasksPane](#cmfctaskspane)|Создает объект `CMFCTasksPane`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCTasksPane::AddGroup](#addgroup)|Добавляет новую группу задач для элемента управления области задач.|  
 |[CMFCTasksPane::AddLabel](#addlabel)|Добавляет новую статическую подпись в указанную группу задач.|  
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|Указывает, переносятся ли слова в метках области задач.|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|Указывает, переносятся ли слова в именах задач области задач.|  
-|[CMFCTasksPane::LoadState](#loadstate)|(Переопределяет [CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CMFCTasksPane::LoadState](#loadstate)|(Переопределяет [CDockablePane::LoadState](cdockablepane-class.md#loadstate).)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|Вызывается платформой по щелчку элемента в области задач.|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,17 +293,17 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|Вызывается платформой по нажатию кнопки перехода на домашнюю страницу.|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(Переопределяет [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Переопределяет [CDockablePane::OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Переопределяет [CDockablePane::PreTranslateMessage](https://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Переопределяет [CDockablePane::OnUpdateCmdUI](cdockablepane-class.md).)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Переопределяет [CDockablePane::PreTranslateMessage](cdockablepane-class.md).)|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(Переопределяет [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|Удаляет все группы на указанной странице.|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|Удаляет все страницы из области задач, за исключением страницы по умолчанию (первой страницы).|  
 |[CMFCTasksPane::RemoveAllTasks](#removealltasks)|Удаляет все задачи из группы.|  
 |[CMFCTasksPane::RemoveGroup](#removegroup)|Удаляет группу.|  
-|[CMFCTasksPane::RemovePage](#removepage)|Удаляет указанную страницу из области задач.|  
+|[CMFCTasksPane::RemovePage](#removepage)|Удаляет указанную страницу из области задач.|
 |[CMFCTasksPane::RemoveTask](#removetask)|Удаляет задачу из группы задач.|  
-|[CMFCTasksPane::SaveState](#savestate)|(Переопределяет [CDockablePane::SaveState](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
-|[CMFCTasksPane::Serialize](#serialize)|(Переопределяет [CDockablePane::Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|[CMFCTasksPane::SaveState](#savestate)|(Переопределяет [CDockablePane::SaveState](cdockablepane-class.md).)|  
+|[CMFCTasksPane::Serialize](#serialize)|(Переопределяет [CDockablePane::Serialize]().)|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Активирует указанную страницу в области задач.|  
 |[CMFCTasksPane::SetCaption](#setcaption)|Задает заголовок области задач.|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Задает высоту заголовка группы.|  
@@ -318,7 +318,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::SetTaskName](#settaskname)|Задает имя задачи.|  
 |[CMFCTasksPane::SetTasksIconHorzOffset](#settasksiconhorzoffset)||  
 |[CMFCTasksPane::SetTasksIconVertOffset](#settasksiconvertoffset)||  
-|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|Задает цвет текста для задачи.|  
+|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|Задает цвет текста для задачи.| 
 |[CMFCTasksPane::SetTasksHorzOffset](#settaskshorzoffset)|Задает смещение задач по горизонтали относительно левого и правого краев их родительских групп.|  
 |[CMFCTasksPane::SetVertMargin](#setvertmargin)|Задает вертикальный интервал между областью задач и краями клиентской области.|  
 |[CMFCTasksPane::SetWindowHeight](#setwindowheight)|Задает высоту окна.|  
@@ -329,7 +329,7 @@ class CMFCTasksPane : public CDockablePane
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|Вызывается платформой при активации новой страницы области задач.|  
   

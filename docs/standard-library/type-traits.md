@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fed2cad9c96b20313617ef57e4373de16712aa34
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2e374ad9c0024b602c07ea91e53d45c9bf0742f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692468"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -142,7 +142,7 @@ using add_const_t = typename add_const<T>::type;
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Проверяет, является ли тип назначаемым с использованием типа копирования и известно ли, что назначение не создаст исключения.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Проверяет, является ли тип назначаемым с использованием типа перемещения и известно ли, что назначение не создаст исключения.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Проверяет, является ли тип уничтожаемым и известно ли, что деструктор не создаст исключения.|
-|[has_virtual_destructor](https://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Проверяет, есть ли у типа виртуальный деструктор.|
+|`has_virtual_destructor`|Проверяет, есть ли у типа виртуальный деструктор.|
 
 Запросы свойств типов
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42588b844158ebe995a9d07dc206679580db12fe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 90a9cdaf5d0b99e2ad746655f67e3ab9a68aad1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201172"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688403"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML
 В этом примере показано, как использовать [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) и [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) интерфейсы вместе с задачами отправки запросов HTTP GET и POST для веб-службы в универсальной Windows платформы (UWP ) приложения. Путем объединения `IXMLHTTPRequest2` с задачами, можно написать код, который объединяется с другими задачами. Например, можно использовать задачу загрузки в цепочке этих задач. Задача загрузки может также реагировать на отмену работы.  
@@ -33,7 +33,7 @@ ms.locfileid: "43201172"
   
  В этом документе сначала показаны способы создания `HttpRequest` и его вспомогательных классов. Затем показано, как использовать этот класс из приложения UWP, которое использует C++ и XAML.  
   
- Более полный пример, использующий `HttpReader` классов, описанных в этом документе, см. в разделе [разработка Bing Maps Trip Optimizer, JavaScript и C++ в приложении Windows Store](https://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Другой пример, использующий `IXMLHTTPRequest2` , но не использует задачи, см. в разделе [краткое руководство: подключение с помощью HTTP-запроса (IXMLHTTPRequest2), XML](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
+Пример, использующий `IXMLHTTPRequest2` , но не использует задачи, см. в разделе [краткое руководство: подключение с помощью HTTP-запроса (IXMLHTTPRequest2), XML](/previous-versions/windows/apps/hh770550\(v=win.10\)).  
   
 > [!TIP]
 >  `IXMLHTTPRequest2` и `IXMLHTTPRequest2Callback` являются интерфейсы, которые рекомендуется для использования в приложении универсальной платформы Windows. Можно также адаптировать этот пример для использования в приложении для настольных систем.  
@@ -121,6 +121,6 @@ ms.locfileid: "43201172"
  [Отмена в библиотеке параллельных Шаблонов](cancellation-in-the-ppl.md)   
  [Асинхронное программирование в C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
  [Создание асинхронных операций в C++ для приложений универсальной платформы Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [Краткое руководство: Подключение с помощью HTTP-запроса (IXMLHTTPRequest2), XML](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [Краткое руководство: Подключение с помощью HTTP-запроса (IXMLHTTPRequest2), XML](/previous-versions/windows/apps/hh770550\(v=win.10\))   
  [Класс Task (среда выполнения с параллелизмом)](../../parallel/concrt/reference/task-class.md)   
  [Класс task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)

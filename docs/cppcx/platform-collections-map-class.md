@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2192786a9ebb14061e31655fd63e0f7c67b5100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218427"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687590"
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -72,7 +72,7 @@ ref class Map sealed;
 
 - открытый класс перечисления
 
-Карта — это, по сути, программа-оболочка для [std::map](../standard-library/map-class.md). Это конкретная реализация в C++ из [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) и [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) типы, передаваемые через открытые интерфейсы среды выполнения Windows. При попытке использования типа `Platform::Collections::Map` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
+Карта — это, по сути, программа-оболочка для [std::map](../standard-library/map-class.md). Это конкретная реализация в C++ из [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) и [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) типы, передаваемые через открытые интерфейсы среды выполнения Windows. При попытке использования типа `Platform::Collections::Map` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
 Дополнительные сведения см. в разделе [коллекций](../cppcx/collections-c-cx.md).
 
@@ -80,13 +80,13 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[MAP::MAP](#ctor)|Инициализирует новый экземпляр класса Map.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Map::Clear](#clear)|Удаляет все пары "ключ-значение" из текущего объекта Map.|
 |[MAP::First](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
@@ -101,7 +101,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|Описание:|
+|name|Описание|
 |[MAP::MapChanged](#mapchanged-event.md) `event`|Происходит при изменении объекта Map.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования

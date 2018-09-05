@@ -1,7 +1,7 @@
 ---
-title: оператор OPATTR | Документы Microsoft
+title: оператор OPATTR | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60cff972deb70536bc570c26894b6877bce21cec
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5e9d22726ce13e8022445b15ae9a0577363fc04d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057543"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686010"
 ---
 # <a name="operator-opattr"></a>Оператор OPATTR
-Возвращает определение области и режим слово *выражение*. Младший байт идентична байтов, возвращенных [. Тип](../../assembler/masm/operator-dot-type.md). Старший байт содержит дополнительные сведения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-OPATTR expression  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает слово, определение области и режим *выражение*. Младший байт идентична байтов, возвращенных [. Тип](../../assembler/masm/operator-dot-type.md). Старший байт содержит дополнительные сведения.
+
+## <a name="syntax"></a>Синтаксис
+
+> Выражение OPATTR
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

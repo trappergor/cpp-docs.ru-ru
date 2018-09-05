@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8743619b1c47f085aacd569a7b90d716f175842
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210809"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685747"
 ---
 # <a name="cfiledialog-class"></a>Класс CFileDialog
 Инкапсулирует общее диалоговое окно, который используется для открытия файла или файла операции сохранения.  
@@ -162,13 +162,13 @@ class CFileDialog : public CCommonDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFileDialog::CFileDialog](#cfiledialog)|Создает объект `CFileDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Добавляет кнопку с галочкой в диалоговом окне.|  
 |[CFileDialog::AddComboBox](#addcombobox)|Добавляет поле со списком в диалоговом окне.|  
@@ -223,7 +223,7 @@ class CFileDialog : public CCommonDialog
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|Вызывается при нажатии кнопки.|  
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Вызывается, когда флажок или снятии флажка.|  
@@ -239,7 +239,7 @@ class CFileDialog : public CCommonDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFileDialog::m_ofn](#m_ofn)|Windows `OPENFILENAME` структуры. Предоставляет доступ к параметрам поле диалогового окна базовый файл.|  
   
@@ -1398,7 +1398,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
   
 ### <a name="parameters"></a>Параметры  
  *lpszPropList*  
- Список предварительно заданных свойств, разделенных точкой с запятой (";"). Список флагов см. в разделе **флаги** раздел [OPENFILENAME](https://msdn.microsoft.com/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
+ Список предварительно заданных свойств, разделенных точкой с запятой (";"). Список флагов см. в разделе **флаги** раздел [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ### <a name="remarks"></a>Примечания  
   

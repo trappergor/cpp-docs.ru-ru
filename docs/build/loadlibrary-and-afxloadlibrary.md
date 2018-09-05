@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687939"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>Функции LoadLibrary и AfxLoadLibrary
 
-Обрабатывает вызов [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (или [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) для явного связывания с библиотекой DLL. Если функция выполняется успешно, он сопоставляет указанную библиотеку DLL с адресным пространством вызывающего процесса и возвращает дескриптор библиотеки DLL, который можно использовать с другими функциями для явного связывания — например, `GetProcAddress` и `FreeLibrary`.
+Обрабатывает вызов [LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) или [LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(или [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) для явного связывания с библиотекой DLL. Если функция выполняется успешно, он сопоставляет указанную библиотеку DLL с адресным пространством вызывающего процесса и возвращает дескриптор библиотеки DLL, который можно использовать с другими функциями для явного связывания — например, `GetProcAddress` и `FreeLibrary`.
 
 `LoadLibrary` пытается обнаружить библиотеку DLL с помощью той же последовательности поиска, который используется для неявного связывания. Если системе не удается найти библиотеку DLL или функция точки входа возвращает значение FALSE, `LoadLibrary` возвращает значение NULL. Если вызов `LoadLibrary` указан модуль DLL, уже сопоставленный с адресным пространством вызывающего процесса, функция возвращает дескриптор библиотеки DLL и увеличивает счетчик ссылок модуля.
 
@@ -59,5 +59,3 @@ ms.locfileid: "42572887"
 ## <a name="see-also"></a>См. также
 
 - [DLL в Visual C++](../build/dlls-in-visual-cpp.md)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

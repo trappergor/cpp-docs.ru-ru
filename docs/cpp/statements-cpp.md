@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9458e427c1954a351ffcedfa2fce0a39634d8369
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 845ca21dc4de4263c9063712b372c70cfb022059
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216369"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685809"
 ---
 # <a name="statements-c"></a>Операторы (C++)
 Операторы C++ представляют собой элементы программы, которые контролируют способ и порядок обработки объектов. Этот раздел состоит из следующих частей.  
@@ -42,7 +42,7 @@ ms.locfileid: "43216369"
   
     -   [Операторы перехода](../cpp/jump-statements-cpp.md). Эти операторы либо передают управление непосредственно в другое место функции, либо возвращают управление из функции.  
   
-    -   [Операторы объявления](https://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Объявления вводят имя в программу. ([Объявления и определения](declarations-and-definitions-cpp.md) содержатся более подробные сведения об объявлениях.)  
+    -   [Операторы объявления](declarations-and-definitions-cpp.md). Объявления вводят имя в программу.  
   
  Сведения об операторах обработки исключений см. в разделе [обработка исключений](../cpp/exception-handling-in-visual-cpp.md).  
   

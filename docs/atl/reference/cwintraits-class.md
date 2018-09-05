@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae151d25af5ad1c77f2dcfc7af1902e562ffde51
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 40c8404ad2f2ab56849bed22a15bd10805888d3c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208312"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690694"
 ---
 # <a name="cwintraits-class"></a>Класс CWinTraits
 Этот класс предоставляет метод для стандартизации стилей, которые используются при создании объекта окна.  
@@ -53,7 +53,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWinTraits::GetWndExStyle](#getwndexstyle)|(Статический) Извлекает расширенные стили для `CWinTraits` объекта.|  
 |[CWinTraits::GetWndStyle](#getwndstyle)|(Статический) Извлекает стандартный стили `CWinTraits` объекта.|  
@@ -108,6 +108,5 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
  Расширенные стили окна объекта.  
   
 ## <a name="see-also"></a>См. также  
- [Члены класса](https://msdn.microsoft.com/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Основные сведения о характеристиках окна](../../atl/understanding-window-traits.md)

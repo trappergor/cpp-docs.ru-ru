@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221360"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677749"
 ---
 # <a name="cstatusbarctrl-class"></a>Класс CStatusBarCtrl
 Предоставляет функциональные возможности стандартного элемента управления "индикатор статуса" Windows.  
@@ -74,13 +74,13 @@ class CStatusBarCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CStatusBarCtrl::CStatusBarCtrl](#cstatusbarctrl)|Создает объект `CStatusBarCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CStatusBarCtrl::Create](#create)|Создает элемент управления строка состояния и присоединяет его к `CStatusBarCtrl` объекта.|  
 |[CStatusBarCtrl::CreateEx](#createex)|Создает элемент управления строка состояния с указанного расширенные стили Windows и присоединяет его к `CStatusBarCtrl` объекта.|  
@@ -171,7 +171,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Задает стиль управления строкой состояния. Применить любое сочетание строки стили элемента управления, перечисленные в состояния [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK. Этот параметр должен содержать стиль WS_CHILD. Она также должна включать WS_VISIBLE стиль.  
@@ -259,7 +259,7 @@ HICON GetIcon(int iPart) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *iPart*|Отсчитываемый от нуля индекс части, который содержит значок, который требуется получить. Если этот параметр имеет значение -1, строка состояния считается строка состояния простой режим.|  
   

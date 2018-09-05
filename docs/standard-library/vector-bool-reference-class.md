@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05486e4b75e631dcdc77855e850fe48c08d77326
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 798c65764ce49e795d3a6220803d51c72411ca79
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686412"
 ---
 # <a name="vectorltboolgtreference-class"></a>Класс vector&lt;bool&gt;::reference
 
@@ -29,7 +29,7 @@ ms.locfileid: "43203855"
 
 ## <a name="remarks"></a>Примечания
 
-Необходима смоделированная ссылка, поскольку C++ изначально не допускает прямых ссылок на биты. `vector<bool>` использует только один бит на элемент, ссылку на который можно создать с помощью данного класса прокси. Однако моделирование ссылки является незавершенным, поскольку определенные назначения не являются допустимыми. Например, следующий пример использования объекта [vector\<bool>::operator[]](https://msdn.microsoft.com/Library/97738633-690d-4069-b2d9-8c54104fbfdd) является неправильным, так как невозможно получить адрес объекта `vector<bool>::reference`.
+Необходима смоделированная ссылка, поскольку C++ изначально не допускает прямых ссылок на биты. `vector<bool>` использует только один бит на элемент, ссылку на который можно создать с помощью данного класса прокси. Однако моделирование ссылки является незавершенным, поскольку определенные назначения не являются допустимыми. Например так как адрес `vector<bool>::reference` объекта не может быть выполнено, следующий код, который пытается использовать `vector<bool>::operator&` не верна:
 
 ```cpp
 vector<bool> vb;
@@ -40,7 +40,7 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[flip](../standard-library/vector-bool-reference-flip.md)|Инвертирует логическое значение элемента вектора.|
 |[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Предоставляет неявное преобразование из `vector<bool>::reference` для **bool**.|

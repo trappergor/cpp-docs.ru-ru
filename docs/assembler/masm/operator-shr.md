@@ -1,7 +1,7 @@
 ---
-title: оператор SHR | Документы Microsoft
+title: оператор SHR | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d152f05dd2558235799ef3cf172e54143b6491ae
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d6d9523059b441aa219ac6586c8c1980c0786a9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679622"
 ---
 # <a name="operator-shr"></a>Оператор SHR
-Возвращает результат сдвига биты *выражение* правой *число* число бит.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-expression SHR count  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает результат сдвига битов *выражение* правой *число* число битов.
+
+## <a name="syntax"></a>Синтаксис
+
+> выражение SHR count
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

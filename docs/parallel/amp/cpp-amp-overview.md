@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df69423e635a76d82ad8a2539c6fd92054f24964
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219387"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677673"
 ---
 # <a name="c-amp-overview"></a>Общие сведения о C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) ускоряет выполнение кода C++, использование преимуществ оборудования параллельной обработки данных, таких как графический процессор (GPU) на выделенной видеокарте. С помощью C++ AMP, можно составить код алгоритмы многомерных данных таким образом, чтобы выполнение может быть ускорено с помощью параллелизма на различном оборудовании. Модель программирования C++ AMP включает многомерные массивы, индексирование, перенос памяти, мозаичное заполнение и библиотеку математических функций. Расширения языка C++ AMP можно использовать для управления, как данные перемещаются из ЦП в GPU и обратно, так что можно улучшить производительность.  
@@ -225,7 +225,7 @@ for (int i = 0; i < 5; i++)
 ### <a name="comparison-of-array-and-arrayview"></a>Сравнение array и array_view  
 В следующей таблице перечислены сходства и различия между `array` и `array_view` классы.  
   
-|Описание:|array - класс|array_view - класс|  
+|Описание|array - класс|array_view - класс|  
 |-----------------|-----------------|-----------------------|  
 |Определение ранга|Во время компиляции.|Во время компиляции.|  
 |Определение границ|Во время выполнения.|Во время выполнения.|  
@@ -464,7 +464,7 @@ C++ AMP включает в себя графическую библиотеку
   
 - [Класс writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): обеспечивает доступ к любой текстуре только для записи.  
   
-- [Короткий вектор библиотеки](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f): Определяет набор коротких векторных типов длиной 2, 3 и 4, которые основаны на **int**, `uint`, **float**, **двойные**, [norm](../../parallel/amp/reference/norm-class.md), или [unorm](../../parallel/amp/reference/unorm-class.md).  
+- Библиотека коротких векторов: Определяет набор коротких векторных типов длиной 2, 3 и 4, которые основаны на **int**, `uint`, **float**, **двойные**, [нормы ](../../parallel/amp/reference/norm-class.md), или [unorm](../../parallel/amp/reference/unorm-class.md).  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>Windows универсальных приложений платформы (UWP)  
  
@@ -496,7 +496,7 @@ C++ AMP включает в себя графическую библиотеку
   
 - [Каналы (представление "Потоки")](/visualstudio/profiling/channels-threads-view)  
   
-- [Анализ кода C++ AMP с Визуализатором параллелизма](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
+- [Анализ кода C++ AMP с Визуализатором параллелизма](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)  
   
 ## <a name="performance-recommendations"></a>Рекомендации по производительности  
  

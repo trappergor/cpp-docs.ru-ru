@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f95169f62fa2eaf9c562bff463ad84c0827db9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b6d8d53ea3b7331de08ea2aa2a00e5fdfb106c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394426"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684327"
 ---
 # <a name="chdrive"></a>_chdrive
 
@@ -67,9 +67,9 @@ int _chdrive(
 
 ## <a name="remarks"></a>Примечания
 
-Если *диск* находится не в диапазоне от 1 до 26, вызывается обработчик недопустимых параметров, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **_chdrive** функция возвращает -1, **errno** равно **EACCES**, и **_doserrno** равно  **ERROR_INVALID_DRIVE**.
+Если *диск* находится не в диапазоне от 1 до 26, вызывается обработчик недопустимых параметров, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **_chdrive** функция возвращает -1, **errno** присваивается **EACCES**, и **_doserrno** присваивается  **ERROR_INVALID_DRIVE**.
 
-Функция **_chdrive** не является потокобезопасной, так как зависит от не безопасной для потоков функции **SetCurrentDirectory**. Для безопасного использования функции **_chdrive** в многопоточном приложении необходимо обеспечить собственный механизм синхронизации потоков. Дополнительные сведения см. на сайте [Библиотека MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542), выполнив поиск по запросу **SetCurrentDirectory**.
+Функция **_chdrive** не является потокобезопасной, так как зависит от не безопасной для потоков функции **SetCurrentDirectory**. Для безопасного использования функции **_chdrive** в многопоточном приложении необходимо обеспечить собственный механизм синхронизации потоков. Дополнительные сведения см. в разделе [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
 
 Функция **_chdrive** изменяет текущий рабочий диск, а функция **_chdir** — текущий рабочий каталог.
 

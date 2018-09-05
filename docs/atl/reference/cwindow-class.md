@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a0ef98a17cdbc262ac8db90eba089601d8f8841
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b989cc55a76c1a982e0739a15d91544e5aeb4ddf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216726"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678666"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 Этот класс предоставляет методы для управления окном.  
@@ -186,13 +186,13 @@ class CWindow
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWindow::CWindow](#cwindow)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWindow::ArrangeIconicWindows](#arrangeiconicwindows)|Упорядочивает все свернутые дочерние окна.|  
 |[CWindow::Attach](#attach)|Прикрепляет окно к `CWindow` объекта.|  
@@ -340,14 +340,14 @@ class CWindow
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWindow::operator HWND](#operator_hwnd)|Преобразует `CWindow` объект HWND.|  
 |[CWindow::operator =](#operator_eq)|Назначает HWND для `CWindow` объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWindow::m_hWnd](#m_hwnd)|Дескриптор окна, связанный с `CWindow` объекта.|  
 |[CWindow::rcDefault](#rcdefault)|Содержит размеры окна по умолчанию.|  
@@ -547,10 +547,10 @@ HWND Create(
  [in] Задает имя окна. Значение по умолчанию имеет значение NULL.  
   
  *dwStyle*  
- [in] Стиль окна. Значение по умолчанию равно 0, то есть стиль не указывается. Список возможных значений см. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
+ [in] Стиль окна. Значение по умолчанию равно 0, то есть стиль не указывается. Список возможных значений см. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.  
   
  *dwExStyle*  
- [in] Стиль окна расширенного. Значение по умолчанию равно 0, то есть не расширенный стиль указывается. Список возможных значений см. в разделе [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ [in] Стиль окна расширенного. Значение по умолчанию равно 0, то есть не расширенный стиль указывается. Список возможных значений см. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *MenuOrID*  
  [in] Переменная типа [_U_MENUorID](../../atl/reference/u-menuorid-class.md) указывать дескриптор меню или идентификатор окна. Значение по умолчанию — 0U.  
@@ -564,7 +564,7 @@ HWND Create(
 ### <a name="remarks"></a>Примечания  
  `CWindow::rcDefault` определяется как `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`.  
   
- См. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK для Windows, Дополнительные сведения.  
+ См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете SDK для Windows, Дополнительные сведения.  
   
  **Примечание** Если 0 используется как значение для *MenuOrID* параметр, он должен быть указан как 0U (значение по умолчанию) для предотвращения ошибок компилятора.  
   
@@ -617,7 +617,7 @@ CWindow(HWND hWnd = NULL) throw();
  Инициализирует [m_hWnd](#m_hwnd) члена *hWnd*, который по умолчанию имеет значение NULL.  
   
 > [!NOTE]
-> `CWindow::CWindow` не создает окно. Классы [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), и [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (все они являются производными от `CWindow`) предоставляют метод для создания в окне или диалоговом окне, который является затем присваивается `CWindow::m_hWnd`. Можно также использовать [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) функции Win32.  
+> `CWindow::CWindow` не создает окно. Классы [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), и [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (все они являются производными от `CWindow`) предоставляют метод для создания в окне или диалоговом окне, который является затем присваивается `CWindow::m_hWnd`. Можно также использовать [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) функции Win32.  
   
 ##  <a name="deferwindowpos"></a>  CWindow::DeferWindowPos  
  Обновляет указанную структуру нескольких положение окна для указанного окна.  
@@ -644,7 +644,7 @@ BOOL DestroyWindow() throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) в Windows SDK.  
+ См. в разделе [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) в Windows SDK.  
   
  Она не удаляет `CWindow` сам объект.  
   
@@ -1201,7 +1201,7 @@ LONG GetWindowLong(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) в Windows SDK.  
+ См. в разделе [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) в Windows SDK.  
   
 > [!NOTE]
 >  Чтобы написать код, который совместим с 32-разрядных и 64-разрядных версиях Windows, используйте [CWindow::GetWindowLongPtr](#getwindowlongptr).  
@@ -1328,7 +1328,7 @@ WORD GetWindowWord(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) в Windows SDK.  
+ См. в разделе [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) в Windows SDK.  
   
 ##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl  
  Устанавливает фокус клавиатуры в элемент управления в диалоговом окне.  
@@ -1606,13 +1606,13 @@ BOOL ModifyStyle(
  [in] Указывает стили окна для добавления во время изменения стиля.  
   
  *nFlags*  
- [in] Флаги размещения окна. Список возможных значений см. в разделе [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) функции в пакете Windows SDK.  
+ [in] Флаги размещения окна. Список возможных значений см. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функции в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если изменяются стили окна; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) функция Windows SDKfor сведения о стилях доступное окно.  
+ Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) функция Windows SDKfor сведения о стилях доступное окно.  
   
  Если *nFlags* не равно нулю, `ModifyStyle` вызывает функцию Win32 `SetWindowPos`и перерисовывает окна путем объединения *nFlags* с использованием следующих четырех флагов:  
   
@@ -1647,13 +1647,13 @@ BOOL ModifyStyleEx(
  [in] Задает расширенные стили нужно добавлять во время изменения стиля.  
   
  *nFlags*  
- [in] Флаги размещения окна. Список возможных значений см. в разделе [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) функции в пакете Windows SDK.  
+ [in] Флаги размещения окна. Список возможных значений см. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функции в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если изменяются расширенные стили окна; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) функция Windows SDKfor сведения о доступных расширенные стили.  
+ Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функция Windows SDKfor сведения о доступных расширенные стили.  
   
  Если *nFlags* не равно нулю, `ModifyStyleEx` вызывает функцию Win32 `SetWindowPos`и перерисовывает окна путем объединения *nFlags* с использованием следующих четырех флагов:  
   
@@ -2230,7 +2230,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) в Windows SDK.  
+ См. в разделе [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) в Windows SDK.  
   
 > [!NOTE]
 >  Чтобы написать код, который совместим с 32-разрядных и 64-разрядных версиях Windows, используйте [CWindow::SetWindowLongPtr](#setwindowlongptr).  
@@ -2276,7 +2276,7 @@ BOOL SetWindowPos(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) в Windows SDK.  
+ См. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) в Windows SDK.  
   
  Вторая версия этого метода использует [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, чтобы задать новое положение, ширину и высоту окна.  
   
@@ -2311,7 +2311,7 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) в Windows SDK.  
+ См. в разделе [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) в Windows SDK.  
   
 ##  <a name="showcaret"></a>  CWindow::ShowCaret  
  Отображает системного курсора.  

@@ -1,7 +1,7 @@
 ---
-title: REAL4 | Документы Microsoft
+title: REAL4 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1459e86841e722a0eba2389b8aac31cb8a98128
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c017e318d1d88a09260bf155ded2e96f1930c5e3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057647"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682710"
 ---
 # <a name="real4"></a>REAL4
-Выделяет и при необходимости инициализирует число с плавающей запятой одинарной точности (4-байтовое) для каждого *инициализатора*.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-name REAL4 initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Выделяет и при необходимости инициализирует число с плавающей запятой одиночной точности (4-байтовое) для каждого *инициализатор*.
+
+## <a name="syntax"></a>Синтаксис
+
+> Инициализатор REAL4 имя [[, инициализатор]]...
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

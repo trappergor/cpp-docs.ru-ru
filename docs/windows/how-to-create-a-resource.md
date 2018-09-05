@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 771b7d91c4c5cfdb66908870675ab5cf53f2fdd4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7c82a55d2cbfba20b80a02dbcf000c85ed10e83
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221024"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679797"
 ---
 # <a name="how-to-create-a-resource"></a>Практическое руководство. Создание ресурса
 
@@ -48,7 +48,7 @@ ms.locfileid: "43221024"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Создание ресурса в представлении классов
 
-1. В [представление классов](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните класс правой кнопкой мыши и выберите пункт **добавить**, затем нажмите кнопку **добавить ресурс** в контекстном меню.
+1. В [представление классов](/visualstudio/ide/viewing-the-structure-of-code), щелкните класс правой кнопкой мыши и выберите пункт **добавить**, затем нажмите кнопку **добавить ресурс** в контекстном меню.
 
 2. В [диалоговом окне "Добавить ресурс"](../windows/add-resource-dialog-box.md)выберите тип ресурса, который хотите добавить в проект.
 

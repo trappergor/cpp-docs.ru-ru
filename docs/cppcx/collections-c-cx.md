@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c174c904dfb43ff3fa3c032bae30da8c1e139c3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0be29ed74b2c5abf8bc3c781900caa61ada3713f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222904"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693082"
 ---
 # <a name="collections-ccx"></a>Коллекции (C++/CX)
 В C + +/ CX программы, можно сделать свободно пользоваться контейнерами библиотеки стандартных шаблонов (STL) и любыми другими типами пользовательских коллекций. Тем не менее, при передаче коллекции и обратно через двоичный интерфейс приложений (ABI) среды выполнения Windows — например, элементу управления XAML или клиенту JavaScript, необходимо использовать типы коллекций среды выполнения Windows.  
@@ -145,6 +145,5 @@ void FindButton(UIElementCollection^ col)
   
 ## <a name="see-also"></a>См. также  
  [Система типов](../cppcx/type-system-c-cx.md)   
- [Встроенные типы](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)   
  [Справочник по языку Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Справочник по пространствам имен](../cppcx/namespaces-reference-c-cx.md)

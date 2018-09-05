@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d0bb7aa4f647ceeb61c20cccd626d9da999b241
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f291a05b1347254989e4876af66c5d8137864020
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200116"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684165"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Отношение к API языка C
-Отдельная характеристика, которая устанавливает библиотеки Microsoft Foundation Class (MFC) помимо других библиотек классов для Windows — это сопоставление очень близки к API Windows, написанных на языке C. Кроме того вы можете обычно объединять вызовы к библиотеке классов свободно с прямыми вызовами в API Windows. Этот непосредственный доступ, однако означает, что классы, полная замена для этого API. Необходимо по-прежнему периодически разработчиками прямые вызовы некоторых функций Windows, таких как [SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor) и [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385), например. Функции Windows заключается только в том случае, если есть явное преимущество для этого функции-члена класса.  
+Отдельная характеристика, которая устанавливает библиотеки Microsoft Foundation Class (MFC) помимо других библиотек классов для Windows — это сопоставление очень близки к API Windows, написанных на языке C. Кроме того вы можете обычно объединять вызовы к библиотеке классов свободно с прямыми вызовами в API Windows. Этот непосредственный доступ, однако означает, что классы, полная замена для этого API. Необходимо по-прежнему периодически разработчиками прямые вызовы некоторых функций Windows, таких как [SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor) и [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics), например. Функции Windows заключается только в том случае, если есть явное преимущество для этого функции-члена класса.  
   
  Поскольку иногда вам нужно сделать собственные вызовы функции Windows, следует имеется доступ к документации по API языка C Windows. Эта документация входит в состав Microsoft Visual C++.  
   

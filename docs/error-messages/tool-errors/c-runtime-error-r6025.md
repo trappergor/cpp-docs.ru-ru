@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220636"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680559"
 ---
 # <a name="c-runtime-error-r6025"></a>C R6025 ошибку во время выполнения
 вызов чистой виртуальной функции  
@@ -41,4 +41,3 @@ ms.locfileid: "43220636"
   
  Эта ошибка вызвана вызов виртуальной функции в абстрактный базовый класс посредством указателя, созданного путем приведения к типу производного класса, но фактически является указателем на базовый класс. Это может произойти при приведении **void** <strong>\*</strong> в указатель на класс при **void** <strong>\*</strong> был создан при создании базового класса.  
   
- Дополнительные сведения см. в разделе [поддержки Майкрософт](http://go.microsoft.com/fwlink/p/?linkid=75220) веб-сайта.

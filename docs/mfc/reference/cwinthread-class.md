@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 784425246c3be99acde2942633ce5190807c59b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213070"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689562"
 ---
 # <a name="cwinthread-class"></a>Класс CWinThread
 Класс, представляющий поток исполнения в приложении.  
@@ -80,13 +80,13 @@ class CWinThread : public CCmdTarget
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWinThread::CWinThread](#cwinthread)|Создает объект `CWinThread`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Функцию CWinThread::CreateThread](#createthread)|Начинает выполнение `CWinThread` объекта.|  
 |[CWinThread::ExitInstance](#exitinstance)|Переопределение для очистки при завершении потока.|  
@@ -96,10 +96,10 @@ class CWinThread : public CCmdTarget
 |[CWinThread::IsIdleMessage](#isidlemessage)|Проверяет наличие специальных сообщений.|  
 |[CWinThread::OnIdle](#onidle)|Переопределение для выполнения обработки времени простоя определенного потока.|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|Отправляет сообщение в другой `CWinThread` объекта.|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Фильтрует сообщения перед их отправкой в функции Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Фильтрует сообщения перед их отправкой в функции Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|  
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Перехватывает определенных сообщений, прежде чем они достигнут приложения.|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Перехватывает все необработанные исключения, порождаемые потока сообщений и обработчиков команд.|  
-|[CWinThread::PumpMessage](#pumpmessage)|Содержит цикл обработки сообщений потока.|  
+|[CWinThread::PumpMessage](#pumpmessage)|содержит цикл обработки сообщений потока.|  
 |[CWinThread::ResumeThread](#resumethread)|Счетчик приостановок уменьшающийся потока.|  
 |[CWinThread::Run](#run)|Управление функции для потоков с помощью механизма обработки сообщений. Переопределите, чтобы настроить цикл обработки сообщений по умолчанию.|  
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Задает приоритет текущего потока.|  
@@ -107,13 +107,13 @@ class CWinThread : public CCmdTarget
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWinThread::operator ДЕСКРИПТОР](#operator_handle)|Извлекает дескриптор `CWinThread` объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWinThread::m_bAutoDelete](#m_bautodelete)|Указывает, следует ли уничтожать объект, находящийся в завершение потока.|  
 |[CWinThread::m_hThread](#m_hthread)|Дескриптор текущего потока.|  
@@ -411,7 +411,7 @@ BOOL PostThreadMessage(
 >  При вызове Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) функции одного приложения MFC, MFC сообщение обработчики не вызываются. Дополнительные сведения см. в статье базы знаний, «PRB: MFC сообщение обработчик не вызывается с PostThreadMessage()» (Q142415).  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- Переопределите эту функцию для фильтрации сообщений окон до их передачи функциям Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).  
+ Переопределите эту функцию для фильтрации сообщений окон до их передачи функциям Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -485,7 +485,7 @@ virtual LRESULT ProcessWndProcException(
  Эта функция-член используется только в потоки, которые имеют цикл обработки сообщений.  
   
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage  
- Содержит цикл обработки сообщений потока.  
+ содержит цикл обработки сообщений потока.  
   
 ```  
 virtual BOOL PumpMessage();
@@ -520,7 +520,7 @@ virtual int Run();
  **Int** значение, возвращаемое в потоке. Это значение можно получить, вызвав [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).  
   
 ### <a name="remarks"></a>Примечания  
- `Run` Получает и отправляет сообщения, Windows, пока приложение не получит [WM_QUIT](/windows/desktop/winmsg/wm-quit) сообщения. Если очередь сообщений потока содержит сообщения не `Run` вызовы `OnIdle` для выполнения обработки времени простоя. Входящие сообщения перейти к [PreTranslateMessage](#pretranslatemessage) функция-член для специальной обработки, а затем в функцию Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) для перевода на стандартной клавиатуре. Наконец [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) вызове функции Windows.  
+ `Run` Получает и отправляет сообщения, Windows, пока приложение не получит [WM_QUIT](/windows/desktop/winmsg/wm-quit) сообщения. Если очередь сообщений потока содержит сообщения не `Run` вызовы `OnIdle` для выполнения обработки времени простоя. Входящие сообщения перейти к [PreTranslateMessage](#pretranslatemessage) функция-член для специальной обработки, а затем в функцию Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) для перевода на стандартной клавиатуре. Наконец [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) вызове функции Windows.  
   
  `Run` редко переопределяется, но его можно переопределить для реализации особое поведение.  
   

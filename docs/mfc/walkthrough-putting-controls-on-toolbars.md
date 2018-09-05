@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 258d8f10238db58be26743694943ae3bd6abc20e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199268"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693579"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Пошаговое руководство. Размещение элементов управления на панели инструментов
 В этом разделе описывается добавление кнопки панели инструментов, содержащий элемент управления Windows на панель инструментов. Кнопки панели инструментов MFC, необходимо [класс CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-производного класса, например [класс CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [класс CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Класс CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), или [класс CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "43199268"
   
     1.  Передайте `ID_EDIT_FIND_COMBO` как идентификатор команды.  
   
-    2.  Используйте [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) с `ID_EDIT_FIND` получить индекс изображения.  
+    2.  Используйте [CCommandManager::GetCmdImage](reference/internal-classes.md) с `ID_EDIT_FIND` получить индекс изображения.  
   
     3.  Список стили поля со списком доступных, см. в разделе [поле со списком стилей](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

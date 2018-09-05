@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c0f72fd7a359654ffdb32ae0030a82216384207
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197617"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686161"
 ---
 # <a name="cmfcfontcombobox-class"></a>Класс CMFCFontComboBox
 `CMFCFontComboBox` Класс создает поле со списком, содержащее список шрифтов.  
@@ -46,26 +46,26 @@ class CMFCFontComboBox : public CComboBox
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Создает объект `CMFCFontComboBox`.|  
 |`CMFCFontComboBox::~CMFCFontComboBox`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCFontComboBox::CompareItem`|Вызывается платформой для определения относительной позиции нового элемента в отсортированном списке текущего элемента управления поля со списком шрифтов. (Переопределяет [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|  
 |`CMFCFontComboBox::DrawItem`|Вызывается платформой для рисования заданного элемента в элементе управления текущего поля со списком шрифта. (Переопределяет [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|Извлекает сведения о выбранный шрифт.|  
 |`CMFCFontComboBox::MeasureItem`|Вызывается платформой для информирования Windows из измерений в списке в текущий шрифт поле со списком. (Переопределяет [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|  
-|`CMFCFontComboBox::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCFontComboBox::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|Выбирает шрифт, который соответствует заданному условию, из поля со списком шрифта.|  
 |[CMFCFontComboBox::Setup](#setup)|Инициализирует список элементов в поле со списком шрифта.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Указывает платформу какой шрифт, используемый для рисования метки элемента в поле со списком текущего шрифта.|  
   

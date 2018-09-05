@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2847bf32a51a63e39d80839fed1b46fac18f29dc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ad17396a9c82532d46ea04f88b637828fe6f460
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215795"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678501"
 ---
 # <a name="cricheditctrl-class"></a>Класс CRichEditCtrl
 Предоставляет функции элемента управления форматированным редактированием.  
@@ -182,13 +182,13 @@ class CRichEditCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Создает объект `CRichEditCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRichEditCtrl::CanPaste](#canpaste)|Определяет, если содержимое буфера обмена, можно вставить в этот элемент управления форматированным редактированием.|  
 |[CRichEditCtrl::CanRedo](#canredo)|Определяет, есть ли каких-либо действий в очереди повторов элемента управления.|  
@@ -443,7 +443,7 @@ virtual BOOL Create(
   
 - WS_TABSTOP для включать управления редактированием в порядок следования.  
   
- Дополнительные сведения о стили окна, см. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
+ Дополнительные сведения о стили окна, см. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
@@ -462,7 +462,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Задает стиль элемента управления поля ввода. Применить сочетание стилей окна, перечисленных в **"Примечания"** раздел [создать](#create) и [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles), описанные в пакете Windows SDK.  

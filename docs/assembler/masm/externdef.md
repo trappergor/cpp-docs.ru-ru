@@ -1,7 +1,7 @@
 ---
-title: EXTERNDEF | Документы Microsoft
+title: EXTERNDEF | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b010f52f91a04388f34052fcc5c374690cff13df
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d5c3d42cabb88c38ce1d98da24cd2cb4ddec8d5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052704"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683665"
 ---
 # <a name="externdef"></a>EXTERNDEF
-Определяет один или несколько внешних переменных, меток или символов, которые называются *имя* , тип которого является `type`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-EXTERNDEF [[langtype]] name:type [[, [[langtype]] name:type]]...  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Если *имя* определяется в модуле, она обрабатывается как [ОТКРЫТЫЙ](../../assembler/masm/public-masm.md). Если *имя* имеется ссылка в модуле, она обрабатывается как [EXTERN](../../assembler/masm/extern-masm.md). Если *имя* — ссылки нет, он обрабатывается. `type` Может быть [ABS](../../assembler/masm/operator-abs.md), которая импортирует *имя* как константа. Обычно используется в включаемых файлов.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Определяет один или несколько внешних переменных, меток или символов, которые называются *имя* типом `type`.
+
+## <a name="syntax"></a>Синтаксис
+
+> Тип: имени EXTERNDEF [[langtype]] [[, [[langtype]] Имя: type]]...
+
+## <a name="remarks"></a>Примечания
+
+Если *имя* определяется в модуле, он рассматривается как [ОТКРЫТЫЙ](../../assembler/masm/public-masm.md). Если *имя* на который приведена ссылка в модуле, он рассматривается как [EXTERN](../../assembler/masm/extern-masm.md). Если *имя* является ссылки нет, он игнорируется. `type` Может быть [ABS](../../assembler/masm/operator-abs.md), которая импортирует *имя* как константа. Обычно используется в включаемых файлов.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

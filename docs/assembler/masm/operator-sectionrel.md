@@ -1,7 +1,7 @@
 ---
-title: оператор SECTIONREL | Документы Microsoft
+title: оператор SECTIONREL | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,24 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca377c33c2d22be638b85d055c40b402cceb545f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 746b9e5c0663937f829267634b2527f084b6611a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056406"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682426"
 ---
 # <a name="operator-sectionrel"></a>Оператор SECTIONREL
-Возвращает смещение относительного раздел выражения относительно раздела, содержащего целевой объект в конечный исполняемый файл.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-SECTIONREL expression  
-```  
-  
-## <a name="remarks"></a>Примечания  
- SECTIONREL доступен только в вывод объекта COFF.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает смещение относительного разделе выражения относительно раздел, содержащий целевой объект в конечный исполняемый файл.
+
+## <a name="syntax"></a>Синтаксис
+
+> Выражение SECTIONREL
+
+## <a name="remarks"></a>Примечания
+
+SECTIONREL доступен только с помощью эмиссии объект COFF.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 48a337ab82045543035c2612c707d8c47186ed2d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c7fe0665db01d1a2cd7a1da10b495ba86bc17469
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195456"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690866"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Различия в программировании Windows Forms/MFC
 В подразделах [использование пользовательского элемента управления формы Windows в MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) описываются поддержка MFC для Windows Forms. Если вы не знакомы с .NET Framework или программирования MFC, этот раздел содержит справочные сведения о различиях между ними в программировании.  
@@ -65,5 +65,4 @@ ms.locfileid: "43195456"
      MFC с командой механизм обновления. Таким образом активное представление или документ несет ответственность за состояние элементов пользовательского интерфейса (например, включение или отключение кнопки инструмента или элемента меню и проверки состояния). Windows Forms не имеет эквивалента механизма команды обновления.  
   
 ## <a name="see-also"></a>См. также  
- [Использование пользовательского элемента управления формы Windows в MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Пошаговые руководства по Windows Forms](https://msdn.microsoft.com/fd44d13d-4733-416f-aefc-32592e59e5d9)
+ [Использование пользовательского элемента управления формы Windows Forms в MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   

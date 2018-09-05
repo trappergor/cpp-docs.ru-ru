@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c52f2a17e347e7b37152a3d7a78423f0523b5679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0b655713a378c859bb017f661022f86aa687ab6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220602"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676436"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Практическое руководство. Указание каталогов включения для ресурсов
 
@@ -32,7 +32,7 @@ ms.locfileid: "43220602"
 
 2. В **страницы свойств** диалоговом окне щелкните **ресурсы** узел в области слева, затем укажите дополнительные каталоги включения в **Дополнительные каталоги включаемых файлов** свойство.
 
-Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) руководства разработчика .NET Framework. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Пошаговое руководство: Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) руководства разработчика .NET Framework. 
 
 ## <a name="requirements"></a>Требования
 

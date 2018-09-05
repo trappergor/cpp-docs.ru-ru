@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1535ccda7b53a4fe87c496e2749e382413e32d0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219583"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677792"
 ---
 # <a name="concurrency-namespace-functions"></a>функции пространства имен Concurrency
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  Интерфейс `IResourceManager`.  
   
 ### <a name="remarks"></a>Примечания  
- Несколько последующие вызовы этого метода будет возвращать один и тот же экземпляр диспетчера ресурсов. Каждый вызов метода увеличивает ссылку подсчета с помощью Resource Manager и должен совпадать с вызовом [IResourceManager::Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522) метод, когда планировщик завершает взаимодействует с диспетчером ресурсов.  
+ Несколько последующие вызовы этого метода будет возвращать один и тот же экземпляр диспетчера ресурсов. Каждый вызов метода увеличивает ссылку подсчета с помощью Resource Manager и должен совпадать с вызовом [IResourceManager::Release](iresourcemanager-structure.md) метод, когда планировщик завершает взаимодействует с диспетчером ресурсов.  
   
  [unsupported_os](unsupported-os-class.md) возникает исключение, если операционная система не поддерживается средой выполнения с параллелизмом.  
   
 ##  <a name="create_task"></a>  create_task  
- Создает объект PPL [задачи](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.  
+ Создает объект PPL [задачи](task-class.md) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.  
   
 ```
 template<typename T>

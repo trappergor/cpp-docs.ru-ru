@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1225ab62dfd64a991ba5ff680e86b62e7d48f8ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200078"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684811"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 Инкапсулирует функциональность элемента управления "всплывающая подсказка" — небольшого всплывающего окна, в котором отображается одна строка текста, описывающая назначение инструмента в приложении.  
@@ -102,13 +102,13 @@ class CToolTipCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|Создает объект `CToolTipCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CToolTipCtrl::Activate](#activate)|Активирует и деактивирует всплывающая подсказка.|  
 |[CToolTipCtrl::AddTool](#addtool)|Регистрирует средство управления всплывающей подсказки.|  
@@ -309,7 +309,7 @@ virtual BOOL CreateEx(
  Задает стиль управления всплывающей подсказки. См. в разделе **"Примечания"** раздел [создать](#create) Дополнительные сведения.  
   
  *dwStyleEx*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, при успешном выполнении в противном случае 0.  
@@ -372,7 +372,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[out] *lpToolInfo*|Указатель на [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) структуры, который получает сведения о текущем окне всплывающей подсказки.|  
   
@@ -502,7 +502,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[out] *pttgt*|Указатель на [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структуру, содержащую сведения об элементе управления ToolTip. При возвращении данного метода *pszTitle* членом [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структура указывает на текст заголовка.|  
   

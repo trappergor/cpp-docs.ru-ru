@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc995da6ce25aaed35e4e3fac04c08f37acaea7a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961016"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676148"
 ---
 # <a name="studenttdistribution-class"></a>Класс student_t_distribution
 
@@ -89,7 +89,7 @@ public:
 
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
 
-Дополнительные сведения о *t*-распределении Стьюдента см. в статье [T-распределение Стьюдента](http://go.microsoft.com/fwlink/p/?linkid=401094) на веб-сайте Wolfram MathWorld.
+Дополнительные сведения о *t*-распределении Стьюдента см. в статье [T-распределение Стьюдента](http://mathworld.wolfram.com/Studentst-Distribution.html) на веб-сайте Wolfram MathWorld.
 
 ## <a name="example"></a>Пример
 

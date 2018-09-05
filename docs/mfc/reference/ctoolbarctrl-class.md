@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196595"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686089"
 ---
 # <a name="ctoolbarctrl-class"></a>Класс CToolBarCtrl
 Предоставляет функциональные возможности стандартного элемента управления "панель инструментов" Windows.  
@@ -212,13 +212,13 @@ class CToolBarCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CToolBarCtrl::CToolBarCtrl](#ctoolbarctrl)|Создает объект `CToolBarCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CToolBarCtrl::AddBitmap](#addbitmap)|Добавляет один или несколько точечных рисунков кнопки в список изображений кнопок, доступных для элемента управления панели инструментов.|  
 |[CToolBarCtrl::AddButtons](#addbuttons)|Добавляет одну или несколько кнопок в элемент управления toolbar.|  
@@ -530,7 +530,7 @@ BOOL ChangeBitmap(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *idButton*|Идентификатор команды кнопки, который принимает новое растровое изображение.|  
 |[in] *iBitmap*|Отсчитываемый от нуля индекс изображения в список изображений для текущего элемента управления панели инструментов.|  
@@ -622,7 +622,7 @@ virtual BOOL Create(
   
 - WS_DISABLED редко  
   
- См. в разделе [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете SDK для Windows, описание стили окна.  
+ См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете SDK для Windows, описание стили окна.  
   
  При необходимости применить сочетание [общие стили элемента управления](/windows/desktop/Controls/common-control-styles), как описано в пакете Windows SDK.  
   
@@ -646,7 +646,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
  Задает стиль элемента управления панели инструментов. Панели инструментов всегда должен иметь стиль WS_CHILD. Кроме того, можно указать любое сочетание стили окна и панели инструментов, как описано в разделе **"Примечания"** раздел [создать](#create).  
@@ -839,7 +839,7 @@ CString GetButtonText(int idButton) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *idButton*|Идентификатор для кнопки, извлечения, отображаемый текст.|  
   
@@ -858,7 +858,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[out] *lpColorScheme*|Указатель на [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) структуру, которая получает сведения о схеме цвет. При возвращении данного метода структура описывает цветом и цветом тени панели инструментов.|  
   
@@ -1051,7 +1051,7 @@ BOOL GetPadding(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[out] *pnHorzPadding*|Целое число, Получает горизонтальный отступ элемента управления панели инструментов, в пикселях.|  
 |[out] *pnVertPadding*|Целое число, Получает вертикальный отступ элемента управления панели инструментов, в пикселях.|  
@@ -1402,7 +1402,7 @@ void LoadImages(
  *iBitmapID*  
  Идентификатор растрового изображения с изображениями для загрузки. Чтобы указать собственные ресурса точечного рисунка, значение этого параметра идентификатор ресурса точечного рисунка, а значение *hInst* значение NULL. Растровое изображение ресурса добавляются к списку изображений в качестве одного образа. Можно добавить стандартные, системный точечные рисунки, установив *hinst* HINST_COMMCTRL и присвоить ему один из следующих идентификаторов:  
   
-|Идентификатор растрового изображения|Описание:|  
+|Идентификатор растрового изображения|Описание|  
 |---------------|-----------------|  
 |IDB_HIST_LARGE_COLOR|Точечные рисунки Explorer большого размера|  
 |IDB_HIST_SMALL_COLOR|Обозреватель растровых изображений небольшого размера|  
@@ -1514,7 +1514,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *pReplaceBitmap*|Указатель на [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) структура, описывающая точечный рисунок заменяемого и новая Битовая карта.|  
   
@@ -1727,7 +1727,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *lpColorScheme*|Указатель на [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) структура, описывающая цвет выделения и цвет тени элемента управления панели инструментов.|  
   
@@ -1950,7 +1950,7 @@ DWORD SetPadding(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *nHorzPadding*|Указывает горизонтальное заполнение элемента управления панели инструментов, в пикселях.|  
 |[in] *nVertPadding*|Задает вертикальный отступ элемента управления панели инструментов, в пикселях.|  
@@ -1977,7 +1977,7 @@ CImagelist* SetPressedImageList(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *iImageID*|Отсчитываемый от нуля индекс списка изображений. Установите этот параметр равным нулю, если вы используете только один список изображений.|  
 |[in] *pImageList*|Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) , содержащий новый список изображений.|  

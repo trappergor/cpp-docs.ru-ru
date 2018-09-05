@@ -1,7 +1,7 @@
 ---
-title: Некритичная ошибка ML A2063 | Документы Microsoft
+title: Некритичная ошибка ML A2063 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0d270a2e2d039ee14ddbcb72ca666d9d54e6d9c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c5ce02fcbab6452b45f38d7d8becff64a880d403
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057660"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680740"
 ---
 # <a name="ml-nonfatal-error-a2063"></a>Некритичная ошибка ML A2063
-**можно ВЫРОВНЯТЬ только до степени числа 2: выражение**  
-  
- Выражение, заданное с [ВЫРОВНЯТЬ](../../assembler/masm/align-masm.md) директива недопустим.  
-  
- **ВЫРОВНЯТЬ** выражение должно быть степенью числа 2 от 2 до 256 символов и должно быть меньше или равно выравнивание текущего сегмента, структуры или объединения.  
-  
-## <a name="see-also"></a>См. также  
- [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)
+
+**можно ВЫРОВНЯТЬ только до степени числа 2: выражение**
+
+Выражения, указанного с помощью [ВЫРОВНЯТЬ](../../assembler/masm/align-masm.md) директива недопустим.
+
+**ВЫРОВНЯТЬ** выражение должно быть степенью числа 2 от 2 до 256 символов и должно быть меньше или равно выравнивание текущего сегмента, структуры или объединения.
+
+## <a name="see-also"></a>См. также
+
+[Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

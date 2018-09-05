@@ -1,7 +1,7 @@
 ---
-title: МАКРОС | Документы Microsoft
+title: МАКРОС | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b7469314bc1b65f960df1ca582acb6dbb4624e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d957935c9ca91d2d09a093350c8d23a848e58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054449"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688872"
 ---
 # <a name="macro"></a>MACRO
-Помечает макрос блок называется *имя* и устанавливает *параметр* заполнители для аргументов, переданные при вызове макроса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-   name MACRO [[parameter [[:REQ | :=default | :VARARG]]]]...  
-statements  
-ENDM [[value]]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Функция макрос возвращает *значение* на оператор вызова.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Помечает блок макрос с именем *имя* и устанавливает *параметр* передается заполнители для аргументов, когда вызывается макрос.
+
+## <a name="syntax"></a>Синтаксис
+
+> *имя* МАКРОС [[*параметр* [[: REQ |: =*по умолчанию* |: VARARG]]]]...<br/>
+> *Инструкции*<br/>
+> ENDM [[*значение*]]
+
+## <a name="remarks"></a>Примечания
+
+Возвращает функцию макрос *значение* к вызывающей инструкции.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

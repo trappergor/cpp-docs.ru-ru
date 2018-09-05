@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ed404bcbbdd62c051b0f93e2607d1278bfbf0204
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220233"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691839"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Пошаговое руководство. Использование среды выполнения с параллелизмом в приложениях с поддержкой модели COM
 В этом документе демонстрируется использование среды выполнения с параллелизмом в приложении, которое использует компонент модели объектов (COM).  
@@ -36,7 +36,7 @@ ms.locfileid: "43220233"
   
 - [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- Дополнительные сведения о COM, см. в разделе [объектов модели компонентов (COM)](https://msdn.microsoft.com/library/windows/desktop/ms680573).  
+ Дополнительные сведения о COM, см. в разделе [объектов модели компонентов (COM)](/windows/desktop/com/component-object-model--com--portal).  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>Управление временем существования библиотеки COM  
  Несмотря на то, что использование COM с помощью среды выполнения с параллелизмом следует тем же принципам, как любой другой механизм параллелизма, следующие рекомендации помогут эти библиотеки вместе эффективного использования.  

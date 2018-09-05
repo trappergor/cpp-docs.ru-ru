@@ -1,7 +1,7 @@
 ---
-title: SDWORD | Документы Microsoft
+title: SDWORD | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0435692996cc2189bcf30ab6ff10fc9ddbc0b271
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c0873a57bd9d741c2606cb0735c0d632667bae05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058037"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693277"
 ---
 # <a name="sdword"></a>SDWORD
-Выделяет и при необходимости инициализирует знаком двойное слово (4 байта) хранилища для каждого `initializer`. Также можно использовать в качестве спецификатора типа в любом является допустимым типом.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-name SDWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)   
- [DWORD](../../assembler/masm/dword.md)   
- [DD](../../assembler/masm/dd.md)
+
+Выделяет и при необходимости инициализирует со знаком двойное слово (4 байта) хранилища для каждого `initializer`. Также можно использовать в качестве спецификатора типа в любом является допустимым типом.
+
+## <a name="syntax"></a>Синтаксис
+
+> Инициализатор SDWORD имя [[, инициализатор]]...
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[DWORD](../../assembler/masm/dword.md)<br/>
+[DD](../../assembler/masm/dd.md)<br/>

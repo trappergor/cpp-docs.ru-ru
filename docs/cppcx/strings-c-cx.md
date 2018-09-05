@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c75c8821a04c0270a79800e77cd4b57bf49c00
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e427d6469df3a3b82f25a26a0f9ce70642b8514c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202352"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679556"
 ---
 # <a name="strings-ccx"></a>Строки (C++/CX)
 Текст в среде выполнения Windows представлена в C + +/ CX, [класс Platform::String](../cppcx/platform-string-class.md). Используйте `Platform::String Class` при передаче строки и обратно в методы в классах среды выполнения Windows, или когда выполняется взаимодействие с другими компонентами среды выполнения Windows через границы двоичного интерфейса (ABI) приложения. `Platform::String Class` предоставляет методы для некоторых типичных операций над строками, но он является полнофункциональным классом строки. При разработке модуля в C++ используйте стандартные строковые типы C++ (такие как [wstring](../standard-library/basic-string-class.md) ) для сложной обработки строк и преобразуйте конечный результат в тип [Platform::String^](../cppcx/platform-string-class.md) , прежде чем передать его открытому интерфейсу или получить его из такого интерфейса. Операция преобразования между типом `wstring` или `wchar_t*` и типом `Platform::String`проста и эффективна.  
@@ -75,5 +75,3 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Встроенные типы](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)

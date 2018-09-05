@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221759"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690453"
 ---
 # <a name="cancellation-in-the-ppl"></a>Отмена в библиотеке параллельных шаблонов
 В этом документе рассматривается роль отмены в библиотеке параллельных шаблонов (PPL), а также объясняется, как отменить параллельную работу и как определить, что параллельная работа отменена.  
@@ -150,7 +150,7 @@ ms.locfileid: "43221759"
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Токены отмены и композиция задач  
 
- [Параллелизма:: HYPERLINK "https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all](reference/concurrency-namespace-functions.md#when_all) и [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) функции помогают объединять несколько задач для реализации общих шаблонов. В этом разделе описывается, как эти функции работают с токенами отмены.  
+ [Concurrency::when_all](reference/concurrency-namespace-functions.md#when_all) и [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) функции помогают объединять несколько задач для реализации общих шаблонов. В этом разделе описывается, как эти функции работают с токенами отмены.  
   
  Если предоставляется токен отмены для любой из функций `when_all` и `when_any`, эта функция отменяется, только если отменяется этот токен отмены, или одна из участвующих задач заканчивается в отмененном состоянии или создает исключение.  
   
@@ -261,7 +261,7 @@ Caught 50
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Показывается, как использовать отмену для реализации алгоритма параллельного поиска.|  
 |[Практическое руководство. Использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Здесь приводятся способы использования класса `task_group` для записи алгоритма поиска для базовой структуры дерева.|  
