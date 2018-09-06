@@ -17,26 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85c085e6e5a8f0bbddba5be2905b437425d9a5c3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9bf2ede32583715a19840ce861aa3ed6445fd7cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963658"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766409"
 ---
 # <a name="persistence-classes"></a>Классы сохраняемости
-Следующие классы реализуют сохранения объектов:  
-  
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) позволяет клиенту Загрузка и сохранение свойств объекта в контейнер свойств.  
-  
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) позволяет клиенту, для загрузки и сохранения данных постоянного объекта в поток.  
-  
--   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) позволяет клиенту, для загрузки и сохранения данных постоянного объекта в хранилище.  
-  
-## <a name="related-articles"></a>Связанные статьи  
- [Учебник по ATL](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../atl/atl-class-overview.md)   
- [Макросы сопоставления свойств](../atl/reference/property-map-macros.md)
+
+Следующие классы реализуют сохранения объектов:
+
+- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) позволяет клиенту Загрузка и сохранение свойств объекта в контейнер свойств.
+
+- [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) позволяет клиенту, для загрузки и сохранения данных постоянного объекта в поток.
+
+- [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) позволяет клиенту, для загрузки и сохранения данных постоянного объекта в хранилище.
+
+## <a name="related-articles"></a>Связанные статьи
+
+[Учебник по ATL](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../atl/atl-class-overview.md)   
+[Макросы сопоставления свойств](../atl/reference/property-map-macros.md)
 

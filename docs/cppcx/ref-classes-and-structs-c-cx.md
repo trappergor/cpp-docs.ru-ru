@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584124"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767611"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Классы и структуры ссылки (C++/CX)
 C + +/ CX поддерживает определяемые пользователем *ссылочные классы* и *ссылочные структуры*и определяемых пользователем *значение классы* и *значение структуры*. Эти структуры данных являются основными контейнерами, в какие C + +/ CX поддерживает систему типов среды выполнения Windows. Их содержимое передается в метаданные в соответствии с определенными правилами, и это позволяет им передаваться между компонентами среды выполнения Windows и приложений универсальной платформы Windows, написанных на C++ и других языках.  

@@ -175,11 +175,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 43f9e1b342d6de1a93906d2469d0fd1eb211e886
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215665"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765009"
 ---
 # <a name="coleclientitem-class"></a>Класс COleClientItem
 Определяет контейнерный интерфейс для элементов OLE.  
@@ -194,13 +194,13 @@ class COleClientItem : public CDocItem
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleClientItem::COleClientItem](#coleclientitem)|Создает объект `COleClientItem`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleClientItem::Activate](#activate)|Открывает элемент OLE для операции, а затем выполняет указанную команду.|  
 |[COleClientItem::ActivateAs](#activateas)|Активирует элемент другого типа.|  
@@ -274,7 +274,7 @@ class COleClientItem : public CDocItem
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleClientItem::CanActivate](#canactivate)|Вызывается платформой для определения допустимости активации на месте.|  
 |[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Вызывается платформой при изменении положения элемента.|  

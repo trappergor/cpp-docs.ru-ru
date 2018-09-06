@@ -1,5 +1,5 @@
 ---
-title: Макросы обработки исключений | Документы Microsoft
+title: Макросы обработки исключений | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,58 +19,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ee381aa792c252fc9b80107d25e15e7d1ecfca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b503e36dfe04eaa3180809033187957ff8d970a0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358981"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766819"
 ---
-# <a name="exception-handling-macros"></a>Макросы обработки исключений
-Эти макросы обеспечивают поддержку для обработки исключений.  
-  
-|||  
-|-|-|  
-|[_ATLCATCH](#_atlcatch)|Операторы обработки ошибок, возникающих в соответствующем блоке `_ATLTRY`.|  
-|[_ATLCATCHALL](#_atlcatchall)|Операторы обработки ошибок, возникающих в соответствующем блоке `_ATLTRY`.|  
-|[_ATLTRY](#_atltry)|Помечает раздел защищенный код, в которых возможно может возникнуть ошибка.|  
-  
+# <a name="exception-handling-macros"></a>Макросы для обработки исключений
+
+Эти макросы обеспечивают поддержку обработки исключений.
+
+|||
+|-|-|
+|[_ATLCATCH](#_atlcatch)|Операторы обработки ошибок, возникших в соответствующем `_ATLTRY`.|
+|[_ATLCATCHALL](#_atlcatchall)|Операторы обработки ошибок, возникших в соответствующем `_ATLTRY`.|
+|[_ATLTRY](#_atltry)|Помечает раздел защищенный код, где возможно может возникнуть ошибка.|
+
 ## <a name="requirements"></a>Требования:
+
 **Заголовок:** atldef.h
 
-##  <a name="_atlcatch"></a>  _ATLCATCH  
- Операторы обработки ошибок, возникающих в соответствующем блоке `_ATLTRY`.  
-  
+##  <a name="_atlcatch"></a>  _ATLCATCH
+
+Операторы обработки ошибок, возникших в соответствующем `_ATLTRY`.
+
 ```
 _ATLCATCH(e)
-```  
-  
-### <a name="parameters"></a>Параметры  
- *e*  
- Чтобы перехватить исключение.  
-  
-### <a name="remarks"></a>Примечания  
- Использовать в сочетании с `_ATLTRY`. Разрешается в C++ [catch (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) для обработки данного типа исключения C++.  
-  
-##  <a name="_atlcatchall"></a>  _ATLCATCHALL  
- Операторы обработки ошибок, возникающих в соответствующем блоке `_ATLTRY`.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*e*  
+Чтобы перехватить исключение.
+
+### <a name="remarks"></a>Примечания
+
+Используется в сочетании с `_ATLTRY`. Разрешается в C++ [catch (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) для обработки данного типа исключения C++.
+
+##  <a name="_atlcatchall"></a>  _ATLCATCHALL
+
+Операторы обработки ошибок, возникших в соответствующем `_ATLTRY`.
+
 ```
 _ATLCATCHALL
-```  
-  
-### <a name="remarks"></a>Примечания  
- Использовать в сочетании с `_ATLTRY`. Разрешается в C++ [catch(...) ](../../cpp/try-throw-and-catch-statements-cpp.md) для обработки всех типов исключений C++.  
-  
-##  <a name="_atltry"></a>  _ATLTRY  
- Помечает раздел защищенный код, в которых возможно может возникнуть ошибка.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+Используется в сочетании с `_ATLTRY`. Разрешается в C++ [catch(...) ](../../cpp/try-throw-and-catch-statements-cpp.md) для обработки всех типов исключений C++.
+
+##  <a name="_atltry"></a>  _ATLTRY
+
+Помечает раздел защищенный код, где возможно может возникнуть ошибка.
+
 ```
 _ATLTRY
-```  
-  
-### <a name="remarks"></a>Примечания  
- Использовать в сочетании с [_ATLCATCH](#_atlcatch) или [_ATLCATCHALL](#_atlcatchall). Разрешается в символ C++ [повторите](../../cpp/try-throw-and-catch-statements-cpp.md).  
-  
-## <a name="see-also"></a>См. также  
- [Макросы](../../atl/reference/atl-macros.md)
+```
+
+### <a name="remarks"></a>Примечания
+
+Используется в сочетании с [_ATLCATCH](#_atlcatch) или [_ATLCATCHALL](#_atlcatchall). Разрешается в символ C++ [попробуйте](../../cpp/try-throw-and-catch-statements-cpp.md).
+
+## <a name="see-also"></a>См. также
+
+[Макросы](../../atl/reference/atl-macros.md)

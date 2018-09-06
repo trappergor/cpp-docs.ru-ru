@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597324"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765698"
 ---
 # <a name="platformiboxarray-interface"></a>Интерфейс Platform::IBoxArray
 `IBoxArray` является оболочкой для массивов типов значений, передаваемых через двоичный интерфейс приложений (ABI) или хранящихся в коллекциях элементов `Platform::Object^` , таких как коллекции в элементах управления XAML.  
@@ -43,7 +43,7 @@ interface class IBoxArray
 ### <a name="members"></a>Участники  
  Интерфейс `IBoxArray` наследует от интерфейса `IValueType` . Интерфейс`IBoxArray` также содержит следующие члены:  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Значение](#value)|Возвращает распакованный массив, который ранее хранился в этом экземпляре `IBoxArray` .|  
 

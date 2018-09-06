@@ -15,69 +15,81 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cae1e2f05484aeccd76e987c2d63c41aec30f6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 476dd8b3eeb7174c7584a58ccb5d53bf251adbcc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848448"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43768012"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Программирование с использованием CComBSTR (ATL)
-Класс ATL [CComBSTR](../atl/reference/ccombstr-class.md) обеспечивает создание оболочки данные типа BSTR. Хотя `CComBSTR` — это полезное средство, существует несколько ситуаций, требующих осторожность.  
-  
--   [Проблемы преобразования](#programmingwithccombstr_conversionissues)  
-  
--   [Область проблемы](#programmingwithccombstr_scopeissues)  
-  
--   [Явное освобождение объекта CComBSTR](#programmingwithccombstr_explicitlyfreeing)  
-  
--   [Использование CComBSTR объектов в циклах](#programmingwithccombstr_usingloops)  
-  
--   [Проблемы утечки памяти](#programmingwithccombstr_memoryleaks)  
-  
-##  <a name="programmingwithccombstr_conversionissues"></a> Проблемы преобразования  
- Несмотря на то что несколько `CComBSTR` методы автоматически преобразует передан аргумент строки ANSI в Юникод, методы всегда возвращают строки формата Юникод. Чтобы преобразовать выходной строки ANSI, используйте класс ATL преобразования. Дополнительные сведения о преобразовании классы ATL, см. в разделе [ATL и макросов преобразования MFC из строки](reference/string-conversion-macros.md).  
-  
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities#114](../atl/codesnippet/cpp/programming-with-ccombstr-atl_1.cpp)]  
-  
- При использовании строкового литерала для изменения `CComBSTR` , используйте строки расширенных символов. Это позволит снизить ненужных преобразований.  
-  
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/cpp/programming-with-ccombstr-atl_2.cpp)]  
-  
-##  <a name="programmingwithccombstr_scopeissues"></a> Область проблемы  
- Как и в случае с любой обретают класс `CComBSTR` будет освобождения ее ресурсов, если он выходит за пределы области. Если функция возвращает указатель на `CComBSTR` строки, это может вызвать проблемы, поскольку указатель будет ссылаться памяти, который уже был освобожден. В таких случаях используйте `Copy` метод, как показано ниже.  
-  
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/cpp/programming-with-ccombstr-atl_3.cpp)]  
-  
-##  <a name="programmingwithccombstr_explicitlyfreeing"></a> Явное освобождение объекта CComBSTR  
- Можно явно освободить строку, содержащуюся в `CComBSTR` прежде, чем объект выходит из области. Если строка освобождается, `CComBSTR` недопустимый объект.  
-  
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/cpp/programming-with-ccombstr-atl_4.cpp)]  
-  
-##  <a name="programmingwithccombstr_usingloops"></a> Использование CComBSTR объектов в циклах  
- Как `CComBSTR` класс выделяет буфер для выполнения определенных операций, таких как `+=` оператор или `Append` метод, не рекомендуется выполнять строками в непрерывном цикле. В таких ситуациях `CStringT` обеспечивает более высокую производительность.  
-  
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/cpp/programming-with-ccombstr-atl_5.cpp)]  
-  
-##  <a name="programmingwithccombstr_memoryleaks"></a> Проблемы утечки памяти  
- Передав адрес инициализированный `CComBSTR` выступать в качестве **[out]** параметра приводит к утечке памяти.  
-  
- В следующем примере строки, выделенные для хранения строки `"Initialized"` происходит утечка когда функция `MyGoodFunction` заменяет строку.  
-  
- [!code-cpp[NVC_ATL_Utilities#119](../atl/codesnippet/cpp/programming-with-ccombstr-atl_6.cpp)]  
-  
- Чтобы избежать утечки, вызовите `Empty` метод на существующие `CComBSTR` объектов перед их передачей тот адрес, что **[out]** параметра.  
-  
- Обратите внимание, что тот же код может не привести к утечке в случае параметра функции **[в, out]**.  
-  
-## <a name="see-also"></a>См. также  
- [Основные понятия](../atl/active-template-library-atl-concepts.md)   
- [Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md)   
- [wstring](../standard-library/basic-string-class.md)   
- [Макросы преобразования строк](../atl/reference/string-conversion-macros.md)
+
+Класс ATL [CComBSTR](../atl/reference/ccombstr-class.md) обеспечивает создание оболочки данные типа BSTR. Хотя `CComBSTR` — это полезное средство, существует несколько ситуаций, требующих осторожность.
+
+- [Проблемы преобразования](#programmingwithccombstr_conversionissues)
+
+- [Область проблемы](#programmingwithccombstr_scopeissues)
+
+- [Явное освобождение объекта CComBSTR](#programmingwithccombstr_explicitlyfreeing)
+
+- [Использование CComBSTR объектов в циклах](#programmingwithccombstr_usingloops)
+
+- [Проблемы утечки памяти](#programmingwithccombstr_memoryleaks)
+
+##  <a name="programmingwithccombstr_conversionissues"></a> Проблемы преобразования
+
+Несмотря на то что несколько `CComBSTR` методы автоматически преобразует передан аргумент строки ANSI в Юникод, методы всегда возвращают строки формата Юникод. Чтобы преобразовать выходной строки ANSI, используйте класс ATL преобразования. Дополнительные сведения о преобразовании классы ATL, см. в разделе [ATL и макросов преобразования MFC из строки](reference/string-conversion-macros.md).
+
+### <a name="example"></a>Пример
+
+[!code-cpp[NVC_ATL_Utilities#114](../atl/codesnippet/cpp/programming-with-ccombstr-atl_1.cpp)]
+
+При использовании строкового литерала для изменения `CComBSTR` , используйте строки расширенных символов. Это позволит снизить ненужных преобразований.
+
+### <a name="example"></a>Пример
+
+[!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/cpp/programming-with-ccombstr-atl_2.cpp)]
+
+##  <a name="programmingwithccombstr_scopeissues"></a> Область проблемы
+
+Как и в случае с любой обретают класс `CComBSTR` будет освобождения ее ресурсов, если он выходит за пределы области. Если функция возвращает указатель на `CComBSTR` строки, это может вызвать проблемы, поскольку указатель будет ссылаться памяти, который уже был освобожден. В таких случаях используйте `Copy` метод, как показано ниже.
+
+### <a name="example"></a>Пример
+
+[!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/cpp/programming-with-ccombstr-atl_3.cpp)]
+
+##  <a name="programmingwithccombstr_explicitlyfreeing"></a> Явное освобождение объекта CComBSTR
+
+Можно явно освободить строку, содержащуюся в `CComBSTR` прежде, чем объект выходит из области. Если строка освобождается, `CComBSTR` недопустимый объект.
+
+### <a name="example"></a>Пример
+
+[!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/cpp/programming-with-ccombstr-atl_4.cpp)]
+
+##  <a name="programmingwithccombstr_usingloops"></a> Использование CComBSTR объектов в циклах
+
+Как `CComBSTR` класс выделяет буфер для выполнения определенных операций, таких как `+=` оператор или `Append` метод, не рекомендуется выполнять строками в непрерывном цикле. В таких ситуациях `CStringT` обеспечивает более высокую производительность.
+
+### <a name="example"></a>Пример
+
+[!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/cpp/programming-with-ccombstr-atl_5.cpp)]
+
+##  <a name="programmingwithccombstr_memoryleaks"></a> Проблемы утечки памяти
+
+Передав адрес инициализированный `CComBSTR` выступать в качестве **[out]** параметра приводит к утечке памяти.
+
+В следующем примере строки, выделенные для хранения строки `"Initialized"` происходит утечка когда функция `MyGoodFunction` заменяет строку.
+
+[!code-cpp[NVC_ATL_Utilities#119](../atl/codesnippet/cpp/programming-with-ccombstr-atl_6.cpp)]
+
+Чтобы избежать утечки, вызовите `Empty` метод на существующие `CComBSTR` объектов перед их передачей тот адрес, что **[out]** параметра.
+
+Обратите внимание, что тот же код может не привести к утечке в случае параметра функции **[в, out]**.
+
+## <a name="see-also"></a>См. также
+
+[Основные понятия](../atl/active-template-library-atl-concepts.md)   
+[Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md)   
+[wstring](../standard-library/basic-string-class.md)   
+[Макросы преобразования строк](../atl/reference/string-conversion-macros.md)
 

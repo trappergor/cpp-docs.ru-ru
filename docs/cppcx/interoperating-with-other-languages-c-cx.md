@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7d4aec775dc716a5e88e6b421a7cd7f818730c23
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589892"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767547"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Взаимодействие с другими языками (C++/CX)
 Эта часть документации описывается, как использовать C + +/ CX для создания компонентов среды выполнения Windows, которые могут использоваться другими языками программирования и библиотеками. Можно также создавать компоненты, которые могут использоваться не всеми языками. В этом разделе описываются различные аспекты, которые следует учитывать при C + +/ CX приложение взаимодействует с компонентами, написанными с помощью JavaScript, языка .NET Framework управляемых или библиотека шаблонов C++ среды выполнения Windows.  

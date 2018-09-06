@@ -1,5 +1,5 @@
 ---
-title: Класс CElementTraits | Документы Microsoft
+title: Класс CElementTraits | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530622f096ef14d4eb3de56e5219e8f7df4f082
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45139b16ebb923acd004d995cd9466ea9e39e163
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359749"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765740"
 ---
 # <a name="celementtraits-class"></a>Класс CElementTraits
-Этот класс используется классами коллекции для обеспечения функции и методы для перемещения, копирования, сравнения и операций хэширования.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот класс используется классами коллекцию для предоставления методов и функций для перемещения, копирования, сравнения и операций хэширования.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 template<typename T>  
 class CElementTraits : public CDefaultElementTraits<T>
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `T`  
- Тип данных, хранимых в коллекции.  
-  
-## <a name="remarks"></a>Примечания  
- Этот класс предоставляет по умолчанию статические функции и методы для перемещения, копирования, сравнение и хэширования элементов, хранящихся в объекте класса коллекции. `CElementTraits` указывается как поставщик по умолчанию эти операции в классах коллекций [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), и [CRBTree](../../atl/reference/crbtree-class.md).  
-  
- Реализация по умолчанию будет достаточно для простых типов данных, но при использовании классов коллекций для хранения более сложные объекты функций и методов должны быть переопределены пользовательские реализации.  
-  
- Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlcoll.h  
-  
-## <a name="see-also"></a>См. также  
- [Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+```
+
+#### <a name="parameters"></a>Параметры
+
+`T`  
+Тип данных, хранимых в коллекции.
+
+## <a name="remarks"></a>Примечания
+
+Этот класс предоставляет статические функции по умолчанию и методы для перемещения, копирования, сравнение и хэширования элементов, сохраненную в объекте класса коллекции. `CElementTraits` определяется как поставщик по умолчанию из этих операций в классах коллекций [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), и [CRBTree](../../atl/reference/crbtree-class.md).
+
+Реализация по умолчанию будет достаточно для простых типов данных, но если в классах коллекций используются для хранения более сложных объектов, функций и методов должны быть переопределены пользовательские реализации.
+
+Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlcoll.h
+
+## <a name="see-also"></a>См. также
+
+[Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)

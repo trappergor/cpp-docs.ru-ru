@@ -103,11 +103,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205149"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765935"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Класс CMFCToolBarMenuButton
 Кнопка панели инструментов, содержащая всплывающее меню.  
@@ -123,13 +123,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Создает объект `CMFCToolBarMenuButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|Сравнивает данный экземпляр с предоставленным `CMFCToolBarButton` объекта. (Переопределяет [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|  
 |[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Копирует свойства другую кнопку панели инструментов для текущей кнопки. (Переопределяет [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
@@ -174,13 +174,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Рисует значка на кнопке меню.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Если значение равно TRUE, всегда вызывается платформой [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) при рисовании кнопки.|  
   

@@ -20,11 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590787"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767895"
 ---
 # <a name="platformstathreadattribute-class"></a>Класс Platform::STAThreadAttribute
 Указывает, что потоковая модель для приложения является однопотоковым подразделением (STA).  
@@ -39,14 +39,14 @@ public ref class STAThreadAttribute sealed : Attribute
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор STAThreadAttribute 1](#ctor)|Инициализирует новый экземпляр класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
  Атрибут STAThreadAttribute наследует от [Platform::Object Class](../cppcx/platform-object-class.md). Атрибут STAThreadAttribute также перегружает или имеет следующие члены:  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[STAThreadAttribute::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
 |[STAThreadAttribute::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  

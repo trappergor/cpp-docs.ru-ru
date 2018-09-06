@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205484"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764414"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Перевод типов и членов в разряд нерекомендуемых (C++/CX)
 В C + +/ CX, прекращении типов среды выполнения Windows и члены для производителей и получателей с помощью [не рекомендуемые к использованию](/uwp/api/windows.foundation.metadata.deprecatedattribute) атрибут поддерживается. При использовании элемента API, к которому был применен этот атрибут, вы получите предупреждение времени компиляции, в котором указывается, что данный элемент является нерекомендуемым и предлагается альтернатива. В собственных открытых типах и методах вы можете применять этот атрибут с заданием своего сообщения.  

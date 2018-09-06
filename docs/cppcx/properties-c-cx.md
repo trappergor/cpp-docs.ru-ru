@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600859"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764310"
 ---
 # <a name="properties-ccx"></a>Свойства (C++/CX)
 Типы среды выполнения Windows предоставляют открытые данные в виде свойств. Клиентский код обращается к свойству как открытым данным-членам. Внутренне свойство реализуется в виде блока, содержащего метод доступа get или set, или оба эти метода. С помощью методов доступа можно выполнять дополнительные действия до или после получения значения; например, можно вызывать события или выполнять проверки.  
