@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
+ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322372"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42583916"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Как сообщить о проблеме с набором инструментов Visual C++ или документацией
 
@@ -335,7 +335,7 @@ CONTEXT:
 
 1. Введите **mkdir linkrepro**, чтобы создать каталог с данными компоновки для воспроизведения.
 
-1. Введите команду **set link\_repro=linkrepro**, чтобы задать переменную среды **link\_repro** для созданного каталога.
+1. Введите команду **set link\_repro=linkrepro**, чтобы задать переменную среды **link\_repro** для созданного каталога. Если построение выполняется из другого каталога, как это обычно бывает для более сложных проектов, вместо этого задайте для **link\_repro** полный путь к каталогу linkrepro.
 
 1. Чтобы выполнить сборку проекта данных для воспроизведения в Visual Studio, в окне консоли командной строки разработчика введите команду **devenv**. Таким образом, значение переменной среды **link\_repro** будет доступно Visual Studio. Для сборки проекта в командной строке используйте аргументы командной строки, записанные выше, чтобы повторить сборку данных для воспроизведения.
 

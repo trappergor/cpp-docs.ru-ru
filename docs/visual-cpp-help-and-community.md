@@ -8,16 +8,16 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cac05b17d470cdb593f4d7e1e1943f812022906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d36f56161e352d67838bfaf68c8e2d1dcee0f33e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851639"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583989"
 ---
 # <a name="visual-c-help-and-community"></a>Справка и сообщество Visual C++
 
@@ -34,7 +34,7 @@ ms.locfileid: "33851639"
 |Заголовок|Описание:|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Содержит общую и справочную документацию по Visual C++. Часть библиотеки MSDN.|
-|[Центр разработчиков для Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Содержит сведения об использовании C++ и других языков для разработки приложений для [!INCLUDE[win8](build/reference/includes/win8_md.md)]. Часть центра разработчиков Windows; содержимое по C++ находится в разделе Документы > Справочник по языку.|
+|[Центр разработчиков для Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Содержит сведения об использовании C++ и других языков для разработки приложений для Windows 8. Часть центра разработчиков Windows; содержимое по C++ находится в разделе Документы > Справочник по языку.|
 
 ### <a name="online-and-offline-documentation"></a>Документация, доступная в сети и вне сети
 

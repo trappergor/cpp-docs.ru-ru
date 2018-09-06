@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e1a67ce57e4ddf726ba64923bbe5a95b5b2f1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78f76b6f61eb5d8e7370e61e9cc1f466bdfb4c43
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410844"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592723"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Приложения UWP, среда выполнения Windows и среда выполнения C
 
-Приложения универсальной платформы Windows (UWP) — это программы, запускаемые в среде выполнения Windows на базе [!INCLUDE[win8](../build/reference/includes/win8_md.md)]. Среда выполнения Windows — это надежное окружение, контролирующее функции, переменные и ресурсы, доступные приложению UWP. Но эта среда намеренно содержит ограничения, не позволяющие использовать в приложениях UWP большинство функций библиотеки времени выполнения C (CRT).
+Приложения универсальной платформы Windows (UWP) — это программы, запускаемые в среде выполнения Windows на базе Windows 8. Среда выполнения Windows — это надежное окружение, контролирующее функции, переменные и ресурсы, доступные приложению UWP. Но эта среда намеренно содержит ограничения, не позволяющие использовать в приложениях UWP большинство функций библиотеки времени выполнения C (CRT).
 
 Среда выполнения Windows не поддерживает следующие возможности CRT.
 

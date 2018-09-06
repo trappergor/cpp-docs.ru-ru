@@ -1,7 +1,7 @@
 ---
 title: Особенности библиотеки CRT | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
-ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
+ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34799198"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42578164"
 ---
 # <a name="crt-library-features"></a>Особенности библиотеки CRT
 
@@ -64,6 +64,8 @@ ms.locfileid: "34799198"
 |libvcruntimed.lib|Нет|Отладочная версия для статического связывания. Нераспространяемый компонент.|**/MTd**|_MT, _DEBUG|
 |vcruntime.lib|vcruntime\<version>.dll|DLL-библиотека импорта для vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|DLL-библиотека импорта для отладочной версии vcruntime. Нераспространяемый компонент.|**/MDd**|_DEBUG, _MT, _DLL|
+
+Когда произошел рефакторинг UCRT, функции среды выполнения с параллелизмом были перемещены в concrt140.dll, который является частью распространяемого пакета C++. Эта библиотека DLL необходима для параллельных контейнеров и алгоритмов C++, таких как `concurrency::parallel_for`. Кроме того, стандартная библиотека C++ требует эту библиотеку DLL в Windows XP для поддержки примитивов синхронизации, так как Windows XP не поддерживает переменные условия.
 
 Код, инициализирующий CRT, находится в одной из нескольких библиотек в зависимости от статического или динамического связывания библиотеки CRT и использования машинного, управляемого или смешанного кода. Этот код обрабатывает запуск, инициализацию внутренних данных потоков и завершение CRT. Он определяется версией используемого компилятора. Эта библиотека всегда статически связана, даже при использовании динамически связанной библиотеки UCRT.
 
