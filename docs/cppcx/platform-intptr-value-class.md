@@ -18,11 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612133"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758834"
 ---
 # <a name="platformintptr-value-class"></a>Класс значения Platform::IntPtr
 Представляет указатель или дескриптор числа со знаком, размер которого зависит от платформы (32-разрядная или 64-разрядная).  
@@ -36,7 +36,7 @@ public value struct IntPtr
 ### <a name="members"></a>Участники  
  Класс IntPtr имеет следующие члены:  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[IntPtr::IntPtr](#ctor)|Инициализирует новый экземпляр класса IntPtr.|  
 |[Оператор IntPtr::op_explicit](#op-explicit)|Преобразует указанный параметр в объект IntPtr или указатель на значение IntPtr.|  

@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 39d708d2464ba74ecd78421599c8c039bb02c214
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602516"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755495"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Пространство имен Platform::Runtime::CompilerServices
 Это пространство имен предназначено только для внутреннего использования (не для использования в разработке).  

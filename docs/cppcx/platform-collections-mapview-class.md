@@ -21,11 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e1dfbcff7e9e470992b0799aac1c87984b52ed50
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689475"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755912"
 ---
 # <a name="platformcollectionsmapview-class"></a>Класс Platform::Collections::MapView
 Представляет доступное только для чтения представление на *карте*, которое является коллекцией пар "ключ-значение".  

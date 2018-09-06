@@ -177,11 +177,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a1db997dd81b339901bf3cf3017a766e17aa8cfb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197637"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758457"
 ---
 # <a name="cdaorecordset-class"></a>Класс CDaoRecordset
 
@@ -197,13 +197,13 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDaoRecordset::CDaoRecordset](#cdaorecordset)|Создает объект `CDaoRecordset`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDaoRecordset::AddNew](#addnew)|Подготавливает для добавления новой записи. Вызовите [обновления](#update) для завершения добавления.|
 |[CDaoRecordset::CanAppend](#canappend)|Возвращает ненулевое значение, если новые записи добавляются в набор записей с помощью [AddNew](#addnew) функция-член.|
@@ -280,7 +280,7 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Содержит флаг, указывающее, является ли поля автоматически помечаются как измененный.|
 |[CDaoRecordset::m_nFields](#m_nfields)|Содержит число элементов данных полей в классе наборов записей и количество столбцов, выбранных в набор записей из источника данных.|
@@ -998,7 +998,7 @@ short GetEditMode();
 
 ### <a name="remarks"></a>Примечания
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |`dbEditNone`|Ни одна из операций редактирования уже выполняется.|
 |`dbEditInProgress`|`Edit` был вызван.|

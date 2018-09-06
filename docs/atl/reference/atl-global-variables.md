@@ -1,5 +1,5 @@
 ---
-title: Глобальные переменные ATL | Документы Microsoft
+title: Глобальные переменные ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/06/2017
 ms.technology:
@@ -17,29 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4664c99eb49b57f258be399c042fa14b60bbecdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55844390b872cb0d94ff991ab79b8519388d009f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356483"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762464"
 ---
-# <a name="atl-global-variables"></a>Глобальные переменные библиотеки ATL
+# <a name="atl-global-variables"></a>Глобальные переменные ATL
 
-## <a name="patlmodule"></a>_pAtlModule  
-Глобальная переменная сохранения указателя к текущему модулю.  
+## <a name="patlmodule"></a>_pAtlModule
+
+Глобальная переменная, сохранения указателя для текущего модуля.  
 
 ```cpp  
 __declspec(selectany) CAtlModule * _pAtlModule  
 ```  
-### <a name="remarks"></a>Примечания  
-Методы в этой глобальной переменной можно использовать для предоставления функциональных возможностей, предоставленный класс (устаревшая) CComModule в Visual C++ 6.0.
+### <a name="remarks"></a>Примечания
 
-### <a name="example"></a>Пример  
+Методы этой глобальной переменной можно использовать для предоставления функций, который был указан (устаревшая) класс CComModule в Visual C++ 6.0.
+
+### <a name="example"></a>Пример
 
 ```cpp  
 LONG lLocks = _pAtlModule->GetLockCount();  
 ```  
-### <a name="requirements"></a>Требования  
- **Заголовок:** atlbase.h  
+### <a name="requirements"></a>Требования
+
+**Заголовок:** atlbase.h  
 

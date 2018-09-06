@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d9bd4238f9e89a6d9c11f402aa0af2fa6f2418bd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591717"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755782"
 ---
 # <a name="platformdetailsheap-class"></a>Класс Platform::Details::Heap
 Эта структура предназначена только для внутреннего использования (не для использования при разработке).  

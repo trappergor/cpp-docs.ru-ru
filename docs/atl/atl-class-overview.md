@@ -1,5 +1,5 @@
 ---
-title: Обзор класса ATL | Документы Microsoft
+title: Обзор класса ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eaa712ba8954b8b9b755f8045a81296bb345685
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e64ecd708f5ff159b61a6b7601c74dbf2b6abda6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255932"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758671"
 ---
 # <a name="atl-class-overview"></a>Обзор класса ATL
-Классы в Active Template Library (ATL), можно классифицировать следующим образом.  
-  
-|||  
-|-|-|  
-|[Фабрики классов](../atl/class-factories-classes.md)|[Управление памятью](../atl/memory-management-classes.md)|  
-|[Сведения о классах](../atl/class-information-classes.md)|[Оснастка MMC](../atl/mmc-snap-in-classes.md)|  
-|[Коллекция](../atl/collection-classes.md)|[Безопасность объекта](../atl/object-safety-classes.md)|  
-|[Модули COM](../atl/com-modules-classes.md)|[Сохраняемость](../atl/persistence-classes.md)|  
-|[Составные элементы управления](../atl/composite-controls-classes.md)|[Свойства и страницы свойств](../atl/properties-and-property-pages-classes.md)|  
-|[Точки подключения](../atl/connection-points-classes.md)|[Поддержка реестра](../atl/registry-support-classes.md)|  
-|[Включение элементов управления](../atl/control-containment-classes.md)|[Выполнение объектов](../atl/running-objects-classes.md)|  
-|[Элементы управления: Поддержка Общие](../atl/controls-general-support-classes.md)|[Безопасность](../atl/security-classes.md)|  
-|[Передача данных](../atl/data-transfer-classes.md)|[Поддержка поставщика службы](../atl/service-provider-support-classes.md)|  
-|[Типы данных](../atl/data-types-classes.md)|[Сведения о сайте](../atl/site-information-classes.md)|  
-|[Отладка и исключения](../atl/debugging-and-exceptions-classes.md)|[Строки и текста](../atl/string-and-text-classes.md)|  
-|[Сдвоенные интерфейсы](../atl/dual-interfaces-classes.md)|[Перемещаемые интерфейсы](../atl/tear-off-interfaces-classes.md)|  
-|[Перечислители и коллекций](../atl/enumerators-and-collections-classes.md)|[Группировка потоков в пул](../atl/thread-pooling-classes.md)|  
-|[Сведения об ошибке](../atl/error-information-classes.md)|[Работа с потоками моделей и критические секции](../atl/threading-models-and-critical-sections-classes.md)|  
-|[Обработка файлов](../atl/file-handling-classes.md)|[Поддержка пользовательского интерфейса](../atl/ui-support-classes.md)|  
-|[Указатели на интерфейс](../atl/interface-pointers-classes.md)|[Поддержка Windows](../atl/windows-support-classes.md)|  
-|[Реализация IUnknown](../atl/iunknown-implementation-classes.md)|[Служебная программа](../atl/utility-classes.md)|  
-  
- Дополнительные классы, которые можно использовать в проекты ATL, в разделе [общие классы](../atl-mfc-shared/atl-mfc-shared-classes.md).  
-  
-## <a name="see-also"></a>См. также  
- [Классы и структуры](../atl/reference/atl-classes.md)   
- [Компоненты ATL COM Desktop](../atl/atl-com-desktop-components.md)  
- [Функции](../atl/reference/atl-functions.md)   
- [Глобальные переменные](../atl/reference/atl-global-variables.md)   
- [Макросы](../atl/reference/atl-macros.md)   
- [Typedefs](../atl/reference/atl-typedefs.md)
+
+Классы в Active Template Library (ATL) можно классифицировать следующим образом.
+
+|||
+|-|-|
+|[Фабрики классов](../atl/class-factories-classes.md)|[Управление памятью](../atl/memory-management-classes.md)|
+|[Сведения о классе](../atl/class-information-classes.md)|[Оснастки MMC](../atl/mmc-snap-in-classes.md)|
+|[Коллекция](../atl/collection-classes.md)|[Средства безопасности объектов](../atl/object-safety-classes.md)|
+|[Модулей COM](../atl/com-modules-classes.md)|[Сохраняемость](../atl/persistence-classes.md)|
+|[Составные элементы управления](../atl/composite-controls-classes.md)|[Свойства и страницы свойств](../atl/properties-and-property-pages-classes.md)|
+|[Точки подключения](../atl/connection-points-classes.md)|[Поддержка реестра](../atl/registry-support-classes.md)|
+|[Включение элементов управления](../atl/control-containment-classes.md)|[Выполнение объектов](../atl/running-objects-classes.md)|
+|[Элементов управления: Общая поддержка](../atl/controls-general-support-classes.md)|[Безопасность](../atl/security-classes.md)|
+|[Передача данных](../atl/data-transfer-classes.md)|[Поддержка поставщика службы](../atl/service-provider-support-classes.md)|
+|[Типы данных](../atl/data-types-classes.md)|[Сведения о сайте](../atl/site-information-classes.md)|
+|[Отладка и исключения](../atl/debugging-and-exceptions-classes.md)|[Строковых и текстовых](../atl/string-and-text-classes.md)|
+|[Сдвоенные интерфейсы](../atl/dual-interfaces-classes.md)|[Перемещаемые интерфейсы](../atl/tear-off-interfaces-classes.md)|
+|[Перечислителей и коллекций](../atl/enumerators-and-collections-classes.md)|[Группировка потоков в пул](../atl/thread-pooling-classes.md)|
+|[Сведения об ошибке](../atl/error-information-classes.md)|[Потоковых моделей и критических разделов](../atl/threading-models-and-critical-sections-classes.md)|
+|[Обработка файлов](../atl/file-handling-classes.md)|[Поддержка пользовательского интерфейса](../atl/ui-support-classes.md)|
+|[Указатели на интерфейс](../atl/interface-pointers-classes.md)|[Поддержка Windows](../atl/windows-support-classes.md)|
+|[Реализация IUnknown](../atl/iunknown-implementation-classes.md)|[Служебная программа](../atl/utility-classes.md)|
+
+Дополнительные классы, которые могут быть использованы в проектах ATL, см. в разделе [общие классы](../atl-mfc-shared/atl-mfc-shared-classes.md).
+
+## <a name="see-also"></a>См. также
+
+[Классы и структуры](../atl/reference/atl-classes.md)   
+[Компоненты ATL COM Desktop](../atl/atl-com-desktop-components.md)  
+[Функции](../atl/reference/atl-functions.md)   
+[Глобальные переменные](../atl/reference/atl-global-variables.md)   
+[Макросы](../atl/reference/atl-macros.md)   
+[Typedefs](../atl/reference/atl-typedefs.md)
 

@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: cf975b0b434218d1917c2d630582e32cd287e298
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883717"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755077"
 ---
 # <a name="atlcommodule70-structure"></a>Структура _ATL_COM_MODULE70
-Используемый код, связанный с COM в ATL  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Используемый код, связанный с COM в ATL
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
@@ -39,34 +40,34 @@ struct _ATL_COM_MODULE70 {
     _ATL_OBJMAP_ENTRY** m_ppAutoObjMapLast;
     CRITICAL_SECTION m_csObjMap;
 };
-```  
-  
-## <a name="members"></a>Участники  
- `cbSize`  
- Размер структуры, используемые для управления версиями.  
-  
- `m_hInstTypeLib`  
- Дескриптор экземпляра, в библиотеку типов для этого модуля.  
-  
- `m_ppAutoObjMapFirst`  
- Адрес элемента массива, который задает начало карты записей объект для этого модуля.  
-  
- `m_ppAutoObjMapLast`  
- Адрес элемента массива, указывающий на конец записи сопоставления объекта для этого модуля.  
-  
- `m_csObjMap`  
- Критический раздел для сериализации доступа к записям объекта карты. Используется системой ATL.  
-  
-## <a name="remarks"></a>Примечания  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) определяется как typedef типа _ATL_COM_MODULE70.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlbase.h  
-  
-## <a name="see-also"></a>См. также  
- [Классы и структуры](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Участники
 
+`cbSize`  
+Размер структуры, используемые для управления версиями.
 
+`m_hInstTypeLib`  
+Дескриптор экземпляра, в библиотеку типов для этого модуля.
 
+`m_ppAutoObjMapFirst`  
+Адрес элемента массива, который задает начало карты записей объект для этого модуля.
+
+`m_ppAutoObjMapLast`  
+Адрес элемента массива, указывающий на конец записи сопоставления объекта для этого модуля.
+
+`m_csObjMap`  
+Критический раздел для сериализации доступа к записям объекта карты. Используется системой ATL.
+
+## <a name="remarks"></a>Примечания
+
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) определяется как typedef типа _ATL_COM_MODULE70.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlbase.h
+
+## <a name="see-also"></a>См. также
+
+[Классы и структуры](../../atl/reference/atl-classes.md)
 

@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222747"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756981"
 ---
 # <a name="delegates-ccx"></a>Делегаты (C++/CX)
 `delegate` Ключевое слово используется для объявления ссылочного типа, эквивалентный среды выполнения Windows, объекта функции в стандартном языке C++. Объявление делегата похоже на сигнатуру функции; оно определяет тип возвращаемого значения и типы параметров, которые должна иметь заключенная в оболочку функция. Ниже показано пользователем объявление делегата:  

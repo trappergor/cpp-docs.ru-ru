@@ -14,11 +14,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d74eb59fa1c8c8f53591c8452cb6940bc9ae1743
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601274"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753114"
 ---
 # <a name="namespaces-reference-ccx"></a>Справочник по пространствам имен (C++/CX)
 Статьи в этом разделе документации описывают пространства имен, которые поддерживают компилятор для C + +/ CX.  
@@ -28,7 +28,7 @@ ms.locfileid: "42601274"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Пространство имен по умолчанию](../cppcx/default-namespace.md)|Содержит описания встроенных основных типов.|  
 |[Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)|Содержит описания типов, которые можно использовать, а также внутренних типов, которые используются только инфраструктурой компилятора.|  

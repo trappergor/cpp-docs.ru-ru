@@ -30,201 +30,232 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2684a3aab8480738d4d64a79681f1930113c71
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a17b690111edc220f6310963e5f606e2a9c869c9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218931"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756045"
 ---
 # <a name="idataobjectimpl-class"></a>Класс IDataObjectImpl
-Этот класс предоставляет методы для поддержки унифицированная передача данных и управление подключениями.  
-  
+
+Этот класс предоставляет методы для поддержки унифицированная передача данных и управление подключениями.
+
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 template<class T>  
 class IDataObjectImpl
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *T*  
- Ваш класс, производный от `IDataObjectImpl`.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[IDataObjectImpl::DAdvise](#dadvise)|Устанавливает соединение между объектом данных и приемника уведомлений. Это позволяет в приемник получать уведомления об изменениях в объекте.|  
-|[IDataObjectImpl::DUnadvise](#dunadvise)|Завершает соединение, установленное ранее при помощи `DAdvise`.|  
-|[IDataObjectImpl::EnumDAdvise](#enumdadvise)|Создает перечислитель для итерации по текущим вспомогательным соединениям.|  
-|[IDataObjectImpl::EnumFormatEtc](#enumformatetc)|Создает перечислитель для перебора `FORMATETC` структуры, поддерживаемые объектом данных. Реализация ATL возвращает E_NOTIMPL.|  
-|[IDataObjectImpl::FireDataChange](#firedatachange)|Отправляет уведомление об изменениях каждый приемник.|  
-|[IDataObjectImpl::GetCanonicalFormatEtc](#getcanonicalformatetc)|Извлекает логически эквивалентного `FORMATETC` структуры, который является более сложным. Реализация ATL возвращает E_NOTIMPL.|  
-|[IDataObjectImpl::GetData](#getdata)|Передает данные из объекта данных клиенту. Данные описываются в `FORMATETC` структурировать и передается через `STGMEDIUM` структуры.|  
-|[IDataObjectImpl::GetDataHere](#getdatahere)|Аналогичную `GetData`, за исключением, что клиент должен выделить `STGMEDIUM` структуры. Реализация ATL возвращает E_NOTIMPL.|  
-|[IDataObjectImpl::QueryGetData](#querygetdata)|Определяет, поддерживает ли объект данных определенного `FORMATETC` структуры для передачи данных. Реализация ATL возвращает E_NOTIMPL.|  
-|[IDataObjectImpl::SetData](#setdata)|Передает данные от клиента к объекту данных. Реализация ATL возвращает E_NOTIMPL.|  
-  
-## <a name="remarks"></a>Примечания  
- [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) интерфейс предоставляет методы для поддержки унифицированная передача данных. `IDataObject` использует стандартный формат структуры [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) и [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) для получения и хранения данных.  
-  
- `IDataObject` также управляет соединениями с вспомогательными приемникам обрабатывать уведомления об изменении данных. Чтобы клиенту получать уведомления об изменении данных из объекта данных, должен реализовать клиент, [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) интерфейса на объект с именем приемника уведомлений. Когда клиент вызывает метод `IDataObject::DAdvise`, установить соединение между объектом данных и приемником уведомлений.  
-  
- Класс `IDataObjectImpl` предоставляет реализацию по умолчанию `IDataObject` и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
-  
- **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `IDataObject`  
-  
- `IDataObjectImpl`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlctl.h  
-  
-##  <a name="dadvise"></a>  IDataObjectImpl::DAdvise  
- Устанавливает соединение между объектом данных и приемника уведомлений.  
-  
+```
+
+#### <a name="parameters"></a>Параметры
+
+*T*  
+Ваш класс, производный от `IDataObjectImpl`.
+
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[IDataObjectImpl::DAdvise](#dadvise)|Устанавливает соединение между объектом данных и приемника уведомлений. Это позволяет в приемник получать уведомления об изменениях в объекте.|
+|[IDataObjectImpl::DUnadvise](#dunadvise)|Завершает соединение, установленное ранее при помощи `DAdvise`.|
+|[IDataObjectImpl::EnumDAdvise](#enumdadvise)|Создает перечислитель для итерации по текущим вспомогательным соединениям.|
+|[IDataObjectImpl::EnumFormatEtc](#enumformatetc)|Создает перечислитель для перебора `FORMATETC` структуры, поддерживаемые объектом данных. Реализация ATL возвращает E_NOTIMPL.|
+|[IDataObjectImpl::FireDataChange](#firedatachange)|Отправляет уведомление об изменениях каждый приемник.|
+|[IDataObjectImpl::GetCanonicalFormatEtc](#getcanonicalformatetc)|Извлекает логически эквивалентного `FORMATETC` структуры, который является более сложным. Реализация ATL возвращает E_NOTIMPL.|
+|[IDataObjectImpl::GetData](#getdata)|Передает данные из объекта данных клиенту. Данные описываются в `FORMATETC` структурировать и передается через `STGMEDIUM` структуры.|
+|[IDataObjectImpl::GetDataHere](#getdatahere)|Аналогичную `GetData`, за исключением, что клиент должен выделить `STGMEDIUM` структуры. Реализация ATL возвращает E_NOTIMPL.|
+|[IDataObjectImpl::QueryGetData](#querygetdata)|Определяет, поддерживает ли объект данных определенного `FORMATETC` структуры для передачи данных. Реализация ATL возвращает E_NOTIMPL.|
+|[IDataObjectImpl::SetData](#setdata)|Передает данные от клиента к объекту данных. Реализация ATL возвращает E_NOTIMPL.|
+
+## <a name="remarks"></a>Примечания
+
+[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) интерфейс предоставляет методы для поддержки унифицированная передача данных. `IDataObject` использует стандартный формат структуры [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) и [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) для получения и хранения данных.
+
+`IDataObject` также управляет соединениями с вспомогательными приемникам обрабатывать уведомления об изменении данных. Чтобы клиенту получать уведомления об изменении данных из объекта данных, должен реализовать клиент, [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) интерфейса на объект с именем приемника уведомлений. Когда клиент вызывает метод `IDataObject::DAdvise`, установить соединение между объектом данных и приемником уведомлений.
+
+Класс `IDataObjectImpl` предоставляет реализацию по умолчанию `IDataObject` и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.
+
+**Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`IDataObject`
+
+`IDataObjectImpl`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlctl.h
+
+##  <a name="dadvise"></a>  IDataObjectImpl::DAdvise
+
+Устанавливает соединение между объектом данных и приемника уведомлений.
+
 ```
 HRESULT DAdvise(
     FORMATETC* pformatetc,
     DWORD advf,
     IAdviseSink* pAdvSink,
     DWORD* pdwConnection);
-```  
-  
-### <a name="remarks"></a>Примечания  
- Это позволяет в приемник получать уведомления об изменениях в объекте.  
-  
- Чтобы разорвать соединение, вызовите [DUnadvise](#dunadvise).  
-  
- См. в разделе [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) в Windows SDK.  
-  
-##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
- Завершает соединение, установленное ранее при помощи [DAdvise](#dadvise).  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+Это позволяет в приемник получать уведомления об изменениях в объекте.
+
+Чтобы разорвать соединение, вызовите [DUnadvise](#dunadvise).
+
+См. в разделе [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) в Windows SDK.
+
+##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise
+
+Завершает соединение, установленное ранее при помощи [DAdvise](#dadvise).
+
 ```
 HRESULT DUnadvise(DWORD dwConnection);
-```  
-  
-### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) в Windows SDK.  
-  
-##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise  
- Создает перечислитель для итерации по текущим вспомогательным соединениям.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+См. в разделе [IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) в Windows SDK.
+
+##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise
+
+Создает перечислитель для итерации по текущим вспомогательным соединениям.
+
 ```
 HRESULT DAdvise(
     FORMATETC* pformatetc,
     DWORD advf,
     IAdviseSink* pAdvSink,
     DWORD* pdwConnection);
-```  
-  
-### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::EnumDAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-enumdadvise) в Windows SDK.  
-  
-##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
- Создает перечислитель для перебора `FORMATETC` структуры, поддерживаемые объектом данных.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+См. в разделе [IDataObject::EnumDAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-enumdadvise) в Windows SDK.
+
+##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc
+
+Создает перечислитель для перебора `FORMATETC` структуры, поддерживаемые объектом данных.
+
 ```
 HRESULT EnumFormatEtc(  
     DWORD dwDirection,
     IEnumFORMATETC** ppenumFormatEtc);
-```  
-  
-### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) в Windows SDK.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает E_NOTIMPL.  
-  
-##  <a name="firedatachange"></a>  IDataObjectImpl::FireDataChange  
- Отправляет уведомление об изменениях каждый приемник, управляемого в данный момент выполняется.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+См. в разделе [IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) в Windows SDK.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает E_NOTIMPL.
+
+##  <a name="firedatachange"></a>  IDataObjectImpl::FireDataChange
+
+Отправляет уведомление об изменениях каждый приемник, управляемого в данный момент выполняется.
+
 ```
 HRESULT FireDataChange();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение HRESULT.  
-  
-##  <a name="getcanonicalformatetc"></a>  IDataObjectImpl::GetCanonicalFormatEtc  
- Извлекает логически эквивалентного `FORMATETC` структуры, который является более сложным.  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Стандартное значение HRESULT.
+
+##  <a name="getcanonicalformatetc"></a>  IDataObjectImpl::GetCanonicalFormatEtc
+
+Извлекает логически эквивалентного `FORMATETC` структуры, который является более сложным.
+
 ```
 HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut);
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает E_NOTIMPL.  
-  
-### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::GetCanonicalFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-getcanonicalformatetc) в Windows SDK.  
-  
-##  <a name="getdata"></a>  IDataObjectImpl::GetData  
- Передает данные из объекта данных клиенту.  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает E_NOTIMPL.
+
+### <a name="remarks"></a>Примечания
+
+См. в разделе [IDataObject::GetCanonicalFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-getcanonicalformatetc) в Windows SDK.
+
+##  <a name="getdata"></a>  IDataObjectImpl::GetData
+
+Передает данные из объекта данных клиенту.
+
 ```
 HRESULT GetData(
     FORMATETC* pformatetcIn,
     STGMEDIUM* pmedium);
-```  
-  
-### <a name="remarks"></a>Примечания  
- *PformatetcIn* параметра необходимо указать тип среды хранения TYMED_MFPICT.  
-  
- См. в разделе [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) в Windows SDK.  
-  
-##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
- Аналогичную `GetData`, за исключением, что клиент должен выделить `STGMEDIUM` структуры.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+*PformatetcIn* параметра необходимо указать тип среды хранения TYMED_MFPICT.
+
+См. в разделе [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) в Windows SDK.
+
+##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere
+
+Аналогичную `GetData`, за исключением, что клиент должен выделить `STGMEDIUM` структуры.
+
 ```
 HRESULT GetDataHere(
     FORMATETC* pformatetc,
     STGMEDIUM* pmedium);
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает E_NOTIMPL.  
-  
-### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::GetDataHere](/windows/desktop/api/objidl/nf-objidl-idataobject-getdatahere) в Windows SDK.  
-  
-##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
- Определяет, поддерживает ли объект данных определенного `FORMATETC` структуры для передачи данных.  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает E_NOTIMPL.
+
+### <a name="remarks"></a>Примечания
+
+См. в разделе [IDataObject::GetDataHere](/windows/desktop/api/objidl/nf-objidl-idataobject-getdatahere) в Windows SDK.
+
+##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData
+
+Определяет, поддерживает ли объект данных определенного `FORMATETC` структуры для передачи данных.
+
 ```
 HRESULT QueryGetData(FORMATETC* pformatetc);
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает E_NOTIMPL.  
-  
-### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata) в Windows SDK.  
-  
-##  <a name="setdata"></a>  IDataObjectImpl::SetData  
- Передает данные от клиента к объекту данных.  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает E_NOTIMPL.
+
+### <a name="remarks"></a>Примечания
+
+См. в разделе [IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata) в Windows SDK.
+
+##  <a name="setdata"></a>  IDataObjectImpl::SetData
+
+Передает данные от клиента к объекту данных.
+
 ```
 HRESULT SetData(
     FORMATETC* pformatetc,
     STGMEDIUM* pmedium,
     BOOL fRelease);
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает E_NOTIMPL.  
-  
-### <a name="remarks"></a>Примечания  
- См. в разделе [IDataObject::SetData](/windows/desktop/api/objidl/nf-objidl-idataobject-setdata) в Windows SDK.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает E_NOTIMPL.
+
+### <a name="remarks"></a>Примечания
+
+См. в разделе [IDataObject::SetData](/windows/desktop/api/objidl/nf-objidl-idataobject-setdata) в Windows SDK.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../../atl/atl-class-overview.md)

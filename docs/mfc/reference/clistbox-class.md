@@ -113,11 +113,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1f67107b17f304c5a9c4d6f68d68797370502065
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221731"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761187"
 ---
 # <a name="clistbox-class"></a>CListBox-класс
 Предоставляет функции списка Windows.  
@@ -132,13 +132,13 @@ class CListBox : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CListBox::CListBox](#clistbox)|Создает объект `CListBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CListBox::AddString](#addstring)|Добавляет строку в поле со списком.|  
 |[CListBox::CharToItem](#chartoitem)|Переопределение, чтобы обеспечить пользовательский WM_CHAR обработки для списков рисуемый владельцем, которых нет строки.|  

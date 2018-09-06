@@ -17,69 +17,78 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a23dc598d499071183cfcf7b0172611a693e569d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f9d3db2a3d7f673c8e81b1077bcb45e9b8241d37
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884240"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751865"
 ---
 # <a name="com-map-global-functions"></a>Глобальные функции сопоставления COM
-Эти функции обеспечивают поддержку для сопоставления COM `IUnknown` реализаций.  
-  
-|||  
-|-|-|  
-|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Делегирует `IUnknown` неагрегированные объекта.|  
+
+Эти функции обеспечивают поддержку для сопоставления COM `IUnknown` реализаций.
+
+|||
+|-|-|
+|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Делегирует `IUnknown` неагрегированные объекта.|
 |[InlineIsEqualIUnknown](#inlineisequaliunknown)|Создает эффективного кода для сравнения интерфейсы с параметром `IUnknown`.|  
 
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlbase.h  
+## <a name="requirements"></a>Требования
 
-##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface  
- Извлекает указатель на запрошенный интерфейс.  
-  
+**Заголовок:** atlbase.h  
+
+##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface
+
+Извлекает указатель на запрошенный интерфейс.
+
 ```
 HRESULT AtlInternalQueryInterface(
     void* pThis,
     const _ATL_INTMAP_ENTRY* pEntries,
     REFIID iid,
     void** ppvObject);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *pThis*  
- [in] Указатель на объект, содержащий карту COM интерфейсы, предоставляемые в `QueryInterface`.  
-  
- *pEntries*  
- [in] Массив `_ATL_INTMAP_ENTRY` структур, которые обращаются к карту доступных интерфейсов.  
-  
- *IID*  
- [in] Идентификатор GUID запрашиваемого интерфейса.  
-  
- *ppvObject*  
- [out] Указатель на указатель интерфейса, заданный в *iid*, или значение NULL, если интерфейс не найден.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Одно из стандартных значений HRESULT.  
-  
-### <a name="remarks"></a>Примечания  
- `AtlInternalQueryInterface` обрабатывает интерфейсы только в таблице сопоставлений COM. Если объект является статистическим, `AtlInternalQueryInterface` не делегировать внешняя Неизвестная строка. Вы можете ввести интерфейсы в таблицу сопоставлений COM с помощью макроса [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) или одного из его вариантов.  
-  
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
-  
-##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown  
- Вызывайте эту функцию для особого случая тестирования для `IUnknown`.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*pThis*  
+[in] Указатель на объект, содержащий карту COM интерфейсы, предоставляемые в `QueryInterface`.
+
+*pEntries*  
+[in] Массив `_ATL_INTMAP_ENTRY` структур, которые обращаются к карту доступных интерфейсов.
+
+*IID*  
+[in] Идентификатор GUID запрашиваемого интерфейса.
+
+*ppvObject*  
+[out] Указатель на указатель интерфейса, заданный в *iid*, или значение NULL, если интерфейс не найден.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Одно из стандартных значений HRESULT.
+
+### <a name="remarks"></a>Примечания
+
+`AtlInternalQueryInterface` обрабатывает интерфейсы только в таблице сопоставлений COM. Если объект является статистическим, `AtlInternalQueryInterface` не делегировать внешняя Неизвестная строка. Вы можете ввести интерфейсы в таблицу сопоставлений COM с помощью макроса [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) или одного из его вариантов.
+
+### <a name="example"></a>Пример
+
+[!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]
+
+##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown
+
+Вызывайте эту функцию для особого случая тестирования для `IUnknown`.
+
 ```
 BOOL InlineIsEqualUnknown(REFGUID rguid1);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *rguid1*  
- [in] Идентификатор GUID для сравнения с `IID_IUnknown`.  
-  
-## <a name="see-also"></a>См. также  
- [Функции](../../atl/reference/atl-functions.md)   
- [Макросы сопоставления COM](../../atl/reference/com-map-macros.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*rguid1*  
+[in] Идентификатор GUID для сравнения с `IID_IUnknown`.
+
+## <a name="see-also"></a>См. также
+
+[Функции](../../atl/reference/atl-functions.md)   
+[Макросы сопоставления COM](../../atl/reference/com-map-macros.md)

@@ -18,11 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613463"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757124"
 ---
 # <a name="platformmtathreadattribute-class"></a>Класс Platform::MTAThreadAttribute
 Указывает, что потоковая модель для приложения является многопотоковым подразделением (MTA).  
@@ -37,14 +37,14 @@ public ref class MTAThreadAttribute sealed : Attribute
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[1 конструктор MTAThreadAttribute](#ctor) конструктор|Инициализирует новый экземпляр класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
  Атрибут MTAThreadAttribute наследует от [Platform::Object Class](../cppcx/platform-object-class.md). Атрибут MTAThreadAttribute также перегружает или имеет следующие члены:  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[MTAThreadAttribute::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  

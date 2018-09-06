@@ -31,11 +31,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ccbfc00af51c3327b86386905fb7571f5cbf41fc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852059"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757911"
 ---
 # <a name="cobject-class"></a>Класс CObject
 Основной базовый класс для всех исключений библиотеки классов Microsoft Foundation.  
@@ -50,13 +50,13 @@ class AFX_NOVTABLE CObject
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObject::CObject](#cobject)|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObject::AssertValid](#assertvalid)|Проверяет целостность этого объекта.|  
 |[CObject::Dump](#dump)|Создает дамп диагностики этого объекта.|  
@@ -67,7 +67,7 @@ class AFX_NOVTABLE CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Удалить CObject::operator](#operator_delete)|Специальные **удалить** оператор.|  
 |[Новый CObject::operator](#operator_new)|Специальные **новый** оператор.|  

@@ -16,50 +16,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ad124f0819dbfd9cfd0117cb91fbcffba05a400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201280"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752819"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` функция, определяемая параметром третий параметр макроса COMMAND_HANDLER в схему сообщения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+`CommandHandler` функция, определяемая параметром третий параметр макроса COMMAND_HANDLER в схему сообщения.
+
+## <a name="syntax"></a>Синтаксис
+
 ```  
- 
-    LRESULT 
-    CommandHandler 
- (
+LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
     HWND hWndCtl,  
     BOOL& bHandled);
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *wNotifyCode*  
- Код уведомления.  
-  
- *wID*  
- Идентификатор пункта меню, элемент управления или сочетаний клавиш.  
-  
- *hWndCtl*  
- Дескриптор окна элемента управления.  
-  
- *bHandled*  
- Карта наборов сообщений *bHandled* значение TRUE перед `CommandHandler` вызывается. Если `CommandHandler` не полностью обрабатывает сообщение, она должна задать *bHandled* значение false, чтобы указать, должна дальнейшей обработки сообщения.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Результат обработки сообщения. 0 в случае успеха.  
-  
-## <a name="remarks"></a>Примечания  
- Пример использования этого обработчика сообщений в схеме сообщений, см. в разделе [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
-  
-## <a name="see-also"></a>См. также  
- [Реализация окна](../atl/implementing-a-window.md)   
- [Схемы сообщений](../atl/message-maps-atl.md)   
- [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
+```
+
+#### <a name="parameters"></a>Параметры
+
+*wNotifyCode*  
+Код уведомления.
+
+*wID*  
+Идентификатор пункта меню, элемент управления или сочетаний клавиш.
+
+*hWndCtl*  
+Дескриптор окна элемента управления.
+
+*bHandled*  
+Карта наборов сообщений *bHandled* значение TRUE перед `CommandHandler` вызывается. Если `CommandHandler` не полностью обрабатывает сообщение, она должна задать *bHandled* значение false, чтобы указать, должна дальнейшей обработки сообщения.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Результат обработки сообщения. 0 в случае успеха.
+
+## <a name="remarks"></a>Примечания
+
+Пример использования этого обработчика сообщений в схеме сообщений, см. в разделе [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).
+
+## <a name="see-also"></a>См. также
+
+[Реализация окна](../atl/implementing-a-window.md)   
+[Схемы сообщений](../atl/message-maps-atl.md)   
+[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

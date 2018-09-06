@@ -14,11 +14,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e2f1e83c285274326be2501a8f9b006c8df05204
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613390"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751531"
 ---
 # <a name="platformivaluetype-interface"></a>Интерфейс Platform::IValueType
 `Platform::IValueType` — это интерфейс инфраструктуры, реализуемый классами и структурами значений. Не должен использоваться в коде явным образом.  

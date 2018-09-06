@@ -23,110 +23,121 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f474c73a63c7eaeb7452e88812180a24d1321df
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ae4aaffc76e12734038b0d325e7b540393c6cc6d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881192"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754934"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Класс IObjectSafetyImpl
-Этот класс предоставляет реализацию по умолчанию `IObjectSafety` интерфейс, позволяющий клиенту получить и задать уровни безопасности объекта.  
-  
+
+Этот класс предоставляет реализацию по умолчанию `IObjectSafety` интерфейс, позволяющий клиенту получить и задать уровни безопасности объекта.
+
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 template <class T,DWORD dwSupportedSafety>  
 class IObjectSafetyImpl
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *T*  
- Ваш класс, производный от `IObjectSafetyImpl`.  
-  
- *dwSupportedSafety*  
- Указывает параметры безопасности, поддерживаемых для элемента управления. Может принимать одно из следующих значений:  
-  
-- Интерфейс, определенный INTERFACESAFE_FOR_UNTRUSTED_CALLER [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) параметр `riid` должно выполняться как безопасные для использования.  
-  
-- Интерфейс, определенный INTERFACESAFE_FOR_UNTRUSTED_DATA `SetInterfaceSafetyOptions` параметр `riid` следует выполнить безопасный для непроверенных данных во время инициализации.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Получает параметры безопасности, поддерживаемых этим объектом, а также параметры безопасности, заданных в настоящее время для объекта.|  
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Объект становится безопасным для инициализации или сценариев.|  
-  
-### <a name="public-data-members"></a>Открытые члены данных  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Сохраняет текущий уровень безопасности объекта.|  
-  
-## <a name="remarks"></a>Примечания  
- Класс `IObjectSafetyImpl` предоставляет реализацию по умолчанию `IObjectSafety`. `IObjectSafety` Интерфейс позволяет клиенту получить и задать уровни безопасности объекта. Например, можно вызвать веб-браузер `IObjectSafety::SetInterfaceSafetyOptions` для инициализации или безопасные для использования элемента управления.  
-  
- Обратите внимание, что использование [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) макрос с помощью категорий компонентов CATID_SafeForScripting и CATID_SafeForInitializing предоставляет альтернативный способ указания, что компонент безопасен.  
-  
- **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `IObjectSafety`  
-  
- `IObjectSafetyImpl`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlctl.h  
-  
-##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions  
- Получает параметры безопасности, поддерживаемых этим объектом, а также параметры безопасности, заданных в настоящее время для объекта.  
-  
+```
+
+#### <a name="parameters"></a>Параметры
+
+*T*  
+Ваш класс, производный от `IObjectSafetyImpl`.
+
+*dwSupportedSafety*  
+Указывает параметры безопасности, поддерживаемых для элемента управления. Может принимать одно из следующих значений:
+
+- Интерфейс, определенный INTERFACESAFE_FOR_UNTRUSTED_CALLER [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) параметр `riid` должно выполняться как безопасные для использования.
+
+- Интерфейс, определенный INTERFACESAFE_FOR_UNTRUSTED_DATA `SetInterfaceSafetyOptions` параметр `riid` следует выполнить безопасный для непроверенных данных во время инициализации.
+
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Получает параметры безопасности, поддерживаемых этим объектом, а также параметры безопасности, заданных в настоящее время для объекта.|
+|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Объект становится безопасным для инициализации или сценариев.|
+
+### <a name="public-data-members"></a>Открытые члены данных
+
+|Имя|Описание|
+|----------|-----------------|
+|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Сохраняет текущий уровень безопасности объекта.|
+
+## <a name="remarks"></a>Примечания
+
+Класс `IObjectSafetyImpl` предоставляет реализацию по умолчанию `IObjectSafety`. `IObjectSafety` Интерфейс позволяет клиенту получить и задать уровни безопасности объекта. Например, можно вызвать веб-браузер `IObjectSafety::SetInterfaceSafetyOptions` для инициализации или безопасные для использования элемента управления.
+
+Обратите внимание, что использование [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) макрос с помощью категорий компонентов CATID_SafeForScripting и CATID_SafeForInitializing предоставляет альтернативный способ указания, что компонент безопасен.
+
+**Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`IObjectSafety`
+
+`IObjectSafetyImpl`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlctl.h
+
+##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions
+
+Получает параметры безопасности, поддерживаемых этим объектом, а также параметры безопасности, заданных в настоящее время для объекта.
+
 ```
 HRESULT GetInterfaceSafetyOptions(  
     REFIID riid,
     DWORD* pdwSupportedOptions,
     DWORD* pdwEnabledOptions);
-```  
-  
-### <a name="remarks"></a>Примечания  
- Реализация возвращает соответствующие значения для любого интерфейса, поддерживаемого реализацией объекта `IUnknown::QueryInterface`.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+Реализация возвращает соответствующие значения для любого интерфейса, поддерживаемого реализацией объекта `IUnknown::QueryInterface`.
+
 > [!IMPORTANT]
->  Любой объект, который поддерживает `IObjectSafety` отвечает за собственную безопасность и для любого объекта, он делегирует. Программист должен учитывать учетной записи вопросов, связанных с выполнения кода в контексте пользователя, межузловых сценариев и выполняют проверку подходящий зоны.  
-  
- См. в разделе [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) в Windows SDK.  
-  
-##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety  
- Сохраняет текущий уровень безопасности объекта.  
-  
+>  Любой объект, который поддерживает `IObjectSafety` отвечает за собственную безопасность и для любого объекта, он делегирует. Программист должен учитывать учетной записи вопросов, связанных с выполнения кода в контексте пользователя, межузловых сценариев и выполняют проверку подходящий зоны.
+
+См. в разделе [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) в Windows SDK.
+
+##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety
+
+Сохраняет текущий уровень безопасности объекта.
+
 ```
 DWORD m_dwCurrentSafety;
-```  
-  
-##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions  
- Объект становится безопасным для инициализации или скриптов, задав [m_dwCurrentSafety](#m_dwcurrentsafety) элемент с соответствующим значением.  
-  
+```
+
+##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions
+
+Объект становится безопасным для инициализации или скриптов, задав [m_dwCurrentSafety](#m_dwcurrentsafety) элемент с соответствующим значением.
+
 ```
 HRESULT SetInterfaceSafetyOptions(  
     REFIID riid,
     DWORD dwOptionsSetMask,
     DWORD dwEnabledOptions);
-```  
-  
-### <a name="remarks"></a>Примечания  
- Реализация возвращает E_NOINTERFACE для любого интерфейса, не поддерживается реализацией объекта `IUnknown::QueryInterface`.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+Реализация возвращает E_NOINTERFACE для любого интерфейса, не поддерживается реализацией объекта `IUnknown::QueryInterface`.
+
 > [!IMPORTANT]
->  Любой объект, который поддерживает `IObjectSafety` отвечает за собственную безопасность и для любого объекта, он делегирует. Программист должен учитывать учетной записи вопросов, связанных с выполнения кода в контексте пользователя, межузловых сценариев и выполняют проверку подходящий зоны.  
-  
- См. в разделе [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) в Windows SDK.  
-  
-## <a name="see-also"></a>См. также  
- [Интерфейс IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+>  Любой объект, который поддерживает `IObjectSafety` отвечает за собственную безопасность и для любого объекта, он делегирует. Программист должен учитывать учетной записи вопросов, связанных с выполнения кода в контексте пользователя, межузловых сценариев и выполняют проверку подходящий зоны.
+
+См. в разделе [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) в Windows SDK.
+
+## <a name="see-also"></a>См. также
+
+[Интерфейс IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)

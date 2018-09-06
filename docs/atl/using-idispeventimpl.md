@@ -16,68 +16,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ac64a99c3523f174c62c9788aeab867aa8758b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03c4bbd4efbdbf5d1ecf566244a9000a93a7c981
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848932"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760303"
 ---
 # <a name="using-idispeventimpl"></a>Использование IDispEventImpl
-При использовании `IDispEventImpl` для обработки событий, вам потребуется:  
-  
--   Наследование класса из [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
-  
--   Добавьте картой приемника событий к классу.  
-  
--   Добавьте записи в карте приемника событий с помощью [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) или [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) макрос.  
-  
--   Реализуйте методы, что вы заинтересованы в обработке.  
-  
--   Уведомлений и негативной рекомендации источника события.  
-  
-## <a name="example"></a>Пример  
- В приведенном ниже примере показано, как обрабатывать `DocumentChange` события, инициированные средой Word **приложения** объекта. Это событие определяется как метод на `ApplicationEvents` disp-интерфейса.  
-  
- Пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).  
-  
- `[`  
-  
- `uuid(000209F7-0000-0000-C000-000000000046),`  
-  
- `hidden`  
-  
- `]`  
-  
- `dispinterface ApplicationEvents {`  
-  
- `properties:`  
-  
- `methods:`  
-  
- `[id(0x00000001), restricted, hidden]`  
-  
- `void Startup();`  
-  
- `[id(0x00000002)]`  
-  
- `void Quit();`  
-  
- `[id(0x00000003)]`  
-  
- `void DocumentChange();`  
-  
- `};`  
-  
- В примере используется `#import` для создания файлов обязательный заголовок из библиотеки типов в Word. Если вы хотите использовать этот пример с другими версиями Word, необходимо указать правильный mso dll-файла. Например Office 2000 предоставляет mso9.dll и OfficeXP предоставляет mso.dll. Этот код является упрощенной версией stdafx.h:  
-  
- [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
-  
- В NotSoSimple.h отображается следующий код. Соответствующий код указан с комментариями:  
-  
- [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
-  
-## <a name="see-also"></a>См. также  
- [Обработка событий](../atl/event-handling-and-atl.md)   
- [Пример ATLEventHandling](../visual-cpp-samples.md)
+
+При использовании `IDispEventImpl` для обработки событий, вам потребуется:
+
+- Наследование класса из [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
+
+- Добавьте картой приемника событий к классу.
+
+- Добавьте записи в карте приемника событий с помощью [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) или [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) макрос.
+
+- Реализуйте методы, что вы заинтересованы в обработке.
+
+- Уведомлений и негативной рекомендации источника события.
+
+## <a name="example"></a>Пример
+
+В приведенном ниже примере показано, как обрабатывать `DocumentChange` события, инициированные средой Word **приложения** объекта. Это событие определяется как метод на `ApplicationEvents` disp-интерфейса.
+
+Пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).  
+
+```cpp
+[ uuid(000209F7-0000-0000-C000-000000000046), hidden ]  
+dispinterface ApplicationEvents {
+properties:
+methods:
+    [id(0x00000001), restricted, hidden]
+    void Startup();
+
+    [id(0x00000002)]
+    void Quit();
+
+    [id(0x00000003)]
+    void DocumentChange();
+};
+```
+
+В примере используется `#import` для создания файлов обязательный заголовок из библиотеки типов в Word. Если вы хотите использовать этот пример с другими версиями Word, необходимо указать правильный mso dll-файла. Например Office 2000 предоставляет mso9.dll и OfficeXP предоставляет mso.dll. Этот код является упрощенной версией stdafx.h:
+
+[!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]
+
+В NotSoSimple.h отображается следующий код. Соответствующий код указан с комментариями:
+
+[!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]
+
+## <a name="see-also"></a>См. также
+
+[Обработка событий](../atl/event-handling-and-atl.md)   
+[Пример ATLEventHandling](../visual-cpp-samples.md)
 

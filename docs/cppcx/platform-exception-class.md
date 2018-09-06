@@ -19,11 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586639"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758772"
 ---
 # <a name="platformexception-class"></a>Класс Platform::Exception
 Представляет ошибки, происходящие во время выполнения приложения. Пользовательские классы исключений не могут быть производными от класса `Platform::Exception`. Если требуется пользовательское исключение, можно использовать класс `Platform::COMException` и указать относящееся к приложению значение HRESULT.  
@@ -41,21 +41,21 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 ### <a name="constructors"></a>Конструкторы  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[Exception::Exception](#ctor)|Инициализирует новый экземпляр класса `Exception`.|  
   
 ### <a name="methods"></a>Методы  
  Класс `Exception` наследует методы `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`и `ToString()` из [Platform::Object Class](../cppcx/platform-object-class.md). Класс `Exception` содержит также следующий метод.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[Exception::CreateException](#createexception)|Создает исключение, представляющее указанное значение HRESULT.|  
   
 ### <a name="properties"></a>Свойства  
  Класс Exception также содержит следующие свойства.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|  
 |[Exception::Message](#message)|Сообщение с описанием исключения. Это значение доступно только для чтения, его нельзя изменить после создания `Exception` .|  
