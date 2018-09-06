@@ -39,11 +39,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222780"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760849"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Класс CMFCShellTreeCtrl
 `CMFCShellTreeCtrl` Класс расширяет [класс CTreeCtrl](../../mfc/reference/ctreectrl-class.md) функциональные возможности, отображая иерархию элементов оболочки.  
@@ -59,7 +59,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Включает или отключает контекстное меню.|  
 |[CMFCShellTreeCtrl::GetFlags](#getflags)|Возвращает сочетание флагов, которые передаются [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).|  

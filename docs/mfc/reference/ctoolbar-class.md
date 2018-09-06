@@ -55,11 +55,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2abbf512085c9c59e9e6874e3f815548cd9052c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217108"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760787"
 ---
 # <a name="ctoolbar-class"></a>Класс CToolBar
 Панели элементов управления, имеющие строку растровых кнопок и необязательные разделители.  
@@ -74,13 +74,13 @@ class CToolBar : public CControlBar
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CToolBar::CToolBar](#ctoolbar)|Создает объект `CToolBar`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CToolBar::CommandToIndex](#commandtoindex)|Возвращает индекс кнопки с заданному идентификатору команды.|  
 |[CToolBar::Create](#create)|На панели инструментов Windows создает и присоединяет его к `CToolBar` объекта.|  

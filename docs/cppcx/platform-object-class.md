@@ -21,11 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dd6f4eed4cefba16d95baabe38fc5268c0ae8512
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216443"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752330"
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
 Определяет общее поведение для классов ссылок и структур ссылок в приложениях среды выполнения Windows. Все экземпляры классов ссылок и структур ссылок могут неявно преобразовываться в Platform::Object^ и переопределять его виртуальный метод ToString.  
@@ -40,13 +40,13 @@ public ref class Object : Object
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Object::Object](#ctor)|Инициализирует новый экземпляр класса Object.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Object::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
 |[Object::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  

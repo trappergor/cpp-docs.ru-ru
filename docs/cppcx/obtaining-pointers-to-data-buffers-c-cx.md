@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b8a36573e72b173180e89b48403829a9387d4ee8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212509"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757027"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Получение указателей на буферы данных (C++/CX)
 В среде выполнения Windows [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) интерфейс предоставляет не зависящий от языка и основанный способ доступа к буферам данных. В C++ можно получить необработанный указатель на базовый массив байтов с помощью интерфейса IBufferByteAccess библиотеки среды выполнения Windows, определенный в файле robuffer.h. Благодаря такому подходу можно изменить массив байтов на месте без создания лишний копий данных.  

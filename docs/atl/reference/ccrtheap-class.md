@@ -21,121 +21,142 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c99d1ef7b28a9325d59db2144be11fa63cc99f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5244990d720cd36e0a040e9243067e49716d2549
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883051"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754769"
 ---
 # <a name="ccrtheap-class"></a>Класс CCRTHeap
-Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функции кучи CRT.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функции кучи CRT.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 class CCRTHeap : public IAtlMemMgr
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CCRTHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|  
-|[CCRTHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|  
-|[CCRTHeap::GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.|  
-|[CCRTHeap::Reallocate](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|  
-  
-## <a name="remarks"></a>Примечания  
- `CCRTHeap` реализует памяти, с помощью CRT функций выделения кучи функций, включая [malloc](../../c-runtime-library/reference/malloc.md), [бесплатный](../../c-runtime-library/reference/free.md), [realloc](../../c-runtime-library/reference/realloc.md), и [_msize](../../c-runtime-library/reference/msize.md).  
-  
-## <a name="example"></a>Пример  
- См. в примере [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `IAtlMemMgr`  
-  
- `CCRTHeap`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlmem.h  
-  
-##  <a name="allocate"></a>  CCRTHeap::Allocate  
- Вызовите этот метод, чтобы выделить блок памяти.  
-  
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CCRTHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
+|[CCRTHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|
+|[CCRTHeap::GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.|
+|[CCRTHeap::Reallocate](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|
+
+## <a name="remarks"></a>Примечания
+
+`CCRTHeap` реализует памяти, с помощью CRT функций выделения кучи функций, включая [malloc](../../c-runtime-library/reference/malloc.md), [бесплатный](../../c-runtime-library/reference/free.md), [realloc](../../c-runtime-library/reference/realloc.md), и [_msize](../../c-runtime-library/reference/msize.md).
+
+## <a name="example"></a>Пример
+
+См. в примере [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`IAtlMemMgr`
+
+`CCRTHeap`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlmem.h
+
+##  <a name="allocate"></a>  CCRTHeap::Allocate
+
+Вызовите этот метод, чтобы выделить блок памяти.
+
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *nBytes*  
- Запрошенное число байтов в новом блоке памяти.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на начало выделенного блока памяти.  
-  
-### <a name="remarks"></a>Примечания  
- Вызовите [CCRTHeap::Free](#free) или [CCRTHeap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.  
-  
- Реализовано с помощью [malloc](../../c-runtime-library/reference/malloc.md).  
-  
-##  <a name="free"></a>  CCRTHeap::Free  
- Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*nBytes*  
+Запрошенное число байтов в новом блоке памяти.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает указатель на начало выделенного блока памяти.
+
+### <a name="remarks"></a>Примечания
+
+Вызовите [CCRTHeap::Free](#free) или [CCRTHeap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.
+
+Реализовано с помощью [malloc](../../c-runtime-library/reference/malloc.md).
+
+##  <a name="free"></a>  CCRTHeap::Free
+
+Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.
+
 ```
 virtual void Free(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *p*  
- Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.  
-  
-### <a name="remarks"></a>Примечания  
- Реализовано с помощью [бесплатный](../../c-runtime-library/reference/free.md).  
-  
-##  <a name="getsize"></a>  CCRTHeap::GetSize  
- Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*p*  
+Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.
+
+### <a name="remarks"></a>Примечания
+
+Реализовано с помощью [бесплатный](../../c-runtime-library/reference/free.md).
+
+##  <a name="getsize"></a>  CCRTHeap::GetSize
+
+Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.
+
 ```
 virtual size_t GetSize(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *p*  
- Указатель на область памяти, выделенную ранее данным диспетчером памяти.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает размер выделенного блока памяти в байтах.  
-  
-### <a name="remarks"></a>Примечания  
- Реализовано с помощью [_msize](../../c-runtime-library/reference/msize.md).  
-  
-##  <a name="reallocate"></a>  CCRTHeap::Reallocate  
- Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*p*  
+Указатель на область памяти, выделенную ранее данным диспетчером памяти.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает размер выделенного блока памяти в байтах.
+
+### <a name="remarks"></a>Примечания
+
+Реализовано с помощью [_msize](../../c-runtime-library/reference/msize.md).
+
+##  <a name="reallocate"></a>  CCRTHeap::Reallocate
+
+Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.
+
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *p*  
- Указатель на область памяти, выделенную ранее данным диспетчером памяти.  
-  
- *nBytes*  
- Запрошенное число байтов в новом блоке памяти.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на начало выделенного блока памяти.  
-  
-### <a name="remarks"></a>Примечания  
- Вызовите [CCRTHeap::Free](#free) для освобождения памяти, выделенной с помощью этого метода. Реализовано с помощью [realloc](../../c-runtime-library/reference/realloc.md).  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../../atl/atl-class-overview.md)   
- [Класс CComHeap](../../atl/reference/ccomheap-class.md)   
- [Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)   
- [Класс CLocalHeap](../../atl/reference/clocalheap-class.md)   
- [Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
- [Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*p*  
+Указатель на область памяти, выделенную ранее данным диспетчером памяти.
+
+*nBytes*  
+Запрошенное число байтов в новом блоке памяти.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает указатель на начало выделенного блока памяти.
+
+### <a name="remarks"></a>Примечания
+
+Вызовите [CCRTHeap::Free](#free) для освобождения памяти, выделенной с помощью этого метода. Реализовано с помощью [realloc](../../c-runtime-library/reference/realloc.md).
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Класс CComHeap](../../atl/reference/ccomheap-class.md)   
+[Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)   
+[Класс CLocalHeap](../../atl/reference/clocalheap-class.md)   
+[Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
+[Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)

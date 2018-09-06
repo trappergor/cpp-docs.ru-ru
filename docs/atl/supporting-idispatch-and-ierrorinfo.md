@@ -1,5 +1,5 @@
 ---
-title: Поддержка IDispatch и IErrorInfo | Документы Microsoft
+title: Поддержка IDispatch и IErrorInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f4c99da3989cce84bd5b6bd3bbfee8df97ff43
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d9c27dfe81c3bbd2978f418c8e942ac20190b30
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360953"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753612"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Поддержка IDispatch и IErrorInfo
-Класс шаблона можно использовать [IDispatchImpl](../atl/reference/idispatchimpl-class.md) для реализации по умолчанию из `IDispatch Interface` часть любых двух интерфейсов объекта.  
-  
- Если объект использует `IErrorInfo` отчетов ошибок обратно клиенту, то объект должен поддерживать интерфейс `ISupportErrorInfo Interface` интерфейс. Класс шаблона [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) позволяет легко реализовать это, если имеется только один интерфейс, который приводит к возникновению ошибки в объекте.  
-  
-## <a name="see-also"></a>См. также  
- [Основы COM-объектов ATL](../atl/fundamentals-of-atl-com-objects.md)
+
+Можно использовать класс шаблона [IDispatchImpl](../atl/reference/idispatchimpl-class.md) для предоставления реализацию по умолчанию `IDispatch Interface` часть любого сдвоенные интерфейсы в объекте.
+
+Если объект использует `IErrorInfo` интерфейс сообщить ошибок обратно клиенту, а затем ваш объект должен поддерживать `ISupportErrorInfo Interface` интерфейс. Класс шаблона [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) предоставляет простой способ выполнить это, если имеется только один интерфейс, который выдает ошибки для объекта.
+
+## <a name="see-also"></a>См. также
+
+[Основы COM-объектов ATL](../atl/fundamentals-of-atl-com-objects.md)
 

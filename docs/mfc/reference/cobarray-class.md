@@ -53,11 +53,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5082490b9dd2e37090bac747e592b62ce51ac26a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200906"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754973"
 ---
 # <a name="cobarray-class"></a>Класс CObArray
 Поддерживает массивы указателей `CObject` .  
@@ -72,13 +72,13 @@ class CObArray : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObArray::CObArray](#cobarray)|Создает пустой массив для `CObject` указатели.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObArray::Add](#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
 |[CObArray::Append](#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|  
@@ -100,7 +100,7 @@ class CObArray : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[[CObArray::operator]](#operator_at)|Получает или задает элемент с указанным индексом.|  
   

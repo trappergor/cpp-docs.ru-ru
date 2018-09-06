@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d971d4cce8dc3a9d01a666bc8e0e6333f85260c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201378"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751573"
 ---
 # <a name="platformguid-value-class"></a>Класс значения Platform::Guid
 Представляет [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) тип в системе типов среды выполнения Windows.  
@@ -34,7 +34,7 @@ public value struct Guid
 ### <a name="members"></a>Участники  
  Структура Guid имеет методы Equals(), GetHashCode() и ToString(), производные от [Platform::Object Class](../cppcx/platform-object-class.md), и метод GetTypeCode(), производный от [Platform::Type Class](../cppcx/platform-type-class.md). У структуры Guid также имеются следующие члены.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[Guid](#ctor)|Инициализирует новый экземпляр структуры Guid.|  
 |[operator==](#operator-equality)|Оператор равенства.|  

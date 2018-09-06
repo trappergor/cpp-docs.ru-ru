@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlDebugInterfacesModule | Документы Microsoft
+title: Класс CAtlDebugInterfacesModule | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265bc9c59e240dc11ecf71b67719fc8dd1ea5ad4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dbac5c07f04725400423e72d1cc38eb0f25e48f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359226"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755531"
 ---
 # <a name="catldebuginterfacesmodule-class"></a>Класс CAtlDebugInterfacesModule
-Этот класс обеспечивает поддержку интерфейсов отладки.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот класс поддерживает интерфейсы отладки.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 class CAtlDebugInterfacesModule
-```  
-  
-## <a name="remarks"></a>Примечания  
- `CAtlDebugInterfacesModule` предоставляет поддержку, необходимые для интерфейсов отладки. Она включена в любой проект, который определяет символ [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlbase.h  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../../atl/atl-class-overview.md)   
- [Классы модуля](../../atl/atl-module-classes.md)
+```
+
+## <a name="remarks"></a>Примечания
+
+`CAtlDebugInterfacesModule` обеспечивает поддержку, необходимые для интерфейсов отладки. Он включен в любой проект, который определяет символ [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlbase.h
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Модульные классы](../../atl/atl-module-classes.md)

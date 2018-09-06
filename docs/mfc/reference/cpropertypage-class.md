@@ -51,11 +51,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203407"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757514"
 ---
 # <a name="cpropertypage-class"></a>Cpropertypage-класс
 Представляет отдельные страницы вкладки свойств, также известные как диалоговое окно вкладки.  
@@ -70,13 +70,13 @@ class CPropertyPage : public CDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPropertyPage::CPropertyPage](#cpropertypage)|Создает объект `CPropertyPage`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|Изменяет "ОК" для чтения Close и отключает кнопки "Отмена", при изменении неустранимой модальную страницу свойств на странице.|  
 |[CPropertyPage::Construct](#construct)|Создает объект `CPropertyPage`. Используйте `Construct` , если вы хотите указать параметры во время выполнения или при использовании массивов.|  
@@ -96,7 +96,7 @@ class CPropertyPage : public CDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) структуры. Предоставляет доступ к параметрам страницу основных свойств.|  
   

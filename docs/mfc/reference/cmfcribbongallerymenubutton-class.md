@@ -29,11 +29,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540097"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751699"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Класс CMFCRibbonGalleryMenuButton
 Реализует кнопку меню ленты, которая содержит коллекцию лент.  
@@ -49,13 +49,13 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|Создает и инициализирует объект `CMFCRibbonGalleryMenuButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|(Переопределяет [CMFCToolBarMenuButton::CopyFrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom).)|  
 |[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(Переопределяет [CMFCToolBarMenuButton::CreatePopupMenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu).)|  

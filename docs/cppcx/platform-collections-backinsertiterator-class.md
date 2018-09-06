@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2c0678dbb78aaa115c0c4f3120a8bc0d74bf1c65
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612628"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760735"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Класс Platform::Collections::BackInsertIterator
 Представляет итератор, который вставляет, а не перезаписывает элементы в конец упорядоченной коллекции.  
@@ -44,13 +44,13 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[BackInsertIterator::BackInsertIterator](#ctor)|Инициализирует новый экземпляр класса BackInsertIterator.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Оператор BackInsertIterator::operator*](#operator-dereference)|Получает ссылку на текущий объект BackInsertIterator.|  
 |[Оператор BackInsertIterator::operator++](#operator-increment)|Возвращает ссылку на текущий объект BackInsertIterator. Итератор не изменяется.|  

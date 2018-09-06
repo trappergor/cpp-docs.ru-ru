@@ -15,11 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d83afb854aaa400a02f9de95e269f85cfeba1a96
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586876"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761516"
 ---
 # <a name="platformibox-interface"></a>Интерфейс Platform::IBox
 [Platform::IBox](../cppcx/platform-ibox-interface.md) — это имя C++ для интерфейса `Windows::Foundation::IReference` .  
@@ -45,7 +45,7 @@ interface class IBox
   
  **Свойства**  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Значение](#value)|Возвращает распакованное значение, которое ранее хранилось в этом экземпляре `IBox` .|  
 

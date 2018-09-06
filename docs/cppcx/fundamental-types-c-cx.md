@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1e30e7ced4f4e761f7342811c533c1f361d0b1df
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597877"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754199"
 ---
 # <a name="fundamental-types-ccx"></a>Фундаментальные типы (C++/CX)
 В дополнение к стандартным встроенным типам C++, C + +/ CX поддерживает систему типов, которая определяется архитектура среды выполнения Windows, предоставляя определения типов для среды выполнения Windows фундаментальные типы, сопоставленные со стандартными типами C++... C + +/ CX реализует логическое значение, символьные и числовые базовые типы. Эти typedef определены в пространстве имен `default` , которое никогда не требуется указывать явным образом. Кроме того, C + +/ CX предоставляет оболочки и конкретные реализации для некоторых типов среды выполнения Windows и интерфейсы.  

@@ -105,11 +105,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27ea5ccb0d15bd57a526c78cd3c57a4e83369ed0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199292"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757794"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Предоставляет функции элемента управления редактированием Windows.  
@@ -124,13 +124,13 @@ class CEdit : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CEdit::CEdit](#cedit)|Создает `CEdit` объект элемента управления.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CEdit::CanUndo](#canundo)|Определяет, можно ли отменить операцию управления ввода.|  
 |[CEdit::CharFromPos](#charfrompos)|Возвращает индексы строки и символ для символа, ближайшего к заданной позиции.|  
@@ -511,7 +511,7 @@ BOOL GetHighlight(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[out] *pichStart*|Отсчитываемый от нуля индекс первого символа в диапазоне текста, который будет выделен.|  
 |[out] *pichEnd*|Отсчитываемый от нуля индекс последнего символа в диапазоне текста, который будет выделен.|  
@@ -979,7 +979,7 @@ void SetHighlight(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *ichStart*|Отсчитываемый от нуля индекс первого символа в диапазоне текста для выделения.|  
 |[in] *ichEnd*|Отсчитываемый от нуля индекс последнего символа в диапазоне текста для выделения.|  
@@ -1243,7 +1243,7 @@ BOOL ShowBalloonTip(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *pEditBalloonTip*|Указатель на [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) структура, описывающая всплывающей подсказки.|  
 |[in] *lpszTitle*|Указатель на строку Юникода, которая содержит заголовок всплывающей подсказки.|  

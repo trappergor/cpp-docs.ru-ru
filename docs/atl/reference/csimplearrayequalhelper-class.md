@@ -1,5 +1,5 @@
 ---
-title: Класс CSimpleArrayEqualHelper | Документы Microsoft
+title: Класс CSimpleArrayEqualHelper | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,61 +18,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6660f72dbd91a41670b3c5f8772d21caf4b8abc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87b23ba46ee4a8e25c15b4d9e51b87c444da67f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362132"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758219"
 ---
 # <a name="csimplearrayequalhelper-class"></a>Класс CSimpleArrayEqualHelper
-Этот класс представляет вспомогательный класс для [CSimpleArray](../../atl/reference/csimplearray-class.md) класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот класс представляет вспомогательный объект для [CSimpleArray](../../atl/reference/csimplearray-class.md) класса.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 template <class T>  
 class CSimpleArrayEqualHelper
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `T`  
- Производный класс.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(Статический) Проверка двух `CSimpleArray` объекта элементов на предмет равенства.|  
-  
-## <a name="remarks"></a>Примечания  
- Этот класс признаки является дополнением к `CSimpleArray` класса. Он предоставляет метод для сравнения двух элементов, хранящихся в `CSimpleArray` объекта. По умолчанию элементы сравниваются с помощью **operator=()**, но если в массиве содержатся сложные типы данных которых не хватает собственные оператор равенства, необходимо переопределить этот класс.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlsimpcoll.h  
-  
-##  <a name="isequal"></a>  CSimpleArrayEqualHelper::IsEqual  
- Проверка двух `CSimpleArray` объекта элементов на предмет равенства.  
-  
+```
+
+#### <a name="parameters"></a>Параметры
+
+`T`  
+Производный класс.
+
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(Статический) Сравнивает два `CSimpleArray` объекта элементов на предмет равенства.|
+
+## <a name="remarks"></a>Примечания
+
+Этот класс признаков является дополнением к `CSimpleArray` класса. Он предоставляет метод для сравнения двух элементов, хранящихся в `CSimpleArray` объекта. По умолчанию элементы сравниваются с помощью **operator=()**, но если массив содержит сложные типы данных, которые не хватает собственные оператор равенства, вам потребуется переопределение этого класса.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlsimpcoll.h
+
+##  <a name="isequal"></a>  CSimpleArrayEqualHelper::IsEqual
+
+Сравнивает два `CSimpleArray` объекта элементов на предмет равенства.
+
 ```
 static bool IsEqual(
     const T& t1,
     const T& t2);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *T1*  
- Объект типа T.  
-  
- *T2*  
- Объект типа T.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если элементы равны false в противном случае.  
-  
-## <a name="see-also"></a>См. также  
- [Класс CSimpleArray](../../atl/reference/csimplearray-class.md)   
- [Класс CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*T1*  
+Объект типа T.
+
+*T2*  
+Объект типа T.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение true, если элементы равны; значение false в противном случае.
+
+## <a name="see-also"></a>См. также
+
+[Класс CSimpleArray](../../atl/reference/csimplearray-class.md)   
+[Класс CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)

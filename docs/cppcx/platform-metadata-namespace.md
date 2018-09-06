@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607810"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759594"
 ---
 # <a name="platformmetadata-namespace"></a>Пространство имен Platform::Metadata
 Это пространство имен содержит атрибуты, которые изменяют объявления типов.  
