@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753738"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895296"
 ---
 # <a name="curl-class"></a>Класс cUrl
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` позволяет управлять поля URL-адреса, такие как путь или номер порта. `CUrl` принимает URL-адреса следующего вида:
 
-\<Схема > ://\<имя пользователя >:\<пароль > @\<имя узла >:\<номер_порта > /\<UrlPath >\<ExtraInfo >
+\<Схема > ://\<имя пользователя >:\<пароль >\@\<имя узла >:\<номер_порта > /\<UrlPath >\<ExtraInfo >
 
 (Некоторые поля являются обязательными). Например рассмотрим этот URL-адрес:
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl) разбирает его следующим образом:
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - Пароль: «секрет»
 
-- Имя узла: «www.microsoft.com»
+- Имя узла: "`www.microsoft.com`"
 
 - PortNumber: 80
 
@@ -235,7 +235,7 @@ inline BOOL CreateUrl(
 
 Этот метод добавляет его отдельные поля для создания полной строки URL-адрес, используя следующий формат:
 
-**\<Схема > ://\<пользователя >:\<передать > @\<домена >:\<порт >\<путь >\<дополнительный >**
+**\<Схема > ://\<пользователя >:\<передать >\@\<домена >:\<порт >\<путь >\<дополнительный >**
 
 При вызове этого метода *pdwMaxLength* параметр изначально должен содержать максимальную длину буфера строки ссылается *lpszUrl* параметра. Значение *pdwMaxLength* параметр будет дополняться фактическую длину строки URL-адреса.
 
