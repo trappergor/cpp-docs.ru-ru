@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269544"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900516"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Настройка проекта Linux CMake
 
@@ -30,7 +30,7 @@ ms.locfileid: "39269544"
 В этом разделе предполагается, что вы уже знакомы с поддержкой CMake в Visual Studio. Дополнительные сведения см. в разделе [Инструменты CMake для Visual C++](../ide/cmake-tools-for-visual-cpp.md). Дополнительные сведения о CMake см. на странице [Сборка, тестирование и упаковка программного обеспечения с помощью CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Если диспетчер пакетов предоставляет более раннюю версию CMake, можно [создать CMake из источника](#build-a-supported-cmake release-from-source) или скачать нужную версию на [официальной странице CMake](https://cmake.org/download/). Для версии CMake от Майкрософт, которая поддерживает панель [Представление целевых объектов CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) в Visual Studio, скачайте последние готовые двоичные файлы: [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+> Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт, которая поддерживает панель [Представление целевых объектов CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) в Visual Studio, скачайте последние готовые двоичные файлы: [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). Если диспетчер пакетов предоставляет более раннюю версию, чем CMake 3.8, можно [создать CMake из источника](#build-a-supported-cmake-release-from-source) или, если вы предпочитаете использовать стандартный CMake, скачать нужную версию на [официальной странице CMake](https://cmake.org/download/). 
 
 ## <a name="open-a-folder"></a>Открытие папки
 
@@ -87,10 +87,16 @@ add_executable(hello-cmake hello.cpp)
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
       "remoteCopySources": true,
       "remoteCopySourcesOutputVerbosity": "Normal",
       "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [".vs", ".git"],
+      "rsyncCommandArgs" : "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput" : "false",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
@@ -98,7 +104,19 @@ add_executable(hello-cmake hello.cpp)
 }
 ```
 
-Значение `name` может быть любым. Значение `remoteMachineName` указывает, какая удаленная система будет целевым объектом, если систем несколько. Чтобы помочь вам выбрать нужную систему, для этого поля включена технология IntelliSense. Поле `remoteCMakeListsRoot` указывает, в какое место в удаленной системе будут скопированы источники проекта Поле `remoteBuildRoot` указывает, в каком месте в удаленной системе будут формироваться выходные данные сборки. Эти выходные данные также копируются локально в место, указанное с помощью `buildRoot`.
+Значение `name` может быть любым. Значение `remoteMachineName` указывает, какая удаленная система будет целевым объектом, если систем несколько. Чтобы помочь вам выбрать нужную систему, для этого поля включена технология IntelliSense. Поле `remoteCMakeListsRoot` указывает, в какое место в удаленной системе будут скопированы источники проекта Поле `remoteBuildRoot` указывает, в каком месте в удаленной системе будут формироваться выходные данные сборки. Эти выходные данные также копируются локально в место, указанное с помощью `buildRoot`. Поля `remoteInstallRoot` и `installRoot` похожи на `remoteBuildRoot` и `buildRoot`, но применяются во время установки cmake. Запись `remoteCopySources` определяет, копируются ли ваши локальные источники на удаленный компьютер. Можно установить false, если у вас много файлов и вы уже синхронизируете источники самостоятельно. Значение `remoteCopyOutputVerbosity` определяет уровень детализации операции копирования на случай, если вам необходимо будет диагностировать ошибки. Запись `remoteCopySourcesConcurrentCopies` определяет, сколько процессов создается для копирования. Значение `remoteCopySourcesMethod` может быть rsync или sftp. Поле `remoteCopySourcesExclusionList` позволяет указать, что будет скопировано на удаленный компьютер. Значение `rsyncCommandArgs` позволяет управлять методом копирования rsync. Поле `remoteCopyBuildOutput` указывает, будут ли выходные данные удаленной сборки копироваться в папку локальной сборки.
+
+Кроме того, существуют некоторые необязательные параметры, которые можно использовать для дополнительного контроля:
+
+```json
+{
+      "remotePreBuildCommand": "",
+      "remotePreGenerateCommand": "",
+      "remotePostBuildCommand": "",
+}
+```
+
+Эти параметры позволяют вам выполнять команды в окне удаленного ввода до и после сборки и до создания CMake. Они могут быть любой допустимой командой в окне удаленного ввода. Выходные данные передаются обратно в Visual Studio.
 
 ## <a name="build-a-supported-cmake-release-from-source"></a>Создание поддерживаемого выпуска CMake из источника
 

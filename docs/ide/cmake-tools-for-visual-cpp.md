@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238569"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900671"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Проекты CMake в Visual C++
 
@@ -221,6 +221,8 @@ JSON IntelliSense помогает изменить файл CMakeSettings.json:
 1. **variables**: содержит пару "имя — значение" для переменных CMake, которая передается в CMake в виде **-D**_имя_**=**_значение_. Если инструкции сборки проекта CMake указывают добавление каких-либо переменных непосредственно в файл кэша CMake, рекомендуется вместо этого добавить их сюда.
 1. **cmakeCommandArgs**: указывает любые дополнительные параметры, которые нужно передать в CMake.exe.
 1. **configurationType**: определяет тип конфигурации сборки для выбранного генератора. Сейчас поддерживаются значения Debug, MinSizeRel, Release и RelWithDebInfo.
+1. **ctestCommandArgs**: указывает дополнительные параметры, передаваемые в CTest при выполнении тестов.
+1. **buildCommandArgs**: указывает дополнительные параметры, передаваемые базовой системе сборки. Например, передача -v при использовании генератора Ninja приводит к тому, что Ninja выдает командные строки.
 
 ### <a name="environment-variables"></a>Переменные среды
 
