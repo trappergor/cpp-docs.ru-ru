@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f3d4f893099c129f82cfa08650c6f1f3fbbb2c46
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608551"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764583"
 ---
 # <a name="platformenum-class"></a>Класс Platform::Enum
 Класс значений, представляющий набор именованных констант.  

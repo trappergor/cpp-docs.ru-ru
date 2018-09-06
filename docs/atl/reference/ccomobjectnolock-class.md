@@ -21,115 +21,131 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85332341e1a229ce5110153c0ad6195ef0ad42c4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5af4f2ce063c817ee4bf0c9f8ee4fea3beffb075
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208179"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762909"
 ---
 # <a name="ccomobjectnolock-class"></a>Класс CComObjectNoLock
-Этот класс реализует `IUnknown` для неагрегированные объекта, но не не инкремента, счетчик блокировок модуля в конструкторе.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот класс реализует `IUnknown` для неагрегированные объекта, но не не инкремента, счетчик блокировок модуля в конструкторе.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 template<class Base>  
 class CComObjectNoLock : public Base
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *Base*  
- Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также как и из любого другого интерфейса, которые должны поддерживаться в объекте.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|Конструктор.|  
-|[CComObjectNoLock::~CComObjectNoLock](#dtor)|Деструктор|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CComObjectNoLock::AddRef](#addref)|Увеличивает счетчик ссылок на объект.|  
-|[CComObjectNoLock::QueryInterface](#queryinterface)|Возвращает указатель на запрашиваемый интерфейс.|  
-|[CComObjectNoLock::Release](#release)|Уменьшает счетчик ссылок на объект.|  
-  
-## <a name="remarks"></a>Примечания  
- `CComObjectNoLock` аналогичен [CComObject](../../atl/reference/ccomobject-class.md) тем, что он реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) для объекта неагрегированные; тем не менее, `CComObjectNoLock` выполняет подсчет приращения блокировки модуля в конструкторе.  
-  
- ATL использует `CComObjectNoLock` для фабрик классов. Как правило вы не будет использовать этот класс напрямую.  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `Base`  
-  
- `CComObjectNoLock`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlcom.h  
-  
-##  <a name="addref"></a>  CComObjectNoLock::AddRef  
- Увеличивает счетчик ссылок на объект.  
-  
+```
+
+#### <a name="parameters"></a>Параметры
+
+*Base*  
+Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также как и из любого другого интерфейса, которые должны поддерживаться в объекте.
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|Конструктор.|
+|[CComObjectNoLock::~CComObjectNoLock](#dtor)|Деструктор|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CComObjectNoLock::AddRef](#addref)|Увеличивает счетчик ссылок на объект.|
+|[CComObjectNoLock::QueryInterface](#queryinterface)|Возвращает указатель на запрашиваемый интерфейс.|
+|[CComObjectNoLock::Release](#release)|Уменьшает счетчик ссылок на объект.|
+
+## <a name="remarks"></a>Примечания
+
+`CComObjectNoLock` аналогичен [CComObject](../../atl/reference/ccomobject-class.md) тем, что он реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) для объекта неагрегированные; тем не менее, `CComObjectNoLock` выполняет подсчет приращения блокировки модуля в конструкторе.
+
+ATL использует `CComObjectNoLock` для фабрик классов. Как правило вы не будет использовать этот класс напрямую.
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`Base`
+
+`CComObjectNoLock`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlcom.h
+
+##  <a name="addref"></a>  CComObjectNoLock::AddRef
+
+Увеличивает счетчик ссылок на объект.
+
 ```
 STDMETHOD_(ULONG, AddRef)();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Значение, которое может быть полезно для диагностики или тестирования.  
-  
-##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock  
- Конструктор. В отличие от [CComObject](../../atl/reference/ccomobject-class.md), не увеличивает счетчик блокировки модуля.  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение, которое может быть полезно для диагностики или тестирования.
+
+##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock
+
+Конструктор. В отличие от [CComObject](../../atl/reference/ccomobject-class.md), не увеличивает счетчик блокировки модуля.
+
 ```
 CComObjectNoLock(void* = NULL);
-```  
-  
-### <a name="parameters"></a>Параметры  
- <em>void\*</em>  
- [in] Этот параметр без имени не используется. Он существует для согласованности с другими `CComXXXObjectXXX` конструкторы.  
-  
-##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
- Деструктор  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+<em>void\*</em>  
+[in] Этот параметр без имени не используется. Он существует для согласованности с другими `CComXXXObjectXXX` конструкторы.
+
+##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
+
+Деструктор
+
 ```
 ~CComObjectNoLock();
-```  
-  
-### <a name="remarks"></a>Примечания  
- Освобождает все выделенные ресурсы и вызовы [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
+```
 
-  
-##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface  
- Извлекает указатель на запрошенный интерфейс.  
-  
+### <a name="remarks"></a>Примечания
+
+Освобождает все выделенные ресурсы и вызовы [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
+
+##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
+
+Извлекает указатель на запрошенный интерфейс.
+
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *IID*  
- [in] Идентификатор запрашиваемого интерфейса.  
-  
- *ppvObject*  
- [out] Указатель на указатель интерфейса, идентифицируемый *iid*. Если объект не поддерживает этот интерфейс *ppvObject* имеет значение NULL.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение HRESULT.  
-  
-##  <a name="release"></a>  CComObjectNoLock::Release  
- Уменьшает счетчик ссылок на объект.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*IID*  
+[in] Идентификатор запрашиваемого интерфейса.
+
+*ppvObject*  
+[out] Указатель на указатель интерфейса, идентифицируемый *iid*. Если объект не поддерживает этот интерфейс *ppvObject* имеет значение NULL.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Стандартное значение HRESULT.
+
+##  <a name="release"></a>  CComObjectNoLock::Release
+
+Уменьшает счетчик ссылок на объект.
+
 ```
 STDMETHOD_(ULONG, Release)();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- В отладочных сборках `Release` возвращает значение, которое может быть полезно для диагностики или тестирования. В неотладочных сборках `Release` всегда возвращает значение 0.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+В отладочных сборках `Release` возвращает значение, которое может быть полезно для диагностики или тестирования. В неотладочных сборках `Release` всегда возвращает значение 0.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../../atl/atl-class-overview.md)

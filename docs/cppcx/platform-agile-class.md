@@ -21,11 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596606"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763436"
 ---
 # <a name="platformagile-class"></a>Класс Platform::Agile
 Представляет объект, имеющий MashalingBehavior = Standard, как объект Agile, который значительно снижает вероятность возникновения в среде выполнения исключений, связанных с потоками. `Agile<T>` позволяет объекту, отличному от Agile, вызывать тот же или другой поток или быть вызванным из этих потоков. Дополнительные сведения см. в разделе [работа с потоками и маршалинг](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -50,14 +50,14 @@ class Agile;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Agile::Agile](#ctor)|Инициализирует новый экземпляр класса Agile.|  
 |[Деструктор Agile::~Agile](#dtor)|Ликвидирует текущий экземпляр класса Agile.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Agile::Get](#get)|Возвращает дескриптор объекта, представленного текущим объектом Agile.|  
 |[Agile::GetAddressOf](#getaddressof)|Повторно инициализирует текущий объект Agile и возвращает адрес дескриптора для объекта типа `T`.|  
@@ -66,7 +66,7 @@ class Agile;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Agile::operator->](#operator-arrow)|Извлекает дескриптор объекта, представленного текущим объектом Agile.|  
 |[Agile::operator=](#operator-assign)|Присваивает указанное значение текущему объекту Agile.|  

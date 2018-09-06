@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adff92e4b5c849c7fab151e716561e163cd59fff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 886c300cb25b9370dee7c9ad23e8b5ff31214522
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962349"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763952"
 ---
 # <a name="file-handling-classes"></a>Классы для обработка файлов
-Эти классы предоставляют методы для обработки файлов, временные файлы и файлы, отображенные в память.  
-  
--   [CAtlFile](../atl/reference/catlfile-class.md) этот класс предоставляет тонкую оболочку Windows API обработки файлов.  
-  
--   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) этот класс представляет размещенного в памяти файла, добавление оператора приведения к методам [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).  
-  
--   [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) этот класс представляет файл, размещенный в памяти.  
-  
--   [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md) этот класс предоставляет методы для создания и использования временных файлов.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../atl/atl-class-overview.md)
+
+Эти классы предоставляют методы для обработки файлов, временные файлы и файлы, отображенные в память.
+
+- [CAtlFile](../atl/reference/catlfile-class.md) этот класс предоставляет тонкую оболочку Windows API обработки файлов.
+
+- [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) этот класс представляет размещенного в памяти файла, добавление оператора приведения к методам [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).
+
+- [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) этот класс представляет файл, размещенный в памяти.
+
+- [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md) этот класс предоставляет методы для создания и использования временных файлов.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../atl/atl-class-overview.md)
 

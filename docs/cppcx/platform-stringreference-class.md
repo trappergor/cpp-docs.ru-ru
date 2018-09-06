@@ -18,11 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609667"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767703"
 ---
 # <a name="platformstringreference-class"></a>Класс Platform::StringReference
 Тип оптимизации, который можно использовать для передачи строковых данных из входных параметров `Platform::String^` в другие методы с минимальным числом операций копирования.  
@@ -39,13 +39,13 @@ class StringReference
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[StringReference::StringReference](#ctor)|Два конструктора для создания экземпляров `StringReference`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[StringReference::Data](#data)|Возвращает строковые данные как массив значений char16.|  
 |[StringReference::Length](#length)|Возвращает число символов в строке.|  
@@ -54,7 +54,7 @@ class StringReference
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[StringReference::operator=](#operator-assign)|Присваивает `StringReference` новому экземпляру `StringReference` .|  
 |[StringReference::operator()](#operator-call)|Преобразует `StringReference` в `Platform::String^`.|  

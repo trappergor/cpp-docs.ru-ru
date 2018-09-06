@@ -1,5 +1,5 @@
 ---
-title: Класс CAutoPtrElementTraits | Документы Microsoft
+title: Класс CAutoPtrElementTraits | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,71 +19,79 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c845243e3b99be10af70042688e672fa867fb888
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cab1b2699c87c09761258fcde8cbb8b4c8eaa32f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357450"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764255"
 ---
 # <a name="cautoptrelementtraits-class"></a>Класс CAutoPtrElementTraits
-Этот класс предоставляет методы, статических функций и определения типов полезны при создании коллекции интеллектуальных указателей.  
-  
+
+Этот класс предоставляет методы, статические функции и определения типов полезно при создании коллекции интеллектуальных указателей.
+
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 template<typename T>  
 class CAutoPtrElementTraits 
     : public CDefaultElementTraits<ATL::CAutoPtr<T>>
-```    
-  
-#### <a name="parameters"></a>Параметры  
- `T`  
- Тип указателя.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-typedefs"></a>Общедоступные определения типов  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, используемый для добавления элементов к такому объекту класса коллекции.|  
-|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных для использования для получения элементов из объекта класса коллекции.|  
-  
-## <a name="remarks"></a>Примечания  
- Этот класс предоставляет методы, статических функций и определения типов для State и используется для создания объектов класса коллекции, содержащее интеллектуальных указателей. Классы [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) и [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) являются производными от `CAutoPtrElementTraits`. При создании коллекции интеллектуальных указателей, который требует вектор new и delete операторов, использовать [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) вместо него.  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
-  
- [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
-  
- [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)  
-  
- [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)  
-  
- `CAutoPtrElementTraits`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlcoll.h  
-  
-##  <a name="inargtype"></a>  CAutoPtrElementTraits::INARGTYPE  
- Тип данных, используемый для добавления элементов к такому объекту класса коллекции.  
-  
+```
+
+#### <a name="parameters"></a>Параметры
+
+`T`  
+Тип указателя.
+
+## <a name="members"></a>Участники
+
+### <a name="public-typedefs"></a>Общедоступные определения типов
+
+|Имя|Описание|
+|----------|-----------------|
+|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|
+|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|
+
+## <a name="remarks"></a>Примечания
+
+Этот класс предоставляет методы, статические функции и определения типов для создания объектов класса коллекции, содержащий интеллектуальные указатели. Классы [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) и [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) являются производными от `CAutoPtrElementTraits`. Если для создания коллекции интеллектуальных указателей, который требуется вектор new и delete операторы, использовать [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) вместо этого.
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+
+`CAutoPtrElementTraits`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlcoll.h
+
+##  <a name="inargtype"></a>  CAutoPtrElementTraits::INARGTYPE
+
+Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.
+
 ```
 typedef CAutoPtr<T>& INARGTYPE;
-```  
-  
-##  <a name="outargtype"></a>  CAutoPtrElementTraits::OUTARGTYPE  
- Тип данных для использования для получения элементов из объекта класса коллекции.  
-  
+```
+
+##  <a name="outargtype"></a>  CAutoPtrElementTraits::OUTARGTYPE
+
+Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.
+
 ```
 typedef T *& OUTARGTYPE;
-```  
-  
-## <a name="see-also"></a>См. также  
- [Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+```
+
+## <a name="see-also"></a>См. также
+
+[Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -17,39 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b90afb9ae47ced33c331aef988489b567b1078b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 53078d740d1051a928b4592d275f33944685e622
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879906"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767108"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>Класс CComAutoDeleteCriticalSection
-Этот класс предоставляет методы для получения и освобождения владения объект критической секции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот класс предоставляет методы для получения и освобождения владения объект критической секции.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
-```  
-  
-## <a name="remarks"></a>Примечания  
- `CComAutoDeleteCriticalSection` является производным от класса [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Тем не менее `CComAutoDeleteCriticalSection` переопределяет [термин](ccomsafedeletecriticalsection-class.md#term) метод **частного** доступа, который обеспечивает внутреннюю память очистки, только когда экземпляры этого класса не выйдут из области или будут явно удалены из объем памяти.  
+```
 
-  
- Этот класс предоставляет дополнительные методы не через своего базового класса. См. в разделе [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) и [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) Дополнительные сведения о вспомогательных классов критический раздел.  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
-  
- [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)  
-  
- `CComAutoDeleteCriticalSection`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** файле atlcore.h  
-  
-## <a name="see-also"></a>См. также  
- [Класс CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
- [Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+## <a name="remarks"></a>Примечания
+
+`CComAutoDeleteCriticalSection` является производным от класса [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Тем не менее `CComAutoDeleteCriticalSection` переопределяет [термин](ccomsafedeletecriticalsection-class.md#term) метод **частного** доступа, который обеспечивает внутреннюю память очистки, только когда экземпляры этого класса не выйдут из области или будут явно удалены из объем памяти.  
+
+Этот класс предоставляет дополнительные методы не через своего базового класса. См. в разделе [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) и [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) Дополнительные сведения о вспомогательных классов критический раздел.
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
+
+[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)
+
+`CComAutoDeleteCriticalSection`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** файле atlcore.h
+
+## <a name="see-also"></a>См. также
+
+[Класс CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
+[Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)

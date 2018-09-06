@@ -24,164 +24,185 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0c6ed9fb68e685a7b8a59b049277e61f41fd2ce
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 43581995e8979ec733d8c82374896009c843166b
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885729"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766650"
 ---
 # <a name="cstringelementtraits-class"></a>Класс CStringElementTraits
-Этот класс предоставляет статические функции, используемые классами коллекцию хранения `CString` объектов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот класс предоставляет статические функции, используемые классами коллекцию хранения `CString` объектов.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 template <typename T>  
 class CStringElementTraits
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *T*  
- Тип данных, хранимых в коллекции.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-typedefs"></a>Общедоступные определения типов  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CStringElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|  
-|[CStringElementTraits::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CStringElementTraits::CompareElements](#compareelements)|(Статический) Вызывайте эту функцию для сравнения двух строковых элементов на предмет равенства.|  
-|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(Статический) Вызывайте эту функцию для сравнения двух строковых элементов.|  
-|[CStringElementTraits::CopyElements](#copyelements)|(Статический) Вызывайте эту функцию, чтобы скопировать `CString` элементов, сохраненную в объекте класса коллекции.|  
-|[CStringElementTraits::Hash](#hash)|(Статический) Вызывайте эту функцию для вычисления хэш-значение для заданной строки элемента.|  
-|[CStringElementTraits::RelocateElements](#relocateelements)|(Статический) Вызывайте эту функцию, чтобы переместить `CString` элементов, сохраненную в объекте класса коллекции.|  
-  
-## <a name="remarks"></a>Примечания  
- Этот класс предоставляет статические функции для копирования, перемещения и сравнения строк, а также для создания хэш-значение. Эти функции полезны при использовании класса коллекции для хранения строковых данных. Используйте [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) когда необходимы сравнения без учета регистра. Используйте [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) когда строка объекты должны восприниматься в качестве ссылки.  
-  
- Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** cstringt.h  
-  
-##  <a name="compareelements"></a>  CStringElementTraits::CompareElements  
- Вызовите эту статическую функцию для сравнения двух строковых элементов на предмет равенства.  
-  
+```
+
+#### <a name="parameters"></a>Параметры
+
+*T*  
+Тип данных, хранимых в коллекции.
+
+## <a name="members"></a>Участники
+
+### <a name="public-typedefs"></a>Общедоступные определения типов
+
+|Имя|Описание|
+|----------|-----------------|
+|[CStringElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|
+|[CStringElementTraits::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CStringElementTraits::CompareElements](#compareelements)|(Статический) Вызывайте эту функцию для сравнения двух строковых элементов на предмет равенства.|
+|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(Статический) Вызывайте эту функцию для сравнения двух строковых элементов.|
+|[CStringElementTraits::CopyElements](#copyelements)|(Статический) Вызывайте эту функцию, чтобы скопировать `CString` элементов, сохраненную в объекте класса коллекции.|
+|[CStringElementTraits::Hash](#hash)|(Статический) Вызывайте эту функцию для вычисления хэш-значение для заданной строки элемента.|
+|[CStringElementTraits::RelocateElements](#relocateelements)|(Статический) Вызывайте эту функцию, чтобы переместить `CString` элементов, сохраненную в объекте класса коллекции.|
+
+## <a name="remarks"></a>Примечания
+
+Этот класс предоставляет статические функции для копирования, перемещения и сравнения строк, а также для создания хэш-значение. Эти функции полезны при использовании класса коллекции для хранения строковых данных. Используйте [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) когда необходимы сравнения без учета регистра. Используйте [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) когда строка объекты должны восприниматься в качестве ссылки.
+
+Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** cstringt.h
+
+##  <a name="compareelements"></a>  CStringElementTraits::CompareElements
+
+Вызовите эту статическую функцию для сравнения двух строковых элементов на предмет равенства.
+
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *str1*  
- Первая строка, элемент.  
-  
- *str2*  
- Вторая строка элемента.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если элементы равны; значение false в противном случае.  
-  
-##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered  
- Вызовите эту статическую функцию для сравнения двух элементов строки.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*str1*  
+Первая строка, элемент.
+
+*str2*  
+Вторая строка элемента.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение true, если элементы равны; значение false в противном случае.
+
+##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered
+
+Вызовите эту статическую функцию для сравнения двух элементов строки.
+
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *str1*  
- Первая строка, элемент.  
-  
- *str2*  
- Вторая строка элемента.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Нуль, если строки идентичны, < 0 Если *str1* — меньше, чем *str2*, или > 0 Если *str1* больше, чем *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) метод используется для выполнения сравнений.  
+```
 
-  
-##  <a name="copyelements"></a>  CStringElementTraits::CopyElements  
- Вызовите эту статическую функцию, чтобы скопировать `CString` элементов, сохраненную в объекте класса коллекции.  
-  
+### <a name="parameters"></a>Параметры
+
+*str1*  
+Первая строка, элемент.
+
+*str2*  
+Вторая строка элемента.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Нуль, если строки идентичны, < 0 Если *str1* — меньше, чем *str2*, или > 0 Если *str1* больше, чем *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) метод используется для выполнения сравнений.  
+
+##  <a name="copyelements"></a>  CStringElementTraits::CopyElements
+
+Вызовите эту статическую функцию, чтобы скопировать `CString` элементов, сохраненную в объекте класса коллекции.
+
 ```
 static void CopyElements(
     T* pDest,
     const T* pSrc,
     size_t nElements);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *pDest*  
- Указатель на первый элемент, который будет отправляться скопированные данные.  
-  
- *pSrc*  
- Указатель на первый элемент, для копирования.  
-  
- *nElements*  
- Число элементов для копирования.  
-  
-### <a name="remarks"></a>Примечания  
- Исходный и целевой элементы не должны перекрываться.  
-  
-##  <a name="hash"></a>  CStringElementTraits::Hash  
- Вызовите эту статическую функция для вычисления хэш-значение для заданной строки элемента.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*pDest*  
+Указатель на первый элемент, который будет отправляться скопированные данные.
+
+*pSrc*  
+Указатель на первый элемент, для копирования.
+
+*nElements*  
+Число элементов для копирования.
+
+### <a name="remarks"></a>Примечания
+
+Исходный и целевой элементы не должны перекрываться.
+
+##  <a name="hash"></a>  CStringElementTraits::Hash
+
+Вызовите эту статическую функция для вычисления хэш-значение для заданной строки элемента.
+
 ```
 static ULONG Hash(INARGTYPE str);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *str*  
- Элемент строку.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает хэш-значение, вычисляемое с использованием содержимого строки.  
-  
-##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE  
- Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*str*  
+Элемент строку.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает хэш-значение, вычисляемое с использованием содержимого строки.
+
+##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE
+
+Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.
+
 ```
 typedef T::PCXSTR INARGTYPE;
-```  
-  
-##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE  
- Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.  
-  
+```
+
+##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE
+
+Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.
+
 ```
 typedef T& OUTARGTYPE;
-```  
-  
-##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements  
- Вызовите эту статическую функцию, чтобы переместить `CString` элементов, сохраненную в объекте класса коллекции.  
-  
+```
+
+##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements
+
+Вызовите эту статическую функцию, чтобы переместить `CString` элементов, сохраненную в объекте класса коллекции.
+
 ```
 static void RelocateElements(
     T* pDest,
     T* pSrc,
     size_t nElements);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *pDest*  
- Указатель на первый элемент, который будет получать перемещенные данные.  
-  
- *pSrc*  
- Указатель на первый элемент, чтобы переместить.  
-  
- *nElements*  
- Число элементов для перемещения.  
-  
-### <a name="remarks"></a>Примечания  
- Вызывает эту статическую функцию [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), что вполне достаточно для большинства типов данных. Если перемещаемый объекты содержат указатели на свои собственные члены, эту статическую функцию необходимо переопределить.  
-  
-## <a name="see-also"></a>См. также  
- [Класс CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
- [Класс CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)   
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*pDest*  
+Указатель на первый элемент, который будет получать перемещенные данные.
+
+*pSrc*  
+Указатель на первый элемент, чтобы переместить.
+
+*nElements*  
+Число элементов для перемещения.
+
+### <a name="remarks"></a>Примечания
+
+Вызывает эту статическую функцию [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), что вполне достаточно для большинства типов данных. Если перемещаемый объекты содержат указатели на свои собственные члены, эту статическую функцию необходимо переопределить.
+
+## <a name="see-also"></a>См. также
+
+[Класс CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
+[Класс CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)
