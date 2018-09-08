@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c82f54a365208c247e735e467157dfd29f9f271a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7e7514fdfc07fcbb4a1fff42d80fd138ab7d6043
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613413"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100252"
 ---
 # <a name="exceptions-ccx"></a>Исключения (C++/CX)
 
@@ -34,7 +34,7 @@ C + +/ CX поддерживает набор стандартных исклю�
 
 В следующей таблице перечислены стандартные исключения.
 
-|name|Значение HRESULT|Описание:|
+|name|Значение HRESULT|Описание|
 |----------|------------------------|-----------------|
 |COMException|*Определяемое пользователем значение hresult*|Возникает при возвращении неизвестного значения HRESULT после вызова метода COM.|
 |AccessDeniedException|E\_ACCESSDENIED|Возникает при запрете доступа к ресурсу или функции.|
@@ -91,7 +91,7 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
     if (!err->Handled) //Propagate has not been called on it yet.
 {
-     try
+    try
     {
         err->Propagate();
     }
@@ -101,7 +101,6 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
         // TODO: Log error and either take action to recover
         // or else re-throw exception to continue fail-fast
     }
-
 }
 ```
 
@@ -111,5 +110,5 @@ C + +/ CX не использует `finally` предложение.
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку Visual C++](visual-c-language-reference-c-cx.md)  
-[Справочник по пространствам имен](namespaces-reference-c-cx.md)  
+[Справочник по языку Visual C++](visual-c-language-reference-c-cx.md)<br/>
+[Справочник по пространствам имен](namespaces-reference-c-cx.md)

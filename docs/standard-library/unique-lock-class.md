@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956480"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110140"
 ---
 # <a name="uniquelock-class"></a>Класс unique_lock
 
@@ -42,20 +42,20 @@ class unique_lock;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`mutex_type`|Синоним для аргумента шаблона `Mutex`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[unique_lock](#unique_lock)|Создает объект `unique_lock`.|
 |[Деструктор ~unique_lock](#dtorunique_lock_destructor)|Освобождает все ресурсы, связанные с объектом `unique_lock`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца соответствующего объекта `mutex`.|
 |[mutex](#mutex)|Извлекает сохраненный указатель на соответствующий объект `mutex`.|
@@ -69,14 +69,14 @@ class unique_lock;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[operator bool](#op_bool)|Указывает, является ли вызывающий поток владельцем соответствующего объекта `mutex`.|
 |[оператор=](#op_eq)|Копирует сохраненный указатель `mutex` и соответствующее состояние владения из указанного объекта.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-`unique_lock`
+*unique_lock*<br/>
 
 ## <a name="requirements"></a>Требования
 
@@ -131,7 +131,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 ### <a name="parameters"></a>Параметры
 
 *Другое*  
- Объект `unique_lock`.
+Объект `unique_lock`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -182,7 +182,7 @@ void swap(unique_lock& Other) noexcept;
 ### <a name="parameters"></a>Параметры
 
 *Другое*  
- Объект `unique_lock`.
+Объект `unique_lock`.
 
 ## <a name="try_lock"></a>  try_lock
 
@@ -215,7 +215,7 @@ bool try_lock_for(
 ### <a name="parameters"></a>Параметры
 
 *Rel_time*  
- Объект [chrono::duration](../standard-library/duration-class.md), который указывает максимальный интервал времени, в течение которого метод пытается получить права владельца объекта `mutex`.
+Объект [chrono::duration](../standard-library/duration-class.md), который указывает максимальный интервал времени, в течение которого метод пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -241,7 +241,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="parameters"></a>Параметры
 
 *Abs_time*  
- Момент времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
+Момент времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -284,16 +284,16 @@ unique_lock(mutex_type& Mtx,
 ### <a name="parameters"></a>Параметры
 
 *Mtx*  
- Тип объекта мьютекса.
+Тип объекта мьютекса.
 
 *Rel_time*  
- Объект [chrono::duration](../standard-library/duration-class.md), который указывает максимальный интервал времени, в течение которого метод пытается получить права владельца объекта `mutex`.
+Объект [chrono::duration](../standard-library/duration-class.md), который указывает максимальный интервал времени, в течение которого метод пытается получить права владельца объекта `mutex`.
 
 *Abs_time*  
- Момент времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
+Момент времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
 
 *Другое*  
- Объект `unique_lock`.
+Объект `unique_lock`.
 
 ### <a name="remarks"></a>Примечания
 
