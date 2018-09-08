@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d000dce4c0009341c787a211ed8ef41d1728b51b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407776"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107551"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
@@ -56,11 +56,12 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Параметры
 
-*файл* дескриптора файла.
+*file*<br/>
+Дескриптор файла.
 
 ## <a name="remarks"></a>Примечания
 
-**_Unlock_file** функция разблокирует файл, указанный параметром *файл*. Снятие блокировки файла разрешает доступ к этому файлу других процессов. Эта функция не должен вызываться, если не **_lock_file** ранее вызывался для *файл* указателя. Вызов **_unlock_file** для файла, который не будет заблокирован, могут привести к взаимоблокировке. Пример см. в разделе [_lock_file](lock-file.md).
+**_Unlock_file** функция разблокирует файл, указанный параметром *файл*. Снятие блокировки файла разрешает доступ к этому файлу других процессов. Эта функция не должны вызываться, если не **_lock_file** был ранее вызван для *файл* указатель. Вызов **_unlock_file** в файле, который не будет заблокирован, могут привести к взаимоблокировке. Пример см. в разделе [_lock_file](lock-file.md).
 
 ## <a name="requirements"></a>Требования
 

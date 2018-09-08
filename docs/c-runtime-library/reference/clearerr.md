@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395306"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105280"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,13 +54,14 @@ void clearerr(
 
 ### <a name="parameters"></a>Параметры
 
-*поток* указатель **ФАЙЛ** структуры.
+*поток*<br/>
+Указатель на структуру **FILE**.
 
 ## <a name="remarks"></a>Примечания
 
-**Clearerr** функция сбрасывает индикатор ошибки и индикатор end of file для *поток*. Индикаторы ошибок, не удаляются автоматически; После задания индикатор ошибок для заданного потока операций в этом потоке продолжать возвращать значение ошибки до **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, или [rewind](rewind.md) вызывается.
+**Clearerr** функция сбрасывает индикатор ошибки и индикатор окончания файла для *поток*. Индикаторы ошибок автоматически не удаляются; После как индикатор ошибки для указанного потока будет задан, операции в этом потоке будут возвращать значение ошибки до **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, или [rewind](rewind.md) вызывается.
 
-Если *поток* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает. Дополнительные сведения о **errno** и кодах ошибок см. в разделе [константы errno](../../c-runtime-library/errno-constants.md).
+Если *поток* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает. Дополнительные сведения о **errno** и кодах ошибок см. в разделе [константы errno](../../c-runtime-library/errno-constants.md).
 
 Существует более безопасная версия этой функции, см. раздел [clearerr_s](clearerr-s.md).
 
