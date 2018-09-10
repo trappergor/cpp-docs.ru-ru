@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad7a0a5263d001d9dc77dd8d9e8cf0cf70100b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a7d1381e511bc98b446e3f58be4d2a1c5ac15070
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219643"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105709"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Справочник по языку C++ (C++/CX)
 
@@ -24,7 +24,6 @@ C + +/ CX представляет собой набор расширений я
 > C + +/ WinRT — это новый "," стандартный C ++ 17 языковых проекции для API среды выполнения Windows. Она доступна в последний пакет SDK Windows 10 версии 1803 и далее. C + +/ WinRT реализуется полностью в файлах заголовков и предоставляющая с первоклассный доступ к современных API Windows.
 
 > С использованием C + +/ WinRT, можно одновременно использовать и создавать интерфейсы API среды выполнения Windows, с помощью любой совместимый со стандартами C ++ 17 компилятор. C + +/ WinRT обычно работает быстрее и создает меньше двоичных файлов, чем любой другой параметр языка для среды выполнения Windows. Мы продолжим предоставлять поддержку C + +/ CX и WRL, но настоятельно рекомендуется, использовать новые приложения C + +/ WinRT. Дополнительные сведения см. в разделе [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
-
 
 С помощью C + +/ CX, можно создать:
 

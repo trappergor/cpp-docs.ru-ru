@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758382"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103883"
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -46,17 +46,16 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>Параметры
 
-*K*  
- Тип ключа в паре "ключ-значение".
+*K*<br/>
+Тип ключа в паре "ключ-значение".
 
-*V*  
+*V*<br/>
 Тип значения в паре "ключ-значение".
 
-*C*  
+*C*<br/>
 Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию [std::less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()*  
-Созданный компилятором функция, которая проверяет тип *K* и *V* и предоставляет понятное сообщение об ошибке, если тип не может храниться в сопоставлении.
+*__is_valid_winrt_type()* компилятором функция, которая проверяет тип *K* и *V* и предоставляет понятное сообщение об ошибке, если тип не может храниться в сопоставлении.
 
 ### <a name="remarks"></a>Примечания
 
@@ -169,7 +168,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ, используемый для поиска элемента Map. Тип *ключ* является именем типа *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -188,10 +187,10 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
-*значение*  
+*значение*<br/>
 Значение из пары "ключ-значение". Тип *значение* является именем типа *V*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -210,7 +209,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ, используемый для поиска элемента в сопоставлении. Тип *ключ* является именем типа *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -240,19 +239,19 @@ Map(
 
 ### <a name="parameters"></a>Параметры
 
-*InIt*  
+*InIt*<br/>
 Имя типа текущего объекта Map.
 
-*Зап.*  
+*Зап.*<br/>
 Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map.
 
-*m*  
+*m*<br/>
 Ссылка или [значения lvalue и rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для `map Class` , используемый для инициализации текущего объекта Map.
 
-*Первый*  
+*Первый*<br/>
 Итератор ввода первого элемента в диапазоне элементов, используемый для инициализации текущего объекта Map.
 
-*последний*  
+*последний*<br/>
 Итератор ввода первого элемента после диапазона элементов, используемый для инициализации текущего объекта Map.
 
 ## <a name="mapchanged"></a>  Событие MAP::MapChanged
@@ -285,7 +284,7 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
 ## <a name="size"></a>  Метод MAP::size
@@ -304,5 +303,5 @@ virtual property unsigned int Size;
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Platform](platform-namespace-c-cx.md)  
-[Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Пространство имен Platform](platform-namespace-c-cx.md)<br/>
+[Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

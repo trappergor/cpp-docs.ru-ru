@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbac9637083a61b7fce03a844201530116b882b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 60a12c18ec4e174087900f7386d948ea3ab16a89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964363"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102490"
 ---
 # <a name="basicstringstream-class"></a>Класс basic_stringstream
 
@@ -42,11 +42,14 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Alloc* класс распределителя.
+*Alloc*<br/>
+Класс распределителя.
 
-*Elem* тип основного элемента строки.
+*Elem*<br/>
+Тип основного элемента строки.
 
-*TR* признаки символа основному элементу строки.
+*Tr*<br/>
+Признаки символа, соответствующие основному элементу строки.
 
 ## <a name="remarks"></a>Примечания
 
@@ -54,19 +57,19 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_stringstream](#basic_stringstream)|Создает объект типа `basic_stringstream`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Этот тип является синонимом для параметра шаблона `Alloc`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[rdbuf](#rdbuf)|Возвращает адрес буфера сохраненного потока типа `pointer` в [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|
 |[str](#str)|Задает или получает текст в буфере строк без изменения позиции записи.|
@@ -97,9 +100,11 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>Параметры
 
-*_Режим* одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим*<br/>
+Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*STR* объект типа `basic_string`.
+*str*<br/>
+Объект типа `basic_string`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -137,7 +142,8 @@ void str(
 
 ### <a name="parameters"></a>Параметры
 
-*_Newstr* новую строку.
+*_Newstr*<br/>
+Новая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

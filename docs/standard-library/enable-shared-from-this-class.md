@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e5b0b0c55c5a5dd0a48d2437fc83fa43226f5a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d74db7e9c88baec8aad7f966c0af3f2ec7840f0a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956148"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110556"
 ---
 # <a name="enablesharedfromthis-class"></a>Класс enable_shared_from_this
 
@@ -46,7 +46,8 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-*Ty* тип, управляемый общим указателем.
+*Ty*<br/>
+Тип, управляемый общим указателем.
 
 ## <a name="remarks"></a>Примечания
 

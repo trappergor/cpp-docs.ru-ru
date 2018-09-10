@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198319"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105319"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -32,7 +32,7 @@ ms.locfileid: "43198319"
 
 ### <a name="parameters"></a>Параметры
 
-*Параметры*<br/>
+*options*<br/>
 Можно указать следующие параметры для **pgomgr**:
 
 - **/ help** или **/?** Выводит доступную **pgomgr** параметры.
@@ -50,7 +50,8 @@ ms.locfileid: "43198319"
 *pgcfiles*<br/>
 Один или несколько PGC-файлы, данные профиля, которые необходимо объединить в PGD-файла. Можно указать один или несколько файлов .pgc. Если вы не укажете все файлы .pgc **pgomgr** объединяет все файлы .pgc, имена которых совпадают с PGD-файла.
 
-*pgdFile* PGD-файла, в который при объединении данных из PGC-файл или файлы.
+*pgdFile*<br/>
+PGD-файла, в который при объединении данных из PGC-файл или файлы.
 
 ## <a name="remarks"></a>Примечания
 

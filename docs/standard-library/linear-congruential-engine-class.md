@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3b5ed9880a29e0738f67ca30695ea87c81de6b7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958283"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110218"
 ---
 # <a name="linearcongruentialengine-class"></a>Класс linear_congruential_engine
 
@@ -55,13 +55,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Параметры
 
-*UIntType* беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*Объект* **множитель**. **Предварительные условия** : см. раздел "Примечания".
+*A*<br/>
+**Множитель**. **Предварительные условия** : см. раздел "Примечания".
 
-*C* **приращения**. **Предварительные условия** : см. раздел "Примечания".
+*C*<br/>
+**Приращение**. **Предварительные условия** : см. раздел "Примечания".
 
-*M* **модуля**. **Предварительные условия** : см. раздел "Примечания".
+*M*<br/>
+**Остаток от деления**. **Предварительные условия** : см. раздел "Примечания".
 
 ## <a name="members"></a>Участники
 

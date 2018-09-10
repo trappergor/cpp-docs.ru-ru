@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d27d141b4ec475f3df6e4bf56dba80850767beb0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957364"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106773"
 ---
 # <a name="isfundamental-class"></a>Класс is_fundamental
 
@@ -37,7 +37,8 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty* запрашиваемый тип.
+*Ty*<br/>
+Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 

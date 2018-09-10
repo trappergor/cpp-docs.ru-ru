@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 264f61ede0fb47e198459593b2eea154846cc7b9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962560"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108295"
 ---
 # <a name="regexiterator-class"></a>Класс regex_iterator
 
@@ -75,11 +75,14 @@ private:
 
 ### <a name="parameters"></a>Параметры
 
-*BidIt* тип итератора для подстрок соответствия.
+*BidIt*<br/>
+Тип итератора для подстрок соответствия.
 
-*Elem* тип элементов для обеспечения соответствия.
+*Elem*<br/>
+Тип элементов для обеспечения соответствия.
 
-*RXtraits* класс характеристик для элементов.
+*RXtraits*<br/>
+Класс характеристик для элементов.
 
 ## <a name="remarks"></a>Примечания
 
@@ -223,7 +226,8 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* итератор для сравнения.
+*right*<br/>
+Итератор для сравнения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -395,7 +399,8 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* итератор для сравнения.
+*right*<br/>
+Итератор для сравнения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -625,13 +630,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* начало последовательности для сопоставления.
+*Первый*<br/>
+Начало последовательности для сопоставления.
 
-*последний* конец последовательности для сопоставления.
+*последний*<br/>
+Конец последовательности для сопоставления.
 
-*повторно* регулярное выражение для соответствий.
+*RE*<br/>
+Регулярное выражение для соответствий.
 
-*f* флаги для соответствий.
+*f*<br/>
+Флаги для соответствий.
 
 ### <a name="remarks"></a>Примечания
 

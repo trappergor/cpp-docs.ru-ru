@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 87eb15654be3f709da92d561d048b3a7961c985f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209008"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099620"
 ---
 # <a name="backinsertiterator-class"></a>Класс back_insert_iterator
 
@@ -40,7 +40,8 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-*Контейнер* тип контейнера к задней части какие элементы являются вставит `back_insert_iterator`.
+*Контейнер*<br/>
+Тип контейнера, в конец которого итератор `back_insert_iterator` вставит элементы.
 
 ## <a name="remarks"></a>Примечания
 
@@ -48,20 +49,20 @@ class back_insert_iterator;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[back_insert_iterator](#back_insert_iterator)|Создает итератор `back_insert_iterator`, который добавляет элементы в местоположение за последним элементом в контейнере.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий контейнер для итератора `back_insert_iterator`.|
 |[reference](#reference)|Тип, предоставляющий ссылку для итератора `back_insert_iterator`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в конечную часть.|
 |[оператор++](#op_add_add)|Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
@@ -83,7 +84,8 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Параметры
 
-*_Cont* контейнера, `back_insert_iterator` вставляет элемент в коллекцию.
+*_Cont*<br/>
+Контейнер, в который `back_insert_iterator` вставляет элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -121,9 +123,9 @@ int main( )
 
    // Alternatively, insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 600;
+*backiter = 600;
    backiter++;
- *backiter = 700;
+*backiter = 700;
 
    cout << "After the insertions, the vector vec is: ( ";
    for ( vIter = vec.begin ( ) ; vIter != vec.end ( ); vIter++)
@@ -234,9 +236,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 10;
+*backiter = 10;
    backiter++;      // Increment to the next element
- *backiter = 20;
+*backiter = 20;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";
@@ -295,9 +297,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;      // Increment to the next element
- *backiter = 40;
+*backiter = 40;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";
@@ -323,7 +325,8 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Параметры
 
-*Val* значение для вставки в контейнер.
+*Val*<br/>
+Значение для вставки в контейнер.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -366,9 +369,9 @@ int main( )
    cout << ")." << endl;
 
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 10;
+*backiter = 10;
    backiter++;      // Increment to the next element
- *backiter = 20;
+*backiter = 20;
    backiter++;
 
    cout << "After the insertions, the vector vec becomes: ( ";

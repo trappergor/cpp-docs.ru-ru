@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef4b993ec628771666ac3773b575ee518c18173
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954712"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106442"
 ---
 # <a name="basiciostream-class"></a>Класс basic_iostream
 
@@ -49,19 +49,19 @@ public:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_iostream](#basic_iostream)|Создание объекта `basic_iostream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[swap](#swap)|Меняет местами содержимое предоставленного объекта `basic_iostream` на содержимое этого объекта.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор=](#op_eq)|Присваивает значение указанного объекта `basic_iostream` этому объекту. Это назначение перемещения, включающее `rvalue`, которое не оставляет копию.|
 
@@ -85,9 +85,11 @@ basic_iostream();
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf* существующий `basic_streambuf` объекта.
+*strbuf*<br/>
+Существующий объект `basic_streambuf`.
 
-*правом* существующий `basic_iostream` объект, используемый для создания нового `basic_iostream`.
+*right*<br/>
+Существующий объект `basic_iostream`, который используется для создания нового объекта `basic_iostream`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -105,7 +107,8 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `rvalue` ссылка `basic_iostream` для присваивания из.
+*right*<br/>
+Ссылка `rvalue` на объект `basic_iostream`, на основе которого будет присвоено значение.
 
 ### <a name="remarks"></a>Примечания
 
@@ -121,7 +124,8 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `basic_iostream` объект для замены.
+*right*<br/>
+Объект `basic_iostream` для обмена.
 
 ### <a name="remarks"></a>Примечания
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b651d73db043388e1dc7bf33c085f07d3aabed33
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767947"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103714"
 ---
 # <a name="atl-operators"></a>Операторы ATL
 
@@ -43,15 +43,15 @@ ms.locfileid: "43767947"
 Сравнивает `CSid` объектов или `SID` структуры (идентификатором безопасности) на предмет равенства.
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-`lhs`  
+*lhs*  
 Первый `CSid` объекта или `SID` сравниваемая структура.
 
-`rhs`  
+*правая часть*  
 Второй `CSid` объекта или `SID` сравниваемая структура.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -63,7 +63,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 Сравнивает `CSid` объектов или `SID` структуры (идентификатором безопасности) на предмет их неравенства.
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -83,7 +83,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 Проверяет `CSid` объекта или `SID` структура слева от оператора меньше, чем `CSid` объекта или `SID` структура справа (для совместимости стандартной библиотеки C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -107,7 +107,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 Проверяет `CSid` объекта или `SID` структуры слева от оператора больше, чем `CSid` объекта или `SID` структура справа (для совместимости стандартной библиотеки C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -131,7 +131,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 Проверяет `CSid` объекта или `SID` структуры слева от оператора меньше или равно `CSid` объекта или `SID` структура справа (для совместимости стандартной библиотеки C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -155,7 +155,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 Проверяет `CSid` объекта или `SID` структуры слева от оператора больше или равно `CSid` объекта или `SID` структура справа (для совместимости стандартной библиотеки C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры

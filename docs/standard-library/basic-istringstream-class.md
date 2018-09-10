@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53760cd2d69067fd93a76a35b0ba29fcc82a4664
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9580068474eba77bcf50067efefb98b5949d464f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960073"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109894"
 ---
 # <a name="basicistringstream-class"></a>Класс basic_istringstream
 
@@ -44,11 +44,14 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Alloc* класс распределителя.
+*Alloc*<br/>
+Класс распределителя.
 
-*Elem* тип основного элемента строки.
+*Elem*<br/>
+Тип основного элемента строки.
 
-*TR* признаки символа основному элементу строки.
+*Tr*<br/>
+Признаки символа, соответствующие основному элементу строки.
 
 ## <a name="remarks"></a>Примечания
 
@@ -56,19 +59,19 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_istringstream](#basic_istringstream)|Создает объект типа `basic_istringstream`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Этот тип является синонимом для параметра шаблона `Alloc`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[rdbuf](#rdbuf)|Возвращает адрес буфера сохраненного потока типа `pointer` в [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|
 |[str](#str)|Задает или получает текст в буфере строк без изменения позиции записи.|
@@ -76,7 +79,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор=](#op_eq)|Назначает значения этому объекту `basic_istringstream` из параметра объекта.|
 
@@ -112,11 +115,14 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Параметры
 
-*_Режим* одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим*<br/>
+Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*STR* объект типа `basic_string`.
+*str*<br/>
+Объект типа `basic_string`.
 
-*правом* ссылку rvalue `basic_istringstream` объекта.
+*right*<br/>
+Ссылка rvalue на объект `basic_istringstream`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -136,7 +142,8 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* ссылка rvalue на `basic_istringstream` объекта.
+*right*<br/>
+Ссылка rvalue на объект `basic_istringstream`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -172,7 +179,8 @@ void str(
 
 ### <a name="parameters"></a>Параметры
 
-*_Newstr* новую строку.
+*_Newstr*<br/>
+Новая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -196,7 +204,7 @@ void swap(basic_istringstream& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Ссылка `lvalue` на объект `basic_istringstream`.|
 

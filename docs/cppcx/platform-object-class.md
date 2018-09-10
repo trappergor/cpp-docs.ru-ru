@@ -20,169 +20,182 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd6f4eed4cefba16d95baabe38fc5268c0ae8512
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 82f9cf473a1b38e3a77b43bc5fde30057c7b1a8a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752330"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106552"
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
-Определяет общее поведение для классов ссылок и структур ссылок в приложениях среды выполнения Windows. Все экземпляры классов ссылок и структур ссылок могут неявно преобразовываться в Platform::Object^ и переопределять его виртуальный метод ToString.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-public ref class Object : Object  
-```  
-  
-### <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Object::Object](#ctor)|Инициализирует новый экземпляр класса Object.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Object::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
-|[Object::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  
-|[Object::ReferenceEquals](#referenceequals)|Определяет, являются ли указанные экземпляры класса Object одним и тем же экземпляром.|  
-|[ToString](#tostring)|Возвращает строку, представляющую текущий объект. Может быть переопределен.|  
-|[GetType](#gettype)|Получает объект [Platform::Type](../cppcx/platform-type-class.md) , описывающий текущий экземпляр.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `Object`  
-  
- `Object`  
-  
-### <a name="requirements"></a>Требования  
- **Заголовок:** vccorlib.h  
-  
- **Пространство имен:** Platform  
 
-  
+Определяет общее поведение для классов ссылок и структур ссылок в приложениях среды выполнения Windows. Все экземпляры классов ссылок и структур ссылок могут неявно преобразовываться в Platform::Object^ и переопределять его виртуальный метод ToString.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+public ref class Object : Object
+```
+
+### <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[Object::Object](#ctor)|Инициализирует новый экземпляр класса Object.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[Object::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|
+|[Object::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|
+|[Object::ReferenceEquals](#referenceequals)|Определяет, являются ли указанные экземпляры класса Object одним и тем же экземпляром.|
+|[ToString](#tostring)|Возвращает строку, представляющую текущий объект. Может быть переопределен.|
+|[GetType](#gettype)|Получает объект [Platform::Type](../cppcx/platform-type-class.md) , описывающий текущий экземпляр.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`Object`
+
+`Object`
+
+### <a name="requirements"></a>Требования
+
+**Заголовок:** vccorlib.h
+
+**Пространство имен:** Platform
+
 ## <a name="equals"></a> Метод Object::Equals
-Определяет, равен ли заданный объект текущему объекту.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-  
-bool Equals(  
-    Object^ obj  
-)  
-```  
-  
-### <a name="parameters"></a>Параметры  
- obj  
- Объект для сравнения.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Значение`true` , если объекты равны; в противном случае — значение `false`.  
-  
 
+Определяет, равен ли заданный объект текущему объекту.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+bool Equals(
+    Object^ obj
+)
+```
+
+### <a name="parameters"></a>Параметры
+
+*obj*<br/>
+Объект для сравнения.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение`true` , если объекты равны; в противном случае — значение `false`.
 
 ## <a name="gethashcode"></a>  Метод Object::GetHashCode
-Возвращает значение идентификатора `IUnknown`* для этого экземпляра, если это COM-объект, или вычисляемое хэш-значение, если это не COM-объект.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Числовое значение, которое однозначно идентифицирует этот объект.  
-  
-### <a name="remarks"></a>Примечания  
- Можно использовать GetHashCode для создание ключей объектов в сопоставлениях. Можно сравнить хэш-кодов с помощью [Object::Equals](#equals). Если эта ветвь выполнения кода очень важна, а `GetHashCode` и `Equals` работают недостаточно быстро, можно перейти вниз на соответствующий уровень COM и выполнять сравнение указателей `IUnknown` в неуправляемом коде.  
-  
 
+Возвращает значение идентификатора `IUnknown`* для этого экземпляра, если это COM-объект, или вычисляемое хэш-значение, если это не COM-объект.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Числовое значение, которое однозначно идентифицирует этот объект.
+
+### <a name="remarks"></a>Примечания
+
+Можно использовать GetHashCode для создание ключей объектов в сопоставлениях. Можно сравнить хэш-кодов с помощью [Object::Equals](#equals). Если эта ветвь выполнения кода очень важна, а `GetHashCode` и `Equals` работают недостаточно быстро, можно перейти вниз на соответствующий уровень COM и выполнять сравнение указателей `IUnknown` в неуправляемом коде.
 
 ## <a name="gettype"></a>  Метод Object::GetType
-Возвращает [Platform::Type](../cppcx/platform-type-class.md) , описывающий тип среды выполнения объекта.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-Object::GetType()  
-```  
 
-  
-### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение  
- Объект [Platform::Type](../cppcx/platform-type-class.md) , описывающий тип среды выполнения объекта.  
-  
-### <a name="remarks"></a>Примечания  
- Статический [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) может использоваться для получения [перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) значение, которое представляет текущий тип. Это наиболее полезно для встроенных типов. Код типа для любого класса ссылок помимо [Platform::String](../cppcx/platform-string-class.md) — объект (1).  
-  
- [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) класс используется в API Windows как независимый от языка способ передачи сведений о типе между компонентами Windows и приложениями. T[класс Platform::Type](../cppcx/platform-type-class.md) имеет операторы для преобразования между `Type` и `TypeName`.  
-  
- Используйте [typeid](../windows/typeid-cpp-component-extensions.md) оператора для выборки `Platform::Type` для имени класса, например, при переходе между страницами XAML:  
-  
-```  
-rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Класс Platform::Type](../cppcx/platform-type-class.md)   
- [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)   
- [Система типов] (.. /cppcx/Type-System-c-CX.md
-  
+Возвращает [Platform::Type](../cppcx/platform-type-class.md) , описывающий тип среды выполнения объекта.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+Object::GetType();
+```
+
+### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
+
+Объект [Platform::Type](../cppcx/platform-type-class.md) , описывающий тип среды выполнения объекта.
+
+### <a name="remarks"></a>Примечания
+
+Статический [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) может использоваться для получения [перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) значение, которое представляет текущий тип. Это наиболее полезно для встроенных типов. Код типа для любого класса ссылок помимо [Platform::String](../cppcx/platform-string-class.md) — объект (1).
+
+[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) класс используется в API Windows как независимый от языка способ передачи сведений о типе между компонентами Windows и приложениями. T[класс Platform::Type](../cppcx/platform-type-class.md) имеет операторы для преобразования между `Type` и `TypeName`.
+
+Используйте [typeid](../windows/typeid-cpp-component-extensions.md) оператора для выборки `Platform::Type` для имени класса, например, при переходе между страницами XAML:
+
+```
+rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
+```
+
+## <a name="see-also"></a>См. также
+
+[Класс Platform::Type](../cppcx/platform-type-class.md)<br/>
+[Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)<br/>
+[Система типов] (.. /cppcx/Type-System-c-CX.md
+
 ## <a name="ctor"></a>  Конструктор Object::Object
-Инициализирует новый экземпляр класса Object.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-public:Object()  
-```  
+
+Инициализирует новый экземпляр класса Object.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+public:Object();
+```
 
 ## <a name="referenceequals"></a>  Метод Object::ReferenceEquals
-Определяет, являются ли указанные экземпляры класса Object одним и тем же экземпляром.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)  
-```  
-  
-### <a name="parameters"></a>Параметры  
- obj1  
- Первый из сравниваемых объектов.  
-  
- obj2  
- Второй из сравниваемых объектов.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если объекты совпадают; в противном случае — значение `false`.  
- 
+
+Определяет, являются ли указанные экземпляры класса Object одним и тем же экземпляром.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
+```
+
+### <a name="parameters"></a>Параметры
+
+*объекты Obj1*<br/>
+Первый из сравниваемых объектов.
+
+*obj2*<br/>
+Второй из сравниваемых объектов.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение `true`, если объекты совпадают; в противном случае — значение `false`.
+
 ## <a name="tostring"></a>  Метод Object::ToString (C + +/ CX)
-Возвращает строку, представляющую текущий объект.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-public:  
-virtual String^ ToString()  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Строка, представляющая текущий объект. Этот метод можно переопределить, чтобы ссылочный класс или структура содержали пользовательскую строку сообщения:  
-  
-```cpp  
-public ref class Tree sealed  
-{  
-public:  
-    Tree(){}  
-    virtual Platform::String^ ToString() override  
-    {  
-      return "I’m a Tree";  
-    };  
-};  
-```  
-## <a name="see-also"></a>См. также  
- [Пространство имен Platform](platform-namespace-c-cx.md)
+
+Возвращает строку, представляющую текущий объект.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+public:
+virtual String^ ToString();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Строка, представляющая текущий объект. Этот метод можно переопределить, чтобы ссылочный класс или структура содержали пользовательскую строку сообщения:
+
+```cpp
+public ref class Tree sealed
+{
+public:
+    Tree(){}
+    virtual Platform::String^ ToString() override
+    {
+      return "I’m a Tree";
+    };
+};
+```
+## <a name="see-also"></a>См. также
+
+[Пространство имен Platform](platform-namespace-c-cx.md)

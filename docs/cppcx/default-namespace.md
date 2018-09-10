@@ -11,50 +11,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87510fe7eee6a8027e5375f82f2b6ce7bf74ec3c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c1cc9c3a133cc9931337f608c6f26eb059376ade
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754105"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108938"
 ---
 # <a name="default-namespace"></a>Пространство имен default
-`default` Пространство имен области встроенные типы, которые поддерживаются в C + +/ CX.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-namespace default;  
-```  
-  
-### <a name="members"></a>Участники  
- Все встроенные типы наследуют следующие члены.  
-  
-|||  
-|-|-|  
-|[default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md)|Определяет, равен ли заданный объект текущему объекту.|  
-|[default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|Возвращает хэш-код данного экземпляра.|  
-|[default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md)|Возвращает строку, которая представляет текущий тип.|  
-|[default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md)|Возвращает строку, которая представляет текущий тип.|  
-  
-### <a name="built-in-types"></a>Встроенные типы  
-  
-|name|Описание|  
-|----------|-----------------|  
-|`char16`|16-битовое нечисловое значение, представляющее кодовую точку Юникода (UTF-16).|  
-|`float32`|32-битовое число с плавающей запятой стандарта IEEE 754.|  
-|`float64`|64-битовое число с плавающей запятой стандарта IEEE 754.|  
-|`int16`|16-разрядное знаковое целое число.|  
-|`int32`|32-разрядное знаковое целое число.|  
-|`int64`|64-разрядное целое число со знаком.|  
-|`int8`|8-разрядное числовое значение со знаком.|  
-|`uint16`|16-разрядное целое число без знака.|  
-|`uint32`|32-разрядное целое число без знака.|  
-|`uint64`|64-разрядное целое число без знака.|  
-|`uint8`|8-разрядное числовое значение без знака.|  
-  
-### <a name="requirements"></a>Требования  
- **Заголовок:** vccorlib.h  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по языку Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+
+`default` Пространство имен области встроенные типы, которые поддерживаются в C + +/ CX.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+namespace default;
+```
+
+### <a name="members"></a>Участники
+
+Все встроенные типы наследуют следующие члены.
+
+|||
+|-|-|
+|[default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md)|Определяет, равен ли заданный объект текущему объекту.|
+|[default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|Возвращает хэш-код данного экземпляра.|
+|[default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md)|Возвращает строку, которая представляет текущий тип.|
+|[default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md)|Возвращает строку, которая представляет текущий тип.|
+
+### <a name="built-in-types"></a>Встроенные типы
+
+|name|Описание|
+|----------|-----------------|
+|`char16`|16-битовое нечисловое значение, представляющее кодовую точку Юникода (UTF-16).|
+|`float32`|32-битовое число с плавающей запятой стандарта IEEE 754.|
+|`float64`|64-битовое число с плавающей запятой стандарта IEEE 754.|
+|`int16`|16-разрядное знаковое целое число.|
+|`int32`|32-разрядное знаковое целое число.|
+|`int64`|64-разрядное целое число со знаком.|
+|`int8`|8-разрядное числовое значение со знаком.|
+|`uint16`|16-разрядное целое число без знака.|
+|`uint32`|32-разрядное целое число без знака.|
+|`uint64`|64-разрядное целое число без знака.|
+|`uint8`|8-разрядное числовое значение без знака.|
+
+### <a name="requirements"></a>Требования
+
+**Заголовок:** vccorlib.h
+
+## <a name="see-also"></a>См. также
+
+[Справочник по языку Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

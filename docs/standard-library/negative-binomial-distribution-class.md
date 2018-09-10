@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7d2035a1146c5e620d8f75dd6bba5095a7630e0a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964412"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104001"
 ---
 # <a name="negativebinomialdistribution-class"></a>Класс negative_binomial_distribution
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*IntType* целочисленный тип результата, по умолчанию **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*IntType*<br/>
+По умолчанию используется целочисленный тип результата, **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -242,11 +243,14 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*k* `k` параметр распределения.
+*k*<br/>
+Параметр распределения `k`.
 
-*p* `p` параметр распределения.
+*p*<br/>
+Параметр распределения `p`.
 
-*parm* структуру параметров, используемый для формирования распределения.
+*parm*<br/>
+Структура параметров, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -266,11 +270,14 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*k* `k` параметр распределения.
+*k*<br/>
+Параметр распределения `k`.
 
-*p* `p` параметр распределения.
+*p*<br/>
+Параметр распределения `p`.
 
-*правом* `param_type` структура, используемая для сравнения.
+*right*<br/>
+Структура `param_type`, используемая для сравнения.
 
 ### <a name="remarks"></a>Примечания
 

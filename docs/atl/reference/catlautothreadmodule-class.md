@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b782d7d53e5d97f08ebae62fc62d7a49c9f96d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b534190a4e7243f5192e6d703b056d8bcb327ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763660"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110647"
 ---
 # <a name="catlautothreadmodule-class"></a>Класс CAtlAutoThreadModule
 
 Этот класс реализует COM-сервера пула потоков, модель с подразделением.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,7 +46,7 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
 
 > [!NOTE]
->  Этот класс заменяет устаревшее [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) класса.
+> Этот класс заменяет устаревшее [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) класса.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

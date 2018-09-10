@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d14bba0e38e49145ccd7d0078f4bbfd731e08827
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964467"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110429"
 ---
 # <a name="ltiteratorgt-functions"></a>Функции &lt;iterator&gt;
 
@@ -64,9 +64,11 @@ void advance(
 
 ### <a name="parameters"></a>Параметры
 
-*InIt* итератор, который будет увеличиваться, и, должны удовлетворять требованиям для итератора ввода.
+*InIt*<br/>
+Итератор, который должен увеличен, должен удовлетворять требованиям для итератора ввода.
 
-*Отключение* целочисленный тип, который можно преобразовать в тип отличия итератора и, указывающий число приращений позиции итератора, необходимо сдвинуть.
+*Off*<br/>
+Целочисленный тип, который можно преобразовать в тип отличия итератора, указывающий число приращений позиции итератора, необходимо сдвинуть вперед.
 
 ### <a name="remarks"></a>Примечания
 
@@ -134,7 +136,8 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Параметры
 
-*_Cont* контейнер, в который должна быть выполнена вставка с обратной стороны.
+*_Cont*<br/>
+Контейнер, в который будет выполняться вставка с обратной стороны.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -172,9 +175,9 @@ int main( )
 
    // Insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;
- *backiter = 40;
+*backiter = 40;
 
    // Alternatively, insertions can be done with the
    // back_insert_iterator member function
@@ -212,9 +215,11 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Параметры
 
-*Продолжение* контейнера.
+*Продолжение*<br/>
+Контейнер.
 
-*Массив* массив объектов типа `Ty`.
+*array*<br/>
+Массив объектов перечисления `Ty`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -305,7 +310,8 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Параметры
 
-*Продолжение* контейнер или initializer_list.
+*Продолжение*<br/>
+Контейнер или initializer_list.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -337,7 +343,8 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Параметры
 
-*Продолжение* контейнер или initializer_list.
+*Продолжение*<br/>
+Контейнер или initializer_list.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -368,9 +375,11 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* первый итератор — определить, расстояние которых от второй.
+*Первый*<br/>
+Первый итератор, для которого нужно определить расстояние до второго.
 
-*последний* второй итератор — определить, расстояние которых от первого.
+*последний*<br/>
+Второй итератор, для которого нужно определить расстояние от первого.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -447,9 +456,11 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Параметры
 
-*Продолжение* контейнера.
+*Продолжение*<br/>
+Контейнер.
 
-*Массив* массив объектов типа `Ty`.
+*array*<br/>
+Массив объектов перечисления `Ty`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -472,7 +483,8 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Параметры
 
-*_Cont* объект-контейнер, front испытывает элемент вставки.
+*_Cont*<br/>
+Объект-контейнер, для которого выполняется вставка элемента в переднюю часть.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -512,7 +524,7 @@ int main( )
 
    // Using the template function to insert an element
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 100;
+*Iter = 100;
 
    // Alternatively, you may use the front_insert member function
    front_inserter ( L ) = 200;
@@ -526,9 +538,9 @@ int main( )
 
 ```Output
 The list L is:
- ( -1 0 1 2 3 4 5 6 7 8 ).
+( -1 0 1 2 3 4 5 6 7 8 ).
 After the front insertions, the list L is:
- ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
+( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
 ## <a name="inserter"></a>  inserter
@@ -545,9 +557,11 @@ inserter(
 
 ### <a name="parameters"></a>Параметры
 
-*_Cont* контейнера, к которому будут добавляться новые элементы.
+*_Cont*<br/>
+Контейнер, в который будут добавляться новые элементы.
 
-*_Where* итератор, обнаруживающий точку вставки.
+*_Where*<br/>
+Итератор, обнаруживающий точку вставки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -581,7 +595,7 @@ int main( )
 
    // Using the template version to insert an element
    insert_iterator<list <int> > Iter( L, L.begin ( ) );
- *Iter = 1;
+*Iter = 1;
 
    // Alternatively, using the member function to insert an element
    inserter ( L, L.end ( ) ) = 500;
@@ -595,9 +609,9 @@ int main( )
 
 ```Output
 The list L is:
- ( 20 30 40 ).
+( 20 30 40 ).
 After the insertions, the list L is:
- ( 1 20 30 40 500 ).
+( 1 20 30 40 500 ).
 ```
 
 ## <a name="make_checked_array_iterator"></a>  make_checked_array_iterator
@@ -611,18 +625,21 @@ After the insertions, the list L is:
 template <class Iter>
 checked_array_iterator<Iter>
     make_checked_array_iterator(
- Iter Ptr,
+Iter Ptr,
     size_t Size,
     size_t Index = 0);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель в массив назначения.
+*PTR*<br/>
+Указатель на массив назначения.
 
-*Размер* размер массива назначения.
+*Size*<br/>
+Размер массива назначения.
 
-*Индекс* необязательный индекс в массиве.
+*Index*<br/>
+Необязательный индекс массива.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -704,7 +721,8 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>Параметры
 
-*_It* итератор, хранящийся в новом перемещения итератора.
+*_It*<br/>
+Итератор, хранящийся в новом итераторе перемещения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -725,7 +743,8 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель в массив назначения.
+*PTR*<br/>
+Указатель на массив назначения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -802,9 +821,11 @@ InputIterator next(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* текущей позиции.
+*Первый*<br/>
+Текущая позиция.
 
-*_Off* число итераций.
+*_Off*<br/>
+Количество раз для прохода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -827,9 +848,11 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* текущей позиции.
+*Первый*<br/>
+Текущая позиция.
 
-*_Off* число итераций.
+*_Off*<br/>
+Количество раз для прохода.
 
 ### <a name="remarks"></a>Примечания
 

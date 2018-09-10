@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e565d5f10bdb06bff6ad8c17047ed3e11070364d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959872"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099594"
 ---
 # <a name="istreamiterator-class"></a>Класс istream_iterator
 
@@ -38,7 +38,7 @@ ms.locfileid: "38959872"
 ```cpp
 template <class Type, class CharType = char, class Traits = char_traits<CharType>, class Distance = ptrdiff_t,>
 class istream_iterator
- : public iterator<
+: public iterator<
     input_iterator_tag, Type, Distance,
     const Type *,
     const Type&>;
@@ -46,25 +46,29 @@ class istream_iterator
 
 ### <a name="parameters"></a>Параметры
 
-*Тип* тип объекта, которые нужно извлечь из входного потока.
+*Тип*<br/>
+Тип объекта, который необходимо извлечь из потока ввода.
 
-*CharType* тип, представляющий тип символа для `istream_iterator`. Этот аргумент является необязательным и значение по умолчанию — **char**.
+*CharType*<br/>
+Тип, представляющий шрифт символа для `istream_iterator`. Этот аргумент является необязательным и значение по умолчанию — **char**.
 
-*Признаки* тип, представляющий тип символа для `istream_iterator`. Этот аргумент является необязательным, и в качестве значения по умолчанию используется `char_traits`< `CharType`>.
+*Признаки*<br/>
+Тип, представляющий шрифт символа для `istream_iterator`. Этот аргумент является необязательным, и в качестве значения по умолчанию используется `char_traits`< `CharType`>.
 
-*Расстояние* подписанный целочисленный тип, представляющий тип отличия для `istream_iterator`. Этот аргумент является необязательным, и значением по умолчанию является `ptrdiff_t`.
+*Distance*<br/>
+Тип целого числа со знаком, представляющий тип отличия для `istream_iterator`. Этот аргумент является необязательным, и значением по умолчанию является `ptrdiff_t`.
 
 После создания или увеличения объекта класса istream_iterator с помощью сохраненного указателя, не содержащего null, объект фактически пытается извлечь и сохранить объект типа `Type` из соответствующего входного потока. Если извлечение завершается ошибкой, этот объект фактически заменяет сохраненный указатель указателем null, тем самым создавая индикатор конца последовательности.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[istream_iterator](#istream_iterator)|Создает итератор конца потока в качестве итератора `istream_iterator` по умолчанию или итератор `istream_iterator`, инициализированный в тип потока итератора, из которого он считывается.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, обеспечивающий тип символа для `istream_iterator`.|
 |[istream_type](#istream_type)|Тип, обеспечивающий тип потока для `istream_iterator`.|
@@ -72,7 +76,7 @@ class istream_iterator
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор*](#op_star)|Оператор удаления ссылки возвращает сохраненный объект типа `Type`, к которому обращается `istream_iterator`.|
 |[оператор>](#op_arrow)|Возвращает значение члена при наличии.|
@@ -144,7 +148,8 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Параметры
 
-*_Istr* входной поток для чтения, используется для инициализации `istream_iterator`.
+*_Istr*<br/>
+Входной поток для чтения, используется для инициализации `istream_iterator`.
 
 ### <a name="remarks"></a>Примечания
 

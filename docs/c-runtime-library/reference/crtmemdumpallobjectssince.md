@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24cf01facaba326c36454ea5410da8dbb05848f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92d6148f6cbe49799a122d1745a6a6cde4c8be30
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396873"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100383"
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 
@@ -53,17 +53,18 @@ void _CrtMemDumpAllObjectsSince(
 
 ### <a name="parameters"></a>Параметры
 
-*состояние* указатель на состояние кучи, чтобы начать формирование дампа из или **NULL**.
+*state*<br/>
+Указатель на состояние кучи, при наступлении которого должен начинаться дамп, или **NULL**.
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtMemDumpAllObjectsSince** функция выводит сведения о заголовке отладки объектов, помещенных в кучу в понятной пользователю форме. Данные дампа могут использоваться приложением для отслеживания операций выделения памяти и выявления проблем с памятью. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtMemDumpAllObjectsSince** удаляются на этапе предварительной обработки.
+**_CrtMemDumpAllObjectsSince** функция помещает в дамп данные заголовка отладки объектов, помещенных в кучу в понятной пользователю форме. Данные дампа могут использоваться приложением для отслеживания операций выделения памяти и выявления проблем с памятью. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtMemDumpAllObjectsSince** удаляются во время предварительной обработки.
 
-**_CrtMemDumpAllObjectsSince** использует значение *состояние* параметр, чтобы определить, где для инициации операции дампа. Чтобы начать формирование дампа из указанного состояния кучи, *состояние* параметр должен быть указателем на **_CrtMemState** структуру, которая должна быть заполнена, [_CrtMemCheckpoint](crtmemcheckpoint.md) перед **_CrtMemDumpAllObjectsSince** был вызван. Когда *состояние* — **NULL**, функция начинает дампа с начала выполнения программы.
+**_CrtMemDumpAllObjectsSince** использует значение *состояние* параметр, чтобы определить, куда начинаться операция дампа. Должен начинаться дамп указанного состояния кучи, *состояние* параметр должен быть указателем на **_CrtMemState** структуру, которая должна быть заполнена, [_CrtMemCheckpoint](crtmemcheckpoint.md) перед **_CrtMemDumpAllObjectsSince** был вызван. Когда *состояние* — **NULL**, функция начинает запись дампа с начала выполнения программы.
 
-Если приложение установило функция-ловушка дампа путем вызова [_CrtSetDumpClient](crtsetdumpclient.md), то каждый раз **_CrtMemDumpAllObjectsSince** выводит сведения о **_CLIENT_BLOCK** тип блока, он вызывает функцию дампа, предоставляемую приложением. По умолчанию внутренние блоки времени выполнения C (**_CRT_BLOCK**) не включаются в операции дампа памяти. [_CrtSetDbgFlag](crtsetdbgflag.md) функцию можно использовать для включения **_CRTDBG_CHECK_CRT_DF** бита **_crtDbgFlag** для учета этих блоков. Кроме того, блоки, помеченные как освобожденные или игнорируемые (**_FREE_BLOCK**, **_IGNORE_BLOCK**), в дамп памяти не включаются.
+Если приложение установило функция-ловушка дампа, вызвав [_CrtSetDumpClient](crtsetdumpclient.md), то каждый раз, **_CrtMemDumpAllObjectsSince** помещает в дамп данные о **_CLIENT_BLOCK** тип блока, он вызывает функцию дампа, предоставляемую приложением. По умолчанию внутренние блоки времени выполнения C (**_CRT_BLOCK**) не включаются в операции с дампом памяти. [_CrtSetDbgFlag](crtsetdbgflag.md) функция может использоваться для включения **_CRTDBG_CHECK_CRT_DF** бита **_crtDbgFlag** для учета этих блоков. Кроме того, блоки, помеченные как освобожденные или игнорируемые (**_FREE_BLOCK**, **_IGNORE_BLOCK**), в дамп памяти не включаются.
 
-Дополнительные сведения о функциях состояния кучи и **_CrtMemState** структуры см. в разделе [функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Дополнительные сведения о функциях управления состоянием кучи и **_CrtMemState** структуры, см. в разделе [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Требования
 
@@ -79,7 +80,7 @@ void _CrtMemDumpAllObjectsSince(
 
 ## <a name="example"></a>Пример
 
-Пример использования **_CrtMemDumpAllObjectsSince**, в разделе [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Пример использования **_CrtMemDumpAllObjectsSince**, см. в разделе [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: -F (задание размера стека) | Документы Microsoft
+title: -F (задание размера стека) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,51 +20,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed0ad03d18493cc5618f9aad2a16b07e4a01717f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373144"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103779"
 ---
 # <a name="f-set-stack-size"></a>/F (Задание размера стека)
-Задает размер стека программы в байтах.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/F number  
-```  
-  
-## <a name="arguments"></a>Аргументы  
- `number`  
- Размер стека в байтах.  
-  
-## <a name="remarks"></a>Примечания  
- Без этого параметра размер стека по умолчанию равно 1 МБ. `number` Аргумент может быть в десятичном или нотации языка. Аргумент находится в диапазоне от 1 до максимального размера стека допускаемого компоновщиком. Компоновщик Округляет указанное значение до ближайших 4 байт. Расстояние между **/F** и `number` является необязательным.  
-  
- Может потребоваться увеличить размер стека, если программа возвращает сообщения о переполнении стека.  
-  
- Можно также задать размер стека:  
-  
--   С помощью **/STACK** компоновщика. Дополнительные сведения см. в разделе [/STACK](../../build/reference/stack.md).  
-  
--   С помощью EDITBIN файл .exe. Дополнительные сведения см. в разделе [Справочник ЕDITBIN](../../build/reference/editbin-reference.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  Откройте папку **C/C++** .  
-  
-3.  Выберите страницу свойств **Командная строка** .  
-  
-4.  Введите параметр компилятора в поле **Дополнительные параметры** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+Задает размер стека программы в байтах.
+
+## <a name="syntax"></a>Синтаксис
+
+> **/F** *номер*
+
+## <a name="arguments"></a>Аргументы
+
+*номер*<br/>
+Размер стека в байтах.
+
+## <a name="remarks"></a>Примечания
+
+Без этого параметра размер стека по умолчанию до 1 МБ. *Номер* аргумент может быть десятичными или нотации языка. Аргумент находится в диапазоне от 1 до максимального размера стека принят компоновщиком. Компоновщик Округляет указанное значение до ближайшего 4 байт. Расстояние между **/F** и *номер* является необязательным.
+
+Может потребоваться увеличить размер стека, если программа возвращает сообщения о переполнении стека.
+
+Можно также задать размер стека:
+
+-   С помощью **/STACK** параметр компоновщика. Дополнительные сведения см. в разделе [/STACK](../../build/reference/stack.md).
+
+-   С помощью программы EDITBIN файл .exe. Дополнительные сведения см. в разделе [Справочник ЕDITBIN](../../build/reference/editbin-reference.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
+
+1. Введите параметр компилятора в поле **Дополнительные параметры** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Параметры компилятора](../../build/reference/compiler-options.md)   
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

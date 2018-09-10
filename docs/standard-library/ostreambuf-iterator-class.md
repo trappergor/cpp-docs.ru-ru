@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ba1a48fe9a4e7f0f8921861abeab2b76de3169c8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207725"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107389"
 ---
 # <a name="ostreambufiterator-class"></a>Класс ostreambuf_iterator
 
@@ -45,9 +45,11 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Параметры
 
-*CharType* тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным и значение по умолчанию — **char**.
+*CharType*<br/>
+Тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным и значение по умолчанию — **char**.
 
-*Признаки* тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
+*Признаки*<br/>
+Тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Примечания
 
@@ -55,13 +57,13 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Создает итератор `ostreambuf_iterator`, инициализированный для записи символов в поток вывода.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, обеспечивающий тип символа для `ostreambuf_iterator`.|
 |[ostream_type](#ostreambuf_iterator_ostream_type)|Тип, обеспечивающий тип потока для `ostream_iterator`.|
@@ -70,13 +72,13 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[failed](#failed)|Проверяет наличие ошибок вставки в буфер потока вывода.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x`.|
 |[оператор++](#op_add_add)|Нефункциональный оператор инкремента, возвращающий `ostreambuf_iterator`, обращающийся к тому же объекту, к которому он обращался до вызова операции.|
@@ -124,17 +126,17 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
 \* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
+by charOutBuf are: OUT.
 *\
 ```
 
@@ -172,9 +174,9 @@ int main( )
 
 *charOut = 'a';
    charOut ++;
- *charOut  = 'b';
+*charOut  = 'b';
    charOut ++;
- *charOut = 'c';
+*charOut = 'c';
    cout << " are characters output individually." << endl;
 
    bool b1 = charOut.failed ( );
@@ -225,10 +227,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;   // no effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
 \* Output:
 Elements written to output stream:
@@ -273,10 +275,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
 \* Output:
 Elements written to output stream:
@@ -294,7 +296,8 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Параметры
 
-*_Char* символ для вставки в буфер потока.
+*_Char*<br/>
+Символ для вставки в буфер потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -324,15 +327,15 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 OUT
-*\
+*/
 ```
 
 ## <a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator
@@ -346,9 +349,11 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf* выходной объект streambuf, используемый для инициализации указателя буфера потока вывода.
+*strbuf*<br/>
+Выходной объект streambuf, используемый для инициализации указателя буфера потока вывода.
 
-*Ostr* выходной объект stream, используемый для инициализации указателя буфера потока вывода.
+*Ostr*<br/>
+Выходной объект stream, используемый для инициализации указателя буфера потока вывода.
 
 ### <a name="remarks"></a>Примечания
 
@@ -374,9 +379,9 @@ int main( )
 
 *charOut = 'O';
    charOut ++;
- *charOut  = 'U';
+*charOut  = 'U';
    charOut ++;
- *charOut = 'T';
+*charOut = 'T';
    cout << " are characters output individually." << endl;
 
    ostreambuf_iterator<char> strOut ( cout );
@@ -457,17 +462,17 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
 \* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
+by charOutBuf are: OUT.
 *\
 ```
 

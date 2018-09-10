@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 915b2e0c15d3afb3f040b59c22b2de40af2aabb5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6f849b18e761fed4daf2c4a336a984242008bfd7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761772"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105189"
 ---
 # <a name="defaulttypenamegettype-method"></a>Метод default::(type_name)::GetType
-Возвращает объект Platform::Type^, которая представляет текущий тип.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-  
-Platform::Type^ GetType()  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Объект [Platform::Type](../cppcx/platform-type-class.md)^, представляющий текущий объект.  
-  
-### <a name="requirements"></a>Требования  
- **Минимальный поддерживаемый клиент:** Windows 8  
-  
- **Минимальный поддерживаемый сервер:** Windows Server 2012  
-  
- **Пространство имен:** по умолчанию  
-  
- **Заголовок:** vccorlib.h  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен по умолчанию](../cppcx/default-namespace.md)
+
+Возвращает объект Platform::Type^, которая представляет текущий тип.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+Platform::Type^ GetType();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект [Platform::Type](../cppcx/platform-type-class.md)^, представляющий текущий объект.
+
+### <a name="requirements"></a>Требования
+
+**Минимальный поддерживаемый клиент:** Windows 8
+
+**Минимальный поддерживаемый сервер:** Windows Server 2012
+
+**Пространство имен:** по умолчанию
+
+**Заголовок:** vccorlib.h
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен по умолчанию](../cppcx/default-namespace.md)

@@ -15,30 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec2651ae44955a4adfa1319e5528b7fe948a15bf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 197f43a8b5a9485642aca16c25cb35515cabe020
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759412"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109996"
 ---
 # <a name="platformuintptr-value-class"></a>Класс значений Platform::UIntPtr
-Представляет указатель без знака, размер которого соответствует платформе (32-разрядной или 64-разрядной).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-public value struct UintPtr  
-```  
-  
-### <a name="requirements"></a>Требования  
- **Минимальный поддерживаемый клиент:** Windows 8  
-  
- **Минимальный поддерживаемый сервер:** Windows Server 2012  
-  
- **Пространство имен:** Platform  
-  
- **Метаданные:** platform.winmd  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)
+
+Представляет указатель без знака, размер которого соответствует платформе (32-разрядной или 64-разрядной).
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+public value struct UintPtr
+```
+
+### <a name="requirements"></a>Требования
+
+**Минимальный поддерживаемый клиент:** Windows 8
+
+**Минимальный поддерживаемый сервер:** Windows Server 2012
+
+**Пространство имен:** Platform
+
+**Метаданные:** platform.winmd
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

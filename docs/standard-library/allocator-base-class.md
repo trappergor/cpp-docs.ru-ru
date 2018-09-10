@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f55a332032b081cba45d2235f263adafde7e10f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962463"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101786"
 ---
 # <a name="allocatorbase-class"></a>Класс allocator_base
 
@@ -68,20 +68,20 @@ class allocator_base
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Тип*|Тип элементов, распределяемых распределителем.|
 |*Синхронизация*|Политика синхронизации распределителя: [класс sync_none](../standard-library/sync-none-class.md), [класс sync_per_container](../standard-library/sync-per-container-class.md), [класс sync_per_thread](../standard-library/sync-per-thread-class.md) или [класс sync_shared](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[allocator_base](#allocator_base)|Создает объект типа `allocator_base`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[const_pointer](#const_pointer)|Тип, предоставляющий постоянный указатель на тип объекта, управляемого распределителем.|
 |[const_reference](#const_reference)|Тип, предоставляющий постоянную ссылку на тип объекта, управляемого распределителем.|
@@ -93,7 +93,7 @@ class allocator_base
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[_Charalloc](#charalloc)|Выделяет память под массив объектов типа **char**.|
 |[_Chardealloc](#chardealloc)|Освобождает память для массива, содержащего элементы типа **char**.|
@@ -120,7 +120,7 @@ char *_Charalloc(size_type count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*count*|Число элементов в массиве, которые нужно выделить.|
 
@@ -142,7 +142,7 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|
@@ -163,7 +163,8 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val* константное или неконстантное значение объекта, адрес которого ищется.
+*Val*<br/>
+Константное или неконстантное значение объекта, адрес которого ищется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -186,7 +187,7 @@ pointer allocate(size_type _Nx);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*_Nx*|Число элементов в массиве, которые нужно выделить.|
 |*_Hint*|Этот параметр не учитывается.|
@@ -212,7 +213,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Объект allocator для копирования.|
 
@@ -246,7 +247,7 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель места, в котором должен создаваться объект.|
 |*Val*|Значение, с которым создаваемый объект будет инициализирован.|
@@ -265,7 +266,7 @@ void deallocate(pointer ptr, size_type _Nx);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
 |*_Nx*|Количество объектов для освобождения из хранилища.|
@@ -284,7 +285,7 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель, обозначающий адрес уничтожаемого объекта.|
 

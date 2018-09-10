@@ -7,12 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: ad8041ff6a4abab84272d2bbbdee290bfce4eff6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5c96ac897d870e1f8dc153847797379b6720dc7b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961881"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103250"
 ---
 # <a name="lthashsetgt-functions"></a>Функции &lt;hash_set&gt;
 
@@ -35,9 +35,11 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*правом* hash_set, предоставляющий элементы для обмена местами, или hash_set, элементы которого должны быть заменены hash_set *левой*.
+*right*<br/>
+Hash_set, предоставляющий элементы для обмена местами, или hash_set, элементы которого должны быть заменены hash_set *левой*.
 
-*слева* hash_set, элементы которого должны быть заменены hash_set *правой*.
+*left*<br/>
+Hash_set, элементы которого должны быть заменены hash_set *правой*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -64,9 +66,11 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Параметры
 
-*правом* hash_multiset, предоставляющий элементы для обмена местами, или hash_multiset, элементы которого должны быть заменены объекта hash_multiset *левой*.
+*right*<br/>
+Hash_multiset, предоставляющий элементы для обмена местами, или hash_multiset, элементы которого должны быть заменены объекта hash_multiset *левой*.
 
-*слева* hash_multiset, элементы которого должны быть заменены объекта hash_multiset *правой*.
+*left*<br/>
+Hash_multiset, элементы которого должны быть заменены объекта hash_multiset *правой*.
 
 ### <a name="remarks"></a>Примечания
 

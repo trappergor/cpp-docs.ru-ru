@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eb76c477c54192dc6b6b969ecd4cdd32850c015f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964227"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110309"
 ---
 # <a name="independentbitsengine-class"></a>Класс independent_bits_engine
 
@@ -36,11 +36,14 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Параметры
 
-*Ядро* тип базового механизма.
+*ядра*<br/>
+Тип базового механизма.
 
-*W* **размер слова**. Размер каждого полученного числа в битах. **Предварительные условия**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Размер слова**. Размер каждого полученного числа в битах. **Предварительные условия**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType* беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Участники
 

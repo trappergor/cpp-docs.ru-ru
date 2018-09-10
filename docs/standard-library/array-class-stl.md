@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ac07884d3ac7390bdb3aba4144c1c436041434f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960047"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110062"
 ---
 # <a name="array-class-c-standard-library"></a>Класс array (стандартная библиотека C++)
 
@@ -126,14 +126,14 @@ class array;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |`Ty`|Тип элемента.|
 |`N`|Количество элементов|
 
 ## <a name="members"></a>Участники
 
-|Определение типа|Описание:|
+|Определение типа|Описание|
 |-|-|
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
 |[const_pointer](#const_pointer)|Тип постоянного указателя на элемент.|
@@ -147,7 +147,7 @@ class array;
 |[size_type](#size_type)|Тип беззнакового расстояния между двумя элементами.|
 |[value_type](#value_type)|Тип элемента.|
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[array](#array)|Создает объект массива.|
 |[assign](#assign)|Заменяет все элементы.|
@@ -169,7 +169,7 @@ class array;
 |[size](#size)|Подсчитывает количество элементов.|
 |[swap](#swap)|Меняет местами содержимое двух контейнеров.|
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[array::operator=](#op_eq)|Заменяет управляемую последовательность.|
 |[array::operator[]](#op_at)|Обращается к элементу в указанной позиции.|
@@ -202,7 +202,8 @@ array(const array& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* объект или диапазон для вставки.
+*right*<br/>
+Объект или диапазон для вставки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -257,7 +258,8 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val* значение для назначения.
+*Val*<br/>
+Присваиваемое значение.
 
 ### <a name="remarks"></a>Примечания
 
@@ -313,7 +315,8 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Отключение* положение элемента, для доступа к.
+*Отключение*<br/>
+Позиция элемента, к которому осуществляется доступ.
 
 ### <a name="remarks"></a>Примечания
 
@@ -981,7 +984,7 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента, вставляемого в массив.|
 
@@ -1173,7 +1176,8 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Отключение* положение элемента, для доступа к.
+*Отключение*<br/>
+Позиция элемента, к которому осуществляется доступ.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1225,7 +1229,8 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* контейнер для копирования.
+*right*<br/>
+Контейнер для копирования.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1602,7 +1607,8 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* массив для обмена содержимым.
+*right*<br/>
+Массив для обмена содержимым.
 
 ### <a name="remarks"></a>Примечания
 

@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c8edc5dd90fb4209ecf6dc227208a7375fd8ce1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a41d7dab53c50d0583fdb48f62d078ee54251f32
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762652"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108516"
 ---
 # <a name="platformclassnotregisteredexception-class"></a>Класс Platform::ClassNotRegisteredException
-Возникает, если COM-класс не зарегистрирован.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-public ref class ClassNotRegisteredException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в описании класса [COMException](../cppcx/platform-comexception-class.md) .  
-  
-### <a name="requirements"></a>Требования  
- **Минимальный поддерживаемый клиент:** Windows 8  
-  
- **Минимальный поддерживаемый сервер:** Windows Server 2012  
-  
- **Пространство имен:** Platform  
-  
- **Метаданные:** platform.winmd  
-  
-## <a name="see-also"></a>См. также  
- [Класс Platform::COMException](../cppcx/platform-comexception-class.md)
+
+Возникает, если COM-класс не зарегистрирован.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+public ref class ClassNotRegisteredException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Примечания
+
+Дополнительные сведения см. в описании класса [COMException](../cppcx/platform-comexception-class.md) .
+
+### <a name="requirements"></a>Требования
+
+**Минимальный поддерживаемый клиент:** Windows 8
+
+**Минимальный поддерживаемый сервер:** Windows Server 2012
+
+**Пространство имен:** Platform
+
+**Метаданные:** platform.winmd
+
+## <a name="see-also"></a>См. также
+
+[Класс Platform::COMException](../cppcx/platform-comexception-class.md)

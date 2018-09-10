@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 381316cd7b05f62ba8b730c376e266e5fd0a70cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960595"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109292"
 ---
 # <a name="istreambufiterator-class"></a>Класс istreambuf_iterator
 
@@ -49,9 +49,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Параметры
 
-*CharType* тип, представляющий тип символа для istreambuf_iterator.
+*CharType*<br/>
+Тип, представляющий тип символа для istreambuf_iterator.
 
-*Признаки* тип, представляющий тип символа для istreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
+*Признаки*<br/>
+Тип, представляющий тип символа для istreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Примечания
 
@@ -61,13 +63,13 @@ class istreambuf_iterator
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[istreambuf_iterator](#istreambuf_iterator)|Создает объект `istreambuf_iterator`, инициализируемый для чтения символов из входного потока.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, обеспечивающий тип символа для `ostreambuf_iterator`.|
 |[int_type](#int_type)|Тип, предоставляющий целочисленный тип для `istreambuf_iterator`.|
@@ -77,13 +79,13 @@ class istreambuf_iterator
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[equal](#equal)|Тесты на равенство между двумя итераторами буфера входного потока.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор*](#op_star)|Оператор удаления ссылки возвращает следующий символ в потоке.|
 |[оператор++](#op_add_add)|Либо возвращает следующий символ из входного потока, либо копирует объект перед его увеличением и возвращает копию.|
@@ -150,7 +152,8 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* итератор, для которого для проверки на равенство.
+*right*<br/>
+Итератор, для которого выполняется проверка на равенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -246,9 +249,11 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf* буфер входного потока, с которым `istreambuf_iterator` присоединяется.
+*strbuf*<br/>
+Буфер входного потока, к которому присоединяется `istreambuf_iterator`.
 
-*_Istr* входной поток, в который `istreambuf_iterator` присоединяется.
+*_Istr*<br/>
+Входной поток, к которому присоединяется `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -319,7 +324,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;   //Put value of outpos equal to inpos
+*outpos = *inpos;   //Put value of outpos equal to inpos
       ++inpos;
       ++outpos;
    }
@@ -364,7 +369,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;
+*outpos = *inpos;
       ++inpos;   //Increment istreambuf_iterator
       ++outpos;
    }

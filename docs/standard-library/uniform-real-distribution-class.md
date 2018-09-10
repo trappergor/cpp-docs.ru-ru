@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 222aef46fb8080ba044904dbbedd5546cec51929
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c9a9661bc61d59d6ca5b0aff1889a6bb736a1001
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963095"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103231"
 ---
 # <a name="uniformrealdistribution-class"></a>Класс uniform_real_distribution
 
@@ -77,11 +77,12 @@ public:
    result_type min() const;
    result_type max() const;
 };
- ```
+```
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*<br/>
+По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 

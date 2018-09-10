@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a20a637872c8c26433920da313d4e6c001736d06
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966625"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105761"
 ---
 # <a name="addrvaluereference-class"></a>Класс add_rvalue_reference
 
@@ -39,7 +39,8 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T* введите для изменения.
+*T*<br/>
+Тип для изменения.
 
 ## <a name="remarks"></a>Примечания
 
@@ -80,7 +81,8 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>Требования
 
-Заголовок: <type_traits> Пространство имен: std
+Заголовок: \<type_traits >  
+Пространство имен: std
 
 ## <a name="see-also"></a>См. также
 

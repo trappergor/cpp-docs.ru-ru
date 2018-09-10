@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74641b229fbf888504df72a97f8a5c025d9b7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30e2b226524e1d4a62c9f8cc950f4dd30846861
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963720"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100980"
 ---
 # <a name="basicostream-class"></a>Класс basic_ostream
 
@@ -50,9 +50,11 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Elem* объект `char_type`.
+*Elem*<br/>
+Объект `char_type`.
 
-*TR* символ `traits_type`.
+*Tr*<br/>
+`traits_type` символа.
 
 ## <a name="remarks"></a>Примечания
 
@@ -63,16 +65,16 @@ iostate state = goodbit;
 const sentry ok(*this);
 
 if (ok)
- {try
- {<convert and insert elements
+{try
+{<convert and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 width(0);
@@ -91,16 +93,16 @@ const sentry ok(*this);
 if (!ok)
     state |= badbit;
 else
- {try
- {<obtain and insert elements
+{try
+{<obtain and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 setstate(state);
@@ -118,13 +120,13 @@ return (*this);
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_ostream](#basic_ostream)|Создает объект `basic_ostream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[flush](#flush)|Очищает буфер.|
 |[put](#put)|Помещает символ в поток.|
@@ -136,7 +138,7 @@ return (*this);
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор=](#basic_ostream_operator_eq)|Присваивает значение указанного параметра объекта `basic_ostream` этому объекту.|
 |[оператор<<](#basic_ostream_operator_lt_lt)|Записывает данные в поток.|
@@ -161,11 +163,14 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf* объект типа [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Объект типа [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **true** Если это стандартный поток; в противном случае **false**.
+*_Isstd*<br/>
+**значение true,** Если это стандартный поток; в противном случае **false**.
 
-*правом* ссылка rvalue на объект типа `basic_ostream`.
+*right*<br/>
+Ссылка rvalue на объект типа `basic_ostream`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -242,11 +247,14 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Параметры
 
-*Pfn* указателя функции.
+*pfn-имени*<br/>
+Указатель функции.
 
-*strbuf* указатель на `stream_buf` объект.
+*strbuf*<br/>
+Указатель на объект `stream_buf`.
 
-*Val* элемент, записываемый в поток.
+*Val*<br/>
+Элемент, записываемый в поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -360,7 +368,8 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `rvalue` ссылка `basic_ostream` объекта.
+*right*<br/>
+Ссылка `rvalue` на объект `basic_ostream`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -376,7 +385,8 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символ.
+*_Ch*<br/>
+Символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -419,11 +429,14 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Параметры
 
-*_Pos* позицию в потоке.
+*_Pos*<br/>
+Позиция в потоке.
 
-*_Off* смещение относительно *_Way*.
+*_Off*<br/>
+Смещение относительно *_Way*.
 
-*_Way* один из [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) перечисления.
+*_Way*<br/>
+Одно из перечислений [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -485,7 +498,8 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* ссылку `basic_ostream` объекта.
+*right*<br/>
+Ссылка на объект `basic_ostream`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -521,9 +535,11 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>Параметры
 
-*число* количество символов для помещения в поток.
+*count*<br/>
+Количество символов для помещения в поток.
 
-*STR* символов для помещения в поток.
+*str*<br/>
+Символы для помещения в поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

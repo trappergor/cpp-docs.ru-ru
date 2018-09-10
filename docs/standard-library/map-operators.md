@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 22d8d5d348dc4bf4bd50ee56db360e4490503b78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0113f792a20c1680ce931d43cbaf016e7bcfaf59
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959262"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108310"
 ---
 # <a name="ltmapgt-operators"></a>Операторы &lt;map&gt;
 
@@ -48,9 +48,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `map`.
+*left*<br/>
+Объект типа `map`.
 
-*правом* объект типа `map`.
+*right*<br/>
+Объект типа `map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -110,9 +112,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `map`.
+*left*<br/>
+Объект типа `map`.
 
-*правом* объект типа `map`.
+*right*<br/>
+Объект типа `map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -172,9 +176,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `map`.
+*left*<br/>
+Объект типа `map`.
 
-*правом* объект типа `map`.
+*right*<br/>
+Объект типа `map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -237,9 +243,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `map`.
+*left*<br/>
+Объект типа `map`.
 
-*правом* объект типа `map`.
+*right*<br/>
+Объект типа `map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -299,9 +307,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `map`.
+*left*<br/>
+Объект типа `map`.
 
-*правом* объект типа `map`.
+*right*<br/>
+Объект типа `map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -361,9 +371,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `map`.
+*left*<br/>
+Объект типа `map`.
 
-*правом* объект типа `map`.
+*right*<br/>
+Объект типа `map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -426,9 +438,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `multimap`.
+*left*<br/>
+Объект типа `multimap`.
 
-*правом* объект типа `multimap`.
+*right*<br/>
+Объект типа `multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -488,9 +502,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `multimap`.
+*left*<br/>
+Объект типа `multimap`.
 
-*правом* объект типа `multimap`.
+*right*<br/>
+Объект типа `multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -550,9 +566,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `multimap`.
+*left*<br/>
+Объект типа `multimap`.
 
-*правом* объект типа `multimap`.
+*right*<br/>
+Объект типа `multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -615,9 +633,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `multimap`.
+*left*<br/>
+Объект типа `multimap`.
 
-*правом* объект типа `multimap`.
+*right*<br/>
+Объект типа `multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -677,9 +697,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `multimap`.
+*left*<br/>
+Объект типа `multimap`.
 
-*правом* объект типа `multimap`.
+*right*<br/>
+Объект типа `multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -739,9 +761,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `multimap`.
+*left*<br/>
+Объект типа `multimap`.
 
-*правом* объект типа `multimap`.
+*right*<br/>
+Объект типа `multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

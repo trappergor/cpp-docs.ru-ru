@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 66818710a1d5811f2ff52acf7f9785de09ba0c53
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956467"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101694"
 ---
 # <a name="iosbase-class"></a>Класс ios_base
 
@@ -147,13 +147,13 @@ ms.locfileid: "38956467"
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[ios_base](#ios_base)|Создает объект `ios_base`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[event_callback](#event_callback)|Описывает функцию, передаваемую в [register_call](#register_callback).|
 |[fmtflags](#fmtflags)|Константы для определения внешнего вида выходных данных.|
@@ -205,7 +205,7 @@ ms.locfileid: "38956467"
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[failure](#failure)|Класс-член служит базовым классом для всех исключений, выдаваемых функцией-членом [clear](../standard-library/basic-ios-class.md#clear) в классе шаблона [basic_ios](../standard-library/basic-ios-class.md).|
 |[flags](#flags)|Задает или возвращает текущие параметры флага.|
@@ -224,7 +224,7 @@ ms.locfileid: "38956467"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор=](#op_eq)|Оператор присваивания для объектов `ios_base`.|
 
@@ -272,11 +272,14 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Параметры
 
-*_Электронной* [событий](#event).
+*_E*<br/>
+[Event](#event).
 
-*_Базовому* поток, в котором был вызов события.
+*_Базовому*<br/>
+Поток, в котором был вызов события.
 
-*_Условия* определенное пользователем число.
+*_I*<br/>
+Определенное пользователем число.
 
 ### <a name="remarks"></a>Примечания
 
@@ -349,7 +352,8 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Параметры
 
-*fmtfl* новый `fmtflags` параметр.
+*fmtfl*<br/>
+Новое значение `fmtflags`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -499,7 +503,8 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Параметры
 
-*_Loc* новое значение языкового стандарта.
+*_Loc*<br/>
+Новое значение языкового стандарта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -575,7 +580,8 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Параметры
 
-*IDX* индекс значения для сохранения как `iword`.
+*IDX*<br/>
+Индекс значения для сохранения как `iword`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -649,7 +655,8 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* объект типа `ios_base`.
+*right*<br/>
+Объект типа `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -672,7 +679,8 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Параметры
 
-*_Prec* количество значащих цифр для отображения или количество цифр после десятичной запятой в фиксированной нотации.
+*_Prec*<br/>
+Количество значащих цифр при отображении, или количество цифр после десятичной запятой в фиксированной нотации.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -716,7 +724,8 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Параметры
 
-*_Idx* индекс значения для сохранения как `pword`.
+*_Idx*<br/>
+Индекс значения для сохранения как `pword`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -741,9 +750,11 @@ void register_callback(
 
 ### <a name="parameters"></a>Параметры
 
-*pfn* указатель на функцию обратного вызова.
+*pfn-имени*<br/>
+Указатель на функцию обратного вызова.
 
-*IDX* определенное пользователем число.
+*IDX*<br/>
+Определенное пользователем число.
 
 ### <a name="remarks"></a>Примечания
 
@@ -901,17 +912,19 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Параметры
 
-*Применяемая _маска* флажки, которые нужно включить.
+*Применяемая _маска*<br/>
+Флажки, которые нужно включить.
 
-*_Unset* флажки, которые нужно отключить.
+*_Unset*<br/>
+Флажки, которые нужно отключить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-    The previous format flags
+Предыдущий флаги формата
 
 ### <a name="remarks"></a>Примечания
 
-    The first member function effectively calls [flags](#flags)(_ *Mask* &#124; \_ *Flags*) (set selected bits) and then returns the previous format flags. The second member function effectively calls **flags**(\_ *Mask* **& fmtfl, flags& ~**`_Mask`) (replace selected bits under a mask) and then returns the previous format flags.
+Первая функция-член эффективно вызывает [флаги](#flags)(_ *маска* &#124; \_ *флаги*) (значение выбранного bits) и затем возвращает предыдущий флаги формата. Вторая функция-член эффективно вызывает **флаги**(\_ *маска* **& fmtfl, флаги & ~**`_Mask`) (заменить выбранный bits под маской) и затем возвращает предыдущий флаги формата.
 
 ### <a name="example"></a>Пример
 
@@ -949,15 +962,16 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Параметры
 
-*_Sync* ли все потоки синхронизированы с `stdio`.
+*_Sync*<br/>
+Являются ли все потоки в соответствии с `stdio`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-    Previous setting for this function.
+Предыдущее значение для этой функции.
 
 ### <a name="remarks"></a>Примечания
 
-    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+Функция сохраняет статический член `stdio` синхронизировать флаг, который изначально **true**. Когда **true**, этот флаг обеспечивает синхронизацию операций на том же файле между правильно [iostreams](../standard-library/iostreams-conventions.md) функции и параметрами, определенными в стандартной библиотеке C++. В противном случае синхронизация может или не может быть гарантирована, но производительность может быть улучшена. Функция сохраняет *_Sync* в `stdio` синхронизировать флаг и возвращает его предыдущее сохраненное значение. Его можно вызвать надежно только перед выполнением любых операций в стандартных потоков.
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
@@ -971,15 +985,16 @@ void unsetf(
 
 ### <a name="parameters"></a>Параметры
 
-*Применяемая _маска* флаги, которые требуется отключить.
+*Применяемая _маска*<br/>
+Флаги для сброса в off.
 
 ### <a name="remarks"></a>Примечания
 
-    The member function effectively calls [flags](#flags)(`~`*_Mask* **& flags**) (clear selected bits).
+Функция-член эффективно вызывает [флаги](#flags)(`~`*_Mask* **& флаги**) (очистить выбранные bits).
 
 ### <a name="example"></a>Пример
 
-    See [ios_base::setf](#setf) for a sample of using `unsetf`.
+См. в разделе [ios_base::setf](#setf) образец с помощью `unsetf`.
 
 ## <a name="width"></a> ios_base::width
 
@@ -994,15 +1009,16 @@ streamsize width(
 
 ### <a name="parameters"></a>Параметры
 
-*_Wide* нужный размер выходного потока.
+*_Wide*<br/>
+Нужный размер выходного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-    The current width setting.
+Текущее значение ширины.
 
 ### <a name="remarks"></a>Примечания
 
-    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
+Первая функция-член возвращает хранимые поле ширину. Вторая функция-член сохраняет *_Wide* в ширины поля и возвращает его ранее сохраненное значение.
 
 ### <a name="example"></a>Пример
 
@@ -1027,7 +1043,7 @@ int main( ) {
 
 ## <a name="xalloc"></a> ios_base::xalloc
 
-    Specifies that a variable is part of the stream.
+Указывает, что переменная является частью потока.
 
 ```cpp
 static int xalloc( );
@@ -1035,11 +1051,11 @@ static int xalloc( );
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-    The static member function returns a stored static value, which it increments on each call.
+Статическую функцию-член возвращает сохраненное значение статического, который увеличивается при каждом вызове.
 
 ### <a name="remarks"></a>Примечания
 
-    You can use the return value as a unique index argument when calling the member functions [iword](#iword) or [pword](#pword).
+Можно использовать возвращаемое значение как уникальный индекс аргумент при вызове члена функции [iword](#iword) или [pword](#pword).
 
 ### <a name="example"></a>Пример
 

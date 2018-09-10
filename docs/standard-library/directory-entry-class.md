@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a55109683a18415638cacd9cd15dbcaa3164fc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdb2962d2d1dc4e39d2528c89267a9cf8871937a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846936"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105787"
 ---
 # <a name="directoryentry-class"></a>Класс directory_entry
 
@@ -67,7 +67,44 @@ class directory_entry;
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="assign"></a>assign
+### <a name="constructors"></a>Конструкторы
+
+|Конструктор|Описание|
+|-|-|
+|[directory_entry](#directory_entry)|Установленные по умолчанию конструкторы работают корректно. Четвертый конструктор инициализирует `mypath` для *pval*, `mystat` для *stat_arg*, и `mysymstat` для *symstat_arg*.|
+
+### <a name="member-functions"></a>Функции-члены
+
+|Функция-член|Описание|
+|-|-|
+|[assign](#assign)|Функция-член назначает *pval* для `mypath`, *stat* для `mystat`, и *symstat* для `mysymstat`.|
+|[path](#path)|Функция-член возвращает значение `mypath`.|
+|[replace_filename](#replace_filename)|Функция-член заменяет `mypath` с `mypath.parent_path()`  /  *pval*, `mystat` с *stat_arg*, и `mysymstat` с *symstat_arg*|
+|[status](#status)|Обе функции-члены возвращают `mystat` возможно, во-первых изменена.|
+|[symlink_status](#symlink_status)|Обе функции-члены возвращают `mysymstat` возможно, во-первых изменена.|
+
+### <a name="operators"></a>Операторы
+
+|Оператор|Описание|
+|-|-|
+|[оператор!=](#op_neq)|Заменяет элементы списка копией другого списка.|
+|[оператор=](#op_as)|Операторы-члены присваивания по умолчанию работают корректно.|
+|[оператор==](#op_eq)|Возвращает `mypath == right.mypath`.|
+|[оператор<](#op_lt)|Возвращает `mypath < right.mypath`.|
+|[оператор<=](#op_lteq)|Возвращает `!(right < *this)`.|
+|[оператор>](#op_gt)|Возвращает `right < *this`.|
+|[оператор>=](#op_gteq)|Возвращает `!(*this < right)`.|
+|[оператор const path_type &](#path_type)|Возвращает `mypath`.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<экспериментальная/filesystem&gt;
+
+**Пространство имен:** std::experimental::filesystem
+
+## <a name="assign"></a> назначить
+
+Функция-член назначает *pval* для `mypath`, *stat_arg* для `mystat`, и *symstat_arg* для `mysymstat`.
 
 ```cpp
 void assign(const std::experimental::filesystem::path& pval,
@@ -75,9 +112,20 @@ void assign(const std::experimental::filesystem::path& pval,
     file_status symstat_arg = file_status());
 ```
 
-Функция-член назначает pval объекту mypath, stat объекту mystat и symstat объекту mysymstat.
+### <a name="parameters"></a>Параметры
 
-## <a name="directoryentry"></a>directory_entry
+*PVal*<br/>
+Путь имя сохраненного файла.  
+
+*stat_arg*<br/>
+Состояние имени сохраненного файла.  
+
+*symstat_arg*<br/>
+Состояние символьной ссылки имени сохраненного файла.  
+
+## <a name="directory_entry"></a> directory_entry
+
+Установленные по умолчанию конструкторы работают корректно. Четвертый конструктор инициализирует `mypath` для *pval*, `mystat` для *stat_arg*, и `mysymstat` для *symstat_arg*.
 
 ```cpp
 directory_entry() = default;
@@ -88,82 +136,128 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
     file_status symstat_arg = file_status());
 ```
 
-Установленные по умолчанию конструкторы работают корректно. Четвертый конструктор инициализирует mypath значением pval, mystat значением stat_arg и mysymstat значением symstat_arg.
+### <a name="parameters"></a>Параметры
 
-## <a name="operator"></a>operator!=
+*PVal*<br/>
+Путь имя сохраненного файла.  
+
+*stat_arg*<br/>
+Состояние имени сохраненного файла.  
+
+*symstat_arg*<br/>
+Состояние символьной ссылки имени сохраненного файла.  
+
+## <a name="op_neq"></a> оператор! =
+
+Функция-член возвращает значение `!(*this == right)`.
 
 ```cpp
 bool operator!=(const directory_entry& right) const noexcept;
 ```
 
-Функция-член возвращает значение !(*this == right).
+### <a name="parameters"></a>Параметры
 
-## <a name="operator"></a>operator=
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+
+## <a name="op_as"></a> оператор =
+
+Операторы-члены присваивания по умолчанию работают корректно.
 
 ```cpp
 directory_entry& operator=(const directory_entry&) = default;
 directory_entry& operator=(directory_entry&&) noexcept = default;
 ```
 
-Операторы-члены присваивания по умолчанию работают корректно.
+### <a name="parameters"></a>Параметры
 
-## <a name="operator"></a>operator==
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md) копируется в `directory_entry`.  
+
+## <a name="op_eq"></a> оператор ==
+
+Функция-член возвращает значение `mypath == right.mypath`.
 
 ```cpp
 bool operator==(const directory_entry& right) const noexcept;
 ```
 
-Функция-член возвращает значение mypath == right.mypath.
+### <a name="parameters"></a>Параметры
 
-## <a name="operatorlt"></a>Оператор&lt;
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+
+## <a name="op_lt"></a> Оператор&lt;
+
+Функция-член возвращает значение `mypath < right.mypath`.
 
 ```cpp
 bool operator<(const directory_entry& right) const noexcept;
 ```
 
-Функция-член возвращает mypath &lt; right.mypath.
+### <a name="parameters"></a>Параметры
 
-## <a name="operatorlt"></a>оператор&lt;=
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+
+## <a name="op_lteq"></a> Оператор&lt;=
+
+Функция-член возвращает значение `!(right < *this)`.
 
 ```cpp
 bool operator&lt;=(const directory_entry& right) const noexcept;
 ```
 
-Функция-член возвращает значение !(right \< *this).
+### <a name="parameters"></a>Параметры
 
-## <a name="operatorgt"></a>Оператор&gt;
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+
+## <a name="op_gt"></a> Оператор&gt;
+
+Функция-член возвращает значение `right < *this`.
 
 ```cpp
 bool operator&gt;(const directory_entry& right) const noexcept;
 ```
 
-Функция-член возвращает значение right \< *this.
+### <a name="parameters"></a>Параметры
 
-## <a name="operatorgt"></a>оператор&gt;=
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+
+## <a name="op_gteq"></a> Оператор&gt;=
+
+Функция-член возвращает значение `!(*this < right)`.
 
 ```cpp
 bool operator&gt;=(const directory_entry& right) const noexcept;
 ```
 
-Функция-член возвращает! (* это \< справа).
+### <a name="parameters"></a>Параметры
 
-## <a name="operator-const-pathtype"></a>operator const path_type&
+*right*<br/>
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+
+## <a name="path_type"></a> оператор const path_type &
+
+Оператор-член возвращает `mypath`.
 
 ```cpp
 operator const std::experimental::filesystem::path&() const;
 ```
 
-Оператор-член возвращает mypath.
+## <a name="path"></a> путь
 
-## <a name="path"></a>путем
+Функция-член возвращает значение `mypath`.
 
 ```cpp
 const std::experimental::filesystem::path& path() const noexcept;
 ```
 
-Функция-член возвращает значение mypath.
+## <a name="replace_filename"></a> replace_filename
 
-## <a name="replacefilename"></a>replace_filename
+Функция-член заменяет `mypath` с `mypath.parent_path()`  /  *pval*, `mystat` с *stat_arg*, и `mysymstat` с *symstat_arg*
 
 ```cpp
 void replace_filename(
@@ -172,37 +266,50 @@ void replace_filename(
     file_status symstat_arg = file_status());
 ```
 
-Функция-член заменяет mypath значением mypath.parent_path() / pval, mystat значением stat_arg и mysymstat значением symstat_arg.
+### <a name="parameters"></a>Параметры
 
-## <a name="status"></a>status
+*PVal*<br/>
+Путь имя сохраненного файла.  
+
+*stat_arg*<br/>
+Состояние имени сохраненного файла.  
+
+*symstat_arg*<br/>
+Состояние символьной ссылки имени сохраненного файла.  
+
+## <a name="status"></a> состояние
+
+Обе функции-члены возвращают `mystat` возможно сначала изменить следующим образом:
+
+1. Если `status_known(mystat)` не выполнять никаких действий.
+
+1. В противном случае, если `!status_known(mysymstat) && !is_symlink(mysymstat)` затем `mystat = mysymstat`.
 
 ```cpp
 file_status status() const;
 file_status status(error_code& ec) const noexcept;
 ```
 
-Обе функции-члены возвращают mystat, возможно, сначала изменив его следующим образом:
+### <a name="parameters"></a>Параметры
 
-1. если status_known(mystat), не выполнять никаких действий.
+*EC*<br/>
+Код состояния ошибки.  
 
-1. В противном случае, если !status_known(mysymstat) && !is_symlink(mysymstat), то mystat = mysymstat.
+## <a name="symlink_status"></a> symlink_status
 
-## <a name="symlinkstatus"></a>symlink_status
+Обе функции-члены возвращают `mysymstat` возможно сначала изменить следующим образом: Если `status_known(mysymstat)` не выполнять никаких действий. В противном случае — значение `mysymstat = symlink_status(mypval)`.
 
 ```cpp
 file_status symlink_status() const;
 file_status symlink_status(error_code& ec) const noexcept;
 ```
 
-Обе функции-члены возвращают mysymstat, возможно, сначала изменив его следующим образом: если status_known(mysymstat), не выполнять никаких действий. В противном случае mysymstat = symlink_status(mypval).
+### <a name="parameters"></a>Параметры
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<экспериментальный/файловой системы&gt;
-
-**Пространство имен:** std::experimental::filesystem
+*EC*<br/>
+Код состояния ошибки.  
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<Файловая система&gt;](../standard-library/filesystem.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)  
+[\<файловая система&gt;](../standard-library/filesystem.md)  

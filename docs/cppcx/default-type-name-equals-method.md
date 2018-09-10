@@ -13,40 +13,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36bd6e933d4e7bb1563ec6738c7ba3ed314c1cfd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 127f5ee876790fa3cfb8a052c2db6c41cc00f332
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763917"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109023"
 ---
 # <a name="defaulttypenameequals-method"></a>Метод default::(type_name)::Equals
-Определяет, равен ли заданный объект текущему объекту.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-  
-bool Equals(  
-    Object^ obj  
-)  
-```  
-  
-### <a name="parameters"></a>Параметры  
- obj  
- Объект для сравнения.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Значение`true` , если объекты равны; в противном случае — значение `false`.  
-  
-### <a name="requirements"></a>Требования  
- **Минимальный поддерживаемый клиент:** Windows 8  
-  
- **Минимальный поддерживаемый сервер:** Windows Server 2012  
-  
- **Пространство имен:** по умолчанию  
-  
- **Заголовок:** vccorlib.h  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен по умолчанию](../cppcx/default-namespace.md)
+
+Определяет, равен ли заданный объект текущему объекту.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+bool Equals(
+    Object^ obj
+)
+```
+
+### <a name="parameters"></a>Параметры
+
+*obj*<br/>
+Объект для сравнения.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение`true` , если объекты равны; в противном случае — значение `false`.
+
+### <a name="requirements"></a>Требования
+
+**Минимальный поддерживаемый клиент:** Windows 8
+
+**Минимальный поддерживаемый сервер:** Windows Server 2012
+
+**Пространство имен:** по умолчанию
+
+**Заголовок:** vccorlib.h
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен по умолчанию](../cppcx/default-namespace.md)

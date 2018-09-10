@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 766ab6f9a93cc617c2a3ecb4c305775d670a9640
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955937"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108958"
 ---
 # <a name="ltostreamgt-operators"></a>Операторы &lt;ostream&gt;
 
@@ -88,17 +88,23 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символ.
+*_Ch*<br/>
+Символ.
 
-*_Elem* тип элемента.
+*_Elem*<br/>
+Тип элемента.
 
-*_Ostr* A `basic_ostream` объекта.
+*_Ostr*<br/>
+Объект `basic_ostream`.
 
-*STR* строку символов.
+*str*<br/>
+Строка символов.
 
-*_Tr* символ признаки.
+*_Tr*<br/>
+Признаки символа.
 
-*Val* тип
+*Val*<br/>
+Тип.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
