@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: использование шаблонов ресурсов | Документация Майкрософт'
+title: 'Практическое: использование шаблонов ресурсов (C++) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,27 +8,27 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- language-specific template files
+- language-specific template files [C++]
 - resource templates
-- resources [Visual Studio], creating
-- rct files
+- resources [C++], creating
+- rct files [C++]
 - templates, resource templates
-- resources [Visual Studio], templates
-- .rct files
+- resources [C++], templates
+- .rct files [C++]
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bd85dd5c5b6468ca8246fdf11f4068eae928107
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90c94e87693929c2ae33d65fe3f3a4b2dd55d48b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602444"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313979"
 ---
-# <a name="how-to-use-resource-templates"></a>Практическое руководство. Использование шаблонов ресурсов
+# <a name="how-to-use-resource-templates-c"></a>Практическое: использование шаблонов ресурсов (C++)
 
 Шаблон ресурса — это настроенный ресурс, сохраненный как RCT-файл. Шаблон ресурса можно использовать в качестве отправной точки для создания других ресурсов. Шаблоны ресурсов позволяют сэкономить время при разработке дополнительных ресурсов или групп ресурсов, которые совместно используют какие-либо возможности, например, стандартные элементы управления и другие повторяющиеся элементы. Например, вы хотите поместить кнопку "Справка" и значок с логотипом компании в несколько диалоговых окон. Чтобы быстро сделать это, создайте новый шаблон диалогового окна и поместите в него логотип и кнопку "Справка".
 

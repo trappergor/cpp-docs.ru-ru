@@ -1,5 +1,5 @@
 ---
-title: Добавление элементов управления в диалоговое окно приводит к прекращению работы диалогового окна | Документация Майкрософт
+title: Добавление элементов управления в диалоговое окно приводит к прекращению работы (C++) диалогового окна | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,10 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], troubleshooting
-- common controls, troubleshooting
-- troubleshooting controls
-- dialog boxes, troubleshooting
-- dialog box controls, troubleshooting
+- dialog boxes [C++], troubleshooting
 - InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
 author: mikeblome
@@ -20,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d27c12b491fc5f05da58a84703ea13e84e9e9c6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88990595fdf1f6cbb88efd40ec6247b70d90c586
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215374"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314903"
 ---
-# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Добавление элементов управления в диалоговое окно приводит к неработоспособности этого диалогового окна
+# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function-c"></a>Добавление элементов управления в диалоговое окно приводит к прекращению работы (C++) диалогового окна
 
 После добавления общего элемента управления или элемента управления форматированным редактированием в диалоговое окно, она не будет отображаться при тестировании диалогового или самого диалогового окна не будет отображаться.
 

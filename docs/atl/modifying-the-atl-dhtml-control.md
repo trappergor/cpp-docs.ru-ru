@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0652ca867ba49243ca5c87caa1dec98da929cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764554"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314239"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Изменение элемента управления DHTML в ATL
 
@@ -51,7 +51,7 @@ ms.locfileid: "43764554"
 
    Можно использовать **IWebBrowser2** методы так, как библиотека ATL предоставляет указатель на этот интерфейс для вас в вашей h-файле.
 
-Далее следует измените HTML-ресурса для вызова методов, которые вы создали. Вы добавите три кнопки для вызова этих методов.  
+Далее следует измените HTML-ресурса для вызова методов, которые вы создали. Вы добавите три кнопки для вызова этих методов.
 
 #### <a name="to-modify-the-html-resource"></a>Для изменения HTML-ресурса
 
@@ -72,9 +72,9 @@ ms.locfileid: "43764554"
 3. Добавьте вызов в `HelloHTML` созданного метода. Пример:
 
     ```html
-    <br>  
-    <br>  
-    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>  
+    <br>
+    <br>
+    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
    Этот метод создаст кнопкой с надписью **HelloHTML**, который пользователь может щелкнуть для отображения `HelloHTML` окно сообщения.

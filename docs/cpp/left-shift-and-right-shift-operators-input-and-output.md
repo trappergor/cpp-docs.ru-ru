@@ -23,16 +23,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6c89e2550c01db695aa513a98d6d1cc8f116ca0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dea292ad348a155c6acdf64352dae47e858140b0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572493"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314109"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Операторы сдвигов влево и вправо (&gt; &gt; и &lt; &lt;)
 
-Побитовые операторы сдвига являются оператором сдвига вправо (>>), который перемещает биты *выражение сдвига* оператор сдвига влево и вправо (<<), который перемещает биты *выражение сдвига* слева. <sup>1</sup>
+Операторы побитового сдвига являются оператором сдвига вправо (**&gt;&gt;**), который перемещает биты *выражение сдвига* справа и оператор сдвига влево (**&lt; &lt;**), который перемещает биты *выражение сдвига* слева. <sup>1</sup>
 
 ## <a name="syntax"></a>Синтаксис
 

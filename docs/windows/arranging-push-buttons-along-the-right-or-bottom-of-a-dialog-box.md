@@ -1,5 +1,5 @@
 ---
-title: Упорядочивание кнопок по правому или нижнему краю диалогового окна | Документация Майкрософт
+title: Упорядочивание кнопок по правому или нижнему краю диалогового окна (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71e44b8d4fef02101c7b8d8f5878aeaa22a5c528
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e87a600192bbcd3c8c91dd3f400ed67e9fab7ea9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608727"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316735"
 ---
-# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Упорядочивание кнопок по правому или нижнему краю диалогового окна
+# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box-c"></a>Упорядочивание кнопок по правому или нижнему краю диалогового окна (C++)
 
 ### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Упорядочивание кнопок по правому или нижнему краю диалогового окна
 

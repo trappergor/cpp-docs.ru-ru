@@ -8,19 +8,19 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++]
+- attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fce2bbb0866f0260e8948677bd52c8e9f36b57c6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 037200c509574199dbecf56c950590e00e7aa71f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607797"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313615"
 ---
 # <a name="attributes-by-usage"></a>Список атрибутов по использованию
 
@@ -28,7 +28,7 @@ ms.locfileid: "42607797"
 
 Если атрибут предшествует элемент Visual C++, который не находится в области атрибута, блок атрибутов рассматривается как комментарий.
 
-|Атрибут|Описание:|
+|Атрибут|Описание|
 |---------------|-----------------|
 |[Атрибуты модуля](../windows/module-attributes.md)|Применяется к [модуль](../windows/module-cpp.md) атрибута.|
 |[Атрибуты интерфейса](../windows/interface-attributes.md)|Применяется к [__interface](../cpp/interface.md) ключевым словом языка C++.|

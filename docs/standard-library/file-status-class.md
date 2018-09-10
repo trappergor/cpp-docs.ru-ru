@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::permissions
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8f85041099d76a4bbb492aa55c5fb73d870589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dc955aa615deadb6e99cfdbb8d72513cc93ced8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842538"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314564"
 ---
 # <a name="filestatus-class"></a>Класс file_status
 
@@ -39,7 +39,34 @@ ms.locfileid: "33842538"
 class file_status;
 ```
 
-## <a name="filestatusfilestatus"></a>file_status::file_status
+### <a name="constructors"></a>Конструкторы
+
+|Конструктор|Описание|
+|-|-|
+|[file_status](#file_status)|Создает оболочку для [file_type](../standard-library/filesystem-enumerations.md#file_type) и файл [perms](../standard-library/filesystem-enumerations.md#perms).|
+
+### <a name="member-functions"></a>Функции-члены
+
+|Функция-член|Описание|
+|-|-|
+|[type](#type)|Возвращает или задает класс `file_type`.|
+|[permissions](#permissions)|Возвращает или задает разрешения для файла.|
+
+### <a name="operators"></a>Операторы
+
+|Оператор|Описание|
+|-|-|
+|[оператор=](#op_as)|Операторы-члены присваивания по умолчанию работают корректно.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<filesystem >
+
+**Пространство имен:** std::experimental:: FileSystem, std::experimental:: FileSystem
+
+## <a name="file_status"></a> file_status::file_status
+
+Создает оболочку для [file_type](../standard-library/filesystem-enumerations.md#file_type) и файл [perms](../standard-library/filesystem-enumerations.md#perms).
 
 ```cpp
 explicit file_status(
@@ -53,40 +80,60 @@ file_status(file_status&&) noexcept = default;
 ~file_status() noexcept = default;
 ```
 
-## <a name="filestatusoperator"></a>file_status::operator=
+### <a name="parameters"></a>Параметры
+
+*ftype*<br/>
+Указанный `file_type`, по умолчанию используется `file_type::none`.
+
+*Маска*<br/>
+Указанный файл `perms`, по умолчанию используется `perms::unknown`.
+
+*file_status*<br/>
+Сохраненный объект.
+
+## <a name="op_as"></a> file_status::operator =
+
+Операторы-члены присваивания по умолчанию работают корректно.
 
 ```cpp
 file_status& operator=(const file_status&) noexcept = default;
 file_status& operator=(file_status&&) nexcept = default;
 ```
 
-Операторы-члены присваивания по умолчанию работают корректно.
+### <a name="parameters"></a>Параметры
 
-## <a name="type"></a>type
+*file_status*<br/>
+[File_status](../standard-library/file-status-class.md) копируется в `file_status`.
+
+## <a name="type"></a> Тип
+
+Возвращает или задает класс `file_type`.
 
 ```cpp
 file_type type() const noexcept
 void type(file_type ftype) noexcept
 ```
 
-Возвращает или задает file_type.
+### <a name="parameters"></a>Параметры
 
-## <a name="permissions"></a>permissions
+*ftype*<br/>
+Задается следующим образом: `file_type`.
+
+## <a name="permissions"></a> Разрешения
+
+Возвращает или задает разрешения для файла.
+
+Используйте метод задания, чтобы создать файл `readonly` или удалите `readonly` атрибута.
 
 ```cpp
 perms permissions() const noexcept
 void permissions(perms mask) noexcept
 ```
 
-Возвращает или задает разрешения для файла.
+### <a name="parameters"></a>Параметры
 
-Используйте метод задания, чтобы сделать файл доступным только для чтения или удалить атрибут "только для чтения".
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<filesystem >
-
-**Пространство имен:** std::experimental::filesystem, std::experimental::filesystem
+*Маска*<br/>
+Задается следующим образом: `perms`.
 
 ## <a name="see-also"></a>См. также
 

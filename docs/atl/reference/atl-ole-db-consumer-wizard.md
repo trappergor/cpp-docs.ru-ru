@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83e644d8544b7919c0f61199197574d03b13ff8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763072"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315381"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Мастер потребителя ATL OLE DB
 
@@ -106,23 +106,23 @@ ms.locfileid: "43763072"
 
    После выбора источника данных, это поле заполняется на имя класса по умолчанию, исходя из таблицы или хранимой процедуры, который вы выбрали (см. в разделе **выбрать источник данных** ниже). Можно изменить имя класса.
 
-- **H-файл**  
+- **H-файл**
 
    После выбора источника данных, это окно заполняется на основе таблицы или хранимой процедуры, который вы выбрали имя класса заголовка по умолчанию (см. в разделе **выбрать источник данных** ниже). Можно изменить имя файла заголовка, или выбрать имеющийся файл заголовка.
 
-- **С атрибутами**  
+- **С атрибутами**
 
    Этот параметр указывает, будет ли мастер создавать классы потребителя с использованием атрибутов или определений шаблона. Если выбран этот параметр, мастер использует атрибуты вместо объявлений шаблона (это параметр по умолчанию). Если вы отключите этот параметр, мастер использует объявления шаблона вместо атрибутов.
 
    - При выборе потребителя **тип** из **таблицы**, мастер использует `db_source` и `db_table` атрибуты для объявления классов, создать таблицу и метода доступа к таблице и использует `db_column` для Создайте сопоставление столбцов. Например он создает эту карту:
 
         ```cpp
-        // Inject table class and table accessor class declarations  
-        [db_source("<initialization_string>"), db_table("dbo.Orders")]  
-        ... 
-        // Column map  
-        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
-        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
+        // Inject table class and table accessor class declarations
+        [db_source("<initialization_string>"), db_table("dbo.Orders")]
+        ...
+        // Column map
+        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
+        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
         ...
         ```
 
@@ -133,20 +133,20 @@ ms.locfileid: "43763072"
             class COrdersAccessor; // Table class
             class COrders : public CTable<CAccessor<COrdersAccessor>>;
         // ...
-        // Column map  
+        // Column map
             BEGIN_COLUMN_MAP(COrderDetailsAccessor)
                 COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
                 COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
-                // ...  
+                // ...
             END_COLUMN_MAP()
         ```
 
    - При выборе потребителя **тип** из **команда**, мастер использует `db_source` и `db_command` атрибуты и использует `db_column` для создания в сопоставление столбцов. Например он создает эту карту:
 
         ```cpp
-        [db_source("<initialization_string>"), db_command("SQL_command")]  
-        ... 
-        // Column map using db_column is the same as for consumer type of 'table'  
+        [db_source("<initialization_string>"), db_command("SQL_command")]
+        ...
+        // Column map using db_column is the same as for consumer type of 'table'
         ```
 
       Вместо использования команды и объявлений класса метода доступа команды в h-файле класса команды, например:
@@ -193,6 +193,6 @@ ms.locfileid: "43763072"
 
 ## <a name="see-also"></a>См. также
 
-[Потребителя ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)  
-[Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Строки подключения и связи данных (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Потребителя ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)
+[Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)
+[строки подключения и связи данных (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

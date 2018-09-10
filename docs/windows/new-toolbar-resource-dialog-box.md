@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно "Создание ресурса панели инструментов" | Документация Майкрософт
+title: Новые панели инструментов ресурсов-диалоговое окно (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New Toolbar Resource dialog box
+- New Toolbar Resource dialog box [C++]
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6952fa51115d5bec9650ef6d6012e3c7aff2d127
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602174"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316306"
 ---
-# <a name="new-toolbar-resource-dialog-box"></a>Создание ресурса панели инструментов - диалоговое окно
+# <a name="new-toolbar-resource-dialog-box-c"></a>Новые панели инструментов ресурсов-диалоговое окно (C++)
 
-**Создание ресурса панели инструментов** диалоговое окно позволяет указать ширину и высоту кнопки, при добавлении панели инструментов. Значение по умолчанию — 16 х 15 пикселей.
+**Создание ресурса панели инструментов** диалоговое окно позволяет указать ширину и высоту кнопки, добавляемый в ресурс панели инструментов в проекте C++. Значение по умолчанию — 16 х 15 пикселей.
 
 Битовая карта, используется для создания панели инструментов имеет максимальную ширину 2048. Поэтому, если задать **Ширина кнопки** 512, может быть только четыре кнопки. Если вам для настройки ширины 513, может иметь только три кнопки.
 
