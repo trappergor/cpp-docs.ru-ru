@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2e641dbea0507c51987d67e78b3cd8ef8be0dc6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 63712f6eb7efd9c52db5480b7f13babe9601dea2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958508"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110231"
 ---
 # <a name="basicifstream-class"></a>Класс basic_ifstream
 
@@ -46,9 +46,11 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Elem* базового элемента буфера файла.
+*Elem*<br/>
+Базовый элемент буфера файла.
 
-*TR* признаки базового элемента буфера файла (обычно `char_traits` <  `Elem`>).
+*Tr*<br/>
+Признаки базового элемента буфера файла (обычно `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Примечания
 
@@ -93,13 +95,13 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_ifstream](#basic_ifstream)|Выполняет инициализацию нового экземпляра объекта `basic_ifstream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[close](#close)|Закрывает файл.|
 |[is_open](#is_open)|Определяет, открыт ли файл.|
@@ -109,7 +111,7 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор=](#op_eq)|Назначает содержимое этого объекта потока. Это назначение перемещения, включающее `rvalue`, которое не оставляет копию.|
 
@@ -141,11 +143,14 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*_Filename* имя открываемого файла.
+*_Filename*<br/>
+Имя файла, который необходимо открыть.
 
-*_Режим* одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим*<br/>
+Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* защита, эквивалентно открытия файла по умолчанию `shflag` параметр в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Защита открытия файла по умолчанию, эквивалент параметра `shflag` в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Примечания
 
@@ -242,11 +247,14 @@ void open(
 
 ### <a name="parameters"></a>Параметры
 
-*_Filename* имя открываемого файла.
+*_Filename*<br/>
+Имя файла, который необходимо открыть.
 
-*_Режим* одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим*<br/>
+Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* защита, эквивалентно открытия файла по умолчанию `shflag` параметр в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Защита открытия файла по умолчанию, эквивалент параметра `shflag` в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Примечания
 
@@ -266,7 +274,8 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* ссылка rvalue на `basic_ifstream` объекта.
+*right*<br/>
+Ссылка rvalue на объект `basic_ifstream`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -302,7 +311,8 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* ссылку на другой буфер потока.
+*right*<br/>
+Ссылка на другой буфер потока.
 
 ### <a name="remarks"></a>Примечания
 

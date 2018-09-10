@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7a7489c07572a9e3865698dc02988768983669
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960581"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104610"
 ---
 # <a name="unorderedmultimap-class"></a>Класс unordered_multimap
 
@@ -171,7 +171,7 @@ class unordered_multimap;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Key*|Тип ключа.|
 |*Ty*|Сопоставленный тип.|
@@ -181,7 +181,7 @@ class unordered_multimap;
 
 ## <a name="members"></a>Участники
 
-|Определение типа|Описание:|
+|Определение типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип распределителя для управления хранилищем.|
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
@@ -200,7 +200,7 @@ class unordered_multimap;
 |[size_type](#size_type)|Тип беззнакового расстояния между двумя элементами.|
 |[value_type](#value_type)|Тип элемента.|
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[begin](#begin)|Задает начало управляемой последовательности.|
 |[контейнер](#bucket)|Получает номер блока для значения ключа.|
@@ -230,7 +230,7 @@ class unordered_multimap;
 |[swap](#swap)|Меняет местами содержимое двух контейнеров.|
 |[unordered_multimap](#unordered_multimap)|Создает объект контейнера.|
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[unordered_multimap::operator=](#op_eq)|Копирует хэш-таблицу.|
 
@@ -306,7 +306,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*nbucket*|Номер сегмента.|
 
@@ -370,7 +370,7 @@ size_type bucket(const Key& keyval) const;
 ### <a name="parameters"></a>Параметры
 
 *keyval*  
- Значение ключа для сопоставления.
+Значение ключа для сопоставления.
 
 ### <a name="remarks"></a>Примечания
 
@@ -411,7 +411,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -486,7 +486,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -515,7 +515,7 @@ size_type bucket_size(size_type nbucket) const;
 ### <a name="parameters"></a>Параметры
 
 *nbucket*  
- Номер сегмента.
+Номер сегмента.
 
 ### <a name="remarks"></a>Примечания
 
@@ -556,7 +556,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -674,7 +674,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -881,7 +881,7 @@ size_type count(const Key& keyval) const;
 ### <a name="parameters"></a>Параметры
 
 *keyval*  
- Искомое значение ключа.
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -920,7 +920,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -981,7 +981,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -997,7 +997,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multimap.|
 
@@ -1028,7 +1028,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multimap.|
 |*where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -1106,7 +1106,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1132,7 +1132,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*nbucket*|Номер сегмента.|
 
@@ -1202,7 +1202,7 @@ std::pair<const_iterator, const_iterator>
 ### <a name="parameters"></a>Параметры
 
 *keyval*  
- Искомое значение ключа.
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1254,7 +1254,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1278,16 +1278,16 @@ size_type erase(
 ### <a name="parameters"></a>Параметры
 
 *Where*  
- Положение удаляемого элемента.
+Положение удаляемого элемента.
 
 *Первый*  
- Положение первого удаляемого элемента.
+Положение первого удаляемого элемента.
 
 *последний*  
- Положение перед последним удаляемым элементом.
+Положение перед последним удаляемым элементом.
 
 *Key*  
- Значение ключа удаляемых элементов.
+Значение ключа удаляемых элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1310,7 +1310,7 @@ const_iterator find(const Key& keyval) const;
 ### <a name="parameters"></a>Параметры
 
 *keyval*  
- Искомое значение ключа.
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1355,7 +1355,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1522,7 +1522,7 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента, вставляемого в unordered_multimap.|
 |*Where*|Место начала поиска правильной точки вставки.|
@@ -1980,7 +1980,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2012,7 +2012,7 @@ void max_load_factor(float factor);
 ### <a name="parameters"></a>Параметры
 
 *Коэффициент*  
- Новый коэффициент максимальной нагрузки.
+Новый коэффициент максимальной нагрузки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2076,7 +2076,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2142,7 +2142,7 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*right*|unordered_multimap копируется в unordered_multimap.|
 
@@ -2292,7 +2292,7 @@ void rehash(size_type nbuckets);
 ### <a name="parameters"></a>Параметры
 
 *nbuckets*  
- Требуемое число сегментов.
+Требуемое число сегментов.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2346,7 +2346,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2419,7 +2419,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2475,7 +2475,8 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* контейнер для замены.
+*right*<br/>
+Контейнер для замены.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2581,7 +2582,7 @@ unordered_multimap(
 
 template <class InputIterator>
 unordered_multimap(
- InputIterator first, InputIterator last,
+InputIterator first, InputIterator last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
     const Comp& Comp = Pred(),
@@ -2590,13 +2591,13 @@ unordered_multimap(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*InputIterator*|Тип итератора.|
 |*Al*|Объект распределителя для сохранения.|
 |*Зап.*|Объект функции сравнения для сохранения.|
 |*хэш*|Объект хэш-функции для сохранения.|
-|*bucket_count*|Минимальное количество блоков.|
+|*Bucket_count*|Минимальное количество блоков.|
 |*Справа*|Контейнер для копирования.|
 |*IList*|Объект initializer_list, из которого копируются элементы.|
 
@@ -2733,9 +2734,9 @@ int main()
 
 ```Output
 [a, 1] [b, 2] [c, 3] [d, 4] [e, 5] [f, 6] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [5, g] [6, h] [7, i] [8, j] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [c, 3] [b, 2] [a, 1]
- [f, 6] [e, 5] [d, 4]
- [c, 3] [b, 2] [a, 1]
- [c, 3] [b, 2] [a, 1]
+[f, 6] [e, 5] [d, 4]
+[c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 ```
 
 ## <a name="value_type"></a>  unordered_multimap::value_type

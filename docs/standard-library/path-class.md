@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ea20d43e2679addc10465cfc549a64fc210274f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4559bec84d7e6051155ad73f68a1ef8ae13ca6cc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861692"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104164"
 ---
 # <a name="path-class"></a>Класс path
 
@@ -33,7 +33,88 @@ ms.locfileid: "33861692"
 class path;
 ```
 
-## <a name="pathappend"></a>path::append
+### <a name="constructors"></a>Конструкторы
+
+|Конструктор|Описание|
+|-|-|
+|[path](#path)|Создает документ `path`.|
+
+### <a name="typedefs"></a>Определения типов
+
+|Имя типа|Описание|
+|-|-|
+|[const_iterator](#const_iterator)|Синоним для `iterator`.|
+|[iterator](#iterator)|Двунаправленный постоянный итератор, указывающий `path` компоненты `myname`.|
+|[string_type](#string_type)|Тип является синонимом `basic_string<value_type>`.|
+
+### <a name="member-functions"></a>Функции-члены
+
+|Функция-член|Описание|
+|-|-|
+|[append](#append)|Добавляет указанную последовательность в `mypath`и вставляют preferred_separator при необходимости.|
+|[assign](#assign)|Заменяет `mypath` с указанной последовательностью, преобразованной при необходимости.|
+|[begin](#begin)|Возвращает `path::iterator` обозначающий первый элемент пути в имени пути, если он имеется.|
+|[c_str](#c_str)|Возвращает указатель на первый символ в `mypath`.|
+|[clear](#clear)|Выполняет `mypath.clear()`.|
+|[compare](#compare)|Возвращает значения для сравнения.|
+|[Concat](#compare)|Добавляет к указанной последовательности `mypath`, преобразовать (но не вставляют разделитель) при необходимости.|
+|[empty](#empty)|Возвращает `mypath.empty()`.|
+|[end](#end)|Возвращает итератор конец последовательности типа `iterator`.|
+|[Расширение](#extension)|Возвращает суффикс `filename()`.|
+|[filename](#filename)|Возвращает компонент корневого каталога myname, а именно `empty() path() : *--end()`. Компонент может быть пустым.|
+|[generic_string](#generic_string)|Возвращает значение `this->string<Elem, Traits, Alloc>(al)` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.|
+|[generic_u16string](#generic_u16string)|Возвращает `u16string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.|
+|[generic_u32string](#generic_u32string)|Возвращает `u32string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.|
+|[generic_u8string](#generic_u8string)|Возвращает `u8string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.|
+|[generic_wstring](#generic_wstring)|Возвращает `wstring()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.|
+|[has_extension](#has_extension)|Возвращает `!extension().empty()`.|
+|[has_filename](#has_filename)|Возвращает `!filename().empty()`.|
+|[has_parent_path](#has_parent_path)|Возвращает `!parent_path().empty()`.|
+|[has_relative_path](#has_relative_path)|Возвращает `!relative_path().empty()`.|
+|[has_root_directory](#has_root_directory)|Возвращает `!root_directory().empty()`.|
+|[has_root_name](#has_root_name)|Возвращает `!root_name().empty()`.|
+|[has_root_path](#has_root_path)|Возвращает `!root_path().empty()`.|
+|[has_stem](#has_stem)|Возвращает `!stem().empty()`.|
+|[is_absolute](#is_absolute)|Для Windows, функция возвращает `has_root_name() && has_root_directory()`. Для Posix функция возвращает `has_root_directory()`.|
+|[is_relative](#is_relative)|Возвращает `!is_absolute()`.|
+|[make_preferred](#make_preferred)|Преобразует каждый разделитель в preferred_separator при необходимости.|
+|[native](#native)|Возвращает `myname`.|
+|[parent_path](#parent_path)|Возвращает родительский компонент пути `myname`.|
+|[preferred_separator при](#preferred_separator)|Постоянный объект предоставляет предпочтительный символ для разделения компонентов пути в зависимости от операционной системы размещения. |
+|[relative_path](#relative_path)|Возвращает компонент относительного пути `myname`. |
+|[remove_filename](#remove_filename)|Удаляет имя файла.|
+|[replace_extension](#replace_extension)|Заменяет расширение `myname`. |
+|[replace_filename](#replace_filename)|RReplaces имя файла.|
+|[root_directory](#root_directory)|Возвращает компонент корневого каталога `myname`. |
+|[root_name](#root_name)|Возвращает компонент корневого имени `myname`. |
+|[путь_к_корню](#root_path)|Возвращает компонент корневого пути `myname`.|
+|[точные науки](#stem)|Возвращает `stem` компонент `myname`.|
+|[string](#string)|Преобразует последовательность, хранимую в `mypath`.|
+|[swap](#swap)|Выполняет `swap(mypath, right.mypath)`.|
+|[u16string](#u16string)|Преобразует последовательность, хранимую в `mypath` UTF-16 и возвращает ее, сохранив в объект типа `u16string`.|
+|[u32string](#u32string)|Преобразует последовательность, хранимую в `mypath` UTF-32 и возвращает ее, сохранив в объект типа `u32string`.|
+|[u8string](#u8string)|Преобразует последовательность, хранимую в `mypath` UTF-8 и возвращает ее, сохранив в объект типа `u8string`.|
+|[value_type](#value_type)|Тип описывает элементы пути, предпочитаемые в системе размещения.|
+|[wstring](#wstring)|Преобразует последовательность, хранимую в `mypath` кодировку, предпочитаемую в системе размещения для `wchar_t` последовательности и возвращает ее, сохранив в объект типа `wstring`.|
+
+### <a name="operators"></a>Операторы
+
+|Оператор|Описание|
+|-|-|
+|[оператор=](#op_as)|Заменяет элементы пути копию другой путь.|
+|[оператор+=](#op_add)|Различные `concat` выражения.|
+|[оператор/=](#op_divide)|Различные `append` выражения.|
+|[оператор string_type](#op_string)|Возвращает `myname`.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<filesystem >
+
+**Пространство имен:** std::experimental::filesystem
+
+## <a name="append"></a> PATH::append
+
+Добавляет указанную последовательность для `mypath`, преобразованный, так и вставки `preferred_separator` при необходимости.
 
 ```cpp
 template <class Source>
@@ -43,9 +124,20 @@ template <class InIt>
 path& append(InIt first, InIt last);
 ```
 
-Функции-члены добавляют указанную последовательность в mypath, преобразуют ее и вставляют preferred_separator при необходимости.
+### <a name="parameters"></a>Параметры
 
-## <a name="pathassign"></a>path::assign
+*source*<br/>
+Указанной последовательности.
+
+*Первый*<br/>
+Начало указанной последовательности.
+
+*последний*<br/>
+Конец указанной последовательности.
+
+## <a name="assign"></a> PATH::Assign
+
+Заменяет `mypath` с указанной последовательностью, преобразованной при необходимости.
 
 ```cpp
 template <class Source>
@@ -55,33 +147,44 @@ template <class InIt>
 path& assign(InIt first, InIt last);
 ```
 
-Функции-члены заменяют mypath указанной последовательностью, преобразованной при необходимости.
+### <a name="parameters"></a>Параметры
 
-## <a name="pathbegin"></a>path::begin
+*source*<br/>
+Указанной последовательности.
+
+*Первый*<br/>
+Начало указанной последовательности.
+
+*последний*<br/>
+Конец указанной последовательности.
+
+## <a name="begin"></a> PATH::BEGIN
+
+Возвращает `path::iterator` обозначающий первый элемент пути в имени пути, если он имеется.
 
 ```cpp
 iterator begin() const;
 ```
 
-Возвращает path::iterator, обозначающий первый элемент пути в имени пути (при наличии).
+## <a name="c_str"></a> PATH::c_str
 
-## <a name="pathcstr"></a>path::c_str
+Возвращает указатель на первый символ в `mypath`.
 
 ```cpp
 const value_type& *c_str() const noexcept;
 ```
 
-Возвращает указатель на первый символ в mypath.
+## <a name="clear"></a> PATH::Clear
 
-## <a name="pathclear"></a>path::clear
+Выполняет `mypath.clear()`.
 
 ```cpp
 void clear() noexcept;
 ```
 
-Функция-член выполняет mypath.clear()
+## <a name="compare"></a> PATH::Compare
 
-## <a name="pathcompare"></a>path::compare
+Первая функция возвращает `mypath.compare(pval.native())`. Вторая функция возвращает `mypath.compare(str)`. Третья функция возвращает `mypath.compare(ptr)`.
 
 ```cpp
 int compare(const path& pval) const noexcept;
@@ -89,9 +192,20 @@ int compare(const string_type& str) const;
 int compare(const value_type *ptr) const;
 ```
 
-Первая функция возвращает mypath.compare(pval.native()). Вторая функция возвращает mypath.compare(str). Третья функция возвращает mypath.compare(ptr).
+### <a name="parameters"></a>Параметры
 
-## <a name="pathconcat"></a>path::concat
+*PVal*<br/>
+Путь для сравнения.
+
+*str*<br/>
+Строка для сравнения.
+
+*ptr*<br/>
+Указатель для сравнения.
+
+## <a name="concat"></a> PATH::concat
+
+Добавляет к указанной последовательности `mypath`, преобразовать (но не вставляют разделитель) при необходимости.
 
 ```cpp
 template <class Source>
@@ -101,53 +215,68 @@ template <class InIt>
 path& concat(InIt first, InIt last);
 ```
 
-Функции-члены добавляют указанную последовательность в mypath, преобразуют ее (но не вставляют разделитель) при необходимости.
+### <a name="parameters"></a>Параметры
 
-## <a name="pathconstiterator"></a>path::const_iterator
+*source*<br/>
+Указанной последовательности.
+
+*Первый*<br/>
+Начало указанной последовательности.
+
+*последний*<br/>
+Конец указанной последовательности.
+
+## <a name="const_iterator"></a> PATH::const_iterator
+
+Синоним для `iterator`.
 
 ```cpp
 typedef iterator const_iterator;
 ```
 
-Тип является синонимом для типа iterator.
+## <a name="empty"></a> PATH::Empty
 
-## <a name="pathempty"></a>path::empty
+Возвращает `mypath.empty()`.
 
 ```cpp
 bool empty() const noexcept;
 ```
 
-Возвращает mypath.empty().
+## <a name="end"></a> PATH::End
 
-## <a name="pathend"></a>path::end
+Возвращает итератор конец последовательности типа `iterator`.
 
 ```cpp
 iterator end() const;
 ```
 
-Возвращает итератор конца последовательности типа iterator.
+## <a name="extension"></a> PATH::Extension
 
-## <a name="pathextension"></a>path::extension
+Возвращает суффикс `filename()`.
 
 ```cpp
 path extension() const;
 ```
 
-Возвращает суффикс X filename() так, чтобы:
+### <a name="remarks"></a>Примечания
 
-Если X == path(".") &#124;&#124; X == path("..") или X не содержит точки, суффикс будет пустым.
+Возвращает суффикс `filename() X` таким образом, чтобы:
+
+Если `X == path(".") || X == path("..")` или, если `X` не содержит точки, суффикс пуст.
 
 В противном случае суффикс начинается с самой крайней правой точки (и включает ее).
 
-## <a name="pathfilename"></a>path::filename
+## <a name="filename"></a> PATH::filename
+
+Возвращает компонент корневого каталога myname, а именно `empty() path() : *--end()`. Компонент может быть пустым.
 
 ```cpp
 path filename() const;
 ```
 
-Возвращает компонент корневого каталога myname, а именно `empty()  path() : *--end()`. Компонент может быть пустым.
+## <a name="generic_string"></a> PATH::generic_string
 
-## <a name="pathgenericstring"></a>path::generic_string
+Возвращает значение `this->string<Elem, Traits, Alloc>(al)` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
 
 ```cpp
 template <class Elem,
@@ -159,121 +288,121 @@ template <class Elem,
 string generic_string() const;
 ```
 
-Возвращает значение `this->string<Elem, Traits, Alloc>(al)` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
+## <a name="generic_u16string"></a> PATH::generic_u16string
 
-## <a name="pathgenericu16string"></a>path::generic_u16string
+Возвращает `u16string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.
 
 ```cpp
 u16string generic_u16string() const;
 ```
 
-Возвращает значение u16string() с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
+## <a name="generic_u32string"></a> PATH::generic_u32string
 
-## <a name="pathgenericu32string"></a>path::generic_u32string
+Возвращает `u32string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.
 
 ```cpp
 u32string generic_u32string() const;
 ```
 
-Возвращает значение u32string() с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
+## <a name="generic_u8string"></a> PATH::generic_u8string
 
-## <a name="pathgenericu8string"></a>path::generic_u8string
+Возвращает `u8string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.
 
 ```cpp
 string generic_u8string() const;
 ```
 
-Возвращает значение u8string() с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
+## <a name="generic_wstring"></a> PATH::generic_wstring
 
-## <a name="pathgenericwstring"></a>path::generic_wstring
+Возвращает `wstring()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.
 
 ```cpp
 wstring generic_wstring() const;
 ```
 
-Возвращает значение wstring() с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
+## <a name="has_extension"></a> PATH::has_extension
 
-## <a name="pathhasextension"></a>path::has_extension
+Возвращает `!extension().empty()`.
 
 ```cpp
 bool has_extension() const;
 ```
 
-Возвращает !extension().empty().
+## <a name="has_filename"></a> PATH::has_filename
 
-## <a name="pathhasfilename"></a>path::has_filename
+Возвращает `!filename().empty()`.
 
 ```cpp
 bool has_filename() const;
 ```
 
-Возвращает !filename().empty().
+## <a name="has_parent_path"></a> PATH::has_parent_path
 
-## <a name="pathhasparentpath"></a>path::has_parent_path
+Возвращает `!parent_path().empty()`.
 
 ```cpp
 bool has_parent_path() const;
 ```
 
-Возвращает !parent_path().empty().
+## <a name="has_relative_path"></a> PATH::has_relative_path
 
-## <a name="pathhasrelativepath"></a>path::has_relative_path
+Возвращает `!relative_path().empty()`.
 
 ```cpp
 bool has_relative_path() const;
 ```
 
-Возвращает !relative_path().empty().
+## <a name="has_root_directory"></a> PATH::has_root_directory
 
-## <a name="pathhasrootdirectory"></a>path::has_root_directory
+Возвращает `!root_directory().empty()`.
 
 ```cpp
 bool has_root_directory() const;
 ```
 
-Возвращает !root_directory().empty().
+## <a name="has_root_name"></a> PATH::has_root_name
 
-## <a name="pathhasrootname"></a>path::has_root_name
+Возвращает `!root_name().empty()`.
 
 ```cpp
 bool has_root_name() const;
 ```
 
-Возвращает !root_name().empty().
+## <a name="has_root_path"></a> PATH::has_root_path
 
-## <a name="pathhasrootpath"></a>path::has_root_path
+Возвращает `!root_path().empty()`.
 
 ```cpp
 bool has_root_path() const;
 ```
 
-Возвращает !root_path().empty().
+## <a name="has_stem"></a> PATH::has_stem
 
-## <a name="pathhasstem"></a>path::has_stem
+Возвращает `!stem().empty()`.
 
 ```cpp
 bool has_stem() const;
 ```
 
-Возвращает !stem().empty().
+## <a name="is_absolute"></a> PATH::is_absolute
 
-## <a name="pathisabsolute"></a>path::is_absolute
+Для Windows, функция возвращает `has_root_name() && has_root_directory()`. Для Posix функция возвращает `has_root_directory()`.
 
 ```cpp
 bool is_absolute() const;
 ```
 
-Для Windows функция возвращает has_root_name() && has_root_directory(). Для Posix функция возвращает has_root_directory().
+## <a name="is_relative"></a> PATH::is_relative
 
-## <a name="pathisrelative"></a>path::is_relative
+Возвращает `!is_absolute()`.
 
 ```cpp
 bool is_relative() const;
 ```
 
-Возвращает !is_absolute().
+## <a name="iterator"></a> PATH::iterator
 
-## <a name="pathiterator"></a>path::iterator
+Двунаправленный постоянный итератор, указывающий компоненты пути `myname`.
 
 ```cpp
 class iterator
@@ -288,45 +417,49 @@ class iterator
    };
 ```
 
-Этот класс описывает двунаправленный постоянный итератор, указывающий компоненты пути myname в последовательности:
+### <a name="remarks"></a>Примечания
+
+Этот класс описывает двунаправленный постоянный итератор, указывающий `path` компоненты `myname` в последовательности:
 
 1. корневое имя (при наличии);
 
 1. корневой каталог (при наличии);
 
-1. остальные элементы каталога родительского пути (при наличии), заканчивая именем файла, если оно есть.
+1. остальные элементы каталога родительского `path`, если он присутствует, заканчивая именем файла, при его наличии
 
-Для pval объект типа path:
+Для `pval` объект типа `path`:
 
-1. path::iterator X = pval.begin() указывает первый элемент пути в имени пути (при наличии).
+1. `path::iterator X = pval.begin()` Определяет первый `path` элемент в имени пути, если он имеется.
 
-1. X == pval.end() имеет значение true, если точки X следуют непосредственно за концом последовательности компонентов.
+1. `X == pval.end()` верно, когда `X` точек просто за концом последовательности компонентов.
 
-3. *X возвращает строку, совпадающую с текущим компонентом.
+3. `*X` Возвращает строку, совпадающую с текущим компонентом
 
-1. ++X указывает следующий компонент в последовательности (при наличии).
+1. `++X` указывает на следующий компонент в последовательности, если он имеется.
 
-1. --X указывает предыдущий компонент в последовательности (при наличии).
+1. `--X` указывает на предыдущий компонент в последовательности, если он имеется.
 
-1. Изменение myname делает недействительными все итераторы, указывающие элементы в myname.
+1. Изменение `myname` делает недействительными все итераторы, указывающие элементы в `myname`.
 
-## <a name="pathmakepreferred"></a>path::make_preferred
+## <a name="make_preferred"></a> PATH::make_preferred
+
+Преобразует каждый разделитель в preferred_separator при необходимости.
 
 ```cpp
 path& make_preferred();
 ```
 
-Функция-член преобразует каждый разделитель в preferred_separator при необходимости.
+## <a name="native"></a> PATH::Native
 
-## <a name="pathnative"></a>path::native
+Возвращает `myname`.
 
 ```cpp
 const string_type& native() const noexcept;
 ```
 
-Возвращает myname.
+## <a name="op_as"></a> PATH::operator =
 
-## <a name="pathoperator"></a>path::operator=
+Заменяет элементы пути копию другой путь.
 
 ```cpp
 path& operator=(const path& right);
@@ -336,9 +469,21 @@ template <class Source>
 path& operator=(const Source& source);
 ```
 
-Первый оператор-член копирует right.myname в myname. Второй оператор-член перемещает right.myname в myname. Третий оператор-член работает так же, как *this = path(source).
+### <a name="parameters"></a>Параметры
 
-## <a name="pathoperator"></a>path::operator+=
+*right*<br/>
+[Путь](../standard-library/path-class.md) копируется в `path`.
+
+*source*<br/>
+Исходный путь.
+
+### <a name="remarks"></a>Примечания
+
+Первый оператор копий член `right.myname` для `myname`. Второй оператор-член перемещает `right.myname` для `myname`. Третий оператор-член ведет себя так же, как `*this = path(source)`.
+
+## <a name="op_add"></a> PATH::operator +=
+
+Различные `concat` выражения.
 
 ```cpp
 path& operator+=(const path& right);
@@ -353,21 +498,42 @@ template <class Elem>
 path& operator+=(Elem elem);
 ```
 
+### <a name="parameters"></a>Параметры
+
+*right*<br/>
+Добавленном контуре.
+
+*str*<br/>
+Добавлена строка.
+
+*ptr*<br/>
+Добавлен указатель.
+
+*Elem*<br/>
+Добавленный `value_type` или `Elem`.
+
+*source*<br/>
+Добавлен источник.
+
+### <a name="remarks"></a>Примечания
+
 Функции-члены работают так же, как следующие соответствующие выражения:
 
-1. concat(right);
+1. `concat(right);`
 
-1. concat(path(str));
+1. `concat(path(str));`
 
-1. concat(ptr);
+1. `concat(ptr);`
 
-1. concat(string_type(1, elem));
+1. `concat(string_type(1, elem));`
 
-1. concat(source);
+1. `concat(source);`
 
-1. concat(path(basic_string\<Elem>(1, elem)));
+1. `concat(path(basic_string\<Elem>(1, elem)));`
 
-## <a name="pathoperator"></a>path::operator/=
+## <a name="op_divide"></a> PATH::operator / =
+
+Различные `append` выражения.
 
 ```cpp
 path& operator/=(const path& right);
@@ -376,29 +542,45 @@ template <class Source>
 path& operator/=(const Source& source);
 ```
 
+### <a name="parameters"></a>Параметры
+
+*right*<br/>
+Добавленном контуре.
+
+*source*<br/>
+Добавлен источник.
+
+### <a name="remarks"></a>Примечания
+
 Функции-члены работают так же, как следующие соответствующие выражения:
 
-1. append(right);
+1. `append(right);`
 
-1. append(source);
+1. `append(source);`
 
-## <a name="pathoperator-stringtype"></a>path::operator string_type
+## <a name="op_string"></a> PATH::operator string_type
+
+Возвращает `myname`.
 
 ```cpp
 operator string_type() const;
 ```
 
-Оператор-член возвращает myname.
+## <a name="parent_path"></a> PATH::parent_path
 
-## <a name="pathparentpath"></a>path::parent_path
+Возвращает родительский компонент пути `myname`.
 
 ```cpp
 path parent_path() const;
 ```
 
-Возвращает компонент родительского пути myname, а именно префикс myname, после удаления filename().native() и любых непосредственно предшествующих разделителей каталога. (Аналогично, если begin() != end(), это сочетание всех элементов в диапазоне [begin(), --end()) при успешном применении operator/=.) Компонент может быть пустым.
+### <a name="remarks"></a>Примечания
 
-## <a name="pathpath"></a>path::path
+Возвращает родительский компонент пути `myname`, а именно префикс `myname` после удаления `filename().native()` и любой непосредственно предшествующих разделителей каталога. (Аналогично, если `begin() != end()`, это сочетание всех элементов в диапазоне [begin(),--end()) при успешном применении operator / =.) Компонент может быть пустым.
+
+## <a name="path"></a> PATH::path
+
+Создает `path` различными способами.
 
 ```cpp
 path();
@@ -419,23 +601,44 @@ template <class InIt>
 path(InIt first, InIt last, const locale& loc);
 ```
 
-Все конструкторы создают myname различными способами.
+### <a name="parameters"></a>Параметры
 
-Для path() — это myname().
+*right*<br/>
+Путь, из которых созданного пути является копией.
 
-Для path(const path& right) — это myname(right.myname).
+*source*<br/>
+Источник, из которых созданного пути является копией.
 
-Для path(path&& right) — это myname(right.myname).
+*Loc*<br/>
+Указанный языковой стандарт.
 
-Для template\<class Source> path(const Source& source) это будет myname(source).
+*Первый*<br/>
+Позиция первого элемента, который следует скопировать.
 
-Для template\<class Source> path(const Source& source, const locale& loc) это будет myname(source) с получением любых необходимых аспектов codecvt из loc.
+*последний*<br/>
+Позиция последнего элемента для копирования.
 
-Для template\<class InIt> path(InIt first, InIt last) это будет myname(first, last).
+### <a name="remarks"></a>Примечания
 
-Для template\<class InIt> path(InIt first, InIt last, const locale& loc) это будет myname(first, last) с получением всех необходимых аспектов codecvt из loc.
+Конструкторы, все построения `myname` различными способами:
 
-## <a name="pathpreferredseparator"></a>path::preferred_separator
+Для `path()` это `myname()`.
+
+Для `path(const path& right`) это `myname(right.myname)`.
+
+Для `path(path&& right)` это `myname(right.myname)`.
+
+Для `template<class Source> path(const Source& source)` это `myname(source)`.
+
+Для `template<class Source> path(const Source& source, const locale& loc)` это `myname(source)`, получающий все необходимые аспекты codecvt из `loc`.
+
+Для `template<class InIt> path(InIt first, InIt last)` это `myname(first, last)`.
+
+Для `template<class InIt> path(InIt first, InIt last, const locale& loc)` это `myname(first, last)`, получающий все необходимые аспекты codecvt из `loc`.
+
+## <a name="preferred_separator"></a> PATH::preferred_separator
+
+Постоянный объект предоставляет предпочтительный символ для разделения компонентов пути в зависимости от операционной системы размещения. 
 
 ```cpp
 #if _WIN32_C_LIB
@@ -445,35 +648,61 @@ static constexpr value_type preferred_separator == '/';
 #endif // filesystem model now defined
 ```
 
-Постоянный объект предоставляет предпочтительный символ для разделения компонентов пути в зависимости от операционной системы размещения. Обратите внимание, что в большинстве контекстов в Windows в равной мере допускается использование соответствующего символа L"/".
+### <a name="remarks"></a>Примечания
 
-## <a name="pathrelativepath"></a>path::relative_path
+Обратите внимание, что в большинстве контекстов в Windows в равной мере допускается использование соответствующего символа L"/".
+
+## <a name="relative_path"></a> PATH::relative_path
+
+Возвращает компонент относительного пути `myname`. 
 
 ```cpp
 path relative_path() const;
 ```
 
-Возвращает компонент относительного пути myname, а именно суффикс myname, после удаления root_path().native() и любых непосредственно последующих избыточных разделителей каталога. Компонент может быть пустым.
+### <a name="remarks"></a>Примечания
 
-## <a name="pathremovefilename"></a>path::remove_filename
+Возвращает компонент относительного пути `myname`, а именно суффикс `myname` после удаления `root_path().native()` и любой непосредственно последующих избыточных разделителей каталога. Компонент может быть пустым.
+
+## <a name="remove_filename"></a> PATH::remove_filename
+
+Удаляет имя файла.
 
 ```cpp
 path& remove_filename();
 ```
 
-## <a name="pathreplaceextension"></a>path::replace_extension
+## <a name="replace_extension"></a> PATH::replace_extension
+
+Заменяет расширение `myname`. 
 
 ```cpp
 path& replace_extension(const path& newext = path());
 ```
 
-Функция-член сначала удаляет суффикс extension().native() из myname. Затем, если !newext.empty() && newext[0] != dot (где dot — *path(".").c_str()), то точка добавляется к myname. Затем к myname добавляется newext.
+### <a name="parameters"></a>Параметры
 
-## <a name="pathreplacefilename"></a>path::replace_filename
+*newext*<br/>
+Новое расширение.
+
+### <a name="remarks"></a>Примечания
+
+Сначала удаляет суффикс `extension().native()` из `myname`. Затем, если `!newext.empty() && newext[0] != dot` (где `dot` — `*path(".").c_str()`), затем `dot` добавляется к `myname`. Затем `newext` добавляется к `myname`.
+
+## <a name="replace_filename"></a> PATH::replace_filename
+
+Заменяет имя файла.
 
 ```cpp
 path& replace_filename(const path& pval);
 ```
+
+### <a name="parameters"></a>Параметры
+
+*PVal*<br/>
+Путь к имени файла.
+
+### <a name="remarks"></a>Примечания
 
 Функция-член выполняет:
 
@@ -484,39 +713,57 @@ remove_filename();
 return (*this);
 ```
 
-## <a name="pathrootdirectory"></a>path::root_directory
+## <a name="root_directory"></a> PATH::root_directory
+
+Возвращает компонент корневого каталога `myname`. 
 
 ```cpp
 path root_directory() const;
 ```
 
-Возвращает компонент корневого каталога myname. Компонент может быть пустым.
+### <a name="remarks"></a>Примечания
 
-## <a name="pathrootname"></a>path::root_name
+Компонент может быть пустым.
+
+## <a name="root_name"></a> PATH::root_name
+
+Возвращает компонент корневого имени `myname`. 
 
 ```cpp
 path root_name() const;
 ```
 
-Возвращает компонент корневого имени myname. Компонент может быть пустым.
+### <a name="remarks"></a>Примечания
 
-## <a name="pathrootpath"></a>path::root_path
+Компонент может быть пустым.
+
+## <a name="root_path"></a> PATH::root_path
+
+Возвращает компонент корневого пути `myname`.
 
 ```cpp
 path root_path() const;
 ```
 
-Возвращает компонент корневого пути myname, а именно root_name() / root_directory. Компонент может быть пустым.
+### <a name="remarks"></a>Примечания
 
-## <a name="pathstem"></a>path::stem
+Возвращает компонент корневого пути `myname`, а именно root_name() / root_directory. Компонент может быть пустым.
+
+## <a name="stem"></a> PATH::stem
+
+Возвращает `stem` компонент `myname`.
 
 ```cpp
 path stem() const;
 ```
 
-Возвращает компонент основы myname, а именно filename().native(), удаляя все конечные суффиксы extension().native(). Компонент может быть пустым.
+### <a name="remarks"></a>Примечания
 
-## <a name="pathstring"></a>path::string
+Возвращает `stem` компонент `myname`, в частности `filename().native()` любой завершающими `extension().native()` удалены. Компонент может быть пустым.
+
+## <a name="string"></a> PATH::String
+
+Преобразует последовательность, хранимую в `mypath`.
 
 ```cpp
 template \<class Elem, class Traits = char_traits\<Elem>, class Alloc = allocator\<Elem>>
@@ -524,59 +771,63 @@ basic_string\<Elem, Traits, Alloc> string(const Alloc& al = Alloc()) const;
 string string() const;
 ```
 
+### <a name="remarks"></a>Примечания
+
 Первая функция-член (шаблон) преобразует последовательность, хранимую в mypath, так же, как:
 
-1. string() для string\<char, Traits, Alloc>()
+1. `string()` для `string<char, Traits, Alloc>()`
 
-1. wstring() для string\<wchar_t, Traits, Alloc>()
+1. `wstring()` для `string<wchar_t, Traits, Alloc>()`
 
-1. u16string() для string\<char16_t, Traits, Alloc>()
+1. `u16string()` для `string<char16_t, Traits, Alloc>()`
 
-1. u32string() для string\<char32_t, Traits, Alloc>()
+1. `u32string()` для `string<char32_t, Traits, Alloc>()`
 
-Вторая функция-член преобразует последовательность, хранимую в mypath, в кодировку, предпочитаемую в системе размещения для последовательности char, и возвращает ее, сохранив в объекте типа string.
+Вторая функция-член преобразует последовательность, хранимую в `mypath` кодировку, предпочитаемую в системе размещения для последовательности char и возвращает ее, сохранив в объекте типа string.
 
-## <a name="pathstringtype"></a>path::string_type
+## <a name="string_type"></a> PATH::STRING_TYPE
+
+Тип является синонимом `basic_string<value_type>`.
 
 ```cpp
 typedef basic_string<value_type> string_type;
 ```
 
-Тип является синонимом basic_string<value_type>.
+## <a name="swap"></a> PATH::Swap
 
-## <a name="pathswap"></a>path::swap
+Выполняет `swap(mypath, right.mypath)`.
 
 ```cpp
 void swap(path& right) noexcept;
 ```
 
-Выполняет swap(mypath, right.mypath).
+## <a name="u16string"></a> PATH::u16string
 
-## <a name="pathu16string"></a>path::u16string
+Преобразует последовательность, хранимую в `mypath` UTF-16 и возвращает ее, сохранив в объект типа `u16string`.
 
 ```cpp
 u16string u16string() const;
 ```
 
-Функция-член преобразует последовательность, хранимую в mypath, в кодировку UTF-16 и возвращает ее, сохранив в объект типа u16string.
+## <a name="u32string"></a> PATH::u32string
 
-## <a name="pathu32string"></a>path::u32string
+Преобразует последовательность, хранимую в `mypath` UTF-32 и возвращает ее, сохранив в объект типа `u32string`.
 
 ```cpp
 u32string u32string() const;
 ```
 
-Функция-член преобразует последовательность, хранимую в mypath, в кодировку UTF-32 и возвращает ее, сохранив в объект типа u32string.
+## <a name="u8string"></a> PATH::u8string
 
-## <a name="pathu8string"></a>path::u8string
+Преобразует последовательность, хранимую в `mypath` UTF-8 и возвращает ее, сохранив в объект типа `u8string`.
 
 ```cpp
 string u8string() const;
 ```
 
-Функция-член преобразует последовательность, хранимую в mypath, в кодировку UTF-8 и возвращает ее, сохранив в объект типа u8string.
+## <a name="value_type"></a> PATH::value_type
 
-## <a name="pathvaluetype"></a>path::value_type
+Тип описывает элементы пути, предпочитаемые в системе размещения.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -586,21 +837,13 @@ typedef char value_type;
 #endif // filesystem model now defined
 ```
 
-Тип описывает элементы пути, предпочитаемые в системе размещения.
+## <a name="wstring"></a> PATH::wstring
 
-## <a name="pathwstring"></a>path::wstring
+Преобразует последовательность, хранимую в `mypath` кодировку, предпочитаемую в системе размещения для `wchar_t` последовательности и возвращает ее, сохранив в объект типа `wstring`.
 
 ```cpp
 wstring wstring() const;
 ```
-
-Преобразует последовательность, хранимую в mypath, в кодировку, предпочитаемую в системе размещения для последовательности wchar_t, и возвращает ее, сохранив в объекте типа wstring.
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<filesystem >
-
-**Пространство имен:** std::experimental::filesystem
 
 ## <a name="see-also"></a>См. также
 

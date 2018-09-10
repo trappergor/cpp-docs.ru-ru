@@ -56,12 +56,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a3c45dc2762c85a2b0f191b8dcf858ccb33b24b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957513"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110101"
 ---
 # <a name="moneypunct-class"></a>Класс moneypunct
 
@@ -76,9 +76,11 @@ class moneypunct;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType* тип, используемый внутри программы для кодирования символов.
+*CharType*<br/>
+Тип, используемый внутри программы для кодирования символов.
 
-*Intl* флаг, указывающий, соблюдаются международные, нужно ли наблюдать.
+*Intl*<br/>
+Флаг, указывающий, должны ли соблюдаться международные конвенции.
 
 ## <a name="remarks"></a>Примечания
 
@@ -88,20 +90,20 @@ class moneypunct;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[moneypunct](#moneypunct)|Конструктор объектов типа `moneypunct`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|
 |[string_type](#string_type)|Тип, описывающий строку, содержащую символы типа `CharType`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[curr_symbol](#curr_symbol)|Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа валюты.|
 |[decimal_point](#decimal_point)|Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа десятичного разделителя.|
@@ -442,14 +444,14 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 international frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 
 German_Germany.1252 domestic grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 domestic frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 ```
 
 ## <a name="grouping"></a>  moneypunct::grouping
@@ -511,14 +513,14 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 international frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 
 German_Germany.1252 domestic grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 German_Germany.1252 domestic frac_digits
- to the right of the radix character: 2
+to the right of the radix character: 2
 ```
 
 ## <a name="moneypunct"></a>  moneypunct::moneypunct
@@ -531,7 +533,8 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs* целочисленное значение, используемое для указания типа управления памятью для объекта.
+*_Refs*<br/>
+Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
 ### <a name="remarks"></a>Примечания
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0a826d258cf9b88294a2d870cf802763a588520e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956938"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105735"
 ---
 # <a name="negate-struct"></a>Структура negate
 
@@ -44,14 +44,16 @@ struct negate<void>
   template <class Type>
   auto operator()(Type&& Left) const`
     -> decltype(-std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Тип* любой тип, поддерживающий `operator-` , принимающий операнды указанного или выводимого типа.
+*Тип*<br/>
+Любой тип, поддерживающий `operator-`, принимающий операнды указанного или выводимого типа.
 
-*Слева* операнд должен быть инвертирован. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *тип*.
+*Слева*<br/>
+Операнд для замены знака. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *тип*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

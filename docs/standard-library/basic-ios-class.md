@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956847"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110022"
 ---
 # <a name="basicios-class"></a>Класс basic_ios
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Параметры
 
-*Elem* типом.
+*Elem*<br/>
+Тип.
 
-*Признаки* переменной типа `char_traits`.
+*Признаки*<br/>
+Переменная типа `char_traits`.
 
 ## <a name="remarks"></a>Примечания
 
@@ -106,13 +108,13 @@ class basic_ios : public ios_base
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_ios](#basic_ios)|Создает класс `basic_ios`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Синоним параметра шаблона `Elem`.|
 |[int_type](#int_type)|Синоним для `Traits::int_type`.|
@@ -122,7 +124,7 @@ class basic_ios : public ios_base
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[bad](#bad)|Сообщает о потере целостности буфера потока.|
 |[clear](#clear)|Очищает все флаги ошибок.|
@@ -146,7 +148,7 @@ class basic_ios : public ios_base
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[explicit operator bool](#op_bool)|Позволяет использовать `basic_ios` объекта в виде **bool**. Автоматическое преобразование типов отключено для предотвращения распространенных непредвиденных побочных эффектов.|
 |[operator void *](#op_void_star)|Указывает, находится ли поток по-прежнему в хорошем состоянии.|
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>Параметры
 
-*SB* стандартный буфер для хранения элементов ввода или вывода.
+*SB*<br/>
+Стандартный буфер для хранения элементов ввода или вывода.
 
 ### <a name="remarks"></a>Примечания
 
@@ -256,7 +259,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* поток, флаги которого требуется скопировать.
+*right*<br/>
+Поток, флаги которого требуется скопировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -338,7 +342,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Параметры
 
-*Newexcept* флаги, которые должны вызывать исключение.
+*Newexcept*<br/>
+Флаги, которые должны вызывать исключение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -426,7 +431,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Параметры
 
-*Char* знаком в качестве символа заливки.
+*Char*<br/>
+Символ, который нужно использовать в качестве символа заливки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -489,7 +495,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Параметры
 
-*Loc* строка языкового стандарта.
+*Loc*<br/>
+Строка языкового стандарта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -531,9 +538,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Параметры
 
-*_Sb* стандартный буфер для хранения элементов ввода или вывода.
+*_Sb*<br/>
+Стандартный буфер для хранения элементов ввода или вывода.
 
-*_Isstd* указывает, является ли это стандартный поток.
+*_Isstd*<br/>
+Указывает, является ли этот поток стандартным.
 
 ### <a name="remarks"></a>Примечания
 
@@ -577,7 +586,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `ios_base` объект для перемещения значений.
+*right*<br/>
+Объект `ios_base`, из которого будут перемещаться значения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -593,9 +603,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Параметры
 
-*Char* **char** для преобразования.
+*Char*<br/>
+**Char** для преобразования.
 
-*По умолчанию* **char** который должен возвращаться, если эквивалент не будет найден.
+*Default*<br/>
+**Char** который должен возвращаться, если эквивалент не будет найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -726,7 +738,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Параметры
 
-*_Sb* потока.
+*_Sb*<br/>
+Поток.
 
 ### <a name="remarks"></a>Примечания
 
@@ -817,7 +830,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Параметры
 
-*_State* дополнительные флаги для установки.
+*_State*<br/>
+Дополнительные флаги для установки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -866,7 +880,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf* буфер потока, чтобы стать буфером чтения.
+*strbuf*<br/>
+Буфер потока, который должен стать буфером чтения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -884,7 +899,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Параметры
 
-*STR* потока.
+*str*<br/>
+Поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -930,7 +946,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Char* знак для преобразования.
+*Char*<br/>
+Символ для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -971,7 +988,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `basic_ios` объект, используемый для обмена значений.
+*right*<br/>
+Объект `basic_ios`, используемый для обмена значений.
 
 ### <a name="remarks"></a>Примечания
 

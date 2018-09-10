@@ -14,61 +14,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 024d9d7dce234b07620a108b1f11c240bd842ac6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f7f81397be93de0080f2d6e8668d3cd5880ecc38
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765493"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104058"
 ---
 # <a name="platformmetadataruntimeclassname"></a>Platform::Metadata::RuntimeClassName
-При применении к определению класса, проверяет, возвращает ли функция GetRuntimeClassName допустимое имя в закрытый класс.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-[Platform::Metadata::RuntimeClassName] name  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- имя  
-  
- Имя существующего открытого типа, который виден в среде выполнения Windows.  
-  
-### <a name="remarks"></a>Примечания  
- Этот атрибут используется в закрытых классах ссылок для указания имени пользовательского типа среды выполнения. Задает в качестве имени открытый интерфейс, реализуемый классом.  
-  
-### <a name="example"></a>Пример  
- В следующем примере показано использование атрибута. В этом примере имя типа среды выполнения HellowWorldImpl является интерфейсом Test::Native::MyComponent::IHelloWorld.  
-  
-```  
-  
-namespace Test  
-{  
-    namespace Native  
-    {  
-        namespace MyComponent  
-        {  
-            public interface class IHelloWorld  
-            {  
-                Platform::String^ SayHello();  
-            };  
-  
-            private ref class HelloWorldImpl sealed :[Platform::Metadata::RuntimeClassName] IHelloWorld  
-            {  
-            public:  
-                HelloWorldImpl();  
-                virtual Platform::String^ SayHello();  
-            };  
-  
-            Platform::String^ HelloWorldImpl::SayHello()  
-            {  
-                return L"Hello World!";  
-            }  
-        }  
-    }  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Platform::Metadata](../cppcx/platform-metadata-namespace.md)
+
+При применении к определению класса, проверяет, возвращает ли функция GetRuntimeClassName допустимое имя в закрытый класс.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[Platform::Metadata::RuntimeClassName] name
+```
+
+#### <a name="parameters"></a>Параметры
+
+*name*<br/>
+Имя существующего открытого типа, который виден в среде выполнения Windows.
+
+### <a name="remarks"></a>Примечания
+
+Этот атрибут используется в закрытых классах ссылок для указания имени пользовательского типа среды выполнения. Задает в качестве имени открытый интерфейс, реализуемый классом.
+
+### <a name="example"></a>Пример
+
+В следующем примере показано использование атрибута. В этом примере имя типа среды выполнения HellowWorldImpl является интерфейсом Test::Native::MyComponent::IHelloWorld.
+
+```cpp
+namespace Test
+{
+    namespace Native
+    {
+        namespace MyComponent
+        {
+            public interface class IHelloWorld
+            {
+                Platform::String^ SayHello();
+            };
+
+            private ref class HelloWorldImpl sealed :[Platform::Metadata::RuntimeClassName] IHelloWorld
+            {
+            public:
+                HelloWorldImpl();
+                virtual Platform::String^ SayHello();
+            };
+
+            Platform::String^ HelloWorldImpl::SayHello()
+            {
+                return L"Hello World!";
+            }
+        }
+    }
+}
+```
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Platform::Metadata](../cppcx/platform-metadata-namespace.md)

@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3855da95342098c9ae260dc1d238c77f0fe69b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 756fbf28a73314ad4e335f658a48527f90975e55
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752506"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108576"
 ---
 # <a name="defaulttypenametostring-method"></a>Метод default::(имя_типа)::ToString
-Возвращает строку, которая представляет текущий тип.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-  
-String^ ToString()  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Строка, представляющая текущий объект.  
-  
-### <a name="requirements"></a>Требования  
- **Минимальный поддерживаемый клиент:** Windows 8  
-  
- **Минимальный поддерживаемый сервер:** Windows Server 2012  
-  
- **Пространство имен:** по умолчанию  
-  
- **Заголовок:** vccorlib.h  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен по умолчанию](../cppcx/default-namespace.md)
+
+Возвращает строку, которая представляет текущий тип.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+String^ ToString();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Строка, представляющая текущий объект.
+
+### <a name="requirements"></a>Требования
+
+**Минимальный поддерживаемый клиент:** Windows 8
+
+**Минимальный поддерживаемый сервер:** Windows Server 2012
+
+**Пространство имен:** по умолчанию
+
+**Заголовок:** vccorlib.h
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен по умолчанию](../cppcx/default-namespace.md)

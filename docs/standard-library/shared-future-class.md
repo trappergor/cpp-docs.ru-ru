@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954998"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100784"
 ---
 # <a name="sharedfuture-class"></a>Класс shared_future
 
@@ -56,13 +56,13 @@ class shared_future;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[shared_future](#shared_future)|Создает объект `shared_future`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[get](#get)|Получает результат, который хранится в *связанном асинхронном состоянии*.|
 |[допустимый](#valid)|Указывает, является ли объект не пустым.|
@@ -72,7 +72,7 @@ class shared_future;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[shared_future::operator=](#op_eq)|Назначает новое связанное асинхронное состояние.|
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Параметры
 
-*Справа* A `shared_future` объекта.
+*Справа*<br/>
+Объект `shared_future`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Параметры
 
-*Справа* объект [будущих](../standard-library/future-class.md) или `shared_future` объекта.
+*Справа*<br/>
+Класс [future](../standard-library/future-class.md) или объект `shared_future`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Параметры
 
-*Rel_time* объект [chrono::duration](../standard-library/duration-class.md) , указывающий максимальный интервал времени, поток блокируется.
+*Rel_time*<br/>
+Объект [chrono::duration](../standard-library/duration-class.md), который указывает на максимальный интервал времени, в течение которого поток может быть заблокирован.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Параметры
 
-*Abs_time* объект [chrono::time_point](../standard-library/time-point-class.md) объект, который указывает время, после чего поток можно разблокировать.
+*Abs_time*<br/>
+Объект [chrono::time_point](../standard-library/time-point-class.md), который указывает время, по истечении которого поток можно разблокировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

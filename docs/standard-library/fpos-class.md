@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966606"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105891"
 ---
 # <a name="fpos-class"></a>Класс fpos
 
@@ -47,24 +47,25 @@ class fpos
 
 ### <a name="parameters"></a>Параметры
 
-*Statetype* информации о состоянии.
+*Statetype*<br/>
+Сведения о состоянии.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[fpos](#fpos)|Создает объект, содержащий сведения о положении (смещении) в потоке.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[seekpos](#seekpos)|Используется только внутренними механизмами стандартной библиотеки C++. Не вызывайте этот метод в коде.|
 |[state](#state)|Задает или возвращает состояние преобразования.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор!=](#op_neq)|Проверяет индикаторы положений в файлах на неравенство.|
 |[operator+](#op_add)|Увеличивает значение положения в файле.|
@@ -92,11 +93,14 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение в потоке.
+*_Off*<br/>
+Смещение в поток.
 
-*_State* начальное состояние `fpos` объекта.
+*_State*<br/>
+Начальное состояние объекта `fpos`.
 
-*_Filepos* смещение в потоке.
+*_Filepos*<br/>
+Смещение в поток.
 
 ### <a name="remarks"></a>Примечания
 
@@ -114,7 +118,8 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* индикатор позиции файла, с которым нужно сравнить.
+*right*<br/>
+Индикатор положения в файле, с которым нужно выполнять сравнение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -186,7 +191,8 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение, по которому нужно увеличить индикатор положения в файле.
+*_Off*<br/>
+Смещение, на которое нужно увеличить индикатор положения в файле.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -210,7 +216,8 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение, по которому нужно увеличить индикатор положения в файле.
+*_Off*<br/>
+Смещение, на которое нужно увеличить индикатор положения в файле.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -236,9 +243,11 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* место в файле.
+*right*<br/>
+Положение в файле.
 
-*_Off* смещение Stream.
+*_Off*<br/>
+Смещение потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -258,7 +267,8 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение Stream.
+*_Off*<br/>
+Смещение потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -282,7 +292,8 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* индикатор позиции файла, с которым нужно сравнить.
+*right*<br/>
+Индикатор положения в файле, с которым нужно выполнять сравнение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -355,7 +366,8 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Параметры
 
-*_State* новое состояние преобразования.
+*_State*<br/>
+Новое состояние преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

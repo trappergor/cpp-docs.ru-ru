@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a67a22b8236646b549032e236006cd4855c3a43c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961075"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108730"
 ---
 # <a name="ltarraygt-functions"></a>Функции &lt;array&gt;
 
@@ -50,13 +50,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс* смещение элемента.
+*Index*<br/>
+Смещение элемента.
 
-*T* тип элемента.
+*T*<br/>
+Тип элемента.
 
-*N* число элементов в массиве.
+*N*<br/>
+Количество элементов в массиве.
 
-*arr* массив для выбора.
+*arr*<br/>
+Массив для выбора элемента.
 
 ### <a name="example"></a>Пример
 
@@ -101,13 +105,17 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*Ty* тип элемента.
+*Ty*<br/>
+Тип элемента.
 
-*N* размер массива.
+*N*<br/>
+Размер массива.
 
-*слева* первый массив для обмена.
+*left*<br/>
+Первый массив для обмена.
 
-*правом* второй массив для обмена.
+*right*<br/>
+Второй массив для обмена.
 
 ### <a name="remarks"></a>Примечания
 

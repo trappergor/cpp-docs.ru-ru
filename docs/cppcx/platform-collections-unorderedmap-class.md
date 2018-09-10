@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205817"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105839"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Класс Platform::Collections::UnorderedMap
 
@@ -35,13 +35,13 @@ ref class Map sealed;
 
 #### <a name="parameters"></a>Параметры
 
-*K*  
+*K*<br/>
 Тип ключа в паре "ключ-значение".
 
-*V*  
+*V*<br/>
 Тип значения в паре "ключ-значение".
 
-*C*  
+*C*<br/>
 Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию [std::equal_to\<K >](../standard-library/equal-to-struct.md).
 
 ### <a name="remarks"></a>Примечания
@@ -66,13 +66,13 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[UnorderedMap::UnorderedMap](#ctor)|Инициализирует новый экземпляр класса Map.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[UnorderedMap::Clear](#clear)|Удаляет все пары "ключ-значение" из текущего объекта Map.|
 |[UnorderedMap::First](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
@@ -87,7 +87,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|Описание:|
+|name|Описание|
 |[MAP::MapChanged](#mapchanged) событий|Происходит при изменении объекта Map.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -118,7 +118,7 @@ virtual void Clear();
 
 ```cpp
 virtual Windows::Foundation::Collections::IIterator<
-   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ 
+   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^
    First();
 ```
 
@@ -158,7 +158,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ, используемый для поиска элемента UnorderedMap. Тип *ключ* является именем типа *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -180,10 +180,10 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
-*значение*  
+*значение*<br/>
 Значение из пары "ключ-значение". Тип *значение* является именем типа *V*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -204,7 +204,7 @@ V Lookup(
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ, используемый для поиска элемента в объекте UnorderedMap. Тип *ключ* является именем типа *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -242,7 +242,7 @@ virtual void Remove(
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
 ## <a name="size"></a>  Метод UnorderedMap::Size
@@ -346,31 +346,32 @@ UnorderedMap(
 
 ### <a name="parameters"></a>Параметры
 
-*InIt*  
+*InIt*<br/>
 Имя типа текущего объекта UnorderedMap.
 
-*P*  
+*P*<br/>
 Объект функции, который может сравнивать два ключа с целью определения их равенства. Значение по умолчанию [std::equal_to\<K >](../standard-library/equal-to-struct.md).
 
-*H*  
+*H*<br/>
 Объект функции, создающий хэш-значения для ключей. Значение по умолчанию [хэш-Class 1](../standard-library/hash-class.md) для ключа типов, которые поддерживает класс.
 
-*m*  
+*m*<br/>
 Ссылка или [значения lvalue и rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для [std::unordered_map](../standard-library/unordered-map-class.md) , используемый для инициализации текущего объекта UnorderedMap.
 
-*IL* объект [std::initializer_list](../standard-library/initializer-list-class.md) из [std::pair](../standard-library/pair-structure.md) объекты, которые используются для инициализации объекта map.
+*il*<br/>
+Объект [std::initializer_list](../standard-library/initializer-list-class.md) из [std::pair](../standard-library/pair-structure.md) объекты, которые используются для инициализации объекта map.
 
-*Первый*  
+*Первый*<br/>
 Итератор ввода первого элемента в диапазоне элементов, используемый для инициализации текущего объекта UnorderedMap.
 
-*последний*  
+*последний*<br/>
 Итератор ввода первого элемента после диапазона элементов, используемый для инициализации текущего объекта UnorderedMap.
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Platform](platform-namespace-c-cx.md)  
-[Пространство имен Platform::Collections](../cppcx/platform-collections-namespace.md)  
-[Класс Platform::Collections::Map](../cppcx/platform-collections-map-class.md)  
-[Класс Platform::Collections::UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md)  
-[Коллекции](../cppcx/collections-c-cx.md)  
-[Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Пространство имен Platform](platform-namespace-c-cx.md)<br/>
+[Пространство имен Platform::Collections](../cppcx/platform-collections-namespace.md)<br/>
+[Класс Platform::Collections::Map](../cppcx/platform-collections-map-class.md)<br/>
+[Класс Platform::Collections::UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
+[Коллекции](../cppcx/collections-c-cx.md)<br/>
+[Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

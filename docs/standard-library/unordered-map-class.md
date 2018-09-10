@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02be0369821cc6f8aa37210c9a3b7f9479be84
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954725"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107472"
 ---
 # <a name="unorderedmap-class"></a>Класс unordered_map
 
@@ -172,7 +172,7 @@ class unordered_map;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Key*|Тип ключа.|
 |*Ty*|Сопоставленный тип.|
@@ -182,7 +182,7 @@ class unordered_map;
 
 ## <a name="members"></a>Участники
 
-|Определение типа|Описание:|
+|Определение типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип распределителя для управления хранилищем.|
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
@@ -201,7 +201,7 @@ class unordered_map;
 |[size_type](#size_type)|Тип беззнакового расстояния между двумя элементами.|
 |[value_type](#value_type)|Тип элемента.|
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[at](#at)|Поиск элемента с заданным ключом.|
 |[begin](#begin)|Задает начало управляемой последовательности.|
@@ -232,7 +232,7 @@ class unordered_map;
 |[swap](#swap)|Меняет местами содержимое двух контейнеров.|
 |[unordered_map](#unordered_map)|Создает объект контейнера.|
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[unordered_map::operator[]](#op_at)|Находит или вставляет элемент с указанным ключом.|
 |[unordered_map::operator=](#op_eq)|Копирует хэш-таблицу.|
@@ -303,7 +303,7 @@ const Ty& at(const Key& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*key*|Значение ключа, которое необходимо найти.|
 
@@ -355,7 +355,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*nbucket*|Номер сегмента.|
 
@@ -417,7 +417,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval* значение ключа для сопоставления.
+*keyval*<br/>
+Значение ключа для сопоставления.
 
 ### <a name="remarks"></a>Примечания
 
@@ -457,7 +458,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -561,7 +562,7 @@ size_type bucket_size(size_type nbucket) const;
 ### <a name="parameters"></a>Параметры
 
 *nbucket*  
- Номер сегмента.
+Номер сегмента.
 
 ### <a name="remarks"></a>Примечания
 
@@ -601,7 +602,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -718,7 +719,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -925,7 +926,7 @@ size_type count(const Key& keyval) const;
 ### <a name="parameters"></a>Параметры
 
 *keyval*  
- Искомое значение ключа.
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -964,7 +965,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -1024,7 +1025,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1040,7 +1041,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_map, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.|
 
@@ -1069,7 +1070,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_map, если объект unordered_map не содержит этого элемента или, в более общем случае, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.|
 |*where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -1148,7 +1149,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1170,7 +1171,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*nbucket*|Номер сегмента.|
 
@@ -1190,7 +1191,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 ### <a name="parameters"></a>Параметры
 
 *keyval*  
- Искомое значение ключа.
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1242,7 +1243,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1260,16 +1261,16 @@ size_type erase(const key_type& Key);
 ### <a name="parameters"></a>Параметры
 
 *Where*  
- Положение удаляемого элемента.
+Положение удаляемого элемента.
 
 *Первый*  
- Положение первого удаляемого элемента.
+Положение первого удаляемого элемента.
 
 *последний*  
- Положение перед последним удаляемым элементом.
+Положение перед последним удаляемым элементом.
 
 *Key*  
- Значение ключа удаляемых элементов.
+Значение ключа удаляемых элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1292,7 +1293,7 @@ const_iterator find(const Key& keyval) const;
 ### <a name="parameters"></a>Параметры
 
 *keyval*  
- Искомое значение ключа.
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1337,7 +1338,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1498,7 +1499,7 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента, вставляемого в unordered_map, если оно уже не содержит элемент, ключ которого эквивалентно упорядочен.|
 |*Where*|Место начала поиска правильной точки вставки.|
@@ -1784,7 +1785,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -1977,7 +1978,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2009,7 +2010,7 @@ void max_load_factor(float factor);
 ### <a name="parameters"></a>Параметры
 
 *Коэффициент*  
- Новый коэффициент максимальной нагрузки.
+Новый коэффициент максимальной нагрузки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2073,7 +2074,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2139,7 +2140,7 @@ Ty& operator[](Key&& keyval);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*keyval*|Значение ключа, которое необходимо найти или вставить.|
 
@@ -2203,10 +2204,10 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 c1['A'] == 0
 c1['a'] == 1
- [c, 3] [b, 2] [A, 0] [a, 1]
+[c, 3] [b, 2] [A, 0] [a, 1]
 c2[move(str)] == 0
 c2["abc"] == 1
 ```
@@ -2227,7 +2228,7 @@ unordered_map& operator=(unordered_map&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*right*|Контейнер unordered_map, из которого функция оператора назначает содержимое.|
 
@@ -2381,7 +2382,7 @@ void rehash(size_type nbuckets);
 ### <a name="parameters"></a>Параметры
 
 *nbuckets*  
- Требуемое число сегментов.
+Требуемое число сегментов.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2435,7 +2436,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2508,7 +2509,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2565,7 +2566,7 @@ void swap(unordered_map& right);
 ### <a name="parameters"></a>Параметры
 
 *right*  
- Контейнер для замены.
+Контейнер для замены.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2664,7 +2665,7 @@ unordered_map(
 
 template <class InIt>
 unordered_map(
- InputIterator First,
+InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
@@ -2674,12 +2675,12 @@ unordered_map(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Al*|Объект распределителя для сохранения.|
 |*Зап.*|Объект функции сравнения для сохранения.|
 |*хэш*|Объект хэш-функции для сохранения.|
-|*bucket_count*|Минимальное количество блоков.|
+|*Bucket_count*|Минимальное количество блоков.|
 |*Справа*|Контейнер для копирования.|
 |*Первый*||
 |*последний*||
@@ -2820,18 +2821,18 @@ int main()
 ```
 
 ```Output
- [a, 1] [b, 2] [c, 3]
- [d, 4] [e, 5] [f, 6]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+[d, 4] [e, 5] [f, 6]
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [5, g] [6, h] [7, i] [8, j]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- ```
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+```
 
 ## <a name="value_type"></a>  unordered_map::value_type
 

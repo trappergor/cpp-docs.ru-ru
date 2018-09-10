@@ -15,38 +15,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a318b9608fdf57291444e7b6331e2c2c36f118b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 049b8afe83209412391dd41c39d62d02512ab382
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764346"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110824"
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute - атрибут
-Указывает, что перечисление может обрабатываться как битовое поле (т. е. набор флагов).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-  
-public ref class Flags abstract : Attribute  
-```  
-  
-## <a name="inheritance"></a>Наследование  
- [Platform::Object](../cppcx/platform-object-class.md)   
-  
- [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
-  
-### <a name="remarks"></a>Примечания  
-  
-### <a name="requirements"></a>Требования  
- **Минимальный поддерживаемый клиент:** Windows 8  
-  
- **Минимальный поддерживаемый сервер:** Windows Server 2012  
-  
- **Пространство имен:** Platform::Metadata  
-  
- **Метаданные:** platform.winmd  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Platform::Metadata](../cppcx/platform-metadata-namespace.md)
+
+Указывает, что перечисление может обрабатываться как битовое поле (т. е. набор флагов).
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+public ref class Flags abstract : Attribute
+```
+
+## <a name="inheritance"></a>Наследование
+
+[Platform::Object](../cppcx/platform-object-class.md)
+
+[Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)
+
+### <a name="remarks"></a>Примечания
+
+### <a name="requirements"></a>Требования
+
+**Минимальный поддерживаемый клиент:** Windows 8
+
+**Минимальный поддерживаемый сервер:** Windows Server 2012
+
+**Пространство имен:** Platform::Metadata
+
+**Метаданные:** platform.winmd
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Platform::Metadata](../cppcx/platform-metadata-namespace.md)

@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbab8314a038d796ebd1a13342f3054e59f3e68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eda76666679b133b2d5486d21cd4c8e24d1fdf3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407370"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105087"
 ---
 # <a name="staticassert-macro"></a>Макрос _STATIC_ASSERT
 
-Вычисление выражения во время компиляции и выдает ошибку, если результат **FALSE**.
+Вычисляет выражение во время компиляции и выдают ошибку при выполнении в результате **FALSE**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,15 +49,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>Параметры
 
-*booleanExpression* (включая указатели) выражение, которое возвращает ненулевое значение (**TRUE**) или 0 (**FALSE**).
+*booleanExpression*<br/>
+Выражение (включая указатели), которое возвращает ненулевое значение (**TRUE**) или 0 (**FALSE**).
 
 ## <a name="remarks"></a>Примечания
 
-Этот макрос напоминает [макросы _ASSERT и _ASSERTE](assert-asserte-assert-expr-macros.md), за исключением того, что *booleanExpression* вычисляется во время компиляции, а не во время выполнения. Если *booleanExpression* равен **FALSE** (0), [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) создается.
+Этот макрос напоминает [макросы _ASSERT и _ASSERTE](assert-asserte-assert-expr-macros.md), за исключением того, что *booleanExpression* вычисляется во время компиляции, а не во время выполнения. Если *booleanExpression* принимает значение **FALSE** (0), [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) создается.
 
 ## <a name="example"></a>Пример
 
-В этом примере мы проверяем ли [sizeof](../../c-language/sizeof-operator-c.md) **int** больше или равно 2 байта и ли [sizeof](../../c-language/sizeof-operator-c.md) **длинные** — 1 байт. Программа не будет компилироваться, и создавать [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) из-за **длинные** больше, чем 1 байт.
+В этом примере мы проверяем ли [sizeof](../../c-language/sizeof-operator-c.md) **int** больше или равно двум байтам и был ли [sizeof](../../c-language/sizeof-operator-c.md) **long** равен 1 байту. Программа не будет компилироваться и генерирует [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) поскольку **long** больше, чем 1 байт.
 
 ```C
 // crt__static_assert.c

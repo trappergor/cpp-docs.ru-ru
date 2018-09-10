@@ -13,33 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d6461e6c94a6889c956ac0319c55c9ee5d2a361
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: edcb67686db871e4ebddb961ed254d260b630139
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751384"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107153"
 ---
 # <a name="defaulttypenamegethashcode-method"></a>Метод default::(имя_типа)::GetHashCode
-Возвращает хэш-код данного экземпляра.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Хэш-код данного экземпляра.  
-  
-### <a name="requirements"></a>Требования  
- **Минимальный поддерживаемый клиент:** Windows 8  
-  
- **Минимальный поддерживаемый сервер:** Windows Server 2012  
-  
- **Пространство имен:** по умолчанию  
-  
- **Заголовок:** vccorlib.h  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен по умолчанию](../cppcx/default-namespace.md)
+
+Возвращает хэш-код данного экземпляра.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Хэш-код данного экземпляра.
+
+### <a name="requirements"></a>Требования
+
+**Минимальный поддерживаемый клиент:** Windows 8
+
+**Минимальный поддерживаемый сервер:** Windows Server 2012
+
+**Пространство имен:** по умолчанию
+
+**Заголовок:** vccorlib.h
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен по умолчанию](../cppcx/default-namespace.md)

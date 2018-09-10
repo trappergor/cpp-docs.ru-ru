@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 018af5d544e38485dc38608f280d57ce595db49c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960200"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103283"
 ---
 # <a name="exponentialdistribution-class"></a>Класс exponential_distribution
 
@@ -77,9 +77,11 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*<br/>
+По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*РГСЧ*<br/>
+Механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -191,9 +193,11 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*лямбда-выражения* `lambda` параметр распределения.
+*lambda*<br/>
+Параметр распределения `lambda`.
 
-*parm* пакет параметров, используемый для формирования распределения.
+*parm*<br/>
+Пакет параметров, используемый для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -220,9 +224,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*лямбда-выражения* `lambda` параметр распределения.
+*lambda*<br/>
+Параметр распределения `lambda`.
 
-*правом* `param_type` объект для сравнения с данной структурой.
+*right*<br/>
+Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания
 

@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406837"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100291"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,7 +55,8 @@ void rewind(
 
 ### <a name="parameters"></a>Параметры
 
-*поток* указатель **ФАЙЛ** структуры.
+*поток*<br/>
+Указатель на структуру **FILE**.
 
 ## <a name="remarks"></a>Примечания
 
@@ -63,11 +64,11 @@ void rewind(
 
 **(void) fseek (** _поток_**, 0 L, SEEK_SET);**
 
-Однако в отличие от [fseek](fseek-fseeki64.md), **rewind** удаляет индикаторы ошибок для потока, а также индикатор end of file. Кроме того, в отличие от [fseek](fseek-fseeki64.md), **rewind** не возвращает значение, указывающее, успешно перемещена указателя.
+Однако в отличие от [fseek](fseek-fseeki64.md), **rewind** удаляет индикаторы ошибок для потока, а также индикатор окончания файла. Кроме того, в отличие от [fseek](fseek-fseeki64.md), **rewind** не возвращает значение, указывающее, был ли успешно перемещен указатель.
 
-Чтобы очистить буфер клавиатуры, используйте **rewind** с потоком **stdin**, который будет связан с помощью клавиатуры по умолчанию.
+Чтобы очистить буфер клавиатуры, используйте **rewind** с потоком **stdin**, который будет связан с клавиатуры по умолчанию.
 
-Если поток **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает и **errno** равно **EINVAL**.
+Если поток имеет **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает и **errno** присваивается **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

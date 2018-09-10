@@ -1,5 +1,5 @@
 ---
-title: -DELAYLOAD (загрузка импорта с задержкой) | Документы Microsoft
+title: -DELAYLOAD (Импорт отложенной загрузки) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,39 +20,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d65caa8a0ea140f93bf156e3c14a85232e6e56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b140aed55bb1a83224bbe1698ff40695c306a693
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372260"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103740"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (загрузка импорта с задержкой)
-```  
-/DELAYLOAD:dllname  
-```  
-  
-## <a name="parameters"></a>Параметры  
- `dllname`  
- Имя DLL-библиотеки, загрузку которой нужно задержать.  
-  
-## <a name="remarks"></a>Примечания  
- При использовании параметра /DELAYLOAD DLL-библиотека, указанная с помощью `dllname`, загружается только при первом вызове функции этой DLL-библиотеки программой. Дополнительные сведения см. в разделе [поддержка компоновщика для Delay-Loaded DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md). Можно использовать этот параметр сколько угодно раз, указывая сколько угодно DLL-библиотек. При компоновке программы нужно использовать Delayimp.lib. Также можно использовать собственную вспомогательную функцию загрузки с задержкой.  
-  
- [/DELAY](../../build/reference/delay-delay-load-import-settings.md) указывает настройки привязки и загрузки для каждой библиотеки DLL, загружаемых с задержкой.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  В **компоновщика** выберите **ввода** страницу свойств.  
-  
-3.  Изменить **Отложенно загружаемые DLL** свойство.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+> **/ DELAYLOAD:**_dllname_
+
+## <a name="parameters"></a>Параметры
+
+*dllname*<br/>
+Имя DLL-библиотеки, загрузку которой нужно задержать.
+
+## <a name="remarks"></a>Примечания
+
+При использовании параметра /DELAYLOAD DLL-библиотека, указанная с помощью `dllname`, загружается только при первом вызове функции этой DLL-библиотеки программой. Дополнительные сведения см. в разделе [поддержка компоновщика для Delay-Loaded DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md). Можно использовать этот параметр сколько угодно раз, указывая сколько угодно DLL-библиотек. При компоновке программы нужно использовать Delayimp.lib. Также можно использовать собственную вспомогательную функцию загрузки с задержкой.
+
+[/DELAY](../../build/reference/delay-delay-load-import-settings.md) указывает настройки привязки и загрузки для каждой библиотеки DLL, загружаемых с задержкой.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+2. В **компоновщика** папку, выберите **ввода** страницу свойств.
+
+3. Изменить **Отложенно загружаемые DLL** свойство.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
+[Параметры компоновщика](../../build/reference/linker-options.md)

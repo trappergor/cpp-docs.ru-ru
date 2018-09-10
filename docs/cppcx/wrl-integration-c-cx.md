@@ -9,17 +9,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1bd61fd12c555c42f3226d523a519c29f1d09c10
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760982"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102698"
 ---
 # <a name="wrl-integration-ccx"></a>Интеграция с WRL (C++/CX)
 
 Вы можете свободно сочетать код WRL с кодом библиотеки шаблонов C++ (WRL) среды выполнения Windows. В той же записи преобразования можно использовать объекты, объявленные с помощью WRL дескриптор объекта (`^`) нотации и WRL смарт-указатель (`ComPtr<T>`) нотации. Тем не менее необходимо вручную обрабатывать возвращаемые значения и коды ошибок WRL HRESULT и WRL исключения.
-  
+
 ## <a name="wrl-development"></a>Разработка WRL
 
 Дополнительные сведения о разработке и использовании компонентов WRL см. в разделе [библиотеки шаблонов C++ (WRL) среды выполнения Windows](../windows/windows-runtime-cpp-template-library-wrl.md).
@@ -115,9 +115,8 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
     }
     return retVal;
 }
-
 ```
 
 ## <a name="see-also"></a>См. также
 
-[Взаимодействие с другими языками](interoperating-with-other-languages-c-cx.md)  
+[Взаимодействие с другими языками](interoperating-with-other-languages-c-cx.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3311e46ea28424717a0274fbe9e956610cdc54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a6854a3b11d5c5850d790e749789e91a7cb986a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767716"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110048"
 ---
 # <a name="atl-dialog-wizard"></a>Мастер диалоговых окон ATL
 
@@ -35,7 +35,7 @@ ms.locfileid: "43767716"
 **Короткое имя**  
 Задает сокращенное имя для объекта ATL диалогового окна. Имя определяет имя класса и имена (.cpp и .h) файлов, только после изменения этих полей по отдельности.
 
-`Class`  
+**Класс**  
 Задает имя создаваемого класса. Это имя основано на имени, указанному в **короткое имя**, предшествует «C», типичный префикс для имени класса.
 
 **H-файл**  

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb00f7205dcb470785c9682335341ca07935aae5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962455"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110442"
 ---
 # <a name="allocatortraits-class"></a>Класс allocator_traits
 
@@ -70,7 +70,7 @@ class allocator_traits;
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`allocator_traits::allocator_type`|Этот тип является синонимом для параметра-шаблона `Alloc`.|
 |`allocator_traits::const_pointer`|Этот тип — `Alloc::const_pointer`, если он правильно сформирован; в противном случае этот тип — `pointer_traits<pointer>::rebind<const value_type>`.|
@@ -88,7 +88,7 @@ class allocator_traits;
 
 Следующие статические методы вызывают соответствующий метод в указанном параметре распределителя.
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[allocate](#allocate)|Статический метод, который выделяет память с помощью указанного параметра распределителя.|
 |[construct](#construct)|Статический метод, который используется указанным распределителем для создания объекта.|
@@ -116,11 +116,14 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Параметры
 
-*Al* объект распределителя.
+*Al*<br/>
+Объект распределителя.
 
-*число* число элементов для выделения.
+*count*<br/>
+Число элементов для распределения.
 
-*Указание* объект `const_pointer` , может помочь объекту allocator удовлетворить запрос хранилища, найдя адрес выделенного объекта до запроса. Пустой указатель рассматривается как отсутствие подсказки.
+*Указание*<br/>
+`const_pointer`, который может помочь объекту allocator удовлетворить запрос хранилища, найдя адрес выделенного объекта до запроса. Пустой указатель рассматривается как отсутствие подсказки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -141,11 +144,14 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-*Al* объект распределителя.
+*Al*<br/>
+Объект распределителя.
 
-*PTR* указатель на расположение, где будет создаваться объект.
+*ptr*<br/>
+Указатель места, в котором должен создаваться объект.
 
-*args* список аргументов, передаваемый в конструктор объекта.
+*аргументы*<br/>
+Список аргументов, передаваемый в конструктор объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -163,11 +169,14 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Параметры
 
-*Al* объект распределителя.
+*Al*<br/>
+Объект распределителя.
 
-*PTR* указатель на начальное расположение освобождаемых объектов.
+*ptr*<br/>
+Указатель на начальное расположение освобождаемых объектов.
 
-*число* количество освобождаемых объектов.
+*count*<br/>
+Количество освобождаемых объектов.
 
 ### <a name="remarks"></a>Примечания
 
@@ -186,9 +195,11 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Параметры
 
-*Al* объект распределителя.
+*Al*<br/>
+Объект распределителя.
 
-*PTR* указатель на расположение объекта.
+*ptr*<br/>
+Указатель на расположение объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -204,7 +215,8 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Параметры
 
-*Al* объект распределителя.
+*Al*<br/>
+Объект распределителя.
 
 ### <a name="remarks"></a>Примечания
 
@@ -220,7 +232,8 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Параметры
 
-*Al* объект распределителя.
+*Al*<br/>
+Объект распределителя.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

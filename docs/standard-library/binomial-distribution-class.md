@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f853ada608b2f70dc0a7c7e3fb78e5fb28d0fa83
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957689"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100876"
 ---
 # <a name="binomialdistribution-class"></a>Класс binomial_distribution
 
@@ -81,9 +81,11 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*IntType* целочисленный тип результата, по умолчанию **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*IntType*<br/>
+По умолчанию используется целочисленный тип результата, **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*РГСЧ*<br/>
+Универсальный механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -250,11 +252,14 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*t* `t` параметр распределения.
+*t*<br/>
+Параметр распределения `t`.
 
-*p* `p` параметр распределения.
+*p*<br/>
+Параметр распределения `p`.
 
-*parm* `param_type` структура, используемая для формирования распределения.
+*parm*<br/>
+Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -282,11 +287,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*t* `t` параметр распределения.
+*t*<br/>
+Параметр распределения `t`.
 
-*p* `p` параметр распределения.
+*p*<br/>
+Параметр распределения `p`.
 
-*правом* `param_type` объект для сравнения с данной структурой.
+*right*<br/>
+Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания
 

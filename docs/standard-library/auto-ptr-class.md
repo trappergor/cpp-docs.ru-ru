@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 945de6e2ef7e9ec3967091f88b1d0cfeaa8df5e3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958007"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108893"
 ---
 # <a name="autoptr-class"></a>Класс auto_ptr
 
@@ -65,9 +65,11 @@ public:
 ```
 ### <a name="parameters"></a>Параметры
 
-*правом* `auto_ptr` из которого необходимо получить существующий ресурс.
+*right*<br/>
+`auto_ptr`, из которого необходимо получить существующий ресурс.
 
-*PTR* указатель, заданный для замены сохраненного указателя.
+*ptr*<br/>
+Указатель, указанный для замены сохраненного указателя.
 
 ## <a name="remarks"></a>Примечания
 
@@ -79,19 +81,19 @@ public:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[auto_ptr](#auto_ptr)|Конструктор для объектов типа `auto_ptr`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[element_type](#element_type)|Этот тип является синонимом для параметра шаблона `Type`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[get](#get)|Эта функция-член возвращает сохраненный указатель `myptr`.|
 |[release](#release)|Этот член заменяет сохраненный указатель `myptr` на пустой указатель и возвращает сохраненный ранее указатель.|
@@ -99,7 +101,7 @@ public:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор=](#op_eq)|Оператор присваивания, который передает право владения от одного объекта `auto_ptr` другому.|
 |[оператор*](#op_star)|Оператор удаления ссылки для объектов типа `auto_ptr`.|
@@ -130,9 +132,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель на объект, `auto_ptr` инкапсулирует.
+*ptr*<br/>
+Указатель на объект, который инкапсулирует `auto_ptr`.
 
-*правом* `auto_ptr` объект для копирования конструктором.
+*right*<br/>
+Объект `auto_ptr` для копирования конструктором.
 
 ### <a name="remarks"></a>Примечания
 
@@ -282,7 +286,8 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*правом* объект типа `auto_ptr`.
+*right*<br/>
+Объект типа `auto_ptr`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -499,7 +504,8 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель, заданный для замены сохраненного указателя `myptr`.
+*ptr*<br/>
+Указатель, заданный для замены сохраненного указателя `myptr`.
 
 ### <a name="example"></a>Пример
 

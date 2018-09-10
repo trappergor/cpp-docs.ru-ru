@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab5c5c790813f57da483878cb6a86fcf2ab0f04
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 51d8a4656cac15da170d221c784105ff939983a5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959655"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108802"
 ---
 # <a name="fisherfdistribution-class"></a>Класс fisher_f_distribution
 
@@ -79,9 +79,11 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*<br/>
+По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*РГСЧ*<br/>
+Универсальный механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -257,11 +259,14 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*m* `m` параметр распределения.
+*m*<br/>
+Параметр распределения `m`.
 
-*n* `n` параметр распределения.
+*n*<br/>
+Параметр распределения `n`.
 
-*parm* `param_type` структура, используемая для формирования распределения.
+*parm*<br/>
+Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -289,11 +294,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*m* `m` параметр распределения.
+*m*<br/>
+Параметр распределения `m`.
 
-*n* `n` параметр распределения.
+*n*<br/>
+Параметр распределения `n`.
 
-*правом* `param_type` объект для сравнения с данной структурой.
+*right*<br/>
+Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания
 

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74725ddd7884bcc714e1048b28c53f201ebe4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce945499505b7efcaaf010585f27fbfaf42a06b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397136"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103323"
 ---
 # <a name="freelocale"></a>_free_locale
 
@@ -57,13 +57,14 @@ void _free_locale(
 
 ### <a name="parameters"></a>Параметры
 
-*языковой стандарт* объект языкового стандарта для освобождения.
+*locale*<br/>
+Объект языкового стандарта, который необходимо освободить.
 
 ## <a name="remarks"></a>Примечания
 
 **_Free_locale** функция используется, чтобы освободить объект языкового стандарта, полученный из вызова **_get_current_locale** или **_create_locale**.
 
-Предыдущее имя этой функции **__free_locale** (с двух символов подчеркивания) рекомендуется к использованию.
+Предыдущее имя функции, **__free_locale** (с двумя начальными символами подчеркивания) рекомендуется.
 
 ## <a name="requirements"></a>Требования
 

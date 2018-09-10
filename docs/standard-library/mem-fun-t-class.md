@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27182d6c1b2f3c37353f653235449982e921d692
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a32df3211d77a255421ceb794b6bd891f930733a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956392"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108544"
 ---
 # <a name="memfunt-class"></a>Класс mem_fun_t
 
@@ -41,9 +41,11 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>Параметры
 
-*_Pm* указатель на функцию-член класса `Type` для преобразования в объект функции.
+*_Pm*<br/>
+Указатель на функцию-член класса `Type` для преобразования в объект функции.
 
-*_Pleft* объекта, *_Pm* вызывается функция-член.
+*_Pleft*<br/>
+Объект, *_Pm* вызывается функция-член.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

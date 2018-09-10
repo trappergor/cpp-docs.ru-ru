@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 808de08163f0f94e4c3d0064fced7cb81f83c931
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c87cdc55359fbdd4855a062a3b1b56384c3be574
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767934"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104190"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Класс Platform::AccessDeniedException
-Возникает при запрете доступа к ресурсу или функции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-public ref class AccessDeniedException : COMException,    IException,    IPrintable,   IEquatable  
-```  
-  
-### <a name="remarks"></a>Примечания  
- Если возникло это исключение, проверьте, что вы запросили соответствующую возможность и указали необходимые объявления в манифесте пакета приложения. Дополнительные сведения см. в статье [COMException](../cppcx/platform-comexception-class.md) .  
-  
-### <a name="requirements"></a>Требования  
- **Минимальный поддерживаемый клиент:** Windows 8  
-  
- **Минимальный поддерживаемый сервер:** Windows Server 2012  
-  
- **Пространство имен:** Platform  
-  
- **Метаданные:** platform.winmd  
-  
-## <a name="see-also"></a>См. также  
- [Класс Platform::COMException](../cppcx/platform-comexception-class.md)
+
+Возникает при запрете доступа к ресурсу или функции.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+public ref class AccessDeniedException : COMException,    IException,    IPrintable,   IEquatable
+```
+
+### <a name="remarks"></a>Примечания
+
+Если возникло это исключение, проверьте, что вы запросили соответствующую возможность и указали необходимые объявления в манифесте пакета приложения. Дополнительные сведения см. в статье [COMException](../cppcx/platform-comexception-class.md) .
+
+### <a name="requirements"></a>Требования
+
+**Минимальный поддерживаемый клиент:** Windows 8
+
+**Минимальный поддерживаемый сервер:** Windows Server 2012
+
+**Пространство имен:** Platform
+
+**Метаданные:** platform.winmd
+
+## <a name="see-also"></a>См. также
+
+[Класс Platform::COMException](../cppcx/platform-comexception-class.md)

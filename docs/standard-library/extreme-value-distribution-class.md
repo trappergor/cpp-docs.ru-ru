@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec80db9282bc51106c6beedd42dd05a1ba636c74
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 10c93374a1ed9ed4fa875c78310d9ffa34406b83
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958023"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100849"
 ---
 # <a name="extremevaluedistribution-class"></a>Класс extreme_value_distribution
 
@@ -81,9 +81,11 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*<br/>
+По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*РГСЧ*<br/>
+Механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -200,11 +202,14 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*a_value* `a` параметр распределения.
+*a_value*<br/>
+Параметр распределения `a`.
 
-*b_value* `b` параметр распределения.
+*b_value*<br/>
+Параметр распределения `b`.
 
-*parm* `param_type` структура, используемая для формирования распределения.
+*parm*<br/>
+Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -232,11 +237,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*a_value* `a` параметр распределения.
+*a_value*<br/>
+Параметр распределения `a`.
 
-*b_value* `b` параметр распределения.
+*b_value*<br/>
+Параметр распределения `b`.
 
-*правом* `param_type` объект для сравнения с данной структурой.
+*right*<br/>
+Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания
 

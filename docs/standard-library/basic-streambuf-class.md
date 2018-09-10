@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202796"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100967"
 ---
 # <a name="basicstreambuf-class"></a>Класс basic_streambuf
 
@@ -124,9 +124,11 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Параметры
 
-*Elem* объект [char_type](#char_type).
+*Elem*<br/>
+Объект [char_type](#char_type).
 
-*TR* символ [traits_type](#traits_type).
+*Tr*<br/>
+Символ [traits_type](#traits_type).
 
 ## <a name="remarks"></a>Примечания
 
@@ -168,13 +170,13 @@ class basic_streambuf;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_streambuf](#basic_streambuf)|Создает объект типа `basic_streambuf`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Связывает имя типа с параметром шаблона `Elem`.|
 |[int_type](#int_type)|Сопоставляет имя типа в области `basic_streambuf` с параметром шаблона `Elem`.|
@@ -184,7 +186,7 @@ class basic_streambuf;
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[eback](#eback)|Защищенная функция, возвращающая указатель на начало входного буфера.|
 |[egptr](#egptr)|Защищенная функция, возвращающая указатель на позицию сразу после конца входного буфера.|
@@ -228,7 +230,7 @@ class basic_streambuf;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор=](#op_eq)|Присваивает значения этому объекту из другого объекта `basic_streambuf`.|
 
@@ -250,7 +252,8 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* ссылка lvalue на `basic_streambuf` объект, используемый для задания значений для данного `basic_streambuf` объекта.
+*right*<br/>
+Ссылка lvalue на объект `basic_streambuf`, используемый для установки значений для этого объекта `basic_streambuf`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -312,7 +315,8 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Параметры
 
-*число* величина, на которую должен переместиться указатель.
+*count*<br/>
+Величина, на которую должен переместиться указатель.
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +374,8 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Параметры
 
-*_Loc* ссылка на языковой стандарт.
+*_Loc*<br/>
+Ссылка на языковой стандарт.
 
 ### <a name="remarks"></a>Примечания
 
@@ -436,7 +441,8 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* ссылка lvalue на `basic_streambuf` объект, который используется для присвоения значений этому объекту.
+*right*<br/>
+Ссылка lvalue на объект `basic_streambuf`, используемый для присвоения значений этому объекту.
 
 ### <a name="remarks"></a>Примечания
 
@@ -452,7 +458,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta* символ для вставки в буфер, или **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Символ для вставки в буфер, или **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -486,7 +493,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta* символ для вставки в буфер, или **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Символ для вставки в буфер, или **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -524,7 +532,8 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Параметры
 
-*число* число символов, которую следует переместить запись позицию вперед.
+*count*<br/>
+Число символов, на которое следует перенести вперед позицию записи.
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +565,8 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Параметры
 
-*_Loc* ссылка на языковой стандарт.
+*_Loc*<br/>
+Ссылка на языковой стандарт.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -582,11 +592,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* позиция для поиска относительно *_Way*.
+*_Off*<br/>
+Позиция для поиска относительно *_Way*.
 
-*_Way* отправной точкой для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way*<br/>
+Начальная точка для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which*<br/>
+Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -606,9 +619,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Параметры
 
-*_Sp* позиция для поиска.
+*_Sp*<br/>
+Позиция для поиска.
 
-*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which*<br/>
+Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -630,9 +645,11 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Параметры
 
-*_Buffer* указатель на `char_type` для этого экземпляра.
+*_Buffer*<br/>
+Указатель на `char_type` для этого экземпляра.
 
-*число* размер буфера.
+*count*<br/>
+Размер буфера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -707,11 +724,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* позиция для поиска относительно *_Way*.
+*_Off*<br/>
+Позиция для поиска относительно *_Way*.
 
-*_Way* отправной точкой для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way*<br/>
+Начальная точка для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which*<br/>
+Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -741,9 +761,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Параметры
 
-*_Sp* позиция для поиска.
+*_Sp*<br/>
+Позиция для поиска.
 
-*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which*<br/>
+Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -769,9 +791,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Параметры
 
-*_Buffer* указатель на буфер.
+*_Buffer*<br/>
+Указатель на буфер.
 
-*число* размер буфера.
+*count*<br/>
+Размер буфера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -793,11 +817,14 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Параметры
 
-*_Gbeg* указатель на начало буфера.
+*_Gbeg*<br/>
+Указатель на начало буфера.
 
-*_Gnext* указатель на место посередине буфера.
+*_Gnext*<br/>
+Указатель на место посередине буфера.
 
-*_Gend* указатель на конец буфера.
+*_Gend*<br/>
+Указатель на конец буфера.
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
@@ -809,9 +836,11 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Параметры
 
-*_Pbeg* указатель на начало буфера.
+*_Pbeg*<br/>
+Указатель на начало буфера.
 
-*_Pend* указатель на конец буфера.
+*_Pend*<br/>
+Указатель на конец буфера.
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -863,9 +892,11 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* буфер для хранения извлеченных символов.
+*ptr*<br/>
+Буфер для хранения извлеченных символов.
 
-*число* число элементов для чтения.
+*count*<br/>
+Количество элементов для чтения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -967,7 +998,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символ.
+*_Ch*<br/>
+Символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1014,7 +1046,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символ.
+*_Ch*<br/>
+Символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1056,9 +1089,11 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* символьной строки.
+*ptr*<br/>
+Строка символов.
 
-*число* число символов.
+*count*<br/>
+Число символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1181,7 +1216,7 @@ void swap(basic_streambuf& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Ссылка lvalue на объект `basic_streambuf`, используемый для обмена значений.|
 
@@ -1281,9 +1316,11 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* буфер для хранения извлеченных символов.
+*ptr*<br/>
+Буфер для хранения извлеченных символов.
 
-*число* число элементов для извлечения.
+*count*<br/>
+Количество элементов для извлечения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1303,9 +1340,11 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указателя на элементы для вставки.
+*ptr*<br/>
+Указатель на вставляемые элементы.
 
-*число* число элементов для вставки.
+*count*<br/>
+Число элементов для вставки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

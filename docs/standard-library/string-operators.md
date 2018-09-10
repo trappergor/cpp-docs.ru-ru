@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966632"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101814"
 ---
 # <a name="ltstringgt-operators"></a>Операторы &lt;string&gt;
 
@@ -107,9 +107,11 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* строки в стиле C или объект типа `basic_string` для объединения.
+*left*<br/>
+Строка в стиле C или объект типа `basic_string` для объединения.
 
-*правом* строки в стиле C или объект типа `basic_string` для объединения.
+*right*<br/>
+Строка в стиле C или объект типа `basic_string` для объединения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -194,9 +196,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* строки в стиле C или объект типа `basic_string` для сравнения.
+*left*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*правом* строки в стиле C или объект типа `basic_string` для сравнения.
+*right*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -283,9 +287,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* строки в стиле C или объект типа `basic_string` для сравнения.
+*left*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*правом* строки в стиле C или объект типа `basic_string` для сравнения.
+*right*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -372,9 +378,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* строки в стиле C или объект типа `basic_string` для сравнения.
+*left*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*правом* строки в стиле C или объект типа `basic_string` для сравнения.
+*right*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -466,9 +474,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* строки в стиле C или объект типа `basic_string` для сравнения.
+*left*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*правом* строки в стиле C или объект типа `basic_string` для сравнения.
+*right*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -557,9 +567,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ostr* записываемых в выходной поток.
+*_Ostr*<br/>
+Поток вывода, в который выполняется запись.
 
-*STR* строки в выходной поток.
+*str*<br/>
+Строка, которую необходимо ввести в поток вывода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -592,9 +604,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* строки в стиле C или объект типа `basic_string` для сравнения.
+*left*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*правом* строки в стиле C или объект типа `basic_string` для сравнения.
+*right*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -693,9 +707,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* строки в стиле C или объект типа `basic_string` для сравнения.
+*left*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*правом* строки в стиле C или объект типа `basic_string` для сравнения.
+*right*<br/>
+Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -784,9 +800,11 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Параметры
 
-*_Istr* входной поток, используемый для извлечения последовательности
+*_Istr*<br/>
+Входной поток, используемый для извлечения последовательности
 
-*правом* строка, извлекаемая из входного потока.
+*right*<br/>
+Строка, извлекаемая из входного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
