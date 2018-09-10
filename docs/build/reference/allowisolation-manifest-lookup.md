@@ -18,45 +18,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62f467ff467d785d17601737436e0eb1ff972f37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9197e67e46932f08a266258c41dab7922af2900
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205497"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318984"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (поиск манифеста)
-Задает поведение нахождения файлов манифеста.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/ALLOWISOLATION[:NO]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **/ALLOWISOLATION:no** указывает библиотеки DLL загружаются так, как если бы манифеста не было и приводит к компоновщику задание бита `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` бит в необязательном заголовке `DllCharacteristics` поля.  
-  
- **/ ALLOWISOLATION** вынуждает операционную систему на поиск и загрузку манифеста.  
-  
- **/ ALLOWISOLATION** используется по умолчанию.  
-  
- При отключении изоляции для исполняемого файла, загрузчик Windows не будет пытаться найти манифест приложения для нового процесса. Новый процесс не будет контекста активации по умолчанию, даже при наличии манифеста в исполняемый файл или размещено в том же каталоге, что и исполняемый файл с именем <em>имя исполняемого файла</em>**. exe.manifest**.  
-  
- Дополнительные сведения см. в разделе [манифеста Справочник по файлам](/windows/desktop/SbsCs/manifest-files-reference).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  Разверните узел **Свойства конфигурации**.  
-  
-3.  Разверните **компоновщика** узла.  
-  
-4.  Выберите **файл манифеста** страницу свойств.  
-  
-5.  Изменить **Разрешить изоляцию** свойство.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+Задает поведение нахождения файлов манифеста.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+/ALLOWISOLATION[:NO]
+```
+
+## <a name="remarks"></a>Примечания
+
+**/ALLOWISOLATION:no** указывает библиотеки DLL загружаются так, как если бы манифеста не было и приводит к компоновщику задание бита `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` бит в необязательном заголовке `DllCharacteristics` поля.
+
+**/ ALLOWISOLATION** вынуждает операционную систему на поиск и загрузку манифеста.
+
+**/ ALLOWISOLATION** используется по умолчанию.
+
+При отключении изоляции для исполняемого файла, загрузчик Windows не будет пытаться найти манифест приложения для нового процесса. Новый процесс не будет контекста активации по умолчанию, даже при наличии манифеста в исполняемый файл или размещено в том же каталоге, что и исполняемый файл с именем <em>имя исполняемого файла</em>**. exe.manifest**.
+
+Дополнительные сведения см. в разделе [манифеста Справочник по файлам](/windows/desktop/SbsCs/manifest-files-reference).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Выберите **свойства конфигурации** > **компоновщика** > **файл манифеста** страницу свойств.
+
+1. Изменить **Разрешить изоляцию** свойство.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402407"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318282"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Спецификации исключений (throw, noexcept) (C++)
 
@@ -43,7 +43,7 @@ void MyFunction(int i) noexcept;
 
 |Спецификация исключений|Значение|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|Функция не вызывает исключений. В [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) режиме (по умолчанию), `noexcept` и `noexcept(true)` эквивалентны. Когда возникает исключение из функции, которая объявлена `noexcept` или `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) вызывается. Когда возникает исключение из функции, объявленные как `throw()` в **/std: c ++ 14** режим, результат является неопределенным поведением. Вызывается без определенной функции. Это приспосабливаемости стандартом C ++ 14, требующий компилятору вызывать [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 версии 15.5 и более поздние версии**: В **/std: c ++ 17** режиме `noexcept`, `noexcept(true)`, и `throw()` являются эквивалентными. В **/std: c ++ 17** режиме `throw()` является псевдонимом для `noexcept(true)`. В **/std: c ++ 17** режим, когда исключение из функции с любой из этих спецификаций [std::terminate](../standard-library/exception-functions.md#terminate) вызывается как требует стандарт C ++ 17.|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|Функция не вызывает исключений. В [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) режиме (по умолчанию), `noexcept` и `noexcept(true)` эквивалентны. Когда возникает исключение из функции, которая объявлена `noexcept` или `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) вызывается. Когда возникает исключение из функции, объявленные как `throw()` в **/std: c ++ 14** режим, результат является неопределенным поведением. Вызывается без определенной функции. Это приспосабливаемости стандартом C ++ 14, требующий компилятору вызывать [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 версии 15.5 и более поздние версии**: В **/std: c ++ 17** режиме `noexcept`, `noexcept(true)`, и `throw()` являются эквивалентными. В **/std: c ++ 17** режиме `throw()` является псевдонимом для `noexcept(true)`. В **/std: c ++ 17** режим, когда исключение из функции с любой из этих спецификаций [std::terminate](../standard-library/exception-functions.md#terminate) вызывается как требует стандарт C ++ 17.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Нет спецификация|Функция может создавать исключения любого типа.|
 |`throw(type)`| (**C ++ 14 и более ранних версий**) функция может создавать исключения типа `type`. Компилятор использует синтаксис, но оно интерпретируется как `noexcept(false)`. В **/std: c ++ 17** режиме компилятор выдает предупреждение C5040.|
 

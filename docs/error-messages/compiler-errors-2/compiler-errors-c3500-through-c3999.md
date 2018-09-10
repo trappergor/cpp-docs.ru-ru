@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541664"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319075"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Ошибки компилятора с C3500 по C3999
 
@@ -496,7 +496,7 @@ ms.locfileid: "42541664"
 |[Ошибка компилятора C3721](compiler-error-c3721.md)|"*подписи*": несовместимая сигнатура для события|
 |[Ошибка компилятора C3722](compiler-error-c3722.md)|Универсальное событие не допускается|
 |[Ошибка компилятора C3723](compiler-error-c3723.md)|"*функция*": не удается разрешить событие|
-|[Ошибка компилятора C3724](compiler-error-c3724.md)|необходимо #include < windows.h > для использования многопоточности в событиях|
+|[Ошибка компилятора C3724](compiler-error-c3724.md)|необходимо #include \<windows.h > для использования многопоточности в событиях|
 |Ошибка компилятора C3725|Является устаревшей.|
 |C3726 ошибки компилятора|Является устаревшей.|
 |[Ошибка компилятора C3727](compiler-error-c3727.md)|"*событий*": управляемое событие должно быть функция-член или член данных, являющийся указателем на делегата|

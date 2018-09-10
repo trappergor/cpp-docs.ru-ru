@@ -1,5 +1,5 @@
 ---
-title: Редактор сочетаний клавиш | Документация Майкрософт
+title: Редактор сочетаний клавиш (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,27 +11,26 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
-- tables [Visual Studio], accelerator key
-- accelerator keys
-- resource editors, Accelerator editor
+- tables [C++], accelerator key
+- accelerator keys [C++]
+- resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
-- Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04401180cfcd82f3a699f71ba594523cf0f9cb9b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 42870002ff84b697599443da8ab9b9b88dbbd7ca
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681727"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318802"
 ---
-# <a name="accelerator-editor"></a>Редактор сочетаний клавиш
+# <a name="accelerator-editor-c"></a>Редактор сочетаний клавиш (C++)
 
-Таблица сочетаний клавиш представляет собой ресурс Windows, содержащий список сочетаний клавиш и связанных с ними идентификаторов команд. В программе можно использовать несколько таблиц сочетаний клавиш.
+Таблицы сочетаний клавиш — это ресурс Windows на C++, который содержит список сочетаний клавиш (также известный как сочетания клавиш) и связанные с ними идентификаторов команд. В программе можно использовать несколько таблиц сочетаний клавиш.
 
 Обычно сочетания клавиш используются для ускорения доступа к командам программы, также доступным в меню или на панели инструментов. Но таблицу сочетаний клавиш можно также использовать, чтобы определить сочетания клавиш для команд, с которыми не связаны никакие объекты пользовательского интерфейса.
 
