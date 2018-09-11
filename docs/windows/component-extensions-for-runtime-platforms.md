@@ -10,7 +10,7 @@ dev_langs:
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
-- Visual C++, keywords
+- C++, keywords
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8bb269f1d572fed2d7fc85ee33f07d22a98aae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 160ae864218304fbc94324ecfd9d6229729ca379
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220586"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318347"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Расширения компонентов для платформ среды выполнения
 
@@ -115,7 +115,7 @@ C + +/ CLI расширяет стандарт ISO/ANSI C++ и определя�
 
 В этом разделе перечислены дополнительные программные конструкции и разделы, относящиеся к среде CLR.
 
-|Раздел|Описание:|
+|Раздел|Описание|
 |-----------|-----------------|
 |[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Среда выполнения Windows и среды CLR) Позволяет использовать ключевые слова как идентификаторы.|
 |[Списки аргументов переменной длины (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Среда выполнения Windows и среды CLR) Разрешает функции принимать переменное число аргументов.|

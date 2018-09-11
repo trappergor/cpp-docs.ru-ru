@@ -1,5 +1,5 @@
 ---
-title: Элементы управления в диалоговых окнах | Документация Майкрософт
+title: Элементы управления в диалоговых окнах (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591962"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317112"
 ---
-# <a name="controls-in-dialog-boxes"></a>Элементы управления в диалоговых окнах
+# <a name="controls-in-dialog-box-ces"></a>Управляет es, в диалоговом окне (C++)
 
 Можно добавить элементы управления в диалоговое окно с помощью [вкладка диалогового окна редактора](../windows/dialog-editor-tab-toolbox.md) в [окно панели элементов](/visualstudio/ide/reference/toolbox), что позволяет выбрать элемент управления и перетащите его в диалоговом окне. По умолчанию окно панели элементов будет присвоено автоматического скрытия. Он отображается как вкладка в левой области решения, когда открыт редактор диалоговых окон. Тем не менее, вы можете закрепить **элементов** в позиции, щелкнув окно **автоматическое скрытие** кнопки в правом верхнем углу окна. Дополнительные сведения о том, как управлять поведением этого окна см. в разделе [Управление окнами](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 

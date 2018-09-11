@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- status bars, associating menu items
-- menus, status bar text
+- status bars [C++], associating menu items
+- menus [C++], status bar text
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d9cb5e57d6c7020e0b89104dac87fa3cd08ea023
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 16de276478485cb52b11b3f1bbb869c5b75d05a4
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583705"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316761"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Привязка команд меню к тексту строки состояния в приложениях MFC
 
-Приложение может отображать описательный текст для каждой команды меню, которую может выбрать пользователь. Добиться этого можно назначить строку текста для каждой команды меню, используя **Prompt** свойство в **свойства** окна. Если в [таблице строк](../windows/string-editor.md) имеется строка, идентификатор которой совпадает с идентификатором команды, приложение MFC автоматически отобразит этот строковый ресурс в строке состояния выполняющегося приложения в момент, когда пользователь наведет указатель мыши на пункт меню.
+Приложение MFC может отображать описательный текст для каждой из команд меню, которые может выбрать пользователь. Добиться этого можно назначить строку текста для каждой команды меню, используя **Prompt** свойство в **свойства** окна. Если в [таблице строк](../windows/string-editor.md) имеется строка, идентификатор которой совпадает с идентификатором команды, приложение MFC автоматически отобразит этот строковый ресурс в строке состояния выполняющегося приложения в момент, когда пользователь наведет указатель мыши на пункт меню.
 
 ### <a name="to-associate-a-menu-command-with-a-status-bar-text-string"></a>Чтобы связать команду меню со строкой текста в строке состояния, выполните следующие действия.
 

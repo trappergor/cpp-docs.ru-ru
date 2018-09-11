@@ -1,5 +1,5 @@
 ---
-title: 'Значки и курсоры: ресурсы изображений для устройств отображения (редактор изображений для значков) | Документация Майкрософт'
+title: 'Значки и курсоры: ресурсы изображений для устройств отображения (редактор C++ изображений для значков) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,13 +11,13 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - cursors [C++], creating
-- image resources, display devices
+- image resources [C++], display devices
 - icons [C++], creating
 - cursors [C++], types
 - icons [C++]
 - Image editor [C++], icons and cursors
 - cursors [C++]
-- display devices, creating icons for
+- display devices [C++], creating icons for
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
@@ -26,14 +26,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b90337b48c46d335bfccf405b2ba7e0628b9f99
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 03c3b64cfbf93260c1195fa028d05bb8085c9b09
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209496"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313589"
 ---
-# <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Значки и курсоры: ресурсы изображений для устройств отображения (редактор изображений для значков)
+# <a name="icons-and-cursors-image-resources-for-display-devices-c-image-editor-for-icons"></a>Значки и курсоры: ресурсы изображений для устройств отображения (редактор C++ изображений для значков)
 
 Значки и курсоры представляют собой графические ресурсы, которые могут состоять из нескольких изображений разных размеров, использующих разные цветовые схемы, в зависимости от типа устройства отображения. Кроме того, у курсоров есть "активная точка" — точка, которая используется системой Windows для отслеживания позиции курсора. Значки и курсоры будут созданы и отредактированы с использованием **изображение** редактора, как точечные рисунки и другие образы.
 

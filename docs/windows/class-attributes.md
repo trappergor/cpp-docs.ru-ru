@@ -8,26 +8,25 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], class attributes
-- class attributes
+- attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b0057fa97805c093df7cac126e87f9af0a98a73
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 60243373ea6b34ebceffd6f1ae21723e71e11bbb
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611897"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313602"
 ---
 # <a name="class-attributes"></a>Атрибуты классов
 
 Следующие атрибуты применяются к [класс](../cpp/class-cpp.md) ключевым словом языка C++.
 
-|Атрибут|Описание:|
+|Атрибут|Описание|
 |---------------|-----------------|
 |[aggregatable](../windows/aggregatable.md)|Указывает, что класс поддерживает агрегирование.|
 |[aggregates](../windows/aggregates.md)|Указывает, что элемент управления использует статистическую функцию целевого класса.|

@@ -1,5 +1,5 @@
 ---
-title: Создание всплывающей подсказки для кнопки панели инструментов | Документация Майкрософт
+title: Создание всплывающей подсказки для кнопки панели инструментов (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - "\nin tool tip"
 - toolbar buttons [C++], tool tips
 - buttons [C++], tool tips
-- Toolbar editor, creating tool tips
+- Toolbar editor [C++], creating tool tips
 ms.assetid: 0af65342-fd78-4e78-8d0d-dc68f7fc462e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aef763e20df3d8b19326a008706a45cc5508cd9c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5e5fef71d3fa2ad76192a06603ed9e22d52eef71
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600114"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317827"
 ---
-# <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Создание всплывающей подсказки для кнопки панели инструментов
+# <a name="creating-a-tool-tip-for-a-toolbar-button-c"></a>Создание всплывающей подсказки для кнопки панели инструментов (C++)
 
 ### <a name="to-create-a-tool-tip"></a>Создание всплывающей подсказки
 

@@ -1,5 +1,5 @@
 ---
-title: Создание всплывающих меню | Документация Майкрософт
+title: Создание всплывающих меню (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,26 +8,26 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- context menus, Menu Editor
-- pop-up menus, creating
-- menus, pop-up
-- menus, creating
-- shortcut menus, creating
-- pop-up menus, displaying
+- context menus [C++], Menu Editor
+- pop-up menus [C++], creating
+- menus [C++], pop-up
+- menus [C++], creating
+- shortcut menus [C++], creating
+- pop-up menus [C++], displaying
 ms.assetid: dff4dddf-2e8d-4c34-b755-90baae426b58
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b06fa02420b70538faa70b24137df634420dd8d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3fd2fcc5fc8603f265fa2d213325227baecd7f5d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222648"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313772"
 ---
-# <a name="creating-pop-up-menus"></a>Создание всплывающих меню
+# <a name="creating-pop-up-menus-c"></a>Создание всплывающих меню (C++)
 
 [Всплывающие меню](../mfc/menus-mfc.md) отображают часто используемые команды. Они могут быть контекстно-зависимыми, т. е. зависеть от положения указателя. Использование всплывающего меню в приложении требует создания самого меню и привязки его к коду приложения.
 

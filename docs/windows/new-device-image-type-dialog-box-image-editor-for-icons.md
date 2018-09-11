@@ -1,5 +1,5 @@
 ---
-title: Новый &lt;устройства&gt; изображения диалоговое окно «тип» (редактор изображений для значков) | Документация Майкрософт
+title: Новый &lt;устройства&gt; изображение диалогового окна типа (C++) (редактор изображений для значков) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,21 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New <Device> Image Type dialog box
+- New <Device> Image Type dialog box [C++]
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ab00ebad999569c3991f3a1d8d511d24eb47380
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610887"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313940"
 ---
-# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Новый &lt;устройства&gt; изображения диалоговое окно «тип» (редактор изображений для значков)
+# <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Новый &lt;устройства&gt; изображение диалогового окна типа (C++) (редактор изображений для значков)
 
 Позволяет создать новое изображение устройства указанного типа. Чтобы открыть **New \<устройства > изображение** диалоговом окне щелкните **Создание типа изображений** на **изображение** меню.
 

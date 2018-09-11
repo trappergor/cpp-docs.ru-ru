@@ -10,7 +10,6 @@ dev_langs:
 helpviewer_keywords:
 - images [C++], properties
 - Image editor [C++], Properties window
-- Image editor [C++], image properties
 - Properties window, image editor
 ms.assetid: f6172bf1-08c4-4dfd-b542-dd8749e83fe6
 author: mikeblome
@@ -18,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3c03cfa1d1d9a30cf6639b04937bacff473d7c3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 286e71b427bd39df6c493c7727b66ef27b72c766
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604637"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314343"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>Изменение свойств изображения (редактор изображений для значков)
 
@@ -35,7 +34,7 @@ ms.locfileid: "42604637"
 
 2. В **свойства** окна, измените любой или все свойства изображения.
 
-   |Свойство.|Описание:|
+   |Свойство.|Описание|
    |--------------|-----------------|
    |**Цвета**|Задает цветовую схему для образа. Выберите **монохромная**, **16**, или **256**, или **True Color**. Если изображение с 16-цветовую палитру уже создана, выбрав **монохромная** вызывает подстановок черного и белого цвета изображения. Контрастность не всегда сохраняются: например, смежные области красного и зеленого цветов преобразуются на черный.|
    |**Имя файла**|Задает имя файла изображения. По умолчанию Visual Studio назначает базовое имя файла, созданные путем удаления первые четыре символа («IDB_») из стандартного идентификатора ресурса (IDB_BITMAP1) и добавления соответствующего расширения. Имя файла для изображения в этом примере будет `BITMAP1.bmp`. Можно переименовать его `MYBITMAP1.bmp`.|

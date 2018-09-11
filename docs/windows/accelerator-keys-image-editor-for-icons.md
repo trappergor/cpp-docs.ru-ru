@@ -1,5 +1,5 @@
 ---
-title: Сочетания клавиш (редактор изображений для значков) | Документация Майкрософт
+title: Сочетания клавиш (редактор C++ изображений для значков) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f211b15134ad292c9e7e4d3ed92d81ea59dd3b86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683304"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317749"
 ---
-# <a name="accelerator-keys-image-editor-for-icons"></a>Сочетания клавиш (редактор изображений для значков)
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>Сочетания клавиш (редактор C++ изображений для значков)
 
 Ниже приведены сочетания клавиш для команд редактора изображений, привязанных к ключи по умолчанию. Чтобы изменить сочетания клавиш, нажмите кнопку **параметры** на **средства** меню и выберите **клавиатуры** под **среды** папки. Дополнительные сведения см. в разделе [Определение и настройка сочетаний клавиш в Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 

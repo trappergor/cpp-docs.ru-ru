@@ -1,5 +1,5 @@
 ---
-title: Панель инструментов (редактор изображений для значков) | Документация Майкрософт
+title: Панель инструментов (редактор C++ изображений для значков) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fbad27020b18bafe2f9fc60ee08282d9101ea5a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604140"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314408"
 ---
-# <a name="toolbar-image-editor-for-icons"></a>Панель инструментов (редактор изображений для значков)
+# <a name="toolbar-c-image-editor-for-icons"></a>Панель инструментов (редактор C++ изображений для значков)
 
 **Редактор изображений** инструментов содержит инструменты для рисования, рисования, ввода текста, стирания и управлении представлениями. Он также содержит селектора параметр, с помощью которого можно выбрать параметры для каждого инструмента. Например можно выбрать из различных кисти, масштаб увеличения и стили линий.
 

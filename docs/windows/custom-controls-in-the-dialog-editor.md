@@ -1,5 +1,5 @@
 ---
-title: Пользовательские элементы управления в редакторе диалоговых окон | Документация Майкрософт
+title: Пользовательские элементы управления в редакторе диалоговых окон (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,24 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], templates
-- custom controls [Visual Studio], dialog boxes
-- custom controls [Visual Studio]
-- dialog box controls, custom (user) controls
-- Dialog editor, custom controls
+- custom controls [C++], dialog boxes
+- custom controls [C++]
+- dialog box controls [C++], custom (user) controls
+- Dialog Editor [C++], custom controls
 ms.assetid: f494b314-4000-4bbe-bbd0-4b18fb71ede1
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7329873b8f56b44904c38161e737d99d29efa580
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1bebca381bc9d6d644ac1aac95b902065268a9d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592990"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317710"
 ---
-# <a name="custom-controls-in-the-dialog-editor"></a>Пользовательские элементы управления в редакторе диалогов
+# <a name="custom-controls-in-the-dialog-editor-c"></a>Пользовательские элементы управления в редакторе диалоговых окон (C++)
 
 Редактор диалоговых окон позволяет использовать существующую «custom» или «user» элементы управления в шаблон диалогового окна.
 

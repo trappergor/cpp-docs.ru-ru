@@ -1,5 +1,5 @@
 ---
-title: Отображение или скрытие панели инструментов редактора диалоговых окон | Документация Майкрософт
+title: Отображение или скрытие панели инструментов редактора диалоговых окон (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - controls [C++], showing or hiding Dialog editor toolbar
 - toolbars [C++], showing
 - toolbars [C++], hiding
-- Dialog editor, showing or hiding toolbar
+- Dialog Editor [C++], showing or hiding toolbar
 ms.assetid: 93c255e1-90eb-48b6-8602-450acda75bed
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1aa9e84e1f03f0299d25ec43b91c93531179ab6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9b7b6c8b01665da1effb1b3bd056c99bd82163c0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599416"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316020"
 ---
-# <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Отображение и скрытие панели инструментов в редакторе диалоговых окон
+# <a name="showing-or-hiding-the-dialog-editor-toolbar-c"></a>Отображение или скрытие панели инструментов редактора диалоговых окон (C++)
 
-При открытии **диалоговое окно** редакторе **редактор диалоговых окон** панель инструментов автоматически отображается в верхней части решения.
+При открытии **диалоговое окно** редактора в проекте C++ **редактор диалоговых окон** панель инструментов автоматически отображается в верхней части решения.
 
 ### <a name="dialog-editor-toolbar"></a>Панель инструментов редактора диалоговых окон
 
