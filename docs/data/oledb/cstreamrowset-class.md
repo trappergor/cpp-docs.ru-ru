@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b9f1c7aef4116ae057d771e66b5027c5783f64e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2a8e4af6e85dbfa3b617471b592f806ae1ef5548
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338016"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572407"
 ---
 # <a name="cstreamrowset-class"></a>Класс CStreamRowset
 Используется в `CCommand` или `CTable` объявления.  
@@ -69,7 +69,7 @@ class CStreamRowset
 |||  
 |-|-|  
 |[CStreamRowset](#cstreamrowset)|Конструктор. Создает и инициализирует `CStreamRowset` объекта.|  
-|[Закрыть](#close)|Выпуски [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) указатель на интерфейс в классе.|  
+|[Закрыть](#close)|Выпуски [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) указатель на интерфейс в классе.|  
   
 ## <a name="remarks"></a>Примечания  
  Используйте `CStreamRowset` в вашей `CCommand` или `CTable` объявление, например:  
@@ -99,7 +99,7 @@ CStreamRowset();
 ```  
 
 ## <a name="close"></a> CStreamRowset::Close
-Выпуски [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) указатель на интерфейс в классе.  
+Выпуски [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) указатель на интерфейс в классе.  
   
 ### <a name="syntax"></a>Синтаксис  
   

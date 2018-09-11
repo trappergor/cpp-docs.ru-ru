@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d8780c249fdf768c322e3026240642c4da43c4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 538a376dd14eae32864b494b7e79db1c89686b84
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338725"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315019"
 ---
 # <a name="application-control"></a>Управление приложением
 OLE требует существенного контроля над приложениями и их объекты. OLE системные библиотеки DLL должны иметь возможность запуска и выпускать приложения автоматически координации работы и изменением объектов и т. д. Функции в этом разделе соответствует этим требованиям. В дополнение к их вызова OLE системные библиотеки DLL, эти функции должен вызываться иногда также приложениями. 
@@ -186,7 +186,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Требования  
- **Заголовок:** < afxwin.h >  
+ **Заголовок:** afxwin.h  
    
 ### <a name="see-also"></a>См. также  
  [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
@@ -332,7 +332,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Требования  
- **Заголовок:** < afxwin.h >  
+ **Заголовок:** afxwin.h  
    
 ### <a name="see-also"></a>См. также  
  [Макросы и глобальные объекты](mfc-macros-and-globals.md)  

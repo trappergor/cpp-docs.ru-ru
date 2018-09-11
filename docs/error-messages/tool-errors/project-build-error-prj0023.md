@@ -1,7 +1,7 @@
 ---
-title: Ошибка построения проекта PRJ0023 | Документы Microsoft
+title: Ошибка построения проекта PRJ0023 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7351d140cefe720e6bde123e00a950a34bd3404b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47b31aa1acba3d13bfeb52e52233f90e1c12cbda
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321890"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213890"
 ---
 # <a name="project-build-error-prj0023"></a>Ошибка построения проекта PRJ0023
-Инструмент «инструмент», неизвестное свойство содержит неверное имя файла «файл».  
-  
- Имя файла ***файл***, заданный для средства, ***средство***, недопустим.  
-  
- Использовать Неизвестный или недопустимый макрос.  
-  
- В разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md) сведения о том, как получить доступ к свойствам проекта.
+
+> Средство "*средство*«, неизвестное свойство содержит неверное имя файла»*файл*".
+
+Имя файла *файл* заданных для средства *средство* был недопустимым.
+
+Возможно, был использован неизвестный или недопустимый макрос.
+
+См. в разделе [параметр свойств проекта Visual C++](../../ide/working-with-project-properties.md) сведения о том, как получить доступ к свойствам проекта.

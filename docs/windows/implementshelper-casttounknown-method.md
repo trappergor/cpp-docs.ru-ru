@@ -1,5 +1,5 @@
 ---
-title: Метод ImplementsHelper::CastToUnknown | Документы Microsoft
+title: Метод ImplementsHelper::CastToUnknown | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b786bb41e9f0667ebbb81329b2f0977525d4ba96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874503"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598066"
 ---
 # <a name="implementshelpercasttounknown-method"></a>Метод ImplementsHelper::CastToUnknown
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Указатель на базовый интерфейс IUnknown.  
-  
-## <a name="remarks"></a>Примечания  
- Возвращает указатель на базовый интерфейс IUnknown для текущей структуры реализует.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Implementshelper-структура](../windows/implementshelper-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Указатель на базовый `IUnknown` интерфейс.
+
+## <a name="remarks"></a>Примечания
+
+Возвращает указатель на базовый `IUnknown` интерфейса для текущего `Implements` структуры.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура ImplementsHelper](../windows/implementshelper-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

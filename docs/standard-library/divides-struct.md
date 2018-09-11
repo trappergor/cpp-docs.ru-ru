@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc3f744da2deb804f1a3e3445fbed3da3fac0b5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 55a97c1928babd32279253546ac53efd950d6c5e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955790"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110335"
 ---
 # <a name="divides-struct"></a>divides - структура
 
@@ -44,16 +44,18 @@ struct divides<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const
     -> decltype(std::forward<T>(Left)*/ std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *Тип*, *T*, *U* тип, поддерживающий `operator/` , принимающий операнды указанного или выводимого типа.
 
-*Слева* левый операнд в операции деления. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
+*Слева*<br/>
+Левый операнд в операции деления. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
 
-*Справа* правый операнд в операции деления. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
+*Справа*<br/>
+Правый операнд в операции деления. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

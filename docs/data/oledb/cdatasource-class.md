@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c3bd275c189e7c99bbc275caf31436b5f5a1d5e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 984bdabb9d67b157468287fa64f9f21ddabdd5d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340089"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217233"
 ---
 # <a name="cdatasource-class"></a>Класс CDataSource
 Соответствующий объект источника данных OLE DB, который представляет подключение через поставщика к источнику данных.  
@@ -153,7 +153,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IDBProperties::GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) в *справочнике программиста OLE DB* в Windows SDK.  
+ См. в разделе [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
@@ -238,10 +238,10 @@ HRESULT Open(LPCSTR szProgID,
  [in] `CLSID` Поставщика данных.  
   
  *pPropSet*  
- [in] Указатель на массив [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](https://msdn.microsoft.com/library/ms713696.aspx) в *справочнике программиста OLE DB* в Windows SDK.  
+ [in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK.  
   
  *nPropertySets*  
- [in] Число [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структуры, передаются в *pPropSet* аргумент.  
+ [in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры, передаются в *pPropSet* аргумент.  
   
  *pName*  
  [входные данные] Имя базы данных, к которой необходимо подключиться.  
@@ -253,7 +253,7 @@ HRESULT Open(LPCSTR szProgID,
  [входные данные] Пароль пользователя.  
   
  *nInitMode*  
- [входные данные] Режим инициализации базы данных. См. в разделе [свойства инициализации](https://msdn.microsoft.com/library/ms723127.aspx)в *Справочник программиста OLE DB по* в пакете SDK Windows для получения списка допустимых режимов инициализации. Если *nInitMode* — это инициализация нулю, то режим включается в набор свойств, используемых для открытия соединения.  
+ [входные данные] Режим инициализации базы данных. См. в разделе [свойства инициализации](/previous-versions/windows/desktop/ms723127\(v=vs.85\))в *Справочник программиста OLE DB по* в пакете SDK Windows для получения списка допустимых режимов инициализации. Если *nInitMode* — это инициализация нулю, то режим включается в набор свойств, используемых для открытия соединения.  
   
  *szProgID*  
  [входные данные] Идентификатор программы.  
@@ -271,7 +271,7 @@ HRESULT Open(LPCSTR szProgID,
  Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Перегрузка метода, который использует *hWnd* параметра открывает объект источника данных с помощью компонентов службы в oledb32.dll; эта библиотека DLL содержит реализацию возможностей компонентов службы, такие как создание пулов ресурсов, автоматически Прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Перегрузка метода, который использует *hWnd* параметра открывает объект источника данных с помощью компонентов службы в oledb32.dll; эта библиотека DLL содержит реализацию возможностей компонентов службы, такие как создание пулов ресурсов, автоматически Прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
  Перегрузки метода, не использующих *hWnd* параметр откройте объект источника данных без использования компонентов службы в oledb32.dll. Объект [CDataSource](../../data/oledb/cdatasource-class.md) открытый с помощью этих перегрузок функций не смогут использовать все функции службы компонентов.  
   
@@ -293,13 +293,13 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  *szFileName*  
  [входные данные] Имя файла (обычно это файл подключения к источнику данных (UDL)).  
   
- Дополнительные сведения о файлах передачи данных (UDL-файлах) см. в разделе [Обзор API связи данных](https://msdn.microsoft.com/library/ms718102.aspx) в пакете Windows SDK.  
+ Дополнительные сведения о файлах передачи данных (UDL-файлах) см. в разделе [Обзор API связи данных](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
 
 ## <a name="openfrominitializationstring"></a> CDataSource::OpenFromInitializationString
 Открывает источник данных, указанная в строке инициализации, предоставленные пользователем.  
@@ -351,7 +351,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
  Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+ Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
 ## <a name="openwithservicecomponents"></a> CDataSource::OpenWithServiceComponents
 Открывает объект источника данных с помощью компонентов службы в oledb32.dll.  
@@ -376,16 +376,16 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  [входные данные] Идентификатор программы поставщика данных.  
   
  *pPropset*  
- [in] Указатель на массив [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](https://msdn.microsoft.com/library/ms713696.aspx) в *справочнике программиста OLE DB* в Windows SDK. При инициализации объекта источника данных свойства должны принадлежать к группе свойств источника данных. Если в то же свойство указано более одного раза *pPropset*, то используется значение, которое зависит от поставщика. Если *ulPropSets* равен нулю, этот параметр учитывается.  
+ [in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK. При инициализации объекта источника данных свойства должны принадлежать к группе свойств источника данных. Если в то же свойство указано более одного раза *pPropset*, то используется значение, которое зависит от поставщика. Если *ulPropSets* равен нулю, этот параметр учитывается.  
   
  *ulPropSets*  
- [in] Число [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структуры, передаются в *pPropSet* аргумент. Если это равно нулю, поставщик не учитывает *pPropset*.  
+ [in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры, передаются в *pPropSet* аргумент. Если это равно нулю, поставщик не учитывает *pPropset*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
+ Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
 
 ## <a name="see-also"></a>См. также  
  [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

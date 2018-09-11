@@ -1,5 +1,5 @@
 ---
-title: Запуск от имени участника группы "пользователи" | Документы Microsoft
+title: Запуск от имени участника группы «Пользователи» | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fd9d0deded3180529bfa714519a9b8d415c6b15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841664"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586326"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Запуск от имени участника группы "Пользователи"
 В данном разделе описано, как настройка учетных записей пользователей Windows как участников группы "Пользователи" (в отличие от группы "Администраторы") повышает уровень безопасности за счет уменьшения шанса заражения вирусом из вредоносного кода.  

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ffd2a8969b4cd0edb5845310300e3b42148f816
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c74bc6a134ea31f3184912192ccbcb3908e64cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337620"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221529"
 ---
 # <a name="casyncsocket-class"></a>Класс CAsyncSocket
 Представляет сокет Windows — конечную точку сетевого взаимодействия.  
@@ -173,7 +173,7 @@ class CAsyncSocket : public CObject
 > [!NOTE]
 >  С помощью сокетов MFC в второстепенных потоков в приложении MFC статически скомпонованной необходимо вызвать метод `AfxSocketInit` в каждом потоке, который использует сокеты для инициализации библиотеки сокета. По умолчанию `AfxSocketInit` вызывается только в основном потоке.  
   
- Дополнительные сведения см. в разделе [Windows Sockets: использование класса CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) и связанных статей. а также [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Дополнительные сведения см. в разделе [Windows Sockets: использование класса CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) и связанных статей. а также [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -229,7 +229,7 @@ virtual BOOL Accept(
 ### <a name="remarks"></a>Примечания  
  Эта процедура извлекает первое подключение в очереди ожидающих подключений, создает новый сокет с теми же свойствами, что этот сокет и присоединяет его к *rConnectedSocket*. Если нет ожидающих подключений в очереди, `Accept` возвращает ноль и `GetLastError` возвращает сообщение об ошибке. Допущенный сокет ( *rConnectedSocket)* не позволяет принимать дополнительные подключения. Исходное сокет остается открытым и ожидает передачи данных.  
   
- Аргумент *lpSockAddr* является параметр результата, который заполняется адрес подключения сокета, как известные ןנטהועס. `Accept` используется с типами сокета на основе подключения, например SOCK_STREAM.  
+ Аргумент *lpSockAddr* является параметр результата, который заполняется адрес подключения сокета, как известные. `Accept` используется с типами сокета на основе подключения, например SOCK_STREAM.  
   
 ##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect  
  Вызовите эту функцию-член для запроса уведомления о событии для сокета.  
@@ -515,7 +515,7 @@ BOOL Create(
 > [!IMPORTANT]
 > `Create` — **не** поточно ориентированными.  При вызове его в многопоточной среде где он может быть вызван одновременно разными потоками, не забудьте защитить каждый вызов с мьютекс или другая блокировка синхронизации.  
   
- Дополнительные сведения о stream и датаграмм сокетов, см. в статьях [Windows Sockets: фон](../../mfc/windows-sockets-background.md) и [Windows Sockets: порты и адреса сокета](../../mfc/windows-sockets-ports-and-socket-addresses.md) и [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Дополнительные сведения о stream и датаграмм сокетов, см. в статьях [Windows Sockets: фон](../../mfc/windows-sockets-background.md) и [Windows Sockets: порты и адреса сокета](../../mfc/windows-sockets-ports-and-socket-addresses.md) и [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="detach"></a>  CAsyncSocket::Detach  
  Вызовите эту функцию-член для отсоединения дескриптора СОКЕТА в *m_hSocket* элемент данных из `CAsyncSocket` и задайте *m_hSocket* значение NULL.  
@@ -554,7 +554,7 @@ static int PASCAL GetLastError();
 ### <a name="remarks"></a>Примечания  
  Когда функция-член указывает, что произошла ошибка, `GetLastError` должен вызываться для извлечения кода соответствующее сообщение об ошибке. См. в разделе описания отдельных членов функции список кодов ошибок применимо.  
   
- Дополнительные сведения о кодах ошибок см. в разделе [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ Дополнительные сведения о кодах ошибок см. в разделе [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  Вызывайте эту функцию члена, чтобы получить адрес сокета однорангового узла, к которому подключен этот сокет.  

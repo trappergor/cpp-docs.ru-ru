@@ -1,5 +1,5 @@
 ---
-title: Создание списков изображений | Документы Microsoft
+title: Создание списков изображений | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e5f5ac8396c32e56e4c0f2f951f45bb33714822
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53cf33a551dc95e7ed282b599673f627ff8a7b21
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341529"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220941"
 ---
 # <a name="creating-the-image-lists"></a>Создание списков изображений
-Создание списков изображений одинаково независимо от используемого [CListView](../mfc/reference/clistview-class.md) или [CListCtrl](../mfc/reference/clistctrl-class.md).  
+Создание списков изображений не отличается, независимо от используемого метода [CListView](../mfc/reference/clistview-class.md) или [CListCtrl](../mfc/reference/clistctrl-class.md).  
   
 > [!NOTE]
 >  Вы должны образ только списки, если элемент управления списка включает `LVS_ICON` стиля.  
   
- Используйте класс `CImageList` для создания одного или нескольких списков изображений (для полного размера значков Мелкие значки и состояния). В разделе [CImageList](../mfc/reference/cimagelist-class.md)и в разделе [списки изображений представление списка](http://msdn.microsoft.com/library/windows/desktop/bb774736) в Windows SDK.  
+ Используйте класс `CImageList` создать один или несколько списков изображений (для полного размера значков Мелкие значки и состояний). См. в разделе [CImageList](../mfc/reference/cimagelist-class.md)и см. в разделе [списки изображений представление списка](/windows/desktop/Controls/using-list-view-controls) в пакете Windows SDK.  
   
  Вызовите [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) для каждого образ списка; передать указатель на соответствующий `CImageList` объекта.  
   

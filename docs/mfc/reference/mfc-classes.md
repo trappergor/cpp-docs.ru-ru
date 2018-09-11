@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5bfff86dd688ea5029a0c0971c3f8ad6c6aef3b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027818"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213196"
 ---
 # <a name="mfc-classes"></a>Классы MFC
 Классы в следующем списке содержатся в библиотеке Microsoft Foundation Class (MFC).  
@@ -135,7 +135,7 @@ ms.locfileid: "39027818"
  Предоставляет функции поля со списком Windows.  
   
  [Класс CClientDC](../../mfc/reference/cclientdc-class.md)  
- Обрабатывает вызовы функций Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) во время разработки и функций [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) во время уничтожения.  
+ Обрабатывает вызовы функций Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) во время создания и [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) во время уничтожения.  
   
  [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
  Базовый класс для архитектуры схемы сообщений библиотеки классов Microsoft Foundation.  
@@ -852,7 +852,7 @@ ms.locfileid: "39027818"
  Имитирует внешний вид Microsoft Windows XP или Microsoft Vista, когда пользователь выбирает тему Windows XP или Vista.  
   
  [Класс CMFCVisualManagerWindows7](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- Предоставляет приложению внешний вид приложения [!INCLUDE[win7](../../build/includes/win7_md.md)] .  
+ Придает приложению внешний вид приложений Windows 7.  
   
  [Класс CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  Позволяет пользователю управлять дочерними окнами MDI в приложении MDI.  
@@ -861,7 +861,7 @@ ms.locfileid: "39027818"
  Представляет фреймовое окно половинной высоты по сравнению с тем, которое стандартно отображается на плавающих панелях инструментов.  
   
  [Класс CMonikerFile](../../mfc/reference/cmonikerfile-class.md)  
- Представляет поток данных ([IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) с именем [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+ Представляет поток данных ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) с именем, [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
  [Класс CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)  
  Инкапсулирует функциональность элемента управления "календарь месяца".  
@@ -930,7 +930,7 @@ ms.locfileid: "39027818"
  Обеспечивает поддержку пользовательских интерфейсов клиентских элементов управления.  
   
  [Класс COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)  
- Дополнительные сведения см. в разделе [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) структуры в пакете Windows SDK.  
   
  [Класс COleCurrency](../../mfc/reference/colecurrency-class.md)  
  Инкапсулирует тип данных `CURRENCY` автоматизации OLE.  
@@ -1020,7 +1020,7 @@ ms.locfileid: "39027818"
  Используется в особых случаях в диалоговом окне OLE "Изменить ссылки", которое используется при необходимости обновления только существующих связанных или внедренных объектов в документе.  
   
  [Класс COleVariant](../../mfc/reference/colevariant-class.md)  
- Инкапсулирует [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) тип данных.  
+ Инкапсулирует [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) тип данных.  
   
  [Класс CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)  
  Класс `CPagerCtrl` создается элемент управления страничного навигатора Windows, который может выполнить прокрутку и отобразить содержащееся окно, которое не помещается в содержащее его окно.  
@@ -1173,7 +1173,7 @@ ms.locfileid: "39027818"
  Инкапсулирует переход с синусоидальной скоростью, амплитуда которого определяется начальной скоростью переменной анимации.  
   
  [Класс CSize](../../atl-mfc-shared/reference/csize-class.md)  
- Аналог структуры [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) в ОС Windows, реализующий относительные координаты или положение.  
+ Аналогичную Windows [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, реализующий относительные координаты или положение.  
   
  [Класс CSliderCtrl](../../mfc/reference/csliderctrl-class.md)  
  Предоставляет функциональные возможности стандартного элемента управления "ползунок" Windows.  

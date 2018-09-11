@@ -1,5 +1,5 @@
 ---
-title: Метод WeakReference::DecrementStrongReference | Документы Microsoft
+title: Метод WeakReference::DecrementStrongReference | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d5605670e05f91f9f1293c8bff0f4d74e458d25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3620a4b82aabb0058773f68938f545119f90791
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890340"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605602"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>Метод WeakReference::DecrementStrongReference
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-ULONG DecrementStrongReference();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Уменьшает счетчик строгого ссылок объекта WeakReference.  
-  
- Если строгую ссылку счетчик становится равным нулю, строгая ссылка имеет значение `nullptr`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Счетчик уменьшается на единицу строгую ссылку.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ULONG DecrementStrongReference();
+```
+
+## <a name="remarks"></a>Примечания
+
+Уменьшает текущий счетчик строгая ссылка **WeakReference** объекта.
+
+Надежный счетчик достигает нуля, строгая ссылка имеет значение **nullptr**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Счетчик уменьшается на единицу строгую ссылку.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
 [Класс WeakReference](../windows/weakreference-class1.md)  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

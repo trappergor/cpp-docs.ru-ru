@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: ~ WeakReference деструктор | Документы Microsoft'
+title: 'WeakReference:: ~ WeakReference деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b26d58f13e819ce4bb605beba9beecbbc1fa94a6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890737"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596311"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>Деструктор WeakReference::~WeakReference
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-virtual ~WeakReference();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
-  
-## <a name="remarks"></a>Примечания  
- Деинициализирует текущий экземпляр класса WeakReference.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::wrl:: details](../windows/microsoft-wrl-details-namespace.md) [WeakReference-класс](../windows/weakreference-class1.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual ~WeakReference();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+## <a name="remarks"></a>Примечания
+
+Деинициализирует текущий экземпляр **WeakReference** класса.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::wrl:: details](../windows/microsoft-wrl-details-namespace.md)
+[класс WeakReference](../windows/weakreference-class1.md)

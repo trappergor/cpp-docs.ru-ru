@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957978"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105670"
 ---
 # <a name="basicstring-class"></a>Класс basic_string
 
@@ -146,21 +146,24 @@ class basic_string;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType* тип данных из одного символа, храниться в строке. Стандартная библиотека C++ предоставляет специализации этого класса шаблона с определениями типов [строка](../standard-library/string-typedefs.md#string) для элементов типа **char**, [wstring](../standard-library/string-typedefs.md#wstring), для **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) для `char16_t`, и [u32string](../standard-library/string-typedefs.md#u32string) для `char32_t`.
+*CharType*<br/>
+Тип данных одиночного символа, сохраняемого в строке. Стандартная библиотека C++ предоставляет специализации этого класса шаблона с определениями типов [строка](../standard-library/string-typedefs.md#string) для элементов типа **char**, [wstring](../standard-library/string-typedefs.md#wstring), для **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) для `char16_t`, и [u32string](../standard-library/string-typedefs.md#u32string) для `char32_t`.
 
-*Признаки* различные важные свойства элементов `CharType` в специализации basic_string описываются классом `Traits`. Значение по умолчанию — `char_traits`< `CharType`>.
+*Признаки*<br/>
+Различные важные свойства элементов `CharType` в специализации basic_string описываются классом `Traits`. Значение по умолчанию — `char_traits`< `CharType`>.
 
-*Распределитель* тип, представляющий сохраненный объект распределителя, инкапсулирующий сведения о выделении и освобождении памяти строки. Значение по умолчанию — **allocator**< `CharType`>.
+*Распределитель*<br/>
+Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении строки и отмене распределения памяти. Значение по умолчанию — **allocator**< `CharType`>.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_string](#basic_string)|Создает пустую строку или строку, инициализируемую с определенными символами, или представляющую собой полную или частичную копию какого-либо другого строкового объекта или С-строки.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта строки.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать элемент **const** в строке.|
@@ -179,7 +182,7 @@ class basic_string;
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[append](#append)|Добавляет символы в конец строки.|
 |[assign](#assign)|Назначает значения новых символов содержимому строки.|
@@ -225,7 +228,7 @@ class basic_string;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор+=](#op_add_eq)|Присоединяет символы к строке.|
 |[оператор=](#op_eq)|Назначает значения новых символов содержимому строки.|
@@ -314,19 +317,26 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* C-строки для добавления.
+*ptr*<br/>
+C-строка для добавления.
 
-*STR* строку, символы которой являются для добавления.
+*str*<br/>
+Строка, символы которой добавляются.
 
-*_Off* индекс части исходной строки, предоставляющей добавляемые знаки.
+*_Off*<br/>
+Индекс части исходной строки, предоставляющей добавляемые знаки.
 
-*число* число символов для добавления в основном из исходной строки.
+*count*<br/>
+Максимальное число символов для добавления из исходной строки.
 
-*_Ch* символьное значение для добавления.
+*_Ch*<br/>
+Символьное значение для добавления.
 
-*Первый* итератор ввода первого элемента в диапазоне для добавления.
+*Первый*<br/>
+Входной итератор ввода, указывающий на первый элемент в диапазоне для добавления.
 
-*последний* входной итератор, const_pointer или const_iterator, указывающий на позицию сразу за последним элементом в диапазоне для добавления.
+*последний*<br/>
+Входной итератор, const_pointer или const_iterator, указывающий на позицию сразу за последним элементом в диапазоне для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -468,19 +478,26 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель на символы C-строки для назначения целевой строке.
+*ptr*<br/>
+Указатель на символы C-строки, которые должны быть назначены целевой строке.
 
-*число* число символов, которые могут быть назначены, из исходной строки.
+*count*<br/>
+Число символов, которые могут быть назначены, из исходной строки.
 
-*STR* исходной строки, символы которой должны быть назначены целевой строке.
+*str*<br/>
+Исходная строка, символы которой присваиваются целевой строке.
 
-*_Ch* символьное значение для назначения.
+*_Ch*<br/>
+Символьное значение для присваивания.
 
-*Первый* входной итератор, const_pointer или const_iterator, указывающий первый символ в диапазоне исходной строки присваиваемое целевому диапазону.
+*Первый*<br/>
+Входной итератор, const_pointer или const_iterator, указывающий первый символ в диапазоне исходной строки для присваивания целевому диапазону.
 
-*последний* входной итератор, const_pointer или const_iterator, указывающий символ сразу за последним символом в диапазоне исходной строки присваиваемое целевому диапазону.
+*последний*<br/>
+Входной итератор, const_pointer или const_iterator, указывающий символ сразу за последним символом в диапазоне исходной строки для присваивания целевому диапазону.
 
-*Отключение* позицию, с которой начинается новые символы могут быть назначены.
+*Отключение*<br/>
+Позиция, начиная с которой должны назначаться новые символы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -595,7 +612,8 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* индекс позиции элемента должна быть ссылка.
+*_Off*<br/>
+Индекс позиции элемента, на который должна быть ссылка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -721,12 +739,12 @@ basic_string(
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last);
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last,
     const allocator_type& _Al);
 
@@ -741,21 +759,29 @@ basic_string(
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* C-строка, символы которой будут использоваться для инициализации `string` конструируемого. Это значение не может быть указателем null.
+*ptr*<br/>
+C-строка, символы могут использоваться для инициализации создаваемой строки `string`. Это значение не может быть указателем null.
 
-*_Al* класс распределителя памяти для строкового объекта.
+*_Al*<br/>
+Класс распределителя хранилища для создаваемого строкового объекта.
 
-*число* количество инициализируемых символов.
+*count*<br/>
+Количество инициализируемых символов.
 
-*правом* инициализирующая создаваемую строку.
+*right*<br/>
+Строка, инициализирующая создаваемую строку.
 
-*_Roff* индекс символа в строке, который должен использоваться для инициализации значений символов создаваемой строки первым.
+*_Roff*<br/>
+Индекс символа в строке, который первым используется для инициализации значений символов создаваемой строки.
 
-*_Ch* значение символа, копируемое в создаваемую строку.
+*_Ch*<br/>
+Значение символа, копируемое в создаваемую строку.
 
-*Первый* входной итератор, const_pointer или const_iterator, указывающий на первый элемент в исходном диапазоне для вставки.
+*Первый*<br/>
+Итератор ввода, const_pointer или const_iterator, указывающий на первый элемент в диапазоне источника, который необходимо вставить.
 
-*последний* входной итератор, const_pointer или const_iterator, указывающий на позицию сразу за последним элементом в исходном диапазоне для вставки.
+*последний*<br/>
+Итератор ввода, const_pointer или const_iterator, указывающий на положение сразу за последним элементом в диапазоне источника, который необходимо вставить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -851,7 +877,7 @@ int main( ) {
    cout << "The full original string str1 is: " << str1 << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'G';
+*str1_Iter = 'G';
    cout << "The first character of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The full modified string str1 is now: " << str1 << endl;
@@ -881,7 +907,7 @@ const value_type *c_str() const;
 
 ### <a name="remarks"></a>Примечания
 
-Объекты типа String, принадлежащие классу basic_string\<char> шаблона C++, не обязательно завершаются символом NULL. Символ NULL '\0' используется как специальный символ в C-строке для пометки ее конца, но не имеет специального значения в объекте типа String и может быть частью строки так же, как любой другой символ. Выполняется автоматическое преобразование из константы **char\***  в строки, но класс string не предоставляет автоматическое преобразование из С-строк в объекты типа **basic_string\<char>**.
+Объекты типа String, принадлежащие классу basic_string\<char> шаблона C++, не обязательно завершаются символом NULL. Символ NULL '\0' используется как специальный символ в C-строке для пометки ее конца, но не имеет специального значения в объекте типа String и может быть частью строки так же, как любой другой символ. Выполняется автоматическое преобразование из **const char** <strong>\*</strong> в строки, но строка класс не предоставляет автоматическое преобразование из строки в стиле C для объектов типа **basic_string\<char >**.
 
 Не следует изменять возвращенную С-строку, так как это может сделать недействительным указатель на эту строку, и не следует ее удалять, так как строка имеет ограниченное время существования и принадлежит классу string.
 
@@ -1148,19 +1174,26 @@ int compare(
 
 ### <a name="parameters"></a>Параметры
 
-*STR* строка, которая сравнивается со строкой операнда.
+*str*<br/>
+Строка для сравнения со строкой операнда.
 
-*_Pos1* индекс строки операнда, с которого начинается сравнение.
+*_Pos1*<br/>
+Индекс строки операнда, с которого начинается сравнение.
 
-*_Num1* максимальное количество символов из строки операнда для сравнения.
+*_Num1*<br/>
+Максимальное количество символов из строки операнда для сравнения.
 
-*_Num2* максимальное количество символов из строки параметра для сравнения.
+*_Num2*<br/>
+Максимальное количество символов из строки параметра для сравнения.
 
-*_Off* индекс строки параметра, с которого начинается сравнение.
+*_Off*<br/>
+Индекс строки параметра, с которого начинается сравнение.
 
-*число* максимальное количество символов из строки параметра для сравнения.
+*count*<br/>
+Максимальное количество символов из строки параметра для сравнения.
 
-*PTR* C-строка для сравнения со строкой операнда.
+*ptr*<br/>
+С-строка для сравнения со строкой операнда.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1341,14 +1374,14 @@ The operand string is equal to the parameter string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter string.
+are equal to the parameter string.
 The first three characters of the operand string
- are less than the parameter string.
+are less than the parameter string.
 
 The operand string is: AACAB
 The parameter string is: DCABD
 The three characters from position 2 of the operand string are equal to
- the 3 characters parameter string from position 1.
+the 3 characters parameter string from position 1.
 
 The operand string is: ABC
 The parameter C-string is: DEF
@@ -1357,12 +1390,12 @@ The operand string is less than the parameter C-string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter C-string.
+are equal to the parameter C-string.
 
 The operand string is: AACAB
 The parameter C-string is: ACAB
 The 3 characters from position 2 of the operand string are equal to
- the first 3 characters of the parameter C-string.
+the first 3 characters of the parameter C-string.
 ```
 
 ## <a name="const_iterator"></a>  basic_string::const_iterator
@@ -1470,11 +1503,13 @@ size_type copy(
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* целевой массив символов, к которому должны быть скопированы элементы.
+*ptr*<br/>
+Целевой массив символов, в который должны быть скопированы элементы.
 
 _ *Число* число копируемых символов, в основном из исходной строки.
 
-*_Off* Начальная позиция в исходной строке, из которого должны быть сделаны копии.
+*_Off*<br/>
+Начальная позиция в исходной строке, из которой должны быть сделаны копии.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1573,13 +1608,16 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>Параметры
 
-*dest* целевой массив символов, к которому должны быть скопированы элементы.
+*dest*<br/>
+Целевой массив символов, в который должны быть скопированы элементы.
 
-*dest_size* размер *dest*.
+*dest_size*<br/>
+Размер *dest*.
 
 _ *Число* число копируемых символов, в основном из исходной строки.
 
-*_Off* Начальная позиция в исходной строке, из которого должны быть сделаны копии.
+*_Off*<br/>
+Начальная позиция в исходной строке, из которой должны быть сделаны копии.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1652,7 +1690,7 @@ const value_type *data() const;
 
 Объекты типа string, принадлежащие классу basic_string \<char> шаблона C++, не обязательно завершаются символом NULL. Тип возвращаемого значения для `data` не допустимую C-строку, так как нуль-символ возвращает добавляется. Символ NULL '\0' используется как специальный символ в C-строке для пометки ее конца, но не имеет специального значения в объекте типа String и может быть частью объекта string так же, как любой другой символ.
 
-Выполняется автоматическое преобразование из константы **char\***  в строки, но класс string не предоставляет автоматическое преобразование из С-строк в объекты типа **basic_string \<char>**.
+Выполняется автоматическое преобразование из **const char** <strong>\*</strong> в строки, но строка класс не предоставляет автоматическое преобразование из строки в стиле C для объектов типа **basic_string \<char >**.
 
 Не следует изменять возвращенную строку, так как это может сделать недействительным указатель на эту строку, и не следует ее удалять, так как строка имеет ограниченное время существования и принадлежит классу string.
 
@@ -1847,7 +1885,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'T';
+*str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1891,15 +1929,20 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* итератор, обращающийся к позиции первого элемента в диапазоне для очистки.
+*Первый*<br/>
+Итератор, указывающий позицию первого элемента в диапазоне для очистки.
 
-*последний* итератор, указывающий на позицию, следующую за последним элементом в диапазоне для очистки.
+*последний*<br/>
+Итератор, указывающий позицию первого, следующую за последним элементом в диапазоне для очистки.
 
-*_It* итератор, адресующий положение элемента в строке для удаления.
+*_It*<br/>
+Итератор, указывающий позицию элемента в строке для очистки.
 
-*_Pos* индекс первого символа в строке для удаления.
+*_Pos*<br/>
+Индекс первого символа в строке для удаления.
 
-*число* число элементов, которые будут удалены, если их число в диапазоне от строки, начинающемся с *_Pos*.
+*count*<br/>
+Число элементов, которые будут удалены, если их столько же, сколько в диапазоне строки, начинающемся с *_Pos*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1998,15 +2041,20 @@ size_type find(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символьное значение, для которого является функция-член, для поиска.
+*_Ch*<br/>
+Значение символа, для которого следует искать функцию-член.
 
-*_Off* индекс позиции, с которого начинается поиск.
+*_Off*<br/>
+Индекс позиции, в которой следует начать поиск.
 
-*PTR* C-строка, для которого функция-член для поиска.
+*ptr*<br/>
+Строка C-string, для которой следует искать функцию-член.
 
-*число* число символов, начиная с первого символа, в C-строка, для которого функция-член для поиска.
+*count*<br/>
+Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.
 
-*STR* строка, для которого функция-член для поиска.
+*str*<br/>
+Строка, для которой следует искать функцию-член.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2130,7 +2178,7 @@ The Character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' after
- the 5th position in str2 is: 17
+the 5th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: This is a sample string for this program
@@ -2139,7 +2187,7 @@ The index of the next occurrence of 'for' is in str3 begins at: 24
 
 The original string str4 is: clearly this perfectly unclear.
 The index of the 1st element of 'clear' after
- the 5th position in str4 is: 25
+the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
@@ -2171,15 +2219,20 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символьное значение, для которого является функция-член, для поиска.
+*_Ch*<br/>
+Значение символа, для которого следует искать функцию-член.
 
-*_Off* индекс позиции, с которого начинается поиск.
+*_Off*<br/>
+Индекс позиции, в которой следует начать поиск.
 
-*PTR* C-строка, для которого функция-член для поиска.
+*ptr*<br/>
+Строка C-string, для которой следует искать функцию-член.
 
-*число* число символов, начиная с первого символа, в C-строка, для которого функция-член для поиска.
+*count*<br/>
+Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.
 
-*STR* строка, для которого функция-член для поиска.
+*str*<br/>
+Строка, для которой следует искать функцию-член.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2312,21 +2365,21 @@ The index of the 'non x' found in str1 is: 1
 
 The original string str2 is: BBB-1111
 Elements of the substring 'B1' were not
- found in str2 after the 6th position.
+found in str2 after the 6th position.
 The index of the 1st element of 'B2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 444-555-GGG
 The index of the 1st occurrence of an element in str3
- other than one of the characters in '45G' is: 3
+other than one of the characters in '45G' is: 3
 The index of the second occurrence of an element of '45G' in str3
- after the 0th position is: 7
+after the 0th position is: 7
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st non occurrence of an element of 'ba3' in str4 after
- the 5th position is: 5
+the 5th position is: 5
 The index of the 1st non occurrence of an element of '12' in str4 after
- the 0th position is: 2
+the 0th position is: 2
 ```
 
 ## <a name="find_first_of"></a>  basic_string::find_first_of
@@ -2357,15 +2410,20 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символьное значение, для которого является функция-член, для поиска.
+*_Ch*<br/>
+Значение символа, для которого следует искать функцию-член.
 
-*_Off* индекс позиции, с которого начинается поиск.
+*_Off*<br/>
+Индекс позиции, в которой следует начать поиск.
 
-*PTR* C-строка, для которого функция-член для поиска.
+*ptr*<br/>
+Строка C-string, для которой следует искать функцию-член.
 
-*число* число символов, начиная с первого символа, в C-строка, для которого функция-член для поиска.
+*count*<br/>
+Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.
 
-*STR* строка, для которого функция-член для поиска.
+*str*<br/>
+Строка, для которой следует искать функцию-член.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2497,21 +2555,21 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the 1st occurrence of an element of 'B1' in str2 after
- the 6th position is: 11
+the 6th position is: 11
 The index of the 1st element of 'D2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 123-abc-123-abc-456-EFG-456-EFG
 The index of the 1st occurrence of an element of '5G' in str3 after
- the 0th position is: 17
+the 0th position is: 17
 The index of the second occurrence of an element of '5G' in str3
- after the 0th position is: 22
+after the 0th position is: 22
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st occurrence of an element of 'ba3' in str4 after
- the 5th position is: 9
+the 5th position is: 9
 The index of the 1st occurrence of an element of 'a2' in str4 after
- the 0th position is: 1
+the 0th position is: 1
 ```
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
@@ -2542,15 +2600,20 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символьное значение, для которого является функция-член, для поиска.
+*_Ch*<br/>
+Значение символа, для которого следует искать функцию-член.
 
-*_Off* индекс позиции, в котором для завершения поиска.
+*_Off*<br/>
+Индекс позиции, в которой следует завершить поиск.
 
-*PTR* C-строка, для которого функция-член для поиска.
+*ptr*<br/>
+Строка C-string, для которой следует искать функцию-член.
 
-*число* число символов, начиная с первого символа, в C-строка, для которого функция-член для поиска.
+*count*<br/>
+Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.
 
-*STR* строка, для которого функция-член для поиска.
+*str*<br/>
+Строка, для которой следует искать функцию-член.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2680,25 +2743,25 @@ int main( )
 ```Output
 The original string str1 is: dddd-1dd4-abdd
 The index of the last non 'd'
- found before the 7th position in str1 is: 5
+found before the 7th position in str1 is: 5
 The index of the non 'd' found in str1 is: 11
 
 The original string str2 is: BBB-1111
 The index of the last occurrence of a element
- not of 'B1' in str2 before the 6th position is: 3
+not of 'B1' in str2 before the 6th position is: 3
 The elements of the substring 'B-1' were not found in str2 .
 
 The original string str3 is: 444-555-GGG
 The index of the last occurrence of an element in str3
- other than one of the characters in '45G' is: 7
+other than one of the characters in '45G' is: 7
 The index of the penultimate occurrence of an element
- not in '45G' in str3 is: 3
+not in '45G' in str3 is: 3
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element not
- in 'b-a' in str4 before the 5th position is: 1
+in 'b-a' in str4 before the 5th position is: 1
 The index of the last occurrence of an element not in '12'
- in str4 before the end position is: 10
+in str4 before the end position is: 10
 ```
 
 ## <a name="find_last_of"></a>  basic_string::find_last_of
@@ -2729,15 +2792,20 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символьное значение, для которого является функция-член, для поиска.
+*_Ch*<br/>
+Значение символа, для которого следует искать функцию-член.
 
-*_Off* индекс позиции, в котором для завершения поиска.
+*_Off*<br/>
+Индекс позиции, в которой следует завершить поиск.
 
-*PTR* C-строка, для которого функция-член для поиска.
+*ptr*<br/>
+Строка C-string, для которой следует искать функцию-член.
 
-*число* число символов, начиная с первого символа, в C-строка, для которого функция-член для поиска.
+*count*<br/>
+Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.
 
-*STR* строка, для которого функция-член для поиска.
+*str*<br/>
+Строка, для которой следует искать функцию-член.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2858,19 +2926,19 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the last occurrence of an element of 'B1' in str2 before
- the 12th position is: 11
+the 12th position is: 11
 The index of the last element of 'D2' after
- the 0th position in str2 is: 16
+the 0th position in str2 is: 16
 
 The original string str3 is: 456-EFG-456-EFG
 The index of the last occurrence of an element of '5E' in str3 before
- the 8th position is: 4
+the 8th position is: 4
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element of 'ba3' in str4 before
- the 8th position is: 4
+the 8th position is: 4
 The index of the last occurrence of an element of 'a2' in str4 before
- the 0th position is: 9
+the 0th position is: 9
 ```
 
 ## <a name="front"></a>  basic_string::front
@@ -2992,23 +3060,32 @@ void insert(
 
 ### <a name="parameters"></a>Параметры
 
-*_P0* индекс позиции за точкой вставки новых символов.
+*_P0*<br/>
+Индекс позиции за точкой вставки новых символов.
 
-*PTR* C-строка, которая полностью или частично вставляется в строку.
+*ptr*<br/>
+C-строка, которая полностью или частично вставляется в строку.
 
-*число* число символов для вставки.
+*count*<br/>
+Число вставляемых знаков.
 
-*STR* строку, которая полностью или частично вставляется в целевую строку.
+*str*<br/>
+Строка, которая полностью или частично вставляется в целевую строку.
 
-*_Off* индекс части исходной строки, предоставляющей добавляемые знаки.
+*_Off*<br/>
+Индекс части исходной строки, предоставляющей добавляемые знаки.
 
-*_Ch* символьное значение элементов для вставки.
+*_Ch*<br/>
+Символьное значение вставляемых элементов.
 
-*_It* итератор, обращающийся к позиции, за которым следует вставить символ.
+*_It*<br/>
+Итератор, разрешающий положение, за которым вставляется знак.
 
-*Первый* входной итератор, const_pointer или const_iterator, указывающий на первый элемент в исходном диапазоне для вставки.
+*Первый*<br/>
+Итератор ввода, const_pointer или const_iterator, указывающий на первый элемент в диапазоне источника, который необходимо вставить.
 
-*последний* входной итератор, const_pointer или const_iterator, указывающий на позицию сразу за последним элементом в исходном диапазоне для вставки.
+*последний*<br/>
+Итератор ввода, const_pointer или const_iterator, указывающий на положение сразу за последним элементом в диапазоне источника, который необходимо вставить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3288,11 +3365,14 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символ для добавления.
+*_Ch*<br/>
+Символ значение для добавления.
 
-*PTR* символы C-строки для добавления.
+*ptr*<br/>
+Символы C-строки для добавления.
 
-*правом* символы строки для добавления.
+*right*<br/>
+Символы строки для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3377,11 +3457,14 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символьное значение для назначения.
+*_Ch*<br/>
+Символьное значение для присваивания.
 
-*PTR* указатель на символы C-строки для назначения целевой строке.
+*ptr*<br/>
+Указатель на символы C-строки, которые должны быть назначены целевой строке.
 
-*правом* исходной строки, символы которой должны быть назначены целевой строке.
+*right*<br/>
+Исходная строка, символы которой присваиваются целевой строке.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3459,7 +3542,8 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* индекс позиции элемента должна быть ссылка.
+*_Off*<br/>
+Индекс позиции элемента, на который должна быть ссылка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3528,7 +3612,7 @@ typedef typename allocator_type::pointer pointer;
 
 Тип является синонимом `allocator_type::pointer`.
 
-Для типа `string`, это эквивалентно **char\***.
+Для типа `string`, это эквивалентно **char**<strong>\*</strong>.
 
 ### <a name="example"></a>Пример
 
@@ -3575,7 +3659,8 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символ, добавляемый в конец строки.
+*_Ch*<br/>
+Символ, который нужно добавить в конец строки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -3667,7 +3752,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'A';
+*str1_rIter = 'A';
    cout << "The first character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3689,10 +3774,10 @@ int main( )
 ```Output
 The first character-letter of the reversed string str1 is: a
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The first character-letter of the modified str1 is now: A
 The full modified reversed string str1 is now:
- AblE was I ere I saw elbA
+AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
@@ -3766,7 +3851,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'o';
+*str1_rIter = 'o';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3788,10 +3873,10 @@ int main( )
 ```Output
 The last character-letter of the reversed string str1 is: A
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The last character-letter of the modified str1 is now: o
 The full modified reversed string str1 is now:
- ablE was I ere I saw elbo
+ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
@@ -3873,29 +3958,39 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>Параметры
 
-*STR* строка, представляющая источник символов для строки операнда.
+*str*<br/>
+Строка, представляющая источник символов для строки операнда.
 
-*_Pos1* индекс строки операнда, с которой начинается замена.
+*_Pos1*<br/>
+Индекс строки операнда, в котором начинается замена.
 
-*_Num1* максимальное количество символов должно быть заменено в строке операнда.
+*_Num1*<br/>
+Максимальное количество заменяемых символов в строке операнда.
 
-*_Pos2* индекс строки параметра, с которого начинается копирование.
+*_Pos2*<br/>
+Индекс строки параметра, в котором начинается копирование.
 
-*_Num2* максимальное количество символов для использования в C-строки параметра.
+*_Num2*<br/>
+Максимальное количество используемых символов из C-строки параметра.
 
-*PTR* C-строка, представляющая источник символов для строки операнда.
+*ptr*<br/>
+C-строка, представляющая источник символов для строки операнда.
 
-*_Ch* символ, который необходимо скопировать в строку операнда.
+*_Ch*<br/>
+Символ, который должен копироваться в строку операнда.
 
 * first0 * это итератор, указывающий первый символ, будут удалены в строке операнда.
 
 * last0 * это итератор, указывающий последний символ, будут удалены в строке операнда.
 
-*Первый* итератор, const_pointer или const_iterator, указывающий первый символ должен копироваться в строку параметра.
+*Первый*<br/>
+Итератор, const_pointer или const_iterator, указывающий первый символ, который должен копироваться в строку параметра.
 
-*последний* итератор, const_pointer или const_iterator, указывающий последний символ для копирования в строке параметров.
+*последний*<br/>
+Итератор, const_pointer или const_iterator, указывающий последний символ, который должен копироваться в строку параметра.
 
-*число* , сколько раз *_Ch* копируется в строку операнда.
+*count*<br/>
+Сколько раз *_Ch* копируется в строку операнда.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -4039,45 +4134,45 @@ The operand string s1o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs1p is: CCC
 The result of s1o.replace ( 1 , 3 , s1p )
- is the string: ABBBAAAA.
+is the string: ABBBAAAA.
 The result of s1o.replace ( 5 , 3 , cs1p )
- is the string: ABBBACCC.
+is the string: ABBBACCC.
 
 The operand string s2o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs2p is: CCC
 The result of s2o.replace (1, 3, s2p, 1, 2)
- is the string: ABBAAAA.
+is the string: ABBAAAA.
 The result of s2o.replace (4 ,3 ,cs2p)
- is the string: ABBAC.
+is the string: ABBAC.
 
 The operand string s3o is: AAAAAAAA
 The parameter character c1p is: C
 The result of s3o.replace(1, 3, 4, ch3p)
- is the string: ACCCCAAAA.
+is the string: ACCCCAAAA.
 
 The operand string s4o is: AAAAAAAA
 The parameter string s4p is: BBB
 The parameter C-string cs4p is: CCC
 The result of s1o.replace (IterF0, IterL0, s4p)
- is the string: BBBAAAAA.
+is the string: BBBAAAAA.
 The result of s4o.replace (IterF0, IterL0, cs4p)
- is the string: CCCAAAAA.
+is the string: CCCAAAAA.
 
 The operand string s5o is: AAAAAAAF
 The parameter C-string cs5p is: CCCBB
 The result of s5o.replace (IterF1, IterL1, cs4p ,4)
- is the string: CCCBAAAF.
+is the string: CCCBAAAF.
 
 The operand string s6o is: AAAAAAAG
 The parameter character ch6p is: q
 The result of s6o.replace (IterF1, IterL1, 4, ch6p)
- is the string: qqqqAAAAG.
+is the string: qqqqAAAAG.
 
 The operand string s7o is: OOOOOOO
 The parameter string s7p is: PPPP
 The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
- is the string: OPPOOOO.
+is the string: OPPOOOO.
 ```
 
 ## <a name="reserve"></a>  basic_string::reserve
@@ -4090,7 +4185,8 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*число* число символов, для которых резервируется память.
+*count*<br/>
+Число символов, для которых резервируется память.
 
 ### <a name="remarks"></a>Примечания
 
@@ -4184,9 +4280,11 @@ void resize(
 
 ### <a name="parameters"></a>Параметры
 
-*число* новый размер строки.
+*count*<br/>
+Новый размер строки.
 
-*_Ch* инициализируются добавляемые символы значение Если требуются дополнительные элементы.
+*_Ch*<br/>
+Значение, с которым инициализируются добавляемые символы, если требуются дополнительные элементы.
 
 ### <a name="remarks"></a>Примечания
 
@@ -4321,15 +4419,20 @@ size_type rfind(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch* символьное значение, для которого является функция-член, для поиска.
+*_Ch*<br/>
+Значение символа, для которого следует искать функцию-член.
 
-*_Off* индекс позиции, с которого начинается поиск.
+*_Off*<br/>
+Индекс позиции, в которой следует начать поиск.
 
-*PTR* C-строка, для которого функция-член для поиска.
+*ptr*<br/>
+Строка C-string, для которой следует искать функцию-член.
 
-*число* число символов, начиная с первого символа, в C-строка, для которого функция-член для поиска.
+*count*<br/>
+Число символов, начиная с первого, в строке C-string, для которой следует искать функцию-член.
 
-*STR* строка, для которого функция-член для поиска.
+*str*<br/>
+Строка, для которой следует искать функцию-член.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -4454,7 +4557,7 @@ The character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' before
- the 30th position in str2 is: 17
+the 30th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
@@ -4599,9 +4702,11 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* индекс поиска элемента в позиции, из которого делается копия строки, со значением по умолчанию 0.
+*_Off*<br/>
+Индекс поиска элемента в позиции, от которой делается копия строки; значение по умолчанию — 0.
 
-*число* число символов, которые должны быть скопированы при их наличии.
+*count*<br/>
+Число символов, которые должны быть скопированы, если они имеются.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -4635,13 +4740,13 @@ int main( )
 
 ```Output
 The original string str1 is:
- Heterological paradoxes are persistent.
+Heterological paradoxes are persistent.
 
 The substring str1 copied is: logical
 
 The default substring str3 is:
- Heterological paradoxes are persistent.
- which is the entire original string.
+Heterological paradoxes are persistent.
+which is the entire original string.
 ```
 
 ## <a name="swap"></a>  basic_string::swap
@@ -4655,7 +4760,8 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*STR* исходная строка, элементы которого должны быть заменены в строку назначения.
+*str*<br/>
+Исходная строка, элементы которой должны заменить элементы целевой строки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -4697,11 +4803,11 @@ int main( )
 
 ```Output
 Before swapping string s1 and s2:
- The basic_string s1 = Tweedledee.
- The basic_string s2 = Tweedledum.
+The basic_string s1 = Tweedledee.
+The basic_string s2 = Tweedledum.
 After swapping string s1 and s2:
- The basic_string s1 = Tweedledum.
- The basic_string s2 = Tweedledee.
+The basic_string s1 = Tweedledum.
+The basic_string s2 = Tweedledee.
 ```
 
 ## <a name="traits_type"></a>  basic_string::traits_type

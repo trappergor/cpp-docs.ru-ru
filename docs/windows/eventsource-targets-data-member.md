@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Eventsource::targets_ | Документы Microsoft
+title: Элемент данных Eventsource::targets_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fcdcb759c90009410f76a4b10039a0d976ca0cc4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871748"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605119"
 ---
 # <a name="eventsourcetargets-data-member"></a>Элемент данных EventSource::targets_
-Массив из одного или нескольких обработчиков событий.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-ComPtr<Details::EventTargetArray> targets_;  
-```  
-  
-## <a name="remarks"></a>Примечания  
- При возникновении события, представленного текущим объектом EventSource, обработчики событий вызываются.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс EventSource](../windows/eventsource-class.md)
+
+Массив из одного или нескольких обработчиков событий.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ComPtr<Details::EventTargetArray> targets_;
+```
+
+## <a name="remarks"></a>Примечания
+
+Когда события, представленного текущим **EventSource** объект встречается, обработчики событий вызываются.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс EventSource](../windows/eventsource-class.md)

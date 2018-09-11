@@ -1,5 +1,5 @@
 ---
-title: 'Пошаговое руководство: Подключение с использованием задач и HTTP-запросов XML | Документы Microsoft'
+title: 'Пошаговое руководство: Подключение с использованием задач и HTTP-запросов XML | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411d52201aad69a94267615cd0a2acbe6376f64d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90a9cdaf5d0b99e2ad746655f67e3ab9a68aad1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692591"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688403"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML
-В этом примере показано, как использовать [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) и [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) интерфейсы вместе с задачами отправки запросов HTTP GET и POST к веб-службе в универсальной платформы Windows (UWP ) приложения. Путем объединения `IXMLHTTPRequest2` с задачами, можно написать код, который объединяется с другими задачами. Например, можно использовать задачу загрузки в цепочке этих задач. Задача загрузки может также реагировать на отмену работы.  
+В этом примере показано, как использовать [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) и [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) интерфейсы вместе с задачами отправки запросов HTTP GET и POST для веб-службы в универсальной Windows платформы (UWP ) приложения. Путем объединения `IXMLHTTPRequest2` с задачами, можно написать код, который объединяется с другими задачами. Например, можно использовать задачу загрузки в цепочке этих задач. Задача загрузки может также реагировать на отмену работы.  
   
 > [!TIP]
->  Можно также использовать C++ REST SDK для выполнения HTTP-запросов из приложения UWP, с помощью приложения C++ или на настольных приложений C++. Дополнительные сведения см. в разделе [C++ REST SDK (кодовое имя «Casablanca»)](https://github.com/Microsoft/cpprestsdk).  
+>  Можно также использовать C++ REST SDK для выполнения HTTP-запросов из приложения UWP с помощью приложения C++ или на рабочем столе приложения C++. Дополнительные сведения см. в разделе [C++ REST SDK (кодовое название «Casablanca»)](https://github.com/Microsoft/cpprestsdk).  
   
- Дополнительные сведения о задачах см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Дополнительные сведения о том, как использовать задачи в приложении UWP в разделе [асинхронное программирование в C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) и [создание асинхронных операций в C++ для приложений UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+ Дополнительные сведения о задачах см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Дополнительные сведения об использовании задач в приложении UWP см. в разделе [асинхронное программирование в C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) и [создание асинхронных операций в C++ для приложений UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
   
- В этом документе сначала показаны способы создания `HttpRequest` и его вспомогательных классов. Затем показано, как использовать этот класс из приложения UWP, использующего C++ и XAML.  
+ В этом документе сначала показаны способы создания `HttpRequest` и его вспомогательных классов. Затем показано, как использовать этот класс из приложения UWP, которое использует C++ и XAML.  
   
- Более полный пример, использующий `HttpReader` классов, описанных в этом документе в разделе [разработка Bing Maps Trip Optimizer, приложение магазина Windows на JavaScript и C++](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Другой пример, использующий `IXMLHTTPRequest2` , но не использует задачи, в разделе [краткое руководство: подключение с помощью HTTP-запроса (IXMLHTTPRequest2), XML](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
+Пример, использующий `IXMLHTTPRequest2` , но не использует задачи, см. в разделе [краткое руководство: подключение с помощью HTTP-запроса (IXMLHTTPRequest2), XML](/previous-versions/windows/apps/hh770550\(v=win.10\)).  
   
 > [!TIP]
->  `IXMLHTTPRequest2` и `IXMLHTTPRequest2Callback` являются интерфейсами, которые рекомендуется для использования в приложении UWP. Можно также адаптировать этот пример для использования в приложении для настольных систем.  
+>  `IXMLHTTPRequest2` и `IXMLHTTPRequest2Callback` являются интерфейсы, которые рекомендуется для использования в приложении универсальной платформы Windows. Можно также адаптировать этот пример для использования в приложении для настольных систем.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
   
@@ -45,13 +45,13 @@ ms.locfileid: "33692591"
   
  Методы `GetAsync`, `PostAsync` класса `HttpRequest` позволяют запустить операции HTTP GET и POST, соответственно. Эти методы используют класс `HttpRequestStringCallback` для чтения ответа сервера в виде строки. Методы `SendAsync` и `ReadAsync` позволяют выполнять потоковую передачу большого содержимого в виде блоков. Эти методы возвращают [concurrency::task](../../parallel/concrt/reference/task-class.md) для представления операции. Методы `GetAsync` и `PostAsync` создают значение `task<std::wstring>`, где часть `wstring` представляет ответ сервера. Методы `SendAsync` и `ReadAsync` генерируют значения `task<void>`; эти задачи завершаются по завершению операций отправки и чтения.  
   
- Поскольку `IXMLHTTPRequest2` интерфейсы работают асинхронно, в этом примере используется [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) для создания задачи, выполняемой после объект обратного вызова завершает или отменяет операцию загрузки. Класс `HttpRequest` создает основанное на задаче продолжение из этой задачи, чтобы установить конечный результат. Класс `HttpRequest` использует основанное на задаче продолжение, чтобы убедиться, что задача продолжения выполняется, даже если предыдущая задача выдает ошибку или отменяется. Дополнительные сведения о продолжения на основе задач см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
+ Так как `IXMLHTTPRequest2` интерфейсы работают асинхронно, в этом примере используется [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) для создания задачи, выполняемой после объект обратного вызова завершает или отменяет операцию загрузки. Класс `HttpRequest` создает основанное на задаче продолжение из этой задачи, чтобы установить конечный результат. Класс `HttpRequest` использует основанное на задаче продолжение, чтобы убедиться, что задача продолжения выполняется, даже если предыдущая задача выдает ошибку или отменяется. Дополнительные сведения о продолжениях на основе задач см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
   
- Чтобы поддерживать отмену, классы `HttpRequest`, `HttpRequestBuffersCallback` и `HttpRequestStringCallback` используют токены отмены. `HttpRequestBuffersCallback` И `HttpRequestStringCallback` классы используют [Concurrency::cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) метод, чтобы позволить событию завершения задачи реагировать на отмену. Этот обратный вызов отмены прерывает загрузку. Дополнительные сведения об отмене см. в разделе [отмены](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
+ Чтобы поддерживать отмену, классы `HttpRequest`, `HttpRequestBuffersCallback` и `HttpRequestStringCallback` используют токены отмены. `HttpRequestBuffersCallback` И `HttpRequestStringCallback` классы используют [Concurrency::cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) способ включения события завершения задачи реагировать на отмену. Этот обратный вызов отмены прерывает загрузку. Дополнительные сведения об отмене см. в разделе [отмены](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
 #### <a name="to-define-the-httprequest-class"></a>Определение класса HttpRequest  
   
-1.  Используйте Visual C++ **пустое приложение (XAML)** шаблона для создания пустой проект приложения XAML. В этом примере проект называется `UsingIXMLHTTPRequest2`.  
+1.  С помощью Visual C++ **пустое приложение (XAML)** шаблон, чтобы создать проект пустого XAML-приложения. В этом примере проект называется `UsingIXMLHTTPRequest2`.  
   
 2.  Добавьте в проект файл заголовка с именем HttpRequest.h и файл исходного кода с именем HttpRequest.cpp.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "33692591"
   
 #### <a name="to-use-the-httprequest-class"></a>Использование класса HttpRequest  
   
-1.  В MainPage.xaml определить [StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) следующим образом.  
+1.  В MainPage.xaml определите [StackPanel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) следующим образом.  
   
      [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33692591"
   
  Здесь приводится работающее приложение:  
   
- ![Выполнение приложения среды выполнения Windows](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
+ ![Запущенное приложение среды выполнения Windows](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
   
 ## <a name="next-steps"></a>Следующие шаги  
  [Пошаговые руководства по среде выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
@@ -120,7 +120,7 @@ ms.locfileid: "33692591"
  [Параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [Отмена в библиотеке параллельных Шаблонов](cancellation-in-the-ppl.md)   
  [Асинхронное программирование в C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
- [Создание асинхронных операций в C++ для приложений UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [Краткое руководство: Подключение с помощью HTTP-запроса (IXMLHTTPRequest2), XML](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
- [Класс Task (среда выполнения параллелизма)](../../parallel/concrt/reference/task-class.md)   
+ [Создание асинхронных операций в C++ для приложений универсальной платформы Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
+ [Краткое руководство: Подключение с помощью HTTP-запроса (IXMLHTTPRequest2), XML](/previous-versions/windows/apps/hh770550\(v=win.10\))   
+ [Класс Task (среда выполнения с параллелизмом)](../../parallel/concrt/reference/task-class.md)   
  [Класс task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)

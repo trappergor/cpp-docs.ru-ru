@@ -15,15 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3593e218418d946cee471c501db5d5746fbe9a43
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fd8d4f02bd40764d2a6132333aecde6dd8cd6063
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406163"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208604"
 ---
 # <a name="indirection-on-array-types"></a>Двойные ссылки в типах массивов
-Использование оператора косвенного обращения (**\***) на *n*-размерного массива приводит *n*-1-мерный массив. Если *n* -1, получением скаляр (или элемент массива).  
+
+Использование оператора косвенного обращения (<strong>\*</strong>) на *n*-размерного массива приводит *n*-1-мерный массив. Если *n* -1, получением скаляр (или элемент массива).  
   
 ## <a name="see-also"></a>См. также  
  [Массивы](../cpp/arrays-cpp.md)

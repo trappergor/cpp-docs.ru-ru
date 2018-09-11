@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85c19e4f23f7c6e9454793ac86a574614ec2fae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88e44100e20ce40b343a82c7caed66387ca1bcd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847251"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681044"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -39,7 +39,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> В выпуске Visual Studio 2017 г \<filesystem > заголовок еще не стандарта C++. Visual C++ 2017 реализует окончательный проект стандарта, который находится в [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> В выпуске Visual Studio 2017 \<filesystem > заголовок еще не был стандартом C++. Visual C++ 2017 реализует окончательный проект стандарта, который находится в [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Этот заголовок поддерживает файловые системы одного из двух широких классов операционных систем размещения: Microsoft Windows и Posix.
 
@@ -128,7 +128,8 @@ using namespace std::experimental::filesystem::v1;
 
 |name|Описание|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60), которое определяет поведение в случае, если конечный файл уже существует.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file), которое определяет поведение в случае, если конечный файл уже существует.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file), которое определяет поведение в случае, если конечный файл уже существует.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Перечисление, указывающее параметры итераторов каталога.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Перечисление для типов файлов.|
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|

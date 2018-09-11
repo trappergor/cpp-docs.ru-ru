@@ -1,5 +1,5 @@
 ---
-title: Метод Module::GetObjectCount | Документы Microsoft
+title: Метод Module::GetObjectCount | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74fca4325891488aa1f4669ae1fd8b94a1298910
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2be87f336adeb156789bb8c0ae7c8d05c8de39a4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875085"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608641"
 ---
 # <a name="modulegetobjectcount-method"></a>Метод Module::GetObjectCount
-Извлекает количество объектов, управляемых этим модулем.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-virtual long GetObjectCount() const;  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Текущее количество объектов, управляемых этим модулем.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс Module](../windows/module-class.md)
+
+Извлекает количество объектов, управляемых этим модулем.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual long GetObjectCount() const;
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Текущее количество объектов, управляемых этим модулем.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс Module](../windows/module-class.md)

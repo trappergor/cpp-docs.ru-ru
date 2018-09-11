@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38e076d5a8e552efa353be711d84485c96f6ffd3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 11480e8a2ee4272c80b775bb93006b1074da7b19
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962992"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109814"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>Класс is_nothrow_default_constructible
 
@@ -36,7 +36,8 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty* запрашиваемый тип.
+*Ty*<br/>
+Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 

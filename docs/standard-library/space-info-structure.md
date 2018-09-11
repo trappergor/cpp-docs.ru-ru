@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b143a37c306320223ac3abe430e41c9750c8ece9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8a0f1eb9818356e7261125efaea69e275c3e29b8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025787"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684687"
 ---
 # <a name="spaceinfo-structure"></a>Структура space_info
 
@@ -39,7 +39,7 @@ struct space_info   {
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`unsigned long long available`|Представляет число байтов, доступных для представления данных в томе.|
 |`unsigned long long capacity`|Представляет общее число байтов, которое может представлять том.|
@@ -55,5 +55,4 @@ struct space_info   {
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<filesystem>](../standard-library/filesystem.md)<br/>
-[space](http://msdn.microsoft.com/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
 [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md)<br/>

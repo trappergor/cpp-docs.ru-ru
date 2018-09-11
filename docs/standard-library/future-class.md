@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e55f5d9759de0993f0202612e237bb778a195602
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956642"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106656"
 ---
 # <a name="future-class"></a>Класс future
 
@@ -56,13 +56,13 @@ class future;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[future](#future)|Создает объект `future`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[get](#get)|Получает результат, который хранится в связанном асинхронном состоянии.|
 |[Предоставить общий доступ](#share)|Преобразует объект в `shared_future`.|
@@ -73,7 +73,7 @@ class future;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[future::operator=](#op_eq)|Передает связанное асинхронное состояние из указанного объекта.|
 
@@ -94,7 +94,8 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Другие* A `future` объекта.
+*Другое*<br/>
+Объект `future`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -134,7 +135,8 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Справа* A `future` объекта.
+*Справа*<br/>
+Объект `future`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -191,7 +193,8 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Rel_time* объект [chrono::duration](../standard-library/duration-class.md) , указывающий максимальный интервал времени, поток блокируется.
+*Rel_time*<br/>
+Объект [chrono::duration](../standard-library/duration-class.md), который указывает на максимальный интервал времени, в течение которого поток может быть заблокирован.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -212,7 +215,8 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Параметры
 
-*Abs_time* объект [chrono::time_point](../standard-library/time-point-class.md) объект, который указывает время, после чего поток можно разблокировать.
+*Abs_time*<br/>
+Объект [chrono::time_point](../standard-library/time-point-class.md), который указывает время, по истечении которого поток можно разблокировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

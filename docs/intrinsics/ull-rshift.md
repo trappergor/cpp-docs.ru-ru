@@ -1,5 +1,5 @@
 ---
-title: __ull_rshift | Документы Microsoft
+title: __ull_rshift | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333122"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539696"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Блок, относящийся только к системам Microsoft**  
   
- на x64 сдвигается на 64-разрядное значение, указан первым параметром вправо на количество битов, указанное в качестве второго параметра.  
+ Смещает 64-разрядное значение, определяемое первый параметр справа в x64, количество битов, указанное в качестве второго параметра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,21 +43,21 @@ unsigned __int64 __ull_rshift(
  64-разрядное целое значение для сдвига вправо.  
   
  [in] `nBit`  
- Число разрядов для поворота остаток от деления 32 на x86 и остаток от деления 64 на x64.  
+ Количество битов для сдвига, остаток от деления 32 на x86 и остаток от деления 64 в x64.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Маска сдвинуто `nBit` bits.  
+ Маска сдвинуты `nBit` bits.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Если второй параметр больше 31 на номер берется по модулю 32 (64 на x64) для определения количества разрядов для поворота x86 (63 на x64). `ull` В названии указывает `unsigned long long (unsigned __int64)`.  
+ Если второй параметр больше, чем 31 x86 (63 в x64), это число берется остаток от деления 32 (64 в x64) для определения числа битов для сдвига. `ull` В имени указывает `unsigned long long (unsigned __int64)`.  
   
 ## <a name="example"></a>Пример  
   

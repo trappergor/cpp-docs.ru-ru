@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c6e304547af06d5de6d81bae2ceace119e4681d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: aee6122e8dbcf85f882e5b78475a2c332b855721
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339800"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571809"
 ---
 # <a name="igetdatasourceimpl-class"></a>Класс IGetDataSourceImpl
-Предоставляет реализацию [IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx) объекта.  
+Предоставляет реализацию [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\)) объекта.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -71,7 +71,7 @@ STDMETHOD(GetDataSource)(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IGetDataSource::GetDataSource](https://msdn.microsoft.com/library/ms725443.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
  Полезно, если вам нужно получить доступ к свойствам в объекте источника данных.  

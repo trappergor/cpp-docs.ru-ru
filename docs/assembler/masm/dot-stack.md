@@ -1,7 +1,7 @@
 ---
-title: . СТЕК | Документы Microsoft
+title: . СТЕК | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dab47677da8db2afca73a078b110300a017e7c8d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 95e8d69903fabf60fdb5bc04d90452bdad163a19
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052304"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676240"
 ---
 # <a name="stack"></a>.STACK
-При использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md), определяет сегмент стека (с именем сегмента СТЕК). Необязательный `size` указывает число байтов для стека (по умолчанию 1024). `.STACK` Директива автоматически закрывает инструкцию стека.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-.STACK [[size]]  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+При использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md), определяет сегмент стека (с именем сегмента стека). Необязательный `size` указывает число байтов для стека (по умолчанию 1024). `.STACK` Директива автоматически закрывает ее стека.
+
+## <a name="syntax"></a>Синтаксис
+
+> . СТЕК [[размер]]
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

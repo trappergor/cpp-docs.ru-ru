@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52d1727018fd2ad214e031229945daa4d843f115
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403067"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131846"
 ---
 # <a name="constructors-c"></a>Конструкторы (C++)
 
@@ -157,9 +157,9 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 
 ```cpp
 class Box {
+public:
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height){}
-};
 private:
     int m_width;
     int m_length;
@@ -598,7 +598,7 @@ public:
 
 ## <a name="inheriting_constructors"></a> Наследование конструкторов (C ++ 11)
 
-Производные классы могут наследовать конструкторы от прямых базовых классов путем объявления using, как показано в следующем примере:
+Производный класс может наследовать конструкторы от прямого базового класса с помощью **с помощью** объявление, как показано в следующем примере:
 
 ```cpp
 #include <iostream>
@@ -647,7 +647,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-Оператор using переводит в область видимости все конструкторы из базового класса, кроме тех, чьи сигнатуры совпадают с сигнатурами конструкторов из производного класса. Обычно, если в производном классе не объявляются новые данные-члены или конструкторы, оптимальным решением будет использовать наследуемые конструкторы.
+**Visual Studio 2017 версии 15.7 и более поздние версии**: **с помощью** инструкции в **/std: c ++ 17** режим переводит в область видимости все конструкторы из базового класса, кроме тех, которые имеют одинаковую сигнатуру для конструкторов в производном классе. Обычно, если в производном классе не объявляются новые данные-члены или конструкторы, оптимальным решением будет использовать наследуемые конструкторы. См. также [улучшения в Visual Studio 2017 версии 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
 
 Шаблон класса может наследовать все конструкторы от аргумента типа, если этот тип определяет базовый класс:
 

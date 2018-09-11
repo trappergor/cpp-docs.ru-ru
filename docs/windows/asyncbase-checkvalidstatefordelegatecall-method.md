@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::CheckValidStateForDelegateCall | Документы Microsoft
+title: Метод AsyncBase::CheckValidStateForDelegateCall | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e3420304b0432f635d04a4892e7984dd38f144
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd3629fcaf8507abd2baf6cded3c6a63bc6fd64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859879"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611504"
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>Метод AsyncBase::CheckValidStateForDelegateCall
-Проверяет, является ли делегат свойства можно изменить в текущем состоянии асинхронной.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-inline HRESULT CheckValidStateForDelegateCall();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если делегат свойства могут быть изменены; в противном случае E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Проверяет, является ли делегат свойства можно изменить в текущем состоянии асинхронной.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline HRESULT CheckValidStateForDelegateCall();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если делегат свойства можно изменить; в противном случае E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

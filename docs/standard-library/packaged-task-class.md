@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d64c848e69cd7670b966159128ff340ac7dbf5f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964799"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107101"
 ---
 # <a name="packagedtask-class"></a>Класс packaged_task
 
@@ -52,14 +52,14 @@ class packaged_task;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[деструктор packaged_task](#packaged_task)|Создает объект `packaged_task`.|
 |[Деструктор packaged_task::~packaged_task](#dtorpackaged_task_destructor)|Уничтожает объект `packaged_task`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[get_future](#get_future)|Возвращает объект [future](../standard-library/future-class.md), который имеет то же связанное асинхронное состояние.|
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Вызывает вызываемый объект, который хранится в связанном асинхронном состоянии и атомарно сохраняет возвращаемое значение.|
@@ -69,7 +69,7 @@ class packaged_task;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[packaged_task::operator=](#op_eq)|Передает связанное асинхронное состояние из указанного объекта.|
 |[packaged_task::operator()](#op_call)|Вызывает вызываемый объект, который хранится в связанном асинхронном состоянии, атомарно сохраняет возвращаемое значение и устанавливает состояние в значение *ready*.|
@@ -123,7 +123,8 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Параметры
 
-*Справа* A `packaged_task` объекта.
+*Справа*<br/>
+Объект `packaged_task`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -178,11 +179,14 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Параметры
 
-*Справа* A `packaged_task` объекта.
+*Справа*<br/>
+Объект `packaged_task`.
 
-*Alloc* распределитель памяти. Дополнительные сведения см. в разделе [\<allocators>](../standard-library/allocators-header.md).
+*Alloc*<br/>
+Распределитель памяти. Дополнительные сведения см. в разделе [\<allocators>](../standard-library/allocators-header.md).
 
-*fn* объект функции.
+*fn*<br/>
+Объект функции.
 
 ### <a name="remarks"></a>Примечания
 
@@ -228,7 +232,8 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Справа* A `packaged_task` объекта.
+*Справа*<br/>
+Объект `packaged_task`.
 
 ## <a name="valid"></a>  packaged_task::valid
 

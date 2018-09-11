@@ -1,5 +1,5 @@
 ---
-title: Метод Semaphore::LOCK | Документы Microsoft
+title: Метод Semaphore::LOCK | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b4db212236da6c9fb320ff5a5e04f4e9f4a4c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47925bcc647d253775e4dd61f6a7f5d5fb586dde
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892479"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599287"
 ---
 # <a name="semaphorelock-method"></a>Метод Semaphore::Lock
-Ожидает, пока текущий объект или объект семафора, связанный с указанным дескриптором, не будет находиться в сигнальном состоянии или указанный интервал времени ожидания истечет.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-SyncLock Lock(  
-   DWORD milliseconds = INFINITE  
-);  
-  
-static SyncLock Lock(  
-   HANDLE h,  
-   DWORD milliseconds = INFINITE  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `milliseconds`  
- Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, что означает неограниченное время ожидания.  
-  
- `h`  
- Дескриптор объекта семафора.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Details::SyncLockWithStatusT\<HandleTraits::SemaphoreTraits >  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
+
+Только после текущего объекта, или **семафора** объект, связанный с указанным дескриптором, находится в сигнальном состоянии или истечет указанный интервал времени ожидания.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*в миллисекундах*  
+Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, что означает неограниченное время ожидания.
+
+*h*  
+Дескриптор **семафора** объекта.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+`Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
 [Класс Semaphore](../windows/semaphore-class.md)
- 

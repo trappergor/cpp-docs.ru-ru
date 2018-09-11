@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0600f3a6f220d54085ff7c2ff8d60c2148ced625
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466560"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593314"
 ---
 # <a name="argtraitsargs-constant"></a>Константа ArgTraits::args
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-static const int args = -1; ;  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Ведет статистику, число параметров `Invoke` метод для интерфейса делегата.  
-  
-## <a name="remarks"></a>Примечания  
- Когда `args` равно -1 указывает, может существовать совпадения `Invoke` сигнатуру метода.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Argtraits-структура](../windows/argtraits-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+static const int args = -1; ;
+```
+
+## <a name="remarks"></a>Примечания
+
+Ведет статистику, число параметров `Invoke` метод для интерфейса делегата.
+
+## <a name="remarks"></a>Примечания
+
+Когда **args** равно -1 указывает, может существовать совпадения `Invoke` сигнатуру метода.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура ArgTraits](../windows/argtraits-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

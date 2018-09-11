@@ -1,5 +1,5 @@
 ---
-title: New (новый слот в vtable) (расширения компонентов C++) | Документы Microsoft
+title: New (новый слот в vtable) (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,102 +15,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ac6b6401870e29ec10b17ff2c06fb970328af82
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879787"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612689"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (новый слот в vtable) (расширения компонентов C++)
-`new` Ключевое слово указывает, что виртуальный член получает новую ячейку в таблице vtable.  
-  
-## <a name="all-runtimes"></a>Все среды выполнения  
- (Отсутствуют комментарии для этой возможности языка, которая применяется во всех средах выполнения.)  
-  
-## <a name="windows-runtime"></a>Среда выполнения Windows  
- Не поддерживается в среде выполнения Windows.  
-  
-## <a name="common-language-runtime"></a>Среда CLR 
- **Заметки**  
-  
- В **/CLR** компиляции `new` указывает, что виртуальный член получает новую ячейку в таблице vtable, что функция не переопределяет метод базового класса.  
-  
- `new` в результате модификатор newslot добавляемый IL-код для функции.  Дополнительные сведения о newslot см. в разделе:  
-  
--   [Метод MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
-  
--   [Перечисление MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
-  
-### <a name="requirements"></a>Требования  
- Параметр компилятора: **/clr**  
-  
-### <a name="examples"></a>Примеры  
- **Пример**  
-  
- В следующем примере показано влияние `new`.  
-  
-```  
-// newslot.cpp  
-// compile with: /clr  
-ref class C {  
-public:  
-   virtual void f() {  
-      System::Console::WriteLine("C::f() called");  
-   }  
-  
-   virtual void g() {  
-      System::Console::WriteLine("C::g() called");  
-   }  
-};  
-  
-ref class D : public C {  
-public:  
-   virtual void f() new {  
-      System::Console::WriteLine("D::f() called");  
-   }  
-  
-   virtual void g() override {  
-      System::Console::WriteLine("D::g() called");  
-   }  
-};  
-  
-ref class E : public D {  
-public:  
-   virtual void f() override {  
-      System::Console::WriteLine("E::f() called");  
-   }  
-};  
-  
-int main() {  
-   D^ d = gcnew D;  
-   C^ c = gcnew D;  
-  
-   c->f();   // calls C::f  
-   d->f();   // calls D::f  
-  
-   c->g();   // calls D::g  
-   d->g();   // calls D::g  
-  
-   D ^ e = gcnew E;  
-   e->f();   // calls E::f  
-}  
-```  
-  
- **Вывод**  
-  
-```Output  
-C::f() called  
-  
-D::f() called  
-  
-D::g() called  
-  
-D::g() called  
-  
-E::f() called  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)   
- [Спецификаторы переопределения](../windows/override-specifiers-cpp-component-extensions.md)
+
+**Новый** слово указывает, что виртуальный член получает новую ячейку в таблице vtable.
+
+## <a name="all-runtimes"></a>Все среды выполнения
+
+(Отсутствуют комментарии для этой возможности языка, которая применяется во всех средах выполнения.)
+
+## <a name="windows-runtime"></a>Среда выполнения Windows
+
+Не поддерживается в среде выполнения Windows.
+
+## <a name="common-language-runtime"></a>Среда CLR
+
+### <a name="remarks"></a>Примечания
+
+В `/clr` компиляции **новый** указывает, что виртуальный член получает новую ячейку в таблице vtable, что функция не переопределяет метод базового класса.
+
+**новый** вызывает модификатор newslot добавляемый IL-код для функции.  Дополнительные сведения о newslot см. в разделе:
+
+- [Метод MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)
+
+- [Перечисление пространство](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)
+
+### <a name="requirements"></a>Требования
+
+Параметр компилятора: `/clr`
+
+### <a name="examples"></a>Примеры
+
+В следующем примере показано влияние **новый**.
+
+```cpp
+// newslot.cpp
+// compile with: /clr
+ref class C {
+public:
+   virtual void f() {
+      System::Console::WriteLine("C::f() called");
+   }
+
+   virtual void g() {
+      System::Console::WriteLine("C::g() called");
+   }
+};
+
+ref class D : public C {
+public:
+   virtual void f() new {
+      System::Console::WriteLine("D::f() called");
+   }
+
+   virtual void g() override {
+      System::Console::WriteLine("D::g() called");
+   }
+};
+
+ref class E : public D {
+public:
+   virtual void f() override {
+      System::Console::WriteLine("E::f() called");
+   }
+};
+
+int main() {
+   D^ d = gcnew D;
+   C^ c = gcnew D;
+
+   c->f();   // calls C::f
+   d->f();   // calls D::f
+
+   c->g();   // calls D::g
+   d->g();   // calls D::g
+
+   D ^ e = gcnew E;
+   e->f();   // calls E::f
+}
+```
+
+```Output
+C::f() called
+
+D::f() called
+
+D::g() called
+
+D::g() called
+
+E::f() called
+```
+
+## <a name="see-also"></a>См. также
+
+[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)  
+[Спецификаторы переопределения](../windows/override-specifiers-cpp-component-extensions.md)

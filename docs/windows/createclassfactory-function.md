@@ -17,51 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3cecffa8505aaead738007e2a0872c3f1bc5a6d6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461329"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593652"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory - функция
-Создает фабрику, которая создает экземпляры указанного класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-template<typename Factory>  
-inline HRESULT STDMETHODCALLTYPE CreateClassFactory(  
-   _In_ unsigned int *flags,   
-   _In_ const CreatorMap* entry,   
-   REFIID riid,   
-   _Outptr_ IUnknown **ppFactory  
-) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *flags*  
- Сочетание одного или нескольких [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значений перечисления.  
-  
- *entry*  
- Указатель на [CreatorMap](../windows/creatormap-structure.md) , содержащий инициализации и регистрации сведений о параметрах *riid*.  
-  
- *riid*  
- Ссылка на идентификатор интерфейса.  
-  
- *ppFactory*  
- Если эта операция завершается успешно, указатель на фабрику класса.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
-  
-## <a name="remarks"></a>Примечания  
- Ошибка assert создается в том случае, если параметр шаблона *фабрики* не является производным от интерфейса `IClassFactory`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)
+
+Создает фабрику, которая создает экземпляры указанного класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<typename Factory>
+inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
+   _In_ unsigned int *flags,
+   _In_ const CreatorMap* entry,
+   REFIID riid,
+   _Outptr_ IUnknown **ppFactory
+) throw();
+```
+
+### <a name="parameters"></a>Параметры
+
+*flags*  
+Сочетание одного или нескольких [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значений перечисления.
+
+*entry*  
+Указатель на [CreatorMap](../windows/creatormap-structure.md) , содержащий инициализации и регистрации сведений о параметрах *riid*.
+
+*riid*  
+Ссылка на идентификатор интерфейса.
+
+*ppFactory*  
+Если эта операция завершается успешно, указатель на фабрику класса.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="remarks"></a>Примечания
+
+Ошибка assert создается в том случае, если параметр шаблона *фабрики* не является производным от интерфейса `IClassFactory`.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)

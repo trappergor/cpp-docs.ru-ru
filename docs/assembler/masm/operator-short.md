@@ -1,7 +1,7 @@
 ---
-title: оператор SHORT | Документы Microsoft
+title: оператор SHORT | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f307482e602759c688ebca120a46efce7624a25
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 13ea2b0d7333bcdabc42e59ac3f3d4e4a24a0af3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056331"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686240"
 ---
 # <a name="operator-short"></a>оператор SHORT
-Задает тип *метка* в короткие. Все ссылки на *метка* должен быть коротким (в диапазоне от -128 до + 127 байт от инструкции прыжка до *метка*).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-SHORT label  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Задает тип *метка* коротких. Все ссылки на *метка* должен быть коротким (в диапазоне от -128 до + 127 байт из инструкции перехода к *метка*).
+
+## <a name="syntax"></a>Синтаксис
+
+> КОРОТКИЕ метки
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

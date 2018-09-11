@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee338d4e90f94ed7cb7f9158235c66b72e9f2e52
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dbf216d672dd22e453f8c213f7a9f34f08a47273
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464750"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593141"
 ---
 # <a name="asyncbasecancel-method"></a>Метод AsyncBase::Cancel
-Отменяет асинхронную операцию.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHOD(  
-   Cancel  
-)(void);  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- По умолчанию всегда возвращает значение S_OK.  
-  
-## <a name="remarks"></a>Примечания  
- `Cancel()` — Это реализация по умолчанию `IAsyncInfo::Cancel`, а не фактические работает. Действительно отменить асинхронную операцию, переопределить `OnCancel()` чисто виртуального метода.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Отменяет асинхронную операцию.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(
+   Cancel
+)(void);
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+По умолчанию всегда возвращает значение S_OK.
+
+## <a name="remarks"></a>Примечания
+
+**Cancel()** — это реализация по умолчанию `IAsyncInfo::Cancel`, а не фактические работает. Действительно отменить асинхронную операцию, переопределить `OnCancel()` чисто виртуального метода.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

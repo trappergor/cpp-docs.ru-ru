@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c767b39874ff64082d8533f92a9e006f69835c97
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205939"
 ---
 # <a name="cclientdc-class"></a>Класс CClientDC
-Берет на себя вызов функций Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) во время создания и [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) во время уничтожения.  
+Берет на себя вызов функций Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) во время создания и [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) во время уничтожения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -77,7 +77,7 @@ explicit CClientDC(CWnd* pWnd);
  Окно которого клиентской области, будут получать доступ к объект контекста устройства.  
   
 ### <a name="remarks"></a>Примечания  
- Конструктор вызывает функцию Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ Конструктор вызывает функцию Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc).  
   
  Исключения (типа `CResourceException`) создается, если Windows `GetDC` вызов завершается ошибкой. Контекст устройства не могут быть доступны в том случае, если Windows уже выделен все контексты его доступных устройств. Приложения конкурирует за пять общих отображения контексты, доступные в любой момент времени в группе Windows.  
   

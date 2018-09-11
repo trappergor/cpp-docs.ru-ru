@@ -1,5 +1,5 @@
 ---
-title: Метод FtmBase::ReleaseMarshalData | Документы Microsoft
+title: Метод FtmBase::ReleaseMarshalData | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d56bc92e11d458a1872975f5a81a19c96566d59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d4bccbcd9f3c3b13fa8be0ccc7afa493751cd9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873655"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593543"
 ---
 # <a name="ftmbasereleasemarshaldata-method"></a>Метод FtmBase::ReleaseMarshalData
-Удаляет пакет маршалируется данных.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHODIMP ReleaseMarshalData(  
-   __in IStream *pStm  
-) override;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `pStm`  
- Указатель на поток, содержащий пакет данных будут уничтожены.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** ftm.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс FtmBase](../windows/ftmbase-class.md)
+
+Уничтожает пакет маршалированного данных.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHODIMP ReleaseMarshalData(
+   __in IStream *pStm
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*pStm*  
+Указатель на поток, содержащий пакет данных будут уничтожены.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** ftm.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс FtmBase](../windows/ftmbase-class.md)

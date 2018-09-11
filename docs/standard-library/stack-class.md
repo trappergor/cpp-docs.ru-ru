@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963229"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110416"
 ---
 # <a name="stack-class"></a>Класс stack
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>Параметры
 
-*Тип* тип данных элемента для сохранения в стеке.
+*Тип*<br/>
+Тип данных элемента для сохранения в стеке.
 
-*Контейнер* тип базового контейнера, используемый для реализации стека. Значение по умолчанию — класс `deque`*\<Type>*.
+*Контейнер*<br/>
+Тип базового контейнера, используемый для реализации стека. Значение по умолчанию — класс `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Примечания
 
@@ -70,13 +72,13 @@ class stack
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[stack](#stack)|Создает `stack`, который является пустым или копией объекта базового контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий базовый контейнер для принятия `stack`.|
 |[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `stack`.|
@@ -84,7 +86,7 @@ class stack
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[empty](#empty)|Проверяет, является ли `stack` пустым.|
 |[pop](#pop)|Удаляет элемент из верхней части `stack`.|
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val* элемент, добавляемый на вершину стека.
+*Val*<br/>
+Элемент, добавленный в верх стека.
 
 ### <a name="remarks"></a>Примечания
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* контейнер, копией которого является создаваемый стек.
+*right*<br/>
+Контейнер, копией которого должен стать создаваемый стек.
 
 ### <a name="example"></a>Пример
 

@@ -1,5 +1,5 @@
 ---
-title: Метод SRWLock::LockExclusive | Документы Microsoft
+title: Метод SRWLock::LockExclusive | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36ae694365b58cb10666e5d8af67269b2c4f125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6218bfe1bbdc27749bed1395108b7a30533c50b7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889375"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596887"
 ---
 # <a name="srwlocklockexclusive-method"></a>Метод SRWLock::LockExclusive
-Получает объект SRWLock в монопольном режиме.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-SyncLockExclusive LockExclusive();  
-  
-static SyncLockExclusive LockExclusive(  
-   _In_ SRWLOCK* lock  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `lock`  
- Указатель на объект SRWLock.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Объект SRWLock в монопольном режиме.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс SRWLock](../windows/srwlock-class.md)
+
+Получает **SRWLock** объекта в монопольном режиме.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+SyncLockExclusive LockExclusive();
+
+static SyncLockExclusive LockExclusive(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*lock*  
+Указатель на **SRWLock** объекта.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**SRWLock** объекта в монопольном режиме.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс SRWLock](../windows/srwlock-class.md)

@@ -1,7 +1,7 @@
 ---
 title: Улучшения соответствия C++ | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 08/15/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209096"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220220"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) и [15.7](#improvements_157)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
 Благодаря поддержке обобщенных constexpr и NSDMI для статистических выражений, компилятор Microsoft Visual C++ теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствует несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md).
 
@@ -55,19 +55,19 @@ ms.locfileid: "39209096"
 
 ### <a name="constexpr-lambdas"></a>Лямбда-выражения constexpr
 
-Лямбда-выражения теперь можно использоваться в константных выражениях. Дополнительные сведения см. в документе о [лямбда-выражениях](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf).
+Лямбда-выражения теперь можно использоваться в константных выражениях. Дополнительные сведения см. в разделе [Лямбда-выражения constexpr на C++](cpp/lambda-expressions-constexpr.md).
 
 ### <a name="if-constexpr-in-function-templates"></a>Операторы if constexpr в шаблонах функций
 
-Шаблон функции может содержать операторы `if constexpr` для выполнения ветвления во время компиляции. Дополнительные сведения см. в документе об [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html).
+Шаблон функции может содержать операторы `if constexpr` для выполнения ветвления во время компиляции. Дополнительные сведения см. в разделе [Операторы if constexpr](cpp/if-else-statement-cpp.md#if_constexpr).
 
 ### <a name="selection-statements-with-initializers"></a>Операторы выбора с инициализаторами
 
-Оператор `if` может включать инициализатор, который вводит переменную в области видимости блока внутри самого оператора. Дополнительные сведения см. в документе об [инструкциях выбора с инициализатором](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html).
+Оператор `if` может включать инициализатор, который вводит переменную в области видимости блока внутри самого оператора. Дополнительные сведения см. в разделе [Операторы if с инициализатором](cpp/if-else-statement-cpp.md#if_with_init).
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>Атрибуты [[maybe_unused]] и [[nodiscard]]
 
-Новые атрибуты для отключения предупреждений, когда сущность не используется, или для выдачи предупреждений, когда возвращаемое значение вызова функции отбрасывается. Дополнительные сведения см. в документах о [формулировке для атрибута maybe_unused](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) и [предложении атрибутов unused,nodiscard и fallthrough](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf).
+Новые атрибуты для отключения предупреждений, когда сущность не используется, или для выдачи предупреждений, когда возвращаемое значение вызова функции отбрасывается. Дополнительные сведения см. в статье [Attributes in C++](cpp/attributes.md) (Атрибуты в C++).
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>Использование пространств имен атрибутов без повторения
 
@@ -75,11 +75,11 @@ ms.locfileid: "39209096"
 
 ### <a name="structured-bindings"></a>Структурированные привязки
 
-Теперь одно объявление позволяет хранить значение с отдельными именами для его компонентов, когда значение является массивом, std::tuple или std::pair, либо когда все его нестатические данные-члены являются открытыми. Дополнительные сведения см. в документе по [структурированным привязкам](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf).
+Теперь одно объявление позволяет хранить значение с отдельными именами для его компонентов, когда значение является массивом, std::tuple или std::pair, либо когда все его нестатические данные-члены являются открытыми. Дополнительные сведения см. в разделах [Структурированные привязки](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) и [Возврат нескольких значений из функции](cpp/functions-cpp.md#multi_val).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Правила конструкции для значений класса перечисления
 
-Теперь когда определение перечисления не вводит перечислитель, а источник перечисления использует синтаксис инициализации списка, происходит неявное и несужающее преобразование из базового типа перечисления в области в само перечисление. Дополнительные сведения см. в документе о [правилах конструкции значений класса enum](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
+Теперь когда определение перечисления не вводит перечислитель, а источник перечисления использует синтаксис инициализации списка, происходит неявное и несужающее преобразование из базового типа перечисления в области в само перечисление. Дополнительные сведения см. в разделе [Правила конструкции значений класса перечисления](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) и [Перечисления](cpp/enumerations-cpp.md#no_enumerators).
 
 ### <a name="capturing-this-by-value"></a>Захват объекта \*this по значению
 
@@ -93,7 +93,7 @@ ms.locfileid: "39209096"
 
 Ключевое слово `register`, ранее признанное нерекомендуемым (и игнорируемое компилятором), теперь удалено из языка. Дополнительные сведения см. в документе об [удалении нерекомендуемого ключевого слова register](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html).
 
-Полный список улучшений соответствия вплоть до версии Visual Studio 2015 с обновлением 3 см. в разделе [Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx) (Новые возможности Visual C++ 2003–2015).
+Полный список улучшений соответствия вплоть до версии Visual Studio 2015 с обновлением 3 см. в разделе [Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/library/mt723604.aspx) (Новые возможности Visual C++ 2003–2015).
 
 ## <a name="improvements_155"></a> Усовершенствования в Visual Studio 2017 версии 15.5
 
@@ -212,6 +212,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+Дополнительные сведения см. в разделе [Конструкторы](cpp/constructors-cpp.md#inheriting_constructors).
 
 ### <a name="c17-extended-aggregate-initialization"></a>C++17. Расширенная агрегатная инициализация
 
@@ -1625,6 +1627,8 @@ int main() {
 
 ## <a name="update_158"></a> Исправления ошибок и изменения в поведении в Visual Studio 2017 15.8
 
+Изменения компилятора в Visual Studio 2017 версии 15.8 входят в категорию исправления ошибок и изменений в поведении и перечислены ниже:
+
 ### <a name="typename-on-unqualified-identifiers"></a>Ключевое слово typename в неквалифицированных идентификаторах
 
 В режиме [/permissive-](build/reference/permissive-standards-conformance.md) компилятор больше не принимает ложные ключевые слова `typename` в неквалифицированных идентификаторах в определениях шаблонов псевдонимов. Следующий код теперь вызывает ошибку C7511: *"T": после ключевого слова typename должно следовать полное имя*.
@@ -1678,6 +1682,8 @@ struct S : Base<T> {
 ```
 
 Чтобы исправить эту ошибку, измените инструкцию `return` на `return this->base_value;`.
+
+**Примечание.** В библиотеке Boost.Python в течение долгого времени был описан способ обходного решения исключительно для MVV для объявления о переадресации шаблона в [unind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). В режиме [/permissive-](build/reference/permissive-standards-conformance.md), начиная с Visual Studio 2017 версии 15.8 (_MSC_VER=1915), компилятор MSVC корректно выполняет поиск в зависимости от аргументов (ADL) и согласуется с другими компиляторами, делая условие обходного решения ненужным. Чтобы избежать ошибки *C3861: 'unwind_type': идентификатор не найден*, см. [PR 229](https://github.com/boostorg/python/pull/229) в репозитории Boostorg для обновления файла заголовка. Пакет Boost [vcpkg](vcpkg.md) уже исправлен, поэтому при получении или обновлении источника Boost из vcpkg не нужно применять отдельное исправление.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>Опережающие объявления и определения в пространстве имен std
 

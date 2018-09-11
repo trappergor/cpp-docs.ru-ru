@@ -1,5 +1,5 @@
 ---
-title: Редактирование файлов управляемых ресурсов | Документы Microsoft
+title: Редактирование файлов управляемых ресурсов (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,26 +10,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- .resx files, editing
-- resource files, editing
-- resx files, editing
+- .resx files [C++], editing
+- resource files [C++], editing
+- resx files [C++], editing
 ms.assetid: 42593030-7897-4bf3-920c-e0b2d11c5bbd
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 269fc34ad67ce99ba390e41cda2510a2c84ec1da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d17a4d1f9fa7cb80fc8fcb3cec5599fb572c0ea0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880702"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318659"
 ---
-# <a name="editing-managed-resource-files"></a>Редактирование файлов управляемых ресурсов
-Файлы управляемых ресурсов (.resx) являются файлами XML. При добавлении управляемый файл ресурсов в проект из **Добавление нового элемента** диалоговом **редактора управляемых ресурсов** открывается по умолчанию.  
-  
- Дополнительные сведения см. в разделе [ресурсы. Формат файла RESX](http://msdn.microsoft.com/en-us/0c476133-87e4-47e8-b0ef-4b88f4ef3dc5).  
-  
-## <a name="see-also"></a>См. также  
- [Файлы ресурсов](../windows/resource-files-visual-studio.md)
+# <a name="editing-managed-resource-files-c"></a>Редактирование управляемых файлов ресурсов (C++)
+
+Файлы управляемых ресурсов (.resx) являются файлами XML. При добавлении управляемый файл ресурсов в проект из **Добавление нового элемента** диалоговом окне **редактора управляемых ресурсов** открывается по умолчанию.
+
+## <a name="see-also"></a>См. также
+
+[Файлы ресурсов](../windows/resource-files-visual-studio.md)

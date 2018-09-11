@@ -1,5 +1,5 @@
 ---
-title: 'Класс Platform::Collections:: MAP | Документы Microsoft'
+title: 'Класс Platform::Collections:: MAP | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093185"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103883"
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -46,17 +46,16 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>Параметры
 
-*K*  
- Тип ключа в паре "ключ-значение".
+*K*<br/>
+Тип ключа в паре "ключ-значение".
 
-*V*  
+*V*<br/>
 Тип значения в паре "ключ-значение".
 
-*C*  
+*C*<br/>
 Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию [std::less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()*  
-Созданные компилятором функцию, которая проверяет тип *K* и *V* и предоставляет понятное сообщение об ошибке, если тип не может храниться в схеме.
+*__is_valid_winrt_type()* компилятором функция, которая проверяет тип *K* и *V* и предоставляет понятное сообщение об ошибке, если тип не может храниться в сопоставлении.
 
 ### <a name="remarks"></a>Примечания
 
@@ -72,9 +71,9 @@ ref class Map sealed;
 
 - открытый класс перечисления
 
-Карта — это, по сути, программа-оболочка для [std::map](../standard-library/map-class.md). Это конкретная реализация C++ типов [Windows::Foundation:: Collections:: < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) и [IObservableMap](http://msdn.microsoft.com/library/windows/apps/br226050.aspx) типы, которые передаются через открытые интерфейсы среды выполнения Windows. При попытке использования типа `Platform::Collections::Map` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения для [Windows::Foundation:: Collections::\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
+Карта — это, по сути, программа-оболочка для [std::map](../standard-library/map-class.md). Это конкретная реализация в C++ из [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) и [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) типы, передаваемые через открытые интерфейсы среды выполнения Windows. При попытке использования типа `Platform::Collections::Map` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
-Дополнительные сведения см. в разделе [коллекции](../cppcx/collections-c-cx.md).
+Дополнительные сведения см. в разделе [коллекций](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Участники
 
@@ -141,11 +140,11 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ### <a name="remarks"></a>Примечания
 
-Это удобный способ сохранения итератора, возвращаемого методом First(), — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевое слово выведения типа. Например, `auto x = myMap->First();`.
+Удобный способ сохранения итератора, возвращаемого методом First() — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевым словом вывода типа. Например, `auto x = myMap->First();`.
 
 ## <a name="getview"></a>  Метод MAP::GetView
 
-Возвращает только для чтения представление текущего сопоставления; то есть [класс Platform::Collections:: mapview](../cppcx/platform-collections-mapview-class.md), который реализует [Windows::Foundation:: Collections::\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) интерфейса.
+Возвращает доступное только для чтения представление текущего сопоставления; то есть [класс Platform::Collections:: mapview](../cppcx/platform-collections-mapview-class.md), который реализует [Windows::Foundation::Collections::IMapView\<K, V >] / uwp/api/Windows.Foundation.Collections.IMapView_K_V_) интерфейса.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -169,7 +168,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ, используемый для поиска элемента Map. Тип *ключ* является именем типа *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -188,15 +187,15 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
-*значение*  
+*значение*<br/>
 Значение из пары "ключ-значение". Тип *значение* является именем типа *V*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если ключ существующего элемента в текущем объекте Map совпадает *ключ* части значения этому элементу задано значение *значение*. `false` Если в текущем объекте Map нет элемента, соответствующего *ключ* и *ключ* и *значение* параметров, внесенные в виде пары ключ значение и затем добавляются в текущей карты.
+`true` Если ключ существующего элемента в текущем объекте Map совпадает с *ключ* и часть, представляющая значение этого элемента имеет значение *значение*. `false` Если в текущем объекте Map нет элемента соответствует *ключ* и *ключ* и *значение* параметров, внесенные в пару ключ значение и затем добавляются в текущего объекта Map.
 
 ## <a name="lookup"></a>  Метод MAP::Lookup
 
@@ -210,18 +209,18 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ, используемый для поиска элемента в сопоставлении. Тип *ключ* является именем типа *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение, связанное с *ключ*. Тип возвращаемого значения является именем типа *V*.
+Значение, с которым сопоставляется *ключ*. Тип возвращаемого значения является именем типа *V*.
 
 ### <a name="remarks"></a>Примечания
 
 Если ключ не существует, то [Platform::OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) возникает исключение.
 
-## <a name="ctor"></a>  MAP::MAP-конструктор
+## <a name="ctor"></a>  Конструктор MAP::MAP
 
 Инициализирует новый экземпляр класса Map.
 
@@ -240,19 +239,19 @@ Map(
 
 ### <a name="parameters"></a>Параметры
 
-*InIt*  
+*InIt*<br/>
 Имя типа текущего объекта Map.
 
-*comp*  
+*Зап.*<br/>
 Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map.
 
-*m*  
+*m*<br/>
 Ссылка или [значения lvalue и rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для `map Class` , используемый для инициализации текущего объекта Map.
 
-*Первый*  
+*Первый*<br/>
 Итератор ввода первого элемента в диапазоне элементов, используемый для инициализации текущего объекта Map.
 
-*последний*  
+*последний*<br/>
 Итератор ввода первого элемента после диапазона элементов, используемый для инициализации текущего объекта Map.
 
 ## <a name="mapchanged"></a>  Событие MAP::MapChanged
@@ -267,11 +266,11 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
 
-Объект [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/apps/br206644.aspx) , содержащий сведения о объект, создавший событие и типе произошедшего изменения. См. также [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) и [перечисление CollectionChange](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Объект [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , содержащий сведения об объекте, который вызвал событие и типе произошедшего изменения. См. также [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) и [CollectionChange Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
-Проект приложения для среды выполнения Windows, использующие C# или Visual Basic IMap\<K, V > в качестве IDictionary\<K, V >.
+Приложения для среды выполнения Windows, использующих C# или Visual Basic проект IMap\<K, V > в качестве IDictionary\<K, V >.
 
 ## <a name="remove"></a>  Метод MAP::Remove
 
@@ -285,12 +284,12 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
 ## <a name="size"></a>  Метод MAP::size
 
-Возвращает число [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в объекте Map.
+Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в сопоставлении.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -304,5 +303,5 @@ virtual property unsigned int Size;
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Platform](platform-namespace-c-cx.md)  
-[Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Пространство имен Platform](platform-namespace-c-cx.md)<br/>
+[Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

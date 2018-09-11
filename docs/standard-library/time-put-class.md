@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6c1c11a9c81123c518e3a0da3e56cc81d4cd5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958933"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106760"
 ---
 # <a name="timeput-class"></a>Класс time_put
 
@@ -46,10 +46,10 @@ class time_put : public locale::facet;
 ### <a name="parameters"></a>Параметры
 
 *CharType*  
- Тип, используемый внутри программы для кодирования символов.
+Тип, используемый внутри программы для кодирования символов.
 
 *OutputIterator*  
- Тип итератора, в который функции записи времени записывают свои выходные данные.
+Тип итератора, в который функции записи времени записывают свои выходные данные.
 
 ## <a name="remarks"></a>Примечания
 
@@ -57,20 +57,20 @@ class time_put : public locale::facet;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[time_put](#time_put)|Конструктор для объектов типа `time_put`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|
 |[iter_type](#iter_type)|Тип, который описывает итератор вывода.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[do_put](#do_put)|Виртуальная функция, выводящая информацию о времени и дате в виде последовательности `CharType`.|
 |[put](#put)|Выводит информацию о времени и дате в виде последовательности `CharType`.|
@@ -109,19 +109,19 @@ virtual iter_type do_put(
 ### <a name="parameters"></a>Параметры
 
 *next*  
- Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.
+Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.
 
 *_Iosbase*  
- Не используется.
+Не используется.
 
 *_Pt*  
- Выводимые сведения о дате и времени.
+Выводимые сведения о дате и времени.
 
 *_Fmt*  
- Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
+Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 *_Mod*  
- Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
+Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -172,28 +172,28 @@ iter_type put(iter_type next,
 ### <a name="parameters"></a>Параметры
 
 *next*  
- Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.
+Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.
 
 *_Iosbase*  
- Не используется.
+Не используется.
 
 *_Fill*  
- Символ типа `CharType` применяется для интервала.
+Символ типа `CharType` применяется для интервала.
 
 *_Pt*  
- Выводимые сведения о дате и времени.
+Выводимые сведения о дате и времени.
 
 *_Fmt*  
- Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
+Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 *_Mod*  
- Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
+Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 *Первый*  
- Начало строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
+Начало строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 *последний*  
- Конец строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
+Конец строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -257,7 +257,8 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs* целочисленное значение, используемое для указания типа управления памятью для объекта.
+*_Refs*<br/>
+Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
 ### <a name="remarks"></a>Примечания
 

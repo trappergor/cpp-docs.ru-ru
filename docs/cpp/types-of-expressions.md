@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9d823b74762c4b35f25fd2daa94b5fc7c0ce32
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 68920a47971f260cbdd11224edd5d8e8b70a0f07
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462031"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686326"
 ---
 # <a name="types-of-expressions"></a>Типы выражений
 Выражения C++ делятся на несколько категорий:  
@@ -36,7 +36,7 @@ ms.locfileid: "39462031"
   
 -   [Константные выражения](../cpp/cpp-constant-expressions.md). Константные выражения целиком состоят из константных данных.  
   
--   [Выражения с явными преобразованиями типов](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Явные преобразования (приведения) типов могут использоваться в выражениях.  
+-   [Выражения с явными преобразованиями типов](explicit-type-conversion-operator-parens.md). Явные преобразования (приведения) типов могут использоваться в выражениях.  
   
 -   [Выражения с операторами указателя на член](../cpp/pointer-to-member-operators-dot-star-and-star.md).  
   

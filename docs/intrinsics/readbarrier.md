@@ -1,5 +1,5 @@
 ---
-title: _ReadBarrier | Документы Microsoft
+title: _ReadBarrier | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e188089af114abb3e52ef5c0e289f5c8fa013b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e46b64b47aa2f47d5b63aea1231a5f8e8bb274ac
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329375"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540289"
 ---
 # <a name="readbarrier"></a>_ReadBarrier  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33329375"
  Ограничивает оптимизации компилятора, которые могут изменить порядок операций доступа к памяти для точки вызова.  
   
 > [!CAUTION]
->  Встроенные функции компилятора `_ReadBarrier`, `_WriteBarrier` и `_ReadWriteBarrier`, а также макрос `MemoryBarrier` являются нерекомендуемыми, и использовать их не следует. Для взаимодействия между потоками, использовать механизмы, такие как [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) и [std::atomic\<T >](../standard-library/atomic.md) , определенные в [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md). Доступ к оборудованию, используйте [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) параметр компилятора вместе с [volatile](../cpp/volatile-cpp.md) ключевое слово.  
+>  Встроенные функции компилятора `_ReadBarrier`, `_WriteBarrier` и `_ReadWriteBarrier`, а также макрос `MemoryBarrier` являются нерекомендуемыми, и использовать их не следует. Для взаимодействия между потоками, используют механизмы, например [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) и [std::atomic\<T >](../standard-library/atomic.md) , определенные в [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md). Для доступа к оборудованию, используйте [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) параметр компилятора вместе с [volatile](../cpp/volatile-cpp.md) ключевое слово.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ void _ReadBarrier(void);
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`_ReadBarrier`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_ReadBarrier`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

@@ -321,17 +321,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec349041ff51441d49b5de39968417bdd071cad6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689236"
 ---
 # <a name="cmfctoolbar-class"></a>Класс CMFCToolBar
 `CMFCToolBar` Класс похож на [класс CToolBar](../../mfc/reference/ctoolbar-class.md), но обеспечивает дополнительную поддержку возможностей пользовательского интерфейса. Они включают плоские панели инструментов, панели инструментов с наиболее часто используемыми изображениями, крупные значки, кнопки пролистывания страниц, заблокированные панели инструментов, элементы управления главной панели, текст под изображениями, фоновые изображения и панели инструментов с вкладками. Класс `CMFCToolBar` также содержит встроенную поддержку пользовательской настройки панелей инструментов и меню, перетаскивания между панелями элементов и меню, кнопки поля со списком, кнопки редактируемых полей, различных палитр и кнопок сворачивания.
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.    
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -343,14 +343,14 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCToolBar::CMFCToolBar`|Конструктор по умолчанию.|  
 |`CMFCToolBar::~CMFCToolBar`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Добавляет в список команд, которые отображаются всегда, когда пользователь открывает меню команды меню.|  
 |[CMFCToolBar::AddCommandUsage](#addcommandusage)|Увеличивает на единицу счетчик, который связан с заданной команде.|  
@@ -502,7 +502,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Определяет, отображается ли панель инструментов в списке на **панелей инструментов** области **Настройка** диалоговое окно.|  
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Вычисляет максимальное Высота кнопки на панели инструментов.|  
@@ -513,7 +513,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Задает нужно ли выполнять масштабирование или не изображениям значков панели инструментов в режим высокой точек на ДЮЙМ.|  
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Указывает соотношение между измерением (высоты или ширины) больших изображений и измерение обычных образов.|  
@@ -916,7 +916,7 @@ virtual BOOL Create(
  Указатель на родительское окно панели инструментов.  
   
  [in] *dwStyle*  
- Стиль панели инструментов. См. в разделе [панели инструментов и стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb760439) в пакете Windows SDK для списка стилей.  
+ Стиль панели инструментов. См. в разделе [панели инструментов и стили кнопок](/windows/desktop/Controls/toolbar-control-and-button-styles) в пакете Windows SDK для списка стилей.  
   
  [in] *nID*  
  Идентификатор дочернего окна панели инструментов.  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  Дополнительные стили для создания объекта панели внедренный элемент управления.  
   
  [in] *dwStyle*  
- Стиль панели инструментов. См. в разделе [панели инструментов и стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb760439) список подходящие стили.  
+ Стиль панели инструментов. См. в разделе [панели инструментов и стили кнопок](/windows/desktop/Controls/toolbar-control-and-button-styles) список подходящие стили.  
   
  [in] *rcBorders*  
  Объект `CRect` , указывающий ширину границы окна инструментов.  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, которое представляет текущий цвет выделенного текста.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) значение, которое представляет текущий цвет выделенного текста.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCToolBar::SetHotTextColor](#sethottextcolor) для установки нового цвета текста для выделенные кнопки панели инструментов.  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  Значение TRUE, если панель инструментов и родственные располагаются в той же строке; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) метод вызывает этот метод, чтобы определить способ отображения **Настройка** всплывающего меню. Если этот метод возвращает значение TRUE, платформа отображает **Отображать кнопки на одной строке** кнопки. В противном случае платформа отображает **Отображать кнопки на двух строках** кнопки.  
+ [CMFCCustomizeButton::CreatePopupMenu](internal-classes.md) метод вызывает этот метод, чтобы определить способ отображения **Настройка** всплывающего меню. Если этот метод возвращает значение TRUE, платформа отображает **Отображать кнопки на одной строке** кнопки. В противном случае платформа отображает **Отображать кнопки на двух строках** кнопки.  
   
  Использование этого метода обычно не требуется. Чтобы включить **Отображать кнопки на одной строке** или **Отображать кнопки на двух строках** , вызовите метод [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   

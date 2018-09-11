@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335626"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196557"
 ---
 # <a name="registering-ole-controls"></a>Регистрация элементов управления OLE
 Элементы управления OLE, как и другие объекты сервера OLE, может осуществляться другими приложениями, поддержкой OLE. Это достигается путем регистрации библиотеки типов и класс элемента управления.  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` Задает модель потоков в реестре ThreadingModel = Free.  
   
-     Вы можете объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` присвоить ThreadingModel = Both. См. в разделе [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) в пакете SDK для Windows, Дополнительные сведения по использованию потоков регистрации модели.  
+     Вы можете объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` присвоить ThreadingModel = Both. См. в разделе [InprocServer32](/windows/desktop/com/inprocserver32) в пакете SDK для Windows, Дополнительные сведения по использованию потоков регистрации модели.  
   
 > [!NOTE]
 >  В версиях MFC до MFC 4.2 **int** *nRegFlags* параметр был параметром BOOL *bInsertable*, разрешены или запрещены элемент управления, который будет вставлен из инструкции Insert Объект-диалоговое окно.  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Ненулевое значение, если класс элемента управления был зарегистрирован; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Это позволяет элементу управления для использования с контейнерами, учитывать OLE-control. `AfxOleRegisterControlClass` обновление реестра с именем элемента управления и его расположение в системе и также задает потоковую модель, которая поддерживает элемент управления в реестре. Дополнительные сведения см. в разделе [технические 64 Примечание](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «Модель с подразделением потоков в OLE элементы управления» и [о процессах и потоках](http://msdn.microsoft.com/library/windows/desktop/ms681917) в пакете Windows SDK.  
+ Это позволяет элементу управления для использования с контейнерами, учитывать OLE-control. `AfxOleRegisterControlClass` обновление реестра с именем элемента управления и его расположение в системе и также задает потоковую модель, которая поддерживает элемент управления в реестре. Дополнительные сведения см. в разделе [технические 64 Примечание](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «Модель с подразделением потоков в OLE элементы управления» и [о процессах и потоках](/windows/desktop/ProcThread/about-processes-and-threads) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -189,7 +189,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Ненулевое значение, если класс элемента управления был зарегистрирован; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Это позволяет странице свойств для использования с контейнерами, учитывать OLE-control. `AfxOleRegisterPropertyPageClass` Добавляет в реестр имя страницы свойств и его расположение в системе, а также задает потоковую модель, которая поддерживает элемент управления в реестре. Дополнительные сведения см. в разделе [технические 64 Примечание](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «Модель с подразделением потоков в OLE элементы управления» и [о процессах и потоках](http://msdn.microsoft.com/library/windows/desktop/ms681917) в пакете Windows SDK.  
+ Это позволяет странице свойств для использования с контейнерами, учитывать OLE-control. `AfxOleRegisterPropertyPageClass` Добавляет в реестр имя страницы свойств и его расположение в системе, а также задает потоковую модель, которая поддерживает элемент управления в реестре. Дополнительные сведения см. в разделе [технические 64 Примечание](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «Модель с подразделением потоков в OLE элементы управления» и [о процессах и потоках](/windows/desktop/ProcThread/about-processes-and-threads) в пакете Windows SDK.  
   
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  

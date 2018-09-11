@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e3f18f3d312adb00370d6dc51203542c259914ec
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207923"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314252"
 ---
 # <a name="ostreamiterator-class"></a>Класс ostream_iterator
 
@@ -42,23 +42,26 @@ class ostream_iterator
 
 ### <a name="parameters"></a>Параметры
 
-*Тип* тип объекта, вставляемого в поток вывода.
+*Тип*<br/>
+Тип объекта, который необходимо вставить в поток вывода.
 
-*CharType* тип, представляющий тип символа для `ostream_iterator`. Этот аргумент является необязательным и значение по умолчанию — **char**.
+*CharType*<br/>
+Тип, представляющий шрифт символа для `ostream_iterator`. Этот аргумент является необязательным и значение по умолчанию — **char**.
 
-*Признаки* тип, представляющий тип символа для `ostream_iterator`. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
+*Признаки*<br/>
+Тип, представляющий шрифт символа для `ostream_iterator`. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
 
 Класс ostream_iterator должен удовлетворять требованиям для итератора вывода. Алгоритмы можно записывать непосредственно в потоки вывода с помощью `ostream_iterator`.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[ostream_iterator](#ostream_iterator)|Создает `ostream_iterator`, инициализированный и разделенный для записи в поток вывода.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, обеспечивающий тип символа для `ostream_iterator`.|
 |[ostream_type](#ostream_type)|Тип, обеспечивающий тип потока для `ostream_iterator`.|
@@ -66,7 +69,7 @@ class ostream_iterator
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x`.|
 |[оператор++](#op_add_add)|Нефункциональный оператор инкремента, возвращающий `ostream_iterator`, обращающийся к тому же объекту, к которому он обращался до вызова операции.|
@@ -114,17 +117,17 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to the output stream\n"
         << "by intOut are:" << endl;
- *intOut = 10;
- *intOut = 20;
- *intOut = 30;
+*intOut = 10;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 The integers written to the output stream
 by intOut are:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_star"></a>  ostream_iterator::operator*
@@ -163,17 +166,17 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_add_add"></a>  ostream_iterator::operator++
@@ -213,17 +216,17 @@ int main( )
    // standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="op_eq"></a>  ostream_iterator::operator=
@@ -236,7 +239,8 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val* значение объекта типа `Type` для вставки в выходной поток.
+*Val*<br/>
+Значение объекта типа `Type`, который нужно вставить в поток вывода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -266,17 +270,17 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 10
 20
 30
-*\
+*/
 ```
 
 ## <a name="ostream_iterator"></a>  ostream_iterator::ostream_iterator
@@ -294,9 +298,11 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ostr* поток вывода типа [ostream_iterator::ostream_type](#ostream_type) для итерации.
+*_Ostr*<br/>
+Поток вывода типа [ostream_iterator::ostream_type](#ostream_type) для итерации по нему.
 
-*_Delimiter* разделитель, который вставляется в выходной поток данных между значениями.
+*_Delimiter*<br/>
+Разделитель, который вставляется в поток вывода между значениями.
 
 ### <a name="remarks"></a>Примечания
 
@@ -319,9 +325,9 @@ int main( )
 
    // ostream_iterator for stream cout
    ostream_iterator<int> intOut ( cout , "\n" );
- *intOut = 10;
+*intOut = 10;
    intOut++;
- *intOut = 20;
+*intOut = 20;
    intOut++;
 
    int i;
@@ -343,12 +349,12 @@ int main( )
           ostream_iterator<int> ( cout, " : " ) );
    cout << endl;
 }
-\* Output:
+/* Output:
 10
 20
 Elements output without delimiter: 123456
 Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
-*\
+*/
 ```
 
 ## <a name="ostream_type"></a>  ostream_iterator::ostream_type
@@ -404,17 +410,17 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to output stream\n"
         << "by intOut are:" << endl;
- *intOut = 1;
- *intOut = 10;
- *intOut = 100;
+*intOut = 1;
+*intOut = 10;
+*intOut = 100;
 }
-\* Output:
+/* Output:
 The integers written to output stream
 by intOut are:
 1
 10
 100
-*\
+*/
 ```
 
 ## <a name="see-also"></a>См. также

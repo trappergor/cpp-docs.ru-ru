@@ -1,5 +1,5 @@
 ---
-title: Конструктор EventSource::EventSource | Документы Microsoft
+title: Конструктор EventSource::EventSource | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb1cbab4c53b66f66fd79f28729230f16eb2482c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e00580397dade2bb5c44e44f18a51808826d7ef2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872423"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597681"
 ---
 # <a name="eventsourceeventsource-constructor"></a>Конструктор EventSource::EventSource
-Инициализирует новый экземпляр класса EventSource.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-EventSource();  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс EventSource](../windows/eventsource-class.md)
+
+Инициализирует новый экземпляр класса **EventSource** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+EventSource();
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс EventSource](../windows/eventsource-class.md)

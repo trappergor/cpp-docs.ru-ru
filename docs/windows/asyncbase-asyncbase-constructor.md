@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6b9b2b1abd9e42461f3bcfc57fcad1840382053
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e0f0a866a64592de9f85cbc8a47530b742918ca6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466258"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607546"
 ---
 # <a name="asyncbaseasyncbase-constructor"></a>Конструктор AsyncBase::AsyncBase
-Инициализирует новый экземпляр класса **AsyncBase** класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-AsyncBase();  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Инициализирует новый экземпляр класса **AsyncBase** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+AsyncBase();
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

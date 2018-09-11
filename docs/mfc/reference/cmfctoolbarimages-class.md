@@ -150,16 +150,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8e8225163f8370e5664465ead7e0b01e5213afb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 682f4ecbbc4d048f6353be6844bfef042efbc45f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850292"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540118"
 ---
 # <a name="cmfctoolbarimages-class"></a>Класс CMFCToolBarImages
 Изображения на панели инструментов. `CMFCToolBarImages` Класс управляет инструментов изображения, загруженные из ресурсов приложения или из файлов.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
 ## <a name="syntax"></a>Синтаксис  
   
 ```  

@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a27548d51d3de1a27da0b765bd85439467c024
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850226"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216463"
 ---
 # <a name="cmfcribbonedit-class"></a>Класс CMFCRibbonEdit
 Реализует элемент управления, расположенный на панели ленты.  
@@ -224,7 +224,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
  Указатель на родительское окно `CMFCRibbonEdit` объекта.  
   
  [in] *dwEditStyle*  
- Задает стиль текстового поля. Вы можете объединить стили окна, перечисленных в разделе "Примечания" с [изменение стилей элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775464) , описанные в пакете Windows SDK.  
+ Задает стиль текстового поля. Вы можете объединить стили окна, перечисленных в разделе "Примечания" с [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles) , описанные в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новое текстовое поле, если метод был выполнен успешно; в противном случае — значение NULL.  
@@ -345,7 +345,7 @@ int GetTextAlign() const;
   
 - **ES_RIGHT** для выравнивание по правому краю  
   
- Дополнительные сведения об этих стилей см. в разделе [изменение стилей элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Дополнительные сведения об этих стилей см. в разделе [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  Получает ширину в пикселях от [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.  
@@ -601,7 +601,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод перерисовывает прямоугольник отображения для `CMFCRibbonEdit` путем вызова косвенно [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) с флагами RDW_INVALIDATE RDW_ERASE и RDW_UPDATENOW значение.  
+ Этот метод перерисовывает прямоугольник отображения для `CMFCRibbonEdit` путем вызова косвенно [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) с флагами RDW_INVALIDATE RDW_ERASE и RDW_UPDATENOW значение.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  Задает данные специальных возможностей для [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объекта.  
@@ -655,7 +655,7 @@ void SetTextAlign(int nAlign);
   
 - ES_RIGHT для выравнивание по правому краю  
   
- Дополнительные сведения об этих стилей см. в разделе [изменение стилей элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Дополнительные сведения об этих стилей см. в разделе [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  Задает ширину текстового поля для [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.  

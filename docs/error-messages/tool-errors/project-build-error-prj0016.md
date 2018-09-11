@@ -1,5 +1,5 @@
 ---
-title: Ошибка построения проекта PRJ0016 | Документы Microsoft
+title: Ошибка построения проекта PRJ0016 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6184e5bb251a2b74e8500cc195a38f2d814c1b5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c07de9e766b7c2126d0ce4c8d1daed631a8355c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319056"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194744"
 ---
 # <a name="project-build-error-prj0016"></a>Ошибка построения проекта PRJ0016
-Параметры безопасности пользователя не процесс создается. Эти параметры необходимы для сборки.  
+Параметры безопасности пользователя не позволяют процессу создания. Эти параметры необходимы для сборки.  
   
- Вы вошли как пользователь не имеет разрешений на создание процессов с помощью процесса. Изменение уровней разрешений для этой учетной записи пользователя или обратитесь к администратору учетной записи.  
+ Вы вошли качестве пользователя, который не имеет разрешений на создание процессов с помощью процесса. Необходимо изменить уровень разрешений для этой учетной записи пользователя или обратитесь к администратору учетной записи.  
   
- Эта ошибка также может возникнуть, если значение следующего раздела реестра:  
+ Эта ошибка также может возникнуть, если задано значение следующего раздела реестра:  
   
  \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun  
   
- Чтобы устранить эту ошибку, удалите раздел RestrictRun. При необходимости этот раздел реестра, добавление **vcspawn.exe** к списку записей в разделе.  
+ Чтобы устранить эту ошибку, удалите раздел RestrictRun. Этот раздел реестра при необходимости, добавить **vcspawn.exe** в список записей в ключе.  
   
- Другой причиной этой ошибки является, параметры политики не содержит VCSpawn.exe раздела реестра HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun как разрешенные программа окна для этой учетной записи пользователя.  
+ Другой причиной этой ошибки является то, что параметры политики не включает VCSpawn.exe в разделе реестра HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun как разрешенные программа окно для этой учетной записи пользователя.  
   
  Дополнительные сведения см. в разделе:  
   
--   Статья базы знаний 324153, доступном на [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
+-   Статье базы знаний 324153, доступном на [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
   
--   [Использование системных параметров политики](http://msdn.microsoft.com/library/aa372139), раздел «Запуск только допустимых приложений Windows».
+-   [Использование системных параметров политики](https://msdn.microsoft.com/library/aa372139), раздел «Запуск только допустимых приложений Windows».

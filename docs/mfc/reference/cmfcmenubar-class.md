@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853781"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196386"
 ---
 # <a name="cmfcmenubar-class"></a>Класс CMFCMenuBar
 Строка меню, которая реализует закрепление.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Следует использовать эту функцию вместо [CMFCMenuBar::Create](#create) при необходимости указать стили, кроме стиль панели инструментов. Некоторые часто используемые дополнительные стили: TBSTYLE_TRANSPARENT и CBRS_TOP.  
   
- Список дополнительные стили, см. в разделе [панели инструментов и стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb760439), [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498), и [общие стили окна](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
+ Список дополнительные стили, см. в разделе [панели инструментов и стили кнопок](/windows/desktop/Controls/toolbar-control-and-button-styles), [общие стили элемента управления](/windows/desktop/Controls/common-control-styles), и [общие стили окна](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
 ### <a name="example"></a>Пример  
  Следующий пример демонстрирует, как использовать `CreateEx` метод `CMFCMenuBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).  
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  Ширина кнопки для поля со списком в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- **Помочь** похож на поле со списком **помочь** поле со списком в строке меню [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ **Помочь** похож на поле со списком **помочь** списком в строке меню Microsoft Word.  
   
  При вызове этого метода с *uiID* значение 0, этот метод скрывает поле со списком. В противном случае этот метод поле со списком автоматически отображается в правой части панели меню. После вызова этого метода вызовите [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) получить указатель на вставленный [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объекта.  
   
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>Параметры  
  [in] *lpLogFont*  
- Указатель на [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) структура, определяющая шрифт для задания.  
+ Указатель на [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) структура, определяющая шрифт для задания.  
   
  [in] *bHorz*  
  Значение TRUE, если вы хотите *lpLogFont* параметр, используемый для вертикального шрифта, значение FALSE, если требуется, его можно использовать для горизонтального шрифта.  

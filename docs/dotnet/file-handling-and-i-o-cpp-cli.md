@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 515d74b30e63fbc40411ec9cd62b2b1ab6d92591
-ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
+ms.openlocfilehash: 78bfdcc4ea0e73fa27b05c1c043e5f8d6eeb5e00
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093011"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693139"
 ---
 # <a name="file-handling-and-io-ccli"></a>Функции работы с файлами и операции ввода-вывода (C++/CLI)
 Демонстрирует различные операции с файлами с помощью .NET Framework.  
@@ -337,6 +337,6 @@ int main()
 ## <a name="see-also"></a>См. также   
  [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
- [Файловый и потоковый ввод-вывод](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)
+ [Файловый и потоковый ввод-вывод](/dotnet/standard/io/index)
 
  [Пространство имен System.IO](https://msdn.microsoft.com/library/system.io.aspx)

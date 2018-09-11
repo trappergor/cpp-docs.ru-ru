@@ -1,5 +1,5 @@
 ---
-title: __svm_vmsave | Документы Microsoft
+title: __svm_vmsave | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b1a76d4dca7a7177a44c56fc7c25832ace89c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329669"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680641"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Блок, относящийся только к системам Microsoft**  
@@ -44,13 +44,13 @@ void __svm_vmsave(
 |[in] `VmcbPhysicalAddress`|Физический адрес VMCB.|  
   
 ## <a name="remarks"></a>Примечания  
- `__svm_vmsave` Функция эквивалентна `VMSAVE` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения, выполните поиск документа, «AMD64 архитектура программист вручную тома 2: программирования системы» номер документа 24593, редакция 3.11 или более поздней версии в [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) сайта.  
+ `__svm_vmsave` Функция эквивалентна `VMSAVE` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер документа 24593, редакция 3.11 и более поздних версиях в [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__svm_vmsave`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmsave`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

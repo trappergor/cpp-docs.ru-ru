@@ -1,5 +1,5 @@
 ---
-title: __svm_vmload | Документы Microsoft
+title: __svm_vmload | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cd8164da7be750310f133bb25c17f8cdb21f38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d3f82633c9bd48ede71853dbe383352b0b3d6f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335157"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692868"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Блок, относящийся только к системам Microsoft**  
   
- Загружает подмножество состояние процессора из блока управления указанной виртуальной машины (VMCB).  
+ Загружает часть состояния процессора из блока управления указанной виртуальной машины (VMCB).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,13 +44,13 @@ void __svm_vmload(
 |[in] `VmcbPhysicalAddress`|Физический адрес VMCB.|  
   
 ## <a name="remarks"></a>Примечания  
- `__svm_vmload` Функция эквивалентна `VMLOAD` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения, выполните поиск документа, «AMD64 архитектура программист вручную тома 2: программирование системы» номер 24593, 3.11, редакции документа в [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) сайта.  
+ `__svm_vmload` Функция эквивалентна `VMLOAD` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер 24593, 3.11, версия документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__svm_vmload`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmload`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

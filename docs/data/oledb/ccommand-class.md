@@ -60,12 +60,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 74cabc19dd21be78771fba177758131d13c8794d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1e5afa183721ced8fec4b6a8bfc2f27193a95fbe
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338367"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572604"
 ---
 # <a name="ccommand-class"></a>Класс CCommand
 Предоставляет методы для задания и выполнения команды.  
@@ -90,7 +90,7 @@ class CCommand :
  Тип класса набора строк (таких как `CArrayRowset` или `CNoRowset`) возникает необходимость команду, чтобы использовать. Значение по умолчанию — `CRowset`.  
   
  *Тип TMultiple*  
- Чтобы использовать команду OLE DB, может вернуть несколько результатов, укажите [CMultipleResults](../../data/oledb/cmultipleresults-class.md). В противном случае используйте [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Дополнительные сведения см. в разделе [IMultipleResults](https://msdn.microsoft.com/library/ms721289.aspx).  
+ Чтобы использовать команду OLE DB, может вернуть несколько результатов, укажите [CMultipleResults](../../data/oledb/cmultipleresults-class.md). В противном случае используйте [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Дополнительные сведения см. в разделе [IMultipleResults](/previous-versions/windows/desktop/ms721289\(v=vs.85\)).  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
@@ -211,13 +211,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
  [in] Сеанс, в котором выполняется команда.  
   
  *wszCommand*  
- [in] Команда для выполнения, передается как строка Юникода. Может иметь значение NULL, при использовании `CAccessor`, в этом случае команда будет извлекаться из значение, передаваемое [DEFINE_COMMAND](../../data/oledb/define-command.md) макрос. См. в разделе [ICommand::Execute](https://msdn.microsoft.com/library/ms718095.aspx) в *Справочник программиста OLE DB по* подробные сведения.  
+ [in] Команда для выполнения, передается как строка Юникода. Может иметь значение NULL, при использовании `CAccessor`, в этом случае команда будет извлекаться из значение, передаваемое [DEFINE_COMMAND](../../data/oledb/define-command.md) макрос. См. в разделе [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) в *Справочник программиста OLE DB по* подробные сведения.  
   
  *szCommand*  
  [in] Совпадение с кодом *wszCommand* за исключением того, что этот параметр принимает командной строки ANSI. Четвертый виде этот метод может принимать значение NULL. См. в разделе «Примечания» далее в этом разделе сведения.  
   
  *pPropSet*  
- [in] Указатель на массив [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](https://msdn.microsoft.com/library/ms713696.aspx) в *справочнике программиста OLE DB* в Windows SDK.  
+ [in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK.  
   
  *pRowsAffected*  
  [входные/выходные данные] Указатель на область памяти, где возвращается число строк, затронутых командой. Если  *\*pRowsAffected* имеет значение NULL, счетчик строк не возвращается. В противном случае `Open` задает  *\*pRowsAffected* на следующих условиях:  
@@ -229,13 +229,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 |Команда не обновления, удаления или вставки строк|*\*pRowsAffected* не определено.|  
   
  *guidCommand*  
- [in] GUID, который определяет синтаксис и общие правила для поставщика, используемого при анализе текста команды. См. в разделе [ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx) и [ICommandText::SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx) в *Справочник программиста OLE DB по* подробные сведения.  
+ [in] GUID, который определяет синтаксис и общие правила для поставщика, используемого при анализе текста команды. См. в разделе [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) и [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) в *Справочник программиста OLE DB по* подробные сведения.  
   
  *bBind*  
  [in] Указывает, нужно ли привязывать команда автоматически после выполнения. По умолчанию используется **true**, который вызывает команду, чтобы автоматически привязать. Установка *bBind* для **false** предотвращает автоматическая привязка команды, можно привязать вручную. (Привязке вручную является особый интерес для пользователей OLAP).  
   
  *ulPropSets*  
- [in] Число [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структуры, передаются в *pPropSet* аргумент.  
+ [in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры, передаются в *pPropSet* аргумент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
@@ -255,7 +255,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 >  `Open` вызовы `Execute`, который в свою очередь вызывает `GetNextResult`. 
 
 ## <a name="create"></a> CCommand::Create
-Вызовы [CCommand::CreateCommand](../../data/oledb/ccommand-createcommand.md) для создания команды для указанного сеанса, затем вызывает [ICommandText::SetCommandText](https://msdn.microsoft.com/library/ms709825.aspx) для задания текста команды.  
+Вызовы [CCommand::CreateCommand](../../data/oledb/ccommand-createcommand.md) для создания команды для указанного сеанса, затем вызывает [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) для задания текста команды.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -280,7 +280,7 @@ HRESULT CCommandBase::Create(const CSession& session,
  [in] Указатель на текст ANSI командной строки.  
   
  *guidCommand*  
- [in] GUID, который определяет синтаксис и общие правила для поставщика, используемого при анализе текста команды. Описание диалекты, см. в разделе [ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx) в *Справочник программиста OLE DB по*.  
+ [in] GUID, который определяет синтаксис и общие правила для поставщика, используемого при анализе текста команды. Описание диалекты, см. в разделе [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) в *Справочник программиста OLE DB по*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
@@ -319,7 +319,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ICommandWithParameters::GetParameterInfo](https://msdn.microsoft.com/library/ms714917.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [ICommandWithParameters::GetParameterInfo](/previous-versions/windows/desktop/ms714917\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.   
@@ -341,7 +341,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
  Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает оболочку для метода OLE DB [ICommandPrepare::Prepare](https://msdn.microsoft.com/library/ms718370.aspx).  
+ Этот метод создает оболочку для метода OLE DB [ICommandPrepare::Prepare](/previous-versions/windows/desktop/ms718370\(v=vs.85\)).  
 
 ## <a name="releasecommand"></a> CCommand::ReleaseCommand
 Освобождает метод доступа к параметру, а затем освобождает в саму команду.  
@@ -367,7 +367,7 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ICommandWithParameters::SetParameterInfo](https://msdn.microsoft.com/library/ms725393.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
@@ -385,7 +385,7 @@ HRESULT CCommandBase::Unprepare() throw();
  Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает оболочку для метода OLE DB [ICommandPrepare::Unprepare](https://msdn.microsoft.com/library/ms719635.aspx). 
+ Этот метод создает оболочку для метода OLE DB [ICommandPrepare::Unprepare](/previous-versions/windows/desktop/ms719635\(v=vs.85\)). 
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332820"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197907"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Шаблоны элементов Visual C++ в диалоговом окне "Добавление нового элемента"
 Вы можете легко добавить элементы, являющиеся общими для проектов Visual C++, с помощью команды **Добавить новый элемент**. При использовании команды **Добавить новый элемент** отображается диалоговое окно `Add New Item` со списком шаблонов элементов, добавляющих в проект соответствующие файлы.  
@@ -44,7 +44,7 @@ ms.locfileid: "33332820"
 |Файл заголовка (.h)|Создает файл заголовка C++.|  
 |HTML-страница (.htm)|Создает пустой HTML-файл.|  
 |Файл значка (.ico)|Создает файл значка Win32.|  
-|Класс установщика|Добавляет класс, наследующий от [класса установщика](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx), с использованием функций среды CLR.|  
+|Класс установщика|Добавляет класс, наследующий от [класса установщика](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx), с использованием функций среды CLR.|  
 |Файл MIDL (.idl)|Создает файл IDL.|  
 |Файл определения модуля (.def)|Создает DLL-файл экспорта определений.|  
 |Таблица свойств (.props)|Создает файл страницы свойств Visual C++.|  

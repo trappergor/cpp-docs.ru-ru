@@ -51,12 +51,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 72ac1a5be4f2e114e5b90b65542b09733c43d174
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1ca0d5a4dfd8139c0941dffd22397f296b7b4354
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338867"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571730"
 ---
 # <a name="csession-class"></a>класс CSession
 Представляет сеанс доступа к отдельной базы данных.  
@@ -98,7 +98,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT. 
@@ -127,13 +127,13 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx).  
+ Дополнительные сведения см. в разделе [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\)).  
 
 ## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
 Возвращает сведения, касающиеся транзакции.  
@@ -145,13 +145,13 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ITransaction::GetTransactionInfo](https://msdn.microsoft.com/library/ms714975.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [ITransaction::GetTransactionInfo](https://msdn.microsoft.com/library/ms714975.aspx) в *Справочник программиста OLE DB по*. 
+ Дополнительные сведения см. в разделе [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\)) в *Справочник программиста OLE DB по*. 
 
 ## <a name="open"></a> CSession::Open
 Открывает новый сеанс для объекта источника данных.  
@@ -169,10 +169,10 @@ HRESULT Open(const CDataSource& ds,
  [in] Источник данных, для которого будет открыть сеанс.  
   
  *pPropSet*  
- [in] Указатель на массив [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](https://msdn.microsoft.com/library/ms713696.aspx) в *справочнике программиста OLE DB* в Windows SDK.  
+ [in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK.  
   
  *ulPropSets*  
- [in] Число [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) структуры, передаются в *pPropSet* аргумент.  
+ [in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры, передаются в *pPropSet* аргумент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
@@ -193,13 +193,13 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx) в *Справочник программиста OLE DB по*. 
+ Дополнительные сведения см. в разделе [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\)) в *Справочник программиста OLE DB по*. 
   
 ## <a name="see-also"></a>См. также  
  ["CatDB"](../../visual-cpp-samples.md)   

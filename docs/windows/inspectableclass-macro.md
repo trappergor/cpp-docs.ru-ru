@@ -1,5 +1,5 @@
 ---
-title: Макрос InspectableClass | Документы Microsoft
+title: Макрос InspectableClass | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,38 +15,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 922f7f74771125aed0122c408ef902da2569e5c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b85a10c68b7379f0e59bf859b3d8badf7413195
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873775"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208345"
 ---
 # <a name="inspectableclass-macro"></a>Макрос InspectableClass
-Задает уровень имя и доверия класса среды выполнения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-InspectableClass(  
-   runtimeClassName,   
+
+Задает уровень имя и доверия класса среды выполнения.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+InspectableClass(
+   runtimeClassName,
    trustLevel)  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `runtimeClassName`  
- Полное текстовое имя класса среды выполнения.  
-  
- `trustLevel`  
- Один из [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) значений перечисления.  
-  
-## <a name="remarks"></a>Примечания  
- `InspectableClass` Макрос может использоваться только с типами среды выполнения Windows.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс RuntimeClass](../windows/runtimeclass-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*runtimeClassName*  
+Полное текстовое имя класса среды выполнения.
+
+*trustLevel*  
+Один из [TrustLevel](https://msdn.microsoft.com/library/br224625.aspx) значений перечисления.
+
+## <a name="remarks"></a>Примечания
+
+**InspectableClass** макрос может использоваться только с типами среды выполнения Windows.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс RuntimeClass](../windows/runtimeclass-class.md)

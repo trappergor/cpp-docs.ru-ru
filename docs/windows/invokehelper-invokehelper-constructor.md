@@ -1,5 +1,5 @@
 ---
-title: Конструктор InvokeHelper::InvokeHelper | Документы Microsoft
+title: Конструктор InvokeHelper::InvokeHelper | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7678f9e3092bdc6e9d5839085044708b0d400533
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ad09a5a4794a9db8882a088f90da5046b6f7b9d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874854"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609244"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>Конструктор InvokeHelper::InvokeHelper
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-explicit InvokeHelper(  
-   TCallback callback  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `callback`  
- Обработчик событий.  
-  
-## <a name="remarks"></a>Примечания  
- Инициализирует новый экземпляр класса InvokeHelper.  
-  
- `TCallback` Параметр шаблона тип обработчика событий.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Invokehelper-структура](../windows/invokehelper-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*обратный вызов*  
+Обработчик событий.
+
+## <a name="remarks"></a>Примечания
+
+Инициализирует новый экземпляр класса **InvokeHelper** класса.
+
+`TCallback` Параметр шаблона тип обработчика событий.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура InvokeHelper](../windows/invokehelper-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

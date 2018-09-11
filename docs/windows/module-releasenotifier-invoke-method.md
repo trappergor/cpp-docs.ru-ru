@@ -1,5 +1,5 @@
 ---
-title: 'Module::ReleaseNotifier:: Invoke-метод | Документы Microsoft'
+title: 'Module::ReleaseNotifier:: вызвать метод | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eb51d59d2f7f1adc934332cbfa5fead56bbef0a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da71ab887145f3bcb1341b5ea6004a24253a4a5f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876206"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594504"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Метод Module::ReleaseNotifier::Invoke
-При реализации вызывает обработчик событий при освобождении последнего объекта в модуле.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-virtual void Invoke() = 0;  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)
+
+При реализации, вызывает обработчик событий при освобождении последнего объекта в модуле.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual void Invoke() = 0;
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)

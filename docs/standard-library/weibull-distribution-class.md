@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b651f4117cae6d3b4ed72d22ace5194e5d24446
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f684ad5e6487378e8f85aa1c30af0ae9d9038075
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957676"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109853"
 ---
 # <a name="weibulldistribution-class"></a>Класс weibull_distribution
 
@@ -80,7 +80,8 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*<br/>
+По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -103,7 +104,7 @@ class weibull_distribution
 
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
 
-Подробные сведения о распределении Вейбулла см. в статье [Распределение Вейбулла](http://go.microsoft.com/fwlink/p/?linkid=401115) в Wolfram MathWorld.
+Подробные сведения о распределении Вейбулла см. в статье [Распределение Вейбулла](http://mathworld.wolfram.com/WeibullDistribution.html) в Wolfram MathWorld.
 
 ## <a name="example"></a>Пример
 

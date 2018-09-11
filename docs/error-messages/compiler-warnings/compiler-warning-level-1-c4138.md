@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4138 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4138 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0865935c30c4934684c7a12e50ab26f3e8b12c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc3102f18021c16663bdf61dcde6df5e6893d46c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277037"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197092"
 ---
 # <a name="compiler-warning-level-1-c4138"></a>Предупреждение компилятора (уровень 1) C4138
 "*/" найден вне комментария  
   
- Закрывающему разделителю комментария не предшествует разделитель, открывающий комментарий. Компилятор предполагает пробел между звездочкой (**\***) и косой чертой (/).  
+ Закрывающему разделителю комментария не предшествует разделитель, открывающий комментарий. Компилятор предполагает пробел между звездочкой (<strong>\*</strong>) и косую черту (/).  
   
 ## <a name="example"></a>Пример  
   

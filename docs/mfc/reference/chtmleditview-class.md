@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c52518bc2588188ea2990ddb3be1f7d79dd461d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339547"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211901"
 ---
 # <a name="chtmleditview-class"></a>Класс CHtmlEditView
 Предоставляет функции платформы редактирования WebBrowser в контексте архитектуры документов или представлений MFC.  
@@ -110,7 +110,7 @@ virtual BOOL Create(
  Указывает атрибуты стиля окна. По умолчанию задаются стили WS_VISIBLE и WS_CHILD Windows.  
   
  *Rect*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.  
   
  *pParentWnd*  
  Указатель на родительское окно элемента управления.  

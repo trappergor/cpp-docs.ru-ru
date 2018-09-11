@@ -1,5 +1,5 @@
 ---
-title: Module::ReleaseNotifier::Release | Документы Microsoft
+title: Module::ReleaseNotifier::Release | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfc64a64a0fc08d417117e46bc7537a4e2ebf4ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f8ac0383e2aeed2f042da7d4968e6b19a36d68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877051"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600177"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
-Удаляет текущий объект Module::ReleaseNotifier, если объект был создан с параметром `true`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-void Release() throw();  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)
+
+Удаляет текущий **Module::ReleaseNotifier** объекта, если объект был создан с параметром **true**.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void Release() throw();
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)

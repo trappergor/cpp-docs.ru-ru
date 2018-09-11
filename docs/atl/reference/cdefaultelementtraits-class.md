@@ -17,36 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c86df573e35ba58d01be6c12ed9fff87c837126
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: de61165ecac24e9c892dd5e95b1bb4e042a34fa1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882667"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763787"
 ---
 # <a name="cdefaultelementtraits-class"></a>Класс CDefaultElementTraits
-Этот класс предоставляет функции и методы по умолчанию для класса коллекции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот класс предоставляет функции и методы по умолчанию для класса коллекции.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 template <typename T>  
 class CDefaultElementTraits : public CElementTraitsBase<T>,
     public CDefaultHashTraits<T>,
     public CDefaultCompareTraits<T>
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *T*  
- Тип данных, хранимых в коллекции.  
-  
-## <a name="remarks"></a>Примечания  
- Этот класс предоставляет статические функции по умолчанию и методы для перемещения, копирования, сравнение и хэширования элементов, сохраненную в объекте класса коллекции. Этот класс является производным, его функции и методы из [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md), и [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)и используемой [ CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md), и [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).  
-  
- Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlcoll.h  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+```
+
+#### <a name="parameters"></a>Параметры
+
+*T*  
+Тип данных, хранимых в коллекции.
+
+## <a name="remarks"></a>Примечания
+
+Этот класс предоставляет статические функции по умолчанию и методы для перемещения, копирования, сравнение и хэширования элементов, сохраненную в объекте класса коллекции. Этот класс является производным, его функции и методы из [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md), и [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)и используемой [ CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md), и [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).
+
+Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlcoll.h
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../../atl/atl-class-overview.md)

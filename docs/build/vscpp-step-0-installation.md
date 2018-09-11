@@ -1,5 +1,5 @@
 ---
-title: Установка поддержки C++ в Visual Studio | Документация Майкрософт
+title: Установка поддержки C++ в Visual Studio 2017 | Документация Майкрософт
 description: Поддержка Visual C++ в Visual Studio
 ms.custom: mvc
 ms.date: 06/21/2018
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cc9c124a5b3f2fea92f729d7d11df579cc25a39
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376063"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130895"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Установка поддержки C++ в Visual Studio
 
-Если вы еще не скачали и установлен на компьютере Visual Studio и инструментов Visual C++, вот как приступить к работе.
+Если вы еще не скачали и установлен на компьютере Visual Studio 2017 и инструменты Visual C++, вот как приступить к работе.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -35,7 +35,13 @@ ms.locfileid: "39376063"
 
 Дополнительные сведения о дисковом пространстве и требования к операционной системе, см. в разделе [Visual Studio семейства требования к системе продуктов](/visualstudio/productinfo/vs2017-system-requirements-vs). Установщик сообщает, сколько места на диске необходим для выбранных параметров.
 
-## <a name="installation"></a>Установка
+## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 установки
+
+ Чтобы установить Visual Studio 2015, перейдите к [загрузить более ранние версии Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Запустите программу установки и выберите **Выборочная установка** и выберите компонент C++. 
+
+ Как правило настоятельно рекомендуется использовать Visual Studio 2017, даже если вам нужно скомпилировать код, с помощью компилятора Visual Studio 2015. Дополнительные сведения см. в разделе [Использование собственного многоплатформенного нацеливания в Visual Studio для сборки старых проектов](../porting/use-native-multi-targeting.md).
+
+## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 установки
 
 1. Скачайте последнюю версию установщика Visual Studio 2017 для Windows.
 
@@ -43,7 +49,7 @@ ms.locfileid: "39376063"
    > [Установить Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
-   > Выпуск Community предназначен для индивидуальных разработчиков, использования при аудиторном обучении и в научных исследованиях, а также разработки решений с открытым кодом. В других целях установите <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> или <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
+   > Выпуск Community предназначен для индивидуальных разработчиков, использования при аудиторном обучении и в научных исследованиях, а также разработки решений с открытым кодом. В других целях установите [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) или [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 1. Найдите файл установщика, вы скачали и запустите его. Она может отображаться в браузере, или может оказаться в папке загрузок. Программа установки требуются права администратора для выполнения. Может появиться **контроль учетных записей пользователей** диалоговое окно с предложением предоставить разрешение на дать установщику внести изменения в систему; выберите **Да**. Если у вас возникают проблемы, найдите скачанный файл в проводнике щелкните правой кнопкой мыши значок установщика и выберите **Запуск от имени администратора** в контекстном меню.
 
@@ -61,7 +67,7 @@ ms.locfileid: "39376063"
 
    При первом запуске Visual Studio будет предложено выполнить вход с использованием учетной записи Майкрософт. Если у вас ее нет, его можно создать бесплатно. Также необходимо выбрать тему. Не беспокойтесь, можно изменить его позже, если вы хотите. 
 
-   Может потребоваться Visual Studio несколько минут, чтобы для подготовки к работе первый раз при запуске. Вот, как оно выглядит в небольшой промежуток времени.
+   Может потребоваться Visual Studio несколько минут для подготовки к использования в первый раз, запустите его. Вот, как оно выглядит в небольшой промежуток времени.
 
    ![Вход Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "вход Visual Studio 2017")
 

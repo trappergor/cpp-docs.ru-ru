@@ -1,5 +1,5 @@
 ---
-title: Метод HString::IsValid | Документы Microsoft
+title: Метод HString::IsValid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe2bea7e7971daa1c6bb169a1c049a6757d9ed8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05efb34a2d03264ca0fb6da1da22a2610c800c30
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874321"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600820"
 ---
 # <a name="hstringisvalid-method"></a>Метод HString::IsValid
-Указывает, является ли текущий объект HString пустым.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+Указывает, является ли текущий **HString** объект пуст или не.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 bool IsValid() const throw()  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- Значение `true`, если текущий объект HString не пуст; в противном случае — значение `false`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HString](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+**значение true,** Если текущий **HString** объект не является пустой; в противном случае **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HString](../windows/hstring-class.md)

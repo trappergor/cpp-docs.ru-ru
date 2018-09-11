@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc677304ae7ab61e6726366869e85f731cd92484
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1244b87410a09996d946408ff77dbb552b339c85
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463211"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591158"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>Метод AsyncBase::TryTransitionToError
-Указывает, является ли указанный код ошибки можно изменить внутреннее состояние ошибки.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-bool TryTransitionToError(  
-   const HRESULT error  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *Ошибка*  
- Ошибка HRESULT.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** если внутреннее состояние ошибки было изменено; в противном случае — значение **false**.  
-  
-## <a name="remarks"></a>Примечания  
- Эта операция изменяет состояние ошибки только в том случае, если состояние ошибки уже имеет значение S_OK. Эта операция не оказывает влияния Если состояние ошибки не ошибка, отменено, завершено или закрыт.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Указывает, является ли указанный код ошибки можно изменить внутреннее состояние ошибки.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+bool TryTransitionToError(
+   const HRESULT error
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Ошибка*  
+Ошибка HRESULT.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** если внутреннее состояние ошибки было изменено; в противном случае — значение **false**.
+
+## <a name="remarks"></a>Примечания
+
+Эта операция изменяет состояние ошибки только в том случае, если состояние ошибки уже имеет значение S_OK. Эта операция не оказывает влияния Если состояние ошибки не ошибка, отменено, завершено или закрыт.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

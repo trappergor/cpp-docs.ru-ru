@@ -1,5 +1,5 @@
 ---
-title: Метод WeakReference::IncrementStrongReference | Документы Microsoft
+title: Метод WeakReference::IncrementStrongReference | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee53e068c13f52c01e997680b57915051a8efad8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c8e9ba093c6be4b1e0d5747c16a8dc8887cd2c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890626"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591092"
 ---
 # <a name="weakreferenceincrementstrongreference-method"></a>Метод WeakReference::IncrementStrongReference
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-ULONG IncrementStrongReference();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Счетчик увеличивается строгую ссылку.  
-  
-## <a name="remarks"></a>Примечания  
- Увеличивает счетчик строгую ссылку объекта WeakReference.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ULONG IncrementStrongReference();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Счетчик увеличивается строгую ссылку.
+
+## <a name="remarks"></a>Примечания
+
+Увеличивает счетчик строгую ссылку текущего **WeakReference** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
 [Класс WeakReference](../windows/weakreference-class1.md)  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

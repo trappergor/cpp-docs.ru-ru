@@ -1,5 +1,5 @@
 ---
-title: Метод HString::Get | Документы Microsoft
+title: Метод HString::Get | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea2b36c6fd5ccfd8fa0429448fb3b7045762a461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b8f00619e716ae0b906714691c652a6854eb8754
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881241"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606733"
 ---
 # <a name="hstringget-method"></a>Метод HString::Get
-Возвращает значение базового дескриптора HSTRING.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+Получает значение базового дескриптора HSTRING.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HSTRING Get() const throw()  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение базового дескриптора HSTRING.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HString](../windows/hstring-class.md)
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение базового дескриптора HSTRING.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HString](../windows/hstring-class.md)

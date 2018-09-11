@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4358712e5573095229a48a6d08b78706c608874d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b434ca991ef05bb90c3cbdc659cf8adc3381aa0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403652"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752919"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -30,36 +30,36 @@ ms.locfileid: "39403652"
 
 ## <a name="grammar"></a>Грамматика
 
-*спецификатор decl*:  
+*спецификатор decl*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-decl-modifier-seq***)** 
 
-*extended-decl-modifier-seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier*<sub>opt</sub>  
+*extended-decl-modifier-seq*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
 
-*extended-decl-modifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**Выровнять (** *#* **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**выделить («** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**домен приложения**  
-&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Устарело**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
-&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
-&nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
-&nbsp;&nbsp;&nbsp;&nbsp;**с атрибутом naked**  
-&nbsp;&nbsp;&nbsp;&nbsp;**noalias**  
-&nbsp;&nbsp;&nbsp;&nbsp;**noinline**  
-&nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
-&nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
-&nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Процесс**  
-&nbsp;&nbsp;&nbsp;&nbsp;**свойство (** { **получить =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**ограничения**  
-&nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
-&nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
-&nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**поток**  
-&nbsp;&nbsp;&nbsp;&nbsp;**UUID («** *ComObjectGUID* **")**  
+*extended-decl-modifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Выровнять (** *#* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**выделить («** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**домен приложения**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Устарело**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**с атрибутом naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**noalias**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**noinline**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**noreturn**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Процесс**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**свойство (** { **получить =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ограничения**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**поток**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**UUID («** *ComObjectGUID* **")**
 
 Пробел отделяет последовательность модификаторов объявления. Примеры приведены в дальнейших разделах.
 

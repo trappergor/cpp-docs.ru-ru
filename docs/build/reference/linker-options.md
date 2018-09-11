@@ -1,7 +1,7 @@
 ---
-title: Параметры компоновщика | Документы Microsoft
+title: Параметры компоновщика | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: d514e992b165f7deb5f9354f58fe5a409f52546a
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753634"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42571537"
 ---
 # <a name="linker-options"></a>Параметры компоновщика
 
@@ -40,7 +40,7 @@ LINK.exe связывает объектные файлы в формате COFF
 
 - [Зарезервированные слова](../../build/reference/reserved-words.md)
 
-В командной строке параметры компоновщика указываются без учета регистра; Например / base и/Base означают одно и то же самое. Дополнительные сведения о том, как указать каждый параметр в командной строке или в Visual Studio, см. в документации для этого параметра.
+В командной строке параметры компоновщика указываются без учета регистра; Например / base и/Base идентичны. Дополнительные сведения о том, как указать каждый параметр в командной строке или в Visual Studio, см. в документации для этого параметра.
 
 Директиву pragma [comment](../../preprocessor/comment-c-cpp.md) можно использовать для задания некоторых параметров компоновщика.
 
@@ -68,7 +68,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Управляет отложенной загрузкой библиотек DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Включает отложенную загрузку указанной библиотеки DLL.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Частично подписывает сборку.|
-|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Задает флаги по умолчанию загружает зависимые библиотеки DLL.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Задает флаги по умолчанию для зависимой загрузки DLL.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Выполняет сборку библиотеки DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Создает драйвер режима ядра.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Указывает, следует ли создавать исполняемый образ, базовый адрес которого может быть случайным образом изменен во время загрузки с помощью технологии ASLR.|
@@ -97,7 +97,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)|Задает создание кода во время компоновки.|
 |[/MACHINE](../../build/reference/machine-specify-target-platform.md)|Указывает целевую платформу.|
 |[/MANIFEST](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)|Создает параллельный файл манифеста и при необходимости включает его в двоичный файл.|
-|[/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md)|Указывает \<dependentAssembly > в файле манифеста.|
+|[/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md)|Указывает \<dependentAssembly > раздела в файле манифеста.|
 |[/MANIFESTFILE](../../build/reference/manifestfile-name-manifest-file.md)|Изменяет имя файла манифеста по умолчанию.|
 |[/MANIFESTINPUT](../../build/reference/manifestinput-specify-manifest-input.md)|Задает входной файл манифеста для обработки и внедрения компоновщиком в двоичный файл. Этот параметр можно использовать несколько раз, чтобы указать несколько входных файлов манифеста.|
 |[/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md)|Указывает, следует ли внедрять в манифест программы сведения о контроле учетных записей.|
@@ -105,7 +105,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|Включает указанные сведения в файл сопоставления.|
 |[/MERGE](../../build/reference/merge-combine-sections.md)|Объединяет разделы.|
 |[/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|Задает параметры командной строки MIDL.|
-|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Добавляет визуализаторов отладчика из файла Natvis в PDB-ФАЙЛ.|
+|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Добавляет визуализаторы отладчика из файла Natvis в PDB-ФАЙЛ.|
 |[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|Подавляет создание сборки .NET Framework.|
 |[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)|Пропускает все (или только указанные) библиотеки по умолчанию при разрешении внешних ссылок.|
 |[/NOENTRY](../../build/reference/noentry-no-entry-point.md)|Создает библиотеку DLL, содержащую только ресурсы.|
@@ -118,11 +118,12 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Использует альтернативное местоположение для сохранения файла PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Создает файл базы данных программы (PDB), не содержащий закрытых символов.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Задает файл PGD для профильных оптимизаций.|
-|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Устаревшие** создает сборки поточно ориентированного инструментирования профильной Оптимизации.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Устаревшие** создает сборку инструментирования профильной Оптимизации поточно ориентированными.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|Создает выходной файл, который может быть использован для профилировщика производительности инструментов.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Задает контрольную сумму в заголовке файла EXE.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Указывает на то, что образ будет содержать таблицу безопасных обработчиков исключений.|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|Переопределяет атрибуты секции.|
+|[/ SOURCELINK](../../build/reference/sourcelink.md)|Указывает файл SourceLink для добавления в PDB.|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|Задает размер стека (в байтах).|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|Присоединяет программу-заглушку MS-DOS к программе Win32.|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|Указывает операционной системе, как запускать файл EXE.|

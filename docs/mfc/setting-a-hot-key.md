@@ -1,5 +1,5 @@
 ---
-title: Задание сочетания клавиш | Документы Microsoft
+title: Задание сочетания клавиш | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3987ddee98ae35e02a181e38cd71f181801aeb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 254d7532b83a4f30c0029b2488bb0b2111cce31d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379649"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219401"
 ---
 # <a name="setting-a-hot-key"></a>Задание сочетания клавиш
 Приложение может использовать сведения, предоставляемые сочетания клавиш ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) элемента управления в одном из двух способов:  
   
--   Настройка Глобальные сочетания клавиш для активации окна nonchild, отправляя [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) сообщение в окно активироваться.  
+-   Настройте глобальные сочетания клавиш для активации окна nonchild, отправляя [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) сообщение в окно активации.  
   
--   Настройка сочетания клавиш определенного потока с помощью вызова функции Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+-   Настройка сочетания клавиш конкретного потока путем вызова функции Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
 ## <a name="see-also"></a>См. также  
  [Использование CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

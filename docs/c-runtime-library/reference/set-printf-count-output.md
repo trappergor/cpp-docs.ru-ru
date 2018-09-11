@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406645"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108323"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
-Включить или отключить поддержку **%n** при заполнении [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-функциями семейства.
+Включить или отключить поддержку **%n** формат в [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-функциями семейства.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -55,15 +55,16 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Параметры
 
-*включить* ненулевое значение, чтобы включить **%n** поддерживает 0, чтобы отключить **%n** поддержки.
+*Включить*<br/>
+Ненулевое значение, чтобы включить **%n** поддерживает, 0, чтобы отключить **%n** поддержки.
 
 ## <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
 
-Состояние **%n** поддерживает перед вызовом этой функции: Если ненулевой **%n** была включена поддержка, 0, если оно было отключено.
+Состояние **%n** поддержки перед вызовом этой функции: ненулевое значение, если **%n** была включена поддержка, 0, если оно было отключено.
 
 ## <a name="remarks"></a>Примечания
 
-В целях безопасности поддержка **%n** описатель формата отключен по умолчанию в **printf** и ее вариантов. Если **%n** встречается в **printf** является вызывают обработчик недопустимого параметра, как описано в спецификации формата, поведение по умолчанию [проверка параметров](../../c-runtime-library/parameter-validation.md). Вызов **_set_printf_count_output** с аргументом ненулевой вызовет **printf**-функциями семейства для интерпретации **%n** как описано в [формате Спецификация синтаксиса: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+В целях безопасности поддержка **%n** описатель формата отключен по умолчанию в **printf** и всех ее вариантах. Если **%n** встречается в **printf** является вызывают обработчик недопустимого параметра, как описано в спецификации формата, поведение по умолчанию [проверка параметров](../../c-runtime-library/parameter-validation.md). Вызов **_set_printf_count_output** с ненулевым аргументом приведет к **printf**-функциями семейства для интерпретации **%n** как описано в разделе [формат Синтаксис описания: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Требования
 

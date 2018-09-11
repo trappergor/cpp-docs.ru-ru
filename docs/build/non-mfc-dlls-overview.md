@@ -1,5 +1,5 @@
 ---
-title: 'Библиотек DLL, не являющихся MFC: Обзор | Документы Microsoft'
+title: 'Не MFC DLL: Обзор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ad8e6d1107dfdacc91c32d48ca1e3624a0211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8acb1db66e4f6cc78ca79403aea782a936bff494
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368646"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199469"
 ---
 # <a name="non-mfc-dlls-overview"></a>Общие сведения о библиотеках DLL, не являющихся MFC
-Не - MFC библиотеки DLL является библиотекой DLL, внутренне не использует MFC, а экспортированные функции в DLL может быть вызван MFC или не MFC исполняемые файлы. Функции обычно экспортируются из не - MFC библиотеки DLL с помощью стандартного интерфейса C.  
+Не - MFC DLL представляет собой библиотеку DLL, который внутренне не использует MFC, а экспортированные функции в библиотеке DLL могут быть вызваны MFC или не являющихся MFC исполняемых файлов. Функции обычно экспортируются из не - MFC DLL с использованием стандартного интерфейса C.  
   
- Дополнительные сведения о MFC DLL см. в разделе [библиотеки динамической компоновки](http://msdn.microsoft.com/library/windows/desktop/ms682589) в [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Дополнительные сведения о MFC DLL, см. в разделе [библиотек динамической компоновки](https://msdn.microsoft.com/library/windows/desktop/ms682589) в пакете Windows SDK.  
   
 ## <a name="what-do-you-want-to-do"></a>Выберите действие  
   

@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954881"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206479"
 ---
 # <a name="numericlimits-class"></a>Класс numeric_limits
 
@@ -100,11 +100,12 @@ class numeric_limits
 
 ### <a name="parameters"></a>Параметры
 
-*Тип* базовый тип данных элемента, свойства которого протестированы, запрашиваются или устанавливаются.
+*Тип*<br/>
+ Базовый тип данных элемента, свойства которого проверяются, запрашиваются или устанавливаются.
 
 ## <a name="remarks"></a>Примечания
 
-Заголовок определяет явные специализации для типов **wchar_t**, **bool**, **char**, **автоматический char**, **без знака char**, **короткие**, **unsigned short**, **int**, **unsigned int**, **долго**, **unsigned long**, **float**, **двойные**, **long double ***** **длинное длинное**, **long long без знака**, `char16_t`, и `char32_t`. Для этих явных специализаций член [numeric_limits::is_specialized](#is_specialized) — **true**, а все соответствующие элементы имеют значимые значения. Программа может предоставлять дополнительные явные специализации. Большинство функций-членов класса описывают или проверяют возможные реализации **float**.
+Заголовок определяет явные специализации для типов **wchar_t**, **bool**, **char**, **автоматический char**, **без знака char**, **короткие**, **unsigned short**, **int**, **unsigned int**, **долго**, **unsigned long**, **float**, **двойные**, **long double**, **длинное длинное**, **long long без знака**, **char16_t**, и **char32_t**. Для этих явных специализаций член [numeric_limits::is_specialized](#is_specialized) — **true**, а все соответствующие элементы имеют значимые значения. Программа может предоставлять дополнительные явные специализации. Большинство функций-членов класса описывают или проверяют возможные реализации **float**.
 
 Для произвольной специализации у членов нет значимых значений. Объект-член, не имеющее смысл значение, сохраняет ноль (или **false**) и возвращает функция-член, которая не возвращает осмысленное значение `Type(0)`.
 
@@ -156,7 +157,7 @@ class numeric_limits
 Возвращает наименьшее ненулевое денормализованное значение.
 
 ```cpp
-static Type denorm_min() throw();
+static constexpr Type denorm_min() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -215,7 +216,7 @@ The smallest nonzero denormalized value
 Возвращает количество цифр основания системы счисления, которое тип может представлять без потери точности.
 
 ```cpp
-static const int digits = 0;
+static constexpr int digits = 0;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -259,7 +260,7 @@ int main( )
 Возвращает количество дробных десятичных цифр, которое тип может представлять без потери точности.
 
 ```cpp
-static const int digits10 = 0;
+static constexpr int digits10 = 0;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -303,7 +304,7 @@ The float is; 100000000
 Функция возвращает разницу между 1 и наименьшим значением больше 1, которое может быть представлено для типа данных.
 
 ```cpp
-static Type epsilon() throw();
+static constexpr Type epsilon() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -355,7 +356,7 @@ The difference between 1 and the smallest value greater than 1
 Проверяет, допускает ли тип денормализованные значения.
 
 ```cpp
-static const float_denorm_style has_denorm = denorm_absent;
+static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -401,7 +402,7 @@ Whether long int objects allow denormalized values: 0
 Проверяет, обнаружена ли потеря точности как потеря денормализации, а не неточный результат.
 
 ```cpp
-static const bool has_denorm_loss = false;
+static constexpr bool has_denorm_loss = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -447,7 +448,7 @@ Whether long int objects can detect denormalized loss: 0
 Проверяет, может ли тип представлять положительную бесконечность.
 
 ```cpp
-static const bool has_infinity = false;
+static constexpr bool has_infinity = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -493,7 +494,7 @@ Whether long int objects have infinity: 0
 Проверяет, может ли тип представлять "тихое" нечисло (NAN), которое является несигнализирующим.
 
 ```cpp
-static const bool has_quiet_NaN = false;
+static constexpr bool has_quiet_NaN = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -539,7 +540,7 @@ Whether long int objects have quiet_NaN: 0
 Проверяет, может ли тип представлять сообщения об обнаружении нечисла (NAN).
 
 ```cpp
-static const bool has_signaling_NaN = false;
+static constexpr bool has_signaling_NaN = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -585,7 +586,7 @@ Whether long int objects have a signaling_NaN: 0
 Представление положительной бесконечности для типа, если имеется.
 
 ```cpp
-static Type infinity() throw();
+static constexpr Type infinity() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -639,7 +640,7 @@ The representation of infinity for type long double is: inf
 Проверяет, конечен ли набор значений, представляемый типом.
 
 ```cpp
-static const bool is_bounded = false;
+static constexpr bool is_bounded = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -693,7 +694,7 @@ Whether unsigned char objects have bounded set of representable values: 1
 Проверяет, не содержат ли вычисления с типом ошибок округления.
 
 ```cpp
-static const bool is_exact = false;
+static constexpr bool is_exact = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -747,7 +748,7 @@ Whether unsigned char objects have calculations free of rounding errors: 1
 Проверяет, соответствует ли тип стандартам IEC 559.
 
 ```cpp
-static const bool is_iec559 = false;
+static constexpr bool is_iec559 = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -797,7 +798,7 @@ Whether unsigned char objects conform to iec559 standards: 0
 Проверяет, может ли тип представлять целые числа.
 
 ```cpp
-static const bool is_integer = false;
+static constexpr bool is_integer = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -847,7 +848,7 @@ Whether unsigned char objects have an integral representation: 1
 Проверяет, имеет ли тип **type** представление по модулю.
 
 ```cpp
-static const bool is_modulo = false;
+static constexpr bool is_modulo = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -897,7 +898,7 @@ Whether unsigned char objects have a modulo representation: 1
 Проверяет, может ли тип представлять числа со знаком.
 
 ```cpp
-static const bool is_signed = false;
+static constexpr bool is_signed = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -947,7 +948,7 @@ Whether unsigned char objects have a signed representation: 0
 Проверяет, задана ли для типа явная специализация в классе шаблона `numeric_limits`.
 
 ```cpp
-static const bool is_specialized = false;
+static constexpr bool is_specialized = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1001,7 +1002,7 @@ Whether int* objects have an explicit specialization in the class: 0
 Возвращает наибольшее отрицательное конечное значение.
 
 ```cpp
-static Type lowest() throw();
+static constexpr Type lowest() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1017,7 +1018,7 @@ static Type lowest() throw();
 Возвращает максимальное конечное значение типа.
 
 ```cpp
-static Type max() throw();
+static constexpr Type max() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1059,7 +1060,7 @@ int main() {
 Возвращает количество цифр дробной части, необходимых, чтобы у двух различных значений типа были уникальные десятичные представления.
 
 ```cpp
-static int max_digits10 = 0;
+static constexpr int max_digits10 = 0;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1075,7 +1076,7 @@ static int max_digits10 = 0;
 Возвращает максимальную положительную целую степень, которую тип с плавающей запятой может представить как конечное значение при возведении основания системы счисления в эту степень.
 
 ```cpp
-static const int max_exponent = 0;
+static constexpr int max_exponent = 0;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1121,7 +1122,7 @@ The maximum radix-based exponent for type long double is:  1024
 Возвращает максимальную положительную целую степень, которую тип с плавающей запятой может представить как конечное значение при возведении десяти в эту степень.
 
 ```cpp
-static const int max_exponent10 = 0;
+static constexpr int max_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1167,7 +1168,7 @@ The maximum base 10 exponent for type long double is:  308
 Возвращает минимальное нормализованное значение для типа.
 
 ```cpp
-static Type min() throw();
+static constexpr Type min() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1217,7 +1218,7 @@ The minimum value for type short int is:  -32768
 Возвращает максимальную отрицательную целую степень, которую тип с плавающей запятой может представить как конечное значение при возведении основания системы счисления в эту степень.
 
 ```cpp
-static const int min_exponent = 0;
+static constexpr int min_exponent = 0;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1263,7 +1264,7 @@ The minimum radix-based exponent for type long double is:  -1021
 Возвращает максимальную отрицательную целую степень, которую тип с плавающей запятой может представить как конечное значение при возведении десяти в эту степень.
 
 ```cpp
-static const int min_exponent10 = 0;
+static constexpr int min_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1309,7 +1310,7 @@ The minimum base 10 exponent for type long double is:  -307
 Возвращает представление "тихого" нечисла (NAN) для типа.
 
 ```cpp
-static Type quiet_NaN() throw();
+static constexpr Type quiet_NaN() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1355,7 +1356,7 @@ The quiet NaN for type long double is:  1.#QNAN
 Возвращает целочисленное основание системы счисления, используемое для представления типа.
 
 ```cpp
-static const int radix = 0;
+static constexpr int radix = 0;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1401,7 +1402,7 @@ The base for type long double is:  2
 Возвращает максимальную ошибку округления для типа.
 
 ```cpp
-static Type round_error() throw();
+static constexpr Type round_error() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1443,7 +1444,7 @@ The maximum rounding error for type long double is:  0.5
 Возвращает значение, описывающее различные методы, которые могут быть выбраны реализацией для округления значения с плавающей запятой до целочисленного.
 
 ```cpp
-static const float_round_style round_style = round_toward_zero;
+static constexpr float_round_style round_style = round_toward_zero;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1490,7 +1491,7 @@ The rounding style for an int type is: 0
 Возвращает представление обозначения нечисла (NAN) для типа.
 
 ```cpp
-static Type signaling_NaN() throw();
+static constexpr Type signaling_NaN() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1530,7 +1531,7 @@ int main( )
 Проверяет, может ли тип определить, что значение слишком мало для представления в качестве нормализованного значения, до его округления.
 
 ```cpp
-static const bool tinyness_before = false;
+static constexpr bool tinyness_before = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1580,7 +1581,7 @@ Whether unsigned char types can detect tinyness before rounding: 0
 Проверяет, реализованы ли для типа исключения при выполнении арифметических операций.
 
 ```cpp
-static const bool traps = false;
+static constexpr bool traps = false;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение

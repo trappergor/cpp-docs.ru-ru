@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c7faa1146c7784076c75a468e87a717a8d03da
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ff3d6f9376678240f53113d925a868adfcb4da6d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965734"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314525"
 ---
 # <a name="plus-struct"></a>Структура plus
 
@@ -44,16 +44,18 @@ struct plus<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) + std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *Тип*, *T*, *U* тип, поддерживающий бинарный `operator+` , принимающий операнды указанного или выводимого типа.
 
-*Слева* левый операнд в операции сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
+*Слева*<br/>
+Левый операнд в операции сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
 
-*Справа* правый операнд в операции сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
+*Справа*<br/>
+Правый операнд в операции сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -102,11 +104,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 0 4 8 12 16 20 )
 The vector v2 = ( -4 -6 -8 -10 -12 -14 )
 The element-wise sums are: ( -4 -2 0 2 4 6 )
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Требования

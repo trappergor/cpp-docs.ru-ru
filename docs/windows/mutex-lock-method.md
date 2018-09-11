@@ -1,5 +1,5 @@
 ---
-title: Метод Mutex::LOCK | Документы Microsoft
+title: Метод Mutex::LOCK | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38bd11620f8d403bbd1667ab6fa4f3f827362c88
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880876"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600877"
 ---
 # <a name="mutexlock-method"></a>Метод Mutex::Lock
-Ожидает, пока текущий объект или объект мьютекса, связанный с указанным дескриптором освобождает объект взаимного исключения или истечения отведенного времени ожидания.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-SyncLock Lock(  
-   DWORD milliseconds = INFINITE  
-);  
-  
-static SyncLock Lock(  
-   HANDLE h,  
-   DWORD milliseconds = INFINITE  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `milliseconds`  
- Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, что означает неограниченное время ожидания.  
-  
- `h`  
- Дескриптор объекта Mutex.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers
- 
- ## <a name="see-also"></a>См. также
- [Класс Mutex](../windows/mutex-class1.md)
+
+Только после текущего объекта, или **мьютекс** объект, связанный с указанным дескриптором, выпуски, мьютексом или указанный интервал времени ожидания истечет.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*в миллисекундах*  
+Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, что означает неограниченное время ожидания.
+
+*h*  
+Дескриптор **мьютекс** объекта.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+[Класс Mutex](../windows/mutex-class1.md)

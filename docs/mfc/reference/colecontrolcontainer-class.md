@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f278ffd3d3210f899e86787d0872180df2d91d98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852307"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222863"
 ---
 # <a name="colecontrolcontainer-class"></a>Класс COleControlContainer
 Играет роль контейнера для элементов управления ActiveX.  
@@ -149,7 +149,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_siteMap](#m_sitemap)|Карты узла.|  
   
 ## <a name="remarks"></a>Примечания  
- Это делается за счет поддержки одного или нескольких узлов элемента управления ActiveX (реализованный `COleControlSite`). `COleControlContainer` полностью реализует [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) и [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) интерфейсы, обеспечивая вложенные элементы управления ActiveX, для выполнения их квалификации, как элементы на месте.  
+ Это делается за счет поддержки одного или нескольких узлов элемента управления ActiveX (реализованный `COleControlSite`). `COleControlContainer` полностью реализует [IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe) и [IOleContainer](/windows/desktop/api/oleidl/nn-oleidl-iolecontainer) интерфейсы, обеспечивая вложенные элементы управления ActiveX, для выполнения их квалификации, как элементы на месте.  
   
  Как правило, этот класс используется в сочетании с `COccManager` и `COleControlSite` для реализации пользовательского контейнера элементов управления ActiveX, с помощью пользовательских узлов для одного или нескольких элементов управления ActiveX.  
   
@@ -449,7 +449,7 @@ virtual UINT GetDlgItemInt(
  Указатель на логическое переменной, получающей значение успешное завершение или сбой функции (значение TRUE указывает на успешное завершение, значение FALSE указывает на ошибку).  
   
  *bSigned*  
- Указывает ли функция изучить текст для знак «минус» в начале и возвращать целое число со знаком, если таковая найдена. Если *bSigned* параметр имеет значение TRUE, указывается, что значение извлекаемого является целое число со знаком, привести возвращаемое значение к **int** типа. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Указывает ли функция изучить текст для знак «минус» в начале и возвращать целое число со знаком, если таковая найдена. Если *bSigned* параметр имеет значение TRUE, указывается, что значение извлекаемого является целое число со знаком, привести возвращаемое значение к **int** типа. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если в случае успешного выполнения переменной указывает *lpTrans* имеет значение TRUE, и возвращает значение, преобразованное значение текста элемента управления.  
@@ -486,7 +486,7 @@ virtual int GetDlgItemText(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если функция выполняется успешно, возвращаемое значение указывает количество символов, копируемых в буфер, не включая завершающий нуль-символ.  
   
- Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  Определяет, поддерживает ли WM_SETFOCUS сообщения.  

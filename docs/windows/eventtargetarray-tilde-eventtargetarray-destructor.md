@@ -1,5 +1,5 @@
 ---
-title: 'EventTargetArray:: ~ EventTargetArray деструктор | Документы Microsoft'
+title: 'EventTargetArray:: ~ EventTargetArray деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98f18c94a3e18a8e01e6ec58eddd8da702e4d97d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6fc209158afc21872df869e81296b94159c5bc4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871797"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613564"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>Деструктор EventTargetArray::~EventTargetArray
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-~EventTargetArray();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Деинициализирует текущий `EventTargetArray` класса.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Eventtargetarray-класс](../windows/eventtargetarray-class.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+~EventTargetArray();
+```
+
+## <a name="remarks"></a>Примечания
+
+Деинициализирует текущий **EventTargetArray** класса.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Класс EventTargetArray](../windows/eventtargetarray-class.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

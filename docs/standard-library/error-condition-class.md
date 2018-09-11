@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7305ff80c50c65e4b03a9879d39960e8c47786df
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 66096fcfee62e869577527b632f3409fea231b35
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690835"
 ---
 # <a name="errorcondition-class"></a>Класс error_condition
 
@@ -50,19 +50,19 @@ class error_condition;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[error_condition](#error_condition)|Создает объект типа `error_condition`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[assign](#assign)|Присваивает условию ошибки значение кода ошибки и категорию.|
 |[category](#category)|Возвращает категорию ошибки.|
@@ -71,7 +71,7 @@ class error_condition;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор==](#op_eq_eq)|Проверяет равенство между объектами `error_condition`.|
 |[оператор!=](#op_neq)|Проверяет неравенство между объектами `error_condition`.|
@@ -95,7 +95,7 @@ void assign(value_type val, const error_category& _Cat);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Val*|Значение кода ошибки для хранения в `error_code`.|
 |*_Cat*|Категория ошибки для хранения в `error_code`.|
@@ -147,7 +147,7 @@ error_condition(_Enum _Errcode,
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Val*|Значение кода ошибки для хранения в `error_condition`.|
 |*_Cat*|Категория ошибки для хранения в `error_condition`.|
@@ -157,7 +157,7 @@ error_condition(_Enum _Errcode,
 
 Первый конструктор сохраняет нулевое значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Второй конструктор сохраняет *val* как значение кода ошибки и указатель на [error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Второй конструктор сохраняет *val* как значение кода ошибки и указатель на [error_category](../standard-library/error-category-class.md).
 
 Третий конструктор сохраняет `(value_type)_Errcode` как значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -187,7 +187,7 @@ bool operator==(const error_condition& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Объект для проверки на равенство.|
 
@@ -209,7 +209,7 @@ bool operator!=(const error_condition& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Объект для проверки на неравенство.|
 
@@ -231,7 +231,7 @@ bool operator<(const error_condition& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Сравниваемый объект `error_condition`.|
 
@@ -257,7 +257,7 @@ error_condition(_Enum error,
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*_Errcode*|Значение перечисления для присвоения объекту `error_condition`.|
 

@@ -1,7 +1,7 @@
 ---
-title: оператор SIZE | Документы Microsoft
+title: оператор SIZE | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f365c0c4154f7f85f5bbd176a1a2c3c70bf1a7b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 537271f9964ff567744aa83dca2a497b0fe07f4d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679936"
 ---
 # <a name="operator-size"></a>Оператор SIZE
-Возвращает число байтов в *переменной* выделенной первой инициализатором.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-SIZE variable  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает число байтов в *переменной* выделенной с помощью первого инициализатор.
+
+## <a name="syntax"></a>Синтаксис
+
+> РАЗМЕР переменной
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

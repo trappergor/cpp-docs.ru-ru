@@ -18,43 +18,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c2ac6d8722bcdfed06ae97508b0ca7e5bb8ea00a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461975"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601456"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance - функция
-Регистрирует и возвращает экземпляр заданного типа, определенного в идентификатор указанного класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template<typename T>  
-inline HRESULT ActivateInstance(  
-   _In_ HSTRING activatableClassId,  
-   _Out_ Microsoft::WRL::Details::ComPtrRef<T> instance  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *T*  
- Типа, подлежащего активации.  
-  
- *activatableClassId*  
- Имя идентификатора класса, определяет параметр *T*.  
-  
- *экземпляр*  
- После завершения операции, ссылку на экземпляр *T*.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если выполнение прошло успешно; в противном случае ошибку HRESULT, которые указывают на причину ошибки.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Windows::Foundation  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Windows::Foundation](../windows/windows-foundation-namespace.md)
+
+Регистрирует и возвращает экземпляр заданного типа, определенного в идентификатор указанного класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<typename T>
+inline HRESULT ActivateInstance(
+   _In_ HSTRING activatableClassId,
+   _Out_ Microsoft::WRL::Details::ComPtrRef<T> instance
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*  
+Типа, подлежащего активации.
+
+*activatableClassId*  
+Имя идентификатора класса, определяет параметр *T*.
+
+*экземпляр*  
+После завершения операции, ссылку на экземпляр *T*.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае ошибку HRESULT, которые указывают на причину ошибки.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Windows::Foundation
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Windows::Foundation](../windows/windows-foundation-namespace.md)

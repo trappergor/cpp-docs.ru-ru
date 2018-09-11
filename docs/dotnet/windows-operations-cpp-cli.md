@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 198fd5bee9ea65888f24a0514ed6a2b79b0fa8c3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678033"
 ---
 # <a name="windows-operations-ccli"></a>Операции Windows (C++/CLI)
-Демонстрирует различные Windows задачи, связанные с [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Демонстрирует различные задачи конкретных Windows, с помощью пакета SDK для Windows.  
   
- В следующих разделах описываются различные операции Windows, выполняемые с [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] с помощью Visual C++.  
+ В следующих разделах описываются различные операции Windows, выполняемые с помощью пакета SDK Windows, с помощью Visual C++.  
 
 ## <a name="determine_shutdown"></a> Определить, запущена ли завершение работы
 В следующем примере кода показано, как определить, завершается ли в настоящее время приложение или .NET Framework. Это полезно для доступа к статических элементов в .NET Framework, поскольку во время завершения работы, эти конструкции являются завершается системой и не могут использоваться. Проверив <xref:System.Environment.HasShutdownStarted%2A> свойство во-первых, можно избежать потенциальных сбоев, не доступ к этим элементам.  
@@ -499,12 +499,10 @@ int main()
 ```  
   
 ### <a name="remarks"></a>Примечания  
- .NET Framework можно использовать для доступа к реестру с помощью <xref:Microsoft.Win32.Registry> и [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) классы, оба из которых определены в <xref:Microsoft.Win32> пространства имен. **Реестра** класс — это контейнер для статических экземпляров <xref:Microsoft.Win32.RegistryKey> класса. Каждый экземпляр представляет корневой узел реестра. Экземпляры <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, и <xref:Microsoft.Win32.Registry.Users>.  
+ .NET Framework можно использовать для доступа к реестру с помощью <xref:Microsoft.Win32.Registry> и [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) классы, оба из которых определены в <xref:Microsoft.Win32> пространства имен. **Реестра** класс — это контейнер для статических экземпляров <xref:Microsoft.Win32.RegistryKey> класса. Каждый экземпляр представляет корневой узел реестра. Экземпляры <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, и <xref:Microsoft.Win32.Registry.Users>.  
 
 ## <a name="related-sections"></a>Связанные разделы  
  <xref:System.Environment>  
   
 ## <a name="see-also"></a>См. также  
  [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
-
- [Введение в мониторинг производительности](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35) 

@@ -1,5 +1,5 @@
 ---
-title: 'HString:: ~ HString деструктор | Документы Microsoft'
+title: 'HString:: ~ HString деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad64aa4cde3f3654c243e047f83669e5f02deea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 394cabbd09a3eb2322424cd873e4d91825fa8c51
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874048"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603403"
 ---
 # <a name="hstringhstring-destructor"></a>Деструктор HString::~HString
-Удаляет текущий экземпляр класса HString.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
+
+Удаляет текущий экземпляр **HString** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 ~HString() throw()  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HString](../windows/hstring-class.md)
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HString](../windows/hstring-class.md)

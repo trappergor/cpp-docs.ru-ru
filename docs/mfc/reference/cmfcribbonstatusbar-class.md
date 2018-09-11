@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e82f22861016f5046cde1fa3a37889c994f111c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852465"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540297"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Класс CMFCRibbonStatusBar
 `CMFCRibbonStatusBar` Класс реализует элемент управления строки состояния, которая может отображать элементы ленты.  
@@ -259,7 +259,7 @@ BOOL CreateEx(
  Значение TRUE, если в строке состояния успешно создан, значение FALSE в противном случае.  
   
 ##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
@@ -340,7 +340,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
@@ -354,7 +354,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 int GetSpace() const;  
@@ -365,7 +365,7 @@ int GetSpace() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 BOOL IsBottomFrame() const;  
@@ -376,7 +376,7 @@ BOOL IsBottomFrame() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;  
@@ -426,7 +426,7 @@ virtual void OnDrawInformation(
  Переопределите этот метод в производном классе, если вы хотите настроить внешний вид строка с информацией в строке состояния. Используйте [CMFCRibbonStatusBar::SetInformation](#setinformation) метод для размещения в строке состояния в режиме сведения. В этом режиме скрывает все панели строки состояния и отображает сведения строкой, указанной параметром *strInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 virtual void RecalcLayout();

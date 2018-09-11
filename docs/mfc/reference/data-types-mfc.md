@@ -1,5 +1,5 @@
 ---
-title: Типы данных (MFC) | Документы Microsoft
+title: Типы данных (MFC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,23 +34,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121018"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199873"
 ---
 # <a name="data-types-mfc"></a>Типы данных (MFC)
-В этом разделе перечислены типы данных, наиболее часто используются в библиотеке Microsoft Foundation Class. Большинство типов данных являются такие же, как в платформы Development Kit (SDK), а другие представляют собой уникальные для MFC.  
+В этом разделе перечислены типы данных, чаще всего используется в библиотеке Microsoft Foundation Class. Большинство типов данных имеют такие же, как в платформе Software Development Kit (SDK), другие являются уникальными для MFC.  
   
- Сведения о типах данных, используемых в Windows SDK и MFC см. в разделе [типы данных Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Сведения о типах данных, используемых в пакет SDK для Windows и MFC, см. в разделе [типы данных Windows](/windows/desktop/WinProg/windows-data-types).  
   
- Следующие типы данных, уникальный для библиотеки классов Microsoft Foundation.  
+ Следующие типы данных, уникальные для библиотеки Microsoft Foundation Class.  
   
--   УСТАНОВИТЕ значение, используемое для обозначения позиции элемента в коллекции. используемые классы коллекций MFC.  
+-   УСТАНОВИТЕ значение, используемое для обозначения положение элемента в коллекции; используемые классы коллекций MFC.  
   
--   LPCRECT 32-разрядного указателя в константу (неизменяемым) `RECT` структуры.  
+-   LPCRECT 32-разрядный указатель на константу (неизменяемым) `RECT` структуры.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../mfc/class-library-overview.md)   

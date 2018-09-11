@@ -1,5 +1,5 @@
 ---
-title: Метод EventTargetArray::AddTail | Документы Microsoft
+title: Метод EventTargetArray::AddTail | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6609bba6d7adbddda152007e4db45c82f8039bc0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872287"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603682"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>Метод EventTargetArray::AddTail
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void AddTail(  
-   _In_ IUnknown* element  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `element`  
- Указатель на обработчик событий для добавления.  
-  
-## <a name="remarks"></a>Примечания  
- Добавляет указанный обработчик события в конец массива внутренних обработчиков событий.  
-  
- AddTail() предназначен для внутреннего использования только класса EventSource.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Eventtargetarray-класс](../windows/eventtargetarray-class.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void AddTail(
+   _In_ IUnknown* element
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Элемент*  
+Указатель на обработчик событий для добавления.
+
+## <a name="remarks"></a>Примечания
+
+Добавляет указанный обработчик событий в конец внутреннего массива из обработчиков событий.
+
+**AddTail()** предназначен для использования в среде только `EventSource` класса.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Класс EventTargetArray](../windows/eventtargetarray-class.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ef525ee1b000c7f374260961de17076eb4734e7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961016"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108854"
 ---
 # <a name="studenttdistribution-class"></a>Класс student_t_distribution
 
@@ -74,7 +74,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*<br/>
+По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -89,7 +90,7 @@ public:
 
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
 
-Дополнительные сведения о *t*-распределении Стьюдента см. в статье [T-распределение Стьюдента](http://go.microsoft.com/fwlink/p/?linkid=401094) на веб-сайте Wolfram MathWorld.
+Дополнительные сведения о *t*-распределении Стьюдента см. в статье [T-распределение Стьюдента](http://mathworld.wolfram.com/Studentst-Distribution.html) на веб-сайте Wolfram MathWorld.
 
 ## <a name="example"></a>Пример
 
@@ -184,9 +185,10 @@ explicit student_t_distribution(const param_type& parm);
 ### <a name="parameters"></a>Параметры
 
 *n*  
- Параметр распределения `n`.
+Параметр распределения `n`.
 
-*parm* пакет параметров, используемый для формирования распределения.
+*parm*<br/>
+Пакет параметров, используемый для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 

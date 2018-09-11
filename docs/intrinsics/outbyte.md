@@ -1,5 +1,5 @@
 ---
-title: __outbyte | Документы Microsoft
+title: __outbyte | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73d32b9300a5a581306d926688230660cd998b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70aa643d7d8f81cca0ff74a3016badd6551c11a0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330627"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539331"
 ---
 # <a name="outbyte"></a>__outbyte
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки `out` инструкции, которая отправляет 1 байт, определяемое `Data` исходящий порт ввода-вывода, заданные `Port`.  
+ Создает `out` инструкция, которая отправляет 1 байт, установленный параметром `Data` номера порта ввода-вывода, определяемое `Port`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,13 +43,13 @@ void __outbyte(
  Порт для отправки данных.  
   
  [in] `Data`  
- Байт для отправки указанный порт.  
+ Байт, будут отправлены для указанного порта.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__outbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbyte`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   

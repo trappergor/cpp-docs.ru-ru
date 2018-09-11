@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b1a4d3d44f7ce18486feab4096673970857a0907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849920"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214981"
 ---
 # <a name="cscrollview-class"></a>Класс CScrollView
 Объект [CView](../../mfc/reference/cview-class.md) с возможностями прокрутки.  
@@ -86,9 +86,9 @@ class CScrollView : public CView
   
 -   Он автоматически прокручивается в ответ на сообщения от клавиатуры, мыши непрокручиваемых или Поворачивайте колесико.  
   
- Чтобы автоматически перейти в ответ на сообщения с помощью клавиатуры, добавьте сообщение WM_KEYDOWN и тестирования для VK_DOWN, VK_PREV и вызов [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ Чтобы автоматически перейти в ответ на сообщения с помощью клавиатуры, добавьте сообщение WM_KEYDOWN и тестирования для VK_DOWN, VK_PREV и вызов [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos).  
   
- Колесико мыши, прокрутка самостоятельно путем переопределения размещенный сообщения можно обрабатывать [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) и [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) функций-членов. Как и для `CScrollView`, эти функции-члены поддерживают рекомендуемые поведение для [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), сообщением о повороте колеса.  
+ Колесико мыши, прокрутка самостоятельно путем переопределения размещенный сообщения можно обрабатывать [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) и [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) функций-членов. Как и для `CScrollView`, эти функции-члены поддерживают рекомендуемые поведение для [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), сообщением о повороте колеса.  
   
  Чтобы воспользоваться преимуществами автоматическую прокрутку, являются производными от класса представления `CScrollView` вместо из `CView`. Когда сначала создается представление, чтобы вычислить размер прокручиваемой представления, в зависимости от размера документа, вызов `SetScrollSizes` функции-члена из переопределенный либо [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) или [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Необходимо написать собственный код, чтобы запросить размер документа. Например, см. в разделе [пример Scribble](../../visual-cpp-samples.md).)  
   

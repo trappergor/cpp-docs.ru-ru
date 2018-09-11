@@ -17,74 +17,78 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ace2b62197b652baeb7e287a582b521252270f6d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467148"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691240"
 ---
 # <a name="bindable"></a>bindable
-Указывает, что свойство поддерживает привязку данных.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-[bindable]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Bindable** атрибут C++ имеет ту же функциональность, что [bindable](http://msdn.microsoft.com/library/windows/desktop/aa366738) описании атрибута MIDL. Его можно использовать на свойства, определенные с [propget](../windows/propget.md), [propput](../windows/propput.md), или [propputref](../windows/propputref.md) атрибуты, или можно вручную определить метод привязки.  
-  
- В следующих примерах MFC показано использование **bindable**:  
-  
--   [Примеры элементов управления: Элементы управления ActiveX на основе MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
-  
--   [Кр образец: Элемент управления ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
-  
--   [Образец TESTHELP: Элемент управления ActiveX с помощью подсказки и помощь](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
-  
-## <a name="example"></a>Пример  
- В следующем коде показано, как можно использовать **bindable** свойства:  
-  
-```cpp  
-// cpp_attr_ref_bindable.cpp  
-// compile with: /LD  
-#include <windows.h>  
-[  
-   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"),  
-   dispinterface,  
+
+Указывает, что свойство поддерживает привязку данных.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[bindable]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Bindable** атрибут C++ имеет ту же функциональность, что [bindable](/windows/desktop/Midl/bindable) описании атрибута MIDL. Его можно использовать на свойства, определенные с [propget](../windows/propget.md), [propput](../windows/propput.md), или [propputref](../windows/propputref.md) атрибуты, или можно вручную определить метод привязки.
+
+В следующих примерах MFC показано использование **bindable**:
+
+- [Примеры элементов управления: Элементы управления ActiveX на основе MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+
+- [Кр образец: Элемент управления ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+
+- [Образец TESTHELP: Элемент управления ActiveX с помощью подсказки и помощь](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+
+## <a name="example"></a>Пример
+
+В следующем коде показано, как можно использовать **bindable** свойства:
+
+```cpp
+// cpp_attr_ref_bindable.cpp
+// compile with: /LD
+#include <windows.h>
+[
+   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"),
+   dispinterface,
    helpstring("property demo Interface")  
-]  
-__interface IPropDemo : IDispatch {  
-  
-   [propget, id(1), bindable, displaybind, defaultbind, requestedit] HRESULT P1([out, retval] long *nSize);  
-   [propput, id(1), bindable, displaybind, defaultbind, requestedit] HRESULT P1([in] long nSize);  
-   [id(3), bindable, propget] HRESULT Object([out, retval] IDispatch **ppObj);  
-   [id(3), bindable, propputref] HRESULT Object([in] IDispatch* pObj);     
-   [id(-552), helpstring("method AboutBox")] HRESULT AboutBox();  
-};  
-  
-[ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Метод интерфейса|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [defaultbind](../windows/defaultbind.md)   
- [displaybind](../windows/displaybind.md)   
- [immediatebind](../windows/immediatebind.md)   
- [requestedit](../windows/requestedit.md)   
+]
+__interface IPropDemo : IDispatch {
+
+   [propget, id(1), bindable, displaybind, defaultbind, requestedit] HRESULT P1([out, retval] long *nSize);
+   [propput, id(1), bindable, displaybind, defaultbind, requestedit] HRESULT P1([in] long nSize);
+   [id(3), bindable, propget] HRESULT Object([out, retval] IDispatch **ppObj);
+   [id(3), bindable, propputref] HRESULT Object([in] IDispatch* pObj);
+   [id(-552), helpstring("method AboutBox")] HRESULT AboutBox();
+};
+
+[ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[defaultbind](../windows/defaultbind.md)  
+[displaybind](../windows/displaybind.md)  
+[immediatebind](../windows/immediatebind.md)  
+[requestedit](../windows/requestedit.md)  

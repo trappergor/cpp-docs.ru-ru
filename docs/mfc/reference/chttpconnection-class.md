@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e773e57b4cdaee09331dab651f41f1fa8db211
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bbc42f1af6dab8c34c6092e604682669ab18b9bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336066"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211581"
 ---
 # <a name="chttpconnection-class"></a>Класс CHttpConnection
 Управление подключением к HTTP-серверу.  
@@ -129,7 +129,7 @@ CHttpConnection(
 |НЕНУЛЕВЫЕ строковые|НЕНУЛЕВЫЕ строковые|*pstrUserName*|*pstrPassword*|  
   
  *dwFlags*  
- Любое сочетание **INTERNET_ FLAG_\***  флаги. См. в таблице в **"Примечания"** раздел [CHttpConnection::OpenRequest](#openrequest) описание *dwFlags* значения.  
+ Любое сочетание `INTERNET_FLAG_*` флаги. См. в таблице в **"Примечания"** раздел [CHttpConnection::OpenRequest](#openrequest) описание *dwFlags* значения.  
   
 ### <a name="remarks"></a>Примечания  
  Никогда не создаст `CHttpConnection` напрямую. Вместо этого вы создаете объект, вызвав [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  

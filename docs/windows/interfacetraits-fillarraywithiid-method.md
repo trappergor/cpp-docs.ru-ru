@@ -1,5 +1,5 @@
 ---
-title: Метод InterfaceTraits::FillArrayWithIid | Документы Microsoft
+title: Метод InterfaceTraits::FillArrayWithIid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6e32b2e40ba9dc2b8085f8edc99beb899e90ace
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fc4679d9e6d3a4fdfc112d8a8b471ceb2646ecc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877505"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583732"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>Метод InterfaceTraits::FillArrayWithIid
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-__forceinline static void FillArrayWithIid(  
-   _Inout_ unsigned long &index,  
-   _In_ IID* iids  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `index`  
- Указатель на поле, содержащее значение отсчитываемый от нуля индекс.  
-  
- `iids`  
- Массив идентификаторов интерфейса.  
-  
-## <a name="remarks"></a>Примечания  
- Назначает идентификатор интерфейса `Base` на элемент массива, заданного аргументом индекса.  
-  
- В отличие от имени этого API только один массив элемент изменен; не весь массив.  
-  
- Дополнительные сведения о `Base`, см. в разделе определения открытых типов в [InterfaceTraits-структура](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [InterfaceTraits-структура](../windows/interfacetraits-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Индекс*  
+Указатель на поле, содержащее значение отсчитываемый от нуля индекс.
+
+*идентификаторы IID*  
+Массив идентификаторов интерфейсов.
+
+## <a name="remarks"></a>Примечания
+
+Назначает идентификатор интерфейса `Base` к элементу массива, указанного аргументом индекса.
+
+В отличие от имени этого API только один массив изменяется; не весь массив.
+
+Дополнительные сведения о `Base`, см. в разделе общедоступные определения типов в [interfacetraits-структура](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

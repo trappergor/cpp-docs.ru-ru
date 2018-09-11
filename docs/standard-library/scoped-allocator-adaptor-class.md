@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62bdeeddf0e81cf017c49eac51ca0e2eaaf046c1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962934"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104071"
 ---
 # <a name="scopedallocatoradaptor-class"></a>Класс scoped_allocator_adaptor
 
@@ -67,7 +67,7 @@ class scoped_allocator_adaptor;
 
 В целях демонстрации определено три типа:
 
-|Тип|Описание:|
+|Тип|Описание|
 |----------|-----------------|
 |`Outermost`|Тип параметра `OUTERMOST(*this)`.|
 |`Outermost_traits`|`allocator_traits<Outermost>`|
@@ -75,13 +75,13 @@ class scoped_allocator_adaptor;
 
 ### <a name="constructors"></a>Конструкторы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Создает объект `scoped_allocator_adaptor`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`const_pointer`|Этот тип является синонимом `const_pointer`, связанного с распределителем `Outer`.|
 |`const_void_pointer`|Этот тип является синонимом `const_void_pointer`, связанного с распределителем `Outer`.|
@@ -98,13 +98,13 @@ class scoped_allocator_adaptor;
 
 ### <a name="structs"></a>Структуры
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Структура scoped_allocator_adaptor::rebind](#rebind_struct)|Определяет тип `Outer::rebind\<Other>::other` как синоним для `scoped_allocator_adaptor\<Other, Inner...>`.|
 
 ### <a name="methods"></a>Методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[allocate](#allocate)|Выделяет память, используя распределитель `Outer`.|
 |[construct](#construct)|Создает объект.|
@@ -131,9 +131,11 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Параметры
 
-*число* количество элементов, для которых является достаточно места для выделения.
+*count*<br/>
+Количество элементов, для которых необходимо выделить достаточный объем памяти.
 
-*Указание* указатель, который может помочь объекту распределителя, найдя адрес объекта, выделенного до запроса.
+*Указание*<br/>
+Указатель, который может помочь объекту распределителя, найдя адрес объекта, который был выделен до этого запроса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -168,15 +170,20 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель на область памяти, где будет создаваться объект.
+*ptr*<br/>
+Указатель на место в памяти, где необходимо создать объект.
 
-*args* списка аргументов.
+*аргументы*<br/>
+Список аргументов.
 
-*Первый* объект первого типа в паре.
+*Первый*<br/>
+Объект первого типа в паре.
 
-*второй* объект второго типа в паре.
+*second*<br/>
+Объект второго типа в паре.
 
-*правом* существующий объект, который необходимо переместить или скопировать.
+*right*<br/>
+Существующий объект, который необходимо переместить или копировать.
 
 ### <a name="remarks"></a>Примечания
 
@@ -208,9 +215,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель на начальное расположение освобождаемых объектов.
+*ptr*<br/>
+Указатель на начальное расположение освобождаемых объектов.
 
-*число* количество освобождаемых объектов.
+*count*<br/>
+Количество освобождаемых объектов.
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
 
@@ -223,7 +232,8 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель на уничтожаемый объект.
+*ptr*<br/>
+Указатель на уничтожаемый объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -283,10 +293,10 @@ scoped_allocator_adaptor();
 scoped_allocator_adaptor(const scoped_allocator_adaptor& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
+const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
+scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
@@ -294,11 +304,14 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Параметры
 
-*правом* существующий `scoped_allocator_adaptor`.
+*right*<br/>
+Существующий `scoped_allocator_adaptor`.
 
-*Al* существующий распределитель, который будет служить внешний распределитель.
+*Al*<br/>
+Существующий распределитель, который следует использовать как внешний распределитель.
 
-*REST* список распределителей, которые будут использоваться как внутренние Распределители.
+*REST*<br/>
+Список распределителей, которые следует использовать как внутренние распределители.
 
 ### <a name="remarks"></a>Примечания
 

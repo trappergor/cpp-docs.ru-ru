@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58362b46050a7e2a504a4cd78085975e1c5e1a6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c66ca089a54f00148cf683612e529f1cd0505445
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025774"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685410"
 ---
 # <a name="mfc-dll-wizard"></a>мастер DLL [MFC]
 При использовании мастера MFC DLL для создания проекта MFC DLL, вы получаете работающее приложение со встроенной функциональностью, после компиляции будет реализовывать основные возможности [DLL](../../build/dlls-in-visual-cpp.md). Начальная программа MFC включает в себя (.cpp) исходные файлы C++, файлы ресурсов (.rc) и файл проекта (VCXPROJ-файл). Код, созданный в этих начальный набор файлов зависит от MFC. Дополнительные сведения см. в разделе о файлах файла readme.txt, которая создается для проекта в Visual Studio и [классы и функции, созданных с помощью мастера MFC DLL](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,6 @@ ms.locfileid: "39025774"
  [Создание проектов Visual C++ и управление ими](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Страницы свойств](../../ide/property-pages-visual-cpp.md)   
  [Работа со свойствами проектов](../../ide/working-with-project-properties.md)   
- [Развертывание приложений](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [Класс MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Добавление функции-члена](../../ide/adding-a-member-function-visual-cpp.md)   
  [Реализация интерфейса](../../ide/implementing-an-interface-visual-cpp.md)   

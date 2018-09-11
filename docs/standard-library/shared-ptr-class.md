@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957526"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109879"
 ---
 # <a name="sharedptr-class"></a>Класс shared_ptr
 
@@ -139,20 +139,20 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[shared_ptr](#shared_ptr)|Создает документ `shared_ptr`.|
 |[shared_ptr::~shared_ptr](#dtorshared_ptr)|Удаляет `shared_ptr`.|
 
 ### <a name="types"></a>Типы
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[element_type](#element_type)|Тип элемента.|
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[get](#get)|Возвращает адрес принадлежащего ресурса.|
 |[owner_before](#owner_before)|Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.|
@@ -163,7 +163,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[shared_ptr::operator bool](#op_bool)|Проверяет существование принадлежащего ресурса.|
 |[shared_ptr::operator*](#op_star)|Возвращает указанное значение.|
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Параметры
 
-*SP* общий указатель для копирования.
+*SP*<br/>
+Общий указатель для копирования.
 
-*AP* автоматический указатель для копирования.
+*тихоокеанского региона*<br/>
+"Автоматический" указатель ( auto_ptr ) для копирования
 
 ### <a name="remarks"></a>Примечания
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* `lvalue` ссылки `shared_ptr` или `weak_ptr`.
+*ptr*<br/>
+Ссылка `lvalue` на значение `shared_ptr` или `weak_ptr`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Параметры
 
-*Другие* тип, управляемый указатель на аргумент.
+*Другое*<br/>
+Тип, управляемый указателем аргумента.
 
-*D* тип метода удаления.
+*D*<br/>
+Тип метода удаления.
 
-*PTR* указатель для копирования.
+*ptr*<br/>
+Копируемый указатель.
 
-*dtor* метод удаления для копирования.
+*dtor*<br/>
+Метод удаления для копирования.
 
-*Объект* тип распределителя.
+*A*<br/>
+Тип распределителя.
 
-*Alloc* распределитель для копирования.
+*Alloc*<br/>
+Распределитель для копирования.
 
 ### <a name="remarks"></a>Примечания
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Параметры
 
-*Другие* тип, управляемый указатель на аргумент.
+*Другое*<br/>
+Тип, управляемый указателем аргумента.
 
-*PTR* указатель для копирования.
+*ptr*<br/>
+Копируемый указатель.
 
-*D* тип метода удаления.
+*D*<br/>
+Тип метода удаления.
 
-*Объект* тип распределителя.
+*A*<br/>
+Тип распределителя.
 
-*dtor* метод удаления.
+*dtor*<br/>
+Метод удаления.
 
-*ator* распределителя.
+*ator*<br/>
+Распределитель.
 
-*SP* интеллектуальный указатель для копирования.
+*SP*<br/>
+Интеллектуальный указатель для копирования
 
-*WP* слабый указатель.
+*WP*<br/>
+Слабый указатель.
 
-*AP* автоматический указатель для копирования.
+*тихоокеанского региона*<br/>
+"Автоматический" указатель ( auto_ptr ) для копирования
 
 ### <a name="remarks"></a>Примечания
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Параметры
 
-*SP* общий указатель, который будет заменен.
+*SP*<br/>
+Разделяемый указатель (shared_ptr), с которым требуется произвести обмен контролируемыми объектами.
 
 ### <a name="remarks"></a>Примечания
 

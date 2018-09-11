@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b632fabe8f596d46a0423d670ff57bb12de93cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cdef0e68e50085513871d1fcacd9cfdb302e9f51
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953460"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107575"
 ---
 # <a name="pointertobinaryfunction-class"></a>Класс pointer_to_binary_function
 
@@ -44,11 +44,14 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*pfunc* бинарная функция для преобразования.
+*pfunc*<br/>
+Бинарная функция для преобразования.
 
-*слева* левый объект,  *\*pfunc* вызывается.
+*left*<br/>
+Левый объект, для которого вызывается функция *\*pfunc*.
 
-*правом* правый объект,  *\*pfunc* вызывается.
+*right*<br/>
+Правый объект, для которого вызывается функция *\*pfunc*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

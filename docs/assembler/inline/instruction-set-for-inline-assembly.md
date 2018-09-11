@@ -1,7 +1,7 @@
 ---
-title: Набор инструкций для встроенной сборки | Документы Microsoft
+title: Набор инструкций для встроенной сборки | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f5aea757506dd3bf48056a139f381e9d8a883
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02fe69fad2e1ef9fb8aa0c5aa23913ccf403e15a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051121"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693999"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Набор инструкций для встроенного кода на языке ассемблера
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
- Компилятор Visual C++ поддерживает все коды операций при использовании Pentium 4 и AMD Athlon. Можно создать дополнительные инструкции, поддерживаемые целевой процессор с [_emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md).  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Использование языка ассемблера в блоках __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+Компилятор Visual C++ поддерживает все коды операций при использовании Pentium 4 и AMD Athlon. Дополнительные инструкции, поддерживаемые целевой процессор могут создаваться с помощью [_emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md).
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Использование языка ассемблера в блоках __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

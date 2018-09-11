@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d668d99c8fa2b9001b0693a5e38e8e6941d087b6
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337633"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684961"
 ---
 # <a name="clistctrl-class"></a>Класс CListCtrl
 Инкапсулирует функциональность элемента управления "список", который отображает коллекцию элементов, где каждый элемент состоит из значка (списка изображений) и метки.  
@@ -294,13 +294,13 @@ class CListCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CListCtrl::CListCtrl](#clistctrl)|Создает объект `CListCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CListCtrl::ApproximateViewRect](#approximateviewrect)|Определяет ширину и высоту, необходимые для отображения элементов элемента управления представления списка.|  
 |[CListCtrl::Arrange](#arrange)|Выравнивает элементы на сетку.|  
@@ -545,7 +545,7 @@ CSize ApproximateViewRect(
  Объект `CSize` , содержащий приблизительную ширину и высоту, необходимые для отображения элементов, в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_ApproximateViewRect](http://msdn.microsoft.com/library/windows/desktop/bb761231), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_ApproximateViewRect](/windows/desktop/api/commctrl/nf-commctrl-listview_approximateviewrect), как описано в пакете Windows SDK.  
   
 ##  <a name="arrange"></a>  CListCtrl::Arrange  
  Перемещает элементы в представлении значками, таким образом, чтобы они были выровнены по сетке.  
@@ -589,7 +589,7 @@ void CancelEditLabel();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_CANCELEDITLABEL](http://msdn.microsoft.com/library/windows/desktop/bb774886) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_CANCELEDITLABEL](/windows/desktop/Controls/lvm-canceleditlabel) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="clistctrl"></a>  CListCtrl::CListCtrl  
  Создает объект `CListCtrl`.  
@@ -611,10 +611,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- Задает стиль элемента управления списком. Любое сочетание стилей элемента управления "список" примените к элементу управления. См. в разделе [стили окна представления списка](http://msdn.microsoft.com/library/windows/desktop/bb774739) в пакете Windows SDK для полный список этих стилей. Расширенные стили, определенные для элемента управления с помощью набора [SetExtendedStyle](#setextendedstyle).  
+ Задает стиль элемента управления списком. Любое сочетание стилей элемента управления "список" примените к элементу управления. См. в разделе [стили окна представления списка](/windows/desktop/Controls/list-view-window-styles) в пакете Windows SDK для полный список этих стилей. Расширенные стили, определенные для элемента управления с помощью набора [SetExtendedStyle](#setextendedstyle).  
   
  *Rect*  
- Задает размер и положение элемента управления списком. Может быть либо `CRect` объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
+ Задает размер и положение элемента управления списком. Может быть либо `CRect` объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
   
  *pParentWnd*  
  Указывает родительского окна элемента управления списком, обычно `CDialog`. Он не должен иметь значение NULL.  
@@ -653,13 +653,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
- Задает стиль элемента управления списком. Любое сочетание стилей элемента управления "список" примените к элементу управления. Полный список этих стилей, см. в разделе [стили окна представления списка](http://msdn.microsoft.com/library/windows/desktop/bb774739) в пакете Windows SDK.  
+ Задает стиль элемента управления списком. Любое сочетание стилей элемента управления "список" примените к элементу управления. Полный список этих стилей, см. в разделе [стили окна представления списка](/windows/desktop/Controls/list-view-window-styles) в пакете Windows SDK.  
   
  *Rect*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
   
  *pParentWnd*  
  Указатель на окно, которое является родительским для элемента управления.  
@@ -673,7 +673,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_**.  
   
- `CreateEx` Создает элемент управления с помощью расширенных стилей Windows, определяемое *dwExStyle*. Чтобы задать расширенные стили к элементу управления, вызовите [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` такие стили заданы как WS_EX_CONTEXTHELP, но используют `SetExtendedStyle` должны стать LVS_EX_FULLROWSELECT подобные стили. Дополнительные сведения см. в разделе стили, описанную в разделе [расширенных стилей представления списка](http://msdn.microsoft.com/library/windows/desktop/bb774732) в пакете Windows SDK.  
+ `CreateEx` Создает элемент управления с помощью расширенных стилей Windows, определяемое *dwExStyle*. Чтобы задать расширенные стили к элементу управления, вызовите [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` такие стили заданы как WS_EX_CONTEXTHELP, но используют `SetExtendedStyle` должны стать LVS_EX_FULLROWSELECT подобные стили. Дополнительные сведения см. в разделе стили, описанную в разделе [расширенных стилей представления списка](/windows/desktop/Controls/extended-list-view-styles) в пакете Windows SDK.  
   
 ##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage  
  Создает список изображение перетаскивания для элемента, заданного посредством *nItem*.  
@@ -689,7 +689,7 @@ CImageList* CreateDragImage(
  Индекс элемента, список изображений, перетащите будет создано.  
   
  *lpPoint*  
- Адрес [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, которая получает начальное расположение верхнего левого угла изображения, в представлении координаты.  
+ Адрес [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, которая получает начальное расположение верхнего левого угла изображения, в представлении координаты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на список изображений перетаскивания, если выполнение прошло успешно; в противном случае имеет значение NULL.  
@@ -791,7 +791,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  Длинный указатель на `DRAWITEMSTRUCT` структуру, содержащую сведения о типе документа требуется.  
   
 ### <a name="remarks"></a>Примечания  
- `itemAction` Членом [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) структура определяет рисования действие, которое должно быть выполнено.  
+ `itemAction` Членом [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) структура определяет рисования действие, которое должно быть выполнено.  
   
  По умолчанию эта функция-член ничего не делает. Переопределите эту функцию-член для реализации рисования для рисуемого владельцем `CListCtrl` объекта.  
   
@@ -849,7 +849,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 - **Значение -1** произошел сбой операции.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_ENABLEGROUPVIEW](http://msdn.microsoft.com/library/windows/desktop/bb774900) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_ENABLEGROUPVIEW](/windows/desktop/Controls/lvm-enablegroupview) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="ensurevisible"></a>  CListCtrl::EnsureVisible  
  Гарантирует, что элемент списка по крайней мере частично видимой.  
@@ -893,7 +893,7 @@ int FindItem(
   
 ### <a name="parameters"></a>Параметры  
  *pFindInfo*  
- Указатель на [LVFINDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774745) структуру, содержащую сведения об элементе для поиска.  
+ Указатель на [LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa) структуру, содержащую сведения об элементе для поиска.  
   
  *nвремя запуска*  
  Индекс элемента, чтобы начать поиск с или -1, чтобы начать с самого начала. Элемент по *nвремя запуска* исключены из поиска в том случае, если *nвремя запуска* не равно -1.  
@@ -949,7 +949,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
  Возвращает ненулевое значение, если успешно, или нуль, которые в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод реализует поведение макроса Win32, [ListView_GetBkImage](http://msdn.microsoft.com/library/windows/desktop/bb761246), как описано в пакете Windows SDK.  
+ Этот метод реализует поведение макроса Win32, [ListView_GetBkImage](/windows/desktop/api/commctrl/nf-commctrl-listview_getbkimage), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 
@@ -998,7 +998,7 @@ BOOL GetCheck(int nItem) const;
  Ненулевое значение, если элемент выделен, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetCheckState](http://msdn.microsoft.com/library/windows/desktop/bb761250), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetCheckState](/windows/desktop/api/commctrl/nf-commctrl-listview_getcheckstate), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::SetCheck](#setcheck).  
@@ -1017,7 +1017,7 @@ BOOL GetColumn(
  Индекс столбца, атрибуты которого должны быть получены.  
   
  *pColumn*  
- Адрес [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) структура, которая определяет сведения для извлечения и получает сведения о столбце. `mask` Элемент задает, какой столбец атрибуты для извлечения. Если `mask` элемент задает значение LVCF_TEXT `pszText` член должен содержать адрес буфера, который получает текст элемента и `cchTextMax` члена необходимо указать размер буфера.  
+ Адрес [LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) структура, которая определяет сведения для извлечения и получает сведения о столбце. `mask` Элемент задает, какой столбец атрибуты для извлечения. Если `mask` элемент задает значение LVCF_TEXT `pszText` член должен содержать адрес буфера, который получает текст элемента и `cchTextMax` члена необходимо указать размер буфера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -1061,7 +1061,7 @@ BOOL GetColumnOrderArray(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb761254), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetColumnOrderArray](/windows/desktop/api/commctrl/nf-commctrl-listview_getcolumnorderarray), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 
@@ -1165,7 +1165,7 @@ CString GetEmptyText() const;
  Объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) , содержащий текст, отображаемый, если элемент управления является пустым.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [LVM_GETEMPTYTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774921) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_GETEMPTYTEXT](/windows/desktop/Controls/lvm-getemptytext) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getextendedstyle"></a>  CListCtrl::GetExtendedStyle  
  Извлекает текущий расширенные стили элемента управления представления списка.  
@@ -1175,10 +1175,10 @@ DWORD GetExtendedStyle();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Сочетание расширенные стили в настоящий момент в списке просмотра элемента управления. Список этих расширенных стилей, см. в разделе [расширенных стилей представления списка](http://msdn.microsoft.com/library/windows/desktop/bb774732) темы в Windows SDK.  
+ Сочетание расширенные стили в настоящий момент в списке просмотра элемента управления. Список этих расширенных стилей, см. в разделе [расширенных стилей представления списка](/windows/desktop/Controls/extended-list-view-styles) темы в Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb761264), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetExtendedListViewStyle](/windows/desktop/api/commctrl/nf-commctrl-listview_getextendedlistviewstyle), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::SetExtendedStyle](#setextendedstyle).  
@@ -1226,7 +1226,7 @@ int GetFocusedGroup() const;
  Индекс группы, состояние которого отличается от LVGS_FOCUSED, если такая группа; в противном случае — значение -1.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [LVM_GETFOCUSEDGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774925) сообщения, который описан в пакете Windows SDK. Дополнительные сведения см. в разделе значение LVGS_FOCUSED `state` членом [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) структуры.  
+ Этот метод отправляет [LVM_GETFOCUSEDGROUP](/windows/desktop/Controls/lvm-getfocusedgroup) сообщения, который описан в пакете Windows SDK. Дополнительные сведения см. в разделе значение LVGS_FOCUSED `state` членом [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры.  
   
 ##  <a name="getgroupcount"></a>  CListCtrl::GetGroupCount  
  Возвращает число групп в текущего элемента управления представление списка.  
@@ -1239,7 +1239,7 @@ int GetGroupCount()const;
  Число групп в элементе управления представления списка.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [LVM_GETGROUPCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774931) --> сообщение, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_GETGROUPCOUNT](/windows/desktop/Controls/lvm-getgroupcount) --> сообщение, который описан в пакете Windows SDK.  
   
 ##  <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo  
  Возвращает сведения для указанной группы управления представления списком.  
@@ -1255,13 +1255,13 @@ int GetGroupInfo(
  Идентификатор группы, сведения о которой требуется получить.  
   
  *pgrp*  
- Указатель на [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) содержащий сведения о группе, указанной.  
+ Указатель на [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) содержащий сведения о группе, указанной.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В противном случае возвращает идентификатор группы, в случае успешного выполнения или значение -1.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb774932) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETGROUPINFO](/windows/desktop/Controls/lvm-getgroupinfo) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex  
  Извлекает сведения об указанной группе в текущего элемента управления представление списка.  
@@ -1274,16 +1274,16 @@ BOOL GetGroupInfoByIndex(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *iIndex*|Отсчитываемый от нуля индекс в группе.|  
-|[out] *pGroup*|Указатель на [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) структуры, который получает сведения о группе, указанной параметром *iIndex* параметра.<br /><br /> Вызывающий объект отвечает за инициализацию членов [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) структуры. Задайте `cbSize` член размер структуры и флаги `mask` указал информацию необходимо вернуть.|  
+|[out] *pGroup*|Указатель на [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры, который получает сведения о группе, указанной параметром *iIndex* параметра.<br /><br /> Вызывающий объект отвечает за инициализацию членов [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры. Задайте `cbSize` член размер структуры и флаги `mask` указал информацию необходимо вернуть.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [LVM_GETGROUPINFOBYINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774933) --> сообщение, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933) --> сообщение, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяет переменную, `m_listCtrl`, который используется для доступа к текущего элемента управления представление списка. Эта переменная используется в следующем примере.  
@@ -1334,10 +1334,10 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
   
 ### <a name="parameters"></a>Параметры  
  *pGroupMetrics*  
- Указатель на [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) содержащий сведения о группе показателей.  
+ Указатель на [LVGROUPMETRICS](/windows/desktop/api/commctrl/ns-commctrl-taglvgroupmetrics) содержащий сведения о группе показателей.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774934) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETGROUPMETRICS](/windows/desktop/Controls/lvm-getgroupmetrics) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getgrouprect"></a>  CListCtrl::GetGroupRect  
  Получает ограничивающий прямоугольник для указанной группы в текущего элемента управления представление списка.  
@@ -1351,19 +1351,19 @@ BOOL GetGroupRect(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *iGroupId*|Задает группу.|  
-|[in, out] *lpRect*|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Если этот метод выполняется успешно, структуры получает координаты прямоугольника, группы, который задается параметром *iGroupId*.|  
+|[in, out] *lpRect*|Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Если этот метод выполняется успешно, структуры получает координаты прямоугольника, группы, который задается параметром *iGroupId*.|  
 |[in] *iCoords*|Задает для извлечения координат прямоугольника. Используйте одно из следующих значений:<br /><br /> -LVGGR_GROUP - координаты (по умолчанию) всего развернутой группы.<br />-LVGGR_HEADER - координаты только заголовок (свернутой группы).<br />-LVGGR_SUBSETLINK - координирует только подмножество ссылки (подмножество разметки).|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Вызывающий объект отвечает за распределение [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, на которые указывают *pRect* параметра.  
+ Вызывающий объект отвечает за распределение [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, на которые указывают *pRect* параметра.  
   
- Этот метод отправляет [LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяет переменную, `m_listCtrl`, который используется для доступа к текущего элемента управления представление списка. Эта переменная используется в следующем примере.    
@@ -1404,18 +1404,18 @@ UINT GetGroupState(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *iGroupId*|Отсчитываемый от нуля индекс в группе.|  
-|[in] *dwMask*|Маска, указывающая значение состояния для извлечения для указанной группы. Дополнительные сведения см. в разделе `mask` членом [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) структуры.|  
+|[in] *dwMask*|Маска, указывающая значение состояния для извлечения для указанной группы. Дополнительные сведения см. в разделе `mask` членом [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Запрошенное состояние для указанной группы, или 0, если не удается найти группу.  
   
 ### <a name="remarks"></a>Примечания  
- Возвращаемое значение является результатом побитовую операцию и на *dwMask* параметр и значение `state` членом [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) структура, представляющая текущий элемент управления представление списка.  
+ Возвращаемое значение является результатом побитовую операцию и на *dwMask* параметр и значение `state` членом [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структура, представляющая текущий элемент управления представление списка.  
   
- Этот метод отправляет [LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936) сообщения, который описан в пакете Windows SDK. Дополнительные сведения см. в разделе [ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288) макрос.  
+ Этот метод отправляет [LVM_GETGROUPSTATE](/windows/desktop/Controls/lvm-getgroupstate) сообщения, который описан в пакете Windows SDK. Дополнительные сведения см. в разделе [ListView_GetGroupState](/windows/desktop/api/commctrl/nf-commctrl-listview_getgroupstate) макрос.  
   
 ##  <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl  
  Извлекает элемент управления заголовка элемента управления представления списка.  
@@ -1428,7 +1428,7 @@ CHeaderCtrl* GetHeaderCtrl();
  Указатель на элемент управления заголовка, используемые элементом управления представления списка.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetHeader](http://msdn.microsoft.com/library/windows/desktop/bb761290), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetHeader](/windows/desktop/api/commctrl/nf-commctrl-listview_getheader), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).  
@@ -1444,7 +1444,7 @@ HCURSOR GetHotCursor();
  Дескриптор текущего курсора с горячей ресурса используется в элементе управления представления списка.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb761292), как описано в пакете Windows SDK. "Горячий" курсор, отображается, только если выбор при наведении курсора мыши включен, появляется при прохождении курсора над любой элемент списка. Выбор при наведении указателя мыши можно включить, задав LVS_EX_TRACKSELECT расширенный стиль.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetHotCursor](/windows/desktop/api/commctrl/nf-commctrl-listview_gethotcursor), как описано в пакете Windows SDK. "Горячий" курсор, отображается, только если выбор при наведении курсора мыши включен, появляется при прохождении курсора над любой элемент списка. Выбор при наведении указателя мыши можно включить, задав LVS_EX_TRACKSELECT расширенный стиль.  
   
 ### <a name="example"></a>Пример    
   
@@ -1467,7 +1467,7 @@ int GetHotItem();
  Индекс горячего текущий элемент управления представления списком.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb761294), как описано в пакете Windows SDK. Элемент "Горячий" определены включен выбранный элемент при "Горячий" Отслеживание (при наведении указателя мыши на выбор).  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetHotItem](/windows/desktop/api/commctrl/nf-commctrl-listview_gethotitem), как описано в пакете Windows SDK. Элемент "Горячий" определены включен выбранный элемент при "Горячий" Отслеживание (при наведении указателя мыши на выбор).  
   
  Если включено отслеживание, когда пользователь задерживает на элемент представления списка, метку элемента автоматически выделяется без использования кнопки мыши.  
   
@@ -1492,7 +1492,7 @@ DWORD GetHoverTime() const;
  Возвращает задержку в миллисекундах, в которых курсор мыши необходимо подвести указатель к элементу, прежде чем он выбран. Если возвращаемое значение равно -1, время при наведении указателя мыши, то время при наведении указателя мыши по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb761296), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetHoverTime](/windows/desktop/api/commctrl/nf-commctrl-listview_gethovertime), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример    
   
@@ -1542,13 +1542,13 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
   
 ### <a name="parameters"></a>Параметры  
  *lvim*  
- Указатель на [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) структуру, содержащую сведения для знак вставки.  
+ Указатель на [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) структуру, содержащую сведения для знак вставки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В противном случае возвращает значение TRUE, если успешно, или значение FALSE. Возвращается значение FALSE, если размер в `cbSize` членом `LVINSERTMARK` структуры не равно фактический размер структуры.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774945) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETINSERTMARK](/windows/desktop/Controls/lvm-getinsertmark) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getinsertmarkcolor"></a>  CListCtrl::GetInsertMarkColor  
  Получает текущий цвет знака вставки.  
@@ -1558,10 +1558,10 @@ COLORREF GetInsertMarkColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) структуру, содержащую цвет курсора.  
+ Возвращает [COLORREF](/windows/desktop/gdi/colorref) структуру, содержащую цвет курсора.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774947) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-getinsertmarkcolor) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect  
  Возвращает прямоугольник, ограничивающий курсор.  
@@ -1582,7 +1582,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 - **1** положение курсора найдено.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETINSERTMARKRECT](http://msdn.microsoft.com/library/windows/desktop/bb774949) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETINSERTMARKRECT](/windows/desktop/Controls/lvm-getinsertmarkrect) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getitem"></a>  CListCtrl::GetItem  
  Извлекает все или некоторые из атрибутов для элемента представления списка.  
@@ -1593,7 +1593,7 @@ BOOL GetItem(LVITEM* pItem) const;
   
 ### <a name="parameters"></a>Параметры  
  *pItem*  
- Указатель на [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуру, которая получает атрибуты этого элемента.  
+ Указатель на [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуру, которая получает атрибуты этого элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -1629,7 +1629,7 @@ DWORD_PTR GetItemData(int nItem) const;
  32-разрядное значение конкретного приложения, связанный с указанным элементом.  
   
 ### <a name="remarks"></a>Примечания  
- Это значение равно `lParam` членом [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуры, как описано в пакете SDK для Windows  
+ Это значение равно `lParam` членом [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуры, как описано в пакете SDK для Windows  
   
 ### <a name="example"></a>Пример  
 
@@ -1658,18 +1658,18 @@ BOOL GetItemIndexRect(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Указатель на [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) структуру для родительского элемента данного подэлемента.<br /><br /> Вызывающий объект отвечает за выделение и определения участников [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) структуры. Этот параметр не может иметь значение NULL.|  
+|[in] *pItemIndex*|Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуру для родительского элемента данного подэлемента.<br /><br /> Вызывающий объект отвечает за выделение и определения участников [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуры. Этот параметр не может иметь значение NULL.|  
 |[in] *iColumn*|Отсчитываемый от нуля индекс столбца в элементе управления.|  
 |[in] *rectType*|Часть подэлемента представление списка, для которого извлекается прямоугольник. Укажите одно из следующих значений.<br /><br /> LVIR_BOUNDS - Возвращает прямоугольник, ограничивающий всего вложенного элемента, включая значок и метку.<br /><br /> LVIR_ICON - Возвращает ограничивающий прямоугольник значка или мелкого значка подэлемента.<br /><br /> LVIR_LABEL - Возвращает прямоугольник, ограничивающий текста данного подэлемента.|  
-|[out] *pRect*|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, который получает сведения о ограничивающий прямоугольник данного подэлемента.<br /><br /> Вызывающий объект отвечает за распределение [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Этот параметр не может иметь значение NULL.|  
+|[out] *pRect*|Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, который получает сведения о ограничивающий прямоугольник данного подэлемента.<br /><br /> Вызывающий объект отвечает за распределение [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Этот параметр не может иметь значение NULL.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [LVM_GETITEMINDEXRECT](http://msdn.microsoft.com/library/windows/desktop/bb761046) сообщения, который описан в пакете Windows SDK. Дополнительные сведения см. в разделе [ListView_GetItemIndexRect макрос](http://msdn.microsoft.com/library/windows/desktop/bb774959).  
+ Этот метод отправляет [LVM_GETITEMINDEXRECT](/windows/desktop/Controls/lvm-getitemindexrect) сообщения, который описан в пакете Windows SDK. Дополнительные сведения см. в разделе [ListView_GetItemIndexRect макрос](/windows/desktop/api/commctrl/nf-commctrl-listview_getitemindexrect).  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяет переменную, `m_listCtrl`, который используется для доступа к текущего элемента управления представление списка. Эта переменная используется в следующем примере.    
@@ -1713,7 +1713,7 @@ BOOL GetItemPosition(
  Индекс элемента, позиция которого требуется получить.  
   
  *lpPoint*  
- Адрес [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, которая получает положение верхнего левого угла элемента, в представлении координаты.  
+ Адрес [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, которая получает положение верхнего левого угла элемента, в представлении координаты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -1750,7 +1750,7 @@ BOOL GetItemRect(
  Индекс элемента, позиция которого требуется получить.  
   
  *lpRect*  
- Адрес [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает ограничивающий прямоугольник.  
+ Адрес [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает ограничивающий прямоугольник.  
   
  *nCode*  
  Часть элемента представления списка, для которого требуется получить ограничивающий прямоугольник. Он может принимать одно из следующих значений:  
@@ -1819,7 +1819,7 @@ BOOL GetItemSpacing(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *fSmall*|Представление, для которого требуется извлечь интервалы между элементами. Укажите значение TRUE для мелкими значками, или FALSE для представления значок.|  
 |[out] *pnHorzSpacing*|Содержит горизонтальный интервал между элементами.|  
@@ -1829,7 +1829,7 @@ BOOL GetItemSpacing(
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [LVM_GETITEMSPACING](http://msdn.microsoft.com/library/windows/desktop/bb761051) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_GETITEMSPACING](/windows/desktop/Controls/lvm-getitemspacing) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getitemstate"></a>  CListCtrl::GetItemState  
  Получает состояние представление элемента списка.  
@@ -1851,7 +1851,7 @@ UINT GetItemState(
  Просмотр элемента флаги состояния для указанного списка.  
   
 ### <a name="remarks"></a>Примечания  
- Состояние элемента определяется `state` членом [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуры, как описано в пакете Windows SDK. Если указать или изменить состояние элемента, `stateMask` элемент указывает, какие биты состояния, которые вы хотите изменить.  
+ Состояние элемента определяется `state` членом [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуры, как описано в пакете Windows SDK. Если указать или изменить состояние элемента, `stateMask` элемент указывает, какие биты состояния, которые вы хотите изменить.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::GetTopIndex](#gettopindex).  
@@ -1890,7 +1890,7 @@ CString GetItemText(
  Возвращает версию `CString` возвращает текст элемента.  
   
 ### <a name="remarks"></a>Примечания  
- Если *nSubItem* равен нулю, эта функция получает подпись элемента; Если *nSubItem* имеет ненулевое значение, происходит получение текста данного подэлемента. Дополнительные сведения об аргументе подэлемента, см. в статье в обсуждении [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуры в пакете Windows SDK.  
+ Если *nSubItem* равен нулю, эта функция получает подпись элемента; Если *nSubItem* имеет ненулевое значение, происходит получение текста данного подэлемента. Дополнительные сведения об аргументе подэлемента, см. в статье в обсуждении [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуры в пакете Windows SDK.  
   
 ##  <a name="getnextitem"></a>  CListCtrl::GetNextItem  
  Выполняет поиск списка Просмотр элемента с указанными свойствами и предпоследнюю указанную связь с данным объектом.  
@@ -1942,10 +1942,10 @@ BOOL GetNextItemIndex(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in, out] *pItemIndex*|Указатель на [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) структуру, которая описывает элемент, в которой начинается поиск, или значение -1, чтобы найти первый элемент, соответствующий флаги в *nFlags* параметра.<br /><br /> При успешном выполнении, этот метод `LVITEMINDEX` структура описывает элемент, найденный в ходе поиска.|  
-|[in] *nFlags*|Побитовое сочетание (OR) флагов, определяющих, как выполняется поиск.<br /><br /> Поиск может зависеть от индекса, состояние или внешний вид целевой элемент или конечный элемент физическое расположение относительно элемента указано посредством *pItemIndex* параметра. Дополнительные сведения см. в разделе *флаги* параметр в [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) сообщения.|  
+|[in, out] *pItemIndex*|Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуру, которая описывает элемент, в которой начинается поиск, или значение -1, чтобы найти первый элемент, соответствующий флаги в *nFlags* параметра.<br /><br /> При успешном выполнении, этот метод `LVITEMINDEX` структура описывает элемент, найденный в ходе поиска.|  
+|[in] *nFlags*|Побитовое сочетание (OR) флагов, определяющих, как выполняется поиск.<br /><br /> Поиск может зависеть от индекса, состояние или внешний вид целевой элемент или конечный элемент физическое расположение относительно элемента указано посредством *pItemIndex* параметра. Дополнительные сведения см. в разделе *флаги* параметр в [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) сообщения.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -1953,7 +1953,7 @@ BOOL GetNextItemIndex(
 ### <a name="remarks"></a>Примечания  
  Вызывающий объект отвечает за выделение и определения участников `LVITEMINDEX` структуры, на которые указывают *pItemIndex* параметра.  
   
- Этот метод отправляет [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem  
  Получает индекс элемента списка, идентифицируемый *pos*, затем задает *pos* значение ПОЗИЦИИ.  
@@ -2006,7 +2006,7 @@ UINT GetNumberOfWorkAreas() const;
  Не используется в данный момент.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetNumberOfWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb774988), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetNumberOfWorkAreas](/windows/desktop/api/commctrl/nf-commctrl-listview_getnumberofworkareas), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример    
   
@@ -2045,10 +2045,10 @@ COLORREF GetOutlineColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) структуру, содержащую цвет контура.  
+ Возвращает [COLORREF](/windows/desktop/gdi/colorref) структуру, содержащую цвет контура.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761065) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETOUTLINECOLOR](/windows/desktop/Controls/lvm-getoutlinecolor) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getorigin"></a>  CListCtrl::GetOrigin  
  Извлекает текущее исходное представление для элемента управления представления списка.  
@@ -2059,7 +2059,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
   
 ### <a name="parameters"></a>Параметры  
  *lpPoint*  
- Адрес [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, которая получает представление источника.  
+ Адрес [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, которая получает представление источника.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0. Тем не менее если элемент управления в представлении отчетов, возвращаемое значение всегда равно нулю.  
@@ -2075,7 +2075,7 @@ UINT GetSelectedColumn() const;
  Индекс выбранного столбца.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761067) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-getselectedcolumn) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount  
  Возвращает число выбранных элементов в элементе управления представления списка.  
@@ -2117,7 +2117,7 @@ int GetSelectionMark();
  Метки выделения отсчитываемый от нуля, или -1, если нет метки выделения.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb774998), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetSelectionMark](/windows/desktop/api/commctrl/nf-commctrl-listview_getselectionmark), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 
@@ -2197,7 +2197,7 @@ BOOL GetSubItemRect(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetSubItemRect](http://msdn.microsoft.com/library/windows/desktop/bb775004), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetSubItemRect](/windows/desktop/api/commctrl/nf-commctrl-listview_getsubitemrect), как описано в пакете Windows SDK.  
   
 ##  <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor  
  Получает цвет фона текста элемента управления представления списка.  
@@ -2234,13 +2234,13 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
   
 ### <a name="parameters"></a>Параметры  
  *PTI*  
- Указатель на [LVTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb774766) структуру, которая получает сведений о плитке.  
+ Указатель на [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) структуру, которая получает сведений о плитке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение не используется.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761081) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETTILEINFO](/windows/desktop/Controls/lvm-gettileinfo) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo  
  Извлекает сведения об элементе управления представления списком мозаичного представления.  
@@ -2251,13 +2251,13 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
   
 ### <a name="parameters"></a>Параметры  
  *ptvi*  
- Указатель на [LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768) структуры, который получает полученные сведения.  
+ Указатель на [LVTILEVIEWINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileviewinfo) структуры, который получает полученные сведения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение не используется.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761083) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETTILEVIEWINFO](/windows/desktop/Controls/lvm-gettileviewinfo) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="gettooltips"></a>  CListCtrl::GetToolTips  
  Извлекает элемент управления tooltip, используемого элементом управления представления списка для отображения подсказки.  
@@ -2270,7 +2270,7 @@ CToolTipCtrl* GetToolTips() const;
  Указатель на [CToolTipCtrl](ctooltipctrl-class.md) объект для использования элементом управления списка. Если [создать](#create) функция-член использует стиль LVS_NOTOOLTIPS, используются без подсказки и возвращается значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [LVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761085), как описано в пакете Windows SDK. Реализация MFC `GetToolTips` возвращает `CToolTipCtrl` объект, который используется в элементе управления списком, а не дескриптор элемента управления всплывающей подсказки.  
+ Эта функция-член реализует поведение сообщение Win32 [LVM_GETTOOLTIPS](/windows/desktop/Controls/lvm-gettooltips), как описано в пакете Windows SDK. Реализация MFC `GetToolTips` возвращает `CToolTipCtrl` объект, который используется в элементе управления списком, а не дескриптор элемента управления всплывающей подсказки.  
   
 ### <a name="example"></a>Пример  
 
@@ -2324,7 +2324,7 @@ DWORD GetView() const;
  Текущее представление элемента управления представления списка.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_GETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761091) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_GETVIEW](/windows/desktop/Controls/lvm-getview) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="getviewrect"></a>  CListCtrl::GetViewRect  
  Получает прямоугольник, ограничивающий всех элементов в элементе управления представления списка.  
@@ -2335,7 +2335,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>Параметры  
  *lpRect*  
- Адрес [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
+ Адрес [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -2360,7 +2360,7 @@ void GetWorkAreas(
  Указатель на массив `RECT` структуры (или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекты) получают рабочие области элемента управления представления списка. Значения в этих структурах находятся в координатах клиентской области окна.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_GetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775024), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_GetWorkAreas](/windows/desktop/api/commctrl/nf-commctrl-listview_getworkareas), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas).  
@@ -2380,7 +2380,7 @@ BOOL HasGroup(int iGroupId) const;
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_HASGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761097) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_HASGROUP](/windows/desktop/Controls/lvm-hasgroup) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="hittest"></a>  CListCtrl::HitTest  
  Определяет какой элемент представления списка, если он имеется в указанной позиции.  
@@ -2401,7 +2401,7 @@ int HitTest(
  Проверяемая точка.  
   
  *pFlags*  
- Указатель на целое число, получающий сведения о результатах теста. См. описание `flags` членом [LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) структуры в пакете Windows SDK.  
+ Указатель на целое число, получающий сведения о результатах теста. См. описание `flags` членом [LVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvhittestinfo) структуры в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс элемента в позиции, заданной параметром *pHitTestInfo*, если таковой имеется, или значение -1, в противном случае.  
@@ -2476,7 +2476,7 @@ int InsertColumn(
 ### <a name="remarks"></a>Примечания  
  Крайний слева столбец в элементе управления представления списка должен быть по левому краю.  
   
- [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) структура содержит атрибуты столбца в представлении отчета. Он также используется для получения сведений о столбце. Эта структура описана в пакете Windows SDK.  
+ [LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) структура содержит атрибуты столбца в представлении отчета. Он также используется для получения сведений о столбце. Эта структура описана в пакете Windows SDK.  
   
 ##  <a name="insertgroup"></a>  CListCtrl::InsertGroup  
  Вставляет группы в элементе управления представления списка.  
@@ -2492,13 +2492,13 @@ LRESULT InsertGroup(
  Индекс элемента, где группа — для вставки.  
   
  *pgrp*  
- Указатель на [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) структура, содержащая группы для добавления.  
+ Указатель на [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структура, содержащая группы для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает индекс элемента, добавленный группе, или значение -1, если произошел сбой операции.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_INSERTGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761103) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_INSERTGROUP](/windows/desktop/Controls/lvm-insertgroup) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted  
  Вставляет указанную группу в упорядоченный список групп.  
@@ -2509,13 +2509,13 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
   
 ### <a name="parameters"></a>Параметры  
  *pStructInsert*  
- Указатель на [LVINSERTGROUPSORTED](http://msdn.microsoft.com/library/windows/desktop/bb774756) структуру, содержащую группу, для вставки.  
+ Указатель на [LVINSERTGROUPSORTED](/windows/desktop/api/commctrl/ns-commctrl-taglvinsertgroupsorted) структуру, содержащую группу, для вставки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение не используется.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_INSERTGROUPSORTED](http://msdn.microsoft.com/library/windows/desktop/bb761105) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_INSERTGROUPSORTED](/windows/desktop/Controls/lvm-insertgroupsorted) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="insertitem"></a>  CListCtrl::InsertItem  
  Вставляет элемент в элементе управления представления списка.  
@@ -2547,7 +2547,7 @@ int InsertItem(
   
 ### <a name="parameters"></a>Параметры  
  *pItem*  
- Указатель на [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структура, задающая атрибуты элемента, как описано в пакете Windows SDK.  
+ Указатель на [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структура, задающая атрибуты элемента, как описано в пакете Windows SDK.  
   
  *nItem*  
  Индекс элемента для вставки.  
@@ -2559,13 +2559,13 @@ int InsertItem(
  Индекс изображения элемента или I_IMAGECALLBACK, если элемент представляет собой элемент обратного вызова. Сведения об элементах обратного вызова, см. в разделе [CListCtrl::GetCallbackMask](#getcallbackmask).  
   
  *nMask*  
- *NMask* параметр указывает, какой элемент атрибуты, которые передаются как параметры являются допустимыми. Он может иметь одно или несколько из значения маски, описанного в [LVITEM структуры](http://msdn.microsoft.com/library/windows/desktop/bb774760) в пакете Windows SDK. Допустимые значения могут объединяться с помощью битового оператора или.  
+ *NMask* параметр указывает, какой элемент атрибуты, которые передаются как параметры являются допустимыми. Он может иметь одно или несколько из значения маски, описанного в [LVITEM структуры](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) в пакете Windows SDK. Допустимые значения могут объединяться с помощью битового оператора или.  
   
  *nState*  
- Указывает состояние элемента, изображения и изображение для наложения. См. в разделах пакета Windows SDK [структуры LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Дополнительные сведения и [состояния элементов в представлении списка](http://msdn.microsoft.com/library/windows/desktop/bb774733) список Допустимые флаги.  
+ Указывает состояние элемента, изображения и изображение для наложения. См. в разделах пакета Windows SDK [структуры LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Дополнительные сведения и [состояния элементов в представлении списка](/windows/desktop/Controls/list-view-item-states) список Допустимые флаги.  
   
  *nStateMask*  
- Указывает, какие биты состояния элемента будут извлечены или изменены. См. в разделе [LVITEM структуры](http://msdn.microsoft.com/library/windows/desktop/bb774760) в пакете SDK для Windows, Дополнительные сведения.  
+ Указывает, какие биты состояния элемента будут извлечены или изменены. См. в разделе [LVITEM структуры](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) в пакете SDK для Windows, Дополнительные сведения.  
   
  *lParam*  
  32-разрядное значение конкретного приложения, связанный с элементом. Если этот параметр задан, необходимо задать *nMask* атрибут LVIF_PARAM.  
@@ -2574,7 +2574,7 @@ int InsertItem(
  Индекс нового элемента в случае успешного выполнения или значение -1, в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Вызов этого метода может привести к LVM_INSERTITEM сообщение должно отправляться окна элемента управления. Обработчик связанных сообщений для элемента управления может завершиться ошибкой задать текст элемента при определенных условиях (например, с помощью стилей окна, такие как LVS_OWNERDRAW). Дополнительные сведения об этих условиях см. [LVM_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb761107) в пакете Windows SDK.  
+ Вызов этого метода может привести к LVM_INSERTITEM сообщение должно отправляться окна элемента управления. Обработчик связанных сообщений для элемента управления может завершиться ошибкой задать текст элемента при определенных условиях (например, с помощью стилей окна, такие как LVS_OWNERDRAW). Дополнительные сведения об этих условиях см. [LVM_INSERTITEM](/windows/desktop/Controls/lvm-insertitem) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 
@@ -2612,16 +2612,16 @@ int InsertMarkHitTest(
   
 ### <a name="parameters"></a>Параметры  
  *pPoint*  
- Указатель на [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, содержащую нажатия координаты относительно клиентской области элемента управления списком.  
+ Указатель на [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, содержащую нажатия координаты относительно клиентской области элемента управления списком.  
   
  *lvim*  
- Указатель на [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) структура, задающая точке вставки, ближайшей к значениям координат, заданного параметром точки.  
+ Указатель на [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) структура, задающая точке вставки, ближайшей к значениям координат, заданного параметром точки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Точка вставки ближе всего к заданному точки.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb761131) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_INSERTMARKHITTEST](/windows/desktop/Controls/lvm-insertmarkhittest) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled  
  Определяет, включена ли представление "Группа" для элемента управления представления списка.  
@@ -2634,7 +2634,7 @@ BOOL IsGroupViewEnabled() const;
  В противном случае возвращает значение TRUE, если включено представление "Группа", или значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_ISGROUPVIEWENABLED](http://msdn.microsoft.com/library/windows/desktop/bb761133) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_ISGROUPVIEWENABLED](/windows/desktop/Controls/lvm-isgroupviewenabled) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="isitemvisible"></a>  CListCtrl::IsItemVisible  
  Указывает, видима ли указанный элемент в текущий элемент управления представление списка.  
@@ -2645,7 +2645,7 @@ BOOL IsItemVisible(int index) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *индекса*|Отсчитываемый от нуля индекс элемента в текущего элемента управления представление списка.|  
   
@@ -2653,7 +2653,7 @@ BOOL IsItemVisible(int index) const;
  Значение TRUE, если указанный элемент является видимым; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [LVM_ISITEMVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb761135) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_ISITEMVISIBLE](/windows/desktop/Controls/lvm-isitemvisible) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex  
  Сопоставляет уникальный идентификатор элемента в текущий элемент управления списком индекс.  
@@ -2664,7 +2664,7 @@ UINT MapIDToIndex(UINT id) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *идентификатор*|Уникальный идентификатор элемента.|  
   
@@ -2676,7 +2676,7 @@ UINT MapIDToIndex(UINT id) const;
   
  Обратите внимание на то, что в многопоточной среде индекс гарантируется только в потоке, который размещает элемент управления представление списка, не в фоновых потоках.  
   
- Этот метод отправляет [LVM_MAPIDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761137) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="mapindextoid"></a>  CListCtrl::MapIndexToID  
  Сопоставляет индекс элемента в элементе управления списком текущий уникальный идентификатор.  
@@ -2687,7 +2687,7 @@ UINT MapIndexToID(UINT index) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *индекса*|Отсчитываемый от нуля индекс элемента.|  
   
@@ -2699,7 +2699,7 @@ UINT MapIndexToID(UINT index) const;
   
  Обратите внимание на то, что в многопоточной среде индекс гарантируется только в потоке, который размещает элемент управления представление списка, не в фоновых потоках.  
   
- Этот метод отправляет [LVM_MAPINDEXTOID](http://msdn.microsoft.com/library/windows/desktop/bb761139) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_MAPINDEXTOID](/windows/desktop/Controls/lvm-mapindextoid) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяет переменную, `m_listCtrl`, который используется для доступа к текущего элемента управления представление списка. Эта переменная используется в следующем примере.    
@@ -2761,7 +2761,7 @@ LRESULT MoveGroup(
  Возвращаемое значение не используется.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_MOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761141) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_MOVEGROUP](/windows/desktop/Controls/lvm-movegroup) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup  
  Перемещает указанный элемент в указанной группе.  
@@ -2784,7 +2784,7 @@ void MoveItemToGroup(
 > [!NOTE]
 >  Этот метод в настоящее время не реализуется.  
   
- Этот метод эмулирует функциональные возможности [LVM_MOVEITEMTOGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761143) сообщения, как описано в пакете Windows SDK.  
+ Этот метод эмулирует функциональные возможности [LVM_MOVEITEMTOGROUP](/windows/desktop/Controls/lvm-moveitemtogroup) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="redrawitems"></a>  CListCtrl::RedrawItems  
  Заставляет элемент управления списка перерисовку диапазона элементов.  
@@ -2806,7 +2806,7 @@ BOOL RedrawItems(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Указанные элементы не будут обновлены фактически, пока в окно представления списка не получит сообщение WM_PAINT. Чтобы немедленно перерисовать, вызовите Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) функции после применения этой функции.  
+ Указанные элементы не будут обновлены фактически, пока в окно представления списка не получит сообщение WM_PAINT. Чтобы немедленно перерисовать, вызовите Windows [UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow) функции после применения этой функции.  
   
 ##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups  
  Удаляет все группы из элемента управления представления списка.  
@@ -2816,7 +2816,7 @@ void RemoveAllGroups();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_REMOVEALLGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761147) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_REMOVEALLGROUPS](/windows/desktop/Controls/lvm-removeallgroups) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="removegroup"></a>  CListCtrl::RemoveGroup  
  Удаляет указанную группу из элемента управления представления списка.  
@@ -2833,7 +2833,7 @@ LRESULT RemoveGroup(int iGroupId);
  В противном случае возвращает индекс группы, в случае успешного выполнения или значение -1.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_REMOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761149) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_REMOVEGROUP](/windows/desktop/Controls/lvm-removegroup) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="scroll"></a>  CListCtrl::Scroll  
  Прокручивает содержимое элемента управления представления списка.  
@@ -2858,7 +2858,7 @@ BOOL SetBkColor(COLORREF cr);
   
 ### <a name="parameters"></a>Параметры  
  *CR*  
- Цвет фона для задания, или значение CLR_NONE нет цвета фона. Элементы управления представления списка с цветами фона прорисовку значительно быстрее, чем без цвета фона. Сведения см. в разделе [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) в пакете Windows SDK.  
+ Цвет фона для задания, или значение CLR_NONE нет цвета фона. Элементы управления представления списка с цветами фона прорисовку значительно быстрее, чем без цвета фона. Сведения см. в разделе [COLORREF](/windows/desktop/gdi/colorref) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -3001,7 +3001,7 @@ BOOL SetColumn(
  Индекс столбца, атрибуты которого должны устанавливаться.  
   
  *pColumn*  
- Адрес [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) атрибуты структуру, содержащую новый столбец, как описано в пакете Windows SDK. Структура `mask` элемент задает, какой столбец атрибуты для задания. Если `mask` задает LVCF_TEXT значения, структуры `pszText` член является адрес заканчивающуюся нулем строку и структуру `cchTextMax` игнорируется.  
+ Адрес [LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) атрибуты структуру, содержащую новый столбец, как описано в пакете Windows SDK. Структура `mask` элемент задает, какой столбец атрибуты для задания. Если `mask` задает LVCF_TEXT значения, структуры `pszText` член является адрес заканчивающуюся нулем строку и структуру `cchTextMax` игнорируется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -3029,7 +3029,7 @@ BOOL SetColumnOrderArray(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb775072), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetColumnOrderArray](/windows/desktop/api/commctrl/nf-commctrl-listview_setcolumnorderarray), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).  
@@ -3048,7 +3048,7 @@ BOOL SetColumnWidth(
  Индекс столбца, для которого будет устанавливаться ширину. В представлении списка этот параметр должен быть 0.  
   
  *CX*  
- Новая ширина столбца. Может быть LVSCW_AUTOSIZE или LVSCW_AUTOSIZE_USEHEADER, как описано в разделе [LVM_SETCOLUMNWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb761163) в пакете Windows SDK.  
+ Новая ширина столбца. Может быть LVSCW_AUTOSIZE или LVSCW_AUTOSIZE_USEHEADER, как описано в разделе [LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -3062,13 +3062,13 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
   
 ### <a name="parameters"></a>Параметры  
  *dwNewStyle*  
- Сочетание расширенные стили для использования элементом управления представления списка. Список этих стилей, см. в разделе [расширенных стилей представления списка](http://msdn.microsoft.com/library/windows/desktop/bb774732) темы в Windows SDK.  
+ Сочетание расширенные стили для использования элементом управления представления списка. Список этих стилей, см. в разделе [расширенных стилей представления списка](/windows/desktop/Controls/extended-list-view-styles) темы в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Сочетание предыдущих расширенные стили, используемые элементом управления представления списка.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb775076), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetExtendedListViewStyle](/windows/desktop/api/commctrl/nf-commctrl-listview_setextendedlistviewstyle), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 
@@ -3094,13 +3094,13 @@ int SetGroupInfo(
  Идентификатор группы, сведения о которой имеет значение.  
   
  *pgrp*  
- Указатель на [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) структуру, содержащую сведения для задания. Вызывающий объект отвечает за выделение эту структуру и установке его членов.  
+ Указатель на [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуру, содержащую сведения для задания. Вызывающий объект отвечает за выделение эту структуру и установке его членов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор группы, если метод выполнен успешно; в противном случае — значение -1.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [LVM_SETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb761167) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_SETGROUPINFO](/windows/desktop/Controls/lvm-setgroupinfo) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics  
  Задает метрики групповой элемент управления списка.  
@@ -3111,10 +3111,10 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
   
 ### <a name="parameters"></a>Параметры  
  *pGroupMetrics*  
- Указатель на [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) структура, содержащая сведения о группе метрики устанавливаемое значение.  
+ Указатель на [LVGROUPMETRICS](/windows/desktop/api/commctrl/ns-commctrl-taglvgroupmetrics) структура, содержащая сведения о группе метрики устанавливаемое значение.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb761168) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SETGROUPMETRICS](/windows/desktop/Controls/lvm-setgroupmetrics) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="sethotcursor"></a>  CListCtrl::SetHotCursor  
  Задает курсор, используемый, когда включено отслеживание для элемента управления представления списка.  
@@ -3131,7 +3131,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
  Дескриптор на предыдущий ресурс "Горячий" курсор, который используется в элементе управления представления списка.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb775082), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetHotCursor](/windows/desktop/api/commctrl/nf-commctrl-listview_sethotcursor), как описано в пакете Windows SDK.  
   
  "Горячий" курсор, отображается, только если выбор при наведении курсора мыши включен, отображается при наведении курсора на любой элемент списка. Выбор при наведении указателя мыши можно включить, задав LVS_EX_TRACKSELECT расширенный стиль.  
   
@@ -3153,7 +3153,7 @@ int SetHotItem(int iIndex);
  Отсчитываемый от нуля индекс элемента, ранее "Горячий".  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb775083), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetHotItem](/windows/desktop/api/commctrl/nf-commctrl-listview_sethotitem), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::GetHotItem](#gethotitem).  
@@ -3173,7 +3173,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
  Предыдущий время при наведении указателя мыши в миллисекундах.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb775084), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetHoverTime](/windows/desktop/api/commctrl/nf-commctrl-listview_sethovertime), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::GetHoverTime](#gethovertime).  
@@ -3203,7 +3203,7 @@ CSize SetIconSpacing(CSize size);
  Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) объект, содержащий предыдущие значения для интервала значок.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetIconSpacing](http://msdn.microsoft.com/library/windows/desktop/bb775085), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetIconSpacing](/windows/desktop/api/commctrl/nf-commctrl-listview_seticonspacing), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 
@@ -3251,13 +3251,13 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
   
 ### <a name="parameters"></a>Параметры  
  *plvInfoTip*  
- Указатель на [LVFSETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb774764) структура, содержащая сведения о задаваемых.  
+ Указатель на [LVFSETINFOTIP](/windows/desktop/api/commctrl/ns-commctrl-taglvsetinfotip) структура, содержащая сведения о задаваемых.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb761180) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SETINFOTIP](/windows/desktop/Controls/lvm-setinfotip) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="setinsertmark"></a>  CListCtrl::SetInsertMark  
  Задает курсор в определенной позиции.  
@@ -3268,13 +3268,13 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
   
 ### <a name="parameters"></a>Параметры  
  *lvim*  
- Указатель на [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) структуру, указав место установки точки вставки.  
+ Указатель на [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) структуру, указав место установки точки вставки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В противном случае возвращает значение TRUE, если успешно, или значение FALSE. Возвращается значение FALSE, если размер в `cbSize` членом `LVINSERTMARK` структуры не равно фактический размер структуры, или когда курсор не применяется в текущем представлении.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb761182) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SETINSERTMARK](/windows/desktop/Controls/lvm-setinsertmark) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor  
  Задает цвет курсора.  
@@ -3285,13 +3285,13 @@ COLORREF SetInsertMarkColor(COLORREF color);
   
 ### <a name="parameters"></a>Параметры  
  *Цвет*  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) структуры, указывающий цвет, чтобы задать точку вставки.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) структуры, указывающий цвет, чтобы задать точку вставки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `COLORREF` структура, содержащая на предыдущий цвет.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761184) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-setinsertmarkcolor) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="setitem"></a>  CListCtrl::SetItem  
  Задает некоторые или все представления списка атрибуты элемента.  
@@ -3325,7 +3325,7 @@ BOOL SetItem(
   
 ### <a name="parameters"></a>Параметры  
  *pItem*  
- Адрес [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуру, содержащую новый элемент атрибуты, как описано в пакете Windows SDK. Структура `iItem` и `iSubItem` члены определения элемента или подэлемента и структуры `mask` элемент указывает, какие атрибуты следует задать. Дополнительные сведения о `mask` член, см. в разделе **"Примечания"**.  
+ Адрес [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуру, содержащую новый элемент атрибуты, как описано в пакете Windows SDK. Структура `iItem` и `iSubItem` члены определения элемента или подэлемента и структуры `mask` элемент указывает, какие атрибуты следует задать. Дополнительные сведения о `mask` член, см. в разделе **"Примечания"**.  
   
  *nItem*  
  Индекс элемента, атрибуты которого должны устанавливаться.  
@@ -3384,7 +3384,7 @@ void SetItemCount(int nItems);
  Чтобы задать количество элементов для элемента управления представление виртуального списка, см. в разделе [CListCtrl::SetItemCountEx](#setitemcountex).  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetItemCount](http://msdn.microsoft.com/library/windows/desktop/bb775093), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetItemCount](/windows/desktop/api/commctrl/nf-commctrl-listview_setitemcount), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 
@@ -3427,7 +3427,7 @@ BOOL SetItemCountEx(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetItemCountEx](http://msdn.microsoft.com/library/windows/desktop/bb775095), как описано в разделе Windows SDKand должен вызываться только для представлений виртуального списка.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetItemCountEx](/windows/desktop/api/commctrl/nf-commctrl-listview_setitemcountex), как описано в разделе Windows SDKand должен вызываться только для представлений виртуального списка.  
   
 ### <a name="example"></a>Пример  
 
@@ -3468,7 +3468,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Это значение равно `lParam` членом [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуры, как описано в пакете Windows SDK.  
+ Это значение равно `lParam` членом [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуры, как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 
@@ -3494,21 +3494,21 @@ BOOL SetItemIndexState(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Указатель на [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) структура, описывающая элемент. Вызывающий объект отвечает за выделение эту структуру и установке его членов.|  
-|[in] *dwState*|Состояние, чтобы задать элемент, который представляет собой битовую комбинацию из [список состояний представления элементов](http://msdn.microsoft.com/library/windows/desktop/bb774733). Укажите ноль для сброса или одну для установки, состояния.|  
-|[in] *dwMask*|Маска допустимых битов состоянии, указанном *dwState* параметра. Побитовое сочетание (OR) укажите [список состояний представления элементов](http://msdn.microsoft.com/library/windows/desktop/bb774733).|  
+|[in] *pItemIndex*|Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структура, описывающая элемент. Вызывающий объект отвечает за выделение эту структуру и установке его членов.|  
+|[in] *dwState*|Состояние, чтобы задать элемент, который представляет собой битовую комбинацию из [список состояний представления элементов](/windows/desktop/Controls/list-view-item-states). Укажите ноль для сброса или одну для установки, состояния.|  
+|[in] *dwMask*|Маска допустимых битов состоянии, указанном *dwState* параметра. Побитовое сочетание (OR) укажите [список состояний представления элементов](/windows/desktop/Controls/list-view-item-states).|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о *dwState* параметр, см. в разделе [состояний элемента представления списка](http://msdn.microsoft.com/library/windows/desktop/bb774733).  
+ Дополнительные сведения о *dwState* параметр, см. в разделе [состояний элемента представления списка](/windows/desktop/Controls/list-view-item-states).  
   
- Дополнительные сведения о *dwMask* параметр, см. в разделе *stateMask* членом [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуры.  
+ Дополнительные сведения о *dwMask* параметр, см. в разделе *stateMask* членом [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуры.  
   
- Этот метод отправляет [LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_SETITEMINDEXSTATE](/windows/desktop/Controls/lvm-setitemindexstate) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="setitemposition"></a>  CListCtrl::SetItemPosition  
  Перемещает элемент в указанную позицию в элементе управления представления списка.  
@@ -3524,7 +3524,7 @@ BOOL SetItemPosition(
  Индекс элемента, позиция которого является устанавливаемое значение.  
   
  *pt*  
- Объект [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуры, указывающий новое положение, в представлении, координаты верхнего левого угла элемента.  
+ Объект [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуры, указывающий новое положение, в представлении, координаты верхнего левого угла элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -3557,13 +3557,13 @@ BOOL SetItemState(
  Индекс элемента, состояние которого отличается от устанавливаемое значение.  
   
  *pItem*  
- Адрес [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуры, как описано в пакете Windows SDK. Структура `stateMask` указывает состояние, которое bits для изменений, а также структура `state` член содержит новые значения для этих файлов. Другие элементы учитываются.  
+ Адрес [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуры, как описано в пакете Windows SDK. Структура `stateMask` указывает состояние, которое bits для изменений, а также структура `state` член содержит новые значения для этих файлов. Другие элементы учитываются.  
   
  *nState*  
- Новые значения для биты состояния. Список возможных значений см. в разделе [CListCtrl::GetNextItem](#getnextitem) и [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) члена.  
+ Новые значения для биты состояния. Список возможных значений см. в разделе [CListCtrl::GetNextItem](#getnextitem) и [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) члена.  
   
  *nMask*  
- Маска, указывающая, какое состояние битов для изменения. Это значение соответствует элементу stateMask [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуры.  
+ Маска, указывающая, какое состояние битов для изменения. Это значение соответствует элементу stateMask [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -3598,13 +3598,13 @@ BOOL SetItemText(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод не предназначен для использования с элементами управления, содержащий стиль окна LVS_OWNERDATA (на самом деле, это вызовет утверждение в отладочных сборках). Дополнительные сведения о стиле элемента управления этого списка см. в разделе [Обзор средств управления представление списка](http://msdn.microsoft.com/library/windows/desktop/bb774735).  
+ Этот метод не предназначен для использования с элементами управления, содержащий стиль окна LVS_OWNERDATA (на самом деле, это вызовет утверждение в отладочных сборках). Дополнительные сведения о стиле элемента управления этого списка см. в разделе [Обзор средств управления представление списка](/windows/desktop/Controls/list-view-controls-overview).  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::InsertItem](#insertitem).  
   
 ##  <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor  
- Задает цвет границы элемента управления представление списка, если [LVS_EX_BORDERSELECT](http://msdn.microsoft.com/library/windows/desktop/bb774739) окно расширенного стиля задано значение.  
+ Задает цвет границы элемента управления представление списка, если [LVS_EX_BORDERSELECT](/windows/desktop/Controls/list-view-window-styles) окно расширенного стиля задано значение.  
   
 ```  
 COLORREF SetOutlineColor(COLORREF color);
@@ -3612,13 +3612,13 @@ COLORREF SetOutlineColor(COLORREF color);
   
 ### <a name="parameters"></a>Параметры  
  *Цвет*  
- Новый [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) структуру, содержащую цвет контура.  
+ Новый [COLORREF](/windows/desktop/gdi/colorref) структуру, содержащую цвет контура.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Предыдущий `COLORREF` структуру, содержащую цвет контура  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761200) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SETOUTLINECOLOR](/windows/desktop/Controls/lvm-setoutlinecolor) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="setselectedcolumn"></a>  CListCtrl::SetSelectedColumn  
  Задает выбранный столбец элемента управления представления списка.  
@@ -3635,7 +3635,7 @@ LRESULT SetSelectedColumn(int iCol);
  Возвращаемое значение не используется.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761202) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-setselectedcolumn) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="setselectionmark"></a>  CListCtrl::SetSelectionMark  
  Задает метки выделения элемента управления представления списка.  
@@ -3652,7 +3652,7 @@ int SetSelectionMark(int iIndex);
  Предыдущей метки выделения, или значение -1, если нет метки выделения.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb775112), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetSelectionMark](/windows/desktop/api/commctrl/nf-commctrl-listview_setselectionmark), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CListCtrl::GetSelectionMark](#getselectionmark).  
@@ -3666,7 +3666,7 @@ BOOL SetTextBkColor(COLORREF cr);
   
 ### <a name="parameters"></a>Параметры  
  *CR*  
- COLORREF, указав новый цвет фона текста. Сведения см. в разделе [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) в пакете Windows SDK.  
+ COLORREF, указав новый цвет фона текста. Сведения см. в разделе [COLORREF](/windows/desktop/gdi/colorref) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -3691,7 +3691,7 @@ BOOL SetTextColor(COLORREF cr);
   
 ### <a name="parameters"></a>Параметры  
  *CR*  
- COLORREF, указав новый цвет текста. Сведения см. в разделе [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) в пакете Windows SDK.  
+ COLORREF, указав новый цвет текста. Сведения см. в разделе [COLORREF](/windows/desktop/gdi/colorref) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -3717,13 +3717,13 @@ BOOL SetTileInfo(PLVTILEINFO pti);
   
 ### <a name="parameters"></a>Параметры  
  *PTI*  
- Указатель на [LVTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb774766) структура, содержащая сведения о задаваемых.  
+ Указатель на [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) структура, содержащая сведения о задаваемых.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761210) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SETTILEINFO](/windows/desktop/Controls/lvm-settileinfo) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo  
  Задает сведения, которые использует элемент управления списка мозаичного представления.  
@@ -3734,13 +3734,13 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
   
 ### <a name="parameters"></a>Параметры  
  *ptvi*  
- Указатель на [LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768) структуру, содержащую сведения для задания.  
+ Указатель на [LVTILEVIEWINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileviewinfo) структуру, содержащую сведения для задания.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761212) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SETTILEVIEWINFO](/windows/desktop/Controls/lvm-settileviewinfo) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="settooltips"></a>  CListCtrl::SetToolTips  
  Задает подсказку, которая управления представления списком будет использоваться для отображения подсказки.  
@@ -3757,7 +3757,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
  Указатель на [CToolTipCtrl](ctooltipctrl-class.md) объект, содержащий всплывающей подсказки, ранее используемых элемента управления, или значение NULL, если нет подсказок использовались ранее.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [LVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761216), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [LVM_SETTOOLTIPS](/windows/desktop/Controls/lvm-settooltips), как описано в пакете Windows SDK.  
   
  Чтобы не использовать всплывающие подсказки, указывающих стиль LVS_NOTOOLTIPS при создании `CListCtrl` объекта.  
   
@@ -3776,7 +3776,7 @@ DWORD SetView(int iView);
  В противном случае возвращает значение 1, если успешно, или значение -1. Например если представление является недопустимым, возвращается значение -1.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761220) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SETVIEW](/windows/desktop/Controls/lvm-setview) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="setworkareas"></a>  CListCtrl::SetWorkAreas  
  Задает область, где могут отображаться значки в элементе управления представления списка.  
@@ -3795,7 +3795,7 @@ void SetWorkAreas(
  Адрес массив `RECT` структуры (или `CRect` объекты), укажите новые рабочие области элемента управления представления списка. Эти области должен быть указан в координатах клиентской области окна. Если этот параметр имеет значение NULL, рабочая область будет присвоено клиентской области элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775128), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SetWorkAreas](/windows/desktop/api/commctrl/nf-commctrl-listview_setworkareas), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 
@@ -3826,7 +3826,7 @@ BOOL SortGroups(
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности [LVM_SORTGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761225) сообщения, как описано в пакете Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности [LVM_SORTGROUPS](/windows/desktop/Controls/lvm-sortgroups) сообщения, как описано в пакете Windows SDK.  
   
 ##  <a name="sortitems"></a>  CListCtrl::SortItems  
  Сортирует элементы списка с помощью функции сравнения, определяемые приложением.  
@@ -3861,9 +3861,9 @@ int CALLBACK CompareFunc(LPARAM lParam1,
 ```  
 Функция сравнения должен возвращать отрицательное значение, если первый элемент должен находиться перед второй, положительное значение, если первый элемент должен следовать второй, или нуль, если два элемента равны.  
   
- *LParam1* параметр является 32-разрядное значение, связанное с первым элементом, который сравнивается, и *lParam2* параметра является значение, связанное с второго элемента. Это значения, которые были указаны в *lParam* членом элементов [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуры, когда они были добавлены в список. *LParamSort* параметра совпадает со значением *dwData* значение.  
+ *LParam1* параметр является 32-разрядное значение, связанное с первым элементом, который сравнивается, и *lParam2* параметра является значение, связанное с второго элемента. Это значения, которые были указаны в *lParam* членом элементов [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуры, когда они были добавлены в список. *LParamSort* параметра совпадает со значением *dwData* значение.  
   
- Этот метод отправляет [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_SORTITEMS](/windows/desktop/Controls/lvm-sortitems) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  Вот простое сравнение функцию, которая приводит к элементов отсортированных по их *lParam* значения.  
@@ -3897,7 +3897,7 @@ BOOL SortItemsEx(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *pfnCompare*|Адрес функции сравнения, определяемые приложением.<br /><br /> Операция сортировки вызывает функцию сравнения, каждый раз, когда необходимо определить относительный порядок двух элементов списка. Функция сравнения необходимо либо статический член класса или автономного функцию, которая не является членом класса.|  
 |[in] *dwData*|Определяемый приложением значение, передаваемое в функцию сравнения.|  
@@ -3915,14 +3915,14 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```  
-Это сообщение является как [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), за исключением типа данных, переданных в функцию сравнения. В [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), *lParam1* и *lParam2* являются значения элементов для сравнения. В [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228), *lParam1* текущий индекс первого элемента для сравнения и *lParam2* текущий индекс второго элемента. Вы можете отправить [LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055) сообщений для получения дополнительных сведений об элементе.  
+Это сообщение является как [LVM_SORTITEMS](/windows/desktop/Controls/lvm-sortitems), за исключением типа данных, переданных в функцию сравнения. В [LVM_SORTITEMS](/windows/desktop/Controls/lvm-sortitems), *lParam1* и *lParam2* являются значения элементов для сравнения. В [LVM_SORTITEMSEX](/windows/desktop/Controls/lvm-sortitemsex), *lParam1* текущий индекс первого элемента для сравнения и *lParam2* текущий индекс второго элемента. Вы можете отправить [LVM_GETITEMTEXT](/windows/desktop/Controls/lvm-getitemtext) сообщений для получения дополнительных сведений об элементе.  
   
  Функция сравнения должен возвращать отрицательное значение, если первый элемент должен находиться перед второй, положительное значение, если первый элемент должен следовать второй, или нуль, если два элемента равны.  
   
 > [!NOTE]
->  В процессе сортировки нестабильны содержимое представления списка. Если функция обратного вызова отправляет сообщения в элементе управления представления списка, отличное от [LVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb774953), результаты будут непредсказуемыми.  
+>  В процессе сортировки нестабильны содержимое представления списка. Если функция обратного вызова отправляет сообщения в элементе управления представления списка, отличное от [LVM_GETITEM](/windows/desktop/Controls/lvm-getitem), результаты будут непредсказуемыми.  
   
- Этот метод отправляет [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [LVM_SORTITEMSEX](/windows/desktop/Controls/lvm-sortitemsex) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяет переменную, `m_listCtrl`, который используется для доступа к текущего элемента управления представление списка. Эта переменная используется в следующем примере.  
@@ -3978,13 +3978,13 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
   
 ### <a name="parameters"></a>Параметры  
  *pInfo*  
- Указатель на [LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) структуры.  
+ Указатель на [LVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvhittestinfo) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от единицы индекс элемента, вложенного элемента, тестируемой (если таковые имеются) или значение -1, в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение макроса Win32, [ListView_SubItemHitTest](http://msdn.microsoft.com/library/windows/desktop/bb775135), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение макроса Win32, [ListView_SubItemHitTest](/windows/desktop/api/commctrl/nf-commctrl-listview_subitemhittest), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
 

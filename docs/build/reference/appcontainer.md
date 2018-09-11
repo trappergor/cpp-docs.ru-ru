@@ -1,5 +1,5 @@
 ---
-title: -APPCONTAINER | Документы Microsoft
+title: -APPCONTAINER | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c47154d7a5eddd26573612708462c0352da30ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea6f08a141d48183d96dba6cb02fcf31909af0ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368438"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686257"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-Помечает исполняемый файл, необходимо запустить в контейнере приложения, например, Microsoft Store или универсальных приложений Windows приложения.  
+Помечает исполняемый файл, который должен выполняться в контейнере приложения — например, Microsoft Store или универсальной Windows приложение.  
   
 ```  
   
@@ -34,8 +34,8 @@ ms.locfileid: "32368438"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Исполняемый файл, для которого задан параметр **/APPCONTAINER** , может выполняться только в контейнере приложения, то есть в среде изоляции процессов, которая была введена в Windows 8. Этот параметр должен быть установлен для приложений Microsoft Store и универсальных приложений Windows.  
+ Исполняемый файл, для которого задан параметр **/APPCONTAINER** , может выполняться только в контейнере приложения, то есть в среде изоляции процессов, которая была введена в Windows 8. Для приложений Microsoft Store и универсальной Windows этот параметр должен быть установлен.  
   
 ## <a name="see-also"></a>См. также  
  [Параметры EDITBIN](../../build/reference/editbin-options.md)   
- [Что такое универсальное приложение Windows?](http://go.microsoft.com/fwlink/p/?LinkID=522074)
+ [Что такое приложение универсальной Windows?](/windows/uwp/get-started/universal-application-platform-guide)

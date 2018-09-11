@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337386"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764879"
 ---
 # <a name="cframewnd-class"></a>Класс CFrameWnd
 Реализует функции однодокументного интерфейса Windows (SDI) с наложенным или всплывающим фреймовым окном с элементами для управления окном.  
@@ -136,13 +136,13 @@ class CFrameWnd : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFrameWnd::CFrameWnd](#cframewnd)|Создает объект `CFrameWnd`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFrameWnd::ActivateFrame](#activateframe)|Становится кадр отображаются и доступны пользователю.|  
 |[CFrameWnd::BeginModalState](#beginmodalstate)|Задает фрейм окна к модальному окну.|  
@@ -191,7 +191,7 @@ class CFrameWnd : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFrameWnd::OnCreateClient](#oncreateclient)|Создает окно клиента для кадра.|  
 |[CFrameWnd::OnHideMenuBar](#onhidemenubar)|Вызывается перед меню в текущем приложении MFC является скрытым.|  
@@ -199,7 +199,7 @@ class CFrameWnd : public CWnd
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|Элементы управления автоматическое включение и отключение функциональные возможности для пунктов меню.|  
 |[CFrameWnd::rectDefault](#rectdefault)|Передайте этот статический `CRect` как параметр при создании `CFrameWnd` объекта, чтобы разрешить Windows выбрать исходный размер и положение окна.|  
@@ -984,7 +984,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *nState*|Указывает, следует ли отобразить или скрыть меню. *NState* параметр может иметь следующие значения:<br /><br /> -AFX_MBS_VISIBLE (0x01) — открывает меню, если он скрыт, но не действует, если он видим.<br />-AFX_MBS_HIDDEN (0x02) — скрывает элемент управления menu, если она видна, но не действует, если он скрыт.|  
   
@@ -1003,14 +1003,14 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *nStyle*|Указывает меню по умолчанию скрыт, или является видимым и имеет фокус. *NStyle* параметр может иметь следующие значения:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01) —<br />     В меню отображается все время и по умолчанию не имеет фокус.<br />-AFX_MBV_DISPLAYONFOCUS (0X02 —)<br />     Меню скрыта по умолчанию. Если меню скрыта, нажмите клавишу ALT, чтобы отобразить меню и сделать его активным. Если меню отображается, нажмите клавишу ALT или ESC для скрытия меню.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (битовую комбинацию (OR)) — меню скрыта по умолчанию. Если меню скрыта, нажмите клавишу F10 для отображения меню и сделать его активным. Если меню отображается, нажмите клавишу F10, чтобы переключить фокус, или отключить меню. До нажатия клавиши ALT или ESC, чтобы скрыть его отображении меню.|  
   
 ### <a name="remarks"></a>Примечания  
  Если значение *nStyle* параметр не является допустимым, этот метод проверочные утверждения в режиме отладки и вызывает [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) в режиме выпуска. В случае другие ошибки времени выполнения, этот метод, проверочные утверждения в режиме отладки и вызывает исключение, производный от [CException](../../mfc/reference/cexception-class.md) класса.  
   
- Этот метод воздействует на состояние меню в приложениях, написанных для [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] и более поздних версий.  
+ Этот метод воздействует на состояние меню в приложениях, написанных для Windows Vista и более поздних версий.  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  Вызывайте эту функцию для размещения строки в области строки состояния, который имеет идентификатор 0.  

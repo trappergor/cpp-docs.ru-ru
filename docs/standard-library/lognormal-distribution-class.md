@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb8a30f8dde14801b89b1e2d36e349ea8e93a5c6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958534"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107113"
 ---
 # <a name="lognormaldistribution-class"></a>Класс lognormal_distribution
 
@@ -78,7 +78,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*<br/>
+По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -204,11 +205,14 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*m* `m` параметр распределения.
+*m*<br/>
+Параметр распределения `m`.
 
-*s* `s` параметр распределения.
+*s*<br/>
+Параметр распределения `s`.
 
-*parm* `param_type` структура, используемая для формирования распределения.
+*parm*<br/>
+Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -236,11 +240,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*m* `m` параметр распределения.
+*m*<br/>
+Параметр распределения `m`.
 
-*s* `s` параметр распределения.
+*s*<br/>
+Параметр распределения `s`.
 
-*правом* `param_type` структура, используемая для сравнения.
+*right*<br/>
+Структура `param_type`, используемая для сравнения.
 
 ### <a name="remarks"></a>Примечания
 

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954920"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103707"
 ---
 # <a name="queue-class"></a>Класс queue
 
@@ -52,9 +52,11 @@ class queue
 
 ### <a name="parameters"></a>Параметры
 
-*Тип* тип данных элемента для сохранения в очереди
+*Тип*<br/>
+Тип данных элемента для сохранения в очереди.
 
-*Контейнер* тип базового контейнера, используемый для реализации очереди.
+*Контейнер*<br/>
+Тип базового контейнера, используемый для реализации очереди.
 
 ## <a name="remarks"></a>Примечания
 
@@ -74,13 +76,13 @@ class queue
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[queue](#queue)|Создает `queue`, который является пустым или копией объекта базового контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий базовый контейнер для изменения в `queue`.|
 |[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `queue`.|
@@ -88,7 +90,7 @@ class queue
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[back](#back)|Возвращает ссылку на последний и наиболее недавно добавленный элемент в конец `queue`.|
 |[empty](#empty)|Проверяет, является ли `queue` пустым.|
@@ -331,7 +333,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val* элемент, добавляемый в конец очереди.
+*Val*<br/>
+Элемент, добавляемый в конец очереди.
 
 ### <a name="remarks"></a>Примечания
 
@@ -381,7 +384,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* **const** контейнер, из которых копироваться создаваемая очередь.
+*right*<br/>
+Контейнер **const**, из которого будет копироваться создаваемая очередь.
 
 ### <a name="remarks"></a>Примечания
 

@@ -1,5 +1,5 @@
 ---
-title: -Qpar (автоматический Параллелизатор) | Документы Microsoft
+title: -Qpar (автоматический Параллелизатор) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430bf1ebc79008d97435ecbcb3b15cf19dda5f8d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 24c3501422a0bfbaba8aea0e45c102f63948b7db
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684509"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (автоматический параллелизатор)
-Включает [автоматического Параллелизатора](../../parallel/auto-parallelization-and-auto-vectorization.md) функции компилятора для автоматически параллелизации циклов в коде.  
+Позволяет [автоматического Параллелизатора](../../parallel/auto-parallelization-and-auto-vectorization.md) функция компилятора для автоматически параллельного выполнения циклов в коде.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,11 +31,11 @@ ms.locfileid: "32375692"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Когда компилятор автоматически параллелизации циклов в коде, распределяются случайным образом вычисление между несколькими ядрами процессора. Цикл параллелизации подвергается только в том случае, если компилятор определяет, что он является допустимым для этого, и что параллелизации позволяет улучшить производительность.  
+ Когда компилятор автоматически параллелизуются циклы в коде, он распределяет вычисления между несколькими ядрами процессора. Только в том случае, если компилятор определяет, что можно сделать и параллелизации, что позволяет улучшить производительность параллелизации цикла.  
   
- `#pragma loop()` Директивы, доступные для оптимизатора параллелизовать определенных циклов. Дополнительные сведения см. в разделе [цикла](../../preprocessor/loop.md).  
+ `#pragma loop()` Директивы, доступные для помогают оптимизатору параллельного выполнения определенных циклов. Дополнительные сведения см. в разделе [цикла](../../preprocessor/loop.md).  
   
- Сведения о включении выходных сообщений для автоматического параллелизатора см. в разделе [/qpar-Report (уровень отчетности автоматического Параллелизатора)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
+ Сведения о способах включения выходных сообщений для автоматическим параллелизатором, см. в разделе [/qpar-Report (уровень отчетности автоматического Параллелизатора)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
   
 ### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>Установка параметра компилятора /Qpar в Visual Studio  
   
@@ -55,4 +55,4 @@ ms.locfileid: "32375692"
  [Параметры компилятора](../../build/reference/compiler-options.md)   
  [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
  [#pragma loop()](../../preprocessor/loop.md)   
- [Параллельное программирование в машинном коде](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [Параллельное программирование в машинном коде](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

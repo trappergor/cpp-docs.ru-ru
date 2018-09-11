@@ -48,15 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec9e30112a9f0f5b54b84ccbbb61268e56d70d2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73e0b7646da57af679e7b3cbec3b0bb72d4ea8b8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338783"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571441"
 ---
 # <a name="iaccessorimpl-class"></a>Класс IAccessorImpl
-Предоставляет реализацию [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) интерфейс.  
+Предоставляет реализацию [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -98,7 +98,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](#releaseaccessor)|Освобождает метод доступа.|  
   
 ## <a name="remarks"></a>Примечания  
- Обязателен для наборов строк и команд. OLE DB требует, чтобы поставщики для реализации HACCESSOR, который является тегом в массив [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) структуры. Предоставляемые HACCESSORs `IAccessorImpl` являются адресами `BindType` структуры. По умолчанию `BindType` определяется как `ATLBINDINGS` в `IAccessorImpl`в определении шаблона. `BindType` предоставляет механизм, используемый `IAccessorImpl` для отслеживания числа элементов в его `DBBINDING` массива, а также ссылка метода доступа и число флагов.  
+ Обязателен для наборов строк и команд. OLE DB требует, чтобы поставщики для реализации HACCESSOR, который является тегом в массив [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) структуры. Предоставляемые HACCESSORs `IAccessorImpl` являются адресами `BindType` структуры. По умолчанию `BindType` определяется как `ATLBINDINGS` в `IAccessorImpl`в определении шаблона. `BindType` предоставляет механизм, используемый `IAccessorImpl` для отслеживания числа элементов в его `DBBINDING` массива, а также ссылка метода доступа и число флагов.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 Конструктор.  
@@ -120,7 +120,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IAccessor::AddRefAccessor](https://msdn.microsoft.com/library/ms714978.aspx) в *справочнике программиста OLE DB*.
+ См. в разделе [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) в *справочнике программиста OLE DB*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 Создает метод доступа на основе набора привязок.  
@@ -137,7 +137,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IAccessor::CreateAccessor](https://msdn.microsoft.com/library/ms720969.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
 Возвращает привязки базовые столбцы из объекта-получателя в метод доступа.  
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IAccessor::GetBindings](https://msdn.microsoft.com/library/ms721253.aspx) в *справочнике программиста OLE DB*. 
+ См. в разделе [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 Освобождает метод доступа.  
@@ -165,7 +165,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IAccessor::ReleaseAccessor](https://msdn.microsoft.com/library/ms719717.aspx) в *справочнике программиста OLE DB*.
+ См. в разделе [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) в *справочнике программиста OLE DB*.
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac37f1b5b5df8f39e584b8e5476af81a4b09ecff
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dfa345ba4b9960e10ebbbd0f2392204c0af34241
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464341"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590640"
 ---
 # <a name="array-attributes"></a>Атрибуты массивов
-Следующие атрибуты применяется к массивам или `SAFEARRAY`s.  
-  
-|Атрибут|Описание:|  
-|---------------|-----------------|  
-|[library_block](../windows/library-block.md)|Помещает конструкцию внутри блока библиотеки в IDL-файл.|  
-|[satype](../windows/satype.md)|Указывает тип данных структуры SAFEARRAY.|  
-|[string](../windows/string-cpp.md)|Указывает, что одномерный массив **char**, **wchar_t**, **байтов** (или эквивалентную) массив или указатель на такой массив должен обрабатываться как строка.|  
-  
-## <a name="see-also"></a>См. также  
- [Список атрибутов по использованию](../windows/attributes-by-usage.md)
+
+Следующие атрибуты применяется к массивам или `SAFEARRAY`s.
+
+|Атрибут|Описание:|
+|---------------|-----------------|
+|[library_block](../windows/library-block.md)|Помещает конструкцию внутри блока библиотеки в IDL-файл.|
+|[satype](../windows/satype.md)|Указывает тип данных `SAFEARRAY` структуры.|
+|[string](../windows/string-cpp.md)|Указывает, что одномерный массив **char**, **wchar_t**, `byte` (или эквивалентную) массив или указатель на такой массив должен обрабатываться как строка.|
+
+## <a name="see-also"></a>См. также
+
+[Список атрибутов по использованию](../windows/attributes-by-usage.md)

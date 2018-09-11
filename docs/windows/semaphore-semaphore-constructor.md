@@ -1,5 +1,5 @@
 ---
-title: Конструктор Semaphore::Semaphore | Документы Microsoft
+title: Конструктор Semaphore::Semaphore | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc7ddd6279dbdf177c8e478b7c1350647ac4a7c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a585f052c42453f0eb9fe8a39a21a5561d4b00c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888663"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598964"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Конструктор Semaphore::Semaphore
-Инициализирует новый экземпляр класса Semaphore.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-explicit Semaphore(  
-   HANDLE h  
-);  
-  
-WRL_NOTHROW Semaphore(  
-   _Inout_ Semaphore&& h  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `h`  
- Дескриптор или ссылка rvalue на объект Semaphore.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers
- 
- ## <a name="see-also"></a>См. также
- [Класс Semaphore](../windows/semaphore-class.md)
+
+Инициализирует новый экземпляр класса **семафора** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+explicit Semaphore(
+   HANDLE h
+);
+
+WRL_NOTHROW Semaphore(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*h*  
+Дескриптор или rvalue ссылка для **семафора** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+[Класс Semaphore](../windows/semaphore-class.md)

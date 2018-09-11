@@ -1,5 +1,5 @@
 ---
-title: Пространство имен Microsoft::WRL::Wrappers::Details | Документы Microsoft
+title: Пространство имен Microsoft::WRL::Wrappers::Details | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,41 +23,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 752989b33bd0b017233ea4a105d2ad36ca2290f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3af5add0a934b59cf3027b7beb0ea000a7ae1415
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875556"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595711"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Пространство имен Microsoft::WRL::Wrappers::Details
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-namespace Microsoft::WRL::Wrappers::Details;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="classes"></a>Классы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Класс SyncLockT](../windows/synclockt-class.md)|Представляет тип, который может принимать монопольного или общие права владения ресурсом.|  
-|[Класс SyncLockWithStatusT](../windows/synclockwithstatust-class.md)|Представляет тип, который может принимать монопольного или общие права владения ресурсом.|  
-  
-### <a name="methods"></a>Методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Метод CompareStringOrdinal](../windows/comparestringordinal-method.md)|Сравнивает два указанных `HSTRING` объектов и возвращает целое число, которое показывает их относительное положение в порядке сортировки.|  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+namespace Microsoft::WRL::Wrappers::Details;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="classes"></a>Классы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Класс SyncLockT](../windows/synclockt-class.md)|Представляет тип, который может занять монопольного или общее владение ресурсом.|
+|[Класс SyncLockWithStatusT](../windows/synclockwithstatust-class.md)|Представляет тип, который может занять монопольного или общее владение ресурсом.|
+
+### <a name="methods"></a>Методы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод CompareStringOrdinal](../windows/comparestringordinal-method.md)|Сравнивает два указанных `HSTRING` объектов и возвращает целое число, которое показывает их относительное положение в порядке сортировки.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)

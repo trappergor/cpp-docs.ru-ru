@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef090aec97308a6d423c18daab5ee540efdd8a1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959778"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316328"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -32,24 +32,24 @@ ms.locfileid: "38959778"
 
 ## <a name="syntax"></a>Синтаксис
 
-> #<a name="include-hashmap"></a>включить < hash_map >
+> #<a name="include-hashmap"></a>включить \<hash_map >
 
 ### <a name="operators"></a>Операторы
 
-|Версия hash_map|Версия hash_multimap|Описание:|
+|Версия hash_map|Версия hash_multimap|Описание|
 |-----------------------|----------------------------|-----------------|
 |[operator!= (hash_map)](hash-map-operators.md#op_neq)|[Operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Проверяет неравенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|
 |[ operator== (hash_map)](hash-map-operators.md#op_eq_eq)|[ operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Проверяет равенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|
 
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов
 
-|Версия hash_map|Версия hash_multimap|Описание:|
+|Версия hash_map|Версия hash_multimap|Описание|
 |-----------------------|----------------------------|-----------------|
 |[swap (hash_map)](hash-map-class.md#swap)|[swap (hash_multimap)](hash-multimap-class.md#swap)|Меняет местами элементы двух объектов hash_map или hash_multimap.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[Класс hash_compare](hash-compare-class.md)|Описывает объект, который может использоваться любым ассоциативным контейнером хэша — hash_map hash_multimap, hash_set или hash_multiset — по умолчанию `Traits` объект параметра для упорядочивания и хэширования элементов в них.|
 |[Класс value_compare](value-compare-class.md)|Предоставляет объект функции, который может сравнивать элементы hash_map путем сравнения значения ключей для определения относительного порядка в hash_map.|
@@ -64,6 +64,6 @@ ms.locfileid: "38959778"
 
 ## <a name="see-also"></a>См. также
 
-[Ссылки на файлы заголовков](cpp-standard-library-header-files.md)
-[потокобезопасность в стандартной библиотеке C++](thread-safety-in-the-cpp-standard-library.md)
-[Справочник по библиотеке C++ Standard](cpp-standard-library-reference.md)
+[Справочник по файлам заголовков](cpp-standard-library-header-files.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по стандартной библиотеке C++](cpp-standard-library-reference.md)

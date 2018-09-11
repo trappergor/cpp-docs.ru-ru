@@ -17,33 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a7a1e8fe89f64ad5909e7c1415545e3b3d80196
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2c7f7784e57f0dc66b6a4c77565016d17420eb55
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337773"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219126"
 ---
 # <a name="idl-attributes-add-method-wizard"></a>Атрибуты IDL, мастер добавления метода
 Используйте эту страницу мастера добавления метода, чтобы указать все параметры IDL для этого метода.  
   
  **id**  
- Задает числовой идентификатор, который определяет этот метод. См. описание [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) в *справочнике по MIDL*.  
+ Задает числовой идентификатор, который определяет этот метод. См. описание [id](/windows/desktop/Midl/id) в *справочнике по MIDL*.  
   
  Это поле недоступно для настраиваемых интерфейсов и disp-интерфейсов MFC.  
   
  **call_as**  
- Указывает имя удаленного метода, с которым можно сопоставить этот локальный метод. См. описание [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) в *справочнике по MIDL*.  
+ Указывает имя удаленного метода, с которым можно сопоставить этот локальный метод. См. описание [call_as](/windows/desktop/Midl/call-as) в *справочнике по MIDL*.  
   
  Недоступно для disp-интерфейсов MFC.  
   
  **helpcontext**  
- Задает идентификатор контекста, позволяющий пользователю просматривать в файле справки информацию об этом методе. См. описание [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) в *справочнике по MIDL*.  
+ Задает идентификатор контекста, позволяющий пользователю просматривать в файле справки информацию об этом методе. См. описание [helpcontext](/windows/desktop/Midl/helpcontext) в *справочнике по MIDL*.  
   
  Недоступно для disp-интерфейсов MFC.  
   
  **helpstring**  
- Определяет строку символов, используемую для описания элемента, к которому оно применяется. По умолчанию имеет значение "method *имя метода*." См. описание [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) в *справочнике по MIDL*.  
+ Определяет строку символов, используемую для описания элемента, к которому оно применяется. По умолчанию имеет значение "method *имя метода*." См. описание [helpstring](/windows/desktop/Midl/helpstring) в *справочнике по MIDL*.  
   
  Недоступно для disp-интерфейсов MFC.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "33337773"
   
 |Атрибут|Описание:|  
 |---------------|-----------------|  
-|**hidden**|Указывает, что метод существует, но не должен отображаться в пользовательском браузере. См. описание [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) в *справочнике по MIDL*.|  
-|**source**|Указывает, что член метода является источником событий. См. описание [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) в *справочнике по MIDL*.|  
-|`local`|Указывает компилятору MIDL, что метод не является удаленным. См. описание [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) в *справочнике по MIDL*.|  
-|**restricted**|Указывает, что метод не может вызываться произвольным образом. См. описание [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) в *справочнике по MIDL*.|  
-|**vararg**|Указывает, что метод принимает переменное число аргументов. В этом случае последний аргумент должен быть безопасным массивом типа **VARIANT**, содержащим все остальные аргументы. См. описание [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) в *справочнике по MIDL*.|  
+|**hidden**|Указывает, что метод существует, но не должен отображаться в пользовательском браузере. См. описание [hidden](/windows/desktop/Midl/hidden) в *справочнике по MIDL*.|  
+|**source**|Указывает, что член метода является источником событий. См. описание [source](/windows/desktop/Midl/source) в *справочнике по MIDL*.|  
+|`local`|Указывает компилятору MIDL, что метод не является удаленным. См. описание [local](/windows/desktop/Midl/local) в *справочнике по MIDL*.|  
+|**restricted**|Указывает, что метод не может вызываться произвольным образом. См. описание [restricted](/windows/desktop/Midl/restricted) в *справочнике по MIDL*.|  
+|**vararg**|Указывает, что метод принимает переменное число аргументов. В этом случае последний аргумент должен быть безопасным массивом типа **VARIANT**, содержащим все остальные аргументы. См. описание [vararg](/windows/desktop/Midl/vararg) в *справочнике по MIDL*.|  
   
 ## <a name="see-also"></a>См. также  
  [Добавление метода](../ide/adding-a-method-visual-cpp.md)   

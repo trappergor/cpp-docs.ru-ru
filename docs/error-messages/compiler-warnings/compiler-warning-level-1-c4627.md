@@ -1,7 +1,7 @@
 ---
-title: Предупреждение (уровень 1) C4627 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4627 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/09/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde9e6707465fd95dbcb10e073a852624f0de0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
+ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284190"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249624"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>Предупреждение компилятора (уровень 1) C4627
-"\<идентификатор >": пропущен при поиске использования предкомпилированного заголовка  
+
+> "*header_file*": пропущен при поиске использования предкомпилированного заголовка
+
+Если у текущего файла исходного кода [/Yu \(использование предкомпилированного файла заголовка)](../../build/reference/yu-use-precompiled-header-file.md) параметр, то компилятор игнорирует все, что в файле, прежде чем предкомпилированный заголовок включен. Предупреждение **C4627** создается в Visual Studio 2015 и более ранних версий, если *header_file* включен перед предкомпилированного файла заголовка, и если предкомпилированный заголовок не следует включать *header_file*.
+
+## <a name="example"></a>Пример
+
+В этом примере демонстрируется, как может произойти ошибка и показаны способы ее устранения:
+ 
+```cpp
+// c4627.cpp
+#include <iostream>       // C4627 - iostream not included by pch.h
+#include "pch.h"          // precompiled header file that does not include iostream
+// #include <iostream>    // To fix, move the iostream header include here from above
+int main()
+{
+    std::cout << "std::cout is defined!\n";
+}
+```
   
- При поиске расположения, где используется предкомпилированный заголовок, компилятор обнаружил `#include` директивы  *\<идентификатор >* включаемого файла. Компилятор игнорирует `#include` директивы, но выдает предупреждение **C4627** если предкомпилированный заголовок еще не содержит  *\<идентификатор >* включаемого файла.  
-  
-## <a name="see-also"></a>См. также  
- [Создание предварительно скомпилированных файлов заголовков](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>См. также
+
+[Создание предварительно скомпилированных файлов заголовков](../../build/reference/creating-precompiled-header-files.md)

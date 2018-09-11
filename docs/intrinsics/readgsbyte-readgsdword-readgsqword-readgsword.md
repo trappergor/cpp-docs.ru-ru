@@ -1,5 +1,5 @@
 ---
-title: __readgsbyte __readgsdword, __readgsqword __readgsword | Документы Microsoft
+title: __readgsbyte __readgsdword, __readgsqword __readgsword | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a0732f5a93c152588f0a7fdc99c7a10787bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325283"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541681"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 **Блок, относящийся только к системам Microsoft**  
   
- Чтение памяти в расположении, указанном в качестве смещения относительно начала сегмента GS.  
+ Прочитать память из расположения, указанной в качестве смещения относительно начала сегмент GS.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ unsigned __int64 __readgsqword(
   
 #### <a name="parameters"></a>Параметры  
  [in] `Offset`  
- Смещение от начала `GS` из которого выполняется чтение.  
+ Смещение от начала `GS` считаны.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Содержимое памяти байт, слово, двойное слово или quadword (как указано в имени функции, вызываемой) в расположении `GS:[Offset]`.  
@@ -62,15 +62,15 @@ unsigned __int64 __readgsqword(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsbyte`|X64|  
+|`__readgsdword`|X64|  
+|`__readgsqword`|X64|  
+|`__readgsword`|X64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Эти встроенные функции доступны только в режиме ядра и процедуры доступны только как встроенные объекты.  
+ Эти встроенные функции доступны только в режиме ядра и процедуры доступны только как встроенные функции.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

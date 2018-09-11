@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fdbcc396b77c6e0eb13262b80ca30df704f0c62
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3f377d2005625237113ebe881081f1eaf41d2b74
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959109"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318607"
 ---
 # <a name="minus-struct"></a>Структура minus
 
@@ -44,16 +44,18 @@ struct minus<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) - std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *Тип*, *T*, *U* тип, поддерживающий бинарный `operator-` , принимающий операнды указанного или выводимого типа.
 
-*Слева* левый операнд операции. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
+*Слева*<br/>
+Левый операнд в операции. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
 
-*Справа* правый операнд операции. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
+*Справа*<br/>
+Правый операнд в операции. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -107,11 +109,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 1 5 9 13 17 21 )
 The vector v2 = ( -1 2 5 8 11 14 )
 The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Требования

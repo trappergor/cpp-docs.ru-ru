@@ -1,5 +1,5 @@
 ---
-title: HStringReference::Operator&lt; оператор | Документы Microsoft
+title: Оператор HStringReference::Operator&lt; оператора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,38 +15,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b486157fb42883af724f2356e7f85701e405035
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee7edbee285df6da752e875ac4d86a74e8f7893d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877297"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594145"
 ---
-# <a name="hstringreferenceoperatorlt-operator"></a>HStringReference::Operator&lt; оператор
-Указывает, является ли первый параметр меньше второго параметра.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline bool operator<(  
-    const HStringReference& lhs,   
+# <a name="hstringreferenceoperatorlt-operator"></a>Оператор HStringReference::Operator&lt; оператор
+
+Указывает, является ли первый параметр меньше значения второго параметра.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline bool operator<(
+    const HStringReference& lhs,
     const HStringReference& rhs) throw()  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `lhs`  
- Первый параметр для сравнения. `lhs` может быть ссылкой на HStringReference.  
-  
- `rhs`  
- Второй параметр для сравнения.  `rhs` может быть ссылкой на HStringReference.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `true` Если `lhs` параметр меньше, чем `rhs` параметр; в противном случае `false`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HStringReference](../windows/hstringreference-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*lhs*  
+Первый параметр для сравнения. *LHS* можно ссылаться на **HStringReference**.
+
+*правая часть*  
+Второй параметр для сравнения.  *правая часть* можно ссылаться на **HStringReference**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если *lhs* параметр меньше, чем *rhs* параметра; в противном случае **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HStringReference](../windows/hstringreference-class.md)

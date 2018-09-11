@@ -1,5 +1,5 @@
 ---
-title: usesgetlasterror | Документы Microsoft
+title: usesgetlasterror | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 399b9fbbcf4b449f5f91beaea89c403d120d0a21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 39052024224b1a78a84b2d9503957b8fff09b96f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890279"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208295"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
-Сообщает вызывающего объекта, если возникает ошибка при вызове этой функции, затем вызывающий объект может затем вызвать `GetLastError` для получения кода ошибки.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-[usesgetlasterror]  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Usesgetlasterror** языка C++ имеет ту же функциональность, что [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- В разделе [idl_module](../windows/idl-module.md) примере образец демонстрирует использование **usesgetlasterror**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**модуль** атрибута|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
+
+Вызывающий объект о том, есть ли ошибки при вызове этой функции, затем вызывающий объект затем можно вызвать `GetLastError` для получения кода ошибки.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[usesgetlasterror]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Usesgetlasterror** атрибут C++ имеет ту же функциональность, что [usesgetlasterror](/windows/desktop/Midl/usesgetlasterror) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в разделе [idl_module](../windows/idl-module.md) примере образец демонстрирует использование **usesgetlasterror**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**модуль** атрибут|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  

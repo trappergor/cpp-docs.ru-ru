@@ -1,7 +1,7 @@
 ---
-title: Неустранимая ошибка ML A1010 | Документы Microsoft
+title: Неустранимая ошибка ML A1010 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b622595b6994c4c4eaa74ed8f824f28dffe89b1a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12b7e8698951e8ef59e0433134ec992af5d5f77f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057686"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676301"
 ---
 # <a name="ml-fatal-error-a1010"></a>Неустранимая ошибка ML A1010
-**вложенность несовпадающие блока:**  
-  
- Начало блока не имеет соответствующего конечного или конца блока не имеет сопоставления начало. Может быть задействован одно из следующих:  
-  
--   Директиву высокого уровня, такие как [. Если](../../assembler/masm/dot-if.md), [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md), или [. Во время](../../assembler/masm/dot-while.md).  
-  
--   Директива условной сборки как [IF](../../assembler/masm/if-masm.md), [ПОВТОРИТЕ](../../assembler/masm/repeat.md), или **при**.  
-  
--   Определение структуры или объединения.  
-  
--   Определение процедуры.  
-  
--   Определение сегмента.  
-  
--   Объект [POPCONTEXT](../../assembler/masm/popcontext.md) директивы.  
-  
--   Сборке условной директивы, такие как [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), или **ENDIF** без соответствующего [IF](../../assembler/masm/if-masm.md).  
-  
-## <a name="see-also"></a>См. также  
- [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)
+
+**вложенность непарные блок:**
+
+Начало блока не имеет сопоставления конечных или конца блока не имеет сопоставления начало. Может быть задействован один из следующих:
+
+- Директиву высокого уровня, такие как [. Если](../../assembler/masm/dot-if.md), [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md), или [. ХОТЯ](../../assembler/masm/dot-while.md).
+
+- Директива условной сборки как [IF](../../assembler/masm/if-masm.md), [ПОВТОРИТЕ](../../assembler/masm/repeat.md), или **ХОТЯ**.
+
+- Определение структуры или объединения.
+
+- Определение процедуры.
+
+- Определение сегмента.
+
+- Объект [POPCONTEXT](../../assembler/masm/popcontext.md) директива.
+
+- Сборкой условной директивы, такие как [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), или **ENDIF** без соответствующего [IF](../../assembler/masm/if-masm.md).
+
+## <a name="see-also"></a>См. также
+
+[Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

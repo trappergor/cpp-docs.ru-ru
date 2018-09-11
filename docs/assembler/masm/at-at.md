@@ -1,7 +1,7 @@
 ---
-title: '@@: | Документы Microsoft'
+title: '@@: | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2c3494f82e7a0fc99853494e5020b51b905292
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1f9f1bd26862147bb365349e25709a7086085c0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056465"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691330"
 ---
 # <a name=""></a>@@:
-Определяет метку кода распознается только между *label1* и *label2*, где *label1* равно начала кода или предыдущей `@@:` метку и *label2* кода или следующего `@@:` метки. В разделе [ @B ](../../assembler/masm/at-b.md) и [ @F ](../../assembler/masm/at-f.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-@@:  
-  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по символам](../../assembler/masm/symbols-reference.md)
+
+Определяет метку кода, распознаваемое только между *label1* и *label2*, где *label1* начало кода или предыдущей `@@:` метку и *label2* конце кода или следующего `@@:` метки. См. в разделе [ @B ](../../assembler/masm/at-b.md) и [ @F ](../../assembler/masm/at-f.md).
+
+## <a name="syntax"></a>Синтаксис
+
+> @@:
+
+## <a name="see-also"></a>См. также
+
+[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>

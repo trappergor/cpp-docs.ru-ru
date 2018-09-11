@@ -1,5 +1,5 @@
 ---
-title: ComPtr::operator! =-оператор | Документы Microsoft
+title: Оператор ComPtr::operator! =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,53 +15,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2450b5d473d1caadae171516cf337479bfd5d603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4874121f22daa8e4a13bf7a1d332c9b8e3db60ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881885"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578111"
 ---
 # <a name="comptroperator-operator"></a>Оператор ComPtr::operator!=
-Определяет неравенство двух объектов СomPtr.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-bool operator!=(  
-   const ComPtr<T>& a,  
-   const ComPtr<U>& b  
-);  
-  
-bool operator!=(  
-   const ComPtr<T>& a,  
+
+Указывает ли два **ComPtr** объекты не равны.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+bool operator!=(
+   const ComPtr<T>& a,
+   const ComPtr<U>& b
+);
+
+bool operator!=(
+   const ComPtr<T>& a,
    decltype(__nullptr)  
-);  
-  
-bool operator!=(  
-   decltype(__nullptr),  
-   const ComPtr<T>& a  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `a`  
- Ссылка на объект ComPtr.  
-  
- `b`  
- Ссылка на другой объект ComPtr.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Первый оператор возвращает значение `true`, если объект `a` не равен объекту `b`; в противном случае —значение `false`.  
-  
- Второй и третий операторы возвращают значение `true`, если объект `a` не равен `nullptr`; в противном случае — значение `false`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)   
- [Класс ComPtr](../windows/comptr-class.md)
+);
+
+bool operator!=(
+   decltype(__nullptr),
+   const ComPtr<T>& a
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*a*  
+Ссылку на **ComPtr** объекта.
+
+*b*  
+Ссылка на другой **ComPtr** объекта.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Первый оператор возвращает **true** Если объект *a* не равен объекту *b*; в противном случае **false**.
+
+Второй и третий операторы возвращают **true** Если объект *a* не равно **nullptr**; в противном случае **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)  
+[Класс ComPtr](../windows/comptr-class.md)

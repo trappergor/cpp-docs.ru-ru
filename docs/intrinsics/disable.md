@@ -1,5 +1,5 @@
 ---
-title: _disable | Документы Microsoft
+title: _disable | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4359d77f13338e2e007236b0103fd358dffd0ce1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2748d0412c9ee0f7e7684d35a38f3c2b5d133754
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324263"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539522"
 ---
 # <a name="disable"></a>_disable
 **Блок, относящийся только к системам Microsoft**  
@@ -41,12 +41,12 @@ void _disable(void);
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`_disable`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_disable`|x86, ARM, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- `_disable` Указывает, что обработчик Снимите флаг прерывания. На платформе x86 систем, эта функция создает инструкцию снятия флага прерывания (`cli`) .  
+ `_disable` Указывает процессору очистить флаг прерывания. На платформе x86 систем, эта функция создает инструкцию снятия флага прерывания (`cli`) .  
   
  Эта функция доступна только в режиме ядра. При использовании в пользовательском режиме, исключение привилегированной инструкции во время выполнения отбрасывается.  
   

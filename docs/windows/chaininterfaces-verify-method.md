@@ -17,32 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e6dbc595714cbecf2ad13db13051866e31e5ebcd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466843"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581062"
 ---
 # <a name="chaininterfacesverify-method"></a>Метод ChainInterfaces::Verify
-Проверяет, что каждому интерфейсу, определяемая параметрами шаблона *I0* через *I9* наследует от IUnknown и IInspectable и что *I0* наследует от *I1* через *I9*.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-WRL_NOTHROW __forceinline static void Verify();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- При сбое операции проверки **static_assert** выдает сообщение об ошибке, описывающее ошибку.  
-  
-## <a name="remarks"></a>Примечания  
- Параметры шаблона *I0* и *I1* являются обязательными и параметры *I2* через *I9* являются необязательными.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Структура ChainInterfaces](../windows/chaininterfaces-structure.md)
+
+Проверяет, что каждому интерфейсу, определяемая параметрами шаблона *I0* через *I9* наследует от `IUnknown` и/или `IInspectable`и что *I0* наследует от *I1* через *I9*.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+WRL_NOTHROW __forceinline static void Verify();
+```
+
+## <a name="remarks"></a>Примечания
+
+При сбое операции проверки **static_assert** выдает сообщение об ошибке, описывающее ошибку.
+
+Параметры шаблона *I0* и *I1* являются обязательными и параметры *I2* через *I9* являются необязательными.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Структура ChainInterfaces](../windows/chaininterfaces-structure.md)

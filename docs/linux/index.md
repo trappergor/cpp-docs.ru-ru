@@ -1,20 +1,22 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
-ms.topic: landing-page
+ms.topic: conceptual
 title: Документация по разработке для Linux на C++
 description: Создание и отладка приложений на платформе Linux.
-ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c17106038bc79742351efef07a5900a4709c9569
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29794184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213917"
 ---
 # <a name="linux-development-with-c-documentation"></a>Документация по разработке для Linux на C++
 
-Создание и отладка приложений на платформе Linux.
+Используйте Visual Studio 2017 для создания и отладки приложений на платформе Linux.
 
 <ul class="panelContent cardsF">
     <li>
@@ -29,7 +31,7 @@ ms.locfileid: "29794184"
                     </div>
                     <div class="cardText">
                         <h3>Установка и настройка рабочей нагрузки Linux</h3>
-                        <p>Узнайте, как настроить Visual Studio, чтобы создавать приложения для Linux на C++.</p>
+                        <p>Узнайте, как настроить Visual Studio 2017 и более поздней версии, чтобы создавать приложения для Linux на C++.</p>
                     </div>
                 </div>
             </div>

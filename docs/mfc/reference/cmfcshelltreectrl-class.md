@@ -38,17 +38,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0508f0042f63441b3a9bdf66cd29ca0a9a73e6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849806"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760849"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Класс CMFCShellTreeCtrl
 `CMFCShellTreeCtrl` Класс расширяет [класс CTreeCtrl](../../mfc/reference/ctreectrl-class.md) функциональные возможности, отображая иерархию элементов оболочки.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.    
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
@@ -59,10 +59,10 @@ class CMFCShellTreeCtrl : public CTreeCtrl
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Включает или отключает контекстное меню.|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|Возвращает сочетание флагов, которые передаются [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|Возвращает сочетание флагов, которые передаются [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|Извлекает путь к элементу.|  
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|Возвращает указатель на [класс CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) объект, который используется вместе с это `CMFCShellTreeCtrl` объект для создания окна проводника.|  
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Эта функция-член вызывается родительского окна в том случае, когда он получает сообщение уведомления, которое подходит к этому окну. (Переопределяет [CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify).)|  
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
  Задайте значение DWORD, указывающее сочетание флагов, в настоящее время.  
   
 ### <a name="remarks"></a>Примечания  
- Флаги установлены `CMFCShellTreeCtrl` отправляются в метод [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066) каждый раз, когда объект обновляется. Можно изменить флаги, с помощью [CMFCShellTreeCtrl::SetFlags](#setflags) метод.  
+ Флаги установлены `CMFCShellTreeCtrl` отправляются в метод [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066) каждый раз, когда объект обновляется. Можно изменить флаги, с помощью [CMFCShellTreeCtrl::SetFlags](#setflags) метод.  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  Получает путь элемента в [класс CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.  
@@ -254,7 +254,7 @@ void SetFlags(
  Логическое значение, указывающее ли `CMFCShellTreeCtrl` должен быть обновлен немедленно.  
   
 ### <a name="remarks"></a>Примечания  
- `CMFCShellTreeCtrl` Передает все значение флагов [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066). Дополнительные сведения о значениях различных флагов см. в разделе [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).  
+ `CMFCShellTreeCtrl` Передает все значение флагов [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Дополнительные сведения о значениях различных флагов см. в разделе [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  Связывает [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) со [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.  

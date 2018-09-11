@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462073"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611036"
 ---
 # <a name="agileeventsource-class"></a>Класс AgileEventSource
 
@@ -30,19 +30,19 @@ ms.locfileid: "39462073"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Параметры  
- *TDelegateInterface*  
+## <a name="parameters"></a>Параметры
 
- Интерфейс делегат, представляющий обработчик событий.
+*TDelegateInterface*  
+Интерфейс делегат, представляющий обработчик событий.
 
- *TEventSourceOptions*  
- [InvokeModeOptions](invokemodeoptions-structure.md) структура, поля которого invokeMode задается `InvokeMode::StopOnFirstError` или `InvokeMode::FireAll`.
+*TEventSourceOptions*  
+[InvokeModeOptions](invokemodeoptions-structure.md) структура, поля которого invokeMode задается `InvokeMode::StopOnFirstError` или `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Примечания
 
@@ -50,13 +50,14 @@ class AgileEventSource
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
- `EventSource` `AgileEventSource`
+`EventSource`
+`AgileEventSource`
 
 ## <a name="requirements"></a>Требования
 
- **Заголовок:** event.h
+**Заголовок:** event.h
 
- **Пространство имен:** Microsoft::WRL
+**Пространство имен:** Microsoft::WRL
 
 ## <a name="members"></a>Участники
 
@@ -64,7 +65,7 @@ class AgileEventSource
 
 |Имя|Описание:|
 |----------|-----------------|
-|[Метод AgileEventSource::Add](#add)|Добавляет обработчик событий agile, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего объекта AgileEventSource.|
+|[Метод AgileEventSource::Add](#add)|Добавляет обработчик событий agile, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего **AgileEventSource** объекта.|
 
 ## <a name="add"></a> Метод AgileEventSource::Add
 
@@ -85,7 +86,7 @@ HRESULT Add(
 Интерфейс для объекта делегата, который представляет обработчик событий.
 
 *Маркер*  
-После завершения операции представляет дескриптор события. Используйте этот маркер в качестве параметра в метод Remove() для удаления обработчика событий.
+После завершения операции представляет дескриптор события. Использовать этот маркер в качестве параметра `Remove()` метод для удаления обработчика событий.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -93,4 +94,5 @@ HRESULT Add(
 
 
 ## <a name="see-also"></a>См. также
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

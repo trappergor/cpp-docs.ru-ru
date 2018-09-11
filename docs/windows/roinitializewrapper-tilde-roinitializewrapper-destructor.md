@@ -1,5 +1,5 @@
 ---
-title: 'RoInitializeWrapper:: ~ RoInitializeWrapper деструктор | Документы Microsoft'
+title: 'RoInitializeWrapper:: ~ RoInitializeWrapper деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29683e68f1f5aadcd477cdc717b03a648c5cccc7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5548eb413f0d5cd4c72983e00bdf65f61bb98f6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892004"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597927"
 ---
 # <a name="roinitializewrapperroinitializewrapper-destructor"></a>Деструктор RoInitializeWrapper::~RoInitializeWrapper
-Отменяет инициализацию среды выполнения Windows.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
+
+Отменяет инициализацию среды выполнения Windows.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 ~RoInitializeWrapper()  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Класс RoInitializeWrapper вызывает Windows::Foundation::Uninitialize().  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HandleT](../windows/handlet-class.md)
+```
+
+## <a name="remarks"></a>Примечания
+
+**RoInitializeWrapper** класс вызывает `Windows::Foundation::Uninitialize()`.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HandleT](../windows/handlet-class.md)

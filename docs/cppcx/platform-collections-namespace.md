@@ -1,5 +1,5 @@
 ---
-title: Пространство имен Platform::Collections | Документы Microsoft
+title: Пространство имен Platform::Collections | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -11,24 +11,24 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a8c6191f8cbcf79973a5af55d222dd6f17fc47e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088041"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106074"
 ---
 # <a name="platformcollections-namespace"></a>Пространство имен Platform::Collections
 
-Содержит пространство имен Platform::Collections `Map`, `MapView`, `Vector`, и `VectorView` классы. Эти классы являются конкретными реализациями соответствующих интерфейсов, которые определены в пространстве имен [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) . Конкретные типы коллекций не могут переноситься через интерфейс ABI (например, когда программа JavaScript или C# вызывает компонент C++), но они могут неявно преобразоваться в соответствующие типы интерфейсов. Например, если вы реализуете открытый метод, который заполняет и возвращает коллекцию, используйте [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) для внутренней реализации коллекции и [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) в качестве возвращаемого типа. Дополнительные сведения см. в разделе [коллекций](../cppcx/collections-c-cx.md) и [создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Содержит пространство имен Platform::Collections `Map`, `MapView`, `Vector`, и `VectorView` классы. Эти классы являются конкретными реализациями соответствующих интерфейсов, которые определены в [Windows::Foundation:: Collections](/uwp/api/Windows.Foundation.Collections) пространства имен. Конкретные типы коллекций не могут переноситься через интерфейс ABI (например, когда программа JavaScript или C# вызывает компонент C++), но они могут неявно преобразоваться в соответствующие типы интерфейсов. Например, если вы реализуете открытый метод, который заполняет и возвращает коллекцию, используйте [Platform::Collections:: vector](../cppcx/platform-collections-vector-class.md) внутренней реализации коллекции и использовать [Windows::Foundation:: Collections: : IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) как тип возвращаемого значения. Дополнительные сведения см. в разделе [коллекций](../cppcx/collections-c-cx.md) и [создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Можно создать Platform::Collections::Vector из [std::vector](../standard-library/vector-class.md) и [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) из [std::map](../standard-library/map-class.md).
 
-Кроме того, пространство имен Platform::Collections предоставляет поддержку вставкой и входных итераторов и `Vector` и `VectorView` итераторов.
+Кроме того, пространство имен Platform::Collections обеспечивает поддержку вставкой и входных итераторов и `Vector` и `VectorView` итераторы.
 
 Необходимо включить (`#include`) заголовок collection.h использовать типы в пространстве имен Platform::Collections.
 
@@ -68,4 +68,4 @@ using namespace Platform::Collections;
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)  
+[Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

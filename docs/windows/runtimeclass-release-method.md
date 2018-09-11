@@ -1,5 +1,5 @@
 ---
-title: Метод RuntimeClass::Release | Документы Microsoft
+title: Метод RuntimeClass::Release | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0cb7af376e577a53f888425519108dedf01b7f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888800"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612056"
 ---
 # <a name="runtimeclassrelease-method"></a>Метод RuntimeClass::Release
-Выполняет операцию освобождения модели COM, с текущим объектом RuntimeClass.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHOD_(  
-   ULONG,  
-   Release  
-)();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
-  
-## <a name="remarks"></a>Примечания  
- Если счетчик ссылок становится равным нулю, RuntimeClass объект удаляется.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс RuntimeClass](../windows/runtimeclass-class.md)
+
+Выполняет операцию освобождения модели COM в текущем **RuntimeClass** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="remarks"></a>Примечания
+
+Если счетчик ссылок становится равным нулю, **RuntimeClass** объект удаляется.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс RuntimeClass](../windows/runtimeclass-class.md)

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337262"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681629"
 ---
 # <a name="chotkeyctrl-class"></a>Класс CHotKeyCtrl
 Предоставляет функциональные возможности стандартного элемента управления "горячая клавиша" Windows.  
@@ -52,13 +52,13 @@ class CHotKeyCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHotKeyCtrl::CHotKeyCtrl](#chotkeyctrl)|Создает объект `CHotKeyCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHotKeyCtrl::Create](#create)|Создает элемент управления "Горячий" ключа и присоединяет его к `CHotKeyCtrl` объекта.|  
 |[CHotKeyCtrl::CreateEx](#createex)|Создает элемент управления "Горячий" ключа с указанным расширенные стили Windows и присоединяет его к `CHotKeyCtrl` объекта.|  
@@ -75,7 +75,7 @@ class CHotKeyCtrl : public CWnd
   
  Если пользователь выбрал сочетание клавиш, приложение можно извлекать заданное сочетание клавиш из элемента управления и настроить сочетания клавиш в системе с помощью WM_SETHOTKEY сообщения. Каждый раз, когда пользователь нажимает клавишу "Горячий" после этого из любой части системы, окна, указанную в сообщении WM_SETHOTKEY получает сообщение WM_SYSCOMMAND, указав SC_HOTKEY. Это сообщение активирует окно, которое получает его. Сочетания клавиш будет существовать до приложения, которое вызвало WM_SETHOTKEY завершает работу.  
   
- Этот механизм отличается от "Горячий" Поддержка ключа, зависящий от сообщения WM_HOTKEY и Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) и [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) функции.  
+ Этот механизм отличается от "Горячий" Поддержка ключа, зависящий от сообщения WM_HOTKEY и Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) и [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) функции.  
   
  Дополнительные сведения об использовании `CHotKeyCtrl`, см. в разделе [элементов управления](../../mfc/controls-mfc.md) и [использование CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
@@ -111,7 +111,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- Задает стиль "Горячий" ключа элемента управления. Примените любое сочетание стилей элемента управления. См. в разделе [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) в пакете SDK для Windows, Дополнительные сведения.  
+ Задает стиль "Горячий" ключа элемента управления. Примените любое сочетание стилей элемента управления. См. в разделе [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете SDK для Windows, Дополнительные сведения.  
   
  *Rect*  
  Задает размер и положение "Горячий" ключа элемента управления. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [структура RECT](../../mfc/reference/rect-structure1.md).  
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
- Задает стиль "Горячий" ключа элемента управления. Примените любое сочетание стилей элемента управления. Дополнительные сведения см. в разделе [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) в пакете Windows SDK.  
+ Задает стиль "Горячий" ключа элемента управления. Примените любое сочетание стилей элемента управления. Дополнительные сведения см. в разделе [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK.  
   
  *Rect*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
   
  *pParentWnd*  
  Указатель на окно, которое является родительским для элемента управления.  

@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmptrld | Документы Microsoft
+title: __vmx_vmptrld | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 599e15414a944602ee196f3910a1c5dd561c906d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd04350df17b6d2dfed65526d0f7681c314f07f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682624"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 **Блок, относящийся только к системам Microsoft**  
   
- Загружает ссылку на текущую структуру управления виртуальной машины (VMCS) из указанного адреса.  
+ Загружает указатель на текущую структуру управления виртуальной машины (VMCS) из указанного адреса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +39,7 @@ int __vmx_vmptrld(
   
 #### <a name="parameters"></a>Параметры  
  [in] *`VmcsPhysicalAddress`  
- Адрес, где хранятся VMCS указателя.  
+ Адрес, где хранится указатель VMCS.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  0  
@@ -52,15 +52,15 @@ int __vmx_vmptrld(
  Сбой операции без сведений о состоянии.  
   
 ## <a name="remarks"></a>Примечания  
- Указатель VMCS — это физический адрес 64-разрядной.  
+ Указатель VMCS — это 64-разрядный физический адрес.  
   
- `__vmx_vmptrld` Функция эквивалентна `VMPTRLD` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__vmx_vmptrld` Функция эквивалентна `VMPTRLD` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__vmx_vmptrld`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrld`|X64|  
   
  **Файл заголовка** \<intrin.h >  
   

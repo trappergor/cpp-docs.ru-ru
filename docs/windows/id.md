@@ -1,5 +1,5 @@
 ---
-title: Идентификатор | Документы Microsoft
+title: Идентификатор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,52 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b5250a730b0ce80cbbe9698b4b5e636a85986b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882451"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223190"
 ---
 # <a name="id"></a>id
-Указывает `dispid` параметра для функции-члена (свойство или метод в интерфейсе или disp-интерфейс).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      [ id(  
-   dispid  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `dispid`  
- Идентификатор диспетчеризации для метода интерфейса.  
-  
-## <a name="remarks"></a>Примечания  
- **Идентификатор** языка C++ имеет ту же функциональность, что [идентификатор](http://msdn.microsoft.com/library/windows/desktop/aa367040) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **идентификатор**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Метод интерфейса|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [Атрибуты членов данных](../windows/data-member-attributes.md)   
- [значение по умолчанию](../windows/defaultvalue.md)   
- [in](../windows/in-cpp.md)   
- [out](../windows/out-cpp.md)   
+
+Указывает *dispid* параметра для функции-члена (свойство или метод, в интерфейс или диспетчерский интерфейс).
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ id(
+   dispid
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*Идентификатор DISPID*  
+Идентификатор диспетчеризации метода интерфейса.
+
+## <a name="remarks"></a>Примечания
+
+**Идентификатор** атрибут C++ имеет ту же функциональность, что [идентификатор](/windows/desktop/Midl/id) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [bindable](../windows/bindable.md) пример демонстрирует использование **идентификатор**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[Атрибуты элементов данных](../windows/data-member-attributes.md)  
+[defaultvalue](../windows/defaultvalue.md)  
+[in](../windows/in-cpp.md)  
+[out](../windows/out-cpp.md)  

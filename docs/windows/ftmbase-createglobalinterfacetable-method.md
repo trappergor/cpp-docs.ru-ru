@@ -1,5 +1,5 @@
 ---
-title: Метод FtmBase::CreateGlobalInterfaceTable | Документы Microsoft
+title: Метод FtmBase::CreateGlobalInterfaceTable | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b17749d5f20007e05f181de8f4e069d3fc736f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c042b6bd17da3459f499f9eb1c9167343c2e2ab
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872397"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578777"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>Метод FtmBase::CreateGlobalInterfaceTable
-Создает общую таблицу интерфейса (GIT).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-static HRESULT CreateGlobalInterfaceTable(  
-   __out IGlobalInterfaceTable **git  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `git`  
- После завершения этой операции представляет указатель на общую таблицу интерфейса.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
-  
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе «IGlobalInterfaceTable» в подразделе «COM-интерфейсы» раздела «Ссылки COM» в библиотеке MSDN.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** ftm.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс FtmBase](../windows/ftmbase-class.md)
+
+Создает общую таблицу интерфейса (GIT).
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+static HRESULT CreateGlobalInterfaceTable(
+   __out IGlobalInterfaceTable **git
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Git*  
+После завершения этой операции указатель на общую таблицу интерфейса.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="remarks"></a>Примечания
+
+Дополнительные сведения см. в разделе `IGlobalInterfaceTable` подразделы **COM-интерфейсы** подраздела **ссылку COM** раздела в библиотеке MSDN.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** ftm.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс FtmBase](../windows/ftmbase-class.md)

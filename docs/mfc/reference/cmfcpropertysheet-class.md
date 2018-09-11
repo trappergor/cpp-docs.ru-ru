@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45624c094d7ae656c50b55cc932762b7f9aa6476
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a9e4d2bc62ffadb59565ba64e28311cd1283cb5d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854074"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691440"
 ---
 # <a name="cmfcpropertysheet-class"></a>Класс CMFCPropertySheet
 Класс `CMFCPropertySheet` поддерживает таблицу свойств, каждая страница свойств в которой обозначается вкладкой, кнопкой панели инструментов, узлом элемента управления «Дерево» или элементом списка.  
@@ -70,14 +70,14 @@ class CMFCPropertySheet : public CPropertySheet
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Создает объект `CMFCPropertySheet`.|  
 |`CMFCPropertySheet::~CMFCPropertySheet`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|  
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Добавляет новую страницу свойств в элемент управления «Дерево».|  
@@ -91,9 +91,9 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Инициализирует появление текущего элемента управления «Страница свойств».|  
 |[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Вызывается платформой при включении страницы свойств.|  
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Вызывается платформой для отрисовки пользовательского заголовка страницы свойств.|  
-|`CMFCPropertySheet::OnInitDialog`|Обрабатывает [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) сообщения. (Переопределяет [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
+|`CMFCPropertySheet::OnInitDialog`|Обрабатывает [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) сообщения. (Переопределяет [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Вызывается платформой для удаления страницы свойств из элемента управления «Дерево».|  
-|`CMFCPropertySheet::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет `CPropertySheet::PreTranslateMessage`.)|  
+|`CMFCPropertySheet::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет `CPropertySheet::PreTranslateMessage`.)|  
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Удаляет узел из элемента управления «Дерево».|  
 |[CMFCPropertySheet::RemovePage](#removepage)|Удаляет страницу свойств из таблицы свойств.|  
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Указывает список изображений, используемых в элементе управления навигации панели Outlook.|  
@@ -462,7 +462,7 @@ void SetLook(
   
  В следующей таблице перечислены значения перечисления, которые могут быть указаны в *выглядеть* параметра.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`CMFCPropertySheet::PropSheetLook_Tabs`|(По умолчанию) Отображает вкладки для каждой страницы свойств. Вкладки отображаются в верхней части страницы свойств и помещаются в стек, если есть несколько вкладок, чем может поместиться в одну строку.|  
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|Отображает список кнопок навигации в стиле Microsoft Outlook линейки с левой стороны страницы свойств. Каждой кнопке в списке соответствует страницы свойств. Если доступны дополнительные кнопки, чем может поместиться в видимой части списка, платформа отображает стрелки прокрутки.|  

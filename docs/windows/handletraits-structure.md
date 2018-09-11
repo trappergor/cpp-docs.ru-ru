@@ -1,5 +1,5 @@
 ---
-title: Структура HANDLETraits | Документы Microsoft
+title: Handletraits-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2193743da9e7b5667714650660cd8e1efdb5cf4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876652"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610985"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits - структура
-Определяет общие характеристики дескриптора.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-struct HANDLETraits;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-typedefs"></a>Общедоступные определения типов  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|`Type`|Синоним для HANDLE.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Метод HANDLETraits::Close](../windows/handletraits-close-method.md)|Закрывает указанный дескриптор.|  
-|[Метод HANDLETraits::GetInvalidValue](../windows/handletraits-getinvalidvalue-method.md)|Представляет недопустимый дескриптор.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `HANDLETraits`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Определяет общие характеристики дескриптора.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+struct HANDLETraits;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-typedefs"></a>Общедоступные определения типов
+
+|Имя|Описание:|
+|----------|-----------------|
+|`Type`|Синоним для HANDLE.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод HANDLETraits::Close](../windows/handletraits-close-method.md)|Закрывает указанный дескриптор.|
+|[Метод HANDLETraits::GetInvalidValue](../windows/handletraits-getinvalidvalue-method.md)|Представляет недопустимый дескриптор.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`HANDLETraits`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

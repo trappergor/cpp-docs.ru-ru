@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3157 | Документы Microsoft
+title: Ошибка компилятора C3157 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21f6141bd921ce82feb9218baede59edfc58243f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 156315e0e1892d9ef92020e56992d6dec51356aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244310"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220158"
 ---
 # <a name="compiler-error-c3157"></a>Ошибка компилятора C3157
 Атрибут ParamArray может применяться только к последнему параметру  
   
- [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx) атрибут был применен к недопустимому параметру.
+ [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) к неправильный параметр был применен атрибут.

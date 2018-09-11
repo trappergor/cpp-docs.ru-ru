@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960935"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106474"
 ---
 # <a name="regextraits-class"></a>Класс regex_traits
 
@@ -92,7 +92,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Elem* тип элемента символа для описания.
+*Elem*<br/>
+Тип элемента символа для описания.
 
 ## <a name="remarks"></a>Примечания
 
@@ -365,7 +366,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Параметры
 
-*Loc* объект языкового стандарта для хранения.
+*Loc*<br/>
+Объект языкового стандарта, который необходимо сохранить.
 
 ### <a name="remarks"></a>Примечания
 
@@ -452,9 +454,11 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Параметры
 
-*CH* элемент для проверки.
+*ch*<br/>
+Элемент для проверки.
 
-*CLS* классы для проверки.
+*CLS*<br/>
+Классы для проверки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -541,7 +545,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Параметры
 
-*str*
+*str*<br/>
 
 Завершающаяся нулем последовательность.
 
@@ -714,9 +718,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* начало последовательности для поиска.
+*Первый*<br/>
+Начало искомой последовательности.
 
-*последний* конец последовательности для поиска.
+*последний*<br/>
+Конец искомой последовательности.
 
 ### <a name="remarks"></a>Примечания
 
@@ -808,9 +814,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* начало последовательности для поиска.
+*Первый*<br/>
+Начало искомой последовательности.
 
-*последний* конец последовательности для поиска.
+*последний*<br/>
+Конец искомой последовательности.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1149,9 +1157,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* начало преобразуемой последовательности.
+*Первый*<br/>
+Начало преобразуемой последовательности.
 
-*последний* конец последовательности для преобразования.
+*последний*<br/>
+Конец преобразуемой последовательности.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1239,9 +1249,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* начало преобразуемой последовательности.
+*Первый*<br/>
+Начало преобразуемой последовательности.
 
-*последний* конец последовательности для преобразования.
+*последний*<br/>
+Конец преобразуемой последовательности.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1328,7 +1340,8 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Параметры
 
-*CH* элемента, который требуется преобразовать.
+*ch*<br/>
+Преобразуемый элемент.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1415,7 +1428,8 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Параметры
 
-*CH* элемента, который требуется преобразовать.
+*ch*<br/>
+Преобразуемый элемент.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1502,9 +1516,11 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Параметры
 
-*CH* элемента, который требуется преобразовать.
+*ch*<br/>
+Преобразуемый элемент.
 
-*Основание системы счисления* арифметическое основание.
+*radix*<br/>
+Используемое арифметическое основание.
 
 ### <a name="remarks"></a>Примечания
 

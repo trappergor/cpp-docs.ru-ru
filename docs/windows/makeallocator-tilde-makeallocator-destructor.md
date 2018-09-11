@@ -1,5 +1,5 @@
 ---
-title: 'MakeAllocator:: ~ MakeAllocator деструктор | Документы Microsoft'
+title: 'MakeAllocator:: ~ MakeAllocator деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7115bd3ad6ef1a385b8c2a509f42316c9f8b69bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877103"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607202"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>Деструктор MakeAllocator::~MakeAllocator
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-~MakeAllocator();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Деинициализирует текущий экземпляр класса MakeAllocator.  
-  
- Этот деструктор также удаляет базовой выделенную память при необходимости.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [MakeAllocator-класс](../windows/makeallocator-class.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+~MakeAllocator();
+```
+
+## <a name="remarks"></a>Примечания
+
+Деинициализирует текущий экземпляр **MakeAllocator** класса.
+
+Этот деструктор также удаляет базовой выделенную память при необходимости.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Класс MakeAllocator](../windows/makeallocator-class.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

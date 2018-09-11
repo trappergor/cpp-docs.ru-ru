@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a472a100a03f8a03947eedb3aa8dc04edadb588
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 238fab4ec2d900c8183c018f3cb03fe6dc1fb2f5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396060"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202238"
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 
@@ -58,7 +58,7 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="remarks"></a>Примечания
 
-Используйте эту функцию, чтобы вызвать [HeapSetInformation](http://msdn.microsoft.com/library/windows/desktop/aa366705) и включить кучу низкой фрагментации в куче CRT.
+Используйте эту функцию, чтобы вызвать [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) и включить кучу низкой фрагментации в куче CRT.
 
 ## <a name="requirements"></a>Требования
 

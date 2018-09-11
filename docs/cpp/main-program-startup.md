@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 824bb7059e13c76af0c2f739676d32afc04aa0c7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401486"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572870"
 ---
 # <a name="main-program-startup"></a>Функция main. Запуск программы
-Это специальная функция с именем **основной** является начальной точкой выполнения для всех программ C и C++. При создании кода, который соответствует [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] модель программирования, можно использовать `wmain`, которая является версией Юникода **основной**.  
+Это специальная функция с именем **основной** является начальной точкой выполнения для всех программ C и C++. Написание кода, который соответствует модели программирования Юникода можно использовать `wmain`, которая является версией Юникода **основной**.  
   
  **Основной** функция не является стандартным компилятором. Она должна присутствовать в тексте программы.  
   

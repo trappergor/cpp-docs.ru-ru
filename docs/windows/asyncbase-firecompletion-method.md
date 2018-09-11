@@ -17,33 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5988516f3836749357b15295ac228b78fe3f04
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 19b796b1fbc618bb909b186aa86d3c893c8536c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467245"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600260"
 ---
 # <a name="asyncbasefirecompletion-method"></a>Метод AsyncBase::FireCompletion
-Вызывает обработчик события завершения или сбрасывает делегат внутренней хода выполнения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void FireCompletion(  
-   void  
-) override;  
-  
-virtual void FireCompletion();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Первая версия **FireCompletion()** сбрасывает переменной делегата внутренней хода выполнения. Вторая версия вызывает обработчик события завершения, если асинхронная операция завершена.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Вызывает обработчик события завершения или сбрасывает делегат внутренней хода выполнения.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void FireCompletion(
+   void
+) override;
+
+virtual void FireCompletion();
+```
+
+## <a name="remarks"></a>Примечания
+
+Первая версия **FireCompletion()** сбрасывает переменной делегата внутренней хода выполнения. Вторая версия вызывает обработчик события завершения, если асинхронная операция завершена.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

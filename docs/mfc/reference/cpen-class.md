@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132936805d948257f8d6579f0f840aaf2fd15a0d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 60fb1c219068cc0c59f908688ea5c471946458ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849662"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204145"
 ---
 # <a name="cpen-class"></a>Cpen-класс
 Инкапсулирует перо интерфейса графических устройств Windows (GDI).  
@@ -57,10 +57,10 @@ class CPen : public CGdiObject
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|Создает логический перо финальных или геометрическом с указанного стиля, ширины и атрибуты кисти и присоединяет его к `CPen` объекта.|  
-|[CPen::CreatePenIndirect](#createpenindirect)|Создает перо с стиль, ширину и цвет, заданный в [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) структурировать и присоединяет его к `CPen` объекта.|  
+|[CPen::CreatePenIndirect](#createpenindirect)|Создает перо с стиль, ширину и цвет, заданный в [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) структурировать и присоединяет его к `CPen` объекта.|  
 |[CPen::FromHandle](#fromhandle)|Возвращает указатель на `CPen` объект для заданного Windows HPEN.|  
-|[CPen::GetExtLogPen](#getextlogpen)|Получает [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) базовой структуры.|  
-|[CPen::GetLogPen](#getlogpen)|Получает [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) базовой структуры.|  
+|[CPen::GetExtLogPen](#getextlogpen)|Получает [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) базовой структуры.|  
+|[CPen::GetLogPen](#getlogpen)|Получает [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) базовой структуры.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
@@ -144,7 +144,7 @@ CPen(
   
 - Присоединяет PS_JOIN_BEVEL являются скошенные.  
   
-- Присоединяет PS_JOIN_MITER являются углом внутри текущего предельного значения, указываемого [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) функции. Если соединение превышает этот предел, скошенные его.  
+- Присоединяет PS_JOIN_MITER являются углом внутри текущего предельного значения, указываемого [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) функции. Если соединение превышает этот предел, скошенные его.  
   
 - Присоединяет PS_JOIN_ROUND round.  
   
@@ -208,7 +208,7 @@ BOOL CreatePen(
  Содержит цвета в формате RGB для пера.  
   
  *pLogBrush*  
- Указывает на [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры. Если *nPenStyle* является PS_COSMETIC, `lbColor` членом `LOGBRUSH` структура определяет цвет пера и *lbStyle* членом `LOGBRUSH` структуры должно быть присвоено BS_ СПЛОШНОЙ. Если nPenStyle PS_GEOMETRIC, все члены должны использоваться для указания атрибутов кисть пера.  
+ Указывает на [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) структуры. Если *nPenStyle* является PS_COSMETIC, `lbColor` членом `LOGBRUSH` структура определяет цвет пера и *lbStyle* членом `LOGBRUSH` структуры должно быть присвоено BS_ СПЛОШНОЙ. Если nPenStyle PS_GEOMETRIC, все члены должны использоваться для указания атрибутов кисть пера.  
   
  *nStyleCount*  
  Задает длину в единицах двойного слова из *lpStyle* массива. Это значение должно быть равно нулю, если *nPenStyle* не PS_USERSTYLE.  
@@ -290,7 +290,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Параметры  
  *pLogPen*  
- Указывает на [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) структуру, содержащую сведения о пера.  
+ Указывает на [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) структуру, содержащую сведения о пера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -300,13 +300,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  В следующих разделах в пакете SDK для Windows, сведения об атрибутах пера:  
   
-- [Функция GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
+- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
-- [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
+- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода показан вызов `GetExtLogPen` для извлечения атрибутов с помощью пера, а затем создать новый, финальных пера с тем же цветом.  
@@ -322,7 +322,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Параметры  
  *pLogPen*  
- Указывает на [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) структуру, содержащую сведения о пера.  
+ Указывает на [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) структуру, содержащую сведения о пера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -334,9 +334,9 @@ int GetLogPen(LOGPEN* pLogPen);
   
  В следующих разделах в пакете SDK для Windows, сведения об атрибутах пера:  
   
-- [Функция GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода показан вызов `GetLogPen` для получения символа пера, а затем создайте пера новый, сплошной цвет.  
@@ -356,7 +356,7 @@ operator HPEN() const;
 ### <a name="remarks"></a>Примечания  
  Этот оператор — оператор приведения, который поддерживает непосредственное использование объекта HPEN.  
   
- Дополнительные сведения об использовании графических объектов см. в статье [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в пакете Windows SDK.  
+ Дополнительные сведения об использовании графических объектов см. в статье [объектов график](/windows/desktop/gdi/graphic-objects) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  

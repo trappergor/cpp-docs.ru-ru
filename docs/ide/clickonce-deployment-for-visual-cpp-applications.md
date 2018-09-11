@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e85ec0dfc011aab4d2b3ac835bbe71782b055000
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 82a290eb7695bbcd7c03cda0351445519352e80a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332329"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677728"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Развертывание с помощью технологии ClickOnce для приложений Visual C++
-Visual Studio предоставляет две различных технологии развертывания приложений Windows: ClickOnce и [установщик Windows](http://msdn.microsoft.com/library/cc185688).  
+Visual Studio предоставляет две различных технологии развертывания приложений Windows: ClickOnce и [установщик Windows](/windows/desktop/Msi/windows-installer-portal).  
   
 ## <a name="clickonce-deployment-in-c"></a>Развертывание с помощью технологии ClickOnce в C++  
  Среда разработки Visual C++ не поддерживает непосредственно развертывание проектов Visual C++ с помощью ClickOnce, но для этого существуют специальные средства.  
@@ -53,7 +53,6 @@ Visual Studio предоставляет две различных технол�
  [Makecert.exe (средство создания сертификатов)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [Развертывание классических приложений](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Развертывание с помощью установщика Windows](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Создание пакетов загрузчика](/visualstudio/deployment/creating-bootstrapper-packages)   
  [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   

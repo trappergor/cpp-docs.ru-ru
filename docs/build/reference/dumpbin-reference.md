@@ -1,5 +1,5 @@
 ---
-title: Справочник DUMPBIN | Документы Microsoft
+title: Справочник DUMPBIN | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d116ad1efde9ae144e17eb9a4ac2ad996add13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4858fe41db5e9a5ac6208881a045e7915b9bdfee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372660"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573375"
 ---
 # <a name="dumpbin-reference"></a>Справочник DUMPBIN
-Дампер двоичных файлов COFF корпорации Майкрософт (программа DUMPBIN. (EXE) отображает сведения о распространенных объекта файла формат COFF двоичных файлов. Можно использовать DUMPBIN для просмотра объекта COFF-файлы, стандартных библиотек объектов COFF, исполняемых файлов и библиотек динамической компоновки (DLL).  
+Дампер двоичных файлов Microsoft COFF ((программа DUMPBIN). (EXE) отображает сведения о распространенных объекта файла формат COFF двоичных файлов. (Программа DUMPBIN) можно использовать для проверки файлов объекта COFF, стандартных библиотек объектов COFF, исполняемых файлов и библиотек динамической компоновки (DLL).  
   
 > [!NOTE]
->  Это средство можно запустить только из командной строки [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. В системной командной строке или проводнике это невозможно.  
+>  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.  
   
- Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
+ Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
   
 -   [Командная строка DUMPBIN](../../build/reference/dumpbin-command-line.md)  
   

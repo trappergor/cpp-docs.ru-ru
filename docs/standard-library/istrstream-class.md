@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d979cab4dc25898b772c434f5a50682573ce4016
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957289"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099542"
 ---
 # <a name="istrstream-class"></a>Класс istrstream
 
@@ -43,13 +43,13 @@ class istrstream : public istream
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[istrstream](#istrstream)|Создает объект типа `istrstream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[rdbuf](#rdbuf)|Возвращает указатель на объект `strstreambuf`, связанный с потоком.|
 |[str](#str)|Вызывает метод [freeze](../standard-library/strstreambuf-class.md#freeze), а затем возвращает указатель на начало управляемой последовательности.|
@@ -82,9 +82,11 @@ istrstream(
 
 ### <a name="parameters"></a>Параметры
 
-*число* длину буфера (*ptr*).
+*count*<br/>
+Длина буфера (*ptr*).
 
-*PTR* содержимое, с которым инициализируется буфер.
+*ptr*<br/>
+Содержимое, с которым инициализируется буфер.
 
 ### <a name="remarks"></a>Примечания
 

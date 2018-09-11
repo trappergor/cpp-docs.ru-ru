@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f937bf3da7aab803164ca968ba9fa3de227ce03
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 49ef07365675ddb9cdedee1f6a2cdfb676188dc6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463528"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42576713"
 ---
 # <a name="activationfactorygetiids-method"></a>Метод ActivationFactory::GetIids
-Извлекает массив идентификаторов реализованного интерфейса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHOD(  
-   GetIids  
-)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *iidCount*  
- После завершения операции, число идентификаторов интерфейса в *идентификаторы IID* массива.  
-  
- *идентификаторы IID*  
- После завершения операции представляет массив идентификаторов реализованного интерфейса.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. E_OUTOFMEMORY является возможной ошибкой HRESULT.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ActivationFactory](../windows/activationfactory-class.md)
+
+Извлекает массив идентификаторов реализованного интерфейса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(
+   GetIids
+)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>Параметры
+
+*iidCount*  
+После завершения операции, число идентификаторов интерфейса в *идентификаторы IID* массива.
+
+*идентификаторы IID*  
+После завершения операции представляет массив идентификаторов реализованного интерфейса.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. E_OUTOFMEMORY является возможной ошибкой HRESULT.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ActivationFactory](../windows/activationfactory-class.md)

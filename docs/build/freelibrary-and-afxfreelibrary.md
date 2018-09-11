@@ -1,5 +1,5 @@
 ---
-title: Функции FreeLibrary и AfxFreeLibrary | Документы Microsoft
+title: Функции FreeLibrary и AfxFreeLibrary | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e1bf5f1a05438ddf89af86c9b0d12e7885b901
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 063c858253c12cfedbf252a124029b8cbc16a691
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367515"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680967"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>Функции FreeLibrary и AfxFreeLibrary
-Процессы, которые явно связать до вызова функции DLL [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) работает, если модуль DLL больше не нужен. Это функция уменьшает значение счетчика ссылок модуля и, если счетчик ссылок равен нулю, отменяет сопоставление из адресного пространства процесса.  
+Процессы, которые явно связать вызов DLL [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx) функционировать, когда модуль DLL больше не используется. Это функция уменьшает значение счетчика ссылок модуля и, если счетчик ссылок равен нулю, unmaps его из адресного пространства процесса.  
   
- В приложении MFC использовать [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) вместо `FreeLibrary` выгрузить DLL расширения MFC. Интерфейс (прототип функции) для `AfxFreeLibrary` совпадает со значением `FreeLibrary`.  
+ В приложении MFC использовать [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) вместо `FreeLibrary` выгрузка библиотеки DLL расширения MFC. Интерфейс (прототип функции) для `AfxFreeLibrary` совпадает со значением `FreeLibrary`.  
   
 ## <a name="what-do-you-want-to-do"></a>Выберите действие  
   
@@ -49,5 +49,5 @@ ms.locfileid: "32367515"
   
 ## <a name="see-also"></a>См. также  
  [Библиотеки DLL в Visual C++](../build/dlls-in-visual-cpp.md)   
- [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
+ [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)   
  [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

@@ -1,5 +1,5 @@
 ---
-title: Метод RuntimeClassBaseT::AsIID | Документы Microsoft
+title: Метод RuntimeClassBaseT::AsIID | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,51 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b50466fc2c357c1d57fca272ff343cd56f3689c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892134"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604270"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>Метод RuntimeClassBaseT::AsIID
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template<typename T>  
-__forceinline static HRESULT AsIID(  
-   _In_ T* implements,  
-   REFIID riid,  
-   _Deref_out_ void **ppvObject  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `T`  
- Тип, который реализует идентификатор интерфейса, заданный параметром `riid`.  
-  
- `implements`  
- Переменная типа, указанного в параметре шаблона `T`.  
-  
- `riid`  
- Извлекаемый идентификатор интерфейса.  
-  
- `ppvObject`  
- Если операция завершилась успешно, представляет указатель на указатель интерфейса, заданный параметром `riid`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае — значение HRESULT, описывающее ошибку.  
-  
-## <a name="remarks"></a>Примечания  
- Извлекает указатель на идентификатор указанного интерфейса.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Структура RuntimeClassBaseT](../windows/runtimeclassbaset-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<typename T>
+__forceinline static HRESULT AsIID(
+   _In_ T* implements,
+   REFIID riid,
+   _Deref_out_ void **ppvObject
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*  
+Тип, который реализует идентификатор интерфейса, заданный параметром *riid*.
+
+*Реализует*  
+Переменной типа, указанного параметром шаблона *T*.
+
+*riid*  
+Извлекаемый идентификатор интерфейса.
+
+*ppvObject*  
+При успешном выполнении эта операция указатель для указатель на интерфейс, указанного параметром *riid*.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, описывающее ошибку.
+
+## <a name="remarks"></a>Примечания
+
+Извлекает указатель на идентификатор указанного интерфейса.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура RuntimeClassBaseT](../windows/runtimeclassbaset-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

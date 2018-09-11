@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b7c8f9e29cc71cd12c04d4135e4f02d273ab4725
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961744"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319036"
 ---
 # <a name="checkedarrayiterator-class"></a>Класс checked_array_iterator
 
@@ -95,10 +95,10 @@ int main() {
       cout << " " << b[i];
    cout << " )" << endl;
 }
-\* Output:
+/* Output:
 ( 0 1 2 3 4 )
 ( 0 1 2 3 4 )
-*\
+*/
 ```
 
 ## <a name="example"></a>Пример
@@ -144,20 +144,20 @@ int main()
 
     return 0;
 }
-\* Output:
- 0 1 2 3 4 5 6 7 8 9
-*\
+/* Output:
+0 1 2 3 4 5 6 7 8 9
+*/
 ```
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[checked_array_iterator](#checked_array_iterator)|Формирование итератора `checked_array_iterator` по умолчанию или итератора `checked_array_iterator` из базового итератора.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[difference_type](#difference_type)|Тип, обеспечивающий разницу между двумя итераторами `checked_array_iterator`, которые ссылаются на элементы в одном контейнере.|
 |[pointer](#pointer)|Тип, содержащий указатель на элемент, к которому обращается итератор `checked_array_iterator`.|
@@ -165,13 +165,13 @@ int main()
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[base](#base)|Восстановление базового итератора из соответствующего итератора `checked_array_iterator`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор==](#op_eq_eq)|Проверка двух итераторов `checked_array_iterator` на равенство.|
 |[оператор!=](#op_neq)|Проверка двух итераторов `checked_array_iterator` на неравенство.|
@@ -233,9 +233,9 @@ int main() {
    cout << "The iterator underlying rpos is bpos & it points to: "
         << *bpos << "." << endl;
 }
-\* Output:
+/* Output:
 The iterator underlying rpos is bpos & it points to: 1.
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator"></a>  checked_array_iterator::checked_array_iterator
@@ -253,11 +253,14 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель на массив.
+*ptr*<br/>
+Указатель на массив.
 
-*размер* размер массива.
+*size*<br/>
+Размер массива.
 
-*Индекс* (необязательно) элемент в массиве, для инициализации итератора.  По умолчанию итератор инициализируется первым элементом в массиве.
+*Индекс*<br/>
+Элемент в массиве для инициализации итератора (необязательно).  По умолчанию итератор инициализируется первым элементом в массиве.
 
 ### <a name="remarks"></a>Примечания
 
@@ -292,11 +295,11 @@ int main() {
    checked_array_iterator<int*> checked_output_iterator2(b,5,3);
    cout << *checked_output_iterator2 << endl;
 }
-\* Output:
+/* Output:
 0 1 2 3 4
 0 1 2 3 4
 3
-*\
+*/
 ```
 
 ## <a name="difference_type"></a>  checked_array_iterator::difference_type
@@ -325,7 +328,8 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `checked_array_iterator` по которому проверяется на предмет равенства.
+*right*<br/>
+Итератор `checked_array_iterator`, по которому выполняется проверка на равенство.
 
 ### <a name="remarks"></a>Примечания
 
@@ -364,10 +368,10 @@ int main() {
    else
       cout << "checked_array_iterators are not equal" << endl;
 }
-\* Output:
+/* Output:
 checked_array_iterators are equal
 checked_array_iterators are not equal
-*\
+*/
 ```
 
 ## <a name="op_neq"></a>  checked_array_iterator::operator!=
@@ -380,7 +384,8 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `checked_array_iterator` по которому проверяется на предмет их неравенства.
+*right*<br/>
+Итератор `checked_array_iterator`, по которому выполняется проверка на неравенство.
 
 ### <a name="remarks"></a>Примечания
 
@@ -419,10 +424,10 @@ int main() {
    else
       cout << "checked_array_iterators are equal" << endl;
 }
-\* Output:
+/* Output:
 checked_array_iterators are equal
 checked_array_iterators are not equal
-*\
+*/
 ```
 
 ## <a name="op_lt"></a>  checked_array_iterator::operator&lt;
@@ -435,7 +440,8 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `checked_array_iterator` по которому проверяется на предмет их неравенства.
+*right*<br/>
+Итератор `checked_array_iterator`, по которому выполняется проверка на неравенство.
 
 ### <a name="remarks"></a>Примечания
 
@@ -474,10 +480,10 @@ int main() {
    else
       cout << "checked_output_iterator2 is not less than checked_output_iterator" << endl;
 }
-\* Output:
+/* Output:
 checked_output_iterator2 is not less than checked_output_iterator
 checked_output_iterator2 is less than checked_output_iterator
-*\
+*/
 ```
 
 ## <a name="op_gt"></a>  checked_array_iterator::operator&gt;
@@ -490,7 +496,8 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `checked_array_iterator` для сравнения.
+*right*<br/>
+Итератор `checked_array_iterator`, с которым выполняется сравнение.
 
 ### <a name="remarks"></a>Примечания
 
@@ -508,7 +515,8 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `checked_array_iterator` для сравнения.
+*right*<br/>
+Итератор `checked_array_iterator`, с которым выполняется сравнение.
 
 ### <a name="remarks"></a>Примечания
 
@@ -526,7 +534,8 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `checked_array_iterator` для сравнения.
+*right*<br/>
+Итератор `checked_array_iterator`, с которым выполняется сравнение.
 
 ### <a name="remarks"></a>Примечания
 
@@ -565,10 +574,10 @@ int main() {
    else
       cout << "checked_output_iterator2 is less than checked_output_iterator" << endl;
 }
-\* Output:
+/* Output:
 checked_output_iterator2 is greater than or equal to checked_output_iterator
 checked_output_iterator2 is less than checked_output_iterator
-*\
+*/
 ```
 
 ## <a name="op_star"></a>  checked_array_iterator::operator*
@@ -621,7 +630,7 @@ int main() {
    cout << "b[0] = " << *p << endl;
    cout << "c[0].first = " << p_c->first << endl;
 }
-\* Output:
+/* Output:
 0
 1
 2
@@ -629,7 +638,7 @@ int main() {
 4
 b[0] = 0
 c[0].first = 10
-*\
+*/
 ```
 
 ## <a name="op_arrow"></a>  checked_array_iterator::operator-&gt;
@@ -691,11 +700,11 @@ int main() {
    checked_output_iterator++;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 3
 77
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
@@ -739,11 +748,11 @@ int main() {
    checked_output_iterator--;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 3
 6
-*\
+*/
 ```
 
 ## <a name="op_add_eq"></a>  checked_array_iterator::operator+=
@@ -756,7 +765,8 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение, на который необходимо увеличить итератор.
+*_Off*<br/>
+Смещение, на которое необходимо увеличить итератор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -787,10 +797,10 @@ int main() {
    checked_output_iterator += 3;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 199
-*\
+*/
 ```
 
 ## <a name="op_add"></a>  checked_array_iterator::operator+
@@ -803,7 +813,8 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение, добавляемое к `checked_array_iterator`.
+*_Off*<br/>
+Смещение для добавления к `checked_array_iterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -834,10 +845,10 @@ int main() {
    checked_output_iterator = checked_output_iterator + 3;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 6
 199
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
@@ -850,7 +861,8 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение, на который необходимо увеличить итератор.
+*_Off*<br/>
+Смещение, на которое необходимо увеличить итератор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -882,10 +894,10 @@ int main() {
    checked_output_iterator -= 2;
    cout << *checked_output_iterator << endl;
 }
-\* Output:
+/* Output:
 199
 3
-*\
+*/
 ```
 
 ## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
@@ -900,7 +912,8 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение, которое необходимо уменьшить `checked_array_iterator`.
+*_Off*<br/>
+Смещение, на которое необходимо уменьшить `checked_array_iterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -922,7 +935,8 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение от `checked_array_iterator` адрес.
+*_Off*<br/>
+Смещение от адреса `checked_array_iterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -956,9 +970,9 @@ int main() {
 
    cout << refrpos + 1 << endl;
 }
-\* Output:
+/* Output:
 3
-*\
+*/
 ```
 
 ## <a name="pointer"></a>  checked_array_iterator::pointer

@@ -28,7 +28,7 @@ ms.locfileid: "33254436"
   
  Классы пользовательских коллекций должны содержать определения для `MoveNext` и `Current`.  
   
- Дополнительные сведения см. в разделе [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) .  
+ Дополнительные сведения см. в разделе [Практическое руководство. Перебор элементов определенной пользователем коллекции с использованием цикла for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) .  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3287:  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea2c87a3ce87bbf15f99609a643a9a72f6d2058e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a8b2ca6ebbc0201a3c56c9239b665c55ccd9eb13
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853489"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202749"
 ---
 # <a name="colechangesourcedialog-class"></a>Класс COleChangeSourceDialog
 Используется для диалогового окна OLE "Изменить источник".  
@@ -77,9 +77,9 @@ class COleChangeSourceDialog : public COleDialog
 |[COleChangeSourceDialog::m_cs](#m_cs)|Структура, которая управляет поведением окна.|  
   
 ## <a name="remarks"></a>Примечания  
- Создайте объект класса `COleChangeSourceDialog` при необходимости вызвать это диалоговое окно. После `COleChangeSourceDialog` объект был создан, можно использовать [m_cs](#m_cs) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_cs` Структуры имеет тип [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160). Дополнительные сведения об использовании этого класса диалогового окна см. в разделе [DoModal](#domodal) функция-член.  
+ Создайте объект класса `COleChangeSourceDialog` при необходимости вызвать это диалоговое окно. После `COleChangeSourceDialog` объект был создан, можно использовать [m_cs](#m_cs) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_cs` Структуры имеет тип [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea). Дополнительные сведения об использовании этого класса диалогового окна см. в разделе [DoModal](#domodal) функция-член.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) структуры в пакете Windows SDK.  
   
  Дополнительные сведения о конкретных OLE диалоговым окнам см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -120,7 +120,7 @@ explicit COleChangeSourceDialog(
 ### <a name="remarks"></a>Примечания  
  Чтобы отобразить диалоговое окно, вызовите [DoModal](#domodal) функции.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры и [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) функции в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) структуры и [OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) функции в пакете Windows SDK.  
   
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  Вызывайте эту функцию для отображения диалогового окна OLE изменение источника.  
@@ -136,7 +136,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, если пользователь отменил диалоговое окно.  
   
-- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) функции в пакете Windows SDK.  
+- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) функции в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Если вы хотите инициализировать различных диалоговых путем определения участников [m_cs](#m_cs) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
@@ -185,9 +185,9 @@ CString GetFromPrefix();
 ### <a name="remarks"></a>Примечания  
  Эта функция только после вызова [DoModal](#domodal) возвращает IDOK.  
   
- Это значение поступает непосредственно из `lpszFrom` членом [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры.  
+ Это значение поступает непосредственно из `lpszFrom` членом [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) структуры.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) структуры в пакете Windows SDK.  
   
 ##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  Вызывайте эту функцию для получения части моникер элемента отображаемое имя для элемента связанного клиента.  
@@ -215,12 +215,12 @@ CString GetToPrefix();
 ### <a name="remarks"></a>Примечания  
  Эта функция только после вызова [DoModal](#domodal) возвращает IDOK.  
   
- Это значение поступает непосредственно из `lpszTo` членом [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры.  
+ Это значение поступает непосредственно из `lpszTo` членом [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) структуры.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) структуры в пакете Windows SDK.  
   
 ##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
- Этот элемент данных — это структура типа [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
+ Этот элемент данных — это структура типа [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea).  
   
 ```  
 OLEUICHANGESOURCE m_cs;  
@@ -229,7 +229,7 @@ OLEUICHANGESOURCE m_cs;
 ### <a name="remarks"></a>Примечания  
  `OLEUICHANGESOURCE` используется для управления поведением диалогового окна OLE изменение источника. Члены этой структуры можно изменять непосредственно.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) структуры в пакете Windows SDK.  
   
 ##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  Вызывайте эту функцию для определения допустимости нового источника.  
@@ -244,7 +244,7 @@ BOOL IsValidSource();
 ### <a name="remarks"></a>Примечания  
  Эта функция только после вызова [DoModal](#domodal) возвращает IDOK.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) структуры в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс COleDialog](../../mfc/reference/coledialog-class.md)   

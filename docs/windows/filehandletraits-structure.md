@@ -1,5 +1,5 @@
 ---
-title: Структура FileHandleTraits | Документы Microsoft
+title: Filehandletraits-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b84eaca73111e4b76390bddf55d85305c08c0c22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be5e26fb433450c18ed0d079153698c283960ac9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872787"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596245"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits - структура
-Определяет характеристики дескриптора файла.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-struct FileHandleTraits : HANDLETraits;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `HANDLETraits`  
-  
- `FileHandleTraits`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Определяет характеристики дескриптора файла.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+struct FileHandleTraits : HANDLETraits;
+```
+
+## <a name="members"></a>Участники
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`HANDLETraits`
+
+`FileHandleTraits`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

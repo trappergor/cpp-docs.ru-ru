@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5a19c958998630399b6698f0e28b6e36d77d93ce
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208530"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318997"
 ---
 # <a name="rawstorageiterator-class"></a>Класс raw_storage_iterator
 
@@ -40,9 +40,11 @@ class raw_storage_iterator
 
 ### <a name="parameters"></a>Параметры
 
-*OutputIterator* Указывает выходной итератор сохраняемого объекта.
+*OutputIterator*<br/>
+Указывает выходной итератор сохраняемого объекта.
 
-*Тип* тип объекта, для которого выполняется выделение памяти.
+*Тип*<br/>
+Тип объекта, для которого выполняется выделение памяти.
 
 ## <a name="remarks"></a>Примечания
 
@@ -54,20 +56,20 @@ class raw_storage_iterator
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Создает итератор необработанного хранилища с указанным базовым выходным итератором.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[element_type](#element_type)|Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.|
 |[iter_type](#iter_type)|Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `ii`  =  `x`.|
 |[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища \* `i`  =  `x` для сохранения в памяти.|
@@ -159,15 +161,15 @@ int main( void)
 {
    Int *pInt = ( Int* ) malloc( sizeof( Int ) );
    memset( pInt, 0, sizeof( Int ) ); // Set bIsConstructed to false;
- *pInt = 5;
+*pInt = 5;
    raw_storage_iterator< Int*, Int > it( pInt );
- *it = 5;
+*it = 5;
 }
-\* Output:
+/* Output:
 Not constructed.
 Copying 5
 Constructing 5
-*\
+*/
 ```
 
 ## <a name="op_eq"></a>  raw_storage_iterator::operator=
@@ -181,7 +183,8 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="parameters"></a>Параметры
 
-`val` Значение объекта типа `Type` для вставки в память.
+*Val*<br/>
+Значение объекта типа `Type` для вставки в память.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -233,13 +236,13 @@ int main( void )
 *pInt = 5;
 
    raw_storage_iterator<Int*, Int> it( pInt );
- *it = 5;
+*it = 5;
 }
-\* Output:
+/* Output:
 Not constructed.
 Copying 5
 Constructing 5
-*\
+*/
 ```
 
 ## <a name="op_add_add"></a>  raw_storage_iterator::operator++
@@ -282,20 +285,20 @@ int main( void )
    int *pInt = new int[5];
    std::raw_storage_iterator<int*,int> it( pInt );
    for ( int i = 0; i < 5; i++, it++ ) {
- *it = 2 * i;
+*it = 2 * i;
 };
 
    for ( int i = 0; i < 5; i++ ) cout << "array " << i << " = " << pInt[i] << endl;;
 
    delete[] pInt;
 }
-\* Output:
+/* Output:
 array 0 = 0
 array 1 = 2
 array 2 = 4
 array 3 = 6
 array 4 = 8
-*\
+*/
 ```
 
 ## <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator
@@ -308,7 +311,8 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 ### <a name="parameters"></a>Параметры
 
-*Первый* прямой итератор, который лежит в основе `raw_storage_iterator` создаваемого объекта.
+*Первый*<br/>
+Прямой итератор, который лежит в основе создаваемого объекта `raw_storage_iterator`.
 
 ### <a name="example"></a>Пример
 
@@ -366,7 +370,7 @@ int main( void )
 
    free(pInt);
 }
-\* Output:
+/* Output:
 Error! I'm not constructed!
 Copying 1
 Error! I'm not constructed!
@@ -387,7 +391,7 @@ array 0 = 1
 array 1 = 2
 array 2 = 3
 array 3 = 4
-*\
+*/
 ```
 
 ## <a name="see-also"></a>См. также

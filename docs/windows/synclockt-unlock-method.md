@@ -1,5 +1,5 @@
 ---
-title: Метод SyncLockT::Unlock | Документы Microsoft
+title: Метод SyncLockT::Unlock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4073d6e2b8924ae08e6af10a8e028f273f1fdfd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f050916f9957531e9275cf76fd3efb6f612cc988
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892310"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598856"
 ---
 # <a name="synclocktunlock-method"></a>Метод SyncLockT::Unlock
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void Unlock();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Передает управление ресурса, удерживаемого текущий объект SyncLockT, если таковые имеются.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>См. также  
- [Класс SyncLockT](../windows/synclockt-class.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void Unlock();
+```
+
+## <a name="remarks"></a>Примечания
+
+Управление ресурсы, удерживаемые текущим **SyncLockT** объекта, если таковые имеются.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>См. также
+
+[Класс SyncLockT](../windows/synclockt-class.md)

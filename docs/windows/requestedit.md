@@ -1,5 +1,5 @@
 ---
-title: requestedit | Документы Microsoft
+title: requestedit | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4d302d625f0f87eaec39bc1de35885f6d6b6a9ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878259"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198055"
 ---
 # <a name="requestedit"></a>requestedit
-Указывает, что свойство поддерживает **OnRequestEdit** уведомления.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-[requestedit]  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Requestedit** языка C++ имеет ту же функциональность, что [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) для приведен пример использования **requestedit**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Метод интерфейса|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [Атрибуты членов данных](../windows/data-member-attributes.md)   
- [defaultbind](../windows/defaultbind.md)   
- [displaybind](../windows/displaybind.md)   
- [immediatebind](../windows/immediatebind.md)   
+
+Указывает, что свойство поддерживает `OnRequestEdit` уведомлений.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[requestedit]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Requestedit** атрибут C++ имеет ту же функциональность, что [requestedit](/windows/desktop/Midl/requestedit) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [bindable](../windows/bindable.md) использовать образец **requestedit**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[Атрибуты элементов данных](../windows/data-member-attributes.md)  
+[defaultbind](../windows/defaultbind.md)  
+[displaybind](../windows/displaybind.md)  
+[immediatebind](../windows/immediatebind.md)  

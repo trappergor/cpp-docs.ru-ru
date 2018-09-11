@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: f10422d8efcebec62e77a495a6fb04c980da6060
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451543"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215165"
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 
@@ -73,13 +73,13 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **wctomb** преобразует расширенный символ Многобайтовый символ, он возвращает число байтов (никогда не, превышающий **MB_CUR_MAX**) в расширенных символов. Если *wchar* является нуль-символ Юникода (L '\0'), **wctomb** возвращает 1. Если целевой указатель *mbchar* — **NULL**, **wctomb** возвращает 0. Если преобразование не поддерживается в текущем языковом стандарте, **wctomb** возвращает -1 и **errno** равно **EILSEQ**.
+Если **wctomb** преобразует расширенный символ в Многобайтовый символ, он возвращает число байтов (которое больше никогда не **MB_CUR_MAX**) в расширенном символе. Если *wchar* является нуль-символ Юникода (L '\0'), **wctomb** возвращает значение 1. Если целевой указатель *mbchar* — **NULL**, **wctomb** возвращает 0. Если преобразование не поддерживается в текущем языковом стандарте, **wctomb** возвращает -1 и **errno** присваивается **EILSEQ**.
 
 ## <a name="remarks"></a>Примечания
 
-**Wctomb** функция преобразует его *wchar* аргумент, соответствующий Многобайтовый символ и сохраняет результат в *mbchar*. Эту функцию можно вызывать из любой точки в любой программе. **wctomb** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; **_wctomb_l** идентична **wctomb** за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**Wctomb** функция преобразует его *wchar* аргумент в соответствующий Многобайтовый символ и сохраняет результат в *mbchar*. Эту функцию можно вызывать из любой точки в любой программе. **wctomb** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; **_wctomb_l** идентична **wctomb** за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-**wctomb** проверяет свои параметры. Если *mbchar* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функция возвращает -1.
+**wctomb** проверяет свои параметры. Если *mbchar* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и функция возвращает -1.
 
 ## <a name="requirements"></a>Требования
 
@@ -127,4 +127,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

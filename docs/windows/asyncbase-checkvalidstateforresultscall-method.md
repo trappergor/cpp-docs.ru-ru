@@ -1,5 +1,5 @@
 ---
-title: Метод AsyncBase::CheckValidStateForResultsCall | Документы Microsoft
+title: Метод AsyncBase::CheckValidStateForResultsCall | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7308651726abd03f9bd4c9a32550644bec156432
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 398f46d5f8eb15d961d80b9a7a20b758fffd09c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859905"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584240"
 ---
 # <a name="asyncbasecheckvalidstateforresultscall-method"></a>Метод AsyncBase::CheckValidStateForResultsCall
-Проверяет, является ли результаты асинхронной операции можно собирать в текущем состоянии асинхронной.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-inline HRESULT CheckValidStateForResultsCall();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если результаты могут быть собраны; в противном случае E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Проверяет, является ли результаты асинхронной операции можно собирать в текущем состоянии асинхронной.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline HRESULT CheckValidStateForResultsCall();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если результаты могут быть собраны; в противном случае E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

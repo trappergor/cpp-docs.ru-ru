@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1076 | Документы Microsoft
+title: Неустранимая ошибка C1076 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38577e59ea874dda99d57297fc8c921f444648c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02cc55280202b9ce576dc1e771b3428837209c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199489"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539327"
 ---
 # <a name="fatal-error-c1076"></a>Неустранимая ошибка C1076
 ограничение компилятора: достигнут предел внутренней кучи; воспользуйтесь /Zm для задания большего значения  
@@ -30,9 +30,9 @@ ms.locfileid: "33199489"
   
  Устранение ошибки  
   
-1.  Используйте [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) параметр, чтобы задать ограничение памяти компилятора значение, указанное в [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) сообщение об ошибке. Дополнительные сведения, включающие как задать это значение [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)], см. в разделе "Примечания" [/Zm (укажите предкомпилированный заголовок предел выделения памяти)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
+1.  Используйте [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) параметр, чтобы задать ограничение памяти компилятора значение, указанное в [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) сообщение об ошибке. Дополнительные сведения, включая способ задать это значение в Visual Studio, см. в разделе "Примечания" в [/Zm (укажите предкомпилированный заголовок предел выделения памяти)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
   
-2.  Если используются 32-разрядные размещенные компиляторы в 64-разрядной операционной системе, используйте 64-разрядные размещенные компиляторы. Дополнительные сведения см. в разделе [как: включить 64-разрядных инструментов Visual C++ в командной строке](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
+2.  Если используются 32-разрядные размещенные компиляторы в 64-разрядной операционной системе, используйте 64-разрядные размещенные компиляторы. Дополнительные сведения см. в разделе [как: включить 64-разрядных набора инструментов Visual C++ в командной строке](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
   
 3.  Удалите неиспользуемые включенные файлы.  
   
@@ -46,4 +46,4 @@ ms.locfileid: "33199489"
   
 8.  Разделите данный файл на меньшие файлы.  
   
- Если C1076 возникает непосредственно после начала построения, значение, указанное для **/Zm** , возможно, слишком велико для вашей программы. Уменьшить **/Zm** значение.
+ Если C1076 возникает непосредственно после начала построения, значение, заданное для **/Zm** , вероятно, слишком велико для вашей программы. Уменьшить **/Zm** значение.

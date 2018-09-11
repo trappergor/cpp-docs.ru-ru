@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c00f66eef11d2d26bbcaa07110e9d9e738fc7c2f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028321"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110166"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Атомарные&gt; функции
 
@@ -110,11 +110,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на *atomic* объект, который хранит значение типа `Ty`.
+*Atom*<br/>
+Указатель на *atomic* объект, который хранит значение типа `Ty`.
 
-*EXP* указатель на значение типа `Ty`.
+*Exp*<br/>
+Указатель на значение типа `Ty`.
 
-*Значение* значение типа `Ty`.
+*Значение*<br/>
+Значение типа `Ty`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -148,15 +151,20 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `Ty`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
-*EXP* указатель на значение типа `Ty`.
+*Exp*<br/>
+Указатель на значение типа `Ty`.
 
-*Значение* значение типа `Ty`.
+*Значение*<br/>
+Значение типа `Ty`.
 
-*Order1* первый [memory_order](../standard-library/atomic-enums.md#memory_order_enum) аргумент.
+*Order1*<br/>
+Первый аргумент [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Order2* второй `memory_order` аргумент. Значение *Order2* не может быть `memory_order_release` или `memory_order_acq_rel`, он не может быть надежнее, чем значение *Order1*.
+*Order2*<br/>
+Второй аргумент `memory_order`. Значение *Order2* не может быть `memory_order_release` или `memory_order_acq_rel`, он не может быть надежнее, чем значение *Order1*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -164,7 +172,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>Примечания
 
-*Атомарная операция сравнения и обмена* сравнивает значение, которое хранится в объекте, который указывает *Atom* со значением, указывает *Exp*. Если значения равны, значение, которое хранится в объекте, который указывает *atom* заменяется `Val` с помощью `read-modify-write` операции и применение память порядок ограничения, которые определяются *Order1*. Если значения не равны, операция заменяет значение, которое указывает *Exp* со значением, которое хранится в объекте, который указывает *Atom* и применяет ограничения порядка памяти, определяется *Order2*.
+*Атомарная операция сравнения и обмена* сравнивает значение, которое хранится в объекте, который указывает *Atom* со значением, указывает *Exp*. Если значения равны, значение, которое хранится в объекте, который указывает *atom* заменяется *значение* с помощью `read-modify-write` операции и применения ограничений порядка памяти, определяется *Order1*. Если значения не равны, операция заменяет значение, которое указывает *Exp* со значением, которое хранится в объекте, который указывает *Atom* и применяет ограничения порядка памяти, определяется *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
 
@@ -186,11 +194,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `Ty`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
-*EXP* указатель на значение типа `Ty`.
+*Exp*<br/>
+Указатель на значение типа `Ty`.
 
-*Значение* значение типа `Ty`.
+*Значение*<br/>
+Значение типа `Ty`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -224,15 +235,20 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `Ty`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
-*EXP* указатель на значение типа `Ty`.
+*Exp*<br/>
+Указатель на значение типа `Ty`.
 
-*Значение* значение типа `Ty`.
+*Значение*<br/>
+Значение типа `Ty`.
 
-*Order1* первый [memory_order](../standard-library/atomic-enums.md#memory_order_enum) аргумент.
+*Order1*<br/>
+Первый аргумент [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Order2* второй `memory_order` аргумент. Значение *Order2* не может быть `memory_order_release` или `memory_order_acq_rel`, не может надежнее, чем значение *Order1*.
+*Order2*<br/>
+Второй аргумент `memory_order`. Значение *Order2* не может быть `memory_order_release` или `memory_order_acq_rel`, не может надежнее, чем значение *Order1*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -256,9 +272,11 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `Ty`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
-*Значение* значение типа `Ty`.
+*Значение*<br/>
+Значение типа `Ty`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -288,11 +306,14 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `Ty`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
-*Значение* значение типа `Ty`.
+*Значение*<br/>
+Значение типа `Ty`.
 
-*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Порядок*<br/>
+Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -315,9 +336,11 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит указатель на тип `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит указатель на тип `T`.
 
-*Значение* значение типа `ptrdiff_t`.
+*Значение*<br/>
+Значение типа `ptrdiff_t`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -357,9 +380,11 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит указатель на тип `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит указатель на тип `T`.
 
-*Значение* значение типа `ptrdiff_t`.
+*Значение*<br/>
+Значение типа `ptrdiff_t`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -398,9 +423,11 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `T`.
 
-*Значение* значение типа `T`.
+*Значение*<br/>
+Значение типа `T`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -430,11 +457,14 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `T`.
 
-*Значение* значение типа `T`.
+*Значение*<br/>
+Значение типа `T`.
 
-*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Порядок*<br/>
+Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -457,9 +487,11 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `T`.
 
-*Значение* значение типа `T`.
+*Значение*<br/>
+Значение типа `T`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -489,11 +521,14 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `T`.
 
-*Значение* значение типа `T`.
+*Значение*<br/>
+Значение типа `T`.
 
-*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Порядок*<br/>
+Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -521,9 +556,11 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит указатель на тип `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит указатель на тип `T`.
 
-*Значение* значение типа `ptrdiff_t`.
+*Значение*<br/>
+Значение типа `ptrdiff_t`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -561,9 +598,11 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит указатель на тип `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит указатель на тип `T`.
 
-*Значение* значение типа `ptrdiff_t`.
+*Значение*<br/>
+Значение типа `ptrdiff_t`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -603,9 +642,11 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `T`.
 
-*Значение* значение типа `T`.
+*Значение*<br/>
+Значение типа `T`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -635,11 +676,14 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `T`.
 
-*Значение* значение типа `T`.
+*Значение*<br/>
+Значение типа `T`.
 
-*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Порядок*<br/>
+Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -660,7 +704,8 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Флаг* указатель на `atomic_flag` объект.
+*Флаг*<br/>
+Указатель на объект `atomic_flag` .
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
 
@@ -673,9 +718,11 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Параметры
 
-*Флаг* указатель на `atomic_flag` объект.
+*Флаг*<br/>
+Указатель на объект `atomic_flag` .
 
-*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Порядок*<br/>
+Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
 
@@ -688,7 +735,8 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Флаг* указатель на `atomic_flag` объект.
+*Флаг*<br/>
+Указатель на объект `atomic_flag` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -705,9 +753,11 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Параметры
 
-*Флаг* указатель на `atomic_flag` объект.
+*Флаг*<br/>
+Указатель на объект `atomic_flag` .
 
-*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Порядок*<br/>
+Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -726,9 +776,11 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `Ty`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
-*Значение* значение типа `Ty`.
+*Значение*<br/>
+Значение типа `Ty`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -747,7 +799,8 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` объект, который хранит значение типа `T`.
+*Atom*<br/>
+Указатель на объект `atomic`, который хранит значение типа `T`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -770,7 +823,8 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` , содержащий значение типа `Ty`.
+*Atom*<br/>
+Указатель на объект `atomic`, который содержит значение типа `Ty`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -793,9 +847,11 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` , содержащий значение типа `Ty`.
+*Atom*<br/>
+Указатель на объект `atomic`, который содержит значение типа `Ty`.
 
-*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Не используйте `memory_order_release``memory_order_acq_rel`.
+*Порядок*<br/>
+Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Не используйте `memory_order_release``memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -811,7 +867,8 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Порядок* ограничение, которое определяет тип границы порядка памяти.
+*Порядок*<br/>
+Ограничение порядка памяти, которое определяет тип границы.
 
 ### <a name="remarks"></a>Примечания
 
@@ -839,9 +896,11 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на атомарный объект, который содержит значение типа `Ty`.
+*Atom*<br/>
+Указатель на атомарный объект, который содержит значение типа `Ty`.
 
-*Значение* значение типа `Ty`.
+*Значение*<br/>
+Значение типа `Ty`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -867,11 +926,14 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-*Atom* указатель на `atomic` , содержащий значение типа `Ty`.
+*Atom*<br/>
+Указатель на объект `atomic`, который содержит значение типа `Ty`.
 
-*Значение* значение типа `Ty`.
+*Значение*<br/>
+Значение типа `Ty`.
 
-*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Не используйте `memory_order_consume`, `memory_order_acquire` или `memory_order_acq_rel`.
+*Порядок*<br/>
+Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Не используйте `memory_order_consume`, `memory_order_acquire` или `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -887,7 +949,8 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Порядок* ограничение, которое определяет тип границы порядка памяти.
+*Порядок*<br/>
+Ограничение порядка памяти, которое определяет тип границы.
 
 ### <a name="remarks"></a>Примечания
 
@@ -913,7 +976,8 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Arg* значение типа `Ty`.
+*Arg*<br/>
+Значение типа `Ty`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

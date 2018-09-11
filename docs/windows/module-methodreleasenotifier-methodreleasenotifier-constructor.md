@@ -1,5 +1,5 @@
 ---
-title: 'Конструктор Module::methodreleasenotifier:: methodreleasenotifier | Документы Microsoft'
+title: 'Конструктор Module::methodreleasenotifier:: methodreleasenotifier | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91540ca3fff03f1f0a449413c2d1ca72781c70f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 62f136fb9aac184d6ca81314aafea270e7b33a87
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875231"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583875"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Конструктор Module::MethodReleaseNotifier::MethodReleaseNotifier
-Инициализирует новый экземпляр класса Module::MethodReleaseNotifier.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-MethodReleaseNotifier(  
-   _In_ T* object,   
-   _In_ void (T::* method)(),   
-   bool release) throw() :  
-            ReleaseNotifier(release), object_(object),   
-            method_(method);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `object`  
- Объект, функция-член которого является обработчиком событий.  
-  
- `method`  
- Функция-член параметра `object` , обработчик событий.  
-  
- `release`  
- Укажите `true` для включения вызов базового [модуль:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) метода; в противном случае укажите `false`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)
+
+Инициализирует новый экземпляр класса **Module::MethodReleaseNotifier** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+MethodReleaseNotifier(
+   _In_ T* object,
+   _In_ void (T::* method)(),
+   bool release) throw() :
+            ReleaseNotifier(release), object_(object),
+            method_(method);
+```
+
+### <a name="parameters"></a>Параметры
+
+*object*  
+Объект, функция-член которого является обработчиком событий.
+
+*Метод*  
+Функция-член параметра *объект* то есть обработчик событий.
+
+*release*  
+Укажите **true** для включения вызова базового [модуль:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) метода; в противном случае укажите **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)

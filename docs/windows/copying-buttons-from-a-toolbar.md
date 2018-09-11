@@ -1,5 +1,5 @@
 ---
-title: Копирование кнопок из панели инструментов | Документы Microsoft
+title: Копирование кнопок из панели инструментов (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,7 +8,7 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Toolbar editor, copying buttons
+- Toolbar editor [C++], copying buttons
 - toolbars [C++], copying buttons
 - toolbar buttons [C++], copying
 ms.assetid: 3a31e428-f125-44c6-8966-a8a3fac5b117
@@ -17,27 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c006d243af78ea7f642ec36f49ce46fcfc732c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92002b41ace8fe68c80d2b607bb692f7fb9f9c62
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880235"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318685"
 ---
-# <a name="copying-buttons-from-a-toolbar"></a>Копирование кнопок из панели инструментов
-### <a name="to-copy-buttons-from-a-toolbar"></a>Копирование кнопок из панели инструментов  
-  
-1.  Удерживайте клавишу **CTRL** ключа.  
-  
-2.  В **инструментов представления** панели, перетащите кнопку либо новое место на панели инструментов или в папку на другой панели инструментов.  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
- Требования  
-  
- MFC или ATL  
-  
-## <a name="see-also"></a>См. также  
- [Создание, перемещение и редактирование кнопок панели инструментов](../windows/creating-moving-and-editing-toolbar-buttons.md)   
- [Редактор панелей инструментов](../windows/toolbar-editor.md)
+# <a name="copying-buttons-from-a-toolbar-c"></a>Копирование кнопок из панели инструментов (C++)
 
+### <a name="to-copy-buttons-from-a-toolbar"></a>Копирование кнопок из панели инструментов
+
+1. Удерживая нажатой **Ctrl** ключ.
+
+2. В **инструментов представления** панели, перетащите кнопку либо новое место на панели инструментов или в расположение на другой панели инструментов.
+
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Требования
+
+MFC или ATL
+
+## <a name="see-also"></a>См. также
+
+[Создание, перемещение и редактирование кнопок на панели инструментов](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Редактор панелей инструментов](../windows/toolbar-editor.md)

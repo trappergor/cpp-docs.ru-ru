@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2936a65023b32f994ed7260260476bc7b0457c2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ff8bacd14a6e8e99fb98d5e9c4ac3136fe1a1f0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336421"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572414"
 ---
 # <a name="updating-rowsets"></a>обновление наборов строк
 Обновление или запись данных в хранилище данных — одна из простейших операций баз данных. В OLE DB используется простой механизм обновления: приложение-клиент задает значения привязанных членов данных, а затем записывает эти значения в набор строк; затем клиент запрашивает у поставщика обновление хранилища данных.  
   
- Клиенты могут выполнять следующие типы обновлений в данных набора строк: задание значений столбцов в строке, вставка строки и удаление строки. Для выполнения этих операций, класс шаблона OLE DB [CRowset](../../data/oledb/crowset-class.md) реализует [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) интерфейс и переопределяет следующие методы интерфейса:  
+ Клиенты могут выполнять следующие типы обновлений в данных набора строк: задание значений столбцов в строке, вставка строки и удаление строки. Для выполнения этих операций, класс шаблона OLE DB [CRowset](../../data/oledb/crowset-class.md) реализует [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) интерфейс и переопределяет следующие методы интерфейса:  
   
 -   Команда[SetData](../../data/oledb/crowset-setdata.md) изменяет значения столбцов в строке набора строк; она эквивалентна команде SQL UPDATE.  
   
@@ -216,4 +216,4 @@ product.Update();                 // Update row 101 now
 ## <a name="see-also"></a>См. также  
  [Работа с шаблонами объекта-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)   
  [Класс CRowset](../../data/oledb/crowset-class.md)   
- [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)
+ [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))

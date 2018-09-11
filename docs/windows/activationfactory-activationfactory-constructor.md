@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25277c2fc8dc4672422bd85f4197f770198f1978
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9430e23c06bdccb05fe7bcadf6c89c4980564421
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464805"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611267"
 ---
 # <a name="activationfactoryactivationfactory-constructor"></a>Конструктор ActivationFactory::ActivationFactory
-Инициализирует **ActivationFactory** класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-ActivationFactory();  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ActivationFactory](../windows/activationfactory-class.md)
+
+Инициализирует **ActivationFactory** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ActivationFactory();
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ActivationFactory](../windows/activationfactory-class.md)

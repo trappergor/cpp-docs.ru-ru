@@ -1,5 +1,5 @@
 ---
-title: Функции SafeInt | Документы Microsoft
+title: Функции SafeInt | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,40 +10,41 @@ dev_langs:
 helpviewer_keywords:
 - functions, SafeInt
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97edd25abca3c9e80a35745165eedc93cc13a9b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf9a35d2198c78290bb6e60adef40fc88fdf4879
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889311"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604432"
 ---
 # <a name="safeint-functions"></a>Функции SafeInt
-Библиотека SafeInt предоставляет несколько функций, которые можно использовать без создания экземпляра [класс SafeInt](../windows/safeint-class.md). Если вы хотите защитить один математическую операцию от переполнения для целочисленных значений, можно использовать эти функции. Если вы хотите защиты множества математических операций, необходимо создать `SafeInt` объектов. Это более эффективный способ — создать `SafeInt` объекты, а не для используются эти функции несколько раз.  
-  
- Эти функции позволяют сравнения, а также для выполнения математических операций над двумя различными типами параметров без преобразования их к одному типу.  
-  
- Каждая из этих функций имеет два типа шаблонов: `T` и `U`. Каждый из этих типов может быть логическое значение, символ или целочисленный тип. Целочисленные типы могут быть подписанные или не подписанные и любых размеров из 8 бит до 64 бит.  
-  
-## <a name="in-this-section"></a>В этом разделе  
-  
-|Функция|Описание|  
-|--------------|-----------------|  
-|[SafeAdd](../windows/safeadd.md)|Складывает два числа и обеспечивает защиту от переполнения.|  
-|[SafeCast](../windows/safecast.md)|Приводит один тип параметра в другой тип.|  
-|[SafeDivide](../windows/safedivide.md)|Делит два числа и обеспечивает защиту от деления на ноль.|  
-|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [ SafeNotEquals](../windows/safenotequals.md)|Сравнивает два числа. Эти функции позволяют сравнивать два различных типов чисел без изменения их типов.|  
-|[SafeModulus](../windows/safemodulus.md)|Выполняет операцию остатка от деления двух чисел.|  
-|[SafeMultiply](../windows/safemultiply.md)|Перемножает два числа и обеспечивает защиту от переполнения.|  
-|[SafeSubtract](../windows/safesubtract.md)|Вычитает два числа и обеспечивает защиту от переполнения.|  
-  
-## <a name="related-sections"></a>Связанные разделы  
-  
-|Раздел|Описание|  
-|-------------|-----------------|  
-|[Класс SafeInt](../windows/safeint-class.md)|класс `SafeInt`;|  
-|[Класс SafeIntException](../windows/safeintexception-class.md)|Класс исключения, относящиеся к библиотека SafeInt.|
+
+Библиотека SafeInt предоставляет ряд функций, которые можно использовать без создания экземпляра [класс SafeInt](../windows/safeint-class.md). Если вы хотите защитить от переполнения для целочисленного значения одной математической операции, можно использовать эти функции. Если вы хотите защиты множества математических операций, следует создать **SafeInt** объектов. Более эффективно, чтобы создать **SafeInt** объектов, чем для используются эти функции несколько раз.
+
+Эти функции позволяют сравнить или выполняют математические операции над двумя различные типы параметров без преобразования их к одному типу.
+
+Каждая из этих функций имеет два типа шаблонов: `T` и `U`. Каждый из этих типов может быть значение типа Boolean, символ или целочисленный тип. Целочисленные типы могут быть подписанные или не подписанные и любого размера, от 8-битных до 64 бит.
+
+## <a name="in-this-section"></a>В этом разделе
+
+|Функция|Описание:|
+|--------------|-----------------|
+|[SafeAdd](../windows/safeadd.md)|Складывает два числа и обеспечивает защиту от переполнения.|
+|[SafeCast](../windows/safecast.md)|Преобразует один тип параметра в другой тип.|
+|[SafeDivide](../windows/safedivide.md)|Делит два числа и обеспечивает защиту от деления на ноль.|
+|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [ SafeNotEquals](../windows/safenotequals.md)|Сравнивает два числа. Эти функции предназначены для сравнения двух различных типов чисел без изменения их типы.|
+|[SafeModulus](../windows/safemodulus.md)|Выполняет операцию взятия по модулю на двух чисел.|
+|[SafeMultiply](../windows/safemultiply.md)|Перемножает два числа и обеспечивает защиту от переполнения.|
+|[SafeSubtract](../windows/safesubtract.md)|Вычитает два числа и обеспечивает защиту от переполнения.|
+
+## <a name="related-sections"></a>Связанные разделы
+
+|Раздел|Описание:|
+|-------------|-----------------|
+|[Класс SafeInt](../windows/safeint-class.md)|**SafeInt** класса.|
+|[Класс SafeIntException](../windows/safeintexception-class.md)|Класс исключений, определенных в библиотеку SafeInt.|

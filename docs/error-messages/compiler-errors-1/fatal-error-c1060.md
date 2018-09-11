@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1060 | Документы Microsoft
+title: Неустранимая ошибка C1060 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa168c185bafbfd6fadf3f0d5f1320ba4f43d60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01b3b25499f46b476d0480ec87b609b36ba8dfd9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226315"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677708"
 ---
 # <a name="fatal-error-c1060"></a>Неустранимая ошибка C1060
 компилятору не хватает размера кучи  
@@ -30,13 +30,13 @@ ms.locfileid: "33226315"
   
 ### <a name="to-fix-this-error-try-the-following-possible-solutions"></a>Чтобы устранить эту проблему, попробуйте следующие возможные решения  
   
-1.  Если возникают ошибки компилятора [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) и [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), используйте [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) параметр компилятора, чтобы снизить предел выделения памяти. Если уменьшить распределение оставшейся памяти, в куче останется больше места для вашего приложения.  
+1.  Если возникают ошибки компилятора [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) и [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), использовать [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) параметр компилятора, чтобы снизить предел распределения памяти. Если уменьшить распределение оставшейся памяти, в куче останется больше места для вашего приложения.  
   
-     Если [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) он уже установлен, попробуйте удалить ее. Место в куче может быть исчерпано из-за того, что предел распределения памяти, заданный с помощью этого параметра, слишком велик. Компилятор использует ограничение по умолчанию, если удалить [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) параметр.  
+     Если [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) уже установлен, попробуйте удалить его. Место в куче может быть исчерпано из-за того, что предел распределения памяти, заданный с помощью этого параметра, слишком велик. Компилятор использует ограничение по умолчанию, если удалить [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) параметр.  
   
-2.  Если компиляция происходит на 64-разрядной платформе, используйте 64-разрядный набор средств компиляции. Сведения см. в разделе [как: включить 64-разрядных инструментов Visual C++ в командной строке](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
+2.  Если компиляция происходит на 64-разрядной платформе, используйте 64-разрядный набор средств компиляции. Сведения см. в разделе [как: включить 64-разрядных набора инструментов Visual C++ в командной строке](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
   
-3.  На 32-разрядной версии Windows, попробуйте использовать [/3 GB](http://go.microsoft.com/fwlink/p/?linkid=177831) переключатель в файле boot.ini.  
+3.  На 32-разрядной Windows, попробуйте использовать [/3 GB](https://support.microsoft.com/en-us/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) переключатель в файле boot.ini.  
   
 4.  Увеличьте размер файла подкачки Windows.  
   

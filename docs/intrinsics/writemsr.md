@@ -1,5 +1,5 @@
 ---
-title: __writemsr | Документы Microsoft
+title: __writemsr | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76131f4d07dec1713c80b4cd4f98f729b9ecf07b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323528"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539887"
 ---
 # <a name="writemsr"></a>__writemsr
 **Блок, относящийся только к системам Microsoft**  
   
- Создает запись для регистрации на определенной модели (`wrmsr`) инструкции.  
+ Создает запись для регистра (`wrmsr`) инструкции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ void __writemsr(
   
 #### <a name="parameters"></a>Параметры  
  [in] `Register`  
- Регистр определенной модели.  
+ Модельнозависимого регистра.  
   
  [in] `Value`  
  Значение для записи.  
@@ -50,12 +50,12 @@ void __writemsr(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writemsr`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция может использоваться только в режиме ядра, и эта процедура доступна только как встроенная функция.  
+ Эта функция может использоваться только в режиме ядра, и эта процедура доступна только как встроенная.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

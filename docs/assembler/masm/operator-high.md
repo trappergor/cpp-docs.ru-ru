@@ -1,7 +1,7 @@
 ---
-title: оператор HIGH | Документы Microsoft
+title: оператор HIGH | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11890a8b37a9b191a573f12c4df1328d12c1d5cd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd69844b8ec81dc41df1f742e02f5da6476fa220
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055720"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679320"
 ---
 # <a name="operator-high"></a>Оператор HIGH
-Возвращает старшие 8 разрядов младшие 16 разрядов *выражение*. Выражения MASM являются 64-разрядными значениями.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-HIGH expression  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает старшие 8 разряда младшие 16 разрядов *выражение*. Выражения MASM являются 64-разрядными значениями.
+
+## <a name="syntax"></a>Синтаксис
+
+> Высокий уровень выражения
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

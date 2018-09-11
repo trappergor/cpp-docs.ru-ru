@@ -1,7 +1,7 @@
 ---
-title: ОПЕРАТОР GOTO (MASM) | Документы Microsoft
+title: GOTO (MASM) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eecdab2fe91de0aae656b37c6fddafe658e60c0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b0be678e2d39389cbc551c386c1890f799124b5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694005"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
-Передает строку, помеченную сборки **: *** macrolabel*.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-GOTO   
-macrolabel  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Оператор GOTO** разрешены только в [МАКРОС](../../assembler/masm/macro.md), [для](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [ПОВТОРИТЕ](../../assembler/masm/repeat.md), и **при**блоки. Метка должна быть только директивой в строке и должен предшествовать начальное двоеточие.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Передает строку, помеченную сборки **:**_macrolabel_.
+
+## <a name="syntax"></a>Синтаксис
+
+> **GOTO** *macrolabel*
+
+## <a name="remarks"></a>Примечания
+
+**GOTO** разрешены только в [МАКРОС](macro.md), [для](for-masm.md), [принудительное Включение](forc.md), [ПОВТОРИТЕ](repeat.md), и [при](while-masm.md)блоков. *Macrolabel* целевой объект должен быть единственным директивы в той строке и должен предшествовать начальное двоеточие.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

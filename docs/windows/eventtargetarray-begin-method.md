@@ -1,5 +1,5 @@
 ---
-title: Метод EventTargetArray::Begin | Документы Microsoft
+title: Метод EventTargetArray::Begin | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef0c9726b089c798ff8b9a98a04da40099cf888a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 738ee52eb68cfbb03a380ffac52efdb4010b5205
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871592"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602135"
 ---
 # <a name="eventtargetarraybegin-method"></a>Метод EventTargetArray::Begin
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-ComPtr<IUnknown>* Begin();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Адрес первого элемента во внутреннем массиве обработчиков событий.  
-  
-## <a name="remarks"></a>Примечания  
- Получает адрес первого элемента во внутреннем массиве обработчиков событий.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Eventtargetarray-класс](../windows/eventtargetarray-class.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ComPtr<IUnknown>* Begin();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Адрес первого элемента во внутреннем массиве обработчиков событий.
+
+## <a name="remarks"></a>Примечания
+
+Получает адрес первого элемента во внутреннем массиве обработчиков событий.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Класс EventTargetArray](../windows/eventtargetarray-class.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

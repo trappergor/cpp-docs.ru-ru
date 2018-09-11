@@ -1,7 +1,7 @@
 ---
-title: оператор HIGH32 | Документы Microsoft
+title: оператор HIGH32 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ee4dd585cdb5dccb12300bcfc74a37a5b4b7f10
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c85744918b9c66ad9adaed3e5f595e21d24904f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056838"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688160"
 ---
 # <a name="operator-high32"></a>Оператор HIGH32
-Возвращает старшие 32 разряда *выражение*. Выражения MASM являются 64-разрядными значениями.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-HIGH32 expression  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает старшие 32 разряда *выражение*. Выражения MASM являются 64-разрядными значениями.
+
+## <a name="syntax"></a>Синтаксис
+
+> Выражение HIGH32
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

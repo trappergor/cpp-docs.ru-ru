@@ -1,7 +1,7 @@
 ---
-title: . ERRNB | Документы Microsoft
+title: . ERRNB | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2487184b7884cd076ecc10303f0c488b3460bf44
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 19ed43346a49025c43afbc4b0fd51f7a2f33b6c2
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050159"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313303"
 ---
 # <a name="errnb"></a>.ERRNB
-Если возникает ошибка *textitem* не является пустым.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-.ERRNB <textitem> [[, message]]  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Выдает ошибку, если *textitem* не является пустым.
+
+## <a name="syntax"></a>Синтаксис
+
+> . ERRNB *textitem* [[, *сообщение*]]
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

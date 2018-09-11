@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1b5160061233f9d0a474385bccd324333ed9549a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322878"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686291"
 ---
 # <a name="resources-property-pages"></a>Страницы свойств ресурсов
-Дополнительные сведения об использовании компилятора ресурсов см. в разделе [Использование компилятора ресурсов (командной строки RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055).  
+Дополнительные сведения об использовании компилятора ресурсов см. в разделе [Использование компилятора ресурсов (командной строки RC)](/windows/desktop/menurc/using-rc-the-rc-command-line-).  
   
  Сведения о доступе к страницам свойств **Ресурсы** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).  
   

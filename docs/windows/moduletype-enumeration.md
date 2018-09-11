@@ -1,5 +1,5 @@
 ---
-title: Перечисление ModuleType | Документы Microsoft
+title: Перечисление ModuleType | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d36355c9f64f9f5c827ef8c4d5b3cb6a77d17b65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe8d41aded38db7cde5316e04cfa1689845aa4e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876840"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595476"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType - перечисление
-Указывает, должен ли модуль поддерживать внутрипроцессный или внепроцессный сервер.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-enum ModuleType;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="values"></a>Значения  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|`InProc`|Внутрипроцессный сервер.|  
-|`OutOfProc`|Сервер "out of process".|  
-|`DisableCaching`|Отключите механизм кэширования для модуля.|  
-|`InProcDisableCaching`|Сочетание `InProc` и `DisableCaching`.|  
-|`OutOfProcDisableCaching`|Сочетание `OutOfProc` и `DisableCaching`.|  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Указывает, должен ли модуль поддерживать внутрипроцессный или внепроцессный сервер.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+enum ModuleType;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="values"></a>Значения
+
+|Имя|Описание:|
+|----------|-----------------|
+|`InProc`|Внутрипроцессный сервер.|
+|`OutOfProc`|Сервер вне процесса.|
+|`DisableCaching`|Отключите механизм кэширования для модуля.|
+|`InProcDisableCaching`|Сочетание `InProc` и `DisableCaching`.|
+|`OutOfProcDisableCaching`|Сочетание `OutOfProc` и `DisableCaching`.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

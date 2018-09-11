@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 785a89b1a5a174fc5ce453a6d2f87a18c508edf6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9b3790e0fb3d1b304359677ddedab2b65dcfe89d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462353"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575745"
 ---
 # <a name="activationfactoryaddref-method"></a>Метод ActivationFactory::AddRef
-Увеличивает счетчик ссылок текущего **ActivationFactory** объекта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHOD_(  
-   ULONG,  
-   AddRef  
-)();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ActivationFactory](../windows/activationfactory-class.md)
+
+Увеличивает счетчик ссылок текущего **ActivationFactory** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ActivationFactory](../windows/activationfactory-class.md)

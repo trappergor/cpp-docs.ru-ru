@@ -1,5 +1,5 @@
 ---
-title: 'Как: Создание консольного приложения CLR (C + +/ CLI) | Документы Microsoft'
+title: 'Практическое: Создание консольного приложения CLR (C + +/ CLI) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132574"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211161"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Практическое руководство. Создание консольного приложения CLR (C++/CLI)
 Шаблон консольного приложения можно использовать для создания проекта консольного приложения, уже включающего необходимые ссылки и файлы.  
@@ -32,7 +32,7 @@ ms.locfileid: "33132574"
   
 -   Ссылки на следующие пространства имен .NET Framework:  
   
-    -   [System](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx)— содержит фундаментальные и базовые классы, определяющие часто используемые типы значений и типы ссылочных данных, события и обработчики событий, интерфейсы, атрибуты и исключения обработки.  
+    -   [Система](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)— содержит фундаментальные и базовые классы, определяющие часто используемые значения и ссылочные типы данных, события и обработчики событий, интерфейсы, атрибуты и исключения обработки.  
   
     -   mscorlib — библиотека DLL сборки, которая поддерживает разработку для .NET Framework.  
   

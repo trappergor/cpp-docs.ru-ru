@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c32aed9d50e0575893c99a9552c74e6e491ecb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1c44abc596f5338ad82b49bc9761abfc5bb26a1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853024"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216206"
 ---
 # <a name="colepropertiesdialog-class"></a>Класс COlePropertiesDialog
 Инкапсулирует стандартное диалоговое окно свойств объекта OLE Windows.  
@@ -153,10 +153,10 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Возвращаемое значение  
  IDOK и IDCANCEL, если выполнение прошло успешно; в противном случае 0. IDOK и IDCANCEL являются константы, указывающие, является ли пользователь выбрал кнопку ОК или "Отмена".  
   
- Если возвращается IDCANCEL, можно вызвать Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) функцию, чтобы определить, произошла ли ошибка.  
+ Если возвращается IDCANCEL, можно вызвать Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) функцию, чтобы определить, произошла ли ошибка.  
   
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
- Структура типа [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), которое используется для инициализации странице "Общие" диалогового окна свойств объекта OLE.  
+ Структура типа [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa), которое используется для инициализации странице "Общие" диалогового окна свойств объекта OLE.  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
@@ -168,7 +168,7 @@ OLEUIGNRLPROPS m_gp;
  Дополнительные сведения о `OLEUIGNRLPROPS` структуры, см. в Windows SDK.  
   
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
- Структура типа [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), которое используется для инициализации ссылки страницы диалогового окна свойств объекта OLE.  
+ Структура типа [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa), которое используется для инициализации ссылки страницы диалогового окна свойств объекта OLE.  
   
 ```  
 OLEUILINKPROPS m_lp;  
@@ -180,7 +180,7 @@ OLEUILINKPROPS m_lp;
  Дополнительные сведения о `OLEUILINKPROPS` структуры, см. в Windows SDK.  
   
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
- Структура типа [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), которое используется для инициализации общее диалоговое окно свойств объекта OLE.  
+ Структура типа [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa), которое используется для инициализации общее диалоговое окно свойств объекта OLE.  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
@@ -189,10 +189,10 @@ OLEUIOBJECTPROPS m_op;
 ### <a name="remarks"></a>Примечания  
  Эта структура содержит элементы, используемые для инициализации страницы представлений, ссылки и Общие.  
   
- Дополнительные сведения см. в разделе OLEUIOBJECTPROPS и [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) структур в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе OLEUIOBJECTPROPS и [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) структур в пакете Windows SDK.  
   
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
- Структура типа [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), члены которой хранения характеристики объекта диалогового окна.  
+ Структура типа [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2), члены которой хранения характеристики объекта диалогового окна.  
   
 ```  
 PROPSHEETHEADER m_psh;  
@@ -206,7 +206,7 @@ PROPSHEETHEADER m_psh;
  Дополнительные сведения о `PROPSHEETHEADER` структуры, см. в Windows SDK.  
   
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
- Структура типа [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), которое используется для инициализации представления страницы диалогового окна свойств объекта OLE.  
+ Структура типа [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa), которое используется для инициализации представления страницы диалогового окна свойств объекта OLE.  
   
 ```  
 OLEUIVIEWPROPS m_vp;  

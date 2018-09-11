@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYLINKRESOURCE (ссылка на ресурс .NET Framework) | Документы Microsoft
+title: -ASSEMBLYLINKRESOURCE (ссылка на ресурс .NET Framework) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374054"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206492"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>Параметр /ASSEMBLYLINKRESOURCE (ссылка на ресурс .NET Framework)
 ```  
@@ -38,17 +38,17 @@ ms.locfileid: "32374054"
  Файл ресурсов .NET Framework, ссылку на который необходимо создать из сборки.  
   
 ## <a name="remarks"></a>Примечания  
- Параметр/assemblylinkresource создает ссылку на ресурс .NET Framework в выходном файле; файл ресурса не помещается в выходной файл. [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) внедряет файл ресурсов в выходной файл.  
+ Параметр этом случае создает ссылку на ресурс .NET Framework в выходном файле; файл ресурса не помещается в выходной файл. [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) внедряет файл ресурсов в выходной файл.  
   
- Связанные ресурсы являются открытыми в сборке, если при создании компоновщик.  
+ Связанные ресурсы являются открытыми в сборке при создании с ключом компоновщика.  
   
- / Параметр ASSEMBLYLINKRESOURCE нужно будет добавить компиляции [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) или [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) не допускается в этом случае.  
+ / ASSEMBLYLINKRESOURCE требует, компиляция [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) или [/NOASSEMBLY предписывает](../../build/reference/noassembly-create-a-msil-module.md) не допускается в этом случае.  
   
- Если *filename* является файлом ресурсов .NET Framework, созданным, например, с [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) или в среде разработки, он может осуществляться с помощью членов **System.Resources** пространства имен. Дополнительные сведения см. в разделе [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx). Другие ресурсы, используйте **GetManifestResource** \* методы в **System.Reflection.Assembly** класса доступа к ресурсам во время выполнения.  
+ Если *filename* является файлом ресурсов .NET Framework, созданным, например, по [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) или в среде разработки, он может осуществляться с помощью членов пространства **System.Resources** пространства имен. Дополнительные сведения см. в разделе [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Все прочие ресурсы, используйте **GetManifestResource** \* методы в **System.Reflection.Assembly** класс для доступа к ресурсу во время выполнения.  
   
- *Имя файла* может иметь любой формат. Например может потребоваться сделать собственную библиотеку DLL частью сборки, чтобы он мог установлена в глобальный кэш сборок и доступна из управляемого кода в сборке.  
+ *Имя файла* может иметь любой формат файла. Например может потребоваться сделать собственную библиотеку DLL частью сборки, поэтому его можно установить в глобальный кэш сборок и доступна из управляемого кода в сборке.  
   
- Доступны следующие параметры компоновщика, влияющие на создание сборки.  
+ Доступны следующие параметры компоновщика, которые влияют на создание сборки.  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "32374054"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).  
   
 2.  Нажмите кнопку **компоновщика** папки.  
   

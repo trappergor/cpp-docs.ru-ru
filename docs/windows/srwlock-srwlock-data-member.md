@@ -1,5 +1,5 @@
 ---
-title: Элемент данных SRWLOCK::srwlock_ | Документы Microsoft
+title: Элемент данных SRWLOCK::srwlock_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77b6d10e4343fd17c8bd65e232d29923214eff0c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eec019d9eb120f1918cb81c9d7ba88f13d81ee38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889112"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608564"
 ---
 # <a name="srwlocksrwlock-data-member"></a>Элемент данных SRWLock::SRWLock_
-Содержит базовую переменную блокировки для текущего объекта SRWLock.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-SRWLOCK SRWLock_;  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс SRWLock](../windows/srwlock-class.md)
+
+Содержит базовой переменной блокировки для текущего **SRWLock** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+SRWLOCK SRWLock_;
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс SRWLock](../windows/srwlock-class.md)

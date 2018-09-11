@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963798"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100758"
 ---
 # <a name="locale-class"></a>Класс locale
 
@@ -150,19 +150,19 @@ cout.imbue(loc);
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[locale](#locale)|Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[category](#category)|Целочисленный тип, который содержит значения битовой маски для обозначения стандартных семейств аспектов.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[combine](#combine)|Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.|
 |[name](#name)|Возвращает имя сохраненного языкового стандарта.|
@@ -176,7 +176,7 @@ cout.imbue(loc);
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор!=](#op_neq)|Проверка двух языковых стандартов на неравенство.|
 |[оператор( )](#op_call)|Сравнивает два объекта `basic_string`.|
@@ -184,7 +184,7 @@ cout.imbue(loc);
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[facet](#facet_class)|Класс, используемый как базовый класс для всех аспектов языкового стандарта.|
 |[id](#id_class)|Класс члена содержит уникальный идентификатор аспекта, применяемый в качестве индекса для поиска аспектов в языковом стандарте.|
@@ -301,7 +301,8 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Loc* языковой стандарт, содержащий аспект для вставки в целевой языковой стандарт.
+*Loc*<br/>
+Языковой стандарт, содержащий аспект для вставки в целевой языковой стандарт.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -369,7 +370,8 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Параметры
 
-*Loc* языкового стандарта для использования в качестве языкового стандарта по умолчанию с помощью программы.
+*Loc*<br/>
+Языковой стандарт, который будет использоваться программой по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -436,15 +438,20 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Параметры
 
-*Locname* имя языкового стандарта.
+*Locname*<br/>
+Имя языкового стандарта.
 
-*Loc* языкового стандарта, который должен копироваться при создании нового языкового стандарта.
+*Loc*<br/>
+Языковой стандарт, который будет копироваться при создании нового языкового стандарта.
 
-*Другие* языковой стандарт, из которого необходимо выбрать категорию.
+*Другое*<br/>
+Языковой стандарт, из которого будет выбираться категория.
 
-*CAT* категории для замены в созданном языковом стандарте.
+*CAT*<br/>
+Категория для замены в созданном языковом стандарте.
 
-*FAc* аспект для замены в созданном языковом стандарте.
+*FAc*<br/>
+Аспект для замены в созданном языковом стандарте.
 
 ### <a name="remarks"></a>Примечания
 
@@ -555,7 +562,8 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* один из языковых стандартов на неравенство.
+*right*<br/>
+Один из языковых стандартов для проверки на неравенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -600,9 +608,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252) and
- loc2 (German_Germany.1252) are equal.
+loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252) and
- loc3 (English_United States.1252) are not equal.
+loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="op_call"></a>  locale::operator()
@@ -618,9 +626,11 @@ bool operator()(
 
 ### <a name="parameters"></a>Параметры
 
-*слева* левая строка.
+*left*<br/>
+Левая строка.
 
-*правом* правая строка.
+*right*<br/>
+Правая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -685,7 +695,8 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*правом* один из языковых стандартов для проверки на равенство.
+*right*<br/>
+Один из языковых стандартов для проверки на равенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -734,14 +745,14 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252)
- and loc2 (German_Germany.1252) are equal.
+and loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252)
- and loc3 (English_United States.1252) are not equal.
+and loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="see-also"></a>См. также
 
 [\<locale>](../standard-library/locale.md)<br/>
 [Кодовые страницы](../c-runtime-library/code-pages.md)<br/>
-[Имени языкового стандарта, языка и строк страны или региона](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Сведения о строках имени языкового стандарта, языка, а также страны или региона](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

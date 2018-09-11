@@ -1,5 +1,5 @@
 ---
-title: __invlpg | Документы Microsoft
+title: __invlpg | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327529"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540692"
 ---
 # <a name="invlpg"></a>__invlpg
 **Блок, относящийся только к системам Microsoft**  
   
- Приводит к возникновению ошибки x86 `invlpg` инструкции, которая делает недействительными буфера ассоциативной трансляции (TLB) для страницы, связанные с памятью, на который указывает `Address`.  
+ Создает x86 `invlpg` инструкции, что делает недействительным буфера ассоциативной трансляции (TLB) для страницы, связанные с объемом памяти, на которые указывают `Address`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,12 +46,12 @@ void __invlpg(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Встроенная функция `__invlpg` выдает привилегированной инструкции и доступна только в режиме ядра с уровнем привилегий (Диалогового) 0.  
+ Встроенная `__invlpg` выдает привилегированной инструкции и доступна только в режиме ядра с уровнем привилегий (CPL) 0.  
   
  Эта процедура доступна только как встроенная функция.  
   

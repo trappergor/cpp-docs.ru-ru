@@ -1,5 +1,5 @@
 ---
-title: Класс Semaphore | Документы Microsoft
+title: Класс семафора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,62 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb0b3d5dff91bcb1fb1688c7b1a9314fe7ebf00c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889473"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598419"
 ---
 # <a name="semaphore-class"></a>Semaphore - класс
-Представляет объект синхронизации, который управляет общим ресурсом и поддерживает ограниченное число пользователей.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-typedefs"></a>Общедоступные определения типов  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|`SyncLock`|Синоним для класса, который поддерживает синхронные блокировки.|  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Конструктор Semaphore::Semaphore](../windows/semaphore-semaphore-constructor.md)|Инициализирует новый экземпляр класса Semaphore.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Метод InvokeHelper::Invoke](../windows/invokehelper-invoke-method.md)|Вызывает обработчик событий, сигнатура которого содержит указанное число аргументов.|  
-  
-### <a name="public-data-members"></a>Открытые члены данных  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Метод Semaphore::Lock](../windows/semaphore-lock-method.md)|Ожидает, пока текущий объект или объект, связанный с указанным дескриптором находится в состоянии получения сигнала или истечении отведенного времени ожидания.|  
-  
-### <a name="public-operators"></a>Открытые операторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Оператор Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Перемещает заданный дескриптор из объекта семафора для текущего объекта семафора.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `Semaphore`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Представляет объект синхронизации, который управляет общим ресурсом и поддерживает ограниченное число пользователей.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-typedefs"></a>Общедоступные определения типов
+
+|Имя|Описание:|
+|----------|-----------------|
+|`SyncLock`|Синоним для класса, поддерживающего синхронной блокировки.|
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Конструктор Semaphore::Semaphore](../windows/semaphore-semaphore-constructor.md)|Инициализирует новый экземпляр класса **семафора** класса.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод InvokeHelper::Invoke](../windows/invokehelper-invoke-method.md)|Вызывает обработчик событий, сигнатура которого содержит указанное число аргументов.|
+
+### <a name="public-data-members"></a>Открытые члены данных
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод Semaphore::Lock](../windows/semaphore-lock-method.md)|Ожидает, пока текущий объект или объект, связанный с указанным дескриптором, находится в сигнальном состоянии или истечет указанный интервал времени ожидания.|
+
+### <a name="public-operators"></a>Открытые операторы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Оператор Semaphore::operator=](../windows/semaphore-operator-assign-operator.md)|Перемещает указанный дескриптор из **семафора** объект с текущим **семафора** объекта.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`Semaphore`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)

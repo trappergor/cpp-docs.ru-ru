@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fff9e812a6946dd15de5b2d33f57358d02246dab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b983d30a06a872ae20afa130c3a42ef0df1b0846
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462483"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601390"
 ---
 # <a name="comptrswap-method"></a>Метод ComPtr::Swap
-Меняет местами интерфейс, управляемый текущим **ComPtr** с помощью интерфейса, управляемого с помощью указанного **ComPtr**.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void Swap(  
-   _Inout_ ComPtr&& r  
-);  
-  
-void Swap(  
-   _Inout_ ComPtr& r  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *r*  
- Объект **ComPtr**.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ComPtr](../windows/comptr-class.md)
+
+Меняет местами интерфейс, управляемый текущим **ComPtr** с помощью интерфейса, управляемого с помощью указанного **ComPtr**.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void Swap(
+   _Inout_ ComPtr&& r
+);
+
+void Swap(
+   _Inout_ ComPtr& r
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*r*  
+Объект **ComPtr**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtr](../windows/comptr-class.md)

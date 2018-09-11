@@ -1,5 +1,5 @@
 ---
-title: Метод Module::UnregisterObjects | Документы Microsoft
+title: Метод Module::UnregisterObjects | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b711338c436eda3e64d9b51ef0d3137975d834a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ee7e6deeda17d2ac374b39edf70ab28fa1457fa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874123"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603385"
 ---
 # <a name="moduleunregisterobjects-method"></a>Метод Module::UnregisterObjects
-Отменяет регистрацию объектов в указанном модуле. Таким образом другие приложения не смогут подключиться к ним.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-HRESULT UnregisterObjects(  
-   ModuleBase* module,  
-   const wchar_t* serverName);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `module`  
- Указатель на модуль.  
-  
- `serverName`  
- Представляет имя, которое определяет подмножество объектов, затронутых этой операцией.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее причину неудачного завершения операции.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс Module](../windows/module-class.md)
+
+Отменяет регистрацию объектов в указанном модуле. Таким образом другие приложения не смогут подключиться к ним.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT UnregisterObjects(
+   ModuleBase* module,
+   const wchar_t* serverName);
+```
+
+### <a name="parameters"></a>Параметры
+
+*модуль*  
+Указатель на модуль.
+
+*Имя_сервера*  
+Представляет имя, которое определяет подмножество объектов, затронутых этой операцией.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее причину неудачного завершения операции.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс Module](../windows/module-class.md)

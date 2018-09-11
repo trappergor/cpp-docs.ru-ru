@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 580df181e544ced6594b049b85d7f147bd2fe22e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7336824d04745440a1f6152ebacfed2afc62258e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464620"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602382"
 ---
 # <a name="asyncbaseerrorcode-method"></a>Метод AsyncBase::ErrorCode
-Получает код ошибки для текущей асинхронной операции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-inline void ErrorCode(  
-   HRESULT *error  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *Ошибка*  
- Расположение, в котором эта операция сохраняет текущий код ошибки.  
-  
-## <a name="remarks"></a>Примечания  
- Данная операция является потокобезопасной.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Получает код ошибки для текущей асинхронной операции.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline void ErrorCode(
+   HRESULT *error
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Ошибка*  
+Расположение, в котором эта операция сохраняет текущий код ошибки.
+
+## <a name="remarks"></a>Примечания
+
+Данная операция является потокобезопасной.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

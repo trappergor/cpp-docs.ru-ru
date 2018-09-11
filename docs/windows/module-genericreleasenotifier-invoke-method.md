@@ -1,5 +1,5 @@
 ---
-title: 'Module::GenericReleaseNotifier:: Invoke-метод | Документы Microsoft'
+title: 'Module::GenericReleaseNotifier:: вызвать метод | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 116b313a0055bcdca9841e740f1720d18fb6c7f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875335"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600671"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Метод Module::GenericReleaseNotifier::Invoke
-Вызывает обработчик событий, связанный с текущим объектом Module::GenericReleaseNotifier.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void Invoke();  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)
+
+Вызывает обработчик событий, связанный с текущим **Module::GenericReleaseNotifier** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void Invoke();
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb91bc7ec37d4738aaf9f1c7ac6532079a0b71d0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959642"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313734"
 ---
 # <a name="iteratortraits-struct"></a>Структура iterator_traits
 
@@ -57,7 +57,7 @@ struct iterator_traits {
 
 - `reference`: синоним `Iterator::reference`.
 
-Частичные специализации определяют критические типы, связанные с указателем на объект типа **тип \***  или const **тип \***.
+Частичные специализации определяют критические типы, связанные с указателем на объект типа **тип** <strong>\*</strong> или **тип const**  <strong>\*</strong>.
 
 В этой реализации вы также можете применить несколько шаблонов функций, которые не используют частичную специализацию:
 
@@ -118,12 +118,12 @@ int main( )
    function( vc.begin( ), vc.end( ) );
    function( li.begin( ), li.end( ) );
 }
-\* Output:
+/* Output:
 struct std::random_access_iterator_tag
 a a a a a a a a a a
 struct std::bidirectional_iterator_tag
 0 0 0 0 0 0 0 0 0 0
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Требования

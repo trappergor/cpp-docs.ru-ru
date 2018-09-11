@@ -1,5 +1,5 @@
 ---
-title: Метод HandleT::InternalClose | Документы Microsoft
+title: Метод HandleT::InternalClose | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b0aef97645d515a03dcf2cab90eedc06f07971c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc3f01227cb37285f11ef8256d0b101f156871b5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874149"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605520"
 ---
 # <a name="handletinternalclose-method"></a>Метод HandleT::InternalClose
-Закрытие текущего объекта HandleT.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-virtual bool InternalClose();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `true` Если текущего объекта HandleT Закрыто успешно. в противном случае `false`.  
-  
-## <a name="remarks"></a>Примечания  
- InternalClose() защищен.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HandleT](../windows/handlet-class.md)
+
+Закрывает текущий **HandleT** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual bool InternalClose();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если текущий **HandleT** Закрыто успешно; в противном случае — значение **false**.
+
+## <a name="remarks"></a>Примечания
+
+**InternalClose()** — **защищенные**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HandleT](../windows/handlet-class.md)

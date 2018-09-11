@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688cef94721ac7ea3a36ccd375185b922b23a15f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 655d9be75fa031cc2cbebfd65c4634528f410e85
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395608"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110530"
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
@@ -53,15 +53,16 @@ void _CrtMemDumpStatistics(
 
 ### <a name="parameters"></a>Параметры
 
-*состояние* указатель на состояние кучи для помещения в дамп.
+*state*<br/>
+Указатель на состояние кучи для создания дампа.
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtMemDumpStatistics** функция помещает в дамп данные заголовка отладки для указанного состояния кучи в понятной пользователю форме. Статистика дампа может использоваться приложением для отслеживания операций выделения памяти и выявления проблем с памятью. Состояние памяти может содержать состояние определенной кучи или разницу между двумя состояниями. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtMemDumpStatistics** удаляются на этапе предварительной обработки.
+**_CrtMemDumpStatistics** функция помещает в дамп данные заголовка отладки для указанного состояния кучи в понятной пользователю форме. Статистика дампа может использоваться приложением для отслеживания операций выделения памяти и выявления проблем с памятью. Состояние памяти может содержать состояние определенной кучи или разницу между двумя состояниями. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtMemDumpStatistics** удаляются во время предварительной обработки.
 
-*Состояние* параметр должен быть указателем на **_CrtMemState** структуру, которая должна быть заполнена, [_CrtMemCheckpoint](crtmemcheckpoint.md) или возвращаемых [_ CrtMemDifference](crtmemdifference.md) перед **_CrtMemDumpStatistics** вызывается. Если *состояние* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и никакие действия не выполняются. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+*Состояние* параметр должен быть указателем на **_CrtMemState** структуру, которая должна быть заполнена, [_CrtMemCheckpoint](crtmemcheckpoint.md) или возвращенные [_ CrtMemDifference](crtmemdifference.md) перед **_CrtMemDumpStatistics** вызывается. Если *состояние* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и никакие действия не выполняются. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Дополнительные сведения о функциях состояния кучи и **_CrtMemState** структуры см. в разделе [функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Дополнительные сведения о функциях управления состоянием кучи и **_CrtMemState** структуры, см. в разделе [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Требования
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c4cdc26c66c05cda821b43367b806ecc2a2a8168
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966489"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100810"
 ---
 # <a name="enableif-class"></a>Класс enable_if
 
@@ -37,9 +37,11 @@ struct enable_if;
 
 ### <a name="parameters"></a>Параметры
 
-*B* значение, определяющее наличие результирующего типа.
+*B*<br/>
+Значение, определяющее наличие результирующего типа.
 
-*T* тип для создания, если *B* имеет значение true.
+*T*<br/>
+Тип для создания, если *B* имеет значение true.
 
 ## <a name="remarks"></a>Примечания
 
@@ -64,12 +66,12 @@ using enable_if_t = typename enable_if<B,T>::type;
     template <your_stuff>
 typename enable_if<your_condition, your_return_type>::type
     yourfunction(args) {// ...
- }
+}
 // The alias template makes it more concise:
     template <your_stuff>
 enable_if_t<your_condition, your_return_type>
 yourfunction(args) {// ...
- }
+}
 ```
 
 - Сценарий 2. Добавление параметра функции с аргументом по умолчанию:
@@ -78,7 +80,7 @@ yourfunction(args) {// ...
     template <your_stuff>
 your_return_type_if_present
     yourfunction(args, enable_if_t<your condition, FOO> = BAR) {// ...
- }
+}
 ```
 
 - Сценарий 3. Добавление параметра шаблона с аргументом по умолчанию:
@@ -95,7 +97,7 @@ rest_of_function_declaration_goes_here
 void your_function(const T& t,
     enable_if_t<is_something<T>::value, const string&>
 s) {// ...
- }
+}
 ```
 
 Сценарий 1 не применяется к конструкторам и операторам преобразования, так как у них нет возвращаемых типов.

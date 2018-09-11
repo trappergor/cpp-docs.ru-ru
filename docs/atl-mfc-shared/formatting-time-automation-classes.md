@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ca1bf5c716be10d079beaec3e49ae014df0932
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6dc5ecb7460e5813779cef8c9359983ae1007edf
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882102"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762789"
 ---
 # <a name="formatting-time-automation-classes"></a>Форматирование времени: Классы автоматизации
-#### <a name="to-format-a-time"></a>Форматирование времени  
-  
- Используйте `Format` функцию-член либо [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) или [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) создать символьную строку, содержащую времени или времени.  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#179](../atl-mfc-shared/codesnippet/cpp/formatting-time-automation-classes_1.cpp)]  
-  
- Дополнительные сведения см. в разделе класса [COleVariant](../mfc/reference/colevariant-class.md).  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений  
-  
--   [Общие программирования даты и времени в MFC](../atl-mfc-shared/date-and-time.md)  
-  
--   [Классы общего назначения для программирования даты и времени](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
-  
--   [Работа с SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
-  
-## <a name="see-also"></a>См. также  
- [Дата и время. Поддержка автоматизации](../atl-mfc-shared/date-and-time-automation-support.md)
+
+## <a name="to-format-a-time"></a>Форматирование времени
+
+Используйте `Format` функцию-член либо [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) или [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) создать символьную строку, содержащую времени или времени.
+
+   [!code-cpp[NVC_ATLMFC_Utilities#179](../atl-mfc-shared/codesnippet/cpp/formatting-time-automation-classes_1.cpp)]
+
+Дополнительные сведения см. в разделе класса [COleVariant](../mfc/reference/colevariant-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
+
+- [Общие программирования даты и времени в MFC](../atl-mfc-shared/date-and-time.md)
+
+- [Работа с SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
+
+## <a name="see-also"></a>См. также
+
+[Дата и время. Поддержка автоматизации](../atl-mfc-shared/date-and-time-automation-support.md)
 

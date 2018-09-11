@@ -1,5 +1,5 @@
 ---
-title: Метод Implements::CastToUnknown | Документы Microsoft
+title: Метод Implements::CastToUnknown | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857d13736a92bbbc2c6f1228b3444081ffc18de5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 988580a34c030c84c50adfff2741408be4b249cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874490"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586362"
 ---
 # <a name="implementscasttounknown-method"></a>Метод Implements::CastToUnknown
-Возвращает указатель на базовый интерфейс IUnknown.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-__forceinline IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Эта операция всегда завершается успешно и возвращает указатель на IUnknown.  
-  
-## <a name="remarks"></a>Примечания  
- Внутренняя вспомогательная функция.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Структура Implements](../windows/implements-structure.md)
+
+Возвращает указатель на базовый `IUnknown` интерфейс.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Эта операция выполняется успешно и всегда возвращает `IUnknown` указатель.
+
+## <a name="remarks"></a>Примечания
+
+Внутренняя вспомогательная функция.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Структура Implements](../windows/implements-structure.md)

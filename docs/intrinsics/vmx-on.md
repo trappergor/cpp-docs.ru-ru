@@ -1,5 +1,5 @@
 ---
-title: __vmx_on | Документы Microsoft
+title: __vmx_on | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa4325dc55bee53f2a19b192bb0c699dd89eb0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4321a082efa71ecc81963099317ad3600ce8b36f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333096"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676202"
 ---
 # <a name="vmxon"></a>__vmx_on
 **Блок, относящийся только к системам Microsoft**  
@@ -39,7 +39,7 @@ unsigned char __vmx_on(
   
 #### <a name="parameters"></a>Параметры  
  [in] `VmsSupportPhysicalAddress`  
- Указатель на 64-разрядных физический адрес, который указывает на структуру управления виртуальной машины (VMCS).  
+ Указатель на 64-разрядный физический адрес, который указывает на структуру управления виртуальной машины (VMCS).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -50,13 +50,13 @@ unsigned char __vmx_on(
 |2|Сбой операции без сведений о состоянии.|  
   
 ## <a name="remarks"></a>Примечания  
- `__vmx_on` Соответствует функции `VMXON` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__vmx_on` Соответствует функции `VMXON` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__vmx_on`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_on`|X64|  
   
  **Файл заголовка** \<intrin.h >  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод HandleT::Detach | Документы Microsoft
+title: Метод HandleT::Detach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 100d215099494c9b2714fd2c42dee69644a5006c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7b66d5c65dd084da564067cd62242b315f6da182
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878467"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591378"
 ---
 # <a name="handletdetach-method"></a>Метод HandleT::Detach
-Отсоединяет текущий объект HandleT из его базового дескриптора.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-typename HandleTraits::Type Detach();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Базовый дескриптор.  
-  
-## <a name="remarks"></a>Примечания  
- По завершении этой операции текущего объекта HandleT присваивается недопустимое состояние.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HandleT](../windows/handlet-class.md)
+
+Отсоединяет текущий **HandleT** объект из его базовый дескриптор.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+typename HandleTraits::Type Detach();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Базовый дескриптор.
+
+## <a name="remarks"></a>Примечания
+
+После завершения операции текущего **HandleT** присваивается недопустимое состояние.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HandleT](../windows/handlet-class.md)

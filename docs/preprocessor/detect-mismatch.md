@@ -1,5 +1,5 @@
 ---
-title: detect_mismatch | Документы Microsoft
+title: detect_mismatch | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f30afed5acdb9da433f7ce5f992df9bcb6dc8f5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: f165d24dc1a3044fb89474aef58a2992fa6feed9
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33953963"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538693"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 Помещает запись в объект. Компоновщик проверяет эти записи на предмет наличия потенциальных несоответствий.  
@@ -35,14 +35,16 @@ ms.locfileid: "33953963"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- При компоновке проекта компоновщик создает ошибку `LNK2038`, если проект содержит 2 объекта с одинаковыми именами `name`, но разными значениями `value`. Используйте эту директиву #pragma для предотвращения компоновки несогласованных объектных файлов.  
+ 
+При компоновке проекта компоновщик создает ошибку `LNK2038`, если проект содержит 2 объекта с одинаковыми именами `name`, но разными значениями `value`. Используйте эту директиву #pragma для предотвращения компоновки несогласованных объектных файлов.  
   
- Имя и значение являются строковыми литералами и подчиняются правилам для строковых литералов в отношении escape-символов и объединения. В них учитывается регистр, и они не могут содержать запятую, знак равенства, кавычки или символ `null`.  
+Имя и значение являются строковыми литералами и подчиняются правилам для строковых литералов в отношении escape-символов и объединения. Они чувствительны к регистру и не может содержать запятую, знак равенства, кавычки, или **null** символ.  
   
 ## <a name="example"></a>Пример  
- В этом примере создаются два файла, имеющие разные номера версий для одной метки версии.  
+ 
+В этом примере создаются два файла, имеющие разные номера версий для одной метки версии.  
   
-```  
+```cpp  
 // pragma_directive_detect_mismatch_a.cpp  
 #pragma detect_mismatch("myLib_version", "9")  
 int main ()  
@@ -54,7 +56,8 @@ int main ()
 #pragma detect_mismatch("myLib_version", "1")  
 ```  
   
- При компиляции обоих этих файлов с помощью командной строки `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp` возникает ошибка `LNK2038`.  
+При компиляции обоих этих файлов с помощью командной строки `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp` возникает ошибка `LNK2038`.  
   
 ## <a name="see-also"></a>См. также  
- [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

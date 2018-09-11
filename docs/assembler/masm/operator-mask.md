@@ -1,7 +1,7 @@
 ---
-title: оператор MASK | Документы Microsoft
+title: оператор MASK | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6e7fe7b71fbb28be7cd99dc6fc7a6d437a4253c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 22d1133257db825ac36beb8b83d5f170664472c2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057930"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689696"
 ---
 # <a name="operator-mask"></a>Оператор MASK
-Возвращает Битовая маска в котором биты в *recordfieldname* или *записи* устанавливаются и удаляются все биты.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-MASK {recordfieldname | record}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает немного маски, в котором биты в *recordfieldname* или *записи* заданы и все остальные биты, очищаются.
+
+## <a name="syntax"></a>Синтаксис
+
+> Маска {recordfieldname | запись}
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

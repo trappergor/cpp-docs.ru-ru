@@ -1,5 +1,5 @@
 ---
-title: Встроенные функции _InterlockedCompareExchangePointer | Документы Microsoft
+title: Встроенные функции _InterlockedCompareExchangePointer | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c8e7a31c5377d71eaad96fddc7d93215ed3abb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340389"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214625"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchangePointer
 **Блок, относящийся только к системам Microsoft**  
@@ -103,16 +103,16 @@ long _InterlockedCompareExchangePointer_rel (
   
 |Встроенная функция|Архитектура|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<Intrin.h >|  
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<Intrin.h >|  
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h >|  
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Примечания  
  `_InterlockedCompareExchangePointer` выполняет атомарное сравнение значения `Destination` адрес с `Comparand` адрес. Если адрес `Destination` равен адресу `Comparand`, адрес `Exchange` сохраняется в адресе, указанном в `Destination`. В противном случае операция не выполняется.  
   
- `_InterlockedCompareExchangePointer` предоставляет встроенную поддержку компилятора для функции Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) функции.  
+ `_InterlockedCompareExchangePointer` предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) функции.  
   
- Пример использования `_InterlockedCompareExchangePointer`, в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Пример использования `_InterlockedCompareExchangePointer`, см. в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
  На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции ARM с суффиксом `_nf` («без границ») не действуют как барьер памяти.  
   

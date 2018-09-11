@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 80c369d5ccbcc9f83d0f3ff90769a3df5d7ec177
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467096"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603416"
 ---
 # <a name="classfactoryqueryinterface-method"></a>Метод ClassFactory::QueryInterface
-Извлекает указатель на интерфейс, заданный параметром.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHOD(  
-   QueryInterface  
-)(REFIID riid, _Deref_out_ void **ppvObject);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *riid*  
- Идентификатор интерфейса.  
-  
- *ppvObject*  
- После завершения операции, указатель на интерфейс, заданный параметром *riid*.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ClassFactory](../windows/classfactory-class.md)
+
+Извлекает указатель на интерфейс, заданный параметром.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*  
+Идентификатор интерфейса.
+
+*ppvObject*  
+После завершения операции, указатель на интерфейс, заданный параметром *riid*.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ClassFactory](../windows/classfactory-class.md)

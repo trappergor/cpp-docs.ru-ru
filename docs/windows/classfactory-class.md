@@ -17,94 +17,100 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0f033fc20fac656e6b9fcfa9ac822099ea929d62
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463870"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611809"
 ---
 # <a name="classfactory-class"></a>ClassFactory - класс
-Реализует базовую функциональность интерфейса `IClassFactory`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template <  
-   typename I0 = Details::Nil,  
-   typename I1 = Details::Nil,  
-   typename I2 = Details::Nil  
->  
-class ClassFactory : public Details::RuntimeClass<  
-   typename Details::InterfaceListHelper<IClassFactory,   
-   I0,   
-   I1,   
-   I2,   
-   Details::Nil>::TypeT,   
-   RuntimeClassFlags<ClassicCom | InhibitWeakReference>,   
-      false>;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *I0*  
- Интерфейс признаками.  
-  
- *I1*  
- Первый интерфейс.  
-  
- *I2*  
- Второй интерфейс.  
-  
-## <a name="remarks"></a>Примечания  
- Использовать `ClassFactory` для обеспечения реализации пользовательской фабрики.  
-  
- Следующий шаблон программирования демонстрирует использование [реализует](../windows/implements-structure.md) структура для указания более трех интерфейсов на фабрику класса.  
-  
- `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Конструктор ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[Метод ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Увеличивает счетчик ссылок для текущим объектом ClassFactory.|  
-|[Метод ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим объектом ClassFactory.|  
-|[Метод ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Извлекает указатель на интерфейс, заданный параметром.|  
-|[Метод ClassFactory::Release](../windows/classfactory-release-method.md)|Уменьшает счетчик ссылок для текущим объектом ClassFactory.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `ClassFactory`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)   
- [Перечисление RuntimeClassType](../windows/runtimeclasstype-enumeration.md)
+
+Реализует базовую функциональность интерфейса `IClassFactory`.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template <
+   typename I0 = Details::Nil,
+   typename I1 = Details::Nil,
+   typename I2 = Details::Nil
+>
+class ClassFactory : public Details::RuntimeClass<
+   typename Details::InterfaceListHelper<IClassFactory,
+   I0,
+   I1,
+   I2,
+   Details::Nil>::TypeT,
+   RuntimeClassFlags<ClassicCom | InhibitWeakReference>,
+      false>;
+```
+
+### <a name="parameters"></a>Параметры
+
+*I0*  
+Интерфейс признаками.
+
+*I1*  
+Первый интерфейс.
+
+*I2*  
+Второй интерфейс.
+
+## <a name="remarks"></a>Примечания
+
+Использовать **ClassFactory** для обеспечения реализации пользовательской фабрики.
+
+Следующий шаблон программирования демонстрирует использование [реализует](../windows/implements-structure.md) структура для указания более трех интерфейсов на фабрику класса.
+
+`struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Конструктор ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Увеличивает счетчик ссылок для текущего **ClassFactory** объекта.|
+|[Метод ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим **ClassFactory** объекта.|
+|[Метод ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Извлекает указатель на интерфейс, заданный параметром.|
+|[Метод ClassFactory::Release](../windows/classfactory-release-method.md)|Уменьшает счетчик ссылок для текущего **ClassFactory** объекта.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`RuntimeClassBase`
+
+`ImplementsHelper`
+
+`DontUseNewUseMake`
+
+`RuntimeClassFlags`
+
+`RuntimeClassBaseT`
+
+`RuntimeClass`
+
+`ClassFactory`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)  
+[Перечисление RuntimeClassType](../windows/runtimeclasstype-enumeration.md)

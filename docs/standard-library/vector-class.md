@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba8ef2a2044c55da258c4dbcde6690112d52f1a9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963606"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199499"
 ---
 # <a name="vector-class"></a>Класс vector
 
@@ -120,7 +120,7 @@ class vector
  Тип данных элементов, сохраняемых в векторе.
 
 *Распределитель*  
- Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении и отмене распределения памяти для вектора. Этот аргумент является необязательным, и значение по умолчанию — **распределителя***\<тип>.*
+ Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении и отмене распределения памяти для вектора. Этот аргумент является необязательным, и значением по умолчанию является `allocator<Type>`.
 
 ## <a name="remarks"></a>Примечания
 
@@ -1187,7 +1187,7 @@ int main( )
    const int& ii = v1.front( );
 
    cout << "The first integer of v1 is "<< i << endl;
-   // by incrementing i, we move the the front reference to the second element
+   // by incrementing i, we move the front reference to the second element
    i++;
    cout << "Now, the first integer of v1 is "<< i << endl;
 }
@@ -1561,7 +1561,8 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val* значение для назначения на элемент, добавляемый в конец вектора.
+*Val*<br/>
+ Значение, назначаемое элементу, который добавляется в конец вектора.
 
 ### <a name="example"></a>Пример
 

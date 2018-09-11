@@ -1,5 +1,5 @@
 ---
-title: Метод SRWLockExclusiveTraits::GetInvalidValue | Документы Microsoft
+title: Метод SRWLockExclusiveTraits::GetInvalidValue | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 599fb1d4b204e170a01f01c60e03959a30075c1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5883d2b9b432afea134eaa5daf1b4105994e236a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888959"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605488"
 ---
 # <a name="srwlockexclusivetraitsgetinvalidvalue-method"></a>Метод SRWLockExclusiveTraits::GetInvalidValue
-Извлекает объект SRWLockExclusiveTraits, всегда является недопустимым.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Пустой объект SRWLockExclusiveTraits.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Структура SRWLockExclusiveTraits](../windows/srwlockexclusivetraits-structure.md)
+
+Извлекает **SRWLockExclusiveTraits** объект, который всегда является недопустимым.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Пустой **SRWLockExclusiveTraits** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Структура SRWLockExclusiveTraits](../windows/srwlockexclusivetraits-structure.md)

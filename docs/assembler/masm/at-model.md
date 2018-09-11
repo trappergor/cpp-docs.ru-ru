@@ -1,7 +1,7 @@
 ---
-title: '@Model | Документы Microsoft'
+title: '@Model | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88132e1c83ebea33282390fa2de35d40bdf4ff03
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f49d2a4a6dd04931ad1d9bf09ffe8bfeafad8150
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050666"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684068"
 ---
 # <a name="model"></a>@Model
-1 для **очень МЕЛКИЕ** модель, 2 для **НЕБОЛЬШОЙ** модели 3 для **COMPACT** модели 4 для **Средний** модель, 5 для **БОЛЬШОЙ**модели 6 для **БОЛЬШОЙ** модель и 7 для **плоский** модели (уравнять числовое).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-@Model  
-  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по символам](../../assembler/masm/symbols-reference.md)
+
+1 для **КРОШЕЧНЫЕ** модели, 2 для **НЕБОЛЬШОЙ** модели, 3 для **COMPACT** модели, 4 для **Средний** модели, 5 для **крупный**модели, 6 для **БОЛЬШОЙ** модели и 7 для **НЕСТРУКТУРИРОВАННЫЙ** модели (уравнять числовые).
+
+## <a name="syntax"></a>Синтаксис
+
+> @Model
+
+## <a name="see-also"></a>См. также
+
+[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>

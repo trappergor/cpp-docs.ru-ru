@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662754ae4f0f95160f18682f35eb2f7951e7e344
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c79409ae6e4c7447050c26246768c0074c4e4e92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026556"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677199"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Добавление класса MFC из библиотеки типов
 Этот мастер используется для создания класса MFC из интерфейса в доступной библиотеке типов. Вы можете добавить класс MFC для [приложения MFC](../../mfc/reference/creating-an-mfc-application.md), [библиотеки DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md) или [элемента управления ActiveX MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "39026556"
   
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Добавление класса MFC из библиотеки типов  
   
-1.  В любом **обозревателе решений** или [представление классов](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните правой кнопкой мыши имя проекта, к которому вы хотите добавить класс.  
+1.  В любом **обозревателе решений** или [представление классов](/visualstudio/ide/viewing-the-structure-of-code), щелкните правой кнопкой мыши имя проекта, к которому вы хотите добавить класс.  
   
 2.  В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.  
   

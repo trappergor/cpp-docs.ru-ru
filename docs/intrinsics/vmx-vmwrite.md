@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmwrite | Документы Microsoft
+title: __vmx_vmwrite | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87aeafd1b9c0c1a35e3f5d99ab5b9d76410b4d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 132841c8c24e2b625dad218aaaef2a19cba0a264
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680502"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Блок, относящийся только к системам Microsoft**  
   
- Записывает заданное значение указанного поля в текущую структуру управления виртуальной машины (VMCS).  
+ Записывает заданное значение указанного поля в текущей структуре управления виртуальной машины (VMCS).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ unsigned char __vmx_vmwrite(
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in] `Field`|VMCS поле для записи.|  
+|[in] `Field`|Поле VMCS для записи.|  
 |[in] `FieldValue`|Значение для записи в поле VMCS.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -56,13 +56,13 @@ unsigned char __vmx_vmwrite(
  Сбой операции без сведений о состоянии.  
   
 ## <a name="remarks"></a>Примечания  
- `__vmx_vmwrite` Функция эквивалентна `VMWRITE` инструкции компьютера. Значение `Field` параметра является индексом кодировке поля, как описано в документации Intel. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта, а затем изучите приложения C, документ.  
+ `__vmx_vmwrite` Функция эквивалентна `VMWRITE` инструкции компьютера. Значение `Field` параметр является индекс кодировке поля, который описан в документации Intel. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) к сайту, а затем изучите приложения C, документ.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__vmx_vmwrite`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmwrite`|X64|  
   
  **Файл заголовка** \<intrin.h >  
   

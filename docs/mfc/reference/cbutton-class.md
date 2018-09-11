@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e4c1755a4d7e5da451305260d4f88ac2c938bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027892"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196715"
 ---
 # <a name="cbutton-class"></a>Класс CButton
 Предоставляет функциональные возможности кнопочных элементов управления Windows.  
@@ -360,7 +360,7 @@ BOOL GetIdealSize(SIZE* psize);
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности BCM_GETIDEALSIZE сообщения, как описано в разделе [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности BCM_GETIDEALSIZE сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
  Этот метод используется для получения списка изображений из элемента управления button.  
@@ -377,7 +377,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности BCM_GETIMAGELIST сообщения, как описано в разделе [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности BCM_GETIMAGELIST сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
  Извлекает текст заметки, связанный с текущей элемент управления command link.  
@@ -407,7 +407,7 @@ BOOL GetNote(
 ### <a name="remarks"></a>Примечания  
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_COMMANDLINK или BS_DEFCOMMANDLINK.  
   
- Этот метод отправляет [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [BCM_GETNOTE](/windows/desktop/Controls/bcm-getnote) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getnotelength"></a>  CButton::GetNoteLength  
  Получает длину текста Примечание для текущей команды управления ссылками.  
@@ -422,7 +422,7 @@ UINT GetNoteLength() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_COMMANDLINK или BS_DEFCOMMANDLINK.  
   
- Этот метод отправляет [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [BCM_GETNOTELENGTH](/windows/desktop/Controls/bcm-getnotelength) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
  Получает глиф, связанный с текущей управления SplitButton.  
@@ -439,7 +439,7 @@ TCHAR GetSplitGlyph() const;
   
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_SPLITBUTTON или BS_DEFSPLITBUTTON.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуру с флагом BCSIF_GLYPH, а затем отправляет, которые структурируются в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в Windows SDK. При возврате функции сообщения, этот метод получает глиф из `himlGlyph` член структуры.  
+ Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуру с флагом BCSIF_GLYPH, а затем отправляет, которые структурируются в [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) сообщение, которое описано в Windows SDK. При возврате функции сообщения, этот метод получает глиф из `himlGlyph` член структуры.  
   
 ##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
  Извлекает [список изображений](../../mfc/reference/cimagelist-class.md) для текущего управления SplitButton.  
@@ -454,7 +454,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_SPLITBUTTON или BS_DEFSPLITBUTTON.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуру с флагом BCSIF_IMAGE, а затем отправляет, которые структурируются в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в Windows SDK. При возврате функции сообщения, этот метод возвращает список изображений из `himlGlyph` член структуры.  
+ Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуру с флагом BCSIF_IMAGE, а затем отправляет, которые структурируются в [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) сообщение, которое описано в Windows SDK. При возврате функции сообщения, этот метод возвращает список изображений из `himlGlyph` член структуры.  
   
 ##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
  Извлекает параметры, определяющие, каким образом Windows выводит текущий элемент управления SplitButton.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[out] *pInfo*|Указатель на [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуры, который получает сведения о текущем управления SplitButton. Вызывающий объект отвечает за распределение структуры.|  
+|[out] *pInfo*|Указатель на [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуры, который получает сведения о текущем управления SplitButton. Вызывающий объект отвечает за распределение структуры.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -475,7 +475,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_SPLITBUTTON или BS_DEFSPLITBUTTON.  
   
- Этот метод отправляет [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
  Получает прямоугольник, ограничивающий компонента раскрывающегося списка для текущего управления SplitButton.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[out] *pSize*|Указатель на [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, которая получает описание прямоугольника.|  
+|[out] *pSize*|Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, которая получает описание прямоугольника.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -498,7 +498,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  Когда элемент управления split button развернута, ее можно отобразить компонент раскрывающегося списка, например элемент управления списка или элемента управления страничного навигатора. Этот метод извлекает ограничивающий прямоугольник, содержащий компонент раскрывающегося списка.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуру с флагом BCSIF_SIZE, а затем отправляет, которые структурируются в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в Windows SDK. При возврате функции сообщения, этот метод извлекает ограничивающий прямоугольник из `size` член структуры.  
+ Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуру с флагом BCSIF_SIZE, а затем отправляет, которые структурируются в [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) сообщение, которое описано в Windows SDK. При возврате функции сообщения, этот метод извлекает ограничивающий прямоугольник из `size` член структуры.  
   
 ##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
  Получает стили кнопок разбиения, которые определяют текущего управления SplitButton.  
@@ -508,14 +508,14 @@ UINT GetSplitStyle() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Побитовое сочетание стили кнопок разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуры.  
+ Побитовое сочетание стили кнопок разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуры.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_SPLITBUTTON или BS_DEFSPLITBUTTON.  
   
  Стили кнопок разбиения укажите выравнивание, пропорции и графическом формате, с которым Windows рисует значок кнопки разбиения.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуру с флагом BCSIF_STYLE, а затем отправляет, которые структурируются в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, которое описано в Windows SDK. При возврате функции сообщения, этот метод возвращает стили кнопок разбиения из `uSplitStyle` член структуры.  
+ Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуру с флагом BCSIF_STYLE, а затем отправляет, которые структурируются в [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) сообщение, которое описано в Windows SDK. При возврате функции сообщения, этот метод возвращает стили кнопок разбиения из `uSplitStyle` член структуры.  
   
 ##  <a name="getstate"></a>  CButton::GetState  
  Возвращает состояние элемента управления "Кнопка".  
@@ -559,7 +559,7 @@ BOOL GetTextMargin(RECT* pmargin);
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности BCM_GETTEXTMARGIN сообщения, как описано в разделе [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности BCM_GETTEXTMARGIN сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
   
 ##  <a name="setbitmap"></a>  CButton::SetBitmap  
  Вызовите эту функцию-член должен быть сопоставлен новое растровое изображение кнопки.  
@@ -693,9 +693,9 @@ BOOL SetDropDownState(BOOL fDropDown);
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Элемент управления split button стиль BS_SPLITBUTTON или BS_DEFSPLITBUTTON и состоит из кнопки и стрелку раскрывающегося списка справа от нее. Дополнительные сведения см. в разделе [стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb775951). Как правило когда пользователь щелкает стрелку раскрывающегося списка установлено состояние раскрывающегося списка. Этот метод позволяет программно задать состояние раскрывающегося списка элемента управления. Затененный для указания состояния отображаются стрелку раскрывающегося списка.  
+ Элемент управления split button стиль BS_SPLITBUTTON или BS_DEFSPLITBUTTON и состоит из кнопки и стрелку раскрывающегося списка справа от нее. Дополнительные сведения см. в разделе [стили кнопок](/windows/desktop/Controls/button-styles). Как правило когда пользователь щелкает стрелку раскрывающегося списка установлено состояние раскрывающегося списка. Этот метод позволяет программно задать состояние раскрывающегося списка элемента управления. Затененный для указания состояния отображаются стрелку раскрывающегося списка.  
   
- Этот метод отправляет [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [BCM_SETDROPDOWNSTATE](/windows/desktop/Controls/bcm-setdropdownstate) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная *m_splitButton*, который используется для программного доступа к элемент управления split button. Эта переменная используется в следующем примере.  
@@ -726,7 +726,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="remarks"></a>Примечания  
  Если элемент управления связями кнопки или команды требуется полномочие безопасности с повышенными правами для выполнения действия, значение элемента управления `elevation required` состояние. Как следствие Windows отображает значок щита контроля учетных записей (UAC) в элементе управления. Дополнительные сведения см. в разделе «Контроль учетных записей пользователей» в [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
- Этот метод отправляет [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="seticon"></a>  CButton::SetIcon  
  Вызовите эту функцию-член должен быть сопоставлен новый значок кнопки.  
@@ -777,7 +777,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности BCM_SETIMAGELIST сообщения, как описано в разделе [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности BCM_SETIMAGELIST сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
  Задает текст заметки для текущий элемент управления command link.  
@@ -798,7 +798,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 ### <a name="remarks"></a>Примечания  
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_COMMANDLINK или BS_DEFCOMMANDLINK.  
   
- Этот метод отправляет [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [BCM_SETNOTE](/windows/desktop/Controls/bcm-setnote) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная *m_cmdLink*, который используется для программного доступа к элемент управления command link. Эта переменная используется в следующем примере.  
@@ -831,7 +831,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  Глиф является физическое представление символа в определенном шрифте. *ChGlyph* параметр не используется в качестве глифа, но вместо этого используется для выбора глифа набор глифов, определенная системой. Глиф стрелку раскрывающегося списка по умолчанию задается символ "6" и напоминает символ Юникода ЧЕРНЫЙ вниз ТРЕУГОЛЬНИК (U + 25BC).  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуру с флажком BCSIF_GLYPH и `himlGlyph` член с *chGlyph* параметра, а затем отправляет, Структура в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, описанное в пакете Windows SDK.  
+ Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуру с флажком BCSIF_GLYPH и `himlGlyph` член с *chGlyph* параметра, а затем отправляет, Структура в [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) сообщение, описанное в пакете Windows SDK.  
   
 ##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
  Связывает [список изображений](../../mfc/reference/cimagelist-class.md) с текущего управления SplitButton.  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>Примечания  
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_SPLITBUTTON или BS_DEFSPLITBUTTON.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуру с флажком BCSIF_IMAGE и `himlGlyph` член с *pSplitImageList* параметра, а затем отправляет эту структуру в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, описанное в пакете Windows SDK.  
+ Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуру с флажком BCSIF_IMAGE и `himlGlyph` член с *pSplitImageList* параметра, а затем отправляет эту структуру в [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) сообщение, описанное в пакете Windows SDK.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Указывает параметры, определяющие, каким образом Windows выводит текущий элемент управления SplitButton.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] *pInfo*|Указатель на [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структура, определяющая текущего управления SplitButton.|  
+|[in] *pInfo*|Указатель на [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структура, определяющая текущего управления SplitButton.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -873,7 +873,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ### <a name="remarks"></a>Примечания  
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_SPLITBUTTON или BS_DEFSPLITBUTTON.  
   
- Этот метод отправляет [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [BCM_SETSPLITINFO](/windows/desktop/Controls/bcm-setsplitinfo) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная `m_splitButton`, который используется для программного доступа к элемент управления split button.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] *pSize*|Указатель на [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структура, описывающая ограничивающего прямоугольника.|  
+|[in] *pSize*|Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структура, описывающая ограничивающего прямоугольника.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  Когда элемент управления split button развернута, ее можно отобразить компонент раскрывающегося списка, например элемент управления списка или элемента управления страничного навигатора. Этот метод задает размер ограничивающего прямоугольника, который содержит компонент раскрывающегося списка.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуру с флажком BCSIF_SIZE и `size` член с *pSize* параметра, а затем отправляет, чтобы структура в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, описанное в пакете Windows SDK.  
+ Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуру с флажком BCSIF_SIZE и `size` член с *pSize* параметра, а затем отправляет, чтобы структура в [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) сообщение, описанное в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная `m_splitButton`, который используется для программного доступа к элемент управления split button. Эта переменная используется в следующем примере.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Побитовое сочетание стили кнопок разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуры.|  
+|[in] *uSplitStyle*|Побитовое сочетание стили кнопок разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуры.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -937,9 +937,9 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 ### <a name="remarks"></a>Примечания  
  Этот метод можно используйте только с элементами управления, чьи стиль кнопки является BS_SPLITBUTTON или BS_DEFSPLITBUTTON.  
   
- Стили кнопок разбиения укажите выравнивание, пропорции и графическом формате, с которым Windows рисует значок кнопки разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуры.  
+ Стили кнопок разбиения укажите выравнивание, пропорции и графическом формате, с которым Windows рисует значок кнопки разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуры.  
   
- Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) структуру с флажком BCSIF_STYLE и `uSplitStyle` член с *uSplitStyle* параметра, а затем отправляет, Структура в [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) сообщение, описанное в пакете Windows SDK.  
+ Этот метод инициализирует `mask` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуру с флажком BCSIF_STYLE и `uSplitStyle` член с *uSplitStyle* параметра, а затем отправляет, Структура в [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) сообщение, описанное в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная `m_splitButton`, который используется для программного доступа к элемент управления split button.  
@@ -985,7 +985,7 @@ BOOL SetTextMargin(RECT* pmargin);
  Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует функциональные возможности BCM_SETTEXTMARGIN сообщения, как описано в разделе [кнопки](http://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
+ Эта функция-член эмулирует функциональные возможности BCM_SETTEXTMARGIN сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CWnd](../../mfc/reference/cwnd-class.md)   

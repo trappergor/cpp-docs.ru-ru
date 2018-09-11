@@ -1,7 +1,7 @@
 ---
 title: Аргументы функции ссылочного типа | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,66 +18,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fad8fc85a37aec80d09ed6df9280a78de0540f01
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 042f609988a87beb8a990405e0426405bc874128
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409059"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209755"
 ---
 # <a name="reference-type-function-arguments"></a>Аргументы функции ссылочного типа
-Вместо крупных объектов эффективнее бывает передавать функциям ссылки. Это позволяет компилятору передавать адрес объекта, сохраняя при этом синтаксис, который использовался бы для обращения к этому объекту. Рассмотрим следующий пример, в котором используется структура `Date`:  
-  
-```cpp 
-// reference_type_function_arguments.cpp  
-struct Date  
-{  
-short DayOfWeek;  
-short Month;  
-short Day;  
-short Year;  
-};  
-  
-// Create a Julian date of the form DDDYYYY  
-// from a Gregorian date.  
-long JulianFromGregorian( Date& GDate )  
-{  
-static int cDaysInMonth[] = {  
-31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31  
-   };  
-long JDate = 0;  
-// Add in days for months already elapsed.  
-for ( int i = 0; i < GDate.Month - 1; ++i )  
-JDate += cDaysInMonth[i];  
-// Add in days for this month.  
-JDate += GDate.Day;  
-  
-// Check for leap year.  
-if ( GDate.Year % 100 != 0 && GDate.Year % 4 == 0 )  
-JDate++;  
-// Add in year.  
-JDate *= 10000;  
-JDate += GDate.Year;  
-  
-return JDate;  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
- Предыдущий код показывает, что членам структуры, передаваемой по ссылке осуществляется с помощью оператора выбора члена (**.**) вместо указатель оператора выбора члена (**->**).  
-  
- Несмотря на то, что аргументы, передаваемые как ссылочные типы Просмотрите синтаксис типов, не являющихся указателями, они сохраняют одну важную характеристику типов указателя: они являются изменяемыми, если иное не объявлено как **const**. Поскольку задача приведенного выше кода заключается не в том, чтобы изменить объект `GDate`, более подходящим будет следующий прототип функции:  
-  
-```cpp 
-long JulianFromGregorian( const Date& GDate );  
-```  
-  
- Этот прототип гарантирует, что функция `JulianFromGregorian` не изменит его аргумент.  
-  
- Любая функция, прототипирован как ссылочный тип может принимать объект одного типа на его месте, так как имеется стандартное преобразование из *typename* для * typename ***&**.  
-  
-## <a name="see-also"></a>См. также  
- [Ссылки](../cpp/references-cpp.md)
+
+Вместо крупных объектов эффективнее бывает передавать функциям ссылки. Это позволяет компилятору передавать адрес объекта, сохраняя при этом синтаксис, который использовался бы для обращения к этому объекту. Рассмотрим следующий пример, в котором используется структура `Date`:
+
+```cpp
+// reference_type_function_arguments.cpp
+#include <iostream>
+
+struct Date
+{
+    short Month;
+    short Day;
+    short Year;
+};
+
+// Create a date of the form DDDYYYY (day of year, year)
+// from a Date.
+long DateOfYear( Date& date )
+{
+    static int cDaysInMonth[] = {
+        31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+    };
+    long dateOfYear = 0;
+
+    // Add in days for months already elapsed.
+    for ( int i = 0; i < date.Month - 1; ++i )
+        dateOfYear += cDaysInMonth[i];
+
+    // Add in days for this month.
+    dateOfYear += date.Day;
+
+    // Check for leap year.
+    if ( date.Month > 2 &&
+        (( date.Year % 100 != 0 || date.Year % 400 == 0 ) &&
+        date.Year % 4 == 0 ))
+        dateOfYear++;
+
+    // Add in year.
+    dateOfYear *= 10000;
+    dateOfYear += date.Year;
+
+    return dateOfYear;
+}
+
+int main()
+{
+    Date date{ 8, 27, 2018 };
+    long dateOfYear = DateOfYear(date);
+    std::cout << dateOfYear << std::endl;
+}
+```
+
+Предыдущий код показывает, что членам структуры, передаваемой по ссылке осуществляется с помощью оператора выбора члена (**.**) вместо указатель оператора выбора члена (**->**).
+
+Несмотря на то, что аргументы, передаваемые как ссылочные типы Просмотрите синтаксис типов, не являющихся указателями, они сохраняют одну важную характеристику типов указателя: они являются изменяемыми, если иное не объявлено как **const**. Поскольку задача приведенного выше кода заключается не в том, чтобы изменить объект `date`, более подходящим будет следующий прототип функции:
+
+```cpp
+long DateOfYear( const Date& date );
+```
+
+Этот прототип гарантирует, что функция `DateOfYear` не изменит его аргумент.
+
+Любая функция, прототипирован как ссылочный тип может принимать объект одного типа на его месте, так как имеется стандартное преобразование из *typename* для *typename* <strong>&</strong>.
+
+## <a name="see-also"></a>См. также
+
+[Ссылки](../cpp/references-cpp.md)<br/>

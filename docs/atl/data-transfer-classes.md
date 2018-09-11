@@ -18,20 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b953b7e7a2f67aa3b17d5bb5fd020706d4c98e3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e129ec4df6738086d111742adc4b3c0ffd226c40
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953386"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765802"
 ---
 # <a name="data-transfer-classes"></a>Классы передачи данных
-Следующие классы поддерживают различные типы передаваемых данных:  
-  
--   [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md) поддерживает унифицированная передача данных с помощью стандартных форматов для получения и задания данных. Уведомления об изменении данных дескрипторов, управляя соединения с приемниками уведомлений.  
-  
--   [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md) позволяет асинхронным моникером для отправки и получения сведений о асинхронный обмен данными из объекта.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../atl/atl-class-overview.md)
+
+Следующие классы поддерживают различные типы передаваемых данных:
+
+- [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md) поддерживает унифицированная передача данных с помощью стандартных форматов для получения и задания данных. Уведомления об изменении данных дескрипторов, управляя соединения с приемниками уведомлений.
+
+- [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md) позволяет асинхронным моникером для отправки и получения сведений о асинхронный обмен данными из объекта.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../atl/atl-class-overview.md)
 

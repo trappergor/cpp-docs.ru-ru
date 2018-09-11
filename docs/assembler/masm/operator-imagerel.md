@@ -1,7 +1,7 @@
 ---
-title: оператор IMAGEREL | Документы Microsoft
+title: оператор IMAGEREL | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,26 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4c22c1e12ff2850c61cb1b0aea7fe89eca5ca4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3293f78151ae9bc5a8de47c4083d3e896027815c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055116"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691412"
 ---
 # <a name="operator-imagerel"></a>Оператор IMAGEREL
-Возвращает изображение относительном смещении `expression`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-IMAGEREL expression  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Результирующее значение часто называют RVA или относительный виртуальный адрес.  
-  
- IMAGEREL доступен только в вывод объекта COFF.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Возвращает изображение относительном смещении `expression`.
+
+## <a name="syntax"></a>Синтаксис
+
+> Выражение IMAGEREL
+
+## <a name="remarks"></a>Примечания
+
+Результирующее значение часто называют RVA или относительный виртуальный адрес.
+
+IMAGEREL доступен только с помощью эмиссии объект COFF.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

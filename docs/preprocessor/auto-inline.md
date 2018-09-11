@@ -1,5 +1,5 @@
 ---
-title: auto_inline | Документы Microsoft
+title: auto_inline | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de012a31fe68c68d4e64df2d3fa10b44d9112735
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: dc1b8a3b8539fb4871e4a28f4635c8012b9f80a2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954025"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538511"
 ---
 # <a name="autoinline"></a>auto_inline
-Исключает все функции, определенные в пределах диапазона где **off** указан из числа кандидатов на автоматическое расширение.  
+Исключает все функции, определенные в диапазоне где **off** задан, из числа кандидатов на автоматическое встроенное разворачивание.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 #pragma auto_inline( [{on | off}] )  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Для использования **auto_inline** pragma, поместите ее перед или сразу после (не в) определение функции. Эта директива #pragma начинает действовать с первого определения функции после вхождения данной директивы.  
+
+Чтобы использовать **auto_inline** pragma, поместите ее перед или сразу же после (не в) определение функции. Эта директива #pragma начинает действовать с первого определения функции после вхождения данной директивы.  
   
-## <a name="see-also"></a>См. также  
- [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>См. также
+
+[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,5 +1,5 @@
 ---
-title: 'WeakRef:: ~ WeakRef деструктор | Документы Microsoft'
+title: 'WeakRef:: ~ WeakRef деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47752b861ab5974b60f62cdfaba620e60288d09a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 250286e12d2062bd33c2d2b517e901e7b6c27d55
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889892"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603008"
 ---
 # <a name="weakrefweakref-destructor"></a>Деструктор WeakRef::~WeakRef
-Деинициализирует текущий экземпляр класса WeakRef.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-~WeakRef();  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс WeakRef](../windows/weakref-class.md)
+
+Деинициализирует текущий экземпляр **WeakRef** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+~WeakRef();
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс WeakRef](../windows/weakref-class.md)

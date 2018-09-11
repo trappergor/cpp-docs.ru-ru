@@ -27,126 +27,140 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209226"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766591"
 ---
 # <a name="ccomptrbase-class"></a>Класс CComPtrBase
-Этот класс предоставляет основу для классов интеллектуальных указателей, использование памяти на основе COM-подпрограммы.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот класс предоставляет основу для классов интеллектуальных указателей, использование памяти на основе COM-подпрограммы.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 template <class T>  
 class CComPtrBase
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *T*  
- Тип объекта, на которые ссылается интеллектуального указателя.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CComPtrBase:: ~ CComPtrBase](#dtor)|Деструктор|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CComPtrBase::Advise](#advise)|Вызовите этот метод, чтобы создать подключение между `CComPtrBase`в точку подключения и приемником клиента.|  
-|[CComPtrBase::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|  
-|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Вызовите этот метод для создания объекта класса, связанного с указанным Идентификатором класса или идентификатор программы.|  
-|[CComPtrBase::CopyTo](#copyto)|Вызовите этот метод, чтобы скопировать `CComPtrBase` указатель на другой переменной указателя.|  
-|[CComPtrBase::Detach](#detach)|Вызовите этот метод для освобождения владения указатель.|  
-|[CComPtrBase::IsEqualObject](#isequalobject)|Вызовите этот метод для проверки, если указанный `IUnknown` указывает на тот же объект, связанный с `CComPtrBase` объекта.|  
-|[CComPtrBase::QueryInterface](#queryinterface)|Вызовите этот метод для возврата указателя на указанный интерфейс.|  
-|[CComPtrBase::Release](#release)|Вызовите этот метод для освобождения интерфейс.|  
-|[CComPtrBase::SetSite](#setsite)|Вызовите этот метод, чтобы задать для сайта `CComPtrBase` объект `IUnknown` родительского объекта.|  
-  
-### <a name="public-operators"></a>Открытые операторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CComPtrBase::operator T *](#operator_t_star)|Оператор приведения типов.|  
-|[CComPtrBase::operator!](#operator_not)|Оператор NOT.|  
-|[CComPtrBase::operator &](#operator_amp)|& Оператор.|  
-|[CComPtrBase::operator *](#operator_star)|Оператор \*.|  
-|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Меньше-оператор «больше».|  
-|[CComPtrBase::operator ==](#operator_eq_eq)|Оператор равенства.|  
-|[CComPtrBase::operator "->"](#operator_ptr)|Оператор указателя на элементы.|  
-  
-### <a name="public-data-members"></a>Открытые члены данных  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CComPtrBase::p](#p)|Указатель данных переменная-член.|  
-  
-## <a name="remarks"></a>Примечания  
- Этот класс служит основой для других интеллектуальных указателей, которые используют процедур управления памятью COM, такие как [CComQIPtr](../../atl/reference/ccomqiptr-class.md) и [CComPtr](../../atl/reference/ccomptr-class.md). Производные классы, добавить свои собственные конструкторы и операторы, но полагаться на методы, предоставленные `CComPtrBase`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlcomcli.h  
-  
-##  <a name="advise"></a>  CComPtrBase::Advise  
- Вызовите этот метод, чтобы создать подключение между `CComPtrBase`в точку подключения и приемником клиента.  
-  
+```
+
+#### <a name="parameters"></a>Параметры
+
+*T*  
+Тип объекта, на которые ссылается интеллектуального указателя.
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CComPtrBase:: ~ CComPtrBase](#dtor)|Деструктор|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CComPtrBase::Advise](#advise)|Вызовите этот метод, чтобы создать подключение между `CComPtrBase`в точку подключения и приемником клиента.|
+|[CComPtrBase::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
+|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Вызовите этот метод для создания объекта класса, связанного с указанным Идентификатором класса или идентификатор программы.|
+|[CComPtrBase::CopyTo](#copyto)|Вызовите этот метод, чтобы скопировать `CComPtrBase` указатель на другой переменной указателя.|
+|[CComPtrBase::Detach](#detach)|Вызовите этот метод для освобождения владения указатель.|
+|[CComPtrBase::IsEqualObject](#isequalobject)|Вызовите этот метод для проверки, если указанный `IUnknown` указывает на тот же объект, связанный с `CComPtrBase` объекта.|
+|[CComPtrBase::QueryInterface](#queryinterface)|Вызовите этот метод для возврата указателя на указанный интерфейс.|
+|[CComPtrBase::Release](#release)|Вызовите этот метод для освобождения интерфейс.|
+|[CComPtrBase::SetSite](#setsite)|Вызовите этот метод, чтобы задать для сайта `CComPtrBase` объект `IUnknown` родительского объекта.|
+
+### <a name="public-operators"></a>Открытые операторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CComPtrBase::operator T *](#operator_t_star)|Оператор приведения типов.|
+|[CComPtrBase::operator!](#operator_not)|Оператор NOT.|
+|[CComPtrBase::operator &](#operator_amp)|& Оператор.|
+|[CComPtrBase::operator *](#operator_star)|Оператор \*.|
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Меньше-оператор «больше».|
+|[CComPtrBase::operator ==](#operator_eq_eq)|Оператор равенства.|
+|[CComPtrBase::operator "->"](#operator_ptr)|Оператор указателя на элементы.|
+
+### <a name="public-data-members"></a>Открытые члены данных
+
+|Имя|Описание|
+|----------|-----------------|
+|[CComPtrBase::p](#p)|Указатель данных переменная-член.|
+
+## <a name="remarks"></a>Примечания
+
+Этот класс служит основой для других интеллектуальных указателей, которые используют процедур управления памятью COM, такие как [CComQIPtr](../../atl/reference/ccomqiptr-class.md) и [CComPtr](../../atl/reference/ccomptr-class.md). Производные классы, добавить свои собственные конструкторы и операторы, но полагаться на методы, предоставленные `CComPtrBase`.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlcomcli.h
+
+##  <a name="advise"></a>  CComPtrBase::Advise
+
+Вызовите этот метод, чтобы создать подключение между `CComPtrBase`в точку подключения и приемником клиента.
+
 ```
 HRESULT Advise(
     IUnknown* pUnk,
     const IID& iid,
     LPDWORD pdw) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *pUnk*  
- Указатель на клиент `IUnknown`.  
-  
- *IID*  
- Идентификатор GUID точки подключения. Как правило это так же, как выходящего интерфейса, управляемого с использованием точки подключения.  
-  
- *PDW*  
- Указатель на файл cookie, который однозначно идентифицирует соединение.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
-  
-### <a name="remarks"></a>Примечания  
- См. в разделе [AtlAdvise](connection-point-global-functions.md#atladvise) Дополнительные сведения.  
-  
-##  <a name="attach"></a>  CComPtrBase::Attach  
- Вызовите этот метод, чтобы стать владельцем существующего указателя.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*pUnk*  
+Указатель на клиент `IUnknown`.
+
+*IID*  
+Идентификатор GUID точки подключения. Как правило это так же, как выходящего интерфейса, управляемого с использованием точки подключения.
+
+*PDW*  
+Указатель на файл cookie, который однозначно идентифицирует соединение.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+
+### <a name="remarks"></a>Примечания
+
+См. в разделе [AtlAdvise](connection-point-global-functions.md#atladvise) Дополнительные сведения.
+
+##  <a name="attach"></a>  CComPtrBase::Attach
+
+Вызовите этот метод, чтобы стать владельцем существующего указателя.
+
 ```
 void Attach(T* p2) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *P2*  
- `CComPtrBase` Объект будет стать владельцем этого указателя.  
-  
-### <a name="remarks"></a>Примечания  
- `Attach` вызовы [CComPtrBase::Release](#release) в существующем [CComPtrBase::p](#p) переменной-члена, а затем назначает *p2* для `CComPtrBase::p`. Когда `CComPtrBase` объект принимает владение указатель, он будет автоматически вызывать `Release` на указатель, который приведет к удалению указатель и любые выделенных данных, если счетчик ссылок на объект становится равным 0.  
-  
-##  <a name="dtor"></a>  CComPtrBase:: ~ CComPtrBase  
- Деструктор  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*P2*  
+`CComPtrBase` Объект будет стать владельцем этого указателя.
+
+### <a name="remarks"></a>Примечания
+
+`Attach` вызовы [CComPtrBase::Release](#release) в существующем [CComPtrBase::p](#p) переменной-члена, а затем назначает *p2* для `CComPtrBase::p`. Когда `CComPtrBase` объект принимает владение указатель, он будет автоматически вызывать `Release` на указатель, который приведет к удалению указатель и любые выделенных данных, если счетчик ссылок на объект становится равным 0.
+
+##  <a name="dtor"></a>  CComPtrBase:: ~ CComPtrBase
+
+Деструктор
+
 ```
 ~CComPtrBase() throw();
-```  
-  
-### <a name="remarks"></a>Примечания  
- Освобождает интерфейс, на которые указывают `CComPtrBase`.  
-  
-##  <a name="cocreateinstance"></a>  CComPtrBase::CoCreateInstance  
- Вызовите этот метод для создания объекта класса, связанного с указанным Идентификатором класса или идентификатор программы.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+Освобождает интерфейс, на которые указывают `CComPtrBase`.
+
+##  <a name="cocreateinstance"></a>  CComPtrBase::CoCreateInstance
+
+Вызовите этот метод для создания объекта класса, связанного с указанным Идентификатором класса или идентификатор программы.
+
 ```
 HRESULT CoCreateInstance(  
     LPCOLESTR szProgID,
@@ -157,218 +171,260 @@ HRESULT CoCreateInstance(
     REFCLSID rclsid,
     LPUNKNOWN pUnkOuter = NULL,
     DWORD dwClsContext = CLSCTX_ALL) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *szProgID*  
- Указатель на идентификатор ProgID, позволяющий восстановить идентификатор CLSID.  
-  
- *pUnkOuter*  
- Если значение равно NULL, указывает, что объект не создается как часть агрегата. Если не NULL, — это указатель на Агрегатный объект `IUnknown` интерфейс (управляющий `IUnknown`).  
-  
- *dwClsContext*  
- Контекст, в котором будет выполняться код, который управляет вновь созданный объект.  
-  
- *rclsid*  
- CLSID, связанный с данными и кодом, который будет использоваться для создания объекта.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK при успешном выполнении или ошибкой REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING или E_NOINTERFACE в случае сбоя. См. в разделе [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) и [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) описание этих ошибок.  
-  
-### <a name="remarks"></a>Примечания  
- Если в первой форме метода вызывается, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) используется для восстановления CLSID. Затем вызовите обе формы [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
-  
- В отладочных сборках, произойдет ошибка утверждения, если [CComPtrBase::p](#p) не равно NULL.  
-  
-##  <a name="copyto"></a>  CComPtrBase::CopyTo  
- Вызовите этот метод, чтобы скопировать `CComPtrBase` указатель на другой переменной указателя.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*szProgID*  
+Указатель на идентификатор ProgID, позволяющий восстановить идентификатор CLSID.
+
+*pUnkOuter*  
+Если значение равно NULL, указывает, что объект не создается как часть агрегата. Если не NULL, — это указатель на Агрегатный объект `IUnknown` интерфейс (управляющий `IUnknown`).
+
+*dwClsContext*  
+Контекст, в котором будет выполняться код, который управляет вновь созданный объект.
+
+*rclsid*  
+CLSID, связанный с данными и кодом, который будет использоваться для создания объекта.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение S_OK при успешном выполнении или ошибкой REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING или E_NOINTERFACE в случае сбоя. См. в разделе [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) и [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) описание этих ошибок.
+
+### <a name="remarks"></a>Примечания
+
+Если в первой форме метода вызывается, [CLSIDFromProgID](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromprogid) используется для восстановления CLSID. Затем вызовите обе формы [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+
+В отладочных сборках, произойдет ошибка утверждения, если [CComPtrBase::p](#p) не равно NULL.
+
+##  <a name="copyto"></a>  CComPtrBase::CopyTo
+
+Вызовите этот метод, чтобы скопировать `CComPtrBase` указатель на другой переменной указателя.
+
 ```
 HRESULT CopyTo(T** ppT) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *ppT*  
- Адрес переменной, которая получит `CComPtrBase` указатель.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK при успешном выполнении E_POINTER в случае сбоя.  
-  
-### <a name="remarks"></a>Примечания  
- Копирует `CComPtrBase` указатель на *ppT*. Количество ссылок в [CComPtrBase::p](#p) увеличивается переменная-член.  
-  
- Ошибка HRESULT, будет возвращено в том случае, если *ppT* равен NULL. В отладочных сборках, произойдет ошибка утверждения, если *ppT* равен NULL.  
-  
-##  <a name="detach"></a>  CComPtrBase::Detach  
- Вызовите этот метод для освобождения владения указатель.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*ppT*  
+Адрес переменной, которая получит `CComPtrBase` указатель.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение S_OK при успешном выполнении E_POINTER в случае сбоя.
+
+### <a name="remarks"></a>Примечания
+
+Копирует `CComPtrBase` указатель на *ppT*. Количество ссылок в [CComPtrBase::p](#p) увеличивается переменная-член.
+
+Ошибка HRESULT, будет возвращено в том случае, если *ppT* равен NULL. В отладочных сборках, произойдет ошибка утверждения, если *ppT* равен NULL.
+
+##  <a name="detach"></a>  CComPtrBase::Detach
+
+Вызовите этот метод для освобождения владения указатель.
+
 ```
 T* Detach() throw();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает копию указателя.  
-  
-### <a name="remarks"></a>Примечания  
- Освобождает права владения указателем, задает [CComPtrBase::p](#p) переменной-члена данных значение NULL и возвращает копию указателя.  
-  
-##  <a name="isequalobject"></a>  CComPtrBase::IsEqualObject  
- Вызовите этот метод для проверки, если указанный `IUnknown` указывает на тот же объект, связанный с `CComPtrBase` объекта.  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает копию указателя.
+
+### <a name="remarks"></a>Примечания
+
+Освобождает права владения указателем, задает [CComPtrBase::p](#p) переменной-члена данных значение NULL и возвращает копию указателя.
+
+##  <a name="isequalobject"></a>  CComPtrBase::IsEqualObject
+
+Вызовите этот метод для проверки, если указанный `IUnknown` указывает на тот же объект, связанный с `CComPtrBase` объекта.
+
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *pOther*  
- Сравниваемый шаблон `IUnknown *`.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если объекты идентичны.  
-  
-##  <a name="operator_not"></a>  CComPtrBase::operator!  
- Оператор NOT.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*pOther*  
+Сравниваемый шаблон `IUnknown *`.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение true, если объекты идентичны.
+
+##  <a name="operator_not"></a>  CComPtrBase::operator!
+
+Оператор NOT.
+
 ```
 bool operator!() const throw();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если `CComHeapPtr` указатель равен NULL, false в противном случае.  
-  
-##  <a name="operator_amp"></a>  CComPtrBase::operator &amp;  
- & Оператор.  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение true, если `CComHeapPtr` указатель равен NULL, false в противном случае.
+
+##  <a name="operator_amp"></a>  CComPtrBase::operator &amp;
+
+& Оператор.
+
 ```
 T** operator&() throw();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает адрес объекта, на которые указывают `CComPtrBase` объекта.  
-  
-##  <a name="operator_star"></a>  CComPtrBase::operator \*  
- Оператор \*.  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает адрес объекта, на которые указывают `CComPtrBase` объекта.
+
+##  <a name="operator_star"></a>  CComPtrBase::operator \*
+
+Оператор \*.
+
 ```
 T& operator*() const throw();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение [CComPtrBase::p](#p); то есть указатель на объект, упоминаемый в `CComPtrBase` объекта.  
-  
- Если отладочные построения, ошибка возникнет, если [CComPtrBase::p](#p) не равно NULL.  
-  
-##  <a name="operator_eq_eq"></a>  CComPtrBase::operator ==  
- Оператор равенства.  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение [CComPtrBase::p](#p); то есть указатель на объект, упоминаемый в `CComPtrBase` объекта.
+
+Если отладочные построения, ошибка возникнет, если [CComPtrBase::p](#p) не равно NULL.
+
+##  <a name="operator_eq_eq"></a>  CComPtrBase::operator ==
+
+Оператор равенства.
+
 ```
 bool operator== (T* pT) const throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *pT*  
- Указатель на объект.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если `CComPtrBase` и *pT* указывал тот же объект, значение false в противном случае.  
-  
-##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;  
+```
 
- Оператор указателя на член.  
-  
+### <a name="parameters"></a>Параметры
+
+*pT*  
+Указатель на объект.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение true, если `CComPtrBase` и *pT* указывал тот же объект, значение false в противном случае.
+
+##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;
+
+Оператор указателя на член.
+
 ```
 _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение [CComPtrBase::p](#p) переменной-члена данных.  
-  
-### <a name="remarks"></a>Примечания  
- Этот оператор используется для вызова метода в классе, на которые указывают `CComPtrBase` объекта. В отладочных сборках, произойдет сбой утверждения, если `CComPtrBase` элемент данных указывает на значение NULL.  
-  
-##  <a name="operator_lt"></a>  CComPtrBase::operator &lt;  
- Меньше-оператор «больше».  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение [CComPtrBase::p](#p) переменной-члена данных.
+
+### <a name="remarks"></a>Примечания
+
+Этот оператор используется для вызова метода в классе, на которые указывают `CComPtrBase` объекта. В отладочных сборках, произойдет сбой утверждения, если `CComPtrBase` элемент данных указывает на значение NULL.
+
+##  <a name="operator_lt"></a>  CComPtrBase::operator &lt;
+
+Меньше-оператор «больше».
+
 ```
 bool operator<(T* pT) const throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *pT*  
- Указатель на объект.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если указатель управляет текущий объект меньше, чем указатель, к которому он сравнивается.  
-  
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
- Оператор приведения типов.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*pT*  
+Указатель на объект.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение true, если указатель управляет текущий объект меньше, чем указатель, к которому он сравнивается.
+
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*
+
+Оператор приведения типов.
+
 ```  
 operator T*() const throw();
-```  
-  
-### <a name="remarks"></a>Примечания  
- Возвращает указатель на тип данных объекта, определенный в шаблоне класса.  
-  
-##  <a name="p"></a>  CComPtrBase::p  
- Указатель данных переменная-член.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+Возвращает указатель на тип данных объекта, определенный в шаблоне класса.
+
+##  <a name="p"></a>  CComPtrBase::p
+
+Указатель данных переменная-член.
+
 ```
 T* p;
-```  
-  
-### <a name="remarks"></a>Примечания  
- Эта переменная-член содержит информацию об указателях.  
-  
-##  <a name="queryinterface"></a>  CComPtrBase::QueryInterface  
- Вызовите этот метод для возврата указателя на указанный интерфейс.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+Эта переменная-член содержит информацию об указателях.
+
+##  <a name="queryinterface"></a>  CComPtrBase::QueryInterface
+
+Вызовите этот метод для возврата указателя на указанный интерфейс.
+
 ```
 template <class Q> HRESULT QueryInterface(Q
 ** pp) const throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *Q*  
- Тип объекта, указатель на интерфейс является обязательным.  
-  
- *PP*  
- Адрес выходной переменной, которая получает указатель на запрошенный интерфейс.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успеха или E_NOINTERFACE в случае сбоя.  
-  
-### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [IUnknown::QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
-  
- В отладочных сборках, произойдет ошибка утверждения, если *pp* не равно NULL.  
-  
-##  <a name="release"></a>  CComPtrBase::Release  
- Вызовите этот метод для освобождения интерфейс.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*Q*  
+Тип объекта, указатель на интерфейс является обязательным.
+
+*PP*  
+Адрес выходной переменной, которая получает указатель на запрошенный интерфейс.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает значение S_OK в случае успеха или E_NOINTERFACE в случае сбоя.
+
+### <a name="remarks"></a>Примечания
+
+Этот метод вызывает метод [IUnknown::QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+
+В отладочных сборках, произойдет ошибка утверждения, если *pp* не равно NULL.
+
+##  <a name="release"></a>  CComPtrBase::Release
+
+Вызовите этот метод для освобождения интерфейс.
+
 ```
 void Release() throw();
-```  
-  
-### <a name="remarks"></a>Примечания  
- Интерфейс освобождается, и [CComPtrBase::p](#p) имеет значение NULL.  
-  
-##  <a name="setsite"></a>  CComPtrBase::SetSite  
- Вызовите этот метод, чтобы задать для сайта `CComPtrBase` объект `IUnknown` родительского объекта.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+Интерфейс освобождается, и [CComPtrBase::p](#p) имеет значение NULL.
+
+##  <a name="setsite"></a>  CComPtrBase::SetSite
+
+Вызовите этот метод, чтобы задать для сайта `CComPtrBase` объект `IUnknown` родительского объекта.
+
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *punkParent*  
- Указатель на `IUnknown` интерфейс родительского элемента.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
-  
-### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*punkParent*  
+Указатель на `IUnknown` интерфейс родительского элемента.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+
+### <a name="remarks"></a>Примечания
+
+Этот метод вызывает метод [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../../atl/atl-class-overview.md)

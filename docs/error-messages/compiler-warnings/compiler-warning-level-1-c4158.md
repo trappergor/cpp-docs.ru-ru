@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4158 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4158 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc7a3e8dca8b263d0d49b9d213692284e221b58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 417c730a515ef38c19c4108dd6c71d5d3d5a660b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277024"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207883"
 ---
 # <a name="compiler-warning-level-1-c4158"></a>Предупреждение компилятора (уровень 1) C4158
-допущение использования #pragma pointers_to_members(full_generality, inheritance)  
-  
- Объект **#pragma pointers_to_members (***один&#124;нескольких&#124;виртуальных***)** был выдан без сопутствующей **#pragma pointers_to_members(full_generality)**.
+
+> допущение использования #pragma pointers_to_members(full_generality, inheritance)
+
+Объект **#pragma pointers_to_members (** *единый* &#124; *несколько* &#124; *виртуального* **)** был выдан без сопутствующего **#pragma pointers_to_members(full_generality)**.

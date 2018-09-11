@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400662"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107502"
 ---
 # <a name="lockfile"></a>_lock_file
 
-Блокирует **ФАЙЛ** объекта для обеспечения согласованности для потоков, обращающихся к **ФАЙЛ** объекта одновременно.
+Блокирует **ФАЙЛ** объекта, чтобы обеспечить согласованность для потоков осуществляют доступ к **ФАЙЛ** объекта одновременно.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -53,11 +53,12 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Параметры
 
-*файл* дескриптора файла.
+*file*<br/>
+Дескриптор файла.
 
 ## <a name="remarks"></a>Примечания
 
-**_Lock_file** функции блокировки **ФАЙЛ** объекта, указанного параметром *файл*. Базовый файл не заблокирован **_lock_file**. Используйте [_unlock_file](unlock-file.md) для снятия блокировки с файла. Вызовы **_lock_file** и **_unlock_file** должны совпадать в потоке.
+**_Lock_file** функцию блокировки **ФАЙЛ** объекта, заданного параметром *файл*. Базовый файл не заблокирован **_lock_file**. Используйте [_unlock_file](unlock-file.md) для снятия блокировки с файла. Вызовы **_lock_file** и **_unlock_file** должны совпадать в поток.
 
 ## <a name="requirements"></a>Требования
 

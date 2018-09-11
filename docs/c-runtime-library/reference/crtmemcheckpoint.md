@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ca83a9b9b48302e9ff4974d083d0a95796a1ef3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395517"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107578"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Получает текущее состояние отладочной кучи и сохраняет его в предоставленной приложением **_CrtMemState** структуры (только отладочная версия).
+Получает текущее состояние отладочной кучи и сохраняет в предоставленной приложением **_CrtMemState** структуры (только отладочная версия).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -54,17 +54,18 @@ void _CrtMemCheckpoint(
 
 ### <a name="parameters"></a>Параметры
 
-*состояние* указатель **_CrtMemState** структуры для заполнения контрольными точками памяти.
+*state*<br/>
+Указатель на **_CrtMemState** структуры для заполнения контрольными точками памяти.
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtMemCheckpoint** функция создает моментальный снимок текущего состояния отладочной кучи в любой момент. Этот моментальный снимок могут использовать другие функции управления состоянием кучи, такие как [_CrtMemDifference](crtmemdifference.md), для обнаружения утечек памяти и других проблем. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtMemState** удаляются на этапе предварительной обработки.
+**_CrtMemCheckpoint** функция создает моментальный снимок текущего состояния отладочной кучи в любой момент. Этот моментальный снимок могут использовать другие функции управления состоянием кучи, такие как [_CrtMemDifference](crtmemdifference.md), для обнаружения утечек памяти и других проблем. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtMemState** удаляются во время предварительной обработки.
 
-Приложение должно передать указатель в выделенный ранее экземпляр **_CrtMemState** структуры, определенные в файле Crtdbg.h в *состояние* параметра. Если **_CrtMemCheckpoint** возникает ошибка при создании контрольной точки, функция создает **_CRT_WARN** отладки отчет с описанием проблемы.
+Приложение должно передать указатель на ранее выделенный экземпляр **_CrtMemState** структуры, определенные в Crtdbg.h в *состояние* параметра. Если **_CrtMemCheckpoint** возникает ошибка во время создания контрольной точки, функция создает **_CRT_WARN** отладка отчет с описанием проблемы.
 
-Дополнительные сведения о функциях состояния кучи и **_CrtMemState** структуры см. в разделе [функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Дополнительные сведения о функциях управления состоянием кучи и **_CrtMemState** структуры, см. в разделе [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Если *состояние* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, [errno _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) равно **EINVAL** и функция возвращает значение.
+Если *состояние* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) присваивается **EINVAL** и функция возвращает значение.
 
 ## <a name="requirements"></a>Требования
 

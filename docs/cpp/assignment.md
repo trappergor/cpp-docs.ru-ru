@@ -15,52 +15,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6343d7be23e633fe383343bd7f154d5cc9bb234
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b4955fb16d76bc68166bf314b9e1e8c02cd8e244
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407615"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131477"
 ---
 # <a name="assignment"></a>Назначение
-Оператор присваивания (**=**) является, строго говоря, бинарным оператором. Его объявление идентично объявлению любого другого бинарного оператора, со следующими исключениями:  
-  
--   Он должен быть нестатической функцией-членом. Не **оператор =** могут быть объявлены как функции недопустимы.  
-  
--   Он не наследуется производными классами.  
-  
--   По умолчанию **оператор =** функция может быть создана компилятором для типов классов, если он не существует.  
-  
- В следующем примере показано, как объявить оператор присваивания:  
-  
-```cpp 
-// assignment.cpp  
-class Point  
-{  
-public:  
-   Point &operator=( Point & );  // Right side is the argument.  
-   int _x, _y;  
-};  
-  
-// Define assignment operator.  
-Point &Point::operator=( Point &ptRHS )  
-{  
-   _x = ptRHS._x;  
-   _y = ptRHS._y;  
-  
-   return *this;  // Assignment operator returns left side.  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
- Обратите внимание, что указанный аргумент является правой частью выражения. Оператор возвращает объект для сохранения поведения оператора присваивания, который после завершения присваивания возвращает значение левой части. Это позволяет писать операторы следующего вида:  
-  
-```cpp 
-pt1 = pt2 = pt3;  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Перегрузка операторов](../cpp/operator-overloading.md)
+
+Оператор присваивания (**=**) является, строго говоря, бинарным оператором. Его объявление идентично объявлению любого другого бинарного оператора, со следующими исключениями:
+
+- Он должен быть нестатической функцией-членом. Не **оператор =** могут быть объявлены как функции недопустимы.
+- Он не наследуется производными классами.
+- По умолчанию **оператор =** функция может быть создана компилятором для типов классов, если он не существует.
+
+В следующем примере показано, как объявить оператор присваивания:
+
+```cpp
+class Point
+{
+public:
+    int _x, _y;
+
+    // Right side of copy assignment is the argument.
+    Point& operator=(const Point&);
+};
+
+// Define copy assignment operator.
+Point& Point::operator=(const Point& otherPoint)
+{
+    _x = otherPoint._x;
+    _y = otherPoint._y;
+
+    // Assignment operator returns left side of assignment.
+    return *this;
+}
+
+int main()
+{
+    Point pt1, pt2;
+    pt1 = pt2;
+}
+```
+
+Предоставленный аргумент является правой части выражения. Оператор возвращает объект для сохранения поведения оператора присваивания, который после завершения присваивания возвращает значение левой части. Это позволяет цепочки назначений, таких как:
+
+```cpp
+pt1 = pt2 = pt3;
+```
+
+Оператор присваивания копии является не следует путать с помощью конструктора копии. Последний вызывается во время создания объекта из существующей структуры:
+
+```cpp
+// Copy constructor is called--not overloaded copy assignment operator!
+Point pt3 = pt1;
+
+// The previous initialization is similar to the following:
+Point pt4(pt1); // Copy constructor call.
+```
+
+> [!NOTE]
+> Рекомендуется следовать [правило из трех](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) , что класс, определяющий оператор присваивания копии следует явным образом определить конструктор копии, чтобы конструктор и перемещения присваивание перемещением деструктор и, начиная с C ++ 11, оператор.
+
+## <a name="see-also"></a>См. также
+
+- [Перегрузка операторов](../cpp/operator-overloading.md)
+- [Конструкторы копий и операторы присваивания копий (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)

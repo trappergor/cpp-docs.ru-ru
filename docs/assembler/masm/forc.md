@@ -1,7 +1,7 @@
 ---
-title: FORC | Документы Microsoft
+title: ПРИНУДИТЕЛЬНОЕ ВКЛЮЧЕНИЕ | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e804083069243c333d3ac87dc701ada13afd739f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f4a16af6b8af984c887402669469e4ba9ea5ab28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054475"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685054"
 ---
 # <a name="forc"></a>FORC
-Помечает блок, который повторяется один раз для каждого символа в `string`, с заменой текущий символ `parameter` на каждом проходе.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-   FORC  
-parameter, <string> statements  
-ENDM  
-```  
-  
-## <a name="remarks"></a>Примечания  
- То же, что [IRPC](../../assembler/masm/irpc.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Помечает блок, который повторяется один раз для каждого символа в *строка*, с помощью текущего символ замены *параметр* на каждом проходе.
+
+## <a name="syntax"></a>Синтаксис
+
+> Принудительное Включение *параметр*, \< *строки*><br/>
+> *Инструкции*<br/>
+> ENDM
+
+## <a name="remarks"></a>Примечания
+
+Совпадение с кодом [IRPC](../../assembler/masm/irpc.md).
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

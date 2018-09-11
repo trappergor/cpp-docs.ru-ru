@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1305 | Документы Microsoft
+title: Неустранимая ошибка C1305 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cb1cf19d0fc4152fbb458d684972bb5a4418f37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90d73003d9f19eb41f9eb34cd47c7b90b1e6164f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227151"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540503"
 ---
 # <a name="fatal-error-c1305"></a>Неустранимая ошибка C1305
-База данных профилей «PGD-файл» — для другой архитектуры  
+База данных профилей «PGD-файл» предназначена для другой архитектуры  
   
- PGD-файл, который был создан из операции/LTCG: PGINSTRUMENT для другой платформы, передаваемых в [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Профильная оптимизация](../../build/reference/profile-guided-optimizations.md) доступны для x86 и [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] платформы. Однако PGD-файл, созданный с помощью операции/LTCG: PGINSTRUMENT для одной платформы, не является допустимым в качестве входного для / LTCG: PGOPTIMIZE для разных платформ.  
+ PGD-файл, который был создан из операции/LTCG: PGINSTRUMENT для другой платформы передан [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Оптимизация, зависимая от профиля](../../build/reference/profile-guided-optimizations.md) доступны для платформ x86 и x64. Тем не менее PGD-файл, созданный с помощью операции/LTCG: PGINSTRUMENT для одной платформы не является допустимым как входные данные для разных платформ / LTCG: PGOPTIMIZE.  
   
- Чтобы устранить эту ошибку, передайте только PGD-файл, созданный с/LTCG: PGINSTRUMENT для/LTCG: PGOPTIMIZE на той же платформе.
+ Чтобы устранить эту ошибку, необходимо только передайте PGD-файл, который создается с помощью/LTCG: PGINSTRUMENT для/LTCG: PGOPTIMIZE на той же платформе.

@@ -1,5 +1,5 @@
 ---
-title: __addgsbyte __addgsword, __addgsdword __addgsqword | Документы Microsoft
+title: __addgsbyte __addgsword, __addgsdword __addgsqword | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271f5bf7140dff437b6ef0935f8a4c90daabccd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50c0025e561c86fc18bbf5c4554c9f894fe32ec7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329479"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540087"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 **Блок, относящийся только к системам Microsoft**  
@@ -64,19 +64,19 @@ void __addgsqword(
  Смещение от начала `GS`.  
   
  [in] `Data`  
- Значения для добавления в область памяти.  
+ Значение, добавляемое в область памяти.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__addgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__addgsbyte`|X64|  
+|`__addgsword`|X64|  
+|`__addgsdword`|X64|  
+|`__addgsqword`|X64|  
   
 ## <a name="remarks"></a>Примечания  
- Эти встроенные функции доступны только в режиме ядра, и эти процедуры доступны только как встроенные объекты.  
+ Эти встроенные функции доступны только в режиме ядра, и эти процедуры доступны только как встроенные функции.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

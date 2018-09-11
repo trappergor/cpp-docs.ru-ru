@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlAutoThreadModule | Документы Microsoft
+title: Класс CAtlAutoThreadModule | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c89d142254909591ebd01bfa859be5488cbfaf6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b534190a4e7243f5192e6d703b056d8bcb327ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356622"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110647"
 ---
 # <a name="catlautothreadmodule-class"></a>Класс CAtlAutoThreadModule
-Этот класс реализует пула потоков, модели подразделения COM-сервера.  
-  
+
+Этот класс реализует COM-сервера пула потоков, модель с подразделением.
+
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+> Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
-```  
-  
-## <a name="remarks"></a>Примечания  
- `CAtlAutoThreadModule` является производным от [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) и реализует пула потоков, модели подразделения COM-сервера. `CAtlAutoThreadModule` использует [CComApartment](../../atl/reference/ccomapartment-class.md) для управления подразделениями для каждого потока в модуле.  
-  
- Необходимо использовать [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) макроса в определении класса объекта, чтобы указать [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) как фабрика класса. Затем следует добавить экземпляр класса, производного от `CAtlAutoThreadModuleT` например `CAtlAutoThreadModule`. Пример:  
-  
- `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`  
-  
+```
+
+## <a name="remarks"></a>Примечания
+
+`CAtlAutoThreadModule` является производным от [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) и реализует COM-сервера пула потоков, модель с подразделением. `CAtlAutoThreadModule` использует [CComApartment](../../atl/reference/ccomapartment-class.md) для управления как подразделение, для каждого потока в модуле.
+
+Необходимо использовать [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) макроса в определении класса объекта, чтобы указать [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) как фабрика класса. Затем следует добавить один экземпляр класса, производного от `CAtlAutoThreadModuleT` например `CAtlAutoThreadModule`. Пример:
+
+`CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
+
 > [!NOTE]
->  Этот класс заменяет устаревшее [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) класса.  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `IAtlAutoThreadModule`  
-  
- [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)  
-  
- `CAtlAutoThreadModule`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlbase.h  
-  
-## <a name="see-also"></a>См. также  
- [Класс CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)   
- [Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
- [Общие сведения о классе](../../atl/atl-class-overview.md)   
- [Классы модуля](../../atl/atl-module-classes.md)
+> Этот класс заменяет устаревшее [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) класса.
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`IAtlAutoThreadModule`
+
+[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)
+
+`CAtlAutoThreadModule`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlbase.h
+
+## <a name="see-also"></a>См. также
+
+[Класс CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)   
+[Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Модульные классы](../../atl/atl-module-classes.md)

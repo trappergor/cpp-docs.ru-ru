@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0edc3a255d3778711b2b8e74bde448dc34c814c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849097"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682331"
 ---
 # <a name="cpanedialog-class"></a>Класс CPaneDialog
 `CPaneDialog` Класс поддерживает Закрепляемое безрежимное диалоговое окно.  
@@ -42,24 +42,24 @@ class CPaneDialog : public CDockablePane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CPaneDialog::CPaneDialog`|Конструктор по умолчанию.|  
 |`CPaneDialog::~CPaneDialog`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPaneDialog::Create](#create)|Создает фиксируемого диалоговое окно и прикрепляет его к `CPaneDialog` объекта.|  
 |`CPaneDialog::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CPaneDialog::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
-|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Обрабатывает [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) сообщения. (Переопределяет `CBasePane::HandleInitDialog`.)|  
-|`CPaneDialog::OnEraseBkgnd`|Обрабатывает [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) сообщения. (Переопределяет [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
-|`CPaneDialog::OnLButtonDblClk`|Обрабатывает [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) сообщения. (Переопределяет [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
-|`CPaneDialog::OnLButtonDown`|Обрабатывает [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) сообщения. (Переопределяет [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Вызывается платформой для обновления диалогового окна. (Переопределяет [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|`CPaneDialog::OnWindowPosChanging`|Обрабатывает [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) сообщения. (Переопределяет [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
+|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Обрабатывает [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) сообщения. (Переопределяет `CBasePane::HandleInitDialog`.)|  
+|`CPaneDialog::OnEraseBkgnd`|Обрабатывает [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) сообщения. (Переопределяет [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
+|`CPaneDialog::OnLButtonDblClk`|Обрабатывает [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) сообщения. (Переопределяет [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
+|`CPaneDialog::OnLButtonDown`|Обрабатывает [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown) сообщения. (Переопределяет [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Вызывается платформой для обновления диалогового окна. (Переопределяет [CDockablePane::OnUpdateCmdUI](cdockablepane-class.md).)|  
+|`CPaneDialog::OnWindowPosChanging`|Обрабатывает [WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging) сообщения. (Переопределяет [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Задает шаблон для диалоговое окно, которое представляет собой контейнер элемента управления OLE.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -161,7 +161,7 @@ BOOL Create(
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
 ##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
- Обрабатывает [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) сообщения.  
+ Обрабатывает [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) сообщения.  
   
 ```  
 afx_msg LRESULT HandleInitDialog(

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e45320c1dd0a3358d19bf3bd0b83a56a841723
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7ef86d368a0ca9f7aa2c3b6700350ccaaa8f7836
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027054"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317333"
 ---
 # <a name="underflowerror-class"></a>Класс underflow_error
 
@@ -63,10 +63,10 @@ int main( )
       cerr << "Type: " << typeid( e ).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught: The number's a bit small, captain!
 Type: class std::underflow_error
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Требования
@@ -77,6 +77,5 @@ Type: class std::underflow_error
 
 ## <a name="see-also"></a>См. также
 
-[\<stdexcept > члены](http://msdn.microsoft.com/7b6b0a73-916e-44aa-9a3f-f5b6b3ce98e6)<br/>
 [Класс runtime_error](../standard-library/runtime-error-class.md)<br/>
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

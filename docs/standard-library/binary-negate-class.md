@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 33bbd9406f6a9f35e02d5e02aa5a2d6419d1cdae
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961926"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313751"
 ---
 # <a name="binarynegate-class"></a>Класс binary_negate
 
@@ -44,11 +44,14 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Func* бинарной функции, которая должна быть инвертирована.
+*Func*<br/>
+Бинарная функция, которая должна быть инвертирована.
 
-*слева* левый операнд бинарной функции, которая должна быть инвертирована.
+*left*<br/>
+Левый операнд бинарной функции, которая должна быть инвертирована.
 
-*правом* правый операнд бинарной функции, которая должна быть инвертирована.
+*right*<br/>
+Правый операнд бинарной функции, которая должна быть инвертирована.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -116,11 +119,11 @@ int main( )
       cout << *Iter1 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 Original vector v1 = ( 6262 6262 2233879413 2621500314 580942933 3715465425 3739828298 )
 Sorted vector v1 = ( 6262 6262 580942933 2233879413 2621500314 3715465425 3739828298 )
 Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 6262 6262 )
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Требования

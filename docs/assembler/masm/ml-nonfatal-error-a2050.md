@@ -1,7 +1,7 @@
 ---
-title: Некритичная ошибка ML A2050 | Документы Microsoft
+title: Некритичная ошибка ML A2050 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 159ed131c13166435114234b3b16a82cd4d41d1f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bd2e0e6c2fc818ef9286fd303c07a26bdd8b4e5a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056198"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680675"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>Некритичная ошибка ML A2050
-**реальный или BCD номер не разрешен**  
-  
- Число с плавающей запятой (real) или константа двоично-десятичный (BCD) не использовался как инициализатор данных.  
-  
- Произошло одно из следующих:  
-  
--   Вещественное число или данных конфигурации загрузки был использован в выражении.  
-  
--   Вещественное число был использован для инициализации директивы, отличный от [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), или [TBYTE](../../assembler/masm/tbyte.md).  
-  
--   BCD был использован для инициализации директивы, отличный от `TBYTE`.  
-  
-## <a name="see-also"></a>См. также  
- [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)
+
+**реальный или BCD номер не разрешен**
+
+Число с плавающей запятой (real) или константа двоично-десятичный (BCD) использовался отличное от как инициализатор данных.
+
+Одной из следующих причин:
+
+- Вещественное число или данных конфигурации загрузки был использован в выражении.
+
+- Вещественное число, использовавшийся для инициализации директиву, отличное от [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), или [TBYTE](../../assembler/masm/tbyte.md).
+
+- BCD, использовавшийся для инициализации директиву, отличное от `TBYTE`.
+
+## <a name="see-also"></a>См. также
+
+[Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

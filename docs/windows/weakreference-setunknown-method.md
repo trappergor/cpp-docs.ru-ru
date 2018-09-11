@@ -1,5 +1,5 @@
 ---
-title: Метод WeakReference::SetUnknown | Документы Microsoft
+title: Метод WeakReference::SetUnknown | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28b25645b21d3101e2f2b2004f02f29482320808
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1f127b8435f934e5cf203de2aaa6f2d0c3a58d13
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891025"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603074"
 ---
 # <a name="weakreferencesetunknown-method"></a>Метод WeakReference::SetUnknown
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void SetUnknown(  
-   _In_ IUnknown* unk  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `unk`  
- Указатель на `IUnknown` интерфейс для объекта.  
-  
-## <a name="remarks"></a>Примечания  
- Задает строгую ссылку текущего `WeakReference` объекта в заданный указатель интерфейса.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void SetUnknown(
+   _In_ IUnknown* unk
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*UNK*  
+Указатель на `IUnknown` интерфейс для объекта.
+
+## <a name="remarks"></a>Примечания
+
+Задает строгая ссылка текущего **WeakReference** объект в заданный указатель интерфейса.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
 ## <a name="see-also"></a>См. также
+
 [Класс WeakReference](../windows/weakreference-class1.md)  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

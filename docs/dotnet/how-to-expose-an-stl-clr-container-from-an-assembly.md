@@ -1,5 +1,5 @@
 ---
-title: 'Как: предоставлять контейнера STL/CLR из сборки | Документы Microsoft'
+title: 'Практическое: предоставление контейнера STL/CLR из сборки | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,165 +16,385 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 58edb96d3947cc5694731d78c6aa71a855ef7aa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4e2c9195557369fba380518a06fa08be7daeb1a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33140177"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317973"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Практическое руководство. Предоставление контейнера STL/CLR из сборки
-Контейнеры STL/CLR, такие как `list` и `map` реализованы как классы ссылки шаблонов. Поскольку C++ шаблонов создаются во время компиляции, два шаблона класса, которые точно такой же сигнатурой, но находятся в разных сборках, это разные типы. Это означает, что классы шаблонов не может использоваться за пределами сборки.  
-  
- Чтобы для управления доступом между сборками возможна, контейнеры STL/CLR реализовывать универсальный интерфейс <xref:System.Collections.Generic.ICollection%601>. С помощью этого универсального интерфейса, все языки, которые поддерживает универсальные шаблоны, включая C++, C# и Visual Basic, можно получить доступ к контейнеры STL/CLR.  
-  
- В этом разделе показано, как отображение элементов несколькими контейнерами STL/CLR, записанных в сборке C++ с именем `StlClrClassLibrary`. Далее показано два сборкам получать доступ к `StlClrClassLibrary`. Первая сборка языке C++, а вторая в C#.  
-  
- Если обе сборки на языке C++, можно получить доступ к универсальный интерфейс контейнера с помощью его `generic_container` typedef. Например, если у вас есть контейнер типа `cliext::vector<int>`, то его универсальный интерфейс: `cliext::vector<int>::generic_container`. Аналогичным образом можно получить итератор через универсальный интерфейс с помощью `generic_iterator` typedef, как: `cliext::vector<int>::generic_iterator`.  
-  
- Поскольку эти определения типов, объявляются в файлах заголовка C++, их нельзя использовать в сборках, написанных на других языках. Таким образом Чтобы получить доступ к универсальному интерфейсу для `cliext::vector<int>` в C# или любом другом языке .NET, используйте `System.Collections.Generic.ICollection<int>`. Для перебора этой коллекции, используйте `foreach` цикла.  
-  
- В следующей таблице перечислены универсальный интерфейс, который реализует каждый контейнер STL/CLR:  
-  
-|Контейнера STL/CLR|Универсальный интерфейс|  
-|------------------------|-----------------------|  
-|deque < T\>|Интерфейс ICollection < T\>|  
-|hash_map < K, V >|IDictionary < K, V >|  
-|hash_multimap < K, V >|IDictionary < K, V >|  
-|hash_multiset < T\>|Интерфейс ICollection < T\>|  
-|hash_set < T\>|Интерфейс ICollection < T\>|  
-|список < T\>|Интерфейс ICollection < T\>|  
-|карта < K, V >|IDictionary < K, V >|  
-|Множественное сопоставление < K, V >|IDictionary < K, V >|  
-|MULTISET < T\>|Интерфейс ICollection < T\>|  
-|Задайте < T\>|Интерфейс ICollection < T\>|  
-|Vector < T\>|Интерфейс ICollection < T\>|  
-  
+
+Контейнеры STL/CLR, такие как `list` и `map` реализуются как классы ссылки шаблонов. Поскольку C++ шаблонов создаются во время компиляции, два шаблона класса, которые точно такой же сигнатурой, но в разных сборках являются фактически различных типов. Это означает, что классы шаблонов не может использоваться за пределами сборки.
+
+Чтобы совместное использование между сборками возможных, контейнеры STL/CLR реализации универсального интерфейса <xref:System.Collections.Generic.ICollection%601>. С помощью этого универсального интерфейса, все языки, которые поддерживают универсальные шаблоны, включая C++, C# и Visual Basic, могут получать доступ к контейнерам STL/CLR.
+
+В этом разделе показано, как отобразить элементы нескольких контейнеров STL/CLR, записанных в сборке на C++ с именем `StlClrClassLibrary`. Мы покажем, две сборки, чтобы получить доступ к `StlClrClassLibrary`. Первая сборка создается на языке C++, а второе — в C#.
+
+Если обе сборки создаются на языке C++, можно воспользоваться универсальный интерфейс контейнера с помощью его `generic_container` typedef. Например, если у вас есть контейнер типа `cliext::vector<int>`, то будет его универсальный интерфейс: `cliext::vector<int>::generic_container`. Аналогичным образом можно получить итератор через универсальный интерфейс с помощью `generic_iterator` typedef, например: `cliext::vector<int>::generic_iterator`.
+
+Так как эти определения типов объявлены в файлах заголовка C++, их нельзя использовать в сборках, написанных на других языках. Таким образом Чтобы получить доступ к универсальный интерфейс для `cliext::vector<int>` в C# или любом другом языке .NET, используйте `System.Collections.Generic.ICollection<int>`. Для выполнения итерации по коллекции, используйте `foreach` цикла.
+
+В следующей таблице перечислены универсальный интерфейс, который реализует каждый контейнер STL/CLR:
+
+|Контейнера STL/CLR|Универсальный интерфейс|
+|------------------------|-----------------------|
+|`deque<T>`|`ICollection<T>`|
+|`hash_map<K, V>`|`IDictionary<K, V>`|
+|`hash_multimap<K, V>`|`IDictionary<K, V>`|
+|`hash_multiset<T>`|`ICollection<T>`|
+|`hash_set<T>`|`ICollection<T>`|
+|`list<T>`|`ICollection<T>`|
+|`map<K, V>`|`IDictionary<K, V>`|
+|`multimap<K, V>`|`IDictionary<K, V>`|
+|`multiset<T>`|`ICollection<T>`|
+|`set<T>`|`ICollection<T>`|
+|`vector<T>`|`ICollection<T>`|
+
 > [!NOTE]
->  Поскольку `queue`, `priority_queue`, и `stack` контейнеры не поддерживают итераторы, их следует реализовывать универсальные интерфейсы и не может быть получен между сборками.  
-  
-## <a name="example-1"></a>Пример 1  
-  
-### <a name="description"></a>Описание  
- В этом примере необходимо объявить класс C++, содержащей закрытые данные члена STL/CLR. Затем необходимо объявить открытые методы для предоставления доступа к коллекциям закрытый класс. Мы делаем его двумя различными способами, один для клиентов C++ и один для других клиентов .NET.  
-  
-### <a name="code"></a>Код  
-  
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
-## <a name="example-2"></a>Пример 2  
-  
-### <a name="description"></a>Описание  
- В этом примере мы реализовали класса, объявленного в примере 1. Чтобы клиенты на использование этой библиотеки классов, мы используем инструмента манифеста **mt.exe** встроено в файл манифеста в библиотеку DLL. Дополнительные сведения см. в разделе комментариев кода.  
-  
- Дополнительные сведения о средстве манифеста и side-by-side сборок см. в разделе [Построение изолированных приложений C/C++ и сборок Side-by-side](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md).  
-  
-### <a name="code"></a>Код  
-  
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-## <a name="example-3"></a>Пример 3  
-  
-### <a name="description"></a>Описание  
- В этом примере мы создадим C++ клиент, использующий библиотеку классов, созданных в примерах 1 и 2. Этот клиент использует `generic_container` определения типов контейнеров STL/CLR для выполнения итерации по контейнеров и для отображения их содержимого.  
-  
-### <a name="code"></a>Код  
-  
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-### <a name="output"></a>Вывод  
-  
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
-## <a name="example-4"></a>Пример 4  
-  
-### <a name="description"></a>Описание  
- В этом примере мы создадим клиент C#, использующий библиотеку классов, созданных в примерах 1 и 2. Этот клиент использует <xref:System.Collections.Generic.ICollection%601> методы из контейнеров STL/CLR для выполнения итерации по контейнеров и для отображения их содержимого.  
-  
-### <a name="code"></a>Код  
-  
-```  
-// CsConsoleApp.cs  
-// compile with: /r:Microsoft.VisualC.STLCLR.dll /r:StlClrClassLibrary.dll /r:System.dll  
-  
-using System;  
-using System.Collections.Generic;  
-using StlClrClassLibrary;  
-using cliext;  
-  
-namespace CsConsoleApp  
-{  
-    class Program  
-    {  
-        static int Main(string[] args)  
-        {  
-            StlClrClass theClass = new StlClrClass();  
-  
-            Console.WriteLine("cliext::deque contents:");  
-            ICollection<char> iCollChar = theClass.GetDequeCs();  
-            foreach (char c in iCollChar)  
-            {  
-                Console.WriteLine(c);  
-            }  
-            Console.WriteLine();  
-  
-            Console.WriteLine("cliext::list contents:");  
-            ICollection<float> iCollFloat = theClass.GetListCs();  
-            foreach (float f in iCollFloat)  
-            {  
-                Console.WriteLine(f);  
-            }  
-            Console.WriteLine();  
-  
-            Console.WriteLine("cliext::map contents:");  
-            IDictionary<int, string> iDict = theClass.GetMapCs();  
-            foreach (KeyValuePair<int, string> kvp in iDict)  
-            {  
-                Console.WriteLine("{0} {1}", kvp.Key, kvp.Value);  
-            }  
-            Console.WriteLine();  
-  
-            Console.WriteLine("cliext::set contents:");  
-            ICollection<double> iCollDouble = theClass.GetSetCs();  
-            foreach (double d in iCollDouble)  
-            {  
-                Console.WriteLine(d);  
-            }  
-            Console.WriteLine();  
-  
-            Console.WriteLine("cliext::vector contents:");  
-            ICollection<int> iCollInt = theClass.GetVectorCs();  
-            foreach (int i in iCollInt)  
-            {  
-                Console.WriteLine(i);  
-            }  
-            Console.WriteLine();  
-  
-            return 0;  
-        }  
-    }  
-}  
-```  
-  
-### <a name="output"></a>Вывод  
-  
-```  
-cliext::deque contents:  
-a  
-b  
-  
-cliext::list contents:  
-3.14159  
-2.71828  
-  
-cliext::map contents:  
-0 Hello  
-1 World  
-  
-cliext::set contents:  
-2.71828  
-3.14159  
-  
-cliext::vector contents:  
-10  
-20  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)
+> Так как `queue`, `priority_queue`, и `stack` контейнеров не поддерживают итераторы, они не реализуют универсальных интерфейсов и не может быть доступ к которым осуществляется между сборками.
+
+## <a name="example-1"></a>Пример 1
+
+### <a name="description"></a>Описание
+
+В этом примере мы объявить класс C++, содержащей закрытые данные члена STL/CLR. Затем мы объявляем открытые методы для предоставления доступа к коллекции частного класса. Мы делаем его двумя различными способами, один для клиентов C++ и один для других клиентов .NET.
+
+### <a name="code"></a>Код
+
+```cpp
+// StlClrClassLibrary.h
+#pragma once
+
+#include <cliext/deque>
+#include <cliext/list>
+#include <cliext/map>
+#include <cliext/set>
+#include <cliext/stack>
+#include <cliext/vector>
+
+using namespace System;
+using namespace System::Collections::Generic;
+using namespace cliext;
+
+namespace StlClrClassLibrary {
+
+    public ref class StlClrClass
+    {
+    public:
+        StlClrClass();
+
+        // These methods can be called by a C++ class
+        // in another assembly to get access to the
+        // private STL/CLR types defined below.
+        deque<wchar_t>::generic_container ^GetDequeCpp();
+        list<float>::generic_container ^GetListCpp();
+        map<int, String ^>::generic_container ^GetMapCpp();
+        set<double>::generic_container ^GetSetCpp();
+        vector<int>::generic_container ^GetVectorCpp();
+
+        // These methods can be called by a non-C++ class
+        // in another assembly to get access to the
+        // private STL/CLR types defined below.
+        ICollection<wchar_t> ^GetDequeCs();
+        ICollection<float> ^GetListCs();
+        IDictionary<int, String ^> ^GetMapCs();
+        ICollection<double> ^GetSetCs();
+        ICollection<int> ^GetVectorCs();
+
+    private:
+        deque<wchar_t> ^aDeque;
+        list<float> ^aList;
+        map<int, String ^> ^aMap;
+        set<double> ^aSet;
+        vector<int> ^aVector;
+    };
+}
+```
+
+## <a name="example-2"></a>Пример 2
+
+### <a name="description"></a>Описание
+
+В этом примере мы реализации класса, объявленного в примере 1. Чтобы клиенты на использование этой библиотеки классов, мы используем работы инструмента манифеста **mt.exe** внедрять файл манифеста в библиотеку DLL. Дополнительные сведения см. в комментариях к коду.
+
+Дополнительные сведения о средстве манифеста и side-by-side сборок см. в разделе [Построение изолированных приложений C/C++ и сборок Side-by-side](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md).
+
+### <a name="code"></a>Код
+
+```cpp
+// StlClrClassLibrary.cpp
+// compile with: /clr /LD /link /manifest
+// post-build command: (attrib -r StlClrClassLibrary.dll & mt /manifest StlClrClassLibrary.dll.manifest /outputresource:StlClrClassLibrary.dll;#2 & attrib +r StlClrClassLibrary.dll)
+
+#include "StlClrClassLibrary.h"
+
+namespace StlClrClassLibrary
+{
+    StlClrClass::StlClrClass()
+    {
+        aDeque = gcnew deque<wchar_t>();
+        aDeque->push_back(L'a');
+        aDeque->push_back(L'b');
+
+        aList = gcnew list<float>();
+        aList->push_back(3.14159f);
+        aList->push_back(2.71828f);
+
+        aMap = gcnew map<int, String ^>();
+        aMap[0] = "Hello";
+        aMap[1] = "World";
+
+        aSet = gcnew set<double>();
+        aSet->insert(3.14159);
+        aSet->insert(2.71828);
+
+        aVector = gcnew vector<int>();
+        aVector->push_back(10);
+        aVector->push_back(20);
+    }
+
+    deque<wchar_t>::generic_container ^StlClrClass::GetDequeCpp()
+    {
+        return aDeque;
+    }
+
+    list<float>::generic_container ^StlClrClass::GetListCpp()
+    {
+        return aList;
+    }
+
+    map<int, String ^>::generic_container ^StlClrClass::GetMapCpp()
+    {
+        return aMap;
+    }
+
+    set<double>::generic_container ^StlClrClass::GetSetCpp()
+    {
+        return aSet;
+    }
+
+    vector<int>::generic_container ^StlClrClass::GetVectorCpp()
+    {
+        return aVector;
+    }
+
+    ICollection<wchar_t> ^StlClrClass::GetDequeCs()
+    {
+        return aDeque;
+    }
+
+    ICollection<float> ^StlClrClass::GetListCs()
+    {
+        return aList;
+    }
+
+    IDictionary<int, String ^> ^StlClrClass::GetMapCs()
+    {
+        return aMap;
+    }
+
+    ICollection<double> ^StlClrClass::GetSetCs()
+    {
+        return aSet;
+    }
+
+    ICollection<int> ^StlClrClass::GetVectorCs()
+    {
+        return aVector;
+    }
+}
+```
+
+## <a name="example-3"></a>Пример 3
+
+### <a name="description"></a>Описание
+
+В этом примере мы создадим клиент C++, использующий библиотеку классов, созданных в примерах 1 и 2. Этот клиент использует `generic_container` определения типов из контейнеров STL/CLR для выполнения итерации по контейнеры и для отображения их содержимого.
+
+### <a name="code"></a>Код
+
+```cpp
+// CppConsoleApp.cpp
+// compile with: /clr /FUStlClrClassLibrary.dll
+
+#include <cliext/deque>
+#include <cliext/list>
+#include <cliext/map>
+#include <cliext/set>
+#include <cliext/vector>
+
+using namespace System;
+using namespace StlClrClassLibrary;
+using namespace cliext;
+
+int main(array<System::String ^> ^args)
+{
+    StlClrClass theClass;
+
+    Console::WriteLine("cliext::deque contents:");
+    deque<wchar_t>::generic_container ^aDeque = theClass.GetDequeCpp();
+    for each (wchar_t wc in aDeque)
+    {
+        Console::WriteLine(wc);
+    }
+    Console::WriteLine();
+
+    Console::WriteLine("cliext::list contents:");
+    list<float>::generic_container ^aList = theClass.GetListCpp();
+    for each (float f in aList)
+    {
+        Console::WriteLine(f);
+    }
+    Console::WriteLine();
+
+    Console::WriteLine("cliext::map contents:");
+    map<int, String ^>::generic_container ^aMap = theClass.GetMapCpp();
+    for each (map<int, String ^>::value_type rp in aMap)
+    {
+        Console::WriteLine("{0} {1}", rp->first, rp->second);
+    }
+    Console::WriteLine();
+
+    Console::WriteLine("cliext::set contents:");
+    set<double>::generic_container ^aSet = theClass.GetSetCpp();
+    for each (double d in aSet)
+    {
+        Console::WriteLine(d);
+    }
+    Console::WriteLine();
+
+    Console::WriteLine("cliext::vector contents:");
+    vector<int>::generic_container ^aVector = theClass.GetVectorCpp();
+    for each (int i in aVector)
+    {
+        Console::WriteLine(i);
+    }
+    Console::WriteLine();
+
+    return 0;
+}
+```
+
+### <a name="output"></a>Вывод
+
+```Output
+cliext::deque contents:
+a
+b
+
+cliext::list contents:
+3.14159
+2.71828
+
+cliext::map contents:
+0 Hello
+1 World
+
+cliext::set contents:
+2.71828
+3.14159
+
+cliext::vector contents:
+10
+20
+```
+
+## <a name="example-4"></a>Пример 4
+
+### <a name="description"></a>Описание
+
+В этом примере мы создадим клиент C#, использующий библиотеку классов, созданных в примерах 1 и 2. Этот клиент использует <xref:System.Collections.Generic.ICollection%601> методы из контейнеров STL/CLR для выполнения итерации по контейнеры и для отображения их содержимого.
+
+### <a name="code"></a>Код
+
+```csharp
+// CsConsoleApp.cs
+// compile with: /r:Microsoft.VisualC.STLCLR.dll /r:StlClrClassLibrary.dll /r:System.dll
+
+using System;
+using System.Collections.Generic;
+using StlClrClassLibrary;
+using cliext;
+
+namespace CsConsoleApp
+{
+    class Program
+    {
+        static int Main(string[] args)
+        {
+            StlClrClass theClass = new StlClrClass();
+
+            Console.WriteLine("cliext::deque contents:");
+            ICollection<char> iCollChar = theClass.GetDequeCs();
+            foreach (char c in iCollChar)
+            {
+                Console.WriteLine(c);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("cliext::list contents:");
+            ICollection<float> iCollFloat = theClass.GetListCs();
+            foreach (float f in iCollFloat)
+            {
+                Console.WriteLine(f);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("cliext::map contents:");
+            IDictionary<int, string> iDict = theClass.GetMapCs();
+            foreach (KeyValuePair<int, string> kvp in iDict)
+            {
+                Console.WriteLine("{0} {1}", kvp.Key, kvp.Value);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("cliext::set contents:");
+            ICollection<double> iCollDouble = theClass.GetSetCs();
+            foreach (double d in iCollDouble)
+            {
+                Console.WriteLine(d);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("cliext::vector contents:");
+            ICollection<int> iCollInt = theClass.GetVectorCs();
+            foreach (int i in iCollInt)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine();
+
+            return 0;
+        }
+    }
+}
+```
+
+### <a name="output"></a>Вывод
+
+```Output
+cliext::deque contents:
+a
+b
+
+cliext::list contents:
+3.14159
+2.71828
+
+cliext::map contents:
+0 Hello
+1 World
+
+cliext::set contents:
+2.71828
+3.14159
+
+cliext::vector contents:
+10
+20
+```
+
+## <a name="see-also"></a>См. также
+
+[Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)

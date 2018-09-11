@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4405f2ac1615a40f41f5deb9ee4d9baf5b8f8ef7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cc0fdcc1ecfec18403904e75e0efbe3341137f02
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955277"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313785"
 ---
 # <a name="multiplies-struct"></a>Структура multiplies
 
@@ -44,16 +44,18 @@ struct multiplies<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) * std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *Тип*, *T*, *U* тип, поддерживающий бинарный `operator*` , принимающий операнды указанного или выводимого типа.
 
-*Слева* левый операнд в операции умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
+*Слева*<br/>
+Левый операнд в операции умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
 
-*Справа* правый операнд в операции умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
+*Справа*<br/>
+Правый операнд в операции умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -107,12 +109,12 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 2 4 6 8 10 12 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise products of vectors V1 & v2
- are: ( 6 24 54 96 150 216 )
-*\
+are: ( 6 24 54 96 150 216 )
+*/
 ```
 
 ## <a name="requirements"></a>Требования

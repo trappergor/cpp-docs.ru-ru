@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b38ca29ed166f27459da5192f23accf32969465
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e835da146cb609abc873e7e53eb617b8635af0e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336638"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689111"
 ---
 # <a name="cbrush-class"></a>Класс CBrush
 Инкапсулирует кисть интерфейса графических устройств Windows (GDI).  
@@ -54,26 +54,26 @@ class CBrush : public CGdiObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBrush::CBrush](#cbrush)|Создает объект `CBrush`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Инициализирует кисти с стиль, цвет и шаблону, заданному в [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|Инициализирует кисти с стиль, цвет и шаблону, заданному в [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) структуры.|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Инициализирует кисти с шаблону, указанному аппаратно независимый точечный рисунок (DIB).|  
 |[CBrush::CreateHatchBrush](#createhatchbrush)|Инициализирует кисти с указанным заштрихованный шаблон и цветом.|  
 |[CBrush::CreatePatternBrush](#createpatternbrush)|Инициализирует кисти с шаблону, указанному растрового изображения.|  
 |[CBrush::CreateSolidBrush](#createsolidbrush)|Инициализирует кисти с указанным сплошным цветом.|  
 |[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Создает кисть, которая является системный цвет по умолчанию.|  
 |[CBrush::FromHandle](#fromhandle)|Возвращает указатель на `CBrush` объект для заданного дескриптора для Windows `HBRUSH` объекта.|  
-|[CBrush::GetLogBrush](#getlogbrush)|Получает [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.|  
+|[CBrush::GetLogBrush](#getlogbrush)|Получает [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) структуры.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[HBRUSH CBrush::operator](#operator_hbrush)|Возвращает дескриптор Windows, подключенный к `CBrush` объекта.|  
   
@@ -131,7 +131,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  Если вы используете конструктор без аргументов, необходимо инициализировать результирующий `CBrush` со [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), или [CreateDIBPatternBrush](#createdibpatternbrush). Если вы используете один из конструкторов, принимающих аргументы, затем дальнейшая инициализация необходима. Конструкторы с аргументами может создавать исключения, если ошибки обнаружены, пока конструктор без аргументов, всегда будет успешной.  
   
- Конструктор с одним [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр создает сплошной кисти с указанным цветом. Цвет указывает значение RGB и может быть создан с помощью макроса RGB в WINDOWS. З.  
+ Конструктор с одним [COLORREF](/windows/desktop/gdi/colorref) параметр создает сплошной кисти с указанным цветом. Цвет указывает значение RGB и может быть создан с помощью макроса RGB в WINDOWS. З.  
   
  Конструктор с двумя параметрами кисть штриховки. *NIndex* параметр указывает индекс заштрихованный шаблон. *CrColor* параметр задает цвет.  
   
@@ -141,7 +141,7 @@ explicit CBrush(CBitmap* pBitmap);
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
 ##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
- Инициализирует кисти с стиль, цвет и шаблону, заданному в [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.  
+ Инициализирует кисти с стиль, цвет и шаблону, заданному в [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) структуры.  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -149,7 +149,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
   
 ### <a name="parameters"></a>Параметры  
  *lpLogBrush*  
- Указывает на [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуру, содержащую сведения о кисти.  
+ Указывает на [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) структуру, содержащую сведения о кисти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
@@ -208,11 +208,11 @@ BOOL CreateDIBPatternBrush(
   
  Сведения об использовании следующих функций Windows см. в разделе Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (эта функция предназначена только для совместимости с приложениями, написанных для версий Windows, предшествующих версии 3.0; используйте `CreateDIBPatternBrushPt` функции.)  
+- [CreateDIBPatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrush) (эта функция предназначена только для совместимости с приложениями, написанных для версий Windows, предшествующих версии 3.0; используйте `CreateDIBPatternBrushPt` функции.)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (эта функция должна использоваться для приложений Win32.)  
+- [CreateDIBPatternBrushPt](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrushpt) (эта функция должна использоваться для приложений Win32.)  
   
-- [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
+- [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
@@ -243,7 +243,7 @@ BOOL CreateHatchBrush(
 - Штриховка по вертикали HS_VERTICAL  
   
  *crColor*  
- Задает основной цвет кисти цветом RGB (Цвет штриховки). См. в разделе [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) в пакете SDK для Windows, Дополнительные сведения.  
+ Задает основной цвет кисти цветом RGB (Цвет штриховки). См. в разделе [COLORREF](/windows/desktop/gdi/colorref) в пакете SDK для Windows, Дополнительные сведения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -277,7 +277,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
   
  Кисть, созданных с помощью монохромный точечный рисунок (1 цвет плоскости, 1 бит на пиксель) отображаются с помощью текущих цветов текста и фона. Представленный бит, равным 0 пикселов с текущего цвета текста. Представленный немного, равным 1 пикселов с текущим цветом фона.  
   
- Дополнительные сведения об использовании [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), Windows функции, см. в Windows SDK.  
+ Дополнительные сведения об использовании [CreatePatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createpatternbrush), Windows функции, см. в Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
@@ -291,7 +291,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
   
 ### <a name="parameters"></a>Параметры  
  *crColor*  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) структуры, задающее цвет кисти. Цвет указывает значение RGB и может быть создан с помощью макроса RGB в WINDOWS. З.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) структуры, задающее цвет кисти. Цвет указывает значение RGB и может быть создан с помощью макроса RGB в WINDOWS. З.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>Параметры  
  *nIndex*  
- Указывает индекс цветов. Это значение соответствует цвет, используемый для закрашивания один из элементов 21 окна. См. в разделе [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) в пакете Windows SDK для списка значений.  
+ Указывает индекс цветов. Это значение соответствует цвет, используемый для закрашивания один из элементов 21 окна. См. в разделе [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) в пакете Windows SDK для списка значений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -343,7 +343,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="remarks"></a>Примечания  
  Если `CBrush` объект еще не присоединен к дескриптору, временный `CBrush` созданный и присоединенный объект. Этот временный `CBrush` объект действителен только до следующей встречи, в приложении есть время простоя в свой цикл событий. В настоящее время будут удалены все временные графические объекты. Другими словами временный объект допустим только во время обработки сообщения одного окна.  
   
- Дополнительные сведения об использовании графических объектов см. в разделе [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в пакете Windows SDK.  
+ Дополнительные сведения об использовании графических объектов см. в разделе [объектов график](/windows/desktop/gdi/graphic-objects) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CBrush::CBrush](#cbrush).  
@@ -357,7 +357,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
   
 ### <a name="parameters"></a>Параметры  
  *pLogBrush*  
- Указывает на [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуру, содержащую сведения о кисти.  
+ Указывает на [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) структуру, содержащую сведения о кисти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если функция выполняется успешно, и *pLogBrush* является допустимым указателем, возвращаемое значение — количество байтов, сохраненных в буфере.  
@@ -387,7 +387,7 @@ operator HBRUSH() const;
 ### <a name="remarks"></a>Примечания  
  Этот оператор — оператор приведения, который поддерживает непосредственное использование объекта HBRUSH.  
   
- Дополнительные сведения об использовании графических объектов см. в разделе [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в пакете Windows SDK.  
+ Дополнительные сведения об использовании графических объектов см. в разделе [объектов график](/windows/desktop/gdi/graphic-objects) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  

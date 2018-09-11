@@ -1,7 +1,7 @@
 ---
-title: Неустранимая ошибка ML A1008 | Документы Microsoft
+title: Неустранимая ошибка ML A1008 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b312e03740059866bfbf447f962538c499eb46
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5ec709823856e17c90d4af2a06262b30c966f39c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053817"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691942"
 ---
 # <a name="ml-fatal-error-a1008"></a>Неустранимая ошибка ML A1008
-**вложения несовпадающие макросов**  
-  
- Либо макрос не был завершен до окончания файла или завершающий директива [ENDM](../../assembler/masm/endm.md) найдена за пределами блока макрос.  
-  
- Одной из причин этой ошибки является упущение точки перед [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md) или [. Во время](../../assembler/masm/dot-while.md).  
-  
-## <a name="see-also"></a>См. также  
- [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)
+
+**вложения непарные макросов**
+
+Либо макрос не был завершен до достижения конца файла или директиву завершающий [ENDM](../../assembler/masm/endm.md) обнаружено вне блока макрос.
+
+Одной из причин этой ошибки является пропуск точки перед [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md) или [. ХОТЯ](../../assembler/masm/dot-while.md).
+
+## <a name="see-also"></a>См. также
+
+[Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939adc0507eee61be432ba8e8f582cfc53005aa0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853999"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195836"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Класс CMFCShellListCtrl
 `CMFCShellListCtrl` Класс предоставляет функциональные возможности элемента управления списка Windows и расширяет его, включив возможность отображения списка элементов оболочки.  
@@ -212,7 +212,7 @@ const IShellFolder* GetCurrentShellFolder() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [IShellFolder интерфейс](http://msdn.microsoft.com/library/windows/desktop/bb775075) для выбранного объекта.  
+ Указатель на [IShellFolder интерфейс](https://msdn.microsoft.com/library/windows/desktop/bb775075) для выбранного объекта.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает значение NULL, если объект не выбран в данный момент.  
@@ -247,7 +247,7 @@ SHCONTF GetItemTypes() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539) значение, содержащее тип элементов, перечисленных в `CMFCShellListCtrl`.  
+ Объект [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf) значение, содержащее тип элементов, перечисленных в `CMFCShellListCtrl`.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы задать тип элементов, перечисленных в `CMFCShellListCtrl`, вызовите [CMFCShellListCtrl::SetItemTypes](#setitemtypes).  
@@ -263,7 +263,7 @@ BOOL IsDesktop() const;
  Значение TRUE, если отображаемой папки папке рабочего стола; Значение FALSE в противном случае.  
   
 ##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 virtual int OnCompareItems(
@@ -406,7 +406,7 @@ void SetItemTypes(SHCONTF nTypes);
  Список элементов на типы, которые `CMFCShellListCtrl` поддерживает.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о списке типов элементов, см. в разделе [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539).  
+ Дополнительные сведения о списке типов элементов, см. в разделе [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf).  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

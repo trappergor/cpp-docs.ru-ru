@@ -1,5 +1,5 @@
 ---
-title: Метод Module::UnregisterCOMObject | Документы Microsoft
+title: Метод Module::UnregisterCOMObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3409e0e2c1cac5f3934902523edd2653839989ed
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881940"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575762"
 ---
 # <a name="moduleunregistercomobject-method"></a>Метод Module::UnregisterCOMObject
-Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-virtual HRESULT UnregisterCOMObject(  
-   const wchar_t* serverName,  
-   DWORD* cookies,  
-   unsigned int count  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `serverName`  
- (Не используется)  
-  
- `cookies`  
- Массив указателей на значения, которые идентифицируют объекты класса для отмены регистрации. Массив был создан с помощью [RegisterCOMObject](../windows/module-registercomobject-method.md) метод.  
-  
- `count`  
- Количество классов для отмены регистрации.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее причину неудачного завершения операции.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс Module](../windows/module-class.md)
+
+Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual HRESULT UnregisterCOMObject(
+   const wchar_t* serverName,
+   DWORD* cookies,
+   unsigned int count
+```
+
+### <a name="parameters"></a>Параметры
+
+*Имя_сервера*  
+(Не используется)
+
+*Файлы cookie*  
+Массив указателей на значения, которые идентифицируют объекты класса для отмены регистрации. Массив был создан с [RegisterCOMObject](../windows/module-registercomobject-method.md) метод.
+
+*count*  
+Количество классов для отмены регистрации.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее причину неудачного завершения операции.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс Module](../windows/module-class.md)

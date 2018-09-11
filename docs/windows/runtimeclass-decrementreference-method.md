@@ -1,5 +1,5 @@
 ---
-title: Метод RuntimeClass::DecrementReference | Документы Microsoft
+title: Метод RuntimeClass::DecrementReference | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 660c78ba8a6b3000facc43541249fb6f9856a813
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c2b83d64315ed03fce0527dc11668265c1db461
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892687"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613147"
 ---
 # <a name="runtimeclassdecrementreference-method"></a>Метод RuntimeClass::DecrementReference
-Уменьшает счетчик ссылок для текущего объекта RuntimeClass.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-ULONG DecrementReference();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс RuntimeClass](../windows/runtimeclass-class.md)
+
+Уменьшает счетчик ссылок для текущего **RuntimeClass** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ULONG DecrementReference();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс RuntimeClass](../windows/runtimeclass-class.md)

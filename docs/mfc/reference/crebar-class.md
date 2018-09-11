@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848623"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201858"
 ---
 # <a name="crebar-class"></a>CReBar-класс
 Панель элементов управления, которая предоставляет макет, сохраняемость и сведения о состоянии для элементов управления главной панели.  
@@ -105,7 +105,7 @@ BOOL AddBar(
  Указатель на `CBitmap` объект для отображения на заднем плане главной панели. Значение NULL по умолчанию.  
   
  *dwStyle*  
- DWORD, содержащее стиль для применения к главной панели. См. в разделе `fStyle` функции описание структуры Win32 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) полный список стилей аппаратного контроллера управления.  
+ DWORD, содержащее стиль для применения к главной панели. См. в разделе `fStyle` функции описание структуры Win32 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) полный список стилей аппаратного контроллера управления.  
   
  *clrFore*  
  Значение COLORREF, представляющий цвет переднего плана для главной панели.  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  Указатель на `CWnd` объекта, окно которого Windows является родительским для объекта строки состояния. Обычно фрейма окна.  
   
  *dwCtrlStyle*  
- Стиль элемента управления "Главная панель". По умолчанию RBS_BANDBORDERS, который отображает узких строк для разделения смежные полосами в элементе управления "Главная панель". См. в разделе [стили элемента управления главной панели](http://msdn.microsoft.com/library/windows/desktop/bb774377) в пакете SDK Windows для получения списка стилей.  
+ Стиль элемента управления "Главная панель". По умолчанию RBS_BANDBORDERS, который отображает узких строк для разделения смежные полосами в элементе управления "Главная панель". См. в разделе [стили элемента управления главной панели](/windows/desktop/Controls/rebar-control-styles) в пакете SDK Windows для получения списка стилей.  
   
  *dwStyle*  
  Стили окна "Главная панель".  

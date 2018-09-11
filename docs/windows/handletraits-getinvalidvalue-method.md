@@ -1,5 +1,5 @@
 ---
-title: Метод HANDLETraits::GetInvalidValue | Документы Microsoft
+title: Метод HANDLETraits::GetInvalidValue | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 190c327a404d19da86fdb86c32411a8ffeb06e7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82616b0fc8cda44ea501b87f6ac1c6e0eddbfb57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873502"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609366"
 ---
 # <a name="handletraitsgetinvalidvalue-method"></a>Метод HANDLETraits::GetInvalidValue
-Представляет недопустимый дескриптор.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-inline static HANDLE GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение INVALID_HANDLE_VALUE (INVALID_HANDLE_VALUE определяется Windows).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Структура HANDLETraits](../windows/handletraits-structure.md)
+
+Представляет недопустимый дескриптор.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline static HANDLE GetInvalidValue();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Всегда возвращает значение INVALID_HANDLE_VALUE (INVALID_HANDLE_VALUE определяется Windows).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Структура HANDLETraits](../windows/handletraits-structure.md)

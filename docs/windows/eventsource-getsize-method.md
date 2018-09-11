@@ -1,5 +1,5 @@
 ---
-title: Метод EventSource::GetSize | Документы Microsoft
+title: Метод EventSource::GetSize | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60c52c711c85caa64c289937f39fe50ec18e1839
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e852f2664e03ee0ac788fb426951c244f895bb6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887004"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581107"
 ---
 # <a name="eventsourcegetsize-method"></a>Метод EventSource::GetSize
-Возвращает число обработчиков событий, связанных с текущим объектом EventSource  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-size_t GetSize() const;  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Количество обработчиков событий в [targets_](../windows/eventsource-targets-data-member.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс EventSource](../windows/eventsource-class.md)
+
+Возвращает число обработчиков событий, связанных с текущим **EventSource** объекта
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+size_t GetSize() const;
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Количество обработчиков событий в [targets_](../windows/eventsource-targets-data-member.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс EventSource](../windows/eventsource-class.md)

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e46063bc94fae25d414d25ae67b5418ee5aa8c27
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465861"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606991"
 ---
 # <a name="activatableclass-macros"></a>Макрос ActivatableClass
 
@@ -54,7 +54,7 @@ ActivatableClassWithFactoryEx(
 ### <a name="parameters"></a>Параметры
 
 *className*  
-Имя создаваемого класса.  
+Имя создаваемого класса.
 
 *фабрики*  
 Фабрика, которая будет создавать экземпляр указанного класса.
@@ -64,7 +64,7 @@ ActivatableClassWithFactoryEx(
 
 ## <a name="remarks"></a>Примечания
 
-Не используйте эти макросы с помощью классической COM, если вы не используете `#undef` директиву, чтобы убедиться, что **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** удаляется определение макроса.
+Не используйте эти макросы с помощью классической COM, если вы не используете `#undef` директиву, чтобы убедиться, что `__WRL_WINRT_STRICT__` удаляется определение макроса.
 
 ## <a name="requirements"></a>Требования
 
@@ -73,4 +73,5 @@ ActivatableClassWithFactoryEx(
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
+
 [Класс Module](../windows/module-class.md)

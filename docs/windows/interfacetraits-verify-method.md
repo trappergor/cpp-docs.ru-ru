@@ -1,5 +1,5 @@
 ---
-title: Метод InterfaceTraits::Verify | Документы Microsoft
+title: Метод InterfaceTraits::Verify | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5c16ebda96d5d1c8ff12532e728f32501ea4db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c6491968541a0015110c55edf2bede40c084947
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875504"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583448"
 ---
 # <a name="interfacetraitsverify-method"></a>Метод InterfaceTraits::Verify
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-__forceinline static void Verify();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Проверяет, что базовый правильно производный.  
-  
- Дополнительные сведения о `Base`, см. в разделе определения открытых типов в [InterfaceTraits-структура](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [InterfaceTraits-структура](../windows/interfacetraits-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+__forceinline static void Verify();
+```
+
+## <a name="remarks"></a>Примечания
+
+Проверяет, что `Base` должным образом является производным.
+
+Дополнительные сведения о `Base`, см. в разделе **общедоступные определения типов** статьи [interfacetraits-структура](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cef7f0b51d9dc7a44e6dbc45c32f1296825ca30
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 86074c341e26965778aaa5668c219c721a984d79
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961510"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318912"
 ---
 # <a name="logicalor-struct"></a>Структура logical_or
 
@@ -35,7 +35,7 @@ template <class Type = void>
 struct logical_or : public binary_function<Type, Type, bool>
 {
     bool operator()(const Type& Left, const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator||
 template <>
@@ -44,16 +44,18 @@ struct logical_or<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) || std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *Тип*, *T*, *U* любой тип, поддерживающий `operator||` , принимающий операнды указанного или выводимого типа.
 
-*Слева* левый операнд операции логического сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
+*Слева*<br/>
+Левый операнд операции логического сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *T*.
 
-*Справа* правый операнд операции логического сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
+*Справа*<br/>
+Правый операнд операции логического сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -112,14 +114,14 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
-\* Output:
+/* Output:
 Original deque:
- d1 = ( true true false false true false false )
+d1 = ( true true false false true false false )
 Original deque:
- d2 = ( false false false true true true true )
+d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
- d3 = ( true true false true true true true )
-*\
+d3 = ( true true false true true true true )
+*/
 
 ```
 

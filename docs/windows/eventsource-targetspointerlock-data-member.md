@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Eventsource::targetspointerlock_ | Документы Microsoft
+title: Элемент данных Eventsource::targetspointerlock_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb3c2131331521dab1b8264b696206d953762851
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45c85502b7d0768f5fa3e275393a4071fd8649e4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873112"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598869"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>Элемент данных EventSource::targetsPointerLock_
-Синхронизирует доступ к членам внутренней данных даже в том случае, когда добавляются обработчики событий для этого события EventSource, удален или вызван.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-Wrappers::SRWLock targetsPointerLock_;  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс EventSource](../windows/eventsource-class.md)
+
+Синхронизирует доступ к членам внутренние данные, даже когда обработчики событий для данного **EventSource** был добавлен, удален или вызванный.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+Wrappers::SRWLock targetsPointerLock_;
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс EventSource](../windows/eventsource-class.md)

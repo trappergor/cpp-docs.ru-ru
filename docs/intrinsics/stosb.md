@@ -1,5 +1,5 @@
 ---
-title: __stosb | Документы Microsoft
+title: __stosb | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,79 +18,83 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16c9ede6d815c2c697c1ed03dc10476f6dd3bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61050f8fc1924f6d2a143893af5bd1918df94394
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324578"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895192"
 ---
 # <a name="stosb"></a>__stosb
-**Блок, относящийся только к системам Microsoft**  
-  
- Создает инструкцию строка хранилища (`rep stosb`).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __stosb(   
-   unsigned char* Dest,   
-   unsigned char Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- [выходной] `Dest`  
- Целевой для операции.  
-  
- [in] `Data`  
- Для хранения данных.  
-  
- [in] `Count`  
- Длина блока байтов для записи.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__stosb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-  
- **Файл заголовка** \<intrin.h >  
-  
-## <a name="remarks"></a>Примечания  
- Результат, не является знаком `Data` записывается в блок `Count` байтов в `Dest` строку.  
-  
- Эта процедура доступна только как встроенная функция.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// stosb.c  
-// processor: x86, x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
+
+**Блок, относящийся только к системам Microsoft**
+
+Создает инструкцию строка магазина (`rep stosb`).
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __stosb(
+   unsigned char* Dest,
+   unsigned char Data,
+   size_t Count
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
+[выходной] `Dest`  
+Целевой для операции.
+
+[in] `Data`  
+Сохраняемые данные.
+
+[in] `Count`  
+Длина блока байтов для записи.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__stosb`|x86, x64|
+
+**Файл заголовка** \<intrin.h >
+
+## <a name="remarks"></a>Примечания
+
+Результатом является то, что символ `Data` записывается в блок `Count` байтов в `Dest` строку.
+
+Эта процедура доступна только как встроенная функция.
+
+## <a name="example"></a>Пример
+
+```C
+// stosb.c
+// processor: x86, x64
+#include <stdio.h>
+#include <intrin.h>
+
 #pragma intrinsic(__stosb)  
-  
+
 int main()  
-{  
-    unsigned char c = 0x40; /* '@' character */  
-    unsigned char s[] = "*********************************";  
-  
-    printf_s("%s\n", s);  
-    __stosb((unsigned char*)s+1, c, 6);  
-    printf_s("%s\n", s);  
-  
-}  
+{
+    unsigned char c = 0x40; /* '@' character */
+    unsigned char s[] = "*********************************";
+
+    printf_s("%s\n", s);
+    __stosb((unsigned char*)s+1, c, 6);
+    printf_s("%s\n", s);
+
+}
 ```  
-  
-```Output  
+
+```Output
 *********************************  
 *@@@@@@**************************  
 ```  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

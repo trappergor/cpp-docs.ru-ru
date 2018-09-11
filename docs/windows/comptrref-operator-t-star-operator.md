@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f03dfeb75d11ffabe7ab9e29c29474b392dc8bda
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 54c370029b4e6fc90d1f210164de7d7ecb22f3a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466804"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595423"
 ---
 # <a name="comptrrefoperator-t-operator"></a>Оператор ComPtrRef::operator T*
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-operator T*();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Возвращает значение [ptr_](../windows/comptrrefbase-ptr-data-member.md) данными-членом текущего **ComPtrRef** объекта.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Comptrref-класс](../windows/comptrref-class.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+operator T*();
+```
+
+## <a name="remarks"></a>Примечания
+
+Возвращает значение [ptr_](../windows/comptrrefbase-ptr-data-member.md) данными-членом текущего **ComPtrRef** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtrRef](../windows/comptrref-class.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

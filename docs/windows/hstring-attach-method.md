@@ -1,5 +1,5 @@
 ---
-title: Метод HString::Attach | Документы Microsoft
+title: Метод HString::Attach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738c44c11c69f8d2479335ce3effc4135dfe0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7bdf5c17fc9364eb69d86f067bbb00cf40ebc5d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876070"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595320"
 ---
 # <a name="hstringattach-method"></a>Метод HString::Attach
-Связывает указанный объект HString с текущий объект HString.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-void Attach(  
-       HSTRING hstr  
+
+Связывает указанный **HString** объект с текущим **HString** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void Attach(
+       HSTRING hstr
        ) throw()  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `hstr`  
- Существующий объект HString.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HString](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*HSTR*  
+Существующий **HString** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HString](../windows/hstring-class.md)

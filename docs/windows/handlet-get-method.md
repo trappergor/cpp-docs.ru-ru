@@ -1,5 +1,5 @@
 ---
-title: Метод HandleT::Get | Документы Microsoft
+title: Метод HandleT::Get | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb1f4432b112daf6a0f00a4568302a75b6b40f3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e987be9ae368917a70e8dcbb5796bb12228da81b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882970"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592359"
 ---
 # <a name="handletget-method"></a>Метод HandleT::Get
-Возвращает значение базового дескриптора.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-typename HandleTraits::Type Get() const;  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Дескриптор.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HandleT](../windows/handlet-class.md)
+
+Возвращает значение базового дескриптора.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+typename HandleTraits::Type Get() const;
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Дескриптор.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HandleT](../windows/handlet-class.md)

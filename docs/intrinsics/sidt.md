@@ -1,5 +1,5 @@
 ---
-title: __sidt | Документы Microsoft
+title: __sidt | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e41b0edd9b2a3da1046888f16a55e19f2d9f20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 202e982d30fd0877814fa0c0fe967091057f920f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324516"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685981"
 ---
 # <a name="sidt"></a>__sidt
 **Блок, относящийся только к системам Microsoft**  
   
- Сохраняет значение регистра таблицы дескриптора прерываний (IDTR) в заданном расположении памяти.  
+ Сохраняет значение регистра таблицу дескриптора прерываний (IDTR) в указанной области памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,18 +40,18 @@ void __sidt(
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in] `Destination`|Указатель на область памяти, в котором хранится IDTR.|  
+|[in] `Destination`|Указатель на область памяти, где хранится IDTR.|  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__sidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__sidt`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- `__sidt` Функция эквивалентна `SIDT` инструкции компьютера. Дополнительные сведения, выполните поиск документа, «руководство разработчика архитектуры Intel программного обеспечения, том 2: Справочник набор инструкций,» в [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__sidt` Функция эквивалентна `SIDT` инструкции компьютера. Дополнительные сведения см. в документе «Руководство разработчика архитектуры Intel программного обеспечения, том 2: ссылка на набор инструкций,» в [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

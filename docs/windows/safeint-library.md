@@ -1,5 +1,5 @@
 ---
-title: Библиотека SafeInt | Документы Microsoft
+title: Библиотека SafeInt | Документация Майкрософт
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -13,31 +13,32 @@ helpviewer_keywords:
 - libraries, SafeInt
 - SafeInt library
 ms.assetid: 5321e875-67c5-49d7-9650-85a876552d14
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25090eefe4f07181490f650ea4d14add9fc6ac75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 567190aafad10577bb715e2d1c7e651faa2e280b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892056"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613611"
 ---
 # <a name="safeint-library"></a>Библиотека SafeInt
-Библиотека SafeInt помогает предотвратить переполнение емкости целочисленных переменных, которые могут появиться, когда приложение выполняет математических операций.  
-  
-## <a name="in-this-section"></a>В этом разделе  
-  
-|Раздел|Описание|  
-|-------------|-----------------|  
-|[Класс SafeInt](../windows/safeint-class.md)|Этот класс обеспечивает защиту от переполнения целое число со знаком.|  
-|[Функции SafeInt](../windows/safeint-functions.md)|Функции, которые можно использовать без создания `SafeInt` объекта.|  
-|[Класс SafeIntException](../windows/safeintexception-class.md)|Класс исключений, связанных с `SafeInt` класса.|  
-  
-## <a name="related-sections"></a>Связанные разделы  
-  
-|Раздел|Описание|  
-|-------------|-----------------|  
+
+**SafeInt** library помогает предотвращать переполнение емкости целочисленных переменных, которые могут возникнуть в ходе выполнения математических операций приложением.
+
+## <a name="in-this-section"></a>В этом разделе
+
+|Раздел|Описание:|
+|-------------|-----------------|
+|[Класс SafeInt](../windows/safeint-class.md)|Этот класс обеспечивает защиту от переполнение емкости целочисленных переменных.|
+|[Функции SafeInt](../windows/safeint-functions.md)|Функции, которые могут использоваться без создания **SafeInt** объекта.|
+|[Класс SafeIntException](../windows/safeintexception-class.md)|Класс исключений, связанных с **SafeInt** класса.|
+
+## <a name="related-sections"></a>Связанные разделы
+
+|Раздел|Описание:|
+|-------------|-----------------|
 |[Справочник по языку C++](../cpp/cpp-language-reference.md)|Ссылка и концептуальное содержимое для языка C++.|

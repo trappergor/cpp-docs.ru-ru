@@ -1,5 +1,5 @@
 ---
-title: Оператор WeakRef::operator&amp; оператор | Документы Microsoft
+title: Оператор WeakRef::operator&amp; оператора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c8221b405618b1879f4e4c865115a227eb09857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f8bb81ca1591fc398b1d0814fca918309169e82c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890122"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600988"
 ---
 # <a name="weakrefoperatoramp-operator"></a>Оператор WeakRef::operator&amp; оператор
-Возвращает объект ComPtrRef, представляющий текущий объект WeakRef.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
+
+Возвращает `ComPtrRef` , представляющий текущий **WeakRef** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 Details::ComPtrRef<WeakRef> operator&() throw()  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Объект ComPtrRef, представляющий текущий объект WeakRef.  
-  
-## <a name="remarks"></a>Примечания  
- Это внутренний вспомогательный оператор, который не предназначен для использования в коде.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс WeakRef](../windows/weakref-class.md)
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Объект `ComPtrRef` , представляющий текущий **WeakRef** объекта.
+
+## <a name="remarks"></a>Примечания
+
+Это внутренний вспомогательный оператор, который не предназначен для использования в коде.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс WeakRef](../windows/weakref-class.md)

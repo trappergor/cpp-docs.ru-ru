@@ -1,7 +1,7 @@
 ---
-title: ЗАКАНЧИВАЕТСЯ (MASM) | Документы Microsoft
+title: ЗАКАНЧИВАЕТСЯ (MASM) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0c8712ef0c5820e91f3050d6ea1ed5fa861550a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5a198a3577769699ddae4a320429844ef7d46f3a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050289"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692925"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
-Отмечает конец сегмента, структуры или объединения *имя* ранее начинались с [СЕГМЕНТ](../../assembler/masm/segment.md), [СТРУКТУРЫ](../../assembler/masm/struct-masm.md), [ОБЪЕДИНЕНИЕ](../../assembler/masm/union.md), или упрощенный сегмент директива.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-name ENDS  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Помечает конец сегмента, структуры или объединения *имя* ранее начавшиеся с [СЕГМЕНТ](../../assembler/masm/segment.md), [СТРУКТУРЫ](../../assembler/masm/struct-masm.md), [UNION](../../assembler/masm/union.md), или упрощенный сегмент директива.
+
+## <a name="syntax"></a>Синтаксис
+
+> Имя имеет РАСШИРЕНИЕ
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

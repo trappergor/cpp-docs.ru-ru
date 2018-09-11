@@ -1,5 +1,5 @@
 ---
-title: Прокрутка, расположение, сортировка и поиск в элементах управления списками | Документы Microsoft
+title: Прокрутка, расположение, сортировка и поиск в элементах управления списками | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f9ff7afa5440e0d0b83240b1248c33ab0d385e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 073a11b8b798e9b94164a79af2340b0ad133d957
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379194"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197826"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Прокрутка, расположение, сортировка и поиск в элементах управления "Список"
-Список элементов управления ([CListCtrl](../mfc/reference/clistctrl-class.md)) могут быть прокручены по умолчанию. Дополнительные сведения см. в разделе [позиции прокрутки](http://msdn.microsoft.com/library/windows/desktop/bb774736) в Windows SDK и [прокрутки](../mfc/reference/clistctrl-class.md#scroll) функции-члена.  
+Список элементов управления ([CListCtrl](../mfc/reference/clistctrl-class.md)) являются прокручиваемыми по умолчанию. Дополнительные сведения см. в разделе [позиции прокрутки](/windows/desktop/Controls/using-list-view-controls) в пакете SDK для Windows и [прокрутки](../mfc/reference/clistctrl-class.md#scroll) функция-член.  
   
- Можно вызвать `CListCtrl` функции-члены для упорядочения элементов списка в элементе управления сортировки элементов и найдите определенные товары. Дополнительные сведения см. в разделе [размещение, сортировка и поиск](http://msdn.microsoft.com/library/windows/desktop/bb774736) в Windows SDK и [CListCtrl](../mfc/reference/clistctrl-class.md) элементы [расположение](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , и [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
+ Вы можете вызвать `CListCtrl` функции-члены для упорядочения элементов списка в элементе управления, отсортировать элементы и найти определенные товары. Дополнительные сведения см. в разделе [размещение, сортировка и поиск](https://msdn.microsoft.com/library/windows/desktop/bb774736) в пакете SDK для Windows и [CListCtrl](../mfc/reference/clistctrl-class.md) члены [расположение](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , и [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
   
 ## <a name="see-also"></a>См. также  
  [Использование CListCtrl](../mfc/using-clistctrl.md)   

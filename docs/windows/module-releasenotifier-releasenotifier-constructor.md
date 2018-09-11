@@ -1,5 +1,5 @@
 ---
-title: 'Конструктор Module::releasenotifier:: releasenotifier | Документы Microsoft'
+title: 'Конструктор Module::releasenotifier:: releasenotifier | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf21e1abc88c0fac0b9d20653fdb45c3706466d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4ab2d5d03516147acda38ea2133d7445695de80
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882473"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598792"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Конструктор Module::ReleaseNotifier::ReleaseNotifier
-Инициализирует новый экземпляр класса Module::ReleaseNotifier.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-ReleaseNotifier(bool release) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `release`  
- `true` Удаление этого экземпляра при вызове метода Release; `false` не удалить этот экземпляр.  
-  
-## <a name="exceptions"></a>Исключения  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)
+
+Инициализирует новый экземпляр класса **Module::ReleaseNotifier** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+ReleaseNotifier(bool release) throw();
+```
+
+### <a name="parameters"></a>Параметры
+
+*release*  
+**значение true,** удалить данный экземпляр, когда `Release` вызове метода; **false** не удалить этот экземпляр.
+
+## <a name="exceptions"></a>Исключения
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1093 | Документы Microsoft
+title: Неустранимая ошибка C1093 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e7bfe845c35b31f5a1b0833c600e6947be8592
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226354"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202030"
 ---
 # <a name="fatal-error-c1093"></a>Неустранимая ошибка C1093
-Сбой вызова API «имени функции» вызова расположение: «текст из среды выполнения»  
+
+> Вызов API "*имя_функции*«сбой»*расположение вызова*": "*текст из среды выполнения*"  
   
- Не удалось выполнить вызов функции .NET. ***текст из среды выполнения*** может или не предоставляется средой выполнения СОМ.  
+Сбой вызова функции .NET. *Текст из среды выполнения* строки могут или не предоставляется средой выполнения СОМ.  
   
- Дополнительные сведения о системных сообщений об ошибках см. в файле winerror.h системы, и [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351).
+Дополнительные сведения о системных сообщений об ошибках, см. в файле winerror.h системы, и [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).

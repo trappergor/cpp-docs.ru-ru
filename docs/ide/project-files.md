@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327233"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578620"
 ---
 # <a name="project-files"></a>Файлы проекта
 Файл проекта Visual C++ представляет собой XML-файл с расширением VCXPROJ, который содержит сведения, необходимые для сборки проекта Visual C++.  
   
 ## <a name="example"></a>Пример  
- Для создания приведенного ниже примера файла VCXPROJ было задано значение **Консольное приложение Win32** в диалоговом окне **Новый проект**. Для обработки файла проекта используйте средство msbuild.exe из командной строки или команду **Сборка** в [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Этот пример невозможно обработать из-за отсутствия требуемого исходного файла и файла заголовков.) Дополнительные сведения об XML-элементах в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ Для создания приведенного ниже примера файла VCXPROJ было задано значение **Консольное приложение Win32** в диалоговом окне **Новый проект**. Для обработки файла проекта используйте средство msbuild.exe из командной строки или команду **Сборка** в IDE. (Этот пример невозможно обработать из-за отсутствия требуемого исходного файла и файла заголовков.) Дополнительные сведения об XML-элементах в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e11cd204c2c89c7fca9a824450d6136eb65520db
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 98609ce9cc15940586d626c52d24b5ca506164e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461188"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598998"
 ---
 # <a name="comptrgetaddressof-method"></a>Метод ComPtr::GetAddressOf
-Извлекает адрес [ptr_](../windows/comptr-ptr-data-member.md) элемент данных, который содержит указатель на интерфейс, представленный этим **ComPtr**.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-T* const* GetAddressOf() const;  
-T** GetAddressOf();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Адрес переменной.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ComPtr](../windows/comptr-class.md)
+
+Извлекает адрес [ptr_](../windows/comptr-ptr-data-member.md) элемент данных, который содержит указатель на интерфейс, представленный этим **ComPtr**.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+T* const* GetAddressOf() const;
+T** GetAddressOf();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Адрес переменной.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtr](../windows/comptr-class.md)

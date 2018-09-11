@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::condition_variable::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca85765d6fed21938a61f52f25c1a377ec43c499
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0e4d31a93ac8e0f7785ea567821c0ac6b0ad6a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965182"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109840"
 ---
 # <a name="conditionvariable-class"></a>Класс condition_variable
 
@@ -51,13 +51,13 @@ class condition_variable;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[condition_variable](#condition_variable)|Создает объект `condition_variable`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор condition_variable.|
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable`.|
@@ -125,9 +125,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Параметры
 
-*LCK* объект [unique_lock\<mutex >](../standard-library/unique-lock-class.md) объекта.
+*LCK*<br/>
+Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Пред* любое выражение, возвращающее **true** или **false**.
+*Пред*<br/>
+Любое выражение, возвращающее **true** или **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -159,11 +161,14 @@ bool wait_for(
 
 ### <a name="parameters"></a>Параметры
 
-*LCK* объект [unique_lock\<mutex >](../standard-library/unique-lock-class.md) объекта.
+*LCK*<br/>
+Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Rel_time* объект `chrono::duration` , указывающий количество времени до истечения которого поток выходит из спящего режима.
+*Rel_time*<br/>
+Объект `chrono::duration`, указывающий количество времени до активации потока.
 
-*Пред* любое выражение, возвращающее **true** или **false**.
+*Пред*<br/>
+Любое выражение, возвращающее **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -214,11 +219,14 @@ bool wait_until(
 
 ### <a name="parameters"></a>Параметры
 
-*LCK* объект [unique_lock\<mutex >](../standard-library/unique-lock-class.md) объекта.
+*LCK*<br/>
+Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Abs_time* объект [chrono::time_point](../standard-library/time-point-class.md) объекта.
+*Abs_time*<br/>
+Объект [chrono::time_point](../standard-library/time-point-class.md).
 
-*Пред* любое выражение, возвращающее **true** или **false**.
+*Пред*<br/>
+Любое выражение, возвращающее **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

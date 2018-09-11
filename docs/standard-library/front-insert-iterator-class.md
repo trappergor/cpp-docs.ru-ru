@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: fcd8d623b4ce16f7f7af671d06dae568ec2a53d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207615"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318206"
 ---
 # <a name="frontinsertiterator-class"></a>Класс front_insert_iterator
 
@@ -40,7 +40,8 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-*Контейнер* тип контейнера на передний план, из которых элементы должны быть вставлены с `front_insert_iterator`.
+*Контейнер*<br/>
+Тип контейнера, в переднюю часть которого итератор `front_insert_iterator` вставит элементы.
 
 ## <a name="remarks"></a>Примечания
 
@@ -48,20 +49,20 @@ class front_insert_iterator;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[front_insert_iterator](#front_insert_iterator)|Создает итератор, может вставлять элементы с передней стороны указанного объекта контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[container_type](#container_type)|Тип, представляющий контейнер, в переднюю часть которого будет осуществляться вставка.|
 |[reference](#reference)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в переднюю часть.|
 |[оператор++](#op_add_add)|Увеличивает `front_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
@@ -110,9 +111,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L2 is: ( 40 10 20 ).
-*\
+*/
 ```
 
 ## <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator
@@ -125,7 +126,8 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Параметры
 
-*_Cont* объект контейнера, в котором `front_insert_iterator` вставляет элементы.
+*_Cont*<br/>
+Объект контейнера, в который `front_insert_iterator` вставляет элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -162,19 +164,19 @@ int main( )
 
    // Alternatively, one may use the template function
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 30;
+*Iter = 30;
 
    cout << "After the front insertions, the list L is:\n ( ";
    for ( L_Iter = L.begin( ) ; L_Iter != L.end( ); L_Iter++)
       cout << *L_Iter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L is:
- ( -2 0 2 4 6 8 10 12 14 16 ).
+( -2 0 2 4 6 8 10 12 14 16 ).
 After the front insertions, the list L is:
- ( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
-*\
+( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
+*/
 ```
 
 ## <a name="op_star"></a>  front_insert_iterator::operator\*
@@ -220,7 +222,7 @@ int main( )
    cout << ")." << endl;
 
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 20;
+*Iter = 20;
 
    // Alternatively, you may use
    front_inserter ( L ) = 30;
@@ -230,12 +232,12 @@ int main( )
       cout << *L_Iter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L is:
- ( -2 0 2 4 6 8 10 12 14 16 ).
+( -2 0 2 4 6 8 10 12 14 16 ).
 After the front insertions, the list L is:
- ( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
-*\
+( 30 20 -2 0 2 4 6 8 10 12 14 16 ).
+*/
 ```
 
 ## <a name="op_add_add"></a>  front_insert_iterator::operator++
@@ -271,11 +273,11 @@ int main( )
 
    list<int> L1;
    front_insert_iterator<list<int> > iter ( L1 );
- *iter = 10;
+*iter = 10;
    iter++;
- *iter = 20;
+*iter = 20;
    iter++;
- *iter = 30;
+*iter = 30;
    iter++;
 
    list <int>::iterator vIter;
@@ -284,9 +286,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L1 is: ( 30 20 10 ).
-*\
+*/
 ```
 
 ## <a name="op_eq"></a>  front_insert_iterator::operator=
@@ -301,7 +303,8 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Параметры
 
-*Val* значение для привязки к контейнеру.
+*Val*<br/>
+Значение, которое должно быть присвоено контейнеру.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -332,11 +335,11 @@ int main( )
 
    list<int> L1;
    front_insert_iterator<list<int> > iter ( L1 );
- *iter = 10;
+*iter = 10;
    iter++;
- *iter = 20;
+*iter = 20;
    iter++;
- *iter = 30;
+*iter = 30;
    iter++;
 
    list <int>::iterator vIter;
@@ -345,9 +348,9 @@ int main( )
       cout << *vIter << " ";
    cout << ")." << endl;
 }
-\* Output:
+/* Output:
 The list L1 is: ( 30 20 10 ).
-*\
+*/
 ```
 
 ## <a name="reference"></a>  front_insert_iterator::reference
@@ -373,9 +376,9 @@ int main( )
 
    list<int> L;
    front_insert_iterator<list<int> > fiivIter( L );
- *fiivIter = 10;
- *fiivIter = 20;
- *fiivIter = 30;
+*fiivIter = 10;
+*fiivIter = 20;
+*fiivIter = 30;
 
    list<int>::iterator LIter;
    cout << "The list L is: ( ";
@@ -388,10 +391,10 @@ int main( )
    cout << "The first element in the list L is: "
         << RefFirst << "." << endl;
 }
-\* Output:
+/* Output:
 The list L is: ( 30 20 10 ).
 The first element in the list L is: 30.
-*\
+*/
 ```
 
 ## <a name="see-also"></a>См. также

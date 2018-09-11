@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e79ac918c1a549c7972d5feccf4f470473f98c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f0994eb1b0293bb31fdb1cd4659256b978ebd69d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852923"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219369"
 ---
 # <a name="coledropsource-class"></a>Класс COleDropSource
 Разрешает передачу данных можно перетаскивать в качестве целевого объекта перетаскивания.  
@@ -63,7 +63,7 @@ class COleDropSource : public CCmdTarget
   
  Дополнительные сведения об операциях перетаскивания и вставки через интерфейсы OLE, см. в статье [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
- Дополнительные сведения см. в разделе [IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource) в пакете Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -109,7 +109,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию для предоставления отзывов о что произойдет при перетаскивании на этом этапе. Реализация по умолчанию использует курсоры по умолчанию OLE. Дополнительные сведения об операциях перетаскивания и вставки через интерфейсы OLE, см. в статье [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
- Дополнительные сведения см. в разделе [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), и [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [IDropSource::GiveFeedback](/windows/desktop/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover), и [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) в пакете Windows SDK.  
   
 ##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  Вызывается структурой при возникновении события, может начать операцию перетаскивания, например нажатие левой кнопки мыши.  

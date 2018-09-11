@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e786dc176558900223b2b482a7161abe5e0d84d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6e921faf20fd7c2bbac967bf73b62dd33c8220a4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336277"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688232"
 ---
 # <a name="canimatectrl-class"></a>Canimatectrl-класс
 Предоставляет функциональные возможности стандартного элемента управления анимациями Windows.  
@@ -54,13 +54,13 @@ class CAnimateCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimateCtrl::CAnimateCtrl](#canimatectrl)|Создает объект `CAnimateCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimateCtrl::Close](#close)|Закрывает AVI-файла.|  
 |[CAnimateCtrl::Create](#create)|Создает элемент управления анимации и присоединяет его к `CAnimateCtrl` объекта.|  
@@ -147,7 +147,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- Задает стиль элемента управления анимации. Применить любое сочетание windows, стили, описанные в разделе «Примечания» и стили элемента управления анимации, описано в разделе [стили элемента управления анимации](http://msdn.microsoft.com/library/windows/desktop/bb761886) в пакете Windows SDK.  
+ Задает стиль элемента управления анимации. Применить любое сочетание windows, стили, описанные в разделе «Примечания» и стили элемента управления анимации, описано в разделе [стили элемента управления анимации](/windows/desktop/Controls/animation-control-styles) в пакете Windows SDK.  
   
  *Rect*  
  Указывает положение и размер элемента управления анимации. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
   
  Если вы хотите использовать windows расширенных стилей с элементом управления анимации, вызвать [CreateEx](#createex) вместо `Create`.  
   
- Помимо стилей окна, перечисленных выше можно применить один или несколько стилей элемента управления анимации в элемент управления анимации. Пакет SDK Windows, Дополнительные сведения см. в разделе на [стили элемента управления анимации](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
+ Помимо стилей окна, перечисленных выше можно применить один или несколько стилей элемента управления анимации в элемент управления анимации. Пакет SDK Windows, Дополнительные сведения см. в разделе на [стили элемента управления анимации](/windows/desktop/Controls/animation-control-styles).  
   
 ### <a name="example"></a>Пример  
   См. в примере [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
@@ -193,13 +193,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
- Задает стиль элемента управления анимации. Применить любое сочетание окна и Стили анимации элемента управления, описанных в [стили элемента управления анимации](http://msdn.microsoft.com/library/windows/desktop/bb761886) в пакете Windows SDK.  
+ Задает стиль элемента управления анимации. Применить любое сочетание окна и Стили анимации элемента управления, описанных в [стили элемента управления анимации](/windows/desktop/Controls/animation-control-styles) в пакете Windows SDK.  
   
  *Rect*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
   
  *pParentWnd*  
  Указатель на окно, которое является родительским для элемента управления.  
@@ -224,7 +224,7 @@ BOOL IsPlaying() const;
  Значение TRUE, если воспроизводится AVI-файла; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="open"></a>  CAnimateCtrl::Open  
  Вызывайте эту функцию, чтобы открыть AVI-файла и отобразить его первый кадр.  

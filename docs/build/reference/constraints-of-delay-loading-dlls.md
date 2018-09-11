@@ -1,5 +1,5 @@
 ---
-title: Ограничения библиотек DLL, загружаемых с задержкой | Документы Microsoft
+title: Ограничения библиотек DLL, загружаемых с задержкой | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532d5ba64288fb70b19f10386186c0b520e67661
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 213a7c32204b8f96969b4ad7a94683916b66db10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375920"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200846"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Ограничения библиотек DLL, загружаемых с задержкой
 Существует ряд ограничений, связанных с отложенной загрузкой файлов импорта.  
@@ -32,7 +32,7 @@ ms.locfileid: "32375920"
   
 -   [Привязка](../../build/reference/binding-imports.md) записи переадресованных точек не поддерживается.  
   
--   Отложенная загрузка библиотеки DLL может изменить поведение процесса, если в точке входа библиотеки DLL, загружаемой с задержкой, осуществляется инициализация процессов. Другой случай — это статическая память TLS (локальная память потока), объявляемая с помощью [__declspec(thread)](../../cpp/thread.md), она не работает, если библиотека DLL загружается с помощью `LoadLibrary`. Тем не менее, как в статических библиотеках DLL, так и в библиотеках DLL, загружаемых с задержкой, доступна для использования динамическая память TLS, реализуемая с помощью функций `TlsAlloc`, `TlsFree`, `TlsGetValue` и `TlsSetValue`.  
+-   Отложенная загрузка библиотеки DLL может изменить поведение процесса, если в точке входа библиотеки DLL, загружаемой с задержкой, осуществляется инициализация процессов. Другие варианты включают статическая память TLS (локальное хранилище потока), объявленные с помощью [__declspec(thread)](../../cpp/thread.md), который не обрабатывается, когда библиотека DLL загружается через `LoadLibrary`. Тем не менее, как в статических библиотеках DLL, так и в библиотеках DLL, загружаемых с задержкой, доступна для использования динамическая память TLS, реализуемая с помощью функций `TlsAlloc`, `TlsFree`, `TlsGetValue` и `TlsSetValue`.  
   
 -   Статические (глобальные) указатели импортируемых функций потребуется инициализировать заново после первого вызова соответствующих функций. Причина в том, что при первом вызове указатель функции указывает на преобразователь.  
   
@@ -42,10 +42,10 @@ ms.locfileid: "32375920"
   
 ## <a name="see-also"></a>См. также  
  [Поддержка компоновщика для DLLs, загружаемых с задержкой](../../build/reference/linker-support-for-delay-loaded-dlls.md)   
- [Функции LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
- [Функция GetModuleHandle](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
- [Функция GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
- [Функция TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801.aspx)   
- [Функция TlsFree](http://msdn.microsoft.com/library/windows/desktop/ms686804.aspx)   
- [Функция TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812.aspx)   
- [Функция TlsSetValue](http://msdn.microsoft.com/library/windows/desktop/ms686818.aspx)
+ [Функции LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
+ [Функция GetModuleHandle](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
+ [GetProcAddress-функция](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
+ [Функцию TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
+ [Функция TlsFree](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
+ [Функция TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   
+ [Функция TlsSetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

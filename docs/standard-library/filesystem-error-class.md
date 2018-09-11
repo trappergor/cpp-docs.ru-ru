@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1acf34f8478bc075b53780f1e48df125c22608b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ec0a30a8ee193db362efa375f6e9d0f5746a56f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845496"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105306"
 ---
 # <a name="filesystemerror-class"></a>Класс filesystem_error
 
@@ -33,9 +33,31 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс служит базовым классом для всех исключений, уведомляющих об ошибке в функциях \<filesystem>. Он хранит объект типа string (называемый здесь mymesg в целях демонстрации). Он также хранит два объекта типа path, называемые mypval1 и mypval2.
+Этот класс служит базовым классом для всех исключений, уведомляющих об ошибке в функциях \<filesystem>. Он хранит объект типа `string`, который называется `mymesg` здесь в целях надстройках. Он также хранит два объекта типа `path`, который называется `mypval1` и `mypval2`.
 
-## <a name="filesystemerrorfilesystemerror"></a>filesystem_error::filesystem_error
+### <a name="constructors"></a>Конструкторы
+
+|Конструктор|Описание|
+|-|-|
+|[filesystem_error](#filesystem_error)|Создает `filesystem_error` сообщения.|
+
+### <a name="member-functions"></a>Функции-члены
+
+|Функция-член|Описание|
+|-|-|
+|[path1](#path1)|Возвращает `mypval1`.|
+|[path2](#path2)|Возвращает `mypval2`.|
+|[что](#what)|Возвращает указатель на `NTBS`.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<filesystem >
+
+**Пространство имен:** std::experimental::filesystem
+
+## <a name="filesystem_error"></a> filesystem_error::filesystem_error
+
+Первый конструктор создает сообщение из *what_arg* и *ec*. Второй конструктор также создает сообщение из *pval1*, который хранит в `mypval1`. Третий конструктор также создает сообщение из *pval1*, сохраняет ее в `mypval1`и из *pval2*, который хранит в `mypval2`.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -51,37 +73,43 @@ filesystem_error(const string& what_arg,
     error_code ec);
 ```
 
-Первый конструктор создает сообщение из what_arg и ec. Второй конструктор также создает сообщение из pval1, которое он сохраняет в mypval1. Третий конструктор также создает сообщение из pval1, которое он сохраняет в mypval1, и из pval2, которое он сохраняет в mypval2.
+### <a name="parameters"></a>Параметры
 
-## <a name="filesystemerrorpath1"></a>filesystem_error::path1
+*what_arg*<br/>
+Указанное сообщение.
+
+*EC*<br/>
+Указанный код ошибки.
+
+*mypval1*<br/>
+Дополнительно указанным параметром сообщения.
+
+*mypval2*<br/>
+Дополнительно оповещены с помощью указанного параметра.
+
+## <a name="path1"></a> filesystem_error::path1
+
+Функция-член возвращает значение `mypval1`.
 
 ```cpp
 const path& path1() const noexcept;
 ```
 
-Функция-член возвращает значение mypval1.
+## <a name="path2"></a> filesystem_error::path2
 
-## <a name="filesystemerrorpath2"></a>filesystem_error::path2
+Функция-член возвращает значение `mypval2`.
 
 ```cpp
 const path& path2() const noexcept;
 ```
 
-Функция-член возвращает значение mypval2.
+## <a name="what"></a> filesystem_error::What
 
-## <a name="filesystemerrorwhat"></a>filesystem_error::what
+Функция-член возвращает указатель на `NTBS`, предпочтительно составлены из `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, и `mypval2.native_string()`.
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-Функция-член возвращает указатель на строку NTBS, предпочтительно состоящую из runtime_error::what(), system_error::what(), mymesg, mypval1.native_string() и mypval2.native_string().
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<filesystem >
-
-**Пространство имен:** std::experimental::filesystem
 
 ## <a name="see-also"></a>См. также
 

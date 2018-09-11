@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964474"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102620"
 ---
 # <a name="basicistream-class"></a>Класс basic_istream
 
@@ -143,13 +143,13 @@ setstate(state);
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_istream](#basic_istream)|Создает объект типа `basic_istream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[gcount](#gcount)|Возвращает число символов, считанных во время последнего неформатированного ввода.|
 |[get](#get)|Считывает один или несколько символов из входного потока.|
@@ -168,7 +168,7 @@ setstate(state);
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор>>](#op_gt_gt)|Вызывает функцию для входного потока или считывает форматированные данные из входного потока.|
 |[оператор=](#op_eq)|Назначает `basic_istream` справа от оператора этому объекту. Это назначение перемещения с использованием ссылки `rvalue`, после которого не остается копии.|
@@ -193,11 +193,14 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf* объект типа [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Объект типа [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **true** Если это стандартный поток; в противном случае **false**.
+*_Isstd*<br/>
+**значение true,** Если это стандартный поток; в противном случае **false**.
 
-*правом* A `basic_istream` копируемый объект.
+*right*<br/>
+Объект `basic_istream` для копирования.
 
 ### <a name="remarks"></a>Примечания
 
@@ -277,15 +280,20 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>Параметры
 
-*число* число символов для чтения из `strbuf`.
+*count*<br/>
+Число символов для чтения из `strbuf`.
 
-*Delim* символ, который должен завершать чтение, если обнаруживается перед *число*.
+*Delim*<br/>
+Символ, который должен завершать чтение, если обнаруживается перед *число*.
 
-*STR* строка для записи.
+*str*<br/>
+Строка, в которую должна выполняться запись.
 
-*CH* символ для получения.
+*CH*<br/>
+Символ для получения.
 
-*strbuf* буфер для записи.
+*strbuf*<br/>
+Буфер, в который должна выполняться запись.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -356,11 +364,14 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>Параметры
 
-*число* число символов для чтения из `strbuf`.
+*count*<br/>
+Число символов для чтения из `strbuf`.
 
-*Delim* символ, который должен завершать чтение, если обнаруживается перед *число*.
+*Delim*<br/>
+Символ, который должен завершать чтение, если обнаруживается перед *число*.
 
-*STR* строка для записи.
+*str*<br/>
+Строка, в которую должна выполняться запись.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -414,9 +425,11 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>Параметры
 
-*число* число пропускаемых из текущего элементов позицию чтения.
+*count*<br/>
+Количество пропускаемых элементов от текущей позиции чтения.
 
-*Delim* элемент, который, будучи обнаруженным до счетчика, приводит к `ignore` для возврата и все элементы после *Delim* для чтения.
+*Delim*<br/>
+Элемент, который, будучи обнаруженным до счетчика, приводит к `ignore` для возврата и все элементы после *Delim* для чтения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -474,11 +487,14 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Pfn* указателя функции.
+*pfn-имени*<br/>
+Указатель функции.
 
-*strbuf* объект типа `stream_buf`.
+*strbuf*<br/>
+Объект типа `stream_buf`.
 
-*Val* значение для чтения из потока.
+*Val*<br/>
+Значение для чтения из потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -521,7 +537,7 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-извлекает поле и преобразует его в числовое значение путем вызова `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Здесь **InIt** определяется как `istreambuf_iterator` \< **Elem**, **Tr**>, и `val` имеет тип **long**,**unsigned long**, или **void \***  при необходимости.
+извлекает поле и преобразует его в числовое значение путем вызова `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Здесь **InIt** определяется как `istreambuf_iterator` \< **Elem**, **Tr**>, и `val` имеет тип **long**, **unsigned long**, или **void** <strong>\*</strong> при необходимости.
 
 Если преобразованное значение невозможно представить как тип `val`, эта функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). В любом случае эта функция возвращает **\*this**.
 
@@ -584,7 +600,8 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `rvalue` ссылка `basic_ifstream` объекта.
+*right*<br/>
+Ссылка `rvalue` на объект `basic_ifstream`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -653,7 +670,8 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Параметры
 
-*CH* символ для помещения обратно в поток.
+*CH*<br/>
+Символ для помещения обратно в поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -702,9 +720,11 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>Параметры
 
-*STR* массив, из которого должны считываться символы.
+*str*<br/>
+Массив, из которого должны считываться символы.
 
-*число* число символов для чтения.
+*count*<br/>
+Число символов для чтения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -764,9 +784,11 @@ streamsize readsome(
 
 ### <a name="parameters"></a>Параметры
 
-*STR* массив, в котором `readsome` хранит символы, которые считывает.
+*str*<br/>
+Массив, в котором `readsome` сохраняет символы, которые считывает.
 
-*число* число символов для чтения.
+*count*<br/>
+Число символов для чтения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -819,11 +841,14 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Параметры
 
-*POS* абсолютное положение, в которую следует переместить указатель чтения.
+*торговых терминалов*<br/>
+Абсолютное положение, в которое следует переместить указатель чтения.
 
-*Отключение* смещение для перемещения указателя чтения относительно *способом*.
+*Отключение*<br/>
+Смещение для перемещения указателя чтения относительно *способом*.
 
-*способ* один из [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) перечисления.
+*способ*<br/>
+Одно из перечислений [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -887,7 +912,8 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* ссылка lvalue на `basic_istream` объекта.
+*right*<br/>
+Ссылка lvalue на объект `basic_istream`.
 
 ### <a name="remarks"></a>Примечания
 

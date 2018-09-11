@@ -1,5 +1,5 @@
 ---
-title: Встроенные функции _InterlockedIncrement | Документы Microsoft
+title: Встроенные функции _InterlockedIncrement | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598365e4a5439bc17baaed5e603f30c10c49bc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337984"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575792"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Встроенные функции _InterlockedIncrement
 **Блок, относящийся только к системам Microsoft**  
   
- Предоставляют встроенную поддержку компилятора для функции Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedIncrement](http://msdn.microsoft.com/library/ms683614.aspx) функции.  
+ Предоставляют встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement) функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -116,9 +116,9 @@ __int64 _InterlockedIncrement64_nf(
   
 ## <a name="requirements"></a>Требования  
   
-|Встроенная функция|Архитектура|Верхний колонтитул|  
+|Встроенная функция|Архитектура|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<Intrin.h >|  
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<Intrin.h >|  
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<Intrin.h >|  
   
 ## <a name="remarks"></a>Примечания  
@@ -128,14 +128,14 @@ __int64 _InterlockedIncrement64_nf(
   
  На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенная функция с суффиксом `_nf` («без границ») не действует как ограничитель памяти.  
   
- Переменная, на который указывает параметр `lpAddend`, должна быть выровнена по границе 32 разрядов; в противном случае эта функция не выполняется на многопроцессорных системах x86 и любой системе не-x86. Дополнительные сведения см. в разделе [выравнивание](../cpp/align-cpp.md).  
+ Переменная, на который указывает параметр `lpAddend`, должна быть выровнена по границе 32 разрядов; в противном случае эта функция не выполняется на многопроцессорных системах x86 и любой системе не-x86. Дополнительные сведения см. в разделе [выровнять](../cpp/align-cpp.md).  
   
  Функция Win32 объявляется в `Wdm.h` или `Ntddk.h`.  
   
  Эти процедуры доступны только как встроенные объекты.  
   
 ## <a name="example"></a>Пример  
- Пример использования `_InterlockedIncrement`, в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Пример использования `_InterlockedIncrement`, см. в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

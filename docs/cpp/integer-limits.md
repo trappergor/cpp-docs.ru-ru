@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9a516ef366952f9d55e16891dfcb7bb81fac7e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6f49e224520751e08ba6aa7e37932314e11ef8a5
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406023"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315192"
 ---
 # <a name="integer-limits"></a>Пределы целых чисел
 
 **Блок, относящийся только к системам Microsoft**
 
-Ограничения для целочисленных типов представлены в следующей таблице. Эти ограничения также заданы в стандартном файле заголовка < limits.h >.
+Ограничения для целочисленных типов представлены в следующей таблице. Эти ограничения также заданы в стандартном файле заголовка \<limits.h >.
 
 ## <a name="limits-on-integer-constants"></a>Ограничения для целочисленных констант
 
@@ -59,4 +59,5 @@ ms.locfileid: "39406023"
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
- [Пределы чисел с плавающей запятой](../cpp/floating-limits.md)  
+
+[Пределы чисел с плавающей запятой](../cpp/floating-limits.md)

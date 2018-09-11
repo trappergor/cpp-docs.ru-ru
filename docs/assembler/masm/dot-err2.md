@@ -1,7 +1,7 @@
 ---
-title: . ERR2 | Документы Microsoft
+title: . ERR2 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed2d4127340634d398d1bd1db76475e00032a9d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5a23dae5eaecc73625b7580eda01d8e9b97421a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051934"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689462"
 ---
 # <a name="err2"></a>.ERR2
-[. Ошибка](../../assembler/masm/dot-err.md) проверяется при каждом проходе сборки, если блок **параметр: SETIF2** — **значение TRUE.**  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-.ERR2 [[message]]  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+[. ERR](../../assembler/masm/dot-err.md) проверяется при каждом проходе сборки, если блок **параметр: SETIF2** является **значение TRUE.**
+
+## <a name="syntax"></a>Синтаксис
+
+> . ERR2 [[сообщение]]
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

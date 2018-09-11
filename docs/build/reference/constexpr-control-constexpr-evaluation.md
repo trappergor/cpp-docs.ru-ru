@@ -1,5 +1,5 @@
 ---
-title: -constexpr (вычислении constexpr управления) | Документы Microsoft
+title: -constexpr (управлять вычислением constexpr) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,37 +19,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 475702792686a3de8d1ae52bd9e40ef113c49da1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373963"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202578"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (вычислении constexpr управления)  
+# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (управлять вычислением constexpr)  
   
-Используйте **/constexpr** параметры компилятора, параметры управления `constexpr` оценки во время компиляции.  
+Используйте **/constexpr** параметры компилятора, параметры управления **constexpr** оценки во время компиляции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-> /constexpr:Depth*N*  
-> /constexpr:backtrace*N*  
-> /constexpr:Steps*N*  
+> **/constexpr:Depth**<em>N</em>  
+> **/constexpr:backtrace**<em>N</em>  
+> **/constexpr:Steps**<em>N</em>  
   
 ## <a name="arguments"></a>Аргументы  
   
-**Глубина *** N*  
-Ограничение глубины рекурсивной `constexpr` вызов к функции *N* уровней. Значение по умолчанию — 512.  
+**Глубина**<em>N</em>  
+Ограничение глубины рекурсивной **constexpr** вызов к функции *N* уровней. Значение по умолчанию — 512.  
   
-**backtrace *** N*  
-Показать до *N* `constexpr` оценок в диагностике. Значение по умолчанию — 10.  
+**backtrace**<em>N</em>  
+Показать до *N* **constexpr** оценок в системе диагностики. Значение по умолчанию — 10.  
   
-**шаги *** N*  
-Завершение `constexpr` оценки *N* действия. Значение по умолчанию — 100 000.  
+**действия**<em>N</em>  
+Завершить **constexpr** оценки после *N* действия. Значение по умолчанию равно 100 000.  
   
 ## <a name="remarks"></a>Примечания  
   
-**/Constexpr** управляют вычисление во время компиляции компилятор `constexpr` выражения. Этапы вычисления, уровней рекурсии и глубину backtrace являются контроле, чтобы запретить компилятору тратит слишком много времени на `constexpr` оценки. Дополнительные сведения о `constexpr` элемент языка. в разделе [constexpr (C++)](../../cpp/constexpr-cpp.md).  
+**/Constexpr** компилятора параметры управляют вычисление во время компиляции **constexpr** выражения. Чтобы запретить компилятору выполнять тратит слишком много времени на осуществляется по оценке продуктов, уровней рекурсии и глубина backtrace **constexpr** оценки. Дополнительные сведения о **constexpr** элемента языка, см. в разделе [constexpr (C++)](../../cpp/constexpr-cpp.md).  
 
 **/Constexpr** параметры будут доступны, начиная с Visual Studio 2015.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "32373963"
   
 2. В разделе **свойства конфигурации**, разверните **C/C++** папку и выберите **командной строки** страницу свойств.  
   
-3. Введите любой **/constexpr** параметры компилятора в **Дополнительные параметры** поле. Выберите **ОК** или **применить** для сохранения изменений.  
+3. Введите любой **/constexpr** параметров компилятора в **Дополнительные параметры** поле. Выберите **ОК** или **применить** для сохранения изменений.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   

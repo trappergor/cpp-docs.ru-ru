@@ -1,5 +1,5 @@
 ---
-title: HString::Operator ==-оператор | Документы Microsoft
+title: Оператор HString::Operator ==-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,55 +15,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5386636a348fdf7162e9b6d63f0e6dbc109bd655
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed3a93ac964841028b252aa09a6b70c18ed202e9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876544"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602992"
 ---
 # <a name="hstringoperator-operator"></a>Оператор HString::Operator==
-Указывает, равны ли два параметра.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-inline bool operator==(  
-               const HString& lhs,   
-               const HString& rhs) throw()  
-  
-inline bool operator==(  
-                const HString& lhs,   
-                const HStringReference& rhs) throw()  
-  
-inline bool operator==(  
-                const HStringReference& lhs,   
-                const HString& rhs) throw()  
-  
-inline bool operator==(  
-                 const HSTRING& lhs,   
-                 const HString& rhs) throw()  
-  
-inline bool operator==(  
-                 const HString& lhs,   
+
+Указывает, равны ли два параметра.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline bool operator==(
+               const HString& lhs,
+               const HString& rhs) throw()
+
+inline bool operator==(
+                const HString& lhs,
+                const HStringReference& rhs) throw()
+
+inline bool operator==(
+                const HStringReference& lhs,
+                const HString& rhs) throw()
+
+inline bool operator==(
+                 const HSTRING& lhs,
+                 const HString& rhs) throw()
+
+inline bool operator==(
+                 const HString& lhs,
                  const HSTRING& rhs) throw()  
-  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `lhs`  
- Первый параметр для сравнения. `lhs` может быть объект HString или HStringReference или дескриптор HSTRING.  
-  
- `rhs`  
- Второй параметр для сравнения.`rhs` может быть объект HString или HStringReference или дескриптор HSTRING.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `true` Если `lhs` и `rhs` параметры равны; в противном случае — `false`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HString](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*lhs*  
+Первый параметр для сравнения. *LHS* может быть **HString** или `HStringReference` объекта или дескриптором HSTRING.
+
+*правая часть*  
+Второй параметр для сравнения. *rhs* может быть **HString** или `HStringReference` объекта или дескриптором HSTRING.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если *lhs* и *rhs* параметры равны; в противном случае — значение **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HString](../windows/hstring-class.md)

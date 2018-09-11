@@ -1,7 +1,7 @@
 ---
-title: Ошибка построения проекта PRJ0022 | Документы Microsoft
+title: Ошибка построения проекта PRJ0022 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bcd5064fd28900076d98a72890316627268fb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0af331149c28a3ede9436ee7b5dc7ddb39952ed4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317873"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211983"
 ---
 # <a name="project-build-error-prj0022"></a>Ошибка построения проекта PRJ0022
-Неизвестный инструмент, свойство «свойство» содержит неверное имя файла «файл».  
-  
- Имя файла ***файл***, указанный в свойстве ***свойство***, недопустим.  
-  
- Использовать Неизвестный или недопустимый макрос.  
-  
- В разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md) сведения о том, как получить доступ к свойствам проекта.
+
+> Неизвестный инструмент, свойство "*свойство*«содержит неверное имя файла»*файл*".
+
+Имя файла *файл* указанный в свойстве *свойство* был недопустимым.
+
+Возможно, был использован неизвестный или недопустимый макрос.
+
+См. в разделе [параметр свойств проекта Visual C++](../../ide/working-with-project-properties.md) сведения о том, как получить доступ к свойствам проекта.

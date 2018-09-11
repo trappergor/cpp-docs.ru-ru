@@ -37,15 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337077"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573372"
 ---
 # <a name="irowsetinfoimpl-class"></a>Класс IRowsetInfoImpl
-Предоставляет реализацию для [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx) интерфейс.  
+Предоставляет реализацию для [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -92,7 +92,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetInfo::GetProperties](https://msdn.microsoft.com/library/ms719611.aspx) в *справочнике программиста OLE DB*. 
+ См. в разделе [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 Возвращает указатель интерфейса на набор строк, к которому применяется закладка.  
@@ -106,7 +106,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/library/ms721145.aspx) в *справочнике программиста OLE DB*. *IOrdinal* параметр должен быть столбца закладки. 
+ См. в разделе [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) в *справочнике программиста OLE DB*. *IOrdinal* параметр должен быть столбца закладки. 
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 Возвращает указатель интерфейса объекта (команды или сеанса), создавшего этот набор строк.  
@@ -119,7 +119,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetInfo::GetSpecification](https://msdn.microsoft.com/library/ms716746.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод используется с [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) извлекаемого свойства из объекта источника данных.  

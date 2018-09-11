@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c77c8cc20588df8329951167db502a65a67b3756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 424d98236b37dabe1c671a9890f049063a8e50a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849344"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212280"
 ---
 # <a name="coletemplateserver-class"></a>Класс COleTemplateServer
 Используется для OLE-серверов визуального редактирования, серверов автоматизации и контейнеров связей (приложений, поддерживающих ссылки на внедряемые объекты).  
@@ -106,7 +106,7 @@ void ConnectTemplate(
  Указывает, является ли один экземпляр приложения может поддерживать несколько экземпляров. Значение TRUE, если несколько экземпляров приложения запускаются для каждого запроса для создания объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) в пакете Windows SDK.  
+ Дополнительные сведения см. в разделе [раздел CLSID](/windows/desktop/com/clsid-key-hklm) в пакете Windows SDK.  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Отменяет регистрацию шаблона связанный документ.  
@@ -162,7 +162,7 @@ void UpdateRegistry(
   
  Сведения в аргументах *rglpszRegister* и *rglpszOverwrite* записывается в реестр посредством вызова [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Сведения по умолчанию, который регистрируется, когда два аргумента имеют значение NULL, подходит для большинства приложений. Сведения о структуре информации из этих аргументов, см. в разделе `AfxOleRegisterServerClass`.  
   
- Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC HIERSVR](../../visual-cpp-samples.md)   

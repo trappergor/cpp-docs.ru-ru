@@ -1,5 +1,5 @@
 ---
-title: __halt | Документы Microsoft
+title: __halt | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36790eb1df098e6f663a30894c29a9ea14587b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee82433b45e89dd4f2f8039a9690d343723b96a6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327207"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686676"
 ---
 # <a name="halt"></a>__halt
 **Блок, относящийся только к системам Microsoft**  
   
- Останавливает микропроцессора, пока не произойдет прерывание включена, немаскируемое прерывание (NMI) или сброс.  
+ Приостанавливает микропроцессор, пока не произойдет прерывание включена, немаскируемое прерывание (NMI) или сброс событий.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,12 +40,12 @@ void __halt( void );
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__halt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__halt`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- `__halt` Функция эквивалентна `HLT` инструкции компьютера и доступен только в режиме ядра. Дополнительные сведения, выполните поиск документа, «руководство разработчика архитектуры Intel программного обеспечения, том 2: Справочник набор инструкций,» в [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__halt` Функция эквивалентна `HLT` инструкции компьютера и доступна только в режиме ядра. Дополнительные сведения см. в документе «Руководство разработчика архитектуры Intel программного обеспечения, том 2: ссылка на набор инструкций,» в [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

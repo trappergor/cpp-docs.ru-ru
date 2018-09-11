@@ -15,32 +15,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d099f8c527708f937bcbb9978c2dd72ab7a2961
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce03608e796b21d8b6d87565490cc48c6d712d81
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460988"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594391"
 ---
 # <a name="composablebase-class"></a>Класс ComposableBase
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template<  
-   typename FactoryInterface = IInspectable  
->  
-class ComposableBase;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *FactoryInterface*  
-  
-## <a name="remarks"></a>Примечания  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<
+   typename FactoryInterface = IInspectable
+>
+class ComposableBase;
+```
+
+### <a name="parameters"></a>Параметры
+
+*FactoryInterface*
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d54cafaa2f0b4d3db79e8b4c8fc381457952794
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e21473c887c6f51406eb72d3cbb03a08df9e01f6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208335"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608949"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Практическое руководство. Преобразование различных типов строк
 В этом разделе показано, как для преобразования различных типов строк Visual C++ в другие строки. Рассматриваемые типы строк включают `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), и <xref:System.String?displayProperty=fullName>. В любом случае будет создана копия строки при преобразовании в новый тип. Любые изменения, внесенные в новой строке не влияет на исходную строку и наоборот.  
@@ -35,7 +35,7 @@ ms.locfileid: "39208335"
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // convert_from_char.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -115,9 +115,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Вывод  
-  
-```  
+```Output  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
 Hello, World! (_bstr_t)  
@@ -137,7 +135,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // convert_from_wchar_t.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -238,11 +236,9 @@ int main()
     Console::WriteLine("{0}", systemstring);  
     delete systemstring;  
 }  
-```  
+```   
   
-### <a name="output"></a>Вывод  
-  
-```  
+```Output  
 Hello, World! (wchar_t *)  
 Hello, World! (char *)  
 Hello, World! (_bstr_t)  
@@ -262,7 +258,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // convert_from_bstr_t.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -339,11 +335,9 @@ int main()
     Console::WriteLine("{0}", systemstring);  
     delete systemstring;  
 }  
-```  
+```   
   
-### <a name="output"></a>Вывод  
-  
-```  
+```Output  
 Hello, World! (_bstr_t)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -363,7 +357,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // convert_from_ccombstr.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -452,9 +446,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Вывод  
-  
-```  
+```Output  
 Hello, World! (CComBSTR)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -476,7 +468,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // convert_from_cstring.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -498,7 +490,7 @@ int main()
     cout << origa << " (CStringA)" << endl;  
 ```  
   
-```  
+```cpp  
 // Set up a wide character CStringW string.  
 CStringW origw("Hello, World!");  
 wcout << (LPCTSTR)origw << _T(" (CStringW)") << endl;  
@@ -587,7 +579,7 @@ Console::WriteLine("{0}", systemstring);
 delete systemstring;  
 ```  
   
-```  
+```cpp  
     // Convert a wide character CStringW to a   
     // System::String.  
     String ^systemstringw = gcnew String(origw);  
@@ -595,11 +587,9 @@ delete systemstring;
     Console::WriteLine("{0}", systemstringw);  
     delete systemstringw;  
 }  
-```  
+```   
   
-### <a name="output"></a>Вывод  
-  
-```  
+```Output  
 Hello, World! (CStringA)  
 Hello, World! (CStringW)  
 Hello, World! (char *)  
@@ -623,7 +613,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // convert_from_basic_string.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -698,9 +688,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Вывод  
-  
-```  
+```Output  
 Hello, World! (basic_string)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  
@@ -720,7 +708,7 @@ Hello, World! (System::String)
   
 ### <a name="code"></a>Код  
   
-```  
+```cpp  
 // convert_from_system_string.cpp  
 // compile with: /clr /link comsuppw.lib  
   
@@ -806,9 +794,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Вывод  
-  
-```  
+```Output  
 Hello, World! (System::String)  
 Hello, World! (char *)  
 Hello, World! (wchar_t *)  

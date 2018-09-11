@@ -1,5 +1,5 @@
 ---
-title: ODL | Документы Microsoft
+title: ODL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,62 +17,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f376c2294dde0cc2fe538d3896aa28a9d136627
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877700"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221047"
 ---
 # <a name="odl"></a>odl
-Определяет интерфейс как интерфейс языка описания объектов (ODL). Компилятор MIDL не требует **odl** атрибут; она распознается только для совместимости с более старых ODL-файлы.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-[odl]  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Odl** языка C++ имеет ту же функциональность, что [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) языка MIDL.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// cpp_attr_ref_odl.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLIb")];  
-  
-[odl, oleautomation, dual, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMyInterface  
-{  
-   HRESULT x();  
-};  
-  
-[coclass, uuid("00000000-0000-0000-0000-000000000002")]  
-class cmyClass : public IMyInterface  
-{  
-public:  
-   HRESULT x(){}  
-};  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|`interface`|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
+
+Определяет интерфейс как интерфейс языка описания объекта (ODL). Компилятор MIDL не требует **odl** атрибут; он распознается только в целях совместимости с более старой ODL-файлы.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[odl]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Odl** атрибут C++ имеет ту же функциональность, что [odl](/windows/desktop/Midl/odl) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+```cpp
+// cpp_attr_ref_odl.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLIb")];
+
+[odl, oleautomation, dual, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMyInterface
+{
+   HRESULT x();
+};
+
+[coclass, uuid("00000000-0000-0000-0000-000000000002")]
+class cmyClass : public IMyInterface
+{
+public:
+   HRESULT x(){}
+};
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**interface**|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  

@@ -1,5 +1,5 @@
 ---
-title: idl_module | Документы Microsoft
+title: idl_module | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,96 +17,100 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11547a3fb1bd46a1e2edb8ce9dd0a6547464f796
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882528"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220469"
 ---
 # <a name="idlmodule"></a>idl_module
-Указывает точку входа в DLL-файл.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      [ idl_module (   
-   name=module_name,   
-   dllname=dll,   
-   uuid="uuid",   
-   helpstring="help text",   
-   helpstringcontext=helpcontextID,   
-   helpcontext=helpcontext,   
-   hidden,   
-   restricted  
-) ]  
-function declaration  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- **name**  
- Определяемое пользователем имя для блока кода, который будет отображаться в IDL-файл.  
-  
- **имя DLL-библиотеки** (необязательно)  
- DLL-файл, содержащий экспорта.  
-  
- `uuid` (необязательно)  
- Уникальный идентификатор.  
-  
- **HelpString** (необязательно)  
- Строка символов, используемый для описания библиотеки типов.  
-  
- **helpstringcontext** (необязательно)  
- Идентификатор раздела справки в .hlp или CHM-файле.  
-  
- **helpcontext** (необязательно)  
- Идентификатор справки для этой библиотеки типов.  
-  
- **hidden** (необязательно)  
- Параметр, который препятствует отображению библиотеки. Дополнительные сведения см. в описании атрибута MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
-  
- ***ограниченные*** (необязательно)  
- Члены библиотеки не может вызываться произвольным образом. Дополнительные сведения см. в описании атрибута MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
-  
- *объявление функции*  
- Функция, которая будет определена.  
-  
-## <a name="remarks"></a>Примечания  
- `idl_module` Языка c++ позволяет указать точку входа в DLL-файл, который можно импортировать из DLL-файла.  
-  
- **Idl_module** атрибут имеет функциональность, аналогичную [модуль](http://msdn.microsoft.com/library/windows/desktop/aa367099) языка MIDL.  
-  
- Никаких действий можно экспортировать из COM-объект, который можно экспортировать из DLL-файла, поместив точки входа библиотеки DLL в блок library IDL-файл.  
-  
- Ваш необходимо использовать `idl_module` в два этапа. Во-первых необходимо определить пары имя/DLL. Затем, при использовании `idl_module` для указания точки входа, укажите имя и дополнительные атрибуты.  
-  
-## <a name="example"></a>Пример  
- Следующий код показывает, как использовать `idl_module` атрибута:  
-  
-```  
-// cpp_attr_ref_idl_module.cpp  
-// compile with: /LD  
-[idl_quote("midl_pragma warning(disable:2461)")];  
-[module(name="MyLibrary"), idl_module(name="MyLib", dllname="xxx.dll")];  
-[idl_module(name="MyLib"), entry(4), usesgetlasterror]  
-void FuncName(int i);  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|В любом месте|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
- [entry](../windows/entry.md)   
+
+Указывает точку входа в DLL-файл.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ idl_module (
+   name=module_name,
+   dllname=dll,
+   uuid="uuid",
+   helpstring="help text",
+   helpstringcontext=helpcontextID,
+   helpcontext=helpcontext,
+   hidden,
+   restricted
+) ]
+function declaration
+```
+
+### <a name="parameters"></a>Параметры
+
+*name*  
+Определяемое пользователем имя для блока кода, который будет отображаться в IDL-файла.
+
+*dllname* (необязательно)  
+DLL-файл, содержащий экспорта.
+
+*UUID* (необязательно)  
+Уникальный идентификатор.
+
+*HelpString* (необязательно)  
+Строка символов, используемый для описания библиотеки типов.
+
+*helpstringcontext* (необязательно)  
+Идентификатор раздела справки в файл с расширением .hlp или .chm.
+
+*HelpContext* (необязательно)  
+Идентификатор справки для этой библиотеки типов.
+
+*скрытые* (необязательно)  
+Параметр, который запрещает отображение библиотеки. См. в разделе [скрытые](/windows/desktop/Midl/hidden) описании атрибута MIDL Дополнительные сведения.
+
+*ограниченные* (необязательно)  
+Элементы библиотеки нельзя вызывать произвольным образом. См. в разделе [ограниченных](/windows/desktop/Midl/restricted) описании атрибута MIDL Дополнительные сведения.
+
+*объявление функции*  
+Функция, которую вы создадите.
+
+## <a name="remarks"></a>Примечания
+
+**Idl_module** C++ атрибут позволяет указать точку входа в DLL-файл, который можно импортировать из файла DLL.
+
+**Idl_module** атрибут имеет функциональность, аналогичную [модуль](/windows/desktop/Midl/module) описании атрибута MIDL.
+
+Никаких действий можно экспортировать из COM-объект, который можно экспортировать из DLL-файл, поместив точки входа библиотеки DLL в блок library IDL-файле.
+
+Ваш необходимо использовать **idl_module** в два этапа. Во-первых необходимо определить пару имя/DLL. Затем, при использовании **idl_module** для указания точки входа, укажите имя и дополнительные атрибуты.
+
+## <a name="example"></a>Пример
+
+Ниже показано, как использовать **idl_module** атрибут:
+
+```cpp
+// cpp_attr_ref_idl_module.cpp
+// compile with: /LD
+[idl_quote("midl_pragma warning(disable:2461)")];
+[module(name="MyLibrary"), idl_module(name="MyLib", dllname="xxx.dll")];
+[idl_module(name="MyLib"), entry(4), usesgetlasterror]
+void FuncName(int i);
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|В любом месте|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Изолированные атрибуты](../windows/stand-alone-attributes.md)  
+[entry](../windows/entry.md)  

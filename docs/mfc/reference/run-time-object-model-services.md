@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2704e39ffced414e84236302c9ad31586226dd8d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027690"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197476"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 Классы [CObject](../../mfc/reference/cobject-class.md) и [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) инкапсулировать несколько служб объектов, включая доступ к сведениям о классе среды выполнения, сериализации и динамическое создание объектов. Все классы, производные от `CObject` наследуют эти функциональные возможности.  
@@ -87,7 +87,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  Указатель на заканчивающуюся нулем строку, содержащую имя функции или указывает порядковое значение функции. Если этот параметр имеет порядковый номер, он должен быть в младшее слово; старшее слово должно равняться нулю. Этот параметр должен быть в формате Юникод.  
    
 ### <a name="remarks"></a>Примечания  
- Используйте этот макрос для определения ли библиотеки стандартных элементов управления функция определяемое *proc* (вместо вызова метода [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
+ Используйте этот макрос для определения ли библиотеки стандартных элементов управления функция определяемое *proc* (вместо вызова метода [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
 ### <a name="requirements"></a>Требования  
  afxcomctl32.h, afxcomctl32.inl  
@@ -107,7 +107,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  Указатель на заканчивающуюся нулем строку, содержащую имя функции или указывает порядковое значение функции. Если этот параметр имеет порядковый номер, он должен быть в младшее слово; старшее слово должно равняться нулю. Этот параметр должен быть в формате Юникод.  
    
 ### <a name="remarks"></a>Примечания  
- Используйте этот макрос для определения ли библиотеки стандартных элементов управления функция определяемое *proc* (вместо вызова метода [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). Этот макрос версия Юникода AFX_COMCTL32_IF_EXISTS.  
+ Используйте этот макрос для определения ли библиотеки стандартных элементов управления функция определяемое *proc* (вместо вызова метода [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). Этот макрос версия Юникода AFX_COMCTL32_IF_EXISTS.  
    
 ### <a name="requirements"></a>Требования  
  afxcomctl32.h, afxcomctl32.inl  
@@ -330,7 +330,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     -   `afxRegApartmentThreading` Задает модель потоков в реестре ThreadingModel = подразделения.    
     -   `afxRegFreeThreading` Задает модель потоков в реестре ThreadingModel = Free.  
       
-         Вы можете объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` присвоить ThreadingModel = Both. См. в разделе [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) в пакете SDK для Windows, Дополнительные сведения по использованию потоков регистрации модели. 
+         Вы можете объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` присвоить ThreadingModel = Both. См. в разделе [InprocServer32](/windows/desktop/com/inprocserver32) в пакете SDK для Windows, Дополнительные сведения по использованию потоков регистрации модели. 
    
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4* , *b5*, *b6*, *b7*, *b8*  
  Компоненты класса CLSID.  
@@ -350,7 +350,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ### <a name="see-also"></a>См. также  
  [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [Раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [Раздел CLSID](/windows/desktop/com/clsid-key-hklm)
 
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
@@ -368,12 +368,12 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  Идентификатор ресурса строка, содержащая имя внешнего элемента управления.  
   
  *dwOleMisc*  
- Перечисление, содержащее один или несколько флагов. Дополнительные сведения об этом перечислении см. в разделе [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) в пакете Windows SDK.  
+ Перечисление, содержащее один или несколько флагов. Дополнительные сведения об этом перечислении см. в разделе [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) в пакете Windows SDK.  
    
 ### <a name="remarks"></a>Примечания  
  В дополнение к IMPLEMENT_OLECTLTYPE необходимо добавить declare_olectltype-макрос к объявлению класса элемента управления.  
   
- `GetUserTypeNameID` Функция-член возвращает строку ресурса, которая определяет класса элемента управления. `GetMiscStatus` Возвращает OLEMISC разряда для элемента управления. Это перечисление определяет коллекцию параметров, определяющих различные характеристики вашего элемента управления. Полное описание параметров OLEMISC, см. в разделе [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) в пакете Windows SDK.  
+ `GetUserTypeNameID` Функция-член возвращает строку ресурса, которая определяет класса элемента управления. `GetMiscStatus` Возвращает OLEMISC разряда для элемента управления. Это перечисление определяет коллекцию параметров, определяющих различные характеристики вашего элемента управления. Полное описание параметров OLEMISC, см. в разделе [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) в пакете Windows SDK.  
   
 > [!NOTE]
 >  Параметры по умолчанию, используемые автоматически ActiveX: OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, установке OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE и OLEMISC_RECOMPOSEONRESIZE.  

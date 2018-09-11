@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58765b254069524f28b5edd171c10da92ab2f457
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b8bb688a0a79c82d4a8baa13ef2841956b5e331
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956154"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101720"
 ---
 # <a name="basicstringbuf-class"></a>Класс basic_stringbuf
 
@@ -61,11 +61,14 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Alloc* класс распределителя.
+*Alloc*<br/>
+Класс распределителя.
 
-*Elem* тип основного элемента строки.
+*Elem*<br/>
+Тип основного элемента строки.
 
-*TR* признаки символа основному элементу строки.
+*Tr*<br/>
+Признаки символа, соответствующие основному элементу строки.
 
 ## <a name="remarks"></a>Примечания
 
@@ -79,13 +82,13 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[basic_stringbuf](#basic_stringbuf)|Создает объект типа `basic_stringbuf`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип является синонимом параметра-шаблона *Alloc*.|
 |[char_type](#char_type)|Связывает имя типа с параметром шаблона *Elem*.|
@@ -96,7 +99,7 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[overflow](#overflow)|Защищенная виртуальная функция, которая может вызываться при вставке нового символа в полный буфер.|
 |[pbackfail](#pbackfail)|Защищенная виртуальная функция-член пытается поместить элемент обратно во входной буфер, затем делает его текущим (на него указывает следующий указатель).|
@@ -135,9 +138,11 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Параметры
 
-*_Режим* одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим*<br/>
+Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*STR* объект типа [basic_string](../standard-library/basic-string-class.md).
+*str*<br/>
+Объект типа [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Примечания
 
@@ -179,7 +184,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta* символ для вставки в буфер, или `traits_type::eof`.
+*_Meta*<br/>
+Символ для вставки в буфер или `traits_type::eof`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -203,7 +209,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta* символ для вставки в буфер, или `traits_type::eof`.
+*_Meta*<br/>
+Символ для вставки в буфер или `traits_type::eof`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -238,11 +245,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* позиция для поиска относительно *_Way*. Дополнительные сведения см. в разделе [basic_stringbuf::off_type](#off_type).
+*_Off*<br/>
+Позиция для поиска относительно *_Way*. Дополнительные сведения см. в разделе [basic_stringbuf::off_type](#off_type).
 
-*_Way* отправной точкой для операций смещения. Возможные значения см. в разделе [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way*<br/>
+Начальная точка для операций смещения. Возможные значения см. в разделе [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Режим* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим*<br/>
+Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -274,9 +284,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>Параметры
 
-*_Sp* позиция для поиска.
+*_Sp*<br/>
+Позиция для поиска.
 
-*_Режим* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Режим*<br/>
+Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -300,7 +312,8 @@ void str(
 
 ### <a name="parameters"></a>Параметры
 
-*_Newstr* новую строку.
+*_Newstr*<br/>
+Новая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -388,7 +401,8 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Параметры
 
-*другие* basic_stringbuf, содержимое которого будет переключена с этого буфера basic_stringbuf.
+*other*<br/>
+Буфер basic_stringbuf, содержимое которого будет заменено содержимым этого буфера basic_stringbuf.
 
 ### <a name="remarks"></a>Примечания
 
@@ -402,7 +416,8 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Параметры
 
-*другие* basic_stringbuf, содержимое которого, включая признаки языкового стандарта, будут назначены функции stringbuf слева от оператора.
+*other*<br/>
+basic_stringbuf, содержимое которого, включая признаки языкового стандарта, будут назначены функции stringbuf слева от оператора.
 
 ### <a name="remarks"></a>Примечания
 

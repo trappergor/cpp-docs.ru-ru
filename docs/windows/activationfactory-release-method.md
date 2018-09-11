@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e3f05576b4122acd21f7a535172a1facd562ed4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2d21210455a19a45b5dfde3b5bb31920f33cb777
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466391"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605298"
 ---
 # <a name="activationfactoryrelease-method"></a>Метод ActivationFactory::Release
-Уменьшает счетчик ссылок текущего **ActivationFactory** объекта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHOD_(  
-   ULONG,  
-   Release  
-)();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ActivationFactory](../windows/activationfactory-class.md)
+
+Уменьшает счетчик ссылок текущего **ActivationFactory** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ActivationFactory](../windows/activationfactory-class.md)

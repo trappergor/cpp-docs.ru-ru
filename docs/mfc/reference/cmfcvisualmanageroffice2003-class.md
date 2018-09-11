@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfa31831fd2db73fb1154c20cd9d246efad4917
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 33054190e94ca7d136e319b2afc9e28c9080de05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854139"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677980"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Класс CMFCVisualManagerOffice2003
 `CMFCVisualManagerOffice2003` Придает приложению внешний вид Microsoft Office 2003.  
@@ -122,7 +122,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCVisualManagerOffice2003::DrawComboBorderWinXP](#drawcomboborderwinxp)|Рисует границу поле со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboBorderWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcomboborderwinxp).)|  
 |[CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|Рисует кнопку раскрывающегося списка поле со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Платформа вызывает этот метод при рисовании выделенный quick Настройка кнопки меню. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Этот метод вызывается платформой при рисовании команды выделенного меню. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Эта функция вызывается платформой при изменении системных цветов. (Переопределяет `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Указывает, что следует использовать глобальные темы Windows XP.|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Указывает, использует ли наглядный диспетчер глобальной темы.|  
   
@@ -451,10 +451,10 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="parameters"></a>Параметры  
  [in] *clrBaseGroupBackground*  
- Ссылка на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) для задания цвета фона.  
+ Ссылка на [COLORREF](/windows/desktop/gdi/colorref) для задания цвета фона.  
   
  [in] *clrBaseGroupBorder*  
- Ссылка на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) устанавливать цвет границы.  
+ Ссылка на [COLORREF](/windows/desktop/gdi/colorref) устанавливать цвет границы.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -466,7 +466,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , содержащий цвет выделения тон.  
+ Возвращает [COLORREF](/windows/desktop/gdi/colorref) , содержащий цвет выделения тон.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -491,7 +491,7 @@ virtual void GetTabFrameColors(
  Указатель на окно с вкладками, где кадр Рисует вкладку.  
   
  [out] *clrDark*  
- Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, где этот метод сохраняет цвет темной границей вкладки.  
+ Ссылку на [COLORREF](/windows/desktop/gdi/colorref) параметр, где этот метод сохраняет цвет темной границей вкладки.  
   
  [out] *clrBlack*  
  Ссылка на параметр COLORREF, где этот метод сохраняет цвет для границы вкладки окна. Цвет по умолчанию для границы черного.  
@@ -536,7 +536,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , содержащий цвет отключен.  
+ Возвращает [COLORREF](/windows/desktop/gdi/colorref) , содержащий цвет отключен.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -720,7 +720,7 @@ virtual void OnDrawBarGripper(
  Реализация по умолчанию этот метод отображает стандартные захвата. Чтобы настроить внешний вид захвата, переопределите этот метод в пользовательский класс, производный от [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) класса.  
   
 ##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 virtual BOOL OnDrawBrowseButton(
@@ -1095,7 +1095,7 @@ virtual COLORREF OnDrawPaneCaption(
  Прямоугольник, который указывает границы кнопок заголовка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста заголовка.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет текста заголовка.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1208,7 +1208,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Указатель на заголовок окна. Рисует наглядный диспетчер, это [класс CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста в заголовке окна.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) параметр, указывающий цвет текста в заголовке окна.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить внешний вид строки заголовка для категории ленты.  
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  Платформа вызывает этот метод как часть обработки WM_SYSCOLORCHANGE сообщения. Переопределите этот метод в производном наглядный диспетчер, если вы хотите выполнять пользовательский код, при изменении цветов в приложении.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

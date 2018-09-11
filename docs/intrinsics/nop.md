@@ -1,5 +1,5 @@
 ---
-title: __nop | Документы Microsoft
+title: __nop | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ada52595b5d811f68a05813d8df5c68d4a70c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 507f00b82a407b84d374d5f7b9fad8d29101a848
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328777"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682102"
 ---
 # <a name="nop"></a>__nop
 **Блок, относящийся только к системам Microsoft**  
   
- Создает специфический для платформы машинный код, который не выполняет никаких действий.  
+ Создает специфические для платформы машинный код, который не выполняет никаких действий.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,14 +39,14 @@ void __nop();
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__nop`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__nop`|x86, x64|  
   
  **Файл заголовка** \<intrin.h >  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   
 ## <a name="remarks"></a>Примечания  
- `__nop` Функция эквивалентна `NOP` инструкции компьютера. Дополнительные сведения, выполните поиск документа, «руководство разработчика архитектуры Intel программного обеспечения, том 2: Справочник набор инструкций,» в [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
+ `__nop` Функция эквивалентна `NOP` инструкции компьютера. Дополнительные сведения см. в документе «Руководство разработчика архитектуры Intel программного обеспечения, том 2: ссылка на набор инструкций,» в [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.  
   
 ## <a name="see-also"></a>См. также  
  [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   

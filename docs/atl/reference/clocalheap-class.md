@@ -21,129 +21,150 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0489d46ada0e68456f6ae16e7cd702c892a7b9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 54ded1ccb86a7580cf8f004c1f61a82c876eccbe
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880119"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760910"
 ---
 # <a name="clocalheap-class"></a>Класс CLocalHeap
-Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функций Win32 локальной куче.  
-  
+
+Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функций Win32 локальной куче.
+
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 class CLocalHeap : public IAtlMemMgr
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CLocalHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|  
-|[CLocalHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|  
-|[CLocalHeap::GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.|  
-|[CLocalHeap::Reallocate](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|  
-  
-## <a name="remarks"></a>Примечания  
- `CLocalHeap` реализует функции выделения памяти, с помощью функций Win32 локальной куче.  
-  
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CLocalHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
+|[CLocalHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|
+|[CLocalHeap::GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.|
+|[CLocalHeap::Reallocate](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|
+
+## <a name="remarks"></a>Примечания
+
+`CLocalHeap` реализует функции выделения памяти, с помощью функций Win32 локальной куче.
+
 > [!NOTE]
->  Локальная куча функции выполняются медленнее, чем другими функциями управления памятью и не предоставляют меньше возможностей. Таким образом, новые приложения должны использовать [функции кучи](http://msdn.microsoft.com/library/windows/desktop/aa366711). Они доступны в [CWin32Heap](../../atl/reference/cwin32heap-class.md) класса.  
-  
-## <a name="example"></a>Пример  
- См. в примере [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `IAtlMemMgr`  
-  
- `CLocalHeap`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlmem.h  
-  
-##  <a name="allocate"></a>  CLocalHeap::Allocate  
- Вызовите этот метод, чтобы выделить блок памяти.  
-  
+>  Локальная куча функции выполняются медленнее, чем другими функциями управления памятью и не предоставляют меньше возможностей. Таким образом, новые приложения должны использовать [функции кучи](/windows/desktop/Memory/heap-functions). Они доступны в [CWin32Heap](../../atl/reference/cwin32heap-class.md) класса.
+
+## <a name="example"></a>Пример
+
+См. в примере [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`IAtlMemMgr`
+
+`CLocalHeap`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlmem.h
+
+##  <a name="allocate"></a>  CLocalHeap::Allocate
+
+Вызовите этот метод, чтобы выделить блок памяти.
+
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *nBytes*  
- Запрошенное число байтов в новом блоке памяти.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на начало выделенного блока памяти.  
-  
-### <a name="remarks"></a>Примечания  
- Вызовите [CLocalHeap::Free](#free) или [CLocalHeap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.  
-  
- Реализовано с помощью [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) с параметром флага LMEM_FIXED.  
-  
-##  <a name="free"></a>  CLocalHeap::Free  
- Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*nBytes*  
+Запрошенное число байтов в новом блоке памяти.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает указатель на начало выделенного блока памяти.
+
+### <a name="remarks"></a>Примечания
+
+Вызовите [CLocalHeap::Free](#free) или [CLocalHeap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.
+
+Реализовано с помощью [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) с параметром флага LMEM_FIXED.
+
+##  <a name="free"></a>  CLocalHeap::Free
+
+Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.
+
 ```
 virtual void Free(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *p*  
- Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.  
-  
-### <a name="remarks"></a>Примечания  
- Реализовано с помощью [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
-  
-##  <a name="getsize"></a>  CLocalHeap::GetSize  
- Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*p*  
+Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.
+
+### <a name="remarks"></a>Примечания
+
+Реализовано с помощью [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree).
+
+##  <a name="getsize"></a>  CLocalHeap::GetSize
+
+Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.
+
 ```
 virtual size_t GetSize(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *p*  
- Указатель на область памяти, выделенную ранее данным диспетчером памяти.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает размер выделенного блока памяти в байтах.  
-  
-### <a name="remarks"></a>Примечания  
- Реализовано с помощью [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
-  
-##  <a name="reallocate"></a>  CLocalHeap::Reallocate  
- Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*p*  
+Указатель на область памяти, выделенную ранее данным диспетчером памяти.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает размер выделенного блока памяти в байтах.
+
+### <a name="remarks"></a>Примечания
+
+Реализовано с помощью [LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize).
+
+##  <a name="reallocate"></a>  CLocalHeap::Reallocate
+
+Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.
+
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
- *p*  
- Указатель на область памяти, выделенную ранее данным диспетчером памяти.  
-  
- *nBytes*  
- Запрошенное число байтов в новом блоке памяти.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на начало выделенного блока памяти.  
-  
-### <a name="remarks"></a>Примечания  
- Вызовите [CLocalHeap::Free](#free) для освобождения памяти, выделенной с помощью этого метода.  
-  
- Реализовано с помощью [LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742).  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../../atl/atl-class-overview.md)   
- [Класс CComHeap](../../atl/reference/ccomheap-class.md)   
- [Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)   
- [Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
- [Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)   
- [Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*p*  
+Указатель на область памяти, выделенную ранее данным диспетчером памяти.
+
+*nBytes*  
+Запрошенное число байтов в новом блоке памяти.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает указатель на начало выделенного блока памяти.
+
+### <a name="remarks"></a>Примечания
+
+Вызовите [CLocalHeap::Free](#free) для освобождения памяти, выделенной с помощью этого метода.
+
+Реализовано с помощью [LocalReAlloc](/windows/desktop/api/winbase/nf-winbase-localrealloc).
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Класс CComHeap](../../atl/reference/ccomheap-class.md)   
+[Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)   
+[Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
+[Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+[Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)

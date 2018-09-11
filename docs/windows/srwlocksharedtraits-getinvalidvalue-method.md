@@ -1,5 +1,5 @@
 ---
-title: Метод SRWLockSharedTraits::GetInvalidValue | Документы Microsoft
+title: Метод SRWLockSharedTraits::GetInvalidValue | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738d537aaa7cf4c257b95d1093e28441e828c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8721bd4754ff64fb6e7068da25775e165cae066
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890780"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584200"
 ---
 # <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>Метод SRWLockSharedTraits::GetInvalidValue
-Извлекает объект SRWLockSharedTraits, всегда является недопустимым.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Дескриптор объекта SRWLockSharedTraits.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Структура SRWLockSharedTraits](../windows/srwlocksharedtraits-structure.md)
+
+Извлекает **SRWLockSharedTraits** объект, который всегда является недопустимым.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Дескриптор **SRWLockSharedTraits** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Структура SRWLockSharedTraits](../windows/srwlocksharedtraits-structure.md)

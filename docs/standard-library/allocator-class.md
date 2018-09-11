@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4062ebc1e6c78bcd6e50adca4c372012030f75d0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: eceb6c0b4bb6a43616ceae66701e762e08713bf9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964513"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101084"
 ---
 # <a name="allocator-class"></a>Класс allocator
 
@@ -64,7 +64,8 @@ class allocator
 
 ### <a name="parameters"></a>Параметры
 
-*Тип* тип объекта, для которого выполняется хранения выделенных и освобожденных.
+*Тип*<br/>
+Тип объекта, для которого выполняется выделение и освобождение памяти.
 
 ## <a name="remarks"></a>Примечания
 
@@ -92,13 +93,13 @@ class allocator
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[allocator](#allocator)|Конструкторы, используемые для создания объектов `allocator`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[const_pointer](#const_pointer)|Тип, предоставляющий постоянный указатель на тип объекта, управляемого распределителем.|
 |[const_reference](#const_reference)|Тип, предоставляющий постоянную ссылку на тип объекта, управляемого распределителем.|
@@ -110,7 +111,7 @@ class allocator
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[address](#address)|Находит адрес объекта, значение которого задано.|
 |[allocate](#allocate)|Выделяет блок памяти, достаточный для хранения по крайней мере некоторого указанного числа элементов.|
@@ -122,7 +123,7 @@ class allocator
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор=](#op_eq)|Назначает один объект `allocator` другому объекту `allocator`.|
 
@@ -143,7 +144,8 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Val* константное или неконстантное значение объекта, адрес которого ищется.
+*Val*<br/>
+Константное или неконстантное значение объекта, адрес которого ищется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -193,7 +195,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 2 4 6 8 10 12 14 ).
+( 2 4 6 8 10 12 14 ).
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```
 
@@ -207,9 +209,11 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="parameters"></a>Параметры
 
-*число* количество элементов, для которых является достаточно места для выделения.
+*count*<br/>
+Количество элементов, для которых необходимо выделить достаточный объем памяти.
 
-*_Hint* константный указатель, который может помочь объекту allocator удовлетворить запрос хранилища, найдя адрес объекта, выделенного до запроса.
+*_Hint*<br/>
+Константный указатель, который может помочь объекту allocator удовлетворить запрос хранилища, найдя адрес объекта, выделенного до запроса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -268,7 +272,8 @@ allocator(const allocator<Other>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* объекта-распределителя, для копирования.
+*right*<br/>
+Объект allocator для копирования.
 
 ### <a name="remarks"></a>Примечания
 
@@ -388,7 +393,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 2 4 6 8 10 12 14 ).
+( 2 4 6 8 10 12 14 ).
 The integer's address found has a value of: 10.
 ```
 
@@ -442,7 +447,7 @@ int main( )
    // vcref = 150;
    // but the value of the first element could be modified through
    // its nonconst iterator and the const reference would remain valid
- *vfIter = 175;
+*vfIter = 175;
    cout << "The value of the element referred to by vcref,"
         <<"\n after nofication through its nonconst iterator, is: "
         << vcref << "." << endl;
@@ -451,11 +456,11 @@ int main( )
 
 ```Output
 The original vector v is:
- ( 100 200 300 400 500 600 700 ).
+( 100 200 300 400 500 600 700 ).
 The value of the element referred to by vref is: 100,
- the first element in the vector.
+the first element in the vector.
 The value of the element referred to by vcref,
- after nofication through its nonconst iterator, is: 175.
+after nofication through its nonconst iterator, is: 175.
 ```
 
 ## <a name="construct"></a>  allocator::construct
@@ -471,9 +476,11 @@ void construct(pointer ptr, _Other&&...   val);
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель на расположение, где будет создаваться объект.
+*ptr*<br/>
+Указатель места, в котором должен создаваться объект.
 
-*Val* значение, с которым инициализироваться создаваемый объект.
+*Val*<br/>
+Значение, с которым создаваемый объект будет инициализирован.
 
 ### <a name="remarks"></a>Примечания
 
@@ -523,9 +530,9 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 3 6 9 12 15 18 21 ).
+( 3 6 9 12 15 18 21 ).
 The modified vector v1 is:
- ( 3 7 9 12 15 18 21 ).
+( 3 7 9 12 15 18 21 ).
 ```
 
 ## <a name="deallocate"></a>  allocator::deallocate
@@ -538,9 +545,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель на первый объект для освобождения из хранилища.
+*ptr*<br/>
+Указатель на первый объект, который необходимо освободить из хранилища.
 
-*число* число объектов, который необходимо освободить из хранилища.
+*count*<br/>
+Количество объектов для освобождения из хранилища.
 
 ### <a name="remarks"></a>Примечания
 
@@ -560,7 +569,8 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>Параметры
 
-*PTR* указатель, обозначающий адрес уничтожаемого объекта.
+*ptr*<br/>
+Указатель, обозначающий адрес уничтожаемого объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -610,9 +620,9 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 2 4 6 8 10 12 14 ).
+( 2 4 6 8 10 12 14 ).
 The modified vector v1 is:
- ( 2 4 6 8 10 -99 14 ).
+( 2 4 6 8 10 -99 14 ).
 ```
 
 ## <a name="difference_type"></a>  allocator::difference_type
@@ -670,7 +680,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 0 2 4 6 8 10 12 14 ).
+( 0 2 4 6 8 10 12 14 ).
 Pointer v1PtrA addresses 4.
 Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.
@@ -756,7 +766,8 @@ allocator<Type>& operator=(const allocator<Other>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* объект allocator для назначения другому такого объекта.
+*right*<br/>
+Объект allocator для назначения другому такому объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -842,7 +853,7 @@ int main( )
       v1.push_back( 3 * i );
    }
 
-   cout << "The original vector v1 is:\n ( " ;
+   cout << "The original vector v1 is:\n( " ;
    for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ; v1Iter++ )
       cout << *v1Iter << " ";
    cout << ")." << endl;
@@ -858,7 +869,7 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 3 6 9 12 15 18 21 ).
+( 3 6 9 12 15 18 21 ).
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```
 
@@ -870,7 +881,8 @@ struct rebind {    typedef allocator<_Other> other ;    };
 ```
 ### <a name="parameters"></a>Параметры
 
-*другие* тип элемента, для которого выделяется память.
+*other*<br/>
+Тип элемента, для которого выделяется память.
 
 ### <a name="remarks"></a>Примечания
 
@@ -969,9 +981,9 @@ int main( )
 
 ```Output
 The original vector v is:
- ( 100 200 300 400 500 600 700 ).
+( 100 200 300 400 500 600 700 ).
 The value of the element referred to by vref is: 100,
- the first element in the vector.
+the first element in the vector.
 The element referred to by vref after being modified is: 150.
 ```
 
@@ -1061,7 +1073,7 @@ int main( )
 
    vfIter = v.begin( );
    allocator<double>::value_type vecVal = 150.0;
- *vfIter = vecVal;
+*vfIter = vecVal;
    cout << "The value of the element addressed by vfIter is: "
         << *vfIter << ",\n the first element in the vector." << endl;
 
@@ -1074,11 +1086,11 @@ int main( )
 
 ```Output
 The original vector v is:
- ( 100 200 300 400 500 600 700 ).
+( 100 200 300 400 500 600 700 ).
 The value of the element addressed by vfIter is: 150,
- the first element in the vector.
+the first element in the vector.
 The modified vector v is:
- ( 150 200 300 400 500 600 700 ).
+( 150 200 300 400 500 600 700 ).
 ```
 
 ## <a name="see-also"></a>См. также

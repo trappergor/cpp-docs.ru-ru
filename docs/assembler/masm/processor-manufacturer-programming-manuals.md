@@ -1,7 +1,7 @@
 ---
-title: Руководства по программированию изготовителей процессоров | Документы Microsoft
+title: Программированию изготовителей процессоров | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/01/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,28 +12,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55d712af448b4e18d853ced3d387918561d235b0
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: 56e653f1870d3139031a79180cc3a02c33b162f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753605"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676262"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Руководства по программированию изготовителей процессоров
 
-Эта статья содержит ссылки на веб-сайты, могут содержать сведения о программировании о процессоров, которые не являются производства, проданных или поддерживается корпорацией Майкрософт. Корпорация Майкрософт не владеете или управляете веб-сайты или содержимое на них.
+В этой статье ссылки на веб-сайты, могут содержать программирования сведения о процессорах, не производства, продаже или поддерживаемые корпорацией Майкрософт. Microsoft не владеете или управляете веб-сайты или содержимое на них.
 
-## <a name="processor-manufacturer-websites"></a>Веб-сайты изготовитель процессора
+## <a name="processor-manufacturer-websites"></a>Веб-сайты производитель процессора
 
-- [Руководств для разработчиков AMD, руководства и документы ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [Руководства для разработчиков AMD, руководства и ISA документов](https://developer.amd.com/resources/developer-guides-manuals/)
 
-- [Руководства для разработчиков для программного обеспечения Intel 64 и IA-32 архитектуры](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Руководства для разработчиков Intel 64 и IA-32 архитектуры программного обеспечения](https://software.intel.com/articles/intel-sdm)
 
-- [Общие сведения о Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Введение в Intel векторные инструкции AVX](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>Примечания
 
-Visual Studio, ни Microsoft Macro Assembler поддерживает все процессоры.
+Microsoft Macro Assembler ни Visual Studio поддерживают все процессоры.
 
 ## <a name="see-also"></a>См. также
 

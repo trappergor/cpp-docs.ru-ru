@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a143badef2aec500b12d176e10c0a5eaf06b2cf4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a9897be9bbcae0a03ef67996bda6f3ffbe894b8f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339367"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680456"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Упрощение доступа к данным с помощью атрибутов базы данных
 В этом разделе демонстрируется использование атрибутов базы данных для упрощения операций базы данных.  
@@ -207,5 +207,4 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Атрибуты потребителя OLE DB](../../windows/ole-db-consumer-attributes.md)   
- [Примеры атрибутов](http://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+ [Атрибуты объекта-получателя OLE DB](../../windows/ole-db-consumer-attributes.md)   

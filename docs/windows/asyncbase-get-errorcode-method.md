@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fab750ce655add3ccdac9d955e1e3a36e46f8cc5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8e1e9355b6063ae67a40373828f394e3e6334f7d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465133"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613426"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>Метод AsyncBase::get_ErrorCode
-Получает код ошибки для текущей асинхронной операции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHOD(  
-   get_ErrorCode  
-)(HRESULT* errorCode) override;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *код ошибки*  
- Расположение, где хранится текущий код ошибки.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если выполнение прошло успешно; в противном случае E_ILLEGAL_METHOD_CALL, если текущей асинхронной операции закрытия.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Получает код ошибки для текущей асинхронной операции.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(
+   get_ErrorCode
+)(HRESULT* errorCode) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*код ошибки*  
+Расположение, где хранится текущий код ошибки.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае E_ILLEGAL_METHOD_CALL, если текущей асинхронной операции закрытия.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

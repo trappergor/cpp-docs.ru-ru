@@ -23,24 +23,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c247874f96fa3b91af8f5b03840f716b6eb6516
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e7c1073d33004b726ddf273f89f98ac033faa483
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963976"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757355"
 ---
 # <a name="message-handler-functions"></a>Функции обработчиков сообщений
-Библиотека ATL предоставляет три типа функций обработчиков сообщений:  
-  
-|Тип обработчика сообщений|Соответствующий макрос сообщения|  
-|-----------------------------|---------------------------------|  
-|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|  
-|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  
-|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|  
-  
-## <a name="see-also"></a>См. также  
- [Реализация окна](../atl/implementing-a-window.md)   
- [Схемы сообщений](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+
+Библиотека ATL предоставляет три типа функций обработчиков сообщений:
+
+|Тип обработчика сообщений|Соответствующий макрос сообщения|
+|-----------------------------|---------------------------------|
+|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|
+|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|
+|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|
+
+## <a name="see-also"></a>См. также
+
+[Реализация окна](../atl/implementing-a-window.md)   
+[Схемы сообщений](../atl/message-maps-atl.md)   
+[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

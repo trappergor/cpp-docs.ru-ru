@@ -1,7 +1,7 @@
 ---
-title: '@ (Указание файла ответов компоновщика) | Документы Microsoft'
+title: '@ (Указание файла ответов компоновщика) | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,35 +20,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f182abcb26561bd07d62581b3beb9c0d3497ddb1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ff031c64ab57373beadd8a88235d018f2e5c0f5
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369085"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894425"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Определение файла ответов компоновщика)
-```  
-@response_file  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Здесь:  
-  
- `response_file`  
- Текстовый файл, определяющий команды компоновщика.  
-  
-## <a name="remarks"></a>Примечания  
- В разделе [@ (указать файл ответа компилятора)](../../build/reference/at-specify-a-compiler-response-file.md) для получения дополнительной информации.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Этот параметр не доступен из среды разработки Visual Studio.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
-1.  Данного параметра компоновщика программным способом нельзя.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+Указывает файл ответа компоновщика.
+
+## <a name="syntax"></a>Синтаксис
+
+> **\@**<em>response_file</em>
+
+## <a name="arguments"></a>Аргументы
+
+*response_file*  
+Текстовый файл, определяющий команды компоновщика.
+
+## <a name="remarks"></a>Примечания
+
+См. в разделе [@ (указать файл ответа компилятора)](../../build/reference/at-specify-a-compiler-response-file.md) Дополнительные сведения.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+- Этот параметр не доступен из среды разработки Visual Studio.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+- Этот параметр не может изменяться программно.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)  
+[Параметры компоновщика](../../build/reference/linker-options.md)

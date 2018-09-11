@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0230c92a448eedf0cae7c80778c2bd4c48d077
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 58551874227bde5d158946c7df9c77bcc0ff3ef3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963171"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108350"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
@@ -34,9 +34,12 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Параметры
 
-*Elem* тип двухбайтового элемента.
-*Maxcode* максимальное количество символов для аспекта языкового стандарта.
-*Режим* сведения о конфигурации для ограничения языкового стандарта.
+*Elem*<br/>
+Тип двухбайтового элемента.
+*Maxcode*<br/>
+Максимальное количество символов для аспекта языкового стандарта.
+*Режим*<br/>
+Сведения о конфигурации для аспекта языкового стандарта.
 
 ## <a name="remarks"></a>Примечания
 
@@ -44,4 +47,5 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="requirements"></a>Требования
 
-Заголовок: <codecvt> Пространство имен: std
+Заголовок: \<codecvt > \
+Пространство имен: std

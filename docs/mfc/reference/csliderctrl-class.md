@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd58faa0cda2162f1abe906da8e38d4d62402db8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6bd20852f1dfd278d4ae58cc6c67d6047579cd08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850213"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693196"
 ---
 # <a name="csliderctrl-class"></a>Класс CSliderCtrl
 Предоставляет функциональные возможности стандартного элемента управления "ползунок" Windows.  
@@ -104,13 +104,13 @@ class CSliderCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Создает объект `CSliderCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSliderCtrl::ClearSel](#clearsel)|Очищает текущее выделение в элементе управления "ползунок".|  
 |[CSliderCtrl::ClearTics](#cleartics)|Удаляет текущий делений из элемента управления "ползунок".|  
@@ -206,10 +206,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
  *dwStyle*  
- Задает стиль элемента управления "ползунок". Применить любое сочетание [стили элемента управления "ползунок"](http://msdn.microsoft.com/library/windows/desktop/bb760147), описанные в пакет SDK для Windows, к элементу управления.  
+ Задает стиль элемента управления "ползунок". Применить любое сочетание [стили элемента управления "ползунок"](/windows/desktop/Controls/trackbar-control-styles), описанные в пакет SDK для Windows, к элементу управления.  
   
  *Rect*  
- Задает размер и положение элемента управления "ползунок". Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
+ Задает размер и положение элемента управления "ползунок". Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
   
  *pParentWnd*  
  Указывает родительскому окну элемента управления "ползунок", обычно `CDialog`. Он не должен иметь значение NULL.  
@@ -241,13 +241,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
  *dwExStyle*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.  
   
  *dwStyle*  
- Задает стиль элемента управления "ползунок". Применить любое сочетание [стили элемента управления "ползунок"](http://msdn.microsoft.com/library/windows/desktop/bb760147), описанные в пакет SDK для Windows, к элементу управления.  
+ Задает стиль элемента управления "ползунок". Применить любое сочетание [стили элемента управления "ползунок"](/windows/desktop/Controls/trackbar-control-styles), описанные в пакет SDK для Windows, к элементу управления.  
   
  *Rect*  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
+ Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.  
   
  *pParentWnd*  
  Указатель на окно, которое является родительским для элемента управления.  
@@ -287,7 +287,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
  Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся в связанном окне в местоположении, указанном по *fLocation*, или значение NULL, если окно не buddy существует в этом расположении.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), как описано в пакете Windows SDK. Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy), как описано в пакете Windows SDK. Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](/windows/desktop/Controls/trackbar-control-styles) в пакете Windows SDK.  
   
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  Извлекает размер и положение ограничивающего прямоугольника для элемента управления "ползунок" канала.  
@@ -415,7 +415,7 @@ int GetThumbLength() const;
  Длина "ползунок", в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength) сообщения, который описан в пакете Windows SDK.  
   
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  Извлекает размер и положение ограничивающего прямоугольника для ползунка (бегунка) в элементе управления "ползунок".  
@@ -477,9 +477,9 @@ CToolTipCtrl* GetToolTips() const;
  Указатель на [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) объекта, или значение NULL, если всплывающие подсказки не используются. Если элемент управления "ползунок", использует ли стиль TBS_TOOLTIPS, возвращается значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), как описано в пакете Windows SDK. Обратите внимание, что эта функция-член возвращает `CToolTipCtrl` объекта вместо дескриптора элемента управления.  
+ Эта функция-член реализует поведение сообщение Win32 [TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips), как описано в пакете Windows SDK. Обратите внимание, что эта функция-член возвращает `CToolTipCtrl` объекта вместо дескриптора элемента управления.  
   
- Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) в пакете Windows SDK.  
+ Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](/windows/desktop/Controls/trackbar-control-styles) в пакете Windows SDK.  
   
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  Назначает окно в связанном окне для элемента управления "ползунок".  
@@ -505,9 +505,9 @@ CWnd* SetBuddy(
  Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, который ранее был назначен управления "ползунок" в этом расположении.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), как описано в пакете Windows SDK. Обратите внимание, что эта функция-член использует указатели на `CWnd` объектов, а не дескрипторов окон для возвращаемого значения и параметров.  
+ Эта функция-член реализует поведение сообщение Win32 [TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy), как описано в пакете Windows SDK. Обратите внимание, что эта функция-член использует указатели на `CWnd` объектов, а не дескрипторов окон для возвращаемого значения и параметров.  
   
- Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) в пакете Windows SDK.  
+ Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](/windows/desktop/Controls/trackbar-control-styles) в пакете Windows SDK.  
   
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  Задает размер строки для элемента управления "ползунок".  
@@ -631,14 +631,14 @@ void SetThumbLength(int nLength);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] *nLength*|Длина ползунка в пикселях.|  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод требует, что элемент управления trackbar было присвоено [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) стиля.  
+ Этот метод требует, что элемент управления trackbar было присвоено [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) стиля.  
   
- Этот метод отправляет [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) сообщения, который описан в пакете Windows SDK.  
+ Этот метод отправляет [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength) сообщения, который описан в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяется переменная `m_sliderCtrl`, который используется для доступа к текущим элементом управления trackbar. В примере также определяется переменной, `thumbLength`, который используется для хранения длины по умолчанию элемент управления trackbar thumb компонента. Эти переменные используются в следующем примере.  
@@ -689,13 +689,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>Параметры  
  *nLocation*  
- Значение, представляющее место, в котором для отображения элемента управления tooltip. Список возможных значений см. в разделе сообщение Win32 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), как описано в пакете Windows SDK.  
+ Значение, представляющее место, в котором для отображения элемента управления tooltip. Список возможных значений см. в разделе сообщение Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), как описано в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, представляющее предыдущее расположение элемента управления всплывающей подсказки. Возвращаемое значение равно одно из возможных значений для *nLocation*.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 TBM_SETTIPSIDE, как описано в пакете Windows SDK. Элементы управления "ползунок", использующие TBS_TOOLTIPS стиль отображения подсказки. Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщения Win32 TBM_SETTIPSIDE, как описано в пакете Windows SDK. Элементы управления "ползунок", использующие TBS_TOOLTIPS стиль отображения подсказки. Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](/windows/desktop/Controls/trackbar-control-styles) в пакете Windows SDK.  
   
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  Назначает элемент управления всплывающей подсказки к элементу управления "ползунок".  
@@ -709,7 +709,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  Указатель на [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) объект, содержащий всплывающие подсказки для использования с элементом управления "ползунок".  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщение Win32 [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), как описано в пакете Windows SDK. Когда элемент управления "ползунок" создается со стилем TBS_TOOLTIPS, он создает элемент управления подсказки по умолчанию, которое отображается рядом с ползунком, отображение текущей позиции ползунка. Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) в пакете Windows SDK.  
+ Эта функция-член реализует поведение сообщение Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), как описано в пакете Windows SDK. Когда элемент управления "ползунок" создается со стилем TBS_TOOLTIPS, он создает элемент управления подсказки по умолчанию, которое отображается рядом с ползунком, отображение текущей позиции ползунка. Описание стили элемента управления "ползунок", см. в разделе [стили элемента управления Trackbar](/windows/desktop/Controls/trackbar-control-styles) в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Образец CMNCTRL2 MFC](../../visual-cpp-samples.md)   

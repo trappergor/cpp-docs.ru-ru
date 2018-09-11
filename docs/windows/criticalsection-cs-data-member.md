@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Criticalsection::cs_ | Документы Microsoft
+title: Элемент данных Criticalsection::cs_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5da07f5328f6ff75f778e44ffafd3722e0cdfca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2bf40202f225c015522a31c4e9b0482e37c7d0da
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882567"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599492"
 ---
 # <a name="criticalsectioncs-data-member"></a>Элемент данных CriticalSection::cs_
-Объявляет член данных критической секции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-CRITICAL_SECTION cs_;  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Эти данные-член защищены.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс CriticalSection](../windows/criticalsection-class.md)
+
+Объявляет член данных критического раздела.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+CRITICAL_SECTION cs_;
+```
+
+## <a name="remarks"></a>Примечания
+
+Эти данные-член защищены.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс CriticalSection](../windows/criticalsection-class.md)

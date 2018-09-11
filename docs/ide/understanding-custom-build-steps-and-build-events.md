@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 410737380f6cc7c5ad52f29953926b3b1c2e71b5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338771"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678089"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Сведения об этапах настраиваемого построения и событиях построения.
 В среде разработки Visual C++ существует три основных способа для настройки процесса сборки.  
@@ -73,4 +73,3 @@ ms.locfileid: "33338771"
 ## <a name="see-also"></a>См. также  
  [Сборка проектов C++ в Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
  [Стандартные макросы для команд и свойств сборки](../ide/common-macros-for-build-commands-and-properties.md)   
- [Диалоговое окно "Порядок сборки инструментов"](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

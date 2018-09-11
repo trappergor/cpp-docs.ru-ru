@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 627fb8e1ad1341257e3064ee195952c37dd4a481
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852371"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195542"
 ---
 # <a name="coccmanager-class"></a>Класс COccManager
 Управляет разными сайтами пользовательского элемента управления, реализованного объектами `COleControlContainer` и `COleControlSite` .  
@@ -334,7 +334,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Элемент управления должен иметь OLEMISC_ACTSLIKEBUTTON состоянии бит. Дополнительные сведения о флагах OLEMISC, см. в разделе [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) темы в Windows SDK.  
+>  Элемент управления должен иметь OLEMISC_ACTSLIKEBUTTON состоянии бит. Дополнительные сведения о флагах OLEMISC, см. в разделе [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) темы в Windows SDK.  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  Вызывается платформой для разделения элементов управления ActiveX из стандартных элементов управления диалогового окна.  

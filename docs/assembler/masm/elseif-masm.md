@@ -1,7 +1,7 @@
 ---
-title: ELSEIF (MASM) | Документы Microsoft
+title: ELSEIF (MASM) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ba36c9f3ddd50df4cd5a4e5cb366ee806c78307
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bff1d8f22471de7dda89be66bdcacf52a2bf8206
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688890"
 ---
 # <a name="elseif-masm"></a>ELSEIF (MASM)
-Объединяет [ELSE](../../assembler/masm/else-masm.md) и [IF](../../assembler/masm/if-masm.md) в одной инструкции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-ELSEIF  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- В разделе [IF](../../assembler/masm/if-masm.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Объединяет [ELSE](../../assembler/masm/else-masm.md) и [IF](../../assembler/masm/if-masm.md) в одной инструкции.
+
+## <a name="syntax"></a>Синтаксис
+
+> ELSEIF
+
+## <a name="remarks"></a>Примечания
+
+См. в разделе [IF](../../assembler/masm/if-masm.md).
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

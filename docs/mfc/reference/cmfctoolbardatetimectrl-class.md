@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f275ae65b8c3135a110e249b0521194083683c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ad99ccf1f037d16bcff57f9a643f2332f36e7d7a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854087"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220438"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Класс CMFCToolBarDateTimeCtrl
 Кнопка панели инструментов, которая содержит элемент управления выбора даты и времени.  
@@ -96,10 +96,10 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Возвращает указатель на элемент управления выбора даты и времени.|  
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Извлекает дескриптор окна, связанный с кнопкой панели инструментов. (Переопределяет [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Получает установленный период времени из элемент выбора даты и времени и помещает его в указанном [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуры.|  
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Получает установленный период времени из элемент выбора даты и времени и помещает его в указанном [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуры.|  
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Возвращает установленный период времени с помощью элемента управления кнопки выбора времени с указанным идентификатором команды.|  
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Определяет, отображается ли граница кнопки, когда пользователь выбирает кнопку. (Переопределяет [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
-|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Указывает, обрабатывает ли кнопки [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщения. (Переопределяет [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Указывает, обрабатывает ли кнопки [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщения. (Переопределяет [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|Вызывается платформой при добавлении кнопки **Настройка** диалоговое окно. (Переопределяет [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Вызывается платформой для вычисления размера кнопки для заданного контекста устройств и состояние закрепления. (Переопределяет [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Вызывается платформой при вставке кнопки в панели инструментов. (Переопределяет [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
@@ -250,7 +250,7 @@ virtual HWND GetHwnd();
  Этот метод переопределяет [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) метод.  
   
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
- Получает установленный период времени из соответствующую дату и время средства выбора и помещает его в указанном [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуры  
+ Получает установленный период времени из соответствующую дату и время средства выбора и помещает его в указанном [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуры  
   
 ```  
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -263,13 +263,13 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  В первой перегрузке [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объект, который будет получать сведения о времени системы. Во второй перегрузке [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, который будет получать сведения о времени системы.  
   
  [out] *pTimeDest*  
- Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведения о времени системы. Не должен иметь значение NULL.  
+ Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведения о времени системы. Не должен иметь значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В первой перегрузке, ненулевое значение, если время успешно записан [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объекта; в противном случае — значение 0. В перегрузках второй и третий, возвращается значение типа DWORD, равное dwFlag член, который был задан в [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) структуры.  
+ В первой перегрузке, ненулевое значение, если время успешно записан [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объекта; в противном случае — значение 0. В перегрузках второй и третий, возвращается значение типа DWORD, равное dwFlag член, который был задан в [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) структуры.  
   
 ### <a name="remarks"></a>Примечания  
- Метода задает [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) структуры член dwFlags, чтобы указать, имеет ли средство выбора даты и времени значение даты и времени. Если значение равно GDT_NONE, элемент управления имеет значение `no date` состояние и использует стиль DTS_SHOWNONE. Если возвращаемое значение равно GDT_VALID, системное время успешно сохранены в месте назначения.  
+ Метода задает [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) структуры член dwFlags, чтобы указать, имеет ли средство выбора даты и времени значение даты и времени. Если значение равно GDT_NONE, элемент управления имеет значение `no date` состояние и использует стиль DTS_SHOWNONE. Если возвращаемое значение равно GDT_VALID, системное время успешно сохранены в месте назначения.  
   
 ##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
  Возвращает время, выбранного пользователем с помощью элемента управления кнопки выбора времени с указанным идентификатором команды.  
@@ -296,7 +296,7 @@ static DWORD GetTimeAll(
  В первой перегрузке [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объект, который будет получать сведения о времени системы. Во второй перегрузке [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, который будет получать сведения о времени системы.  
   
  [out] *pTimeDest*  
- Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведения о времени системы. Не должен иметь значение NULL.  
+ Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведения о времени системы. Не должен иметь значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если платформа не удается найти кнопку панели инструментов, соответствующий Идентификатору команды *uiCmd*, возвращаемое значение равно нулю в первой перегрузке и GDT_NONE в других перегрузок. При обнаружении кнопки панели инструментов, возвращаемое значение является таким же, как возвращаемое значение из вызова [CMFCToolBarDateTimeCtrl::GetTime](#gettime) этой кнопки. Возвращаемое значение из нуля или GDT_NONE возникает, когда найден кнопки, которое указывает, что вызов `GetTime` не возвратил допустимую дату по другой причине.  
@@ -318,7 +318,7 @@ virtual BOOL HaveHotBorder() const;
  Этот метод возвращает ненулевое значение, если элемент управления является видимым.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
- Указывает, обрабатывает ли кнопки [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщения.  
+ Указывает, обрабатывает ли кнопки [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщения.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -332,9 +332,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Значение TRUE, если кнопки обрабатывает сообщение WM_COMMAND, или FALSE для указания, что сообщения должны обрабатываться родительской панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой, когда он собирается отправить [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) родительское окно.  
+ Этот метод вызывается платформой, когда он собирается отправить [WM_COMMAND](/windows/desktop/menurc/wm-command) родительское окно.  
   
- Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)), обрабатывая [DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737) уведомлений. Он обновляет состояние внутреннее время и обновляет свойство времени всех `CMFCToolBarDateTimeCtrl` объекты с тем же команды идентификатор.  
+ Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)), обрабатывая [DTN_DATETIMECHANGE](/windows/desktop/Controls/dtn-datetimechange) уведомлений. Он обновляет состояние внутреннее время и обновляет свойство времени всех `CMFCToolBarDateTimeCtrl` объекты с тем же команды идентификатор.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
  Вызывается платформой при добавлении кнопки **Настройка** диалоговое окно.  
@@ -502,7 +502,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
  В первой версии, ссылку на [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий время, к которому будет задано элемента управления. Во второй версии, указатель на [CTime](../../atl-mfc-shared/reference/ctime-class.md) , содержащий время, к которому будет задано элемента управления.  
   
  [in] *pTimeNew*  
- Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет задано элемента управления.  
+ Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет задано элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -535,7 +535,7 @@ static BOOL SetTimeAll(
  В первой версии [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий время, к которому будет задано элемента управления. Во второй версии, указатель на [CTime](../../atl-mfc-shared/reference/ctime-class.md) , содержащий время, к которому будет задано элемента управления.  
   
  [in] *pTimeNew*  
- Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет задано элемента управления.  
+ Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет задано элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  

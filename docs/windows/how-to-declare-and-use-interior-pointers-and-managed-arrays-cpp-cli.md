@@ -1,5 +1,5 @@
 ---
-title: 'Как: объявление и использование внутренних указателей и управляемых массивов (C + +/ CLI) | Документы Microsoft'
+title: 'Практическое: объявление и использование внутренних указателей и управляемых массивов (C + +/ CLI) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 691b2606e6b479937394c2ba021934e8f98b0fe5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875309"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599086"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Практическое руководство. Объявление и использование внутренних указателей и управляемых массивов (C++/CLI)
-Следующие C + +/ CLI образце показано, как объявить и использовать внутренний указатель в массив.  
-  
+
+Следующие C + +/ CLI образце показано, как можно объявить и использовать внутренний указатель в массив.
+
 > [!IMPORTANT]
->  Эта функция языка поддерживается **/CLR** параметр компилятора, а не **/zw** параметр компилятора.  
-  
-## <a name="example"></a>Пример  
-  
-### <a name="code"></a>Код  
-  
-```  
-// interior_ptr_arrays.cpp  
-// compile with: /clr  
-#define SIZE 10  
-  
-int main() {  
-   // declare the array  
-   array<int>^ arr = gcnew array<int>(SIZE);  
-  
-   // initialize the array  
+> Эта функция языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.
+
+## <a name="example"></a>Пример
+
+### <a name="code"></a>Код
+
+```cpp
+// interior_ptr_arrays.cpp
+// compile with: /clr
+#define SIZE 10
+
+int main() {
+   // declare the array
+   array<int>^ arr = gcnew array<int>(SIZE);
+
+   // initialize the array
    for (int i = 0 ; i < SIZE ; i++)  
-      arr[i] = i + 1;  
-  
-   // create an interior pointer into the array  
-   interior_ptr<int> ipi = &arr[0];  
-  
-   System::Console::WriteLine("1st element in arr holds: {0}", arr[0]);  
-   System::Console::WriteLine("ipi points to memory address whose value is: {0}", *ipi);  
-  
-   ipi++;  
-   System::Console::WriteLine("after incrementing ipi, it points to memory address whose value is: {0}", *ipi);  
-}  
-```  
-  
-### <a name="output"></a>Вывод  
-  
-```  
-1st element in arr holds: 1  
-ipi points to memory address whose value is: 1  
-after incrementing ipi, it points to memory address whose value is: 2  
-```  
-  
-## <a name="see-also"></a>См. также  
- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+      arr[i] = i + 1;
+
+   // create an interior pointer into the array
+   interior_ptr<int> ipi = &arr[0];
+
+   System::Console::WriteLine("1st element in arr holds: {0}", arr[0]);
+   System::Console::WriteLine("ipi points to memory address whose value is: {0}", *ipi);
+
+   ipi++;
+   System::Console::WriteLine("after incrementing ipi, it points to memory address whose value is: {0}", *ipi);
+}
+```
+
+```Output
+1st element in arr holds: 1
+ipi points to memory address whose value is: 1
+after incrementing ipi, it points to memory address whose value is: 2
+```
+
+## <a name="see-also"></a>См. также
+
+[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26386ebb5e2bbb20b952200869ccffb7677c59af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 05442a0c590bcb66449aeae72d54cc6e988421bc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962430"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099900"
 ---
 # <a name="gammadistribution-class"></a>Класс gamma_distribution
 
@@ -80,9 +80,11 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*<br/>
+По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*РГСЧ*<br/>
+Универсальный механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -207,11 +209,14 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*альфа-канал* `alpha` параметр распределения.
+*alpha*<br/>
+Параметр распределения `alpha`.
 
-*бета-версии* `beta` параметр распределения.
+*beta*<br/>
+Параметр распределения `beta`.
 
-*parm* структуру параметров, используемый для формирования распределения.
+*parm*<br/>
+Структура параметров, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -239,11 +244,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*альфа-канал* `alpha` параметр распределения.
+*alpha*<br/>
+Параметр распределения `alpha`.
 
-*бета-версии* `beta` параметр распределения.
+*beta*<br/>
+Параметр распределения `beta`.
 
-*правом* `param_type` экземпляр для сравнения.
+*right*<br/>
+Экземпляр `param_type` для сравнения.
 
 ### <a name="remarks"></a>Примечания
 

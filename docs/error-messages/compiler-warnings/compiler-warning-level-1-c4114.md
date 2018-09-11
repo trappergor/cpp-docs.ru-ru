@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4114 компилятора | Документы Microsoft
+title: Предупреждение (уровень 1) C4114 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283927"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539340"
 ---
-# <a name="compiler-warning-level-1-c4114"></a>Предупреждение (уровень 1) C4114 компилятора
+# <a name="compiler-warning-level-1-c4114"></a>Компилятор предупреждение (уровень 1) C4114
 Множественное использование одного и того же квалификатора типа  
   
- Объявление типа или определении квалификатор типа (**const**, `volatile`, **подписан**, или `unsigned`) более одного раза. Это вызывает предупреждение с расширениями Майкрософт (/Ze) и программа вернет ошибку совместимости ANSI (/Za).  
+ Объявление типа или определении квалификатор типа (**const**, **volatile**, **автоматический**, или **без знака**) более одного раза. В результате предупреждение с расширениями Майкрософт (/Ze) и ошибку совместимости ANSI (/Za).  
   
  Следующий пример приводит к возникновению ошибки C4114:  
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент данных Eventsource::addremovelock_ | Документы Microsoft
+title: Элемент данных Eventsource::addremovelock_ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46763a6376a18ae469833c3eee6a0d5d9f15ee45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 084a292ed5228f337deced74a87ee20acf0ee5ab
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872657"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611739"
 ---
 # <a name="eventsourceaddremovelock-data-member"></a>Элемент данных EventSource::addRemoveLock_
-Синхронизирует доступ к [targets_](../windows/eventsource-targets-data-member.md) массива, при добавлении, удаление или вызывать обработчики событий.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-Wrappers::SRWLock addRemoveLock_;  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс EventSource](../windows/eventsource-class.md)
+
+Синхронизирует доступ к [targets_](../windows/eventsource-targets-data-member.md) массива, при добавлении, удалении или вызов обработчиков событий.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+Wrappers::SRWLock addRemoveLock_;
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс EventSource](../windows/eventsource-class.md)

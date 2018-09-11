@@ -1,5 +1,5 @@
 ---
-title: Метод FtmBase::DisconnectObject | Документы Microsoft
+title: Метод FtmBase::DisconnectObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2501413196e1fd6b8b7a1a4f9985304863e02549
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b467162d2f5cc5b04bc43a6d31019eb08e17e750
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873005"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595410"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>Метод FtmBase::DisconnectObject
-Принудительно освобождает все внешние подключения к объекту. Объект сервера вызывает реализацию объекта до завершения работы этого метода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHODIMP DisconnectObject(  
-   __in DWORD dwReserved  
-) override;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `dwReserved`  
- Зарезервировано для будущего использования; должно иметь значение нуль.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** ftm.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс FtmBase](../windows/ftmbase-class.md)
+
+Принудительно освобождает все внешние подключения к объекту. Сервер объекта вызывает реализацию объекта этот метод перед завершением работы системы.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHODIMP DisconnectObject(
+   __in DWORD dwReserved
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*dwReserved*  
+Зарезервировано для будущего использования; должно иметь значение нуль.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** ftm.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс FtmBase](../windows/ftmbase-class.md)

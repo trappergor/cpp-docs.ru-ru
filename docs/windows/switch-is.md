@@ -1,5 +1,5 @@
 ---
-title: switch_is | Документы Microsoft
+title: switch_is | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05805bff0044838aaea2af2013fa951c5d3be9a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2aaf38745c02c5975eb2a46f135c51b6d7247610
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892802"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213760"
 ---
 # <a name="switchis"></a>switch_is
-Указывает выражение или идентификатор, выступающего в качестве объединения дискриминантный, который выбирает члена объединения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-[switch_is]  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Switch_is** языка C++ имеет ту же функциональность, что [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- В разделе [случай](../windows/case-cpp.md) пример приведен пример использования **switch_is**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|`typedef`|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
- [switch_type](../windows/switch-type.md)   
+
+Указывает выражение или идентификатор, действующий как объединения дискриминантный, который выбирает член объединения.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[switch_is]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Switch_is** атрибут C++ имеет ту же функциональность, что [switch_is](/windows/desktop/Midl/switch-is) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в разделе [случай](../windows/case-cpp.md) пример для использовать **switch_is**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**typedef**|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[switch_type](../windows/switch-type.md)  

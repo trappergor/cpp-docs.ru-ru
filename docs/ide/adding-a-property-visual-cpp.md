@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e121cf9738910b105f5bb1933592e67d334f8937
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327584"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685330"
 ---
 # <a name="adding-a-property-visual-c"></a>Добавление свойства (Visual C++)
 Вы можете использовать [мастер добавления свойства](../ide/names-add-property-wizard.md) для добавления свойства в интерфейс в проекте.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Добавление свойства в объект  
   
-1.  В [представлении классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) щелкните правой кнопкой мыши имя интерфейса, в который нужно добавить свойство.  
+1.  В [представлении классов](/visualstudio/ide/viewing-the-structure-of-code) щелкните правой кнопкой мыши имя интерфейса, в который нужно добавить свойство.  
   
     > [!NOTE]
     >  Вы также можете добавлять свойства в disp-интерфейсы, которые, если только проект не имеет атрибуты, вложены в узел библиотеки.  
@@ -49,5 +49,5 @@ ms.locfileid: "33327584"
 ## <a name="see-also"></a>См. также  
  [Создание интерфейса COM](../ide/creating-a-com-interface-visual-cpp.md)   
  [Редактирование интерфейса COM](../ide/editing-a-com-interface.md)   
- [Модель COM](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [Указатели интерфейса и интерфейсы](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [Модель COM](/windows/desktop/com/the-component-object-model)   
+ [Указатели интерфейса и интерфейсы](/windows/desktop/com/interface-pointers-and-interfaces)

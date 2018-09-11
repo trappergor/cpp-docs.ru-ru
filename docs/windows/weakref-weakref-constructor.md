@@ -1,5 +1,5 @@
 ---
-title: Конструктор WeakRef::WeakRef | Документы Microsoft
+title: Конструктор WeakRef::WeakRef | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7c8bc81040ce8d4c1cea7497f9d1371fbb9d41f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891052"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611614"
 ---
 # <a name="weakrefweakref-constructor"></a>Конструктор WeakRef::WeakRef
-Инициализирует новый экземпляр класса WeakRef.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-WeakRef();  
-WeakRef(  
+
+Инициализирует новый экземпляр класса **WeakRef** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+WeakRef();
+WeakRef(
    decltype(__nullptr)  
-);  
-  
-WeakRef(  
-   _In_opt_ IWeakReference* ptr  
-);  
-  
-WeakRef(  
-   const ComPtr<IWeakReference>& ptr  
-);  
-  
-WeakRef(  
-   const WeakRef& ptr  
-);  
-  
-WeakRef(  
-   _Inout_ WeakRef&& ptr  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `ptr`  
- Указатель, ссылка или ссылка rvalue на существующий объект, который инициализирует текущий объект WeakRef.  
-  
-## <a name="remarks"></a>Примечания  
- Первый конструктор инициализирует пустой объект WeakRef. Второй конструктор инициализирует объект WeakRef из указателя на интерфейс IWeakReference. Третий конструктор инициализирует объект WeakRef из ссылки на объект ComPtr\<IWeakReference > объекта. Четвертый и пятый конструкторы инициализирует объект WeakRef из другой объект WeakRef.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс WeakRef](../windows/weakref-class.md)
+);
+
+WeakRef(
+   _In_opt_ IWeakReference* ptr
+);
+
+WeakRef(
+   const ComPtr<IWeakReference>& ptr
+);
+
+WeakRef(
+   const WeakRef& ptr
+);
+
+WeakRef(
+   _Inout_ WeakRef&& ptr
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*ptr*  
+Указатель, ссылка или rvalue ссылка на существующий объект, который инициализирует текущий **WeakRef** объекта.
+
+## <a name="remarks"></a>Примечания
+
+Первый конструктор инициализирует пустой **WeakRef** объекта. Второй конструктор инициализирует **WeakRef** объекта из указателя на `IWeakReference` интерфейс. Третий конструктор инициализирует **WeakRef** объект из ссылки на `ComPtr<IWeakReference>` объекта. Инициализирует четвертый и пятый конструкторы **WeakRef** из другого объекта **WeakRef** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс WeakRef](../windows/weakref-class.md)

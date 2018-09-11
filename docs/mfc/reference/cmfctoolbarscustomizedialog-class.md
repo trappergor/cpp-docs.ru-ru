@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c12b23c2250f2b0d26b053410c864c8cf435469
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9132df889f057696a08afe9a1ca6ad2277c46f10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852878"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211056"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Класс CMFCToolBarsCustomizeDialog
 Немодальное диалоговое окно вкладки ( [класс CPropertySheet](../../mfc/reference/cpropertysheet-class.md)), позволяющий пользователям настраивать панели инструментов, меню, сочетания клавиш, определенные пользователем инструменты и визуальный стиль в приложении. Обычно пользователь осуществляет доступ к этому диалоговому окну, выбирая **Настроить** в меню **Сервис** .  
@@ -507,7 +507,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
   
 ### <a name="parameters"></a>Параметры  
  [in, out] *pAccel*  
- Указатель на назначение предложенное клавиатуры, который выражается в виде [УСКОРЕНИЕ](http://msdn.microsoft.com/library/windows/desktop/ms646340) структуры.  
+ Указатель на назначение предложенное клавиатуры, который выражается в виде [УСКОРЕНИЕ](/windows/desktop/api/winuser/ns-winuser-tagaccel) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ключ может быть назначенных или FALSE, если ключ не может быть назначена. Реализация по умолчанию всегда возвращает значение TRUE.  

@@ -1,5 +1,5 @@
 ---
-title: Поиск двоичных данных | Документы Microsoft
+title: Поиск двоичных данных (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,32 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 815975ac693885842d2e4b2287e14957abe8375f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c24d2c4fbae86d6b906de039b8cf6a041858b2e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873567"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315773"
 ---
 # <a name="finding-binary-data"></a>Поиск двоичных данных
-Поиск строк ASCII или шестнадцатеричных байтов. Например, чтобы найти «Hello», можно производить поиск либо для строки «Hello» или для «48 65 6 c 6 C 6F» (шестнадцатеричное).  
-  
-### <a name="to-find-binary-data"></a>Поиск двоичных данных  
-  
-1.  Из **изменить** меню, нажмите кнопку [найти](/visualstudio/ide/reference/find-command).  
-  
-2.  В **найти** выберите предыдущую строку поиска из раскрывающегося списка или введите данные, которые требуется найти.  
-  
-3.  Выберите любой из **найти** параметры.  
-  
-4.  Нажмите кнопку **Найти далее**.  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
- Требования  
-  
- Нет  
-  
-## <a name="see-also"></a>См. также  
- [Binary Editor](binary-editor.md)
 
+Поиск строк ASCII или шестнадцатеричных байтов. Например, чтобы найти «Hello», вы можно выполнить поиск по строке «Hello» или для «48 65 6 c 6 C 6F» (шестнадцатеричный эквивалент).
+
+### <a name="to-find-binary-data"></a>Поиск двоичных данных
+
+1. Из **изменить** меню, щелкните [найти](/visualstudio/ide/reference/find-command).
+
+2. В **найти** выберите предыдущую строку поиска из раскрывающегося списка или введите данные, которые требуется найти.
+
+3. Выберите любой из **найти** параметры.
+
+4. Нажмите кнопку **Найти далее**.
+
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Требования
+
+Нет
+
+## <a name="see-also"></a>См. также
+
+[Binary Editor](binary-editor.md)

@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46e4d8fc7b59f8b4919a7e36a85f29f626aa80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845834"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105217"
 ---
 # <a name="directoryiterator-class"></a>Класс directory_iterator
 
 Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге. Для итератора X результатом выражения *X является объект класса directory_entry, являющийся оболочкой для имени файла и известных данных о его состоянии.
 
-Класс сохраняет объект пути к типу (называемый здесь в целях демонстрации mydir), который представляет имя каталога для упорядочивания, и объект типа directory_entry (называемый здесь myentry), который представляет текущее имя файла в последовательности каталогов. Создаваемый по умолчанию объект типа directory_entry содержит пустой путь mydir и представляет итератор конца последовательности.
+Класс сохраняет объект типа path, называемые `mydir` здесь в целях надстройках, который представляет имя каталога для упорядочивания и вызывается объект типа directory_entry `myentry` здесь, который представляет текущее имя файла в последовательности каталогов. Созданный по умолчанию объект типа directory_entry содержит пустой `mydir` pathname и представляет итератор конец последовательности.
 
 Например, при наличии каталога abc с записями def и ghi, код:
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-вызовет метод visit с аргументами path("abc/def") и path("abc/ghi").
+вызовет `visit` с аргументами path("abc/def") и path("abc/ghi").
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 
@@ -62,7 +62,40 @@ ms.locfileid: "33845834"
 class directory_iterator;
 ```
 
-## <a name="directoryiteratordirectoryiterator"></a>directory_iterator::directory_iterator
+### <a name="constructors"></a>Конструкторы
+
+|Конструктор|Описание|
+|-|-|
+|[directory_iterator](#directory_iterator)|Создает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге.|
+
+### <a name="member-functions"></a>Функции-члены
+
+|Функция-член|Описание|
+|-|-|
+|[Приращение](#increment)|Функция пытается перейти к следующему файлу в каталоге.|
+
+### <a name="operators"></a>Операторы
+
+|Оператор|Описание|
+|-|-|
+|[оператор!=](#op_neq)|Возвращает `!(*this == right)`.|
+|[оператор=](#op_as)|Операторы-члены присваивания по умолчанию работают корректно.|
+|[оператор==](#op_eq)|Возвращает **true** только в том случае, если оба `*this` и *правой* являются итераторами конец последовательности или оба являются не end объекта последовательности итераторы.|
+|[оператор*](#op_star)|Возвращает `myentry`.|
+|[оператор>](#op_cast)|Возвращает `&**this`.|
+|[оператор++](#op_increment)|Вызовы `increment()`, затем возвращает `*this`, или создает копию объекта, вызовы `increment()`, затем возвращает копию.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<experimental/filesystem>
+
+**Пространство имен:** std::experimental::filesystem
+
+## <a name="directory_iterator"></a> directory_iterator::directory_iterator
+
+Первый конструктор создает итератор конца последовательности. Второй и третий конструкторы сохраняют *pval* в `mydir`, затем пытаются открыть и прочитать `mydir` как каталог. Если в случае успешного выполнения они хранят первое имя файла в каталоге в `myentry`; противном случае — создают итератор конец последовательности.
+
+Установленные по умолчанию конструкторы работают корректно.
 
 ```cpp
 directory_iterator() noexcept;
@@ -73,73 +106,94 @@ directory_iterator(const directory_iterator&) = default;
 directory_iterator(directory_iterator&&) noexcept = default;
 ```
 
-Первый конструктор создает итератор конца последовательности. Второй и третий конструкторы сохраняют pval в mydir, а затем пытаются открыть и прочитать mydir как каталог. В случае успешного выполнения они сохраняют первое имя файла в каталоге myentry; в противном случае — создают итератор конца последовательности.
+### <a name="parameters"></a>Параметры
 
-Установленные по умолчанию конструкторы работают корректно.
+*PVal*<br/>
+Путь имя сохраненного файла.
 
-## <a name="directoryiteratorincrement"></a>directory_iterator::increment
+*EC*<br/>
+Код состояния ошибки. 
+
+*directory_iterator*<br/>
+Сохраненный объект.
+
+## <a name="increment"></a> directory_iterator::Increment
+
+Функция пытается перейти к следующему файлу в каталоге. Если в случае успешного выполнения она сохраняет имя этого файла в `myentry`; в противном случае она создает итератор конец последовательности.
 
 ```cpp
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-Функция пытается перейти к следующему файлу в каталоге. В случае успешного выполнения она сохраняет имя этого файла в myentry; в противном случае — создает итератор конца последовательности.
+## <a name="op_neq"></a> directory_iterator::operator! =
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator!=
+Оператор-член возвращает `!(*this == right)`.
 
 ```cpp
 bool operator!=(const directory_iterator& right) const;
 ```
 
-Оператор-член возвращает !(*this == right).
+### <a name="parameters"></a>Параметры
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator=
+*right*<br/>
+[Directory_iterator](../standard-library/directory-iterator-class.md) , с которым производится сравнение `directory_iterator`.
+
+## <a name="op_as"></a> directory_iterator::operator =
+
+Операторы-члены присваивания по умолчанию работают корректно.
 
 ```cpp
 directory_iterator& operator=(const directory_iterator&) = default;
 directory_iterator& operator=(directory_iterator&&) noexcept = default;
 ```
 
-Операторы-члены присваивания по умолчанию работают корректно.
+### <a name="parameters"></a>Параметры
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator==
+*right*<br/>
+[Directory_iterator](../standard-library/directory-iterator-class.md) копируется в `directory_iterator`.
+
+## <a name="op_eq"></a> directory_iterator::operator ==
+
+Оператор-член возвращает **true** только в том случае, если оба `*this` и *правой* являются итераторами конец последовательности или оба являются не end объекта последовательности итераторы.
 
 ```cpp
 bool operator==(const directory_iterator& right) const;
 ```
 
-Оператор-член возвращает значение true, только если оба оператора, *this и right, являются или не являются итераторами конца последовательности.
+### <a name="parameters"></a>Параметры
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator*
+*right*<br/>
+[Directory_iterator](../standard-library/directory-iterator-class.md) , с которым производится сравнение `directory_iterator`.
+
+## <a name="op_star"></a> directory_iterator::operator *
+
+Оператор-член возвращает `myentry`.
 
 ```cpp
 const directory_entry& operator*() const;
 ```
 
-Оператор-член возвращает myentry.
+## <a name="op_cast"></a> directory_iterator::operator ->
 
-## <a name="directoryiteratoroperator-"></a>directory_iterator::operator->
+Функция-член возвращает значение `&**this`.
 
 ```cpp
 const directory_entry * operator->() const;
 ```
 
-Функция-член возвращает значение &\*\*this.
+## <a name="op_increment"></a> directory_iterator::operator ++
 
-## <a name="directoryiteratoroperator"></a>directory_iterator::operator++
+Первая функция-член вызывает `increment()`, затем возвращает `*this`. Вторая функция-член создает копию объекта, вызовы `increment()`, затем возвращает копию.
 
 ```cpp
 directory_iterator& operator++();
 directory_iterator& operator++(int);
 ```
 
-Первая функция-член вызывает метод increment(), а затем возвращает значение *this. Вторая функция-член создает копию объекта, вызывает метод increment(), а затем возвращает копию.
+### <a name="parameters"></a>Параметры
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<experimental/filesystem>
-
-**Пространство имен:** std::experimental::filesystem
+*int*<br/>
+Количество шагов приращения.
 
 ## <a name="see-also"></a>См. также
 

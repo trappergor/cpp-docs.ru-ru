@@ -1,5 +1,5 @@
 ---
-title: HString::Operator =-оператор | Документы Microsoft
+title: Оператор HString::Operator =-оператор | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fd1082beb6d84c5dded008e20683f7292cbc1e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9294650db7a1b18c2542603988952a80b3f1905d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873876"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598549"
 ---
 # <a name="hstringoperator-operator"></a>Оператор HString::Operator=
-Перемещает текущий объект HString значение другого объекта HString.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
+
+Перемещает значение другого **HString** объект с текущим **HString** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HString& operator=(HString&& other) throw()  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `other`  
- Существующий объект HString.  
-  
-## <a name="remarks"></a>Примечания  
- Значение существующего `other` объект копируется текущий объект HString, а затем `other` объект удаляется.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HString](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Параметры
+
+*other*  
+Существующий **HString** объекта.
+
+## <a name="remarks"></a>Примечания
+
+Значение существующего *других* объект копируется в текущий **HString** объекта, а затем *других* уничтожении объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HString](../windows/hstring-class.md)

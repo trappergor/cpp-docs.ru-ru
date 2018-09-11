@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6c97e44e5110108351ac9c47f47434b828193fc7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962030"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099633"
 ---
 # <a name="ltutilitygt-operators"></a>Операторы &lt;utility&gt;
 
@@ -49,10 +49,10 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Параметры
 
 *left*  
- Объект типа `pair`.
+Объект типа `pair`.
 
 *right*  
- Объект типа `pair`.
+Объект типа `pair`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -120,9 +120,11 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*слева* объект типа `pair`.
+*left*<br/>
+Объект типа `pair`.
 
-*правом* объект типа `pair`.
+*right*<br/>
+Объект типа `pair`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -182,10 +184,10 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Параметры
 
 *left*  
- Объект типа `pair` в левой части оператора.
+Объект типа `pair` в левой части оператора.
 
 *right*  
- Объект типа `pair` в правой части оператора.
+Объект типа `pair` в правой части оператора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -259,10 +261,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Параметры
 
 *left*  
- Объект типа `pair` в левой части оператора.
+Объект типа `pair` в левой части оператора.
 
 *right*  
- Объект типа `pair` в правой части оператора.
+Объект типа `pair` в правой части оператора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -344,10 +346,10 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Параметры
 
 *left*  
- Объект типа `pair` в левой части оператора.
+Объект типа `pair` в левой части оператора.
 
 *right*  
- Объект типа `pair` в правой части оператора.
+Объект типа `pair` в правой части оператора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -431,10 +433,10 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>Параметры
 
 *left*  
- Объект типа `pair` в левой части оператора.
+Объект типа `pair` в левой части оператора.
 
 *right*  
- Объект типа `pair` в правой части оператора.
+Объект типа `pair` в правой части оператора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

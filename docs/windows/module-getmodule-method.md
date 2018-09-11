@@ -1,5 +1,5 @@
 ---
-title: Метод Module::GetModule | Документы Microsoft
+title: Метод Module::GetModule | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 014a2aeca7876e8fac7a8428388b4d3ead2860a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 023cd09493605647e9a12052d4b92f799f2bea3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875166"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611724"
 ---
 # <a name="modulegetmodule-method"></a>Метод Module::GetModule
-Создает экземпляр модуля.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-static Module& GetModule();  
-WRL_NOTHROW static Module& GetModule();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Ссылка на модуль.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- 
+
+Создает экземпляр модуля.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+static Module& GetModule();
+WRL_NOTHROW static Module& GetModule();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Ссылка на модуль.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
 [Класс Module](../windows/module-class.md)

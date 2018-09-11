@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854012"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693976"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Класс CMFCEditBrowseCtrl
 `CMFCEditBrowseCtrl` Класс поддерживает управления обзор редактирования, который является редактируемых текстовых полей, которые дополнительно содержат кнопку обзора. Когда пользователь нажимает кнопку обзора, элемент управления выполняет настраиваемое действие или отображает стандартное диалоговое окно, содержащее браузер файла или папки в браузере.  
@@ -56,14 +56,14 @@ class CMFCEditBrowseCtrl : public CEdit
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Конструктор по умолчанию.|  
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Включает или отключает (скрытие) кнопку обзора.|  
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Активирует кнопку обзора и помещает Обзор элемента управления редактирования в *Обзор файлов* режим.|  
@@ -74,7 +74,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Перерисовывает текущего элемента управления обзора редактирования.|  
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Вызвано структурой для прорисовки кнопки обзора.|  
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Вызывается платформой, если было введено недопустимое имя файла в элементе управления.|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. Синтаксис и Дополнительные сведения см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. Синтаксис и Дополнительные сведения см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Задает пользовательский образ для кнопки "Обзор".|  
   
 ## <a name="remarks"></a>Примечания  
@@ -174,7 +174,7 @@ void EnableFileBrowseButton(
 ### <a name="remarks"></a>Примечания  
  Когда элемент управления "Обзор" находится в режиме поиска файлов, а пользователь нажимает кнопку обзора, элемент управления отображает стандартное диалоговое окно выбора файла.  
   
- Полный список доступных флагов см. в разделе [структуры OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Полный список доступных флагов см. в разделе [структуры OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  Отображает кнопку обзора для текущего элемента управления обзора редактирования и переводит элемент управления *поиск папки* режим.  
@@ -198,7 +198,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
  В следующей таблице перечислены возможные возвращаемые значения.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`BrowseMode_Default`|**пользовательский режим**. Действия, определяемые программистом выполняются.|  
 |`BrowseMode_File`|**режим файла**. Откроется диалоговое окно браузера стандартный файл.|  

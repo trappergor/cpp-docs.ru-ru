@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15dc3dc2b4c1fdf549ec90ae6d782b5f8a72509
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 928e2845321ad12a92e4ba3f42838b3f468dce70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853816"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215519"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Класс CMFCToolBarEditBoxButton
 Кнопки панели инструментов, содержащий элемент управления редактированием ( [класс CEdit](../../mfc/reference/cedit-class.md)).  
@@ -105,7 +105,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
 |[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|Определяет, отображается ли граница кнопки, когда пользователь нажимает кнопку. (Переопределяет [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
 |[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|Определяет, имеют ли поле кнопки изменения плоский стиль.|  
-|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Указывает, обрабатывает ли кнопки [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщения. (Переопределяет [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Указывает, обрабатывает ли кнопки [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщения. (Переопределяет [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|Вызывается платформой при добавлении кнопки **Настройка** диалоговое окно. (Переопределяет [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|Вызывается платформой для вычисления размера кнопки для заданного контекста устройств и состояние закрепления. (Переопределяет [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Вызывается платформой при вставке кнопки в панели инструментов. (Переопределяет [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
@@ -361,7 +361,7 @@ static BOOL __stdcall IsFlatMode();
  По умолчанию поле кнопки изменения имеют плоский стиль. Используйте [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) метод, чтобы изменить стиль плоского представления для вашего приложения.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
- Указывает, обрабатывает ли кнопки [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщения.  
+ Указывает, обрабатывает ли кнопки [WM_COMMAND](/windows/desktop/menurc/wm-command) сообщения.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -375,9 +375,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  Значение TRUE, если кнопки обрабатывает сообщение WM_COMMAND, или FALSE для указания, что сообщения должны обрабатываться родительской панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой, когда он собирается отправить [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) родительское окно.  
+ Этот метод вызывается платформой, когда он собирается отправить [WM_COMMAND](/windows/desktop/menurc/wm-command) родительское окно.  
   
- Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)), обрабатывая [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687) уведомлений. Для каждого поля ввода с таким же Идентификатором команды, что и этот объект он задает его текст метки текстовую метку этого объекта.  
+ Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)), обрабатывая [EN_UPDATE](/windows/desktop/Controls/en-update) уведомлений. Для каждого поля ввода с таким же Идентификатором команды, что и этот объект он задает его текст метки текстовую метку этого объекта.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarEditBoxButton::OnAddToCustomizePage  
  Вызывается платформой при добавлении кнопки **Настройка** диалоговое окно.  

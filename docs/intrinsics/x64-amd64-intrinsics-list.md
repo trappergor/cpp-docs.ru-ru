@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f966491603ad1fda04bef34181ebb4937df6a65e
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209291"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680416"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Список встроенных объектов x64 (amd64)
 
@@ -32,13 +32,13 @@ ms.locfileid: "39209291"
 
 - [Руководство по встроенным функциям Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Для поиска конкретных встроенных функций используйте поле поиска.
 
-- [Руководства для разработчиков Intel 64 и IA-32 архитектуры программного обеспечения](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Руководства для разработчиков Intel 64 и IA-32 архитектуры программного обеспечения](https://software.intel.com/articles/intel-sdm)
 
-- [Справочник по программированию расширения набора инструкций архитектуры Intel](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Справочник по программированию расширения набора инструкций архитектуры Intel](https://software.intel.com/isa-extensions)
 
-- [Введение в Intel векторные инструкции AVX](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Введение в Intel векторные инструкции AVX](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [Руководства для разработчиков AMD, руководства и ISA документов](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [Руководства для разработчиков AMD, руководства и ISA документов](https://developer.amd.com/resources/developer-guides-manuals/)
 
 В следующей таблице перечислены встроенные функции, доступные для процессоров x64. В технологии столбце перечислены требуется поддержка набора инструкций. Использование [__cpuid](../intrinsics/cpuid-cpuidex.md) встроенные определить поддержку набора инструкций во время выполнения. Если две записи находятся в одной строке, они представляют разные точки входа для одной встроенной функции. [1] Указывает, что встроенный доступна только в процессорах AMD. [2] Указывает, что встроенный доступна только для процессоров Intel ®. [3] указывает, что прототип является макросом. Заголовок, требуемый для прототипа функции, указан в столбце "Заголовок". Заголовок intrin.h в целях упрощения включает как immintrin.h, так и ammintrin.h.
 

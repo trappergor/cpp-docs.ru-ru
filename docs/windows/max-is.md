@@ -1,5 +1,5 @@
 ---
-title: max_is | Документы Microsoft
+title: max_is | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2aa0b6e3928affbd30e08030f41a0b0183e46d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878974"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200685"
 ---
 # <a name="maxis"></a>max_is
-Задает максимальное значение для индекса массива допустимым.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      [ max_is(  
-   "expression"  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *Выражение*  
- Одно или несколько выражений языка C. Допускаются слоты пустой аргумент.  
-  
-## <a name="remarks"></a>Примечания  
- **Max_is** языка C++ имеет ту же функциональность, что [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) языка MIDL.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Поле в `struct` или **объединение**, интерфейс параметр, метод|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**size_is**|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="example"></a>Пример  
- В разделе [first_is](../windows/first-is.md) пример указания фрагмент массива.  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Атрибуты параметра](../windows/parameter-attributes.md)   
- [first_is](../windows/first-is.md)   
- [last_is](../windows/last-is.md)   
- [length_is](../windows/length-is.md)   
- [size_is](../windows/size-is.md)   
+
+Определяет максимальное значение для индекса допустимым массивом.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ max_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*Выражение*  
+Одно или несколько выражений языка. Допускаются слотов пустой аргумент.
+
+## <a name="remarks"></a>Примечания
+
+**Max_is** атрибут C++ имеет ту же функциональность, что [max_is](/windows/desktop/Midl/max-is) описании атрибута MIDL.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|**size_is**|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="example"></a>Пример
+
+См. в разделе [first_is](../windows/first-is.md) пример указания фрагмент массива.
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты параметра](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[last_is](../windows/last-is.md)  
+[length_is](../windows/length-is.md)  
+[size_is](../windows/size-is.md)  

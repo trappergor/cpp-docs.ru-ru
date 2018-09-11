@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmread | Документы Microsoft
+title: __vmx_vmread | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81feddd403c96d0b3f9402aaa744d0c79dbec21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6f03ea1ea39b9202d4bb7b850bb81354a4a47f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340675"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677384"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Блок, относящийся только к системам Microsoft**  
@@ -42,8 +42,8 @@ unsigned char __vmx_vmread(
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in] `Field`|VMCS поле для чтения.|  
-|[in] `FieldValue`|Указатель на расположение для хранения значения чтения из поля VMCS, заданного `Field` параметра.|  
+|[in] `Field`|Поле VMCS для чтения.|  
+|[in] `FieldValue`|Указатель на расположение для хранения значения чтения из VMCS поле, указанное параметром `Field` параметр.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -54,13 +54,13 @@ unsigned char __vmx_vmread(
 |2|Сбой операции без сведений о состоянии.|  
   
 ## <a name="remarks"></a>Примечания  
- `__vmx_vmread` Функция эквивалентна `VMREAD` инструкции компьютера. Значение `Field` параметра является индексом кодировке поля, как описано в документации Intel. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта, а затем обратитесь к приложении C этого документа .  
+ `__vmx_vmread` Функция эквивалентна `VMREAD` инструкции компьютера. Значение `Field` параметр является индекс кодировке поля, который описан в документации Intel. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта, а затем см. в приложении С этим документом .  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmread`|X64|  
   
  **Файл заголовка** \<intrin.h >  
   

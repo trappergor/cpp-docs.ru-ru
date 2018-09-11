@@ -1,5 +1,5 @@
 ---
-title: Метод HString::Detach | Документы Microsoft
+title: Метод HString::Detach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 621476f092b3dbaad994e63a329f1a8c567f55b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b794dea5c8b3b0fcde82c414e0cf24710cafb86
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33885458"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602501"
 ---
 # <a name="hstringdetach-method"></a>Метод HString::Detach
-Отсоединяет указанный объект HString из его базовое значение.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+Отменяет связывание заданных **HString** объект с его базовым значением.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HSTRING Detach() throw()  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Базовое значение HString до запуска операции отсоединения.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс HString](../windows/hstring-class.md)
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Базовый **HString** значение до запуска операции отсоединения.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс HString](../windows/hstring-class.md)

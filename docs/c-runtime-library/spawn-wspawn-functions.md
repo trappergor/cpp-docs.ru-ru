@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0e5a71faae381bc17b92d6b23047b9632913c2fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451775"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201267"
 ---
 # <a name="spawn-wspawn-functions"></a>Функции _spawn, _wspawn
 Каждая из функций `_spawn` создает и запускает новый процесс:  
@@ -134,7 +134,7 @@ ms.locfileid: "34451775"
 >  Пробелы, встроенные в строки, могут вызывать непредвиденное поведение. Например, если передать в функцию `_spawn` строку `"hi there"`, это приведет к тому, что новый процесс получит два аргумента: `"hi"` и `"there"`. Если предполагалось, что новый процесс должен открыть файл с именем hi there, произойдет сбой процесса. Этого можно избежать, заключив строку в кавычки: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Не передавайте данные, вводимые пользователем, в функцию `_spawn`, не выбрав это содержимое явно. `_spawn` вызывает функцию [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425), поэтому имейте в виду, что неполные пути могут привести к потенциальным уязвимостям безопасности.  
+>  Не передавайте данные, вводимые пользователем, в функцию `_spawn`, не выбрав это содержимое явно. `_spawn` вызывает функцию [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), поэтому имейте в виду, что неполные пути могут привести к потенциальным уязвимостям безопасности.  
   
  Указатели аргументов можно передавать как отдельные параметры (в функциях `_spawnl`, `_spawnle`, `_spawnlp` и `_spawnlpe`) или как массивы указателей (в функциях `_spawnv`, `_spawnve`, `_spawnvp` и `_spawnvpe`). В порожденный процесс необходимо передавать хотя бы один аргумент, `arg0` или `argv`[0]. По правилам этот аргумент представляет собой имя программы в том виде, в котором оно бы вводилось в командную строку. Другое значение не создает ошибку.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "34451775"
 ## <a name="redirecting-output"></a>Перенаправление выходных данных  
  Если при вызове функции `_spawn` из библиотеки DLL или приложения с графическим интерфейсом вы хотите перенаправить выходные данные в канал, можно выбрать один из двух вариантов:  
   
--   Воспользуйтесь API Win32, чтобы создать канал, вызовите функцию [AllocConsole](http://msdn.microsoft.com/library/windows/desktop/ms681944), задайте значения обработки в структуре запуска и вызовите функцию [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425).  
+-   Воспользуйтесь API Win32, чтобы создать канал, вызовите функцию [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944), задайте значения обработки в структуре запуска и вызовите функцию [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).  
   
 -   Вызовите функцию [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md), которая создаст канал и вызовет приложение с помощью файла **cmd.exe /c** (или **command.exe /c**).  
   

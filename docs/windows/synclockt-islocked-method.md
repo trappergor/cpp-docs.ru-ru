@@ -1,5 +1,5 @@
 ---
-title: Метод SyncLockT::IsLocked | Документы Microsoft
+title: Метод SyncLockT::IsLocked | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 067b3763e10b2bbb310b213f7d748e953ba2a902
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca4391539e4f6987431e8b9b036053db02218007
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888479"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593059"
 ---
 # <a name="synclocktislocked-method"></a>Метод SyncLockT::IsLocked
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-bool IsLocked() const;  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если объект SyncLockT заблокирован; в противном случае — **false**.  
-  
-## <a name="remarks"></a>Примечания  
- Указывает, владеет ли текущий объект SyncLockT ресурсом; Объект SyncLockT является *заблокирован*.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>См. также  
- [Класс SyncLockT](../windows/synclockt-class.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если **SyncLockT** объектов заблокирован; в противном случае — значение **false**.
+
+## <a name="remarks"></a>Примечания
+
+Указывает ли текущий **SyncLockT** объекта, которому принадлежит ресурс, то есть, **SyncLockT** объект *заблокирован*.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>См. также
+
+[Класс SyncLockT](../windows/synclockt-class.md)

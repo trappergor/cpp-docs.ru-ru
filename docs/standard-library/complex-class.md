@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026411"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103257"
 ---
 # <a name="complex-class"></a>Класс complex
 
@@ -56,26 +56,26 @@ class complex
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[complex](#complex)|Строит комплексное число с указанными вещественной и мнимой частями или как копию некоторого другого комплексного числа.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[value_type](#value_type)|Тип, представляющий тип данных, который используется для представления действительной и мнимой частей комплексного числа.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[imag](#imag)|Извлекает мнимую часть комплексного числа.|
 |[real](#real)|Извлекает вещественную часть комплексного числа.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор*=](#op_star_eq)|Умножает целевое комплексное число на множитель, который может быть комплексным или иметь тот же тип, что и действительная и мнимая части комплексного числа.|
 |[оператор+=](#op_add_eq)|Добавляет число к целевому комплексному числу, где добавляемое число может быть комплексным или того же типа, что и действительная и мнимая части комплексного числа, к которому выполняется добавление.|
@@ -108,11 +108,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>Параметры
 
-*_RealVal* значение вещественной части, используемое для инициализации конструируемого комплексного числа.
+*_RealVal*<br/>
+Значение вещественной части, используемое для инициализации конструируемого комплексного числа.
 
-*_ImagVal* значение мнимой части, используемое для инициализации конструируемого комплексного числа.
+*_ImagVal*<br/>
+Значение мнимой части, используемое для инициализации конструируемого комплексного числа.
 
-*complexNum* комплексное число, Вещественная и мнимая части которого используются для инициализации конструируемого комплексного числа.
+*complexNum*<br/>
+Комплексное число, вещественная и мнимая части которого используются для инициализации конструируемого комплексного числа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -187,7 +190,8 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* комплексное число, мнимая часть которого извлекается.
+*right*<br/>
+Комплексное число, мнимая часть которого извлекается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -243,7 +247,8 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* комплексное число или число, которое имеет тот же тип как параметр целевого комплексного числа.
+*right*<br/>
+Комплексное число или число того же типа, что и параметр целевого комплексного числа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -326,7 +331,8 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* комплексное число или число, которое имеет тот же тип как параметр целевого комплексного числа.
+*right*<br/>
+Комплексное число или число того же типа, что и параметр целевого комплексного числа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -400,7 +406,7 @@ The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The sum of the two complex numbers is: cs1 = cl1 + cr1 = (5,3)
 The complex number cr1 added to the complex number cl1 is:
- cl1 += cr1 = (5,3)
+cl1 += cr1 = (5,3)
 The modulus of cl1 is: 5.83095
 The argument of cl1 is: 0.54042 radians, which is 30.9638 degrees.
 
@@ -408,7 +414,7 @@ The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The sum of the two complex numbers is: cs2 = cl2 + cr2 = (3,4)
 The complex number cr2 added to the complex number cl2 is:
- cl2 += cr2 = (3,4)
+cl2 += cr2 = (3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -428,9 +434,11 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum* комплексного числа для вычитания из целевого комплексного числа.
+*complexNum*<br/>
+Комплексное число для вычитания из целевого комплексного числа.
 
-*_RealPart* вещественное число для вычитания из целевого комплексного числа.
+*_RealPart*<br/>
+Действительное число для вычитания из целевого комплексного числа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -503,18 +511,18 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The difference between the two complex numbers is:
- cs1 = cl1 - cr1 = (1,5)
+cs1 = cl1 - cr1 = (1,5)
 Complex number cr1 subtracted from complex number cl1 is:
- cl1 -= cr1 = (1,5)
+cl1 -= cr1 = (1,5)
 The modulus of cl1 is: 5.09902
 The argument of cl1 is: 1.3734 radians, which is 78.6901 degrees.
 
 The left-side complex number is cl2 = (2,4)
 The right-side complex number is cr2 = 5
 The difference between the two complex numbers is:
- cs2 = cl2 - cr2 = (-3,4)
+cs2 = cl2 - cr2 = (-3,4)
 Complex number cr2 subtracted from complex number cl2 is:
- cl2 -= cr2 = (-3,4)
+cl2 -= cr2 = (-3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
@@ -534,9 +542,11 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum* комплексного числа для вычитания из целевого комплексного числа.
+*complexNum*<br/>
+Комплексное число для вычитания из целевого комплексного числа.
 
-*_RealPart* вещественное число для вычитания из целевого комплексного числа.
+*_RealPart*<br/>
+Действительное число для вычитания из целевого комплексного числа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -634,7 +644,8 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* комплексное число или число, которое имеет тот же тип как параметр целевого комплексного числа.
+*right*<br/>
+Комплексное число или число того же типа, что и параметр целевого комплексного числа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -666,7 +677,7 @@ int main( )
 
    cl1  = cr1;
    cout << "The complex number cr1 assigned to the complex number cl1 is:"
-        << "\n cl1 = cr1 = " << cl1 << endl;
+        << "\ncl1 = cr1 = " << cl1 << endl;
 
    // Example of the second member function
    // type double assigned to type complex<double>
@@ -677,11 +688,11 @@ int main( )
 
    cl2 = cr2;
    cout << "The complex number cr2 assigned to the complex number cl2 is:"
-        << "\n cl2 = cr2 = " << cl2 << endl;
+        << "\ncl2 = cr2 = " << cl2 << endl;
 
    cl2 = complex<double>(3.0, 4.0);
    cout << "The complex number (3, 4) assigned to the complex number cl2 is:"
-        << "\n cl2 = " << cl2 << endl;
+        << "\ncl2 = " << cl2 << endl;
 }
 ```
 
@@ -689,13 +700,13 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The complex number cr1 assigned to the complex number cl1 is:
- cl1 = cr1 = (2,-1)
+cl1 = cr1 = (2,-1)
 The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The complex number cr2 assigned to the complex number cl2 is:
- cl2 = cr2 = (5,0)
+cl2 = cr2 = (5,0)
 The complex number (3, 4) assigned to the complex number cl2 is:
- cl2 = (3,4)
+cl2 = (3,4)
 ```
 
 ## <a name="real"></a>  complex::real
@@ -711,7 +722,8 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* комплексное число, вещественное значение которого должно быть извлечено.
+*right*<br/>
+Комплексное число, вещественное значение которого извлекается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -792,5 +804,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>См. также
 
-[Члены класса Complex](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

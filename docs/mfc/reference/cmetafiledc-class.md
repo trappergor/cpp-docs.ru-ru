@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338864"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197007"
 ---
 # <a name="cmetafiledc-class"></a>Cmetafiledc-класс
 Реализует метафайл Windows, который содержит последовательность команд интерфейса графических устройств (GDI), которые можно воспроизвести для создания нужного изображения или текста.  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  После отправки нужных команд в метафайл, вызовите `Close` функцией-членом, которая закрывает контексты устройств метафайла и возвращает дескриптор метафайла. Затем `CMetaFileDC` объекта.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) можно затем использовать дескриптор метафайла для воспроизведения метафайла многократно. Метафайл можно также управлять функциями Windows например [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), метафайл копирование на диск.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) можно затем использовать дескриптор метафайла для воспроизведения метафайла многократно. Метафайл можно также управлять функциями Windows например [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea), метафайл копирование на диск.  
   
- Когда метафайла не нужны, удалите его из памяти с [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) функции Windows.  
+ Когда метафайла не нужны, удалите его из памяти с [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) функции Windows.  
   
  Вы также можете реализовать `CMetaFileDC` объект так, чтобы он может обрабатывать оба выходных данных вызовов и атрибут GDI вызовы, например `GetTextExtent`. Такие метафайл является более гибким и можно больше многократно использовать общие GDI-код, который часто состоит из набора выходных данных и атрибута вызовов. `CMetaFileDC` Класс наследует двух контекстах устройств `m_hDC` и `m_hAttribDC`, из CDC. `m_hDC` Контекста устройства отвечает за выполнение всех [CDC](../../mfc/reference/cdc-class.md) GDI вывода вызовы и `m_hAttribDC` контекста устройства обрабатывает все вызовы атрибут CDC GDI. Как правило эти два устройства контекстах см. на то же устройство. В случае использования `CMetaFileDC`, атрибут контроллер домена имеет значение NULL по умолчанию.  
   
@@ -97,9 +97,9 @@ HMETAFILE Close();
  Допустимые HMETAFILE, если функция выполнена успешно; в противном случае имеет значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Дескриптор метафайла Windows также может использоваться для управления метафайла с функциями Windows, таких как [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
+ Дескриптор метафайла Windows также может использоваться для управления метафайла с функциями Windows, таких как [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea).  
   
- Удалить метафайла после использования, вызвав Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) функции.  
+ Удалить метафайла после использования, вызвав Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) функции.  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Закрывает контекст устройства расширенного метафайла и возвращает дескриптор, который определяет расширенный формат метафайла.  

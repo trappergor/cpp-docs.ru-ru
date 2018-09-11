@@ -1,5 +1,5 @@
 ---
-title: v1_enum | Документы Microsoft
+title: v1_enum | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,55 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3156554f5d2b799a9e1ef5a067d1f2e8e600d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbacec7644a05f0077c8d6ffbe3e7856c66dcc4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890665"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222979"
 ---
 # <a name="v1enum"></a>v1_enum
-Направляет передачи заданного перечислимого типа как сущность 32 бита, а не 16-разрядное значение по умолчанию.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-[v1_enum]  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **V1_enum** языка C++ имеет ту же функциональность, что [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- В следующем коде показано использование **v1_enum**:  
-  
-```  
-// cpp_attr_ref_v1_enum.cpp  
-// compile with: /LD  
-[module(name="MyLibrary")];  
-  
-[export, v1_enum]   
-enum eList {   
-   e1 = 1,   
-   e2 = 2  
-};  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Перечислимый тип|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)   
+
+Указывает, что заданного перечислимого типа, передаваться в объект 32-разрядной, а не по умолчанию 16-разрядное.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[v1_enum]
+```
+
+## <a name="remarks"></a>Примечания
+
+**V1_enum** атрибут C++ имеет ту же функциональность, что [v1_enum](/windows/desktop/Midl/v1-enum) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+В следующем коде показано использование **v1_enum**:
+
+```cpp
+// cpp_attr_ref_v1_enum.cpp
+// compile with: /LD
+[module(name="MyLibrary")];
+
+[export, v1_enum]
+enum eList {
+   e1 = 1,
+   e2 = 2
+};
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Перечислимый тип|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  

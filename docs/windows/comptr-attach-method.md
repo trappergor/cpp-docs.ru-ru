@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f02d8585778dcb10013a5673c7443b0355535555
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461072"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600200"
 ---
 # <a name="comptrattach-method"></a>Метод ComPtr::Attach
-Это связывает **ComPtr** с типом интерфейса, указанным текущим параметром типа шаблона.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void Attach(  
-   _In_opt_ InterfaceType* other  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *other*  
- Тип интерфейса.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ComPtr](../windows/comptr-class.md)
+
+Это связывает **ComPtr** с типом интерфейса, указанным текущим параметром типа шаблона.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void Attach(
+   _In_opt_ InterfaceType* other
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*other*  
+Тип интерфейса.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtr](../windows/comptr-class.md)

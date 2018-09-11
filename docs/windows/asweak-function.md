@@ -17,43 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dea10165e920c6b0bbd3856fc04e9ec9661e60c4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462629"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42571338"
 ---
 # <a name="asweak-function"></a>AsWeak - функция
-Извлекает слабую ссылку на определенный экземпляр.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template<typename T>  
-HRESULT AsWeak(  
-   _In_ T* p,  
-   _Out_ WeakRef* pWeak  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *T*  
- Указатель на тип параметра *p*.  
-  
- *p*  
- Экземпляр типа.  
-  
- *pWeak*  
- После завершения операции, указатель на слабую ссылку на параметр *p*.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция выполнена успешно; в противном случае ошибка HRESULT, указывающее причину сбоя.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Извлекает слабую ссылку на определенный экземпляр.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<typename T>
+HRESULT AsWeak(
+   _In_ T* p,
+   _Out_ WeakRef* pWeak
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*  
+Указатель на тип параметра *p*.
+
+*p*  
+Экземпляр типа.
+
+*pWeak*  
+После завершения операции, указатель на слабую ссылку на параметр *p*.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция выполнена успешно; в противном случае ошибка HRESULT, указывающее причину сбоя.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

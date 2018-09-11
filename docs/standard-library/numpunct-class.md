@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 81a176bd911203d04797f3437539730042b8dbae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965569"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108984"
 ---
 # <a name="numpunct-class"></a>Класс numpunct
 
@@ -60,7 +60,8 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType* тип, используемый внутри программы для кодирования символов в языковом стандарте.
+*CharType*<br/>
+Тип, используемый внутри программы для кодирования символов в языковом стандарте.
 
 ## <a name="remarks"></a>Примечания
 
@@ -68,20 +69,20 @@ class numpunct : public locale::facet;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[numpunct](#numpunct)|Конструктор для объектов типа `numpunct`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|
 |[string_type](#string_type)|Тип, описывающий строку, содержащую символы типа `CharType`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[decimal_point](#decimal_point)|Возвращает элемент определенного языкового стандарта для использования в качестве десятичного разделителя.|
 |[do_decimal_point](#do_decimal_point)|Защищенная виртуальная функция-член, которая вызывается, чтобы возвратить элемент определенного языкового стандарта для использования в качестве десятичного разделителя.|
@@ -341,7 +342,7 @@ int main( )
 
 ```Output
 German_Germany.1252 international grouping:
- the 0th group to the left of the radix character is of size 3
+the 0th group to the left of the radix character is of size 3
 ```
 
 ## <a name="numpunct"></a>  numpunct::numpunct
@@ -354,7 +355,8 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs* целочисленное значение, используемое для указания типа управления памятью для объекта.
+*_Refs*<br/>
+Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
 ### <a name="remarks"></a>Примечания
 

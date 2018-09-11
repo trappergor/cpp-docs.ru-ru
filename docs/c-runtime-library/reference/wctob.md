@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cff2dcb8d6b0ad3756a8a0047fcc9b982fb7bb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61d92c02c4410bdc01b76ac6307fb9bb2652880a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411449"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203612"
 ---
 # <a name="wctob"></a>wctob
 
@@ -59,13 +59,13 @@ int wctob(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **wctob** успешно преобразует расширенный символ, он возвращает соответствующее представление многобайтовой только в том случае, если Многобайтовый символ имеет длину ровно один байт. Если **wctob** встречает расширенный символ, не может преобразовать Многобайтовый символ или Многобайтовый символ отлично от один байт, возвращается значение -1.
+Если **wctob** успешно преобразует строку расширенных символов, он возвращает соответствующее представление многобайтового символа, только в том случае, если Многобайтовый символ имеет длину ровно один байт. Если **wctob** встречает расширенный символ, не может преобразовать Многобайтовый или Многобайтовый символ отлично от один байт, он возвращает значение -1.
 
 ## <a name="remarks"></a>Примечания
 
-**Wctob** функция преобразует расширенный символ, содержащийся в *wchar* в соответствующий Многобайтовый символ, передаваемый возвращаемым **int** значение, если многобайтовой символ имеет длину ровно один байт.
+**Wctob** функция преобразует строку расширенных символов, содержащихся в *wchar* соответствующий Многобайтовый символ, передаваемый возвращаемым **int** значение, если многобайтовой символ имеет длину ровно один байт.
 
-Если **wctob** завершилась неудачно и соответствующий Многобайтовый символ найден, функция задает **errno** для **EILSEQ** и возвращает значение -1.
+Если **wctob** завершилась неудачно и соответствующий Многобайтовый символ найден, функция задает **errno** для **EILSEQ** и возвращает – 1.
 
 ## <a name="requirements"></a>Требования
 
@@ -118,4 +118,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Встроенные функции _InterlockedDecrement | Документы Microsoft
+title: Встроенные функции _InterlockedDecrement | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacca8241bc32965d3f22fcb3e4d5ed8b72a1651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a30a09b9feae0d5c7e0d24967c133f076286f2fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338992"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540927"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>Встроенные функции _InterlockedDecrement
 **Блок, относящийся только к системам Microsoft**  
   
- Предоставляет встроенную поддержку компилятора для функции Win32 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx) функции.  
+Предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement) функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -118,7 +118,7 @@ __int64 _InterlockedDecrement64_nf(
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|  
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|  
   
  **Файл заголовка** \<intrin.h >  
@@ -130,7 +130,7 @@ __int64 _InterlockedDecrement64_nf(
   
  На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции с суффиксом `_nf` («без границ») не действуют как барьер памяти.  
   
- Переменная, на который указывает параметр `lpAddend`, должна быть выровнена по границе 32 разрядов; в противном случае эта функция не выполняется на многопроцессорных системах x86 и любой системе не-x86. Дополнительные сведения см. в разделе [выравнивание](../cpp/align-cpp.md).  
+ Переменная, на который указывает параметр `lpAddend`, должна быть выровнена по границе 32 разрядов; в противном случае эта функция не выполняется на многопроцессорных системах x86 и любой системе не-x86. Дополнительные сведения см. в разделе [выровнять](../cpp/align-cpp.md).  
   
  Эти процедуры доступны только как встроенные объекты.  
   

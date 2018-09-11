@@ -1,5 +1,5 @@
 ---
-title: __movsq | Документы Microsoft
+title: __movsq | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e0eacba00f9c0fb397b1fe37d2be8b108b6a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336977"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543217"
 ---
 # <a name="movsq"></a>__movsq
 **Блок, относящийся только к системам Microsoft**  
@@ -48,18 +48,18 @@ void __movsq(
  Источник операции.  
   
  [in] `Count`  
- Количество учетверенных слова для копирования.  
+ Число учетверенных слова для копирования.  
   
 ## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
 |---------------|------------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsq`|X64|  
   
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- В результате первый `Count` учетверенных слова, на который указывает `Source` копируются `Dest` строки.  
+ В результате первый `Count` учетверенных слова, на которые указывают `Source` копируются `Dest` строка.  
   
  Эта процедура доступна только как встроенная функция.  
   

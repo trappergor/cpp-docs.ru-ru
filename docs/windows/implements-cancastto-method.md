@@ -1,5 +1,5 @@
 ---
-title: Метод Implements::CanCastTo | Документы Microsoft
+title: Метод Implements::CanCastTo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 328691877a3b129c852460f8f68cdd3db4974e6f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877077"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595303"
 ---
 # <a name="implementscancastto-method"></a>Метод Implements::CanCastTo
-Возвращает указатель на указанный интерфейс.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-__forceinline HRESULT CanCastTo(  
-   REFIID riid,  
-   _Deref_out_ void **ppv  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `riid`  
- Ссылку на идентификатор интерфейса.  
-  
- `ppv`  
- Если успешно, указатель на интерфейс, заданный `riid`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае — значение HRESULT, указывающее ошибку, например E_NOINTERFACE.  
-  
-## <a name="remarks"></a>Примечания  
- Это внутренняя вспомогательная функция, которая выполняет операцию QueryInterface.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Структура Implements](../windows/implements-structure.md)
+
+Возвращает указатель на указанный интерфейс.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*  
+Ссылку на идентификатор интерфейса.
+
+*ppv*  
+Если в случае успешного выполнения указатель на интерфейс, заданный *riid*.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, указывающее ошибку, например E_NOINTERFACE.
+
+## <a name="remarks"></a>Примечания
+
+Это внутренняя вспомогательная функция, которая выполняет операцию QueryInterface.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Структура Implements](../windows/implements-structure.md)

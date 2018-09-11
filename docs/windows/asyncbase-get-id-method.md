@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea5efa31a3ebff3c86800a023e3525589952c2fc
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 32d2d3cd633204b44e266bddea5d16361b5e9d19
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464718"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604454"
 ---
 # <a name="asyncbasegetid-method"></a>Метод AsyncBase::get_Id
-Извлекает дескриптор асинхронной операции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHOD(  
-   get_Id  
-)(unsigned int *id) override;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *id*  
- Расположение, где будет храниться дескриптор.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если выполнение прошло успешно; в противном случае E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="remarks"></a>Примечания  
- Этот метод реализует `IAsyncInfo::get_Id`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** async.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс AsyncBase](../windows/asyncbase-class.md)
+
+Извлекает дескриптор асинхронной операции.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(
+   get_Id
+)(unsigned int *id) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*id*  
+Расположение, где будет храниться дескриптор.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае E_ILLEGAL_METHOD_CALL.
+
+## <a name="remarks"></a>Примечания
+
+Этот метод реализует `IAsyncInfo::get_Id`.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** async.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс AsyncBase](../windows/asyncbase-class.md)

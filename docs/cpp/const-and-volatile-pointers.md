@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 52550df1ca89ec1252fc2910bf27598d51302495
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408194"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212265"
 ---
 # <a name="const-and-volatile-pointers"></a>Указатели с ключевыми словами const и volatile
 [Const](../cpp/const-cpp.md) и [volatile](../cpp/volatile-cpp.md) ключевые слова изменить способы обработки указателей. **Const** ключевое слово указывает, что указатель невозможно изменить после инициализации; он защищен от последующих изменений.  
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  Предыдущая инструкция объявляет функцию, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), в которых два из трех аргументов являются типа pointer в **char**. Так как аргументы передаются по ссылке, а не по значению, функция могла бы свободно изменить и `strDestination` и `strSource` Если `strSource` не были объявлены как **const**. Объявление `strSource` как **const** вызывающий объект гарантирует, что `strSource` нельзя изменить вызываемой функцией.  
   
 > [!NOTE]
->  Так как стандартное преобразование из *typename* **\*** для **const** *typename* **\***, можно передать аргумент типа `char *` для [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Однако обратное неверно; неявные преобразования не существует для удаления **const** атрибут из объекта или указателя.  
+> Так как стандартное преобразование из *typename* <strong>\*</strong> для **const** *typename* <strong>\*</strong>, можно передать аргумент типа `char *` для [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Однако обратное неверно; неявные преобразования не существует для удаления **const** атрибут из объекта или указателя.  
   
  Объект **const** указатель заданного типа могут быть назначены указатель того же типа. Тем не менее, указатель, не **const** не могут быть назначены **const** указатель. В следующем коде показано одно верное и одно неверное присваивание.  
   

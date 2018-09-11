@@ -1,5 +1,5 @@
 ---
-title: Выбор основного цвета и цвета фона (редактор изображений для значков) | Документы Microsoft
+title: Выбор основного цвета и цвета фона (редактор изображений для значков) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd86e9a1d48465df4656b4b0cb8247712f4e12d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: adaf5f28bd115602c51d20e34d593ce42644c5d4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888650"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613633"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Выбор основного цвета и цвета фона (редактор изображений для значков)
-За исключением **ластика**, инструменты на **редактора изображений** инструментов рисования с текущего основного или фонового цвета при нажатии кнопки мыши влево или вправо, соответственно.  
-  
-### <a name="to-select-a-foreground-color"></a>Выбор цвета переднего плана  
-  
-1.  С левой кнопки мыши, щелкните нужный цвет на [палитра цветов](../windows/colors-window-image-editor-for-icons.md).  
-  
-### <a name="to-select-a-background-color"></a>Выбор цвета фона  
-  
-1.  Правой кнопкой мыши, щелкните нужный цвет на **цветов** палитры.  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.*  
-  
- Требования  
-  
- Нет  
-  
-## <a name="see-also"></a>См. также  
- [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)
+
+За исключением **ластика**, инструменты на **редактор изображений** инструментов рисуют с использованием текущего переднего плана или фонового цвета при нажатии кнопки мыши влево или вправо, соответственно.
+
+### <a name="to-select-a-foreground-color"></a>Выбор цвета переднего плана
+
+1. С левой кнопки мыши, выберите нужный цвет на [палитра цветов](../windows/colors-window-image-editor-for-icons.md).
+
+### <a name="to-select-a-background-color"></a>Выбор цвета фона
+
+1. Правой кнопкой мыши, щелкните нужный цвет на **цвета** палитры.
+
+Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.
+
+## <a name="requirements"></a>Требования
+
+Нет
+
+## <a name="see-also"></a>См. также
+
+[Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)

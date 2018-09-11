@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b1ef298dbc8c15dddafedd74c83476663328d42f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462941"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602664"
 ---
 # <a name="comptrrefgetaddressof-method"></a>Метод ComPtrRef::GetAddressOf
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-InterfaceType* const * GetAddressOf() const;  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Адрес указателя на интерфейс, представленный текущим **ComPtrRef** объекта.  
-  
-## <a name="remarks"></a>Примечания  
- Извлекает адрес указателя на интерфейс, представленный текущим **ComPtrRef** объекта.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Comptrref-класс](../windows/comptrref-class.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+InterfaceType* const * GetAddressOf() const;
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Адрес указателя на интерфейс, представленный текущим **ComPtrRef** объекта.
+
+## <a name="remarks"></a>Примечания
+
+Извлекает адрес указателя на интерфейс, представленный текущим **ComPtrRef** объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtrRef](../windows/comptrref-class.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

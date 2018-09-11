@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c2e6f457af9dfa34b63536a79b7764d91bdbec
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0c94542fdac3734644771f2659d894d1c8c6f907
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339479"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759187"
 ---
 # <a name="cmenu-class"></a>CMenu-класс
 Инкапсуляция `HMENU`Windows.  
@@ -114,13 +114,13 @@ class CMenu : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMenu::CMenu](#cmenu)|Создает объект `CMenu`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMenu::AppendMenu](#appendmenu)|Добавляет новый элемент в конец этого меню.|  
 |[CMenu::Attach](#attach)|Прикрепляет дескриптор меню Windows `CMenu` объекта.|  
@@ -162,7 +162,7 @@ class CMenu : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMenu::operator HMENU](#operator_hmenu)|Извлекает дескриптор объекта меню.|  
 |[CMenu::operator! =](#operator_neq)|Определяет, если два меню объекты не равны.|  
@@ -170,7 +170,7 @@ class CMenu : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMenu::m_hMenu](#m_hmenu)|Указывает дескриптор меню Windows, подключенный к `CMenu` объекта.|  
   
@@ -608,7 +608,7 @@ UINT GetDefaultItem(
  Если функция выполняется успешно, возвращает значение идентификатора или положение элемента меню. Если функция завершается с ошибкой, возвращается - 1.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение функции Win32 [GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение функции Win32 [GetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-getmenudefaultitem), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CMenu::InsertMenu](#insertmenu).  
@@ -635,7 +635,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
   
 ### <a name="parameters"></a>Параметры  
  *lpcmi*  
- Указатель на [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) структуру, содержащую сведения для меню.  
+ Указатель на [MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo) структуру, содержащую сведения для меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если функция выполняется успешно, возвращаемое значение не равно нулю; в противном случае возвращаемое значение равно нулю.  
@@ -688,16 +688,16 @@ BOOL GetMenuItemInfo(
  Идентификатор или положение элемента меню, который требуется получить сведения. Значение этого параметра зависит от значения `ByPos`.  
   
  *lpMenuItemInfo*  
- Указатель на [MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578), как описано в пакете SDK для Windows, который содержит сведения о меню.  
+ Указатель на [MENUITEMINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuiteminfoa), как описано в пакете SDK для Windows, который содержит сведения о меню.  
   
  *fByPos*  
  Значение, указывающее значение `nIDItem`. По умолчанию `ByPos` равно FALSE, что указывает, что uItem — это идентификатор элемента меню. Если `ByPos` не задано значение false, указывает расположение элемента меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если функция выполняется успешно, возвращается ненулевое значение. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, используйте функцию Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), как описано в пакете Windows SDK.  
+ Если функция выполняется успешно, возвращается ненулевое значение. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, используйте функцию Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), как описано в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение функции Win32 [GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980), как описано в пакете Windows SDK. Обратите внимание, что в реализации MFC `GetMenuItemInfo`, вы не используете дескриптор для меню.  
+ Эта функция-член реализует поведение функции Win32 [GetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-getmenuiteminfoa), как описано в пакете Windows SDK. Обратите внимание, что в реализации MFC `GetMenuItemInfo`, вы не используете дескриптор для меню.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
@@ -855,7 +855,7 @@ BOOL InsertMenu(
   
 |nFlags|Интерпретация lpszNewItem|  
 |------------|-----------------------------------|  
-|MF_OWNERDRAW|Содержит 32-разрядное значение, приложение можно использовать для обслуживания дополнительные данные, связанные с элементом меню предоставляемую приложением. Это 32-разрядное значение для приложения в `itemData` член структуры, предоставляемые [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) и [WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923) сообщений. Эти сообщения отправляются в том случае, когда элемент меню будет первоначально отображаться или изменении.|  
+|MF_OWNERDRAW|Содержит 32-разрядное значение, приложение можно использовать для обслуживания дополнительные данные, связанные с элементом меню предоставляемую приложением. Это 32-разрядное значение для приложения в `itemData` член структуры, предоставляемые [WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem) и [WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem) сообщений. Эти сообщения отправляются в том случае, когда элемент меню будет первоначально отображаться или изменении.|  
 |MF_STRING|Содержит длинный указатель на строку, завершающуюся символом null. Это Интерпретация по умолчанию.|  
 |MF_SEPARATOR|*LpszNewItem* параметр учитывается (не требуется).|  
   
@@ -889,7 +889,7 @@ BOOL InsertMenuItem(
   
 ### <a name="parameters"></a>Параметры  
  *uItem*  
- См. описание *uItem* в [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) в пакете Windows SDK.  
+ См. описание *uItem* в [InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema) в пакете Windows SDK.  
   
  *lpMenuItemInfo*  
  См. описание *lpmii* в `InsertMenuItem` в пакете Windows SDK.  
@@ -898,7 +898,7 @@ BOOL InsertMenuItem(
  См. описание *fByPosition* в `InsertMenuItem` в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция осуществляет [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), описанные в пакете Windows SDK.  
+ Эта функция осуществляет [InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema), описанные в пакете Windows SDK.  
   
 ##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  Загружает ресурс меню из исполняемого файла приложения и присоединяет его к `CMenu` объекта.  
@@ -933,13 +933,13 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
   
 ### <a name="parameters"></a>Параметры  
  *lpMenuTemplate*  
- Указывает шаблон меню (который представляет собой одну [MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583) структуры и коллекцию из одного или нескольких [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) структуры). Дополнительные сведения об этих двух структур см. в разделе Windows SDK.  
+ Указывает шаблон меню (который представляет собой одну [MENUITEMTEMPLATEHEADER](/windows/desktop/api/winuser/ns-winuser-menuitemtemplateheader) структуры и коллекцию из одного или нескольких [MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate) структуры). Дополнительные сведения об этих двух структур см. в разделе Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если ресурс был загружен успешно; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Меню шаблона является заголовком, следуют коллекцию из одного или нескольких [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) структуры, каждый из которых может содержать один или несколько пунктов меню, так и во всплывающих меню.  
+ Меню шаблона является заголовком, следуют коллекцию из одного или нескольких [MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate) структуры, каждый из которых может содержать один или несколько пунктов меню, так и во всплывающих меню.  
   
  Номер версии должно быть равно 0.  
   
@@ -1131,10 +1131,10 @@ BOOL SetDefaultItem(
  Значение, указывающее значение *uItem*. Если этот параметр имеет значение FALSE, *uItem* — это идентификатор элемента меню. В противном случае — это позиция элемента меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если функция выполняется успешно, возвращается ненулевое значение. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, используйте функцию Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), как описано в пакете Windows SDK.  
+ Если функция выполняется успешно, возвращается ненулевое значение. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, используйте функцию Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), как описано в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение функции Win32 [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996), как описано в пакете Windows SDK.  
+ Эта функция-член реализует поведение функции Win32 [SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem), как описано в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
   См. в примере [CMenu::InsertMenu](#insertmenu).  
@@ -1168,7 +1168,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
   
 ### <a name="parameters"></a>Параметры  
  *lpcmi*  
- Указатель на [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) структуру, содержащую сведения для меню.  
+ Указатель на [MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo) структуру, содержащую сведения для меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если функция выполняется успешно, возвращаемое значение не равно нулю; в противном случае возвращаемое значение равно нулю.  
@@ -1234,7 +1234,7 @@ BOOL SetMenuItemInfo(
   
 ### <a name="parameters"></a>Параметры  
  *uItem*  
- См. описание *uItem* в [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) в пакете Windows SDK.  
+ См. описание *uItem* в [SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa) в пакете Windows SDK.  
   
  *lpMenuItemInfo*  
  См. описание *lpmii* в `SetMenuItemInfo` в пакете Windows SDK.  
@@ -1243,7 +1243,7 @@ BOOL SetMenuItemInfo(
  См. описание *fByPosition* в `SetMenuItemInfo` в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция осуществляет [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), описанные в пакете Windows SDK.  
+ Эта функция осуществляет [SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa), описанные в пакете Windows SDK.  
   
 ##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  Отображает всплывающее меню с плавающей запятой в указанном расположении и отслеживает выбор элементов всплывающего меню.  
@@ -1259,7 +1259,7 @@ BOOL TrackPopupMenu(
   
 ### <a name="parameters"></a>Параметры  
  *nFlags*  
- Указывает флаги положение на экране и положение указателя мыши. См. в разделе [метод TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) список доступных флагов.  
+ Указывает флаги положение на экране и положение указателя мыши. См. в разделе [метод TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) список доступных флагов.  
   
  *x*  
  Задает горизонтальное положение во всплывающем меню в экранных координатах. В зависимости от значения *nFlags* параметр меню может быть выравниванием по левому краю, по правому краю или по центру относительно этой позиции.  
@@ -1274,7 +1274,7 @@ BOOL TrackPopupMenu(
  Не обрабатывается.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает результат вызова метода [метод TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) в пакете Windows SDK.  
+ Этот метод возвращает результат вызова метода [метод TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  С плавающей запятой всплывающего меню может находиться в любом на экране.  
@@ -1296,7 +1296,7 @@ BOOL TrackPopupMenuEx(
   
 ### <a name="parameters"></a>Параметры  
  *fuFlags*  
- Указывает различные функции для расширенного меню. Список всех значений и их значениях см. в разделе [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
+ Указывает различные функции для расширенного меню. Список всех значений и их значениях см. в разделе [TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex).  
   
  *x*  
  Задает горизонтальное положение во всплывающем меню в экранных координатах.  
@@ -1308,15 +1308,15 @@ BOOL TrackPopupMenuEx(
  Указатель на окно-владелец во всплывающем меню и получения сообщений в созданный меню. Это окно может быть любое окно из текущего приложения, но не может иметь значение NULL. Если указать TPM_NONOTIFY в *fuFlags* параметра, функция не отправлять никаких сообщений для *pWnd*. Эта функция должна возвратить для окна, на которые указывают *pWnd* сообщение WM_COMMAND.  
   
  *lptpm*  
- Указатель на [TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586) структура, задающая область экрана меню не должны перекрываться. Этот параметр может иметь значение NULL.  
+ Указатель на [TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams) структура, задающая область экрана меню не должны перекрываться. Этот параметр может иметь значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если указать TPM_RETURNCMD в *fuFlags* параметр, возвращаемое значение является идентификатором пунктов меню элемента, выбранного пользователем. Если пользователь отменяет меню без выбора или при возникновении ошибки, возвращаемое значение равно 0.  
   
- Если вы не укажете TPM_RETURNCMD в *fuFlags* параметр, возвращаемое значение является ненулевым, если функция выполняется успешно и 0 в случае неудачи. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Если вы не укажете TPM_RETURNCMD в *fuFlags* параметр, возвращаемое значение является ненулевым, если функция выполняется успешно и 0 в случае неудачи. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Примечания  
- С плавающей запятой всплывающего меню может находиться в любом на экране. Дополнительные сведения об обработке ошибок при создании всплывающих меню см. в разделе [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
+ С плавающей запятой всплывающего меню может находиться в любом на экране. Дополнительные сведения об обработке ошибок при создании всплывающих меню см. в разделе [TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex).  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC CTRLTEST](../../visual-cpp-samples.md)   

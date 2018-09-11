@@ -1,5 +1,5 @@
 ---
-title: Метод SRWLockExclusiveTraits::Unlock | Документы Microsoft
+title: Метод SRWLockExclusiveTraits::Unlock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 84f1ef800154f4acf410d45528c50d86180bad39
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892596"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607892"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>Метод SRWLockExclusiveTraits::Unlock
-Освобождает исключительный контроль указанного объекта SRWLock.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-inline static void Unlock(  
-   _In_ Type srwlock  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `srwlock`  
- Дескриптор объекта SRWLock.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Структура SRWLockExclusiveTraits](../windows/srwlockexclusivetraits-structure.md)
+
+Освобождает управлением указанного `SRWLock` объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+inline static void Unlock(
+   _In_ Type srwlock
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*SRWLOCK*  
+Дескриптор `SRWLock` объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Структура SRWLockExclusiveTraits](../windows/srwlockexclusivetraits-structure.md)

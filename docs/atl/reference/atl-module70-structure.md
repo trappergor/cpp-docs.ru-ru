@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e7afe6867f359b334654f58aad39ad7f143dd428
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886223"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764895"
 ---
 # <a name="atlmodule70-structure"></a>Структура _ATL_MODULE70
-Содержит данные, используемые каждого модуля ATL.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Содержит данные, используемые каждого модуля ATL.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 struct _ATL_MODULE70 {
     UINT cbSize;
@@ -38,33 +39,31 @@ struct _ATL_MODULE70 {
     _ATL_TERMFUNC_ELEM* m_pTermFuncs;
     CComCriticalSection m_csStaticDataInitAndTypeInfo;
 };
-```  
-  
-## <a name="members"></a>Участники  
- `cbSize`  
- Размер структуры, используемые для управления версиями.  
-  
- `m_nLockCnt`  
- Чтобы определить, как долго должны оставаться активным модуль счетчика ссылок.  
-  
- `m_pTermFuncs`  
- Отслеживает функции, которые были зарегистрированы для вызова при закрытии ATL.  
-  
- `m_csStaticDataInitAndTypeInfo`  
- Используется для управления доступом к внутренним данным в многопоточной ситуации.  
-  
-## <a name="remarks"></a>Примечания  
- [_ATL_MODULE](atl-typedefs.md#_atl_module) определяется как typedef типа `_ATL_MODULE70`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlbase.h  
-  
-## <a name="see-also"></a>См. также  
-  [Классы и структуры](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Участники
 
+`cbSize`  
+Размер структуры, используемые для управления версиями.
 
+`m_nLockCnt`  
+Чтобы определить, как долго должны оставаться активным модуль счетчика ссылок.
 
+`m_pTermFuncs`  
+Отслеживает функции, которые были зарегистрированы для вызова при закрытии ATL.
 
+`m_csStaticDataInitAndTypeInfo`  
+Используется для управления доступом к внутренним данным в многопоточной ситуации.
 
+## <a name="remarks"></a>Примечания
+
+[_ATL_MODULE](atl-typedefs.md#_atl_module) определяется как typedef типа `_ATL_MODULE70`.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlbase.h
+
+## <a name="see-also"></a>См. также
+
+[Классы и структуры](../../atl/reference/atl-classes.md)
 

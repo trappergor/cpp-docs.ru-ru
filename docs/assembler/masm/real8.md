@@ -1,7 +1,7 @@
 ---
-title: REAL8 | Документы Microsoft
+title: REAL8 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19613b2ae5e5c45509a2424569c765342e1233e8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dfd151f36de52509ac17883b0a43dbde45e6caf3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050900"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688453"
 ---
 # <a name="real8"></a>REAL8
-Выделяет и при необходимости инициализирует число с плавающей запятой двойной точности (8-байтные) для каждого *инициализатора*.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-name REAL8 initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)
+
+Выделяет и при необходимости инициализирует число с плавающей запятой двойной точности (8-байтные) для каждого *инициализатор*.
+
+## <a name="syntax"></a>Синтаксис
+
+> Инициализатор REAL8 имя [[, инициализатор]]...
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>

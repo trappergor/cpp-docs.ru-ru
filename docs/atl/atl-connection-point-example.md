@@ -1,5 +1,5 @@
 ---
-title: Пример точки подключения ATL | Документы Microsoft
+title: Пример точки подключения ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a265d26e8733a7eb2982fb84e8d69ed621922d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9aafd2676b1816737015b6af4fdbc9b3a710ae5
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355185"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752362"
 ---
 # <a name="atl-connection-point-example"></a>Пример точки подключения ATL
-В этом примере показано объекта, который поддерживает [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) как исходящий интерфейс:  
-  
- [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]  
-  
- При указании `IPropertyNotifySink` в качестве исходящего интерфейса, можно использовать класс [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) вместо `IConnectionPointImpl`. Пример:  
-  
- [!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/cpp/atl-connection-point-example_2.h)]  
-  
-## <a name="see-also"></a>См. также  
- [Точка подключения](../atl/atl-connection-points.md)
+
+В этом примере показан объект, который поддерживает [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) как исходящий интерфейс:
+
+[!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]
+
+При указании `IPropertyNotifySink` как исходящий интерфейс, можно использовать класс [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) вместо `IConnectionPointImpl`. Пример:
+
+[!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/cpp/atl-connection-point-example_2.h)]
+
+## <a name="see-also"></a>См. также
+
+[Точка подключения](../atl/atl-connection-points.md)
 

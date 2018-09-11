@@ -1,5 +1,5 @@
 ---
-title: raw_native_types | Документы Microsoft
+title: raw_native_types | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5baa3204b14da53f6a6a3232874e0ac7de0fd91b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b09e36e793608167a4ce64a9124d7dafbaf9ec62
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849799"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541059"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
 **Конкретных C++**  
   
- Отключает использование классов поддержки COM в высокоуровневых функциях оболочки и принудительно использует вместо них низкоуровневые типы данных.  
+Отключает использование классов поддержки COM в высокоуровневых функциях оболочки и принудительно использует вместо них низкоуровневые типы данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,12 @@ raw_native_types
 ```  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию высокоуровневые методы обработки ошибок используют классы поддержки COM [_bstr_t](../cpp/bstr-t-class.md) и [_variant_t](../cpp/variant-t-class.md) вместо `BSTR` и **VARIANT** типов данных и необработанные указатели для COM-интерфейса. Эти классы инкапсулируют сведения выделения и отмены выделения хранилища памяти для этих типов данных и значительно упрощают операции приведения и преобразования типов.  
+ 
+По умолчанию высокоуровневые методы обработки ошибок используют классы с поддержкой COM [_bstr_t](../cpp/bstr-t-class.md) и [_variant_t](../cpp/variant-t-class.md) вместо `BSTR` и `VARIANT` типов данных и необработанные COM указателей на интерфейс. Эти классы инкапсулируют сведения выделения и отмены выделения хранилища памяти для этих типов данных и значительно упрощают операции приведения и преобразования типов.  
   
- **КОНЕЦ определенного C++**  
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

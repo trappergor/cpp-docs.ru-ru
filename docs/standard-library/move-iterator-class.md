@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffd7a429bbddc81458538ace0ccc138dec65b9aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955251"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106578"
 ---
 # <a name="moveiterator-class"></a>Класс move_iterator
 
@@ -55,13 +55,13 @@ class move_iterator;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[move_iterator](#move_iterator)|Конструктор для объектов типа `move_iterator`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[iterator_type](#iterator_type)|Синоним параметра шаблона `RandomIterator`.|
 |[iterator_category](#iterator_category)|Синоним более длинного **typename** выражение с тем же именем, `iterator_category` определяет общие возможности данного итератора.|
@@ -72,13 +72,13 @@ class move_iterator;
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[base](#base)|Функция-член возвращает сохраненный итератор, инкапсулированный данным итератором `move_iterator`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[move_iterator::operator*](#op_star)|Возвращает `(reference)*base().`.|
 |[move_iterator::operator++](#op_add_add)|Увеличивает значение сохраненного итератора. Точное поведение определяется тем, является ли операция преинкрементной или постинкрементной.|
@@ -157,7 +157,8 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* итератор для использования в качестве сохраненного итератора.
+*right*<br/>
+Итератор, который требуется использовать в качестве сохраненного итератора.
 
 ### <a name="remarks"></a>Примечания
 
@@ -173,7 +174,8 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* смещение для добавления в текущую позицию для определения новой текущей позиции.
+*_Off*<br/>
+Смещение, добавляемое к текущей позиции, для определения новой текущей позиции.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

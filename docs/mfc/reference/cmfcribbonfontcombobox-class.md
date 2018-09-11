@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb5fa8f56f242ce40f6be9c27bc1cbd9c5d61ff
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852527"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216478"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Класс CMFCRibbonFontComboBox
 Реализует поле со списком, содержащее список шрифтов. Необходимо задать поле со списком на панели ленты.  
@@ -144,12 +144,12 @@ CMFCRibbonFontComboBox(
  Задает ширину в пикселях, в поле со списком.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о возможных *nFontType* значения параметров, см. в разделе [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) в документации по Windows SDK.  
+ Дополнительные сведения о возможных *nFontType* значения параметров, см. в разделе [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) в документации по Windows SDK.  
   
- Дополнительные сведения о допустимых кодировок, которые могут быть назначены *nCharSet*и их допустимых значений, которые могут быть назначены *nPitchAndFamily*, см. в разделе [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) в Документации по пакету Windows SDK.  
+ Дополнительные сведения о допустимых кодировок, которые могут быть назначены *nCharSet*и их допустимых значений, которые могут быть назначены *nPitchAndFamily*, см. в разделе [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) в Документации по пакету Windows SDK.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;  

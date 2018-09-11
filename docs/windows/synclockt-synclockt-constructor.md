@@ -1,5 +1,5 @@
 ---
-title: Конструктор SyncLockT::SyncLockT | Документы Microsoft
+title: Конструктор SyncLockT::SyncLockT | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dfee1d923536f519917a50ed44fd5c115007c27
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889849"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601971"
 ---
 # <a name="synclocktsynclockt-constructor"></a>Конструктор SyncLockT::SyncLockT
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-SyncLockT(  
-   _Inout_ SyncLockT&& other  
-);  
-  
-explicit SyncLockT(  
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+SyncLockT(
+   _Inout_ SyncLockT&& other
+);
+
+explicit SyncLockT(
    typename SyncTraits::Type sync = SyncTraits::GetInvalidValue()  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `other`  
- Ссылка rvalue на другой объект SyncLockT.  
-  
- `sync`  
- Ссылка на другом объекте SyncLockWithStatusT.  
-  
-## <a name="remarks"></a>Примечания  
- Инициализирует новый экземпляр класса SyncLockT.  
-  
- Первый конструктор инициализирует текущий объект SyncLockT из другого объекта SyncLockT, заданного параметром `other`, а затем становятся недействительными и другой объект SyncLockT. Второй конструктор не `protected`и инициализирует текущий объект SyncLockT в недопустимом состоянии.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>См. также  
- [Класс SyncLockT](../windows/synclockt-class.md)
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*other*  
+Ссылка rvalue на другой **SyncLockT** объекта.
+
+*sync*  
+Ссылка на другой `SyncLockWithStatusT` объекта.
+
+## <a name="remarks"></a>Примечания
+
+Инициализирует новый экземпляр класса **SyncLockT** класса.
+
+Первый конструктор инициализирует текущий **SyncLockT** из другого объекта **SyncLockT** объекта, указанного параметром *других*и затем недействительными другие  **SyncLockT** объекта. Второй конструктор является **защищенные**и инициализирует текущий **SyncLockT** объекта в недопустимом состоянии.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>См. также
+
+[Класс SyncLockT](../windows/synclockt-class.md)

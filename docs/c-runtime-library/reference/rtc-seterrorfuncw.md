@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf610316c504e61d56556a20797f55d2906bca27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9d028454c408492378c345fb6d6c6d9dfc23cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406918"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199595"
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -65,31 +65,44 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 
 ## <a name="remarks"></a>Примечания
 
-В новом коде используйте только **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** входит в состав библиотеки для обеспечения обратной совместимости.
+В новом коде используйте только **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** входит только в библиотеке для обеспечения обратной совместимости.
 
-**_RTC_SetErrorFuncW** обратного вызова применяется только для компонента, который он был связан, но не глобально.
+**_RTC_SetErrorFuncW** обратного вызова применяется только к компоненту, который он был связан, но не глобально.
 
 Убедитесь, что адрес, передаваемый **_RTC_SetErrorFuncW** является допустимой функции обработки ошибок.
 
-Если ошибке назначен тип значение -1, с помощью [_RTC_SetErrorType](rtc-seterrortype.md), вызывается функция обработки ошибок.
+Если ошибке назначен тип-1 с помощью [_RTC_SetErrorType](rtc-seterrortype.md), функция обработки ошибок не вызывается.
 
 Перед тем, как вы сможете вызвать эту функцию, необходимо сначала вызвать одну из функций инициализации проверки на ошибки во время выполнения. Для получения дополнительной информации см. [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
 **_RTC_error_fnW** определяется следующим образом:
 
-> **Определение типа int (__cdecl \*_RTC_error_fnW) (int** *errorType* **, const wchar_t \***  *filename* **, int***linenumber* **, const wchar_t \***  *moduleName* **, const wchar_t \***  *формат* **,...);** 
+```cpp
+typedef int (__cdecl * _RTC_error_fnW)(
+    int errorType,
+    const wchar_t * filename,
+    int linenumber,
+    const wchar_t * moduleName,
+    const wchar_t * format,
+    ... );
+```
 
 Здесь:
 
-*errorType* тип ошибки, который задается параметром [_RTC_SetErrorType](rtc-seterrortype.md).
+*errorType*<br/>
+Тип ошибки, указанной [_RTC_SetErrorType](rtc-seterrortype.md).
 
-*Имя файла* исходного файла, где произошел сбой, или значение null, если нет отладочной информации.
+*filename*<br/>
+Исходный файл, где произошел сбой, или значение NULL, если информация об отладке недоступна.
 
-*linenumber* в строке *filename* где произошел сбой, или 0, если нет отладочной информации.
+*linenumber*<br/>
+Строка *filename* , где произошел сбой, или 0, если информация об отладке недоступна.
 
-*Имя модуля* эту библиотеку DLL или имя исполняемого файла, где произошел сбой.
+*имя модуля*<br/>
+Библиотека DLL или имя исполняемого файла, где произошел сбой.
 
-*формат* строка в стиле printf для отображения сообщения об ошибке с помощью остальные параметры. Первый аргумент VA_ARGLIST — номер возникшей ошибки RTC.
+*format*<br/>
+Строка в стиле printf для отображения сообщения об ошибке с использованием оставшихся параметров. Первый аргумент VA_ARGLIST — номер возникшей ошибки RTC.
 
 Пример, в котором показано, как использовать **_RTC_error_fnW**, см. в разделе [Настройка проверок во время выполнения машинного кода](/visualstudio/debugger/native-run-time-checks-customization).
 

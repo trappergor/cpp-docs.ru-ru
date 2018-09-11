@@ -1,5 +1,5 @@
 ---
-title: Работа с элементом управления панели инструментов | Документы Microsoft
+title: Работа с элементом управления панели инструментов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e488d4b475cbc73f57bb90ccd081b6d490221d58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385941"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202264"
 ---
 # <a name="working-with-the-toolbar-control"></a>Работа с элементом управления панели инструментов
-В этой статье объясняется, как можно доступ к [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) основным [CToolBar](../mfc/reference/ctoolbar-class.md) для большего контроля над панелей инструментов. Это довольно сложная тема.  
+В этой статье объясняется, как вы можете получить доступ к [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) объектом базового [CToolBar](../mfc/reference/ctoolbar-class.md) для большего контроля над панелей инструментов. Это довольно сложная тема.  
   
 ## <a name="procedures"></a>Процедуры  
   
-#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Для доступа к стандартного элемента управления панель инструментов базовый объект CToolBar  
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Для доступа к общего элемента управления панели инструментов базовый объект CToolBar  
   
 1.  Вызовите [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
  `GetToolBarCtrl` Возвращает ссылку на [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) объекта. Ссылку можно использовать для вызова функции-члены класса элемента управления панели инструментов.  
   
 > [!CAUTION]
->  При вызове `CToolBarCtrl` **получить** функции безопасна, соблюдайте осторожность при вызове **задать** функции. Это довольно сложная тема. Обычно вам не потребуется доступ к базовому элементу управления панели инструментов.  
+>  Во время вызова методов `CToolBarCtrl` **получить** функции защищена, будьте осторожны при вызове метода **задать** функции. Это довольно сложная тема. Обычно не требуется доступ к базовому элементу управления панели инструментов.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
+### <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений  
   
--   [Элементы управления (Общие элементы управления Windows)](../mfc/controls-mfc.md)  
+-   [Элементы управления (стандартные элементы управления Windows)](../mfc/controls-mfc.md)  
   
--   [Принципы работы инструментов](../mfc/toolbar-fundamentals.md)  
+-   [Основные сведения о панели инструментов](../mfc/toolbar-fundamentals.md)  
   
 -   [Закрепленные и плавающие панели инструментов](../mfc/docking-and-floating-toolbars.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33385941"
   
 -   [Всплывающие подсказки панели инструментов](../mfc/toolbar-tool-tips.md)  
   
--   [Обновление строки состояния flyby](../mfc/toolbar-tool-tips.md)  
+-   [Состояния flyby](../mfc/toolbar-tool-tips.md)  
   
 -   [Обработка уведомлений всплывающих подсказок](../mfc/handling-tool-tip-notifications.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33385941"
   
 -   [Панели элементов управления](../mfc/control-bars.md)  
   
- Общие сведения об использовании общих элементов управления Windows см. в разделе [стандартные элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Общие сведения об использовании стандартных элементов управления Windows, см. в разделе [стандартные элементы управления](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>См. также  
  [Реализация панели инструментов MFC](../mfc/mfc-toolbar-implementation.md)

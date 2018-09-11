@@ -1,5 +1,5 @@
 ---
-title: Структура MutexTraits | Документы Microsoft
+title: Mutextraits-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0406ec7938a623be7b16e0535e9d2c0c769f8392
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 529265c4b1e5f510a92295a1ceff6d0a012163fe
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874594"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584175"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits - структура
-Определяет общие характеристики [мьютекс](../windows/mutex-class1.md) класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-struct MutexTraits : HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Метод MutexTraits::Unlock](../windows/mutextraits-unlock-method.md)|Освобождает исключительный контроль общего ресурса.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `HANDLENullTraits`  
-  
- `MutexTraits`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Определяет общие характеристики [мьютекс](../windows/mutex-class1.md) класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+struct MutexTraits : HANDLENullTraits;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание:|
+|----------|-----------------|
+|[Метод MutexTraits::Unlock](../windows/mutextraits-unlock-method.md)|Освобождает управлением общего ресурса.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`HANDLENullTraits`
+
+`MutexTraits`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

@@ -104,16 +104,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80244a328fb374c4302f068c3c8b64f5b5d5c676
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850138"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217045"
 ---
 # <a name="coleipframewndex-class"></a>Класс COleIPFrameWndEx
-Класс `COleIPFrameWndEx` реализует OLE-контейнер с поддержкой MFC. Необходимо создать встроенный класс окна фрейма для приложения, производный от класса `COleIPFrameWndEx` , вместо наследования его от класса [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
+Класс `COleIPFrameWndEx` реализует OLE-контейнер с поддержкой MFC. Необходимо создать встроенный класс окна фрейма для приложения, производный от класса `COleIPFrameWndEx` , вместо наследования его от класса [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.   
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -930,7 +929,7 @@ virtual void WinHelp(
  Указывает данные, необходимые для тип справки, определяемое *nCmd*.  
   
  [in] *nCmd*  
- Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе [функция WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) в пакете Windows SDK.  
+ Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе [функция WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
   

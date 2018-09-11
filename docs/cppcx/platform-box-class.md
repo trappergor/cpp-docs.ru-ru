@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::Box | Документы Microsoft
+title: Класс Platform::Box | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,148 +9,167 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fcdf177f942dd598348654b366e0c0f42e916b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 133c8ebabe3e67526086661ab459bb6e96c4e727
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091684"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106513"
 ---
 # <a name="platformbox-class"></a>Класс Platform::Box
-Позволяет сохранять тип значения, такой как `Windows::Foundation::DateTime` , или скалярный тип, такой как `int` , в типе `Platform::Object` . Как правило, нет необходимости использовать `Box` явным образом, так как процесс упаковки выполняется неявно при приведении значения типа к `Object^`.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-ref class Box abstract;  
-```  
-  ### <a name="remarks"></a>Примечания  
-  
-### <a name="requirements"></a>Требования  
- **Заголовок:** vccorlib.h  
-  
- **Пространство имен:** Platform
-|Член|Описание|  
+
+Позволяет сохранять тип значения, такой как `Windows::Foundation::DateTime` , или скалярный тип, такой как `int` , в типе `Platform::Object` . Как правило, нет необходимости использовать `Box` явным образом, так как процесс упаковки выполняется неявно при приведении значения типа к `Object^`.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+ref class Box abstract;
+```
+  ### <a name="remarks"></a>Примечания
+
+### <a name="requirements"></a>Требования
+
+**Заголовок:** vccorlib.h
+
+**Пространство имен:** Platform
+|Член|Описание|
 |------------|-----------------|
 |[Box](#ctor)|Создает `Box` который может инкапсулировать значение указанного типа.|
 |[оператор поле&lt;const T&gt;^](#box-const-t)|Позволяет осуществлять преобразования-упаковки класса значений `const` `T` или `enum` класса `T` в `Box<T>`.|
 |[оператор поле&lt;const volatile T&gt;^](#box-const-volatile-t)|Позволяет осуществлять преобразования-упаковки из класса значений `const volatile` `T` или `enum` типа `T` в `Box<T>`. |
 |[оператор поле&lt;T&gt;^](#box-t)|Позволяет осуществлять преобразования-упаковки класса значений `T` в `Box<T>`.|
 |[оператор поле&lt;volatile T&gt;^](#box-volatile-t)|Позволяет осуществлять преобразования-упаковки из класса значений `volatile` `T` или `enum` типа `T` в `Box<T>`.|
-|[Box::operator T](#t)|Позволяет осуществлять преобразования-упаковки класса значений `T` или `enum` класса `T` в `Box<T>`.| 
+|[Box::operator T](#t)|Позволяет осуществлять преобразования-упаковки класса значений `T` или `enum` класса `T` в `Box<T>`.|
 ## <a name="ctor"></a> Конструктор Box::Box
-Создает `Box` , может инкапсулировать значение указанного типа. | |[ Значение свойства](#value)| Возвращает значение, которое инкапсулируется в `Box` объекта. |  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-Box(T valueArg);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- `valueArg`  
- Тип упаковываемого значения — например, `int`, `bool`, `float64`, `DateTime`.  
-  
+
+Создает `Box` который может инкапсулировать значение указанного типа. | |[ Значение свойства](#value)| Возвращает значение, которое инкапсулируется в `Box` объекта. |
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+Box(T valueArg);
+```
+
+### <a name="parameters"></a>Параметры
+
+*valueArg*<br/>
+Тип упаковываемого значения — например, `int`, `bool`, `float64`, `DateTime`.
 
 ## <a name="box-const-t"></a> Box::operator Box&lt;const T&gt;^ оператор
-Позволяет осуществлять преобразования-упаковки класса значений `const` `T` или `enum` класса `T` в `Box<T>`.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-operator Box<const T>^(const T valueType);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- `T`  
- Любой класс значений, структура значений или тип перечисления. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Объект `Platform::Box<T>^` экземпляр, который представляет исходное значение, упакованное в класс ref.  
-  
+
+Позволяет осуществлять преобразования-упаковки класса значений `const` `T` или `enum` класса `T` в `Box<T>`.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+operator Box<const T>^(const T valueType);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*<br/>
+Любой класс значений, структура значений или тип перечисления. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект `Platform::Box<T>^` экземпляр, представляющий исходное значение, упакованное в класс ссылки.
+
 ## <a name="box-const-volatile-t"></a> Box::operator Box&lt;const volatile T&gt;^ оператор
-Позволяет осуществлять преобразования-упаковки из класса значений `const volatile` `T` или `enum` типа `T` в `Box<T>`.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-operator Box<const volatile T>^(const volatile T valueType);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- `T`  
- Любой тип перечисления, класс значений или структура значений. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Объект `Platform::Box<T>^` экземпляр, который представляет исходное значение, упакованное в класс ref.  
-  
+
+Позволяет осуществлять преобразования-упаковки из класса значений `const volatile` `T` или `enum` типа `T` в `Box<T>`.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+operator Box<const volatile T>^(const volatile T valueType);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*<br/>
+Любой тип перечисления, класс значений или структура значений. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект `Platform::Box<T>^` экземпляр, представляющий исходное значение, упакованное в класс ссылки.
+
 ## <a name="box-t"></a> Box::operator Box&lt;T&gt;^ оператор
-Позволяет осуществлять преобразования-упаковки класса значений `T` в `Box<T>`.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-operator Box<const T>^(const T valueType);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- `T`  
- Любой тип перечисления, класс значений или структура значений. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Объект `Platform::Box<T>^` экземпляр, который представляет исходное значение, упакованное в класс ref.  
-  
+
+Позволяет осуществлять преобразования-упаковки класса значений `T` в `Box<T>`.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+operator Box<const T>^(const T valueType);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*<br/>
+Любой тип перечисления, класс значений или структура значений. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект `Platform::Box<T>^` экземпляр, представляющий исходное значение, упакованное в класс ссылки.
+
 ## <a name="box-volatile-t"></a> Box::operator Box&lt;volatile T&gt;^ оператор
-Позволяет осуществлять преобразования-упаковки из класса значений `volatile` `T` или `enum` типа `T` в `Box<T>`.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-operator Box<volatile T>^(volatile T valueType);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- `T`  
- Любой тип перечисления, класс значений или структура значений. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Объект `Platform::Box<T>^` экземпляр, который представляет исходное значение, упакованное в класс ref.  
-  
+
+Позволяет осуществлять преобразования-упаковки из класса значений `volatile` `T` или `enum` типа `T` в `Box<T>`.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+operator Box<volatile T>^(volatile T valueType);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*<br/>
+Любой тип перечисления, класс значений или структура значений. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект `Platform::Box<T>^` экземпляр, представляющий исходное значение, упакованное в класс ссылки.
+
 ## <a name="t"></a>  Оператор Box::operator T
-Позволяет осуществлять преобразования-упаковки класса значений `T` или `enum` класса `T` в `Box<T>`.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-operator Box<T>^(T valueType);  
-```  
-  
-### <a name="parameters"></a>Параметры  
- `T`  
- Любой тип перечисления, класс значений или структура значений. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Объект `Platform::Box<T>^` экземпляр, который представляет исходное значение, упакованное в класс ref.  
-  
+
+Позволяет осуществлять преобразования-упаковки класса значений `T` или `enum` класса `T` в `Box<T>`.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+operator Box<T>^(T valueType);
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*<br/>
+Любой тип перечисления, класс значений или структура значений. Включает встроенные типы в [пространство имен по умолчанию](../cppcx/default-namespace.md).
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект `Platform::Box<T>^` экземпляр, представляющий исходное значение, упакованное в класс ссылки.
 
 ## <a name="value"></a> Свойство Box::value
-Возвращает значение, которое инкапсулируется в объекте `Box`.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-virtual property T Value{  
-   T get();  
-}  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает упакованное значение с тем же типом, который у него был до упаковки.  
-  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)   
- [Упаковка-преобразование](../cppcx/boxing-c-cx.md)
+
+Возвращает значение, которое инкапсулируется в объекте `Box`.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual property T Value{
+   T get();
+}
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает упакованное значение с тем же типом, который у него был до упаковки.
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)<br/>
+[Упаковка-преобразование](../cppcx/boxing-c-cx.md)

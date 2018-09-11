@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ad6ef6ffaa6341e62b09920ab95d50c5720428c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340506"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195870"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Построение проектов C++ в Visual Studio
 Интегрированная среда разработки (IDE) Visual Studio предлагает несколько способов сборки всего решения или отдельных проектов в его составе. Чтобы повысить эффективность процесса разработки, можно также изменить параметры сборки и настроить пользовательские шаги сборки.  
@@ -50,7 +50,7 @@ ms.locfileid: "33340506"
   
  При сборке приложения Visual C++ в Visual Studio можно изменить многие из параметров сборки, приведенных в диалоговом окне "Страницы свойств" проекта. Сведения о задании свойств проекта см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).  
   
- Пример использования среды IDE для создания, сборки и отладки проекта C++ см. в разделе [Пошаговое руководство. Изучение интегрированной среды разработки Visual Studio с С++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Пример использования среды IDE для сборки проекта C++/CLR см. в разделе [Пошаговое руководство. Компиляция программы на языке C++, предназначенной для среды CLR, в Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Пример использования среды IDE для создания приложения среды выполнения Windows см. в разделе [Создание первого приложения среды выполнения Windows на C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
+ Пример использования среды IDE для создания, сборки и отладки проекта C++ см. в разделе [Пошаговое руководство. Изучение интегрированной среды разработки Visual Studio с С++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Пример использования среды IDE для сборки проекта C++/CLR см. в разделе [Пошаговое руководство. Компиляция программы на языке C++, предназначенной для среды CLR, в Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Пример использования среды IDE для создания приложения среды выполнения Windows см. в разделе [Создание первого приложения среды выполнения Windows на C++](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
   
  Узнать больше о выполнении сборки, изменении параметров сборки и настройке пользовательских шагов сборки можно в приведенных ниже статьях.  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 69e2950fcc0b29fb819445f3216ef262a2657e4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325387"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686425"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 Тег \<param> следует использовать в комментариях к объявлению метода для описания одного из параметров такого метода.  
@@ -42,7 +42,7 @@ ms.locfileid: "33325387"
  Описание параметра.  
   
 ## <a name="remarks"></a>Примечания  
- Текст тега \<param> будет отображаться в IntelliSense, в [обозревателе объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) и в веб-отчете комментариев кода.  
+ Текст тега \<param> будет отображаться в IntelliSense, в [обозревателе объектов](/visualstudio/ide/viewing-the-structure-of-code) и в веб-отчете комментариев кода.  
   
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   

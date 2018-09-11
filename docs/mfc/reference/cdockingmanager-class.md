@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fcaf93823e504f3631d50de4f981ae30e882e9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 08b8aa623f79c32303a0d5fb84c9b865bff918d9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027830"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683581"
 ---
 # <a name="cdockingmanager-class"></a>Класс CDockingManager
 Реализует базовую функциональность, которая контролирует макет закрепления в окне главного фрейма.  
@@ -190,7 +190,7 @@ class CDockingManager : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDockingManager::AddDockSite](#adddocksite)|Создает область закрепления и добавляет его в список панелей элементов управления.|  
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Добавляет маркер в панель области в список скрытых MDI с вкладками областями строки.|  
@@ -267,7 +267,7 @@ class CDockingManager : public CObject
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Указывает, скрываются ли диспетчере закрепления панелей в режиме контейнера OLE.|  
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Указывает глобальный режим закрепления.|  
@@ -379,7 +379,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="parameters"></a>Параметры  
  [in] *hdwp*  
- Задает структуру позиции отложенного окна. Дополнительные сведения см. в разделе [Типы данных Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Задает структуру позиции отложенного окна. Дополнительные сведения см. в разделе [типы данных Windows](/windows/desktop/WinProg/windows-data-types).  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [смарт-закрепления manager](http://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534).  
+ Указатель на диспетчер смарт-закрепления.  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  Извлекает указатель на диспетчер смарт-закрепления.  

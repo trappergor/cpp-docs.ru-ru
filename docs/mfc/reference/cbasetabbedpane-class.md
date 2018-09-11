@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df130c2d5eee3e661f7ead2db156d2ac33349f68
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027762"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690438"
 ---
 # <a name="cbasetabbedpane-class"></a>Класс CBaseTabbedPane
 Расширяет функциональность [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) для поддержки создания окон с вкладками.  
@@ -92,13 +92,13 @@ class CBaseTabbedPane : public CDockablePane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CBaseTabbedPane::CBaseTabbedPane`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBaseTabbedPane::AddTab](#addtab)|Добавляет новую вкладку области с вкладками.|  
 |[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Указывает, можно ли уничтожить пустой области с вкладками.|  
@@ -128,7 +128,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|Повторно вычисляет сведения о структуре для области. (Переопределяет [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CBaseTabbedPane::RemovePane](#removepane)|Удаляет панель из панели с вкладками.|  
 |`CBaseTabbedPane::SaveSiblingBarIDs`|Используется внутренним образом во время сериализации.|  
-|`CBaseTabbedPane::Serialize`|(Переопределяет [CDockablePane::Serialize](http://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::Serialize`|(Переопределяет [CDockablePane::Serialize](cdockablepane-class.md).)|  
 |`CBaseTabbedPane::SerializeTabWindow`|Используется внутренним образом во время сериализации.|  
 |[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Определяет, автоматическое удаление панели элементов управления с вкладками.|  
 |[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Переключает область закрепления между отображается и режим автоматического скрытия. (Переопределяет [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  

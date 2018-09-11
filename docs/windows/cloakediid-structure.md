@@ -17,39 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3a60d12adfade18c9989d1dc8609a38252d32073
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461227"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599102"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid - структура
-Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, что заданный интерфейс недоступен в списке IID.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template<typename T>  
-struct CloakedIid : T;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *T*  
- Интерфейс, который является скрытым (замаскированные).  
-  
-## <a name="remarks"></a>Примечания  
- Ниже приведен пример того, как `CloakedIid` используется: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `T`  
-  
- `CloakedIid`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, что заданный интерфейс недоступен в списке IID.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<typename T>
+struct CloakedIid : T;
+```
+
+#### <a name="parameters"></a>Параметры
+
+*T*  
+Интерфейс, который является скрытым (замаскированные).
+
+## <a name="remarks"></a>Примечания
+
+Ниже приведен пример того, как **CloakedIid** используется: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`T`
+
+`CloakedIid`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

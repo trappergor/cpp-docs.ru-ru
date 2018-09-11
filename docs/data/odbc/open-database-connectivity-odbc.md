@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a729497fe24fb0c08734e45d360965f5d22880c4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9385882ec2cb24aefd1a319615250b5797bc0d1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339452"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572881"
 ---
 # <a name="open-database-connectivity-odbc"></a>Интерфейс ODBC (ODBC)
 Библиотека Microsoft Foundation Classes (MFC) предоставляет классы для разработки программ с использованием интерфейса ODBC. Начиная с Visual Studio 2015 и ODBC для SQL Server 2012 является предпочтительным способом для подключения к источникам данных SQL.
   
- Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) пакета SDK в MSDN.  
+ Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) пакета SDK в MSDN.  
   
   
 ## <a name="in-this-section"></a>В этом разделе  
@@ -67,7 +67,7 @@ ms.locfileid: "39339452"
 -   [Список драйверов ODBC](odbc-driver-list.md)  
   
 ## <a name="odbc-database-tasks"></a>Задачи базы данных ODBC  
- Эти задачи основаны на основе MFC [ODBC](odbc-basics.md) классы. Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK.  
+ Эти задачи основаны на основе MFC [ODBC](odbc-basics.md) классы. Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK.  
   
 -   [Установка и начало работы с ODBC](installing-and-getting-started-with-odbc.md)  
   

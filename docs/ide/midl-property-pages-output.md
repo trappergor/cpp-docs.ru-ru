@@ -22,29 +22,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 927ab1004336787131c8f92c247512d1c66caf69
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325777"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212760"
 ---
 # <a name="midl-property-pages-output"></a>Страницы свойств MIDL: "Выходные данные"
 Страница свойств **Выходные данные** в папке **MIDL** указывает следующие параметры компилятора MIDL:  
   
--   Выходной каталог ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
+-   Выходной каталог ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
--   Файл заголовка ([/h](http://msdn.microsoft.com/library/windows/desktop/aa367325))  
+-   Файл заголовка ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))  
   
--   Файл данных библиотеки DLL ([/dlldata](http://msdn.microsoft.com/library/windows/desktop/aa367322))  
+-   Файл данных библиотеки DLL ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))  
   
--   Файл IID ([/iid](http://msdn.microsoft.com/library/windows/desktop/aa367329))  
+-   Файл IID ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))  
   
--   Файл прокси ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
+-   Файл прокси ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   Создание библиотеки типов ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   Создание библиотеки типов ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
--   Библиотека типов ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
+-   Библиотека типов ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
  Сведения о доступе к странице свойств **Выходные данные** в папке **MIDL** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).  
   

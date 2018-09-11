@@ -1,5 +1,5 @@
 ---
-title: inject_statement | Документы Microsoft
+title: inject_statement | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115f5b3d7012ae3e9073d81e0c1005dcb513e045
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb4142b742ae6c2a758c2a2fb5e09c604959433f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849344"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541646"
 ---
 # <a name="injectstatement"></a>inject_statement
 **Конкретных C++**  
   
- Вставляет свой аргумент как исходный текст в заголовок библиотеки типов.  
+Вставляет свой аргумент как исходный текст в заголовок библиотеки типов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,15 +34,17 @@ ms.locfileid: "33849344"
 inject_statement("source_text")  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `source_text`  
- Исходный текст, вставляемый в файл заголовка библиотеки типов.  
+### <a name="parameters"></a>Параметры  
+*source_text*  
+Исходный текст, вставляемый в файл заголовка библиотеки типов.  
   
 ## <a name="remarks"></a>Примечания  
- Текст вставляется в начало объявления пространства имен, в которое помещается содержимое библиотеки типов в файле заголовка.  
+ 
+Текст вставляется в начало объявления пространства имен, в которое помещается содержимое библиотеки типов в файле заголовка.  
   
- **КОНЕЦ определенного C++**  
+**КОНЕЦ конкретных C++**  
   
 ## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+ 
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

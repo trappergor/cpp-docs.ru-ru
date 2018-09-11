@@ -1,5 +1,5 @@
 ---
-title: Атрибут категории | Документы Microsoft
+title: Атрибут категории | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,35 +8,35 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], grouped by category
+- attributes [C++/CLI], grouped by category
 ms.assetid: 0f0679dc-2c1e-4463-b6a8-5829e36782e1
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a97cc367c1e4bda6218e30c57b36426395c8331
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ce109fa4a7eb3adbcb15150a14a03801a9e247b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859385"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316488"
 ---
 # <a name="attribute-categories"></a>Категории атрибутов
-Справочник по атрибутам описываются различные типы атрибутов, которые можно использовать в Visual C++.  
+Справочник по атрибутам описывает различные типы атрибутов, которые можно использовать в Visual C++.
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы
  [Атрибуты COM](../windows/com-attributes.md)  
- Внедряет код для поддержки различных областей разработки COM.  
+ Вставляет код для поддержки множество различных областей разработки COM.
   
  [Атрибуты IDL](../windows/idl-attributes.md)  
- Вставляет код, который создает или изменяет связанные IDL-файла из в файле исходного кода без помощи мастера и пользователям, которые не знакомы с структуре и синтаксисе этого файла.  
+ Внедряет код, который создает или изменяет связанные IDL-файла из в файл исходного кода без помощи мастера и не требуется ознакомление с структуре и синтаксисе этого файла.
   
  [Атрибуты объекта-получателя OLE DB](../windows/ole-db-consumer-attributes.md)  
- Вставляет код, на основе [Шаблоны потребителей OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), чтобы создать рабочий OLE DB потребителя, выполняет задачи, такие как Открытие таблицы, выполнения команд и доступ к данным.  
+ Внедряет код, на основе [Шаблоны потребителей OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), чтобы создать рабочий OLE DB получатель, который выполняет задачи, такие как Открытие таблицы, выполнения команд и доступ к данным.
   
  [Атрибуты компилятора](../windows/compiler-attributes.md)  
- Вставляет код, который выполняет различные часто встречающиеся задачи программирования.  
+ Внедряет код, который выполняет ряд распространенных задач программирования.
   
  [Атрибутивное программирование](../windows/attributed-programming-concepts.md)  
- Ссылки на разделы, описывающие атрибутивное программирование.
+ Ссылки на концептуальные разделы, описывающие атрибутивное программирование.

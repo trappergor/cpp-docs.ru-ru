@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1113 | Документы Microsoft
+title: Неустранимая ошибка C1113 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343dbc41743c825b7fb3624019817ec7c5f163fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db188764694c0c0c0b7a85c3653564d563f9cbd2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199058"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538527"
 ---
 # <a name="fatal-error-c1113"></a>Неустранимая ошибка C1113
 \#Сбой на «файл»  
   
- Можно передать только файл в формате промежуточного языка Майкрософт (MSIL) [#using](../../preprocessor/hash-using-directive-cpp.md) директивы. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) параметр компилятора позволяет создать выходной файл MSIL. Другие [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] языков также позволяет создавать файлы MSIL.
+ Можно передать только файл в формате Microsoft Intermediate Language (MSIL) [#using](../../preprocessor/hash-using-directive-cpp.md) директива. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) параметры компилятора позволяют создать выходной файл MSIL. Другие языки Visual Studio также создают файлы MSIL.

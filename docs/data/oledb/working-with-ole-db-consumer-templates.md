@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4d172d3b390c2c4ebedaf5ad934a95fc25e206c7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 6403e9a40adcac5cd9a4dc1a3fbe8a1028d11f99
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340060"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692809"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Работа с шаблонами объекта-получателя OLE DB
 В следующих разделах приводятся некоторые примеры того, как использовать шаблоны потребителей OLE DB в типичных сценариях:  
@@ -62,11 +62,11 @@ ms.locfileid: "39340060"
   
  Также можно найти примеры использования шаблонов потребителей OLE DB в следующих примерах:  
   
--   ["CatDB"](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   ["CatDB"](https://github.com/Microsoft/VCSamples)  
   
--   [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](https://github.com/Microsoft/VCSamples)  
   
--   [MultiRead](http://msdn.microsoft.com/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](https://github.com/Microsoft/VCSamples)  
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

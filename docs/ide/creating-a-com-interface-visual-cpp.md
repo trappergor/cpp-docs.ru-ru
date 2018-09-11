@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c31dfc72e6d552cacd46f3e0b49aedc18bf4c7f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683317"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Создание интерфейса COM (Visual C++)
 Visual C++ предоставляет мастеры и шаблоны для создания проектов, использующих определяющие COM интерфейсы и disp-интерфейсы для COM-объектов и классов автоматизации.  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  Дополнительные сведения см. в разделах [Реализация интерфейса](../ide/implementing-an-interface-visual-cpp.md) и [Добавление объектов и элементов управления в проект ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).  
   
- Visual C++ предоставляет несколько способов просмотра и [редактирования COM-интерфейсов](../ide/editing-a-com-interface.md), определенных для проектов. В [представлении классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) отображаются значки для всех интерфейсов или disp-интерфейсов, определенных в IDL-файле проекта C++.  
+ Visual C++ предоставляет несколько способов просмотра и [редактирования COM-интерфейсов](../ide/editing-a-com-interface.md), определенных для проектов. В [представлении классов](/visualstudio/ide/viewing-the-structure-of-code) отображаются значки для всех интерфейсов или disp-интерфейсов, определенных в IDL-файле проекта C++.  
   
  Для классов COM-объектов на основе ATL представление классов считывает схему COM в классе ATL, чтобы показать связь между классом ATL и любым из реализуемых им интерфейсов.  
   

@@ -1,5 +1,5 @@
 ---
-title: Класс преобразованный CMFCVisualManagerOffice2007 | Документы Microsoft
+title: Класс CMFCVisualManagerOffice2007 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -240,17 +240,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd70adb821724a476a66ad21157eb8506ffaa40
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: fd52e1437146c5584fa6240b4423462401921b44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039593"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541335"
 ---
-# <a name="cmfcvisualmanageroffice2007-class"></a>Класс преобразованный CMFCVisualManagerOffice2007
-`CMFCVisualManagerOffice2007` придает приложению внешний вид Microsoft Office 2007. 
+# <a name="cmfcvisualmanageroffice2007-class"></a>Класс CMFCVisualManagerOffice2007
+`CMFCVisualManagerOffice2007` Придает приложению внешний вид Microsoft Office 2007. 
 
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -279,7 +279,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor](#getribbonstatusbartextcolor)||  
 |[CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||  
 |[CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||  
-|`CMFCVisualManagerOffice2007::GetStyle`|Возвращает текущий цвет `CMFCVisualManagerOffice2007` графического пользовательского интерфейса, который, в свою очередь, имитирует графического интерфейса пользователя Microsoft Office 2007.|  
+|`CMFCVisualManagerOffice2007::GetStyle`|Возвращает текущий цвет `CMFCVisualManagerOffice2007` графического пользовательского интерфейса, который, в свою очередь, имитирует графического пользовательского интерфейса Microsoft Office 2007.|  
 |[CMFCVisualManagerOffice2007::GetTabFrameColors](#gettabframecolors)||  
 |[CMFCVisualManagerOffice2007::GetTabHorzMargin](#gettabhorzmargin)||  
 |[CMFCVisualManagerOffice2007::GetTabTextColor](#gettabtextcolor)||  
@@ -377,13 +377,13 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::OnSetWindowRegion](#onsetwindowregion)||  
 |[CMFCVisualManagerOffice2007::OnUpdateSystemColors](#onupdatesystemcolors)||  
 |[CMFCVisualManagerOffice2007::SetResourceHandle](#setresourcehandle)||  
-|`CMFCVisualManagerOffice2007::SetStyle`|Задает цветовую схему `CMFCVisualManagerOffice2007` графического интерфейса пользователя.|  
+|`CMFCVisualManagerOffice2007::SetStyle`|Задает цветовую схему `CMFCVisualManagerOffice2007` графического пользовательского интерфейса.|  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `CMFCVisualManagerOffice2007` для изменения внешнего вида приложения для сходства, Microsoft Office 2007. Этот диспетчер визуального представления требуется задать стиль, прежде чем использовать его. Прежде чем передать этот диспетчер визуальных для `CMFCVisualManager::SetDefaultManager`, необходимо вызвать статическую функцию `CMFCVisualManagerOffice2007::SetStyle`.  
+ Используйте `CMFCVisualManagerOffice2007` для изменения внешнего вида приложения, аналогично Microsoft Office 2007. Это наглядный диспетчер, необходимо задать стиль перед их использованием. Прежде чем передать это наглядный диспетчер, чтобы `CMFCVisualManager::SetDefaultManager`, необходимо вызвать статическую функцию `CMFCVisualManagerOffice2007::SetStyle`.  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать Диспетчер визуальных Office 2007. Этот фрагмент кода является частью [Desktop предупреждения демонстрационный пример](../../visual-cpp-samples.md).  
+ В следующем примере демонстрируется использование наглядный диспетчер Office 2007. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]  
   
@@ -2406,5 +2406,5 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Классы](../../mfc/reference/mfc-classes.md)   
  [Класс CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
- [Класс преобразованный CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
+ [Класс CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
  [Класс CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Преобразование цветов в выделенной области (редактор изображений для значков) | Документы Microsoft
+title: Преобразование цветов в выделенной области (редактор изображений для значков) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,26 +20,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b6630ce3f2bc9fc10e1a7e6cdf037369c60adb2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874084"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601082"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Преобразование цветов в выделенной области (редактор изображений для значков)
-Редактор изображений предоставляет удобный способ инвертирования цветов в выбранной части изображения, что позволяет увидеть, как будет выглядеть изображение в инвертированных цветах.  
-  
-### <a name="to-invert-colors-in-the-current-selection"></a>Инвертирование цветов в выделенной области  
-  
-1.  На **изображения** меню, нажмите кнопку **обратить цвета**.  
-  
 
-  
- Требования  
-  
- Нет  
-  
-## <a name="see-also"></a>См. также  
- [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)
+**Изображение** редактор предоставляет удобный способ инвертирования цветов в выбранной части изображения, что позволяет увидеть, как будет выглядеть изображение в инвертированных цветах.
+
+### <a name="to-invert-colors-in-the-current-selection"></a>Инвертирование цветов в выделенной области
+
+1. На **изображение** меню, щелкните **обратить цвета**.
+
+## <a name="requirements"></a>Требования
+
+Нет
+
+## <a name="see-also"></a>См. также
+
+[Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)

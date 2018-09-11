@@ -1,5 +1,5 @@
 ---
-title: omp | Документы Microsoft
+title: omp | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87dd737b1bbe9263af5ef6416e7d6b8d287feb53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849474"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540485"
 ---
 # <a name="omp"></a>omp
 Принимает одну или несколько директив OpenMP вместе с любыми необязательными директивными предложениями.  
@@ -31,12 +31,13 @@ ms.locfileid: "33849474"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 #pragma omp directive  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- В разделе [директивы OpenMP](../parallel/openmp/reference/openmp-directives.md) для получения дополнительной информации.  
+ 
+См. в разделе [директивы OpenMP](../parallel/openmp/reference/openmp-directives.md) Дополнительные сведения.  
   
 ## <a name="see-also"></a>См. также  
- [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

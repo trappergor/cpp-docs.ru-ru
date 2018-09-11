@@ -1,5 +1,5 @@
 ---
-title: helpstringdll | Документы Microsoft
+title: helpstringdll | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,62 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877349"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219956"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-Указывает имя библиотеки DLL, в которых будет производиться выполняют поиск строки в документе (локализации).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      [ helpstringdll(  
-   "string"  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `string`  
- Библиотеки DLL для уточняющего запроса строки документа.  
-  
-## <a name="remarks"></a>Примечания  
- **Helpstringdll** языка C++ имеет ту же функциональность, что [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) языка MIDL.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// cpp_attr_ref_helpstringdll.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLib", helpstringdll="xx.dll")];  
-  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMyI   
-{  
-   HRESULT xxx();  
-};  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**Класс**, `interface`, метод|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
- [Атрибуты классов](../windows/class-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
+
+Указывает имя библиотеки DLL для выполнения уточняющего запроса строки документа (локализации).
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ helpstringdll(
+   "string"
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*string*  
+Библиотека DLL, чтобы использовать для выполнения уточняющего запроса строки документа.
+
+## <a name="remarks"></a>Примечания
+
+**Helpstringdll** атрибут C++ имеет ту же функциональность, что [helpstringdll](/windows/desktop/Midl/helpstringdll) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+```cpp
+// cpp_attr_ref_helpstringdll.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLib", helpstringdll="xx.dll")];
+
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMyI
+{
+   HRESULT xxx();
+};
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**Класс**, **интерфейс**, метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  
+[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  

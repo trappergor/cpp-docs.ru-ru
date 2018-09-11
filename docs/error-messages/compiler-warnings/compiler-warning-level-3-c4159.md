@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4159 компилятора | Документы Microsoft
+title: Предупреждение (уровень 3) C4159 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139a21f5fbb7ce279d96f9df8be6008c2f092287
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43e3d63ad1d482222c4ffa7aa7435d0e660f3985
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291675"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223322"
 ---
-# <a name="compiler-warning-level-3-c4159"></a>Предупреждение (уровень 3) C4159 компилятора
-\#Директива pragma pragma(pop,...): извлечен ранее занесенный в стек идентификатор «идентификатор»  
-  
- Исходный код содержит **принудительной** инструкции с идентификатором директивы pragma, за которым следует **pop** инструкции без идентификатора. В результате ***идентификатор*** является использование стека и последующие ***идентификатор*** может привести к непредвиденному поведению.  
-  
- Чтобы избежать этого предупреждения, добавьте идентификатор **pop** инструкции. Например:  
-  
-```  
-// C4159.cpp  
-// compile with: /W3  
-#pragma pack(push, f)  
-#pragma pack(pop)   // C4159  
-  
-// using the identifier resolves the warning  
-// #pragma pack(pop, f)  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-3-c4159"></a>Компилятор предупреждение (уровень 3) C4159
+
+> #<a name="pragma-pragmapop--has-popped-previously-pushed-identifier-identifier"></a>Директива pragma pragma(pop,...): извлечен ранее занесенный в стек идентификатор "*идентификатор*"
+
+## <a name="remarks"></a>Примечания
+
+Исходный код содержит **принудительной** инструкции с идентификатором для директивы pragma, за которым следует **pop** инструкции без идентификатора. В результате *идентификатор* открывшемся окне так что последующие использует из *идентификатор* может привести к непредвиденному поведению.
+
+## <a name="example"></a>Пример
+
+Чтобы устранить это предупреждение, добавьте идентификатор **pop** инструкции. Пример:
+
+```cpp
+// C4159.cpp
+// compile with: /W3
+#pragma pack(push, f)
+#pragma pack(pop)   // C4159
+
+// using the identifier resolves the warning
+// #pragma pack(pop, f)
+
+int main()
+{
+}
 ```

@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759ffd42b7de4d7f1922a95876a05ce4d3002dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337542"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683756"
 ---
 # <a name="cbasepane-class"></a>Класс CBasePane
 Базовый класс для всех панелей в MFC.  
@@ -196,14 +196,14 @@ class CBasePane : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CBasePane::CBasePane`|Конструктор по умолчанию.|  
 |`CBasePane::~CBasePane`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CBasePane::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
 |`CBasePane::accLocation`|Вызывается платформой для получения текущего положения экрана для указанного объекта. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` не используйте этот метод.|  
 |`CBasePane::OnUpdateCmdUI`|Используется внутренним образом.|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|Возвращает область, содержащее заданную точку.|  
-|`CBasePane::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CBasePane::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` не используйте этот метод.|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Отменяет регистрацию область и удаляет его из списка в диспетчере закрепления.|  
 |[CBasePane::SaveState](#savestate)|Сохраняет состояние панели в реестр.|  
@@ -311,7 +311,7 @@ class CBasePane : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBasePane::DoPaint](#dopaint)|Заполняет фон панели.|  
   
@@ -676,7 +676,7 @@ virtual BOOL CreateEx(
   
  Библиотека добавляет несколько новых стилей для панели. В следующей таблице описаны новые стили:  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |AFX_CBRS_FLOAT|Области может перемещаться.|  
 |AFX_CBRS_AUTOHIDE|Область поддерживает режим автоматического скрытия|  
@@ -922,7 +922,7 @@ virtual DWORD GetControlBarStyle() const
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение состоит из следующих значений.  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |AFX_CBRS_FLOAT|Делает элемент управления панели число с плавающей запятой.|  
 |AFX_CBRS_AUTOHIDE|Включает режим автоматического скрытия.|  
@@ -1388,7 +1388,7 @@ virtual HDWP MoveWindow(
  Дескриптор структуру позиции отложенного окна, или значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Если передать значение NULL как *hdwp* параметра, этот метод перемещает окно в обычном режиме. Если передается дескриптор, этот метод выполняет отложенного перемещения. Дескриптор можно получить, вызвав [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) или сохранив возвращаемое значение из предыдущего вызова этого метода.  
+ Если передать значение NULL как *hdwp* параметра, этот метод перемещает окно в обычном режиме. Если передается дескриптор, этот метод выполняет отложенного перемещения. Дескриптор можно получить, вызвав [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) или сохранив возвращаемое значение из предыдущего вызова этого метода.  
   
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  Вызвано структурой после изменения родительской области.  
@@ -1614,7 +1614,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
  [in] *dwNewStyle*  
  Побитовое или сочетание следующих значений.  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |AFX_CBRS_FLOAT|Делает элемент управления панели число с плавающей запятой.|  
 |AFX_CBRS_AUTOHIDE|Включает режим автоматического скрытия.|  

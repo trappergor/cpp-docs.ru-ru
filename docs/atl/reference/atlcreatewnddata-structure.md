@@ -19,43 +19,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c5751fa3c5c8bc20f287ca3c48d885fc41c60ba0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880012"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764333"
 ---
 # <a name="atlcreatewnddata-structure"></a>Структура _AtlCreateWndData
-Эта структура содержит данные экземпляра класса в коде управления окнами в ATL  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Эта структура содержит данные экземпляра класса в коде управления окнами в ATL
+
+## <a name="syntax"></a>Синтаксис
+
 ```
     struct _AtlCreateWndData{
     void* m_pThis;
     DWORD m_dwThreadID;
     _AtlCreateWndData* m_pNext;
 };
-```  
-  
-## <a name="members"></a>Участники  
- `m_pThis`  
- **Это** указатель, используемый для получения доступа к экземпляру класса в процедуры окна.  
-  
- `m_dwThreadID`  
- Идентификатор текущего экземпляра класса.  
-  
- `m_pNext`  
- Указатель на следующий `_AtlCreateWndData` объекта.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlbase.h  
-  
-## <a name="see-also"></a>См. также  
- [Классы и структуры](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Участники
 
+`m_pThis`  
+**Это** указатель, используемый для получения доступа к экземпляру класса в процедуры окна.
 
+`m_dwThreadID`  
+Идентификатор текущего экземпляра класса.
 
+`m_pNext`  
+Указатель на следующий `_AtlCreateWndData` объекта.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlbase.h
+
+## <a name="see-also"></a>См. также
+
+[Классы и структуры](../../atl/reference/atl-classes.md)
 

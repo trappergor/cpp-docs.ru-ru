@@ -1,5 +1,5 @@
 ---
-title: Службы ATL | Документы Microsoft
+title: Службы ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,43 +19,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db13b443e605168389f0a9bc767ba29a75d4234d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4875c4844b97e3715c3804f83f4fa3e863eb53bc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354796"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761034"
 ---
 # <a name="atl-services"></a>Службы ATL
-Чтобы создать ATL COM-объекта, чтобы он запускался в службе, просто выберите службы (EXE) из списка параметров мастер проектов ATL server. Мастер создаст класс, производный от `CAtlServiceModuleT` для реализации службы.  
-  
- При построении объекта ATL COM как служба будет регистрироваться только как локальный сервер и он не будет отображаться в списке служб на панели управления. Это, так как это упрощает отладку службы, что локальный сервер как служба. Чтобы установить его в качестве службы, выполните следующую команду командной строке:  
-  
- `YourEXE` `.exe /Service`  
-  
- Чтобы удалить его, выполните следующую команду:  
-  
- `YourEXE` `.exe /UnregServer`  
-  
- Первые четыре темы в этом разделе рассматриваются действия, которые выполняются во время выполнения `CAtlServiceModuleT` функции-члены. Эти разделы отображаются в той же последовательности, как функции обычно вызываются. Чтобы улучшить понимание этих разделов, рекомендуется использовать исходный код, созданный мастером проекта ATL как ссылка. Эти первые четыре относятся следующие.  
-  
 
--   [Функция CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)  
-  
--   [Функция CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)  
-  
--   [Функция CAtlServiceModuleT::Run](../atl/reference/catlservicemodulet-class.md#run)  
-  
--   [Функция CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)  
-  
- В последних трех разделах рассматриваются основные понятия, относящиеся к разработке службы:  
-  
--   [Записи реестра](../atl/registry-entries.md) для службы ATL  
-  
--   [DCOMCNFG](../atl/dcomcnfg.md)  
-  
--   [Советы по отладке](../atl/debugging-tips.md) для службы ATL  
-  
-## <a name="see-also"></a>См. также  
- [Основные понятия](../atl/active-template-library-atl-concepts.md)
+Для создания объекта ATL COM, таким образом, чтобы он работает в службе, просто выберите из списка параметров для сервера в мастере проектов ATL службы (EXE). Мастер создаст класс, производный от `CAtlServiceModuleT` для реализации службы.
+
+При построении объекта ATL COM как услуга, оно будет зарегистрировано только как локальный сервер и она не будет отображаться в списке служб на панели управления. Это, так как это упрощает отладку службы, как локальный сервер чем как услуга. Чтобы установить его в качестве службы, выполните следующее в командной строке:
+
+`YourEXE` `.exe /Service`
+
+Чтобы удалить его, используйте следующую команду:
+
+`YourEXE` `.exe /UnregServer`
+
+Первые четыре в этом разделе рассматриваются действия, которые происходят при выполнении `CAtlServiceModuleT` функций-членов. Эти разделы отображаются в той же последовательности, как функции обычно вызываются. Чтобы лучше понять эти разделы, рекомендуется использовать исходный код, созданный мастером проектов ATL как ссылка. Эти первые четыре относятся следующие.
+
+- [Функция CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)
+
+- [Функция CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
+
+- [Функция CAtlServiceModuleT::Run](../atl/reference/catlservicemodulet-class.md#run)
+
+- [Функция CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)
+
+Последние три рассматриваются основные понятия, связанные с разработкой службы:
+
+- [Записи реестра](../atl/registry-entries.md) для службы ATL
+
+- [DCOMCNFG](../atl/dcomcnfg.md)
+
+- [Советы по отладке](../atl/debugging-tips.md) для службы ATL
+
+## <a name="see-also"></a>См. также
+
+[Основные понятия](../atl/active-template-library-atl-concepts.md)
 

@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6a2457ed01214750091bd9ec5a59c9aeac819357
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336998"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571712"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Класс IDBCreateCommandImpl
-Предоставляет реализацию [IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx) интерфейс.  
+Предоставляет реализацию [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\)) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -74,7 +74,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IDBCreateCommand::CreateCommand](https://msdn.microsoft.com/library/ms709772.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
  Некоторые параметры соответствуют *Справочник программиста OLE DB по* параметры разные имена, которые описаны в `IDBCreateCommand::CreateCommand`:  
   

@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09480168f842adbcbd9e1c50056a9d16278bccc4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e4817d0f0082ef4ec0a9a588982405772d733fe0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465835"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598036"
 ---
 # <a name="argtraitshelperargs-constant"></a>Константа ArgTraitsHelper::args
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-static const int args = Traits::args;  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Помогает [ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md) следить счетчик числа параметров `Invoke` метод для интерфейса делегата.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Argtraitshelper-структура](../windows/argtraitshelper-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+static const int args = Traits::args;
+```
+
+## <a name="remarks"></a>Примечания
+
+Помогает [ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md) следить счетчик числа параметров `Invoke` метод для интерфейса делегата.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура ArgTraitsHelper](../windows/argtraitshelper-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

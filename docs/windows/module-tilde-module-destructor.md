@@ -1,5 +1,5 @@
 ---
-title: 'Модуль:: ~ Module деструктор | Документы Microsoft'
+title: 'Модуль:: ~ Module деструктор | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85f5a483b329525d44688c61ac57df8d3b2ef1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b32c1dcf00879d53193025d3ea8ce4bb9d538d8e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881368"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598208"
 ---
 # <a name="modulemodule-destructor"></a>Деструктор Module::~Module
-Деинициализирует текущий экземпляр класса Module.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-virtual ~Module();  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс Module](../windows/module-class.md)
+
+Деинициализирует текущий экземпляр **модуль** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual ~Module();
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс Module](../windows/module-class.md)

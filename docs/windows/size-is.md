@@ -1,5 +1,5 @@
 ---
-title: size_is | Документы Microsoft
+title: size_is | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f97bb82f3387e82be5bbf120db4fed9aaa092f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 677f28b1ca4a45a3033e1dc6a34bd024bec6e329
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889677"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211506"
 ---
 # <a name="sizeis"></a>size_is
-Укажите объем памяти, выделенной для указателей, по размеру, размер указателей на указатели по размеру и одно - или многомерные массивы.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      [ size_is(  
-   "expression"  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *Выражение*  
- Объем памяти, выделенной для указателей, по размеру.  
-  
-## <a name="remarks"></a>Примечания  
- **Size_is** языка C++ имеет ту же функциональность, что [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- Далее приведен пример [first_is](../windows/first-is.md) пример указания фрагмент массива.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Поле в `struct` или **объединение**, интерфейс параметр, метод|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**max_is**|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Атрибуты параметра](../windows/parameter-attributes.md)   
- [first_is](../windows/first-is.md)   
- [last_is](../windows/last-is.md)   
- [max_is](../windows/max-is.md)   
- [length_is](../windows/length-is.md)   
+
+Укажите объем памяти, выделенной для размера указатели, размер указателей на указатели по размеру и одно - или многомерные массивы.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ size_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*Выражение*  
+Размер памяти, выделенной для размера указателей.
+
+## <a name="remarks"></a>Примечания
+
+**Size_is** атрибут C++ имеет ту же функциональность, что [size_is](/windows/desktop/Midl/size-is) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [first_is](../windows/first-is.md) пример указания фрагмент массива.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|`max_is`|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты параметра](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[last_is](../windows/last-is.md)  
+[max_is](../windows/max-is.md)  
+[length_is](../windows/length-is.md)  

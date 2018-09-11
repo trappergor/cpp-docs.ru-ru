@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322293"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692306"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 Тег \<summary> следует использовать для описания типа или члена типа. Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../ide/remarks-visual-cpp.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "33322293"
  Сводка объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Текст в теге \<summary> является единственным источником сведений о типе для технологии IntelliSense, а также отображается в [обозревателе объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) и веб-отчете комментариев кода.  
+ Текст в теге \<summary> является единственным источником сведений о типе для технологии IntelliSense, а также отображается в [обозревателе объектов](/visualstudio/ide/viewing-the-structure-of-code) и веб-отчете комментариев кода.  
   
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   

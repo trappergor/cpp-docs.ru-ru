@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 186a6705649cee7095d3d2e4c4bb237498fdcea0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221275"
 ---
 # <a name="exception-processing"></a>Обработка исключений
 При выполнении программы, может возникнуть ряд аномальных состояний и ошибок, называется «исключения». Они могут включать нехватку памяти, ошибки выделения ресурсов и не удалось найти файлы.  
@@ -350,7 +350,7 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Вызывайте эту функцию, если вызовы к базовой системе памяти Распределители (такие как **malloc** и [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) функции Windows) завершиться ошибкой. Не нужно вызывать его для **новый** поскольку **новый** создаст исключение памяти автоматически, если выделение памяти завершается сбоем.  
+ Вызывайте эту функцию, если вызовы к базовой системе памяти Распределители (такие как **malloc** и [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) функции Windows) завершиться ошибкой. Не нужно вызывать его для **новый** поскольку **новый** создаст исключение памяти автоматически, если выделение памяти завершается сбоем.  
   
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
@@ -444,7 +444,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  Дескриптор результирующий код, который указывает причину возникновения исключения.  
   
 ### <a name="remarks"></a>Примечания  
- Версия, которая принимает значение HRESULT в качестве аргумента преобразует этот код результата в соответствующий SCODE. Дополнительные сведения о HRESULT и SCODE, см. в разделе [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в пакете Windows SDK.  
+ Версия, которая принимает значение HRESULT в качестве аргумента преобразует этот код результата в соответствующий SCODE. Дополнительные сведения о HRESULT и SCODE, см. в разделе [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes) в пакете Windows SDK.  
   
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  

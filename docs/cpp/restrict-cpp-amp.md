@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e3385e68b7a5a112e5ff63b63afe5dd83603cf72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461892"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678201"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 Спецификатор ограничения может применяться к объявлениям функций и лямбда-выражений. Он реализует ограничения на код функции и на ее поведение в приложениях, в которых используется среда выполнения C++ AMP.  
@@ -32,7 +32,7 @@ ms.locfileid: "39461892"
   
  **Ограничить** предложение принимает следующие формы:  
   
-|Предложение|Описание:|  
+|Предложение|Описание|  
 |------------|-----------------|  
 |`restrict(cpu)`|В функции могут использоваться все возможности языка C++. Вызывать ее могут только другие функции, объявленные с помощью функции restrict(cpu).|  
 |`restrict(amp)`|В функции может использоваться только то подмножество языка C++, выполнение которого может ускорить C++ AMP.|  
@@ -87,7 +87,7 @@ ms.locfileid: "39461892"
   
     -   Использование vararg.  
   
- Описание ограничения функций, см. в разделе [ограничения restrict(amp)](http://go.microsoft.com/fwlink/p/?LinkId=251089).  
+ Описание ограничения функций, см. в разделе [ограничить ограничения (amp)](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как использовать `restrict(amp)`предложение.  

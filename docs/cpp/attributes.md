@@ -1,15 +1,19 @@
 ---
-title: Стандарт C++ атрибуты | Документация Майкрософт
+title: Атрибуты в C++ | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/28/2017
+ms.date: 06/01/2018
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 89da1bbfc89496f54c829093c2c0ccf17d2f9123
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c573f3e170929df1b988bf3e74535dd12b83a2f8
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401978"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131803"
 ---
 # <a name="attributes-in-c"></a>Атрибуты в C++
 

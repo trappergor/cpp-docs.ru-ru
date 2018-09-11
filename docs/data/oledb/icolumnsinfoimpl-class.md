@@ -38,15 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e95ab02abaf4dd536ad6a081708a76cf54cca6b0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2bc335a0c83e57b8abfeb708d9c6acce977010dd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337246"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572389"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Класс IColumnsInfoImpl
-Предоставляет реализацию [IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx) интерфейс.  
+Предоставляет реализацию [IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -88,7 +88,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
 Возвращает массив порядковых номеров столбцов в наборе строк, которые идентифицируются по указанному столбцу идентификаторов.  
@@ -102,7 +102,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IColumnsInfo::MapColumnIDs](https://msdn.microsoft.com/library/ms714200.aspx) в *справочнике программиста OLE DB*.  
+ См. в разделе [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

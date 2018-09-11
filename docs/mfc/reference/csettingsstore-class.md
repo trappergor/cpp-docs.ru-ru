@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849699"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221136"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Создает программу-оболочку для API-функций Windows, обеспечивая объектно-ориентированный интерфейс, который используется для доступа к реестру.  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>Примечания  
  Если *bAdmin* имеет значение TRUE, `m_hKey` присваивается переменной-члена **HKEY_LOCAL_MACHINE**. Если задать *bAdmin* значение false, `m_hKey` присваивается **HKEY_CURRENT_USER**.  
   
- Зависит от прав доступа *bReadOnly* параметра. Если *bReadonly* имеет значение FALSE, будет присвоено прав доступа **KEY_ALL_ACCESS**. Если *bReadyOnly* имеет значение TRUE, прав доступа будет присвоено сочетание **KEY_QUERY_VALUE, KEY_NOTIFY** и **KEY_ENUMERATE_SUB_KEYS**. Дополнительные сведения о безопасности доступа вместе с реестром, см. в разделе [безопасности ключ реестра и права доступа](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ Зависит от прав доступа *bReadOnly* параметра. Если *bReadonly* имеет значение FALSE, будет присвоено прав доступа **KEY_ALL_ACCESS**. Если *bReadyOnly* имеет значение TRUE, прав доступа будет присвоено сочетание **KEY_QUERY_VALUE, KEY_NOTIFY** и **KEY_ENUMERATE_SUB_KEYS**. Дополнительные сведения о безопасности доступа вместе с реестром, см. в разделе [безопасности ключ реестра и права доступа](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
   
  Деструктор для `CSettingsStore` освобождает `m_hKey` автоматически.  
   

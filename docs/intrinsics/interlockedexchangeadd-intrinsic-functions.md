@@ -1,5 +1,5 @@
 ---
-title: Встроенные функции _InterlockedExchangeAdd | Документы Microsoft
+title: Встроенные функции _InterlockedExchangeAdd | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -65,17 +65,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141caf090eb34482fe53a03138ff71d2740e2fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340558"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600896"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Встроенные функции _InterlockedExchangeAdd
 **Блок, относящийся только к системам Microsoft**  
   
- Предоставляют встроенную поддержку компилятора для функции Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [встроенные функции _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) функции.  
+ Предоставляют встроенную поддержку компилятора для пакета SDK Windows Win32 [встроенные функции _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -177,9 +177,9 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
 |Встроенная функция|Архитектура|Верхний колонтитул|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<Intrin.h >|  
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, x64|\<Intrin.h >|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<Intrin.h >|  
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Примечания  
  Существуют несколько вариантов `_InterlockedExchangeAdd`, они различаются в зависимости от типов данных, которые включают, и от того, используется ли семантика получения или освобождения конкретного процессора.  
@@ -193,7 +193,7 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
  Эти процедуры доступны только как встроенные объекты. Таким образом, они являются встроенными ли или не [/Oi](../build/reference/oi-generate-intrinsic-functions.md) или [#pragma intrinsic](../preprocessor/intrinsic.md) используется. Невозможно использовать [#pragma function](../preprocessor/function-c-cpp.md) на этих встроенных функций.  
   
 ## <a name="example"></a>Пример  
- Пример использования `_InterlockedExchangeAdd`, в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Пример использования `_InterlockedExchangeAdd`, см. в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

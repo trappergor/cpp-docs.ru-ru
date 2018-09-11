@@ -1,5 +1,5 @@
 ---
-title: С помощью CStringT | Документы Microsoft
+title: С помощью CStringT | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ca6046035d14dfb8efff51e7a9aa445a318b8ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca78687f79cdbf1d8bdb60c1a877c489498624ee
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354885"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766195"
 ---
 # <a name="using-cstringt"></a>С помощью CStringT
-В этом разделе описываются программирование с использованием шаблона класса [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
-  
-## <a name="in-this-section"></a>В этом разделе  
- [Управление памятью с помощью CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
- Описывает управление памятью с `CStringT`, класс шаблона, используемый для обработки строк переменной длины символов.  
-  
- [Экспорт строковых классов с помощью CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
- Объясняется, как экспортировать свой собственный класс строки из библиотеки DLL с помощью класса CStringT <> шаблона.  
-  
-## <a name="reference"></a>Ссылка  
- [Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
- Содержит справочные сведения об общих `CStringT` класса.  
-  
-## <a name="see-also"></a>См. также  
- [Строки (ATL и MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+
+В этом разделе описываются программирование с использованием шаблона класса [CStringT](../atl-mfc-shared/reference/cstringt-class.md).
+
+## <a name="in-this-section"></a>В этом разделе
+
+[Управление памятью с помощью CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
+Обсуждается управление памятью с помощью `CStringT`, класс шаблона, используемый для работы со строками знаков переменной длины.
+
+[Экспорт строковых классов с помощью CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+Объясняется, как экспортировать свой собственный класс строку из DLL с использованием класс CStringT <> шаблона.
+
+## <a name="reference"></a>Ссылка
+
+[Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
+Содержит справочные сведения об общей `CStringT` класса.
+
+## <a name="see-also"></a>См. также
+
+[Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
 

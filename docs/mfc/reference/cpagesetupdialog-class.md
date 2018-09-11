@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a4fc1b97c30be28554faf68d5338b2a8e4ea8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c134d2e1dc6f3782446afc57b8384279a615e86f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849985"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197461"
 ---
 # <a name="cpagesetupdialog-class"></a>Класс CPageSetupDialog
 Инкапсулирует службы, предоставляемые стандартным диалоговым окном OLE "Параметры страницы" Windows с дополнительной поддержкой установки и изменения полей печати.  
@@ -146,7 +146,7 @@ CPageSetupDialog(
   
 - PSD_DISABLEORIENTATION отключает элемент управления диалогового окна ориентации страницы.  
   
-- Вызывает PSD_RETURNDEFAULT `CPageSetupDialog` для возврата [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структур, которые были инициализированы для на принтере по умолчанию без отображения диалоговое окно. Предполагается, что оба `hDevNames` и `hDevMode` имеют значение NULL; в противном случае функция возвращает ошибку. Если на принтере по умолчанию поддерживается старый драйвер принтера (более ранних, чем Windows версии 3.0), только `hDevNames` возвращается; `hDevMode` имеет значение NULL.  
+- Вызывает PSD_RETURNDEFAULT `CPageSetupDialog` для возврата [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структур, которые были инициализированы для на принтере по умолчанию без отображения диалоговое окно. Предполагается, что оба `hDevNames` и `hDevMode` имеют значение NULL; в противном случае функция возвращает ошибку. Если на принтере по умолчанию поддерживается старый драйвер принтера (более ранних, чем Windows версии 3.0), только `hDevNames` возвращается; `hDevMode` имеет значение NULL.  
   
 - PSD_DISABLEPAPER отключает элемент управления для выбора бумаги.  
   
@@ -172,7 +172,7 @@ CPageSetupDialog(
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
- Создает контекст устройства принтера из [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры.  
+ Создает контекст устройства принтера из [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры.  
   
 ```  
 HDC CreatePrinterDC();
@@ -189,7 +189,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- IDOK и IDCANCEL. Если возвращается IDCANCEL, вызовите Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) функцию, чтобы определить, произошла ли ошибка.  
+ IDOK и IDCANCEL. Если возвращается IDCANCEL, вызовите Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) функцию, чтобы определить, произошла ли ошибка.  
   
  IDOK и IDCANCEL являются константы, указывающие, является ли пользователь выбрал кнопку ОК или "Отмена".  
   
@@ -223,7 +223,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) структуру данных, которая содержит сведения об инициализации устройства и среду драйвер принтера. Чтобы разблокировать память, занимаемую эту структуру с Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) функции, который описан в пакете Windows SDK.  
+ [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) структуру данных, которая содержит сведения об инициализации устройства и среду драйвер принтера. Чтобы разблокировать память, занимаемую эту структуру с Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) функции, который описан в пакете Windows SDK.  
   
 ##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  Вызывайте эту функцию после вызова метода [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) получить имя драйвер принтера, определенная системой.  
@@ -286,7 +286,7 @@ PAGESETUPDLG m_psd;
   
  При изменении `m_psd` элемент данных напрямую, переопределяет любое поведение по умолчанию.  
   
- Дополнительные сведения о [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842) структуры, см. в Windows SDK.  
+ Дополнительные сведения о [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) структуры, см. в Windows SDK.  
   
  См. в примере [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
@@ -346,7 +346,7 @@ virtual UINT PreDrawPage(
   
 ### <a name="parameters"></a>Параметры  
  *wPaper*  
- Задает значение, указывающее размер бумаги. Это значение может принимать одно из **DMPAPER_** значений, перечисленных в описании [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) структуры.  
+ Задает значение, указывающее размер бумаги. Это значение может принимать одно из **DMPAPER_** значений, перечисленных в описании [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) структуры.  
   
  *wFlags*  
  Указывает ориентацию бумаги или конверта, и является ли принтер матричный или ориентации для HPPCLHPPCL (язык управления принтера Hewlett Packard) устройство. Этот параметр может принимать одно из следующих значений:  
@@ -368,7 +368,7 @@ virtual UINT PreDrawPage(
 -   0x01f конверт в режиме книжной (матричного)  
   
  *pPSD*  
- Указатель на структуру `PAGESETUPDLG`. Дополнительные сведения о [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), см. в Windows SDK.  
+ Указатель на структуру `PAGESETUPDLG`. Дополнительные сведения о [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda), см. в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если обработан; в противном случае 0.  

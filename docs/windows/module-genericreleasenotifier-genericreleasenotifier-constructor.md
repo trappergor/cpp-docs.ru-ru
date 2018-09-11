@@ -1,5 +1,5 @@
 ---
-title: 'Конструктор Module::genericreleasenotifier:: genericreleasenotifier | Документы Microsoft'
+title: 'Конструктор Module::genericreleasenotifier:: genericreleasenotifier | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb07c7f53e27e380ba5775369611299cad0f60d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98bcc3d3fcaf7aea3b2632cacb1ff38eedb868b8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875062"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612316"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Конструктор Module::GenericReleaseNotifier::GenericReleaseNotifier
-Инициализирует новый экземпляр класса Module::GenericReleaseNotifier.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      GenericReleaseNotifier(  
-   T callback,   
-   bool release  
-) throw() : ReleaseNotifier(release), callback_(callback);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `callback`  
- Лямбда-выражения, функтором или обработчик событий указателя на функцию, который может быть вызван с функция оператор «скобки» (`()`).  
-  
- `release`  
- Укажите `true` для включения вызов базового [модуль:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) метода; в противном случае укажите `false`.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)
+
+Инициализирует новый экземпляр класса **Module::GenericReleaseNotifier** класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+GenericReleaseNotifier(
+   T callback,
+   bool release
+) throw() : ReleaseNotifier(release), callback_(callback);
+```
+
+### <a name="parameters"></a>Параметры
+
+*обратный вызов*  
+Лямбда-выражения, функтором или обработчик событий указателя на функцию, который может быть вызван с помощью функции оператор «скобки» (`()`).
+
+*release*  
+Укажите **true** для включения вызова базового [модуль:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) метода; в противном случае укажите **false**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)

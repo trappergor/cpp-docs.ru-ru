@@ -1,5 +1,5 @@
 ---
-title: MFC настольных приложений | Документы Microsoft
+title: MFC настольных приложений | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350239"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754999"
 ---
 # <a name="mfc-desktop-applications"></a>Приложения MFC для рабочего стола
 Библиотека Microsoft Foundation Class (MFC) предоставляет объектно-ориентированную программу-оболочку для многих API Win32 и COM. Хотя ее можно использовать для создания очень простых классических приложений, в наибольшей степени она полезна при разработке сложных пользовательских интерфейсов с многочисленными элементами управления. MFC 11.0 можно использовать для создания приложений с пользовательскими интерфейсами в стиле Office.  
@@ -83,10 +83,10 @@ ms.locfileid: "33350239"
  [Категории таблицы иерархии](hierarchy-chart-categories.md)  
  Описывает диаграммы иерархии MFC по категориям.  
   
- [ATL и MFC общие классы](../atl-mfc-shared/atl-mfc-shared-classes.md)  
+ [Общие классы ATL и MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)  
  Предоставляет ссылки на классы, которые совместно используются MFC и библиотекой ATL.  
   
- [Примеры библиотек MFC](../visual-cpp-samples.md)  
+ [Примеры MFC](../visual-cpp-samples.md)  
  Содержит ссылки на примеры использования MFC.  
   
  [Справочные материалы по библиотекам Visual C++](../standard-library/cpp-standard-library-reference.md)  

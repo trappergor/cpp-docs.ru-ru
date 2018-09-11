@@ -17,60 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a5e5d5ddb831c5d4025e729cb27dd3a9e11b3688
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465874"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194757"
 ---
 # <a name="callas"></a>call_as
-Позволяет [локального](../windows/local-cpp.md) функции для сопоставления с удаленной функции так, что при вызове удаленной функции локальной функции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-[ call_as(  
-   function  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *function*  
- Локальная функция, которую требуется вызывать при вызове удаленной функции.  
-  
-## <a name="remarks"></a>Примечания  
- **Call_as** атрибут C++ имеет ту же функциональность, что [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) описании атрибута MIDL.  
-  
-## <a name="example"></a>Пример  
- В следующем коде показано, как можно использовать **call_as** для сопоставления функции не поддерживающие удаленное взаимодействие (**f1**) функции удаленного взаимодействия (**Remf1**):  
-  
-```cpp  
-// cpp_attr_ref_call_as.cpp  
-// compile with: /LD  
-#include "unknwn.h"  
-[module(name="MyLib")];  
-[dual, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMInterface {  
-   [local] HRESULT f1 ( int i );  
-   [call_as(f1)] HRESULT Remf1 ( int i );   
-};  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Метод интерфейса|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [локальный](../windows/local-cpp.md)   
+
+Позволяет [локального](../windows/local-cpp.md) функции для сопоставления с удаленной функции так, что при вызове удаленной функции локальной функции.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ call_as(
+   function
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*function*  
+Локальная функция, которую требуется вызывать при вызове удаленной функции.
+
+## <a name="remarks"></a>Примечания
+
+**Call_as** атрибут C++ имеет ту же функциональность, что [call_as](/windows/desktop/Midl/call-as) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+В следующем коде показано, как можно использовать **call_as** для сопоставления функции не поддерживающие удаленное взаимодействие (`f1`) функции удаленного взаимодействия (`Remf1`):
+
+```cpp
+// cpp_attr_ref_call_as.cpp
+// compile with: /LD
+#include "unknwn.h"
+[module(name="MyLib")];
+[dual, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMInterface {
+   [local] HRESULT f1 ( int i );
+   [call_as(f1)] HRESULT Remf1 ( int i );
+};
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[локальный](../windows/local-cpp.md)  

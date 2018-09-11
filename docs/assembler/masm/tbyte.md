@@ -1,7 +1,7 @@
 ---
-title: TBYTE | Документы Microsoft
+title: TBYTE | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b7c8b3f4cbe26eda9709f27a18ccb4a9cf2bbb1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1a75c07885c0460af6035c8d6fb1b42c6aa733e4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058008"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692890"
 ---
 # <a name="tbyte"></a>TBYTE
-Выделяет и при необходимости инициализирует 10 байт хранилища для каждого `initializer`. Можно также использовать как спецификатор типа в любом является допустимым типом.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-[[name]] TBYTEinitializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по директивам](../../assembler/masm/directives-reference.md)   
- [DT](../../assembler/masm/dt.md)
+
+Выделяет и при необходимости инициализирует 10 байт памяти для каждого `initializer`. Можно также использовать как спецификатор типа в любом является допустимым типом.
+
+## <a name="syntax"></a>Синтаксис
+
+> [[имя]] TBYTEinitializer [[, инициализатор]]...
+
+## <a name="see-also"></a>См. также
+
+[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[DT](../../assembler/masm/dt.md)<br/>

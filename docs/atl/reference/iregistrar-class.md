@@ -25,124 +25,129 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
-ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
+ms.openlocfilehash: 9b445a0e1a2668047d34f18424f44b0dc7cc55f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993572"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760923"
 ---
 # <a name="iregistrar-interface"></a>Интерфейс IRegistrar
-Этот интерфейс определяется насколько и используется внутри функции-члены CAtlModule например [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Этот интерфейс определяется насколько и используется внутри функции-члены CAtlModule например [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 typedef interface IRegistrar IRegistrar;
-```  
+```
+
 ## <a name="remarks"></a>Примечания
-См. в разделе [с помощью подстановочных параметров (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) для получения дополнительных сведений.  
 
-## <a name="members"></a>Участники  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Регистрирует ресурс. |  
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Отменяет регистрацию ресурса.|  
-|[IRegistrar::FileRegister](#fileregister)|Регистрирует файл.|  
-|[IRegistrar::FileUnregister](#fileunregister)|Отменяет регистрацию файла.|  
-|[IRegistrar::StringRegister](#stringregister)|Регистрирует строки.|  
-|[IRegistrar::StringUnregister](#stringunregister)|Отменяет регистрацию строки|  
-|[IRegistrar::ResourceRegister](#resourceregister)|Регистрирует ресурс.|  
-|[IRegistrar::ResourceUnregister](#resourceunregister)|Отменяет регистрацию ресурса.| 
-  
+См. в разделе [с помощью подстановочных параметров (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) для получения дополнительных сведений.
 
- 
-## <a name="requirements"></a>Требования  
- **Заголовок:** atlifase.h  
-  
-##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz 
- Регистрирует ресурс.  
-  
+## <a name="members"></a>Участники
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Регистрирует ресурс. |
+|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Отменяет регистрацию ресурса.|
+|[IRegistrar::FileRegister](#fileregister)|Регистрирует файл.|
+|[IRegistrar::FileUnregister](#fileunregister)|Отменяет регистрацию файла.|
+|[IRegistrar::StringRegister](#stringregister)|Регистрирует строки.|
+|[IRegistrar::StringUnregister](#stringunregister)|Отменяет регистрацию строки|
+|[IRegistrar::ResourceRegister](#resourceregister)|Регистрирует ресурс.|
+|[IRegistrar::ResourceUnregister](#resourceunregister)|Отменяет регистрацию ресурса.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atlifase.h
+
+##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz
+
+Регистрирует ресурс.
+
 ```
-virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz( 
+virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
     /* [in] */ _In_z_ LPCOLESTR resFileName,
     /* [in] */ _In_z_ LPCOLESTR szID,
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
-```  
-  
- 
-  
-##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz  
- Отменяет регистрацию ресурса.
-  
 ```
-virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz( 
+
+##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz
+
+Отменяет регистрацию ресурса.
+
+```
+virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
     /* [in] */ _In_z_ LPCOLESTR resFileName,
     /* [in] */ _In_z_ LPCOLESTR szID,
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
-```  
-  
-  
-##  <a name="fileregister"></a>  IRegistrar::FileRegister  
+```
+
+##  <a name="fileregister"></a>  IRegistrar::FileRegister
+
 Регистрирует файл.
-  
+
 ```
-virtual HRESULT STDMETHODCALLTYPE FileRegister( 
+virtual HRESULT STDMETHODCALLTYPE FileRegister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
-```  
-  
-  
-##  <a name="fileunregister"></a>  IRegistrar::FileUnregister  
+```
+
+##  <a name="fileunregister"></a>  IRegistrar::FileUnregister
+
 Отменяет регистрацию файла.
 
 ```
-virtual HRESULT STDMETHODCALLTYPE FileUnregister( 
-    */ _In_z_ LPCOLESTR fileName) = 0;
-```  
-  
- 
-##  <a name="stringregister"></a>  IRegistrar::StringRegister  
-  Регистрирует указанную строку данных.
+virtual HRESULT STDMETHODCALLTYPE FileUnregister(
+    /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
-virtual HRESULT STDMETHODCALLTYPE StringRegister( 
-    /* [in] */ _In_z_ LPCOLESTR data) = 0;
-```  
-  
-##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
- Отменяет регистрацию указанного строковые данные.  
-  
-```
-virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
-    /* [in] */ _In_z_ LPCOLESTR data) = 0;
-```  
 
-  
-##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister  
- Регистрирует ресурс.  
-  
+##  <a name="stringregister"></a>  IRegistrar::StringRegister
+
+Регистрирует указанную строку данных.
+
 ```
-virtual HRESULT STDMETHODCALLTYPE ResourceRegister( 
+virtual HRESULT STDMETHODCALLTYPE StringRegister(
+    /* [in] */ _In_z_ LPCOLESTR data) = 0;
+```
+
+##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
+
+Отменяет регистрацию указанного строковые данные.
+
+```
+virtualHRESULT STDMETHODCALLTYPE StringUnregister(
+    /* [in] */ _In_z_ LPCOLESTR data) = 0;
+```
+
+##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister
+
+Регистрирует ресурс.
+
+```
+virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
     /* [in] */ _In_z_ LPCOLESTR resFileName,
     /* [in] */ _In_ UINT nID,
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
-```  
-   
-  
-##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister  
- Отменяет регистрацию ресурса.  
-  
 ```
-virtualHRESULT STDMETHODCALLTYPE ResourceUnregister( 
+
+##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister
+
+Отменяет регистрацию ресурса.
+
+```
+virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR resFileName,
     /* [in] */ _In_ UINT nID,
-    /* [in] */ _In_z_ LPCOLESTR szType) = 0; 
-```  
- 
-## <a name="see-also"></a>См. также  
- [Использование подстановочных параметров (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
- [Общие сведения о классе](../../atl/atl-class-overview.md)   
- [Модульные классы](../../atl/atl-module-classes.md)   
- [Компонент реестра (регистратор)](../../atl/atl-registry-component-registrar.md)  
+    /* [in] */ _In_z_ LPCOLESTR szType) = 0;
+```
+
+## <a name="see-also"></a>См. также
+
+[Использование подстановочных параметров (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Модульные классы](../../atl/atl-module-classes.md)   
+[Компонент реестра (регистратор)](../../atl/atl-registry-component-registrar.md)

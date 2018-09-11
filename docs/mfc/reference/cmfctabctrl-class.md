@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852592"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680108"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl` Класс предоставляет функциональные возможности для набора вкладок. Элемент управления "вкладка" отображает закрепляемое окно с плоскими или трехмерными вкладками в верхней или нижней части. Вкладки могут отображать текст и изображение и могут изменять цвет, когда активны.  
@@ -134,14 +134,14 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCTabCtrl::CMFCTabCtrl`|Конструктор по умолчанию.|  
 |`CMFCTabCtrl::~CMFCTabCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Отображает указанную вкладку текущей вкладки и устанавливает фокус на этой вкладке.|  
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Вызывается платформой, когда курсор сначала перетаскивается в окне элемента управления tab.|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Вызывается платформой при выполнении операции перетаскивания при перемещении указателя мыши по окна цели перетаскивания. (Переопределяет [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Отображает всплывающее меню окон с вкладками, ожидает, когда пользователь выбирает вкладку и делает активной вкладкой выбранной вкладки.|  
-|`CMFCTabCtrl::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
 |`CMFCTabCtrl::RecalcLayout`|Повторно вычисляет внутренний макет элемента управления вкладки. (Переопределяет [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Задает текущей вкладке набор вкладок в качестве активной вкладки в нескольких группе вкладок интерфейс документа.|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Активирует вкладку. (Переопределяет [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
@@ -202,7 +202,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Запрещает активное представление теряет фокус, когда вставляется новая вкладка и включен.|  
   
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   Отделяемые окон с вкладками.  
   
- `CMFCTabCtrl` Класс может использоваться с диалоговым окном, предназначен для приложений, использующих закрепления элемента управления панели как [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] и [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Дополнительные сведения см. в разделе [класс CDockablePane](../../mfc/reference/cdockablepane-class.md).  
+ `CMFCTabCtrl` Класс может использоваться с диалоговым окном, но он предназначен для приложений, использующих закрепления элемента управления панели, таких как Microsoft Excel и Visual Studio. Дополнительные сведения см. в разделе [класс CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
  Выполните следующие шаги для добавления переменного размера, закрепление вкладок в приложении.  
   
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  Отсчитываемый от нуля индекс вкладки для отображения или -1, чтобы указать активной вкладки.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
@@ -331,7 +331,7 @@ BOOL Create(
 ### <a name="remarks"></a>Примечания  
  В следующей таблице описаны значения, указываемые для *стиля* параметра.  
   
-|Стиль|Описание:|  
+|Стиль|Описание|  
 |-----------|-----------------|  
 |STYLE_3D|Создает набор вкладок рычажок.|  
 |STYLE_FLAT|Создает набор вкладок с плоскими вкладки.|  
@@ -343,7 +343,7 @@ BOOL Create(
   
  В следующей таблице перечислены значения, указываемые для *расположение* параметра.  
   
-|Расположение|Описание:|  
+|Расположение|Описание|  
 |--------------|-----------------|  
 |LOCATION_BOTTOM|Вкладки расположены в нижней части вкладок.|  
 |LOCATION_TOP|Вкладки расположены в верхней части вкладок.|  
@@ -758,7 +758,7 @@ BOOL ModifyTabStyle(Style style);
 ### <a name="remarks"></a>Примечания  
  Значение *стиля* параметр может принимать одно из следующих `CMFCTabCtrl::Style` перечисления.  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |STYLE_3D|Отображает вкладки трехмерного, прямоугольная, которые имеют скругленные углы.|  
 |STYLE_3D_ONENOTE|Отображает трехмерные вкладок с одной части вертикальной и Наклонные стороне "один", который имеют скругленные углы.|  
@@ -784,7 +784,7 @@ virtual DROPEFFECT OnDragEnter(
  Указывает объект данных, содержащий данные, перетаскиваемые пользователем.  
   
  [in] *dwKeyState*  
- Содержит состояние клавиши-модификаторы. Этот параметр представляет собой битовую комбинацию (OR) из следующих значений: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе **параметры сообщения** раздел [о ввод от мыши](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Содержит состояние клавиши-модификаторы. Этот параметр представляет собой битовую комбинацию (OR) из следующих значений: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе **параметры сообщения** раздел [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *точки*  
  Содержит текущее положение курсора в координатах клиентской области окна.  
@@ -812,7 +812,7 @@ virtual DROPEFFECT OnDragOver(
  Указатель на [COleDataObject](../../mfc/reference/coledataobject-class.md) объект, перетаскиваемый в цель перетаскивания.  
   
  [in] *dwKeyState*  
- Состояние клавиши-модификаторы, который представляет собой битовую комбинацию (OR), MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе «Параметры сообщения» в [о ввод от мыши](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Состояние клавиши-модификаторы, который представляет собой битовую комбинацию (OR), MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе «Параметры сообщения» в [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *точки*  
  Текущее положение мыши.  
@@ -960,7 +960,7 @@ void SetResizeMode(ResizeMode resizeMode);
 ### <a name="remarks"></a>Примечания  
  *ResizeMode* параметр может принимать одно из следующих `ResizeMode` значений перечисления.  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |RESIZE_NO|Невозможно изменить размер вкладок.|  
 |RESIZE_VERT|Элементом управления tab может изменяться по вертикали, но не по горизонтали.|  
@@ -1000,7 +1000,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
   
 ### <a name="parameters"></a>Параметры  
  [out] *pScrollInfo*  
- Указатель на [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) структуру или значение NULL. При возвращении данного метода, а если этот параметр не имеет значение NULL, структура содержит все параметры полосы прокрутки. Значение по умолчанию имеет значение NULL.  
+ Указатель на [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) структуру или значение NULL. При возвращении данного метода, а если этот параметр не имеет значение NULL, структура содержит все параметры полосы прокрутки. Значение по умолчанию имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  

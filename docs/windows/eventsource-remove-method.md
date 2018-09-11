@@ -1,5 +1,5 @@
 ---
-title: Метод EventSource::Remove | Документы Microsoft
+title: Метод EventSource::Remove | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf0480252fca342b8a690e93f92ae14ca5e84c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00f3275095648a41eb25d10bac1f34637b2ac242
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874386"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604576"
 ---
 # <a name="eventsourceremove-method"></a>Метод EventSource::Remove
-Удаляет обработчик событий, представленного маркером регистрации указанное событие из набора обработчиков событий, связанных с текущим объектом EventSource.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-HRESULT Remove(  
-   EventRegistrationToken token  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `token`  
- Дескриптор, представляющий обработчик событий. Этот маркер был возвращен во время регистрации обработчика событий [Add()](../windows/eventsource-add-method.md) метод.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
-  
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения о структуре EventRegistrationToken см. в разделе Windows::Foundation:: eventregistrationtoken структуры в справочной документации среды выполнения Windows.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс EventSource](../windows/eventsource-class.md)
+
+Удаляет обработчик событий, представленного маркером регистрации указанное событие из набора обработчиков событий, связанных с текущим **EventSource** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT Remove(
+   EventRegistrationToken token
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Маркер*  
+Дескриптор, который представляет обработчик событий. Этот токен был возвращен при регистрации обработчика событий с [Add()](../windows/eventsource-add-method.md) метод.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="remarks"></a>Примечания
+
+Дополнительные сведения о `EventRegistrationToken` структуры, см. в разделе **структуры Windows::Foundation:: eventregistrationtoken** подразделы **среды выполнения Windows** справочной документации.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс EventSource](../windows/eventsource-class.md)

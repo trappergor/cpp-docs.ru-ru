@@ -1,7 +1,7 @@
 ---
-title: оператор DUP | Документы Microsoft
+title: оператор DUP | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf25627a47a21d37bd8b837b74f26af194542497
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c03dab1b7809530cd98f82f1f9b0260760c98b68
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056562"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676733"
 ---
 # <a name="operator-dup"></a>Оператор DUP
-Указывает *число* число объявления *начальное значение*.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-count DUP (initialvalue [[, initialvalue]]...)  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по операторам](../../assembler/masm/operators-reference.md)
+
+Указывает *число* число объявлений *initialvalue*.
+
+## <a name="syntax"></a>Синтаксис
+
+> число Повторов (начальное значение [[, начальное значение]]...)
+
+## <a name="see-also"></a>См. также
+
+[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>

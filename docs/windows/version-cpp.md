@@ -1,5 +1,5 @@
 ---
-title: версия (C++) | Документы Microsoft
+title: версия (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,48 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87186ee70b5863f51a7cd91f8695052f361bd11c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890613"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222536"
 ---
 # <a name="version-c"></a>version (C++)
-Определяет конкретную версию несколькими версиями класса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      [ version(  
-   "version"  
-) ]  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *version*  
- Номер версии компонентного класса. Если не указан, 1.0 помещается в IDL-файл.  
-  
-## <a name="remarks"></a>Примечания  
- **Версии** языка C++ имеет ту же функциональность, что [версии](http://msdn.microsoft.com/library/windows/desktop/aa367306) языка MIDL и передается через созданного IDL-файла.  
-  
-## <a name="example"></a>Пример  
- В разделе [привязываемых](../windows/bindable.md) пример приведен пример использования **версии**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|**class**, `struct`|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**coclass**|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты компилятора](../windows/compiler-attributes.md)   
- [Атрибуты классов](../windows/class-attributes.md)   
+
+Идентифицирует конкретную версию несколькими версиями класса.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ version(
+   "version"
+) ]
+```
+
+### <a name="parameters"></a>Параметры
+
+*version*  
+Номер версии `coclass`. Если не указан, 1.0 помещаются в IDL-файл.
+
+## <a name="remarks"></a>Примечания
+
+**Версии** атрибут C++ имеет ту же функциональность, что [версии](/windows/desktop/Midl/version) описании атрибута MIDL и передается через созданного IDL-файла.
+
+## <a name="example"></a>Пример
+
+См. в разделе [bindable](../windows/bindable.md) пример для использовать **версии**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**Класс**, **структуры**|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|**coclass**|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты компилятора](../windows/compiler-attributes.md)  
+[Атрибуты классов](../windows/class-attributes.md)  

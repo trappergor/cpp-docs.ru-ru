@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849741"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680614"
 ---
 # <a name="cmfccolordialog-class"></a>Класс CMFCColorDialog
 `CMFCColorDialog` Класс представляет диалоговое окно выбора цвета.  
@@ -52,18 +52,18 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Создает объект `CMFCColorDialog`.|  
 |`CMFCColorDialog::~CMFCColorDialog`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Возвращает текущий выбранный цвет.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Возвращает цветовую палитру.|  
-|`CMFCColorDialog::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. Синтаксис и Дополнительные сведения см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Переопределяет `CDialogEx::PreTranslateMessage`.)|  
+|`CMFCColorDialog::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. Синтаксис и Дополнительные сведения см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Переопределяет `CDialogEx::PreTranslateMessage`.)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Является производным палитры из системной палитры.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Задает текущий выбранный цвет.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Задает цвет, наиболее эквивалентно указанное значение RGB.|  
@@ -72,7 +72,7 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |`m_bIsMyPalette`|Значение TRUE, если диалоговое окно выбора цвета использует свою собственную цветовую палитру, или значение FALSE, если в диалоговом окне используются палитру, которая указана в `CMFCColorDialog` конструктор.|  
 |`m_bPickerMode`|Значение TRUE, а пользователь выбирает цвет в диалоговом окне выбора; в противном случае — значение FALSE.|  
@@ -149,7 +149,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, содержащее данные RGB для цвета, выбранного в диалоговом окне цвет.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) значение, содержащее данные RGB для цвета, выбранного в диалоговом окне цвет.  
   
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию после вызова метода `DoModal` метод.  
@@ -196,7 +196,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="parameters"></a>Параметры  
  [in] *rgb*  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , указывающее цвета RGB.  
+ Объект [COLORREF](/windows/desktop/gdi/colorref) , указывающее цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
   

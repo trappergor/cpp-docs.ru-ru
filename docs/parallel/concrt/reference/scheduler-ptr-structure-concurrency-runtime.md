@@ -1,5 +1,5 @@
 ---
-title: Структура scheduler_ptr | Документы Microsoft
+title: Структура scheduler_ptr | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686988"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541853"
 ---
 # <a name="schedulerptr-structure"></a>Структура scheduler_ptr
-Представляет указатель на планировщик. Этот класс существует для того, чтобы обеспечить возможность использования спецификации общего времени жизни путем применения shared_ptr или простой ссылки с помощью необработанного указателя.  
+Представляет указатель на планировщик. Этот класс существует в том, чтобы разрешить в спецификации общего времени жизни путем применения shared_ptr или простой ссылки с помощью необработанного указателя.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +38,19 @@ struct scheduler_ptr;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[scheduler_ptr::scheduler_ptr](#ctor)|Перегружен. Создает указатель планировщика из shared_ptr планировщику|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[scheduler_ptr::get](#get)|Возвращает необработанный указатель планировщику|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[scheduler_ptr::operator bool](#operator_bool)|Проверьте, является ли указатель планировщика отличным от null|  
 |[scheduler_ptr::operator-&gt;](#operator_ptr)|Поведение, как у указателя|  
@@ -75,14 +75,14 @@ scheduler_interface* get() const;
 ##  <a name="operator_bool"></a>  scheduler_ptr::operator bool   
  Проверьте, является ли указатель планировщика отличным от null  
   
-''' bool() оператор const;
+'''operator bool() const;
 ```  
   
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
  Behave like a pointer  
   
 ```
-scheduler_interface * operator -> (const;)
+scheduler_interface * operator -> () const;
 ```  
   
 ### Return Value  

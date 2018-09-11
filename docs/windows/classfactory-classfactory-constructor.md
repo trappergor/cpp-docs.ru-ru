@@ -1,5 +1,5 @@
 ---
-title: Конструктор ClassFactory::ClassFactory | Документы Microsoft
+title: Конструктор ClassFactory::ClassFactory | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25c394b069b85056256d405b4dce8804d84cb2e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d3ab1f176029c872c121b816a4ea57b9f83ca6bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857247"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596841"
 ---
 # <a name="classfactoryclassfactory-constructor"></a>Конструктор ClassFactory::ClassFactory
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-WRL_NOTHROW ClassFactory();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ClassFactory](../windows/classfactory-class.md)
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+WRL_NOTHROW ClassFactory();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ClassFactory](../windows/classfactory-class.md)

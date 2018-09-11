@@ -75,7 +75,6 @@
 ## [Распространение файлов Visual C++](redistributing-visual-cpp-files.md)
 ### [Распространение компонентов с использованием модулей слияния](redistributing-components-by-using-merge-modules.md)
 ### [Распространение элементов ActiveX Visual C++](redistributing-visual-cpp-activex-controls.md)
-### [Распространение файлов поддержки базы данных](redistributing-database-support-files.md)
 ### [Распространение библиотеки MFC](redistributing-the-mfc-library.md)
 ### [Распространение приложения ATL](redistributing-an-atl-application.md)
 ## [Примеры развертывания](deployment-examples.md)

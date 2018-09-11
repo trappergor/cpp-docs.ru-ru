@@ -1,5 +1,5 @@
 ---
-title: defaultbind | Документы Microsoft
+title: defaultbind | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58b275b74f9bf7f252fc2d26e9ce32fa7dc143dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871465"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208359"
 ---
 # <a name="defaultbind"></a>defaultbind
-Указывает, одиночное, связываемое свойство, которое представляет объект наилучшим образом.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-[defaultbind]  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Defaultbind** языка C++ имеет ту же функциональность, что [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **defaultbind**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Метод интерфейса|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [Атрибуты членов данных](../windows/data-member-attributes.md)   
- [displaybind](../windows/displaybind.md)   
- [immediatebind](../windows/immediatebind.md)   
- [requestedit](../windows/requestedit.md)   
+
+Указывает единственное свойство, представляющим объект наилучшим образом.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[defaultbind]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Defaultbind** атрибут C++ имеет ту же функциональность, что [defaultbind](/windows/desktop/Midl/defaultbind) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [bindable](../windows/bindable.md) пример демонстрирует использование **defaultbind**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[Атрибуты элементов данных](../windows/data-member-attributes.md)  
+[displaybind](../windows/displaybind.md)  
+[immediatebind](../windows/immediatebind.md)  
+[requestedit](../windows/requestedit.md)  

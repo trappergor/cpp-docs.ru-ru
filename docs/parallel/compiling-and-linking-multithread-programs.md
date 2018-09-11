@@ -1,5 +1,5 @@
 ---
-title: Компиляция и компоновка многопоточных программ | Документы Microsoft
+title: Компиляция и компоновка многопоточных программ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,31 +20,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c77cb217fe841e15f4c7470340bd3fbb502f6a9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4ab667e372c8118a83b7a93444abbfbc5c19b6e0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695737"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131522"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>Компиляция и компоновка многопоточных программ
-Программа Bounce.c представлена [Пример многопоточной программы на языке C](../parallel/sample-multithread-c-program.md).  
+В программе Bounce.c впервые появился в [Пример многопоточной программы на C](sample-multithread-c-program.md).  
   
- Скомпилированные программы многопоточных по умолчанию.  
+Скомпилированные программы многопоточных по умолчанию.  
   
-#### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Компиляция и компоновка многопоточной программы Bounce.c в среде разработки  
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Для компиляции и компоновки многопоточной программы Bounce.c в среде разработки  
   
 1.  В меню **Файл** последовательно выберите пункты **Создать**и **Проект**.  
   
-2.  В **типы проектов** области, нажмите кнопку **Win32**.  
+2.  В **типы проектов** панели щелкните **Win32**.  
   
-3.  В **шаблоны** области, нажмите кнопку **консольное приложение Win32**, а затем назовите проект.  
+3.  В **шаблоны** панели щелкните **консольное приложение Win32**, а затем введите имя проекта.  
   
 4.  Добавьте файл, содержащий исходный код C для проекта.  
   
 5.  На **построения** меню, постройте проект, нажав кнопку **построения** команды.  
   
-#### <a name="to-compile-and-link-the-multithread-program-bouncec-from-the-command-line"></a>Компиляция и компоновка многопоточной программы Bounce.c из командной строки  
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-the-command-line"></a>Для компиляции и компоновки многопоточной программы Bounce.c из командной строки  
   
 1.  Компиляции и компоновки программы:  
   
@@ -52,5 +52,6 @@ ms.locfileid: "33695737"
     CL BOUNCE.C  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)
+## <a name="see-also"></a>См. также
+
+[Реализация многопоточности на языке C с помощью функций Win32](multithreading-with-c-and-win32.md)

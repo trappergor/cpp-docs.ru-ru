@@ -1,5 +1,5 @@
 ---
-title: Метод SRWLock::LockShared | Документы Microsoft
+title: Метод SRWLock::LockShared | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fccc72814ca5c4fff417e0b6221ef0f3c045a5bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f6b3135171e61e928984c0eeb91aff0717a4727
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895753"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599253"
 ---
 # <a name="srwlocklockshared-method"></a>Метод SRWLock::LockShared
-Получает объект SRWLock в режиме общего доступа.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-SyncLockShared LockShared();  
-  
-static SyncLockShared LockShared(  
-   _In_ SRWLOCK* lock  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `lock`  
- Указатель на объект SRWLock.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Объект SRWLock в режиме общего доступа.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** corewrappers.h  
-  
- **Пространство имен:** Microsoft::wrl:: wrappers  
-  
-## <a name="see-also"></a>См. также  
- [Класс SRWLock](../windows/srwlock-class.md)
+
+Получает **SRWLock** объект в режиме общего доступа.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+SyncLockShared LockShared();
+
+static SyncLockShared LockShared(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*lock*  
+Указатель на **SRWLock** объекта.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**SRWLock** объект в режиме общего доступа.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** corewrappers.h
+
+**Пространство имен:** Microsoft::wrl:: wrappers
+
+## <a name="see-also"></a>См. также
+
+[Класс SRWLock](../windows/srwlock-class.md)

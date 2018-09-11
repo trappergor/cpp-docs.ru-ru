@@ -1,5 +1,5 @@
 ---
-title: auto_search | Документы Microsoft
+title: auto_search | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5de12c9db3eec4fe84a93321bdb2d9d96d629ecd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6cea1e1fa31c21a399dace0a58983f97cc87988c
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913048"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541293"
 ---
 # <a name="autosearch"></a>auto_search
 **Конкретных C++**  
   
- Указывает, что если на библиотеку типов ссылаются при помощи директивы #import, и при этом она сама ссылается на другую библиотеку типов, то компилятор может неявным образом выполнить директиву #import и для второй библиотеки типов.  
+Указывает, что при библиотеку типов ссылаются при помощи `#import` и сама ссылается на другую библиотеку типов, компилятор может сделать неявным `#import` для библиотеки типов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,8 +35,9 @@ auto_search
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **КОНЕЦ определенного C++**  
+ **КОНЕЦ конкретных C++**  
   
-## <a name="see-also"></a>См. также  
- [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
- [директива #import](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>См. также 
+
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

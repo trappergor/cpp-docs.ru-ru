@@ -1,5 +1,5 @@
 ---
-title: Метод Module::DecrementObjectCount | Документы Microsoft
+title: Метод Module::DecrementObjectCount | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adcd964f07426fcdcd3b0d68f946e3d8af6f389f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5a672ce0d3397e4f69a44d7a888cdacaa467dd49
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875959"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610490"
 ---
 # <a name="moduledecrementobjectcount-method"></a>Метод Module::DecrementObjectCount
-Уменьшает число объектов, отслеживаемых модулем.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-virtual long DecrementObjectCount();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Число, прежде чем операция уменьшения.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
+
+Уменьшает число объектов, отслеживаемых модулем.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual long DecrementObjectCount();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Число, прежде чем операция уменьшения.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
 ## <a name="see-also"></a>См. также
+
 [Класс Module](../windows/module-class.md)

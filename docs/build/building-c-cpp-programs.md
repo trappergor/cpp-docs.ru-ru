@@ -1,5 +1,5 @@
 ---
-title: Построение программ C/C++ | Документы Microsoft
+title: Сборка программ C/C++ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2894c503dde89668bfb90b615c7b0966fe5fe2e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fa07308d04d14395b0ca9773e2a0c81ed0c2bc2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360979"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573174"
 ---
 # <a name="building-cc-programs"></a>Сборка программ C/C++
 
-Вы можете выполнять сборку проектов Visual C++ в Visual Studio или в командной строке. Интегрированная среда разработки Visual Studio использует [MSBuild](../build/msbuild-visual-cpp.md) для построения проектов и решений. В командной строке для сборки простых проектов вы можете использовать компилятор C/C++ (cl.exe) и компоновщик (link.exe). Для создания более сложных проектов в командной строке, можно использовать MSBuild или [NMAKE](../build/nmake-reference.md). Общие сведения об использовании [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] для построения проектов и решений, в разделе [компилирование и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio).  
+Вы можете выполнять сборку проектов Visual C++ в Visual Studio или в командной строке. Visual Studio IDE использует [MSBuild](../build/msbuild-visual-cpp.md) для сборки проектов и решений. В командной строке для сборки простых проектов вы можете использовать компилятор C/C++ (cl.exe) и компоновщик (link.exe). Для создания более сложных проектов, в командной строке, можно использовать MSBuild или [NMAKE](../build/nmake-reference.md). Общие сведения о том, как использовать Visual Studio для сборки проектов и решений, см. в разделе [компиляция и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
 ## <a name="in-this-section"></a>В этом разделе  
 

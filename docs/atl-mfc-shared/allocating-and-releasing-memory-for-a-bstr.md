@@ -1,5 +1,5 @@
 ---
-title: Выделение и освобождение памяти для BSTR | Документы Microsoft
+title: Выделение и освобождение памяти для BSTR | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,37 +21,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ab5ae9d6f0bfa98231cbc41aa4ae0d10b89537
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bd299c228b3b388658093f6b138225c10ff38db
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358329"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751066"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Выделение и освобождение памяти для BSTR
-При создании `BSTR`s и передавать их между объектами COM, необходимо соблюдать осторожность в обработке памяти, они используют во избежание утечки памяти. Когда `BSTR` остается в интерфейсе, вам необходимо освобождать память при выполняются с ним. Тем не менее, когда `BSTR` передает из интерфейса, получающий объект отвечает за его управление памятью.  
-  
- В общем случае правила для выделения и освобождения памяти выделенной для `BSTR`s, следующим образом:  
-  
--   При вызове в функцию, ожидающую `BSTR` аргумент, необходимо выделить память для `BSTR` перед вызовом и после его освобождения. Пример:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_1.cpp)]  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#193](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_2.cpp)]  
-  
--   При вызове функции, которая возвращает `BSTR`, необходимо освободить строку самостоятельно. Пример:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#194](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_3.cpp)]  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#195](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_4.cpp)]  
-  
--   При реализации функции, которая возвращает `BSTR`, выделите строку, но не освободить. Получения функция освобождает память. Пример:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_5.cpp)]  
-  
-## <a name="see-also"></a>См. также  
- [Строки (ATL и MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
- [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
- [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx)   
- [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)
+
+При создании `BSTR`s и передавайте их между COM-объектов, необходимо соблюдать осторожность в обработке памяти, они используют, чтобы избежать утечки памяти. Когда `BSTR` остается в интерфейсе, вы должны освобождать память при всех возложенных на него. Тем не менее, если `BSTR` передает из интерфейса, получающий объект отвечает за его управление памятью.
+
+Как правило, выделенной правила выделение и освобождение памяти для `BSTR`s, следующим образом:
+
+- При вызове в функцию, ожидающую `BSTR` аргумент, необходимо выделить память для `BSTR` до вызова и выпустить ее позже. Пример:
+
+   [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_1.cpp)]
+
+   [!code-cpp[NVC_ATLMFC_Utilities#193](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_2.cpp)]
+
+- При вызове в функцию, возвращающую `BSTR`, необходимо освободить строку самостоятельно. Пример:
+
+   [!code-cpp[NVC_ATLMFC_Utilities#194](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_3.cpp)]
+
+   [!code-cpp[NVC_ATLMFC_Utilities#195](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_4.cpp)]
+
+- При реализации функции, возвращающей `BSTR`, выделить строки, но не освободит его. Поставка функция освобождает память. Пример:
+
+   [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_5.cpp)]
+
+## <a name="see-also"></a>См. также
+
+[Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+[CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
+[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)   
+[SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
 

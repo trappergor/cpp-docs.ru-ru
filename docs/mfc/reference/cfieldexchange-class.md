@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76167793f7252540dbe9feedbb2d83678ebdcacb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336511"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688390"
 ---
 # <a name="cfieldexchange-class"></a>Класс CFieldExchange
 Поддерживает процедуры обмена полями записей (RFX) и блочного обмена полями записей (Bulk RFX), используемые классами баз данных.  
@@ -40,7 +40,7 @@ class CFieldExchange
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFieldExchange::IsFieldType](#isfieldtype)|Возвращает ненулевое значение, если текущая операция, соответствующие тип обновляемого поля.|  
 |[CFieldExchange::SetFieldType](#setfieldtype)|Указывает тип элемента данных набора записей — столбца или параметра, представленного всех следующих вызовов функций RFX до следующего вызова `SetFieldType`.|  
@@ -117,7 +117,7 @@ void SetFieldType(UINT nFieldType);
 |Значение параметра SetFieldType|Тип элемента данных параметра|  
 |----------------------------------|-----------------------------------|  
 |`CFieldExchange::inputParam`|Входной параметр. Значение, которое было передано в запрос или хранимую процедуру набора записей.|  
-|'' ieldExchange::param **`ame as **CFieldExchange::inputParam`.|  
+|`CFieldExchange::param` | Совпадение с кодом `CFieldExchange::inputParam`.|  
 |`CFieldExchange::outputParam`|Выходной параметр. Возвращаемое значение хранимой процедуры набора записей.|  
 |`CFieldExchange::inoutParam`|Параметр ввода вывода. Значение, которое передается в и возвращаемым из хранимой процедуры набора записей.|  
   

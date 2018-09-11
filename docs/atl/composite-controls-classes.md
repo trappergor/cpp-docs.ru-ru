@@ -17,23 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acfbf8379512513e59528a6eb2855b9caed7d298
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d9f9359bb6dfa1204c32e6902e12c62423291db
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964201"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765886"
 ---
 # <a name="composite-controls-classes"></a>Классы составных элементов управления
-Следующий класс предоставляет поддержку для создания составных элементов управления  
-  
--   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) элементы управления ActiveX, производный от `CComCompositeControl` размещенных стандартное диалоговое окно. Эти типы элементов управления, называются составных элементов управления, так как они смогут размещать другие элементы (собственные элементы управления Windows и элементы управления ActiveX).  
-  
-## <a name="related-articles"></a>Связанные статьи  
- [Основы составного элемента управления](../atl/atl-composite-control-fundamentals.md)  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../atl/atl-class-overview.md)   
- [Макросы составного элемента управления](../atl/reference/composite-control-macros.md)   
- [Глобальные функции составных элементов управления](../atl/reference/composite-control-global-functions.md)
+
+Следующий класс предоставляет поддержку для создания составных элементов управления
+
+- [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) элементы управления ActiveX, производный от `CComCompositeControl` размещенных стандартное диалоговое окно. Эти типы элементов управления, называются составных элементов управления, так как они смогут размещать другие элементы (собственные элементы управления Windows и элементы управления ActiveX).
+
+## <a name="related-articles"></a>Связанные статьи
+
+[Основы составного элемента управления](../atl/atl-composite-control-fundamentals.md)
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../atl/atl-class-overview.md)   
+[Макросы составного элемента управления](../atl/reference/composite-control-macros.md)   
+[Глобальные функции составных элементов управления](../atl/reference/composite-control-global-functions.md)
 

@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd876ec21379d59445b88bdc08a1c7b831cb94fa
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 82df045c5a41767093e690ec35ffeb3d81032474
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954038"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110660"
 ---
 # <a name="recursivedirectoryiterator-class"></a>Класс recursive_directory_iterator
 
-Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге, возможно, рекурсивно просматривая подкаталоги. Для итератора X результатом выражения *X является объект класса directory_entry, являющийся оболочкой для имени файла и известных данных о его состоянии.
+Описывает итератор ввода, последовательный перебор имен файлов в каталоге, возможно по убыванию, рекурсивно просматривая подкаталоги. Для итератора `X`, выражение `*X` результатом которого является объект класса `directory_entry` , который создает оболочку, имя файла и все, что известно о его состоянии.
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 
@@ -37,85 +37,153 @@ class recursive_directory_iterator;
 
 Шаблон класса хранит:
 
-1. объект типа stack<pair\<directory_iterator, path>> (называемый здесь mystack в целях демонстрации), который представляет вложенные каталоги для упорядочивания;
+1. объект типа `stack<pair<directory_iterator, path>>`, который называется `mystack` здесь в целях надстройках, который представляет вложенные каталоги для
 
-1. объект типа directory_entry (называемый здесь myentry), который представляет имя текущего файла в последовательности каталогов;
+1. объект типа `directory_entry` вызывается `myentry` здесь, который представляет текущее имя файла в последовательности каталогов
 
-1. объект типа bool (называемый здесь no_push), который записывает, отключен ли рекурсивный спуск в подкаталоги;
+1. объект типа `bool`, который называется `no_push` здесь, который записывает, отключен ли рекурсивный просмотр подкаталогов
 
-1. объект типа directory_options (называемый здесь myoptions), который записывает параметры, установленные при создании.
+1. объект типа `directory_options`, который называется `myoptions` здесь, который записывает параметры, установленные при создании.
 
-Созданный по умолчанию объект типа recursive_directory_entry содержит итератор конца последовательности в mystack.top().first и представляет итератор конца последовательности. Например, при наличии каталога abc с записями def (каталог), def/ghi и jkl код
+Это созданный по умолчанию объект типа `recursive_directory_entry` итератором конец последовательности в `mystack.top().first` и представляет итератор конец последовательности. Например, если каталог `abc` с записями `def` (каталог), `def/ghi`, и `jkl`, код:
 
 ```cpp
 for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)
     visit(next->path());
 ```
 
-вызывает метод visit с аргументами `path("abc/def/ghi") and path("abc/jkl").`. Определить перебор в поддереве каталога можно двумя способами:
+вызывает метод visit с аргументами `path("abc/def/ghi")` и `path("abc/jkl")`. Вы можно определить перебор в поддереве каталога двумя способами:
 
-1. Символьная ссылка каталога будет проверяться только в том случае, если recursive_directory_iterator создается с аргументом directory_options, значением которого является directory_options::follow_directory_symlink.
+1. Символьная ссылка каталога будет проверяться только в том случае, если при создании `recursive_directory_iterator` с `directory_options` аргумент, значение которого равно `directory_options::follow_directory_symlink`.
 
-1. Если вызвать функцию disable_recursion_pending, то рекурсивная проверка следующего каталога, обнаруженного во время приращения, выполняться не будет.
+1. При вызове метода `disable_recursion_pending` следующего каталога, обнаруженного во время приращения не будут рекурсивно сканирования.
 
-## <a name="recursivedirectoryiteratordepth"></a>recursive_directory_iterator::depth
+### <a name="constructors"></a>Конструкторы
+
+|Конструктор|Описание|
+|-|-|
+|[recursive_directory_iterator](#recursive_directory_iterator)|Создает документ `recursive_directory_iterator`.|
+
+### <a name="member-functions"></a>Функции-члены
+
+|Функция-член|Описание|
+|-|-|
+|[Глубина](#depth)|Возвращает `mystack.size() - 1`, поэтому `pval` находится на нулевой глубине.|
+|[disable_recursion_pending](#disable_recursion_pending)|Магазины **true** в `no_push`.|
+|[Приращение](#increment)|Переходит к следующему файлу в последовательности.|
+|[options](#options)|Возвращает `myoptions`.|
+|[pop](#pop)|Возвращает следующий объект.|
+|[recursion_pending](#recursion_pending)|Возвращает `!no_push`.|
+
+### <a name="operators"></a>Операторы
+
+|Оператор|Описание|
+|-|-|
+|[оператор!=](#op_neq)|Возвращает `!(*this == right)`.|
+|[оператор=](#op_as)|Операторы-члены присваивания по умолчанию работают корректно.|
+|[оператор==](#op_eq)|Возвращает **true** только в том случае, если оба `*this` и *правой* являются итераторами конец последовательности или оба являются не end объекта последовательности итераторы.|
+|[оператор*](#op_multiply)|Возвращает `myentry`.|
+|[оператор>](#op_cast)|Возвращает `&**this`.|
+|[оператор++](#op_increment)|С шагом `recursive_directory_iterator`.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<filesystem >
+
+**Пространство имен:** std::tr2::sys
+
+## <a name="depth"></a> recursive_directory_iterator::Depth
+
+Возвращает `mystack.size() - 1`, поэтому `pval` находится на нулевой глубине.
 
 ```cpp
 int depth() const;
 ```
 
-Возвращает mystack.size() - 1, поэтому pval находится на нулевой глубине.
+## <a name="disable_recursion_pending"></a> recursive_directory_iterator::disable_recursion_pending
 
-## <a name="recursivedirectoryiteratordisablerecursionpending"></a>recursive_directory_iterator::disable_recursion_pending
+Магазины **true** в `no_push`.
 
 ```cpp
 void disable_recursion_pending();
 ```
 
-Функция-член сохраняет значение true в объект no_push.
+## <a name="increment"></a> recursive_directory_iterator::Increment
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator!=
+Переходит к следующему файлу в последовательности.
+
+```cpp
+recursive_directory_iterator& increment(error_code& ec) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*EC*<br/>
+Указанный код ошибки.
+
+### <a name="remarks"></a>Примечания
+
+Функция пытается перейти к имени следующего файла во вложенной последовательности. Если в случае успешного выполнения она сохраняет имя этого файла в `myentry`; в противном случае она создает итератор конец последовательности.
+
+## <a name="op_neq"></a> recursive_directory_iterator::operator! =
+
+Возвращает `!(*this == right)`.
 
 ```cpp
 bool operator!=(const recursive_directory_iterator& right) const;
 ```
 
-Оператор-член возвращает !(*this == right).
+### <a name="parameters"></a>Параметры
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator=
+*right*<br/>
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) для сравнения.
+
+## <a name="op_as"></a> recursive_directory_iterator::operator =
+
+Операторы-члены присваивания по умолчанию работают корректно.
 
 ```cpp
 recursive_directory_iterator& operator=(const recursive_directory_iterator&) = default;
 recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept = default;
 ```
 
-Операторы-члены присваивания по умолчанию работают корректно.
+### <a name="parameters"></a>Параметры
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator==
+*recursive_directory_iterator*<br/>
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) копируется в `recursive_directory_iterator`.
+
+## <a name="op_eq"></a> recursive_directory_iterator::operator ==
+
+Возвращает **true** только в том случае, если оба `*this` и *правой* являются итераторами конец последовательности или оба являются не end объекта последовательности итераторы.
 
 ```cpp
 bool operator==(const recursive_directory_iterator& right) const;
 ```
 
-Оператор-член возвращает значение true, только если оба оператора, *this и right, являются или не являются итераторами конца последовательности.
+### <a name="parameters"></a>Параметры
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator*
+*right*<br/>
+[Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) для сравнения.
+
+## <a name="op_multiply"></a> recursive_directory_iterator::operator *
+
+Возвращает `myentry`.
 
 ```cpp
 const directory_entry& operator*() const;
 ```
 
-Оператор-член возвращает myentry.
+## <a name="op_cast"></a> recursive_directory_iterator::operator ->
 
-## <a name="recursivedirectoryiteratoroperator-"></a>recursive_directory_iterator::operator->
+Возвращает `&**this`.
 
 ```cpp
 const directory_entry * operator->() const;
 ```
 
-Возвращает &\*\*this.
+## <a name="op_increment"></a> recursive_directory_iterator::operator ++
 
-## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator++
+С шагом `recursive_directory_iterator`.
 
 ```cpp
 recursive_directory_iterator& operator++();
@@ -123,33 +191,46 @@ recursive_directory_iterator& operator++();
 recursive_directory_iterator& operator++(int);
 ```
 
-Первая функция-член вызывает метод increment(), а затем возвращает значение *this. Вторая функция-член создает копию объекта, вызывает метод increment(), а затем возвращает копию.
+### <a name="parameters"></a>Параметры
 
-## <a name="recursivedirectoryiteratoroptions"></a>recursive_directory_iterator::options
+*int*<br/>
+Заданное значение приращения.
+
+### <a name="remarks"></a>Примечания
+
+Первая функция-член вызывает `increment()`, затем возвращает `*this`. Вторая функция-член создает копию объекта, вызовы `increment()`, затем возвращает копию.
+
+## <a name="options"></a> recursive_directory_iterator::Options
+
+Возвращает `myoptions`.
 
 ```cpp
 directory_options options() const;
 ```
 
-Возвращает myoptions.
+## <a name="pop"></a> recursive_directory_iterator::POP
 
-## <a name="recursivedirectoryiteratorpop"></a>recursive_directory_iterator::pop
+Возвращает следующий объект.
 
 ```cpp
 void pop();
 ```
 
-Если depth() == 0 объект становится итератором конца последовательности. В противном случае функция-член завершает проверку текущего (самого глубокого) каталога и возобновляет ее на следующем нижнем уровне глубины.
+### <a name="remarks"></a>Примечания
 
-## <a name="recursivedirectoryiteratorrecursionpending"></a>recursive_directory_iterator::recursion_pending
+Если `depth() == 0` объект становится итератор конец последовательности. В противном случае функция-член завершает проверку текущего (самого глубокого) каталога и возобновляет ее на следующем нижнем уровне глубины.
+
+## <a name="recursion_pending"></a> recursive_directory_iterator::recursion_pending
+
+Возвращает `!no_push`.
 
 ```cpp
 bool recursion_pending() const;
 ```
 
-Возвращает !no_push.
+## <a name="recursive_directory_iterator"></a> recursive_directory_iterator::recursive_directory_iterator
 
-## <a name="recursivedirectoryiteratorrecursivedirectoryiterator"></a>recursive_directory_iterator::recursive_directory_iterator
+Создает документ `recursive_directory_iterator`.
 
 ```cpp
 recursive_directory_iterator() noexcept;
@@ -167,23 +248,25 @@ recursive_directory_iterator(const recursive_directory_iterator&) = default;
 recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 ```
 
-Первый конструктор создает итератор конца последовательности. Второй и третий конструкторы сохраняют значение false в no_push и directory_options::none в myoptions, а затем пытаются открыть и прочитать pval как каталог. В случае успешного выполнения они инициализируют mystack и myentry для обозначения первого имени файла, не являющегося каталогом, во вложенной последовательности; в противном случае — создают итератор конца последовательности.
+### <a name="parameters"></a>Параметры
 
-Четвертый и пятый конструкторы работают так же, как второй и третий, за исключением того, что сначала сохраняют opts в myoptions. Установленные по умолчанию конструкторы работают корректно.
+*PVal*<br/>
+Заданный путь.
 
-## <a name="recursivedirectoryiteratorincrement"></a>recursive_directory_iterator::increment
+*error_code*<br/>
+Указанный код ошибки.
 
-```cpp
-recursive_directory_iterator& increment(error_code& ec) noexcept;
-```
+*opts*<br/>
+Параметры указанного каталога.
 
-Функция пытается перейти к имени следующего файла во вложенной последовательности. В случае успешного выполнения она сохраняет имя этого файла в myentry; в противном случае — создает итератор конца последовательности.
+*recursive_directory_iterator*<br/>
+`recursive_directory_iterator`, копией которого будет создаваемый `recursive_directory_iterator`.
 
-## <a name="requirements"></a>Требования
+### <a name="remarks"></a>Примечания
 
-**Заголовок:** \<filesystem >
+Первый конструктор создает итератор конца последовательности. Второй и третий конструкторы сохраняют **false** в `no_push` и `directory_options::none` в `myoptions`, затем пытаются открыть и прочитать *pval* как каталог. Если в случае успешного выполнения они инициализируют `mystack` и `myentry` для обозначения первое имя файла без directory во вложенной последовательности; в противном случае они создают итератор конец последовательности.
 
-**Пространство имен:** std::tr2::sys
+Четвертый и пятый конструкторы работают так же, как второй и третий, за исключением того, что сначала сохраняют *opts* в `myoptions`. Установленные по умолчанию конструкторы работают корректно.
 
 ## <a name="see-also"></a>См. также
 

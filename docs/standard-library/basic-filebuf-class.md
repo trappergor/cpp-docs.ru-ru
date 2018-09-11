@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954972"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222725"
 ---
 # <a name="basicfilebuf-class"></a>Класс basic_filebuf
 
@@ -70,9 +70,11 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Elem* базового элемента буфера файла.
+*Elem*<br/>
+ Базовый элемент буфера файла.
 
-*TR* признаки базового элемента буфера файла (обычно `char_traits` <  `Elem`>).
+*Tr*<br/>
+ Признаки базового элемента буфера файла (обычно `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Примечания
 
@@ -410,11 +412,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Параметры
 
-*_Filename* имя открываемого файла.
+*_Filename*<br/>
+ Имя файла, который необходимо открыть.
 
-*_Режим* одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим*<br/>
+ Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* защита, эквивалентно открытия файла по умолчанию *shflag* параметр в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+ Защита, эквивалентно открытия файла по умолчанию *shflag* параметр в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -456,7 +461,8 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* ссылка rvalue на [basic_filebuf](../standard-library/basic-filebuf-class.md) объекта.
+*right*<br/>
+ Ссылка rvalue на объект [basic_filebuf](../standard-library/basic-filebuf-class.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -476,7 +482,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta* символ для вставки в буфер или `traits_type::eof`.
+*_Meta*<br/>
+ Символ для вставки в буфер или `traits_type::eof`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -484,7 +491,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="remarks"></a>Примечания
 
-Если _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенных виртуальной функции-члена написана вставляется элемент **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) в буфер вывода. Для этого существует несколько способов.
+Если *_Meta* **! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенная функция-член пытается вставить элемент **ch = traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) в выходной буфер. Для этого существует несколько способов.
 
 - Если позиция записи доступна, можно сохранить элемент в позиции записи и увеличить следующий указатель для выходного буфера.
 
@@ -502,7 +509,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta* символ для вставки в буфер, или `traits_type::eof`.
+*_Meta*<br/>
+ Символ для вставки в буфер или `traits_type::eof`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -538,11 +546,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Параметры
 
-*_Off* позиция для поиска относительно *_Way*.
+*_Off*<br/>
+ Позиция для поиска относительно *_Way*.
 
-*_Way* отправной точкой для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way*<br/>
+ Начальная точка для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which*<br/>
+ Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -566,9 +577,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Параметры
 
-*_Sp* позиция для поиска.
+*_Sp*<br/>
+ Позиция для поиска.
 
-*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which*<br/>
+ Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -594,9 +607,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Параметры
 
-*_Buffer* указатель на буфер.
+*_Buffer*<br/>
+ Указатель на буфер.
 
-*число* размер буфера.
+*count*<br/>
+ Размер буфера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -616,7 +631,8 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>Параметры
 
-*правом* `lvalue` ссылку на другой `basic_filebuf`.
+*right*<br/>
+ Ссылка `lvalue` на другой объект `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::sync
 

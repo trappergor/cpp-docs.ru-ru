@@ -1,5 +1,5 @@
 ---
-title: Метод EventSource::Add | Документы Microsoft
+title: Метод EventSource::Add | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a13c5b48a7e242f47903fda038331fd126832dcf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873242"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592235"
 ---
 # <a name="eventsourceadd-method"></a>Метод EventSource::Add
-Добавляет обработчик событий, представленный указанным интерфейсом делегата, к набору обработчиков событий для текущего объекта EventSource.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-HRESULT Add(  
-   _In_ TDelegateInterface* delegateInterface,  
-   _Out_ EventRegistrationToken* token  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `delegateInterface`  
- Интерфейс для объекта делегата, который представляет обработчик событий.  
-  
- `token`  
- После завершения операции представляет дескриптор события. Используйте этот маркер в качестве параметра для [Remove()](../windows/eventsource-remove-method.md) метод для удаления обработчика событий.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** event.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс EventSource](../windows/eventsource-class.md)
+
+Добавляет обработчик событий, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего **EventSource** объекта.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT Add(
+   _In_ TDelegateInterface* delegateInterface,
+   _Out_ EventRegistrationToken* token
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*delegateInterface*  
+Интерфейс для объекта делегата, который представляет обработчик событий.
+
+*Маркер*  
+После завершения операции представляет дескриптор события. Используйте этот маркер в качестве параметра для [Remove()](../windows/eventsource-remove-method.md) метод для удаления обработчика событий.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** event.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+[Класс EventSource](../windows/eventsource-class.md)

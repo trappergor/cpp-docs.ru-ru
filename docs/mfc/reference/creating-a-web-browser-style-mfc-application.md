@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3b0e148104ff5620eddf7ac0d26693d96607d9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 290861abef11b922601ea455390f1d997749ad0e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025660"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686776"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Создание приложения MFC в стиле браузера
 Веб-приложения в стиле браузера можно получить доступ к сведения из Интернета (например, HTML или активные документы) или интрасети, а также папки в локальной файловой системе и в сети. Путем создания производного класса представления приложения из [CHtmlView](../../mfc/reference/chtmlview-class.md), что сделать приложение веб-браузер, создавая представление с элементом управления WebBrowser.  
@@ -77,10 +77,10 @@ void CWebView::OnInitialUpdate()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пример MFC MFCIE](http://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [Пример MFC MFCIE](https://github.com/Microsoft/VCSamples)   
  [Мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md)   
  [Работа со свойствами проектов](../../ide/working-with-project-properties.md)   
  [Страницы свойств](../../ide/property-pages-visual-cpp.md)   
  [Работа со свойствами проектов](../../ide/working-with-project-properties.md)   
- [Развертывание приложений](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

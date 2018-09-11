@@ -8,12 +8,14 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: a1c32311109ee19056c0a73d922ab1a965e3fbbb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+author: corob-msft
+ms.author: corob
+ms.openlocfilehash: 93feda8c6359c5ec24fd4fd9dd38c632726b676b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954129"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197029"
 ---
 # <a name="ltexceptiongt-typedefs"></a>Определения типов &lt;exception&gt;
 
@@ -33,7 +35,7 @@ typedef unspecified exception_ptr;
 
 Неуказанный внутренний класс, используемый для реализации типа `exception_ptr`.
 
-Используйте объект `exception_ptr` для ссылки на текущее исключение или экземпляр указанного пользователем исключения. В реализации Майкрософт исключение представлено структурой [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082). Каждый объект `exception_ptr` содержит поле ссылки на исключение, указывающее на копию структуры `EXCEPTION_RECORD`, представляющую исключение.
+Используйте объект `exception_ptr` для ссылки на текущее исключение или экземпляр указанного пользователем исключения. В реализации Майкрософт исключение представлено структурой [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record). Каждый объект `exception_ptr` содержит поле ссылки на исключение, указывающее на копию структуры `EXCEPTION_RECORD`, представляющую исключение.
 
 При объявлении переменной `exception_ptr` эта переменная не связана ни с одним исключением. То есть в поле ссылки на исключение находится значение NULL. Такой объект `exception_ptr` называется *exception_ptr null*.
 

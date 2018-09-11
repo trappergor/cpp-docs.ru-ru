@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1ae5d4216efc790fae0bc4d86bbe828fc28c473
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7d9217a91b6b6ceda3a0743f94186dc52cbb7f80
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463097"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613354"
 ---
 # <a name="comptrinternaladdref-method"></a>Метод ComPtr::InternalAddRef
-Увеличивает счетчик ссылок интерфейса, связанного с данным **ComPtr**.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void InternalAddRef() const;  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Этот метод защищен.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ComPtr](../windows/comptr-class.md)
+
+Увеличивает счетчик ссылок интерфейса, связанного с данным **ComPtr**.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void InternalAddRef() const;
+```
+
+## <a name="remarks"></a>Примечания
+
+Этот метод защищен.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtr](../windows/comptr-class.md)

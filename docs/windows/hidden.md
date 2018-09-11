@@ -1,5 +1,5 @@
 ---
-title: скрытые | Документы Microsoft
+title: скрытые | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 444994f046b58fbd54dcd3982836bb7fc4d53ed1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 350f1c7c844bd386191b2a236f5bc4ada4e1672a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879689"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204532"
 ---
 # <a name="hidden"></a>hidden
-Указывает, что элемент существует, но не должен отображаться в пользовательском браузере.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-[hidden]  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Скрытые** языка C++ имеет ту же функциональность, что [скрытые](http://msdn.microsoft.com/library/windows/desktop/aa366861) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **скрытые**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|`interface`, **класса**, `struct`, метод, свойство|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**кокласс** (при применении к **классу** или `struct`)|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
- [Атрибуты классов](../windows/class-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
+
+Указывает, что элемент существует, но не должен отображаться в пользовательском браузере.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[hidden]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Скрытые** атрибут C++ имеет ту же функциональность, что [скрытые](/windows/desktop/Midl/hidden) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [bindable](../windows/bindable.md) пример демонстрирует использование **скрытые**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|**интерфейс**, **класс**, **структуры**, метод, свойство|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|**Компонентный класс** (при применении к **класс** или **структуры**)|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  
+[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  

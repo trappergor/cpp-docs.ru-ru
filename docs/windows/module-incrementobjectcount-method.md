@@ -1,5 +1,5 @@
 ---
-title: Метод Module::IncrementObjectCount | Документы Microsoft
+title: Метод Module::IncrementObjectCount | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c662d4f8752014ca785b63020fc0ef7c97b5306f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c5b1b50b096bf7fcda2aa26bf3e2b7820499267
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878246"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599429"
 ---
 # <a name="moduleincrementobjectcount-method"></a>Метод Module::IncrementObjectCount
-Увеличивает число объектов, отслеживаемых модулем.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-virtual long IncrementObjectCount();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Счетчик перед выполнением операции инкремента.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** module.h  
-  
- **Пространство имен:** Microsoft::WRL
- 
- ## <a name="see-also"></a>См. также
- [Класс Module](../windows/module-class.md)
+
+Увеличивает число объектов, отслеживаемых модулем.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual long IncrementObjectCount();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Счетчик перед выполнением операции инкремента.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** module.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс Module](../windows/module-class.md)

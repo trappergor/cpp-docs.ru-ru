@@ -1,5 +1,5 @@
 ---
-title: Метод FtmBase::GetMarshalSizeMax | Документы Microsoft
+title: Метод FtmBase::GetMarshalSizeMax | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,59 +17,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baa1597a3ef0ba7014408e15cacc71bce618cd5d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873798"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590589"
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>Метод FtmBase::GetMarshalSizeMax
-Верхняя граница получите число байтов, необходимое для маршалинга заданный указатель интерфейса на указанный объект.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-STDMETHODIMP GetMarshalSizeMax(  
-   __in REFIID riid,  
-   __in_opt void *pv,  
-   __in DWORD dwDestContext,  
-   __reserved void *pvDestContext,  
-   __in DWORD mshlflags,  
-   __out DWORD *pSize  
-) override;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `riid`  
- Ссылка на идентификатор интерфейса, который необходимо маршалировать.  
-  
- `pv`  
- Указатель на интерфейс для маршалинга; может иметь значение NULL.  
-  
- `dwDestContext`  
- Контекст назначения, где должна быть распаковать указанный интерфейс.  
-  
- Укажите одно или несколько значений перечисления MSHCTX.  
-  
- В настоящее время распаковка может произойти в другое подразделение (MSHCTX_INPROC) текущего процесса или в другом процессе на том же компьютере, как текущий процесс (MSHCTX_LOCAL).  
-  
- `pvDestContext`  
- Зарезервировано для будущего использования; должен иметь значение NULL.  
-  
- `mshlflags`  
- Флаг, указывающий, будет ли передаваться обратно в процессе клиента данные для маршалинга — типичный случай — диска или записываются на глобальной таблицы, где можно получить несколькими клиентами. Укажите одно или несколько значений перечисления MSHLFLAGS.  
-  
- `pSize`  
- После завершения этой операции представляет указатель на верхнюю границу объема данных для записи в поток маршалинга.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если успешно; в противном случае — значение E_FAIL или E_NOINTERFACE.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** ftm.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс FtmBase](../windows/ftmbase-class.md)
+
+Получите верхнюю границу на число байтов, необходимая для маршалинга заданный указатель интерфейса на указанный объект.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHODIMP GetMarshalSizeMax(
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags,
+   __out DWORD *pSize
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*  
+Ссылка на идентификатор интерфейса для маршалинга.
+
+*PV*  
+Указатель на интерфейс, который должен быть маршалирован; может иметь значение NULL.
+
+*dwDestContext*  
+Контекст назначения, где должен быть неупакованный указанный интерфейс.
+
+Укажите одно или несколько значений перечисления MSHCTX.
+
+В настоящее время распаковка может произойти в другое подразделение текущего процесса (MSHCTX_INPROC) или в другом процессе на том же компьютере, что и текущий процесс (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Зарезервировано для будущего использования; должен иметь значение NULL.
+
+*mshlflags*  
+Флаг, указывающий, является ли данных для маршалинга для передачи обратно в клиентском процессе, типичный случай — диска или записываются на глобальной таблицы, где его можно получить несколькими клиентами. Укажите одно или несколько значений перечисления MSHLFLAGS.
+
+*pSize*  
+После завершения этой операции, указатель на верхнюю границу объема данных, записываемых в поток маршалинга.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае — значение E_FAIL или E_NOINTERFACE.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** ftm.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс FtmBase](../windows/ftmbase-class.md)

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0960e94acdbe660474efbeeddd0f72fa4f0606f6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ea2039cd9fa1c5071da143f557406d028f464d7e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34257066"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676712"
 ---
 # <a name="deployment-concepts"></a>Концепции развертывания
 
@@ -61,4 +61,4 @@ ms.locfileid: "34257066"
 
 - [Развертывание классических приложений](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [Основные сведения о зависимостях приложения Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)
-- [Развертывание с помощью установщика Windows](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)
+

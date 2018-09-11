@@ -1,5 +1,5 @@
 ---
-title: LCID | Документы Microsoft
+title: LCID | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,55 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c36c4a53dc627af10b6c768cdc9bc9353cbd4877
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 936777adf9863c233303c4b78ffd9e45aa0f3b95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877258"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209535"
 ---
 # <a name="lcid"></a>lcid
-Позволяет передавать код языка функции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-[lcid]  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Lcid** атрибута C++ реализует функциональность [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) языка MIDL. Если вы хотите реализовать языковой стандарт для блока библиотеки, используйте **lcid =** `lcid` параметр [модуль](../windows/module-cpp.md) атрибута.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// cpp_attr_ref_lcid.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLibrary")];  
-typedef long HRESULT;  
-  
-[dual, uuid("2F5F63F1-16DA-11d2-9E7B-00C04FB926DA")]  
-__interface IStatic {  
-   HRESULT MyFunc([in, lcid] long LocaleID, [out, retval] BSTR * ReturnVal);  
-};  
-```  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Параметр интерфейса|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты параметра](../windows/parameter-attributes.md)   
+
+Позволяет передать код языка функции.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[lcid]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Lcid** атрибут C++ реализует функции [lcid](/windows/desktop/Midl/lcid) описании атрибута MIDL. Если вы хотите реализовать языкового стандарта для блока библиотеки, используйте **lcid =** `lcid` параметр [модуль](../windows/module-cpp.md) атрибута.
+
+## <a name="example"></a>Пример
+
+```cpp
+// cpp_attr_ref_lcid.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLibrary")];
+typedef long HRESULT;
+
+[dual, uuid("2F5F63F1-16DA-11d2-9E7B-00C04FB926DA")]
+__interface IStatic {
+   HRESULT MyFunc([in, lcid] long LocaleID, [out, retval] BSTR * ReturnVal);
+};
+```
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Параметр интерфейса|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты параметра](../windows/parameter-attributes.md)  

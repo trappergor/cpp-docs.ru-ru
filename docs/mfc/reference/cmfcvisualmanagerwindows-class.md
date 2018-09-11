@@ -1,5 +1,5 @@
 ---
-title: Класс преобразованный CMFCVisualManagerWindows | Документы Microsoft
+title: Класс CMFCVisualManagerWindows | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -150,17 +150,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5582c634428290086393791ae23d551726bff7ab
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: fd7ebc32fa76165e35aa3ea23cf3acda61b80189
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040666"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538758"
 ---
-# <a name="cmfcvisualmanagerwindows-class"></a>Класс преобразованный CMFCVisualManagerWindows
-`CMFCVisualManagerWindows` имитирует внешний вид Microsoft Windows XP или Microsoft Vista, когда пользователь выбирает тему Vista или Windows XP.  
+# <a name="cmfcvisualmanagerwindows-class"></a>Класс CMFCVisualManagerWindows
+`CMFCVisualManagerWindows` Имитирует внешний вид Microsoft Windows XP или Microsoft Vista, когда пользователь выбирает Windows XP или Vista темы.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -180,11 +180,11 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Платформа вызывает этот метод для определения ли 3D вкладки всегда должны быть выделены в приложении. (Переопределяет [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|  
+|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Платформа вызывает этот метод, чтобы определить ли 3D вкладки, всегда должны быть выделены в приложении. (Переопределяет [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|  
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Переопределяет `CMFCVisualManager::DrawComboBorderWinXP`.)|  
 |[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(Переопределяет [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|  
 |[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(Переопределяет [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|  
-|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|Этот метод вызывается платформой при рисовании кнопки панели инструментов. (Переопределяет [CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).)|  
+|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|Этот метод вызывается платформой при рисовании кнопки на панели инструментов. (Переопределяет [CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).)|  
 |[CMFCVisualManagerWindows::GetCaptionButtonExtraBorder](#getcaptionbuttonextraborder)|(Переопределяет [CMFCVisualManager::GetCaptionButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getcaptionbuttonextraborder).)|  
 |[CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight](#getdockingpanecaptionextraheight)|(Переопределяет `CMFCVisualManager::GetDockingPaneCaptionExtraHeight`.)|  
 |[CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)|(Переопределяет `CMFCVisualManagerOfficeXP::GetHighlightedMenuItemTextColor`.)|  
@@ -193,9 +193,9 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::IsDefaultWinXPPopupButton](#isdefaultwinxppopupbutton)|(Переопределяет [CMFCVisualManager::IsDefaultWinXPPopupButton](../../mfc/reference/cmfcvisualmanager-class.md#isdefaultwinxppopupbutton).)|  
 |[CMFCVisualManagerWindows::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)|(Переопределяет `CMFCVisualManagerOfficeXP::IsHighlightWholeMenuItem`.)|  
 |[CMFCVisualManagerWindows::IsOfficeStyleMenus](#isofficestylemenus)||  
-|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Показывает, реализует ли диспетчер визуального представления меню в стиле с Microsoft Office XP. (Переопределяет [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|  
+|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Указывает, реализует ли наглядный диспетчер меню Office XP в стиле. (Переопределяет [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|  
 |[CMFCVisualManagerWindows::IsWindowsThemingSupported](#iswindowsthemingsupported)|(Переопределяет `CMFCVisualManager::IsWindowsThemingSupported`.)|  
-|[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|Указывает, доступна ли Тема Windows.|  
+|[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|Указывает, доступен ли темы Windows.|  
 |[CMFCVisualManagerWindows::OnDrawBarGripper](#ondrawbargripper)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|  
 |[CMFCVisualManagerWindows::OnDrawBrowseButton](#ondrawbrowsebutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|  
 |[CMFCVisualManagerWindows::OnDrawButtonBorder](#ondrawbuttonborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|  
@@ -209,8 +209,8 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawEditBorder](#ondraweditborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawEditBorder`.)|  
 |[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Переопределяет [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|  
 |[CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`.)|  
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Этот метод вызывается платформой при рисовании границ вокруг экземпляр [CMFCHeaderCtrl класса](../../mfc/reference/cmfcheaderctrl-class.md). (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Платформа вызывает эту функцию при рисовании стрелку сортировки элемент управления заголовком. (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|  
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Этот метод вызывается платформой при рисовании границы вокруг экземпляр [класс CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Эта функция вызывается платформой при рисовании стрелки сортировки элемента управления заголовка. (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|  
 |[CMFCVisualManagerWindows::OnDrawMenuBorder](#ondrawmenuborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|  
 |[CMFCVisualManagerWindows::OnDrawMenuSystemButton](#ondrawmenusystembutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`.)|  
 |[CMFCVisualManagerWindows::OnDrawMiniFrameBorder](#ondrawminiframeborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`.)|  
@@ -222,7 +222,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawSeparator](#ondrawseparator)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|  
 |[CMFCVisualManagerWindows::OnDrawSpinButtons](#ondrawspinbuttons)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawSpinButtons`.)|  
 |[CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|  
-|[CMFCVisualManagerWindows::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Этот метод вызывается платформой при рисовании индикатор хода выполнения [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объекта. (Переопределяет [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|  
+|[CMFCVisualManagerWindows::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Этот метод вызывается платформой при рисовании индикатора хода выполнения [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объекта. (Переопределяет [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|  
 |[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Этот метод вызывается платформой при рисовании поле размер для [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Переопределяет [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|  
 |[CMFCVisualManagerWindows::OnDrawTab](#ondrawtab)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTab`.)|  
 |[CMFCVisualManagerWindows::OnDrawTabCloseButton](#ondrawtabclosebutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTabCloseButton`.)|  
@@ -234,14 +234,14 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnErasePopupWindowButton](#onerasepopupwindowbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|  
 |[CMFCVisualManagerWindows::OnEraseTabsArea](#onerasetabsarea)|(Переопределяет `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|  
 |[CMFCVisualManagerWindows::OnEraseTabsButton](#onerasetabsbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|  
-|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Платформа вызывает этот метод при она удаляет кадра на [CMFCBaseTabCtrl класса](../../mfc/reference/cmfcbasetabctrl-class.md). (Переопределяет [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
+|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Этот метод вызывается платформой при его стирает кадр на [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md). (Переопределяет [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
 |[CMFCVisualManagerWindows::OnFillBarBackground](#onfillbarbackground)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|  
 |[CMFCVisualManagerWindows::OnFillButtonInterior](#onfillbuttoninterior)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|  
 |[CMFCVisualManagerWindows::OnFillCommandsListBackground](#onfillcommandslistbackground)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|  
 |[CMFCVisualManagerWindows::OnFillMiniFrameCaption](#onfillminiframecaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`.)|  
-|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Платформа вызывает этот метод, когда он заполняет внутреннюю часть кнопки страницы Outlook. (Переопределяет [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
+|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Этот метод вызывается платформой при его заполняет внутреннюю часть кнопки страницы Outlook. (Переопределяет [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
 |[CMFCVisualManagerWindows::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|  
-|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Этот метод вызывается платформой при заливке фона [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) управления. (Переопределяет [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
+|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Этот метод вызывается платформой при заливке фона [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) элемента управления. (Переопределяет [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
 |[CMFCVisualManagerWindows::OnHighlightMenuItem](#onhighlightmenuitem)|(Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`.)|  
 |[CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|(Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerWindows::OnUpdateSystemColors](#onupdatesystemcolors)|(Переопределяет `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
@@ -254,12 +254,12 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Указывает, отображаются ли темы Windows XP 3D вкладки.|  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `CMFCVisualManagerWindows` класс для изменения внешнего вида приложения, чтобы имитировать текущей темы на компьютере, где выполняется приложение.  
+ Используйте `CMFCVisualManagerWindows` классе, чтобы изменить внешний вид приложения для имитации текущей темы на компьютере, на котором выполняется приложение.  
   
- Однако темы Windows могут быть недоступны, если приложение работает под управлением версии Windows, более ранних, чем Windows XP или если темы отключены, так как пользователь с **классический** представления. Если тема не доступна, приложение использует диспетчер visual по умолчанию, определенные в [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Однако темы Windows может быть недоступен, если приложение работает под управлением версии Windows более ранней, чем Windows XP, или если темы отключены, так как пользователь использует **классической** представления. Если тема не станет доступным, приложение использует наглядный диспетчер по умолчанию, определенные в [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `CMFCVisualManagerWindows`. Этот фрагмент кода является частью [Desktop предупреждения демонстрационный пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует, как использовать `CMFCVisualManagerWindows`. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]  
   
@@ -501,24 +501,24 @@ virtual BOOL IsWindowsThemingSupported() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="iswinxpthemeavailable"></a>  CMFCVisualManagerWindows::IsWinXPThemeAvailable  
- Определяет, доступен ли темы Windows.  
+ Определяет, доступна ли Тема Windows.  
   
 ```  
 static BOOL IsWinXPThemeAvailible();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если тема доступна; в противном случае — 0.  
+ Ненулевое значение, если тема доступна; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод допустим для всех Windows XP и более поздние версии темы.  
   
- `IsWinXPThemeAvailable` идентичен `CMFCVisualManagerWindows::IsWindowsThemingAvailable` за исключением того, что `IsWinXPThemeAvailable` является статическим методом. Таким образом она создаст временный диспетчер визуального представления, если он не существует.  
+ `IsWinXPThemeAvailable` идентичен `CMFCVisualManagerWindows::IsWindowsThemingAvailable` за исключением того, что `IsWinXPThemeAvailable` — это статический метод. Таким образом будет создан временный наглядный диспетчер, если он не существует.  
   
- `IsWinXPThemeAvailable` всегда возвращает 0s операционных систем более ранних, чем Windows XP.  
+ `IsWinXPThemeAvailable` всегда возвращает 0 для версий Windows, более ранних, чем Windows XP.  
   
 ##  <a name="m_b3dtabsxptheme"></a>  CMFCVisualManagerWindows::m_b3DTabsXPTheme  
- Логический параметр, определяющий, отображаются ли Диспетчер визуальных 3D вкладки.  
+ Логический параметр, который определяет, отображает ли Диспетчер визуальных 3D вкладки.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;  
@@ -1494,7 +1494,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bВ системах*  
+ [in] *bOn*  
   
 ### <a name="remarks"></a>Примечания  
   

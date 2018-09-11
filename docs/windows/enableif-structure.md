@@ -1,5 +1,5 @@
 ---
-title: Структура EnableIf | Документы Microsoft
+title: Enableif-структура | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,56 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e71c43ca9222b350c07dae5f299f4a6f469bf84
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873382"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578561"
 ---
 # <a name="enableif-structure"></a>EnableIf - структура
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template <  
-   bool b,  
-   typename T = void  
->  
-  
-struct EnableIf;  
-template <  
-   typename T  
->  
-struct EnableIf<true, T>;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `T`  
- Тип.  
-  
- `b`  
- Выражение типа Boolean.  
-  
-## <a name="remarks"></a>Примечания  
- Определяет данные-член типа, указанного в качестве второго параметра шаблона, если первый параметр шаблона равен `true`.  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-typedefs"></a>Общедоступные определения типов  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|`type`|Если параметр `b` равен `true`, частичная специализация определяет, что данные-член `type` будут иметь тип `T`.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `EnableIf`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** internal.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template <
+   bool b,
+   typename T = void
+>
+
+struct EnableIf;
+template <
+   typename T
+>
+struct EnableIf<true, T>;
+```
+
+### <a name="parameters"></a>Параметры
+
+*T*  
+Тип.
+
+*b*  
+Выражение типа Boolean.
+
+## <a name="remarks"></a>Примечания
+
+Определяет данные-член типа, указанного в качестве второго параметра шаблона, если первый параметр шаблона, результатом которого является **true**.
+
+## <a name="members"></a>Участники
+
+### <a name="public-typedefs"></a>Общедоступные определения типов
+
+|Имя|Описание:|
+|----------|-----------------|
+|`type`|Если параметр шаблона *b* принимает значение **true**, частичная специализация определяет данные-член `type` типа `T`.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`EnableIf`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** internal.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

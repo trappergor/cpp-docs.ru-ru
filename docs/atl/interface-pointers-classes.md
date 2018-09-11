@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9176d6ac22b4b9f802efabbb53d64fee3e3fef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19c3dd32a99eee7b2bb460598de5b5edeb03aeda
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961802"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761739"
 ---
 # <a name="interface-pointers-classes"></a>Классы указателей интерфейса
-Следующие классы управление указатель данный интерфейс.  
-  
--   [CComPtr](../atl/reference/ccomptr-class.md) выполняет подсчет автоматических ссылок.  
-  
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md) аналогичен `CComPtr`, а также выполняет автоматическое выполнение запросов к интерфейсов.  
-  
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) предоставляет методы, которые полезны при создании массива из COM указателей на интерфейс.  
-  
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md) предоставляет методы, которые полезны при создании списка COM указателей на интерфейс.  
-  
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md) предоставляет методы для работы с указатели интерфейса и глобальной таблицы интерфейсов (GIT).  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../atl/atl-class-overview.md)
+
+Следующие классы управление указатель данный интерфейс.
+
+- [CComPtr](../atl/reference/ccomptr-class.md) выполняет подсчет автоматических ссылок.
+
+- [CComQIPtr](../atl/reference/ccomqiptr-class.md) аналогичен `CComPtr`, а также выполняет автоматическое выполнение запросов к интерфейсов.
+
+- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) предоставляет методы, которые полезны при создании массива из COM указателей на интерфейс.
+
+- [CInterfaceList](../atl/reference/cinterfacelist-class.md) предоставляет методы, которые полезны при создании списка COM указателей на интерфейс.
+
+- [CComGITPtr](../atl/reference/ccomgitptr-class.md) предоставляет методы для работы с указатели интерфейса и глобальной таблицы интерфейсов (GIT).
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../atl/atl-class-overview.md)
 

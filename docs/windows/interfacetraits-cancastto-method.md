@@ -1,5 +1,5 @@
 ---
-title: Метод InterfaceTraits::CanCastTo | Документы Microsoft
+title: Метод InterfaceTraits::CanCastTo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,52 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2a0a37f4ef9fa8f2aa92405b4b2c01d99386555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aea326149c9748ff480d523a1078f54ba733cb14
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879585"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610424"
 ---
 # <a name="interfacetraitscancastto-method"></a>Метод InterfaceTraits::CanCastTo
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-template<typename T>  
-static __forceinline bool CanCastTo(  
-   _In_ T* ptr,  
-   REFIID riid,  
-   _Deref_out_ void **ppv  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `ptr`  
- Имя указателя на тип.  
-  
- `riid`  
- Идентификатор интерфейса `Base`.  
-  
- `ppv`  
- Если операция завершилась успешно, `ppv` указывает на интерфейсе, указанном свойством `Base`. В противном случае `ppv` равно `nullptr`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `true` Если операция завершилась успешно и `ptr` приведен к указателю на `Base`; в противном случае `false` .  
-  
-## <a name="remarks"></a>Примечания  
- Указывает ли заданный указатель может быть приведен к указателю на `Base`.  
-  
- Дополнительные сведения о `Base`, см. в разделе определения открытых типов в [InterfaceTraits-структура](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** implements.h  
-  
- **Пространство имен:** Microsoft::wrl:: Details  
-  
-## <a name="see-also"></a>См. также  
- [InterfaceTraits-структура](../windows/interfacetraits-structure.md)   
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template<typename T>
+static __forceinline bool CanCastTo(
+   _In_ T* ptr,
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*ptr*  
+Имя указателя на тип.
+
+*riid*  
+Идентификатор интерфейса `Base`.
+
+*ppv*  
+Если операция выполнена успешно, *ppv* указывает на интерфейсе, указанном свойством `Base`. В противном случае *ppv* присваивается **nullptr**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** при успешном выполнении этой операции и *ptr* приведен к указателю на `Base`; в противном случае **false** .
+
+## <a name="remarks"></a>Примечания
+
+Указывает ли заданный указатель может быть приведен к указателю на `Base`.
+
+Дополнительные сведения о `Base`, см. в разделе **общедоступные определения типов** статьи [interfacetraits-структура](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** implements.h
+
+**Пространство имен:** Microsoft::wrl:: Details
+
+## <a name="see-also"></a>См. также
+
+[Структура InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

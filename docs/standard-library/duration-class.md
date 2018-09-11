@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956870"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100915"
 ---
 # <a name="duration-class"></a>Класс duration
 
@@ -51,20 +51,20 @@ class duration <duration<Rep, Period1>, Period2>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |duration::period Typedef|Синоним для параметра-шаблона `Period`.|
 |duration::rep Typedef|Синоним для параметра-шаблона `Rep`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Длительность](#duration)|Создает объект `duration`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[count](#count)|Возвращает количество тактов в интервале времени.|
 |[max](#max)|Статический. Возвращает максимальное допустимое значение параметра-шаблона `Ref`.|
@@ -73,7 +73,7 @@ class duration <duration<Rep, Period1>, Period2>;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[duration::operator-](#operator-)|Возвращает копию объекта `duration` вместе с отрицательным счетчиком тактов.|
 |[duration::operator--](#operator--)|Уменьшает на единицу накопленный счетчик тактов.|
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Параметры
 
-*Rep2* арифметический тип для представления числа тактов.
+*Rep2*<br/>
+Арифметический тип для представления числа тактов.
 
-*Period2* A `std::ratio` специализации шаблона для представления тактового периода в единицах время в секундах.
+*Period2*<br/>
+Специализация шаблона `std::ratio` для представления тактового периода в секундах.
 
-*R* количество тактов в периоде по умолчанию.
+*R*<br/>
+Количество тактов в периоде по умолчанию.
 
-*Длительность* количество тактов в течение указанного периода *Period2*.
+*Длительность*<br/>
+Количество тактов в течение указанного периода *Period2*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Параметры
 
-*Div* для первого метода *Div* представляет счетчик тактов. Для второго метода *Div* является `duration` объект, который содержит счетчик тактов.
+*ДИВ*<br/>
+Для первого метода *Div* представляет счетчик тактов. Для второго метода *Div* является `duration` объект, который содержит счетчик тактов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Параметры
 
-*Mult* значение типа, который задается параметром `duration::rep`.
+*Mult*<br/>
+Значение типа, которое задается параметром `duration::rep`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Параметры
 
-*Div* значение типа, который задается параметром `duration::rep`.
+*ДИВ*<br/>
+Значение типа, которое задается параметром `duration::rep`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность* A `duration` объекта.
+*Длительность*<br/>
+Объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность* A `duration` объекта.
+*Длительность*<br/>
+Объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Параметры
 
-*Div* делитель, который является либо объектом длительности, либо значение, представляющее значение счетчика тактов.
+*ДИВ*<br/>
+Делитель, который является либо объектом длительности, либо значением, представляющим значение счетчика тактов.
 
 ### <a name="remarks"></a>Примечания
 

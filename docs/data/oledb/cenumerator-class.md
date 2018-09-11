@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336970"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572880"
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
-Использует объект перечисления OLE DB, который предоставляет [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) интерфейс, чтобы вернуть набор строк, описывающий все источники данных и перечислителей.  
+Использует объект перечисления OLE DB, который предоставляет [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) интерфейс, чтобы вернуть набор строк, описывающий все источники данных и перечислителей.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -83,7 +83,7 @@ bool Find(TCHAR* szSearchName) throw();
  **значение true,** Если имя найдено. В противном случае **false**.  
   
 ### <a name="remarks"></a>Примечания  
- Это имя сопоставляется `SOURCES_NAME` членом [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) интерфейс.  
+ Это имя сопоставляется `SOURCES_NAME` членом [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) интерфейс.  
   
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
 Выполняет синтаксический анализ отображаемое имя извлекаемого компонента строки, который можно преобразовать в моникер.  
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
  Стандартный HRESULT.  
 
 ## <a name="open"></a> CEnumerator::Open
-Привязывает моникера для перечислителя, если один указан, а затем получает набор строк для перечислителя, вызывая [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx).  
+Привязывает моникера для перечислителя, если один указан, а затем получает набор строк для перечислителя, вызывая [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Синтаксис  
   

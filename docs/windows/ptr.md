@@ -1,5 +1,5 @@
 ---
-title: PTR | Документы Microsoft
+title: PTR | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99d3938e2baa3beb7edc1147716b5feeaa319117
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875998"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219832"
 ---
 # <a name="ptr"></a>ptr
-Определяет указатель как полный указатель.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-[ptr]  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **Ptr** языка C++ имеет ту же функциональность, что [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) языка MIDL.  
-  
-## <a name="example"></a>Пример  
- Далее приведен пример [defaultvalue](../windows/defaultvalue.md) для приведен пример использования **ptr**.  
-  
-## <a name="requirements"></a>Требования  
-  
-### <a name="attribute-context"></a>Контекст атрибута  
-  
-|||  
-|-|-|  
-|**Применение**|Параметр интерфейса, метод интерфейса `typedef`|  
-|**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|Нет|  
-  
- Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>См. также  
- [Атрибуты IDL](../windows/idl-attributes.md)   
- [Атрибуты интерфейса](../windows/interface-attributes.md)   
- [Атрибуты метода](../windows/method-attributes.md)   
- [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)   
+
+Определяет указатель как полный указатель.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+[ptr]
+```
+
+## <a name="remarks"></a>Примечания
+
+**Ptr** атрибут C++ имеет ту же функциональность, что [ptr](/windows/desktop/Midl/ptr) описании атрибута MIDL.
+
+## <a name="example"></a>Пример
+
+См. в примере [defaultvalue](../windows/defaultvalue.md) использовать образец **ptr**.
+
+## <a name="requirements"></a>Требования
+
+### <a name="attribute-context"></a>Контекст атрибута
+
+|||
+|-|-|
+|**Применение**|Параметр интерфейса, метод интерфейса **typedef**|
+|**Повторяемый**|Нет|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
+
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>См. также
+
+[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты интерфейса](../windows/interface-attributes.md)  
+[Атрибуты метода](../windows/method-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  

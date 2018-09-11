@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d8dfc618ba8871a06da6ddd9d1754bc1543654d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0ba3e4b916556ebe83303228cfa9a056780962e3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462470"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612931"
 ---
 # <a name="comptrinternalrelease-method"></a>Метод ComPtr::InternalRelease
-Выполняет операцию освобождения модели COM в интерфейсе, связанном с этим **ComPtr**.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void InternalRelease();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Этот метод защищен.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** client.h  
-  
- **Пространство имен:** Microsoft::WRL  
-  
-## <a name="see-also"></a>См. также  
- [Класс ComPtr](../windows/comptr-class.md)
+
+Выполняет операцию освобождения модели COM в интерфейсе, связанном с этим **ComPtr**.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+void InternalRelease();
+```
+
+## <a name="remarks"></a>Примечания
+
+Этот метод защищен.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** client.h
+
+**Пространство имен:** Microsoft::WRL
+
+## <a name="see-also"></a>См. также
+
+[Класс ComPtr](../windows/comptr-class.md)
