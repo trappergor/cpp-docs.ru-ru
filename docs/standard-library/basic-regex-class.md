@@ -1,7 +1,7 @@
 ---
 title: Класс basic_regex | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 531ecc65a23e0eecd3480c397c081061cffaf9d8
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100889"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384947"
 ---
 # <a name="basicregex-class"></a>Класс basic_regex
 
@@ -30,59 +30,11 @@ ms.locfileid: "44100889"
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-class basic_regex {
-   public:
-   basic_regex();
-   explicit basic_regex(const Elem *ptr,
-   flag_type flags = ECMAScript);
-   basic_regex(const Elem *ptr, size_type len,
-   flag_type flags = ECMAScript);
-   basic_regex(const basic_regex& right);
-   template <class STtraits, class STalloc>
-   explicit basic_regex(const basic_string<Elem, STtraits, STalloc>& str,
-   flag_type flags = ECMAScript);
-   template <class InIt>
-   explicit basic_regex(InIt first, InIt last,
-   flag_type flags = ECMAScript);
-   basic_regex& operator=(const basic_regex& right);
-   basic_regex& operator=(const Elem *ptr);
-   template <class STtraits, class STalloc>
-   basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
-   basic_regex& assign(const basic_regex& right);
-   basic_regex& assign(const Elem *ptr,
-   flag_type flags = ECMAScript);
-   basic_regex& assign(const Elem *ptr, size_type len,
-   flag_type flags = ECMAScript);
-   template <class STtraits, class STalloc>
-   basic_regex& assign(const basic_string<Elem, STtraits, STalloc>& str,
-   flag_type flags = ECMAScript);
-   template <class InIt>
-   basic_regex& assign(InIt first, InIt last,
-   flag_type flags = ECMAScript);
-   locale_type imbue(locale_type loc);
-   locale_type getloc() const;
-   void swap(basic_regex& other) throw();
-   unsigned mark_count() const;
-   flag_type flags() const;
-   typedef Elem value_type;
-   typedef regex_constants::syntax_option_type flag_type;
-   typedef typename RXtraits::locale_type locale_type;
-   static const flag_type icase = regex_constants::icase;
-   static const flag_type nosubs = regex_constants::nosubs;
-   static const flag_type optimize = regex_constants::optimize;
-   static const flag_type collate = regex_constants::collate;
-   static const flag_type ECMAScript = regex_constants::ECMAScript;
-   static const flag_type basic = regex_constants::basic;
-   static const flag_type extended = regex_constants::extended;
-   static const flag_type awk = regex_constants::awk;
-   static const flag_type grep = regex_constants::grep;
-   static const flag_type egrep = regex_constants::egrep;
-   private:
-   RXtraits traits;    // exposition only
-   };
-   ```
+template <class Elem, class RXtraits>
+class basic_regex
+```
 
-### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
 *Elem*<br/>
 Тип элементов для обеспечения соответствия.
@@ -110,86 +62,63 @@ class basic_regex {
 
 Эти функции-члены также принимают аргумент `flags` , указывающих различные параметры для интерпретации регулярных выражений в дополнение к параметрам, описанным *RXtraits* типа.
 
+### <a name="members"></a>Участники
+
+|Член|Значение по умолчанию|
+|-|-|
+|открытый статический const icase flag_type|regex_constants::icase|
+|открытый статический const nosubs flag_type|regex_constants::nosubs|
+|открытый статический const flag_type оптимизации|regex_constants::optimize|
+|открытый статический const flag_type collate|regex_constants::COLLATE|
+|открытый статический const flag_type ECMAScript|regex_constants::ECMAScript|
+|открытый статический const flag_type базовый|regex_constants::Basic|
+|открытый статический const flag_type расширенных|regex_constants::Extended|
+|открытый статический const flag_type awk|regex_constants::awk|
+|открытый статический const flag_type grep|regex_constants::GREP|
+|открытый статический egrep flag_type const|regex_constants::egrep|
+|закрытый RXtraits признаков||
+
+### <a name="constructors"></a>Конструкторы
+
+|Конструктор|Описание|
+|-|-|
+|[basic_regex](#basic_regex)|Конструирует объект регулярного выражения.|
+
+### <a name="typedefs"></a>Определения типов
+
+|Имя типа|Описание|
+|-|-|
+|[flag_type](#flag_type)|Тип флагов параметров синтаксиса.|
+|[locale_type](#locale_type)|Тип сохраненного объекта языкового стандарта.|
+|[value_type](#value_type)|Тип элемента.|
+
+### <a name="member-functions"></a>Функции-члены
+
+|Функция-член|Описание|
+|-|-|
+|[assign](#assign)|Присваивает значение объекту регулярного выражения.|
+|[flags](#flags)|Возвращает флаги параметров синтаксиса.|
+|[get_loc](#get_loc)|Возвращает сохраненный объект языкового стандарта.|
+|[imbue](#imbue)|Изменяет сохраненный объект языкового стандарта.|
+|[mark_count](#mark_count)|Возвращает число сопоставленных частей выражения.|
+|[swap](#swap)|Меняет местами два объекта регулярного выражения.|
+
+### <a name="operators"></a>Операторы
+
+|Оператор|Описание|
+|-|-|
+|[оператор=](#op_eq)|Присваивает значение объекту регулярного выражения.|
+
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** \<regex>
 
 **Пространство имен:** std
 
-## <a name="assign"></a>  basic_regex::assign
-
-Присваивает значение объекту регулярного выражения.
+## <a name="example"></a>Пример
 
 ```cpp
-basic_regex& assign(
-    const basic_regex& right);
-
-basic_regex& assign(
-    const Elem* ptr,
-    flag_type flags = ECMAScript);
-
-basic_regex& assign(
-    const Elem* ptr,
-    size_type len,
-    flag_type flags = ECMAScript);
-
-basic_regex& assign(
-    initializer_list<_Elem> IList,
-    flag_type flags = regex_constants::ECMAScript);
-
-template <class STtraits, class STalloc>
-basic_regex& assign(
-    const basic_string<Elem, STtraits, STalloc>& str,
-    flag_type flags = ECMAScript);
-
-template <class InIt>
-basic_regex& assign(
-    InIt first, InIt last,
-    flag_type flags = ECMAScript);
-```
-
-### <a name="parameters"></a>Параметры
-
-*STtraits*<br/>
-Класс признаков для источника строки.
-
-*STalloc*<br/>
-Класс распределителя для источника строки.
-
-*InIt*<br/>
-Тип итератора ввода для источника диапазона.
-
-*right*<br/>
-Копируемый источник регулярного выражения.
-
-*ptr*<br/>
-Копируемый указатель на начало последовательности.
-
-*flags*<br/>
-Добавляемые при копировании флаги вариантов синтаксиса.
-
-*Len/TD >* длину последовательности для копирования.
-
-*str*<br/>
-Копируемая строка.
-
-*Первый*<br/>
-Копируемое начало последовательности.
-
-*последний*<br/>
-Копируемый конец последовательности.
-
-*IList*<br/>
-Копируемый initializer_list.
-
-### <a name="remarks"></a>Примечания
-
-Каждая функция-член заменяет регулярное выражение, хранящееся в `*this`, на регулярное выражение, описываемое последовательностью операндов, а затем возвращает `*this`.
-
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_assign.cpp
+// std__regex__basic_regex.cpp
 // compile with: /EHsc
 #include <regex>
 #include <iostream>
@@ -261,12 +190,92 @@ int main()
         << regex_match("abc", rx6);
     cout << endl;
 }
-
 ```
 
 ```Output
-match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc") == true
+match("abc", "") == false
+match("abc", "abcd") == false
+match("abc", "abc") == true
+match("abc", "abc") == true
+match(string("abcd"), "abc") == false
+match(string("abc"), "abc") == true
+
+"abc" mark_count == 0
+"(abc)" mark_count == 1
+getloc == imbued == true
+match("abc") == true
 ```
+
+## <a name="assign"></a>  basic_regex::assign
+
+Присваивает значение объекту регулярного выражения.
+
+```cpp
+basic_regex& assign(
+    const basic_regex& right);
+
+basic_regex& assign(
+    const Elem* ptr,
+    flag_type flags = ECMAScript);
+
+basic_regex& assign(
+    const Elem* ptr,
+    size_type len,
+    flag_type flags = ECMAScript);
+
+basic_regex& assign(
+    initializer_list<_Elem> IList,
+    flag_type flags = regex_constants::ECMAScript);
+
+template <class STtraits, class STalloc>
+basic_regex& assign(
+    const basic_string<Elem, STtraits, STalloc>& str,
+    flag_type flags = ECMAScript);
+
+template <class InIt>
+basic_regex& assign(
+    InIt first, InIt last,
+    flag_type flags = ECMAScript);
+```
+
+### <a name="parameters"></a>Параметры
+
+*STtraits*<br/>
+Класс признаков для источника строки.
+
+*STalloc*<br/>
+Класс распределителя для источника строки.
+
+*InIt*<br/>
+Тип итератора ввода для источника диапазона.
+
+*right*<br/>
+Копируемый источник регулярного выражения.
+
+*ptr*<br/>
+Копируемый указатель на начало последовательности.
+
+*flags*<br/>
+Добавляемые при копировании флаги вариантов синтаксиса.
+
+*Len/TD >*<br/>
+Копируемый конец последовательности.
+
+*str*<br/>
+Копируемая строка.
+
+*Первый*<br/>
+Копируемое начало последовательности.
+
+*последний*<br/>
+Копируемый конец последовательности.
+
+*IList*<br/>
+Копируемый initializer_list.
+
+### <a name="remarks"></a>Примечания
+
+Каждая функция-член заменяет регулярное выражение, хранящееся в `*this`, на регулярное выражение, описываемое последовательностью операндов, а затем возвращает `*this`.
 
 ## <a name="basic_regex"></a>  basic_regex::basic_regex
 
@@ -323,7 +332,8 @@ explicit basic_regex(
 *flags*<br/>
 Добавляемые при копировании флаги вариантов синтаксиса.
 
-*Len/TD >* длину последовательности для копирования.
+*Len/TD >*<br/>
+Копируемый конец последовательности.
 
 *str*<br/>
 Копируемая строка.
@@ -345,88 +355,6 @@ explicit basic_regex(
 
 Пустой `basic_regex` объект не соответствует любой последовательностью символов при передаче [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), или [regex_replace](../standard-library/regex-functions.md#regex_replace).
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_construct.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    regex::value_type elem = 'x';
-    regex::flag_type flag = regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-    // constructors
-    regex rx0;
-    cout << "match(\"abc\", \"\") == " << boolalpha
-        << regex_match("abc", rx0) << endl;
-
-    regex rx1("abcd", regex::ECMAScript);
-    cout << "match(\"abc\", \"abcd\") == " << boolalpha
-        << regex_match("abc", rx1) << endl;
-
-    regex rx2("abcd", 3);
-    cout << "match(\"abc\", \"abc\") == " << boolalpha
-        << regex_match("abc", rx2) << endl;
-
-    regex rx3(rx2);
-    cout << "match(\"abc\", \"abc\") == " << boolalpha
-        << regex_match("abc", rx3) << endl;
-
-    string str("abcd");
-    regex rx4(str);
-    cout << "match(string(\"abcd\"), \"abc\") == " << boolalpha
-        << regex_match("abc", rx4) << endl;
-
-    regex rx5(str.begin(), str.end() - 1);
-    cout << "match(string(\"abc\"), \"abc\") == " << boolalpha
-        << regex_match("abc", rx5) << endl;
-    cout << endl;
-
-    // assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-    // mark_count
-    cout << "\"abc\" mark_count == "
-        << regex("abc").mark_count() << endl;
-    cout << "\"(abc)\" mark_count == "
-        << regex("(abc)").mark_count() << endl;
-
-    // locales
-    regex::locale_type loc = rx0.imbue(locale());
-    cout << "getloc == imbued == " << boolalpha
-        << (loc == rx0.getloc()) << endl;
-
-    // initializer_list
-    regex rx6{ { 'a', 'b', 'c' } };
-    cout << "match(\"abc\", \"abc\") == " << boolalpha
-        << regex_match("abc", rx6);
-    cout << endl;
-}
-
-```
-
-```Output
-match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc", "abc") == true
-```
-
 ## <a name="flag_type"></a>  basic_regex::flag_type
 
 Тип флагов параметров синтаксиса.
@@ -438,91 +366,6 @@ typedef regex_constants::syntax_option_type flag_type;
 ### <a name="remarks"></a>Примечания
 
 Этот тип является синонимом [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
-
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_flag_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex::value_type elem = 'x';
-    std::regex::flag_type flag = std::regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-// constructors
-    std::regex rx0;
-    std::cout << "match(\"abc\", \"\") == " << std::boolalpha
-        << regex_match("abc", rx0) << std::endl;
-
-    std::regex rx1("abcd", std::regex::ECMAScript);
-    std::cout << "match(\"abc\", \"abcd\") == " << std::boolalpha
-        << regex_match("abc", rx1) << std::endl;
-
-    std::regex rx2("abcd", 3);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx2) << std::endl;
-
-    std::regex rx3(rx2);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx3) << std::endl;
-
-    std::string str("abcd");
-    std::regex rx4(str);
-    std::cout << "match(string(\"abcd\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx4) << std::endl;
-
-    std::regex rx5(str.begin(), str.end() - 1);
-    std::cout << "match(string(\"abc\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx5) << std::endl;
-    std::cout << std::endl;
-
-// assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", std::regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-// mark_count
-    std::cout << "\"abc\" mark_count == "
-        << std::regex("abc").mark_count() << std::endl;
-    std::cout << "\"(abc)\" mark_count == "
-        << std::regex("(abc)").mark_count() << std::endl;
-
-// locales
-    std::regex::locale_type loc = rx0.imbue(std::locale());
-    std::cout << "getloc == imbued == " << std::boolalpha
-        << (loc == rx0.getloc()) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-match("abc", "") == false
-match("abc", "abcd") == false
-match("abc", "abc") == true
-match("abc", "abc") == true
-match(string("abcd"), "abc") == false
-match(string("abc"), "abc") == true
-
-"abc" mark_count == 0
-"(abc)" mark_count == 1
-getloc == imbued == true
-```
 
 ## <a name="flags"></a>  basic_regex::flags
 
@@ -536,91 +379,6 @@ flag_type flags() const;
 
 Эта функция-член возвращает значение аргумента `flag_type`, переданного в последний вызов одной из функций-членов [basic_regex::assign](#assign), или, если вызовы не выполнялись, возвращает значение, переданное в конструктор.
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_flags.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex::value_type elem = 'x';
-    std::regex::flag_type flag = std::regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-// constructors
-    std::regex rx0;
-    std::cout << "match(\"abc\", \"\") == " << std::boolalpha
-        << regex_match("abc", rx0) << std::endl;
-
-    std::regex rx1("abcd", std::regex::ECMAScript);
-    std::cout << "match(\"abc\", \"abcd\") == " << std::boolalpha
-        << regex_match("abc", rx1) << std::endl;
-
-    std::regex rx2("abcd", 3);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx2) << std::endl;
-
-    std::regex rx3(rx2);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx3) << std::endl;
-
-    std::string str("abcd");
-    std::regex rx4(str);
-    std::cout << "match(string(\"abcd\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx4) << std::endl;
-
-    std::regex rx5(str.begin(), str.end() - 1);
-    std::cout << "match(string(\"abc\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx5) << std::endl;
-    std::cout << std::endl;
-
-// assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", std::regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-// mark_count
-    std::cout << "\"abc\" mark_count == "
-        << std::regex("abc").mark_count() << std::endl;
-    std::cout << "\"(abc)\" mark_count == "
-        << std::regex("(abc)").mark_count() << std::endl;
-
-// locales
-    std::regex::locale_type loc = rx0.imbue(std::locale());
-    std::cout << "getloc == imbued == " << std::boolalpha
-        << (loc == rx0.getloc()) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-match("abc", "") == false
-match("abc", "abcd") == false
-match("abc", "abc") == true
-match("abc", "abc") == true
-match(string("abcd"), "abc") == false
-match(string("abc"), "abc") == true
-
-"abc" mark_count == 0
-"(abc)" mark_count == 1
-getloc == imbued == true
-```
-
 ## <a name="getloc"></a>  basic_regex::getloc
 
 Возвращает сохраненный объект языкового стандарта.
@@ -632,91 +390,6 @@ locale_type getloc() const;
 ### <a name="remarks"></a>Примечания
 
 Функция-член возвращает `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`.
-
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_getloc.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex::value_type elem = 'x';
-    std::regex::flag_type flag = std::regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-// constructors
-    std::regex rx0;
-    std::cout << "match(\"abc\", \"\") == " << std::boolalpha
-        << regex_match("abc", rx0) << std::endl;
-
-    std::regex rx1("abcd", std::regex::ECMAScript);
-    std::cout << "match(\"abc\", \"abcd\") == " << std::boolalpha
-        << regex_match("abc", rx1) << std::endl;
-
-    std::regex rx2("abcd", 3);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx2) << std::endl;
-
-    std::regex rx3(rx2);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx3) << std::endl;
-
-    std::string str("abcd");
-    std::regex rx4(str);
-    std::cout << "match(string(\"abcd\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx4) << std::endl;
-
-    std::regex rx5(str.begin(), str.end() - 1);
-    std::cout << "match(string(\"abc\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx5) << std::endl;
-    std::cout << std::endl;
-
-// assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", std::regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-// mark_count
-    std::cout << "\"abc\" mark_count == "
-        << std::regex("abc").mark_count() << std::endl;
-    std::cout << "\"(abc)\" mark_count == "
-        << std::regex("(abc)").mark_count() << std::endl;
-
-// locales
-    std::regex::locale_type loc = rx0.imbue(std::locale());
-    std::cout << "getloc == imbued == " << std::boolalpha
-        << (loc == rx0.getloc()) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-match("abc", "") == false
-match("abc", "abcd") == false
-match("abc", "abc") == true
-match("abc", "abc") == true
-match(string("abcd"), "abc") == false
-match(string("abc"), "abc") == true
-
-"abc" mark_count == 0
-"(abc)" mark_count == 1
-getloc == imbued == true
-```
 
 ## <a name="imbue"></a>  basic_regex::imbue
 
@@ -735,91 +408,6 @@ locale_type imbue(locale_type loc);
 
 Эта функция-член очищает `*this` и возвращает `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`.
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_imbue.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex::value_type elem = 'x';
-    std::regex::flag_type flag = std::regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-// constructors
-    std::regex rx0;
-    std::cout << "match(\"abc\", \"\") == " << std::boolalpha
-        << regex_match("abc", rx0) << std::endl;
-
-    std::regex rx1("abcd", std::regex::ECMAScript);
-    std::cout << "match(\"abc\", \"abcd\") == " << std::boolalpha
-        << regex_match("abc", rx1) << std::endl;
-
-    std::regex rx2("abcd", 3);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx2) << std::endl;
-
-    std::regex rx3(rx2);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx3) << std::endl;
-
-    std::string str("abcd");
-    std::regex rx4(str);
-    std::cout << "match(string(\"abcd\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx4) << std::endl;
-
-    std::regex rx5(str.begin(), str.end() - 1);
-    std::cout << "match(string(\"abc\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx5) << std::endl;
-    std::cout << std::endl;
-
-// assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", std::regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-// mark_count
-    std::cout << "\"abc\" mark_count == "
-        << std::regex("abc").mark_count() << std::endl;
-    std::cout << "\"(abc)\" mark_count == "
-        << std::regex("(abc)").mark_count() << std::endl;
-
-// locales
-    std::regex::locale_type loc = rx0.imbue(std::locale());
-    std::cout << "getloc == imbued == " << std::boolalpha
-        << (loc == rx0.getloc()) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-match("abc", "") == false
-match("abc", "abcd") == false
-match("abc", "abc") == true
-match("abc", "abc") == true
-match(string("abcd"), "abc") == false
-match(string("abc"), "abc") == true
-
-"abc" mark_count == 0
-"(abc)" mark_count == 1
-getloc == imbued == true
-```
-
 ## <a name="locale_type"></a>  basic_regex::locale_type
 
 Тип сохраненного объекта языкового стандарта.
@@ -832,91 +420,6 @@ typedef typename RXtraits::locale_type locale_type;
 
 Этот тип является синонимом [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_locale_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex::value_type elem = 'x';
-    std::regex::flag_type flag = std::regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-// constructors
-    std::regex rx0;
-    std::cout << "match(\"abc\", \"\") == " << std::boolalpha
-        << regex_match("abc", rx0) << std::endl;
-
-    std::regex rx1("abcd", std::regex::ECMAScript);
-    std::cout << "match(\"abc\", \"abcd\") == " << std::boolalpha
-        << regex_match("abc", rx1) << std::endl;
-
-    std::regex rx2("abcd", 3);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx2) << std::endl;
-
-    std::regex rx3(rx2);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx3) << std::endl;
-
-    std::string str("abcd");
-    std::regex rx4(str);
-    std::cout << "match(string(\"abcd\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx4) << std::endl;
-
-    std::regex rx5(str.begin(), str.end() - 1);
-    std::cout << "match(string(\"abc\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx5) << std::endl;
-    std::cout << std::endl;
-
-// assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", std::regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-// mark_count
-    std::cout << "\"abc\" mark_count == "
-        << std::regex("abc").mark_count() << std::endl;
-    std::cout << "\"(abc)\" mark_count == "
-        << std::regex("(abc)").mark_count() << std::endl;
-
-// locales
-    std::regex::locale_type loc = rx0.imbue(std::locale());
-    std::cout << "getloc == imbued == " << std::boolalpha
-        << (loc == rx0.getloc()) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-match("abc", "") == false
-match("abc", "abcd") == false
-match("abc", "abc") == true
-match("abc", "abc") == true
-match(string("abcd"), "abc") == false
-match(string("abc"), "abc") == true
-
-"abc" mark_count == 0
-"(abc)" mark_count == 1
-getloc == imbued == true
-```
-
 ## <a name="mark_count"></a>  basic_regex::mark_count
 
 Возвращает число сопоставленных частей выражения.
@@ -928,91 +431,6 @@ unsigned mark_count() const;
 ### <a name="remarks"></a>Примечания
 
 Функция-член возвращает число групп записи в регулярном выражении.
-
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_mark_count.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex::value_type elem = 'x';
-    std::regex::flag_type flag = std::regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-// constructors
-    std::regex rx0;
-    std::cout << "match(\"abc\", \"\") == " << std::boolalpha
-        << regex_match("abc", rx0) << std::endl;
-
-    std::regex rx1("abcd", std::regex::ECMAScript);
-    std::cout << "match(\"abc\", \"abcd\") == " << std::boolalpha
-        << regex_match("abc", rx1) << std::endl;
-
-    std::regex rx2("abcd", 3);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx2) << std::endl;
-
-    std::regex rx3(rx2);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx3) << std::endl;
-
-    std::string str("abcd");
-    std::regex rx4(str);
-    std::cout << "match(string(\"abcd\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx4) << std::endl;
-
-    std::regex rx5(str.begin(), str.end() - 1);
-    std::cout << "match(string(\"abc\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx5) << std::endl;
-    std::cout << std::endl;
-
-// assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", std::regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-// mark_count
-    std::cout << "\"abc\" mark_count == "
-        << std::regex("abc").mark_count() << std::endl;
-    std::cout << "\"(abc)\" mark_count == "
-        << std::regex("(abc)").mark_count() << std::endl;
-
-// locales
-    std::regex::locale_type loc = rx0.imbue(std::locale());
-    std::cout << "getloc == imbued == " << std::boolalpha
-        << (loc == rx0.getloc()) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-match("abc", "") == false
-match("abc", "abcd") == false
-match("abc", "abc") == true
-match("abc", "abc") == true
-match(string("abcd"), "abc") == false
-match(string("abc"), "abc") == true
-
-"abc" mark_count == 0
-"(abc)" mark_count == 1
-getloc == imbued == true
-```
 
 ## <a name="op_eq"></a>  basic_regex::operator=
 
@@ -1045,91 +463,6 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 Каждый оператор заменяет регулярное выражение, хранящееся в `*this` , на регулярное выражение, описываемое последовательностью операндов, а затем возвращает `*this`.
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_operator_as.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex::value_type elem = 'x';
-    std::regex::flag_type flag = std::regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-// constructors
-    std::regex rx0;
-    std::cout << "match(\"abc\", \"\") == " << std::boolalpha
-        << regex_match("abc", rx0) << std::endl;
-
-    std::regex rx1("abcd", std::regex::ECMAScript);
-    std::cout << "match(\"abc\", \"abcd\") == " << std::boolalpha
-        << regex_match("abc", rx1) << std::endl;
-
-    std::regex rx2("abcd", 3);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx2) << std::endl;
-
-    std::regex rx3(rx2);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx3) << std::endl;
-
-    std::string str("abcd");
-    std::regex rx4(str);
-    std::cout << "match(string(\"abcd\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx4) << std::endl;
-
-    std::regex rx5(str.begin(), str.end() - 1);
-    std::cout << "match(string(\"abc\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx5) << std::endl;
-    std::cout << std::endl;
-
-// assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", std::regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-// mark_count
-    std::cout << "\"abc\" mark_count == "
-        << std::regex("abc").mark_count() << std::endl;
-    std::cout << "\"(abc)\" mark_count == "
-        << std::regex("(abc)").mark_count() << std::endl;
-
-// locales
-    std::regex::locale_type loc = rx0.imbue(std::locale());
-    std::cout << "getloc == imbued == " << std::boolalpha
-        << (loc == rx0.getloc()) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-match("abc", "") == false
-match("abc", "abcd") == false
-match("abc", "abc") == true
-match("abc", "abc") == true
-match(string("abcd"), "abc") == false
-match(string("abc"), "abc") == true
-
-"abc" mark_count == 0
-"(abc)" mark_count == 1
-getloc == imbued == true
-```
-
 ## <a name="swap"></a>  basic_regex::swap
 
 Меняет местами два объекта регулярного выражения.
@@ -1147,91 +480,6 @@ void swap(basic_regex& right) throw();
 
 Функция-член меняет местами регулярные выражения между `*this` и *правой*. Она делает это в константном времени и не создает исключений.
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_swap.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex::value_type elem = 'x';
-    std::regex::flag_type flag = std::regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-// constructors
-    std::regex rx0;
-    std::cout << "match(\"abc\", \"\") == " << std::boolalpha
-        << regex_match("abc", rx0) << std::endl;
-
-    std::regex rx1("abcd", std::regex::ECMAScript);
-    std::cout << "match(\"abc\", \"abcd\") == " << std::boolalpha
-        << regex_match("abc", rx1) << std::endl;
-
-    std::regex rx2("abcd", 3);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx2) << std::endl;
-
-    std::regex rx3(rx2);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx3) << std::endl;
-
-    std::string str("abcd");
-    std::regex rx4(str);
-    std::cout << "match(string(\"abcd\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx4) << std::endl;
-
-    std::regex rx5(str.begin(), str.end() - 1);
-    std::cout << "match(string(\"abc\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx5) << std::endl;
-    std::cout << std::endl;
-
-// assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", std::regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-// mark_count
-    std::cout << "\"abc\" mark_count == "
-        << std::regex("abc").mark_count() << std::endl;
-    std::cout << "\"(abc)\" mark_count == "
-        << std::regex("(abc)").mark_count() << std::endl;
-
-// locales
-    std::regex::locale_type loc = rx0.imbue(std::locale());
-    std::cout << "getloc == imbued == " << std::boolalpha
-        << (loc == rx0.getloc()) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-match("abc", "") == false
-match("abc", "abcd") == false
-match("abc", "abc") == true
-match("abc", "abc") == true
-match(string("abcd"), "abc") == false
-match(string("abc"), "abc") == true
-
-"abc" mark_count == 0
-"(abc)" mark_count == 1
-getloc == imbued == true
-```
-
 ## <a name="value_type"></a>  basic_regex::value_type
 
 Тип элемента.
@@ -1243,91 +491,6 @@ typedef Elem value_type;
 ### <a name="remarks"></a>Примечания
 
 Тип является синонимом параметра-шаблона *Elem*.
-
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__basic_regex_value_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex::value_type elem = 'x';
-    std::regex::flag_type flag = std::regex::grep;
-
-    elem = elem;  // to quiet "unused" warnings
-    flag = flag;
-
-// constructors
-    std::regex rx0;
-    std::cout << "match(\"abc\", \"\") == " << std::boolalpha
-        << regex_match("abc", rx0) << std::endl;
-
-    std::regex rx1("abcd", std::regex::ECMAScript);
-    std::cout << "match(\"abc\", \"abcd\") == " << std::boolalpha
-        << regex_match("abc", rx1) << std::endl;
-
-    std::regex rx2("abcd", 3);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx2) << std::endl;
-
-    std::regex rx3(rx2);
-    std::cout << "match(\"abc\", \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx3) << std::endl;
-
-    std::string str("abcd");
-    std::regex rx4(str);
-    std::cout << "match(string(\"abcd\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx4) << std::endl;
-
-    std::regex rx5(str.begin(), str.end() - 1);
-    std::cout << "match(string(\"abc\"), \"abc\") == " << std::boolalpha
-        << regex_match("abc", rx5) << std::endl;
-    std::cout << std::endl;
-
-// assignments
-    rx0 = "abc";
-    rx0 = rx1;
-    rx0 = str;
-
-    rx0.assign("abcd", std::regex::ECMAScript);
-    rx0.assign("abcd", 3);
-    rx0.assign(rx1);
-    rx0.assign(str);
-    rx0.assign(str.begin(), str.end() - 1);
-
-    rx0.swap(rx1);
-
-// mark_count
-    std::cout << "\"abc\" mark_count == "
-        << std::regex("abc").mark_count() << std::endl;
-    std::cout << "\"(abc)\" mark_count == "
-        << std::regex("(abc)").mark_count() << std::endl;
-
-// locales
-    std::regex::locale_type loc = rx0.imbue(std::locale());
-    std::cout << "getloc == imbued == " << std::boolalpha
-        << (loc == rx0.getloc()) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-match("abc", "") == false
-match("abc", "abcd") == false
-match("abc", "abc") == true
-match("abc", "abc") == true
-match(string("abcd"), "abc") == false
-match(string("abc"), "abc") == true
-
-"abc" mark_count == 0
-"(abc)" mark_count == 1
-getloc == imbued == true
-```
 
 ## <a name="see-also"></a>См. также
 
