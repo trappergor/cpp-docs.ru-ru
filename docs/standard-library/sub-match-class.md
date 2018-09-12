@@ -1,7 +1,7 @@
 ---
 title: Класс sub_match | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 132498c5773e4cce1fd178573698b62e874dda48
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964786"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691618"
 ---
 # <a name="submatch-class"></a>Класс sub_match
 
@@ -46,24 +46,10 @@ ms.locfileid: "38964786"
 ```cpp
 template <class BidIt>
 class sub_match
- : public std::pair<BidIt, BidIt> {
-public:
-    bool matched;
-    int compare(const sub_match& right) const;
-    int compare(const basic_string<value_type>& right) const;
-    int compare(const value_type *right) const;
-    difference_type length() const;
-    operator basic_string<value_type>() const;
-    basic_string<value_type> str() const;
-
-    // typedefs
-    typedef typename iterator_traits<BidIt>::value_type value_type;
-    typedef typename iterator_traits<BidIt>::difference_type difference_type;
-    typedef BidIt iterator;
- };
+ : public std::pair<BidIt, BidIt>
 ```
 
-### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
 *BidIt*  
  Тип итератора для подстрок соответствия.
@@ -79,6 +65,81 @@ public:
 "^" соответствует целевой последовательности "a"; объект `sub_match` , соответствующий группе записи 0, содержит два итератора, которые указывают на первый символ в последовательности.
 
 "b(a*)b" соответствует целевой последовательности "bb"; объект `sub_match` , соответствующий группе записи 1, содержит два итератора, которые указывают на второй символ в последовательности.
+
+### <a name="typedefs"></a>Определения типов
+
+|Имя типа|Описание|
+|-|-|
+|[difference_type](#difference_type)|Тип разницы итератора.|
+|[iterator](#iterator)|Тип итератора.|
+|[value_type](#value_type)|Тип элемента.|
+
+### <a name="member-functions"></a>Функции-члены
+
+|Функция-член|Описание|
+|-|-|
+|[compare](#compare)|Сравнение подстроки и последовательности.|
+|[length](#length)|Возвращает длину частичного совпадения.|
+|[соответствует](#matched)|Указывает, успешно ли выполнено сопоставление.|
+|[str](#str)|Преобразует подстроку в строку.|
+
+### <a name="operators"></a>Операторы
+
+|Оператор|Описание|
+|-|-|
+|[Operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Приводит подстроку соответствия к строке.|
+
+## <a name="example"></a>Пример
+
+```cpp
+// std__regex__sub_match.cpp
+// compile with: /EHsc
+#include <regex>
+#include <iostream>
+
+int main()
+    {
+    std::regex rx("c(a*)|(b)");
+    std::cmatch mr;
+
+    std::regex_search("xcaaay", mr, rx);
+
+    std::csub_match sub = mr[1];
+    std::cout << "matched == " << std::boolalpha
+        << sub.matched << std::endl;
+    std::cout << "length == " << sub.length() << std::endl;
+
+    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
+    std::cout << "difference == " << dif << std::endl;
+
+    std::csub_match::iterator first = sub.first;
+    std::csub_match::iterator last = sub.second;
+    std::cout << "range == " << std::string(first, last)
+        << std::endl;
+    std::cout << "string == " << sub << std::endl;
+
+    std::csub_match::value_type const *ptr = "aab";
+    std::cout << "compare(\"aab\") == "
+        << sub.compare(ptr) << std::endl;
+    std::cout << "compare(string) == "
+        << sub.compare(std::string("AAA")) << std::endl;
+    std::cout << "compare(sub) == "
+        << sub.compare(sub) << std::endl;
+
+    return (0);
+    }
+```
+
+```Output
+matched == true
+length == 3
+difference == 3
+range == aaa
+string == aaa
+compare("aab") == -1
+compare(string) == 1
+compare(sub) == 0
+```
 
 ## <a name="requirements"></a>Требования
 
@@ -119,59 +180,6 @@ int compare(const value_type *ptr) const;
 
 в противном случае — положительное значение.
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__sub_match_compare.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
-
 ## <a name="difference_type"></a>  sub_match::difference_type
 
 Тип разницы итератора.
@@ -183,59 +191,6 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 ### <a name="remarks"></a>Примечания
 
 Typedef является синонимом `iterator_traits<BidIt>::difference_type`.
-
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__sub_match_difference_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
 
 ## <a name="iterator"></a>  sub_match::iterator
 
@@ -249,59 +204,6 @@ typedef BidIt iterator;
 
 Typedef является синонимом параметра шаблона `Bidit`.
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__sub_match_iterator.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
-
 ## <a name="length"></a>  sub_match::length
 
 Возвращает длину частичного совпадения.
@@ -313,59 +215,6 @@ difference_type length() const;
 ### <a name="remarks"></a>Примечания
 
 Функция-член возвращает длину совпадающей последовательности либо нуль, если последовательность не совпадает.
-
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__sub_match_length.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
 
 ## <a name="matched"></a>  sub_match::matched
 
@@ -379,59 +228,6 @@ bool matched;
 
 Член содержит **true** только в том случае, если группа захвата, связанная с `*this` входил в состав совпадения регулярного выражения.
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__sub_match_matched.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
-
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
 Приводит подстроку соответствия к строке.
@@ -443,59 +239,6 @@ operator basic_string<value_type>() const;
 ### <a name="remarks"></a>Примечания
 
 Оператор-член возвращает `str()`.
-
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__sub_match_operator_str.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
 
 ## <a name="str"></a>  sub_match::str
 
@@ -509,59 +252,6 @@ basic_string<value_type> str() const;
 
 Функция-член возвращает значение `basic_string<value_type>(first, second)`.
 
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__sub_match_str.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
-
 ## <a name="value_type"></a>  sub_match::value_type
 
 Тип элемента.
@@ -573,59 +263,6 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 ### <a name="remarks"></a>Примечания
 
 Typedef является синонимом `iterator_traits<BidIt>::value_type`.
-
-### <a name="example"></a>Пример
-
-```cpp
-// std__regex__sub_match_value_type.cpp
-// compile with: /EHsc
-#include <regex>
-#include <iostream>
-
-int main()
-    {
-    std::regex rx("c(a*)|(b)");
-    std::cmatch mr;
-
-    std::regex_search("xcaaay", mr, rx);
-
-    std::csub_match sub = mr[1];
-    std::cout << "matched == " << std::boolalpha
-        << sub.matched << std::endl;
-    std::cout << "length == " << sub.length() << std::endl;
-
-    std::csub_match::difference_type dif = std::distance(sub.first, sub.second);
-    std::cout << "difference == " << dif << std::endl;
-
-    std::csub_match::iterator first = sub.first;
-    std::csub_match::iterator last = sub.second;
-    std::cout << "range == " << std::string(first, last)
-        << std::endl;
-    std::cout << "string == " << sub << std::endl;
-
-    std::csub_match::value_type *ptr = "aab";
-    std::cout << "compare(\"aab\") == "
-        << sub.compare(ptr) << std::endl;
-    std::cout << "compare(string) == "
-        << sub.compare(std::string("AAA")) << std::endl;
-    std::cout << "compare(sub) == "
-        << sub.compare(sub) << std::endl;
-
-    return (0);
-    }
-
-```
-
-```Output
-matched == true
-length == 3
-difference == 3
-range == aaa
-string == aaa
-compare("aab") == -1
-compare(string) == 1
-compare(sub) == 0
-```
 
 ## <a name="see-also"></a>См. также
 

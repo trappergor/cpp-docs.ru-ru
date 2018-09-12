@@ -1,28 +1,34 @@
 ---
 title: Класс SimpleActivationFactory | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleActivationFactory
+- module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance
+- module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName
+- module/Microsoft::WRL::SimpleActivationFactory::GetTrustLevel
 dev_langs:
 - C++
 helpviewer_keywords:
-- SimpleActivationFactory class
+- Microsoft::WRL::SimpleActivationFactory class
+- Microsoft::WRL::SimpleActivationFactory::ActivateInstance method
+- Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
+- Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0820012c8c22de1287fcb09037212b870a4ff7bf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594802"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691475"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory - класс
 
@@ -52,11 +58,11 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
-|[Метод SimpleActivationFactory::ActivateInstance](../windows/simpleactivationfactory-activateinstance-method.md)|Создает экземпляр указанного интерфейса.|
-|[Метод SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Получает имя класса среды выполнения экземпляра класса, указанного параметром *базы* параметре шаблона класса.|
-|[Метод SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Получает уровень доверия выполняемого экземпляра класса, указанного параметром *базы* параметре шаблона класса.|
+|[Метод SimpleActivationFactory::ActivateInstance](#activateinstance)|Создает экземпляр указанного интерфейса.|
+|[Метод SimpleActivationFactory::GetRuntimeClassName](#getruntimeclassname)|Получает имя класса среды выполнения экземпляра класса, указанного параметром *базы* параметре шаблона класса.|
+|[Метод SimpleActivationFactory::GetTrustLevel](#gettrustlevel)|Получает уровень доверия выполняемого экземпляра класса, указанного параметром *базы* параметре шаблона класса.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -88,6 +94,67 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="activateinstance"></a>Метод SimpleActivationFactory::ActivateInstance
 
-[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+Создает экземпляр указанного интерфейса.
+
+```cpp
+STDMETHOD( ActivateInstance )(
+    _Deref_out_ IInspectable **ppvObject
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
+*ppvObject*  
+После завершения операции, указатель на экземпляр объекта, заданного параметром `Base` параметре шаблона класса.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+### <a name="remarks"></a>Примечания
+
+Если `__WRL_STRICT__` будет определен, Ошибка утверждения создается, если базовый класс, указанный в параметре шаблона класса не является производным от [RuntimeClass](../windows/runtimeclass-class.md), или не настроен со значением WinRt или WinRtClassicComMix [ RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значение перечисления.
+
+## <a name="getruntimeclassname"></a>Метод SimpleActivationFactory::GetRuntimeClassName
+
+Получает имя класса среды выполнения экземпляра класса, указанного в параметре шаблона класса `Base`.
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
+*runtimeName*  
+После завершения операции представляет имя класса среды выполнения.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+### <a name="remarks"></a>Примечания
+
+Если `__WRL_STRICT__` будет определен, Ошибка утверждения создается, если класс, указанный `Base` параметре шаблона класса не является производным от [RuntimeClass](../windows/runtimeclass-class.md), или не настроен со значением WinRt или WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значение перечисления.
+
+## <a name="gettrustlevel"></a>Метод SimpleActivationFactory::GetTrustLevel
+
+Получает уровень доверия выполняемого экземпляра класса, указанного параметром `Base` параметре шаблона класса.
+
+```cpp
+STDMETHOD(
+   GetTrustLevel
+)(_Out_ TrustLevel* trustLvl);
+```
+
+#### <a name="parameters"></a>Параметры
+
+*trustLvl*  
+После завершения операции, уровень доверия текущего объекта класса.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Всегда значение S_OK.
