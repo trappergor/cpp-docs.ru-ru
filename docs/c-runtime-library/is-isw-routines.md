@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391965"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206137"
 ---
 # <a name="is-isw-routines"></a>Процедуры is, isw
 |||  
@@ -80,7 +80,7 @@ ms.locfileid: "32391965"
  `__iscsymf`  
  Буква или символ подчеркивания.  
   
- **isdigit**  
+ `isdigit`  
  Десятичная цифра (0–9).  
   
  `isgraph`  
@@ -121,17 +121,16 @@ ms.locfileid: "32391965"
  `iswcntrl`  
  Расширенный символ управления.  
   
- **__iswcsym**  
- Любой расширенный символ, для которого функция **isalnum** имеет значение true, или символ "_".  
+ `__iswcsym`  
+ Любой расширенный символ, для которого функция `isalnum` имеет значение true, или символ "_".  
   
- **__iswcsymf**  
+ `__iswcsymf`  
  Любой расширенный символ, для которого функция `iswalpha` имеет значение true, или символ "_".  
   
  `iswctype`  
  Символ имеет свойство, указанное аргументом `desc`. Для каждого допустимого значения аргумента `desc` функции `iswctype` существует эквивалентная функция, работающая с расширенными символами, как показано в следующей таблице:  
   
- **Эквивалентность iswctype(**   
- ***c, desc*) другим подпрограммам проверки isw**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Эквивалентность iswctype (c, desc) другим подпрограммам проверки isw
   
 |Значение аргумента *desc*|эквивалент iswctype(*c, desc*)|  
 |------------------------------|----------------------------------------|  

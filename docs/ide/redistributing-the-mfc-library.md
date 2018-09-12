@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6e23358e17558c436d82a3226f84c35a59bf63a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340402"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694039"
 ---
 # <a name="redistributing-the-mfc-library"></a>Распространение библиотеки MFC
 Если вы динамически связываете приложение с библиотекой MFC, нужно повторно распространить соответствующую библиотеку DLL MFC. Например, если ваше приложение MFC собрано с использованием версии MFC, поставляемой с Visual Studio 2015, нужно повторно распространить mfc140.dll или mfc140u.dll в зависимости от того, компилируется ли приложение с поддержкой обычных символов или Юникода.  
@@ -36,7 +36,7 @@ ms.locfileid: "33340402"
   
  Если приложение использует классы MFC, реализующие элемент управления WebBrowser (например, [класс CHtmlView](../mfc/reference/chtmlview-class.md) или [класс CHtmlEditView](../mfc/reference/chtmleditview-class.md)), рекомендуется установить актуальную версию Microsoft Internet Explorer, чтобы на конечном компьютере были доступны самые новые файлы общих элементов управления. (Требуется Internet Explorer 4.0 или более поздней версии.) Сведения об установке компонентов Internet Explorer см. в статье 185375 "Создание одиночного установочного EXE-файла Internet Explorer" на веб-сайте службы поддержки Майкрософт.  
   
- Если в приложении используются классы баз данных MFC (например, [CRecordset Class](../mfc/reference/crecordset-class.md) и [CRecordView Class](../mfc/reference/crecordview-class.md)), нужно также повторно распространить ODBC и все драйверы ODBC, которые использует приложение. Дополнительные сведения см. в разделе [Распространение файлов поддержки базы данных](../ide/redistributing-database-support-files.md).  
+ Если в приложении используются классы баз данных MFC (например, [CRecordset Class](../mfc/reference/crecordset-class.md) и [CRecordView Class](../mfc/reference/crecordview-class.md)), нужно также повторно распространить ODBC и все драйверы ODBC, которые использует приложение.  
   
  Если в приложении MFC используются элементы управления Windows Forms, вместе с приложением нужно повторно распространить файл mfcmifc80.dll. Эта библиотека DLL является сборкой .NET, подписанной строгим именем, которую можно повторно распространить с помощью приложения в локальной папке приложения или развернуть в глобальном кэше сборок (GAC) с помощью [Gacutil.exe (инструмент глобального кэша сборок)](/dotnet/framework/tools/gacutil-exe-gac-tool).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33340402"
   
  Распространяемые повторно MSM-файлы содержат библиотеки DLL, которые используются для локализации. Для каждого поддерживаемого языка используется одна библиотека DLL. В процессе установки эти библиотеки DLL устанавливаются в папку %windir%\system32\ на конечном компьютере.  
   
- Дополнительные сведения о способах локализации приложений MFC см. в разделе [TN057. Локализация компонентов MFC](../mfc/tn057-localization-of-mfc-components.md), а также в [статье 208983 "Способ использования библиотек DLL MFC LOC"](http://go.microsoft.com/fwlink/p/?linkid=198025) на веб-сайте службы поддержки Майкрософт.  
+ Дополнительные сведения о локализации приложений MFC см. в разделе [TN057: локализация компонентов MFC](../mfc/tn057-localization-of-mfc-components.md).
   
  Локализационные библиотеки DLL MFC можно распространить повторно, развернув библиотеку DLL MFC в локальной папке приложения. Дополнительные сведения о повторном распространении библиотек Visual C++ см. в разделе [Распространение файлов Visual C++](../ide/redistributing-visual-cpp-files.md).  
   
