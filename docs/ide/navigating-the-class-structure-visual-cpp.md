@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6612d215902657aed9869e66be93b8b2ea2da25
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b926ab618a631ca1334e89da983f169b6a38e49b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330237"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204655"
 ---
 # <a name="navigating-the-class-structure-visual-c"></a>Навигация по структуре классов (Visual C++)
-Вы можете перемещаться по структуре классов проекта, включая функции, наследование и интерфейсы, с помощью [представления классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) или [обозревателя объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470).  
+Вы можете перемещаться по структуре классов проекта, включая функции, наследование и интерфейсы, с помощью **представления классов** или **обозревателя объектов**. Дополнительные сведения см. в разделе [Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Можно перейти к объявлению функции, дважды щелкнув ее имя в представлении классов. Можно перейти к определению класса, дважды щелкнув имя класса в представлении классов.  
   

@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c219669d018dc8c4cb038e90dffd1137877f422
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e824e94f79aa01ab3a82675fb3e8f76059c567d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382881"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195556"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Диагностика, напечатанная функцией assert
 **ANSI 4.2** Диагностика, выведенная функцией assert, и поведение завершения функции **assert**  
   
- Функция **assert** выводит диагностическое сообщение и вызывает подпрограмму **abort**, если значение выражения — false (0). Диагностическое сообщение имеет форму  
-  
- **Assertion failed**: *expression***, file** *filename***, line** *linenumber*  
-  
- где имя файла — это имя файла исходного кода, а номер строки — это номер строки утверждения, завершившегося сбоем в файле исходного кода. Если выражение равно true (ненулевое), никакие действия не предпринимаются.  
+Функция **assert** выводит диагностическое сообщение и вызывает подпрограмму **abort**, если значение выражения — false (0). Диагностическое сообщение имеет форму  
+
+> **Assertion failed**: <em>expression</em>**, file** <em>filename</em>**, line** *linenumber*  
+
+где *filename* — это имя исходного файла, а *linenumber* — номер строки утверждения, завершившегося сбоем в файле исходного кода. Если *expression* равно true (ненулевое), никакие действия не предпринимаются.  
   
 ## <a name="see-also"></a>См. также  
  [Функции библиотеки](../c-language/library-functions.md)

@@ -17,44 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9600c27f40a43105ae9a8fc2fd1579907891cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f7e5f8933aabe36362938a23c28ed1cd562a579
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391917"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205397"
 ---
 # <a name="pointer-declarations"></a>Объявления указателей
 Объявление указателя именует переменную указателя и задает тип объекта, на который указывает переменная. Переменная, объявленная как указатель, содержит адрес памяти.  
   
-## <a name="syntax"></a>Синтаксис  
- *declarator*:  
- &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
-  
- *direct-declarator*:  
- &nbsp;&nbsp;*identifier*  
-  
- &nbsp;&nbsp;**(** *declarator* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
-  
- *pointer*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
-  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
-  
- *type-qualifier-list*:  
- &nbsp;&nbsp;*type-qualifier*  
-  
- &nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
+## <a name="syntax"></a>Синтаксис
+
+*declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
+
+*direct-declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
+
+*pointer*:  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
+
+*type-qualifier-list*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
   
  *type-specifier* предоставляет тип объекта, который может являться любым базовым, структурным типом или типом объединения. Переменные указателя также могут указывать на функции, массивы и другие указателям. (Дополнительные сведения об объявлении и интерпретации более сложных типов указателей см. в разделе [Интерпретация более сложных деклараторов](../c-language/interpreting-more-complex-declarators.md).)  
   
- Создав *описатель типа* **void**, можно отложить спецификацию типа, к которой относится указатель. Этот элемент называется "указатель на **void**" и записывается как `void *`. Переменная, объявленная как указатель на *void*, может использоваться для указания на объект любого типа. Однако для того чтобы выполнять большинство операций с указателем или объектом, на который он указывает, тип, на который он указывает, должен быть явно задан для каждой операции. (Переменные типа **char \*** и **void \*** могут присваиваться без приведения типа.) Такое преобразование можно выполнить с помощью приведения типа (дополнительные сведения см. в разделе [Преобразования с приведением типа](../c-language/type-cast-conversions.md)).  
+ Создав *описатель типа* **void**, можно отложить спецификацию типа, к которой относится указатель. Этот элемент называется "указатель на **void**" и записывается как `void *`. Переменная, объявленная как указатель на *void*, может использоваться для указания на объект любого типа. Однако для того чтобы выполнять большинство операций с указателем или объектом, на который он указывает, тип, на который он указывает, должен быть явно задан для каждой операции. (Переменные типа **char** <strong>\*</strong> и **void** <strong>\*</strong> могут присваиваться без приведения типа.) Такое преобразование можно выполнить с помощью приведения типа (дополнительные сведения см. в разделе [Преобразования с приведением типа](../c-language/type-cast-conversions.md)).  
   
  *Описатель типа* может иметь значение **const** или **volatile**, либо и то и другое. Они, соответственно, указывают, что указатель не может быть изменен самой программой (**const**) или что указатель может быть изменен каким-либо неподконтрольным программе процессом (**volatile**). (См. раздел [Описатели типа](../c-language/type-qualifiers.md) для получения дополнительной информации о **const** и **volatile**.)  
   
