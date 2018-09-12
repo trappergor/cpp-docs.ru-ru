@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6b8a1432b6a66cb04f2b5105cb772f9e8e2691
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14e7e91044021ef5ef6e5683465d63f2e804fda9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384722"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765577"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>Структуры, объединения, перечисления и битовые поля
 -   [Неправильный доступ к объединению](../c-language/improper-access-to-a-union.md)  
@@ -31,4 +31,4 @@ ms.locfileid: "32384722"
 -   [Тип перечисления](../c-language/enum-type.md)  
   
 ## <a name="see-also"></a>См. также  
- [Поведение, определяемое реализацией](../c-language/implementation-defined-behavior.md)
+[Поведение, определяемое реализацией](../c-language/implementation-defined-behavior.md)
