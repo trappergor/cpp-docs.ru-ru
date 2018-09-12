@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 2d3b238b9a5bc01fa3ee053acdb3c7c84b95df71
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130993"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44385012"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -44,7 +44,7 @@ ms.locfileid: "43130993"
 
 ### <a name="availability"></a>Доступность
 
-**/Qspectre** доступен в Visual Studio 2017 версии 15.5.5 и все обновления в компиляторы Microsoft Visual C++ (MSVC), внесенных после 23 января 2018 г.
+**/Qspectre** доступен в Visual Studio 2017 версии 15.5.5 и все обновления в компиляторы Microsoft Visual C++ (MSVC), внесенных после 23 января 2018 г. Используйте установщик Visual Studio для обновления компилятор, а также для установки библиотек устранен Spectre как отдельные компоненты. **/Qspectre** также доступна в Visual Studio 2015 с обновлением 3 посредством исправления. Дополнительные сведения см. в разделе [4338871 КБ](https://support.microsoft.com/help/4338871).
 
 Все версии Visual Studio 2017 версии 15.5 и все предварительные версии Visual Studio версии 15.6 уже входит недокументированный параметр, **/d2guardspecload**, который эквивалентен начальной поведение   **/qspectre**. Можно использовать **/d2guardspecload** для применения к коду в этих версиях компилятора же способы их устранения. Выполните обновление сборки, чтобы использовать **/qspectre** в компиляторы, которые поддерживают параметр; **/qspectre** параметр также может поддерживать новые способы их устранения в более поздних версиях компилятора.
 
