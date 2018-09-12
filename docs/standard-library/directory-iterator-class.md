@@ -1,7 +1,7 @@
 ---
 title: Класс directory_iterator | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09970c0d3cf8771317c93670c0ec7f029e1ace2a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105217"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691592"
 ---
 # <a name="directoryiterator-class"></a>Класс directory_iterator
 
-Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге. Для итератора X результатом выражения *X является объект класса directory_entry, являющийся оболочкой для имени файла и известных данных о его состоянии.
+Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге. Для итератора `X`, выражение `*X` результатом которого является объект класса `directory_entry` , который создает оболочку, имя файла и все, что известно о его состоянии.
 
-Класс сохраняет объект типа path, называемые `mydir` здесь в целях надстройках, который представляет имя каталога для упорядочивания и вызывается объект типа directory_entry `myentry` здесь, который представляет текущее имя файла в последовательности каталогов. Созданный по умолчанию объект типа directory_entry содержит пустой `mydir` pathname и представляет итератор конец последовательности.
+Класс сохраняет объект типа `path`, который называется `mydir` здесь для целей надстройках, которая представляет имя каталога для упорядочивания, и объект типа `directory_entry` вызывается `myentry` здесь, который представляет текущий Имя файла в последовательности каталогов. Это созданный по умолчанию объект типа `directory_entry` имеет пустой `mydir` pathname и представляет итератор конец последовательности.
 
-Например, при наличии каталога abc с записями def и ghi, код:
+Например, если каталог `abc` с записями `def` и `ghi`, код:
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-вызовет `visit` с аргументами path("abc/def") и path("abc/ghi").
+вызовет `visit` с аргументами `path("abc/def")` и `path("abc/ghi")`.
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 
@@ -72,7 +72,7 @@ class directory_iterator;
 
 |Функция-член|Описание|
 |-|-|
-|[Приращение](#increment)|Функция пытается перейти к следующему файлу в каталоге.|
+|[Приращение](#increment)|Пытается перейти к следующему файлу в каталоге.|
 
 ### <a name="operators"></a>Операторы
 

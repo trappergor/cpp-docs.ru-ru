@@ -1,7 +1,7 @@
 ---
 title: Класс directory_entry | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb2962d2d1dc4e39d2528c89267a9cf8871937a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 3c61d69c1ee5ad40191771dabd829514e3381e88
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105787"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691410"
 ---
 # <a name="directoryentry-class"></a>Класс directory_entry
 
@@ -311,5 +311,5 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)  
-[\<файловая система&gt;](../standard-library/filesystem.md)  
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<файловая система&gt;](../standard-library/filesystem.md)<br/>
