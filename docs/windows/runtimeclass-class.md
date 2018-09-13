@@ -1,28 +1,50 @@
 ---
 title: Класс RuntimeClass | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
+- implements/Microsoft::WRL::RuntimeClass::AddRef
+- implements/Microsoft::WRL::RuntimeClass::DecrementReference
+- implements/Microsoft::WRL::RuntimeClass::GetIids
+- implements/Microsoft::WRL::RuntimeClass::GetRuntimeClassName
+- implements/Microsoft::WRL::RuntimeClass::GetTrustLevel
+- implements/Microsoft::WRL::RuntimeClass::GetWeakReference
+- implements/Microsoft::WRL::RuntimeClass::InternalAddRef
+- implements/Microsoft::WRL::RuntimeClass::QueryInterface
+- implements/Microsoft::WRL::RuntimeClass::Release
+- implements/Microsoft::WRL::RuntimeClass::RuntimeClass
+- implements/Microsoft::WRL::RuntimeClass::~RuntimeClass
 dev_langs:
 - C++
 helpviewer_keywords:
-- RuntimeClass class
+- Microsoft::WRL::RuntimeClass class
+- Microsoft::WRL::RuntimeClass::AddRef method
+- Microsoft::WRL::RuntimeClass::DecrementReference method
+- Microsoft::WRL::RuntimeClass::GetIids method
+- Microsoft::WRL::RuntimeClass::GetRuntimeClassName method
+- Microsoft::WRL::RuntimeClass::GetTrustLevel method
+- Microsoft::WRL::RuntimeClass::GetWeakReference method
+- Microsoft::WRL::RuntimeClass::InternalAddRef method
+- Microsoft::WRL::RuntimeClass::QueryInterface method
+- Microsoft::WRL::RuntimeClass::Release method
+- Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
+- Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f6cca23834eb889ecb83d91b40861b92fe922ad
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605988"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535047"
 ---
 # <a name="runtimeclass-class"></a>Класс RuntimeClass
 
@@ -51,10 +73,24 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Конструктор RuntimeClass::RuntimeClass](../windows/runtimeclass-runtimeclass-constructor.md)|Инициализирует текущий экземпляр класса RuntimeClass.|
-|[Деструктор RuntimeClass::~RuntimeClass](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Деинициализирует текущий экземпляр класса RuntimeClass.|
+| Имя                                               | Описание                                                     |
+| -------------------------------------------------- | --------------------------------------------------------------- |
+| [RuntimeClass::RuntimeClass](#runtimeclass)        | Инициализирует текущий экземпляр `RuntimeClass` класса.   |
+| [RuntimeClass:: ~ RuntimeClass](#tilde-runtimeclass) | Деинициализирует текущий экземпляр `RuntimeClass` класса. |
+
+### <a name="public-methods"></a>Открытые методы
+
+| Имя                                                      | Описание                                                                                        |
+| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| [RuntimeClass::AddRef](#addref)                           | Увеличивает счетчик ссылок для текущего `RuntimeClass` объекта.                              |
+| [RuntimeClass::DecrementReference](#decrementreference)   | Уменьшает счетчик ссылок для текущего `RuntimeClass` объекта.                              |
+| [RuntimeClass::GetIids](#getiids)                         | Возвращает массив, который может содержать идентификаторы, реализуется текущим интерфейсов `RuntimeClass` объекта. |
+| [RuntimeClass::GetRuntimeClassName](#getruntimeclassname) | Получает имя класса среды выполнения текущего `RuntimeClass` объекта.                                  |
+| [RuntimeClass::GetTrustLevel](#gettrustlevel)             | Получает уровень доверия текущего `RuntimeClass` объекта.                                         |
+| [RuntimeClass::GetWeakReference](#getweakreference)       | Получает указатель на объект слабой ссылки для текущего `RuntimeClass` объекта.                 |
+| [RuntimeClass::InternalAddRef](#internaladdref)           | Увеличивает счетчик ссылок для текущего `RuntimeClass` объекта.                               |
+| [RuntimeClass::QueryInterface](#queryinterface)           | Извлекает указатель на идентификатор указанного интерфейса.                                                 |
+| [RuntimeClass::Release](#release)                         | Выполняет операцию освобождения модели COM в текущем `RuntimeClass` объекта.                             |
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -66,6 +102,189 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="tilde-runtimeclass"></a>RuntimeClass:: ~ RuntimeClass
 
-[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+Деинициализирует текущий экземпляр `RuntimeClass` класса.
+
+```cpp
+virtual ~RuntimeClass();
+```
+
+## <a name="addref"></a>RuntimeClass::AddRef
+
+Увеличивает счетчик ссылок для текущего `RuntimeClass` объекта.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="decrementreference"></a>RuntimeClass::DecrementReference
+
+Уменьшает счетчик ссылок для текущего `RuntimeClass` объекта.
+
+```cpp
+ULONG DecrementReference();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="getiids"></a>RuntimeClass::GetIids
+
+Возвращает массив, который может содержать идентификаторы, реализуется текущим интерфейсов `RuntimeClass` объекта.
+
+```cpp
+STDMETHOD(
+   GetIids
+)  
+   (_Out_ ULONG *iidCount,
+   _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>Параметры
+
+*iidCount*  
+После завершения операции, общее число элементов в массиве *идентификаторы IID*.
+
+*идентификаторы IID*  
+После завершения операции представляет указатель на массив идентификаторов интерфейса.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение E_OUTOFMEMORY.
+
+## <a name="getruntimeclassname"></a>RuntimeClass::GetRuntimeClassName
+
+Получает имя класса среды выполнения текущего `RuntimeClass` объекта.
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*runtimeName*  
+После завершения операции представляет имя класса среды выполнения.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+### <a name="remarks"></a>Примечания
+
+Ошибка assert создается в том случае, если `__WRL_STRICT__` или `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` не определена.
+
+## <a name="gettrustlevel"></a>RuntimeClass::GetTrustLevel
+
+Получает уровень доверия текущего `RuntimeClass` объекта.
+
+```cpp
+STDMETHOD(GetTrustLevel)(
+    _Out_ TrustLevel* trustLvl
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*trustLvl*  
+После завершения операции, уровень доверия текущего `RuntimeClass` объекта.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Всегда значение S_OK.
+
+### <a name="remarks"></a>Примечания
+
+Ошибка assert создается в том случае, если `__WRL_STRICT__` или `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` не определена.
+
+## <a name="getweakreference"></a>RuntimeClass::GetWeakReference
+
+Получает указатель на объект слабой ссылки для текущего `RuntimeClass` объекта.
+
+```cpp
+STDMETHOD(
+   GetWeakReference
+)(_Deref_out_ IWeakReference **weakReference);
+```
+
+### <a name="parameters"></a>Параметры
+
+*weakReference*  
+После завершения операции представляет указатель на объект слабой ссылки.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Всегда значение S_OK.
+
+## <a name="internaladdref"></a>RuntimeClass::InternalAddRef
+
+Увеличивает счетчик ссылок для текущего `RuntimeClass` объекта.
+
+```cpp
+ULONG InternalAddRef();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Итоговый счетчик ссылок.
+
+## <a name="queryinterface"></a>RuntimeClass::QueryInterface
+
+Извлекает указатель на идентификатор указанного интерфейса.
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)  
+   (REFIID riid,
+   _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*  
+Идентификатор интерфейса.
+
+*ppvObject*  
+После завершения этого opereation указатель интерфейса, заданного параметром *riid* параметра.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="release"></a>RuntimeClass::Release
+
+Выполняет операцию освобождения модели COM в текущем `RuntimeClass` объекта.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+### <a name="remarks"></a>Примечания
+
+Если счетчик ссылок становится равным нулю, `RuntimeClass` объект удаляется.
+
+## <a name="runtimeclass"></a>RuntimeClass::RuntimeClass
+
+Инициализирует текущий экземпляр `RuntimeClass` класса.
+
+```cpp
+RuntimeClass();
+```

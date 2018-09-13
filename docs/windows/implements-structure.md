@@ -1,28 +1,36 @@
 ---
 title: Реализует структуру | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
+- implements/Microsoft::WRL::Implements::CanCastTo
+- implements/Microsoft::WRL::Implements::CastToUnknown
+- implements/Microsoft::WRL::Implements::FillArrayWithIid
+- implements/Microsoft::WRL::Implements::IidCount
 dev_langs:
 - C++
 helpviewer_keywords:
-- Implements structure
+- Microsoft::WRL::Implements structure
+- Microsoft::WRL::Implements::CanCastTo method
+- Microsoft::WRL::Implements::CastToUnknown method
+- Microsoft::WRL::Implements::FillArrayWithIid method
+- Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603292"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535357"
 ---
 # <a name="implements-structure"></a>Implements - структура
 
@@ -104,23 +112,23 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
-|----------|-----------------|
-|`ClassFlags`|Синоним для `RuntimeClassFlags<WinRt>`.|
+| Имя        | Описание                               |
+| ----------- | ----------------------------------------- |
+| `ClassFlags`| Синоним для `RuntimeClassFlags<WinRt>`. |
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Метод Implements::CanCastTo](../windows/implements-cancastto-method.md)|Возвращает указатель на указанный интерфейс.|
-|[Метод Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Возвращает указатель на базовый `IUnknown` интерфейс.|
-|[Метод Implements::FillArrayWithIid](../windows/implements-fillarraywithiid-method.md)|Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.|
+| Имя                                              | Описание                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Implements::CanCastTo](#cancastto)               | Возвращает указатель на указанный интерфейс.                                                                    |
+| [Implements::CastToUnknown](#casttounknown)       | Возвращает указатель на базовый `IUnknown` интерфейс.                                                        |
+| [Implements::FillArrayWithIid](#fillarraywithiid) | Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива. |
 
 ### <a name="protected-constants"></a>Защищенные константы
 
-|name|Описание:|
-|----------|-----------------|
-|[Константа Implements::IidCount](../windows/implements-iidcount-constant.md)|Содержит число идентификаторов реализованного интерфейса.|
+| name                              | Описание                                    |
+| --------------------------------- | ---------------------------------------------- |
+| [Implements::IidCount](#iidcount) | Содержит число идентификаторов реализованного интерфейса. |
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -142,6 +150,76 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="cancastto"></a>Implements::CanCastTo
 
-[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+Возвращает указатель на указанный интерфейс.
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*  
+Ссылку на идентификатор интерфейса.
+
+*ppv*  
+Если в случае успешного выполнения указатель на интерфейс, заданный *riid*.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, указывающее ошибку, например E_NOINTERFACE.
+
+### <a name="remarks"></a>Примечания
+
+Это внутренняя вспомогательная функция, которая выполняет операцию QueryInterface.
+
+## <a name="casttounknown"></a>Implements::CastToUnknown
+
+Возвращает указатель на базовый `IUnknown` интерфейс.
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Эта операция выполняется успешно и всегда возвращает `IUnknown` указатель.
+
+### <a name="remarks"></a>Примечания
+
+Внутренняя вспомогательная функция.
+
+## <a name="fillarraywithiid"></a>Implements::FillArrayWithIid
+
+Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Индекс*  
+Отсчитываемый от нуля индекс, указывающий начальный элемент массива для этой операции. По завершении этой операции *индекс* увеличивается на 1.
+
+*идентификаторы IID*  
+Массив типа IID.
+
+### <a name="remarks"></a>Примечания
+
+Внутренняя вспомогательная функция.
+
+## <a name="iidcount"></a>Implements::IidCount
+
+Содержит число идентификаторов реализованного интерфейса.
+
+```cpp
+static const unsigned long IidCount;
+```

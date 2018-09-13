@@ -1,7 +1,7 @@
 ---
 title: Элементы ActiveX в MFC | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -25,15 +25,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0f0d88274e6804d087f8acf905ba3181d57798
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 64b44afa6f9605c8c10d933b06fcec79b92f7c97
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205846"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535201"
 ---
 # <a name="mfc-activex-controls"></a>Элементы управления ActiveX MFC
-Элемент управления ActiveX — это многоразовый программный компонент, основанный на модели COM, который поддерживает широкий набор функциональных возможностей OLE и может быть настроен под различные потребности программного обеспечения. Элементы управления ActiveX предназначены для использования в обычные контейнеры элементов управления ActiveX, а также в Интернете, в веб-страницы. Можно создать элементы управления ActiveX с MFC, описанные здесь, или с [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
+
+Элемент управления ActiveX — это многоразовый программный компонент, основанный на модели COM, который поддерживает широкий набор функциональных возможностей OLE и может быть настроен под различные потребности программного обеспечения. 
+
+>[!IMPORTANT]
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения см. в разделе [элементы управления ActiveX](activex-controls.md).
+
+Элементы управления ActiveX предназначены для использования в обычные контейнеры элементов управления ActiveX, а также в Интернете, в веб-страницы. Можно создать элементы управления ActiveX с MFC, описанные здесь, или с [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
   
  Элемент управления ActiveX может нарисовать сам в отдельном окне реагировать на события (например на щелчки мыши) и управлять через интерфейс, который включает свойства и методы, аналогичные доступным в объекты автоматизации.  
   
