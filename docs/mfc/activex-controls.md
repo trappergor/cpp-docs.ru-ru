@@ -1,7 +1,7 @@
 ---
-title: Элементы управления ActiveX | Документы Microsoft
+title: Элементы управления ActiveX | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,16 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc3cb9a43e9982a9c7e7b577562fd9d7cf4a7ccc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83a968a5f3521064feea61b3fa09583a4ede71c9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340795"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534967"
 ---
 # <a name="activex-controls"></a>Элементы управления ActiveX
-В Visual C++ можно создавать элементы управления ActiveX в MFC или ATL.  
-  
+В Visual C++ можно создавать элементы управления ActiveX, с помощью MFC или ATL.  
+
+>[!IMPORTANT]
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Многие возможности элементов управления ActiveX может выполняться в виде проще и безопаснее, с помощью современных технологий, таких как HTML5 и JavaScript, расширения современного браузера или WebAssembly модулей. Дополнительные сведения см. в разделе [побег из прошлого, часть 2: прощание с ActiveX, VBScript, attachEvent...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) и [собственного обмена сообщениями](/microsoft-edge/extensions/guides/native-messaging) и [расширений Microsoft Edge](/microsoft-edge/extensions) и [WebAssembly](https://webassembly.org/).
+
 -   [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)  
   
 -   [ATL](../atl/active-template-library-atl-concepts.md)  

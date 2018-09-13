@@ -1,7 +1,7 @@
 ---
 title: 'Элементы ActiveX в MFC: Оптимизация | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -24,15 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 09d441a44660310a13be264b24286ad2f0ccc6cd
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220510"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535188"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Элементы управления ActiveX в MFC. Оптимизация
 Здесь объясняются методы, которые можно использовать для оптимизации элементов управления ActiveX для повышения производительности.  
+
+>[!IMPORTANT]
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
   
  Разделы [Включение отключение параметра "Активация при видимым"](../mfc/turning-off-the-activate-when-visible-option.md) и [предоставляя мыши взаимодействия во время неактивного](../mfc/providing-mouse-interaction-while-inactive.md) обсудить элементов управления, которые не создать окно до момента активации. Раздел [предоставление активации без окна](../mfc/providing-windowless-activation.md) рассматриваются элементы управления, которые никогда не создаст это окно, даже в том случае, если они активируются.  
   

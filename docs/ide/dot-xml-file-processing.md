@@ -51,9 +51,9 @@ ms.locfileid: "33340519"
   
     -   Встроенные типы (например, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF и ELEMENT_TYPE_VOID) представляются полным именем соответствующего полного типа, например **System.Int32** или **System.TypedReference**.  
   
-    -   ELEMENT_TYPE_PTR представляется как "*" после имени измененного типа.  
+    -   ELEMENT_TYPE_PTR представляется как "\*" после имени измененного типа.  
   
-    -   ELEMENT_TYPE_BYREF представляется как "@" после имени измененного типа.  
+    -   ELEMENT_TYPE_BYREF представляется как "\@" после имени измененного типа.  
   
     -   ELEMENT_TYPE_PINNED представляется как "^" после имени измененного типа. Никогда не создается компилятором Visual C++.  
   
