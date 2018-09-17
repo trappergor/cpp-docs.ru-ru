@@ -144,7 +144,6 @@
 ### [Устранение неполадок настроек сборки](troubleshooting-build-customizations.md)
 ### [Форматирование выходных данных этапа настраиваемой сборки или события сборки](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [Стандартные макросы для команд и свойств сборки](common-macros-for-build-commands-and-properties.md)
-## [Сборка внешних проектов](building-external-projects.md)
 ## [Файлы проекта](project-files.md)
 ## [Пошаговое руководство. Компиляция программы на языке C++, предназначенной для среды CLR, в Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [Использование интегрированной среды разработки Visual Studio для разработки классических приложений на языке C++](using-the-visual-studio-ide-for-cpp-desktop-development.md)
