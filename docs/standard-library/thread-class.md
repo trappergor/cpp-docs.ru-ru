@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f0606258ada9a3b4298bdb9710f3c3021e793b8e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958209"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706892"
 ---
 # <a name="thread-class"></a>Класс thread
 
@@ -60,19 +60,19 @@ class thread;
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Класс thread::id](#id_class)|Уникально идентифицирует соответствующий поток.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[thread](#thread)|Создает **поток** объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[отсоединение](#detach)|Отсоединяет связанный поток от **поток** объекта.|
 |[get_id](#get_id)|Возвращает уникальный идентификатор связанного потока.|
@@ -84,7 +84,7 @@ class thread;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[thread::operator=](#op_eq)|Связывает поток с текущим **поток** объекта.|
 
@@ -200,8 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Другое*  
- Объект **поток** объекта.
+*Другое*<br/>
+Объект **поток** объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -223,8 +223,8 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Другое*  
- Объект **поток** объекта.
+*Другое*<br/>
+Объект **поток** объекта.
 
 ## <a name="thread"></a> Конструктор thread::thread
 
@@ -240,14 +240,14 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*F*  
- Определяемая приложением функция, которая должна быть выполнена потоком.
+*F*<br/>
+Определяемая приложением функция, которая должна быть выполнена потоком.
 
-*A*  
- Список аргументов, передаваемых *F*.
+*A*<br/>
+Список аргументов, передаваемых *F*.
 
-*Другое*  
- Существующий **поток** объекта.
+*Другое*<br/>
+Существующий **поток** объекта.
 
 ### <a name="remarks"></a>Примечания
 

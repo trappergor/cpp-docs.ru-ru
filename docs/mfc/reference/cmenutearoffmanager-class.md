@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538923"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700938"
 ---
 # <a name="cmenutearoffmanager-class"></a>Класс CMenuTearOffManager
 Управление перемещаемыми меню. Перемещаемое меню — это меню в строке меню. Пользователь может удалить перемещаемое меню из строки меню, превращая перемещаемое меню в плавающее.  
@@ -56,13 +56,13 @@ class CMenuTearOffManager : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Создает объект `CMenuTearOffManager`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMenuTearOffManager::Build](#build)||  
 |[CMenuTearOffManager::GetRegPath](#getregpath)||  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiTearOffBarID*  
- [in] *strText*  
+*uiTearOffBarID*<br/>
+[in] [in] *strText*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszRegEntry*  
- Строка, содержащая путь к записи реестра. Приложений сохраняет параметры для перемещаемой панелей в этой записи реестра.  
+*lpszRegEntry*<br/>
+[in] Строка, содержащая путь к записи реестра. Приложений сохраняет параметры для перемещаемой панелей в этой записи реестра.  
   
- [in] *uiTearOffMenuFirst*  
- Первый идентификатор меню перемещаемое меню.  
+*uiTearOffMenuFirst*<br/>
+[in] Первый идентификатор меню перемещаемое меню.  
   
- [in] *uiTearOffMenuLast*  
- Идентификатор последнего меню для перемещаемое меню.  
+*uiTearOffMenuLast*<br/>
+[in] Идентификатор последнего меню для перемещаемое меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiCmdId*  
- [in] *bUse*  
+*uiCmdId*<br/>
+[in] [in] *bUse*  
   
 ### <a name="remarks"></a>Примечания  
   

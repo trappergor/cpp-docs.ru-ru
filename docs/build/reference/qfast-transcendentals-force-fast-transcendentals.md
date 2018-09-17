@@ -1,5 +1,5 @@
 ---
-title: -Qfast_transcendentals (принудительное использование быстрых трансцендентных функций) | Документы Microsoft
+title: -Qfast_transcendentals (принудительное использование быстрых трансцендентных функций) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4bb296c8a1fdfde46969ef601fde33c901c9306
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d979dc9005921ce1a760b2e61c4519ef852b7f84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377434"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709440"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (принудительное использование быстрых трансцендентных функций)
-Создает встроенный код для трансцендентной функции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/Qfast_transcendentals  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Этот параметр компилятора принудительно преобразует трансцендентные функции должно быть преобразовано в встроенный код, чтобы повысить скорость выполнения. Этот параметр действует только в том случае, когда в паре с **/fp: except** или **/fp: точный**. Создание встроенного кода для трансцендентной функции уже поведение по умолчанию в разделе **/fp:fast**.  
-  
- Этот параметр несовместим с **/fp: strict**. В разделе [/FP (указать поведение с плавающей запятой)](../../build/reference/fp-specify-floating-point-behavior.md) Дополнительные сведения о плавающей точки параметры компилятора.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  Откройте папку **C/C++** .  
-  
-3.  Выберите страницу свойств **Командная строка** .  
-  
-4.  Введите параметр компилятора в поле **Дополнительные параметры** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md)   
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+
+Создает встроенный код для трансцендентных функций.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+/Qfast_transcendentals
+```
+
+## <a name="remarks"></a>Примечания
+
+Этот параметр компилятора заставляет трансцендентных функций для преобразования в встроенного кода для повышения быстродействия. Этот параметр действует только в том случае, когда используется вместе с **/fp: except** или **/fp: точное**. Создание встроенного кода для трансцендентных функций уже поведение по умолчанию в разделе **/fp:fast**.
+
+Этот параметр несовместим с **/fp: strict**. См. в разделе [/fp (определение поведения с плавающей запятой)](../../build/reference/fp-specify-floating-point-behavior.md) Дополнительные сведения о точке параметры компилятора.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Откройте папку **C/C++** .
+
+1. Выберите страницу свойств **Командная строка** .
+
+1. Введите параметр компилятора в поле **Дополнительные параметры** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md)
+[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

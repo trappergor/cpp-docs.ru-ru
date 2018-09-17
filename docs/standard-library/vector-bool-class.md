@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962784"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702914"
 ---
 # <a name="vectorltboolgt-class"></a>Класс vector&lt;bool&gt;
 
@@ -51,7 +51,7 @@ class vector<bool, Allocator>
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[const_pointer](#const_pointer)|Typedef для итератора `const_iterator`, который может применяться как указатель константы на логический элемент `vector<bool>`.|
 |[const_reference](#const_reference)|Typedef для **bool**. После инициализации данный объект не проверяет наличие обновлений исходного значения.|
@@ -59,7 +59,7 @@ class vector<bool, Allocator>
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[flip](#flip)|Обращает все биты в `vector<bool>`.|
 |[swap](#swap)|Выполняет обмен элементами между двумя объектами `vector<bool>`.|
@@ -151,7 +151,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*торговых терминалов*|Позиция элемента `vector<bool>`.|
 
@@ -293,11 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Параметры
 
-*Справа*  
- Ссылка на элемент, значение которого должно быть присвоено биту.
+*Справа*<br/>
+Ссылка на элемент, значение которого должно быть присвоено биту.
 
-*Val*  
- Логическое значение, которое должно быть присвоено биту.
+*Val*<br/>
+Логическое значение, которое должно быть присвоено биту.
 
 #### <a name="example"></a>Пример
 
@@ -382,11 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*  
- Элемент должны поменяться местами с *справа* элемент.
+*Слева*<br/>
+Элемент должны поменяться местами с *справа* элемент.
 
-*Справа*  
- Элемент должны поменяться местами с *слева* элемент.
+*Справа*<br/>
+Элемент должны поменяться местами с *слева* элемент.
 
 ### <a name="remarks"></a>Примечания
 

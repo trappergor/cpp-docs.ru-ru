@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee7c04ee4cd581395ff03763c2ebe50b421986d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853973"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711143"
 ---
 # <a name="cmfctaskspanetask-class"></a>Класс CMFCTasksPaneTask
 `CMFCTasksPaneTask` Класс — это вспомогательный класс, представляющий задачи для элемента управления области задач ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Объект задач представляет элемент в группе задач ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Каждая задача может иметь команду, которую платформа выполняет, когда пользователь щелкает задачу, и значок, который присутствует слева от имени задачи.  
@@ -60,20 +60,20 @@ class CMFCTasksPaneTask : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::CMFCTasksPaneTask](#cmfctaskspanetask)|Создает и инициализирует `CMFCTasksPaneTask` объекта.|  
 |`CMFCTasksPaneTask::~CMFCTasksPaneTask`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::SetACCData](#setaccdata)|Определяет, какие данные специальных возможностей для текущей задачи.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Определяет, ли автоматически освобождается, окно «задача».|  
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Определяет, рисуется ли платформа метка задачи полужирным шрифтом.|  
@@ -252,11 +252,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pParent*  
- Представляет родительское окно текущей задачи.  
+*pParent*<br/>
+[in] Представляет родительское окно текущей задачи.  
   
- [out] *данных*  
- Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей задачи.  
+*data*<br/>
+[out] Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей задачи.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если *данных* параметр был успешно заполнен данные специальных возможностей текущей задачи; в противном случае — значение FALSE.  
