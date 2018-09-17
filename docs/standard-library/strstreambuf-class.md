@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960558"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719138"
 ---
 # <a name="strstreambuf-class"></a>Класс strstreambuf
 
@@ -70,13 +70,13 @@ class strstreambuf : public streambuf
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[strstreambuf](#strstreambuf)|Создает объект типа `strstreambuf`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[freeze](#freeze)|Делает буфер потока недоступным для операций с буфером потока.|
 |[overflow](#overflow)|Защищенная виртуальная функция, которая может вызываться при вставке нового символа в полный буфер.|
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Параметры
 
-*_Freezeit*  
- Объект **bool** , указывающее, следует ли поток, который должен быть зафиксирован.
+*_Freezeit*<br/>
+Объект **bool** , указывающее, следует ли поток, который должен быть зафиксирован.
 
 ### <a name="remarks"></a>Примечания
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta*  
- Символ для вставки в буфер или `EOF`.
+*_Meta*<br/>
+Символ для вставки в буфер или `EOF`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta*  
- Символ для вставки в буфер или `EOF`.
+*_Meta*<br/>
+Символ для вставки в буфер или `EOF`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*  
- Позиция для поиска относительно *_Way*.
+*_Off*<br/>
+Позиция для поиска относительно *_Way*.
 
-*_Way*  
- Начальная точка для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way*<br/>
+Начальная точка для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Which*  
- Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which*<br/>
+Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Параметры
 
-*_Sp*  
- Позиция для поиска.
+*_Sp*<br/>
+Позиция для поиска.
 
-*_Which*  
- Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which*<br/>
+Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Параметры
 
-*_Allocfunc*  
- Функция, используемая для выделения памяти буфера.
+*_Allocfunc*<br/>
+Функция, используемая для выделения памяти буфера.
 
-*count*  
- Определяет длину буфера, на которые указывают *_Getptr*. Если *_Getptr* не является аргументом (первая форма конструктора), рекомендуемый размер выделения памяти для буферов.
+*count*<br/>
+Определяет длину буфера, на которые указывают *_Getptr*. Если *_Getptr* не является аргументом (первая форма конструктора), рекомендуемый размер выделения памяти для буферов.
 
-*_Freefunc*  
- Функция, используемая для освобождения памяти буфера.
+*_Freefunc*<br/>
+Функция, используемая для освобождения памяти буфера.
 
-*_Getptr*  
- Буфер, используемый для ввода.
+*_Getptr*<br/>
+Буфер, используемый для ввода.
 
-*_Putptr*  
- Буфер, используемый для вывода.
+*_Putptr*<br/>
+Буфер, используемый для вывода.
 
 ### <a name="remarks"></a>Примечания
 

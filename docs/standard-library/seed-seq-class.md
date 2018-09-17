@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e466d8a176d5c4c7fd1e2250373b42ee263a6d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c4e86ff5ad4e1ebdba728202904324d9dc9e66f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856336"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711754"
 ---
 # <a name="seedseq-class"></a>Класс seed_seq
 
@@ -68,30 +68,63 @@ public:
 
 ## <a name="types"></a>Типы
 
-`typedef unsigned int result_type;` Тип элементов последовательности начальное значение. 32-разрядный целочисленный тип без знака.
+```cpp
+typedef unsigned int result_type;
+```
+
+Тип элементов начальной последовательности. 32-разрядный целочисленный тип без знака.
 
 ## <a name="constructors"></a>Конструкторы
 
-`seed_seq();` Конструктор по умолчанию инициализирует иметь пустой внутренней последовательностью.
+```cpp
+seed_seq();
+```
 
-`template<class T>` `seed_seq(initializer_list<T> initlist);` Использует `initlist` для установки внутренней последовательности.
+Конструктор по умолчанию, инициализируется с пустой внутренней последовательностью.
+
+```cpp
+template<class T>
+seed_seq(initializer_list<T> initlist);
+```
+
+Использует `initlist` для установки внутренней последовательности.
 Типом `T` должен быть целочисленный тип.
 
-`template<class InputIterator>` `seed_seq(InputIterator begin, InputIterator end);` Инициализирует внутреннюю последовательность, используя все элементы в заданном диапазоне итератора.
+```cpp
+template<class InputIterator>
+seed_seq(InputIterator begin, InputIterator end);
+```
+
+Инициализирует внутреннюю последовательность, используя все элементы в заданном диапазоне итератора.
 Типом `iterator_traits<InputIterator>::value_type` должен быть целочисленный тип.
 
 ## <a name="members"></a>Участники
 
 ### <a name="generating-functions"></a>Генерирующие функции
 
-`template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);` Заполняет элементы предоставленной последовательности, используя внутренний алгоритм. На этот алгоритм влияет внутренняя последовательность, с помощью которой инициализируется `seed_seq`.
+```cpp
+template<class RandomAccessIterator>
+void generate(RandomAccessIterator begin,
+          RandomAccessIterator end);
+```
+
+Заполняет элементы предоставленной последовательности, используя внутренний алгоритм. На этот алгоритм влияет внутренняя последовательность, с помощью которой инициализируется `seed_seq`.
 Ничего не делает, если `begin == end`.
 
 ### <a name="property-functions"></a>Функции свойств
 
-`size_t size() const;` Возвращает количество элементов в `seed_seq`.
+```cpp
+size_t size() const;
+```
 
-`template<class OutputIterator> void param(OutputIterator dest) const;` Копирует внутреннюю последовательность в выходной итератор `dest`.
+Возвращает количество элементов в контейнере `seed_seq`.
+
+```cpp
+template<class OutputIterator>
+void param(OutputIterator dest) const;
+```
+
+Копирует внутреннюю последовательность в выходной итератор `dest`.
 
 ## <a name="example"></a>Пример
 

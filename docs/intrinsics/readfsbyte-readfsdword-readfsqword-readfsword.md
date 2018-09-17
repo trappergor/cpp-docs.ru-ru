@@ -1,5 +1,5 @@
 ---
-title: __readfsbyte __readfsdword, __readfsqword __readfsword | Документы Microsoft
+title: __readfsbyte __readfsdword, __readfsqword __readfsword | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705702"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 **Блок, относящийся только к системам Microsoft**  
   
- Чтение памяти из папки, указанной в качестве смещения относительно начала сегмента федерации Active Directory.  
+ Прочитать память из расположения, указанной в качестве смещения относительно начала сегмента FS.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,11 +56,11 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `Offset`  
- Смещение от начала `FS` из которого выполняется чтение.  
+*Смещение*<br/>
+[in] Смещение от начала `FS` считаны.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Содержимое памяти байт, слово, двойное слово соответственно или quadword (как указано в имени функции, вызываемой) в расположении `FS:[Offset]`.  
+ Содержимое памяти байт, слово, двойное или quadword (как указано в имени функции, вызываемой) в расположении `FS:[Offset]`.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -74,7 +74,7 @@ unsigned __int64 __readfsqword(
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Эти процедуры доступны только как встроенные объекты.  
+ Эти процедуры доступны только как встроенные функции.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

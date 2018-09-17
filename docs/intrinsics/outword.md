@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d118c26e79a462723f87e76672b2d9b9c1a76cb2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cd5abaccb4adc9e642458669535cff369d963cfd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541088"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712592"
 ---
 # <a name="outword"></a>Встроенная функция __outword
 **Блок, относящийся только к системам Microsoft**  
@@ -39,11 +39,11 @@ void __outword(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `Port`  
- Порт для отправки данных.  
+*Порт*<br/>
+[in] Порт для отправки данных.  
   
- [in] `Data`  
- Передаваемые данные.  
+*Данные*<br/>
+[in] Передаваемые данные.  
   
 ## <a name="requirements"></a>Требования  
   

@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214625"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711078"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchangePointer
 **Блок, относящийся только к системам Microsoft**  
@@ -87,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in, out] `Destination`  
- Указатель на указатель на целевое значение. Знак игнорируется  
+*Назначение*<br/>
+[in, out] Указатель на указатель на значение назначения. Знак игнорируется.  
   
- [in] `Exchange`  
- Указатель обмена. Знак игнорируется  
+*Exchange*<br/>
+[in] Указатель обмена. Знак игнорируется.  
   
- [in] `Comparand`  
- Указатель для сравнения с местом назначения. Знак игнорируется.  
+*Сравниваемый операнд*<br/>
+[in] Указатель для сравнения с местом назначения. Знак игнорируется.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение является начальным значением места назначения.  

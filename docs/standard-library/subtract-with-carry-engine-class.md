@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687991"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721738"
 ---
 # <a name="subtractwithcarryengine-class"></a>Класс subtract_with_carry_engine
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Параметры
 
-*UIntType*  
- Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*W*  
- **Размер слова**. Размер каждого слова последовательности состояния в битах. **Предварительные условия**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Размер слова**. Размер каждого слова последовательности состояния в битах. **Предварительные условия**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **Короткая задержка**. Количество целочисленных значений. **Предварительные условия**: `0 < S < R`
+*S*<br/>
+**Короткая задержка**. Количество целочисленных значений. **Предварительные условия**: `0 < S < R`
 
-*R*  
- **Длинная задержка**. Определяет повторения в созданном ряду.
+*R*<br/>
+**Длинная задержка**. Определяет повторения в созданном ряду.
 
 ## <a name="members"></a>Члены
 

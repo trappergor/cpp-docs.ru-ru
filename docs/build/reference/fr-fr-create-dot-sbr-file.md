@@ -1,5 +1,5 @@
 ---
-title: Fr -FR,-(создать. SBR-файл) | Документы Microsoft
+title: -FR -Fr (создать. SBR-файл) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,51 +23,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6f61a3360c820a2d47d54f7c174af484079d154
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5691a87f7350c7816e8ddb58d5591e16cc18189
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374769"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709615"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (создать SBR-файл)
-Создает SBR-файлы.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/FR[pathname[\filename]]  
-/Fr[pathname[\filename]]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- В процессе сборки программа обслуживания файлов информации об исходном коде Майкрософт (BSCMAKE) использует эти файлы для создания BSC-файла, с помощью которого отображается информация об исходном коде.  
-  
- **/FR** создает SBR-файл с полными символьными данными.  
-  
- **/Fr** создает SBR-файл без сведений о локальных переменных.  
-  
- Если не указать `filename`, SBR-файл получает такое же базовое имя, как у исходного файла.  
-  
- Использовать параметр **/Fr** не рекомендуется; используйте вместо него **/FR** . Дополнительные сведения см. в разделе "Нерекомендуемые и удаленные параметры компилятора" статьи [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).  
-  
+
+Создает SBR-файлы.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+/FR[pathname[\filename]]
+/Fr[pathname[\filename]]
+```
+
+## <a name="remarks"></a>Примечания
+
+В процессе сборки программа обслуживания файлов информации об исходном коде Майкрософт (BSCMAKE) использует эти файлы для создания BSC-файла, с помощью которого отображается информация об исходном коде.
+
+**/FR** создает SBR-файл с полными символьными данными.
+
+**/Fr** создает SBR-файл без сведений о локальных переменных.
+
+Если не указать `filename`, SBR-файл получает такое же базовое имя, как у исходного файла.
+
+Использовать параметр **/Fr** не рекомендуется; используйте вместо него **/FR** . Дополнительные сведения см. в разделе "Нерекомендуемые и удаленные параметры компилятора" статьи [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+
 > [!NOTE]
->  Не изменяйте расширение SBR. Программе BSCMAKE требуются промежуточные файлы с этим расширением.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  В области навигации выберите страницу свойств **C/C++**, **Информация об исходном коде** .  
-  
-3.  Измените свойство **Файл информации об исходном коде** или **Включить информацию об исходном коде** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
-  
--   См. разделы <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Выходного файла (/ F) параметры](../../build/reference/output-file-f-options.md)   
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
- [Указание пути](../../build/reference/specifying-the-pathname.md)
+>  Не изменяйте расширение SBR. Программе BSCMAKE требуются промежуточные файлы с этим расширением.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. В области навигации выберите страницу свойств **C/C++**, **Информация об исходном коде** .
+
+1. Измените свойство **Файл информации об исходном коде** или **Включить информацию об исходном коде** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
+
+- См. разделы <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Выходного файла (/ F) параметры](../../build/reference/output-file-f-options.md)
+[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
+[Указание пути](../../build/reference/specifying-the-pathname.md)

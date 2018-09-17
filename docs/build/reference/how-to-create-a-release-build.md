@@ -1,5 +1,5 @@
 ---
-title: 'Как: Создание построения выпуска | Документы Microsoft'
+title: 'Практическое: Создание сборки выпуска | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949cfe629332488821da4313c13d40054778ef06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1221133b55002d49c93d66210c5eae6844b534b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370880"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705611"
 ---
 # <a name="how-to-create-a-release-build"></a>Практическое руководство. Создание построения выпуска
-### <a name="to-generate-a-release-build-of-your-program"></a>Для создания окончательного выпуска программы  
-  
-1.  Выберите **выпуска** из **конфигурации решения** раскрывающегося списка, расположенного на **Стандартная** инструментов.  
-  
-2.  На **построения** меню, нажмите кнопку **сборки**.  
-  
-## <a name="see-also"></a>См. также  
- [Сборки выпуска](../../build/reference/release-builds.md)
+
+### <a name="to-generate-a-release-build-of-your-program"></a>Для создания окончательного выпуска программы
+
+1. Выберите **выпуска** из **конфигурации решения** стрелку раскрывающегося списка, расположенного на **стандартный** панели инструментов.
+
+1. На **построения** меню, щелкните **построения**.
+
+## <a name="see-also"></a>См. также
+
+[Сборки выпуска](../../build/reference/release-builds.md)

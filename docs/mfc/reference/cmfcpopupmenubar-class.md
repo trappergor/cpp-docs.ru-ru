@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 02806f26f623b2f4ad7f19cd67216018da984e42
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853638"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713704"
 ---
 # <a name="cmfcpopupmenubar-class"></a>Класс CMFCPopupMenuBar
 Строка меню, внедренная в контекстное меню.  
@@ -76,7 +76,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Сразу же повторно вычисляет макет области. (Переопределяет [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|  
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Загружает элементы всплывающего меню из меню указанного ресурса.|  
@@ -100,7 +100,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Указывает, будет ли отображаться серую полосу, когда приложение имеет внешний вид Windows XP.|  
   
@@ -140,8 +140,8 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bRecalcLayout*  
- Значение TRUE, чтобы автоматически повторно рассчитать макет панели строки всплывающего меню; в противном случае — значение FALSE.  
+*bRecalcLayout*<br/>
+[in] Значение TRUE, чтобы автоматически повторно рассчитать макет панели строки всплывающего меню; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -153,8 +153,8 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiMenuResID*  
- Указывает идентификатор ресурса меню меню загрузки.  
+*uiMenuResID*<br/>
+[in] Указывает идентификатор ресурса меню меню загрузки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, в случае успешного выполнения или значение FALSE, если это не так.  
@@ -190,8 +190,8 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *точки*  
- Точка на экране.  
+*точка*<br/>
+[in] Точка на экране.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает дескриптор для панели инструментов где находится точка, если таковой имеется, или значение NULL, если это не так.  
@@ -257,11 +257,11 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *hMenu*  
- Меню, из которого импортируются кнопок всплывающего меню.  
+*hMenu*<br/>
+[in] Меню, из которого импортируются кнопок всплывающего меню.  
   
- [in] *bShowAllCommands*  
- Значение TRUE, если все команды в меню должны быть импортированные или значение FALSE, если редко используемых могут быть скрыты.  
+*bShowAllCommands*<br/>
+[in] Значение TRUE, если все команды в меню должны быть импортированные или значение FALSE, если редко используемых могут быть скрыты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если кнопки меню были успешно импортированы в меню, или значение FALSE, если не.  
@@ -325,8 +325,8 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *hMenu*  
- Дескриптор меню архивные для загрузки.  
+*hMenu*<br/>
+[in] Дескриптор меню архивные для загрузки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если меню находится успешно загружен, или FALSE, если это не так.  
@@ -364,11 +364,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nIndex*  
- Отсчитываемый от нуля индекс для задается, стиль кнопки панели инструментов.  
+*nIndex*<br/>
+[in] Отсчитываемый от нуля индекс для задается, стиль кнопки панели инструментов.  
   
- [in] *nStyle*  
- Стиль кнопки. См. в разделе [стили элемента управления панели инструментов](../../mfc/reference/toolbar-control-styles.md) список доступных инструментов стили кнопок.  
+*nStyle*<br/>
+[in] Стиль кнопки. См. в разделе [стили элемента управления панели инструментов](../../mfc/reference/toolbar-control-styles.md) список доступных инструментов стили кнопок.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -380,8 +380,8 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *iOffset*  
- Количество строк, что должны быть смещены всплывающей панели меню.  
+*iOffset*<br/>
+[in] Количество строк, что должны быть смещены всплывающей панели меню.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -395,11 +395,11 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pMenuButton*  
- Указатель на кнопке меню, для которого требуется задать таймер задержки.  
+*pMenuButton*<br/>
+[in] Указатель на кнопке меню, для которого требуется задать таймер задержки.  
   
- [in] *nDelayFactor*  
- Фактор задержки, равным по крайней мере, необходимо умножить время задержки стандартное меню (как правило, от половины секунды и пять секунд).  
+*nDelayFactor*<br/>
+[in] Фактор задержки, равным по крайней мере, необходимо умножить время задержки стандартное меню (как правило, от половины секунды и пять секунд).  
   
 ### <a name="remarks"></a>Примечания  
   

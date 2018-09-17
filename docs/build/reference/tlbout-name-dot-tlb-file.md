@@ -1,5 +1,5 @@
 ---
-title: -TLBOUT (имя. TLB-файл) | Документы Microsoft
+title: -TLBOUT (имя. TLB-файл) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,51 +21,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc4103c387fe7a3dae68b642c10e326b361c54a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c44028f834d2b3200b970fdc613d0bf4d4efd29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702862"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (задание имени TLB-файла)
-```  
-/TLBOUT:[path\]filename  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Здесь:  
-  
- *path*  
- Спецификация абсолютный или относительный путь, для которой должен быть создан TLB-файл.  
-  
- *filename*  
- Указывает имя файла TLB-файл, созданный компилятором MIDL. Предполагается без расширения файла. Укажите *filename*TLB-файл, если требуется расширением TLB.  
-  
-## <a name="remarks"></a>Примечания  
- Параметр/TLBOUT задает имя и расширение TLB-файла.  
-  
- Компилятор MIDL вызывается компоновщиком Visual C++ при компоновке проектов, имеющих [модуль](../../windows/module-cpp.md) атрибута.  
-  
- Если/TLBOUT не указан, TLB-файл получит его имя из [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md) *filename*. Если/IDLOUT не указан, TLB-файл будет называться vc70.tlb.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Нажмите кнопку **компоновщика** папки.  
-  
-3.  Нажмите кнопку **внедренный IDL** страницу свойств.  
-  
-4.  Изменить **библиотеки типов** свойство.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
-1.  См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryFile%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)   
- [/ IGNOREIDL (не преобразовывать атрибуты в MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [/ MIDL (указание параметров командной строки MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)   
- [Сборка атрибутированной программы](../../windows/building-an-attributed-program.md)
+
+```
+/TLBOUT:[path\]filename
+```
+
+## <a name="arguments"></a>Аргументы
+
+*path*<br/>
+Спецификацию абсолютный или относительный путь, для которой должна создаваться TLB-файлу.
+
+*filename*<br/>
+Задает имя TLB-файла, созданного компилятором MIDL. Предполагается, что без расширения файла; Укажите *filename*TLB-файл, если вы хотите, чтобы расширением TLB.
+
+## <a name="remarks"></a>Примечания
+
+Параметр/TLBOUT задает имя и расширение TLB-файла.
+
+Компилятор MIDL вызывается компоновщиком Visual C++ при связывании проектов, содержащих [модуль](../../windows/module-cpp.md) атрибута.
+
+Если/TLBOUT не указан, TLB-файлу, получите его имя из [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md) *filename*. Если/IDLOUT не указан, TLB-файл будет называться vc70.tlb.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+
+1. Нажмите кнопку **компоновщика** папки.
+
+1. Нажмите кнопку **внедренные IDL** страницу свойств.
+
+1. Изменить **библиотеки типов** свойство.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+1. См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryFile%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)<br/>
+[/ IGNOREIDL (не процесса атрибуты в MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+[/MIDL (указание параметров командной строки MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)
+[сборка Атрибутированной программы](../../windows/building-an-attributed-program.md)

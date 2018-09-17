@@ -1,5 +1,5 @@
 ---
-title: -OUT (имя выходного файла) | Документы Microsoft
+title: -OUT (имя выходного файла) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fd9ec1b1631104355e076071370f627a36b4037
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c4bfc79a257424820bed5f784cb0a83daf016d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376109"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725404"
 ---
 # <a name="out-output-file-name"></a>/OUT (имя выходного файла)
-```  
-/OUT:filename  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Здесь:  
-  
- *filename*  
- Пользовательское имя для выходного файла. Он заменяет имя по умолчанию.  
-  
-## <a name="remarks"></a>Примечания  
- Параметр/OUT переопределяет стандартное имя и расположение программы, создаваемой компоновщиком.  
-  
- По умолчанию компоновщик формирует имя файла, с помощью базового имени первого указанного файла OBJ и соответствующего расширения (.exe или .dll).  
-  
- Этот параметр по умолчанию базовое имя для сопоставления MAPFILE или импорта библиотеки. Дополнительные сведения см. в разделе [Создание файла сопоставления](../../build/reference/map-generate-mapfile.md) (/ MAP) и [/IMPLIB](../../build/reference/implib-name-import-library.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Нажмите кнопку **компоновщика** папки.  
-  
-3.  Нажмите кнопку **Общие** страницу свойств.  
-  
-4.  Изменить **выходной файл** свойство.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+```
+/OUT:filename
+```
+
+## <a name="arguments"></a>Аргументы
+
+*filename*<br/>
+Определяемое пользователем имя для выходного файла. Он заменяет имя по умолчанию.
+
+## <a name="remarks"></a>Примечания
+
+Параметр / OUT переопределяет стандартное имя и расположение программы, которую создает компоновщик.
+
+По умолчанию компоновщик формирует имя файла, используя базовое имя первого указанного файла OBJ и соответствующего расширения (.exe или .dll).
+
+Этот параметр по умолчанию базовое имя для сопоставления MAPFILE или импорта библиотеки. Дополнительные сведения см. в разделе [Создание файла сопоставления](../../build/reference/map-generate-mapfile.md) (/ MAP) и [/IMPLIB](../../build/reference/implib-name-import-library.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+
+1. Нажмите кнопку **компоновщика** папки.
+
+1. Нажмите кнопку **Общие** страницу свойств.
+
+1. Изменить **выходной файл** свойство.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

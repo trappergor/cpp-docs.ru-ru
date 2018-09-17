@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: faf782f4386cf2b2640ed65f3a2b24bbf4c5d693
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c339ffcf3fb32c7ff8ad45fca792a91c96848d9e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572003"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703733"
 ---
 # <a name="irowsetimpl-class"></a>Класс IRowsetImpl
 Предоставляет реализацию интерфейса `IRowset`.  
@@ -244,11 +244,11 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] *currentRow*  
- Текущая строка.  
+*currentRow*<br/>
+[in] Текущая строка.  
   
- [in] *columnNames*  
- Столбец, для которого запрашивается состояние.  
+*columnNames*<br/>
+[in] Столбец, для которого запрашивается состояние.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) флаги для столбца. 

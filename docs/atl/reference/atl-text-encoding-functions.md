@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757475"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706840"
 ---
 # <a name="atl-text-encoding-functions"></a>Функции кодировки текста ATL
 
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pbSrcData*  
-Буфер, содержащий данные для декодирования.
+*pbSrcData*<br/>
+[in] Буфер, содержащий данные для декодирования.
 
-[in] *nSrcLen*  
-Длина в байтах *pbSrcData*.
+*nSrcLen*<br/>
+[in] Длина в байтах *pbSrcData*.
 
-[out] *szDest*  
-Выделенный вызывающим объектом буфер для получения декодированные данные.
+*szDest*<br/>
+[out] Выделенный вызывающим объектом буфер для получения декодированные данные.
 
-[out] *pnDestLen*  
-Указатель на переменную, которая содержит длину в байтах *szDest*. Если функция выполняется успешно, переменная получает число байтов, записанных в буфер. Если функция завершается с ошибкой, переменная получает требуемую длину в байтах буфера.
+*pnDestLen*<br/>
+[out] Указатель на переменную, которая содержит длину в байтах *szDest*. Если функция выполняется успешно, переменная получает число байтов, записанных в буфер. Если функция завершается с ошибкой, переменная получает требуемую длину в байтах буфера.
 
-[in] *dwFlags*  
-ATLSMTP_QPENCODE флаги, описывающие, каким образом будет осуществляться преобразование.
+*dwFlags*<br/>
+[in] ATLSMTP_QPENCODE флаги, описывающие, каким образом будет осуществляться преобразование.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

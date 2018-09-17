@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211596"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702031"
 ---
 # <a name="hashmap-class"></a>Класс hash_map
 
@@ -125,16 +125,16 @@ class hash_map
 ### <a name="parameters"></a>Параметры
 
 *Key*<br/>
- Тип данных ключа для сохранения в hash_map.
+Тип данных ключа для сохранения в hash_map.
 
 *Тип*<br/>
- Тип данных элемента для сохранения в hash_map.
+Тип данных элемента для сохранения в hash_map.
 
 *Признаки*<br/>
- Тип, который включает два объекта-функции, один из классов compare, который может сравнить значения двух элементов как ключей сортировки, чтобы определить их относительный порядок, и хэш-функцию, которая является унарным предикатом, который сопоставляет значения ключей элементов с целыми числами без знака типа `size_t`. Этот аргумент является необязательным, а hash_compare<`Key`, less<`Key`> > является значением по умолчанию.
+Тип, который включает два объекта-функции, один из классов compare, который может сравнить значения двух элементов как ключей сортировки, чтобы определить их относительный порядок, и хэш-функцию, которая является унарным предикатом, который сопоставляет значения ключей элементов с целыми числами без знака типа `size_t`. Этот аргумент является необязательным, а hash_compare<`Key`, less<`Key`> > является значением по умолчанию.
 
 *Распределитель*<br/>
- Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для hash_map. Этот аргумент является необязательным, а значение по умолчанию — allocator<pair <const `Key`, `Type`>>.
+Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для hash_map. Этот аргумент является необязательным, а значение по умолчанию — allocator<pair <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Примечания
 
@@ -168,13 +168,13 @@ hash_map:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[hash_map](#hash_map)|Создает контейнер `hash_map`, который является пустым или копией части или целого другого контейнера `hash_map`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта `hash_map`.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может считывать тот или иной элемент `const` в контейнере `hash_map`.|
@@ -194,7 +194,7 @@ hash_map:
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[at](#at)|Находит элемент в `hash_map` с указанным значением ключа.|
 |[begin](#begin)|Возвращает итератор, обращающийся к первый элемент в контейнере `hash_map`.|
@@ -225,7 +225,7 @@ hash_map:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[operator&#91;&#93;](#op_at)|Вставляет элемент в `hash_map` с заданным значением ключа.|
 |[hash_map::operator=](#op_eq)|Заменяет элементы `hash_map` копией другого `hash_map`.|
@@ -266,7 +266,7 @@ const Type& at(const Key& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*key*|Значение ключа элемента, который требуется найти.|
 
@@ -649,7 +649,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
- Значение ключа для сравнения с ключами элементов объекта hash_map.
+Значение ключа для сравнения с ключами элементов объекта hash_map.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -900,7 +900,7 @@ emplace(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение, используемое для перемещения, создает элемент для вставки в [hash_map](../standard-library/hash-map-class.md), кроме случаев, когда `hash_map` уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|
 
@@ -940,7 +940,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
@@ -959,7 +959,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение, используемое для перемещения, создает элемент для вставки в [hash_map](../standard-library/hash-map-class.md), кроме случаев, когда `hash_map` уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|
 |*_Where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -1000,7 +1000,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_map::empty
@@ -1141,7 +1141,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
- Значение ключа аргумента для сравнения с ключом сортировки элемента из hash_map, в котором выполняется поиск.
+Значение ключа аргумента для сравнения с ключом сортировки элемента из hash_map, в котором выполняется поиск.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1188,7 +1188,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
@@ -1208,7 +1208,7 @@ int main( )
 The lower bound of the element with a key of 2 in the hash_map hm1 is: 20.
 The upper bound of the element with a key of 2 in the hash_map hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
@@ -1230,16 +1230,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Параметры
 
 *_Where*<br/>
- Положение элемента, удаляемого из объекта hash_map.
+Положение элемента, удаляемого из объекта hash_map.
 
 *Первый*<br/>
- Положение первого элемента, удаляемого из объекта hash_map.
+Положение первого элемента, удаляемого из объекта hash_map.
 
 *последний*<br/>
- Положение сразу после последнего элемента, удаляемого из объекта hash_map.
+Положение сразу после последнего элемента, удаляемого из объекта hash_map.
 
 *key*<br/>
- Значение ключа элементов, удаляемых из объекта hash_map.
+Значение ключа элементов, удаляемых из объекта hash_map.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1352,7 +1352,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
- Значение ключа, с которым сравнивается ключ сортировки элемента из hash_map, по которой выполняется поиск.
+Значение ключа, с которым сравнивается ключ сортировки элемента из hash_map, по которой выполняется поиск.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1525,18 +1525,18 @@ hash_map(
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al
@@ -1544,7 +1544,7 @@ hash_map(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Al*|Класс распределителя памяти для данного объекта hash_map, по умолчанию — `Allocator`.|
 |*Зап.*|Функция сравнения типа const `Traits` используется для упорядочения элементов в hash_map, чье значение по умолчанию — `hash_compare`.|
@@ -1602,7 +1602,7 @@ iterator insert(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента для вставки в hash_map, кроме случаев, когда hash_map уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|
 |*_Where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -1893,7 +1893,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
- Значение ключа аргумента для сравнения с ключом сортировки элемента из hash_map, в котором выполняется поиск.
+Значение ключа аргумента для сравнения с ключом сортировки элемента из hash_map, в котором выполняется поиск.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2029,7 +2029,7 @@ Type& operator[](Key&& key);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*key*|Ключевое значение элемента для вставки.|
 
@@ -2126,7 +2126,7 @@ hash_map& operator=(hash_map&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*right*|[Класс hash_map](../standard-library/hash-map-class.md), который копируется в `hash_map`.|
 
@@ -2532,7 +2532,7 @@ void swap(hash_map& right);
 ### <a name="parameters"></a>Параметры
 
 *right*<br/>
- hash_map аргументов, предоставляющий элементы, которые следует поменять местами с целевой hash_map.
+hash_map аргументов, предоставляющий элементы, которые следует поменять местами с целевой hash_map.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2608,7 +2608,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
- Значение ключа аргумента для сравнения со значением ключа сортировки элемента из hash_map, в котором выполняется поиск.
+Значение ключа аргумента для сравнения со значением ключа сортировки элемента из hash_map, в котором выполняется поиск.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

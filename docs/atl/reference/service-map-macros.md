@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ae4ddf3c3b17023f3a6968e3498c178813d039
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0cab78f1f35ab003d8457c0e185aa031a112e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765349"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702602"
 ---
 # <a name="service-map-macros"></a>Макросы сопоставления служб
 
@@ -123,14 +123,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Параметры
 
-[IN] *guidService*  
-Указатель на идентификатор службы (SID).
+*guidService*<br/>
+[in] Указатель на идентификатор службы (SID).
 
-[IN] *riid*  
-Идентификатор интерфейса, к которому вызывающий объект для получения доступа.
+*riid*<br/>
+[in] Идентификатор интерфейса, к которому вызывающий объект для получения доступа.
 
-[OUT] *ppvObj*  
-Косвенный указатель на запрашиваемый интерфейс.
+*ppvObj*<br/>
+[out] Косвенный указатель на запрашиваемый интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

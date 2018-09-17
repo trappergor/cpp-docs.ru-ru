@@ -1,5 +1,5 @@
 ---
-title: . Компоновщик-ввод DEF-файлы | Документы Microsoft
+title: . DEF-файлы в качестве входных данных компоновщика | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e7828154501a067c6b236929a18c51724d3f6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5afb165b33dfa7911e01c1c4368946fd91915a35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370531"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710278"
 ---
 # <a name="def-files-as-linker-input"></a>DEF-файлы в качестве входных файлов компоновщика
-В разделе [файлы определения модуля (DEF)](../../build/reference/module-definition-dot-def-files.md) для получения дополнительной информации. Используйте [/DEF](../../build/reference/def-specify-module-definition-file.md) возможность указания имени DEF-файла.  
-  
-## <a name="see-also"></a>См. также  
- [Входные LINK-файлы](../../build/reference/link-input-files.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+См. в разделе [файлы определения модуля (DEF)](../../build/reference/module-definition-dot-def-files.md) Дополнительные сведения. Используйте [/DEF](../../build/reference/def-specify-module-definition-file.md) параметр для указания имени DEF-файла.
+
+## <a name="see-also"></a>См. также
+
+[Входные LINK-файлы](../../build/reference/link-input-files.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

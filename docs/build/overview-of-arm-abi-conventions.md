@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027327"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721452"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Обзор соглашений ABI ARM32
 
@@ -64,16 +64,16 @@ Windows на ARM выполняется в режиме с прямым поря
 - Целевая инструкция должна относиться к одному из следующих типов.
 
    |16-разрядные коды операций|Класс|Ограничения|
-    |---------------------|-----------|------------------|
-    |MOV, MVN|Перемещение|Rm != PC, Rd != PC|
-    |LDR, LDR[S]B, LDR[S]H|Загрузка из памяти|Но не формы литерала LDR|
-    |STR, STRB, STRH|Сохранение в память||
-    |ADD, ADC, RSB, SBC, SUB|Сложение или вычитание|Но не формы ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-    |CMP, CMN|Сравнение|Rm != PC, Rn != PC|
-    |MUL|Умножение||
-    |ASR, LSL, LSR, ROR|Сдвиг битов||
-    |AND, BIC, EOR, ORR, TST|Побитовая арифметика||
-    |BX|Ветвление для регистра|Rm != PC|
+   |---------------------|-----------|------------------|
+   |MOV, MVN|Перемещение|Rm != PC, Rd != PC|
+   |LDR, LDR[S]B, LDR[S]H|Загрузка из памяти|Но не формы литерала LDR|
+   |STR, STRB, STRH|Сохранение в память||
+   |ADD, ADC, RSB, SBC, SUB|Сложение или вычитание|Но не формы ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
+   |CMP, CMN|Сравнение|Rm != PC, Rn != PC|
+   |MUL|Умножение||
+   |ASR, LSL, LSR, ROR|Сдвиг битов||
+   |AND, BIC, EOR, ORR, TST|Побитовая арифметика||
+   |BX|Ветвление для регистра|Rm != PC|
 
 Хотя современные ЦП ARMv7 не могут сообщить об использовании запрещенных форм инструкций, будущие поколения ЦП получат такую возможность. При обнаружении этих форм любая использующая их программа будет завершена с исключением неопределенной инструкции.
 
@@ -233,5 +233,5 @@ ARM EABI задает модель очистки исключения, испо
 
 ## <a name="see-also"></a>См. также
 
-[Общие вопросы использования Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
-[Обработка исключений ARM](../build/arm-exception-handling.md)  
+[Общие вопросы использования Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Обработка исключений ARM](../build/arm-exception-handling.md)

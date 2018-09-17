@@ -1,5 +1,5 @@
 ---
-title: ССЫЛКА входные файлы | Документы Microsoft
+title: ССЫЛКА входные файлы | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,43 +24,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d61a24916c3b56cf666a85483414f86753f7f59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5974914e736278ebb336b6814661845740855fe6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374831"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710246"
 ---
 # <a name="link-input-files"></a>Входные LINK-файлы
-Компоновщик предоставить файлы, содержащие объекты, импорта и стандартные библиотеки, ресурсы, определения модулей и ввод команд. СВЯЗЬ не использует расширения файлов для делать предположения о содержимом файла. Вместо этого программа LINK проверяет каждый входной файл, чтобы определить, какого рода файла.  
-  
- Объектные файлы в командной строке, обрабатываются в порядке их следования в командной строке. Библиотеки производится в порядке командной строки, а также с использованием следующих механизмов: неразрешенные символы при связывании в объектный файл из библиотеки производится поиск в эту библиотеку во-первых, а затем в следующих библиотеках из командной строки и [/DEFAULTLIB (укажите библиотеку по умолчанию)](../../build/reference/defaultlib-specify-default-library.md) директив и затем все библиотеки, в начало командной строки.  
-  
+
+Компоновщик предоставить файлы, содержащие объекты, импортировать и стандартные библиотеки, ресурсов, определения модуля и ввод команд. ССЫЛКА не использует расширения файлов для делать предположения о содержимом файла. Вместо этого ссылка анализирует каждый входной файл, чтобы определить, какого рода файл.
+
+Объектные файлы в командной строке, обрабатываются в порядке их следования в командной строке. Библиотеки осуществляется в порядке командной строки, а также с использованием следующих механизмов: неразрешенные символы при переводе в объектный файл из библиотеки ищутся в эту библиотеку во-первых, а затем перечисленные ниже библиотеки из командной строки и [/DEFAULTLIB (укажите библиотеку по умолчанию)](../../build/reference/defaultlib-specify-default-library.md) директивы, а затем на библиотеки в начале командной строки.
+
 > [!NOTE]
->  ССЫЛКА больше не принимает точку с запятой (или любой другой знак) как начало комментария в файлах ответа и упорядочение файлов. Точки с запятой распознаются только в качестве начального комментарии в файлах определения модуля (.def).  
-  
- ССЫЛКИ используются следующие типы входных файлов:  
-  
--   [OBJ-файлы](../../build/reference/dot-obj-files-as-linker-input.md)  
-  
--   [NETMODULE-файлы](../../build/reference/netmodule-files-as-linker-input.md)  
-  
--   [LIB-файлы](../../build/reference/dot-lib-files-as-linker-input.md)  
-  
--   [EXP-файлах](../../build/reference/dot-exp-files-as-linker-input.md)  
-  
--   [DEF-файлы](../../build/reference/dot-def-files-as-linker-input.md)  
-  
--   [PDB-файлы](../../build/reference/dot-pdb-files-as-linker-input.md)  
-  
--   [RES-файлы](../../build/reference/dot-res-files-as-linker-input.md)  
-  
--   [файлы .exe](../../build/reference/dot-exe-files-as-linker-input.md)  
-  
--   [TXT-файлы](../../build/reference/dot-txt-files-as-linker-input.md)  
-  
--   [ILK-файлы](../../build/reference/dot-ilk-files-as-linker-input.md)  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+>  ССЫЛКА больше не принимает точку с запятой (или любой другой символ) как начало комментария в файлы ответов и упорядочение файлов. Точка с запятой, распознаются только как начало комментариев в файлах определения модуля (.def).
+
+СВЯЗИ используются следующие типы входных файлов:
+
+- [OBJ-файлы](../../build/reference/dot-obj-files-as-linker-input.md)
+
+- [NETMODULE-файлы](../../build/reference/netmodule-files-as-linker-input.md)
+
+- [LIB-файлы](../../build/reference/dot-lib-files-as-linker-input.md)
+
+- [EXP-файлы](../../build/reference/dot-exp-files-as-linker-input.md)
+
+- [DEF-файлы](../../build/reference/dot-def-files-as-linker-input.md)
+
+- [PDB-файлы](../../build/reference/dot-pdb-files-as-linker-input.md)
+
+- [RES-файлы](../../build/reference/dot-res-files-as-linker-input.md)
+
+- [файлы .exe](../../build/reference/dot-exe-files-as-linker-input.md)
+
+- [TXT-файлов](../../build/reference/dot-txt-files-as-linker-input.md)
+
+- [ILK-файлы](../../build/reference/dot-ilk-files-as-linker-input.md)
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

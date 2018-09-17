@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61050f8fc1924f6d2a143893af5bd1918df94394
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d6a685633b6e23a21d46ad3256188fea3ee16ccc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895192"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700783"
 ---
 # <a name="stosb"></a>__stosb
 
@@ -43,14 +43,14 @@ void __stosb(
 
 #### <a name="parameters"></a>Параметры
 
-[выходной] `Dest`  
-Целевой для операции.
+*dest*<br/>
+[out] Целевой для операции.
 
-[in] `Data`  
-Сохраняемые данные.
+*Данные*<br/>
+[in] Сохраняемые данные.
 
-[in] `Count`  
-Длина блока байтов для записи.
+*Количество*<br/>
+[in] Длина блока байтов для записи.
 
 ## <a name="requirements"></a>Требования
 

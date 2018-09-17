@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539498"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714211"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Блок, относящийся только к системам Microsoft**  
@@ -39,14 +39,14 @@ unsigned __int64 __shiftright128(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `LowPart`  
- Младшие 64 разряда 128-разрядной величины для сдвига.  
+*Значение подверсии*<br/>
+[in] Младшие 64 разряда 128-разрядной величины для сдвига.  
   
- [in] `HighPart`  
- Старшие 64 разряда 128-разрядной величины для сдвига.  
+*HighPart*<br/>
+[in] Старшие 64 разряда 128-разрядной величины для сдвига.  
   
- [in] `Shift`  
- Число разрядов для поворота.  
+*SHIFT*<br/>
+[in] Количество битов для сдвига.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Младшие 64 разряда результата.  

@@ -1,5 +1,5 @@
 ---
-title: Tools.ini и NMAKE | Документы Microsoft
+title: Tools.ini и NMAKE | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 860a334274a3a1a4ac9e11c3e7b5e9a0f136ecc0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84406886c9aa0c0053ed7c183912bf8a7f1f4771
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380554"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723584"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini и NMAKE
-NMAKE считывает Tools.ini прежде чем он считывает makefile-файлы, если только не используется /R. Ищет Tools.ini сначала в текущем каталоге, а затем в каталоге, указанном в переменной среды INIT. Раздел параметров NMAKE в файле настройки начинается с `[NMAKE]` и может содержать любые сведения о файле makefile. Укажите комментарий на отдельные строки, начинающиеся со знака номера (#).  
-  
-## <a name="see-also"></a>См. также  
- [Запуск программы NMAKE](../build/running-nmake.md)
+
+NMAKE считывает Tools.ini, прежде чем он считывает файлы makefile, если не используется /R. Он ищет Tools.ini сначала в текущем каталоге, а затем в каталоге, указанном в переменной среды INIT. Раздел параметров NMAKE в файле настройки начинается с `[NMAKE]` и может содержать любые сведения о файле makefile. Укажите комментарий на отдельные строки, которая начинается со знака номера (#).
+
+## <a name="see-also"></a>См. также
+
+[Запуск программы NMAKE](../build/running-nmake.md)

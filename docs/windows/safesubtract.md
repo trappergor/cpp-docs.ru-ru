@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 055c1a0c19afce43338df90a92afef2a8469f3f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac6968a688c50ad665e8b28a883eaf62255aaf28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584033"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700114"
 ---
 # <a name="safesubtract"></a>SafeSubtract
 
@@ -41,14 +41,14 @@ inline bool SafeSubtract (
 
 ### <a name="parameters"></a>Параметры
 
-[in] *t*  
-Первое число операции вычитания. Это должен быть типа `T`.
+*t*<br/>
+[in] Первое число операции вычитания. Это должен быть типа `T`.
 
-[in] *u*  
-Для вычитания из *t*. Это должен быть типа `U`.
+*u*<br/>
+[in] Для вычитания из *t*. Это должен быть типа `U`.
 
-[out] *результат*  
-Параметр где **SafeSubtract** сохраняет результат.
+*результат*<br/>
+[out] Параметр где **SafeSubtract** сохраняет результат.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

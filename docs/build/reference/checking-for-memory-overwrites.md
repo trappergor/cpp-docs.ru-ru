@@ -1,5 +1,5 @@
 ---
-title: Проверка перезаписи памяти | Документы Microsoft
+title: Проверка перезаписи памяти | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 258aa6ae01d48df6717135f7dc8b73fc3f9e697a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 246f625e899016080662f27a5901962c1c62f1a8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369855"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718655"
 ---
 # <a name="checking-for-memory-overwrites"></a>Проверка затирания памяти
-Если вы получаете нарушение прав доступа при вызове функции обработки кучи, возможно, что программа повреждены и кучи. Признаком такой ситуации будет выглядеть так:  
-  
-```  
-Access Violation in _searchseg  
-```  
-  
- [_Heapchk](../../c-runtime-library/reference/heapchk.md) функция доступна в обоих отладки и выпуска сборок (только для Windows NT) для проверки целостности кучи библиотеки времени выполнения. Можно использовать `_heapchk` так же, как `AfxCheckMemory` функцию для изолирования затирания, например:  
-  
-```  
-if(_heapchk()!=_HEAPOK)  
-   DebugBreak();  
-```  
-  
- При сбое этой функции необходимо изолировать тогда куча была повреждена.  
-  
-## <a name="see-also"></a>См. также  
- [Устранение проблем сборки выпуска](../../build/reference/fixing-release-build-problems.md)
+
+Если вы получаете нарушение прав доступа при вызове функции обработки кучи, существует возможность, что приложение повредило ее. Признаком такой ситуации будет следующим:
+
+```
+Access Violation in _searchseg
+```
+
+[_Heapchk](../../c-runtime-library/reference/heapchk.md) функция доступна в обоих отладки и сборки выпуска (только для Windows NT) для проверки целостности кучи библиотеки времени выполнения. Можно использовать `_heapchk` так же, как `AfxCheckMemory` функцию для изолирования затирания, например:
+
+```
+if(_heapchk()!=_HEAPOK)
+   DebugBreak();
+```
+
+Если эта функция никогда не выполняется, необходимо изолировать в какой момент куча была повреждена.
+
+## <a name="see-also"></a>См. также
+
+[Устранение проблем сборки выпуска](../../build/reference/fixing-release-build-problems.md)

@@ -1,5 +1,5 @@
 ---
-title: Выходные LIB-файлы | Документы Microsoft
+title: Выходные LIB-файлы | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8caa26685d6132cbc1ffd8a2467f8615bffd42f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23665897266bab87c71b8b3889688113fe8aa99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370492"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720711"
 ---
 # <a name="lib-output-files"></a>Выходные LIB-файлы
-Выходные файлы, создаваемые LIB зависят от режима, в котором он используется, как показано в следующей таблице.  
-  
-|Режим|Вывод|  
-|----------|------------|  
-|По умолчанию (Создание или изменение библиотеки)|COFF библиотеки (LIB)|  
-|Извлечение члена с/Extract|Объектный OBJ-файл|  
-|Построение Экспорт файла и библиотеки импорта с/DEF|Импорт библиотеки (LIB) и файл экспорта (EXP)|  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о LIB](../../build/reference/overview-of-lib.md)
+
+Выходные файлы, создаваемые LIB зависят от режима, в котором он используется, как показано в следующей таблице.
+
+|Режим|Вывод|
+|----------|------------|
+|По умолчанию (Создание или изменение библиотеки)|COFF библиотека (.lib)|
+|Извлечение члена с/Extract|Файл объектов (OBJ)|
+|Построение экспорта файл и импортировать библиотеки с помощью/DEF|Импорт библиотеки (.lib) и файла экспорта (EXP)|
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о LIB](../../build/reference/overview-of-lib.md)

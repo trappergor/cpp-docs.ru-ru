@@ -1,5 +1,5 @@
 ---
-title: -J (по умолчанию является тип unsigned char) | Документы Microsoft
+title: -J (по умолчанию является тип unsigned char) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,45 +23,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a93172296b0e2e6d54dc428ffc62812ad979b160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 400985751d9ceebf7cc2c5f632cb33c5ba847bfe
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714289"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (тип знака по умолчанию не подписан)
-Изменяет значение по умолчанию `char` из тип `signed char` для `unsigned char`и `char` тип является нулем при расширяется для `int` типа.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/J  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Если `char` значение явно объявляется как `signed`, **/j.** параметр не влияет на его, а значение является расширением знака, когда он преобразуется в `int` типа.  
-  
- **/J.** определяет параметр `_CHAR_UNSIGNED`, который используется с `#ifndef` в файле LIMITS.h, чтобы определить диапазон по умолчанию `char` типа.  
-  
- ANSI C и C++ не требуют реализации `char` типа. Этот параметр полезен при работе с символьными данными, которые будут в дальнейшем переведены на язык, отличный от английского.  
-  
+
+Изменяет значение по умолчанию `char` тип из `signed char` для `unsigned char`и `char` типа выполняется с дополнением нулями для `int` типа.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+/J
+```
+
+## <a name="remarks"></a>Примечания
+
+Если `char` значение явно объявляется как `signed`, **/j** параметр не влияет на его, а значение — расширенному знаком нулями для `int` типа.
+
+**/J** определяет параметр `_CHAR_UNSIGNED`, который используется с `#ifndef` в файле LIMITS.h для определения диапазона по умолчанию `char` типа.
+
+ANSI C и C++ не требуют реализации `char` типа. Этот параметр полезен при работе с символьными данными, в конечном итоге будет преобразован в языке, отличном от английского.
+
 > [!NOTE]
->  При использовании данного параметра компилятора с ATL и MFC, может быть сформирована ошибка. Несмотря на то, что их можно отключить эту ошибку путем определения `_ATL_ALLOW_CHAR_UNSIGNED`, этот обходной путь не поддерживается и может работать не всегда.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
-  
-1.  В области **Обозреватель решений**откройте контекстное меню для проекта и выберите пункт **Свойства**.  
-  
-2.  В проекте **страницы свойств** в левой области в разделе диалогового **свойства конфигурации**, разверните **C/C++** , а затем выберите **командной строки**.  
-  
-3.  В **Дополнительные параметры** области, укажите **/j.** параметр компилятора.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
- [Работа со свойствами проектов](../../ide/working-with-project-properties.md)
+>  При использовании этого параметра компилятора с ATL и MFC, ошибка может быть создано. Несмотря на то, что их можно отключить, эту ошибку, определив `_ATL_ALLOW_CHAR_UNSIGNED`, это решение не поддерживается и может работать не всегда.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
+
+1. В области **Обозреватель решений**откройте контекстное меню для проекта и выберите пункт **Свойства**.
+
+1. В проекте **страницы свойств** диалоговое окно, в области слева в разделе **свойства конфигурации**, разверните **C/C++** , а затем выберите **командной строки**.
+
+1. В **Дополнительные параметры** области укажите **/j** параметр компилятора.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
+[Работа со свойствами проектов](../../ide/working-with-project-properties.md)

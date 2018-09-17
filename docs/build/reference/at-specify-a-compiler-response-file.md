@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430e6372c1ca26e946c2ff26bfcfe9180dfb0dba
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9c86d49aea2ce7a8d8b438c64cd883b71e5a4646
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894464"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720854"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (указать файл ответа компилятора)
 
@@ -35,7 +35,7 @@ ms.locfileid: "43894464"
 
 ## <a name="arguments"></a>Аргументы
 
-*response_file*  
+*response_file*<br/>
 Текстовый файл, содержащий команды для компилятора.
 
 ## <a name="remarks"></a>Примечания
@@ -56,5 +56,5 @@ ms.locfileid: "43894464"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)  
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)  
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

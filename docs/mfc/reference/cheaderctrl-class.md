@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758860"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712742"
 ---
 # <a name="cheaderctrl-class"></a>Класс CHeaderCtrl
 Предоставляет функциональные возможности стандартного элемента управления "заголовок" Windows.  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *iItem*|Отсчитываемый от нуля индекс, стиль которого является HDF_SPLITBUTTON ю элемента заголовка. Дополнительные сведения см. в разделе `fmt` членом [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) структуры.|  
-|[out] *lpRect*|Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру для получения ограничивающего прямоугольника сведения.|  
+|*iItem*|[in] Отсчитываемый от нуля индекс, стиль которого является HDF_SPLITBUTTON ю элемента заголовка. Дополнительные сведения см. в разделе `fmt` членом [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) структуры.|  
+|*lpRect*|[out] Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру для получения ограничивающего прямоугольника сведения.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если функция выполнена успешно; в противном случае — значение FALSE.  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[out] *lpRect*|Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает данные ограничивающий прямоугольник.|  
+|*lpRect*|[out] Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает данные ограничивающий прямоугольник.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если функция выполнена успешно; в противном случае — значение FALSE.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in, out] *phdhti*|Указатель на [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) структура, которая указывает точка для проверки и получает результаты теста.|  
+|*phdhti*|[in, out] Указатель на [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) структура, которая указывает точка для проверки и получает результаты теста.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс элемента заголовка, если таковое имеется, в указанной позиции; в противном случае — значение -1.  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *iItem*|Отсчитываемый от нуля индекс элемента заголовка.|  
+|*iItem*|[in] Отсчитываемый от нуля индекс элемента заголовка.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  

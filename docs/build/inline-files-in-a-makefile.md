@@ -1,5 +1,5 @@
 ---
-title: Встроенные файлы в Makefile | Документы Microsoft
+title: Подставляемые файлы в Makefile | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1203a38380e9d5975460fe05de3ced32b939c237
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a845c071979c0736e2e968cf3e7c74568dc95b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368126"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704474"
 ---
 # <a name="inline-files-in-a-makefile"></a>Подставляемые файлы в Makefile
-Подставляемый файл содержит текст, который указывается в файле makefile. Его имя можно использовать команд в качестве входных данных (например, ссылка командный файл) или передачи команд в операционную систему. При выполнении команды, которая создает файл, файл создается на диске.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
- [Указание встроенного файла](../build/specifying-an-inline-file.md)  
-  
- [Создание текста для подставляемых файлов](../build/creating-inline-file-text.md)  
-  
- [Повторное использование подставляемого файла](../build/reusing-inline-files.md)  
-  
- [Использование нескольких встроенных файлов](../build/multiple-inline-files.md)  
-  
-## <a name="see-also"></a>См. также  
- [Команды в файле Makefile](../build/commands-in-a-makefile.md)
+
+Подставляемый файл содержит текст, заданный в файле makefile. Его имя можно использовать в командах как входные данные (например, ссылка командный файл), или он может передать команд в операционную систему. Файл создается на диске при выполнении команды, которая создает файл.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
+
+[Указание встроенного файла](../build/specifying-an-inline-file.md)
+
+[Создание встроенных текстовых стилей](../build/creating-inline-file-text.md)
+
+[Повторное использование подставляемого файла](../build/reusing-inline-files.md)
+
+[Несколько встроенных файлов](../build/multiple-inline-files.md)
+
+## <a name="see-also"></a>См. также
+
+[Команды в файле Makefile](../build/commands-in-a-makefile.md)

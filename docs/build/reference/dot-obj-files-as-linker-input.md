@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: decd015a184b66fa5867435177c07fdf23ad53ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691755"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704383"
 ---
 # <a name="obj-files-as-linker-input"></a>OBJ-файлы в качестве входных файлов компоновщика
 
@@ -42,9 +42,9 @@ ms.locfileid: "43691755"
 
 ## <a name="see-also"></a>См. также
 
-[Входные LINK-файлы](../../build/reference/link-input-files.md)  
-[Параметры компоновщика](../../build/reference/linker-options.md)  
-[Поддержка Юникода](../../text/support-for-unicode.md)  
-[Поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Стандарт Юникод](http://www.unicode.org/)  
-[Формат PE](/windows/desktop/Debug/pe-format)  
+[Входные LINK-файлы](../../build/reference/link-input-files.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)<br/>
+[Поддержка Юникода](../../text/support-for-unicode.md)<br/>
+[Поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md)<br/>
+[Стандарт Юникод](http://www.unicode.org/)<br/>
+[Формат PE](/windows/desktop/Debug/pe-format)

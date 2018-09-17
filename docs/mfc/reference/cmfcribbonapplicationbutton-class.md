@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849019"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701393"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Класс CMFCRibbonApplicationButton
 Реализует отдельную кнопку, расположенную в левом верхнем углу окна приложения. При нажатии кнопки открывается меню, которое обычно содержит общие команды **Файл** , **Открыть**, **Сохранить**и **Выход**.  
@@ -40,13 +40,13 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|Создает и инициализирует объект `CMFCRibbonApplicationButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCRibbonApplicationButton::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCRibbonApplicationButton::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiBmpResID*  
- Идентификатор ресурса изображения для отображения кнопки приложения.  
+*uiBmpResID*<br/>
+[in] Идентификатор ресурса изображения для отображения кнопки приложения.  
   
- [in] *hBmp*  
- Дескриптор к растровому изображению, для отображения кнопки приложения.  
+*hBmp*<br/>
+[in] Дескриптор к растровому изображению, для отображения кнопки приложения.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод, чтобы назначить новый образ в кнопка приложения на ленте после создания кнопки. Кнопка приложения находится в левом верхнем углу окна приложения.  

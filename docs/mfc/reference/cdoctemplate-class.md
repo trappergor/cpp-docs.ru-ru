@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336989"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709843"
 ---
 # <a name="cdoctemplate-class"></a>Класс CDocTemplate
 Абстрактный базовый класс, который определяет базовую функциональность шаблонов документов.  
@@ -76,13 +76,13 @@ class CDocTemplate : public CCmdTarget
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocTemplate::CDocTemplate](#cdoctemplate)|Создает объект `CDocTemplate`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocTemplate::AddDocument](#adddocument)|Добавляет документ в шаблон.|  
 |[CDocTemplate::CloseAllDocuments](#closealldocuments)|Закрывает все документы, связанные с этим шаблоном.|  
@@ -431,11 +431,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszPathName*  
- Указатель на путь к файлу, содержащему открываемого документа.  
+*lpszPathName*<br/>
+[in] Указатель на путь к файлу, содержащему открываемого документа.  
   
- [in] *bAddToMRU*  
- Значение TRUE указывает, что документ является одним из последних файлов; Значение FALSE указывает, что документ не является ни один из последних файлов.  
+*bAddToMRU*<br/>
+[in] Значение TRUE указывает, что документ является одним из последних файлов; Значение FALSE указывает, что документ не является ни один из последних файлов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на документ, именем которого файл *lpszPathName*; Имеет значение NULL, если операция завершилась неудачей.  

@@ -20,30 +20,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6d73237ac5b4b2ab549de5dba19116aa4e743514
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572403"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709427"
 ---
 # <a name="lib-reference"></a>Справочник по LIB
-Диспетчер библиотек Microsoft (LIB.exe) создает и управляет библиотеку общих объекта файла формат COFF объектных файлов. LIB может также использоваться для создания файлов экспорта и импорта библиотеки в экспортированные справочные определения.  
-  
+
+Диспетчер библиотек Microsoft (LIB.exe) создает и управляет библиотеку общих объекта файла формат COFF объектных файлов. LIB может также использоваться для создания файлов экспорта и импорта библиотеки в экспортированные справочные определения.
+
 > [!NOTE]
->  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.  
-  
--   [Общие сведения о LIB](../../build/reference/overview-of-lib.md)  
-  
--   [Практическое руководство. Установка параметров LIB.EXE в среде разработки Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
-  
--   [Запуск программы LIB](../../build/reference/running-lib.md)  
-  
--   [Управление библиотекой](../../build/reference/managing-a-library.md)  
-  
--   [Извлечение члена библиотеки](../../build/reference/extracting-a-library-member.md)  
-  
--   [Работа с библиотеками импорта и файлами экспорта](../../build/reference/working-with-import-libraries-and-export-files.md)  
-  
-## <a name="see-also"></a>См. также  
- [Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)
+>  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.
+
+- [Общие сведения о LIB](../../build/reference/overview-of-lib.md)
+
+- [Практическое руководство. Установка параметров LIB.EXE в среде разработки Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+
+- [Запуск программы LIB](../../build/reference/running-lib.md)
+
+- [Управление библиотекой](../../build/reference/managing-a-library.md)
+
+- [Извлечение члена библиотеки](../../build/reference/extracting-a-library-member.md)
+
+- [Работа с библиотеками импорта и файлами экспорта](../../build/reference/working-with-import-libraries-and-export-files.md)
+
+## <a name="see-also"></a>См. также
+
+[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)

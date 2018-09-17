@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05354361bd460f64daced16684e9f8b70de94898
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ae7e56fd33de888ad31a24ad1e3130acc96daa28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954116"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702834"
 ---
 # <a name="freelist-class"></a>Класс freelist
 
@@ -35,13 +35,12 @@ ms.locfileid: "38954116"
 
 ```cpp
 template <std::size_t Sz, class Max>
-class freelist
- : public Max
+class freelist : public Max
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*sz*|Число элементов в массиве, которые нужно выделить.|
 |*Max*|Класс max, представляющий максимальное количество элементов, которые необходимо сохранить в свободном списке. Классом max может быть [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
@@ -52,13 +51,13 @@ class freelist
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[freelist](#freelist)|Создает объект типа `freelist`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[pop](#pop)|Удаляет первый блок памяти из свободного списка.|
 |[push](#push)|Добавляет блок памяти в список.|
@@ -105,7 +104,7 @@ bool push(void* ptr);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель на блок памяти, которые необходимо добавить в свободный список.|
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 627e6bfdb33561e3d4be55aebf07e831b6cdc035
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539887"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705137"
 ---
 # <a name="writemsr"></a>__writemsr
 **Блок, относящийся только к системам Microsoft**  
@@ -40,11 +40,11 @@ void __writemsr(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `Register`  
- Модельнозависимого регистра.  
+*Регистрация*<br/>
+[in] Модельнозависимого регистра.  
   
- [in] `Value`  
- Значение для записи.  
+*Значение*<br/>
+[in] Записываемое значение.  
   
 ## <a name="requirements"></a>Требования  
   

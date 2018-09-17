@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6e4b62bdf31a88c0b8ea11198949de474b2a4eb2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544518"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701549"
 ---
 # <a name="cpanedivider-class"></a>Класс CPaneDivider
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
@@ -116,13 +116,13 @@ class CPaneDivider : public CBasePane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPaneDivider::CPaneDivider](#cpanedivider)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPaneDivider::AddPaneContainer](#addpanecontainer)||  
 |[CPaneDivider::AddPane](#addpane)||  
@@ -161,14 +161,14 @@ class CPaneDivider : public CBasePane
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPaneDivider::GetPanes](#getpanes)|Возвращает список панелей, которые находятся в [класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|  
 |[CPaneDivider::GetPaneDividers](#getpanedividers)|Возвращает список панели разделители, которые находятся в [класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Задает ширину по умолчанию в точках все разделители панели в приложении.|  
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Содержит указатель на сведения о классе среды выполнения о `CPaneDivider`-объект, производный от.|  
@@ -247,10 +247,10 @@ virtual BOOL AddPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *barContainerManager*  
- [in] *bOuterEdge*  
- [in] *pTargetBar*  
- [in] *dwAlignment*  
+*barContainerManager*<br/>
+[in] [in] *bOuterEdge*  
+*pTargetBar*<br/>
+[in] [in] *dwAlignment*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -283,10 +283,10 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWndToDock*  
- [in] *ptMouse*  
- [in] *rectResult*  
- [in] *bDrawTab*  
+*pWndToDock*<br/>
+[in] [in] *ptMouse*  
+*rectResult*<br/>
+[in] [in] *bDrawTab*  
  [in] *ppTargetBar*  
   
 ### <a name="remarks"></a>Примечания  
@@ -301,8 +301,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -332,8 +332,8 @@ CPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bDefaultSlider*  
- [in] *pParent*  
+*bDefaultSlider*<br/>
+[in] [in] *pParent*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -353,12 +353,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *dwStyleEx*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *nID*  
- [in] *pContext*  
+*dwStyleEx*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*nID*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -396,8 +396,8 @@ CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pBar*  
- [in] *bLeftBar*  
+*pBar*<br/>
+[in] [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -447,8 +447,8 @@ void GetPaneDividers(CObList& lstSliders);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *lstSliders*  
- Содержит список панели разделители, которые находятся в области контейнера.  
+*lstSliders*<br/>
+[out] Содержит список панели разделители, которые находятся в области контейнера.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод должен вызываться для разделителей только по умолчанию области. Разделитель области по умолчанию является разделитель, который изменяет размер контейнера всей области.  
@@ -472,8 +472,8 @@ void GetPanes(CObList& lstBars);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *lstBars*  
- Содержит список панелей, которые находятся в области контейнера.  
+*lstBars*<br/>
+[out] Содержит список панелей, которые находятся в области контейнера.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод должен вызываться для разделителей только по умолчанию области. Разделитель области по умолчанию является разделитель, который изменяет размер контейнера всей области.  
@@ -510,8 +510,8 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bDefaultSlider*  
- [in] *pParent*  
+*bDefaultSlider*<br/>
+[in] [in] *pParent*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -527,10 +527,10 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pBarToInsert*  
- [in] *pTargetBar*  
- [in] *dwAlignment*  
- [in] *lpRect*  
+*pBarToInsert*<br/>
+[in] [in] *pTargetBar*  
+*dwAlignment*<br/>
+[in] [in] *lpRect*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -586,8 +586,8 @@ virtual void Move(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *ptOffset*  
- [in] *bAdjustLayout*  
+*ptOffset*<br/>
+[in] [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -632,8 +632,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pBar*  
- [in] *bShow*  
+*pBar*<br/>
+[in] [in] *bShow*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -668,8 +668,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pBarToReplace*  
- [in] *pBarToReplaceWith*  
+*pBarToReplace*<br/>
+[in] [in] *pBarToReplaceWith*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -685,8 +685,8 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *rectNew*  
- [in] *hdwp*  
+*rectNew*<br/>
+[in] [in] *hdwp*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -736,8 +736,8 @@ void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pDockingBar*  
- [in] *pTabbedBar*  
+*pDockingBar*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Примечания  
   

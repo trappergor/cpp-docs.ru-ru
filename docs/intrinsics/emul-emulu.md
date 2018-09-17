@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8f3bf997006d98cfbd05a47140baf53ef7032876
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545876"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719424"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Блок, относящийся только к системам Microsoft**  
@@ -46,11 +46,11 @@ unsigned __int64 __emulu(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `a`  
- Первый операнд целочисленный результат умножения.  
+*a*<br/>
+[in] Первый операнд целочисленный результат умножения.  
   
- [in] `b`  
- Второй операнд целочисленный результат умножения.  
+*b*<br/>
+[in] Второй операнд целочисленный результат умножения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Результат умножения.  

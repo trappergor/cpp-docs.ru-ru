@@ -22,27 +22,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c6a5af31eaba30af92201a2e2563b67aceed6e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 38b97354408d87d862955c0883c72d3e1459aa61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104112"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719281"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (управлять вызовами проверки стека)
+
 Управляет стековыми зондами.
 
 ## <a name="syntax"></a>Синтаксис
 
-```  
+```
 /Gs[size]
-```  
+```
 
 ## <a name="arguments"></a>Аргументы
+
 *size*<br/>
 (Необязательно) Число байтов, которое могут занимать локальные переменные перед инициацией стекового зонда. Если **/GS** указан без `size` аргумент, это аналогично указанию **/Gs0**,
 
 ## <a name="remarks"></a>Примечания
+
 Стековый зонд — это последовательность кода, которую компилятор вставляет в каждый вызов функции. При активации стекового зонда он занимает количество памяти, требуемое для хранения локальных переменных функции.
 
 Если для локальных переменных функции в стеке требуется больше места, чем `size` байтов, ее стековый зонд активируется. По умолчанию компилятор создает код, который активирует стековый зонд, если функции требуется более одной страницы стека. Это аналогично параметру компилятора **/Gs4096** x86, x64 и платформы ARM. Это значение позволяет приложению и диспетчеру памяти Windows динамически увеличивать количество памяти, выделенной стеку программы, во время выполнения.
@@ -58,18 +61,19 @@ ms.locfileid: "44104112"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
-2.  Выберите **C/C++** папки.
+1. Выберите **C/C++** папки.
 
-3.  Выберите **командной строки** страницу свойств.
+1. Выберите **командной строки** страницу свойств.
 
-4.  Введите параметр компилятора в поле **Дополнительные параметры** .
+1. Введите параметр компилятора в поле **Дополнительные параметры** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>См. также
-[Параметры компилятора](../../build/reference/compiler-options.md)   
+
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

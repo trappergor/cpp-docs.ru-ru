@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be1d106257787d5a5dd919372726c8d31a1edc1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 604ccf9ba0695cf9d17790f149be1f0738266076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339284"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701770"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Класс CDataRecoveryHandler
 `CDataRecoveryHandler` Преждевременном прекращении работы, документы и восстанавливает их, если приложение неожиданно завершает работу.  
@@ -187,9 +187,9 @@ virtual BOOL AutosaveDocumentInfo(
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pDocument*|Указатель на `CDocument` для сохранения.|  
-|[in] *bResetModifiedFlag*|Значение TRUE указывает, что `CDataRecoveryHandler` рассматривает *pDocument* изменяемые; Значение FALSE указывает, что инфраструктура считает *pDocument* быть без изменений. Дополнительные сведения о влиянии этого флага в разделе "Примечания".|  
+|Параметр|Описание|  
+|*pDocument*|[in] Указатель на `CDocument` для сохранения.|  
+|*bResetModifiedFlag*|[in] Значение TRUE указывает, что `CDataRecoveryHandler` рассматривает *pDocument* изменяемые; Значение FALSE указывает, что инфраструктура считает *pDocument* быть без изменений. Дополнительные сведения о влиянии этого флага в разделе "Примечания".|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если заданы соответствующие флаги и *pDocument* является допустимым `CDocument` объекта.  
@@ -217,9 +217,9 @@ CDataRecoveryHandler(
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *dwRestartManagerSupportFlags*|Указывает, какие параметры диспетчера перезапуска, поддерживаются.|  
-|[in] *nAutosaveInterval*|Время между преждевременном прекращении работы. Этот параметр указывается в миллисекундах.|  
+|Параметр|Описание|  
+|*dwRestartManagerSupportFlags*|[in] Указывает, какие параметры диспетчера перезапуска, поддерживаются.|  
+|*nAutosaveInterval*|[in] Время между преждевременном прекращении работы. Этот параметр указывается в миллисекундах.|  
   
 ### <a name="remarks"></a>Примечания  
  Платформа MFC автоматически создает `CDataRecoveryHandler` для приложения при использовании **новый проект** мастера. Если вы настраиваете поведение при восстановлении данных или диспетчер перезапуска, не следует создавать `CDataRecoveryHandler` объекта.  
@@ -236,8 +236,8 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pDocument*|Указатель на `CDocument`. Этот метод создает сведения о документе для данного `CDocument`.|  
+|Параметр|Описание|  
+|*pDocument*|[in] Указатель на `CDocument`. Этот метод создает сведения о документе для данного `CDocument`.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Реализация по умолчанию возвращает значение TRUE.  
@@ -268,8 +268,8 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *strAutosavedFile*|Строка, содержащая имя файла автоматическое сохранение.|  
+|Параметр|Описание|  
+|*strAutosavedFile*|[in] Строка, содержащая имя файла автоматическое сохранение.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Реализация по умолчанию всегда возвращает значение TRUE.  
@@ -285,8 +285,8 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *strDocumentName*  
- Строка, содержащая имя документа. `GenerateAutosaveFileName` использует это имя документа, для создания соответствующее имя файла автосохранения.  
+*strDocumentName*<br/>
+[in] Строка, содержащая имя документа. `GenerateAutosaveFileName` использует это имя документа, для создания соответствующее имя файла автосохранения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имя файла автосохранения, созданный из *strDocumentName*.  
@@ -325,8 +325,8 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pDocument*|Указатель на `CDocument`. `GetDocumentListName` Возвращает имя документа из этого `CDocument`.|  
+|Параметр|Описание|  
+|*pDocument*|[in] Указатель на `CDocument`. `GetDocumentListName` Возвращает имя документа из этого `CDocument`.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имя документа из *pDocument*.  
@@ -345,8 +345,8 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pDocument*|Указатель на `CDocument`.|  
+|Параметр|Описание|  
+|*pDocument*|[in] Указатель на `CDocument`.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Обычный заголовок в указанном документе.  
@@ -362,8 +362,8 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *strDocumentTitle*  
- Обычный заголовок для документа.  
+*strDocumentTitle*<br/>
+[in] Обычный заголовок для документа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Заголовок восстановленного документа.  
@@ -461,8 +461,8 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pDocument*|Указатель на документ, который необходимо удалить.|  
+|Параметр|Описание|  
+|*pDocument*|[in] Указатель на документ, который необходимо удалить.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если *pDocument* был удален из списка; Значение FALSE, если произошла ошибка.  
@@ -529,8 +529,8 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nAutosaveInterval*  
- Новый автосохранения интервал в миллисекундах.  
+*nAutosaveInterval*<br/>
+[in] Новый автосохранения интервал в миллисекундах.  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
  Задает каталог, где хранятся файлы автоматическое сохранение.  
@@ -543,8 +543,8 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *strAutosavePath*|Путь, где хранятся файлы автосохранения.|  
+|Параметр|Описание|  
+|*strAutosavePath*|[in] Путь, где хранятся файлы автосохранения.|  
   
 ### <a name="remarks"></a>Примечания  
  Изменение каталога автосохранения не перемещаются в настоящее время автоматическое сохранение файлов.  
@@ -560,8 +560,8 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *strRestartIdentifier*|Уникальный идентификатор диспетчера перезапуска.|  
+|Параметр|Описание|  
+|*strRestartIdentifier*|[in] Уникальный идентификатор диспетчера перезапуска.|  
   
 ### <a name="remarks"></a>Примечания  
  Диспетчер перезапуска записывает сведения об открытых документов в реестре. Эти сведения сохраняются вместе с перезапуска уникальный идентификатор в виде ключа. Так как перезапуск идентификатор является уникальным для каждого экземпляра приложения, может неожиданно завершить работу нескольких экземпляров приложения и диспетчером перезапуска можно восстановить каждый из них.  
@@ -577,8 +577,8 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *bSaveOnIdle*|Значение TRUE, чтобы сохранить сведения о документе в течение текущего цикла простоя; Значение FALSE, если не выполнить сохранение.|  
+|Параметр|Описание|  
+|*bSaveOnIdle*|[in] Значение TRUE, чтобы сохранить сведения о документе в течение текущего цикла простоя; Значение FALSE, если не выполнить сохранение.|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  Задает ли предыдущих выхода приложения было вызвано диспетчером перезапуска.  
@@ -591,8 +591,8 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *bShutdownByRestartManager*|Значение TRUE указывает, что диспетчер перезапуска привело завершать работу; Значение FALSE указывает, что приложение завершило работу по другой причине.|  
+|Параметр|Описание|  
+|*bShutdownByRestartManager*|[in] Значение TRUE указывает, что диспетчер перезапуска привело завершать работу; Значение FALSE указывает, что приложение завершило работу по другой причине.|  
   
 ### <a name="remarks"></a>Примечания  
  Платформа ведет себя по-разному на основе предыдущих exit непредвиденное или она была начата с диспетчером перезапуска.  
@@ -608,8 +608,8 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pDocument*|Указатель на сохраненный документ.|  
+|Параметр|Описание|  
+|*pDocument*|[in] Указатель на сохраненный документ.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если этот метод, удалить его автоматическое сохранение и обновить сведения о документе; Значение FALSE, если произошла ошибка.  

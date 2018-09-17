@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3f563d94d2e7685c1a83e497b1db082f131842
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a7075a20fa552a169505b445f592448f77bcdc9d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541498"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711117"
 ---
 # <a name="inwordstring"></a>__inwordstring
 **Блок, относящийся только к системам Microsoft**  
@@ -41,14 +41,14 @@ void __inwordstring(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `Port`  
- Порт для чтения из.  
+*Порт*<br/>
+[in] Порт для чтения из.  
   
- [выходной] `Buffer`  
- Данные, считанные из порта записывается здесь.  
+*буфер*<br/>
+[out] Данные, считанные из порта записывается здесь.  
   
- [in] `Count`  
- Число слов в данных для чтения.  
+*Количество*<br/>
+[in] Число слов в данных для чтения.  
   
 ## <a name="requirements"></a>Требования  
   

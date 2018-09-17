@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107436"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711065"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Функции пространства имен Concurrency::precise_math
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 Значение с плавающей запятой
 
-`_Iptr` (параметр out)  
-Целочисленная часть `_X`, как значение с плавающей запятой.
+`_Iptr`  
+[out] Целочисленная часть `_X`, как значение с плавающей запятой.
 
 ### <a name="return-value"></a>Возвращаемое значение
 Со знаком дробной части числа `_X`.
@@ -1891,8 +1891,8 @@ inline double remquo(
 `_Y`  
 Второй аргумент с плавающей запятой.
 
-`_Quo` (параметр out)  
-Адрес целые числа, которое используется для возврата частное биты `_X` деления битов на `_Y`.
+`_Quo`  
+[out] Адрес целые числа, которое используется для возврата частное биты `_X` деления битов на `_Y`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 Возвращает остаток от `_X` деления на `_Y`.
@@ -1914,8 +1914,8 @@ inline float remquof(
 `_Y`  
 Второй аргумент с плавающей запятой.
 
-`_Quo` (параметр out)  
-Адрес целые числа, которое используется для возврата частное биты `_X` деления битов на `_Y`.
+`_Quo`  
+[out] Адрес целые числа, которое используется для возврата частное биты `_X` деления битов на `_Y`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 Возвращает остаток от `_X` деления на `_Y`.

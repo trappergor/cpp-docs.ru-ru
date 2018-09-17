@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4aa0f8e94e0797badbae2a409ae1ce02caea6e81
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954868"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707542"
 ---
 # <a name="weakptr-class"></a>Класс weak_ptr
 
@@ -77,8 +77,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*  
- Тип, управляемый слабым указателем.
+*Ty*<br/>
+Тип, управляемый слабым указателем.
 
 ## <a name="remarks"></a>Примечания
 
@@ -94,7 +94,7 @@ public:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[weak_ptr](#weak_ptr)|Создает документ `weak_ptr`.|
 
@@ -112,7 +112,7 @@ public:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор=](#op_eq)|Заменяет ресурс, которым владеет.|
 
@@ -290,14 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Параметры
 
-*Другое*  
- Тип, которым управляет общий или слабый указатель на аргумент.
+*Другое*<br/>
+Тип, которым управляет общий или слабый указатель на аргумент.
 
-*WP*  
- Слабый указатель для копирования.
+*WP*<br/>
+Слабый указатель для копирования.
 
-*SP*  
- Общий указатель для копирования.
+*SP*<br/>
+Общий указатель для копирования.
 
 ### <a name="remarks"></a>Примечания
 
@@ -349,8 +349,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Параметры
 
-*ptr*  
- Ссылка `lvalue` на значение `shared_ptr` или `weak_ptr`.
+*ptr*<br/>
+Ссылка `lvalue` на значение `shared_ptr` или `weak_ptr`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -409,8 +409,8 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Параметры
 
-*WP*  
- Слабый указатель, который будет заменен.
+*WP*<br/>
+Слабый указатель, который будет заменен.
 
 ### <a name="remarks"></a>Примечания
 
@@ -529,14 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Параметры
 
-*Другое*  
- Тип, которым управляет общий или слабый указатель на аргумент.
+*Другое*<br/>
+Тип, которым управляет общий или слабый указатель на аргумент.
 
-*WP*  
- Слабый указатель для копирования.
+*WP*<br/>
+Слабый указатель для копирования.
 
-*SP*  
- Общий указатель для копирования.
+*SP*<br/>
+Общий указатель для копирования.
 
 ### <a name="remarks"></a>Примечания
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104294"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714532"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -30,7 +30,7 @@ ms.locfileid: "44104294"
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>Примечания
 
@@ -76,7 +76,7 @@ EXPORTS
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 Существует четыре способа экспорта определения; здесь они перечислены в порядке предпочтительности:
 
@@ -95,7 +95,7 @@ EXPORTS
 
 Директиву #pragma полезно в том случае, если вам нужно экспортировать имени объявление функции, а у различных операций экспорта в зависимости от конфигурации сборки (например, в 32-разрядная или 64-разрядных сборок).
 
-Все эти методы можно использовать в одной программе. Когда программа LINK создает программу, содержащую экспорты, она также создает библиотеку импорта (если только при построении не используется файл EXP). 
+Все эти методы можно использовать в одной программе. Когда программа LINK создает программу, содержащую экспорты, она также создает библиотеку импорта (если только при построении не используется файл EXP).
 
 Ниже приведен пример раздела EXPORTS.
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 Если экспортируется переменная из библиотеки DLL с помощью файла DEF, вам не надо указывать `__declspec(dllexport)` для переменной. Однако в любом файле, использующем библиотеку DLL, вы должны использовать `__declspec(dllimport)` для объявления данных.
 

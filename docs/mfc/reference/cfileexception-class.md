@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336524"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713600"
 ---
 # <a name="cfileexception-class"></a>Класс CFileException
 Представляет состояние, связанное с файлом исключения.  
@@ -54,13 +54,13 @@ class CFileException : public CException
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFileException::CFileException](#cfileexception)|Создает объект `CFileException`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFileException::ErrnoToException](#errnotoexception)|Возвращает вызвать код, соответствующий номеру ошибки времени выполнения.|  
 |[CFileException::GetErrorMessage](#geterrormessage)|Получает сообщение, описывающее исключение.|  
@@ -70,7 +70,7 @@ class CFileException : public CException
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFileException::m_cause](#m_cause)|Содержит переносимого кода, соответствующий причине исключения.|  
 |[CFileException::m_lOsError](#m_loserror)|Содержит число ошибок, связанных с операционной системы.|  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] *lpszError*  
- Указатель на буфер, получающий сообщение об ошибке.  
+*lpszError*<br/>
+[in, out] Указатель на буфер, получающий сообщение об ошибке.  
   
- [in] *nMaxError*  
- Максимальное количество символов, которое может содержать указанного буфера. Это включает завершающий нуль-символ.  
+*nMaxError*<br/>
+[in] Максимальное количество символов, которое может содержать указанного буфера. Это включает завершающий нуль-символ.  
   
- [in, out] *pnHelpContext*  
- Указатель на целое число без знака, получающий идентификатор контекста справки. Если `NULL`, возвращается идентификатор отсутствует.  
+*pnHelpContext*<br/>
+[in, out] Указатель на целое число без знака, получающий идентификатор контекста справки. Если `NULL`, возвращается идентификатор отсутствует.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод был выполнен успешно; в противном случае — значение FALSE.  

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eef400f13e36ac543fbcd73ccb7aedf4bc053037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222098"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718098"
 ---
 # <a name="cmfcfontinfo-class"></a>Класс CMFCFontInfo
 `CMFCFontInfo` Класс описывает имя и другие атрибуты шрифта.  
@@ -54,13 +54,13 @@ class CMFCFontInfo : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCFontInfo::GetFullName](#getfullname)|Возвращает сцепленные имена шрифт и его набора (скрипт).|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|Значение, указывающее набор символов (скрипт), связанные со шрифтом.|  
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Значение, указывающее шаг и семейство шрифта.|  
@@ -94,23 +94,23 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszName*  
- Имя шрифта. Дополнительные сведения см. в разделе `lfFaceName` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
+*lpszName*<br/>
+[in] Имя шрифта. Дополнительные сведения см. в разделе `lfFaceName` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
   
- [in] *lpszScript*  
- Имя шрифта сценарий (набор символов).  
+*lpszScript*<br/>
+[in] Имя шрифта сценарий (набор символов).  
   
- [in] *nCharSet*  
- Значение, указывающее набор символов (скрипт) шрифта. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
+*nCharSet*<br/>
+[in] Значение, указывающее набор символов (скрипт) шрифта. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
   
- [in] *nPitchAndFamily*  
- Значение, указывающее шаг и семейство шрифта. Дополнительные сведения см. в разделе `lfPitchAndFamily` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
+*nPitchAndFamily*<br/>
+[in] Значение, указывающее шаг и семейство шрифта. Дополнительные сведения см. в разделе `lfPitchAndFamily` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
   
- [in] *nType*  
- Значение, указывающее тип шрифта. Этот параметр может иметь битовую комбинацию (OR) значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE.  
+*nType*<br/>
+[in] Значение, указывающее тип шрифта. Этот параметр может иметь битовую комбинацию (OR) значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE.  
   
- [in] *src*  
- Существующий `CMFCFontInfo` объект, члены которого используются для построения данного `CMFCFontInfo` объекта.  
+*src*<br/>
+[in] Существующий `CMFCFontInfo` объект, члены которого используются для построения данного `CMFCFontInfo` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   

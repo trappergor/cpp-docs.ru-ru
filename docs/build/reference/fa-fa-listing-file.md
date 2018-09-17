@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101733"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717968"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (файл листинга)
 
@@ -49,38 +49,38 @@ ms.locfileid: "44101733"
 
 ### <a name="fa-arguments"></a>/FA аргументов
 
-Нет  
+Нет<br/>
 Только язык ассемблера, включены в листинг.
 
-**c**  
+**c**<br/>
 Необязательный. Содержит машинный код в листинг.
 
-**s**  
+**s**<br/>
 Необязательный. Включает исходный код в листинг.
 
-**u**  
+**u**<br/>
 Необязательный. Кодирует файл листинга в формате UTF-8 и включает в себя метку порядка байтов. По умолчанию файл кодируется как ANSI. Используйте `u` создать файл листинга, отображаются правильно в любой системе, или если вы используете Юникода файлов исходного кода в качестве входных данных компилятора.
 
 Если оба **s** и **u** указаны, а если файл исходного кода использует кодировку Юникод, отличные от UTF-8, а затем строк кода в ASM-файл может отображаться неправильно.
 
 ### <a name="fa-argument"></a>Аргумент /FA
 
-Нет  
+Нет<br/>
 Один *источника*ASM-файл создается для каждого файла исходного кода при компиляции.
 
-*filename*  
+*filename*<br/>
 Файл с именем *filename*.asm помещается в текущем каталоге. Это допустимо только при компиляции одного файла исходного кода.
 
-*файл имяфайла.расширение*  
+*файл имяфайла.расширение*<br/>
 Файл с именем *файл имяфайла.расширение* помещается в текущем каталоге. Это допустимо только при компиляции одного файла исходного кода.
 
-*Каталог*__\\__  
+*Каталог*__\\__<br/>
 Один *исходный_файл*ASM-файл, который помещается в указанном *directory* для каждого файла исходного кода при компиляции. Обратите внимание, требуется обратную косую черту. Допускаются только пути на текущем диске.
 
-*каталог*__\\__*имя файла*  
+*каталог*__\\__*имя файла*<br/>
 Файл с именем *filename*.asm помещается в указанном *directory*. Это допустимо только при компиляции одного файла исходного кода.
 
-*каталог*__\\__*файл имяфайла.расширение*  
+*каталог*__\\__*файл имяфайла.расширение*<br/>
 Файл с именем *файл имяфайла.расширение* помещается в указанном *directory*. Это допустимо только при компиляции одного файла исходного кода.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
@@ -98,6 +98,7 @@ ms.locfileid: "44101733"
 - См. описания свойств <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. Чтобы указать **параметр/FAu**, см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="example"></a>Пример
+
 Следующая команда создает объединенный исходный, и машинный код с именем HELLO.cod:
 
 ```cmd
@@ -106,7 +107,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>См. также
 
-[Выходного файла (/ F) параметры](../../build/reference/output-file-f-options.md)   
-[Параметры компилятора](../../build/reference/compiler-options.md)   
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
+[Выходного файла (/ F) параметры](../../build/reference/output-file-f-options.md)
+[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
 [Указание пути](../../build/reference/specifying-the-pathname.md)

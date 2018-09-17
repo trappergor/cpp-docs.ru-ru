@@ -1,5 +1,5 @@
 ---
-title: разделы (OpenMP) | Документы Microsoft
+title: разделы (OpenMP) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3b369cfbd68edd32b644c9a4ec0520329507b6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692081"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708036"
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
-Определяет разделы кода, чтобы разделить между всеми потоками.  
+Идентифицирует разделов кода необходимо распределить между всеми потоками.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,16 +39,15 @@ ms.locfileid: "33692081"
 }  
 ```  
   
+## <a name="arguments"></a>Аргументы
+
+*Предложение*<br/>
+(Необязательно) Ноль или несколько предложений. См. в разделе "Примечания" для получения списка предложений, поддерживаемые **разделах**.
+
 ## <a name="remarks"></a>Примечания  
- где  
+ **Разделах** директива может содержать ноль или более **разделе** директивы.  
   
- `clause` (необязательно)  
- Ноль или несколько предложений. . В разделе «Примечания» в список предложений, поддерживаемых **разделы**.  
-  
-## <a name="remarks"></a>Примечания  
- **Разделы** директива может содержать ноль или более **раздел** директивы.  
-  
- **Разделы** директива поддерживает следующие предложения OpenMP:  
+ **Разделах** директива поддерживает следующие предложения OpenMP:  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -60,7 +59,7 @@ ms.locfileid: "33692081"
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- Если **параллельных** также указан `clause` любые предложения, принимаются по **параллельных** или **разделы** директивы, за исключением `nowait`.  
+ Если **параллельных** также указан `clause` предложения принимаются по **параллельных** или **разделах** директивы, за исключением `nowait`.  
   
  Дополнительные сведения см. в разделе [2.4.2 конструкция sections](../../../parallel/openmp/2-4-2-sections-construct.md).  
   

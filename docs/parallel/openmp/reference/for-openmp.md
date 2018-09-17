@@ -1,5 +1,5 @@
 ---
-title: для (OpenMP) | Документы Microsoft
+title: для (OpenMP) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694866"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721660"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-В результаты работы вызывает для цикла внутри параллельной области, чтобы разделить между потоками.  
+Приводит к работе, выполненной в цикл внутри параллельной области для будет разделен между потоками.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,14 +33,13 @@ ms.locfileid: "33694866"
    for_statement  
 ```  
   
-## <a name="remarks"></a>Примечания  
- где  
+## <a name="arguments"></a>Аргументы
+
+*Предложение*<br/>
+(Необязательно) Ноль или несколько предложений. См. в разделе "Примечания" для получения списка предложений, поддерживаемые **для**.  
   
- `clause` (необязательно)  
- Ноль или несколько предложений. . В разделе «Примечания» в список предложений, поддерживаемых **для**.  
-  
- `for_statement`  
- Объект для цикла. Если в код пользователя приведет к неопределенному поведению цикла изменений переменная индекса.  
+*for_statement*<br/>
+Объект для цикла. Приведет к неопределенному поведению, если код пользователя в цикл изменений переменная индекса.  
   
 ## <a name="remarks"></a>Примечания  
  **Для** директива поддерживает следующие предложения OpenMP:  
@@ -51,7 +50,7 @@ ms.locfileid: "33694866"
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [упорядоченные](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [Упорядоченные](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
@@ -59,7 +58,7 @@ ms.locfileid: "33694866"
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Если **параллельных** также указан `clause` любые предложения, принимаются по **параллельных** или **для** директивы, за исключением **nowait**.  
+ Если **параллельных** также указан `clause` предложения принимаются по **параллельных** или **для** директивы, за исключением **nowait**.  
   
  Дополнительные сведения см. в разделе [2.4.1 конструкция for](../../../parallel/openmp/2-4-1-for-construct.md).  
   

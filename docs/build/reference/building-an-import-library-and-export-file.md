@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894620"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723311"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Построение библиотеки импорта и файла экспорта
 
@@ -60,7 +60,7 @@ ms.locfileid: "43894620"
 
 Следующие параметры применяются к сборке библиотеки импорта и экспорта файла:
 
-> **/ OUT:** *импорта*  
+> **/ OUT:** *импорта*
 
 Переопределяет имя выходного файла по умолчанию для *импорта* создаваемой библиотеки. Если/out не указан, имя по умолчанию — базовое имя первого файла объекта или библиотеки в команде LIB и расширение. lib. Получает такое же базовое имя библиотеки импорта и расширение файла экспорта. exp.
 

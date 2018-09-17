@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540086"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719983"
 ---
 # <a name="cmfcautohidebar-class"></a>Класс CMFCAutoHideBar
 Класс `CMFCAutoHideBar` — это специальный класс панели инструментов, реализующий функцию автоматического скрытия.  
@@ -69,13 +69,13 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::CMFCAutoHideBar](#cmfcautohidebar)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
 |[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Переопределяет `CPane::AllowShowOnPaneMenu`.)|  
@@ -94,7 +94,7 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Промежуток времени между моментом, когда пользователь наводит указатель мыши на [класс CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) и некоторое время, соответствующее окно отображением платформой.|  
   
@@ -136,11 +136,11 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pAutoHideWnd*  
- Окно, которое нужно скрыть.  
+*pAutoHideWnd*<br/>
+[in] Окно, чтобы скрыть.  
   
- [in] *dwAlignment*  
- Значение, указывающее выравнивание кнопки автоматического скрытия с окном приложения.  
+*dwAlignment*<br/>
+[in] Значение, указывающее выравнивание кнопки автоматического скрытия с окном приложения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -207,12 +207,12 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszClassName*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *nID*  
- [in] *dwControlBarStyle*  
+*lpszClassName*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*nID*<br/>
+[in] [in] *dwControlBarStyle*  
  [in] *pContext*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -342,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nLength*  
- Значение не используется в базовой реализации. В производных реализациях это значение используется для указания длины панели, размер которой был изменен.  
+*nLength*<br/>
+[in] Значение не используется в базовой реализации. В производных реализациях это значение используется для указания длины панели, размер которой был изменен.  
   
- [in] *bVert*  
- Значение не используется в базовой реализации. В производных реализациях используйте значение true, чтобы дескриптор случай, где строку автоматического скрытия свернута по вертикали и FALSE в случае, когда строка автоматического скрытия свернута по горизонтали.  
+*bVert*<br/>
+[in] Значение не используется в базовой реализации. В производных реализациях используйте значение true, чтобы дескриптор случай, где строку автоматического скрытия свернута по вертикали и FALSE в случае, когда строка автоматического скрытия свернута по горизонтали.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер, полученный в результате изменения размера панели.  

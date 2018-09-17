@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77762fe12ed74f11f0b7e633f2a0c77523a7efaa
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: aae4caaa73970818a4c3deee9a82b94260629e17
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849793"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700918"
 ---
 # <a name="cmfcmenubutton-class"></a>Класс CMFCMenuButton
 Кнопку, которая отображает контекстное меню и сообщает, какие пункты выбирает в меню пользователь.  
@@ -52,20 +52,20 @@ class CMFCMenuButton : public CMFCButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Создает объект `CMFCMenuButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Вызывается платформой для преобразования сообщений окна перед их отправкой. (Переопределяет `CMFCButton::PreTranslateMessage`.)|  
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|Изменение размера кнопки в зависимости от размера текста и изображений.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Указывает, следует ли для отображения всплывающего меню системы по умолчанию или использовать [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|  
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Указывает, будет ли отображаться всплывающее меню под и справа от кнопки.|  
@@ -167,8 +167,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pMsg*  
- Указывает на [MSG](../../mfc/reference/msg-structure1.md) структуру, содержащую сообщение для обработки.  
+*pMsg*<br/>
+[in] Указывает на [MSG](../../mfc/reference/msg-structure1.md) структуру, содержащую сообщение для обработки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если сообщение было преобразовано и не удается отправить; 0, если сообщение не было преобразовано и должно быть перенаправлено.  
@@ -183,8 +183,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bCalcOnly*  
- Логический параметр, который указывает, является ли этот метод изменяет размер кнопки.  
+*bCalcOnly*<br/>
+[in] Логический параметр, который указывает, является ли этот метод изменяет размер кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) объект, который указывает новый размер для кнопки.  

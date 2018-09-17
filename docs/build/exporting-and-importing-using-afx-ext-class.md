@@ -1,5 +1,5 @@
 ---
-title: Экспортирование и импортирование с использованием AFX_EXT_CLASS | Документы Microsoft
+title: Экспорт и импорт с использованием AFX_EXT_CLASS | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,120 +21,121 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6cc853c66afae72d6e426d800c0443ab206ab20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46964b4babc7d7afd4b523ee37981296e9f7dc57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371064"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711950"
 ---
-# <a name="exporting-and-importing-using-afxextclass"></a>Экспортирование и импортирование с использованием AFX_EXT_CLASS  
-  
-[Библиотека DLL-расширения MFC](../build/extension-dlls-overview.md) используйте макрос **AFX_EXT_CLASS** Экспорт классов; исполняемые файлы, связанные с DLL расширений MFC использовать макрос для импорта классы. С **AFX_EXT_CLASS** макрос, файл заголовка, используемые для построения расширения MFC DLL может использоваться с исполняемыми файлами, связан с библиотекой DLL.  
-  
- Добавьте в файл заголовка для библиотеки DLL, **AFX_EXT_CLASS** ключевое слово в объявление класса следующим образом:  
-  
-```cpp  
-class AFX_EXT_CLASS CMyClass : public CDocument  
-{  
-// <body of class>  
-};  
-```  
-  
-Этот макрос определяется MFC как `__declspec(dllexport)` при символы препроцессора `_AFXDLL` и `_AFXEXT` определены. Однако макрос определен как `__declspec(dllimport)` при `_AFXDLL` определяется и `_AFXEXT` не определен. Если определен символ препроцессора `_AFXDLL` указывает, что общая версия MFC используется целевой исполняемый файл (DLL или приложения). Если оба `_AFXDLL` и `_AFXEXT` являются определен, это означает, что целевой исполняемый файл является Библиотекой расширения MFC.  
-  
-Поскольку `AFX_EXT_CLASS` определяется как `__declspec(dllexport)` экспорта данных из библиотеки DLL расширения MFC, можно экспортировать все классы без помещения в DEF-файл декорированные имена для всех символов этого класса.  
-  
-Несмотря на то, что можно избежать создания DEF-файла и всех декорированных имен для класса с помощью этого метода, является более эффективным DEF-файл, так как имена могут быть экспортированы по порядковому номеру. Чтобы использовать метод файл .def экспорта, поместите следующий код в начале и в конце файла заголовка:  
-  
-```cpp  
-#undef AFX_DATA  
-#define AFX_DATA AFX_EXT_DATA  
-// <body of your header file>  
-#undef AFX_DATA  
-#define AFX_DATA  
-```  
-  
+# <a name="exporting-and-importing-using-afxextclass"></a>Экспортирование и импортирование с использованием AFX_EXT_CLASS
+
+[Библиотеки DLL расширений MFC](../build/extension-dlls-overview.md) используйте макрос **AFX_EXT_CLASS** Экспорт классов; исполняемые файлы, связанные библиотеки DLL расширения MFC использовать макрос для импорта классов. С помощью **AFX_EXT_CLASS** макрос, тех же файлов заголовков, которые используются для построения библиотеки DLL, которые могут использоваться с исполняемыми файлами, связанных с библиотекой DLL расширения MFC.
+
+Добавьте в файл заголовка для библиотеки DLL, **AFX_EXT_CLASS** ключевое слово в объявление класса следующим образом:
+
+```cpp
+class AFX_EXT_CLASS CMyClass : public CDocument
+{
+// <body of class>
+};
+```
+
+Этот макрос определяется MFC как `__declspec(dllexport)` при символы препроцессора `_AFXDLL` и `_AFXEXT` определены. Но макрос определяется как `__declspec(dllimport)` при `_AFXDLL` определен и `_AFXEXT` не определен. Если определен символ препроцессора `_AFXDLL` указывает, что используется общей версии MFC, целевой исполняемый файл (библиотеки DLL или приложения). Когда оба `_AFXDLL` и `_AFXEXT` будут определены, это означает, что целевой исполняемый файл — это библиотеки DLL расширения MFC.
+
+Так как `AFX_EXT_CLASS` определяется как `__declspec(dllexport)` при экспорте из библиотеки DLL расширения MFC, не помещая декорированные имена для всех символов этого класса в DEF-файл можно экспортировать целых классов.
+
+Несмотря на то, что можно избежать создания DEF-файла и всех декорированных имен для класса с помощью этого метода, является более эффективным DEF-файл, так как имена могут быть экспортированы по порядковому номеру. Чтобы использовать метод файл .def экспорта, поместите следующий код в начале и конце файла заголовка:
+
+```cpp
+#undef AFX_DATA
+#define AFX_DATA AFX_EXT_DATA
+// <body of your header file>
+#undef AFX_DATA
+#define AFX_DATA
+```
+
 > [!CAUTION]
->  Будьте внимательны при Экспорт встроенных функций, поскольку они могут вызвать конфликты версий. Встроенная функция разворачивается в код приложения; Таким образом Если функция написан позже, оно обновится, если не перекомпилируется самого приложения. Как правило функции DLL можно обновить без повторного построения приложений, которые их используют.  
-  
-## <a name="exporting-individual-members-in-a-class"></a>Экспортирование отдельных членов в классе  
-  
-Иногда может потребоваться экспортирования отдельных членов класса. Например, если вы экспортируете `CDialog`-производного класса может потребоваться только для экспорта в конструктор и `DoModal` вызова. Можно использовать `AFX_EXT_CLASS` для отдельных членов, которые требуется экспортировать.  
-  
-Пример:  
-  
-```cpp  
-class CExampleDialog : public CDialog  
-{  
-public:  
-   AFX_EXT_CLASS CExampleDialog();  
-   AFX_EXT_CLASS int DoModal();  
-   ...  
-   // rest of class definition  
-   ...  
-};  
-```  
-  
-Поскольку все члены класса больше не экспортируются, вы можете столкнуться дополнительную проблему из-за способа работы макросов библиотеки MFC. Несколько вспомогательных макросов MFC объявляют или определяют члены данных. Таким образом эти члены данных также должны быть экспортированы из библиотеки DLL.  
-  
-Например `DECLARE_DYNAMIC` при создании библиотеки DLL расширения MFC макрос определяется следующим образом:  
-  
-```cpp  
-#define DECLARE_DYNAMIC(class_name) \  
-protected: \  
-   static CRuntimeClass* PASCAL _GetBaseClass(); \  
-public: \  
-   static AFX_DATA CRuntimeClass class##class_name; \  
-   virtual CRuntimeClass* GetRuntimeClass() const; \  
-```  
-  
-Строка, которая начинается с статической `AFX_DATA` , объявляет статический объект внутри класса. Чтобы правильно экспортировать класс и доступа к данным во время выполнения из исполняемый файл клиента, необходимо экспортировать статический объект. Так как статический объект объявлен с модификатором `AFX_DATA`, необходимо определить `AFX_DATA` быть `__declspec(dllexport)` при построении библиотеки DLL, а также определить как `__declspec(dllimport)` при построении исполняемый файл клиента. Поскольку `AFX_EXT_CLASS` уже определен таким образом, необходимо переопределить `AFX_DATA` же `AFX_EXT_CLASS` вокруг его определение.  
-  
-Пример:  
-  
-```cpp  
-#undef  AFX_DATA  
-#define AFX_DATA AFX_EXT_CLASS  
-  
-class CExampleView : public CView  
-{  
-   DECLARE_DYNAMIC()  
-   // ... class definition ...  
-};  
-  
-#undef  AFX_DATA  
-#define AFX_DATA  
-```  
-  
-Поскольку MFC всегда использует `AFX_DATA` символов для элементов данных, он определяет в пределах своего макроса, эта технология работает для всех подобных скриптов. Например, он работает для `DECLARE_MESSAGE_MAP`.  
-  
+>  Будьте внимательны при Экспорт встраиваемых функций, так как они могут вызвать конфликты версий. Встроенная функция разворачивается в код приложения; Таким образом Если позже вы повторное написание функции, она не обновится, если не перекомпилируется само приложение. Как правило функции DLL могут обновляться без повторной сборки приложения, которые их используют.
+
+## <a name="exporting-individual-members-in-a-class"></a>Экспортирование отдельных членов в классе
+
+Иногда требуется экспортировать отдельные члены класса. Например, если при экспорте `CDialog`-производного класса только необходимо экспортировать в конструктор и `DoModal` вызова. Можно использовать `AFX_EXT_CLASS` для отдельных членов, нужно экспортировать.
+
+Пример:
+
+```cpp
+class CExampleDialog : public CDialog
+{
+public:
+   AFX_EXT_CLASS CExampleDialog();
+   AFX_EXT_CLASS int DoModal();
+   ...
+   // rest of class definition
+   ...
+};
+```
+
+Так как больше не экспортируются все члены класса, вы можете столкнуться дополнительную проблему из-за способа работы макросов библиотеки MFC. Несколько вспомогательных макросов MFC объявляют или определяют члены данных. Таким образом эти данные-члены также должны экспортироваться из библиотеки DLL.
+
+Например `DECLARE_DYNAMIC` при построении библиотеки DLL расширения MFC макрос определяется следующим образом:
+
+```cpp
+#define DECLARE_DYNAMIC(class_name) \
+protected: \
+   static CRuntimeClass* PASCAL _GetBaseClass(); \
+public: \
+   static AFX_DATA CRuntimeClass class##class_name; \
+   virtual CRuntimeClass* GetRuntimeClass() const; \
+```
+
+Строка, которая начинается с статической `AFX_DATA` объявляет статический объект внутри класса. Для успешного выполнения экспорта этого класса и применения данных времени выполнения из исполняемый файл клиента, необходимо экспортировать статический объект. Так как статический объект объявлен с модификатором `AFX_DATA`, необходимо определить `AFX_DATA` быть `__declspec(dllexport)` при построении библиотеки DLL и определяют его как `__declspec(dllimport)` при построении исполняемый файл клиента. Так как `AFX_EXT_CLASS` уже определен в этом случае нужно переопределить `AFX_DATA` быть так же, как `AFX_EXT_CLASS` вокруг его определение.
+
+Пример:
+
+```cpp
+#undef  AFX_DATA
+#define AFX_DATA AFX_EXT_CLASS
+
+class CExampleView : public CView
+{
+   DECLARE_DYNAMIC()
+   // ... class definition ...
+};
+
+#undef  AFX_DATA
+#define AFX_DATA
+```
+
+Поскольку MFC всегда использует `AFX_DATA` символов для элементов данных, он определяет в пределах своего макроса, эта технология работает для всех подобных скриптов. Например, она работает для `DECLARE_MESSAGE_MAP`.
+
 > [!NOTE]
->  Если экспортируется весь класс, а не выбранные члены класса, статические члены данных экспортируются автоматически.  
-  
-### <a name="what-do-you-want-to-do"></a>Выберите действие  
-  
--   [Экспорт из библиотеки DLL с использованием DEF-файлы](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [Экспорт из библиотеки DLL с помощью __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
--   [Экспорт функций C++ для использования в реализации языка C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
-  
--   [Экспорт функций на языке C для использования в исполняемых файлах C или C++-язык](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
-  
--   [Выбор подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)  
-  
--   [Импорт в приложение с помощью __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)  
-  
--   [Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
-  
--   [Внутренние имена](../build/reference/decorated-names.md)  
-  
--   [Импорт и экспорт встроенных функций](../build/importing-and-exporting-inline-functions.md)  
-  
--   [Взаимный импорт](../build/mutual-imports.md)  
-  
-## <a name="see-also"></a>См. также  
- [Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)
+>  Если экспортируется весь класс, а не выбранные элементы класса, автоматически экспортируются статические данные-члены.
+
+### <a name="what-do-you-want-to-do"></a>Выберите действие
+
+- [Экспорт из DLL с использованием DEF-файлы](../build/exporting-from-a-dll-using-def-files.md)
+
+- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+- [Экспорт функций C++ для использования в исполняемых файлах языка C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+
+- [Экспорт функций на языке C для использования в исполняемых файлах C или C++-язык](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+
+- [Определение подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)
+
+- [Импорт в приложение с помощью объявления __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+
+- [Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+
+### <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
+
+- [Декорированные имена](../build/reference/decorated-names.md)
+
+- [Импорт и экспорт встраиваемых функций](../build/importing-and-exporting-inline-functions.md)
+
+- [Взаимный импорт](../build/mutual-imports.md)
+
+## <a name="see-also"></a>См. также
+
+[Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)

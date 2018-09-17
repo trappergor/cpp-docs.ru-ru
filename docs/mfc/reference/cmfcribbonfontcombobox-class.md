@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216478"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705709"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Класс CMFCRibbonFontComboBox
 Реализует поле со списком, содержащее список шрифтов. Необходимо задать поле со списком на панели ленты.  
@@ -52,19 +52,19 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCRibbonFontComboBox::~CMFCRibbonFontComboBox`|Деструктор.|  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|Создает и инициализирует объект `CMFCRibbonFontComboBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|Заполняет поле со списком шрифтов на ленте на основе таких заданных параметров, как тип и семейство шрифтов, а также кодировка и шаг.|  
 |`CMFCRibbonFontComboBox::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nFontType*  
- Указывает тип шрифта шрифтов для добавления.  
+*nFontType*<br/>
+[in] Указывает тип шрифта шрифтов для добавления.  
   
- [in] *nCharSet*  
- Указывает кодировку шрифтов для добавления.  
+*nCharSet*<br/>
+[in] Указывает кодировку шрифтов для добавления.  
   
- [in] *nPitchAndFamily*  
- Указывает шаг и семейство шрифтов для добавления.  
+*nPitchAndFamily*<br/>
+[in] Указывает шаг и семейство шрифтов для добавления.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Создает и инициализирует [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) объекта.  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nID*  
- Идентификатор команды, команды, которая выполняется, если пользователь выбирает элемент в поле со списком.  
+*nID*<br/>
+[in] Идентификатор команды, команды, которая выполняется, если пользователь выбирает элемент в поле со списком.  
   
- [in] *nFontType*  
- Указывает, какой шрифт типы для отображения в поле со списком. Допустимые значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE, а также любые их битовые комбинации.  
+*nFontType*<br/>
+[in] Указывает, какой шрифт типы для отображения в поле со списком. Допустимые значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE, а также любые их битовые комбинации.  
   
- [in] *nCharSet*  
- Фильтрует шрифты в поле со списком для тех, которые принадлежат указанную кодировку...  
+*nCharSet*<br/>
+[in] Фильтрует шрифты в поле со списком для тех, которые принадлежат указанную кодировку...  
   
- [in] *nPitchAndFamily*  
- Указывает шаг и семейство шрифтов, отображаемых в поле со списком.  
+*nPitchAndFamily*<br/>
+[in] Указывает шаг и семейство шрифтов, отображаемых в поле со списком.  
   
- [in] *nWidth*  
- Задает ширину в пикселях, в поле со списком.  
+*nWidth*<br/>
+[in] Задает ширину в пикселях, в поле со списком.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о возможных *nFontType* значения параметров, см. в разделе [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) в документации по Windows SDK.  

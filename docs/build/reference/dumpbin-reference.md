@@ -20,24 +20,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4858fe41db5e9a5ac6208881a045e7915b9bdfee
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6b9299be5e5b998d9fd8e779e4804a1ac681ad6f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573375"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719047"
 ---
 # <a name="dumpbin-reference"></a>Справочник DUMPBIN
-Дампер двоичных файлов Microsoft COFF ((программа DUMPBIN). (EXE) отображает сведения о распространенных объекта файла формат COFF двоичных файлов. (Программа DUMPBIN) можно использовать для проверки файлов объекта COFF, стандартных библиотек объектов COFF, исполняемых файлов и библиотек динамической компоновки (DLL).  
-  
+
+Дампер двоичных файлов Microsoft COFF ((программа DUMPBIN). (EXE) отображает сведения о распространенных объекта файла формат COFF двоичных файлов. (Программа DUMPBIN) можно использовать для проверки файлов объекта COFF, стандартных библиотек объектов COFF, исполняемых файлов и библиотек динамической компоновки (DLL).
+
 > [!NOTE]
->  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.  
-  
- Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
-  
--   [Командная строка DUMPBIN](../../build/reference/dumpbin-command-line.md)  
-  
--   [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)  
-  
-## <a name="see-also"></a>См. также  
- [Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)
+>  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.
+
+Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.
+
+- [Командная строка DUMPBIN](../../build/reference/dumpbin-command-line.md)
+
+- [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+
+## <a name="see-also"></a>См. также
+
+[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)

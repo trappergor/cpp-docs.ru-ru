@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c1ff172fde385b4e814508aaf2b567ac15874069
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42544511"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720412"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Автоматическая параллелизация и автоматическая векторизация
 Автоматический параллелизатор и автоматический векторизатор обеспечивают автоматическое повышение производительности циклов в коде.  
@@ -75,8 +75,10 @@ void test() {
   
  получаются следующие выходные данные:  
   
-**---Анализ функции: void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4): цикл параллелизован**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+```
   
 При компиляции с помощью команды:  
   
@@ -84,9 +86,11 @@ void test() {
   
 получаются следующие выходные данные:  
   
-**---Анализ функции: void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4): цикл параллелизован**   
-**d:\myproject\mytest.cpp(4): цикл не параллелизован по причине "1008"**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
+```
   
 Обратите внимание на различие в выходных данных двух различных [/qpar-Report (уровень отчетности автоматического Параллелизатора)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) параметры. `/Qpar-report:1` выводит сообщения параллелизатора только для тех циклов, параллелизация которых успешно выполнена. `/Qpar-report:2` выводит сообщения параллелизатора как для выполненных, так и для невыполненных параллелизаций цикла.  
   

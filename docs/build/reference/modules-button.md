@@ -1,5 +1,5 @@
 ---
-title: Кнопка "Модули" | Документы Microsoft
+title: Кнопка "Модули" | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ab09578b5d26d262784bcee49033538a45a4b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6d8bc890bba56835455960e706dea23c80cf395
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372247"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724732"
 ---
 # <a name="modules-button"></a>кнопка "Модули"
-Нажмите кнопку **модули** кнопку, чтобы подключить **дополнительные модули для поиска ошибок** диалогового окна. Введите имя нужного EXE или DLL в текстовом поле и нажмите кнопку **добавить** включаемые модули в поиск сообщения об ошибке. Удалить модуль из списка, выделите его и нажав кнопку **удалить** кнопки.  
-  
-## <a name="see-also"></a>См. также  
- [Элемент управления "Поле ввода значений"](../../build/reference/value-edit-control.md)
+
+Нажмите кнопку **модули** , чтобы открыть **дополнительные модули для поиска ошибок** диалоговое окно. Введите имя нужного EXE или DLL в текстовом поле и нажмите кнопку **добавить** необходимо включать модули в поиск сообщения об ошибке. Удалить модуль из списка, выделив ее и нажав кнопку **удалить** кнопки.
+
+## <a name="see-also"></a>См. также
+
+[Элемент управления "Поле ввода значений"](../../build/reference/value-edit-control.md)

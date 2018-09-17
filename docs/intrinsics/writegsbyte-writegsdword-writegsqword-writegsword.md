@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5ae6f47009600c87cb260246fca474592a5e9c6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8376300f4234f355cce49c2aae90fdc0e67f9a18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539699"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725872"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 **Блок, относящийся только к системам Microsoft**  
@@ -56,11 +56,11 @@ void __writegsqword(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `Offset`  
- Смещение от начала GS для записи.  
+*Смещение*<br/>
+[in] Смещение от начала GS для записи.  
   
- [in] `Data`  
- Значение для записи.  
+*Данные*<br/>
+[in] Записываемое значение.  
   
 ## <a name="requirements"></a>Требования  
   

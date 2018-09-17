@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848587"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703837"
 ---
 # <a name="cmfcribbonlabel-class"></a>Класс CMFCRibbonLabel
 Реализует недоступную для щелчка текстовую метку для ленты.  
@@ -40,14 +40,14 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Создает и инициализирует `CMFCRibbonLabel` объект с указанной текстовой строки.|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCRibbonLabel::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCRibbonLabel::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszText*  
- Текст, появляющийся в метке.  
+*lpszText*<br/>
+[in] Текст, появляющийся в метке.  
   
- [in] *bIsMultiLine*  
- Значение TRUE, чтобы указать, что метка Многострочная метка; в противном случае — значение FALSE.  
+*bIsMultiLine*<br/>
+[in] Значение TRUE, чтобы указать, что метка Многострочная метка; в противном случае — значение FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Определяет, какие данные специальных возможностей для текущего элемента метка ленты.  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pParent*  
- Представляет родительское окно метку ленты.  
+*pParent*<br/>
+[in] Представляет родительское окно метку ленты.  
   
- [out] *данных*  
- Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей метки ленты.  
+*data*<br/>
+[out] Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей метки ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если *данных* параметр был успешно заполнен данные специальных возможностей текущей метки ленты; в противном случае — значение FALSE.  

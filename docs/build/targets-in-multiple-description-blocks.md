@@ -1,5 +1,5 @@
 ---
-title: Целевые объекты в нескольких блоках описания | Документы Microsoft
+title: Целевые объекты в нескольких блоках описания | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b88c98fa3debc7bd5cc6a21d1bc9440e9386b988
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f339561e0a1e8c94063aa0c36c3ecbc96545b35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380292"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722778"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>Целевые объекты в нескольких блоках описания
-Чтобы обновить целевой объект в нескольких блоках описания, использующих различные команды, укажите два последовательных двоеточия (:) между целевым и зависимым.  
-  
-```  
-target.lib :: one.asm two.asm three.asm  
-    ml one.asm two.asm three.asm  
-    lib target one.obj two.obj three.obj  
-target.lib :: four.c five.c  
-    cl /c four.c five.c  
-    lib target four.obj five.obj  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Целевые объекты](../build/targets.md)
+
+Чтобы обновить целевой объект в более чем один блок описание, используя различные команды, укажите два последовательных двоеточия (:) между целевым и зависимым.
+
+```
+target.lib :: one.asm two.asm three.asm
+    ml one.asm two.asm three.asm
+    lib target one.obj two.obj three.obj
+target.lib :: four.c five.c
+    cl /c four.c five.c
+    lib target four.obj five.obj
+```
+
+## <a name="see-also"></a>См. также
+
+[Целевые объекты](../build/targets.md)

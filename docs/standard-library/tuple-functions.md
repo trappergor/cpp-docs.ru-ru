@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c9280de6a2fde3ce2758b5884437704a2cdd879f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966411"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712768"
 ---
 # <a name="lttuplegt-functions"></a>Функции &lt;tuple&gt;
 
@@ -64,17 +64,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Параметры
 
-*Index*  
- Индекс элемента, который нужно получить.
+*Index*<br/>
+Индекс элемента, который нужно получить.
 
-*Типы*  
- Последовательность типов, заявленных в кортеж, в порядке объявления.
+*Типы*<br/>
+Последовательность типов, заявленных в кортеж, в порядке объявления.
 
-*T*  
- Тип элемента, который нужно получить.
+*T*<br/>
+Тип элемента, который нужно получить.
 
-*Tuple*  
- Кортеж std::tuple содержит произвольное количество элементов.
+*Tuple*<br/>
+Кортеж std::tuple содержит произвольное количество элементов.
 
 ### <a name="remarks"></a>Примечания
 
@@ -122,11 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Параметры
 
-*TN*  
- Тип этого N-ного параметра функции.
+*TN*<br/>
+Тип этого N-ного параметра функции.
 
-*TN*  
- Значение N-ного параметра функции.
+*TN*<br/>
+Значение N-ного параметра функции.
 
 ### <a name="remarks"></a>Примечания
 
@@ -180,8 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Параметры
 
-*TN*  
- Базовый тип N-го элемента кортежа.
+*TN*<br/>
+Базовый тип N-го элемента кортежа.
 
 ### <a name="remarks"></a>Примечания
 

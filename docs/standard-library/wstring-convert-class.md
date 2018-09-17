@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cbcf6a1a48f32f5976483d5bb70e7c2e3f1d469
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c56f9ea0770618e65f454acd23ea22f19d3cfa92
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954855"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711104"
 ---
 # <a name="wstringconvert-class"></a>Класс wstring_convert
 
@@ -52,11 +52,11 @@ class wstring_convert
 
 ### <a name="parameters"></a>Параметры
 
-*codecvt*  
- Аспект [языкового стандарта](../standard-library/locale-class.md), представляющий объект преобразования.
+*codecvt*<br/>
+Аспект [языкового стандарта](../standard-library/locale-class.md), представляющий объект преобразования.
 
-*Elem*  
- Тип двухбайтового элемента.
+*Elem*<br/>
+Тип двухбайтового элемента.
 
 ## <a name="remarks"></a>Примечания
 
@@ -76,13 +76,13 @@ class wstring_convert
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[wstring_convert](#wstring_convert)|Создает объект типа `wstring_convert`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[byte_string](#byte_string)|Тип, представляющий однобайтную строку.|
 |[wide_string](#wide_string)|Тип, представляющий двухбайтную строку.|
@@ -91,7 +91,7 @@ class wstring_convert
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[from_bytes](#from_bytes)|Преобразует строку однобайтовых символов в строку двухбайтовых символов.|
 |[to_bytes](#to_bytes)|Преобразует двухбайтовую строку в однобайтовую.|
@@ -145,7 +145,7 @@ wide_string from_bytes(const char* first, const char* last);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Byte*|Последовательность одноэлементных байт для преобразования.|
 |*ptr*|Последовательность символов в стиле С, оканчивающаяся нулем, для преобразования.|
@@ -214,7 +214,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Char*|Расширенный символ для преобразования.|
 |*Wptr*|Последовательность в стиле C, оканчивающаяся нулем, начинающаяся с `wptr`, для преобразования.|
@@ -252,7 +252,7 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*\*Pcvt*|Объект типа `Codecvt` для выполнения преобразования.|
 |*_State*|Объект типа [state_type](#state_type), представляющий состояние преобразования.|

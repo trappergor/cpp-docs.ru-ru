@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027184"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712497"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Класс CMFCRibbonCheckBox
 Класс `CMFCRibbonCheckBox` реализует флажок, который можно добавить на панель ленты, панель быстрого доступа или во всплывающее меню.  
@@ -54,13 +54,13 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(Переопределяет [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
 |[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(Переопределяет [CMFCRibbonButton::GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nID*  
- Указывает идентификатор команды.  
+*nID*<br/>
+[in] Указывает идентификатор команды.  
   
- [in] *lpszText*  
- Указывает текстовую метку.  
+*lpszText*<br/>
+[in] Указывает текстовую метку.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Создает объект "флажок" ленты.  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на CDC, связанного с флажком.  
+*основного контроллера домена*<br/>
+[in] Указатель на CDC, связанного с флажком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `CSize` , содержащий компактный размер поля с флажком.  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на CDC, связанные с этот флажок.  
+*основного контроллера домена*<br/>
+[in] Указатель на CDC, связанные с этот флажок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `CSize` объект, содержащий промежуточный размер поля с флажком.  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на объект CDC, связанный с этот флажок.  
+*основного контроллера домена*<br/>
+[in] Указатель на объект CDC, связанный с этот флажок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `CSize` , содержащий стандартный размер поля с флажком.  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на CDC, в котором отображается флажок.  
+*основного контроллера домена*<br/>
+[in] Указатель на CDC, в котором отображается флажок.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in] *CDC**  
  Указатель на CDC, связанного с флажком.  
   
- [in] *CRect*  
- Объект `CRect` объект, указывающий прямоугольник, в котором должно быть нарисовано изображение меню.  
+*CRect*<br/>
+[in] Объект `CRect` объект, указывающий прямоугольник, в котором должно быть нарисовано изображение меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если для рисования изображения, или значение FALSE, если это не так.  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства, в котором отображается флажок.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства, в котором отображается флажок.  
   
- [in] *strText*  
- Отображаемый текст.  
+*strText*<br/>
+[in] Отображаемый текст.  
   
- [in] *nTextOffset*  
- Расстояние в пикселях от левого края поле со списком для отображения текста.  
+*nTextOffset*<br/>
+[in] Расстояние в пикселях от левого края поле со списком для отображения текста.  
   
- [in] *rect*  
- Прямоугольник отображения для флажка.  
+*Rect*<br/>
+[in] Прямоугольник отображения для флажка.  
   
- [in] *bIsSelected*  
- Значение TRUE, если флажок выбранных, или FALSE, если это не так.  
+*bIsSelected*<br/>
+[in] Значение TRUE, если флажок выбранных, или FALSE, если это не так.  
   
- [in] *bHighlighted*  
- Значение TRUE, если флажок имеет выделенный, или FALSE, если это не так.  
+*bHighlighted*<br/>
+[in] Значение TRUE, если флажок имеет выделенный, или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   

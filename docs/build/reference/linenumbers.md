@@ -1,5 +1,5 @@
 ---
-title: -LINENUMBERS | Документы Microsoft
+title: -LINENUMBERS | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9202d7f46dbd3a619e379d076db217544bd4291
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9b969f51733d9eb4c45ac5609b42920765a7ad5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371763"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704058"
 ---
 # <a name="linenumbers"></a>/LINENUMBERS
-```  
-/LINENUMBERS  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Этот параметр отображает номера строк COFF. Номера строк находятся в объектный файл, если она была скомпилирована в базу данных программы (/Zi), совместим с C7 (/ Z7), или только нумерация строк (/Zd). Исполняемый файл или DLL содержит COFF номера строк, если он был связан с создать отладочную информацию (/ DEBUG).  
-  
- Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/LINENUMBERS
+```
+
+## <a name="remarks"></a>Примечания
+
+Этот параметр отображает номера строк COFF. Номера строк существует в объектный файл, если он был скомпилирован с помощью базы данных программы (/Zi), совместимость C7 (/ Z7), или только нумерация строк (/ Zd). Исполняемый файл или библиотека DLL содержит COFF номера строк, если он был связан с создать отладочную информацию (/ DEBUG).
+
+Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.
+
+## <a name="see-also"></a>См. также
+
+[Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

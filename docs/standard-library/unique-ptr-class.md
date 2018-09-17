@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961559"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725196"
 ---
 # <a name="uniqueptr-class"></a>Класс unique_ptr
 
@@ -104,17 +104,17 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Справа*  
- Объект `unique_ptr`.
+*Справа*<br/>
+Объект `unique_ptr`.
 
-*Nptr*  
- Интерфейс `rvalue` типа `std::nullptr_t`.
+*Nptr*<br/>
+Интерфейс `rvalue` типа `std::nullptr_t`.
 
-*PTR*  
- Объект `pointer`.
+*PTR*<br/>
+Объект `pointer`.
 
-*Метод удаления*  
- Функция `deleter`, которая привязана к `unique_ptr`.
+*Метод удаления*<br/>
+Функция `deleter`, которая привязана к `unique_ptr`.
 
 ## <a name="exceptions"></a>Исключения
 
@@ -136,13 +136,13 @@ public:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[unique_ptr](#unique_ptr)|Для `unique_ptr` предусмотрено семь конструкторов.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[deleter_type](#deleter_type)|Синоним параметра шаблона `Del`.|
 |[element_type](#element_type)|Синоним параметра шаблона `T`.|
@@ -150,7 +150,7 @@ public:
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[get](#get)|Возвращает `stored_ptr`.|
 |[get_deleter](#get_deleter)|Возвращает ссылку на `stored_deleter`.|
@@ -160,7 +160,7 @@ public:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |**operator bool**|Оператор возвращает значение типа, которое можно преобразовать в **bool**. Результат преобразования **bool** — **true** при `get() != pointer()`, в противном случае **false**.|
 |`operator->`|Функция-член возвращает значение `stored_ptr`.|
@@ -328,7 +328,7 @@ void reset(nullptr_t ptr);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель на ресурс для получения права на владение.|
 
@@ -348,8 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*  
- Объект `unique_ptr`, используемый для замены указателей.
+*right*<br/>
+Объект `unique_ptr`, используемый для замены указателей.
 
 ### <a name="remarks"></a>Примечания
 
@@ -380,7 +380,7 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель на ресурс, который будет назначен `unique_ptr.`.|
 |*_Deleter*|`deleter`, который будет назначен `unique_ptr`.|

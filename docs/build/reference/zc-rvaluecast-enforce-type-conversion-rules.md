@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: rvaluecast (принудительное применение правил преобразования типов) | Документы Microsoft'
+title: '/ Zc: rvaluecast (принудительное применение правил преобразования типов) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d730563d01a3b59d4f2ac6bbadc980ca51112203
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626cabbec169d541a63dd65c22a7380718613b79
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379888"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706593"
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (принудительное применение правил преобразования типов)
 
-Когда **/Zc: rvaluecast** параметр указан, компилятор правильно определяет ссылочный тип rvalue как результат операции приведения в соответствии с C ++ 11 standard. Если этот параметр не задан, поведение компилятора является таким же, как в Visual Studio 2012.
+Когда **/Zc: rvaluecast** параметр указан, компилятор правильно определяет ссылочный тип rvalue в результате операции приведения в соответствии со стандартом C ++ 11. Если этот параметр не задан, поведение компилятора является таким же, как в Visual Studio 2012.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,11 +39,11 @@ ms.locfileid: "32379888"
 
 ## <a name="remarks"></a>Примечания
 
-Если **/Zc: rvaluecast** указан, компилятор следует разделу 5.4 стандарте C ++ 11 и рассматривает только выражения приведения, привести не ссылочными типами и выражения приведения, дающие ссылки rvalue на типы, не являющихся функциями как типы rvalue. По умолчанию или если **/Zc:rvalueCast-** указан, компилятор не соответствует стандарту и рассматривает все выражения приведения, дающие ссылки rvalue, как значения rvalue. Для соответствия, а также во избежание ошибок при использовании приведений, рекомендуется использовать **/Zc: rvaluecast**.
+Если **/Zc: rvaluecast** указан, компилятор следует разделу 5.4 стандартом C ++ 11 и рассматривает только выражения приведения, дающие привести типы и выражения, которые приводят к ссылки rvalue на типы, функции, не являющейся приведения как типы rvalue. По умолчанию или если **/Zc:rvalueCast-** указан, компилятор не обеспечивает соответствие стандарту и рассматривает все выражения приведения, которые приводят к ссылки rvalue, как значения rvalue. Для соответствия требованиям, а также во избежание ошибок при использовании приведений, мы рекомендуем использовать **/Zc: rvaluecast**.
 
-По умолчанию **/Zc: rvaluecast** отключено (**/Zc:rvalueCast-**). [/ Разрешительным-](permissive-standards-conformance.md) параметр компилятора неявно устанавливает этот параметр, но его можно переопределить с помощью **/Zc:rvalueCast-**.
+По умолчанию **/Zc: rvaluecast** отключен (**/Zc:rvalueCast-**). [/ Permissive-](permissive-standards-conformance.md) параметр компилятора неявно задает этот параметр, но его можно переопределить с помощью **/Zc:rvalueCast-**.
 
-Используйте **/Zc: rvaluecast** при передаче выражения приведения в качестве аргумента функции, которая принимает ссылочный тип rvalue. Поведение по умолчанию вызывает ошибку компилятора [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) Если компилятор неправильно определяет тип выражения приведения. В этом примере показана ошибка компилятора в правильный код при **/Zc: rvaluecast** не указан:
+Используйте **/Zc: rvaluecast** при передаче выражения приведения в качестве аргумента в функцию, которая принимает ссылочный тип rvalue. Поведение по умолчанию приводит к ошибке компилятора [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) когда компилятор неправильно определяет тип выражения приведения. В этом примере показано ошибку компилятора в правильный код при **/Zc: rvaluecast** не указан:
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -63,8 +63,8 @@ struct Thing {
    T& thing2;
 };
 
-// Create a Thing, using move semantics if possible  
-template <typename T>  
+// Create a Thing, using move semantics if possible
+template <typename T>
 Thing<T> make_thing(T&& t1, T&& t2)
 {
    return (Thing<T>(std::forward<T>(t1), std::forward<T>(t2)));
@@ -74,19 +74,19 @@ struct Test1 {
    long a;
    long b;
 
-   Thing<long> test() { 
+   Thing<long> test() {
       // Use identity casts to create rvalues as arguments
       return make_thing(static_cast<long>(a), static_cast<long>(b));
    }
 };
 ```
 
-По умолчанию компилятор может не сообщать об ошибке C2102, когда это необходимо. В этом примере компилятор не сообщает об ошибке, если принимается адрес rvalue, созданного путем приведения идентификатора, если **/Zc: rvaluecast** не указан:
+По умолчанию компилятор может не сообщать об ошибке C2102, когда это необходимо. В этом примере компилятор не сообщает об ошибке, если берется адрес rvalue, созданного путем приведения идентификатора, когда **/Zc: rvaluecast** не указан:
 
 ```cpp
 int main() {
    int a = 1;
-   int *p = &a;   // Okay, take address of lvalue 
+   int *p = &a;   // Okay, take address of lvalue
                   // Identity cast creates rvalue from lvalue;
    p = &(int)a;   // problem: should cause C2102: '&' requires l-value
 }
@@ -96,11 +96,11 @@ int main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
-1. Изменить **Дополнительные параметры** включив **/Zc: rvaluecast** и выберите **ОК**.
+1. Изменить **Дополнительные параметры** свойство **/Zc: rvaluecast** и выберите **ОК**.
 
 ## <a name="see-also"></a>См. также
 

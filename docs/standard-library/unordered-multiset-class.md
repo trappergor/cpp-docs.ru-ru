@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f601d636ab280a5f7346447b907c3326a4fdecd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ddfbb4887a1b34770a1a350f4d2863635c837db0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965491"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725913"
 ---
 # <a name="unorderedmultiset-class"></a>Класс unordered_multiset
 
@@ -167,7 +167,7 @@ class unordered_multiset;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Key*|Тип ключа.|
 |*хэш*|Тип объекта хэш-функции.|
@@ -176,7 +176,7 @@ class unordered_multiset;
 
 ## <a name="members"></a>Участники
 
-|Определение типа|Описание:|
+|Определение типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип распределителя для управления хранилищем.|
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
@@ -194,7 +194,7 @@ class unordered_multiset;
 |[size_type](#size_type)|Тип беззнакового расстояния между двумя элементами.|
 |[value_type](#value_type)|Тип элемента.|
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[begin](#begin)|Задает начало управляемой последовательности.|
 |[контейнер](#bucket)|Получает номер блока для значения ключа.|
@@ -224,7 +224,7 @@ class unordered_multiset;
 |[swap](#swap)|Меняет местами содержимое двух контейнеров.|
 |[unordered_multiset](#unordered_multiset)|Создает объект контейнера.|
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[unordered_multiset::operator=](#op_eq)|Копирует хэш-таблицу.|
 
@@ -300,7 +300,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*nbucket*|Номер сегмента.|
 
@@ -363,7 +363,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-keyval значение ключа для сопоставления.
+*keyval*<br/>
+Значение ключа для сопоставления.
 
 ### <a name="remarks"></a>Примечания
 
@@ -507,8 +508,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nbucket*  
- Номер сегмента.
+*nbucket*<br/>
+Номер сегмента.
 
 ### <a name="remarks"></a>Примечания
 
@@ -873,8 +874,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*  
- Искомое значение ключа.
+*keyval*<br/>
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -990,7 +991,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multiset.|
 
@@ -1019,7 +1020,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multiset.|
 |*where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -1119,8 +1120,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nbucket*  
- Номер сегмента.
+*nbucket*<br/>
+Номер сегмента.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1187,8 +1188,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*  
- Искомое значение ключа.
+*keyval*<br/>
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1261,17 +1262,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Параметры
 
-*Where*  
- Положение удаляемого элемента.
+*Where*<br/>
+Положение удаляемого элемента.
 
-*Первый*  
- Положение первого удаляемого элемента.
+*Первый*<br/>
+Положение первого удаляемого элемента.
 
-*последний*  
- Положение перед последним удаляемым элементом.
+*последний*<br/>
+Положение перед последним удаляемым элементом.
 
-*Key*  
- Значение ключа удаляемых элементов.
+*Key*<br/>
+Значение ключа удаляемых элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1293,8 +1294,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*  
- Искомое значение ключа.
+*keyval*<br/>
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1506,7 +1507,7 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента, вставляемого в unordered_multiset.|
 |*Where*|Место начала поиска правильной точки вставки.|
@@ -1906,8 +1907,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Параметры
 
-*Коэффициент*  
- Новый коэффициент максимальной нагрузки.
+*Коэффициент*<br/>
+Новый коэффициент максимальной нагрузки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2037,7 +2038,7 @@ unordered_multiset& operator=(unordered_multiset&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*right*|[unordered_multiset](../standard-library/unordered-multiset-class.md) копируется в `unordered_multiset`.|
 
@@ -2188,8 +2189,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Параметры
 
-*nbuckets*  
- Требуемое число сегментов.
+*nbuckets*<br/>
+Требуемое число сегментов.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2372,8 +2373,8 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*  
- Контейнер для замены.
+*right*<br/>
+Контейнер для замены.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2489,13 +2490,13 @@ unordered_multiset(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*InputIterator*|Тип итератора.|
 |*Al*|Объект распределителя для сохранения.|
 |*Зап.*|Объект функции сравнения для сохранения.|
 |*хэш*|Объект хэш-функции для сохранения.|
-|*bucket_count*|Минимальное количество блоков.|
+|*Bucket_count*|Минимальное количество блоков.|
 |*Справа*|Контейнер для копирования.|
 |*IList*|Объект initializer_list, из которого следует выполнить копирование.|
 

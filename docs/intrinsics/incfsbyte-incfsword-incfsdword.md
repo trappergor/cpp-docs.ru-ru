@@ -1,5 +1,5 @@
 ---
-title: __incfsbyte __incfsword, __incfsdword | Документы Microsoft
+title: __incfsbyte, __incfsword, __incfsdword | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330987"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719359"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 **Блок, относящийся только к системам Microsoft**  
   
- Добавьте одно значение по адресу памяти, указанной в качестве смещения относительно начала `FS` сегмента.  
+ Добавьте одно значение в ячейку памяти, указанной в качестве смещения относительно начала `FS` сегмента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,8 +50,8 @@ void __incfsdword(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `Offset`  
- Смещение от начала `FS`.  
+*Смещение*<br/>
+[in] Смещение от начала `FS`.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -62,7 +62,7 @@ void __incfsdword(
 |`__incfsdword`|x86|  
   
 ## <a name="remarks"></a>Примечания  
- Эти встроенные функции доступны только в режиме ядра и процедуры доступны только как встроенные объекты.  
+ Эти встроенные функции доступны только в режиме ядра и процедуры доступны только как встроенные функции.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

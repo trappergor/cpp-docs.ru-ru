@@ -1,5 +1,5 @@
 ---
-title: -ERRORREPORT (editbin.exe) | Документы Microsoft
+title: -ERRORREPORT (editbin.exe) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61113d7260c11b3eb73db1f25445a6a0050c52d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b38171db494a0d90bdb46491451dd1e7216d729d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372299"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718358"
 ---
 # <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
-```  
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Если editbin.exe завершается ошибкой во время выполнения, можно использовать **/errorReport** в корпорацию Майкрософт сведения об этих ошибках.  
-  
- Дополнительные сведения о **/errorReport**, в разделе [/errorReport (отчет внутренних ошибках компилятора)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
-  
-## <a name="see-also"></a>См. также  
- [Параметры EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
+```
+
+## <a name="remarks"></a>Примечания
+
+Если editbin.exe сбое во время выполнения, можно использовать **/errorReport** в корпорацию Майкрософт сведения об этих ошибках.
+
+Дополнительные сведения о **/errorReport**, см. в разделе [/errorReport (отчет внутренних ошибках компилятора)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+
+## <a name="see-also"></a>См. также
+
+[Параметры EDITBIN](../../build/reference/editbin-options.md)

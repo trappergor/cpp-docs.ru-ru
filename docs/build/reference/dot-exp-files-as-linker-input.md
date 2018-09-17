@@ -1,5 +1,5 @@
 ---
-title: . EXP-файлы в качестве входных данных компоновщика | Документы Microsoft
+title: . EXP-файлы как входные данные компоновщика | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9b5c118e81372bd57810a9472526909ed21f765
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4badc93f38d5ce76dcc294ad4ae216c8e3f6454c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371103"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724013"
 ---
 # <a name="exp-files-as-linker-input"></a>EXP-файлы в качестве входных файлов компоновщика
-Файлы экспорта (EXP) содержат сведения о экспортируемые элементы функции и данные. Когда LIB создает библиотеку импорта, она также создает файл EXP. EXP-файл используется при компоновке программы, экспорт и импорт из другой программы, прямо или косвенно. При компоновке с EXP-файл, СВЯЗИ не создает библиотеку импорта, поскольку предполагается, что LIB уже создан. Дополнительные сведения о EXP файлы и библиотеки импорта в разделе [работа с библиотеками, импортировать и экспортировать файлы](../../build/reference/working-with-import-libraries-and-export-files.md).  
-  
-## <a name="see-also"></a>См. также  
- [Входные LINK-файлы](../../build/reference/link-input-files.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+Файлы экспорта (EXP) содержат сведения о экспортируемые элементы функции и данные. Когда LIB создает библиотеку импорта, она также создает файл EXP. EXP-файл используется при связывании это программа, которая экспортирует и импортирует из другой программы, прямо или косвенно. При компоновке с EXP-файл, LINK не создает библиотеку импорта, так как предполагается, что LIB уже создана. Дополнительные сведения о EXP-файлы и библиотеки импорта, см. в разделе [работа с библиотеками, импортировать и экспортировать файлы](../../build/reference/working-with-import-libraries-and-export-files.md).
+
+## <a name="see-also"></a>См. также
+
+[Входные LINK-файлы](../../build/reference/link-input-files.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901015"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712842"
 ---
 # <a name="ctabbedpane-class"></a>Класс CTabbedPane
 
@@ -61,13 +61,13 @@ class CTabbedPane : public CBaseTabbedPane
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`CTabbedPane::CTabbedPane`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CTabbedPane::DetachPane](#detachpane)|(Переопределяет [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|
 |[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Включает или выключает автоматическую цветовую маркировку вкладок.|
@@ -81,7 +81,7 @@ class CTabbedPane : public CBaseTabbedPane
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|Расположение вкладок в приложении по умолчанию.|
 |[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Сведения о классе среды выполнения для настраиваемого объекта, производного от класса `CMFCTabCtrl`.|
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bEnable*  
-Значение TRUE, чтобы включить автоматическое цветовую маркировку вкладок; в противном случае — значение FALSE.
+*bEnable*<br/>
+[in] Значение TRUE, чтобы включить автоматическое цветовую маркировку вкладок; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pBar*  
-[in] *nTabID*  
-[in] *dockMethod*  
-[in] *bHide*  
+*pBar*<br/>
+[in] [in] *nTabID*  
+*dockMethod*<br/>
+[in] [in] *bHide*  
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>Параметры
 
-[out] *rectTabAreaTop*  
-Содержит размер и положение области вкладок в верхней, в экранных координатах.
+*rectTabAreaTop*<br/>
+[out] Содержит размер и положение области вкладок в верхней, в экранных координатах.
 
-[out] *rectTabAreaBottom*  
-Содержит размер и положение области вкладок нижней, в экранных координатах.
+*rectTabAreaBottom*<br/>
+[out] Содержит размер и положение области вкладок нижней, в экранных координатах.
 
 ### <a name="remarks"></a>Примечания
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *arColors*  
-Содержит массив цветов для задания.
+*arColors*<br/>
+[in] Содержит массив цветов для задания.
 
 ### <a name="remarks"></a>Примечания
 

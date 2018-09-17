@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852998"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721868"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Класс CMFCColorPopupMenu
 Представляет контекстное меню, который используется пользователями для выбора цветов в документ или приложение.  
@@ -46,7 +46,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Создает объект `CMFCColorPopupMenu`.|  
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Деструктор.|  
   
@@ -54,7 +54,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Создает фиксируемого перемещаемой цветовую шкалу. (Переопределяет [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|  
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Возвращает [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) , внедренные во всплывающем меню. (Переопределяет [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|  
 |`CMFCColorPopupMenu::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -64,7 +64,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
 |||  
 |-|-|  
-|name|Описание:|  
+|name|Описание|  
 |`m_bEnabledInCustomizeMode`|Логическое значение, определяющее, следует ли отображать цветовую шкалу.|  
 |`m_wndColorBar`|`CMFCColorBar` Объект, предоставляющий выбранный цвет.|  
   
@@ -133,51 +133,51 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *цвета*  
- Массив цветов, отображаемых структурой всплывающего меню.  
+*Цвета*<br/>
+[in] Массив цветов, отображаемых структурой всплывающего меню.  
   
- [in] *цвет*  
- Значение по умолчанию выбранный цвет.  
+*Цвет*<br/>
+[in] Значение по умолчанию выбранный цвет.  
   
- [in] *lpszAutoColor*  
- Текстовая метка *автоматического* кнопка цвета (по умолчанию), или значение NULL.  
+*lpszAutoColor*<br/>
+[in] Текстовая метка *автоматического* кнопка цвета (по умолчанию), или значение NULL.  
   
  Стандартную метку для автоматической кнопки — **автоматического**.  
   
- [in] *lpszOtherColor*  
- Текстовая метка *других* кнопка, отображающая более цвета, или значение NULL.  
+*lpszOtherColor*<br/>
+[in] Текстовая метка *других* кнопка, отображающая более цвета, или значение NULL.  
   
  Стандартный метки другие кнопки **Дополнительные цвета...** .  
   
- [in] *lpszDocColors*  
- Текстовая подпись кнопки цветов документа. Палитра цветов документе перечислены все цвета, которые в настоящее время использует документ.  
+*lpszDocColors*<br/>
+[in] Текстовая подпись кнопки цветов документа. Палитра цветов документе перечислены все цвета, которые в настоящее время использует документ.  
   
- [in] *lstDocColors*  
- Список цветов, которые в настоящее время использует документ.  
+*lstDocColors*<br/>
+[in] Список цветов, которые в настоящее время использует документ.  
   
- [in] *nColumns*  
- Число столбцов, к которым имеет массив цветов.  
+*nColumns*<br/>
+[in] Число столбцов, к которым имеет массив цветов.  
   
- [in] *nHorzDockRows*  
- Число строк, к которым имеет цветовой панели, когда она закреплена горизонтально.  
+*nHorzDockRows*<br/>
+[in] Число строк, к которым имеет цветовой панели, когда она закреплена горизонтально.  
   
- [in] *nVertDockColumns*  
- Число столбцов, которые цветовой полосы при их закреплении по вертикали.  
+*nVertDockColumns*<br/>
+[in] Число столбцов, которые цветовой полосы при их закреплении по вертикали.  
   
- [in] *colorAutomatic*  
- Цвет по умолчанию, платформа применяется при нажатии кнопки автоматического.  
+*colorAutomatic*<br/>
+[in] Цвет по умолчанию, платформа применяется при нажатии кнопки автоматического.  
   
- [in] *uiCommandID*  
- ИД команды управления цветовой полосы.  
+*uiCommandID*<br/>
+[in] ИД команды управления цветовой полосы.  
   
- [in] *bStdColorDlg*  
- Логическое значение, указывающее, следует ли отображать диалоговое окно стандартный системный цвет или [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) диалоговое окно.  
+*bStdColorDlg*<br/>
+[in] Логическое значение, указывающее, следует ли отображать диалоговое окно стандартный системный цвет или [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) диалоговое окно.  
   
- [in] *pParentBtn*  
- Указатель на родительский кнопки.  
+*pParentBtn*<br/>
+[in] Указатель на родительский кнопки.  
   
- [in] *nID*  
- Идентификатор команды.  
+*nID*<br/>
+[in] Идентификатор команды.  
   
 ### <a name="remarks"></a>Примечания  
  Каждая перегрузка конструктора задает `m_bEnabledInCustomizeMode` член значение false.  
@@ -201,10 +201,10 @@ virtual CPane* CreateTearOffBar(
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pWndMain*|Указатель на родительское окно перемещаемой панелью.|  
-|[in] *uiID*|Идентификатор команды перемещаемой панелью.|  
-|[in] *lpszName*|Текст окна перемещаемой панелью.|  
+|Параметр|Описание|  
+|*pWndMain*|[in] Указатель на родительское окно перемещаемой панелью.|  
+|*uiID*|[in] Идентификатор команды перемещаемой панелью.|  
+|*lpszName*|[in] Текст окна перемещаемой панелью.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новый объект панели управления перемещаемой.  
@@ -233,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWndList*  
- Указатель на объект элемента управления сетки свойств.  
+*pWndList*<br/>
+[in] Указатель на объект элемента управления сетки свойств.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

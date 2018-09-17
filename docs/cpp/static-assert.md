@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fa9b8fb7fe85aca21e90195534f33201bee59fc
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ff616e767d47be06c61c1bddf9ffc336f5144bc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464938"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704609"
 ---
 # <a name="staticassert"></a>static_assert
 Проверяет программное утверждение во время компиляции. Если заданное константное выражение имеет значение FALSE, компилятор отображает заданное сообщение, если он указан, и компиляция завершается с ошибкой C2338; в противном случае объявление не оказывает влияния.  
@@ -34,13 +34,12 @@ ms.locfileid: "39464938"
 ```   
 static_assert( constant-expression, string-literal );  
 
-**Visual Studio 2017 and later:**
-static_assert( constant-expression ); 
+static_assert( constant-expression ); // Visual Studio 2017 and later
 ```  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*Константное выражение*|Целочисленное константное выражение, которое можно преобразовать в логическое значение.<br /><br /> Если вычисленное выражение равно нулю (false), *строковый литерал* параметр отображается, и компиляция завершается с ошибкой. Если выражение имеет ненулевое значение (true), **static_assert** объявление не имеет силы.|  
 |*string-literal*|Сообщение, которое отображается, если *константное выражение* равно нулю. Сообщение представляет собой строку символов в [базовый набор символов](../c-language/ascii-character-set.md) компилятора; это, а не [многобайтовых или расширенных символов](../c-language/multibyte-and-wide-characters.md).|  
@@ -54,7 +53,7 @@ static_assert( constant-expression );
   
  Можно использовать **static_assert** ключевое слово в пространство имен, класс или область видимости блока. ( **Static_assert** ключевое слово является технически объявлением, несмотря на то, что он не вводит новое имя в вашу программу, так как он может использоваться в пределах пространства имен.)  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  В следующем примере **static_assert** объявление содержит область видимости пространства имен. Поскольку компилятору известен размер типа `void *`, выражение вычисляется немедленно.  
   
 ## <a name="example"></a>Пример  
@@ -63,7 +62,7 @@ static_assert( constant-expression );
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");  
 ```  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  В следующем примере **static_assert** объявление имеет область видимости класса. **Static_assert** проверяет, является ли параметр шаблона *обычные старые данные* тип (POD). Компилятор проверяет **static_assert** объявление, когда он объявлен, но не вычисляет *константное_выражение* параметр до `basic_string` класс шаблона создается в `main()`.  
   
 ## <a name="example"></a>Пример  
@@ -91,7 +90,7 @@ int main()
 }  
 ```  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  В следующем примере **static_assert** объявление имеет область видимости блока. **Static_assert** проверяет, является ли размер структуры vmpage размеру страницу равным pagesize виртуальной памяти системы.  
   
 ## <a name="example"></a>Пример  

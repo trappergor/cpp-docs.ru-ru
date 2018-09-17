@@ -1,5 +1,5 @@
 ---
-title: -FPO | Документы Microsoft
+title: -FPO | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0c761dc34d1b9dfc88b31754e00dbe77bffe1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 957782d9f360ad5d7a16c46c6b65ae19dd0adec8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372487"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717155"
 ---
 # <a name="fpo"></a>/FPO
-```  
-/FPO  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Этот параметр отображает записи оптимизации (FPO) указателя фрейма.  
-  
- Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/FPO
+```
+
+## <a name="remarks"></a>Примечания
+
+Этот параметр отображает записи оптимизации (FPO) указателя фрейма.
+
+Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.
+
+## <a name="see-also"></a>См. также
+
+[Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
