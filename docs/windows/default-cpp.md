@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1055c0865988edf9b54539c0d214cebcda13735
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220424"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699925"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -46,8 +46,8 @@ ms.locfileid: "43220424"
 
 Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первое вхождение неисходного интерфейса.
 
-*interface2*(необязательно)  
-Исходный интерфейс по умолчанию. Этот интерфейс также необходимо указать с помощью атрибута [source](../windows/source-cpp.md) .
+*Interface2*<br/>
+(Необязательно) Исходный интерфейс по умолчанию. Этот интерфейс также необходимо указать с помощью атрибута [source](../windows/source-cpp.md) .
 
 Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первый исходный интерфейс.
 

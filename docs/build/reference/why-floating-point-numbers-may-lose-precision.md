@@ -1,5 +1,5 @@
 ---
-title: Почему может уменьшиться точность чисел с плавающей запятой | Документы Microsoft
+title: Почему может уменьшиться точность чисел с плавающей запятой | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,62 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb673f087d98f6c7acdd1e98b5649cc84a48d277
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de54610676ade49f7ce41e00ed0049b20e46709c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376141"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700024"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Почему может уменьшиться точность чисел с плавающей запятой
-Десятичные значения с плавающей запятой обычно не имеют точного двоичного представления. Это является побочным эффектом ЦП представление данных с плавающей запятой. По этой причине происходит потеря точности и некоторые операции с плавающей запятой может привести к непредвиденным результатам.  
-  
- Такое поведение является результатом следующего вида:  
-  
--   Двоичное представление десятичного числа может быть точно.  
-  
--   Существует несоответствие типов между чисел (например, смешивая float и double).  
-  
- Чтобы устранить проблему, большинство программистов убедитесь, что значение больше или меньше, чем то, что требуется, или же их получить и использовать библиотеку двоично-десятичный (BCD), которая будет поддерживать точность.  
-  
- Двоичное представление значений с плавающей запятой влияет на точность и правильность вычислений с плавающей запятой. Microsoft Visual C++ использует [формате с плавающей запятой IEEE](../../build/reference/ieee-floating-point-representation.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// Floating-point_number_precision.c  
-// Compile options needed: none. Value of c is printed with a decimal   
-// point precision of 10 and 6 (printf rounded value by default) to   
-// show the difference  
-#include <stdio.h>  
-  
-#define EPSILON 0.0001   // Define your own tolerance  
-#define FLOAT_EQ(x,v) (((v - EPSILON) < x) && (x <( v + EPSILON)))  
-  
-int main() {  
-   float a, b, c;  
-  
-   a = 1.345f;  
-   b = 1.123f;  
-   c = a + b;  
-   // if (FLOAT_EQ(c, 2.468)) // Remove comment for correct result  
-   if (c == 2.468)            // Comment this line for correct result  
-      printf_s("They are equal.\n");  
-   else  
-      printf_s("They are not equal! The value of c is %13.10f "  
-                "or %f",c,c);  
-}  
-```  
-  
-```Output  
-They are not equal! The value of c is  2.4679999352 or 2.468000  
-```  
-  
-## <a name="comments"></a>Комментарии  
- Для EPSILON, можно использовать константы FLT_EPSILON, который определен для типа float, как 1, 192092896e-07F, или DBL_EPSILON, который определен для двойного как 2, 2204460492503131e-016. Необходимо включить файл float.h для этих констант. Эти константы определены как наименьшее положительное число x, например, x + 1,0 не равно 1.0. Поскольку это очень небольшую величину, следует использовать заданное пользователем допустимое расчетов очень больших чисел.  
-  
-## <a name="see-also"></a>См. также  
- [Оптимизация кода](../../build/reference/optimizing-your-code.md)
+
+Десятичного значения с плавающей запятой, как правило, не имеют точного двоичного представления. Это является побочным эффектом представление данных с плавающей запятой в ЦП. По этой причине, может появиться к некоторой потере точности и некоторые операции с плавающей запятой может привести к непредвиденным результатам.
+
+Такое поведение является результатом следующего вида:
+
+- Двоичное представление десятичного числа не может быть точным.
+
+- Существует несоответствие типов между чисел (например, совместное использование float и double).
+
+Для решения проблемы, убедитесь, что значение больше или меньше, чем то, что требуется большинство программистов, или они получить и использовать библиотеку двоично-десятичный (BCD), которая будет поддерживать точность.
+
+Двоичное представление значения с плавающей запятой влияет на точность и точность вычислений с плавающей запятой. Microsoft Visual C++ использует [формате с плавающей запятой IEEE](../../build/reference/ieee-floating-point-representation.md).
+
+## <a name="example"></a>Пример
+
+```
+// Floating-point_number_precision.c
+// Compile options needed: none. Value of c is printed with a decimal
+// point precision of 10 and 6 (printf rounded value by default) to
+// show the difference
+#include <stdio.h>
+
+#define EPSILON 0.0001   // Define your own tolerance
+#define FLOAT_EQ(x,v) (((v - EPSILON) < x) && (x <( v + EPSILON)))
+
+int main() {
+   float a, b, c;
+
+   a = 1.345f;
+   b = 1.123f;
+   c = a + b;
+   // if (FLOAT_EQ(c, 2.468)) // Remove comment for correct result
+   if (c == 2.468)            // Comment this line for correct result
+      printf_s("They are equal.\n");
+   else
+      printf_s("They are not equal! The value of c is %13.10f "
+                "or %f",c,c);
+}
+```
+
+```Output
+They are not equal! The value of c is  2.4679999352 or 2.468000
+```
+
+## <a name="comments"></a>Комментарии
+
+Для ЭПСИЛОН, можно использовать константы FLT_EPSILON, который определен для типа float как 1.192092896e-07F, или DBL_EPSILON, который определен для двойной как 2.2204460492503131e-016. Вам потребуется включить float.h для этих констант. Эти константы определены как наименьшее положительное число x, например, x + 1,0 не равно 1,0. Так как это очень небольшую величину, следует использовать заданное пользователем допустимое число для вычисления с очень больших чисел.
+
+## <a name="see-also"></a>См. также
+
+[Оптимизация кода](../../build/reference/optimizing-your-code.md)
