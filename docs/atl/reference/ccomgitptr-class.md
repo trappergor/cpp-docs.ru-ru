@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758135"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703850"
 ---
 # <a name="ccomgitptr-class"></a>Класс CComGITPtr
 
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *p*  
-Указатель интерфейса, для сохранения в глобальной таблицы интерфейсов (GIT).
+*p*<br/>
+[in] Указатель интерфейса, для сохранения в глобальной таблицы интерфейсов (GIT).
 
-[in] *git*  
-Ссылка на существующий `CComGITPtr` объекта.
+*Git*<br/>
+[in] Ссылка на существующий `CComGITPtr` объекта.
 
-[in] *dwCookie*  
-Файл cookie, используемый для идентификации указатель интерфейса.
+*dwCookie*<br/>
+[in] Файл cookie, используемый для идентификации указатель интерфейса.
 
-[in] *rv*  
-Источник `CComGITPtr` объект для перемещения данных.
+*rv*<br/>
+[in] Источник `CComGITPtr` объект для перемещения данных.
 
 ### <a name="remarks"></a>Примечания
 
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *p*  
-Указатель на интерфейс.
+*p*<br/>
+[in] Указатель на интерфейс.
 
-[in] *git*  
-Ссылка на объект `CComGITPtr`.
+*Git*<br/>
+[in] Ссылку на `CComGITPtr` объекта.
 
-[in] *dwCookie*  
-Файл cookie, используемый для идентификации указатель интерфейса.
+*dwCookie*<br/>
+[in] Файл cookie, используемый для идентификации указатель интерфейса.
 
-[in] *rv*  
-`CComGITPtr` Для перемещения данных из.
+*rv*<br/>
+[in] `CComGITPtr` Для перемещения данных из.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

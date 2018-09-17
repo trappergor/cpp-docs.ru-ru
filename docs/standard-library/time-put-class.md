@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 27a200ba94be8c4937342820fadf89e4225ba97d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106760"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719957"
 ---
 # <a name="timeput-class"></a>Класс time_put
 
@@ -45,10 +45,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType*  
+*CharType*<br/>
 Тип, используемый внутри программы для кодирования символов.
 
-*OutputIterator*  
+*OutputIterator*<br/>
 Тип итератора, в который функции записи времени записывают свои выходные данные.
 
 ## <a name="remarks"></a>Примечания
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Параметры
 
-*next*  
+*next*<br/>
 Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.
 
-*_Iosbase*  
+*_Iosbase*<br/>
 Не используется.
 
-*_Pt*  
+*_Pt*<br/>
 Выводимые сведения о дате и времени.
 
-*_Fmt*  
+*_Fmt*<br/>
 Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
-*_Mod*  
+*_Mod*<br/>
 Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -171,28 +171,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Параметры
 
-*next*  
+*next*<br/>
 Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.
 
-*_Iosbase*  
+*_Iosbase*<br/>
 Не используется.
 
-*_Fill*  
+*_Fill*<br/>
 Символ типа `CharType` применяется для интервала.
 
-*_Pt*  
+*_Pt*<br/>
 Выводимые сведения о дате и времени.
 
-*_Fmt*  
+*_Fmt*<br/>
 Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
-*_Mod*  
+*_Mod*<br/>
 Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
-*Первый*  
+*Первый*<br/>
 Начало строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
-*последний*  
+*последний*<br/>
 Конец строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 ### <a name="return-value"></a>Возвращаемое значение

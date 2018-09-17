@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d514e992b165f7deb5f9354f58fe5a409f52546a
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571537"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721296"
 ---
 # <a name="linker-options"></a>Параметры компоновщика
 
@@ -146,5 +146,5 @@ LINK.exe связывает объектные файлы в формате COFF
 
 ## <a name="see-also"></a>См. также
 
-[Справочные сведения о сборке C/C++](../../build/reference/c-cpp-building-reference.md)  
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)  
+[Справочные сведения о сборке C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)

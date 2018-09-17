@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335962"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716310"
 ---
 # <a name="cdialogex-class"></a>Класс CDialogEx
 Класс `CDialogEx` задает цвет фона и фоновое изображение для диалогового окна.  
@@ -42,14 +42,14 @@ class CDialogEx : public CDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDialogEx::CDialogEx](#cdialogex)|Создает объект `CDialogEx`.|  
 |`CDialogEx::~CDialogEx`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Cdialogex::setbackgroundcolor при использовании](#setbackgroundcolor)|Задает цвет фона диалогового окна.|  
 |[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Задает фоновое изображение диалогового окна.|  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nIDTemplate*  
- Идентификатор ресурса шаблона диалогового окна.  
+*nIDTemplate*<br/>
+[in] Идентификатор ресурса шаблона диалогового окна.  
   
- [in] *lpszTemplateName*  
- Имя ресурса шаблона диалогового окна.  
+*lpszTemplateName*<br/>
+[in] Имя ресурса шаблона диалогового окна.  
   
- [in] *pParent*  
- Указатель на родительское окно. Значение по умолчанию имеет значение NULL.  
+*pParent*<br/>
+[in] Указатель на родительское окно. Значение по умолчанию имеет значение NULL.  
   
- [in] *pParentWnd*  
- Указатель на родительское окно. Значение по умолчанию имеет значение NULL.  
+*pParentWnd*<br/>
+[in] Указатель на родительское окно. Значение по умолчанию имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *цвет*  
- Значение цвета RGB.  
+*Цвет*<br/>
+[in] Значение цвета RGB.  
   
- [in] *bRepaint*  
- Значение TRUE, чтобы немедленно обновить экрана; в противном случае — значение FALSE. Значение по умолчанию — TRUE.  
+*bRepaint*<br/>
+[in] Значение TRUE, чтобы немедленно обновить экрана; в противном случае — значение FALSE. Значение по умолчанию — TRUE.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *hBitmap*  
- Дескриптор для фонового изображения.  
+*hBitmap*<br/>
+[in] Дескриптор для фонового изображения.  
   
- [in] *uiBmpResId*  
- Идентификатор ресурса фонового изображения.  
+*uiBmpResId*<br/>
+[in] Идентификатор ресурса фонового изображения.  
   
- [in] *расположение*  
- Один из `CDialogEx::BackgroundLocation` значения, указывающие расположение образа. Допустимые значения: BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT и BACKGR_BOTTOMRIGHT. Значение по умолчанию — BACKGR_TILE.  
+*расположение*<br/>
+[in] Один из `CDialogEx::BackgroundLocation` значения, указывающие расположение образа. Допустимые значения: BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT и BACKGR_BOTTOMRIGHT. Значение по умолчанию — BACKGR_TILE.  
   
- [in] *bAutoDestroy*  
- Значение TRUE, чтобы автоматически удалить фоновое изображение; в противном случае — значение FALSE.  
+*bAutoDestroy*<br/>
+[in] Значение TRUE, чтобы автоматически удалить фоновое изображение; в противном случае — значение FALSE.  
   
- [in] *bRepaint*  
- Значение TRUE, чтобы немедленно перерисовывает диалоговое окно. в противном случае — значение FALSE.  
+*bRepaint*<br/>
+[in] Значение TRUE, чтобы немедленно перерисовывает диалоговое окно. в противном случае — значение FALSE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Во втором методе перегружать синтаксис, значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  

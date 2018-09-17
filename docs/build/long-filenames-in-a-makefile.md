@@ -1,5 +1,5 @@
 ---
-title: Длинные имена файлов в Makefile | Документы Microsoft
+title: Длинные имена файлов в Makefile | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc199289f80e6ce2f9dbc5317ee439af528a055b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d69abd9fa67db7c1ec2e5dede0ebd5629d21e7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367632"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714549"
 ---
 # <a name="long-filenames-in-a-makefile"></a>Длинные имена файлов в makefile
-Заключите длинные имена файлов в двойные кавычки, следующим образом:  
-  
-```  
-all : "VeryLongFileName.exe"  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Содержимое файла Makefile](../build/contents-of-a-makefile.md)
+
+Заключите длинные имена файлов в двойные кавычки, как показано ниже:
+
+```
+all : "VeryLongFileName.exe"
+```
+
+## <a name="see-also"></a>См. также
+
+[Содержимое файла Makefile](../build/contents-of-a-makefile.md)

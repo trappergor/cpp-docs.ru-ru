@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030ac6bb2e6fb7acd9745d4fa818e89d29ee1832
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208979"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712807"
 ---
 # <a name="arm-intrinsics"></a>Встроенные объекты ARM
 Компилятор Visual C++ создает следующие встроенные функции на архитектуре ARM. Дополнительные сведения о ARM см. в разделе [справочных руководствах по архитектуре ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) и [руководство по средствам ассемблера ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) на веб-сайте справочного центра ARM.  
@@ -2165,8 +2165,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
  `Location`  
  Адрес области памяти для чтения или записи.  
   
- `Value` (хранит только встроенные функции).  
- Значение для записи в заданном расположении памяти.  
+ `Value`  
+ Значение для записи в заданном расположении памяти (только для встроенных функций хранилища).  
   
  **Возвращаемое значение (только для встроенных функций загрузки)**  
   
@@ -2176,9 +2176,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  Можно использовать встроенные функции `__iso_volatile_load8/16/32/64` и `__iso_volatile_store8/16/32/64` для явного выполнения доступа к памяти, который не проходит оптимизацию компилятором. Компилятор не может удалить, объединить или изменить порядок этих операций, но он не создает неявные барьеры памяти оборудования. Таким образом оборудование по-прежнему может переупорядочить возникающие операции доступа к памяти между несколькими потоками. Точнее говоря, эти встроенные функции эквивалентны следующим выражениям при компиляции в **/volatile:iso**.  
   
-```  
-  
-      int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
+```cpp
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
 ```  
   

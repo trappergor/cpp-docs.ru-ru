@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf94c53bd0491d5959a53591b77305d19f21bc36
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4bafae070d3ff9fe80070e3598cd36867abcf830
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612350"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707204"
 ---
 # <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 
@@ -40,11 +40,11 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="parameters"></a>Параметры
 
-[in] *t*  
-Первое число для сравнения. Это должен быть типа `T`.
+*t*<br/>
+[in] Первое число для сравнения. Это должен быть типа `T`.
 
-[in] *u*  
-Второе число для сравнения. Это должен быть типа `U`.
+*u*<br/>
+[in] Второе число для сравнения. Это должен быть типа `U`.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

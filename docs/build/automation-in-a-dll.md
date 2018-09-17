@@ -1,5 +1,5 @@
 ---
-title: Автоматизация в библиотеке DLL | Документы Microsoft
+title: Автоматизация в библиотеке DLL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41c5f31a72cf734296ecb281e0785d415c8043a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cde5d0e400f1bdd3f5a851d47da581380273b04a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360658"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717792"
 ---
 # <a name="automation-in-a-dll"></a>Автоматизация в библиотеке DLL
-При выборе параметра автоматизации в мастер MFC DLL мастер предоставляет следующее:  
-  
--   Язык описания начального объекта (. Файл ODL)  
-  
--   Директива include в файле STDAFX.h Afxole.h  
-  
--   Реализация `DllGetClassObject` функции, которая вызывает **AfxDllGetClassObject** функции  
-  
--   Реализация `DllCanUnloadNow` функции, которая вызывает **AfxDllCanUnloadNow** функции  
-  
--   Реализация `DllRegisterServer` функции, которая вызывает [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) функции  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
-  
--   [Серверы автоматизации](../mfc/automation-servers.md)  
-  
-## <a name="see-also"></a>См. также  
- [DLL в Visual C++](../build/dlls-in-visual-cpp.md)
+
+При выборе параметр автоматизации в мастер библиотек DLL MFC, мастер предоставляет следующее:
+
+- Язык описания объекта starter (. Файл ODL)
+
+- Директива include в файле STDAFX.h Afxole.h
+
+- Реализация `DllGetClassObject` функцию, которая вызывает **AfxDllGetClassObject** функции
+
+- Реализация `DllCanUnloadNow` функцию, которая вызывает **AfxDllCanUnloadNow** функции
+
+- Реализация `DllRegisterServer` функцию, которая вызывает [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) функции
+
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
+
+- [Серверы автоматизации](../mfc/automation-servers.md)
+
+## <a name="see-also"></a>См. также
+
+[DLL в Visual C++](../build/dlls-in-visual-cpp.md)

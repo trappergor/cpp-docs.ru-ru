@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7a39149969b7e85685930d6e901bf81db99d64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d14d00e57cbbb04c77f0b84c584ebb1c4f4260e5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759407"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703213"
 ---
 # <a name="iserviceproviderimpl-class"></a>Класс IServiceProviderImpl
 
@@ -83,14 +83,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Параметры
 
-[IN] *guidService*  
-Указатель на идентификатор службы (SID).
+*guidService*<br/>
+[in] Указатель на идентификатор службы (SID).
 
-[IN] *riid*  
-Идентификатор интерфейса, к которому вызывающий объект для получения доступа.
+*riid*<br/>
+[in] Идентификатор интерфейса, к которому вызывающий объект для получения доступа.
 
-[OUT] *ppvObj*  
-Косвенный указатель на запрашиваемый интерфейс.
+*ppvObj*<br/>
+[out] Косвенный указатель на запрашиваемый интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

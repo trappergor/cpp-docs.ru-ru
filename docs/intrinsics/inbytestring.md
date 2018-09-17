@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f31ea898462fee04d94f379e8fffd323667eda1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7569c7034184adecf6bb452d7c406a762af4e20b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541491"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711663"
 ---
 # <a name="inbytestring"></a>__inbytestring
 **Блок, относящийся только к системам Microsoft**  
@@ -41,14 +41,14 @@ void __inbytestring(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `Port`  
- Порт для чтения из.  
+*Порт*<br/>
+[in] Порт для чтения из.  
   
- [выходной] `Buffer`  
- Данные, считанные из порта записывается здесь.  
+*буфер*<br/>
+[out] Данные, считанные из порта записывается здесь.  
   
- [in] `Count`  
- Число байтов данных для чтения.  
+*Количество*<br/>
+[in] Число байтов данных для чтения.  
   
 ## <a name="requirements"></a>Требования  
   

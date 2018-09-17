@@ -1,5 +1,5 @@
 ---
-title: -nologo (отключение начального заголовка) (C/C++) | Документы Microsoft
+title: -nologo (отключение загрузочного объявления) (C/C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,38 +20,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51209280fe4ce4b32aa108adb02815c1b9cf57fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 36f1d1771abb56bd22e8239923fe2e3c15b1588f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373846"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711871"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>Параметр /nologo (отключение загрузочного объявление) (C/C++)
-Подавляет отображение баннер авторских прав при запуске компилятора и информационные сообщения во время компиляции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/nologo  
-```  
-  
-## <a name="remarks"></a>Примечания  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  Откройте папку **C/C++** .  
-  
-3.  Нажмите кнопку **Общие** страницу свойств.  
-  
-4.  Изменить **отключить загрузочное объявление** свойство.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SuppressStartupBanner%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+
+Подавляет отображение об авторских правах при запуске компилятора и информационных сообщений во время компиляции.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+/nologo
+```
+
+## <a name="remarks"></a>Примечания
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Откройте папку **C/C++** .
+
+1. Нажмите кнопку **Общие** страницу свойств.
+
+1. Изменить **отключить загрузочное объявление** свойство.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SuppressStartupBanner%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

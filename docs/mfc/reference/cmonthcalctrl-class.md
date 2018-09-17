@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8405c41f5235ecba580bbf453a1129a38b4d8421
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719105"
 ---
 # <a name="cmonthcalctrl-class"></a>Cmonthcalctrl-класс
 Инкапсулирует функциональность элемента управления "календарь месяца".  
@@ -120,13 +120,13 @@ class CMonthCalCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Создает объект `CMonthCalCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMonthCalCtrl::Create](#create)|Создает элемент управления calendar month и присоединяет его к `CMonthCalCtrl` объекта.|  
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Получает ширину границы элемента управления calendar текущего месяца.|  
@@ -295,9 +295,9 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[out] *pmcGridInfo*|Указатель на [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) структуры, получающий сведения об элементе управления календаря текущего месяца. Вызывающий объект отвечает за выделение и инициализации этой структуры.|  
+|*pmcGridInfo*|[out] Указатель на [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) структуры, получающий сведения об элементе управления календаря текущего месяца. Вызывающий объект отвечает за выделение и инициализации этой структуры.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -731,9 +731,9 @@ void SetCalendarBorder(int cxyBorder);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *cxyBorder*|Ширина границы в пикселях.|  
+|*cxyBorder*|[in] Ширина границы в пикселях.|  
   
 ### <a name="remarks"></a>Примечания  
  Если этот метод выполняется успешно, ширину границы присваивается *cxyBorder* параметра. В противном случае ширину границы сбрасывается в значение по умолчанию, заданный текущим [темы](/windows/desktop/Controls/visual-styles-overview), или нуль, если темы не используются.  
@@ -771,9 +771,9 @@ BOOL SetCalID(CALID calid);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *calid*|Один из [идентификатор календаря](/windows/desktop/Intl/calendar-identifiers) константы.|  
+|*CALID*|[in] Один из [идентификатор календаря](/windows/desktop/Intl/calendar-identifiers) константы.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -849,9 +849,9 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *dwNewView*|Одно из следующих значений, указывающих ежемесячно, ежегодно, десять лет или представления века.<br /><br /> MCMV_MONTH: Представление за месяц<br /><br /> MCMV_YEAR: Ежегодное представление<br /><br /> MCMV_DECADE: Представление десятилетие<br /><br /> MCMV_CENTURY: Представление века|  
+|*dwNewView*|[in] Одно из следующих значений, указывающих ежемесячно, ежегодно, десять лет или представления века.<br /><br /> MCMV_MONTH: Представление за месяц<br /><br /> MCMV_YEAR: Ежегодное представление<br /><br /> MCMV_DECADE: Представление десятилетие<br /><br /> MCMV_CENTURY: Представление века|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -1135,9 +1135,9 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *lpRect*|Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, содержащий требуемое число календарей.|  
+|*lpRect*|[in] Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, содержащий требуемое число календарей.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, размер которых меньше или равно в прямоугольник, определяемый *lpRect* параметра.  

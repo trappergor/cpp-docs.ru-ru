@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 126e23064bdc599ba230efc5dde472cd05a1aa69
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760849"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720750"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Класс CMFCShellTreeCtrl
 `CMFCShellTreeCtrl` Класс расширяет [класс CTreeCtrl](../../mfc/reference/ctreectrl-class.md) функциональные возможности, отображая иерархию элементов оболочки.  
@@ -104,8 +104,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bEnable*  
- Логическое значение, указывающее, следует ли включить в контекстном меню.  
+*bEnable*<br/>
+[in] Логическое значение, указывающее, следует ли включить в контекстном меню.  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
  Возвращает флаги, установленные для [класс CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.  
@@ -130,11 +130,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *strPath*  
- Ссылка на строковый параметр. Метод записывает путь элемента для данного параметра.  
+*strPath*<br/>
+[out] Ссылка на строковый параметр. Метод записывает путь элемента для данного параметра.  
   
- [in] *htreeItem*  
- Метод возвращает путь для элемента управления дерева.  
+*htreeItem*<br/>
+[in] Метод возвращает путь для элемента управления дерева.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если выполнение прошло успешно; в противном случае 0.  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *сообщения*  
- [in] *wParam*  
- [in] *lParam*  
- [in] *pLResult*  
+*message*<br/>
+[in] [in] *wParam*  
+*lParam*<br/>
+[in] [in] *pLResult*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pItem*  
- [in] *bSelected*  
+*pItem*<br/>
+[in] [in] *bSelected*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -228,11 +228,11 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszPath*  
- Строка, указывающая путь к элементу.  
+*lpszPath*<br/>
+[in] Строка, указывающая путь к элементу.  
   
- [in] *lpidl*  
- PIDL, которое указывает элемент  
+*lpidl*<br/>
+[in] PIDL, которое указывает элемент  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если выполнение прошло успешно; В противном случае — значение E_FAIL.  
@@ -247,11 +247,11 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *dwFlags*  
- Флажки, которые нужно установить.  
+*dwFlags*<br/>
+[in] Флаги для установки.  
   
- [in] *bRefresh*  
- Логическое значение, указывающее ли `CMFCShellTreeCtrl` должен быть обновлен немедленно.  
+*bRefresh*<br/>
+[in] Логическое значение, указывающее ли `CMFCShellTreeCtrl` должен быть обновлен немедленно.  
   
 ### <a name="remarks"></a>Примечания  
  `CMFCShellTreeCtrl` Передает все значение флагов [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Дополнительные сведения о значениях различных флагов см. в разделе [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
@@ -264,8 +264,8 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pShellList*  
- Указатель на объект `CMFCShellListCtrl`.  
+*pShellList*<br/>
+[in] Указатель на `CMFCShellListCtrl` объект.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод связывает `CMFCShellListCtrl` с `CMFCShellTreeCtrl`. Эти объекты могут отображаться в виде окна проводника: Если пользователь выбирает объект в `CMFCShellTreeCtrl`, связанные элементы в `CMFCShellListCtrl` будут обновляться автоматически.  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2ae5b321ce9de1e834119e764a65df638d97e10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195836"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721192"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Класс CMFCShellListCtrl
 `CMFCShellListCtrl` Класс предоставляет функциональные возможности элемента управления списка Windows и расширяет его, включив возможность отображения списка элементов оболочки.  
@@ -72,7 +72,7 @@ class CMFCShellListCtrl : public CMFCListCtrl
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCShellListCtrl::DisplayFolder](#displayfolder)|Отображает список элементов, содержащихся в предоставленный папке.|  
 |[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|Отображает список элементов, содержащихся в папке, который является родительским для текущей отображаемой папки.|  
@@ -130,11 +130,11 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszPath*  
- Строка, содержащая путь к папке.  
+*lpszPath*<br/>
+[in] Строка, содержащая путь к папке.  
   
- [in] *lpItemInfo*  
- Указатель на `LPAFX_SHELLITEMINFO` структура, описывающая папку для отображения.  
+*lpItemInfo*<br/>
+[in] Указатель на `LPAFX_SHELLITEMINFO` структура, описывающая папку для отображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если выполнение прошло успешно; В противном случае — значение E_FAIL.  
@@ -157,8 +157,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bEnable*  
- Логическое значение, указывающее, включает ли платформа в контекстном меню.  
+*bEnable*<br/>
+[in] Логическое значение, указывающее, включает ли платформа в контекстном меню.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
  Извлекает путь к выбранной папке в [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) объекта.  
@@ -168,8 +168,8 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *strPath*  
- Ссылка на строковый параметр, где метод записывает путь.  
+*strPath*<br/>
+[out] Ссылка на строковый параметр, где метод записывает путь.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если выполнение прошло успешно; в противном случае 0.  
@@ -185,8 +185,8 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *strName*  
- Ссылка на строковый параметр, где метод записывает имя.  
+*strName*<br/>
+[out] Ссылка на строковый параметр, где метод записывает имя.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если выполнение прошло успешно; в противном случае 0.  
@@ -227,11 +227,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *strPath*  
- Ссылка на строку, которая получает путь.  
+*strPath*<br/>
+[out] Ссылка на строку, которая получает путь.  
   
- [in] *iItem*  
- Индекс элемента списка.  
+*iItem*<br/>
+[in] Индекс элемента списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если выполнение прошло успешно; Значение FALSE в противном случае.  
@@ -273,8 +273,8 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lParam1*  
- [in] *lParam2*  
+*lParam1*<br/>
+[in] [in] *lParam2*  
  [in] *iColumn*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -291,11 +291,11 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *tmFile*  
- Дата, связанная с файлом.  
+*tmFile*<br/>
+[in] Дата, связанная с файлом.  
   
- [out] *str*  
- Строка, содержащая файла в формате даты.  
+*str*<br/>
+[out] Строка, содержащая файла в формате даты.  
   
 ### <a name="remarks"></a>Примечания  
  Когда [класс CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) объекта отображается дата, связанных с файлом, его необходимо преобразовать эту дату в строковом формате. `CMFCShellListCtrl` Использует этот метод, чтобы сделать это преобразование. По умолчанию этот метод использует текущий языковой стандарт для форматирования даты в строку.  
@@ -310,11 +310,11 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lFileSize*  
- Размер файла, который будет отображаться платформы.  
+*lFileSize*<br/>
+[in] Размер файла, который будет отображаться платформы.  
   
- [out] *str*  
- Строка, содержащая размер файла в формате.  
+*str*<br/>
+[out] Строка, содержащая размер файла в формате.  
   
 ### <a name="remarks"></a>Примечания  
  Когда [класс CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) объект должен отображать размера файла, его необходимо преобразовать размер файла в строковом формате. `CMFCShellListCtrl` Использует этот метод, чтобы сделать это преобразование. По умолчанию этот метод преобразует размер файла из байтов в килобайтах, а затем использует текущий языковой стандарт для форматирования размер в строку.  
@@ -329,11 +329,11 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *iItem*  
- Индекс элемента.  
+*iItem*<br/>
+[in] Индекс элемента.  
   
- [in] *pItem*  
- Параметр LPAFX_SHELLITEMINFO, который описывает элемент.  
+*pItem*<br/>
+[in] Параметр LPAFX_SHELLITEMINFO, который описывает элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс изображения значка, если выполнение прошло успешно; -1, если функция завершается с ошибкой.  
@@ -354,14 +354,14 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *iItem*  
- Индекс элемента.  
+*iItem*<br/>
+[in] Индекс элемента.  
   
- [in] *iColumn*  
- Требуемого столбца.  
+*iColumn*<br/>
+[in] Требуемого столбца.  
   
- [in] *pItem*  
- Параметр LPAFX_SHELLITEMINFO, который описывает элемент.  
+*pItem*<br/>
+[in] Параметр LPAFX_SHELLITEMINFO, который описывает элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `CString` , содержащий текст, связанный с элементом.  
@@ -402,8 +402,8 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nTypes*  
- Список элементов на типы, которые `CMFCShellListCtrl` поддерживает.  
+*nTypes*<br/>
+[in] Список элементов на типы, которые `CMFCShellListCtrl` поддерживает.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о списке типов элементов, см. в разделе [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf).  

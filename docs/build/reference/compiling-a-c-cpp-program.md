@@ -1,5 +1,5 @@
 ---
-title: Компиляция программы C/C++ | Документы Microsoft
+title: Компиляция программы C/C++ | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708bbea963fc2ea8b46061553e7eac2832fd75f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5923cad13464317f98d5500cb244449aa8537b63
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369556"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721231"
 ---
 # <a name="compiling-a-cc-program"></a>Компилирование программы C/C++
 
-Сведения об использовании компилятора см. в следующих разделах:  
-  
--   [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)  
-  
--   [Параметры компилятора](../../build/reference/compiler-options.md)  
-  
--   [Создание предварительно скомпилированных файлов заголовков](../../build/reference/creating-precompiled-header-files.md)  
-  
--   [Поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
+Сведения об использовании компилятора см. в разделах:
 
-Сведения о выборе компилятора узел и целевая архитектура см. в разделе [настройки Visual C++ для 64-разрядных x64 цели](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
-  
-## <a name="see-also"></a>См. также  
+- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+
+- [Параметры компилятора](../../build/reference/compiler-options.md)
+
+- [Создание предварительно скомпилированных файлов заголовков](../../build/reference/creating-precompiled-header-files.md)
+
+- [Поддержка Юникода в компиляторе и компоновщике](../../build/reference/unicode-support-in-the-compiler-and-linker.md)
+
+Сведения о выборе компилятора компьютера и целевой архитектуры, см. в разделе [Настройка Visual C++ для 64-разрядная версия, x64 целевых объектов](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+
+## <a name="see-also"></a>См. также
 
 [Справочные сведения о сборке C/C++](../../build/reference/c-cpp-building-reference.md)

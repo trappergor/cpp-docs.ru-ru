@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684811"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726756"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 Инкапсулирует функциональность элемента управления "всплывающая подсказка" — небольшого всплывающего окна, в котором отображается одна строка текста, описывающая назначение инструмента в приложении.  
@@ -374,7 +374,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[out] *lpToolInfo*|Указатель на [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) структуры, который получает сведения о текущем окне всплывающей подсказки.|  
+|*lpToolInfo*|[out] Указатель на [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) структуры, который получает сведения о текущем окне всплывающей подсказки.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если эти сведения поступают успешно; в противном случае — значение FALSE.  
@@ -504,7 +504,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[out] *pttgt*|Указатель на [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структуру, содержащую сведения об элементе управления ToolTip. При возвращении данного метода *pszTitle* членом [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структура указывает на текст заголовка.|  
+|*pttgt*|[out] Указатель на [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структуру, содержащую сведения об элементе управления ToolTip. При возвращении данного метода *pszTitle* членом [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структура указывает на текст заголовка.|  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle) сообщения, который описан в пакете Windows SDK.  

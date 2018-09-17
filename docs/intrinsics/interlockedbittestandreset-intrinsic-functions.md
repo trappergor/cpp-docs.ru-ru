@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 433d4ba23cbf4ed7e2819a3752cd2155b7c20371
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 12935c6a735d72bb1eb25627c78d69f362073a90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540688"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724380"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>встроенные функции _interlockedbittestandreset
 **Блок, относящийся только к системам Microsoft**  
@@ -82,11 +82,11 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `a`  
- Указатель на область памяти для проверки.  
+*a*<br/>
+[in] Указатель памяти для проверки.  
   
- [in] `b`  
- Позиция разряда для тестирования.  
+*b*<br/>
+[in] Позиция разряда для тестирования.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Исходное значение разряда в позиции, указанной параметром `b`.  

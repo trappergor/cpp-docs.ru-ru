@@ -1,5 +1,5 @@
 ---
-title: -LINKERMEMBER | Документы Microsoft
+title: -LINKERMEMBER | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac961f985de65bb7eea9a4ad0f5d10b75fbe60d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0979009260381eb210e7992377bab8b5ae613338
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371503"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700613"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
-```  
-/LINKERMEMBER[:{1|2}]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Этот параметр выводит открытые символы, определенные в библиотеке. Аргумент 1 позволяет вывести символы в объектном порядке вместе с их смещениями. Аргумент 2 позволяет вывести смещения и индексные номера объектов, а затем список символов в алфавитном порядке, вместе с индексом для каждого объекта. Для получения обоих выходов, укажите/LINKERMEMBER без числа аргументов.  
-  
- Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/LINKERMEMBER[:{1|2}]
+```
+
+## <a name="remarks"></a>Примечания
+
+Этот параметр отображает открытые символы, определенные в библиотеке. Аргумент 1 для отображения символов в порядке объекта, а также их смещения. Аргумент 2 позволяет вывести смещения и порядковые номера объектов, а затем список символов в алфавитном порядке, вместе с индексом для каждого объекта. Чтобы получить обоих выходов, укажите/LINKERMEMBER без числовой аргумент.
+
+Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.
+
+## <a name="see-also"></a>См. также
+
+[Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

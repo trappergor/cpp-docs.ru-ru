@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f59cc50e864a241608e460a45f3336e7cb89ecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339442"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717643"
 ---
 # <a name="carray-class"></a>CArray-класс
 Поддерживает массивы, которые похожи на массивы C, но может динамически увеличиваться и при необходимости.  
@@ -69,24 +69,25 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, определяющий тип объектов, хранящихся в массиве. *Тип* — это параметр, возвращаемый `CArray`.  
-  
- *ARG* *_* *ТИПА*  
- Параметр шаблона, определяющий тип аргумента, который используется для доступа к объектам, которые хранятся в массиве. Часто ссылку *тип*. *ARG_TYPE* — это параметр, передаваемый `CArray`.  
+#### <a name="parameters"></a>Параметры
+
+*ТИП*<br/>
+Параметр шаблона, определяющий тип объектов, хранящихся в массиве. *Тип* — это параметр, возвращаемый `CArray`.
+
+*ARG_TYPE*<br/>
+Параметр шаблона, определяющий тип аргумента, который используется для доступа к объектам, которые хранятся в массиве. Часто ссылку *тип*. *ARG_TYPE* — это параметр, передаваемый `CArray`.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CArray::CArray](#carray)|Создает пустой массив.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CArray::Add](#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
 |[CArray::Append](#append)|Добавляет другой массив к массиву; растет массива, при необходимости|  
@@ -108,7 +109,7 @@ class CArray : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[operator&#91;&#93;](#operator_at)|Получает или задает элемент с указанным индексом.|  
   
@@ -137,7 +138,7 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>Требования  
- `Header:` afxtempl.h  
+**Заголовок:** afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
  Добавляет новый элемент в конец массива, увеличение массива на 1.  

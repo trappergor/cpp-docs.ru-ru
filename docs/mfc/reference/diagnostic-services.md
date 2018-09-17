@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214683"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712962"
 ---
 # <a name="diagnostic-services"></a>Диагностические службы
 Библиотека Microsoft Foundation Class предоставляет множество служб диагностики, которые упрощают отладку программ. Эти службы включают в себя макросы и глобальные функции, позволяющие отслеживать выделение памяти для программы, записывать дамп содержимого объектов во время выполнения и печатать сообщения отладки во время выполнения. Макросы и глобальные функции диагностических служб сгруппированы в следующие категории:  
@@ -594,7 +594,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  Например в следующей таблице описаны первая часть приведенных выше выходных данных:  
   
-|Вывод|Описание:|  
+|Вывод|Описание|  
 |------------|-----------------|  
 |`00427D55:`|Обратный адрес последнего вызова функции.|  
 |`DUMP2\DEBUG\DUMP2.EXE!`|Полный путь имя модуля, содержащего вызов функции.|  
@@ -619,8 +619,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bDump*  
- Значение TRUE указывает, что дамп утечки памяти включен; Значение FALSE указывает, что дамп утечки памяти отключен.  
+*bDump*<br/>
+[in] Значение TRUE указывает, что дамп утечки памяти включен; Значение FALSE указывает, что дамп утечки памяти отключен.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Предыдущее значение для этого флага.  

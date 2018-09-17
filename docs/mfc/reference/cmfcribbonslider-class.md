@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709336"
 ---
 # <a name="cmfcribbonslider-class"></a>Класс CMFCRibbonSlider
 `CMFCRibbonSlider` Класс реализует элемент управления "ползунок", который можно добавить на панель ленты или строки состояния ленты. Элемент управления "ползунок" ленты напоминает ползунки масштаба, отображаемые в приложениях Office 2007.  
@@ -60,13 +60,13 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Создает и инициализирует элемент управления "ползунок" ленты.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonSlider::GetPos](#getpos)|Возвращает текущее положение элемента управления "ползунок".|  
 |[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Возвращает максимальное значение ползунка.|  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nID*  
- Идентификатор "ползунок".  
+*nID*<br/>
+[in] Идентификатор "ползунок".  
   
  [in]. *nWidth*  
  Ползунок ширина в пикселях.  
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nPos*  
- Задает положение, чтобы задать для ползунка. Позиция задается относительно начала ползунка.  
+*nPos*<br/>
+[in] Задает положение, чтобы задать для ползунка. Позиция задается относительно начала ползунка.  
   
- [in] *bRedraw*  
- Значение TRUE, если ползунок перерисовку.  
+*bRedraw*<br/>
+[in] Значение TRUE, если ползунок перерисовку.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Задайте диапазон значений для элемента управления "ползунок".  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *Nмин.*  
- Указывает минимальное значение элемента управления "ползунок".  
+*Nмин.*<br/>
+[in] Указывает минимальное значение элемента управления "ползунок".  
   
- [in] *Nмакс.*  
- Указывает максимальное значение элемента управления "ползунок".  
+*Nмакс.*<br/>
+[in] Указывает максимальное значение элемента управления "ползунок".  
   
 ### <a name="remarks"></a>Примечания  
  Указывает диапазон значений для элемента управления "ползунок", задав минимальное и максимальное значения.  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nZoomIncrement*  
- Задает шаг изменения масштаба элемента управления "ползунок".  
+*nZoomIncrement*<br/>
+[in] Задает шаг изменения масштаба элемента управления "ползунок".  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

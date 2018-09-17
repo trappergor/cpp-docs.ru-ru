@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ba0d46f567232c36eb3dcd7845792bdbe8b6eac
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b321891bc5b9392fffc72ec0c9661a39a5631e5a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955739"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717838"
 ---
 # <a name="strstream-class"></a>Класс strstream
 
@@ -48,13 +48,13 @@ class strstream : public iostream
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[strstream](#strstream)|Создает объект типа `strstream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[freeze](#freeze)|Делает буфер потока недоступным для операций с буфером потока.|
 |[pcount](#pcount)|Возвращает число элементов, записанных в управляемую последовательность.|
@@ -77,8 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Параметры
 
-*_Freezeit*  
- Объект **bool** , указывающее, следует ли поток, который должен быть зафиксирован.
+*_Freezeit*<br/>
+Объект **bool** , указывающее, следует ли поток, который должен быть зафиксирован.
 
 ### <a name="remarks"></a>Примечания
 
@@ -162,14 +162,14 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>Параметры
 
-*count*  
- Размер буфера.
+*count*<br/>
+Размер буфера.
 
-*_Режим*  
- Режим ввода-вывода буфера. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим*<br/>
+Режим ввода-вывода буфера. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*ptr*  
- Буфер.
+*ptr*<br/>
+Буфер.
 
 ### <a name="remarks"></a>Примечания
 

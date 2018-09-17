@@ -1,5 +1,5 @@
 ---
-title: Необработанные псевдооперации | Документы Microsoft
+title: Необработанные псевдооперации | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,77 +12,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3b9dd065b4bf1f64950f97237dec08b10d23cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b05a4f9d109809161df7cde643439c281121f62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369933"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703265"
 ---
 # <a name="raw-pseudo-operations"></a>Необработанные псевдооперации
-В этом разделе перечислены псевдооперации.  
-  
-## <a name="remarks"></a>Примечания  
-  
-|Операция псевдо|Описание|  
-|----------------------|-----------------|  
-|КАДР PROC [: обработчика ошибок]|Причины MASM для создания функции запись в .pdata таблицы и очистки информацию в XDATA для функции структурной обработки исключений очистки поведение.  При наличии обработчика ошибок Данная процедура вводится в xdata как обработчик конкретного языка.<br /><br /> При использовании атрибута КАДР, он должен следовать. Директива ENDPROLOG.  Если функция является конечной (как определено в [типы функций](../build/function-types.md)) атрибут FRAME необязателен, как и в оставшейся части этих псевдо операций.|  
-|. PUSHREG reg|Приводит к возникновению ошибки завершения UWOP_PUSH_NONVOL запись для указанного номера регистра с помощью текущего смещения в прологе.<br /><br /> Это должно использоваться только с защищенным целочисленным регистрам.  Отправок переменные регистры, использовать. ALLOCSTACK 8 вместо|  
-|. Смещение SETFRAME reg|Заливки в кадре зарегистрировать поля и смещение в информации для раскрутки с помощью указанного регистра и смещения. Смещение должно быть кратным 16 и меньше или равно 240. Эта директива также приводит к возникновению ошибки в коде завершения UWOP_SET_FPREG очистки запись для указанного регистра, используя текущее смещение в прологе.|  
-|. Размер ALLOCSTACK|Создает UWOP_ALLOC_SMALL или UWOP_ALLOC_LARGE с указанным размером для текущее смещение в прологе.<br /><br /> Размер операнд должен быть кратен 8.|  
-|. Смещение SAVEREG reg|Создает UWOP_SAVE_NONVOL или UWOP_SAVE_NONVOL_FAR запись для указанного регистра и смещения, используя текущее смещение в прологе. MASM выберет наиболее эффективную кодировку.<br /><br /> Смещение должно быть положительным и кратным 8.  Смещение определяется относительно базовый процедуры кадра, который является обычно RSP, или указатель фрейма зависимым.|  
-|. Смещение SAVEXMM128 reg|Приводит к возникновению ошибки UWOP_SAVE_XMM128 или UWOP_SAVE_XMM128_FAR запись для указанного регистра XMM и смещения, используя текущее смещение в прологе. MASM выберет наиболее эффективную кодировку.<br /><br /> Смещение должно быть положительным и кратным 16.  Смещение определяется относительно базовый процедуры кадра, который является обычно RSP, или указатель фрейма зависимым.|  
-|. PUSHFRAME [код]|Создает запись UWOP_PUSH_MACHFRAME очистки кода. Если указан дополнительный код, операция очистки кода получает модификатор 1. В противном случае модификатор — 0.|  
-|.ENDPROLOG|Сигнализирует о завершении объявлений в прологе.  Должен существовать в первые 255 байт функции.|  
-  
- Ниже приведен пример пролога функции использование большинства кодов операций.  
-  
-```  
-sample PROC FRAME     
-   db      048h; emit a REX prefix, to enable hot-patching  
-push rbp  
-.pushreg rbp  
-sub rsp, 040h  
-.allocstack 040h     
-lea rbp, [rsp+020h]  
-.setframe rbp, 020h  
-movdqa [rbp], xmm7  
-.savexmm128 xmm7, 020h;the offset is from the base of the frame  
-;not the scaled offset of the frame  
-mov [rbp+018h], rsi  
-.savereg rsi, 038h  
-mov [rsp+010h], rdi  
-.savereg rdi, 010h; you can still use RSP as the base of the frame  
-; or any other register you choose  
-.endprolog  
-  
-; you can modify the stack pointer outside of the prologue (similar to alloca)  
-; because we have a frame pointer.  
-; if we didn’t have a frame pointer, this would be illegal  
-; if we didn’t make this modification,  
-; there would be no need for a frame pointer  
-  
-sub rsp, 060h  
-  
-; we can unwind from the following AV because of the frame pointer  
-  
-mov rax, 0  
-mov rax, [rax] ; AV!  
-  
-; restore the registers that weren’t saved with a push  
-; this isn’t part of the official epilog, as described in section 2.5  
-  
-movdqa xmm7, [rbp]  
-mov rsi, [rbp+018h]  
-mov rdi, [rbp-010h]  
-  
-; Here’s the official epilog  
-  
-lea rsp, [rbp-020h]  
-pop rbp  
-ret  
-sample ENDP  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Вспомогательные процедуры раскрутки для MASM](../build/unwind-helpers-for-masm.md)
+
+В этом разделе перечислены псевдооперации.
+
+## <a name="remarks"></a>Примечания
+
+|Псевдо-операции|Описание|
+|----------------------|-----------------|
+|PROC ФРЕЙМА [: обработчика ошибок]|Причины MASM для создания функции запись в .pdata таблицы и очистки информацию в XDATA для функции структурной обработки исключений очистки поведение.  При наличии обработчика ошибок Данная процедура вводится в xdata как обработчик конкретного языка.<br /><br /> При использовании атрибута КАДРА, его следует указать. Директива ENDPROLOG.  Если функция является конечной (как определено в [типы функций](../build/function-types.md)) атрибута FRAME необязателен, как и остальная часть этих псевдо операций.|
+|. PUSHREG reg|Создает UWOP_PUSH_NONVOL запись для указанного номера регистра с использованием текущего смещения в прологе.<br /><br /> Это свойство следует использовать только с защищенных целочисленные регистры.  Push-уведомлений переменные регистры, использовать. ALLOCSTACK 8 вместо|
+|. Смещение SETFRAME reg|Заливки в окне регистрации поля и смещение в информацию очистки с помощью указанного регистра и смещения. Смещение должно быть кратным 16 и меньше или равно 240. Эта директива также создает в коде завершения UWOP_SET_FPREG очистки запись для указанного регистра, с помощью текущего смещения пролога.|
+|. Размер ALLOCSTACK|Создает UWOP_ALLOC_SMALL или UWOP_ALLOC_LARGE заданного размера для текущего смещения в прологе.<br /><br /> Размер операнд должен быть кратен 8.|
+|. Смещение SAVEREG reg|Создает UWOP_SAVE_NONVOL или UWOP_SAVE_NONVOL_FAR запись для указанного регистра и смещение, с помощью текущего смещения пролога. MASM выберет наиболее эффективную кодировку.<br /><br /> Смещение должно быть положительным и кратен 8.  Смещение выполняется относительно базового процедуры кадра, который обычно находится в RSP, или указатель немасштабированным кадра.|
+|. Смещение SAVEXMM128 reg|Создает UWOP_SAVE_XMM128 или UWOP_SAVE_XMM128_FAR запись для указанного регистра XMM и смещение, с помощью текущего смещения пролога. MASM выберет наиболее эффективную кодировку.<br /><br /> Смещение должно быть положительным и кратен 16.  Смещение выполняется относительно базового процедуры кадра, который обычно находится в RSP, или указатель немасштабированным кадра.|
+|. PUSHFRAME [код]|Создает запись UWOP_PUSH_MACHFRAME очистки кода. Если указан дополнительный код, запись присваивается модификатор 1. В противном случае модификатор равно 0.|
+|.ENDPROLOG|Сигнализирует об окончании объявлений пролога.  Должен существовать в первые 255 байт функции.|
+
+Ниже приведен пример пролога функции использование большинства кодов операций.
+
+```
+sample PROC FRAME
+   db      048h; emit a REX prefix, to enable hot-patching
+push rbp
+.pushreg rbp
+sub rsp, 040h
+.allocstack 040h
+lea rbp, [rsp+020h]
+.setframe rbp, 020h
+movdqa [rbp], xmm7
+.savexmm128 xmm7, 020h;the offset is from the base of the frame
+;not the scaled offset of the frame
+mov [rbp+018h], rsi
+.savereg rsi, 038h
+mov [rsp+010h], rdi
+.savereg rdi, 010h; you can still use RSP as the base of the frame
+; or any other register you choose
+.endprolog
+
+; you can modify the stack pointer outside of the prologue (similar to alloca)
+; because we have a frame pointer.
+; if we didn’t have a frame pointer, this would be illegal
+; if we didn’t make this modification,
+; there would be no need for a frame pointer
+
+sub rsp, 060h
+
+; we can unwind from the following AV because of the frame pointer
+
+mov rax, 0
+mov rax, [rax] ; AV!
+
+; restore the registers that weren’t saved with a push
+; this isn’t part of the official epilog, as described in section 2.5
+
+movdqa xmm7, [rbp]
+mov rsi, [rbp+018h]
+mov rdi, [rbp-010h]
+
+; Here’s the official epilog
+
+lea rsp, [rbp-020h]
+pop rbp
+ret
+sample ENDP
+```
+
+## <a name="see-also"></a>См. также
+
+[Вспомогательные процедуры раскрутки для MASM](../build/unwind-helpers-for-masm.md)

@@ -1,5 +1,5 @@
 ---
-title: . RES-файлы как входные данные компоновщика | Документы Microsoft
+title: . RES-файлы как входные данные компоновщика | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71344bb752ff7a328ddd5f718a5de1c1f42b65be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a6a572013a29420670a2aef8c91c9c4bc64e871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370671"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706325"
 ---
 # <a name="res-files-as-linker-input"></a>RES-файлы в качестве входных файлов компоновщика
-При компоновке программы можно указать RES-файл. RES-файл создается компилятором ресурсов (RC). LINK автоматически преобразует RES-файлы в формат COFF. Средство CVTRES.exe должен быть в том же каталоге, что и LINK.exe, или в каталоге, указанном в переменной среды PATH.  
-  
-## <a name="see-also"></a>См. также  
- [Входные LINK-файлы](../../build/reference/link-input-files.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+При компоновке программы можно указать RES-файл. RES-файл создается компилятором ресурсов (RC). LINK автоматически преобразует RES-файлы в COFF. Средство CVTRES.exe должен быть в том же каталоге, что LINK.exe, или в каталоге, указанном в переменной среды PATH.
+
+## <a name="see-also"></a>См. также
+
+[Входные LINK-файлы](../../build/reference/link-input-files.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

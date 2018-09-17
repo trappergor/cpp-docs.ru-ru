@@ -1,5 +1,5 @@
 ---
-title: '-Zc: noexceptTypes (C ++ 17 noexcept правила) | Документы Microsoft'
+title: '-Zc: noexceptTypes (правила C ++ 17 noexcept) | Документация Майкрософт'
 ms.date: 11/14/2017
 ms.technology:
 - cpp-tools
@@ -17,28 +17,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ad2a662af2cda49e3e8dd8c769fa75dafee94b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78657b293562e82e4691ae54f8ee60d490d78ba7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379553"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716681"
 ---
-# <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (c ++ 17 noexcept правила)
+# <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/ Zc: noexcepttypes (правила c ++ 17 noexcept)
 
-Делает стандарт C ++ 17 `throw()` в качестве псевдонима для `noexcept`, удаляет `throw(<type list>)` и `throw(...)`и позволяет включить определенные типы `noexcept`. Это может вызвать ряд проблем совместимости источника в коде, который соответствует до C ++ 14 или более ранней версии. **/Zc:noexceptTypes** параметр можно задать соответствие стандарт C ++ 17 или разрешать C ++ 14 и более ранних версиях поведение при компиляции кода в C ++ 17 режиме.
+Стандарт C ++ 17 делает `throw()` в качестве псевдонима для `noexcept`, удаляет `throw(<type list>)` и `throw(...)`и позволяет включать определенные типы `noexcept`. Это может вызвать ряд проблем совместимости источника в коде, который соответствует C ++ 14 или более ранней версии. **/Zc: noexcepttypes** параметр можно указать соответствие стандарт C ++ 17 или разрешать C ++ 14 и более ранних версиях поведение при компиляции кода в режиме C ++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/Zc:noexceptTypes**[-]
+> **/ Zc: noexcepttypes**[-]
 
 ## <a name="remarks"></a>Примечания
 
-Когда **/Zc:noexceptTypes** параметр указан, компилятор соответствует стандарт C ++ 17 и рассматривает [throw()](../../cpp/exception-specifications-throw-cpp.md) в качестве псевдонима для [noexcept](../../cpp/noexcept-cpp.md), удаляет `throw(<type list>)`и `throw(...)`и позволяет включить определенные типы `noexcept`. **/Zc:noexceptTypes** параметр доступен только тогда, когда [/std: c ++ 17](std-specify-language-standard-version.md) или [/std:latest](std-specify-language-standard-version.md) включен. **/Zc:noexceptTypes** включена по умолчанию в соответствии с ISO стандарт C ++ 17. [/ Разрешительным-](permissive-standards-conformance.md) параметр не влияет на **/Zc:noexceptTypes**. Отключить этот параметр, указав **/Zc:noexceptTypes-** вернуться к C ++ 14 поведение `noexcept` при **/std::C ++ 17** или **/std::latest** указано.
+Когда **/Zc: noexcepttypes** параметр указан, компилятор соответствует стандарт C ++ 17 и рассматривает [throw()](../../cpp/exception-specifications-throw-cpp.md) в качестве псевдонима для [noexcept](../../cpp/noexcept-cpp.md), удаляет `throw(<type list>)`и `throw(...)`и позволяет включать определенные типы `noexcept`. **/Zc: noexcepttypes** параметр доступен только тогда, когда [/std: c ++ 17](std-specify-language-standard-version.md) или [/std:latest](std-specify-language-standard-version.md) включен. **/ Zc: noexcepttypes** включена по умолчанию в соответствии с ISO стандарт C ++ 17. [/ Permissive-](permissive-standards-conformance.md) параметр не влияет на **/Zc: noexcepttypes**. Отключить этот параметр, указав **/Zc:noexceptTypes-** для возврата к C ++ 14 поведение `noexcept` при **/std::C ++ 17** или **/std::latest** указан.
 
-Начиная с версии 15,5 2017 г. Visual Studio, компилятор C++ проверяет дополнительные спецификации несоответствующие исключений в объявлениях в C ++ 17 режиме или когда [/ разрешительным-](permissive-standards-conformance.md) параметра.
+Начиная с Visual Studio 2017 версии 15.5, компилятор C++ проверяет дополнительные спецификации несоответствующих исключений в объявлениях в режиме C ++ 17 или когда [/ permissive-](permissive-standards-conformance.md) параметра.
 
-В этом примере показано, как вести объявления со спецификатором исключения, когда **/Zc:noexceptTypes** задан или отключен параметр. Для демонстрации поведения при установке, компиляция с помощью `cl /EHsc /W4 noexceptTypes.cpp`. Для демонстрации поведения при отключении, компиляция с помощью `cl /EHsc /W4 /Zc:noexceptTypes- noexceptTypes.cpp`.
+В этом примере показано, как вести объявления с спецификатор исключения, когда **/Zc: noexcepttypes** задан или отключен параметр. Для демонстрации поведения при установке, компиляция с помощью `cl /EHsc /W4 noexceptTypes.cpp`. Для демонстрации поведения при отключении, компиляция с помощью `cl /EHsc /W4 /Zc:noexceptTypes- noexceptTypes.cpp`.
 
 ```cpp
 // noexceptTypes.cpp
@@ -60,7 +60,7 @@ struct B : A
 };
 ```
 
-При компиляции с параметром по умолчанию **/Zc:noexceptTypes**, пример приводит к возникновению указанных предупреждений. Чтобы обновить код, используйте следующую команду:
+При компиляции с использованием параметров по умолчанию **/Zc: noexcepttypes**, пример формирует указанные предупреждения. Чтобы обновить код, используйте следующее:
 
 ```cpp
 void f() noexcept;
@@ -82,14 +82,14 @@ struct B : A
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
-1. Изменить **Дополнительные параметры** включив **/Zc:noexceptTypes** или **/Zc:noexceptTypes-** и выберите **ОК**.
+1. Изменить **Дополнительные параметры** свойство **/Zc: noexcepttypes** или **/Zc:noexceptTypes-** и выберите **ОК**.
 
 ## <a name="see-also"></a>См. также
 
-[/Zc (соответствие)](../../build/reference/zc-conformance.md)  
-[noexcept](../../cpp/noexcept-cpp.md)  
-[Спецификации исключений (throw)](../../cpp/exception-specifications-throw-cpp.md)  
+[/Zc (соответствие)](../../build/reference/zc-conformance.md)
+[noexcept](../../cpp/noexcept-cpp.md)<br/>
+[Спецификации исключений (throw)](../../cpp/exception-specifications-throw-cpp.md)

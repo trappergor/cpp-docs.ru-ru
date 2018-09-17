@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876373b5646790f9f8de0042442b2ab56d9d2971
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40242883"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706671"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink включить файл в PDB-ФАЙЛ)
 
@@ -33,7 +33,7 @@ ms.locfileid: "40242883"
 
 ## <a name="arguments"></a>Аргументы
 
-*filename*  
+*filename*<br/>
 Задает конфигурации в формате JSON файл, содержащий простое сопоставление локальных путей для URL-адреса приложения откуда можно извлечь исходный файл для отображения в отладчике. Дополнительные сведения о формате этого файла см. в разделе [исходной схемы JSON ссылку](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema).
 
 ## <a name="remarks"></a>Примечания
@@ -48,11 +48,11 @@ SourceLink — система зависит от языка - и системы
 
 1. В **Дополнительные параметры** , добавьте **/SOURCELINK:**_filename_ и выберите **ОК** или **применить**для сохранения изменений.
 
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
 - Этот параметр не поддерживает программный эквивалент.
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)  
-[Параметры компоновщика](../../build/reference/linker-options.md)  
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

@@ -1,5 +1,5 @@
 ---
-title: Встроенные функции _InterlockedAdd | Документы Microsoft
+title: Встроенные функции _InterlockedAdd | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333951"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709531"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Встроенные функции _InterlockedAdd
 **Блок, относящийся только к системам Microsoft**  
@@ -86,11 +86,11 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in, out] `Addend`  
- Указатель на целое число для сложения; заменяется результатом сложения.  
+*Слагаемое*<br/>
+[in, out] Указатель на целое число для сложения; заменяется результатом сложения.  
   
- [in] `Value`  
- Значение для сложения.  
+*Значение*<br/>
+[in] Добавляемое значение.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Обе функции возвращают результат сложения.  

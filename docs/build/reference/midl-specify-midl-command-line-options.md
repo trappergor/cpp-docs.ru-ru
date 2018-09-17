@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894594"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706944"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Указание параметров командной строки MIDL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "43894594"
 
 ## <a name="arguments"></a>Аргументы
 
-*file*  
+*file*<br/>
 Имя файла, содержащего [параметров командной строки MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Примечания
@@ -61,9 +61,9 @@ ms.locfileid: "43894594"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
-[Параметры компоновщика](../../build/reference/linker-options.md)   
-[/ IDLOUT (имен выходным файлам MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
-[/ IGNOREIDL (не процесса атрибуты в MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
-[/ TLBOUT (имя. TLB-файл)](../../build/reference/tlbout-name-dot-tlb-file.md)   
-[Сборка атрибутированной программы](../../windows/building-an-attributed-program.md)
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)<br/>
+[/ IDLOUT (имен выходным файлам MIDL)](../../build/reference/idlout-name-midl-output-files.md)
+[/IGNOREIDL (не процесса атрибуты в MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+ [ /TLBOUT (имя. TLB-файл)](../../build/reference/tlbout-name-dot-tlb-file.md)
+[сборка Атрибутированной программы](../../windows/building-an-attributed-program.md)

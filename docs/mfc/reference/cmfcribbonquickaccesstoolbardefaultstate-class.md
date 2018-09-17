@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonQuickAccessToolBarDefaultState | Документы Microsoft
+title: Класс CMFCRibbonQuickAccessToolBarDefaultState | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0ee9ee6a600e4a552e90cd5901340c3759d52a59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041809"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702784"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Класс CMFCRibbonQuickAccessToolBarDefaultState
-Вспомогательный класс, который управляет состоянием по умолчанию для быстрого доступа, расположенный на панели ленты ( [CMFCRibbonBar класса](../../mfc/reference/cmfcribbonbar-class.md)).  
+Вспомогательный класс, который управляет состоянием по умолчанию для быстрого доступа, расположенный на панели ленты ( [класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,26 +44,26 @@ class CMFCRibbonQuickAccessToolBarDefaultState
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState](#cmfcribbonquickaccesstoolbardefaultstate)|Создает объект `CMFCRibbonQuickAccessToolbarDefaultState`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Добавляет команду в состояние по умолчанию для быстрого доступа. Сама панель остается неизменным.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Добавляет команду в состояние по умолчанию для быстрого доступа. Это не приводит к изменению самой панели инструментов.|  
 |[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Копирует свойства одного быстрого доступа к другому.|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Удаляет все команды из панели инструментов быстрого доступа. Сама панель остается неизменным.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Удаляет все команды из панели быстрого доступа. Это не приводит к изменению самой панели инструментов.|  
   
 ## <a name="remarks"></a>Примечания  
- После создания панели инструментов быстрого доступа в приложении, рекомендуется установить состояние по умолчанию путем вызова [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Это состояние по умолчанию восстанавливается в том случае, когда пользователь щелкает **Сброс** кнопку **Настройка** страница приложения **параметры** диалоговое окно.  
+ После создания панели инструментов быстрого доступа в приложении, мы рекомендуем задать состояние по умолчанию, вызвав [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Это состояние по умолчанию восстанавливается в том случае, когда пользователь щелкает **Сброс** кнопку **Настройка** странице вашего приложения **параметры** диалоговое окно.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CMFCRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует создание объекта `CMFCRibbonQuickAccessToolbarDefaultState` класс и как добавить команды в состояние по умолчанию для быстрого доступа.  
+ Следующий пример демонстрирует создание объекта класса `CMFCRibbonQuickAccessToolbarDefaultState` класс и как добавить команды в состояние по умолчанию для быстрого доступа.  
   
  [!code-cpp[NVC_MFC_RibbonApp#21](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]  
   
@@ -87,7 +87,7 @@ void AddCommand(
  Задает видимость команды, когда панель быстрого доступа находится в состоянии по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
- Добавление команды CMFCRibbonQuickAccessToolBarDefaultState выполняет три результаты. Во-первых каждая команда добавлены значится на раскрывающийся список справа от панели инструментов быстрого доступа. Таким образом пользователь легко можно добавить или удалить команды из панели инструментов быстрого доступа. Во-вторых, панели инструментов быстрого доступа будет сброшен для отображения только тех команд, которые перечислены как видимый в состоянии по умолчанию при щелчке **Сброс** кнопку в **Настройка** диалоговое окно. Третий, если не был вызван [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), панели инструментов быстрого доступа использует видимые команды из этого списка, как видимые команды по умолчанию при первом запуске приложения пользователем. После добавления всех команд, которые нужно вызвать [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) для установки данного экземпляра в качестве режима по умолчанию для быстрого доступа, панели ленты.  
+ Добавление команды на CMFCRibbonQuickAccessToolBarDefaultState выполняет три результата. Во-первых Каждая добавленная команда значится на раскрывающийся список в правой части панели инструментов быстрого доступа. Таким образом пользователь может легко добавить или удалить команды из панели быстрого доступа. Во-вторых, сбрасывается в панель быстрого доступа для отображения только тех команд, которые перечислены как видимый в состояние по умолчанию при нажатии **Сброс** кнопку **Настройка** диалоговое окно. Третий, если не был вызван [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), панель быстрого доступа использует видимые команды из этого списка как видимые команды по умолчанию при первом запуске приложения пользователем. После добавления всех команд, которые должны вызывать [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) следует задать этот экземпляр как состояние по умолчанию для быстрого доступа, панели ленты.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
  Копирует свойства одного быстрого доступа к другому.  
@@ -97,11 +97,11 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *src*  
- Ссылка на источник `CMFCRibbonQuickAccessToolBarDefaultState` объект для копирования из.  
+*src*<br/>
+[in] Ссылка на источник `CMFCRibbonQuickAccessToolBarDefaultState` для копирования.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод копирует каждой команды из источника `CMFCRibbonQuickAccessToolBarDefaultState` объекта к данному объекту с помощью [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) метод.  
+ Этот метод копирует каждой команды в источнике `CMFCRibbonQuickAccessToolBarDefaultState` объект данному объекту с помощью [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) метод.  
   
 ##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
  Создает объект состояния по умолчанию панель быстрого доступа.  
@@ -114,14 +114,14 @@ CMFCRibbonQuickAccessToolBarDefaultState();
  По умолчанию список команд, новый экземпляр [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) содержит пуст.  
   
 ##  <a name="removeall"></a>  CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
- Очищает список команд по умолчанию в панели инструментов быстрого доступа.  
+ Очищает список команд по умолчанию в панели быстрого доступа.  
   
 ```  
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция удаляет из данного экземпляра, все команды, предыдущие вызовы [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) добавлен.  
+ Эта функция удаляет из данного экземпляра, все команды, предыдущие обращения для [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) добавлен.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

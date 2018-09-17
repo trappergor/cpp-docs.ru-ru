@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208889"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726795"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 При написании приложения, вы создаете один [CWinApp](../../mfc/reference/cwinapp-class.md)-объект, производный от. В некоторых случаях требуется получить сведения об этом объекте, из за пределами `CWinApp`-объект, производный от. Или может потребоваться доступ к другим объектам глобального «диспетчер».
@@ -406,8 +406,8 @@ BOOL AFXAPI AfxInitRichEdit2();
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- Указатель на объект, который является производным от `CWnd`.  
+*pWnd*<br/>
+[in] Указатель на объект, который является производным от `CWnd`.  
    
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если предоставленное окно является расширенным объектом фрейма; в противном случае — значение FALSE.  
@@ -442,8 +442,8 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- Указатель на объект, который является производным от `CWnd`.  
+*pWnd*<br/>
+[in] Указатель на объект, который является производным от `CWnd`.  
    
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если предоставленное окно является объект панели инструментов; в противном случае — значение FALSE.  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bEnable*  
- Значение TRUE указывает, что данные реестра направляется на узел HKCU; Значение FALSE указывает, что приложение записывает данные реестра в узел по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** ( **HKCR**).  
+*bEnable*<br/>
+[in] Значение TRUE указывает, что данные реестра направляется на узел HKCU; Значение FALSE указывает, что приложение записывает данные реестра в узел по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Примечания  
 

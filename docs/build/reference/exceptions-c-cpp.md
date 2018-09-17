@@ -22,35 +22,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a3a9e1cf1384603d6b7d95fa5960e951f932ef
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7d32b22d0ac8a065d59030dccd144236a79c6ac8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216887"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705698"
 ---
 # <a name="exceptions-cc"></a>Исключения (C/C++)
-Два кода исключения могут возникать при возникновении ошибок:  
-  
--   Для **LoadLibrary** сбоя  
-  
--   Для **GetProcAddress** сбоя  
-  
- Вот сведения об исключении:  
-  
-```  
-//  
-// Exception information  
-//  
-#define FACILITY_VISUALCPP  ((LONG)0x6d)  
-#define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
-```  
-  
- Исключение кодами исключений — это стандартный VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и значения VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передает указатель на **DelayLoadInfo** структуры в значении LPDWORD, можно получить с **GetExceptionInformation** в [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) Структура, поле ExceptionInformation [0].  
-  
- Кроме того Если в поле grAttrs неверные биты, ERROR_INVALID_PARAMETER исключение. Это исключение, для всех, Собрав Неустранимая.  
-  
- См. в разделе [определение структуры и константы](../../build/reference/structure-and-constant-definitions.md) Дополнительные сведения.  
-  
-## <a name="see-also"></a>См. также  
- [Обработка ошибок и предупреждений](../../build/reference/error-handling-and-notification.md)
+
+Два кода исключения могут возникать при возникновении ошибок:
+
+- Для **LoadLibrary** сбоя
+
+- Для **GetProcAddress** сбоя
+
+Вот сведения об исключении:
+
+```
+//
+// Exception information
+//
+#define FACILITY_VISUALCPP  ((LONG)0x6d)
+#define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
+```
+
+Исключение кодами исключений — это стандартный VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и значения VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передает указатель на **DelayLoadInfo** структуры в значении LPDWORD, можно получить с **GetExceptionInformation** в [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) Структура, поле ExceptionInformation [0].
+
+Кроме того Если в поле grAttrs неверные биты, ERROR_INVALID_PARAMETER исключение. Это исключение, для всех, Собрав Неустранимая.
+
+См. в разделе [определение структуры и константы](../../build/reference/structure-and-constant-definitions.md) Дополнительные сведения.
+
+## <a name="see-also"></a>См. также
+
+[Обработка ошибок и предупреждений](../../build/reference/error-handling-and-notification.md)

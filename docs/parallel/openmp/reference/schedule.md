@@ -1,5 +1,5 @@
 ---
-title: расписание | Документы Microsoft
+title: расписания | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00db7daf5c2c9882c1d54ac054ee285de1fdac4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 32c05f2c4740e978d58540727067ea0d76d95871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691837"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712157"
 ---
 # <a name="schedule"></a>Расписание
-Применяется к [для](../../../parallel/openmp/reference/for-openmp.md) директивы.  
+Применяется к [для](../../../parallel/openmp/reference/for-openmp.md) директива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,8 +44,8 @@ schedule(type[,size])
   
 -   `static`  
   
- `size` (необязательно)  
- Указывает размер итераций. `size` должен быть целым числом. Если не является допустимым `type` — `runtime`.  
+*size*<br/>
+(Необязательно) Указывает размер итераций. `size` должен быть целым числом. Не является допустимым, если `type` является `runtime`.  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [2.4.1 конструкция for](../../../parallel/openmp/2-4-1-for-construct.md).  

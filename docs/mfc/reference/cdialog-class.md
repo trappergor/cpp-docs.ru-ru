@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c18a9b1e4a35a1089b8a7fb441161552bb3a3909
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217337"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724312"
 ---
 # <a name="cdialog-class"></a>Класс CDialog
 Базовый класс, используемый для отображения диалоговых окон на экране.  
@@ -70,13 +70,13 @@ class CDialog : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDialog::CDialog](#cdialog)|Создает объект `CDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDialog::Create](#create)|Инициализирует `CDialog` объекта. Создает немодальное диалоговое окно и прикрепляет его к `CDialog` объекта.|  
 |[CDialog::CreateIndirect](#createindirect)|Создает немодальное диалоговое окно на основе шаблона диалогового окна в памяти (не ресурсов на основе).|  
@@ -95,7 +95,7 @@ class CDialog : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDialog::OnCancel](#oncancel)|Переопределение для выполнения действия клавиши ESC или кнопку "Отмена". Значение по умолчанию закрывает диалоговое окно и `DoModal` возвращает IDCANCEL.|  
 |[CDialog::OnOK](#onok)|Переопределите, чтобы выполнить действие "ОК" в модальное диалоговое окно. Значение по умолчанию закрывает диалоговое окно и `DoModal` возвращает IDOK.|  
@@ -472,8 +472,8 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pFont*  
- Задает указатель на шрифт, который будет использоваться в качестве шрифта по умолчанию для всех элементов управления в этом диалоговом окне.  
+*pFont*<br/>
+[in] Задает указатель на шрифт, который будет использоваться в качестве шрифта по умолчанию для всех элементов управления в этом диалоговом окне.  
   
 ### <a name="remarks"></a>Примечания  
  Диалоговое окно будет использовать указанный шрифт по умолчанию для всех элементов управления.  

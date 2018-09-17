@@ -1,5 +1,5 @@
 ---
-title: Коды выхода BSCMAKE | Документы Microsoft
+title: Коды выхода BSCMAKE | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022fc0e2bcb73e8aad00fd3cb74eb534409384c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbb5b5f9e61cab7abdd1ba9a8594176680e95f77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369232"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720867"
 ---
 # <a name="bscmake-exit-codes"></a>Коды выхода BSCMAKE
-BSCMAKE возвращает код выхода (также называемые кодом возврата или код ошибки) для операционной системы или вызывающей программе.  
-  
-|Код|Значение|  
-|----------|-------------|  
-|0|Без ошибок|  
-|1|Ошибка командной строки|  
-|4|Неустранимая ошибка во время сборки|  
-  
-## <a name="see-also"></a>См. также  
- [Справочник ВSCMAKE](../../build/reference/bscmake-reference.md)
+
+BSCMAKE возвращает код выхода (также называемые кодом возврата или код ошибки) для операционной системы или вызывающей программе.
+
+|Код|Значение|
+|----------|-------------|
+|0|Нет ошибок|
+|1|Ошибка командной строки|
+|4|Неустранимая ошибка во время сборки|
+
+## <a name="see-also"></a>См. также
+
+[Справочник ВSCMAKE](../../build/reference/bscmake-reference.md)

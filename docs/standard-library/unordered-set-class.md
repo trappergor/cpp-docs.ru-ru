@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954842"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726691"
 ---
 # <a name="unorderedset-class"></a>Класс unordered_set
 
@@ -168,7 +168,7 @@ class unordered_set;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Key*|Тип ключа.|
 |*хэш*|Тип объекта хэш-функции.|
@@ -177,7 +177,7 @@ class unordered_set;
 
 ## <a name="members"></a>Участники
 
-|Определение типа|Описание:|
+|Определение типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип распределителя для управления хранилищем.|
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
@@ -195,7 +195,7 @@ class unordered_set;
 |[size_type](#size_type)|Тип беззнакового расстояния между двумя элементами.|
 |[value_type](#value_type)|Тип элемента.|
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[begin](#begin)|Задает начало управляемой последовательности.|
 |[контейнер](#bucket)|Получает номер блока для значения ключа.|
@@ -225,7 +225,7 @@ class unordered_set;
 |[swap](#swap)|Меняет местами содержимое двух контейнеров.|
 |[unordered_set](#unordered_set)|Создает объект контейнера.|
 
-|Операторы|Описание:|
+|Операторы|Описание|
 |-|-|
 |[unordered_set::operator=](#op_eq)|Копирует хэш-таблицу.|
 
@@ -299,7 +299,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*nbucket*|Номер сегмента.|
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*  
- Значение ключа для сопоставления.
+*keyval*<br/>
+Значение ключа для сопоставления.
 
 ### <a name="remarks"></a>Примечания
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nbucket*  
- Номер сегмента.
+*nbucket*<br/>
+Номер сегмента.
 
 ### <a name="remarks"></a>Примечания
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*  
- Искомое значение ключа.
+*keyval*<br/>
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -978,7 +978,7 @@ Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*аргументы*|Аргументы, которые передаются для создания элемента, который будет вставлен в объект unordered_set, если этот объект еще не содержит элемент, ключ которого упорядочен аналогичным образом.|
 
@@ -1009,7 +1009,7 @@ Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*аргументы*|Аргументы, которые передаются для создания элемента, который будет вставлен в объект unordered_set, если объект unordered_set не содержит этого элемента или, в более общем случае, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.|
 |*where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -1108,7 +1108,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*nbucket*|Номер сегмента.|
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*  
- Искомое значение ключа.
+*keyval*<br/>
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Параметры
 
-*Where*  
- Положение удаляемого элемента.
+*Where*<br/>
+Положение удаляемого элемента.
 
-*Первый*  
- Положение первого удаляемого элемента.
+*Первый*<br/>
+Положение первого удаляемого элемента.
 
-*последний*  
- Положение перед последним удаляемым элементом.
+*последний*<br/>
+Положение перед последним удаляемым элементом.
 
-*Key*  
- Значение ключа удаляемых элементов.
+*Key*<br/>
+Значение ключа удаляемых элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*  
- Искомое значение ключа.
+*keyval*<br/>
+Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1467,7 +1467,7 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента, вставляемого в unordered_set, если оно уже не содержит элемент, ключ которого эквивалентно упорядочен.|
 |*Where*|Место начала поиска правильной точки вставки.|
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Параметры
 
-*Коэффициент*  
- Новый коэффициент максимальной нагрузки.
+*Коэффициент*<br/>
+Новый коэффициент максимальной нагрузки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2001,7 +2001,7 @@ unordered_set& operator=(unordered_set&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*right*|[Unordered_set](../standard-library/unordered-set-class.md) копируется в `unordered_set`.|
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Параметры
 
-*nbuckets*  
- Требуемое число сегментов.
+*nbuckets*<br/>
+Требуемое число сегментов.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*  
- Контейнер для замены.
+*right*<br/>
+Контейнер для замены.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2434,7 +2434,7 @@ unordered_set(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*InputIterator*|Тип итератора.|
 |*Al*|Объект распределителя для сохранения.|

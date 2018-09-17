@@ -1,5 +1,5 @@
 ---
-title: Командная строка DUMPBIN | Документы Microsoft
+title: Командная строка DUMPBIN | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc807a8f67ddaae894a0e0cba55475b804a0abce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9028cebd7c75bb37bbfa958186ebb2e5d206094
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370518"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724788"
 ---
 # <a name="dumpbin-command-line"></a>Командная строка DUMPBIN
-Чтобы запустить DUMPBIN, используйте следующий синтаксис:  
-  
-```  
-DUMPBIN [options] files...  
-```  
-  
- Укажите один или несколько двоичных файлов, а также любые параметры, необходимые для управления данными. DUMPBIN отображает сведения в стандартный вывод. Можно перенаправить в файл или используйте параметр/out, чтобы указать имя файла для выходных данных.  
-  
- При запуске программы DUMPBIN для файла без указания параметра DUMPBIN отображает параметра/Summary выходных данных.  
-  
- При вводе команды `dumpbin` без любые другие данные в командной строке, DUMPBIN отображает сводную информацию об используемых параметрах.  
-  
-## <a name="see-also"></a>См. также  
- [Средства построения C/C++](../../build/reference/c-cpp-build-tools.md)   
- [Справочник DUMPBIN](../../build/reference/dumpbin-reference.md)
+
+Чтобы запустить (программа DUMPBIN), используйте следующий синтаксис:
+
+```
+DUMPBIN [options] files...
+```
+
+Укажите один или несколько двоичных файлов, а также любые параметры, необходимые для управления данными. (Программа DUMPBIN) отображает сведения в стандартный вывод. Можно перенаправить его в файл или используйте параметр/out, чтобы указать имя файла для выходных данных.
+
+При запуске программы DUMPBIN для файла без указания параметра DUMPBIN отображает параметра/Summary выходных данных.
+
+При вводе команды `dumpbin` без других командной строки ввода, DUMPBIN отображает инструкцию использования параметров.
+
+## <a name="see-also"></a>См. также
+
+[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Справочник DUMPBIN](../../build/reference/dumpbin-reference.md)

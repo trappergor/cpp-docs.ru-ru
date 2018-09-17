@@ -1,5 +1,5 @@
 ---
-title: __writefsbyte __writefsdword, __writefsqword __writefsword | Документы Microsoft
+title: __writefsbyte __writefsdword, __writefsqword __writefsword | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338306"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718475"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 **Блок, относящийся только к системам Microsoft**  
   
- Запись в папку, указанную в качестве смещения относительно начала FS сегмента памяти.  
+ Запись памяти в расположении, заданном в качестве смещения относительно начала сегмента FS.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,11 +60,11 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `Offset`  
- Смещение от начала FS для записи.  
+*Смещение*<br/>
+[in] Смещение от начала FS для записи.  
   
- [in] `Data`  
- Значение для записи.  
+*Данные*<br/>
+[in] Записываемое значение.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -78,7 +78,7 @@ void __writefsqword(
  **Файл заголовка** \<intrin.h >  
   
 ## <a name="remarks"></a>Примечания  
- Эти процедуры доступны только как встроенные объекты.  
+ Эти процедуры доступны только как встроенные функции.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

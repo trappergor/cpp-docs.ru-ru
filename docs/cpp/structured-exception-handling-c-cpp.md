@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 861cb216dba1e8b3d451d6120dba897e06ba910a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217123"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713197"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -34,10 +34,10 @@ ms.locfileid: "43217123"
 
 ## <a name="grammar"></a>Грамматика
 
-*Оператор try-except* :  
+*Оператор try-except* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *составной оператор* **__except** **(** *выражение* **)** *составной оператор*
 
-*Оператор try-finally* :  
+*Оператор try-finally* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *составной оператор* **__finally** *составной оператор*
 
 ## <a name="remarks"></a>Примечания

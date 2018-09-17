@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4cfc3e0d129fdb10ee10275000df6d8c51604be
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cc824d31f305fe36e0971704fd63025b3c1fdad2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541118"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722960"
 ---
 # <a name="cmfcautohidebutton-class"></a>Класс CMFCAutoHideButton
 Кнопка, отображающая или скрывающая [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) , настроенный на скрытие.  
@@ -81,7 +81,7 @@ class CMFCAutoHideButton : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCAutoHideButton::BringToTop](#bringtotop)||  
 |[CMFCAutoHideButton::Create](#create)|Создает и инициализирует кнопку автоматического скрытия.|  
@@ -144,14 +144,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pParentBar*  
- Указатель на родительской панели инструментов.  
+*pParentBar*<br/>
+[in] Указатель на родительской панели инструментов.  
   
- [in] *pAutoHideWnd*  
- Указатель на [CDockablePane](../../mfc/reference/cdockablepane-class.md) объекта. Эта кнопка автоматического скрытия, скрывает и показывает, что `CDockablePane`.  
+*pAutoHideWnd*<br/>
+[in] Указатель на [CDockablePane](../../mfc/reference/cdockablepane-class.md) объекта. Эта кнопка автоматического скрытия, скрывает и показывает, что `CDockablePane`.  
   
- [in] *dwAlignment*  
- Значение, указывающее выравнивание кнопки с фрейма главного окна.  
+*dwAlignment*<br/>
+[in] Значение, указывающее выравнивание кнопки с фрейма главного окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -303,8 +303,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
 ### <a name="remarks"></a>Примечания  
  Если вы хотите настроить внешний вид кнопки автоматического скрытия в приложении, создайте новый класс, производный от `CMFCAutoHideButton`. В производном классе переопределите этот метод.  
@@ -320,14 +320,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
- [in] *rectBounds*  
- Ограничивающий прямоугольник кнопки автоматического скрытия.  
+*rectBounds*<br/>
+[in] Ограничивающий прямоугольник кнопки автоматического скрытия.  
   
- [in] *rectBorderSize*  
- Толщина границы для каждой стороны окна кнопки автоматического скрытия.  
+*rectBorderSize*<br/>
+[in] Толщина границы для каждой стороны окна кнопки автоматического скрытия.  
   
 ### <a name="remarks"></a>Примечания  
  Если вы хотите настроить границы каждой кнопки автоматического скрытия в приложении, создайте новый класс, производный от `CMFCAutoHideButton`. В производном классе переопределите этот метод.  
@@ -342,11 +342,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
- [in] *rect*  
- Ограничивающий прямоугольник кнопки автоматического скрытия.  
+*Rect*<br/>
+[in] Ограничивающий прямоугольник кнопки автоматического скрытия.  
   
 ### <a name="remarks"></a>Примечания  
  Если вы хотите настроить фон для кнопки автоматического скрытия в приложении, создайте новый класс, производный от `CMFCAutoHideButton`. В производном классе переопределите этот метод.  
@@ -359,8 +359,8 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bShow*  
- Логическое значение, указывающее, отображает ли этот метод вложенного `CDockablePane`.  
+*bShow*<br/>
+[in] Логическое значение, указывающее, отображает ли этот метод вложенного `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  Показывает или скрывает кнопку автоматического скрытия.  
@@ -370,8 +370,8 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bShow*  
- Логическое значение, указывающее, следует ли показывать кнопку автоматического скрытия.  
+*bShow*<br/>
+[in] Логическое значение, указывающее, следует ли показывать кнопку автоматического скрытия.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
@@ -405,8 +405,8 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pFirstBarInGroup*  
- Указатель на первую строку в группе.  
+*pFirstBarInGroup*<br/>
+[in] Указатель на первую строку в группе.  
   
 ### <a name="remarks"></a>Примечания  
   

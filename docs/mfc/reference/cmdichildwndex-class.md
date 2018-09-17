@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc9965371de0ea75ece0cb31c7ec5187b9279cef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677695"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726717"
 ---
 # <a name="cmdichildwndex-class"></a>Класс CMDIChildWndEx
 `CMDIChildWndEx` Класс предоставляет функциональные возможности Windows дочернего окна многодокументного интерфейса (MDI). Он расширяет функциональные возможности [класс CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Платформа требует этот класс, если приложение MDI использует определенные классы MFC.  
@@ -239,11 +239,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pControlBar*  
- Указатель на область.  
+*pControlBar*<br/>
+[in] Указатель на область.  
   
- [in] *bTail*  
- Значение TRUE, добавляемый в конец списка областей на панели для закрепления manager; в противном случае — значение FALSE.  
+*bTail*<br/>
+[in] Значение TRUE, добавляемый в конец списка областей на панели для закрепления manager; в противном случае — значение FALSE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если области успешно зарегистрирован в диспетчере закрепления; в противном случае — значение FALSE.  
@@ -256,8 +256,8 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pControlBar*  
- Указатель на область.  
+*pControlBar*<br/>
+[in] Указатель на область.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Настраивает макет закрепления.  
@@ -267,8 +267,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *hdwp*  
- Дескриптор структуру позиции отложенного окна.  
+*hdwp*<br/>
+[in] Дескриптор структуру позиции отложенного окна.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -305,14 +305,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pBar*  
- Указатель на область.  
+*pBar*<br/>
+[in] Указатель на область.  
   
- [in] *nDockBarID*  
- Идентификатор области.  
+*nDockBarID*<br/>
+[in] Идентификатор области.  
   
- [in] *lpRect*  
- Указатель на прямоугольник.  
+*lpRect*<br/>
+[in] Указатель на прямоугольник.  
   
 ### <a name="remarks"></a>Примечания  
  *LpRect* параметр не используется.  
@@ -349,8 +349,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *dwDockStyle*  
- Задает стороны окна главного фрейма, в которой включено. Используйте один или несколько из следующих флагов.  
+*dwDockStyle*<br/>
+[in] Задает стороны окна главного фрейма, в которой включено. Используйте один или несколько из следующих флагов.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -371,8 +371,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *dwDockStyle*  
- Задает выравнивание по закрепления, чтобы включить.  
+*dwDockStyle*<br/>
+[in] Задает выравнивание по закрепления, чтобы включить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -453,8 +453,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nID*  
- Идентификатор элемента управления области для поиска.  
+*nID*<br/>
+[in] Идентификатор элемента управления области для поиска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на область, если найден, в противном случае — NULL.  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pControlBar*  
- Указатель на область для вставки.  
+*pControlBar*<br/>
+[in] Указатель на область для вставки.  
   
- [in] *pTarget*  
- Указатель на соседней панели.  
+*pTarget*<br/>
+[in] Указатель на соседней панели.  
   
- [in] *bAfter*  
- Если значение равно TRUE, *pControlBar* вставляется после *pTarget*. Если значение равно FALSE, *pControlBar* вставляется перед *pTarget*.  
+*bAfter*<br/>
+[in] Если значение равно TRUE, *pControlBar* вставляется после *pTarget*. Если значение равно FALSE, *pControlBar* вставляется перед *pTarget*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно, значение FALSE в противном случае.  
@@ -529,14 +529,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *точки*  
- Указанная точка.  
+*точка*<br/>
+[in] Указанная точка.  
   
- [in] *dwBarAlignment*  
- Задает край приближается к точке. Возможные значения: CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP и CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Задает край приближается к точке. Возможные значения: CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP и CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- Значение TRUE, если точка находится рядом с внешней границы элемента на сайте закрепления; Значение FALSE в противном случае.  
+*bOuterEdge*<br/>
+[in] Значение TRUE, если точка находится рядом с внешней границы элемента на сайте закрепления; Значение FALSE в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если точка находится рядом с сайтом закрепления; в противном случае — значение FALSE.  
@@ -580,8 +580,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pFrame*  
- Указатель на окна области.  
+*pFrame*<br/>
+[in] Указатель на окна области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно, в противном случае — значение FALSE.  
@@ -596,11 +596,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bPreview*  
- Значение TRUE, если перейти в режим предварительного просмотра печати. Если значение равно FALSE, выйти из режима предварительного просмотра печати.  
+*bPreview*<br/>
+[in] Значение TRUE, если перейти в режим предварительного просмотра печати. Если значение равно FALSE, выйти из режима предварительного просмотра печати.  
   
- [in] *состояния производительности*  
- Указатель на структуру состояния предварительного просмотра.  
+*состояния производительности*<br/>
+[in] Указатель на структуру состояния предварительного просмотра.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Вызывается платформой для обновления заголовка фрейма.  
@@ -610,8 +610,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bAddToTitle*  
- Если значение равно TRUE, добавьте имя документа к заголовку.  
+*bAddToTitle*<br/>
+[in] Если значение равно TRUE, добавьте имя документа к заголовку.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Возвращает область, содержащее заданную точку.  
@@ -631,20 +631,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *точки*  
- Указывает точку, в экранных координатах, для проверки.  
+*точка*<br/>
+[in] Указывает точку, в экранных координатах, для проверки.  
   
- [in] *nSensitivity*  
- Увеличьте этот объем области поиска. Область удовлетворяет условиям поиска, если заданная точка находится в области повышения.  
+*nSensitivity*<br/>
+[in] Увеличьте этот объем области поиска. Область удовлетворяет условиям поиска, если заданная точка находится в области повышения.  
   
- [in] *bExactBar*  
- Значение TRUE, чтобы игнорировать *nSensitivity* параметра; в противном случае — значение FALSE.  
+*bExactBar*<br/>
+[in] Значение TRUE, чтобы игнорировать *nSensitivity* параметра; в противном случае — значение FALSE.  
   
- [in] *pRTCBarType*  
- Если значение не NULL, метод выполняет поиск только областей указанного типа.  
+*pRTCBarType*<br/>
+[in] Если значение не NULL, метод выполняет поиск только областей указанного типа.  
   
- [in] *dwAlignment*  
- Если область находится в заданной точке, данный параметр содержит части панели, который был ближайший к заданной точке. Дополнительные сведения см. в разделе "Примечания".  
+*dwAlignment*<br/>
+[in] Если область находится в заданной точке, данный параметр содержит части панели, который был ближайший к заданной точке. Дополнительные сведения см. в разделе "Примечания".  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на `CBasePane`-производный объект, содержащий в момент, или значение NULL, если области не был найден.  
@@ -662,8 +662,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bNotify*  
- Значение TRUE, если активный элемент на месте для окна получает уведомление об изменении макета.  
+*bNotify*<br/>
+[in] Значение TRUE, если активный элемент на месте для окна получает уведомление об изменении макета.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Удаляет панель из диспетчере закрепления.  
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pControlBar*  
- Указатель на область для удаления.  
+*pControlBar*<br/>
+[in] Указатель на область для удаления.  
   
- [in] *bDestroy*  
- Значение TRUE, если уничтожается области удален.  
+*bDestroy*<br/>
+[in] Значение TRUE, если уничтожается области удален.  
   
- [in] *bAdjustLayout*  
- Значение TRUE, если настройте макет закрепления немедленно.  
+*bAdjustLayout*<br/>
+[in] Значение TRUE, если настройте макет закрепления немедленно.  
   
- [in] *bAutoHide*  
- Значение TRUE, если макет закрепления относится к списку автоматического скрытия панели. Если значение равно FALSE, макет закрепления относится к список регулярных панелей.  
+*bAutoHide*<br/>
+[in] Значение TRUE, если макет закрепления относится к списку автоматического скрытия панели. Если значение равно FALSE, макет закрепления относится к список регулярных панелей.  
   
- [in] *pBarReplacement*  
- Указатель на область, которая заменяет области удален.  
+*pBarReplacement*<br/>
+[in] Указатель на область, которая заменяет области удален.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pBar*  
- [in] *bShow*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bShow*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Примечания  
   

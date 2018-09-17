@@ -1,5 +1,5 @@
 ---
-title: Обработчик конкретного языка | Документы Microsoft
+title: Обработчик конкретного языка | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,61 +12,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cbfbe6a9b98828a63fb4a092717bfab583e9a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 678f5695523751ebc1ef3c5dba2b63154b21833c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368802"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714952"
 ---
 # <a name="language-specific-handler"></a>Обработчик конкретного языка
-Относительный адрес обработчик конкретного языка в UNWIND_INFO отсутствует, каждый раз, когда установлены флаги UNW_FLAG_EHANDLER или UNW_FLAG_UHANDLER. Как описано в предыдущем разделе, обработчик языка вызывается как часть поиска для обработчика исключений или в процессе очистки. Он имеет следующий прототип:  
-  
-```  
-typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (  
-    IN PEXCEPTION_RECORD ExceptionRecord,  
-    IN ULONG64 EstablisherFrame,  
-    IN OUT PCONTEXT ContextRecord,  
-    IN OUT PDISPATCHER_CONTEXT DispatcherContext  
-);  
-```  
-  
- **ExceptionRecord** предоставляет указатель на запись исключения, имеющий стандартное определение Win64.  
-  
- **EstablisherFrame** адрес базового выделения основных стека для этой функции.  
-  
- **ContextRecord** указывает на контекст исключения во время возникновения исключения (в случае обработчик исключений), либо текущий контекст «раскрутки» (в случае обработчик завершения).  
-  
- **DispatcherContext** указывает диспетчер контекст для этой функции. Он имеет следующее определение:  
-  
-```  
-typedef struct _DISPATCHER_CONTEXT {  
-    ULONG64 ControlPc;  
-    ULONG64 ImageBase;  
-    PRUNTIME_FUNCTION FunctionEntry;  
-    ULONG64 EstablisherFrame;  
-    ULONG64 TargetIp;  
-    PCONTEXT ContextRecord;  
-    PEXCEPTION_ROUTINE LanguageHandler;  
-    PVOID HandlerData;  
-} DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;  
-```  
-  
- **ControlPc** значение RIP в рамках данной функции. Это адрес исключения или адрес, на котором элемент прекратил функцию установления. Это RIP, который будет использоваться для определения, если элемент управления находится внутри защищенной конструкции в данной функции (например, блок __try для \__try /\__except или \__try /\__finally).  
-  
- **ImageBase** представляет собой основу образа (адрес загрузки) модуля, содержащего данную функцию, которую добавлен 32-разрядные смещения, используемые в записи функции и раскрутки для записи относительных адресов.  
-  
- **FunctionEntry** питания указателем RUNTIME_FUNCTION функцию записи, содержащий функцию и очистки относительные адреса база образа сведения для этой функции.  
-  
- **EstablisherFrame** адрес базового выделения основных стека для этой функции.  
-  
- **TargetIp** предоставляющий необязательное инструкция адрес, указывающий адрес продолжения очистка. Этот адрес учитывается, если **EstablisherFrame** не указан.  
-  
- **ContextRecord** указывает на контекст исключения для использования кодом диспетчеризации или раскрутки системы исключения.  
-  
- **LanguageHandler** указывает языкового подпрограмму обработчика вызывается.  
-  
- **HandlerData** указывает на данные языкового обработчика для этой функции.  
-  
-## <a name="see-also"></a>См. также  
- [Обработка исключений (x64)](../build/exception-handling-x64.md)
+
+Относительный адрес обработчик конкретного языка присутствует в UNWIND_INFO всякий раз, когда флаги UNW_FLAG_EHANDLER или UNW_FLAG_UHANDLER установлены. Как описано в предыдущем разделе, вызывается обработчик конкретного языка, как часть поиска обработчика исключений или как часть очистка. Он имеет следующий прототип:
+
+```
+typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
+    IN PEXCEPTION_RECORD ExceptionRecord,
+    IN ULONG64 EstablisherFrame,
+    IN OUT PCONTEXT ContextRecord,
+    IN OUT PDISPATCHER_CONTEXT DispatcherContext
+);
+```
+
+**ExceptionRecord** предоставляет указатель на запись исключения, имеющий стандартное определение Win64.
+
+**EstablisherFrame** — это адрес базового выделения основных стека для этой функции.
+
+**ContextRecord** указывает на контекст исключения во время (в случае обработчик исключений) было создано исключение или текущего «очистить» контекста (в случае обработчик завершения).
+
+**DispatcherContext** указывает на контекст dispatcher для этой функции. Он имеет следующее определение:
+
+```
+typedef struct _DISPATCHER_CONTEXT {
+    ULONG64 ControlPc;
+    ULONG64 ImageBase;
+    PRUNTIME_FUNCTION FunctionEntry;
+    ULONG64 EstablisherFrame;
+    ULONG64 TargetIp;
+    PCONTEXT ContextRecord;
+    PEXCEPTION_ROUTINE LanguageHandler;
+    PVOID HandlerData;
+} DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
+```
+
+**ControlPc** является значением зарезервированного IP-адреса в пределах этой функции. Это адрес исключения или адрес, по которому элемент управления влево функцию установления. Это RIP, который будет использоваться для определения, является ли элемент управления в рамках защищенной конструкции в этой функции (например, блок __try для \__try /\__except или \__try /\__finally).
+
+**"Imagebase"** представляет собой основу образа (адрес загрузки) модуля, содержащего данную функцию, добавляемым к 32-разрядные смещения, используемые в функции записи и раскрутки для записи относительных адресов.
+
+**FunctionEntry** указателем на RUNTIME_FUNCTION функцию записи, содержащий функцию и очистки относительные адреса основного образа сведения для этой функции.
+
+**EstablisherFrame** — это адрес базового выделения основных стека для этой функции.
+
+**TargetIp** предоставляет необязательный инструкции адрес, который указывает адрес продолжения очистку. Этот адрес учитывается, если **EstablisherFrame** не указан.
+
+**ContextRecord** указывает на контекст исключения для использования в коде системы диспетчеризации или раскрутки исключение.
+
+**LanguageHandler** указывает языкового подпрограмму обработчика вызова.
+
+**HandlerData** указывает на данные языкового обработчика для этой функции.
+
+## <a name="see-also"></a>См. также
+
+[Обработка исключений (x64)](../build/exception-handling-x64.md)

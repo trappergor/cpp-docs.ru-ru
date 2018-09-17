@@ -1,5 +1,5 @@
 ---
-title: Содержимое файла Makefile | Документы Microsoft
+title: Содержимое файла Makefile | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,32 +15,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 192e64e1f40df7a4e871d6765f57f16132cc8b5f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 83b48855d990f0c6c3c0872e8c9b22441d04e76a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367073"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718280"
 ---
 # <a name="contents-of-a-makefile"></a>Содержимое файла makefile
-Содержит файл makefile.  
-  
--   [Блоки описания](../build/description-blocks.md)  
-  
--   [Команды](../build/commands-in-a-makefile.md)  
-  
--   [Макросы](../build/macros-and-nmake.md)  
-  
--   [Правила вывода](../build/inference-rules.md)  
-  
--   [Директивы с точками](../build/dot-directives.md)  
-  
--   [Директивы препроцессора](../build/makefile-preprocessing.md)  
-  
-## <a name="remarks"></a>Примечания  
- Другие компоненты, которые можно использовать в файле makefile, [подстановочные знаки](../build/wildcards-and-nmake.md), [длинные имена файлов](../build/long-filenames-in-a-makefile.md), [комментарии](../build/comments-in-a-makefile.md), и [специальные символы](../build/special-characters-in-a-makefile.md).  
-  
- Пример см. в разделе [образец файла Makefile](../build/sample-makefile.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по программе NMAKE](../build/nmake-reference.md)
+
+Содержит makefile:
+
+- [Блоки описания](../build/description-blocks.md)
+
+- [Команды](../build/commands-in-a-makefile.md)
+
+- [Макросы](../build/macros-and-nmake.md)
+
+- [Правила вывода](../build/inference-rules.md)
+
+- [Директивы с точками](../build/dot-directives.md)
+
+- [Директивы предварительной обработки](../build/makefile-preprocessing.md)
+
+## <a name="remarks"></a>Примечания
+
+Присутствуют другие компоненты, которые можно использовать в файлах makefile [подстановочные знаки](../build/wildcards-and-nmake.md), [длинные имена файлов](../build/long-filenames-in-a-makefile.md), [комментарии](../build/comments-in-a-makefile.md), и [специальные символы](../build/special-characters-in-a-makefile.md).
+
+Пример, см. в разделе [образец файла Makefile](../build/sample-makefile.md).
+
+## <a name="see-also"></a>См. также
+
+[Справочник по программе NMAKE](../build/nmake-reference.md)

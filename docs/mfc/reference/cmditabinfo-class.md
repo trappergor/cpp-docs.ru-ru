@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37522cc2eaaa57abd5c3c7a0986532bb47d73f5e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7cd0355c4d0ce203617729142e03860e9960190a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336459"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726613"
 ---
 # <a name="cmditabinfo-class"></a>Класс CMDITabInfo
 `CMDITabInfo` Класс используется для передачи параметров [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) метод. Задайте элементы этого класса, чтобы контролировать поведение групп вкладок MDI.  
@@ -58,19 +58,19 @@ class CMDITabInfo
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMDITabInfo::CMDITabInfo`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMDITabInfo::Serialize](#serialize)|Считывает этот объект из архива или записывает в него.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Указывает ли **закрыть** кнопка отображается на метке активной вкладки.|  
 |[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Указывает, следует ли цвета вкладок MDI.|  
@@ -235,8 +235,8 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *ar*  
- Объект [класс CArchive](../../mfc/reference/carchive-class.md) объекта для сериализации.  
+*ar*<br/>
+[in] Объект [класс CArchive](../../mfc/reference/carchive-class.md) объекта для сериализации.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 42f7eb1864c2839ecce88785dfaef8ab62d0b423
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207645"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705280"
 ---
 # <a name="csplitbutton-class"></a>Класс CSplitButton
 `CSplitButton` Класс представляет элемент управления split button. Элемент управления "кнопка разделения" реализует поведение по умолчанию, когда пользователь щелкает основную часть кнопки, и отображает раскрывающееся меню, когда пользователь щелкает раскрывающуюся стрелку кнопки.  
@@ -44,20 +44,20 @@ class CSplitButton : public CButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSplitButton::CSplitButton](#csplitbutton)|Создает объект `CSplitButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSplitButton::Create](#create)|Создает элемент управления split button с указанными стилями и присоединяет его к текущему `CSplitButton` объекта.|  
 |[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Задает раскрывающемся меню, которое отображается, когда пользователь щелкает стрелку раскрывающегося списка для текущего управления SplitButton.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSplitButton::OnDropDown](#ondropdown)|Обрабатывает уведомление BCN_DROPDOWN, система отправляет, когда пользователь щелкает стрелку раскрывающегося списка для текущего управления SplitButton.|  
   
@@ -99,12 +99,12 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Побитовое сочетание (OR) стили элемента управления к элементу управления. Дополнительные сведения см. в разделе [стили кнопок](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|  
-|[in] *pParentWnd*|Ненулевой указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления.|  
-|[in] *nID*|Идентификатор элемента управления.|  
+|*dwStyle*|[in] Побитовое сочетание (OR) стили элемента управления к элементу управления. Дополнительные сведения см. в разделе [стили кнопок](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|*Rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|  
+|*pParentWnd*|[in] Ненулевой указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления.|  
+|*nID*|[in] Идентификатор элемента управления.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -124,11 +124,11 @@ CSplitButton(CMenu* pMenu)
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *nMenuId*|Идентификатор ресурса меню.|  
-|[in] *nSubMenuId*|Идентификатор ресурса меню.|  
-|[in] *pMenu*|Указатель на [CMenu](../../mfc/reference/cmenu-class.md) , указывающий подменю. `CSplitButton` Объекта удалений `CMenu` объекта и его связанные HMENU при `CSplitButton` объект выходит за пределы области.|  
+|*nMenuId*|[in] Идентификатор ресурса меню.|  
+|*nSubMenuId*|[in] Идентификатор ресурса меню.|  
+|*pMenu*|[in] Указатель на [CMenu](../../mfc/reference/cmenu-class.md) , указывающий подменю. `CSplitButton` Объекта удалений `CMenu` объекта и его связанные HMENU при `CSplitButton` объект выходит за пределы области.|  
   
 ### <a name="remarks"></a>Примечания  
  Используйте [CSplitButton::Create](#create) метод, чтобы создать элемент управления split button и подключить его к `CSplitButton` объекта.  
@@ -144,10 +144,10 @@ afx_msg void OnDropDown(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Указатель на [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) структуру, содержащую сведения о [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|  
-|[out] *pResult*|(Не используется; значение не возвращается). Возвращаемое значение [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|  
+|*pNMHDR*|[in] Указатель на [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) структуру, содержащую сведения о [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|  
+|*pResult*|[out] (Не используется; значение не возвращается). Возвращаемое значение [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|  
   
 ### <a name="remarks"></a>Примечания  
  Когда пользователь щелкает стрелку раскрывающегося списка на элемент управления split button, система отправляет уведомление BCN_DROPDOWN сообщения, в котором `OnDropDown` метод обрабатывает. Тем не менее `CSplitButton` объекта не перенаправляет уведомление BCN_DROPDOWN, чтобы элемент управления, содержащий элемент управления split button. Следовательно содержащегося элемента управления не поддерживает настраиваемое действие в ответ на уведомление.  
@@ -176,11 +176,11 @@ void SetDropDownMenu(CMenu* pMenu);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *nMenuId*|Идентификатор ресурса меню.|  
-|[in] *nSubMenuId*|Идентификатор ресурса меню.|  
-|[in] *pMenu*|Указатель на [CMenu](../../mfc/reference/cmenu-class.md) , указывающий подменю. `CSplitButton` Объекта удалений `CMenu` объекта и его связанные HMENU при `CSplitButton` объект выходит за пределы области.|  
+|*nMenuId*|[in] Идентификатор ресурса меню.|  
+|*nSubMenuId*|[in] Идентификатор ресурса меню.|  
+|*pMenu*|[in] Указатель на [CMenu](../../mfc/reference/cmenu-class.md) , указывающий подменю. `CSplitButton` Объекта удалений `CMenu` объекта и его связанные HMENU при `CSplitButton` объект выходит за пределы области.|  
   
 ### <a name="remarks"></a>Примечания  
  *NMenuId* параметр определяет строку меню, который является горизонтальный список элементов строки меню. *NSubMenuId* параметр является отсчитываемый от нуля индекс число, идентифицирующее подменю, который является списком раскрывающегося списка пунктов меню, связанные с каждым пунктом меню панели. Например типичное приложение имеет меню, которое содержит элементы панели меню «Файл», «Изменить» и «Справка». Элемент панели меню «Файл» есть вложенное меню с элементами меню «Открыть», «Закрыть» и «Exit». Если при нажатии стрелки раскрывающегося списка элемента управления split button, элемент управления отображает меню не в строке меню.  

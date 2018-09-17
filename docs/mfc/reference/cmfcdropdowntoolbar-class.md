@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692387"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719242"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Класс CMFCDropDownToolBar
 Панель инструментов, которая появляется, когда пользователь нажимает и удерживает кнопку верхнего уровня панели инструментов.  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiResID*  
- Идентификатор ресурса точечного рисунка, который относится к активным изображениям значков панели инструментов.  
+*uiResID*<br/>
+[in] Идентификатор ресурса точечного рисунка, который относится к изображениям значка панели инструментов.  
   
- [in] *uiColdResID*  
- Идентификатор ресурса точечного рисунка, который относится к неактивным изображениям значков панели инструментов.  
+*uiColdResID*<br/>
+[in] Идентификатор ресурса точечного рисунка, который относится к изображениям "холодных" панели инструментов.  
   
- [in] *uiMenuResID*  
- Идентификатор ресурса точечного рисунка, который относится к обычным изображениям значков меню.  
+*uiMenuResID*<br/>
+[in] Идентификатор ресурса точечного рисунка, который относится к обычным изображениям значков меню.  
   
- [in] *заблокирован*  
- Значение TRUE для закрепления панели инструментов; в противном случае — значение FALSE.  
+*Заблокировано*<br/>
+[in] Значение TRUE для закрепления панели инструментов; в противном случае — значение FALSE.  
   
- [in] *uiDisabledResID*  
- Идентификатор ресурса точечного рисунка, который относится к отключенным изображениям значков панели инструментов.  
+*uiDisabledResID*<br/>
+[in] Идентификатор ресурса точечного рисунка, который относится к изображениям отключенные панели инструментов.  
   
- [in] *uiMenuDisabledResID*  
- Идентификатор ресурса точечного рисунка, который относится к отключенным изображениям значков меню.  
+*uiMenuDisabledResID*<br/>
+[in] Идентификатор ресурса точечного рисунка, который относится к отключенным изображениям значков меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если метод выполнен успешно; в противном случае — 0.  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiResID*  
- [in] *uiColdResID*  
- [in] *uiMenuResID*  
- [in] *BOOL*  
- [in] *uiDisabledResID*  
- [in] *uiMenuDisabledResID*  
+*uiResID*<br/>
+[in] [in] *uiColdResID*  
+*uiMenuResID*<br/>
+[in] [in] *BOOL*  
+*uiDisabledResID*<br/>
+[in] [in] *uiMenuDisabledResID*  
  [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nFlags*  
- [in] *точки*  
+*nFlags*<br/>
+[in] [in] *точки*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nFlags*  
- [in] *точки*  
+*nFlags*<br/>
+[in] [in] *точки*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Примечания  
   

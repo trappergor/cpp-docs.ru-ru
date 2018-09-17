@@ -1,5 +1,5 @@
 ---
-title: 'Как: Установка параметров LIB. Параметры exe-файла в среде разработки Visual Studio | Документы Microsoft'
+title: 'Практическое: задать LIB. Параметры exe-файла в среде разработки Visual Studio | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38b04fb40c62efdf5a8dd0ae3e3d8b6b4529b017
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8319ac7a40af4b43248c402306040c15f04a225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372364"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707223"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Практическое руководство. Установка параметров LIB.EXE в среде разработки Visual Studio
-### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Установка параметров LIB. Параметры exe-файла в среде разработки Visual Studio  
-  
-1.  Доступ к проекту [страницу свойств](../../ide/working-with-project-properties.md) диалоговое окно.  
-  
-2.  В действующем проекте статической библиотеки выберите **библиотекарь** узла.  
-  
-3.  Выберите страницу свойств Общие или ввода-вывода.  
-  
-4.  При необходимости измените свойства.  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по LIB](../../build/reference/lib-reference.md)
+
+### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Чтобы задать LIB. Параметры exe-файла в среде разработки Visual Studio
+
+1. Доступ к проекту [страницу свойств](../../ide/working-with-project-properties.md) диалоговое окно.
+
+1. С помощью активного проекта статической библиотеки, выберите **библиотекарь** узла.
+
+1. Выберите страницу свойств Общие или ввода-вывода.
+
+1. При необходимости измените свойства.
+
+## <a name="see-also"></a>См. также
+
+[Справочник по LIB](../../build/reference/lib-reference.md)

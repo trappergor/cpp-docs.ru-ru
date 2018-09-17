@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205291"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702095"
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
 Предоставляет функции поля со списком Windows.  
@@ -138,13 +138,13 @@ class CComboBox : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComboBox::CComboBox](#ccombobox)|Создает объект `CComboBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComboBox::AddString](#addstring)|Добавляет строку в конец списка в окне списка, поле со списком или в отсортированном позиции для поля списка CBS_SORT стиль.|  
 |[CComboBox::Clear](#clear)|Удаляет (очищает) текущее выделение, если таковое имеется, в элементе управления.|  
@@ -610,10 +610,10 @@ BOOL GetCueBanner(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[out] *lpszText*|Указатель на буфер, получающий текст баннера подсказки.|  
-|[in] *cchText*|Размер буфера, *lpszText* указывает параметр.|  
+|*lpszText*|[out] Указатель на буфер, получающий текст баннера подсказки.|  
+|*cchText*|[in] Размер буфера, *lpszText* указывает параметр.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В первой перегрузке [CString](../../atl-mfc-shared/using-cstring.md) , содержащий текст баннера подсказки, если он существует; в противном случае `CString` объект, который имеет нулевую длину.  
@@ -1046,9 +1046,9 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *lpszText*|Указатель на буфер нулевым байтом, который содержит текст подсказки.|  
+|*lpszText*|[in] Указатель на буфер нулевым байтом, который содержит текст подсказки.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -1289,9 +1289,9 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *iMinVisible*|Указывает минимальное число видимых элементов.|  
+|*iMinVisible*|[in] Указывает минимальное число видимых элементов.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  

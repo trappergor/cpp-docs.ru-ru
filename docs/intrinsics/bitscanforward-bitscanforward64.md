@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e563e7240c1797bf863ee0762f923e91a6f05bb0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538727"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699898"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Блок, относящийся только к системам Microsoft**  
@@ -47,11 +47,11 @@ unsigned char _BitScanForward64(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [выходной] `Index`  
- Загруженный с позиции разряда первый значащий разряд (1) найден.  
+*Index*<br/>
+[out] Загрузить с позиции разряда Первый значащий разряд (1) найден.  
   
- [in] `Mask`  
- 32-разрядное или 64-разрядное значение для поиска.  
+*Маска*<br/>
+[in] 32-разрядная или 64-разрядное значение для поиска.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  0, если маска равна нулю; ненулевое значение в противном случае.  

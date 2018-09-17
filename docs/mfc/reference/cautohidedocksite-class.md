@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f36d6231cfce86314be082a77a39034b619741ad
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5778b5be050fec50d30215a8b9cef2ca6e4b6dd4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336947"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709687"
 ---
 # <a name="cautohidedocksite-class"></a>Класс CAutoHideDockSite
 `CAutoHideDockSite` Расширяет [класс CDockSite](../../mfc/reference/cdocksite-class.md) для реализации автоматически скрываемые области закрепления.  
@@ -62,7 +62,7 @@ class CAutoHideDockSite : public CDockSite
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|Указывает, является ли `CAutoHideDockSite` отображается на панели меню.|  
 |[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Определяет ли объект базового области является производным от [класс CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|  
 |[CAutoHideDockSite::DockPane](#dockpane)|Закрепляет область `CAuotHideDockSite` объекта.|  
@@ -76,7 +76,7 @@ class CAutoHideDockSite : public CDockSite
   
 |||  
 |-|-|  
-|name|Описание:|  
+|name|Описание|  
 |[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Определяет размер пространства между панелями инструментов и границей панели стыковки. Это пространство измеряется от левого края или верхнего края, в зависимости от выравнивания для области закрепления.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -114,8 +114,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pBar*|Базовый объект области того, платформа.|  
+|Параметр|Описание|  
+|*pBar*|[in] Базовый объект области того, платформа.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если *pBar* является производным от `CMFCAutoHideBar`; Значение FALSE в противном случае.  
@@ -137,10 +137,10 @@ virtual void DockPane(
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pWnd*|Области, в которой закрепляет платформы.|  
-|[in] *dockMethod*|Закрепление параметры для области.|  
-|[in] *lpRect*|Прямоугольник, который указывает границы закрепленной панели.|  
+|Параметр|Описание|  
+|*pWnd*|[in] Области, в которой закрепляет платформы.|  
+|*dockMethod*|[in] Закрепление параметры для области.|  
+|*lpRect*|[in] Прямоугольник, который указывает границы закрепленной панели.|  
   
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию не использует параметр *dockMethod*, предоставляемого для использования в будущем.  
@@ -158,8 +158,8 @@ void GetAlignRect(CRect& rect) const;
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *rect*|Ссылка в прямоугольник. Метод сохраняет размер на сайте закрепления в этот прямоугольник.|  
+|Параметр|Описание|  
+|*Rect*|[in] Ссылка в прямоугольник. Метод сохраняет размер на сайте закрепления в этот прямоугольник.|  
   
 ### <a name="remarks"></a>Примечания  
  Прямоугольник корректируется для смещения полей, чтобы они не включаются.  
@@ -182,8 +182,8 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nOffset*  
- Новое смещение.  
+*nOffset*<br/>
+[in] Новое смещение.  
   
 ### <a name="remarks"></a>Примечания  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) объекты располагаются на статически `CAutoHideDockSite` объекта. Это означает, что пользователь не может вручную изменить расположение `CMFCAutoHideBar` объектов. `SetOffsetLeft` Метод управляет расстояние между левой стороны крайнего левого `CMFCAutoHideBar` и левой части `CAutoHideDockSite`.  
@@ -196,8 +196,8 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nOffset*  
- Новое смещение.  
+*nOffset*<br/>
+[in] Новое смещение.  
   
 ### <a name="remarks"></a>Примечания  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) объекты располагаются на статически `CAutoHideDockSite` объекта. Это означает, что пользователь не может вручную изменить расположение `CMFCAutoHideBar` объектов. `SetOffsetRight` Метод управляет расстояние между правой стороны крайнего правого `CMFCAutoHideBar` и правой части `CAutoHideDockSite`.  
@@ -213,8 +213,8 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *rectNewClientArea*|Зарезервированное значение.|  
+|Параметр|Описание|  
+|*rectNewClientArea*|[in] Зарезервированное значение.|  
   
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию не использует *rectNewClientArea*. Области с помощью поля главной панели инструментов и кнопки интервал перерисовку.  
@@ -230,8 +230,8 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *pAutoHideToolbar*|Указатель на [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) область объектов, расположенных на `CAutoHideDockSite`.|  
+|Параметр|Описание|  
+|*pAutoHideToolbar*|[in] Указатель на [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) область объектов, расположенных на `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод осуществляет поиск строки, содержащей *pAutoHideToolbar*. Он вызывает `CMFCAutoHideBar.UnSetAutoHideMode` для всех `CMFCAutoHideBar` объекты в этой строке. Если *pAutoHideToolbar* не найден или он имеет значение NULL, этот метод вызывает метод `CMFCAutoHideBar.UnSetAutoHideMode` для всех `CMFCAutoHideBar` объектов на `CAutoHideDockSite`.  

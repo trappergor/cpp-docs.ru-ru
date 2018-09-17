@@ -1,5 +1,5 @@
 ---
-title: -TLS | Документы Microsoft
+title: -TLS | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5e510f406ceae7508f9b84f99e7ab397d22f114
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78f485a783dbe8b5fe9a49ed3100754115bf50b8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373528"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714679"
 ---
 # <a name="tls"></a>/TLS
-Отображает структуру IMAGE_TLS_DIRECTORY из исполняемого файла.  
-  
-## <a name="remarks"></a>Примечания  
- / TLS отображает поля структуры TLS и адреса функций обратного вызова TLS.  
-  
- Если программа использует локальное хранилище потока, ее изображение не будет содержать структуру TLS.  В разделе [поток](../../cpp/thread.md) для получения дополнительной информации.  
-  
- IMAGE_TLS_DIRECTORY, определенный в заголовке winnt.h.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+
+Отображает структуру IMAGE_TLS_DIRECTORY из исполняемого файла.
+
+## <a name="remarks"></a>Примечания
+
+/ TLS отображается полей структуры TLS, а также адресов функций обратного вызова TLS.
+
+Если программа не использует локальное хранилище потока, ее образ не будет содержать структуру TLS.  См. в разделе [поток](../../cpp/thread.md) Дополнительные сведения.
+
+IMAGE_TLS_DIRECTORY определяется в заголовке winnt.h.
+
+## <a name="see-also"></a>См. также
+
+[Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

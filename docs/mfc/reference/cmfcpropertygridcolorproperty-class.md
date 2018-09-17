@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 164e54ccbd9365e7e4fb2c1989f84891e5813c2f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7b1023ff59af0f64d5205447e6e7b17ead1f5186
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849177"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705839"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Класс CMFCPropertyGridColorProperty
 Класс `CMFCPropertyGridColorProperty` поддерживает элемент управления списка свойств, открывающий диалоговое окно выбора цвета.  
@@ -50,14 +50,14 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty](#cmfcpropertygridcolorproperty)|Создает объект `CMFCPropertyGridColorProperty`.|  
 |`CMFCPropertyGridColorProperty::~CMFCPropertyGridColorProperty`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|Позволяет *автоматического* кнопку в диалоговом окне выбора цвета. (Метка стандартной кнопки автоматического выбора **автоматического**.)|  
 |[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|Позволяет *других* кнопку в диалоговом окне выбора цвета. (Стандартной меткой другая кнопка **Дополнительные цвета**.)|  
@@ -103,20 +103,20 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *strName*  
- Имя свойства.  
+*strName*<br/>
+[in] Имя свойства.  
   
- [in] *цвет*  
- Значение цвета свойства.  
+*Цвет*<br/>
+[in] Значение цвета свойства.  
   
- [in] *pPalette*  
- Указатель на палитру цветов. Значение по умолчанию имеет значение NULL.  
+*pPalette*<br/>
+[in] Указатель на палитру цветов. Значение по умолчанию имеет значение NULL.  
   
- [in] *lpszDescr*  
- Описание свойства. Значение по умолчанию имеет значение NULL.  
+*lpszDescr*<br/>
+[in] Описание свойства. Значение по умолчанию имеет значение NULL.  
   
- [in] *dwData*  
- Данные приложения, такие как целое число или указатель с другими данными, который связан со свойством. Значение по умолчанию — 0.  
+*dwData*<br/>
+[in] Данные приложения, такие как целое число или указатель с другими данными, который связан со свойством. Значение по умолчанию — 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Позволяет *автоматического* кнопку в диалоговом окне выбора цвета. (Метка стандартной кнопки автоматического выбора **автоматического**.)  
@@ -129,14 +129,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszLabel*  
- Текст метки автоматической кнопки.  
+*lpszLabel*<br/>
+[in] Текст метки автоматической кнопки.  
   
- [in] *colorAutomatic*  
- Значение цвета RGB цвета автоматически (по умолчанию).  
+*colorAutomatic*<br/>
+[in] Значение цвета RGB цвета автоматически (по умолчанию).  
   
- [in] *bEnable*  
- Значение TRUE для включения автоматической кнопки; в противном случае — значение FALSE. Значение по умолчанию — TRUE.  
+*bEnable*<br/>
+[in] Значение TRUE для включения автоматической кнопки; в противном случае — значение FALSE. Значение по умолчанию — TRUE.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -151,14 +151,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszLabel*  
- Текст метки другие кнопки.  
+*lpszLabel*<br/>
+[in] Текст метки другие кнопки.  
   
- [in] *bAltColorDlg*  
- True, если `CMFCColorDialog` диалоговом окне; Значение FALSE, чтобы отобразить диалоговое окно выбора стандартный цвет. Значение по умолчанию — TRUE.  
+*bAltColorDlg*<br/>
+[in] True, если `CMFCColorDialog` диалоговом окне; Значение FALSE, чтобы отобразить диалоговое окно выбора стандартный цвет. Значение по умолчанию — TRUE.  
   
- [in] *bEnable*  
- Значение TRUE для отображения кнопки; в противном случае — значение FALSE.  Значение по умолчанию — TRUE.  
+*bEnable*<br/>
+[in] Значение TRUE для отображения кнопки; в противном случае — значение FALSE.  Значение по умолчанию — TRUE.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -182,8 +182,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *цвет*  
- Значение цвета RGB.  
+*Цвет*<br/>
+[in] Значение цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -195,8 +195,8 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nColumnsNumber*  
- Предпочтительный количество столбцов в таблице свойств цвета.  
+*nColumnsNumber*<br/>
+[in] Предпочтительный количество столбцов в таблице свойств цвета.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод задает значение `m_nColumnsNumber` защищенный элемент данных.  
@@ -209,8 +209,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *varValue*  
- Значение.  
+*varValue*<br/>
+[in] Значение.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) метод, чтобы восстановить исходное значение измененного свойства.  

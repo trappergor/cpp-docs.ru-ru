@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7181b4c5c1c74d5726fd37e98366225aecf7f63a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ed4f12e127c6ceef212ffefc512e764dd53fb19
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962664"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706554"
 ---
 # <a name="timedmutex-class"></a>Класс timed_mutex
 
@@ -49,14 +49,14 @@ class timed_mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[деструктор timed_mutex](#timed_mutex)|Создает объект `timed_mutex`, который не заблокирован.|
 |[Деструктор timed_mutex::~timed_mutex](#dtortimed_mutex_destructor)|Освобождает все ресурсы, используемые объектом `timed_mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.|
 |[try_lock](#try_lock)|Попытки получить права владельца объекта `mutex` без блокировки.|
@@ -129,8 +129,8 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Параметры
 
-*Rel_time*  
- Объект [chrono::duration](../standard-library/duration-class.md), который указывает максимальный интервал времени, в течение которого метод пытается получить права владельца объекта `mutex`.
+*Rel_time*<br/>
+Объект [chrono::duration](../standard-library/duration-class.md), который указывает максимальный интервал времени, в течение которого метод пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -153,8 +153,8 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Параметры
 
-*Abs_time*  
- Момент времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
+*Abs_time*<br/>
+Момент времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a770e240f28dbd8e904a288beb10a9a6abe7431c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962475"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715680"
 ---
 # <a name="ltvalarraygt-functions"></a>Функции &lt;valarray&gt;
 
@@ -69,8 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -124,8 +124,8 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -197,8 +197,8 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -270,8 +270,8 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -352,11 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Значения для координаты y для аргумента арктангенса предоставляются числовыми константами или входным объектом valarray.
+*left*<br/>
+Значения для координаты y для аргумента арктангенса предоставляются числовыми константами или входным объектом valarray.
 
-*right*  
- Значения для координаты x для аргумента арктангенса предоставляются числовыми константами или входным объектом valarray.
+*right*<br/>
+Значения для координаты x для аргумента арктангенса предоставляются числовыми константами или входным объектом valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -440,8 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -517,8 +517,8 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -600,8 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -663,8 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -726,8 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -806,11 +806,11 @@ pow(
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого используются в качестве оснований для каждого элемента, который будет возведен в степень.
+*left*<br/>
+Входной объект valarray, элементы которого используются в качестве оснований для каждого элемента, который будет возведен в степень.
 
-*right*  
- Входной объект valarray, элементы которого используются в качестве степени для каждого элемента, который будет возведен в степень.
+*right*<br/>
+Входной объект valarray, элементы которого используются в качестве степени для каждого элемента, который будет возведен в степень.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -888,8 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -965,8 +965,8 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1048,8 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1104,7 +1104,7 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*left*|Объект типа `valarray`.|
 |*right*|Объект типа `valarray`.|
@@ -1124,8 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1201,8 +1201,8 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*  
- Входной объект valarray, элементы которого будут обработаны функцией-членом.
+*left*<br/>
+Входной объект valarray, элементы которого будут обработаны функцией-членом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

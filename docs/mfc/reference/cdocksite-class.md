@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d3af5911cac27a0ac2bb65e9ee0cdb7b714b41d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540095"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720308"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.  
@@ -118,7 +118,7 @@ class CDockSite: public CBasePane
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDockSite::AddRow](#addrow)||  
 |[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(Переопределяет [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *торговых терминалов*  
- [in] *nHeight*  
+*торговых терминалов*<br/>
+[in] [in] *nHeight*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -225,8 +225,8 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *rectToAlignBy*  
- [in] *rectResult*  
+*rectToAlignBy*<br/>
+[in] [in] *rectResult*  
  [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>Примечания  
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *dwStyleEx*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *dwControlBarStyle*  
- [in] *pContext*  
+*dwStyleEx*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*dwControlBarStyle*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -298,8 +298,8 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pParentDockBar*  
- [in] *nOffset*  
+*pParentDockBar*<br/>
+[in] [in] *nOffset*  
  [in] *nRowHeight*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -317,8 +317,8 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
  [in] *lpRect*  
   
 ### <a name="remarks"></a>Примечания  
@@ -363,8 +363,8 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nID*  
- Идентификатор команды панели требуется найти.  
+*nID*<br/>
+[in] Идентификатор команды панели требуется найти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на область с заданный идентификатор команды, или значение NULL, если области не найден.  
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *rect*  
- [in] *ptDelta*  
+*Rect*<br/>
+[in] [in] *ptDelta*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -501,8 +501,8 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- [in] *nFlags*  
+*pWnd*<br/>
+[in] [in] *nFlags*  
  [in] *ptOffset*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *торговых терминалов*  
- [in] *bByShow*  
+*торговых терминалов*<br/>
+[in] [in] *bByShow*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pRowToResize*  
- [in] *nOffset*  
+*pRowToResize*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *rectAvailable*  
- [in] *nSide*  
- [in] *bExpand*  
- [in] *nOffset*  
+*rectAvailable*<br/>
+[in] [in] *nSide*  
+*bExpand*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -583,8 +583,8 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWndInsertAfter*  
- [in] *rectWnd*  
+*pWndInsertAfter*<br/>
+[in] [in] *rectWnd*  
  [in] *nFlags*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *торговых терминалов*  
- [in] *bShow*  
+*торговых терминалов*<br/>
+[in] [in] *bShow*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -614,8 +614,8 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pt*  
- Точка, в экранных координатах, для области для извлечения.  
+*pt*<br/>
+[in] Точка, в экранных координатах, для области для извлечения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на панель, расположенный в указанной точке или значение NULL, если панель не находился в заданной точке.  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *rect*  
- [in] *точки*  
+*Rect*<br/>
+[in] [in] *точки*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pOldBar*  
- [in] *pNewBar*  
+*pOldBar*<br/>
+[in] [in] *pNewBar*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nNewWidth*  
- [in] *nNewHeight*  
+*nNewWidth*<br/>
+[in] [in] *nNewHeight*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -721,8 +721,8 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pRow*  
- [in] *nNewSize*  
+*pRow*<br/>
+[in] [in] *nNewSize*  
  [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -744,14 +744,14 @@ virtual BOOL ShowPane(
  [in] [out] *pBar*  
  Указатель на панели, чтобы отображать и скрывать.  
   
- [in] *bShow*  
- Значение TRUE, чтобы указать, что области будет отображаться; Значение FALSE, чтобы указать, что данная область является скрытым.  
+*bShow*<br/>
+[in] Значение TRUE, чтобы указать, что области будет отображаться; Значение FALSE, чтобы указать, что данная область является скрытым.  
   
- [in] *bDelay*  
- Значение TRUE, чтобы указать, что макет панели должны быть отложено до тех пор области отображается; в противном случае — значение FALSE.  
+*bDelay*<br/>
+[in] Значение TRUE, чтобы указать, что макет панели должны быть отложено до тех пор области отображается; в противном случае — значение FALSE.  
   
- [in] *bActivate*  
- Этот параметр не используется.  
+*bActivate*<br/>
+[in] Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если область была показано или скрыто успешно. Значение FALSE, если указанной области не принадлежит к этому сайту закрепления.  
@@ -770,8 +770,8 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pRow*  
- [in] *bShow*  
+*pRow*<br/>
+[in] [in] *bShow*  
  [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Примечания  
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pFirstRow*  
- [in] *pSecondRow*  
+*pFirstRow*<br/>
+[in] [in] *pSecondRow*  
   
 ### <a name="remarks"></a>Примечания  
   

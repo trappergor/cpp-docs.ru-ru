@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a9661bc61d59d6ca5b0aff1889a6bb736a1001
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 24a750afa3f4cbc84b4fbfe306c1f97be23200d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103231"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710805"
 ---
 # <a name="uniformrealdistribution-class"></a>Класс uniform_real_distribution
 
@@ -200,13 +200,13 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*a*  
+*a*<br/>
 Нижняя граница случайных значений (инклюзивно).
 
-*b*  
+*b*<br/>
 Верхняя граница случайных значений (эксклюзивно).
 
-*parm*  
+*parm*<br/>
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -235,13 +235,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*a*  
+*a*<br/>
 Нижняя граница случайных значений (инклюзивно).
 
-*b*  
+*b*<br/>
 Верхняя граница случайных значений (эксклюзивно).
 
-*right*  
+*right*<br/>
 Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 146a764cd2b1fcc567a564a6995c191c4f838262
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959047"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722232"
 ---
 # <a name="systemclock-structure"></a>Структура system_clock
 
@@ -48,7 +48,7 @@ struct system_clock;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`system_clock::duration`|Синоним для `duration<rep, period>`.|
 |`system_clock::period`|Синоним для типа, который используется для представления тактового периода при автономном создании экземпляра `duration`.|
@@ -57,7 +57,7 @@ struct system_clock;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[from_time_t](#from_time_t)|Статический. Возвращает объект `time_point`, наиболее точно соответствующий указанному времени.|
 |[Теперь](#now)|Статический. Возвращает текущее время.|
@@ -65,7 +65,7 @@ struct system_clock;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Константа system_clock::is_monotonic](#is_monotonic_constant)|Указывает, являются ли часы монотонными.|
 |[Константа system_clock::is_steady](#is_steady_constant)|Указывает, являются ли часы постоянными.|
@@ -86,8 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*TM*  
- Объект [time_t](../c-runtime-library/standard-types.md).
+*TM*<br/>
+Объект [time_t](../c-runtime-library/standard-types.md).
 
 ## <a name="is_monotonic_constant"></a>  Константа system_clock::is_monotonic
 
@@ -143,8 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Время*  
- Объект [time_point](../standard-library/time-point-class.md).
+*Время*<br/>
+Объект [time_point](../standard-library/time-point-class.md).
 
 ## <a name="see-also"></a>См. также
 

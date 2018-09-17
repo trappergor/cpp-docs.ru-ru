@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9ad07e225afbfe0c69b5115cfb566ef722eb81e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539696"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722667"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Блок, относящийся только к системам Microsoft**  
@@ -39,11 +39,11 @@ unsigned __int64 __ull_rshift(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `mask`  
- 64-разрядное целое значение для сдвига вправо.  
+*Маска*<br/>
+[in] 64-разрядное целое значение для сдвига вправо.  
   
- [in] `nBit`  
- Количество битов для сдвига, остаток от деления 32 на x86 и остаток от деления 64 в x64.  
+*nBit*<br/>
+[in] Количество битов для сдвига, остаток от деления 32 на x86 и остаток от деления 64 в x64.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Маска сдвинуты `nBit` bits.  

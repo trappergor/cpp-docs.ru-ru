@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6af43074e78ffb66299b9eeda97dd18f073d77fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a7a450d683bfa2c358e26a4109a2e8a75c04e233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599403"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716226"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Встроенные функции _InterlockedExchange
 **Блок, относящийся только к системам Microsoft**  
@@ -152,11 +152,11 @@ __int64 _InterlockedExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in, out] `Target`  
- Указатель на значение для обмена. Функция присваивает этой переменной `Value` и возвращает предыдущее значение.  
+*Целевой объект*<br/>
+[in, out] Указатель на значение для обмена. Функция присваивает этой переменной `Value` и возвращает предыдущее значение.  
   
- [in] `Value`  
- Значение для обмена на значение, на которое указывает `Target`.  
+*Значение*<br/>
+[in] Значение для обмена со значением, на которые указывают `Target`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает начальное значение, на которое указывает `Target`.  

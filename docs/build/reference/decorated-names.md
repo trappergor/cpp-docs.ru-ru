@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6adcfe68536394b8dce5712cebc12c82a027c3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 32c8a91442e55325b35d1067ec5009c9bd5cf4a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894724"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700730"
 ---
 # <a name="decorated-names"></a>Внутренние имена
 
@@ -104,5 +104,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>См. также
 
-[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)  
+[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)<br/>
 [Использование ключевого слова extern для задания компоновки](../../cpp/using-extern-to-specify-linkage.md)

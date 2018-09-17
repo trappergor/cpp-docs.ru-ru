@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dcda07b5d2ab499a769c389538e8f272fd8441a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965747"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713172"
 ---
 # <a name="ltallocatorsgt"></a>&lt;Распределители&gt;
 
@@ -47,9 +47,10 @@ Allocator — это класс шаблона, описывающий объе
 
 Распределители представляют собой шаблоны типа
 
-`template<class` `Type` `>`
-
-`class allocator;`
+```cpp
+template<class Type>
+class allocator;
+```
 
 где аргумент шаблона `Type` — это тип, управляемый экземпляром распределителя. Стандартная библиотека C++ предоставляет распределитель по умолчанию, [allocator](../standard-library/allocator-class.md) класса шаблона, который задается в [ \<memory>](../standard-library/memory.md). Заголовок \<allocators> предоставляет следующие распределители:
 
@@ -129,7 +130,7 @@ _Lst1 выделяет узлы с `allocator_chunklist` и фильтр син�
 
 ### <a name="macros"></a>Макросы
 
-|Макрос|Описание:|
+|Макрос|Описание|
 |-|-|
 |[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Создает класс шаблона распределителя.|
 |[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Создает `stdext::allocators::cache_chunklist<sizeof(Type)>`.|
@@ -139,14 +140,14 @@ _Lst1 выделяет узлы с `allocator_chunklist` и фильтр син�
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[operator!= (\<allocators>)](../standard-library/allocators-operators.md#op_neq)|Проверяет на неравенство между объектами распределителя указанного класса.|
 |[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|Проверяет на равенство объекты распределителя указанного класса.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[allocator_base](../standard-library/allocator-base-class.md)|Определяет базовый класс и общие функции, необходимые для создания определяемого пользователем распределителя из фильтра синхронизации.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Описывает объект, который управляет выделением и освобождением памяти для объектов, использующих кэш типа [cache_chunklist](../standard-library/cache-chunklist-class.md).|

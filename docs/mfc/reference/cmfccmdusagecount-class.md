@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853768"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719970"
 ---
 # <a name="cmfccmdusagecount-class"></a>Класс CMFCCmdUsageCount
 Отслеживает загруженность сообщений Windows, например когда пользователь выбирает элемент меню.  
@@ -52,7 +52,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Конструктор по умолчанию.|  
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Деструктор.|  
   
@@ -60,7 +60,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Увеличивает на единицу счетчик, который связан с заданной команде.|  
 |[CMFCCmdUsageCount::GetCount](#getcount)|Получает счетчик использования, который сопоставлен заданному идентификатору команды.|  
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Определяет, собираются ли этот объект минимальный объем данных отслеживания.|  
@@ -73,7 +73,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|name|Описание:|  
+|name|Описание|  
 |`m_CmdUsage`|Объект `CMap` объект, который сопоставляет команды их счетчики использования.|  
 |`m_nMinUsagePercentage`|Процент минимального срока использования команды часто использоваться.|  
 |`m_nStartCount`|Счетчик начала, который используется для определения того, собираются ли этот объект минимальный объем данных отслеживания.|  
@@ -103,8 +103,8 @@ void AddCmd(UINT uiCmd);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *uiCmd*|Указывает команду счетчик будет изменяться.|  
+|Параметр|Описание|  
+|*uiCmd*|[in] Указывает команду счетчик будет изменяться.|  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод добавляет новую запись к структуре карты счетчиков команда `m_CmdUsage`, если запись еще не существует.  
@@ -128,8 +128,8 @@ UINT GetCount(UINT uiCmd) const;
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *uiCmd*|Идентификатор счетчика команду для извлечения.|  
+|Параметр|Описание|  
+|*uiCmd*|[in] Идентификатор счетчика команду для извлечения.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Счетчик использования, который сопоставлен заданному идентификатору команды.  
@@ -160,8 +160,8 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *uiCmd*|Указывает команду, чтобы проверить.|  
+|Параметр|Описание|  
+|*uiCmd*|[in] Указывает команду, чтобы проверить.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если команда часто используется; в противном случае 0.  
@@ -192,8 +192,8 @@ virtual void Serialize(CArchive& ar);
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *ar*|Объект `CArchive` объект для сериализации в или из него.|  
+|Параметр|Описание|  
+|*ar*|[in] Объект `CArchive` объект для сериализации в или из него.|  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод сериализует структуре карты счетчиков команда `m_CmdUsage`и об использовании общее команды, `m_nTotalUsage`, счетчик, в указанный архив или из него.  
@@ -213,9 +213,9 @@ static BOOL __stdcall SetOptions(
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *nStartCount*|Новый исходное количество всех отслеживаемых команд.|  
-|[in] *nMinUsagePercentage*|Новый процент минимального срока использования.|  
+|Параметр|Описание|  
+|*nStartCount*|[in] Новый исходное количество всех отслеживаемых команд.|  
+|*nMinUsagePercentage*|[in] Новый процент минимального срока использования.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно, значение FALSE при *nMinUsagePercentage* параметр, размер которого больше или равно 100.  

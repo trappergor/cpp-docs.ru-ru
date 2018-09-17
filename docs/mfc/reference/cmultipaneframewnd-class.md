@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05f80ef1a7fd4e21bda2fd9705c4ed1be391e9a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d4bc80f8370924377a089b3cb9838030943b9943
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539704"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706749"
 ---
 # <a name="cmultipaneframewnd-class"></a>Класс CMultiPaneFrameWnd
 `CMultiPaneFrameWnd` Класс расширяет [класс CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md). Может поддерживать несколько областей. Вместо одного внутреннего дескриптора на панели элементов управления `CMultiPaneFrameWnd` содержит [класс CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) объект, который позволяет пользователю выполнять прикрепление одного `CMultiPaneFrameWnd` к другому и динамически создавать несколько с плавающей запятой, с вкладками Windows.  
@@ -112,7 +112,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMultiPaneFrameWnd::AddPane](#addpane)|Добавляет панель. (Переопределяет [CPaneFrameWnd::AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane).)|  
 |[CMultiPaneFrameWnd::AddRecentPane](#addrecentpane)||  
@@ -237,10 +237,10 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWndToDock*  
- [in] *ptMouse*  
- [in] *rectResult*  
- [in] *bDrawTab*  
+*pWndToDock*<br/>
+[in] [in] *ptMouse*  
+*rectResult*<br/>
+[in] [in] *bDrawTab*  
  [in] *ppTargetBar*  
   
 ### <a name="remarks"></a>Примечания  
@@ -307,8 +307,8 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pDockedFrame*  
- [in] *dockMethod*  
+*pDockedFrame*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -419,8 +419,8 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pControlBar*  
- [in] *pTarget*  
+*pControlBar*<br/>
+[in] [in] *pTarget*  
  [in] *bAfter*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -437,8 +437,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszProfileName*  
- [in] *uiID*  
+*lpszProfileName*<br/>
+[in] [in] *uiID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -490,8 +490,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pBar*  
- [in] *bShow*  
+*pBar*<br/>
+[in] [in] *bShow*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -506,8 +506,8 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *точки*  
- [in] *nSensitivity*  
+*точка*<br/>
+[in] [in] *nSensitivity*  
  [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -534,8 +534,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pBar*  
- [in] *bDestroy*  
+*pBar*<br/>
+[in] [in] *bDestroy*  
  [in] *bNoDelayedDestroy*  
   
 ### <a name="remarks"></a>Примечания  
@@ -550,8 +550,8 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pBarOrg*  
- [in] *pBarReplaceWith*  
+*pBarOrg*<br/>
+[in] [in] *pBarReplaceWith*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -565,8 +565,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszProfileName*  
- [in] *uiID*  
+*lpszProfileName*<br/>
+[in] [in] *uiID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -619,8 +619,8 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *preDockState*  
- [in] *pBarToDock*  
+*preDockState*<br/>
+[in] [in] *pBarToDock*  
  [in] *dockMethod*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -649,8 +649,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pDockingBar*  
- [in] *pTabbedBar*  
+*pDockingBar*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Примечания  
   

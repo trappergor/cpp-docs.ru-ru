@@ -1,5 +1,5 @@
 ---
-title: Связывание | Документы Microsoft
+title: Связывание | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28b0e9aae66742febca84c7707c4818e1910a9a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c29e7320a96b8d0fb1beda50e4a8e5f8f0bcb0d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372420"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707789"
 ---
 # <a name="linking"></a>Компоновка
-Дополнительные сведения об использовании компоновщика в следующих разделах:  
-  
--   [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)  
-  
--   [Параметры компоновщика](../../build/reference/linker-options.md)  
-  
--   [Файлы определения модуля (DEF)](../../build/reference/module-definition-dot-def-files.md)  
-  
--   [Поддержка компоновщика для библиотек DLL с отложенной загрузкой](../../build/reference/linker-support-for-delay-loaded-dlls.md)  
-  
-## <a name="see-also"></a>См. также  
- [Справочные сведения о сборке C/C++](../../build/reference/c-cpp-building-reference.md)
+
+Сведения об использовании компоновщика см. в разделах:
+
+- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)
+
+- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+- [Файлы определения модуля (DEF)](../../build/reference/module-definition-dot-def-files.md)
+
+- [Поддержка компоновщика для библиотек DLL с отложенной загрузкой](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+## <a name="see-also"></a>См. также
+
+[Справочные сведения о сборке C/C++](../../build/reference/c-cpp-building-reference.md)

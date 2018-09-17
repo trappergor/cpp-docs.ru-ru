@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ea4a0c17422823f306942bc7d02514456bf8310
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538332"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712092"
 ---
 # <a name="tuple-class"></a>Класс tuple
 
@@ -52,8 +52,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*TN*  
- Тип N-го элемента кортежа.
+*TN*<br/>
+Тип N-го элемента кортежа.
 
 ## <a name="remarks"></a>Примечания
 
@@ -154,11 +154,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Параметры
 
-*ОТМЕНИТЬ*  
- Тип n-го скопированного элемента кортежа.
+*ОТМЕНИТЬ*<br/>
+Тип n-го скопированного элемента кортежа.
 
-*right*  
- Кортеж, из которого выполняется копирование.
+*right*<br/>
+Кортеж, из которого выполняется копирование.
 
 ### <a name="remarks"></a>Примечания
 
@@ -227,7 +227,7 @@ template <class... Types>
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*left*|Кортеж, элементы которого должны быть заменены элементами кортежа *правой*.|
 |*right*|Кортеж, элементы которого должны быть заменены элементами кортежа *левой*.|
@@ -263,11 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Параметры
 
-*ОТМЕНИТЬ*  
- Тип n-го скопированного элемента кортежа.
+*ОТМЕНИТЬ*<br/>
+Тип n-го скопированного элемента кортежа.
 
-*right*  
- Кортеж, из которого выполняется копирование.
+*right*<br/>
+Кортеж, из которого выполняется копирование.
 
 ### <a name="remarks"></a>Примечания
 

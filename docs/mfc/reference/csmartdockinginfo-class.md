@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a900ab0e0307cd059aaeb6f4333ef6d28f98dad6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: efd214e4368e122a800e51e9bd90cb72a6a4616b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849819"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725859"
 ---
 # <a name="csmartdockinginfo-class"></a>Класс CSmartDockingInfo
 Определяет внешний вид интеллектуальных маркеров закрепления.  
@@ -56,19 +56,19 @@ class CSmartDockingInfo : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CSmartDockingInfo::CSmartDockingInfo`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSmartDockingInfo::CopyTo](#copyto)|Копирует текущие смарт-закрепления параметры info в предоставленный [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) объекта.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Указывает, следует ли использовать текущий цвет темы, когда платформа отображает интеллектуальных маркеров закрепления.|  
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Задает цвет фона базовый вид интеллектуальных маркеров закрепления.|  
@@ -119,8 +119,8 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *params*  
- Объект типа `CSmartDockingInfo` , заполняется с использованием текущих параметров смарт-закрепления.  
+*params*<br/>
+[out] Объект типа `CSmartDockingInfo` , заполняется с использованием текущих параметров смарт-закрепления.  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  Указывает, следует ли использовать текущий цвет темы, когда платформа отображает интеллектуальных маркеров закрепления.  

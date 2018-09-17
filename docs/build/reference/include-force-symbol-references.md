@@ -1,5 +1,5 @@
 ---
-title: -INCLUDE (Принудительная ссылка на символ) | Документы Microsoft
+title: -INCLUDE (принудительные ссылки на символы) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,47 +22,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfe65344e41b98841c3a4e7bca72b762197510b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6528f6edc51a2dd01e8f91107827b570a44785de
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375653"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715784"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (принудительные ссылки на символы)
-```  
-/INCLUDE:symbol  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Здесь:  
-  
- `symbol`  
- Указывает символ для добавления в таблицу символов.  
-  
-## <a name="remarks"></a>Примечания  
- Параметр/include предписывает компоновщику добавить заданный символ в таблицу символов.  
-  
- Чтобы указать несколько символов, введите запятую (,), точка с запятой (;) или пробел между имена символов. В командной строке необходимо указать/include:`symbol` один раз для каждого символа.  
-  
- Компоновщик разрешает `symbol` , добавляя объект, содержащий определения символа в программу. Эта возможность полезна для включения объект библиотеки, в противном случае не будут связаны в программу.  
-  
- Указание символ этот параметр переопределяет удаление данного символа с [/OPT: ref](../../build/reference/opt-optimizations.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Нажмите кнопку **компоновщика** папки.  
-  
-3.  Нажмите кнопку **ввода** страницу свойств.  
-  
-4.  Изменить **принудительные ссылки на символы** свойство.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+```
+/INCLUDE:symbol
+```
+
+## <a name="parameters"></a>Параметры
+
+*Символ*<br/>
+Указывает символ для добавления в таблицу символов.
+
+## <a name="remarks"></a>Примечания
+
+Параметр/include предписывает компоновщику добавить заданный символ в таблицу символов.
+
+Чтобы указать несколько символов, введите запятую (,), точку с запятой (;) или пробел между именами символ. В командной строке укажите/include:`symbol` один раз для каждого символа.
+
+Компоновщик разрешает `symbol` , добавив объект, содержащий определения символа в программу. Эта функция полезна для включения объект библиотеки, в противном случае не будут связаны в программу.
+
+Указание символ этот параметр переопределяет удаление данного символа с [предотвратят](../../build/reference/opt-optimizations.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+
+1. Нажмите кнопку **компоновщика** папки.
+
+1. Нажмите кнопку **ввода** страницу свойств.
+
+1. Изменить **принудительные ссылки на символы** свойство.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

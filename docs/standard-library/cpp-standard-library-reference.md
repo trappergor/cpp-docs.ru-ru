@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc6c665309f51044f00b05931500065ed087e774
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841210"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722609"
 ---
 # <a name="c-standard-library-reference"></a>Справочник по стандартной библиотеке C++
 
@@ -32,10 +32,10 @@ ms.locfileid: "33841210"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Обзор стандартной библиотеки C++](../standard-library/cpp-standard-library-overview.md) Общие сведения о стандартной библиотеки C++ в реализации корпорацией Майкрософт.
+[Обзор стандартной библиотеки C++](../standard-library/cpp-standard-library-overview.md) Обзор реализации стандартной библиотеки C++ корпорации Майкрософт.
 
-[iostream программирования](../standard-library/iostream-programming.md) Обзор iostream-программирование.
+[iostream программирования](../standard-library/iostream-programming.md) Общие сведения о программировании iostream.
 
-[Файлы заголовка ссылаются](../standard-library/cpp-standard-library-header-files.md) предоставляет ссылки на разделы, описывающие файлы заголовков стандартной библиотеки C++ с примерами кода.
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md) предоставляет ссылки на разделы, описывающие файлы заголовков стандартной библиотеки C++ с примерами кода.
 
 

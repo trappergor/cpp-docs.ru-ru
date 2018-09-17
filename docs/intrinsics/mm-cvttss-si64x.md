@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0d1d3e77dfc89fb67c467582c0ed7981ffae8022
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538756"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706346"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Блок, относящийся только к системам Microsoft**  
@@ -38,8 +38,8 @@ __int64 _mm_cvttss_si64x(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `value`  
- `__m128` Структуру, содержащую значения с плавающей запятой одиночной точности.  
+*значение*<br/>
+[in] `__m128` Структуру, содержащую значения с плавающей запятой одиночной точности.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Результат преобразования первое значение с плавающей запятой в 64-битовое целое число.  

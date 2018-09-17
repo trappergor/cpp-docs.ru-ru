@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ba56cef1ecdcee246b9041b930eeb5bf04728def
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106087"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724611"
 ---
 # <a name="chartraits-struct"></a>Структура char_traits
 
@@ -120,7 +120,8 @@ static char_type *assign(char_type* strTo,
 *_CharTo*<br/>
 Элемент, которому должно быть присвоено это значение символа.
 
-* strTo * строка или массив символов, чьим начальным элементам должны присваиваться значения символов.
+*strTo*<br/>
+Строка или массив символов, чьим начальным элементам должны присваиваться значения символов.
 
 *_Num*<br/>
 Число элементов, которым будут назначаться значения.
@@ -198,9 +199,11 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Параметры
 
-* str1 * первый из двух строк для сравнения друг с другом.
+*str1*<br/>
+Первая из двух строк для сравнения друг с другом.
 
-* str2 * второй из двух строк для сравнения друг с другом.
+*str2*<br/>
+Вторая из двух строк для сравнения друг с другом.
 
 *_Num*<br/>
 Число элементов в строках для сравнения.

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e63b0b47dcc3f53ecd5af2d51505df844f66437a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 055b14c38e3084a7368953cbce4f95373e1a77f3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599390"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706333"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -38,8 +38,8 @@ ms.locfileid: "42599390"
 
 ### <a name="parameters"></a>Параметры
 
-*логическое* (необязательно)  
-**значение true,** Если нет кода, подставленного, **false** чтобы кода, которые следует вставить. **значение true,** используется по умолчанию.
+*Логическое значение*  
+(Необязательно) **true** Если нет кода, подставленного, **false** чтобы кода, которые следует вставить. **значение true,** используется по умолчанию.
 
 ## <a name="remarks"></a>Примечания
 

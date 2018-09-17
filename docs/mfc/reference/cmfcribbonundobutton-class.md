@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848772"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709194"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Класс CMFCRibbonUndoButton
 `CMFCRibbonUndoButton` Класс реализует кнопку раскрывающегося списка, содержащего последние команды пользователя. Пользователи могут выбрать один или несколько последних команд из раскрывающегося списка, чтобы повторить или отменить их.  
@@ -46,13 +46,13 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Создает новый `CMFCRibbonUndoButton` объекта, используя идентификатор команды, указанной вами, текстовую метку и изображений из списка изображений родительского объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Добавляет новое действие в список действий.|  
 |[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Очищает список действий, представляющий стрелку раскрывающегося списка.|  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszLabel*  
- Метка действия, которое будет отображаться в раскрывающемся списке.  
+*lpszLabel*<br/>
+[in] Метка действия, которое будет отображаться в раскрывающемся списке.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  Очищает список действий, представляющий стрелку раскрывающегося списка.  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nID*  
- Указывает идентификатор команды.  
+*nID*<br/>
+[in] Указывает идентификатор команды.  
   
- [in] *lpszText*  
- Задает текстовую подпись кнопки.  
+*lpszText*<br/>
+[in] Задает текстовую подпись кнопки.  
   
- [in] *nSmallImageIndex*  
- Отсчитываемый от нуля индекс в списке изображений родительского объекта для небольшое изображение кнопки.  
+*nSmallImageIndex*<br/>
+[in] Отсчитываемый от нуля индекс в списке изображений родительского объекта для небольшое изображение кнопки.  
   
- [in] *nLargeImageIndex*  
- Отсчитываемый от нуля индекс в списке изображений родительского объекта для большого изображения кнопки.  
+*nLargeImageIndex*<br/>
+[in] Отсчитываемый от нуля индекс в списке изображений родительского объекта для большого изображения кнопки.  
   
- [in] *hIcon*  
- Дескриптор значка, который можно использовать в качестве изображения кнопки.  
+*hIcon*<br/>
+[in] Дескриптор значка, который можно использовать в качестве изображения кнопки.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Определяет количество элементов, которые пользователь выбрал в раскрывающемся списке.  

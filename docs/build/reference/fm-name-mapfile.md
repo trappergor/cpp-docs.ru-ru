@@ -1,5 +1,5 @@
 ---
-title: -Fm-(имя файла сопоставления) | Документы Microsoft
+title: -Fm (имя файла сопоставления) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,47 +20,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a499b943fcd3213aa76876c65c3aac2dd79060
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e69a273d523a78adc2b71652e5f13fb9141d3b1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374288"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699913"
 ---
 # <a name="fm-name-mapfile"></a>Параметр /Fm (имя файла сопоставления)
-Указывает компоновщику создать файл сопоставления, содержащий список сегментов в том порядке, в котором они появляются в соответствующий файл .exe или DLL.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/Fmpathname  
-```  
-  
-## <a name="remarks"></a>Примечания  
- По умолчанию получает имя базового C или C++ исходный файл с файл сопоставления. Расширение КАРТЫ.  
-  
- Указание **/Fm** действует так же, как если бы [/Map (Создание файла сопоставления)](../../build/reference/map-generate-mapfile.md) компоновщика.  
-  
- При указании [/c (компиляция без связывания)](../../build/reference/c-compile-without-linking.md) запрещающий связывание, **/Fm** не делает ничего.  
-  
- Глобальные символы в файл сопоставления обычно имеет один или несколько со знака подчеркивания, поскольку компилятор добавляет подчеркивания в именах переменных. Многие из глобальных символов, присутствующих в файле сопоставления используются компилятором, и стандартные библиотеки.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  Откройте папку **C/C++** .  
-  
-3.  Выберите страницу свойств **Командная строка** .  
-  
-4.  Введите параметр компилятора в поле **Дополнительные параметры** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Выходного файла (/ F) параметры](../../build/reference/output-file-f-options.md)   
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
- [Указание пути](../../build/reference/specifying-the-pathname.md)
+
+Предписывает компоновщику создать файл сопоставления, содержащий список сегментов в порядке, в котором они появляются в соответствующий файл .exe или DLL.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+/Fmpathname
+```
+
+## <a name="remarks"></a>Примечания
+
+По умолчанию получает базовое имя соответствующего файла C или C++ источника с помощью файла сопоставления. Расширения Сопоставления.
+
+Указание **/Fm** действует так же, как если [/Map (Создание файла сопоставления)](../../build/reference/map-generate-mapfile.md) параметр компоновщика.
+
+Если указать [/c (компиляция без связывания)](../../build/reference/c-compile-without-linking.md) запрещающий связывание, **/Fm** не оказывает влияния.
+
+Глобальные символы в файл сопоставления обычно имеют один или несколько таких символов, так как компилятор добавляет подчеркивания имена переменных. Многие из глобальных символов, которые отображаются в файл сопоставления используются внутри компилятора и стандартные библиотеки.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Откройте папку **C/C++** .
+
+1. Выберите страницу свойств **Командная строка** .
+
+1. Введите параметр компилятора в поле **Дополнительные параметры** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Выходного файла (/ F) параметры](../../build/reference/output-file-f-options.md)
+[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
+[Указание пути](../../build/reference/specifying-the-pathname.md)

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf2134b334c259a6543af279ee058b659cf21d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9eb3b70851cb5e51ef2ddc0e99347c81fe632b6d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210191"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726665"
 ---
 # <a name="cdatetimectrl-class"></a>Класс CDateTimeCtrl
 Инкапсулирует функциональность элемента управления "выбор даты и времени".  
@@ -70,13 +70,13 @@ class CDateTimeCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|Создает объект `CDateTimeCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDateTimeCtrl::CloseMonthCal](#closemonthcal)|Закрывает текущий элемент управления выбора даты и времени.|  
 |[CDateTimeCtrl::Create](#create)|Создает элемент управления выбора даты и времени и присоединяет его к `CDateTimeCtrl` объекта.|  
@@ -190,9 +190,9 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[out] *pDateTimePickerInfo*|Указатель на [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) структуру, которая получает описание текущего элемента управления выбора даты и времени.<br /><br /> Вызывающий объект отвечает за распределение этой структуры. Тем не менее, этот метод инициализирует *cbSize* член структуры.|  
+|*pDateTimePickerInfo*|[out] Указатель на [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) структуру, которая получает описание текущего элемента управления выбора даты и времени.<br /><br /> Вызывающий объект отвечает за распределение этой структуры. Тем не менее, этот метод инициализирует *cbSize* член структуры.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -345,9 +345,9 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[out] *psize*|Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, содержащую идеального размера для элемента управления.|  
+|*psize*|[out] Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, содержащую идеального размера для элемента управления.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение всегда имеет значение TRUE.  
@@ -456,9 +456,9 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Новый месяц календаря стиль элемента управления, который представляет собой битовую комбинацию (OR) стили элемента управления Календарь месяца. Дополнительные сведения см. в разделе [стили элемента управления Calendar Month](/windows/desktop/Controls/month-calendar-control-styles).|  
+|*dwStyle*|[in] Новый месяц календаря стиль элемента управления, который представляет собой битовую комбинацию (OR) стили элемента управления Календарь месяца. Дополнительные сведения см. в разделе [стили элемента управления Calendar Month](/windows/desktop/Controls/month-calendar-control-styles).|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Предыдущий стиль элемента управления calendar month раскрывающегося списка.  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 577e4b4e7bf54742035c8b4333d345ca894501ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202980"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708998"
 ---
 # <a name="cusertool-class"></a>Класс CUserTool
 Пользовательский инструмент — это пункт меню, который запускает внешнее приложение. **Средства** вкладке **Настройка** диалоговое окно ( [класс CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) позволяет пользователю добавить пользовательские средства, а также указать имя, команду, аргументы, и исходный каталог для каждого пользовательского средства.  
@@ -60,7 +60,7 @@ class CUserTool : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||  
 |[CUserTool::DrawToolIcon](#drawtoolicon)|Значок средства пользователь рисует в заданном прямоугольнике.|  
@@ -73,13 +73,13 @@ class CUserTool : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CUserTool::LoadDefaultIcon](#loaddefaulticon)|Загружает значок по умолчанию для пользовательского средства.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CUserTool::m_strArguments](#m_strarguments)|Аргументы командной строки для пользовательского средства.|  
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Исходный каталог для пользовательского средства.|  
@@ -122,11 +122,11 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
- [in] *rectImage*  
- Задает координаты области для отображения значка.  
+*rectImage*<br/>
+[in] Задает координаты области для отображения значка.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
  Возвращает строку, содержащую текст команды, связанные со средством пользователя.  
@@ -223,8 +223,8 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszCmd*  
- Указывает новое приложение, должны быть сопоставлены средство пользовательской среды.  
+*lpszCmd*<br/>
+[in] Указывает новое приложение, должны быть сопоставлены средство пользовательской среды.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовите этот метод для установки нового приложения, которое запускает средство пользовательской среды. Метод уничтожает старый значок и загружает новый значок из данного приложения. Если значок не удалось загрузить из приложения, он загружает значок по умолчанию для пользовательского средства, вызвав [CUserTool::LoadDefaultIcon](#loaddefaulticon).  

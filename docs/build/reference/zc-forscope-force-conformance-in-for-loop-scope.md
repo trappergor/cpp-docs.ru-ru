@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: forScope (принудительное обеспечение соответствия в области цикла) | Документы Microsoft'
+title: '/ Zc: forScope (принудительное обеспечение соответствия в области видимости оператора for) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bef68f47fe8fdc430138a6961078139b48030b3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378617"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723597"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (принудительное обеспечение соответствия в области видимости оператора for)
 
@@ -40,7 +40,7 @@ ms.locfileid: "32378617"
 
 При стандартном поведении инициализатору цикла **for** позволяется выходить за пределы области после цикла **for** . При использовании **/Zc:forScope-** и [/Ze](../../build/reference/za-ze-disable-language-extensions.md)инициализатор цикла **for** остается в пределах области до завершения локальной области.
 
-**/Zc: forScope** включен параметр по умолчанию. **/ Zc: forScope** не изменяется, когда [/ разрешительным-](permissive-standards-conformance.md) параметра.
+**/Zc: forScope** включен параметр по умолчанию. **/ Zc: forScope** не затрагивается при [/ permissive-](permissive-standards-conformance.md) параметра.
 
 Параметр **/Zc:forScope-** не рекомендуется к использованию и будет удален в одном из следующих выпусков. Использование **/Zc:forScope-** приводит к созданию предупреждения D9035 о нерекомендуемом элементе.
 
@@ -49,7 +49,7 @@ ms.locfileid: "32378617"
 ```cpp
 // zc_forScope.cpp
 // compile by using: cl /Zc:forScope- /Za zc_forScope.cpp
-// C2065, D9035 expected  
+// C2065, D9035 expected
 int main() {
     // Compile by using cl /Zc:forScope- zc_forScope.cpp
     // to compile this non-standard code as-is.
@@ -65,13 +65,13 @@ int main() {
 
 Поведение параметра **/Zc:forScope** во время выполнения можно изменить с помощью директивы pragma [conform](../../preprocessor/conform.md) .
 
-При использовании параметра **/Zc:forScope-** в проекте с существующим файлом PCH выдается предупреждение, параметр **/Zc:forScope-** пропускается, а компиляция продолжается c использованием существующих файлов PCH. Если требуется создать новый файл PCH, используйте [/Yc (создать файл предкомпилированного заголовка)](../../build/reference/yc-create-precompiled-header-file.md).
+При использовании параметра **/Zc:forScope-** в проекте с существующим файлом PCH выдается предупреждение, параметр **/Zc:forScope-** пропускается, а компиляция продолжается c использованием существующих файлов PCH. Если требуется новый PCH-файл создан, используйте [/Yc (создать предкомпилированный заголовочный файл)](../../build/reference/yc-create-precompiled-header-file.md).
 
 Дополнительные сведения о вопросах соответствия в Visual C++ см. в статье [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **языка** страницу свойств.
 

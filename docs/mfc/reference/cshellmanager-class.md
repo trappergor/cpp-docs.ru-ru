@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 48312e4840436b1e0cc7c3e176d86f1783ff1746
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207396"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714673"
 ---
 # <a name="cshellmanager-class"></a>Класс CShellManager
 Реализует несколько методов, которые позволяют работать с указателями в списках идентификаторов (PIDL).  
@@ -58,13 +58,13 @@ class CShellManager : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CShellManager::CShellManager](#cshellmanager)|Создает объект `CShellManager`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CShellManager::BrowseForFolder](#browseforfolder)|Отображает диалоговое окно, которое позволяет пользователю выбрать папку оболочки.|  
 |[CShellManager::ConcatenateItem](#concatenateitem)|Сцепляет два Pidl.|  
@@ -104,23 +104,23 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *strOutFolder*  
- Строка, используемая этим методом для сохранения пути из выбранной папки.  
+*strOutFolder*<br/>
+[out] Строка, используемая этим методом для сохранения пути из выбранной папки.  
   
- [in] *pWndParent*  
- Указатель на родительское окно.  
+*pWndParent*<br/>
+[in] Указатель на родительское окно.  
   
- [in] *lplszInitialFolder*  
- Строка, содержащая папку, выбирается по умолчанию, когда появится диалоговое окно.  
+*lplszInitialFolder*<br/>
+[in] Строка, содержащая папку, выбирается по умолчанию, когда появится диалоговое окно.  
   
- [in] *lpszTitle*  
- Заголовок для диалогового окна.  
+*lpszTitle*<br/>
+[in] Заголовок для диалогового окна.  
   
- [in] *ulFlags*  
- Флаги, указывающие параметры для диалогового окна. См. в разделе [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) подробное описание.  
+*ulFlags*<br/>
+[in] Флаги, указывающие параметры для диалогового окна. См. в разделе [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) подробное описание.  
   
- [out] *piFolderImage*  
- Указатель на целочисленное значение, где метод записывает индекс изображения выбранной папки.  
+*piFolderImage*<br/>
+[out] Указатель на целочисленное значение, где метод записывает индекс изображения выбранной папки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если пользователь выбирает папки из диалогового окна; в противном случае 0.  
@@ -143,11 +143,11 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pidl1*  
- Первый элемент.  
+*pidl1*<br/>
+[in] Первый элемент.  
   
- [in] *pidl2*  
- Второй элемент.  
+*pidl2*<br/>
+[in] Второй элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новый список элементов, если функция выполняется успешно, в противном случае — значение NULL.  
@@ -163,8 +163,8 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pidlSource*  
- Исходным списками элементов.  
+*pidlSource*<br/>
+[in] Исходным списками элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на только что созданный элемент списка, если выполнение прошло успешно; в противном случае имеет значение NULL.  
@@ -180,8 +180,8 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *cbSize*  
- Размер в списке элементов.  
+*cbSize*<br/>
+[in] Размер в списке элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на созданный элемент списка, если выполнение прошло успешно; в противном случае имеет значение NULL.  
@@ -204,8 +204,8 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pidl*  
- Список элементов для удаления.  
+*pidl*<br/>
+[in] Список элементов для удаления.  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
  Возвращает количество элементов в списке элементов.  
@@ -215,8 +215,8 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pidl*  
- Указатель на список элементов.  
+*pidl*<br/>
+[in] Указатель на список элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Число элементов в списке элементов.  
@@ -229,8 +229,8 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pidl*  
- Указатель на список элементов.  
+*pidl*<br/>
+[in] Указатель на список элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер в списке элементов.  
@@ -243,8 +243,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pidl*  
- Список элементов для итерации.  
+*pidl*<br/>
+[in] Список элементов для итерации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на следующий элемент в списке.  
@@ -262,11 +262,11 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpidl*  
- PIDL, родитель которого будут извлекаться.  
+*lpidl*<br/>
+[in] PIDL, родитель которого будут извлекаться.  
   
- [out] *lpidlParent*  
- Ссылка на PIDL, где метод сохранит результат.  
+*lpidlParent*<br/>
+[out] Ссылка на PIDL, где метод сохранит результат.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Уровень PIDL родительского элемента.  
@@ -284,11 +284,11 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszPath*  
- Строковое значение, указывающее путь для элемента.  
+*lpszPath*<br/>
+[in] Строковое значение, указывающее путь для элемента.  
   
- [out] *pidl*  
- Ссылка на PIDL. Данный метод использует этот PIDL для хранения указателя на его возвращаемое значение.  
+*pidl*<br/>
+[out] Ссылка на PIDL. Данный метод использует этот PIDL для хранения указателя на его возвращаемое значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение NOERROR, если выполнение прошло успешно; значение ошибки, определенное OLE.  

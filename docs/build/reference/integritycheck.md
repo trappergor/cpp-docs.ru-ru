@@ -1,5 +1,5 @@
 ---
-title: / INTEGRITYCHECK | Документы Microsoft
+title: / INTEGRITYCHECK | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -17,23 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0adf9add2d191ae89aec0a5d756ade8e9f7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 062ce019fe1b622661be880d8a06eac9c5971103
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370252"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709207"
 ---
 # <a name="integritycheck"></a>/INTEGRITYCHECK
 
-Указывает, что цифровая подпись двоичный образ будет выполняться проверка во время загрузки.
+Указывает, что цифровая подпись бинарного образа должна быть проверена во время загрузки.
 
-> **/ INTEGRITYCHECK-**[**: НЕТ**]
+> **/ INTEGRITYCHECK**[**: НЕТ**]
 
 ## <a name="remarks"></a>Примечания
 
-В заголовке файла DLL или исполняемого файла этот параметр устанавливает флаг, который требует проверки цифровой подписи диспетчером памяти для загрузки изображения в Windows. Версии Windows, предшествующей Windows Vista игнорировать этот флаг. Этот параметр необходимо задать для 64-разрядных библиотек DLL, реализующие кода в режиме ядра и рекомендуется для всех драйверов устройств. Дополнительные сведения см. в разделе [требования к подписи кода в режиме ядра](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-).
+В заголовке исполняемого файла или файла DLL этот параметр устанавливает флаг, требующий проверки цифровой подписи диспетчером памяти для загрузки образа в Windows. Версии Windows до Windows Vista игнорируют этот флажок. Этот параметр необходимо задать для 64-разрядных библиотек DLL, которые реализуют кода режима ядра и рекомендуется для всех драйверов устройств. Дополнительные сведения см. в разделе [требования подписывания кода режима ядра](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-).
 
 ## <a name="see-also"></a>См. также
 
-[Параметры EDITBIN](../../build/reference/editbin-options.md)  
+[Параметры EDITBIN](../../build/reference/editbin-options.md)

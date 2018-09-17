@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403671"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701693"
 ---
 # <a name="inline-functions-c"></a>Встраиваемые функции (C++)
 Функция, определенная в теле объявления класса, является встраиваемой.  
@@ -156,7 +156,8 @@ private:
   
  Рекурсивные функции можно подставляться до глубины, определяемое [inline_depth](../preprocessor/inline-depth.md) pragma, но не более 16 вызовов. Начиная с этой глубины рекурсивные функции обрабатываются как вызовы на экземпляр функции.  Глубина, до которой эвристический поиск для подстановки функций проверяет рекурсивные функции, не может превышать 16 вызовов. [Inline_recursion](../preprocessor/inline-recursion.md) pragma управляет подстановкой подставляемых функций функции в настоящее время в разделе расширения. См. в разделе [расширение встраиваемых функций](../build/reference/ob-inline-function-expansion.md) (/ Ob) параметр компилятора связанные сведения.  
   
-**Завершение блока, относящегося только к системам Майкрософт**  
+**Завершение блока, относящегося только к системам Майкрософт**
+
  Дополнительные сведения об использовании **встроенного** описатель, см. в разделе:  
   
 -   [Подставляемые функции-члены класса](../cpp/inline-functions-cpp.md)  

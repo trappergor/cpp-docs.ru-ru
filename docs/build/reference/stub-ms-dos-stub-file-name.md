@@ -1,5 +1,5 @@
 ---
-title: -STUB (имя файла заглушки MS-DOS) | Документы Microsoft
+title: -STUB (имя файла заглушки MS-DOS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,53 +22,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4302040f7d18dcffc07ddd054c34b62c22e400d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c279d6f33befb4c308afe0c92b7dcca3d45ba66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379020"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707724"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (имя файла-заглушки MS-DOS)
-```  
-/STUB:filename  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Здесь:  
-  
- *filename*  
- Приложение MS-DOS.  
-  
-## <a name="remarks"></a>Примечания  
- Параметр/STUB прилагает программу-заглушку MS-DOS к программе Win32.  
-  
- Программа-заглушка вызывается в том случае, если файл выполняется в системе MS-DOS. Как правило, выводится соответствующее сообщение; Однако любое допустимое приложение MS-DOS можно программы-заглушки.  
-  
- Укажите *filename* для программы-заглушки после двоеточия (:) в командной строке. Компоновщик проверяет *filename* и выдает сообщение об ошибке, если файл не является исполняемым файлом. Программа должна быть файл .exe; .com файл является недопустимым для программы-заглушки.  
-  
- Если этот параметр не используется, компоновщик присоединяет программу-заглушку по умолчанию, выдает следующее сообщение:  
-  
-```  
-This program cannot be run in MS-DOS mode.  
-```  
-  
- При построении драйвер виртуального устройства, *filename* дает пользователю возможность указать имя файла, который содержит структуру IMAGE_DOS_HEADER (определенную в файле WINNT. (H) для использования в VXD вместо заголовка по умолчанию.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Нажмите кнопку **компоновщика** папки.  
-  
-3.  Выберите страницу свойств **Командная строка** .  
-  
-4.  Введите параметр в **Дополнительные параметры** поле.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+```
+/STUB:filename
+```
+
+## <a name="arguments"></a>Аргументы
+
+*filename*<br/>
+Приложение MS-DOS.
+
+## <a name="remarks"></a>Примечания
+
+Параметр/STUB присоединяет программу-заглушку MS-DOS к программе Win32.
+
+Программу-заглушку вызывается в том случае, если этот файл исполняется в MS-DOS. Как правило, выводится соответствующее сообщение; Однако любое допустимое приложение MS-DOS может быть программу-заглушку.
+
+Укажите *filename* для программу-заглушку после двоеточия (:) в командной строке. Компоновщик проверяет *filename* и выдает сообщение об ошибке, если файл не является исполняемым файлом. Программа должна быть файл .exe; .com файл является недопустимым для программу-заглушку.
+
+Если этот параметр не используется, компоновщик присоединяет программу-заглушку по умолчанию, выдает следующее сообщение:
+
+```
+This program cannot be run in MS-DOS mode.
+```
+
+При построении драйвер виртуального устройства, *filename* позволяет пользователю указать имя файла, который содержит структуру IMAGE_DOS_HEADER (определенную в файле WINNT. H) для использования в VXD вместо заголовка по умолчанию.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+
+1. Нажмите кнопку **компоновщика** папки.
+
+1. Выберите страницу свойств **Командная строка** .
+
+1. Введите параметр в **Дополнительные параметры** поле.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

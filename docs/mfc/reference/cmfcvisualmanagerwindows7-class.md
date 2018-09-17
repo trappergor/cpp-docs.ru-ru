@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539118"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720555"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Класс CMFCVisualManagerWindows7
 `CMFCVisualManagerWindows7` Придает приложению внешний вид приложений Windows 7.  
@@ -40,14 +40,14 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Конструктор по умолчанию.|  
 |[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Деструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCVisualManagerWindows7::CleanStyle`|Очищает текущий стиль оформления и сбрасывает визуальный стиль по умолчанию.|  
 |`CMFCVisualManagerWindows7::CleanUp`|Очищает все объекты в пользовательском интерфейсе и сбрасывает меню.|  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pEdit*  
- Указатель на поле ввода. Это значение не может иметь значение NULL.  
+*pEdit*<br/>
+[in] Указатель на поле ввода. Это значение не может иметь значение NULL.  
   
- [out] *bIsHighlighted*  
- Возвращает, выделена ли поле на ленте.  
+*bIsHighlighted*<br/>
+[out] Возвращает, выделена ли поле на ленте.  
   
- [out] *bIsPaneHighlighted*  
- Возвращает значение TRUE, если панель ленты, который содержит *pEdit* будет выделен.  
+*bIsPaneHighlighted*<br/>
+[out] Возвращает значение TRUE, если панель ленты, который содержит *pEdit* будет выделен.  
   
- [out] *bIsDisabled*  
- Возвращает ли *pEdit* отключена.  
+*bIsDisabled*<br/>
+[out] Возвращает ли *pEdit* отключена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Цвет фона поля редактирования *pEdit*.  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства кнопки меню.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства кнопки меню.  
   
- [in] *pButton*  
- Указатель на `CMFCToolBarButton`. Автоматически заполняются фона для данной кнопки.  
+*pButton*<br/>
+[in] Указатель на `CMFCToolBarButton`. Автоматически заполняются фона для данной кнопки.  
   
- [in] *rect*  
- Прямоугольник, который указывает границы области изображение кнопки меню.  
+*Rect*<br/>
+[in] Прямоугольник, который указывает границы области изображение кнопки меню.  
   
- [in] *состояния*  
- Состояние кнопки.  
+*state*<br/>
+[in] Состояние кнопки.  
   
 ### <a name="remarks"></a>Примечания  
   

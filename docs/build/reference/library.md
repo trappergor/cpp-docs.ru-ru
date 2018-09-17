@@ -1,5 +1,5 @@
 ---
-title: БИБЛИОТЕКА | Документы Microsoft
+title: БИБЛИОТЕКА | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d2fb7e69b0557bf96601666c390b3d59412b5a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43b14e8e8ff4871ba4319c7f4fac5545e72e710b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371168"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723558"
 ---
 # <a name="library"></a>LIBRARY
-Указывает ССЫЛКУ, чтобы создать библиотеку DLL. В то же время LINK создает библиотеку импорта, если только не используется файл EXP в сборке.  
-  
-```  
-LIBRARY [library][BASE=address]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- *Библиотеки* аргумент задает имя библиотеки DLL. Можно также использовать [/OUT](../../build/reference/out-output-file-name.md) компоновщика, чтобы указать имя выходной библиотеки DLL.  
-  
- БАЗОВЫЙ =*адрес* аргумент задает базовый адрес, который операционная система использует для загрузки библиотеки DLL. Этот аргумент переопределяет расположение библиотеки DLL по умолчанию 0x10000000. См. в описании [/BASE](../../build/reference/base-base-address.md) подробные сведения о базовых адресов.  
-  
- Не забывайте использовать [/DLL](../../build/reference/dll-build-a-dll.md) компоновщика при построении библиотеки DLL.  
-  
-## <a name="see-also"></a>См. также  
- [Правила для операторов определения модуля](../../build/reference/rules-for-module-definition-statements.md)
+
+Указывает ССЫЛКУ, чтобы создать библиотеку DLL. В то же время ССЫЛКУ создает библиотеку импорта, если только не используется файл EXP в сборке.
+
+```
+LIBRARY [library][BASE=address]
+```
+
+## <a name="remarks"></a>Примечания
+
+*Библиотеки* аргумент указывает имя библиотеки DLL. Можно также использовать [/OUT](../../build/reference/out-output-file-name.md) параметр компоновщика, чтобы указать имя выходной библиотеки DLL.
+
+БАЗОВЫЙ =*адрес* аргумент задает базовый адрес, который операционная система использует для загрузки библиотеки DLL. Этот аргумент переопределяет расположение библиотеки DLL по умолчанию 0x10000000. См. в описании [/BASE](../../build/reference/base-base-address.md) подробные сведения о базовых адресов.
+
+Не забывайте использовать [/DLL](../../build/reference/dll-build-a-dll.md) параметр компоновщика при построении библиотеки DLL.
+
+## <a name="see-also"></a>См. также
+
+[Правила для операторов определения модуля](../../build/reference/rules-for-module-definition-statements.md)

@@ -21,14 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee09b3fe61c86015d8dc7464ef9925419fc745d9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 488ee353cf245303b5ea73be139a262aea5be49d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100344"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706580"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (обработка комментариев документации) (C/C++)
+
 Указывает компилятору обработка комментариев документации в файлах исходного кода и создания XDC-файл для каждого файла исходного кода, имеющий комментарии к документации.
 
 ## <a name="syntax"></a>Синтаксис
@@ -50,7 +51,7 @@ XDC-файлы обрабатываются в XML-файл с xdcmake.exe. До
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **выходные файлы** страницу свойств.
 
@@ -62,5 +63,5 @@ XDC-файлы обрабатываются в XML-файл с xdcmake.exe. До
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)   
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

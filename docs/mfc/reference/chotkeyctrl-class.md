@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681629"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722251"
 ---
 # <a name="chotkeyctrl-class"></a>Класс CHotKeyCtrl
 Предоставляет функциональные возможности стандартного элемента управления "горячая клавиша" Windows.  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *wVirtualKeyCode*  
- Виртуальному коду клавиши сочетания клавиш. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h.  
+*wVirtualKeyCode*<br/>
+[out] Виртуальному коду клавиши сочетания клавиш. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h.  
   
- [out] *wModifiers*  
- Побитовое сочетание (OR) флагов, которое указывает клавиши-модификаторы в сочетании клавиш.  
+*wModifiers*<br/>
+[out] Побитовое сочетание (OR) флагов, которое указывает клавиши-модификаторы в сочетании клавиш.  
   
  Далее приведены флаги модификаторов.  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *wVirtualKeyCode*  
- Виртуальному коду клавиши сочетания клавиш. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h.  
+*wVirtualKeyCode*<br/>
+[in] Виртуальному коду клавиши сочетания клавиш. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h.  
   
- [in] *wModifiers*  
- Побитовое сочетание (OR) флагов, которое указывает клавиши-модификаторы в сочетании клавиш.  
+*wModifiers*<br/>
+[in] Побитовое сочетание (OR) флагов, которое указывает клавиши-модификаторы в сочетании клавиш.  
   
  Далее приведены флаги модификаторов.  
   
