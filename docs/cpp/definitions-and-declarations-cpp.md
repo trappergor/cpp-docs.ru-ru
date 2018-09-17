@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 54754e465f3a153b769b7619ff2bfb70a1872907
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462892"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699619"
 ---
 # <a name="definitions-and-declarations-c"></a>Определения и объявления (C++)
-**Системам Microsoft** интерфейс DLL относится ко всем элементам (функциям и данным), про которые известно экспортироваться некоторой программой в системе, то есть все элементы, которые объявляются как **dllimport** или **dllexport** . Всех объявлениях, включенных в интерфейс DLL необходимо указать либо **dllimport** или **dllexport** атрибута. Тем не менее, в определении должен указываться только **dllexport** атрибута. Например, следующее определение функции вызовет ошибку компилятора.
+**Блок, относящийся только к системам Microsoft**
+
+ Интерфейс DLL относится ко всем элементам (функциям и данным), которые заведомо экспортироваться некоторой программой в системе; то есть все элементы, которые обозначаются как **dllimport** или **dllexport**. Всех объявлениях, включенных в интерфейс DLL необходимо указать либо **dllimport** или **dllexport** атрибута. Тем не менее, в определении должен указываться только **dllexport** атрибута. Например, следующее определение функции вызовет ошибку компилятора.
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
