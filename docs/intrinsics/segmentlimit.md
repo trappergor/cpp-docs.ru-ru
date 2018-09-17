@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e9ca899b7ad0f83faed4b8aefe318d2c62abb76
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541692"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704994"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Блок, относящийся только к системам Microsoft**  
@@ -38,8 +38,8 @@ unsigned long __segmentlimit(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `a`  
- Константа, задающая селекторе сегмента.  
+*a*<br/>
+[in] Константа, задающая селекторе сегмента.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Ограничение размера сегмента средства выбора сегмента, определяемое `a`при условии, что селектор является допустимым и видимым, текущего уровня разрешений.  

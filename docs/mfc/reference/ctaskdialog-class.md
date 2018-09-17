@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1c3e55f6045b0096ef614e1d3b4b054db60265
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51970f99a05b587bcdbccc5d24ad21b036d87f74
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202399"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710818"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -274,17 +274,17 @@ void AddCommandControl(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nCommandControlID*  
-Идентификационный номер команды управления.
+*nCommandControlID*<br/>
+[in] Идентификационный номер команды управления.
 
-[in] *strCaption*  
-Строка, `CTaskDialog` отображает для пользователя. Используйте эту строку в качестве пояснения команды.
+*strCaption*<br/>
+[in] Строка, `CTaskDialog` отображает для пользователя. Используйте эту строку в качестве пояснения команды.
 
-[in] *bEnabled*  
-Логический параметр, который указывает, включен ли новая кнопка.
+*bEnabled*<br/>
+[in] Логический параметр, который указывает, включен ли новая кнопка.
 
-[in] *bRequiresElevation*  
-Логический параметр, который указывает, требуется ли команда повышения прав.
+*bRequiresElevation*<br/>
+[in] Логический параметр, который указывает, требуется ли команда повышения прав.
 
 ### <a name="remarks"></a>Примечания
 
@@ -309,14 +309,14 @@ void CTaskDialog::AddRadioButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nRadioButtonID*  
-Идентификационный номер переключателя.
+*nRadioButtonID*<br/>
+[in] Идентификационный номер переключателя.
 
-[in] *strCaption*  
-Строка, `CTaskDialog` рядом переключатель отображается.
+*strCaption*<br/>
+[in] Строка, `CTaskDialog` рядом переключатель отображается.
 
-[in] *bEnabled*  
-Логический параметр, который указывает, включен ли переключатель.
+*bEnabled*<br/>
+[in] Логический параметр, который указывает, включен ли переключатель.
 
 ### <a name="remarks"></a>Примечания
 
@@ -339,8 +339,8 @@ void ClickCommandControl(int nCommandControlID) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nCommandControlID*  
-Идентификатор команды элемента управления, нажмите кнопку.
+*nCommandControlID*<br/>
+[in] Идентификатор команды элемента управления, нажмите кнопку.
 
 ### <a name="remarks"></a>Примечания
 
@@ -357,8 +357,8 @@ void ClickRadioButton(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nRadioButtonID*  
-Идентификатор нажмите кнопку переключателя.
+*nRadioButtonID*<br/>
+[in] Идентификатор нажмите кнопку переключателя.
 
 ### <a name="remarks"></a>Примечания
 
@@ -391,29 +391,29 @@ CTaskDialog(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *strContent*  
-Строка, используемая для содержимого `CTaskDialog`.
+*strContent*<br/>
+[in] Строка, используемая для содержимого `CTaskDialog`.
 
-[in] *strMainInstruction*  
-Основные инструкции из `CTaskDialog`.
+*strMainInstruction*<br/>
+[in] Основные инструкции из `CTaskDialog`.
 
-[in] *strTitle*  
-Название `CTaskDialog`.
+*strTitle*<br/>
+[in] Название `CTaskDialog`.
 
-[in] *nCommonButtons*  
-Стандартные кнопки, чтобы добавить маску `CTaskDialog`.
+*nCommonButtons*<br/>
+[in] Стандартные кнопки, чтобы добавить маску `CTaskDialog`.
 
-[in] *nTaskDialogOptions*  
-Набор параметров для `CTaskDialog`.
+*nTaskDialogOptions*<br/>
+[in] Набор параметров для `CTaskDialog`.
 
-[in] *strFooter*  
-Строка для использования в качестве нижнего колонтитула.
+*strFooter*<br/>
+[in] Строка для использования в качестве нижнего колонтитула.
 
-[in] *nIDCommandControlsFirst*  
-Идентификатор строки первой команды.
+*nIDCommandControlsFirst*<br/>
+[in] Идентификатор строки первой команды.
 
-[in] *nIDCommandControlsLast*  
-Идентификатор строки последней команды.
+*nIDCommandControlsLast*<br/>
+[in] Идентификатор строки последней команды.
 
 ### <a name="remarks"></a>Примечания
 
@@ -437,8 +437,8 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Параметры
 
-[in] *hParent*  
-Родительское окно для `CTaskDialog`.
+*hParent*<br/>
+[in] Родительское окно для `CTaskDialog`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -482,8 +482,8 @@ int GetCommonButtonFlag(int nButtonId) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nButtonId*  
-Стандартное значение кнопки Windows.
+*nButtonId*<br/>
+[in] Стандартное значение кнопки Windows.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -499,8 +499,8 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *снять пометку со*  
-Общий тип кнопки связан `CTaskDialog` класса.
+*снять пометку со*<br/>
+[in] Общий тип кнопки связан `CTaskDialog` класса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -592,8 +592,8 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nCommandControlID*  
-Идентификатор команды управления "Кнопка" или кнопку для тестирования.
+*nCommandControlID*<br/>
+[in] Идентификатор команды управления "Кнопка" или кнопку для тестирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -619,8 +619,8 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nRadioButtonID*  
-Идентификатор переключателя для проверки.
+*nRadioButtonID*<br/>
+[in] Идентификатор переключателя для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -666,11 +666,11 @@ void LoadCommandControls(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nIDCommandControlsFirst*  
-Идентификатор строки первой команды.
+*nIDCommandControlsFirst*<br/>
+[in] Идентификатор строки первой команды.
 
-[in] *nIDCommandControlsLast*  
-Идентификатор строки последней команды.
+*nIDCommandControlsLast*<br/>
+[in] Идентификатор строки последней команды.
 
 ### <a name="remarks"></a>Примечания
 
@@ -694,11 +694,11 @@ void LoadRadioButtons(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nIDRadioButtonsFirst*  
-Идентификатор строки для первого переключателя.
+*nIDRadioButtonsFirst*<br/>
+[in] Идентификатор строки для первого переключателя.
 
-[in] *nIDRadioButtonsLast*  
-Идентификатор строки от последнее переключателя.
+*nIDRadioButtonsLast*<br/>
+[in] Идентификатор строки от последнее переключателя.
 
 ### <a name="remarks"></a>Примечания
 
@@ -721,8 +721,8 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *oTaskDialog*  
-`CTaskDialog` , Получает фокус.
+*oTaskDialog*<br/>
+[in] `CTaskDialog` , Получает фокус.
 
 ### <a name="remarks"></a>Примечания
 
@@ -738,8 +738,8 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nCommandControlID*  
-Идентификатор элемент управления, выбранного пользователем.
+*nCommandControlID*<br/>
+[in] Идентификатор элемент управления, выбранного пользователем.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -791,8 +791,8 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bExpanded*  
-Ненулевое значение указывает, что отображается нужные дополнительные данные; 0 указывает, что эти дополнительные данные скрыты.
+*bExpanded*<br/>
+[in] Ненулевое значение указывает, что отображается нужные дополнительные данные; 0 указывает, что эти дополнительные данные скрыты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -828,8 +828,8 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *strHref*  
-Строка, представляющая гиперссылки.
+*strHref*<br/>
+[in] Строка, представляющая гиперссылки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -883,8 +883,8 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nRadioButtonID*  
-Идентификатор переключателя, который был щелкнут пользователем.
+*nRadioButtonID*<br/>
+[in] Идентификатор переключателя, который был щелкнут пользователем.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -904,8 +904,8 @@ virtual HRESULT OnTimer(long lTime);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *lTime*  
-Время в миллисекундах с момента `CTaskDialog` был создан или сброса таймера.
+*lTime*<br/>
+[in] Время в миллисекундах с момента `CTaskDialog` был создан или сброса таймера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -925,8 +925,8 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bChecked*  
-Значение TRUE указывает, что установлен флажок проверки; Значение FALSE указывает, что это не так.
+*bChecked*<br/>
+[in] Значение TRUE указывает, что установлен флажок проверки; Значение FALSE указывает, что это не так.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -973,14 +973,14 @@ void SetCommandControlOptions(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nCommandControlID*  
-Идентификатор элемента управления команду для обновления.
+*nCommandControlID*<br/>
+[in] Идентификатор элемента управления команду для обновления.
 
-[in] *bEnabled*  
-Логический параметр, который указывает, включен ли указанный элемент управления.
+*bEnabled*<br/>
+[in] Логический параметр, который указывает, включен ли указанный элемент управления.
 
-[in] *bRequiresElevation*  
-Логический параметр, который указывает, если указанный элемент управления требуется повышение прав.
+*bRequiresElevation*<br/>
+[in] Логический параметр, который указывает, если указанный элемент управления требуется повышение прав.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1002,11 +1002,11 @@ void SetCommonButtonOptions(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nDisabledButtonMask*  
-Маска для стандартные кнопки для отключения.
+*nDisabledButtonMask*<br/>
+[in] Маска для стандартные кнопки для отключения.
 
-[in] *nElevationButtonMask*  
-Маска для общих кнопок, которые требуют повышения прав.
+*nElevationButtonMask*<br/>
+[in] Маска для общих кнопок, которые требуют повышения прав.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1033,14 +1033,14 @@ void SetCommonButtons(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nButtonMask*  
-Маска из кнопок, чтобы добавить `CTaskDialog`.
+*nButtonMask*<br/>
+[in] Маска из кнопок, чтобы добавить `CTaskDialog`.
 
-[in] *nDisabledButtonMask*  
-Маска из кнопок, чтобы отключить.
+*nDisabledButtonMask*<br/>
+[in] Маска из кнопок, чтобы отключить.
 
-[in] *nElevationButtonMask*  
-Маска кнопок, которые требуют повышения прав.
+*nElevationButtonMask*<br/>
+[in] Маска кнопок, которые требуют повышения прав.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1066,8 +1066,8 @@ void SetContent(const CString& strContent);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *strContent*  
-Строка для отображения пользователю.
+*strContent*<br/>
+[in] Строка для отображения пользователю.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1087,8 +1087,8 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nCommandControlID*  
-Идентификатор элемент управления по умолчанию.
+*nCommandControlID*<br/>
+[in] Идентификатор элемент управления по умолчанию.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1110,8 +1110,8 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nRadioButtonID*  
-Идентификатор переключателя по умолчанию.
+*nRadioButtonID*<br/>
+[in] Идентификатор переключателя по умолчанию.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1133,8 +1133,8 @@ void SetDialogWidth(int nWidth = 0);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nWidth*  
-Ширина диалогового окна в пикселях.
+*nWidth*<br/>
+[in] Ширина диалогового окна в пикселях.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1159,14 +1159,14 @@ void SetExpansionArea(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *strExpandedInformation*  
-Строка, `CTaskDialog` отображает в основном тексте диалогового окна, когда пользователь нажимает кнопку расширения.
+*strExpandedInformation*<br/>
+[in] Строка, `CTaskDialog` отображает в основном тексте диалогового окна, когда пользователь нажимает кнопку расширения.
 
-[in] *strCollapsedLabel*  
-Строка, `CTaskDialog` отображается рядом с кнопкой расширения, когда Развернутая область свернута.
+*strCollapsedLabel*<br/>
+[in] Строка, `CTaskDialog` отображается рядом с кнопкой расширения, когда Развернутая область свернута.
 
-[in] *strExpandedLabel*  
-Строка, `CTaskDialog` отображается рядом с кнопкой расширения при отображении Развернутая область.
+*strExpandedLabel*<br/>
+[in] Строка, `CTaskDialog` отображается рядом с кнопкой расширения при отображении Развернутая область.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1189,11 +1189,11 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *hFooterIcon*  
-Значок "Создать" для `CTaskDialog`.
+*hFooterIcon*<br/>
+[in] Значок "Создать" для `CTaskDialog`.
 
-[in] *lpszFooterIcon*  
-Значок "Создать" для `CTaskDialog`.
+*lpszFooterIcon*<br/>
+[in] Значок "Создать" для `CTaskDialog`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1217,8 +1217,8 @@ void SetFooterText(const CString& strFooterText);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *strFooterText*  
-Новый текст для нижнего колонтитула.
+*strFooterText*<br/>
+[in] Новый текст для нижнего колонтитула.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1239,11 +1239,11 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *hMainIcon*  
-Значок "Создать".
+*hMainIcon*<br/>
+[in] Значок "Создать".
 
-[in] *lpszMainIcon*  
-Значок "Создать".
+*lpszMainIcon*<br/>
+[in] Значок "Создать".
 
 ### <a name="remarks"></a>Примечания
 
@@ -1265,8 +1265,8 @@ void SetMainInstruction(const CString& strInstructions);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *strInstructions*  
-Новые основные инструкции.
+*strInstructions*<br/>
+[in] Новые основные инструкции.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1286,8 +1286,8 @@ void SetOptions(int nOptionFlag);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nOptionFlag*  
-Набор флагов, используемых для `CTaskDialog`.
+*nOptionFlag*<br/>
+[in] Набор флагов, используемых для `CTaskDialog`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1330,11 +1330,11 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bEnabled*  
-Значение TRUE, чтобы включить в виде бегущей строки; Значение FALSE, чтобы отключить в виде бегущей строки и удалите его из `CTaskDialog`.
+*bEnabled*<br/>
+[in] Значение TRUE, чтобы включить в виде бегущей строки; Значение FALSE, чтобы отключить в виде бегущей строки и удалите его из `CTaskDialog`.
 
-[in] *nMarqueeSpeed*  
-Целое число, указывающее скорость в виде бегущей строки.
+*nMarqueeSpeed*<br/>
+[in] Целое число, указывающее скорость в виде бегущей строки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1358,8 +1358,8 @@ void SetProgressBarPosition(int nProgressPos);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nProgressPos*  
-Положение индикатора выполнения.
+*nProgressPos*<br/>
+[in] Положение индикатора выполнения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1381,11 +1381,11 @@ void SetProgressBarRange(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nRangeMin*  
-Нижняя граница индикатора хода выполнения.
+*nRangeMin*<br/>
+[in] Нижняя граница индикатора хода выполнения.
 
-[in] *nRangeMax*  
-Верхняя граница индикатора хода выполнения.
+*nRangeMax*<br/>
+[in] Верхняя граница индикатора хода выполнения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1409,8 +1409,8 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nState*  
-Состояние индикатора хода выполнения. Возможные значения в разделе "Примечания".
+*nState*<br/>
+[in] Состояние индикатора хода выполнения. Возможные значения в разделе "Примечания".
 
 ### <a name="remarks"></a>Примечания
 
@@ -1442,11 +1442,11 @@ void SetRadioButtonOptions(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nRadioButtonID*  
-Идентификатор переключателя.
+*nRadioButtonID*<br/>
+[in] Идентификатор переключателя.
 
-[in] *bEnabled*  
-Значение TRUE, чтобы включить переключатель; Значение FALSE, чтобы отключить кнопку-переключатель.
+*bEnabled*<br/>
+[in] Значение TRUE, чтобы включить переключатель; Значение FALSE, чтобы отключить кнопку-переключатель.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1466,8 +1466,8 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bChecked*  
-Значение true для проверки флажок выбора при `CTaskDialog` отображается; Значение FALSE, чтобы иметь верификации флажок снят, когда `CTaskDialog` отображается.
+*bChecked*<br/>
+[in] Значение true для проверки флажок выбора при `CTaskDialog` отображается; Значение FALSE, чтобы иметь верификации флажок снят, когда `CTaskDialog` отображается.
 
 ### <a name="example"></a>Пример
 
@@ -1483,8 +1483,8 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *strVerificationText*  
-Текст, этот метод отображает рядом с флажком проверки.
+*strVerificationText*<br/>
+[in] Текст, этот метод отображает рядом с флажком проверки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1504,8 +1504,8 @@ void SetWindowTitle(CString& strWindowTitle);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *strWindowTitle*  
-Новый заголовок для `CTaskDialog`.
+*strWindowTitle*<br/>
+[in] Новый заголовок для `CTaskDialog`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1531,29 +1531,29 @@ static INT_PTR ShowDialog(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *strContent*  
-Строка, используемая для содержимого `CTaskDialog`.
+*strContent*<br/>
+[in] Строка, используемая для содержимого `CTaskDialog`.
 
-[in] *strMainInstruction*  
-Основные инструкции из `CTaskDialog`.
+*strMainInstruction*<br/>
+[in] Основные инструкции из `CTaskDialog`.
 
-[in] *strTitle*  
-Название `CTaskDialog`.
+*strTitle*<br/>
+[in] Название `CTaskDialog`.
 
-[in] *nIDCommandControlsFirst*  
-Идентификатор строки первой команды.
+*nIDCommandControlsFirst*<br/>
+[in] Идентификатор строки первой команды.
 
-[in] *nIDCommandControlsLast*  
-Идентификатор строки последней команды.
+*nIDCommandControlsLast*<br/>
+[in] Идентификатор строки последней команды.
 
-[in] *nCommonButtons*  
-Маска из кнопок, чтобы добавить `CTaskDialog`.
+*nCommonButtons*<br/>
+[in] Маска из кнопок, чтобы добавить `CTaskDialog`.
 
-[in] *nTaskDialogOptions*  
-Набор параметров для `CTaskDialog`.
+*nTaskDialogOptions*<br/>
+[in] Набор параметров для `CTaskDialog`.
 
-[in] *strFooter*  
-Строка для использования в качестве нижнего колонтитула.
+*strFooter*<br/>
+[in] Строка для использования в качестве нижнего колонтитула.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1589,20 +1589,20 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *hwnd*  
-Дескриптор `m_hWnd` структуры для `CTaskDialog`.
+*HWND*<br/>
+[in] Дескриптор `m_hWnd` структуры для `CTaskDialog`.
 
-[in] *uNotification*  
-Код уведомления, которое указывает сообщение, созданный.
+*uNotification*<br/>
+[in] Код уведомления, которое указывает сообщение, созданный.
 
-[in] *wParam*  
-Дополнительные сведения о сообщении.
+*wParam*<br/>
+[in] Дополнительные сведения о сообщении.
 
-[in] *lParam*  
-Дополнительные сведения о сообщении.
+*lParam*<br/>
+[in] Дополнительные сведения о сообщении.
 
-[in] *dwRefData*  
-Указатель на `CTaskDialog` объект, к которому применяется сообщения обратного вызова.
+*dwRefData*<br/>
+[in] Указатель на `CTaskDialog` объект, к которому применяется сообщения обратного вызова.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

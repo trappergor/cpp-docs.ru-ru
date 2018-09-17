@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f81b1e675f6b0c12330d84d17b2e6b1635503dfc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690425"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704942"
 ---
 # <a name="clinkctrl-class"></a>Класс CLinkCtrl
 Предоставляет функциональные возможности стандартного элемента управления SysLink Windows.  
@@ -237,7 +237,7 @@ int GetIdealSize(
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in] *cxMaxWidth*|Максимальная ширина ссылки, в пикселях.|  
+|*cxMaxWidth*|[in] Максимальная ширина ссылки, в пикселях.|  
 |[out] \* *pSize*|Указатель на Windows [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры. При возвращении данного метода *cy* членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, который задается параметром *cxMaxWidth*. *Cx* член структуры содержит ширину текста ссылки, которая фактически требуется.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  

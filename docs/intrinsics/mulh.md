@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf4cc0ce245b6b80165ced5a9649586f9214639
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 853666f6dee7bae68b03ccc1d9d9c23ce765925b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541687"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699965"
 ---
 # <a name="mulh"></a>__mulh
 **Блок, относящийся только к системам Microsoft**  
@@ -38,11 +38,11 @@ __int64 __mulh(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `a`  
- Первое число для умножения.  
+*a*<br/>
+[in] Первое число для перемножения.  
   
- [in] `b`  
- Второе число для умножения.  
+*b*<br/>
+[in] Второе число для перемножения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Старшие 64 разряда 128-разрядного результата умножения.  
