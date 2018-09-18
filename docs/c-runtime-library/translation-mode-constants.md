@@ -27,41 +27,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eabf83c8388819b074ad553dc2b29b1902f2f1b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c2eff59c8f766b96c1abaeaa2eb9b369720cc75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015955"
 ---
 # <a name="translation-mode-constants"></a>Константы режима трансляции
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#include <fcntl.h>  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Константы манифеста `_O_BINARY` и `_O_TEXT` определяют режим преобразования файлов (`_open` и `_sopen`) или потоков (`_setmode`).  
-  
- Допустимые значения:  
-  
- `_O_TEXT`  
- Открывает файл в текстовом режиме (с преобразованием). Комбинация символов возврата каретки и перевода строки (CR-LF) преобразуется в один символ перевода строки (LF) в выводе. Символы перевода строки преобразуются в комбинацию CR-LF в выводе. Кроме того, при вводе символ CTRL+Z интерпретируется как символ конца файла. В файлах, открытых для чтения и чтения/записи, функция `fopen` проверяет наличие CTRL+Z в конце файла и удаляет его, если это возможно. Это делается потому, что использование функций `fseek` и `ftell` для перемещения в файле, который заканчивается символом CTRL+Z, может вызвать неправильное поведение функции `fseek` в области конца файла.  
-  
- `_O_BINARY`  
- Открывает файл в двоичном (непреобразованном) режиме. Вышеописанные преобразования отключены.  
-  
- `_O_RAW`  
- Эквивалентно `_O_BINARY`. Поддерживается для обеспечения совместимости с C 2.0.  
-  
- (Дополнительные сведения см. в разделах [Файловый ввод-вывод в текстовом и двоичном режиме](../c-runtime-library/text-and-binary-mode-file-i-o.md) и [Преобразование файлов](../c-runtime-library/file-translation-constants.md).  
-  
-## <a name="see-also"></a>См. также  
- [_open, _wopen](../c-runtime-library/reference/open-wopen.md)   
- [_pipe](../c-runtime-library/reference/pipe.md)   
- [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
- [_setmode](../c-runtime-library/reference/setmode.md)   
- [Глобальные константы](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Синтаксис
+
+```
+
+#include <fcntl.h>
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Константы манифеста `_O_BINARY` и `_O_TEXT` определяют режим преобразования файлов (`_open` и `_sopen`) или потоков (`_setmode`).
+
+Допустимые значения:
+
+|||
+|-|-|
+`_O_TEXT`  | Открывает файл в текстовом режиме (с преобразованием). Комбинация символов возврата каретки и перевода строки (CR-LF) преобразуется в один символ перевода строки (LF) в выводе. Символы перевода строки преобразуются в комбинацию CR-LF в выводе. Кроме того, при вводе символ CTRL+Z интерпретируется как символ конца файла. В файлах, открытых для чтения и чтения/записи, функция `fopen` проверяет наличие CTRL+Z в конце файла и удаляет его, если это возможно. Это делается потому, что использование функций `fseek` и `ftell` для перемещения в файле, который заканчивается символом CTRL+Z, может вызвать неправильное поведение функции `fseek` в области конца файла.
+`_O_BINARY`  | Открывает файл в двоичном (непреобразованном) режиме. Вышеописанные преобразования отключены.
+`_O_RAW`  | Эквивалентно `_O_BINARY`. Поддерживается для обеспечения совместимости с C 2.0.
+
+(Дополнительные сведения см. в разделах [Файловый ввод-вывод в текстовом и двоичном режиме](../c-runtime-library/text-and-binary-mode-file-i-o.md) и [Преобразование файлов](../c-runtime-library/file-translation-constants.md).
+
+## <a name="see-also"></a>См. также
+
+[_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
+[_pipe](../c-runtime-library/reference/pipe.md)<br/>
+[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
+[_setmode](../c-runtime-library/reference/setmode.md)<br/>
+[Глобальные константы](../c-runtime-library/global-constants.md)

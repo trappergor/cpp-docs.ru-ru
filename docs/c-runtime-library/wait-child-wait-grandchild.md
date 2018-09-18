@@ -22,30 +22,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e0f195bebd43ced767f05a7c6073a6d6e9db61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dd7b3fab51c382413c507831572afedd824c3f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018344"
 ---
 # <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#include <process.h>  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_cwait` может использоваться любым процессом для ожидания любого другого процесса (если известен его идентификатор). Аргумент действия может принимать одно из следующих значений:  
-  
-|Константа|Значение|  
-|--------------|-------------|  
-|`_WAIT_CHILD`|Вызывающий процесс ожидает завершения указанного нового процесса.|  
-|`_WAIT_GRANDCHILD`|Вызывающий процесс ожидает завершения указанного нового процесса и всех процессов, созданных этим новым процессом.|  
-  
-## <a name="see-also"></a>См. также  
- [_cwait](../c-runtime-library/reference/cwait.md)   
- [Глобальные константы](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Синтаксис
+
+```
+
+#include <process.h>
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Функция `_cwait` может использоваться любым процессом для ожидания любого другого процесса (если известен его идентификатор). Аргумент действия может принимать одно из следующих значений:
+
+|Константа|Значение|
+|--------------|-------------|
+|`_WAIT_CHILD`|Вызывающий процесс ожидает завершения указанного нового процесса.|
+|`_WAIT_GRANDCHILD`|Вызывающий процесс ожидает завершения указанного нового процесса и всех процессов, созданных этим новым процессом.|
+
+## <a name="see-also"></a>См. также
+
+[_cwait](../c-runtime-library/reference/cwait.md)<br/>
+[Глобальные константы](../c-runtime-library/global-constants.md)

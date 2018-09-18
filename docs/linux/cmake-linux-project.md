@@ -15,16 +15,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900516"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708010"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Настройка проекта Linux CMake
 
-**Visual Studio 2017 версии 15.4 и выше**  
+**Visual Studio 2017 версии 15.4 и выше**<br/>
 При установке рабочей нагрузки Linux для проектов C++ в Visual Studio по умолчанию выбирается поддержка CMake для Linux. Теперь вы можете работать с существующей базой кода, где CMake не требуется преобразовывать в проект VS. Если база кода является кроссплатформенной, в Visual Studio можно создавать решения как для Windows, так и для Linux.
 
 В этом разделе предполагается, что вы уже знакомы с поддержкой CMake в Visual Studio. Дополнительные сведения см. в разделе [Инструменты CMake для Visual C++](../ide/cmake-tools-for-visual-cpp.md). Дополнительные сведения о CMake см. на странице [Сборка, тестирование и упаковка программного обеспечения с помощью CMake](https://cmake.org/).
@@ -65,7 +65,7 @@ add_executable(hello-cmake hello.cpp)
 
 ![Создание кэша CMake в Linux](media/cmake-linux-1.png "Создание кэша CMake в Linux")
 
-**Visual Studio 2017 версии 15.7 и выше**  
+**Visual Studio 2017 версии 15.7 и выше**<br/>
 Чтобы обеспечить поддержку IntelliSense для удаленных заголовков, Visual Studio автоматически копирует их в папку на локальном компьютере Windows. Подробнее см. в разделе [IntelliSense для удаленных заголовков](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Отладка проекта

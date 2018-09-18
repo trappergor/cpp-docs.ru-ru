@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70520b60ccfaf1af5b223bcb4ea1a90639aa484
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e311c27d61eca82019f8069b0984557af02c74a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385557"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028211"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
-Указывает, выполнен ли вход в блок `__finally`[оператора try-finally](../cpp/try-finally-statement.md), когда система выполняет внутренний список обработчиков завершения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-int   _abnormal_termination(  
-   );  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если система *очищает* стек; в противном случае — значение `false`.  
-  
-## <a name="remarks"></a>Примечания  
- Это внутренняя функция, используемая для управления исключениями очистки, и она не должна вызываться из пользовательского кода.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|_abnormal_termination|excpt.h|  
-  
-## <a name="see-also"></a>См. также  
- [Оператор try-finally](../cpp/try-finally-statement.md)
+
+Указывает, выполнен ли вход в блок `__finally`[оператора try-finally](../cpp/try-finally-statement.md), когда система выполняет внутренний список обработчиков завершения.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+int   _abnormal_termination(
+   );
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение `true`, если система *очищает* стек; в противном случае — значение `false`.
+
+## <a name="remarks"></a>Примечания
+
+Это внутренняя функция, используемая для управления исключениями очистки, и она не должна вызываться из пользовательского кода.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|_abnormal_termination|excpt.h|
+
+## <a name="see-also"></a>См. также
+
+[Оператор try-finally](../cpp/try-finally-statement.md)
