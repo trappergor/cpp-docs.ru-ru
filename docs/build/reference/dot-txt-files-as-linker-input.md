@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd865772b3629939306d835728e5033da763eaa9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 73d6966844ae8dc6c41350aad57ad310310b3a32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895270"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715005"
 ---
 # <a name="txt-files-as-linker-input"></a>TXT-файлы в качестве входных файлов компоновщика
 
@@ -29,5 +29,5 @@ ms.locfileid: "43895270"
 
 ## <a name="see-also"></a>См. также
 
-[Входные LINK-файлы](../../build/reference/link-input-files.md)   
+[Входные LINK-файлы](../../build/reference/link-input-files.md)<br/>
 [Параметры компоновщика](../../build/reference/linker-options.md)
