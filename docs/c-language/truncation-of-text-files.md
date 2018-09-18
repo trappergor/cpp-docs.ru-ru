@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837361ce7116deb0b425e380959de3acb6dafa57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed3d760989d131ecdc2491d0b1952e657949fb03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385580"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065677"
 ---
 # <a name="truncation-of-text-files"></a>Усечение текстовых файлов
-**ANSI 4.9.3** Усекается ли соответствующий файл после точки записи в текстовый поток  
-  
- Запись в текстовый поток не приводит к усечению файла после этой точки.  
-  
-## <a name="see-also"></a>См. также  
- [Функции библиотеки](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Усекается ли соответствующий файл после точки записи в текстовый поток
+
+Запись в текстовый поток не приводит к усечению файла после этой точки.
+
+## <a name="see-also"></a>См. также
+
+[Функции библиотеки](../c-language/library-functions.md)

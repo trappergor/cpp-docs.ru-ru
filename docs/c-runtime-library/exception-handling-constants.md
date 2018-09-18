@@ -23,15 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f23fd421d5108648d88c9eeda83c255f9861dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cc17e429c0750b9f0cc8d9eb24bc94adf00484e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070604"
 ---
 # <a name="exception-handling-constants"></a>Константы обработки исключений
-Константа `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` или `EXCEPTION_EXECUTE_HANDLER` возвращается при возникновении исключения во время выполнения защищенного раздела оператора **try-except**. Возвращаемое значение определяет, как обрабатывается исключение. Дополнительные сведения см. в статье [Оператор try-except](../cpp/try-except-statement.md) в *справочнике по языку С++*.  
-  
-## <a name="see-also"></a>См. также  
- [Глобальные константы](../c-runtime-library/global-constants.md)
+
+Константа `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` или `EXCEPTION_EXECUTE_HANDLER` возвращается при возникновении исключения во время выполнения защищенного раздела оператора **try-except**. Возвращаемое значение определяет, как обрабатывается исключение. Дополнительные сведения см. в статье [Оператор try-except](../cpp/try-except-statement.md) в *справочнике по языку С++*.
+
+## <a name="see-also"></a>См. также
+
+[Глобальные константы](../c-runtime-library/global-constants.md)
