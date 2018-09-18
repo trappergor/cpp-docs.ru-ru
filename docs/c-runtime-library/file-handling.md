@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036362"
 ---
 # <a name="file-handling"></a>Обработка файлов
 
@@ -86,7 +86,7 @@ ms.locfileid: "43199361"
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Возвращает дескриптор файла операционной системы, связанный с существующими дескриптором файла среды выполнения C.|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Связывает дескриптор файла времени выполнения C с существующим дескриптором файла операционной системы.|
 
- Следующие функции Win32 также открывают файлы и каналы:
+Следующие функции Win32 также открывают файлы и каналы:
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 
