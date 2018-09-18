@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaab56876651a1056ef89d57bebb2799d1bb3194
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0bcb9d5dbadc0fbaa33a3c8df6f9193704514e0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604145"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083292"
 ---
 # <a name="language-strings"></a>Language Strings
 
@@ -101,7 +101,7 @@ ms.locfileid: "39604145"
 
 ## <a name="see-also"></a>См. также
 
-[Сведения о строках имени языкового стандарта, языка, а также страны или региона](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
-[Строки страны и региона](../c-runtime-library/country-region-strings.md)  
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
+[Сведения о строках имени языкового стандарта, языка, а также страны или региона](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Строки страны и региона](../c-runtime-library/country-region-strings.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dae0eef25b11d49e5f869d88862e602d862135c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082252"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 Тег \<summary> следует использовать для описания типа или члена типа. Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../ide/remarks-visual-cpp.md).  
@@ -35,8 +35,8 @@ ms.locfileid: "43692306"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `description`  
- Сводка объекта.  
+*description*<br/>
+Сводка объекта.  
   
 ## <a name="remarks"></a>Примечания  
  Текст в теге \<summary> является единственным источником сведений о типе для технологии IntelliSense, а также отображается в [обозревателе объектов](/visualstudio/ide/viewing-the-structure-of-code) и веб-отчете комментариев кода.  

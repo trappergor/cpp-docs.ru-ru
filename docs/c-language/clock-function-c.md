@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11e7a127fdf09fbc3704d6e06786e3bd76350941
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2f52e4f551f4ae59e7d3386af8bdba2d2fe5a0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077351"
 ---
 # <a name="clock-function-c"></a>Функция clock (C)
-**ANSI 4.12.2.1** Эра для функции `clock`  
-  
- Эра функции `clock` начинается (со значения 0) при запуске программы C на выполнение. Она возвращает значения времени, измеренные в следующих единицах: 1/**CLOCKS_PER_SEC** (1/1000 для Microsoft C).  
-  
-## <a name="see-also"></a>См. также  
- [Функции библиотеки](../c-language/library-functions.md)
+
+**ANSI 4.12.2.1** Эра для функции `clock`
+
+Эра функции `clock` начинается (со значения 0) при запуске программы C на выполнение. Она возвращает значения времени, измеренные в следующих единицах: 1/**CLOCKS_PER_SEC** (1/1000 для Microsoft C).
+
+## <a name="see-also"></a>См. также
+
+[Функции библиотеки](../c-language/library-functions.md)

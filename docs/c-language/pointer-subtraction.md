@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 576a8d9252db3d5733775a7a0c348b428462aa0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9756861fd1204a05179ac77dfa648822ed83e5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383737"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079545"
 ---
 # <a name="pointer-subtraction"></a>Вычитание указателей
-**ANSI 3.3.6, 4.1.1** Тип целого числа, необходимый для сохранения различия между двумя указателями на элементы одного массива, **ptrdiff_t**  
-  
- Определение типа (typedef) для типа `ptrdiff_t` на 32-разрядных платформах (x86): `int`. Определение типа (typedef) для `ptrdiff_t` на 64-разрядных платформах: `__int64`.
-  
-## <a name="see-also"></a>См. также  
- [Массивы и указатели](../c-language/arrays-and-pointers.md)
+
+**ANSI 3.3.6, 4.1.1** Тип целого числа, необходимый для сохранения различия между двумя указателями на элементы одного массива, **ptrdiff_t**
+
+Определение типа (typedef) для типа `ptrdiff_t` на 32-разрядных платформах (x86): `int`. Определение типа (typedef) для `ptrdiff_t` на 64-разрядных платформах: `__int64`.
+
+## <a name="see-also"></a>См. также
+
+[Массивы и указатели](../c-language/arrays-and-pointers.md)
