@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686161"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725185"
 ---
 # <a name="cmfcfontcombobox-class"></a>Класс CMFCFontComboBox
 `CMFCFontComboBox` Класс создает поле со списком, содержащее список шрифтов.  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *параметре pDesc*  
- Указывает объект описания шрифта.  
+*параметре pDesc*<br/>
+[in] Указывает объект описания шрифта.  
   
- [in] *lpszName*  
- Задает имя шрифта.  
+*lpszName*<br/>
+[in] Задает имя шрифта.  
   
- [in] *nCharSet*  
- Задает набор символов. Значение по умолчанию — DEFAULT_CHARSET. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
+*nCharSet*<br/>
+[in] Задает набор символов. Значение по умолчанию — DEFAULT_CHARSET. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если элемент в поле со списком шрифтов на соответствующий объект описания указанного шрифта или имя шрифта и charset; в противном случае — значение FALSE.  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nFontType*  
- Указывает тип шрифта. Значение по умолчанию — битовую комбинацию (OR) флагов значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE.  
+*nFontType*<br/>
+[in] Указывает тип шрифта. Значение по умолчанию — битовую комбинацию (OR) флагов значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE.  
   
- [in] *nCharSet*  
- Указывает кодировку шрифта. Значение по умолчанию — DEFAULT_CHARSET.  
+*nCharSet*<br/>
+[in] Указывает кодировку шрифта. Значение по умолчанию — DEFAULT_CHARSET.  
   
- [in] *nPitchAndFamily*  
- Указывает шрифт шаг и семейство. Значение по умолчанию — DEFAULT_PITCH.  
+*nPitchAndFamily*<br/>
+[in] Указывает шрифт шаг и семейство. Значение по умолчанию — DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если поле со списком шрифта был инициализирован успешно; в противном случае — значение FALSE.  
