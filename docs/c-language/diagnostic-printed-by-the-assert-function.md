@@ -12,21 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e824e94f79aa01ab3a82675fb3e8f76059c567d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac5473a2dd592bbd9af2f65044d3d7d97515dc37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103390"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Диагностика, напечатанная функцией assert
-**ANSI 4.2** Диагностика, выведенная функцией assert, и поведение завершения функции **assert**  
-  
-Функция **assert** выводит диагностическое сообщение и вызывает подпрограмму **abort**, если значение выражения — false (0). Диагностическое сообщение имеет форму  
 
-> **Assertion failed**: <em>expression</em>**, file** <em>filename</em>**, line** *linenumber*  
+**ANSI 4.2** Диагностика, выведенная функцией assert, и поведение завершения функции **assert**
 
-где *filename* — это имя исходного файла, а *linenumber* — номер строки утверждения, завершившегося сбоем в файле исходного кода. Если *expression* равно true (ненулевое), никакие действия не предпринимаются.  
-  
-## <a name="see-also"></a>См. также  
- [Функции библиотеки](../c-language/library-functions.md)
+Функция **assert** выводит диагностическое сообщение и вызывает подпрограмму **abort**, если значение выражения — false (0). Диагностическое сообщение имеет форму
+
+> **Assertion failed**: <em>expression</em>**, file** <em>filename</em>**, line** *linenumber*
+
+где *filename* — это имя исходного файла, а *linenumber* — номер строки утверждения, завершившегося сбоем в файле исходного кода. Если *expression* равно true (ненулевое), никакие действия не предпринимаются.
+
+## <a name="see-also"></a>См. также
+
+[Функции библиотеки](../c-language/library-functions.md)
