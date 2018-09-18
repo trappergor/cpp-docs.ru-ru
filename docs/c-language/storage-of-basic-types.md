@@ -31,29 +31,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafe81dc684300cb7fdf65137c2f7e45010285b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14c8483671e806adb9170429f2e17d4487de0cfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090494"
 ---
 # <a name="storage-of-basic-types"></a>Хранение базовых типов
-В следующей таблице перечислены хранилища, связанные с каждым базовым типом.  
-  
-### <a name="sizes-of-fundamental-types"></a>Размеры основных типов  
-  
-|Тип|Хранилище|  
-|----------|-------------|  
-|`char`, `unsigned char`, **signed char**|1 байт|  
-|**short**, **unsigned short**|2 байта|  
-|`int`, `unsigned int`|4 байта|  
-|**long**, `unsigned long`|4 байта|  
-|**float**|4 байта|  
-|**double**|8 байт|  
-|`long double`|8 байт|  
-  
- Типы данных C разделяются на общие категории. К "целочисленным" типам относятся `char`, `int`, **short**, **long**, **signed**, `unsigned` и `enum`. К типам "с плавающей запятой" относятся **float**, **double** и `long double`. Арифметические типы включают все целочисленные типы и типы с плавающей запятой.  
-  
-## <a name="see-also"></a>См. также  
- [Объявления и типы](../c-language/declarations-and-types.md)
+
+В следующей таблице перечислены хранилища, связанные с каждым базовым типом.
+
+### <a name="sizes-of-fundamental-types"></a>Размеры основных типов
+
+|Тип|Хранилище|
+|----------|-------------|
+|`char`, `unsigned char`, **signed char**|1 байт|
+|**short**, **unsigned short**|2 байта|
+|`int`, `unsigned int`|4 байта|
+|**long**, `unsigned long`|4 байта|
+|**float**|4 байта|
+|**double**|8 байт|
+|`long double`|8 байт|
+
+Типы данных C разделяются на общие категории. К "целочисленным" типам относятся `char`, `int`, **short**, **long**, **signed**, `unsigned` и `enum`. К типам "с плавающей запятой" относятся **float**, **double** и `long double`. Арифметические типы включают все целочисленные типы и типы с плавающей запятой.
+
+## <a name="see-also"></a>См. также
+
+[Объявления и типы](../c-language/declarations-and-types.md)

@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bde7a170eb499a9b179a909bfb95e75f8fc89518
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46bcc0fa01a05b3942bb1588153ee35b5d6d25e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386572"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090468"
 ---
 # <a name="cifmod"></a>_CIfmod
-Вычисляет остаток с плавающей запятой от двух верхних значений в стеке.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __cdecl _CIfmod();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Эта версия функции `fmod` включает специальные соглашения о вызовах, распознаваемые компилятором. Это ускоряет выполнение, поскольку исключает создание копий и помогает распределять регистры.  
-  
- Полученное значение помещается в верхнюю часть стека.  
-  
-## <a name="requirements"></a>Требования  
- **Платформа:** x86  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)
+
+Вычисляет остаток с плавающей запятой от двух верхних значений в стеке.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __cdecl _CIfmod();
+```
+
+## <a name="remarks"></a>Примечания
+
+Эта версия функции `fmod` включает специальные соглашения о вызовах, распознаваемые компилятором. Это ускоряет выполнение, поскольку исключает создание копий и помогает распределять регистры.
+
+Полученное значение помещается в верхнюю часть стека.
+
+## <a name="requirements"></a>Требования
+ **Платформа:** x86
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)
