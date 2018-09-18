@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3803116cdd9681462644299ee28be15b76950f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 575ac3462af83aaf4e612cc8b591dce78160695a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384848"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081707"
 ---
 # <a name="type-long-double"></a>Тип long double
-Тип `long double` идентичен типу [double](../c-language/type-double.md).  
-  
-## <a name="see-also"></a>См. также  
- [Хранение базовых типов](../c-language/storage-of-basic-types.md)
+
+Тип `long double` идентичен типу [double](../c-language/type-double.md).
+
+## <a name="see-also"></a>См. также
+
+[Хранение базовых типов](../c-language/storage-of-basic-types.md)
