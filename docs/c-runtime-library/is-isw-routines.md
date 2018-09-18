@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f7edcf115a6fadc741c7f1bcde8f240c93abcc
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: db047c2b16eb67f086bc26976783e829189d4266
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895127"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095109"
 ---
 # <a name="is-isw-routines"></a>Процедуры is, isw
 
@@ -61,75 +61,75 @@ ms.locfileid: "43895127"
 
 В языковом стандарте "C" для подпрограмм **is** определены следующие условия проверки:
 
-`isalnum`  
+`isalnum`<br/>
 Алфавитно-цифровые символы (A–Z, a–z или 0–9).
 
-`isalpha`  
+`isalpha`<br/>
 Алфавитные (A–Z или a–z).
 
-`__isascii`  
+`__isascii`<br/>
 Символы ASCII (0x00–0x7F).
 
-`isblank`  
+`isblank`<br/>
 Горизонтальная табуляция или пробел (0x09 или 0x20).
 
-`iscntrl`  
+`iscntrl`<br/>
 Управляющий символ (0x00–0x1F или 0x7F).
 
-`__iscsym`  
+`__iscsym`<br/>
 Буква, символ подчеркивания или цифра.
 
-`__iscsymf`  
+`__iscsymf`<br/>
 Буква или символ подчеркивания.
 
-`isdigit`  
+`isdigit`<br/>
 Десятичная цифра (0–9).
 
-`isgraph`  
+`isgraph`<br/>
 Печатные символы, кроме пробела ( ).
 
-`islower`  
+`islower`<br/>
 Буквы нижнего регистра (a–z).
 
-`isprint`  
+`isprint`<br/>
 Печатные символы, включая пробел (0x20–0x7E).
 
-`ispunct`  
+`ispunct`<br/>
 Знак препинания.
 
-`isspace`  
+`isspace`<br/>
 Пробельный символ (0x09–0x0D или 0x20).
 
-`isupper`  
+`isupper`<br/>
 Буквы верхнего регистра (A–Z).
 
-`isxdigit`  
+`isxdigit`<br/>
 Шестнадцатеричная цифра (А–F, a–f или 0–9).
 
 Для подпрограмм **isw** результаты проверки заданного условия не зависят от языкового стандарта. Условия проверки для функций **isw** следующие:
 
-`iswalnum`  
+`iswalnum`<br/>
 `iswalpha` или `iswdigit`.
 
-`iswalpha`  
+`iswalpha`<br/>
 Любой расширенный символ из набора, определенного реализацией, для которого ни одна из функций `iswcntrl`, `iswdigit`, `iswpunct` и `iswspace` не принимает значение, отличное от нуля. `iswalpha` возвращает ненулевое значение только для расширенных символов, для которых `iswupper` или `iswlower` имеет ненулевое значение.
 
-`iswascii`  
+`iswascii`<br/>
 Представление символа ASCII (0x0000–0x007F) в расширенных символах.
 
-`iswblank`  
+`iswblank`<br/>
 Расширенный символ, соответствующий стандартному пробелу или входящий в определяемый реализацией набор расширенных символов, для которых функция `iswalnum` имеет значение false. Стандартные пробельные символы — это пробел (L" ") и символ горизонтальной табуляции (L"\t").
 
-`iswcntrl`  
+`iswcntrl`<br/>
 Расширенный символ управления.
 
-`__iswcsym`  
+`__iswcsym`<br/>
 Любой расширенный символ, для которого функция `isalnum` имеет значение true, или символ "_".
 
-`__iswcsymf`  
+`__iswcsymf`<br/>
 Любой расширенный символ, для которого функция `iswalpha` имеет значение true, или символ "_".
 
-`iswctype`  
+`iswctype`<br/>
 Символ имеет свойство, указанное аргументом `desc`. Для каждого допустимого значения аргумента `desc` функции `iswctype` существует эквивалентная функция, работающая с расширенными символами, как показано в следующей таблице:
 
 ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Эквивалентность iswctype (c, desc) другим подпрограммам проверки isw
@@ -150,28 +150,28 @@ ms.locfileid: "43895127"
 |**_UPPER**|**iswupper(** `c` **)**|
 |**_HEX**|**iswxdigit(** `c` **)**|
 
-`iswdigit`  
+`iswdigit`<br/>
 Расширенный символ, соответствующий символу десятичной цифры.
 
-`iswgraph`  
+`iswgraph`<br/>
 Печатный расширенный символ, кроме расширенного символа пробела (L" ").
 
-`iswlower`  
+`iswlower`<br/>
 Строчная буква или член определенного реализацией набора расширенных символов, для которых ни одна из функций `iswcntrl`, `iswdigit`, `iswpunct` и `iswspace` не имеет значения, отличного от нуля. `iswlower` возвращает ненулевое значение только для расширенных символов, которые соответствуют буквам нижнего регистра.
 
-`iswprint`  
+`iswprint`<br/>
 Печатный расширенный символ, включая расширенный символа пробела (L" ").
 
-`iswpunct`  
+`iswpunct`<br/>
 Печатный расширенный символ, который не является ни расширенным символом пробела (L" "), ни расширенным символом, для которого значение функции `iswalnum` отлично от нуля.
 
-`iswspace`  
+`iswspace`<br/>
 Расширенный символ, соответствующий стандартному расширенному символу пробела или являющийся одним из определяемых реализацией расширенных символов, для которых функция `iswalnum` имеет значение false. Стандартные пробельные символы: пробел (L" "), символ конца страницы (L"\f"), символ новой строки (L"\n"), символ возврата каретки (L"\r"), символ горизонтальной табуляции (L"\t"), символ вертикальной табуляции (L"\v").
 
-`iswupper`  
+`iswupper`<br/>
 Расширенный символ верхнего регистра или символ из набора определенных реализацией расширенных символов, для которых ни одна из функций `iswcntrl`, `iswdigit`, `iswpunct` и `iswspace` не имеет нулевого значения. Функция `iswupper` возвращает ненулевое значение только для расширенных символов, которые соответствуют буквам верхнего регистра.
 
-`iswxdigit`  
+`iswxdigit`<br/>
 Расширенный символ, который соответствует символу шестнадцатеричной цифры.
 
 ## <a name="example"></a>Пример
@@ -181,16 +181,16 @@ ms.locfileid: "43895127"
 /* This program tests all characters between 0x0
 * and 0x7F, then displays each character with abbreviations
 * for the character-type codes that apply.
-*/  
+*/
 
 #include <stdio.h>
 #include <ctype.h>
 
-int main( void )  
-{  
+int main( void )
+{
    int ch;
-   for( ch = 0; ch <= 0x7F; ch++ )  
-   {  
+   for( ch = 0; ch <= 0x7F; ch++ )
+   {
       printf( "%.2x  ", ch );
       printf( " %c", isprint( ch )  ? ch   : ' ' );
       printf( "%4s", isalnum( ch )  ? "AN" : "" );
@@ -208,9 +208,9 @@ int main( void )
       printf( "%3s", isupper( ch )  ? "U"  : "" );
       printf( "%3s", isxdigit( ch ) ? "X"  : "" );
       printf( ".\n" );
-   }  
-}  
-```  
+   }
+}
+```
 
 ## <a name="output"></a>Вывод
 
@@ -347,8 +347,8 @@ int main( void )
 
 ## <a name="see-also"></a>См. также
 
-[Классификация символов](../c-runtime-library/character-classification.md)   
-[Языковой стандарт](../c-runtime-library/locale.md)   
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
-[Интерпретация последовательностей многобайтовых символов](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+[Классификация символов](../c-runtime-library/character-classification.md)<br/>
+[Языковой стандарт](../c-runtime-library/locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[Интерпретация последовательностей многобайтовых символов](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Функции to](../c-runtime-library/to-functions.md)
