@@ -25,12 +25,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d11aa80eb3c1f8e56ccd27d29319fe5c71e53c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72eb8f75a882912a9d481109f44a6a7a67c0bb1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097709"
 ---
 # <a name="operator-deletecrt"></a>оператор delete(CRT)
-Начиная с выпуска Visual Studio 2013, универсальное время выполнения C (UCRT) больше не поддерживает функции специальных операторов C++ new и delete. Теперь они являются частью стандартной библиотеки C++. Дополнительные сведения см. в статьях об операторах [new и delete](../cpp/new-and-delete-operators.md) и [delete](../cpp/delete-operator-cpp.md) справочника по языку C++. 
+
+Начиная с выпуска Visual Studio 2013, универсальное время выполнения C (UCRT) больше не поддерживает функции специальных операторов C++ new и delete. Теперь они являются частью стандартной библиотеки C++. Дополнительные сведения см. в статьях об операторах [new и delete](../cpp/new-and-delete-operators.md) и [delete](../cpp/delete-operator-cpp.md) справочника по языку C++.

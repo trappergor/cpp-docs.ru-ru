@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ceaa41dcaca88c7857a03c16ccccabdba086fd0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980000932c8cc4a6be3798976d273dae8608324f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089168"
 ---
 # <a name="underflow-of-floating-point-values"></a>Потеря точности значений с плавающей запятой
-**ANSI 4.5.1** Задают ли математические функции значение макроса `ERANGE` для целочисленного выражения `errno` при ошибках потери значимости  
-  
- При потере точности числа с плавающей запятой выражение `errno` не получает значения `ERANGE`. Если значение стремится к нулю и, наконец, теряет значимость, значение устанавливается равным 0.  
-  
-## <a name="see-also"></a>См. также  
- [Функции библиотеки](../c-language/library-functions.md)
+
+**ANSI 4.5.1** Задают ли математические функции значение макроса `ERANGE` для целочисленного выражения `errno` при ошибках потери значимости
+
+При потере точности числа с плавающей запятой выражение `errno` не получает значения `ERANGE`. Если значение стремится к нулю и, наконец, теряет значимость, значение устанавливается равным 0.
+
+## <a name="see-also"></a>См. также
+
+[Функции библиотеки](../c-language/library-functions.md)
