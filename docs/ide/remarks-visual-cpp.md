@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 409f10dffdf6816f3ff0ab4e71060c9bcb6eaf9f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5bf60222b276050af5296d678985eda8fd12948b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027574"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;remarks&gt; (Visual C++)
 Тег \<remarks> позволяет добавить сведения о типе, дополняющие информацию, указанную с помощью тега [\<summary>](../ide/summary-visual-cpp.md). Эта информация отображается в [обозревателе объектов](/visualstudio/ide/viewing-the-structure-of-code) и в веб-отчете комментариев кода.  
@@ -35,8 +35,8 @@ ms.locfileid: "43684216"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `description`  
- Описание элемента.  
+*description*<br/>
+Описание элемента.  
   
 ## <a name="remarks"></a>Примечания  
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
