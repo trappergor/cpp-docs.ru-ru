@@ -30,18 +30,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1049965d7edd880027eaff264fffe56fc1cdb1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8734f2dbca04287652a6a59f633f8c872f2b00a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388926"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040990"
 ---
 # <a name="inp-inpw"></a>inp, inpw
-Эти функции POSIX устарели. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) .  
-  
+
+Эти функции POSIX устарели. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) .
+
 > [!IMPORTANT]
->  Эти функции устарели. Начиная с Visual Studio 2015 они недоступны в CRT.  
-  
+>  Эти функции устарели. Начиная с Visual Studio 2015 они недоступны в CRT.
+
 > [!IMPORTANT]
 >  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
