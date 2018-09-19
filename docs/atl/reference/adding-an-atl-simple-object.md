@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3746e911b4931759baef4d0f4e4f9de77ea834b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d1347fcebc6a3793cbe63ae356f7f9d2e03742cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765600"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109773"
 ---
 # <a name="adding-an-atl-simple-object"></a>Добавление простого объекта ATL
 
@@ -45,10 +45,10 @@ ms.locfileid: "43765600"
 
 ## <a name="see-also"></a>См. также
 
-[Добавление класса](../../ide/adding-a-class-visual-cpp.md)   
-[Добавление нового интерфейса в проект ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[Добавление точек подключения к объекту](../../atl/adding-connection-points-to-an-object.md)   
-[Добавление метода](../../ide/adding-a-method-visual-cpp.md)   
-[Класс MFC](../../mfc/reference/adding-an-mfc-class.md)   
+[Добавление класса](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Добавление нового интерфейса в проект ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[Добавление точек подключения к объектам](../../atl/adding-connection-points-to-an-object.md)<br/>
+[Добавление метода](../../ide/adding-a-method-visual-cpp.md)<br/>
+[Класс MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Добавление универсального класса C++](../../ide/adding-a-generic-cpp-class.md)
 

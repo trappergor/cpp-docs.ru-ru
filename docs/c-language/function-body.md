@@ -17,28 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a566c1120f0a89a985895393fae5a79690bfa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d30cb5429ebee0738aa7b7aab367d79867e92047
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384682"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757823"
 ---
 # <a name="function-body"></a>Текст функции
-"Тело функции" — это составной оператор, содержащий операторы, которые определяют выполняемые функцией действия.  
-  
-## <a name="syntax"></a>Синтаксис  
- *function-definition*:  
- *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
-  
- /\* *attribute-seq* Относится только к системам Microsoft */  
-  
- *compound-statement*: /\* Текст функции \*/  
- **{**  *declaration-list* opt*statement-list* opt **}**  
-  
- Если не указано иное, переменные, объявленные в теле функции (локальные переменные), имеют класс хранения **auto**. При вызове функции создается хранилище для локальных переменных и выполняются локальные инициализации. Управление передается первому оператору в составном выражении *compound-statement* и продолжается до тех пор, пока не будет выполнен оператор `return` или достигнут конец тела функции. Затем управление возвращается в точку, из которой вызвана функция.  
-  
- Если функция должна возвращать значение, должен быть выполнен оператор `return`, содержащий выражение. Если оператор `return` не выполнен или если оператор `return` не содержит выражения, возвращаемое значение функции не определено.  
-  
-## <a name="see-also"></a>См. также  
- [Определения функций в C](../c-language/c-function-definitions.md)
+
+*Тело функции* — это составной оператор, содержащий операторы, которые определяют выполняемые функцией действия.
+
+## <a name="syntax"></a>Синтаксис
+
+*function-definition*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
+
+/\* *attribute-seq* Поддерживается только компилятором Microsoft \*/
+
+*compound-statement*: /\* Текст функции \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+
+Если не указано иное, переменные, объявленные в теле функции (*локальные переменные*), имеют класс хранения **auto**. При вызове функции создается хранилище для локальных переменных и выполняются локальные инициализации. Управление передается первому оператору в составном выражении *compound-statement*. Выполнение будет продолжаться до тех пор, пока не будет выполнен оператор **return** или не достигнут конец тела функции. Затем управление возвращается в точку, из которой вызвана функция.
+
+Если функция должна вернуть значение, должен быть выполнен оператор **return**, который содержит выражение. Если оператор **return** не выполнен или если оператор **return** не содержит выражение, возвращаемое значение функции не будет определено.
+
+## <a name="see-also"></a>См. также
+
+[Определения функций в C](../c-language/c-function-definitions.md)

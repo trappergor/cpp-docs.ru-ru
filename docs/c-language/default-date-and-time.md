@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d66059ddabac7edb2001f154173e6367355815
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8646e612505099476b39109c3ef5f9084f7403ab
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382745"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752164"
 ---
 # <a name="default-date-and-time"></a>Дата и время по умолчанию
-**ANSI 3.8.8** Определения для _DATE\_ и _TIME\_ в случае недоступности даты и времени преобразования  
+
+**ANSI 3.8.8**. Определения для `__DATE__` и `__TIME__`, когда недоступно преобразование даты и времени соответственно.  
   
- Если операционная система не предоставляет сведений о дате и времени преобразования _DATE\_ и _TIME\_ по умолчанию получают значения `May 03 1957` и `17:00:00"`.  
+Если операционная система не предоставляет преобразование даты и времени, _DATE`__DATE__` и _TIME`__TIME__` по умолчанию получают значения `May 03 1957` и `17:00:00`.  
   
-## <a name="see-also"></a>См. также  
- [Директивы предварительной обработки](../c-language/preprocessing-directives.md)
+## <a name="see-also"></a>См. также
+
+[Директивы предварительной обработки](../c-language/preprocessing-directives.md)

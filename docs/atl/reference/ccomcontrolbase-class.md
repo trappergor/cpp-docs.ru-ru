@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17661f7497711449397ae2f64c9d6eff52d5f403
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 18666cc619796bc7ee0216eb9cdf020bd8d8a6f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035751"
 ---
 # <a name="ccomcontrolbase-class"></a>Класс CComControlBase
 
@@ -238,7 +238,7 @@ CComControlBase(HWND& h);
 
 ### <a name="parameters"></a>Параметры
 
-*h*  
+*h*<br/>
 Дескриптор окна, связанный с элементом управления.
 
 ### <a name="remarks"></a>Примечания
@@ -268,10 +268,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 Идентификатор GUID запрашиваемого интерфейса.
 
-*ppv*  
+*ppv*<br/>
 Указатель на указатель интерфейса, идентифицируемый *iid*, или значение NULL, если интерфейс не найден.
 
 ### <a name="remarks"></a>Примечания
@@ -292,7 +292,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 
 ### <a name="parameters"></a>Параметры
 
-*iVerb*  
+*iVerb*<br/>
 Значение, указывающее, действия, которые будут произведены методом `DoVerb`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -313,7 +313,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 
 ### <a name="parameters"></a>Параметры
 
-*iVerb*  
+*iVerb*<br/>
 Значение, указывающее, действия, которые будут произведены методом `DoVerb`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -330,10 +330,10 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
 
 ### <a name="parameters"></a>Параметры
 
-*prcPosRec*  
+*prcPosRec*<br/>
 Зарезервировано.
 
-*hwndParent*  
+*hwndParent*<br/>
 Дескриптор окна, содержащего элемент управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -376,7 +376,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 
 ### <a name="parameters"></a>Параметры
 
-*nAppearance*  
+*nAppearance*<br/>
 Свойство DISPID_AMBIENT_APPEARANCE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -397,7 +397,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 
 ### <a name="parameters"></a>Параметры
 
-*bAutoClip*  
+*bAutoClip*<br/>
 Свойство DISPID_AMBIENT_AUTOCLIP.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -414,7 +414,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>Параметры
 
-*BackColor*  
+*BackColor*<br/>
 Свойство DISPID_AMBIENT_BACKCOLOR.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -431,7 +431,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 
 ### <a name="parameters"></a>Параметры
 
-*bstrCharSet*  
+*bstrCharSet*<br/>
 Свойство DISPID_AMBIENT_CHARSET.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -448,7 +448,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 
 ### <a name="parameters"></a>Параметры
 
-*ulCodePage*  
+*ulCodePage*<br/>
 Свойство DISPID_AMBIENT_CODEPAGE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -465,7 +465,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 
 ### <a name="parameters"></a>Параметры
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 Свойство DISPID_AMBIENT_DISPLAYASDEFAULT.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -482,7 +482,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 
 ### <a name="parameters"></a>Параметры
 
-*bstrDisplayName*  
+*bstrDisplayName*<br/>
 Свойство DISPID_AMBIENT_DISPLAYNAME.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -499,7 +499,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 
 ### <a name="parameters"></a>Параметры
 
-*ppFont*  
+*ppFont*<br/>
 Указатель на контейнер окружения [IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont) интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -520,7 +520,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>Параметры
 
-*ppFont*  
+*ppFont*<br/>
 Указатель на контейнер окружения [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) интерфейс диспетчеризации.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -541,7 +541,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет переднего плана*  
+*Цвет переднего плана*<br/>
 Свойство DISPID_AMBIENT_FORECOLOR.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -558,7 +558,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 
 ### <a name="parameters"></a>Параметры
 
-*lcid*  
+*lcid*<br/>
 Свойство DISPID_AMBIENT_LOCALEID.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -579,7 +579,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 
 ### <a name="parameters"></a>Параметры
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 Свойство DISPID_AMBIENT_MESSAGEREFLECT.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -596,7 +596,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 
 ### <a name="parameters"></a>Параметры
 
-*hPalette*  
+*hPalette*<br/>
 Свойство DISPID_AMBIENT_PALETTE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -613,10 +613,10 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Параметры
 
-*Идентификатор DISPID*  
+*Идентификатор DISPID*<br/>
 Идентификатор извлекаемого свойства контейнера.
 
-*var*  
+*var*<br/>
 Переменная для получения свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -637,7 +637,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 
 ### <a name="parameters"></a>Параметры
 
-*bRightToLeft*  
+*bRightToLeft*<br/>
 Свойство DISPID_AMBIENT_RIGHTTOLEFT. Значение TRUE, если содержимое отображается справа налево, FALSE, если он отображается слева направо.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -654,7 +654,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 
 ### <a name="parameters"></a>Параметры
 
-*bstrScaleUnits*  
+*bstrScaleUnits*<br/>
 Свойство DISPID_AMBIENT_SCALEUNITS.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -671,7 +671,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 
 ### <a name="parameters"></a>Параметры
 
-*bShowGrabHandles*  
+*bShowGrabHandles*<br/>
 Свойство DISPID_AMBIENT_SHOWGRABHANDLES.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -688,7 +688,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 
 ### <a name="parameters"></a>Параметры
 
-*bShowHatching*  
+*bShowHatching*<br/>
 Свойство DISPID_AMBIENT_SHOWHATCHING.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -705,7 +705,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 
 ### <a name="parameters"></a>Параметры
 
-*bSupportsMnemonics*  
+*bSupportsMnemonics*<br/>
 Свойство DISPID_AMBIENT_SUPPORTSMNEMONICS.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -722,7 +722,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 
 ### <a name="parameters"></a>Параметры
 
-*nTextAlign*  
+*nTextAlign*<br/>
 Свойство DISPID_AMBIENT_TEXTALIGN.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -739,7 +739,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 
 ### <a name="parameters"></a>Параметры
 
-*bTopToBottom*  
+*bTopToBottom*<br/>
 Свойство DISPID_AMBIENT_TOPTOBOTTOM. Значение TRUE, если текст отображается сверху вниз, значение FALSE, если он отображается нижней к началу страницы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -756,7 +756,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 
 ### <a name="parameters"></a>Параметры
 
-*bUIDead*  
+*bUIDead*<br/>
 Свойство DISPID_AMBIENT_UIDEAD.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -777,7 +777,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 
 ### <a name="parameters"></a>Параметры
 
-*bUserMode*  
+*bUserMode*<br/>
 Свойство DISPID_AMBIENT_USERMODE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -810,7 +810,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Параметры
 
-*Внедрение зависимостей*  
+*Внедрение зависимостей*<br/>
 Структура, которая будет содержать числителя и знаменателя значения масштаба. Дополнительные сведения см. в разделе [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Примечания
@@ -827,10 +827,10 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*iVerb*  
+*iVerb*<br/>
 Значение, указывающее, действия, которые будут произведены методом [IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb).
 
-*prcPosRect*  
+*prcPosRect*<br/>
 Указатель на положение элемента управления на месте.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -853,10 +853,10 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 
 ### <a name="parameters"></a>Параметры
 
-*riid*  
+*riid*<br/>
 Идентификатор IID указателя интерфейса, который должен быть возвращен в *ppUnkSite*.
 
-*ppUnkSite*  
+*ppUnkSite*<br/>
 Адрес переменной указателя, получающей указатель интерфейса, запрашиваемый в *riid*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1259,7 +1259,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Параметры
 
-*Внедрение зависимостей*  
+*Внедрение зависимостей*<br/>
 Ссылку на [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) структуру, содержащую графической информации, такие как аспект draw, границы элемента управления, и ли Рисование оптимизирован или нет.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1286,7 +1286,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Параметры
 
-*Внедрение зависимостей*  
+*Внедрение зависимостей*<br/>
 Ссылку на [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) структуру, содержащую графической информации, такие как аспект draw, границы элемента управления, и ли Рисование оптимизирован или нет.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1312,16 +1312,16 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Параметры
 
-*nMsg*  
+*nMsg*<br/>
 Зарезервировано.
 
-*wParam*  
+*wParam*<br/>
 Зарезервировано.
 
-*lParam*  
+*lParam*<br/>
 Зарезервировано.
 
-*bHandled*  
+*bHandled*<br/>
 Флаг, указывающий, было ли успешно обработано сообщение окна. Значение по умолчанию — FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1341,16 +1341,16 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Параметры
 
-*nMsg*  
+*nMsg*<br/>
 Зарезервировано.
 
-*wParam*  
+*wParam*<br/>
 Зарезервировано.
 
-*lParam*  
+*lParam*<br/>
 Зарезервировано.
 
-*bHandled*  
+*bHandled*<br/>
 Флаг, указывающий, было ли успешно обработано сообщение окна. Значение по умолчанию — FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1370,16 +1370,16 @@ LRESULT OnPaint(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Параметры
 
-*nMsg*  
+*nMsg*<br/>
 Зарезервировано.
 
-*wParam*  
+*wParam*<br/>
 HDC существующий.
 
-*lParam*  
+*lParam*<br/>
 Зарезервировано.
 
-*lResult*  
+*lResult*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1403,16 +1403,16 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Параметры
 
-*nMsg*  
+*nMsg*<br/>
 Зарезервировано.
 
-*wParam*  
+*wParam*<br/>
 Зарезервировано.
 
-*lParam*  
+*lParam*<br/>
 Зарезервировано.
 
-*bHandled*  
+*bHandled*<br/>
 Флаг, указывающий, было ли успешно обработано сообщение окна. Значение по умолчанию — FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1434,10 +1434,10 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 
 ### <a name="parameters"></a>Параметры
 
-*pMsg*  
+*pMsg*<br/>
 Зарезервировано.
 
-*hRet*  
+*hRet*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1470,7 +1470,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*ADVF*  
+*ADVF*<br/>
 Флаги, указывающие способ вызова [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) выполняется. Значения: от [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) перечисления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1487,7 +1487,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>Параметры
 
-*PMK*  
+*PMK*<br/>
 Указатель на новый моникер элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1524,10 +1524,10 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 
 ### <a name="parameters"></a>Параметры
 
-*dwAspect*  
+*dwAspect*<br/>
 Аспект или представление элемента управления.
 
-*Индекс*  
+*Индекс*<br/>
 Часть представления, которая была изменена. Допустимо только значение -1.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1548,7 +1548,7 @@ BOOL SetControlFocus(BOOL bGrab);
 
 ### <a name="parameters"></a>Параметры
 
-*bGrab*  
+*bGrab*<br/>
 Если значение равно TRUE, устанавливает фокус клавиатуры для вызывающего элемента управления. Если значение равно FALSE, то удаляется фокус клавиатуры из вызывающего элемента управления, предоставляемые он имеет фокус.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1569,7 +1569,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>Параметры
 
-*bDirty*  
+*bDirty*<br/>
 Значение элемента данных [CComControlBase::m_bRequiresSave](#m_brequiressave).
 
 ### <a name="remarks"></a>Примечания
@@ -1578,5 +1578,5 @@ void SetDirty(BOOL bDirty);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
+[Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

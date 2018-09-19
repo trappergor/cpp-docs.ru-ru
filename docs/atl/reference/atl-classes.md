@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c707eeb5a7899dd3ef7c8c2aa46098a70ab9c06d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 94d69debb4bde61fc76917c70d95bcc6314c7208
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044539"
 ---
 # <a name="atl-classes-and-structs"></a>Классы ATL и структуры
 
@@ -231,9 +231,9 @@ Active Template Library (ATL) включает следующие классы �
 
 ## <a name="see-also"></a>См. также
 
-[Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)   
-[Функции](../../atl/reference/atl-functions.md)   
-[Глобальные переменные](../../atl/reference/atl-global-variables.md)   
-[Определения типов](../../atl/reference/atl-typedefs.md)   
+[Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)<br/>
+[Функции](../../atl/reference/atl-functions.md)<br/>
+[Глобальные переменные](../../atl/reference/atl-global-variables.md)<br/>
+[Typedefs](../../atl/reference/atl-typedefs.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)
 
