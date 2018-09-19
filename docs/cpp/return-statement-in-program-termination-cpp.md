@@ -16,27 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cfcf65258767178c0f74f63ca6e938e1d940e3be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061140"
 ---
 # <a name="return-statement-in-program-termination-c"></a>Оператор return при прерывании программы (C++)
-Выдача **возвращают** инструкции от `main` является функционально эквивалентна вызову `exit` функции. Рассмотрим следующий пример.  
-  
-```cpp 
-// return_statement.cpp  
-#include <stdlib.h>  
-int main()  
-{  
-    exit( 3 );  
-    return 3;  
-}  
-```  
-  
- `exit` И **возвращают** инструкции в предыдущем примере функционально идентичны. Однако C++ требует, что функции, которые имеют возвращать типы, отличные от **void** возвращают значение. **Возвращают** инструкция позволяет возвращать значение из `main`.  
-  
-## <a name="see-also"></a>См. также  
- [Завершение программы](../cpp/program-termination.md)
+
+Выдача **возвращают** инструкции от `main` является функционально эквивалентна вызову `exit` функции. Рассмотрим следующий пример.
+
+```cpp
+// return_statement.cpp
+#include <stdlib.h>
+int main()
+{
+    exit( 3 );
+    return 3;
+}
+```
+
+`exit` И **возвращают** инструкции в предыдущем примере функционально идентичны. Однако C++ требует, что функции, которые имеют возвращать типы, отличные от **void** возвращают значение. **Возвращают** инструкция позволяет возвращать значение из `main`.
+
+## <a name="see-also"></a>См. также
+
+[Завершение программы](../cpp/program-termination.md)

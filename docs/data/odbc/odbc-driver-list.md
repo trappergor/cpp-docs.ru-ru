@@ -1,5 +1,5 @@
 ---
-title: Список драйверов ODBC | Документы Microsoft
+title: Список драйверов ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 310f0c6d3b36f63d4ba9d1f165c808b6d417c321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10c5a4fd9b7f15e5f6532bbaf6b5d8af4d3c86ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087797"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068005"
 ---
 # <a name="odbc-driver-list"></a>Список драйверов ODBC
+
 Visual C++ предоставляет драйверы ODBC для следующих баз данных:  
   
--   SQL Server  
+- SQL Server  
   
--   Microsoft Access  
+- Microsoft Access  
   
--   Microsoft Excel  
+- Microsoft Excel  
   
--   dBASE  
+- для dBASE  
   
--   Paradox  
+- Для Paradox  
   
--   Microsoft Oracle ODBC  
+- Oracle (Майкрософт) ODBC  
   
--   Текстовые файлы  
+- Текстовые файлы  
   
- Сведения о драйверах ODBC, предлагаемых корпорацией Майкрософт и других компаний, включая пакет драйверов ODBC обратитесь в службу технической поддержки Майкрософт.  
+Сведения о драйверах ODBC корпорации Майкрософт и других компаний, включая пакет драйверов ODBC обратитесь в службу технической поддержки Майкрософт.  
   
 ## <a name="see-also"></a>См. также  
- [Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)

@@ -12,38 +12,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54754e465f3a153b769b7619ff2bfb70a1872907
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 623824c608832e07d342b6093968f822251e2342
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699619"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075661"
 ---
 # <a name="definitions-and-declarations-c"></a>Определения и объявления (C++)
+
 **Блок, относящийся только к системам Microsoft**
 
- Интерфейс DLL относится ко всем элементам (функциям и данным), которые заведомо экспортироваться некоторой программой в системе; то есть все элементы, которые обозначаются как **dllimport** или **dllexport**. Всех объявлениях, включенных в интерфейс DLL необходимо указать либо **dllimport** или **dllexport** атрибута. Тем не менее, в определении должен указываться только **dllexport** атрибута. Например, следующее определение функции вызовет ошибку компилятора.
+Интерфейс DLL относится ко всем элементам (функциям и данным), которые заведомо экспортироваться некоторой программой в системе; то есть все элементы, которые обозначаются как **dllimport** или **dllexport**. Всех объявлениях, включенных в интерфейс DLL необходимо указать либо **dllimport** или **dllexport** атрибута. Тем не менее, в определении должен указываться только **dllexport** атрибута. Например, следующее определение функции вызовет ошибку компилятора.
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
                                        // prohibited on definition.
-   return 1;  
+   return 1;
 }
 ```
 
- Показанный ниже код также вызовет ошибку.
+Показанный ниже код также вызовет ошибку.
 
 ```
 __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 ```
 
- Однако следующий синтаксис правильный.
+Однако следующий синтаксис правильный.
 
 ```
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- Использование **dllexport** подразумевает определение, хотя **dllimport** — объявление. Необходимо использовать **extern** ключевого слова with **dllexport** для обеспечения объявления; в противном случае подразумевается определение. Таким образом, приведенные ниже примеры правильны.
+Использование **dllexport** подразумевает определение, хотя **dllimport** — объявление. Необходимо использовать **extern** ключевого слова with **dllexport** для обеспечения объявления; в противном случае подразумевается определение. Таким образом, приведенные ниже примеры правильны.
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -53,7 +54,7 @@ extern DllExport int k; // These are both correct and imply a
 DllImport int j;        // declaration.
 ```
 
- В следующих примерах поясняются предшествующие.
+В следующих примерах поясняются предшествующие.
 
 ```
 static __declspec( dllimport ) int l; // Error; not declared extern.
@@ -77,4 +78,5 @@ void func() {
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
- [dllexport, dllimport](../cpp/dllexport-dllimport.md)
+
+[dllexport, dllimport](../cpp/dllexport-dllimport.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a9e6cd4a374f0941b360a3f8f24f61e4b46a6a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 64046eab403dca8da630c9c5324d320e0c79d4cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054302"
 ---
 # <a name="com-10-support-in-atl-projects"></a>Поддержка COM + 1.0 в проектах ATL
 
@@ -39,7 +39,7 @@ COM + 1.0 предназначена для разработки распред�
 
 ## <a name="see-also"></a>См. также
 
-[Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)   
-[Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Конфигурации проектов ATL по умолчанию](../../atl/reference/default-atl-project-configurations.md)
 

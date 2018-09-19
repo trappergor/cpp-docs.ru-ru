@@ -14,81 +14,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62041f78af18d6ac2f521fea763a11bb2859fbf5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0eae1d77b3d0c9fa34cb2bbd5f39548aea83f6a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067159"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Разрешение перегрузки вызовов шаблонов функций
-Шаблон функции может перегрузить нешаблонные функции с одинаковым именем. В этом сценарии вызовы функций разрешаются с помощью вычета аргумента шаблона для создания экземпляра шаблона функции с уникальной специализацией. Если вычет аргумента шаблона завершается с ошибкой, считается, что другие перезагрузки функций разрешат вызов. Эти другие перезагрузки, также известные как набор кандидатов, включают нешаблонные функции и другие экземпляры шаблонов функций. Если вычет аргумента шаблона завершается успешно, то созданная функция сравнивается с другими функциями для определения оптимального совпадения с учетом правил разрешения перегрузок. Дополнительные сведения см. в разделе [перегрузка функций](function-overloading.md).  
-  
+
+Шаблон функции может перегрузить нешаблонные функции с одинаковым именем. В этом сценарии вызовы функций разрешаются с помощью вычета аргумента шаблона для создания экземпляра шаблона функции с уникальной специализацией. Если вычет аргумента шаблона завершается с ошибкой, считается, что другие перезагрузки функций разрешат вызов. Эти другие перезагрузки, также известные как набор кандидатов, включают нешаблонные функции и другие экземпляры шаблонов функций. Если вычет аргумента шаблона завершается успешно, то созданная функция сравнивается с другими функциями для определения оптимального совпадения с учетом правил разрешения перегрузок. Дополнительные сведения см. в разделе [перегрузка функций](function-overloading.md).
+
 ## <a name="example"></a>Пример
 
- Если нешаблонная функция хорошо соответствует функции шаблона, используется нешаблонная функция (если аргументы шаблона не заданы явно), как в вызове `f(1, 1)` в следующем примере.  
-  
+Если нешаблонная функция хорошо соответствует функции шаблона, используется нешаблонная функция (если аргументы шаблона не заданы явно), как в вызове `f(1, 1)` в следующем примере.
+
 ```cpp
-// template_name_resolution9.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-void f(int, int) { cout << "f(int, int)" << endl; }  
-void f(char, char) { cout << "f(char, char)" << endl; }  
-  
-template <class T1, class T2>  
-void f(T1, T2)  
-{  
-   cout << "void f(T1, T2)" << endl;  
-};  
-  
-int main()  
-{  
-   f(1, 1);   // Equally good match; choose the nontemplate function.  
-   f('a', 1); // Chooses the template function.  
-   f<int, int>(2, 2);  // Template arguments explicitly specified.  
-}  
-```  
-  
-```Output  
-f(int, int)  
-void f(T1, T2)  
-void f(T1, T2)  
-```  
-  
+// template_name_resolution9.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+void f(int, int) { cout << "f(int, int)" << endl; }
+void f(char, char) { cout << "f(char, char)" << endl; }
+
+template <class T1, class T2>
+void f(T1, T2)
+{
+   cout << "void f(T1, T2)" << endl;
+};
+
+int main()
+{
+   f(1, 1);   // Equally good match; choose the nontemplate function.
+   f('a', 1); // Chooses the template function.
+   f<int, int>(2, 2);  // Template arguments explicitly specified.
+}
+```
+
+```Output
+f(int, int)
+void f(T1, T2)
+void f(T1, T2)
+```
+
 ## <a name="example"></a>Пример
 
- В следующем примере показано, что точное соответствие функции шаблона предпочтительнее, если требуется преобразование нешаблонной функции.  
-  
+В следующем примере показано, что точное соответствие функции шаблона предпочтительнее, если требуется преобразование нешаблонной функции.
+
 ```cpp
-// template_name_resolution10.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-void f(int, int) { cout << "f(int, int)" << endl; }  
-  
-template <class T1, class T2>  
-void f(T1, T2)  
-{  
-   cout << "void f(T1, T2)" << endl;  
-};  
-  
-int main()  
-{  
-   long l = 0;  
-   int i = 0;  
-   // Call the template function f(long, int) because f(int, int)  
-   // would require a conversion from long to int.  
-   f(l, i);  
-}  
-```  
-  
-```Output  
-void f(T1, T2)  
-```  
-  
+// template_name_resolution10.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+void f(int, int) { cout << "f(int, int)" << endl; }
+
+template <class T1, class T2>
+void f(T1, T2)
+{
+   cout << "void f(T1, T2)" << endl;
+};
+
+int main()
+{
+   long l = 0;
+   int i = 0;
+   // Call the template function f(long, int) because f(int, int)
+   // would require a conversion from long to int.
+   f(l, i);
+}
+```
+
+```Output
+void f(T1, T2)
+```
+
 ## <a name="see-also"></a>См. также
- [Разрешение имен](../cpp/templates-and-name-resolution.md)   
- [typename](../cpp/typename.md)   
+
+[Разрешение имен](../cpp/templates-and-name-resolution.md)<br/>
+[typename](../cpp/typename.md)

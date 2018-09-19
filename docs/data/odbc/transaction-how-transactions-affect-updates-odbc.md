@@ -19,23 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e540b68b820234ee6d30295b40c7e0f4cb7c806d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 21e6511a66129cb172ff10fedfa563bc4d663d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338594"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078521"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Транзакция. Влияние транзакций на обновления (ODBC)
+
 Обновляет [источника данных](../../data/odbc/data-source-odbc.md) осуществляется в процессе транзакций при помощи буфера редактирования (тот же метод использовать вне транзакции). Элементами данных полей в наборе записей служат в качестве буфера, содержащего текущую запись набора записей резервную копию которой временно во время редактирования `AddNew` или `Edit`. Во время `Delete` операции, текущую запись без резервного копирования в рамках транзакции. Дополнительные сведения о буфере редактирования и каким образом обновляет хранилище текущей записи, см. в разделе [набор записей: принцип наборы записей обновления записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
 > [!NOTE]
 >  Если вы реализовали выборка строк, нельзя вызывать `AddNew`, `Edit`, или `Delete`. Вместо этого необходимо написать свои собственные функции для выполнения обновления в источнике данных. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Во время выполнения транзакций `AddNew`, `Edit`, и `Delete` может быть зафиксирована или выполнен откат операции. Последствия `CommitTrans` и `Rollback` может привести к текущей записи не будет сохранена в буфере. Чтобы убедиться, что текущей записи восстановления, важно понять, каким образом `CommitTrans` и `Rollback` функции-члены `CDatabase` работают с функциями обновления класса `CRecordset`.  
+Во время выполнения транзакций `AddNew`, `Edit`, и `Delete` может быть зафиксирована или выполнен откат операции. Последствия `CommitTrans` и `Rollback` может привести к текущей записи не будет сохранена в буфере. Чтобы убедиться, что текущей записи восстановления, важно понять, каким образом `CommitTrans` и `Rollback` функции-члены `CDatabase` работают с функциями обновления класса `CRecordset`.  
   
 ##  <a name="_core_how_committrans_affects_updates"></a> Влияние CommitTrans обновление  
- В следующей таблице описаны последствия `CommitTrans` на транзакциях.  
+
+В следующей таблице описаны последствия `CommitTrans` на транзакциях.  
   
 ### <a name="how-committrans-affects-updates"></a>Влияние CommitTrans обновление  
   
@@ -48,7 +50,8 @@ ms.locfileid: "39338594"
 |`Delete` Затем `CommitTrans`|Записи, удаленные из источника данных.|  
   
 ##  <a name="_core_how_rollback_affects_updates"></a> Влияние отката транзакции  
- В следующей таблице описаны последствия `Rollback` на транзакциях.  
+
+В следующей таблице описаны последствия `Rollback` на транзакциях.  
   
 ### <a name="how-rollback-affects-transactions"></a>Влияние отката транзакции  
   
@@ -61,8 +64,9 @@ ms.locfileid: "39338594"
 |`Delete` Затем `Rollback`|Удаляется содержимое текущей записи.|Вызовите `Requery` для восстановления текущей записи из источника данных.|Удаление данных из источника данных в обратном порядке.|  
   
 ## <a name="see-also"></a>См. также  
- [Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Транзакции: Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [Класс CDatabase](../../mfc/reference/cdatabase-class.md)   
- [Класс CRecordset](../../mfc/reference/crecordset-class.md)
+
+[Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Транзакция. Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[Класс CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
+[Класс CRecordset](../../mfc/reference/crecordset-class.md)

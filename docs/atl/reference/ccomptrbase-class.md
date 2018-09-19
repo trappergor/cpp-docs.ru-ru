@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766591"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070162"
 ---
 # <a name="ccomptrbase-class"></a>Класс CComPtrBase
 
@@ -41,13 +41,13 @@ ms.locfileid: "43766591"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип объекта, на которые ссылается интеллектуального указателя.
 
 ## <a name="members"></a>Участники
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 Указатель на клиент `IUnknown`.
 
-*IID*  
+*IID*<br/>
 Идентификатор GUID точки подключения. Как правило это так же, как выходящего интерфейса, управляемого с использованием точки подключения.
 
-*PDW*  
+*PDW*<br/>
 Указатель на файл cookie, который однозначно идентифицирует соединение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*P2*  
+*P2*<br/>
 `CComPtrBase` Объект будет стать владельцем этого указателя.
 
 ### <a name="remarks"></a>Примечания
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>Параметры
 
-*szProgID*  
+*szProgID*<br/>
 Указатель на идентификатор ProgID, позволяющий восстановить идентификатор CLSID.
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Если значение равно NULL, указывает, что объект не создается как часть агрегата. Если не NULL, — это указатель на Агрегатный объект `IUnknown` интерфейс (управляющий `IUnknown`).
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Контекст, в котором будет выполняться код, который управляет вновь созданный объект.
 
-*rclsid*  
+*rclsid*<br/>
 CLSID, связанный с данными и кодом, который будет использоваться для создания объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*ppT*  
+*ppT*<br/>
 Адрес переменной, которая получит `CComPtrBase` указатель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pOther*  
+*pOther*<br/>
 Сравниваемый шаблон `IUnknown *`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pT*  
+*pT*<br/>
 Указатель на объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pT*  
+*pT*<br/>
 Указатель на объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -345,7 +345,7 @@ bool operator<(T* pT) const throw();
 
 Оператор приведения типов.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Параметры
 
-*Q*  
+*Q*<br/>
 Тип объекта, указатель на интерфейс является обязательным.
 
-*PP*  
+*PP*<br/>
 Адрес выходной переменной, которая получает указатель на запрошенный интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*punkParent*  
+*punkParent*<br/>
 Указатель на `IUnknown` интерфейс родительского элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение

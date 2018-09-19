@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4001 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4001 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf65c00c5c039769a05e009dcfe46ea42633ac4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f684e85233c4df777a53f03f07936137c425946e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300362"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070423"
 ---
 # <a name="linker-tools-warning-lnk4001"></a>Предупреждение средств компоновщика LNK4001
-объектные файлы не указаны; использованы библиотеки  
-  
- Компоновщику передан один или несколько LIB-файлы, но не OBJ-файлы.  
-  
- Так, как компоновщик не может получить доступ к данным, может обращаться в OBJ-файл, LIB-файл, это предупреждение означает, что необходимо явно указать другие параметры компоновщика. Например, может потребоваться указать [компьютера или](../../build/reference/machine-specify-target-platform.md), [/OUT](../../build/reference/out-output-file-name.md), или [/Entry](../../build/reference/entry-entry-point-symbol.md) параметры.
+
+объектные файлы не указаны; библиотеки, которые используются
+
+Компоновщик передан один или несколько LIB-файлы, но не OBJ-файлы.
+
+Так как компоновщик не может получить доступ к данным в LIB-файл, он может обращаться в OBJ-файл, это предупреждение означает, что необходимо явно указать другие параметры компоновщика. Например, может понадобиться указать [или компьютер,](../../build/reference/machine-specify-target-platform.md), [/OUT](../../build/reference/out-output-file-name.md), или [/Entry](../../build/reference/entry-entry-point-symbol.md) параметры.

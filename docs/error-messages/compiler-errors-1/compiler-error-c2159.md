@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2159 | Документы Microsoft
+title: Ошибка компилятора C2159 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412907d8c2f6c6f14adfb4f0799f3f2715a8381e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c33f8faebbca2999a893ceb1d0650ba89ee74bf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048491"
 ---
 # <a name="compiler-error-c2159"></a>Ошибка компилятора C2159
-указано несколько классов хранения  
-  
- Объявление содержит более одного класса хранения.  
-  
- В следующем примере возникает ошибка C2159:  
-  
-```  
-// C2159.cpp  
-// compile with: /c  
-static int i;   // OK  
-extern static int i;   // C2159  
+
+указано несколько классов хранения
+
+Объявление содержит более одного класса хранения.
+
+В следующем примере возникает ошибка C2159:
+
+```
+// C2159.cpp
+// compile with: /c
+static int i;   // OK
+extern static int i;   // C2159
 ```

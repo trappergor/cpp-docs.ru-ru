@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96e165fcd4d38c9d263b48ee2c559394770a52a1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f65df09ffba45f61b967080e4bfd61ec3d2f912a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052792"
 ---
 # <a name="iquickactivateimpl-class"></a>Класс IQuickActivateImpl
 
@@ -40,13 +40,13 @@ ms.locfileid: "43765724"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IQuickActivateImpl`.
 
 ## <a name="members"></a>Участники
@@ -121,5 +121,5 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
+[Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

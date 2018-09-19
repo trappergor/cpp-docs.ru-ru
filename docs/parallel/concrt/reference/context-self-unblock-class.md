@@ -1,5 +1,5 @@
 ---
-title: Класс context_self_unblock | Документы Microsoft
+title: Класс context_self_unblock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1113abc814167912380b57ae7fc85d04284e77
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90774b304a4649c72b6232b5908bf9ff14a4412d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057357"
 ---
 # <a name="contextselfunblock-class"></a>Класс context_self_unblock
 Этот класс описывает исключение, которое создается при вызове метода `Unblock` объекта `Context` из того же контекста. Это означает попытку данного контекста разблокировать самого себя.  
@@ -64,8 +64,8 @@ context_self_unblock() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)

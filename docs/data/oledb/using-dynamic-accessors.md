@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d5015a69c01982398dcb661fc7ea86232dde7f2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: fed93404a6c11addb8068d6140fda48d1c02a253
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056743"
 ---
 # <a name="using-dynamic-accessors"></a>Использование динамических методов доступа
 
@@ -173,8 +173,8 @@ int main(int argc, char* argv[] )
 
 ## <a name="see-also"></a>См. также
 
-[Использование методов доступа](../../data/oledb/using-accessors.md)  
-[Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)  
-[Класс CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)  
-[Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)  
+[Использование методов доступа](../../data/oledb/using-accessors.md)<br/>
+[Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[Класс CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Образец DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)  

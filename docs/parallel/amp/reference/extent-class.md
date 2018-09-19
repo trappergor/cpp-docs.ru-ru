@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8399eed2c047c10a0a78b1cd944dba7b2d1da97e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 59600343a06a2c3c0d4f5b55efadaa09c43452d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067705"
 ---
 # <a name="extent-class-c-amp"></a>Касс extent (C++ AMP)
 Представляет вектор из *N* целочисленных значений, которые определяют границы *N*-мерного пространства с началом координат в 0. Значения в векторе упорядочены от наиболее важных до наименее важных.
@@ -40,7 +40,7 @@ class extent;
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Rank`  
+*_Rank*<br/>
 Ранг `extent` объекта.
 
 ## <a name="requirements"></a>Требования
@@ -102,7 +102,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Index`  
+*_Index*<br/>
 `index` Значение для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -124,22 +124,22 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Array`  
+*_Array*<br/>
 Массив `_Rank` целых чисел, который используется для создания нового `extent` объекта.
 
-`_I`  
+*_I*<br/>
 Размер области памяти.
 
-`_I0`  
+*_I0*<br/>
 Длина самого значительного измерения.
 
-`_I1`  
+*_I1*<br/>
 Длина следующего к наиболее значительное измерение.
 
-`_I2`  
+*_I2*<br/>
 Длина наименее значительного измерения.
 
-`_Other`  
+*_Другое*<br/>
 `extent` Объект, для которого новый `extent` основан объект.
 
 ## <a name="remarks"></a>Примечания
@@ -158,7 +158,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Rhs`  
+*_Rhs*<br/>
 Номер, чтобы найти модуль.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -175,7 +175,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Rhs`  
+*_Rhs*<br/>
 Число для перемножения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -192,7 +192,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Rhs`  
+*_Rhs*<br/>
 `index` , Содержащий добавляемые элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -225,7 +225,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Rhs`  
+*_Rhs*<br/>
 Номер, индекс или экстент для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -242,7 +242,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Rhs`  
+*_Rhs*<br/>
 `index` , Содержащий элементы для вычитания.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -273,7 +273,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Rhs`  
+*_Rhs*<br/>
 Число-знаменатель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -292,7 +292,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Rhs`  
+*_Rhs*<br/>
 Число для вычитания.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -309,7 +309,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Other`  
+*_Другое*<br/>
 `extent` Для копирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -326,7 +326,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Index`  
+*_Index*<br/>
 Целое число от 0 до ранга минус 1.
 
 ### <a name="return-value"></a>Возвращаемое значение

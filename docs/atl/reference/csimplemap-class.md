@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a37083335c42d8042167e737b68ccad517fa00
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756354"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070306"
 ---
 # <a name="csimplemap-class"></a>Класс CSimpleMap
 
@@ -47,19 +47,19 @@ ms.locfileid: "43756354"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>  
+template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>
 class CSimpleMap
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*TKey*  
+*TKey*<br/>
 Тип ключа элемента.
 
-*TVal*  
+*TVal*<br/>
 Тип значения элемента.
 
-*TEqual*  
+*TEqual*<br/>
 Объект признак, определяющий тест на равенство для элементов типа `T`.
 
 ## <a name="members"></a>Участники
@@ -124,10 +124,10 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ.
 
-*Val*  
+*Val*<br/>
 Связанное значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -188,7 +188,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ, который нужно найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -205,7 +205,7 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Val*  
+*Val*<br/>
 Значение, которое требуется найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -222,7 +222,7 @@ TKey& GetKeyAt(int nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс возвращаемого ключевого поля.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -255,7 +255,7 @@ TVal& GetValueAt(int nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс возвращаемого значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -276,7 +276,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -293,7 +293,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -322,7 +322,7 @@ BOOL RemoveAt(int nIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс ключа и связанные значения для удаления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -339,7 +339,7 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Val*  
+*Val*<br/>
 Значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -356,10 +356,10 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ.
 
-*Val*  
+*Val*<br/>
 Новое значение для назначения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -379,13 +379,13 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс, ссылающиеся на ключ и значение, связывание для изменения.
 
-*key*  
+*key*<br/>
 Новый ключ.
 
-*Val*  
+*Val*<br/>
 Новое значение.
 
 ### <a name="return-value"></a>Возвращаемое значение

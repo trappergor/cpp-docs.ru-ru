@@ -17,66 +17,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f2d35f8d5f263125cd6a5e0a5e34105c3424f87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466908"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070298"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
+
 Этот раздел посвящен присущий Майкрософт рекомендуется использовать объявления declspec. Сведения о C ++ 14 `[[deprecated]]` атрибута и рекомендации по использованию этого атрибута и характерные для Майкрософт declspec или директиву pragma, см. в разделе [стандартные атрибуты C++](attributes.md).
 
-За исключением указанных ниже **устаревшим** объявление предлагает ту же функциональность, что [устаревшим](../preprocessor/deprecated-c-cpp.md) директивы pragma:  
-  
--   **Устаревшим** объявление позволяет указать определенные формы перегрузок функций как нерекомендуемые, тогда как форма директивы pragma применяется ко всем перегруженным формам имени функции.  
-  
--   **Устаревшим** объявление позволяет указать сообщение, которое будет отображаться во время компиляции. Текст сообщения может быть взят из макроса.  
-  
--   Макросы могут отмечаться только как нерекомендуемые с **устаревшим** директивы pragma.  
-  
- Если компилятор обнаруживает использование нерекомендуемого идентификатора или стандартные [ `[[deprecated]]` ](attributes.md) атрибут, [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) выдается предупреждение.  
-  
-## <a name="example"></a>Пример  
- В следующем примере показано, как отметить функции как нерекомендуемые и как указать сообщение, которое будет отображаться во время компиляции, если будет использоваться нерекомендуемая функция.  
-  
-```cpp 
-// deprecated.cpp  
-// compile with: /W3  
-#define MY_TEXT "function is deprecated"  
-void func1(void) {}  
-__declspec(deprecated) void func1(int) {}  
-__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}  
-__declspec(deprecated(MY_TEXT)) void func3(int) {}  
-  
-int main() {  
-   func1();  
-   func1(1);   // C4996  
-   func2(1);   // C4996  
-   func3(1);   // C4996  
-}  
-```  
-  
-## <a name="example"></a>Пример  
- В следующем примере показано, как отметить классы как нерекомендуемые и как указать сообщение, которое будет отображаться во время компиляции, если будет использоваться нерекомендуемый класс.  
-  
-```cpp 
-// deprecate_class.cpp  
-// compile with: /W3  
-struct __declspec(deprecated) X {  
-   void f(){}  
-};  
-  
-struct __declspec(deprecated("** X2 is deprecated **")) X2 {  
-   void f(){}  
-};  
-  
-int main() {  
-   X x;   // C4996  
-   X2 x2;   // C4996  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [__declspec](../cpp/declspec.md)   
- [Ключевые слова](../cpp/keywords-cpp.md)
+За исключением указанных ниже **устаревшим** объявление предлагает ту же функциональность, что [устаревшим](../preprocessor/deprecated-c-cpp.md) директивы pragma:
+
+- **Устаревшим** объявление позволяет указать определенные формы перегрузок функций как нерекомендуемые, тогда как форма директивы pragma применяется ко всем перегруженным формам имени функции.
+
+- **Устаревшим** объявление позволяет указать сообщение, которое будет отображаться во время компиляции. Текст сообщения может быть взят из макроса.
+
+- Макросы могут отмечаться только как нерекомендуемые с **устаревшим** директивы pragma.
+
+Если компилятор обнаруживает использование нерекомендуемого идентификатора или стандартные [ `[[deprecated]]` ](attributes.md) атрибут, [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) выдается предупреждение.
+
+## <a name="example"></a>Пример
+
+В следующем примере показано, как отметить функции как нерекомендуемые и как указать сообщение, которое будет отображаться во время компиляции, если будет использоваться нерекомендуемая функция.
+
+```cpp
+// deprecated.cpp
+// compile with: /W3
+#define MY_TEXT "function is deprecated"
+void func1(void) {}
+__declspec(deprecated) void func1(int) {}
+__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}
+__declspec(deprecated(MY_TEXT)) void func3(int) {}
+
+int main() {
+   func1();
+   func1(1);   // C4996
+   func2(1);   // C4996
+   func3(1);   // C4996
+}
+```
+
+## <a name="example"></a>Пример
+
+В следующем примере показано, как отметить классы как нерекомендуемые и как указать сообщение, которое будет отображаться во время компиляции, если будет использоваться нерекомендуемый класс.
+
+```cpp
+// deprecate_class.cpp
+// compile with: /W3
+struct __declspec(deprecated) X {
+   void f(){}
+};
+
+struct __declspec(deprecated("** X2 is deprecated **")) X2 {
+   void f(){}
+};
+
+int main() {
+   X x;   // C4996
+   X2 x2;   // C4996
+}
+```
+
+## <a name="see-also"></a>См. также
+
+[__declspec](../cpp/declspec.md)<br/>
+[Ключевые слова](../cpp/keywords-cpp.md)

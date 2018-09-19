@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2750 | Документы Microsoft
+title: Ошибка компилятора C2750 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06731b0b386b200b74697592137aac10a48a8e82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3f40894c4879c9b3598429c02bb0811db658bb0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069519"
 ---
 # <a name="compiler-error-c2750"></a>Ошибка компилятора C2750
-«Тип»: нельзя использовать «new» для ссылочного типа; Вместо этого использовать «gcnew»  
-  
- Для создания экземпляра типа CLR, которое вызывает экземпляр должен располагаться в куче сбора мусора, необходимо использовать [gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md).  
-  
- Следующий пример приводит к возникновению ошибки C2750:  
-  
-```  
-// C2750.cpp  
-// compile with: /clr  
-ref struct Y1 {};  
-  
-int main() {  
-   Y1 ^ x = new Y1;   // C2750  
-  
-   // try the following line instead  
-   Y1 ^ x2 = gcnew Y1;  
-}  
+
+«Тип»: невозможно использовать «new», на ссылочный тип; Вместо этого использовать «gcnew»
+
+Для создания экземпляра типа CLR, которое вызывает создание экземпляра помещается в куче сбора мусора, необходимо использовать [gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md).
+
+Следующий пример приводит к возникновению ошибки C2750:
+
+```
+// C2750.cpp
+// compile with: /clr
+ref struct Y1 {};
+
+int main() {
+   Y1 ^ x = new Y1;   // C2750
+
+   // try the following line instead
+   Y1 ^ x2 = gcnew Y1;
+}
 ```

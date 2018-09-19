@@ -1,5 +1,5 @@
 ---
-title: Класс invalid_oversubscribe_operation | Документы Microsoft
+title: Класс invalid_oversubscribe_operation | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 612a5658e0ef678253ec493f23b71cc564288904
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1b4e1eaf4bfca27ef22af103a5696ca2a34265d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689520"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069189"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>Класс invalid_oversubscribe_operation
 Этот класс описывает исключение, создаваемое при вызове метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, имеющим значение `false`, без предварительного вызова метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, имеющим значение `true`.  
@@ -64,8 +64,8 @@ invalid_oversubscribe_operation() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)

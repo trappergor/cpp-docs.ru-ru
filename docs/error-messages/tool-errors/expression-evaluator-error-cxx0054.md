@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0054 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0054 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f5306f7cd3385c9ca302cd186de5591b448ea6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aaf1a55ffee1d06eb4807381ad2cf1315420dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294314"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074699"
 ---
 # <a name="expression-evaluator-error-cxx0054"></a>Ошибка вычислителя выражений CXX0054
-зарегистрировать в точку останова выражение недопустимо  
-  
- Регистр не может использоваться в выражении точки останова.  
-  
- Эта ошибка идентична ошибке CAN0054.
+
+Регистрация в недопустимое выражение точки останова
+
+Регистр не может использоваться в выражении точки останова.
+
+Эта ошибка идентична ошибке CAN0054.

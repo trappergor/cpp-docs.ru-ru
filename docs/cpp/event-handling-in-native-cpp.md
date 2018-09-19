@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58bf010be4b05d8c9f024954b51e8cdb176cd4d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 89f6ab1bd378309750984a466c30c224bee89ca7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060035"
 ---
 # <a name="event-handling-in-native-c"></a>Обработка событий в неуправляемом C++
 
@@ -27,76 +27,77 @@ ms.locfileid: "39405786"
 
 ## <a name="declaring-events"></a>Объявление событий
 
-В классе источника событий, используйте [__event](../cpp/event.md) ключевое слово в объявлении метода, чтобы объявить метод как событие. Метод должен только объявляться, но не определяться; в противном случае возникнет ошибка компилятора, поскольку компилятор определяет этот метод неявно при его преобразовании в событие. Собственные события могут быть методами с нулевым или большим количеством параметров. Тип возвращаемого значения может быть пустым или любым целочисленным типом.  
-  
+В классе источника событий, используйте [__event](../cpp/event.md) ключевое слово в объявлении метода, чтобы объявить метод как событие. Метод должен только объявляться, но не определяться; в противном случае возникнет ошибка компилятора, поскольку компилятор определяет этот метод неявно при его преобразовании в событие. Собственные события могут быть методами с нулевым или большим количеством параметров. Тип возвращаемого значения может быть пустым или любым целочисленным типом.
+
 ## <a name="defining-event-handlers"></a>Определение обработчиков событий
 
-В классе приемника событий необходимо указать обработчики событий, которые представляют собой методы с подписями (типы возвращаемого значения, соглашения о вызовах и аргументы), соответствующие событию, которое они будут обрабатывать.  
-  
-## <a name="hooking-event-handlers-to-events"></a>Прикрепление обработчиков событий к событиям  
+В классе приемника событий необходимо указать обработчики событий, которые представляют собой методы с подписями (типы возвращаемого значения, соглашения о вызовах и аргументы), соответствующие событию, которое они будут обрабатывать.
 
-Также в классе приемника событий, используется встроенная функция [__hook](../cpp/hook.md) для связывания событий с обработчиками событий и [__unhook](../cpp/unhook.md) Чтобы разъединить обработчики событий. Можно прикрепить несколько событий к обработчику событий либо несколько обработчиков событий к одному событию.  
-  
-## <a name="firing-events"></a>Запуск событий  
+## <a name="hooking-event-handlers-to-events"></a>Прикрепление обработчиков событий к событиям
 
-Для порождения события просто вызовите метод, объявленный как событие в классе источника события. Если обработчики прикреплены к событию, они будут вызваны.  
-  
-### <a name="native-c-event-code"></a>Код собственного события C++  
+Также в классе приемника событий, используется встроенная функция [__hook](../cpp/hook.md) для связывания событий с обработчиками событий и [__unhook](../cpp/unhook.md) Чтобы разъединить обработчики событий. Можно прикрепить несколько событий к обработчику событий либо несколько обработчиков событий к одному событию.
 
-В следующем примере демонстрируется порождение события в собственном коде C++. Для компиляции и выполнения примера см. комментарии в коде.  
-  
-## <a name="example"></a>Пример  
-  
-### <a name="code"></a>Код  
-  
-```cpp  
-// evh_native.cpp  
-#include <stdio.h>  
-  
-[event_source(native)]  
-class CSource {  
-public:  
-   __event void MyEvent(int nValue);  
-};  
-  
-[event_receiver(native)]  
-class CReceiver {  
-public:  
-   void MyHandler1(int nValue) {  
-      printf_s("MyHandler1 was called with value %d.\n", nValue);  
-   }  
-  
-   void MyHandler2(int nValue) {  
-      printf_s("MyHandler2 was called with value %d.\n", nValue);  
-   }  
-  
-   void hookEvent(CSource* pSource) {  
-      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);  
-      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);  
-   }  
-  
-   void unhookEvent(CSource* pSource) {  
-      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);  
-      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);  
-   }  
-};  
-  
-int main() {  
-   CSource source;  
-   CReceiver receiver;  
-  
-   receiver.hookEvent(&source);  
-   __raise source.MyEvent(123);  
-   receiver.unhookEvent(&source);  
-}  
-```  
-  
-### <a name="output"></a>Вывод  
-  
+## <a name="firing-events"></a>Запуск событий
+
+Для порождения события просто вызовите метод, объявленный как событие в классе источника события. Если обработчики прикреплены к событию, они будут вызваны.
+
+### <a name="native-c-event-code"></a>Код собственного события C++
+
+В следующем примере демонстрируется порождение события в собственном коде C++. Для компиляции и выполнения примера см. комментарии в коде.
+
+## <a name="example"></a>Пример
+
+### <a name="code"></a>Код
+
+```cpp
+// evh_native.cpp
+#include <stdio.h>
+
+[event_source(native)]
+class CSource {
+public:
+   __event void MyEvent(int nValue);
+};
+
+[event_receiver(native)]
+class CReceiver {
+public:
+   void MyHandler1(int nValue) {
+      printf_s("MyHandler1 was called with value %d.\n", nValue);
+   }
+
+   void MyHandler2(int nValue) {
+      printf_s("MyHandler2 was called with value %d.\n", nValue);
+   }
+
+   void hookEvent(CSource* pSource) {
+      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);
+      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);
+   }
+
+   void unhookEvent(CSource* pSource) {
+      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);
+      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);
+   }
+};
+
+int main() {
+   CSource source;
+   CReceiver receiver;
+
+   receiver.hookEvent(&source);
+   __raise source.MyEvent(123);
+   receiver.unhookEvent(&source);
+}
+```
+
+### <a name="output"></a>Вывод
+
 ```Output
-MyHandler2 was called with value 123.  
-MyHandler1 was called with value 123.  
-```  
-  
+MyHandler2 was called with value 123.
+MyHandler1 was called with value 123.
+```
+
 ## <a name="see-also"></a>См. также
- [Обработка событий](../cpp/event-handling.md)  
+
+[Обработка событий](../cpp/event-handling.md)

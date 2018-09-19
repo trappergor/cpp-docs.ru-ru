@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3697 | Документы Microsoft
+title: Ошибка компилятора C3697 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4689365859ec121c716e5fb060d2985647bba30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6cb5755cc737c0cc5524cb6abd980b70d08b6cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050662"
 ---
 # <a name="compiler-error-c3697"></a>Ошибка компилятора C3697
-«квалификатор»: этот квалификатор невозможно использовать для "^"  
-  
- Дескриптор отслеживания ("^") был применен к квалификатор, для которого он не предназначен.  
-  
- Следующий пример приводит к возникновению ошибки C3697:  
-  
-```  
-// C3697.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   String ^__restrict s;   // C3697  
-   String ^ s2;   // OK  
-}  
+
+«квалификатор»: этот квалификатор невозможно использовать для "^"
+
+Дескриптор отслеживания (^) была применена к квалификатор, для которого он не предназначен.
+
+Следующий пример приводит к возникновению ошибки C3697:
+
+```
+// C3697.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   String ^__restrict s;   // C3697
+   String ^ s2;   // OK
+}
 ```

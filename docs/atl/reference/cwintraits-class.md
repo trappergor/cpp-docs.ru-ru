@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c5ddc9d49488aa4609249cbbdc7842e188cc34
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069399"
 ---
 # <a name="cwintraits-class"></a>Класс CWinTraits
 
@@ -45,10 +45,10 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 #### <a name="parameters"></a>Параметры
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Стандартное окно Стили по умолчанию.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 По умолчанию расширенные стили окна.
 
 ## <a name="members"></a>Участники
@@ -68,14 +68,17 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 Библиотека ATL предоставляет три стандартных специализации этого шаблона для часто используемых сочетаний стили окна:
 
-`CControlWinTraits`  
-Предназначен для стандартного элемента управления окна. Используются следующие стандартные стили: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Существуют не расширенные стили.
+- `CControlWinTraits`  
 
-`CFrameWinTraits`  
-Предназначен для стандартных фрейме окна. Включают стандартные стили, используемые: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Включить расширенные стили, используемые: WS_EX_APPWINDOW и WS_EX_WINDOWEDGE.
+   Предназначен для стандартного элемента управления окна. Используются следующие стандартные стили: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Существуют не расширенные стили.
 
-`CMDIChildWinTraits`  
-Предназначен для стандартных дочернего окна интерфейса MDI. Включают стандартные стили, используемые: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Включить расширенные стили, используемые: WS_EX_MDICHILD.
+- `CFrameWinTraits`  
+
+   Предназначен для стандартных фрейме окна. Включают стандартные стили, используемые: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Включить расширенные стили, используемые: WS_EX_APPWINDOW и WS_EX_WINDOWEDGE.
+
+- `CMDIChildWinTraits`  
+
+   Предназначен для стандартных дочернего окна интерфейса MDI. Включают стандартные стили, используемые: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Включить расширенные стили, используемые: WS_EX_MDICHILD.
 
 Если вы хотите убедиться, что некоторые стили заданы для всех экземпляров класса окна одновременно разрешая другие стили, чтобы быть заданы для каждого экземпляра, используйте [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) вместо этого.
 
@@ -93,7 +96,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*dwStyle*  
+*dwStyle*<br/>
 Стандартные стили, используемые для создания окна. Если *dwStyle* равно 0, значения стиля шаблона (`t_dwStyle`) возвращаются. Если *dwStyle* не равно нулю, *dwStyle* возвращается.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -110,7 +113,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Расширенные стили, используемые для создания окна. Если *dwExStyle* равно 0, значения стиля шаблона (`t_dwExStyle`) возвращаются. Если *dwExStyle* не равно нулю, *dwExStyle* возвращается.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -119,5 +122,5 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Основные сведения о характеристиках окна](../../atl/understanding-window-traits.md)

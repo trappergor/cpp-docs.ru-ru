@@ -22,20 +22,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 922103e808541e2829350749a04d6004ba36577f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: eec6f8370103ed0256471c009d6e97cc693a1cd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403424"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071345"
 ---
 # <a name="obsolete-calling-conventions"></a>Устаревшие соглашения о вызовах
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
- **__Pascal**, **__fortran**, и **__syscall** соглашения о вызовах больше не поддерживаются. Их функциональные возможности можно эмулировать с помощью одного из поддерживаемых соглашений о вызовах и соответствующих параметров компоновщика.  
-  
- \<Windows.h > теперь поддерживает макрос WINAPI, которая преобразуется в соответствующее соглашение о вызовах для целевого объекта. Использовать WINAPI, где вы ранее использовали PASCAL или **__far \__pascal**.  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Передача аргументов и соглашения об именовании](../cpp/argument-passing-and-naming-conventions.md)
+
+## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
+
+**__Pascal**, **__fortran**, и **__syscall** соглашения о вызовах больше не поддерживаются. Их функциональные возможности можно эмулировать с помощью одного из поддерживаемых соглашений о вызовах и соответствующих параметров компоновщика.
+
+\<Windows.h > теперь поддерживает макрос WINAPI, которая преобразуется в соответствующее соглашение о вызовах для целевого объекта. Использовать WINAPI, где вы ранее использовали PASCAL или **__far \__pascal**.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Передача аргументов и соглашения об именовании](../cpp/argument-passing-and-naming-conventions.md)

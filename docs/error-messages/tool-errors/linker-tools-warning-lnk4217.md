@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4217 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4217 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 625f3a1b8a67f198b1cb4ca37bd1350229ec20db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c650eddd8078419f63df48cc91705d2e86eb5c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300580"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067986"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Предупреждение средств компоновщика LNK4217
-локально определенный символ «символ» импортируется в функции «функция»  
-  
- [__declspec(dllimport)](../../cpp/dllexport-dllimport.md) был указан для символа, даже если этот символ определен локально. Удалить `__declspec` модификатор, чтобы устранить это предупреждение.  
-  
- `symbol` представляет имя символа, который определен в образе. `function` — функция, которая импортирует символ.  
-  
- Это предупреждение не будет выводиться при компиляции с помощью параметра [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- LNK4217 также может возникать при попытке связать два модуля вместе, когда следует компилировать второй модуль с библиотекой импорта первого модуля.  
-  
-```  
-// LNK4217.cpp  
-// compile with: /LD  
-#include "windows.h"  
-__declspec(dllexport) void func(unsigned short*) {}  
-```  
-  
- Затем:  
-  
-```  
-// LNK4217b.cpp  
-// compile with: /c  
-#include "windows.h"  
-__declspec(dllexport) void func(unsigned short*) {}  
-```  
-  
- При попытке связать эти два модуля приведет LNK4217, компиляция второй пример с библиотекой импорта первого примера, чтобы разрешить.
+
+локально определенный символ «символ» импортируется в функции «функция»
+
+[__declspec(dllimport)](../../cpp/dllexport-dllimport.md) был указан для символа, несмотря на то, что этот символ определен локально. Удалить `__declspec` модификатор, чтобы устранить это предупреждение.
+
+`symbol` — Это имя символа, который определен в образе. `function` — функция, которая импортирует символ.
+
+Это предупреждение не будет отображаться при компиляции с помощью параметра [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+
+LNK4217 также может возникать при попытке связать два модуля, когда следует компилировать второй модуль с библиотекой импорта первого модуля.
+
+```
+// LNK4217.cpp
+// compile with: /LD
+#include "windows.h"
+__declspec(dllexport) void func(unsigned short*) {}
+```
+
+Затем:
+
+```
+// LNK4217b.cpp
+// compile with: /c
+#include "windows.h"
+__declspec(dllexport) void func(unsigned short*) {}
+```
+
+При попытке связать эти два модуля приведет к LNK4217, компиляции во втором примере с библиотекой импорта первого образца для решения.

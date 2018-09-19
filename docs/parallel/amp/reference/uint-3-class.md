@@ -1,5 +1,5 @@
 ---
-title: Класс uint_3 | Документы Microsoft
+title: Класс uint_3 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfa05f5895c21f5ffdf00020efe1d1b1b881fec4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe59fc6f956c0e88cae1e5c737d3fe33d10d10b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052677"
 ---
 # <a name="uint3-class"></a>Класс uint_3
-Представляет короткого вектора трех целых чисел без знака.  
+Представляет короткий вектор из трех целых чисел без знака.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -176,7 +176,7 @@ class uint_3;
   
 |name|Описание|  
 |----------|-----------------|  
-|[Размер константы](#uint_3__size)||  
+|[размер константа](#uint_3__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
@@ -273,20 +273,20 @@ explicit inline uint_3(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_V0`  
- Значение для инициализации элемента 0.  
+*_V0*<br/>
+Значение для инициализации элемента 0.  
   
- `_V1`  
- Значение для инициализации элемента 1.  
+*_V1*<br/>
+Значение для инициализации элемента 1.  
   
- `_V2`  
- Значение для инициализации элемента 2.  
+*_V2*<br/>
+Значение для инициализации элемента 2.  
   
- `_V`  
- Значение для инициализации.  
+*_V*<br/>
+Значение для инициализации.  
   
- `_Other`  
- Объект, используемый для инициализации.  
+*_Другое*<br/>
+Объект, используемый для инициализации.  
   
 ##  <a name="uint_3__size"></a> Размер 
 

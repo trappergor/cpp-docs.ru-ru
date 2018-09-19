@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760127"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063116"
 ---
 # <a name="cheapptrbase-class"></a>Класс CHeapPtrBase
 
@@ -40,16 +40,16 @@ ms.locfileid: "43760127"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип объекта для сохранения в куче.
 
-*Распределитель*  
+*Распределитель*<br/>
 Класс выделения памяти для использования. По умолчанию для подпрограммы CRT используются для выделения и освобождения памяти.
 
 ## <a name="members"></a>Участники
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBytes*  
+*nBytes*<br/>
 Число байтов памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pData*  
+*pData*<br/>
 `CHeapPtrBase` Объект будет стать владельцем этого указателя.
 
 ### <a name="remarks"></a>Примечания
@@ -216,7 +216,7 @@ T* operator->() const throw();
 
 Оператор приведения типов.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBytes*  
+*nBytes*<br/>
 Новый объем памяти, выделенной в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -243,6 +243,6 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Класс CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+[Класс CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Класс CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

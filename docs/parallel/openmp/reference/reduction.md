@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059099"
 ---
 # <a name="reduction"></a>reduction
 Указывает, что один или несколько переменных, которые принадлежат к каждому потоку предметом операцию редукции в конце область параллельной обработки.  
@@ -32,14 +32,13 @@ ms.locfileid: "42540875"
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>Примечания  
- где  
+### <a name="parameters"></a>Параметры
   
- `operation`  
- Оператор для операции для выполнения на переменные (`var`) в конце область параллельной обработки.  
+*Операция*<br/>
+Оператор для операции для выполнения на переменные (`var`) в конце область параллельной обработки.  
   
- `var`  
- Одну или несколько переменных, по которым выполняется скалярная редукция. Если указано более одной переменной, разделите имена переменных запятыми.  
+*var*<br/>
+Одну или несколько переменных, по которым выполняется скалярная редукция. Если указано более одной переменной, разделите имена переменных запятыми.  
   
 ## <a name="remarks"></a>Примечания  
  `reduction` область применения следующих директив:  

@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4175 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4175 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e94b85a65f95353498c144eb4d55abdf83daa2c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61cf0471bd4308feb7be3a789f03e4355d6f7366
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278172"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080289"
 ---
 # <a name="compiler-warning-level-1-c4175"></a>Предупреждение компилятора (уровень 1) C4175
-\#Директива pragma component(browser, on): сведений для браузера должно быть задано в командной строке  
-  
- Для использования директивы pragma [component](../../preprocessor/component.md) необходимо создать информацию об исходном коде во время компиляции ([/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)).
+
+\#Директива pragma component(browser, on): сведений для браузера должно быть задано в командной строке
+
+Для использования директивы pragma [component](../../preprocessor/component.md) необходимо создать информацию об исходном коде во время компиляции ([/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)).

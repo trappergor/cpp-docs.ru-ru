@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3603 | Документы Microsoft
+title: Ошибка компилятора C3603 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec4b4b1df536a176fa05ea9095878ab5e1492cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67adc99491a15503ee5580df37a612eb73013686
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253371"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075895"
 ---
 # <a name="compiler-error-c3603"></a>Ошибка компилятора C3603
-«Символ»: тип «Тип» не поддерживается  
-  
- Предпринята попытка использовать тип данных, пока не поддерживается средой выполнения .NET в управляемом объекте.
+
+«Символ»: тип «Тип» еще не поддерживается
+
+Предпринята попытка использовать тип данных, который еще не поддерживается средой выполнения .NET в управляемом объекте.

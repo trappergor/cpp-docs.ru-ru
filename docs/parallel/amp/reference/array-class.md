@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ce6a5f26cba69aff8ebb296a6f4a716adf1c46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: abf907fe12f55b44e7f2e184b8752d2e09a326f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071735"
 ---
 # <a name="array-class"></a>Класс array
 Представляет контейнер данных, используемый для перемещения данных к ускорителю.
@@ -50,10 +50,10 @@ friend class array;
 ```  
 
 #### <a name="parameters"></a>Параметры
-`value_type`  
+*value_type*<br/>
 Тип элемента данных.
 
-`_Rank`  
+*_Rank*<br/>
 Ранг массива.
 
 ## <a name="members"></a>Участники
@@ -404,46 +404,46 @@ array(array&& _Other) restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Associated_Av`  
+*_Associated_Av*<br/>
 Объект accelerator_view, который указывает расположение предпочтительным целевым объектом для массива.
 
-`_Av`  
+*_Av*<br/>
 [Accelerator_view](accelerator-view-class.md) , указывающий расположение массива.
 
-`_Cpu_access_type`  
+*_Cpu_access_type*<br/>
 Требуемый [access_type](concurrency-namespace-enums-amp.md#access_type) для массива в ЦП. Этот параметр имеет значение по умолчанию `access_type_auto` оставляя ЦП `access_type` определяется средой выполнения. Фактическое ЦП `access_type` для массива можно запросить с помощью `get_cpu_access_type` метод.
 
-`_Extent`  
+*_Extent*<br/>
 Границы каждого измерения массива.
 
-`_E0`  
+*_E0*<br/>
 Наиболее значимый компонент границы этого раздела.
 
-`_E1`  
+*_E1*<br/>
 Далее к наиболее значимый компонент границы этого раздела.
 
-`_E2`  
+*_E2*<br/>
 Наименее значимый компонент границы этого раздела.
 
-`_InputIterator`  
+*_InputIterator*<br/>
 Тип итератора ввода.
 
-`_Src`  
+*_Src*<br/>
 Объект, который требуется скопировать.
 
-`_Src_first`  
+*_Src_first*<br/>
 Итератор с начала в исходном контейнере.
 
-`_Src_last`  
+*_Src_last*<br/>
 Итератор конца в исходном контейнере.
 
-`_Other`  
+*_Другое*<br/>
 Другой источник данных.
 
-`_Rank`  
+*_Rank*<br/>
 Ранг раздела.
 
-`value_type`  
+*value_type*<br/>
 Тип данных элементов, которые будут скопированы.
 
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view
@@ -467,7 +467,7 @@ void copy_to(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Dest`  
+*_Dest*<br/>
 [Array_view](array-view-class.md) объект для копирования.
 
 ##  <a name="cpu_access_type"></a> cpu_access_type
@@ -551,7 +551,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`value_type`  
+*value_type*<br/>
 Тип данных элементов вектора.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -580,19 +580,19 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Index`  
+*_Index*<br/>
 Расположение элемента.
 
-`_I0`  
+*_I0*<br/>
 Наиболее значимый компонент начальной позиции этого раздела.
 
-`_I1`  
+*_I1*<br/>
 Далее к наиболее значимый компонент начальной позиции этого раздела.
 
-`_I2`  
+*_I2*<br/>
 Наименее значимый компонент начальной позиции этого раздела.
 
-`_I`  
+*_I*<br/>
 Расположение элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -614,10 +614,10 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Index`  
+*_Index*<br/>
 Индекс.
 
-`_I`  
+*_I*<br/>
 Индекс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -637,10 +637,10 @@ array& operator= (
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Other`  
+*_Другое*<br/>
 `array` Для копирования.
 
-`_Src`  
+*_Src*<br/>
 `array` Для копирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -752,40 +752,40 @@ array_view<const value_type,3> section(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_E0`  
+*_E0*<br/>
 Наиболее значимый компонент границы этого раздела.
 
-`_E1`  
+*_E1*<br/>
 Далее к наиболее значимый компонент границы этого раздела.
 
-`_E2`  
+*_E2*<br/>
 Наименее значимый компонент границы этого раздела.
 
-`_Ext`  
+*_Ext*<br/>
 [Экстент](extent-class.md) , указывающий границы раздела. Источником является 0.
 
-`_Idx`  
+*_Idx*<br/>
 [Индекс](index-class.md) , указывающий расположение начальной позиции. Подраздел — оставшаяся часть области.
 
-`_I0`  
+*_I0*<br/>
 Наиболее значимый компонент начальной позиции этого раздела.
 
-`_I1`  
+*_I1*<br/>
 Далее к наиболее значимый компонент начальной позиции этого раздела.
 
-`_I2`  
+*_I2*<br/>
 Наименее значимый компонент начальной позиции этого раздела.
 
-`_Rank`  
+*_Rank*<br/>
 Ранг раздела.
 
-`_Section_extent`  
+*_Section_extent*<br/>
 [Экстент](extent-class.md) , указывающий границы раздела.
 
-`_Section_origin`  
+*_Section_origin*<br/>
 [Индекс](index-class.md) , указывающий расположение начальной позиции.
 
-`value_type`  
+*value_type*<br/>
 Тип данных элементов, которые будут скопированы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -807,13 +807,13 @@ array_view<const value_type,_New_rank> view_as(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_New_rank`  
+*_New_rank*<br/>
 Ранг `extent` объект, переданный в качестве параметра.
 
-`_View_extent`  
+*_View_extent*<br/>
 Область памяти, которая используется для создания нового [array_view](array-view-class.md) объекта.
 
-`value_type`  
+*value_type*<br/>
 Тип данных элементов, как в исходном `array` объекта и в возвращенном `array_view` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058501"
 ---
 # <a name="registry-macros"></a>Макросы реестра
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Параметры
 
-*Идентификатор LIBID*  
+*Идентификатор LIBID*<br/>
 Идентификатор GUID библиотеки типов.
 
 ### <a name="remarks"></a>Примечания
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>Параметры
 
-*class*  
+*class*<br/>
 [in] Включен для обеспечения обратной совместимости.
 
-*pid*  
+*pid*<br/>
 [in] LPCTSTR, который является идентификатором зависящий от версии программы.
 
-*vpid*  
+*vpid*<br/>
 [in] Значение LPCTSTR, являющийся идентификатором независящим от версии программы.
 
-*nid*  
+*nid*<br/>
 [in] UINT, которое является индексом строки ресурса в реестре для использования в качестве описание программы.
 
-*flags*  
+*flags*<br/>
 [in] DWORD, содержащее программы потоковой модели в реестре. Должен принимать одно из следующих значений: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH или AUTPRXFLAG.
 
 ### <a name="remarks"></a>Примечания
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Параметры
 
-*Идентификатор ресурса*  
+*Идентификатор ресурса*<br/>
 Идентификатор ресурса RGS-файл, содержащий сведения о *appid*.
 
-*Идентификатор приложения*  
+*Идентификатор приложения*<br/>
 Идентификатор GUID.
 
 ### <a name="remarks"></a>Примечания
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Идентификатор ресурса строки.
 
 ### <a name="remarks"></a>Примечания
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Создаваемые мастером идентификатор ресурса.
 
 ### <a name="remarks"></a>Примечания

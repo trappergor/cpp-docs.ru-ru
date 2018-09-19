@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 156a0a827a67e80369ca8b834b62bcf0e431ab14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754622"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076350"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Интерфейс IThreadPoolConfig
 
@@ -71,7 +71,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Параметры
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Адрес переменной, которая, в случае успешного выполнения получает количество потоков в пуле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -92,7 +92,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Параметры
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Адрес переменной, которая, в случае успешного выполнения Получает максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -113,7 +113,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Параметры
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Запрашиваемое количество потоков в пуле.
 
 Если *nNumThreads* является отрицательным, его абсолютное значение будет умножена на число процессоров в компьютере для получения общего числа потоков.
@@ -138,7 +138,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Параметры
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Запрошенное максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -151,5 +151,5 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ## <a name="see-also"></a>См. также
 
-[Классы](../../atl/reference/atl-classes.md)   
+[Классы](../../atl/reference/atl-classes.md)<br/>
 [Класс CThreadPool](../../atl/reference/cthreadpool-class.md)

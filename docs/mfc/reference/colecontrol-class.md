@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050103"
 ---
 # <a name="colecontrol-class"></a>Colecontrol-класс
 Мощный базовый класс для разработки элементов управления OLE.
@@ -364,13 +364,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Создает объект `COleControl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Извлекает текущий внешний вид элемента управления.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Возвращает значение свойства BackColor окружения.|
@@ -534,7 +534,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Вызывается платформой, когда внешний вид элемента управления должен быть обновлен.|
 |[COleControl::DrawMetafile](#drawmetafile)|Вызывается платформой при использовании контексте устройства метафайла.|
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 По умолчанию `GetControlFlags` возвращает `fastBeginPaint | clipPaintDC`.
 
-`fastBeginPaint` Если задано, функция использует begin-paint, предназначенное для элементов управления OLE, а не [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (значение по умолчанию).
-
-`clipPaintDC` Если не установлено, отключает вызов `IntersectClipRect` сделанных `COleControl` и получает скорость. Если вы используете активации без окна, флаг не оказывает влияния.
-
-`pointerInactive` Если задано, обеспечивает взаимодействия с мышью, а элемент управления неактивен, включив `COleControl`в реализации `IPointerInactive` интерфейс, который по умолчанию отключена.
-
-`noFlickerActivate` Если задано, устраняет необходимость дополнительных операций очень рисования и им мерцание. Используется, если элемент управления самостоятельно прорисовывающий одинаково в штатах неактивными. Если вы используете активации без окна, флаг не оказывает влияния.
-
-`windowlessActivate` Если установлено, указывает на элемент управления использует активации без окна.
-
-`canOptimizeDraw` Если установлено, указывает, что элемент управления будет выполнять оптимизированное Рисование, если контейнер поддерживает его.
+|||
+|-|-|
+|`fastBeginPaint`|Если задано, функция использует begin-paint, предназначенное для элементов управления OLE, а не [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (значение по умолчанию).|
+|`clipPaintDC`|Если не установлено, отключает вызов `IntersectClipRect` сделанных `COleControl` и получает скорость. Если вы используете активации без окна, флаг не оказывает влияния.|
+|`pointerInactive`|Если задано, обеспечивает взаимодействия с мышью, а элемент управления неактивен, включив `COleControl`в реализации `IPointerInactive` интерфейс, который по умолчанию отключена.|
+|`noFlickerActivate`|Если задано, устраняет необходимость дополнительных операций очень рисования и им мерцание. Используется, если элемент управления самостоятельно прорисовывающий одинаково в штатах неактивными. Если вы используете активации без окна, флаг не оказывает влияния.|
+|`windowlessActivate`|Если установлено, указывает на элемент управления использует активации без окна.|
+|`canOptimizeDraw`|Если установлено, указывает, что элемент управления будет выполнять оптимизированное Рисование, если контейнер поддерживает его.|
 
 Дополнительные сведения о `GetControlFlags` и другие виды оптимизации, элементов управления OLE, см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67904ec0c16fb1eddcf182d34f10cb09219dfc6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f9dff61a62eec37a503b1c0018ead6dce33065a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767420"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077117"
 ---
 # <a name="ccomenum-class"></a>Класс CComEnum
 
@@ -32,7 +32,7 @@ ms.locfileid: "43767420"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>  
+    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>
 class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 T,
     Copy>,
@@ -41,19 +41,19 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 COM-интерфейса перечислителя. См. в разделе [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) пример.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор интерфейса интерфейса перечислителя.
 
-*T*  
+*T*<br/>
 Тип элемента, доступные в интерфейсе перечислителя.
 
-*Копировать*  
+*Копировать*<br/>
 Однородную [скопируйте класс политики](../../atl/atl-copy-policy-classes.md).
 
-*ThreadModel*  
+*ThreadModel*<br/>
 Потоковая модель класса. Значение по умолчанию потоковую модель глобальный объект, используемый в проекте.
 
 ## <a name="remarks"></a>Примечания
@@ -102,7 +102,7 @@ COM-интерфейса перечислителя. См. в разделе [IE
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
-[Класс CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
+[Класс CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)<br/>
 [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2904 | Документы Microsoft
+title: Ошибка компилятора C2904 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 003f907cd82abb5d3aa2ce8502074cc39d16699b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f305ccab68a5b0d59cb3d4246b51fed61c6bf7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061569"
 ---
 # <a name="compiler-error-c2904"></a>Ошибка компилятора C2904
-"идентификатор": имя уже использовано для шаблона в текущей области видимости  
-  
- Проверьте наличие повторяющихся имен в коде.  
-  
- Следующий пример приводит к возникновению ошибки C2904:  
-  
-```  
-// C2904.cpp  
-// compile with: /c  
-void X();  // X is declared as a function  
-template<class T> class X{};  // C2904  
+
+"идентификатор": имя уже использовано для шаблона в текущей области видимости
+
+Проверьте наличие повторяющихся имен в коде.
+
+Следующий пример приводит к возникновению ошибки C2904:
+
+```
+// C2904.cpp
+// compile with: /c
+void X();  // X is declared as a function
+template<class T> class X{};  // C2904
 ```

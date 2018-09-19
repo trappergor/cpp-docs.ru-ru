@@ -16,14 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36cb39b467cb413cdf74bef52430cf8caf746199
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a5db612c836e4b902e7cad83017661246f4b649e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079392"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Включение и отключение служб поставщика
+
 Отдельные службы OLE DB можно включить или отключить по умолчанию для всех приложений, которые обращаются к одним поставщиком. Это делается путем добавления OLEDB_SERVICES запись реестра в разделе CLSID поставщика с `DWORD` значение, указывающее службы, чтобы включить или отключить, как показано в следующей таблице.  
   
 |Службы по умолчанию включен|Значение ключевого слова|  
@@ -36,4 +37,5 @@ ms.locfileid: "39340694"
 |Ни один агрегат, все службы отключены|\<отсутствует ключ >|  
   
 ## <a name="see-also"></a>См. также  
- [Включение и отключение служб OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+
+[Включение и отключение служб OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

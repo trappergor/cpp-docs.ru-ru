@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504a6afb9815074efe0bda2b679d5ac6a720b220
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5b40e5ab6cac64edbfdb5ab93c6864d0eacb9e63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073113"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Встроенные операторы C++, приоритет и ассоциативность операторов
 
@@ -115,4 +115,5 @@ ms.locfileid: "39401897"
 |[Запятая](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|
 
 ## <a name="see-also"></a>См. также
- [Перегрузка операторов](operator-overloading.md)
+
+[Перегрузка операторов](operator-overloading.md)

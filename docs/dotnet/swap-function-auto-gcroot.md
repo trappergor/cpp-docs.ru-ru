@@ -1,5 +1,5 @@
 ---
-title: Функция Swap (auto_gcroot) | Документы Microsoft
+title: Функция Swap (auto_gcroot) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 308f909e2a863f2d08feb6ff688cddf61b0347b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c653130079870c885e5bb758a0ae2d953cca5b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165156"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052183"
 ---
 # <a name="swap-function-autogcroot"></a>Функция swap (auto_gcroot)
-Меняет местами объекты между `auto_gcroot` и другого.  
+Меняет местами объекты между одним `auto_gcroot` и другого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_left`  
- Объект `auto_gcroot`.  
+*_слева*<br/>
+Объект `auto_gcroot`.  
   
- `_right`  
- Другой `auto_gcroot`.  
+*_справа*<br/>
+Другой `auto_gcroot`.  
   
 ## <a name="example"></a>Пример  
   

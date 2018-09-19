@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062674"
 ---
 # <a name="cwintraitsor-class"></a>Класс CWinTraitsOR
 
@@ -45,10 +45,10 @@ class CWinTraitsOR
 
 #### <a name="parameters"></a>Параметры
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Стили окна по умолчанию.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 По умолчанию расширенные стили окна.
 
 ## <a name="members"></a>Участники
@@ -82,7 +82,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*dwStyle*  
+*dwStyle*<br/>
 Стили, используемые для создания окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -99,7 +99,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Расширенные стили, используемые для создания окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -108,6 +108,6 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Основные сведения о характеристиках окна](../../atl/understanding-window-traits.md)
 

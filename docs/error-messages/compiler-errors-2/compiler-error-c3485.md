@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3485 | Документы Microsoft
+title: Ошибка компилятора C3485 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cd9de6f300fed673d588df60d7acca15b104b61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db3eee53f23aa2cdc958b63faed11ead302f4b1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258138"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060750"
 ---
 # <a name="compiler-error-c3485"></a>Ошибка компилятора C3485
-определение лямбда-выражения не может содержать cv-квалификаторы  
-  
- Нельзя использовать квалификатор `const` или `volatile` как часть определения лямбда-выражения.  
-  
-### <a name="to-correct-this-error"></a>Исправление ошибки  
-  
--   Удалите квалификатор `const` или `volatile` из определения лямбда-выражения.  
-  
-## <a name="example"></a>Пример  
- Приведенный ниже пример приводит к возникновению ошибки C3485, так как в нем квалификатор `const` используется как часть определения лямбда-выражения.  
-  
-```  
-// C3485.cpp  
-  
-int main()  
-{  
-   auto x = []() const mutable {}; // C3485  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md)
+
+определение лямбда-выражения не может содержать cv-квалификаторы
+
+Нельзя использовать квалификатор `const` или `volatile` как часть определения лямбда-выражения.
+
+### <a name="to-correct-this-error"></a>Исправление ошибки
+
+- Удалите квалификатор `const` или `volatile` из определения лямбда-выражения.
+
+## <a name="example"></a>Пример
+
+Приведенный ниже пример приводит к возникновению ошибки C3485, так как в нем квалификатор `const` используется как часть определения лямбда-выражения.
+
+```
+// C3485.cpp
+
+int main()
+{
+   auto x = []() const mutable {}; // C3485
+}
+```
+
+## <a name="see-also"></a>См. также
+
+[Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md)

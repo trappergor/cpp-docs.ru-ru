@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068342"
 ---
 # <a name="restrict"></a>restrict
 
@@ -32,21 +32,21 @@ ms.locfileid: "39463685"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **__declspec(restrict)** *pointer_return_type* *function*();  
-  
+> **__declspec(restrict)** *pointer_return_type* *function*();
+
 ## <a name="remarks"></a>Примечания
 
 Компилятор распространяет **__declspec(restrict)**. Например, CRT `malloc` функция имеет **__declspec(restrict)** оформления и таким образом, компилятор предполагает, что указатели, инициализированные в расположениях памяти с `malloc` также не используются псевдонимы, ранее существующие указатели.
 
-Компилятор не проверяет, что возвращенный указатель фактически псевдоним не. Это ответственность разработчика, чтобы программа не создавала псевдонимы для указателя, помеченного **ограничить __declspec** модификатор.  
-  
+Компилятор не проверяет, что возвращенный указатель фактически псевдоним не. Это ответственность разработчика, чтобы программа не создавала псевдонимы для указателя, помеченного **ограничить __declspec** модификатор.
+
 Похожую семантику для переменных см. в разделе [__restrict](../cpp/extension-restrict.md).
- 
+
 Другую аннотацию, к которому применяется сглаживание внутри функции, см. в разделе [__declspec(noalias)](../cpp/noalias.md).
-  
-Сведения о **ограничить** ключевое слово, которое является частью C++ AMP, см. в разделе [ограничения (C++ AMP)](../cpp/restrict-cpp-amp.md).  
- 
-## <a name="example"></a>Пример  
+
+Сведения о **ограничить** ключевое слово, которое является частью C++ AMP, см. в разделе [ограничения (C++ AMP)](../cpp/restrict-cpp-amp.md).
+
+## <a name="example"></a>Пример
 
 В следующем образце показано использование **__declspec(restrict)**.
 
@@ -122,6 +122,7 @@ int main()
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
- [Ключевые слова](../cpp/keywords-cpp.md)  
- [__declspec](../cpp/declspec.md)  
- [__declspec(noalias)](../cpp/noalias.md)  
+
+[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[__declspec(noalias)](../cpp/noalias.md)

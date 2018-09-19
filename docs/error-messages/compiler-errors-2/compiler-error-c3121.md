@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3121 | Документы Microsoft
+title: Ошибка компилятора C3121 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff398632375f6c676a3533f3a47064b94aecaa0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d9f14d46827e946d619801c1e92dabb33440aa7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056070"
 ---
 # <a name="compiler-error-c3121"></a>Ошибка компилятора C3121
-Невозможно изменить идентификатор GUID для класса «class_name»  
-  
- Предпринята попытка изменить идентификатор класса с [помощью __declspec(uuid)](../../cpp/uuid-cpp.md).  
-  
- Например следующий код приводит к возникновению ошибки C3121:  
-  
-```  
-// C3121.cpp  
-[emitidl];  
-[module(name="MyLibrary")];  
-  
-[coclass, uuid="00000000-0000-0000-0000-111111111111"]  
-class __declspec(uuid("00000000-0000-0000-0000-111111111112")) A   // C3121  
-{  
-};  
-int main()  
-{  
-}  
+
+Невозможно изменить идентификатор GUID для класса «class_name»
+
+Предпринята попытка изменить идентификатор класса с [помощью __declspec(uuid)](../../cpp/uuid-cpp.md).
+
+Например следующий код создает C3121:
+
+```
+// C3121.cpp
+[emitidl];
+[module(name="MyLibrary")];
+
+[coclass, uuid="00000000-0000-0000-0000-111111111111"]
+class __declspec(uuid("00000000-0000-0000-0000-111111111112")) A   // C3121
+{
+};
+int main()
+{
+}
 ```

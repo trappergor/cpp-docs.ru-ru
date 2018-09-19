@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4221 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4221 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e602eb662533207a1f2957d3b11a0823e4b83af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b0804c8b7cb2d059e45fa504334687a796fbe1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056421"
 ---
 # <a name="compiler-warning-level-4-c4221"></a>Предупреждение компилятора (уровень 4) C4221
-использовано нестандартное расширение: «идентификатор»: не удается инициализировать с помощью адреса автоматической переменной  
-  
- С расширениями по умолчанию Майкрософт (/Ze) можно инициализировать агрегированный тип (**массива**, `struct`, или **объединение**) адрес локальной переменной (автоматический).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// C4221.c  
-// compile with: /W4  
-struct S  
-{  
-   int *i;  
-};  
-  
-void func()  
-{  
-   int j;  
-   struct S s1 = { &j };   // C4221  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
- Подобная инициализация не допускается в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+использовано нестандартное расширение: «идентификатор»: не удается инициализировать с помощью адреса автоматической переменной
+
+С помощью расширения Microsoft по умолчанию (/Ze), можно инициализировать Агрегатный тип (**массива**, `struct`, или **объединение**) адрес локальной переменной (автоматический).
+
+## <a name="example"></a>Пример
+
+```
+// C4221.c
+// compile with: /W4
+struct S
+{
+   int *i;
+};
+
+void func()
+{
+   int j;
+   struct S s1 = { &j };   // C4221
+}
+
+int main()
+{
+}
+```
+
+Подобная инициализация не допускается в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

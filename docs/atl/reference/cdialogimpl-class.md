@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1780a4f77cce4812ebdb03ebc89936da0dc0d5d0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068446"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-класс
 
@@ -51,10 +51,10 @@ template <class T,
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `CDialogImpl`.
 
-*TBase*  
+*TBase*<br/>
 Базовый класс для нового класса. По умолчанию используется базовый класс [CWindow](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Участники
@@ -113,7 +113,7 @@ template <class T,
 
 Создает немодальное диалоговое окно.
 
-```  
+```
 HWND Create(
     HWND hWndParent,  
     LPARAM dwInitParam = NULL );  
@@ -121,18 +121,17 @@ HWND Create(
 HWND Create(
     HWND hWndParent,  
     RECT&, 
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Дескриптор окна-владельца.
 
-**RECT &** *rect*  
-[in] Объект [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий размер и положение диалогового окна.
+**RECT &** *rect* [in] объект [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий размер и положение диалогового окна.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -173,16 +172,16 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор в диалоговое окно.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Сообщение, отправленное в диалоговое окно.
 
-*wParam*  
+*wParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lParam*  
+*lParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -199,18 +198,18 @@ static LRESULT CALLBACK DialogProc(
 
 Создает модальное диалоговое окно.
 
-```   
+```
 INT_PTR DoModal(  
     HWND hWndParent = ::GetActiveWindow(),   
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Дескриптор окна-владельца. Значение по умолчанию — возвращаемое значение [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) функции Win32.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -227,13 +226,13 @@ INT_PTR DoModal(
 
 Уничтожает модальное диалоговое окно.
 
-```   
-BOOL EndDialog(int nRetCode); 
+```
+BOOL EndDialog(int nRetCode);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] Значение, возвращаемое по [CDialogImpl::DoModal](#domodal).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -251,8 +250,8 @@ BOOL EndDialog(int nRetCode);
 
 Возвращает `DialogProc`, процедура текущего диалогового окна.
 
-```   
-virtual WNDPROC GetDialogProc(); 
+```
+virtual WNDPROC GetDialogProc();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -267,13 +266,13 @@ virtual WNDPROC GetDialogProc();
 
 Преобразует единицы (maps) единицы указанного прямоугольника на экран диалогового окна (в пикселях).
 
-```   
-BOOL MapDialogRect(LPRECT lpRect); 
+```
+BOOL MapDialogRect(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lpRect*  
+*lpRect*<br/>
 Указывает на `CRect` объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры, который принимает клиентских координат элемента обновление, которое включает в область обновления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -288,13 +287,13 @@ BOOL MapDialogRect(LPRECT lpRect);
 
 Вызывается после получения последнего сообщения (обычно `WM_NCDESTROY`).
 
-```   
-virtual void OnFinalMessage(HWND hWnd); 
+```
+virtual void OnFinalMessage(HWND hWnd);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна уничтожения.
 
 ### <a name="remarks"></a>Примечания
@@ -305,26 +304,26 @@ virtual void OnFinalMessage(HWND hWnd);
 
 Вызывается только один раз, при получении первого сообщения, для обработки сообщений, отправляемых в диалоговое окно.
 
-```   
+```
 static LRESULT CALLBACK StartDialogProc(
     HWND hWnd,  
     UINT uMsg,  
     WPARAM wParam,  
-    LPARAM lParam); 
+    LPARAM lParam);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор в диалоговое окно.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Сообщение, отправленное в диалоговое окно.
 
-*wParam*  
+*wParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lParam*  
+*lParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -337,5 +336,5 @@ static LRESULT CALLBACK StartDialogProc(
 
 ## <a name="see-also"></a>См. также
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

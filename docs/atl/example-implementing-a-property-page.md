@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046255"
 ---
 # <a name="example-implementing-a-property-page"></a>Пример: Реализация страницы свойств
 
@@ -153,25 +153,25 @@ ms.locfileid: "43759334"
 После создания проекта, вы можете проверить страницу свойств и вспомогательный объект, с помощью простой макрос, который можно создать и запустить в среде разработки Visual Studio. Этот макрос создает вспомогательный объект, а затем вызвать его `ShowPage` метод, используя идентификатор ProgID **DocProperties** страницу свойств и `IUnknown` указатель документа, активного в редакторе Visual Studio. Ниже приведен код, необходимый для этого макроса:
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 При запуске этот макрос, страницы свойств будет отображаться отображается имя файла и его состояние только для чтения текущей активной текстового документа. Состояние только для чтения документа только отражает возможность записи в документ в среде разработки; он не влияет на атрибут только для чтения файла на диске.
 
 ## <a name="see-also"></a>См. также
 
-[Страницы свойств](../atl/atl-com-property-pages.md)   
+[Страницы свойств](../atl/atl-com-property-pages.md)<br/>
 [Пример ATLPages](../visual-cpp-samples.md)

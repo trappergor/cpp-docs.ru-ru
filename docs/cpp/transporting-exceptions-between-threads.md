@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c76d582a6bd30c5fa3f9285bc96853f7e9d162
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46cdf86d431b69704b5a67fea3024365470de945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066368"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Перенос исключений между потоками
 
@@ -50,7 +50,7 @@ namespace std
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Этот атрибут не задан*|Неуказанный внутренний класс, используемый для реализации типа `exception_ptr`.|
 |*p*|Объект `exception_ptr`, который ссылается на исключение.|
@@ -265,6 +265,7 @@ exception_ptr 1: Caught a  myException exception.
 **Заголовок:** \<exception>
 
 ## <a name="see-also"></a>См. также
- [Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)  
- [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md)  
- [/clr (компиляция среды выполнения)](../build/reference/clr-common-language-runtime-compilation.md)
+
+[Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)<br/>
+[/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md)<br/>
+[/clr (компиляция среды выполнения)](../build/reference/clr-common-language-runtime-compilation.md)

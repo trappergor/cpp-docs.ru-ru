@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3012 | Документы Microsoft
+title: Ошибка компилятора C3012 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d30a7fbb50a984c8cec6b45a0ab4759a0578de7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99bdac5ffb75978479ae7ef420a48b3d1b2f8e64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063675"
 ---
 # <a name="compiler-error-c3012"></a>Ошибка компилятора C3012
-  
-> "*встроенная функция*": подставляемая функция непосредственно внутри параллельной области не допускается  
-  
- Объект [встроенные функции компилятора](../../intrinsics/compiler-intrinsics.md) функции не допускается в `omp parallel` области. Чтобы устранить эту проблему, переместите встроенные объекты из области или замените невстроенный эквиваленты.   
-  
-## <a name="example"></a>Пример  
-  
- Следующий пример приводит к возникновению ошибки C3012 и показано, как исправить эту ошибку:  
-  
-```cpp  
-// C3012.cpp  
-// compile with: /openmp  
-#ifdef __cplusplus  
-extern "C" {  
-#endif  
-void* _ReturnAddress();  
-#ifdef __cplusplus  
-}  
-#endif  
-  
-int main()  
-{  
-   #pragma omp parallel  
-   {  
-      _ReturnAddress();   // C3012  
-   }  
-   _ReturnAddress();      // OK  
-}  
+
+> "*внутренние*": встроенная функция, не допускается непосредственно внутри параллельной области
+
+Объект [Внутренняя функция компилятора](../../intrinsics/compiler-intrinsics.md) функция недопустима в `omp parallel` регион. Чтобы устранить эту проблему, встроенные функции можно вывести из области или замените невстроенный эквиваленты.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3012 и показан один из способов ее устранения:
+
+```cpp
+// C3012.cpp
+// compile with: /openmp
+#ifdef __cplusplus
+extern "C" {
+#endif
+void* _ReturnAddress();
+#ifdef __cplusplus
+}
+#endif
+
+int main()
+{
+   #pragma omp parallel
+   {
+      _ReturnAddress();   // C3012
+   }
+   _ReturnAddress();      // OK
+}
 ```

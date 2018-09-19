@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b36f19cc6e3deddbd5984e63b70c61a0ca8ea8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e776fd88799999ce175ba2efc137fc0353cbe65a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762773"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068472"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Класс CComDynamicUnkArray
 
@@ -93,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 `IUnknown` Указатель, чтобы добавить в массив.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -174,7 +174,7 @@ IUnknown* GetAt(int nIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс извлекаемого элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -191,7 +191,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>Параметры
 
-*ppFind*  
+*ppFind*<br/>
 `IUnknown` Указатель, для которого необходим соответствующий файл cookie.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -224,7 +224,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>Параметры
 
-*dwCookie*  
+*dwCookie*<br/>
 Файл cookie, для которого связанного `IUnknown` указатель является обязательным.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -241,7 +241,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>Параметры
 
-*dwCookie*  
+*dwCookie*<br/>
 Ссылка на файл cookie `IUnknown` указатель, который необходимо удалить из массива.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -250,5 +250,5 @@ BOOL Remove(DWORD dwCookie);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComUnkArray](../../atl/reference/ccomunkarray-class.md)   
+[Класс CComUnkArray](../../atl/reference/ccomunkarray-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

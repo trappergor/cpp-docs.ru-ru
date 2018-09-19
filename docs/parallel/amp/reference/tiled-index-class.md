@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069421"
 ---
 # <a name="tiledindex-class"></a>Класс tiled_index
 Предоставляет индекс в [tiled_extent](tiled-extent-class.md) объекта. Этот класс содержит свойства для доступа к элементам относительно локального начального положения плитки и относительно глобального начального положения. Дополнительные сведения о замощенных пространствах см. в разделе [с помощью плитки](../../../parallel/amp/using-tiles.md).  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_Dim0`  
- Длина самого значительного измерения.  
+*_Dim0*<br/>
+Длина самого значительного измерения.  
   
- `_Dim1`  
- Длина измерения, следующего за самым значительным измерением.  
+*_Dim1*<br/>
+Длина измерения, следующего за самым значительным измерением.  
   
- `_Dim2`  
- Длина наименее значительного измерения.  
+*_Dim2*<br/>
+Длина наименее значительного измерения.  
   
 ## <a name="members"></a>Участники  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_Global`  
- Глобальный [индекс](index-class.md) построенного `tiled_index`.  
+*_Global*<br/>
+Глобальный [индекс](index-class.md) построенного `tiled_index`.  
   
- `_Local`  
- Локальный [индекс](index-class.md) построенного `tiled_index`  
+*_Локальный*<br/>
+Локальный [индекс](index-class.md) построенного `tiled_index`  
   
- `_Tile`  
- Плитка [индекс](index-class.md) построенного `tiled_index`  
+*_Tile*<br/>
+Плитка [индекс](index-class.md) построенного `tiled_index`  
   
- `_Tile_origin`  
- Начального положения плитки [индекс](index-class.md) построенного `tiled_index`  
+*_Tile_origin*<br/>
+Начального положения плитки [индекс](index-class.md) построенного `tiled_index`  
   
- `_Barrier`  
- [Tile_barrier](tile-barrier-class.md) построенного `tiled_index`.  
+*_Barrier*<br/>
+[Tile_barrier](tile-barrier-class.md) построенного `tiled_index`.  
   
- `_Other`  
- `tile_index` Который необходимо скопировать в построенный `tiled_index`.  
+*_Другое*<br/>
+`tile_index` Который необходимо скопировать в построенный `tiled_index`.  
   
 ## <a name="overloads"></a>Overloads  
   

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3209 | Документы Microsoft
+title: Ошибка компилятора C3209 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9723d444fb90ea4a8bbaac89f5fffd923ea75a76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5df31170578c2462c3e437d6eb7f65d6b76af8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254515"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048413"
 ---
 # <a name="compiler-error-c3209"></a>Ошибка компилятора C3209
-«класс»: универсальный класс должен быть управляемого типа или WinRTclass  
-  
- Универсальный класс должен быть управляемым классом или классом среды выполнения Windows.  
-  
- В следующем примере показано возникновение ошибки C3209 и приводятся сведения по ее устранению.  
-  
-```  
-// C3209.cpp  
-// compile with: /clr  
-generic <class T>  
-class C {};   // C3209  
-  
-// OK - ref class can be generic  
-generic <class T>  
-ref class D {};  
+
+«класс»: универсальный класс должен быть управляемым или WinRTclass
+
+Универсальный класс должен быть управляемым классом или классом среды выполнения Windows.
+
+В следующем примере показано возникновение ошибки C3209 и приводятся сведения по ее устранению.
+
+```
+// C3209.cpp
+// compile with: /clr
+generic <class T>
+class C {};   // C3209
+
+// OK - ref class can be generic
+generic <class T>
+ref class D {};
 ```

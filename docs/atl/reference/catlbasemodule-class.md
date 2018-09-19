@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067edba7bc0a8819925af533dd48a34c6f6e4536
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c4b3c7d53e3500b5dd97fdbd49e4006916cd1a80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767755"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055459"
 ---
 # <a name="catlbasemodule-class"></a>Класс CAtlBaseModule
 
@@ -93,7 +93,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hInst*  
+*hInst*<br/>
 Добавьте экземпляр ресурса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -122,7 +122,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*i*  
+*i*<br/>
 Номер экземпляра ресурса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -175,7 +175,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hInst*  
+*hInst*<br/>
 Удаляемый экземпляр ресурса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -192,7 +192,7 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hInst*  
+*hInst*<br/>
 Новый экземпляр ресурса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -201,5 +201,5 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Модульные классы](../../atl/atl-module-classes.md)

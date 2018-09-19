@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4543 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 3) C4543 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434f6ce0a1f57e144bd4f58d2f19c4f3639fb66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f0c076da0beb765a84485968dd57f72abb9824
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075472"
 ---
 # <a name="compiler-warning-level-3-c4543"></a>Предупреждение компилятора (уровень 3) C4543
-Подставляемый текст запрещен атрибутом «no_injected_text»  
-  
- [No_injected_text](../../windows/no-injected-text.md) появился атрибут в исходном коде, то есть компилятор сделает невозможным атрибуты встраивать код.  
-  
- Это предупреждение носит с сообщением о том, что атрибуты нельзя будет вставку кода.
+
+Подставляемый текст запрещен атрибутом «no_injected_text»
+
+[No_injected_text](../../windows/no-injected-text.md) появился атрибут в исходном коде, который означает, что компилятор не позволит атрибуты вставку кода.
+
+Это предупреждение является напомнить, что атрибуты не сможете ввести код.

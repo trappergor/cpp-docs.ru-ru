@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3e6809a8204b9a2380e896e4e458512e79fa2b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054510"
 ---
 # <a name="csimplearray-class"></a>Класс CSimpleArray
 
@@ -40,16 +40,16 @@ ms.locfileid: "43766666"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, class TEqual = CSimpleArrayEqualHelper<T>>  
+template <class T, class TEqual = CSimpleArrayEqualHelper<T>>
 class CSimpleArray
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип данных для хранения в массиве.
 
-*TEqual*  
+*TEqual*<br/>
 Объект признак, определяющий тест на равенство для элементов типа *T*.
 
 ## <a name="members"></a>Участники
@@ -107,7 +107,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>Параметры
 
-*t*  
+*t*<br/>
 Элемент, добавляемый в массив.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -123,13 +123,13 @@ BOOL Add(const T& t);
 Конструктор для объекта-массива.
 
 ```
-CSimpleArray(const CSimpleArray<T, TEqual>& src);  
+CSimpleArray(const CSimpleArray<T, TEqual>& src);
 CSimpleArray();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*src*  
+*src*<br/>
 Существующий объект `CSimpleArray`.
 
 ### <a name="remarks"></a>Примечания
@@ -158,7 +158,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>Параметры
 
-*t*  
+*t*<br/>
 Элемент, который требуется найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -203,7 +203,7 @@ T& operator[](int nindex);
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -226,7 +226,7 @@ CSimpleArray<T, TEqual>
 
 ### <a name="parameters"></a>Параметры
 
-*src*  
+*src*<br/>
 Массив для копирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -251,7 +251,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>Параметры
 
-*t*  
+*t*<br/>
 Элемент, удаляемый из массива.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -284,7 +284,7 @@ BOOL RemoveAtint nIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс, указывающий на элемент для удаления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -307,10 +307,10 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс элемента, который требуется изменить.
 
-*t*  
+*t*<br/>
 Значение, присваиваемое указанному элементу.
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1282 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1282 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6640f288bef2601bedeb33fa9fad4b2f3e4389f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d00c23eab3e21064076b9bd8663b0c3a593d997b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057103"
 ---
 # <a name="linker-tools-error-lnk1282"></a>Ошибка средств компоновщика LNK1282
-не удается применить параметр/REBASE файл; файл подписан  
-  
- Предпринята попытка изменить базовый адрес подписанной сборки с помощью параметра/REBASE [editbin](../../build/reference/editbin-reference.md). Для этого сначала изменить базовый адрес и затем подписать сборку.
+
+не удается/REBASE-файл; файл подписан
+
+Была предпринята попытка изменить базовый адрес подписанной сборки с помощью параметра/REBASE [editbin](../../build/reference/editbin-reference.md). Чтобы сделать это, сначала изменить базовый адрес и затем подписать сборку.

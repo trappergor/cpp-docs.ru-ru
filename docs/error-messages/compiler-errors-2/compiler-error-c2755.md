@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2755 | Документы Microsoft
+title: Ошибка компилятора C2755 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a018554de91003b54ffc403f1527ca07f2d4a75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56ecf997df2aeb1a41b5021d61b24073e871b55f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064924"
 ---
 # <a name="compiler-error-c2755"></a>Ошибка компилятора C2755
-«параметр»: параметр частичной специализации не являющийся типом должен быть простым идентификатором  
-  
- Параметр не является типом должен быть простым идентификатором, то, что компилятор может разрешить во время компиляции один идентификатор или значение константы.  
-  
- Следующий пример приводит к возникновению ошибки C2755:  
-  
-```  
-// C2755.cpp  
-template<int I, int J>  
-struct A {};  
-  
-template<int I>   
-struct A<I,I*5> {};   // C2755  
-// try the following line instead  
-// struct A<I,5> {};  
+
+«параметр»: параметр частичной специализации не являющегося типом должен быть простым идентификатором
+
+Параметр не являющегося типом должен быть простым идентификатором, то, что компилятор может разрешить во время компиляции один идентификатор или значение константы.
+
+Следующий пример приводит к возникновению ошибки C2755:
+
+```
+// C2755.cpp
+template<int I, int J>
+struct A {};
+
+template<int I>
+struct A<I,I*5> {};   // C2755
+// try the following line instead
+// struct A<I,5> {};
 ```

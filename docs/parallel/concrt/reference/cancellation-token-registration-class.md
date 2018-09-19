@@ -1,5 +1,5 @@
 ---
-title: Класс cancellation_token_registration | Документы Microsoft
+title: Класс cancellation_token_registration | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe11e2697734d06988f4cbcfce48f38cf02c32b7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cf803fbd35071a7a7100e3267dcf1bfa8b91e9f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687144"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059605"
 ---
 # <a name="cancellationtokenregistration-class"></a>Класс cancellation_token_registration
 Класс `cancellation_token_registration` представляет уведомление обратного вызова из `cancellation_token`. При использовании метода `register` на `cancellation_token` для получения уведомления о времени выполнения отмены объект `cancellation_token_registration` возвращается как дескриптор для обратного вызова, чтобы вызывающий код мог запросить, чтобы определенный обратный вызов больше не выполнялся с помощью метода `deregister`.  
@@ -76,8 +76,9 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration` Для копирования или перемещения.
+ 
 ##  <a name="operator_neq"></a> оператор! = 
 
 ```
@@ -85,8 +86,9 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Rhs`  
-  
+*_Rhs*<br/>
+Сравниваемый шаблон `cancellation_token_registration`.
+ 
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ##  <a name="operator_eq"></a> оператор = 
@@ -98,8 +100,9 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration` Для назначения.
+ 
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ##  <a name="operator_eq_eq"></a> оператор == 
@@ -109,8 +112,9 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Rhs`  
-  
+*_Rhs*<br/>
+Сравниваемый шаблон `cancellation_token_registration`.
+ 
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ## <a name="see-also"></a>См. также  
