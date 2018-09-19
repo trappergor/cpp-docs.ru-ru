@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3799 | Документы Microsoft
+title: Ошибка компилятора C3799 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5e13e1e92b3f821ffbed62b06bd601baac7aad9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1022a2a1f5c5bb6279fc4af0acedbf28d7723aa6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267307"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105340"
 ---
 # <a name="compiler-error-c3799"></a>Ошибка компилятора C3799
-индексированные свойства не может быть пустой список параметров  
-  
-Индексированное свойство объявлено неправильно. Дополнительные сведения см. в разделе [как: используйте свойства в C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
-  
-## <a name="example"></a>Пример  
-Следующий пример приводит к возникновению ошибки C3799 и приводятся сведения по ее устранению.  
-  
-```cpp  
-// C3799.cpp  
-// compile with: /clr /c  
-ref struct C {  
-   property int default[] {   // C3799  
-   // try the following line instead  
-   // property int default[int] {  
-      int get(int index) { return 0; }  
-      void set(int index, int value) {}  
-   }  
-};  
+
+индексированные свойства не может иметь пустой список параметров
+
+Индексированное свойство объявлено неправильно. Дополнительные сведения см. в разделе [как: используйте свойства в C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3799 и показано, как ее исправить.
+
+```cpp
+// C3799.cpp
+// compile with: /clr /c
+ref struct C {
+   property int default[] {   // C3799
+   // try the following line instead
+   // property int default[int] {
+      int get(int index) { return 0; }
+      void set(int index, int value) {}
+   }
+};
 ```

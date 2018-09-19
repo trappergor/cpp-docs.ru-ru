@@ -1,5 +1,5 @@
 ---
-title: Класс invalid_scheduler_policy_key | Документы Microsoft
+title: Класс invalid_scheduler_policy_key | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b78bc955b43f3b6650f7a2fe654e5920c9cac971
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1e7dc90ce1ff04d3d02aed13927f137a2b4f7f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113296"
 ---
 # <a name="invalidschedulerpolicykey-class"></a>Класс invalid_scheduler_policy_key
 Этот класс описывает исключение, создаваемое, когда конструктору объекта `SchedulerPolicy` передается неверный или неизвестный ключ или методу `SetPolicyValue` объекта `SchedulerPolicy` передается ключ, который должен быть изменен другими средствами, такими как метод `SetConcurrencyLimits`.  
@@ -63,8 +63,8 @@ invalid_scheduler_policy_key() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   

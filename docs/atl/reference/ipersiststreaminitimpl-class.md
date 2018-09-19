@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31e8c712ef7c395570912224f75036e6249b431
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 85e772b9222f2066259042e551fa393758559ab2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115883"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Класс IPersistStreamInitImpl
 
@@ -42,14 +42,14 @@ ms.locfileid: "43761973"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IPersistStreamInitImpl 
    : public IPersistStreamInit
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IPersistStreamInitImpl`.
 
 ## <a name="members"></a>Участники
@@ -163,5 +163,5 @@ ATL использует сопоставление свойств объект�
 
 ## <a name="see-also"></a>См. также
 
-[Хранилищ и потоков](/windows/desktop/Stg/storages-and-streams)   
+[Хранилищ и потоков](/windows/desktop/Stg/storages-and-streams)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

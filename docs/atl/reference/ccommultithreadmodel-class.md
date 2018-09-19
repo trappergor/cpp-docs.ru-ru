@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33eac78dc871dd2a9869452bc829150c3356fd0a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6861f19e6b785ac72edec54577b92dea0c307bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100608"
 ---
 # <a name="ccommultithreadmodel-class"></a>Класс CComMultiThreadModel
 
@@ -99,7 +99,7 @@ typedef CComAutoCriticalSection AutoCriticalSection;
 
 Следующий код моделируется [CComObjectRootEx](ccomobjectrootex-class.md)и демонстрирует `AutoCriticalSection` , используемых в среде потоков.
 
-```cpp  
+```cpp
 template<class ThreadModel>
 class CMyAutoCritClass
 {
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 [in] Указатель на переменную на единицу.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -196,7 +196,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 [in] Указатель на переменную для увеличения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -233,7 +233,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComSingleThreadModel](ccomsinglethreadmodel-class.md)   
-[Класс CComAutoCriticalSection](ccomautocriticalsection-class.md)   
-[Класс CComCriticalSection](ccomcriticalsection-class.md)   
+[Класс CComSingleThreadModel](ccomsinglethreadmodel-class.md)<br/>
+[Класс CComAutoCriticalSection](ccomautocriticalsection-class.md)<br/>
+[Класс CComCriticalSection](ccomcriticalsection-class.md)<br/>
 [Общие сведения о классе](../atl-class-overview.md)

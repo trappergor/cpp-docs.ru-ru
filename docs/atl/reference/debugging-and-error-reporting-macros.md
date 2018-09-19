@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef417232d62c664b4943a2198ae351a5c443b089
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763751"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136170"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы отладки и отчеты об ошибках
 
@@ -97,7 +97,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>Параметры
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Выражение (включая указатели), результат вычисления которого отличен от нуля или равен нулю.
 
 ### <a name="remarks"></a>Примечания
@@ -119,10 +119,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>Параметры
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Указывает логическое выражение, проверяемое.
 
-*hr*  
+*hr*<br/>
 Указывает код ошибки для возврата.
 
 ### <a name="remarks"></a>Примечания
@@ -155,7 +155,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>Параметры
 
-*имя функции*  
+*имя функции*<br/>
 [in] Строка, содержащая имя функции, которая не определена.
 
 ### <a name="remarks"></a>Примечания
@@ -185,16 +185,16 @@ ATLTRACE(
 
 ### <a name="parameters"></a>Параметры
 
-*exp*  
+*exp*<br/>
 [in] Строка и переменные для отправки в окне вывода Visual C++ или любого приложения, который перехватывает эти сообщения.
 
-*category*  
+*category*<br/>
 [in] Тип события или метода, на котором в отчет. См. в разделе "Примечания" для списка категорий.
 
-*level*  
+*level*<br/>
 [in] Уровень трассировки для отчета. См. в разделе "Примечания" Дополнительные сведения.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] Форматированная строка для отправки на устройство дампа.
 
 ### <a name="remarks"></a>Примечания
@@ -216,16 +216,16 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>Параметры
 
-*exp*  
+*exp*<br/>
 [in] Строка, для отправки в окне вывода Visual C++ или любого приложения, который перехватывает эти сообщения.
 
-*category*  
+*category*<br/>
 [in] Тип события или метода, на котором в отчет. См. в разделе "Примечания" для списка категорий.
 
-*level*  
+*level*<br/>
 [in] Уровень трассировки для отчета. См. в разделе "Примечания" Дополнительные сведения.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] `printf`-Стиля строку формата для использования, чтобы создать строку для отправки на устройство дампа.
 
 ### <a name="remarks"></a>Примечания
@@ -295,5 +295,5 @@ ATLTRACE и ATLTRACE2 ведут себя так же, ATLTRACE включена
 
 ## <a name="see-also"></a>См. также
 
-[Макросы](../../atl/reference/atl-macros.md)   
+[Макросы](../../atl/reference/atl-macros.md)<br/>
 [Глобальные функции для отладки и создания отчетов об ошибках](../../atl/reference/debugging-and-error-reporting-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Класс critical_section | Документы Microsoft
+title: Класс critical_section | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cbffd14bdde45c3d6124eb5f982b90c92f64f47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136222"
 ---
 # <a name="criticalsection-class"></a>Класс critical_section
 Не допускающий повторные входы мьютекс, который явно учитывает среду выполнения с параллелизмом.  
@@ -52,7 +52,7 @@ class critical_section;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Класс critical_section::scoped_lock](#critical_section__scoped_lock_class)|Исключение безопасном программой-оболочкой RAII для `critical_section` объекта.|  
+|[Класс critical_section::scoped_lock](#critical_section__scoped_lock_class)|Исключение безопасная оболочка RAII для `critical_section` объекта.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
@@ -99,9 +99,9 @@ critical_section();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Ожидается, что больше не блокировки при выполнении деструктора. По-прежнему уничтожение критического раздела приводит к неопределенному блокировки удерживаются результатов к неопределенному поведению.  
+ Предполагается, что больше не блокировку при выполнении деструктора. По-прежнему позволяя критический раздел для уничтожения с блокировкой содержатся результаты в приведет к неопределенному поведению.  
   
-##  <a name="lock"></a> Блокировка 
+##  <a name="lock"></a> Блокировки 
 
  Получает данную критическую секцию.  
   
@@ -110,9 +110,9 @@ void lock();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Часто безопаснее использовать [scoped_lock](#critical_section__scoped_lock_class) конструкцию, чтобы получить и освободить `critical_section` объекта к исключению безопасным способом.  
+ Часто лучше использовать [scoped_lock](#critical_section__scoped_lock_class) конструкции для получения и освобождения `critical_section` объекта к исключению безопасным способом.  
   
- Если блокировка уже захвачена вызывающий контекст [improper_lock](improper-lock-class.md) будет создано исключение.  
+ Если вызывающий контекст уже удерживается блокировка [improper_lock](improper-lock-class.md) будет создано исключение.  
   
 ##  <a name="native_handle"></a> native_handle 
 
@@ -126,10 +126,10 @@ native_handle_type native_handle();
  Ссылка на критический раздел.  
   
 ### <a name="remarks"></a>Примечания  
- Объект `critical_section` объект не связан с определенного собственного дескриптора платформы для операционной системы Windows. Метод просто возвращает ссылку на сам объект.  
+ Объект `critical_section` объект не связан с определенной собственный дескриптор платформы для операционной системы Windows. Метод просто возвращает ссылку на сам объект.  
   
 ##  <a name="critical_section__scoped_lock_class"></a>  Класс critical_section::scoped_lock  
- Исключение безопасном программой-оболочкой RAII для `critical_section` объекта.  
+ Исключение безопасная оболочка RAII для `critical_section` объекта.  
   
 ```
 class scoped_lock;
@@ -144,12 +144,12 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Critical_section`  
- Критической секции для блокировки.  
+*_Critical_section*<br/>
+Критический раздел для блокировки.  
   
 ##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
- Уничтожает `scoped_lock` объекта и освобождает критический раздел, переданную в конструкторе.  
+ Уничтожает `scoped_lock` объект и освобождает критический раздел, переданную в конструкторе.  
   
 ```
 ~scoped_lock();
@@ -164,7 +164,7 @@ bool try_lock();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если была получена блокировка, значение `true`; в противном случае — значение `false`.  
+ Если блокировка была получена, значение `true`; в противном случае значение `false`.  
   
 ##  <a name="try_lock_for"></a> try_lock_for 
 
@@ -175,13 +175,13 @@ bool try_lock_for(unsigned int _Timeout);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Timeout`  
- Количество миллисекунд перед истечением времени ожидания.  
+*_Время ожидания*<br/>
+Количество миллисекунд перед истечением времени ожидания.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если была получена блокировка, значение `true`; в противном случае — значение `false`.  
+ Если блокировка была получена, значение `true`; в противном случае значение `false`.  
   
-##  <a name="unlock"></a> Снятие блокировки 
+##  <a name="unlock"></a> разблокировать 
 
  Снимает блокировку критической секции.  
   

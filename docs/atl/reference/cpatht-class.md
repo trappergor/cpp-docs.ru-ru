@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60541891832a3d466f7396086ac0918108991582
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d95a8f6b28b638b65191bc04ad094cc128f7b247
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080315"
 ---
 # <a name="cpatht-class"></a>Класс CPathT
 
@@ -82,7 +82,7 @@ class CPathT
 
 #### <a name="parameters"></a>Параметры
 
-*StringType*  
+*StringType*<br/>
 Класс string ATL и MFC для пути (см. в разделе [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Участники
@@ -194,7 +194,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Параметры
 
-*pszExtension*  
+*pszExtension*<br/>
 Чтобы добавить расширение файла.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -215,7 +215,7 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Параметры
 
-*pszMore*  
+*pszMore*<br/>
 Добавляемая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -236,7 +236,7 @@ void BuildRoot(int iDrive);
 
 ### <a name="parameters"></a>Параметры
 
-*iDrive*  
+*iDrive*<br/>
 Номер (0 — ответ, 1 — б и т. д.).
 
 ### <a name="remarks"></a>Примечания
@@ -265,10 +265,10 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 ### <a name="parameters"></a>Параметры
 
-*pszDir*  
+*pszDir*<br/>
 Путь к каталогу.
 
-*pszFile*  
+*pszFile*<br/>
 Путь к файлу.
 
 ### <a name="remarks"></a>Примечания
@@ -285,7 +285,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>Параметры
 
-*pszOther*  
+*pszOther*<br/>
 Путь для сравнения с текущей.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -306,10 +306,10 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>Параметры
 
-*hDC*  
+*hDC*<br/>
 Контекст устройства, используемые для метрик шрифтов.
 
-*nWidth*  
+*nWidth*<br/>
 Ширина в пикселях, будут вынуждены помещаются в строку.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -330,10 +330,10 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*nMaxChars*  
+*nMaxChars*<br/>
 Максимальное число символов, которые должны содержаться в новую строку, включая завершающий нуль-символ.
 
-*dwFlags*  
+*dwFlags*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -356,10 +356,10 @@ CPathT() throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pszPath*  
+*pszPath*<br/>
 Указатель на строку пути.
 
-*path*  
+*path*<br/>
 Строка пути.
 
 ##  <a name="fileexists"></a>  CPathT::FileExists
@@ -480,7 +480,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pszPrefix*  
+*pszPrefix*<br/>
 Префикс, который требуется найти. Префикс является одним из этих типов: «C:\\\\«,». «,».. «,».. \\\\".
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -533,7 +533,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pszOther*  
+*pszOther*<br/>
 По другому пути.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -630,7 +630,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pszSpec*  
+*pszSpec*<br/>
 Указатель на заканчивающуюся нулем строку, с типом файла, который требуется найти. Например, чтобы проверить, является ли файл в текущем пути DOC-файл *pszSpec* следует установить значение «* .doc».
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -651,7 +651,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Параметры
 
-*pszMore*  
+*pszMore*<br/>
 Добавляемая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -744,16 +744,16 @@ BOOL RelativePathTo(
 
 ### <a name="parameters"></a>Параметры
 
-*pszFrom*  
+*pszFrom*<br/>
 Начало относительного пути.
 
-*dwAttrFrom*  
+*dwAttrFrom*<br/>
 Атрибуты файла *pszFrom*. Если это значение содержит FILE_ATTRIBUTE_DIRECTORY, *pszFrom* принятой является каталогом; в противном случае, *pszFrom* предполагается, что в файл.
 
-*pszTo*  
+*pszTo*<br/>
 Конечная точка относительного пути.
 
-*dwAttrTo*  
+*dwAttrTo*<br/>
 Атрибуты файла *pszTo*. Если это значение содержит FILE_ATTRIBUTE_DIRECTORY, *pszTo* принятой является каталогом; в противном случае, *pszTo* предполагается, что в файл.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -838,7 +838,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Параметры
 
-*pszExtension*  
+*pszExtension*<br/>
 Новое расширение имени файла, предшествует «.» символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -919,5 +919,5 @@ typedef StringType::XCHAR XCHAR;
 
 ## <a name="see-also"></a>См. также
 
-[Классы](../../atl/reference/atl-classes.md)   
+[Классы](../../atl/reference/atl-classes.md)<br/>
 [Класс CStringT](../../atl-mfc-shared/reference/cstringt-class.md)

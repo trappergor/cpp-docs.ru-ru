@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2617 | Документы Microsoft
+title: Ошибка компилятора C2617 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf84ec0de54b96800d56086c79dc5ff5f82b59e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14435dd5620a144f1b1dd53836c583acefe309c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231794"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109877"
 ---
 # <a name="compiler-error-c2617"></a>Ошибка компилятора C2617
-«функция»: несовместимый оператор return  
-  
- Указанная функция не имеет объявленный тип возвращаемого значения, а предыдущий возвращаемое значение не предоставлено инструкции.  
-  
- Следующий пример приводит к возникновению ошибки C2617:  
-  
-```  
-// C2617.cpp  
-int i;  
-func() {   // no return type prototype  
-   if( i ) return;   // no return value  
-   else return( 1 );   // C2617 detected on this line  
-}  
-```  
-  
- Возможное решение  
-  
-```  
-// C2617b.cpp  
-// compile with: /c  
-int i;  
-int MyF() {  
-   if (i)  
-      return 0;  
-   else   
-      return (1);  
-}  
+
+«функция»: несовместимый оператор return
+
+Указанная функция не имеет объявленный тип возвращаемого значения, а предыдущий возвращаемое значение не предоставлено инструкции.
+
+Следующий пример приводит к возникновению ошибки C2617:
+
+```
+// C2617.cpp
+int i;
+func() {   // no return type prototype
+   if( i ) return;   // no return value
+   else return( 1 );   // C2617 detected on this line
+}
+```
+
+Возможное решение
+
+```
+// C2617b.cpp
+// compile with: /c
+int i;
+int MyF() {
+   if (i)
+      return 0;
+   else
+      return (1);
+}
 ```

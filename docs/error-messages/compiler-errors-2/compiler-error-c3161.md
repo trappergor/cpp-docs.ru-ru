@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3161 | Документы Microsoft
+title: Ошибка компилятора C3161 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2d7aff3eb41c03f5be774704922340ac54126fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11396ccad33489b41d18759ba4d2f00b445e94a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250707"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136079"
 ---
 # <a name="compiler-error-c3161"></a>Ошибка компилятора C3161
-«интерфейс»: вложенный класс, структура, объединение или интерфейс в интерфейсе недопустимы; недопустимо вложение интерфейса в класс, структура или объединение  
-  
- [__Interface](../../cpp/interface.md) может появиться только в глобальной области видимости в пределах пространства имен. Класс, структура или объединение не может присутствовать в интерфейсе.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C3161.  
-  
-```  
-// C3161.cpp  
-// compile with: /c  
-__interface X {  
-   __interface Y {};   // C3161 A nested interface  
-};  
+
+«интерфейс»: вложенный класс, структура, объединение или интерфейс в интерфейсе является недопустимым; недопустимо вложение интерфейса в класс, структуру или объединение
+
+[__Interface](../../cpp/interface.md) может присутствовать только в глобальной области или в пространстве имен. Класс, структура или объединение не может использоваться в интерфейсе.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3161.
+
+```
+// C3161.cpp
+// compile with: /c
+__interface X {
+   __interface Y {};   // C3161 A nested interface
+};
 ```

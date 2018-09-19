@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d3db2a3d7f673c8e81b1077bcb45e9b8241d37
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113140"
 ---
 # <a name="com-map-global-functions"></a>Глобальные функции сопоставления COM
 
@@ -51,16 +51,16 @@ HRESULT AtlInternalQueryInterface(
 
 ### <a name="parameters"></a>Параметры
 
-*pThis*  
+*pThis*<br/>
 [in] Указатель на объект, содержащий карту COM интерфейсы, предоставляемые в `QueryInterface`.
 
-*pEntries*  
+*pEntries*<br/>
 [in] Массив `_ATL_INTMAP_ENTRY` структур, которые обращаются к карту доступных интерфейсов.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID запрашиваемого интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, заданный в *iid*, или значение NULL, если интерфейс не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -85,10 +85,10 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 
 ### <a name="parameters"></a>Параметры
 
-*rguid1*  
+*rguid1*<br/>
 [in] Идентификатор GUID для сравнения с `IID_IUnknown`.
 
 ## <a name="see-also"></a>См. также
 
-[Функции](../../atl/reference/atl-functions.md)   
+[Функции](../../atl/reference/atl-functions.md)<br/>
 [Макросы сопоставления COM](../../atl/reference/com-map-macros.md)

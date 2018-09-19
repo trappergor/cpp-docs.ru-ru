@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка компилятора ресурсов RC1203 | Документы Microsoft
+title: Неустранимая ошибка компилятора ресурсов RC1203 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5267011eea32929b85e6ca60fb26ea34b2c371
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 638af9b85aecdd4eaba712cee68bf4ec96f3ab56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321510"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081459"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>Неустранимая ошибка компилятора ресурсов RC1203
-недопустимый шестнадцатеричный идентификатор языка по умолчанию указан.  
-  
- Указания языка по умолчанию (/ l) параметра был указан недопустимый шестнадцатеричный идентификатор языка. В разделе [языка и страны или региона строки](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) в *Справочник по библиотеке времени выполнения* список допустимых кодов языков.
+
+недопустимый шестнадцатеричный идентификатор языка по умолчанию указано.
+
+Указания языка по умолчанию (/ l) параметр последовало недопустимым шестнадцатеричным идентификатором языка. См. в разделе [языка и строк страны или региона](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) в *Справочник по библиотеке времени выполнения* список допустимых кодов языков.

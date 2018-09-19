@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4440 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4440 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279c938a1a19fc0001923631415fee7b140399c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e91479ee3e6562338a18ca482c319acb0e1647ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088336"
 ---
 # <a name="compiler-warning-level-1-c4440"></a>Предупреждение компилятора (уровень 1) C4440
-вызов переопределения соглашения о «calling_convention1» в «соглашение о вызове 2» игнорируется  
-  
- Попытка изменить соглашение о вызовах пропущено.  
-  
- Следующий пример приводит к возникновению ошибки C4440:  
-  
-```  
-// C4440.cpp  
-// compile with: /W1 /LD /clr  
-typedef void __clrcall F();  
-typedef F __cdecl *PFV;   // C4440  
+
+вызов переопределения соглашения о «calling_convention1» для «соглашение о вызове 2» игнорируется
+
+При попытке изменить соглашение о вызове был пропущен.
+
+Следующий пример приводит к возникновению ошибки C4440:
+
+```
+// C4440.cpp
+// compile with: /W1 /LD /clr
+typedef void __clrcall F();
+typedef F __cdecl *PFV;   // C4440
 ```

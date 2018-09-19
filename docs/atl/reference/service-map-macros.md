@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cab78f1f35ab003d8457c0e185aa031a112e09
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053717"
 ---
 # <a name="service-map-macros"></a>Макросы сопоставления служб
 
@@ -49,7 +49,7 @@ BEGIN_SERVICE_MAP(theClass)
 
 ### <a name="parameters"></a>Параметры
 
-*theClass*  
+*theClass*<br/>
 [in] Указывает класс, содержащий схемы услуги.
 
 ### <a name="remarks"></a>Примечания
@@ -86,7 +86,7 @@ SERVICE_ENTRY( SID )
 
 ### <a name="parameters"></a>Параметры
 
-*ИД БЕЗОПАСНОСТИ*  
+*ИД БЕЗОПАСНОСТИ*<br/>
 Идентификатор службы.
 
 ### <a name="example"></a>Пример
@@ -103,7 +103,7 @@ SERVICE_ENTRY_CHAIN( punk )
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 Указатель на **IUnknown** интерфейс, к которому цепочки.
 
 ### <a name="example"></a>Пример

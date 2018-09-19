@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4229 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4229 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c82599d414ddfcd3bd75097a32d8bfce31752cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0837942c7701f8349983f4651005123b5ba89232
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118886"
 ---
 # <a name="linker-tools-warning-lnk4229"></a>Предупреждение средств компоновщика LNK4229
-Недопустимая директива/Directive будет найден. обрабатывается  
-  
- Переданные директиве [комментарий](../../preprocessor/comment-c-cpp.md) pragma не является допустимым. Компоновщик не обрабатывает `/directive`.
+
+Недопустимая директива/Directive будет найден. игнорируется
+
+Директива передаваемого через [комментарий](../../preprocessor/comment-c-cpp.md) директива pragma не является допустимым. Компоновщик не обрабатывает `/directive`.

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7e3731132e1b9ed9381a7b97347406b620df70
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 13ddd14ad530fa2b7ce2892ce8838b27e307381f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135780"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Класс IPropertyNotifySinkCP
 
@@ -36,17 +36,17 @@ ms.locfileid: "43759669"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T, class CDV = CComDynamicUnkArray>  
+template<class T, class CDV = CComDynamicUnkArray>
 class IPropertyNotifySinkCP 
    : public IConnectionPointImpl<T, &IID_IPropertyNotifySink, CDV>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IPropertyNotifySinkCP`.
 
-*CDV*  
+*CDV*<br/>
 Класс, который управляет подключениями между точкой подключения и его приемников. Значение по умолчанию — [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), что позволяет неограниченное количество подключений. Можно также использовать [CComUnkArray](../../atl/reference/ccomunkarray-class.md), который задает фиксированное количество подключений.
 
 ## <a name="remarks"></a>Примечания
@@ -65,6 +65,6 @@ class IPropertyNotifySinkCP
 
 ## <a name="see-also"></a>См. также
 
-[Класс IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)   
-[Класс IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
+[Класс IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)<br/>
+[Класс IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

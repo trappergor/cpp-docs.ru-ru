@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51d47764ea4515fcbc2cb3b7aa37fd341cd130e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3d919a810ed93e40218476369ef9981da59b89bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114622"
 ---
 # <a name="spectre"></a>spectre
 
@@ -33,7 +33,7 @@ ms.locfileid: "39463233"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **__declspec (spectre(nomitigation))**  
+> **__declspec (spectre(nomitigation))**
 
 ## <a name="remarks"></a>Примечания
 
@@ -66,6 +66,7 @@ int main() {
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
- [__declspec](../cpp/declspec.md)  
- [Ключевые слова](../cpp/keywords-cpp.md)  
- [/Qspectre](../build/reference/qspectre.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[/Qspectre](../build/reference/qspectre.md)

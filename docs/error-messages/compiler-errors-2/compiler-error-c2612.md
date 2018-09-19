@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2612 | Документы Microsoft
+title: Ошибка компилятора C2612 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e88053cde81e7eea8bc9e9280cf235d5eccc6704
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2bdc91dd2b64c4fbd3a14670ba500ac970c9ad3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135793"
 ---
 # <a name="compiler-error-c2612"></a>Ошибка компилятора C2612
-в конце «char» недопустим в списке инициализаторов членов и базовых  
-  
- Символ отображается после последнего базового класса или члена в списке инициализаторов.  
-  
- Следующий пример приводит к возникновению ошибки C2612:  
-  
-```  
-// C2612.cpp  
-class A {  
-public:  
-   int i;  
-   A( int ia ) : i( ia ) + {};   // C2612  
-};  
+
+в конце «char» недопустим в списке инициализаторов базового класса или члена
+
+Символ отображается после последнего базового класса или члена в списке инициализаторов.
+
+Следующий пример приводит к возникновению ошибки C2612:
+
+```
+// C2612.cpp
+class A {
+public:
+   int i;
+   A( int ia ) : i( ia ) + {};   // C2612
+};
 ```

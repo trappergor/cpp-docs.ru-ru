@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43581995e8979ec733d8c82374896009c843166b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074062"
 ---
 # <a name="cstringelementtraits-class"></a>Класс CStringElementTraits
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766650"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <typename T>  
+template <typename T>
 class CStringElementTraits
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип данных, хранимых в коллекции.
 
 ## <a name="members"></a>Участники
@@ -86,10 +86,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Параметры
 
-*str1*  
+*str1*<br/>
 Первая строка, элемент.
 
-*str2*  
+*str2*<br/>
 Вторая строка элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -106,10 +106,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Параметры
 
-*str1*  
+*str1*<br/>
 Первая строка, элемент.
 
-*str2*  
+*str2*<br/>
 Вторая строка элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -129,13 +129,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>Параметры
 
-*pDest*  
+*pDest*<br/>
 Указатель на первый элемент, который будет отправляться скопированные данные.
 
-*pSrc*  
+*pSrc*<br/>
 Указатель на первый элемент, для копирования.
 
-*nElements*  
+*nElements*<br/>
 Число элементов для копирования.
 
 ### <a name="remarks"></a>Примечания
@@ -152,7 +152,7 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>Параметры
 
-*str*  
+*str*<br/>
 Элемент строку.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -188,13 +188,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>Параметры
 
-*pDest*  
+*pDest*<br/>
 Указатель на первый элемент, который будет получать перемещенные данные.
 
-*pSrc*  
+*pSrc*<br/>
 Указатель на первый элемент, чтобы переместить.
 
-*nElements*  
+*nElements*<br/>
 Число элементов для перемещения.
 
 ### <a name="remarks"></a>Примечания
@@ -203,6 +203,6 @@ static void RelocateElements(
 
 ## <a name="see-also"></a>См. также
 
-[Класс CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
-[Класс CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)   
+[Класс CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
+[Класс CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

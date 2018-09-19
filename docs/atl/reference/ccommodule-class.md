@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb135fc68e11a5af86fdccde949b8e1761160625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753283"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090702"
 ---
 # <a name="ccommodule-class"></a>CComModule-класс
 
@@ -144,13 +144,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Параметры
 
-*rclsid*  
+*rclsid*<br/>
 [in] CLSID создаваемого объекта.
 
-*riid*  
+*riid*<br/>
 [in] Идентификатор IID запрошенного интерфейса.
 
-*ppv*  
+*ppv*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppv* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -224,13 +224,13 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 [in] Указатель на массив элементов объекта map.
 
-*h*  
+*h*<br/>
 [in] Передаваемый объект HINSTANCE `DLLMain` или `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Указатель на идентификатор LIBID библиотеки типов, связанных с проектом.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -350,19 +350,19 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 [in] CLSID объекта для регистрации.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in] Идентификатор ProgID, связанный с объектом.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in] Идентификатор ProgID независящим от версии, связанный с объектом.
 
-*nDescID*  
+*nDescID*<br/>
 [in] Идентификатор строкового ресурса описания объекта.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Указывает потоковую модель, чтобы ввести в реестре. Возможные значения: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH или AUTPRXFLAG.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -385,10 +385,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwClsContext*  
+*dwClsContext*<br/>
 [in] Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. Описание этих значений, см. в разделе [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) в пакете Windows SDK.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. Описание этих значений, см. в разделе [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -411,10 +411,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 [in] Указывает, будет ли зарегистрирована библиотека типов. Значение по умолчанию — FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 [in] Указывает идентификатор CLSID объекта для регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет зарегистрировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -442,7 +442,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszIndex*  
+*lpszIndex*<br/>
 [in] Строка в формате `"\\N"`, где `N` — это целочисленный индекс ресурса библиотеки ТИПОВ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -496,13 +496,13 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 [in] CLSID объекта для отмены регистрации.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in] Идентификатор ProgID, связанный с объектом.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in] Идентификатор ProgID независящим от версии, связанный с объектом.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -526,10 +526,10 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="parameters"></a>Параметры
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 Значение TRUE, если библиотека типов также отменяется.
 
-*pCLSID*  
+*pCLSID*<br/>
 Указывает идентификатор CLSID объекта для отмены регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет отменена.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -568,25 +568,25 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 CLSID объекта регистрировать или отменять регистрацию.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 Идентификатор ProgID, связанный с объектом.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 Идентификатор ProgID независящим от версии, связанный с объектом.
 
-*nDescID*  
+*nDescID*<br/>
 Идентификатор строкового ресурса описания объекта.
 
-*szDesc*  
+*szDesc*<br/>
 Строка, содержащая описание объекта.
 
-*dwFlags*  
+*dwFlags*<br/>
 Указывает потоковую модель, чтобы ввести в реестре. Возможные значения: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH или AUTPRXFLAG.
 
-*bЗарегистрируйтесь участия*  
+*bЗарегистрируйтесь участия*<br/>
 Указывает, является ли объект должен быть зарегистрирован.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -621,16 +621,16 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRes*  
+*lpszRes*<br/>
 [in] Имя ресурса.
 
-*nResID*  
+*nResID*<br/>
 [in] Идентификатор ресурса.
 
-*bЗарегистрируйтесь участия*  
+*bЗарегистрируйтесь участия*<br/>
 [in] Указывает, является ли объект должен быть зарегистрирован.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in] Указатель на карте замены хранения значений, связанных с подстановочных параметров сценария. ATL автоматически использует `%MODULE%`. Чтобы использовать дополнительные подстановочные параметры, см. в разделе "Примечания" Дополнительные сведения. В противном случае используйте значение по умолчанию NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -671,16 +671,16 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRes*  
+*lpszRes*<br/>
 [in] Имя ресурса.
 
-*nResID*  
+*nResID*<br/>
 [in] Идентификатор ресурса.
 
-*bЗарегистрируйтесь участия*  
+*bЗарегистрируйтесь участия*<br/>
 [in] Указывает, является ли файл скрипта ресурсов должен быть зарегистрирован.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in] Указатель на карте замены хранения значений, связанных с подстановочных параметров сценария. ATL автоматически использует `%MODULE%`. Чтобы использовать дополнительные подстановочные параметры, см. в разделе "Примечания" Дополнительные сведения. В противном случае используйте значение по умолчанию NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение

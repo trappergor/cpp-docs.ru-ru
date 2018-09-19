@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 392e9dc2997dc7f4f0f36b1d7d38cd8ecdc691bb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ac285921500107b85c30eba4d2f1940c93721d0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113062"
 ---
 # <a name="atlfuncinfo-structure"></a>Структура _ATL_FUNC_INFO
 
@@ -43,16 +43,16 @@ struct _ATL_FUNC_INFO {
 
 ## <a name="members"></a>Участники
 
-`cc`  
+`cc`<br/>
 Соглашение о вызовах. При использовании эту структуру с [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) класса, этот элемент должен быть CC_STDCALL. `CC_CDECL` только этот параметр поддерживается в Windows CE для `CALLCONV` поле `_ATL_FUNC_INFO` структуры. Любое другое значение не поддерживается таким образом его поведение не определено.
 
-`vtReturn`  
+`vtReturn`<br/>
 Тип variant функции возвращают значение.
 
-`nParams`  
+`nParams`<br/>
 Число параметров функции.
 
-`pVarTypes`  
+`pVarTypes`<br/>
 Массив variant типы параметров функции.
 
 ## <a name="remarks"></a>Примечания
@@ -75,7 +75,7 @@ struct _ATL_FUNC_INFO {
 
 ## <a name="see-also"></a>См. также
 
-[Классы и структуры](../../atl/reference/atl-classes.md)  
-[Класс IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)   
+[Классы и структуры](../../atl/reference/atl-classes.md)<br/>
+[Класс IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 
