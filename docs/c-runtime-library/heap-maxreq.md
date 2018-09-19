@@ -19,26 +19,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a69527466fed2ff63a63f376022785644e788a52
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21e2fb3b7c9db01621d54376dcf3afa1f456f471
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034309"
 ---
 # <a name="heapmaxreq"></a>_HEAP_MAXREQ
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#include <malloc.h>  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Максимальный размер пользовательского запроса на выделение памяти, который может быть удовлетворен.  
-  
-## <a name="see-also"></a>См. также  
- [malloc](../c-runtime-library/reference/malloc.md)   
- [calloc](../c-runtime-library/reference/calloc.md)   
- [Глобальные константы](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Синтаксис
+
+```
+
+#include <malloc.h>
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Максимальный размер пользовательского запроса на выделение памяти, который может быть удовлетворен.
+
+## <a name="see-also"></a>См. также
+
+[malloc](../c-runtime-library/reference/malloc.md)<br/>
+[calloc](../c-runtime-library/reference/calloc.md)<br/>
+[Глобальные константы](../c-runtime-library/global-constants.md)

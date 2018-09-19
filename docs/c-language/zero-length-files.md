@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a78a71ab42f466e16868ccb25f8082a27366b199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6352723cc65ba1ed87d867fd1a9938269cc84832
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384971"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033593"
 ---
 # <a name="zero-length-files"></a>Файлы нулевой длины
-**ANSI 4.9.3** Существует ли фактически файл нулевой длины  
-  
- Файлы нулевой длины разрешены.  
-  
-## <a name="see-also"></a>См. также  
- [Функции библиотеки](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Существует ли фактически файл нулевой длины
+
+Файлы нулевой длины разрешены.
+
+## <a name="see-also"></a>См. также
+
+[Функции библиотеки](../c-language/library-functions.md)

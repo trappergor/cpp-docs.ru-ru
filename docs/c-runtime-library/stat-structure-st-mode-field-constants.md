@@ -45,39 +45,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f603757706bfdeeaaefe5b6d33cd94bb2624c389
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd7278d017002ff0d5aa716db61fdcdb54e24018
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051142"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>Константы поля st_mode структуры _stat
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#include <sys/stat.h>  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Эти константы помогают указать тип файла в поле **st_mode** структуры [_stat](../c-runtime-library/standard-types.md).  
-  
- Ниже перечислены константы битовой маски.  
-  
-|Константа|Значение|  
-|--------------|-------------|  
-|`_S_IFMT`|Маска типа файла|  
-|`_S_IFDIR`|Каталог|  
-|`_S_IFCHR`|Специальный символ (если задана, указывает устройство)|  
-|`_S_IFREG`|Регулярное|  
-|`_S_IREAD`|Разрешение на чтение, владелец|  
-|`_S_IWRITE`|Разрешение на запись, владелец|  
-|`_S_IEXEC`|Разрешение на выполнение или поиск, владелец|  
-  
-## <a name="see-also"></a>См. также  
- [Функции _stat, _wstat](../c-runtime-library/reference/stat-functions.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [Стандартные типы](../c-runtime-library/standard-types.md)   
- [Глобальные константы](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Синтаксис
+
+```
+
+#include <sys/stat.h>
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Эти константы помогают указать тип файла в поле **st_mode** структуры [_stat](../c-runtime-library/standard-types.md).
+
+Ниже перечислены константы битовой маски.
+
+|Константа|Значение|
+|--------------|-------------|
+|`_S_IFMT`|Маска типа файла|
+|`_S_IFDIR`|Каталог|
+|`_S_IFCHR`|Специальный символ (если задана, указывает устройство)|
+|`_S_IFREG`|Регулярное|
+|`_S_IREAD`|Разрешение на чтение, владелец|
+|`_S_IWRITE`|Разрешение на запись, владелец|
+|`_S_IEXEC`|Разрешение на выполнение или поиск, владелец|
+
+## <a name="see-also"></a>См. также
+
+[_stat, _wstat Functions](../c-runtime-library/reference/stat-functions.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[Стандартные типы](../c-runtime-library/standard-types.md)<br/>
+[Глобальные константы](../c-runtime-library/global-constants.md)

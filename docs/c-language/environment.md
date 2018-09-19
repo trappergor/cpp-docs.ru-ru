@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c39696c921825dfe199c270b3cbe52f407e2da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d099be8201d061f104c729239f988a751c50168a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038260"
 ---
 # <a name="environment"></a>Среда
--   [Аргументы функции main](../c-language/arguments-to-main.md)  
-  
--   [Интерактивные устройства](../c-language/interactive-devices.md)  
-  
-## <a name="see-also"></a>См. также  
- [Поведение, определяемое реализацией](../c-language/implementation-defined-behavior.md)
+
+- [Аргументы функции main](../c-language/arguments-to-main.md)
+
+- [Интерактивные устройства](../c-language/interactive-devices.md)
+
+## <a name="see-also"></a>См. также
+
+[Поведение, определяемое реализацией](../c-language/implementation-defined-behavior.md)

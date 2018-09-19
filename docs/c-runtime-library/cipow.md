@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3500c0bd17b2638026f45c23b047e2bee411cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c09801841e25b5de2f98e64c01bf48b1eea9992b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387002"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052092"
 ---
 # <a name="cipow"></a>_CIpow
-Вычисляет значение *x*, возведенное в степень *y*, исходя из верхних значений в стеке.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __cdecl _CIpow();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Эта версия функции `pow` включает специальные соглашения о вызовах, распознаваемые компилятором. Это ускоряет выполнение, поскольку исключает создание копий и помогает распределять регистры.  
-  
- Полученное значение помещается в верхнюю часть стека.  
-  
-## <a name="requirements"></a>Требования  
- **Платформа:** x86  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)
+
+Вычисляет значение *x*, возведенное в степень *y*, исходя из верхних значений в стеке.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __cdecl _CIpow();
+```
+
+## <a name="remarks"></a>Примечания
+
+Эта версия функции `pow` включает специальные соглашения о вызовах, распознаваемые компилятором. Это ускоряет выполнение, поскольку исключает создание копий и помогает распределять регистры.
+
+Полученное значение помещается в верхнюю часть стека.
+
+## <a name="requirements"></a>Требования
+ **Платформа:** x86
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)
