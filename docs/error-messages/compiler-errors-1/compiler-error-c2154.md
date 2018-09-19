@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2154 | Документы Microsoft
+title: Ошибка компилятора C2154 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e712a683e703bc277b82931dedcddba38a77c317
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766291c6bd1a81469ce5dc2f1fbd8aee94f0db89
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019839"
 ---
 # <a name="compiler-error-c2154"></a>Ошибка компилятора C2154
-type: в качестве аргумента характеристики подставляемого типа компилятора __underlying_type допускается использовать только тип перечисления  
-  
- Получить можно только базовый тип типа перечисления.  
-  
- Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+
+type: в качестве аргумента характеристики подставляемого типа компилятора __underlying_type допускается использовать только тип перечисления
+
+Получить можно только базовый тип типа перечисления.
+
+Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
