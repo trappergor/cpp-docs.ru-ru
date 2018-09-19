@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3883 | Документы Microsoft
+title: Ошибка компилятора C3883 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6841a0ab5b5f1c61159b11d2aa559863189580e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4387eacb4e35c82af5c2617771b8c887dae42c4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268857"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045475"
 ---
 # <a name="compiler-error-c3883"></a>Ошибка компилятора C3883
-«переменная»: статические элементы данных initonly должен инициализироваться  
-  
- Переменная, помеченная как с [initonly](../../dotnet/initonly-cpp-cli.md) не был правильно инициализирован.  
-  
- Следующий пример приводит к возникновению ошибки C3883:  
-  
-```  
-// C3883.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   initonly  
-   static int staticConst1;   // C3883  
-};  
-```  
-  
- В следующем примере показано возможное решение:  
-  
-```  
-// C3883b.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   initonly  
-   static int staticConst2 = 0;  
-};  
-```  
-  
- Следующий пример демонстрирует способ инициализации в статическом конструкторе:  
-  
-```  
-// C3883c.cpp  
-// compile with: /clr /LD  
-ref struct Y1 {  
-   initonly  
-   static int staticConst1;  
-  
-   static Y1() {  
-      staticConst1 = 0;  
-   }  
-};  
+
+«var»: статические данные-член initonly должен быть инициализирован
+
+Переменная, помеченная как с [initonly](../../dotnet/initonly-cpp-cli.md) не был правильно инициализирован.
+
+Следующий пример приводит к возникновению ошибки C3883:
+
+```
+// C3883.cpp
+// compile with: /clr
+ref struct Y1 {
+   initonly
+   static int staticConst1;   // C3883
+};
+```
+
+В следующем примере показано возможное решение:
+
+```
+// C3883b.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   initonly
+   static int staticConst2 = 0;
+};
+```
+
+Ниже приведен пример, как инициализировать в статическом конструкторе:
+
+```
+// C3883c.cpp
+// compile with: /clr /LD
+ref struct Y1 {
+   initonly
+   static int staticConst1;
+
+   static Y1() {
+      staticConst1 = 0;
+   }
+};
 ```

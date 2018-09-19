@@ -39,34 +39,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97595b29c2d79cd6209479e39987208cafe6f0f8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0804e2a3e9d2f1fc37fae1eb72599f481e6b8c7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021008"
 ---
 # <a name="bstrt-relational-operators"></a>Операторы отношения _bstr_t
-**Блок, относящийся только к системам Microsoft**  
-  
- Сравнивает два объекта `_bstr_t`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-bool operator!( ) const throw( );   
-bool operator==(const _bstr_t& str) const throw( );  
-bool operator!=(const _bstr_t& str) const throw( );  
-bool operator<(const _bstr_t& str) const throw( );  
-bool operator>(const _bstr_t& str) const throw( );  
-bool operator<=(const _bstr_t& str) const throw( );  
-bool operator>=(const _bstr_t& str) const throw( );  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Эти операторы производят лексикографическое сравнение двух объектов `_bstr_t` . Операторы возвращают значение TRUE Если сравнение верно; в противном случае возвращает значение FALSE.  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [_bstr_t Class](../cpp/bstr-t-class.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+Сравнивает два объекта `_bstr_t`.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+bool operator!( ) const throw( ); 
+bool operator==(const _bstr_t& str) const throw( );
+bool operator!=(const _bstr_t& str) const throw( );
+bool operator<(const _bstr_t& str) const throw( );
+bool operator>(const _bstr_t& str) const throw( );
+bool operator<=(const _bstr_t& str) const throw( );
+bool operator>=(const _bstr_t& str) const throw( );
+```
+
+## <a name="remarks"></a>Примечания
+
+Эти операторы производят лексикографическое сравнение двух объектов `_bstr_t` . Операторы возвращают значение TRUE Если сравнение верно; в противном случае возвращает значение FALSE.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[_bstr_t Class](../cpp/bstr-t-class.md)

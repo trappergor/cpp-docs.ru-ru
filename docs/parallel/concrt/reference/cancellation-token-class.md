@@ -1,5 +1,5 @@
 ---
-title: Класс cancellation_token | Документы Microsoft
+title: Класс cancellation_token | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 125d08def4a1fb801cb1b6c911d8c8c9c154c296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037980"
 ---
 # <a name="cancellationtoken-class"></a>Класс cancellation_token
 Класс `cancellation_token` представляет возможность определить, получала ли некоторая операция запрос на отмену. Заданный токен можно связать с `task_group`, `structured_task_group` или `task` для предоставления неявной отмены. Его также можно опрашивать на предмет отмены или зарегистрировать обратный вызов для той ситуации, когда отменяется связанный `cancellation_token_source`.  
@@ -89,7 +89,8 @@ cancellation_token(cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
+*_Src*<br/>
+Cancellation_token к подлежащей копированию или перемещению.
   
 ##  <a name="deregister_callback"></a> deregister_callback 
 
@@ -100,8 +101,8 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Registration`  
- Объект `cancellation_token_registration`, соответствующий обратному вызову, регистрацию которого требуется отменить. Этот токен должен быть предварительно возвращен из вызова метода `register`.  
+*_Registration*<br/>
+Объект `cancellation_token_registration`, соответствующий обратному вызову, регистрацию которого требуется отменить. Этот токен должен быть предварительно возвращен из вызова метода `register`.  
   
 ##  <a name="is_cancelable"></a> is_cancelable 
 
@@ -143,8 +144,9 @@ bool operator!= (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
-  
+*_Src*<br/>
+Сравниваемый шаблон `cancellation_token`.
+
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ##  <a name="operator_eq"></a> оператор = 
@@ -156,7 +158,8 @@ cancellation_token& operator= (cancellation_token&& _Src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
+*_Src*<br/>
+`cancellation_token` Для назначения.
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -167,7 +170,8 @@ bool operator== (const cancellation_token& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
+*_Src*<br/>
+Сравниваемый шаблон `cancellation_token`.
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -181,14 +185,14 @@ template<typename _Function>
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Function`  
- Тип объекта функции, вызываемого при отмене этого `cancellation_token`.  
+*_Function*<br/>
+Тип объекта функции, вызываемого при отмене этого `cancellation_token`.  
   
- `_Func`  
- Объект функции, вызываемый при отмене этого `cancellation_token`.  
+*_Func*<br/>
+Объект функции, вызываемый при отмене этого `cancellation_token`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `cancellation_token_registration`, который можно использовать в методе `deregister` для отмены регистрации ранее зарегистрированного обратного вызова и предотвращения его выполнения. Метод вызывает исключение [invalid_operation](invalid-operation-class.md) исключение, если он вызывается на `cancellation_token` объект, который был создан с помощью [cancellation_token::none](#none) метод.  
+ Объект `cancellation_token_registration`, который можно использовать в методе `deregister` для отмены регистрации ранее зарегистрированного обратного вызова и предотвращения его выполнения. Метод вызовет [invalid_operation](invalid-operation-class.md) исключение, если он вызывается для `cancellation_token` объект, который был создан с помощью [cancellation_token::none](#none) метод.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)

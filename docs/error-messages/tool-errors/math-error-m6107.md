@@ -1,5 +1,5 @@
 ---
-title: Математическая ошибка M6107 | Документы Microsoft
+title: Математическая ошибка M6107 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d16df0d314aa5039d0fc495c1b934e647a40c62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d954e06bfe0ca6b6d94347c6f847242ec549cf80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330792"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041393"
 ---
 # <a name="math-error-m6107"></a>Математическая ошибка M6107
-не поддерживается эмулятором  
-  
- Выполнена попытка выполнения инструкции сопроцессора, которая является недопустимой или не поддерживается эмулятором.  
-  
- Программа завершается с кодом завершения 135.
+
+не поддерживается эмулятором
+
+Была предпринята попытка выполнения инструкции сопроцессора, который является недопустимым или не поддерживается эмулятором.
+
+Программа завершается с кодом завершения 135.

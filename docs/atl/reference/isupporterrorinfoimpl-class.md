@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed0e105443231853442296748f0e505f3df51b48
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5a3f912f7ba3a5455f7583ba2a5036548ac65df2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753712"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022179"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Класс ISupportErrorInfoImpl
 
@@ -37,14 +37,14 @@ ms.locfileid: "43753712"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<const IID* piid>  
+template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl 
    : public ISupportErrorInfo
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор IID интерфейса, поддерживающего [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Участники
@@ -95,7 +95,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Параметры
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Адрес переменной, которая, в случае успешного выполнения получает количество потоков в пуле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -116,7 +116,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Параметры
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Адрес переменной, которая, в случае успешного выполнения Получает максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -137,7 +137,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Параметры
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Запрашиваемое количество потоков в пуле.
 
 Если *nNumThreads* является отрицательным, его абсолютное значение будет умножена на число процессоров в компьютере для получения общего числа потоков.
@@ -162,7 +162,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Параметры
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Запрошенное максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
 
 ### <a name="return-value"></a>Возвращаемое значение

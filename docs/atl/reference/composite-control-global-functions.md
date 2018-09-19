@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91de6c09128acd3ef1a008437ae418b96b45ef66
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037363"
 ---
 # <a name="composite-control-global-functions"></a>Глобальные функции составного элемента управления
 
@@ -77,19 +77,19 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="parameters"></a>Параметры
 
-*hInstance*  
+*hInstance*<br/>
 [in] Идентифицирует экземпляр модуля, исполняемый файл содержит шаблон диалогового окна.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) макрос для создания этого значения.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Определяет окно, которому принадлежит диалоговое окно.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -100,9 +100,9 @@ ATLAPI_(int) AtlAxDialogBox(
 
 Для использования `AtlAxDialogBox` с помощью шаблона диалогового окна, содержащий элемент управления ActiveX, укажите допустимую строку CLSID, APPID или URL-адрес как *текст* поле **УПРАВЛЕНИЯ** раздел ресурса диалогового окна, вместе с " AtlAxWin80» как *имя класса* поле в том же разделе. Следующий подход демонстрирует какие является допустимым **УПРАВЛЕНИЯ** раздел может выглядеть так:
 
-```  
+```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
-    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
 Дополнительные сведения о редактировании ресурсов см. в разделе [как: открытие файла описания ресурсов в текстовом формате](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Дополнительные сведения об инструкциях определения ресурсов элемента управления, см. в разделе [общих параметров управления](/windows/desktop/menurc/common-control-parameters) в разделе Windows SDK *: SDK Tools*.
@@ -124,19 +124,19 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 ### <a name="parameters"></a>Параметры
 
-*hInstance*  
+*hInstance*<br/>
 [in] Идентифицирует экземпляр модуля, исполняемый файл содержит шаблон диалогового окна.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) макрос для создания этого значения.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Определяет окно, которому принадлежит диалоговое окно.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -163,7 +163,7 @@ ATLAPI AtlAxCreateControl(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszName*  
+*lpszName*<br/>
 Указатель на строку для передачи элементу управления. Должен быть отформатирован в одном из следующих способов:
 
 - ProgID, например «MSCAL. Calendar.7»
@@ -179,13 +179,13 @@ ATLAPI AtlAxCreateControl(
    > [!NOTE]
    > «MSHTML:» должен предшествовать фрагмент HTML, таким образом, чтобы он обозначается как поток MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна, элемент управления будет подключен к.
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на поток, который используется для инициализации свойств элемента управления. Может иметь значение NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Адрес указателя, который будет получать `IUnknown` контейнера. Может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -215,7 +215,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszName*  
+*lpszName*<br/>
 Указатель на строку для передачи элементу управления. Должен быть отформатирован в одном из следующих способов:
 
 - ProgID, например «MSCAL. Calendar.7»
@@ -231,22 +231,22 @@ ATLAPI AtlAxCreateControlEx(
    > [!NOTE]
    > «MSHTML:» должен предшествовать фрагмент HTML, таким образом, чтобы он обозначается как поток MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна, элемент управления будет подключен к.
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на поток, который используется для инициализации свойств элемента управления. Может иметь значение NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Адрес указателя, который будет получать `IUnknown` контейнера. Может иметь значение NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Адрес указателя, который будет получать `IUnknown` созданного элемента управления. Может иметь значение NULL.
 
-*iidSink*  
+*iidSink*<br/>
 Идентификатор исходящего интерфейса на содержащийся объект.
 
-*punkSink*  
+*punkSink*<br/>
 Указатель на `IUnknown` интерфейс приемника объекта должен быть подключен к точки подключения, заданные *iidSink* на содержащийся объект после успешного создания содержащийся объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -274,7 +274,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszName*  
+*lpszName*<br/>
 Указатель на строку для передачи элементу управления. Должен быть отформатирован в одном из следующих способов:
 
 - ProgID, например «MSCAL. Calendar.7»
@@ -290,16 +290,16 @@ ATLAPI AtlAxCreateControlLic(
    > [!NOTE]
    > «MSHTML:» должен предшествовать фрагмент HTML, таким образом, чтобы он обозначается как поток MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 Дескриптор окна, элемент управления будет подключен к.
 
-*pStream*  
+*pStream*<br/>
 Указатель на поток, который используется для инициализации свойств элемента управления. Может иметь значение NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 Адрес указателя, который будет получать `IUnknown` контейнера. Может иметь значение NULL.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR, содержащий лицензии для элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -328,7 +328,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszName*  
+*lpszName*<br/>
 Указатель на строку для передачи элементу управления. Должен быть отформатирован в одном из следующих способов:
 
 - ProgID, например «MSCAL. Calendar.7»
@@ -344,25 +344,25 @@ ATLAPI AtlAxCreateControlLicEx(
    > [!NOTE]
    > «MSHTML:» должен предшествовать фрагмент HTML, таким образом, чтобы он обозначается как поток MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 Дескриптор окна, элемент управления будет подключен к.
 
-*pStream*  
+*pStream*<br/>
 Указатель на поток, который используется для инициализации свойств элемента управления. Может иметь значение NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 Адрес указателя, который будет получать `IUnknown` контейнера. Может иметь значение NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Адрес указателя, который будет получать `IUnknown` созданного элемента управления. Может иметь значение NULL.
 
-*iidSink*  
+*iidSink*<br/>
 Идентификатор исходящего интерфейса на содержащийся объект.
 
-*punkSink*  
+*punkSink*<br/>
 Указатель на `IUnknown` интерфейс приемника объекта должен быть подключен к точки подключения, заданные *iidSink* на содержащийся объект после успешного создания содержащийся объект.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR, содержащий лицензии для элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -390,13 +390,13 @@ ATLAPI AtlAxAttachControl(
 
 ### <a name="parameters"></a>Параметры
 
-*pControl*  
+*pControl*<br/>
 [in] Указатель на `IUnknown` элемента управления.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна, где будет размещаться элемент управления.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Указатель на указатель на `IUnknown` объекта-контейнера.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -420,10 +420,10 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Параметры
 
-*h*  
+*h*<br/>
 [in] Дескриптор окна, на котором размещается элемент управления.
 
-*PP*  
+*PP*<br/>
 [out] `IUnknown` Контейнера элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -440,10 +440,10 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Параметры
 
-*h*  
+*h*<br/>
 [in] Дескриптор окна, на котором размещается элемент управления.
 
-*PP*  
+*PP*<br/>
 [out] `IUnknown` , Размещенного элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -460,10 +460,10 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 
 ### <a name="parameters"></a>Параметры
 
-*punkChild*  
+*punkChild*<br/>
 [in] Указатель на `IUnknown` интерфейс дочернего элемента.
 
-*punkParent*  
+*punkParent*<br/>
 [in] Указатель на `IUnknown` интерфейс родительского элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -519,19 +519,19 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="parameters"></a>Параметры
 
-*punkObj*  
+*punkObj*<br/>
 [in] Указатель на объект, для которого должны быть возвращены сведения.
 
-*plibid*  
+*plibid*<br/>
 [out] Указатель на идентификатор LIBID библиотеки типов, содержащий определение исходного интерфейса.
 
-*piid*  
+*piid*<br/>
 [out] Указатель на идентификатор интерфейса объекта по умолчанию исходного интерфейса.
 
-*pdwMajor*  
+*pdwMajor*<br/>
 [out] Указатель на основной номер версии библиотеки типов, содержащий определение исходного интерфейса.
 
-*pdwMinor*  
+*pdwMinor*<br/>
 [out] Указатель на дополнительный номер версии библиотеки типов, содержащий определение исходного интерфейса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -553,5 +553,5 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ## <a name="see-also"></a>См. также
 
-[Функции](../../atl/reference/atl-functions.md)   
+[Функции](../../atl/reference/atl-functions.md)<br/>
 [Макросы для работы с составными элементами управления](../../atl/reference/composite-control-macros.md)

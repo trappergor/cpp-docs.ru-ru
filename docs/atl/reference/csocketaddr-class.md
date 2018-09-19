@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eba14e7b8a251fdc1287fc413e2c4ebcd7ae77
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040860"
 ---
 # <a name="csocketaddr-class"></a>Класс CSocketAddr
 
@@ -106,25 +106,25 @@ int FindAddr(
 
 ### <a name="parameters"></a>Параметры
 
-*szHost*  
+*szHost*<br/>
 Имя узла или пунктирную IP-адрес.
 
-*szPortOrServiceName*  
+*szPortOrServiceName*<br/>
 Номер порта или имя службы на узле.
 
-*nPortNo*  
+*nPortNo*<br/>
 Номер порта.
 
-*flags*  
+*flags*<br/>
 0 или сочетание AI_PASSIVE, AI_CANONNAME или AI_NUMERICHOST.
 
-*addr_family*  
+*addr_family*<br/>
 Семейство (например, PF_INET) адресов.
 
-*sock_type*  
+*sock_type*<br/>
 Тип сокета (например, SOCK_STREAM).
 
-*ai_proto*  
+*ai_proto*<br/>
 Протокол (например, IPPROTO_IP или IPPROTO_IPV6).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -149,16 +149,16 @@ int FindINET4Addr(
 
 ### <a name="parameters"></a>Параметры
 
-*szHost*  
+*szHost*<br/>
 Имя узла или пунктирную IP-адрес.
 
-*nPortNo*  
+*nPortNo*<br/>
 Номер порта.
 
-*flags*  
+*flags*<br/>
 0 или сочетание AI_PASSIVE, AI_CANONNAME или AI_NUMERICHOST.
 
-*sock_type*  
+*sock_type*<br/>
 Тип сокета (например, SOCK_STREAM).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -183,16 +183,16 @@ int FindINET6Addr(
 
 ### <a name="parameters"></a>Параметры
 
-*szHost*  
+*szHost*<br/>
 Имя узла или пунктирную IP-адрес.
 
-*nPortNo*  
+*nPortNo*<br/>
 Номер порта.
 
-*flags*  
+*flags*<br/>
 0 или сочетание AI_PASSIVE, AI_CANONNAME или AI_NUMERICHOST.
 
-*sock_type*  
+*sock_type*<br/>
 Тип сокета (например, SOCK_STREAM).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -213,7 +213,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Ссылка на определенный элемент в [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) списка.
 
 ### <a name="return-value"></a>Возвращаемое значение

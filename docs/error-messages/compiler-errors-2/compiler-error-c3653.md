@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3653 | Документы Microsoft
+title: Ошибка компилятора C3653 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a78dd5a9c52c9dfc845de43c62ae38180d0d079f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d0409317cb0cdf6a248554cba2e18d7f9d2e0e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019007"
 ---
 # <a name="compiler-error-c3653"></a>Ошибка компилятора C3653
-«функция»: не может использоваться как именованное переопределение: переопределяемая функция не найдена; Возможно, вы забыли имя функции явно, с помощью:: оператор?  
-  
- Явное переопределение указана функция, не найден ни в одном интерфейсе. Дополнительные сведения см. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- Следующий пример приводит к возникновению ошибки C3653:  
-  
-```  
-// C3653.cpp  
-// compile with: /clr  
-public interface struct I {  
-   void h();  
-};  
-  
-public ref struct X : public I {  
-   virtual void f() new sealed = J {};   // C3653 no J in scope  
-   virtual void g() {}   // OK  
-   virtual void h() new sealed = I::h {};   // OK  
-};  
+
+«функция»: нельзя использовать в качестве именованного переопределения: переопределяемая функция не найдена; Возможно, вы забыли имя функции явно, используя:: оператор?
+
+Явное переопределение указана функция, не найден ни в одном интерфейсе. Дополнительные сведения см. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+Следующий пример приводит к возникновению ошибки C3653:
+
+```
+// C3653.cpp
+// compile with: /clr
+public interface struct I {
+   void h();
+};
+
+public ref struct X : public I {
+   virtual void f() new sealed = J {};   // C3653 no J in scope
+   virtual void g() {}   // OK
+   virtual void h() new sealed = I::h {};   // OK
+};
 ```

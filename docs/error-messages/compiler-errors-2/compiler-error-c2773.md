@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2773 | Документы Microsoft
+title: Ошибка компилятора C2773 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfad1a4a3b34bd8c4d4ed81c1327073e650f5079
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 861fe9b53352548c919e54c36a603eaeb4d23b39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023440"
 ---
 # <a name="compiler-error-c2773"></a>Ошибка компилятора C2773
-\#Импорт и #using доступна только для компилятора C++  
-  
- Компилятор C не распознает `#import` директивы препроцессора. Источник компилировать как C++. Используйте [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) при необходимости.
+
+\#Импорт и #using доступны только в компиляторе C++
+
+Компилятор C не распознает `#import` директивы препроцессора. Источник компилировать как C++. Используйте [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) при необходимости.

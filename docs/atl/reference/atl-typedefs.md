@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 513fe618d32e3a3dcfadcf98134a927ddf629b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 866cedba73be1c7858415359dfd94cec9a55dccc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761798"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045254"
 ---
 # <a name="atl-typedefs"></a>Определения типов ATL
 
@@ -67,15 +67,15 @@ Active Template Library включает в себя следующие опре
 
 Определен как определение типа, в зависимости от _ATL_BASE_MODULE70.
 
-```   
-typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;   
+```
+typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 ```
 
 ### <a name="remarks"></a>Примечания
 
 Используется в каждом проекте ATL. На основе [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).
 
-Классы, которые являются частью модульные классы ATL 7.0 являются производными от _ATL_BASE_MODULE структуры.  Дополнительные сведения о модульные классы ATL, см. [классы модулей COM](../../atl/com-modules-classes.md).  
+Классы, которые являются частью модульные классы ATL 7.0 являются производными от _ATL_BASE_MODULE структуры.  Дополнительные сведения о модульные классы ATL, см. [классы модулей COM](../../atl/com-modules-classes.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -85,13 +85,13 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 
 Определен как определение типа, в зависимости от _ATL_COM_MODULE70.
 
-```   
-typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;   
+```
+typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ```
 
 ### <a name="remarks"></a>Примечания
 
-Используется в проектах ATL, которые используют функции COM. На основе [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).  
+Используется в проектах ATL, которые используют функции COM. На основе [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -101,9 +101,10 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 
 Определен как определение типа, в зависимости от _ATL_MODULE70.
 
-```   
-typedef ATL::_ATL_MODULE70 _ATL_MODULE;   
-```  
+```
+typedef ATL::_ATL_MODULE70 _ATL_MODULE;
+```
+
 ## <a name="requirements"></a>Требования
 
 **Заголовок:**
@@ -116,13 +117,13 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 
 Определен как определение типа, в зависимости от _ATL_WIN_MODULE70.
 
-```   
-typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE; 
+```
+typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ```
 
 ### <a name="remarks"></a>Примечания
 
-Использовать все проекты ATL, которые используют функции управления окнами. На основе [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).  
+Использовать все проекты ATL, которые используют функции управления окнами. На основе [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -132,9 +133,9 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 
 Тип, используемый [CUrl](curl-class.md) для указания номера порта.
 
-```  
+```
 typedef WORD ATL_URL_PORT;
-```  
+```
 
 ## <a name="requirements"></a>Требования
 
@@ -144,9 +145,10 @@ typedef WORD ATL_URL_PORT;
 
 Этот класс управляет указателей интерфейса СОМ.
 
-```   
-typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;   
-```  
+```
+typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
+```
+
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
@@ -155,16 +157,16 @@ typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 
 Вызывает методы модели, независимо от модели потоков используется соответствующем потоке.
 
-```   
-#if defined(_ATL_SINGLE_THREADED)  
-typedef CComSingleThreadModel CComGlobalsThreadModel;  
-#elif defined(_ATL_APARTMENT_THREADED)  
-typedef CComMultiThreadModel CComGlobalsThreadModel;  
-#elif defined(_ATL_FREE_THREADED)  
-typedef CComMultiThreadModel CComGlobalsThreadModel;  
-#else  
-#pragma message ("No global threading model defined")  
-#endif   
+```
+#if defined(_ATL_SINGLE_THREADED)
+typedef CComSingleThreadModel CComGlobalsThreadModel;
+#elif defined(_ATL_APARTMENT_THREADED)
+typedef CComMultiThreadModel CComGlobalsThreadModel;
+#elif defined(_ATL_FREE_THREADED)
+typedef CComMultiThreadModel CComGlobalsThreadModel;
+#else
+#pragma message ("No global threading model defined")
+#endif
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -185,7 +187,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 
 S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
 
-Используйте `CComObjectThreadModel` в пределах одного объекта класса. Используйте `CComGlobalsThreadModel` в объекте, глобально доступные для программы, или если вы хотите защитить модуля ресурсы между несколькими потоками.  
+Используйте `CComObjectThreadModel` в пределах одного объекта класса. Используйте `CComGlobalsThreadModel` в объекте, глобально доступные для программы, или если вы хотите защитить модуля ресурсы между несколькими потоками.
 
 ## <a name="requirements"></a>Требования
 
@@ -195,16 +197,16 @@ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
 
 Вызывает методы модели, независимо от модели потоков используется соответствующем потоке.
 
-```   
-#if defined(_ATL_SINGLE_THREADED)  
-typedef CComSingleThreadModel CComObjectThreadModel;  
-#elif defined(_ATL_APARTMENT_THREADED)  
-typedef CComSingleThreadModel CComObjectThreadModel;  
-#elif defined(_ATL_FREE_THREADED)  
-typedef CComMultiThreadModel CComObjectThreadModel;  
-#else  
-#pragma message ("No global threading model defined")  
-#endif   
+```
+#if defined(_ATL_SINGLE_THREADED)
+typedef CComSingleThreadModel CComObjectThreadModel;
+#elif defined(_ATL_APARTMENT_THREADED)
+typedef CComSingleThreadModel CComObjectThreadModel;
+#elif defined(_ATL_FREE_THREADED)
+typedef CComMultiThreadModel CComObjectThreadModel;
+#else
+#pragma message ("No global threading model defined")
+#endif
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -225,7 +227,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 
 S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
 
-Используйте `CComObjectThreadModel` в пределах одного объекта класса. Используйте `CComGlobalsThreadModel` в объекте, либо глобально доступной, программу или когда необходимо обеспечить защиту ресурсов модуля в нескольких потоках.  
+Используйте `CComObjectThreadModel` в пределах одного объекта класса. Используйте `CComGlobalsThreadModel` в объекте, либо глобально доступной, программу или когда необходимо обеспечить защиту ресурсов модуля в нескольких потоках.
 
 ## <a name="requirements"></a>Требования
 
@@ -235,9 +237,9 @@ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
 
 Этот класс является специализацией `CContainedWindowT`.
 
-```   
-typedef CContainedWindowT<CWindow> CContainedWindow;   
-```  
+```
+typedef CContainedWindowT<CWindow> CContainedWindow;
+```
 
 ## <a name="requirements"></a>Требования
 
@@ -251,9 +253,9 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 Специализация [CPathT](../../atl/reference/cpatht-class.md) с помощью `CString`.
 
-```   
-typedef CPathT<CString> CPath;   
-```  
+```
+typedef CPathT<CString> CPath;
+```
 
 ## <a name="requirements"></a>Требования
 
@@ -263,8 +265,8 @@ typedef CPathT<CString> CPath;
 
 Специализация [CPathT](../../atl/reference/cpatht-class.md) с помощью `CStringA`.
 
-```   
-typedef CPathT<CStringA> CPathA;   
+```
+typedef CPathT<CStringA> CPathA;
 ```
 
 ## <a name="requirements"></a>Требования
@@ -275,9 +277,9 @@ typedef CPathT<CStringA> CPathA;
 
 Специализация [CPathT](../../atl/reference/cpatht-class.md) с помощью `CStringW`.
 
-```   
-typedef ATL::CPathT<CStringW> CPathW;   
-```  
+```
+typedef ATL::CPathT<CStringW> CPathW;
+```
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlpath.h
@@ -286,13 +288,13 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 Представляет массив для хранения простых типов.
 
-```   
-#define CSimpleValArray CSimpleArray   
-```  
+```
+#define CSimpleValArray CSimpleArray
+```
 
 ### <a name="remarks"></a>Примечания
 
-`CSimpleValArray` предоставляется для создания и управления массивы, содержащие простые типы данных. Это простой #define из [CSimpleArray](../../atl/reference/csimplearray-class.md).  
+`CSimpleValArray` предоставляется для создания и управления массивы, содержащие простые типы данных. Это простой #define из [CSimpleArray](../../atl/reference/csimplearray-class.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -302,9 +304,9 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 Указатель на константу [CUrl](../../atl/reference/curl-class.md) объекта.
 
-```   
-typedef const CUrl* LPCURL;   
-```  
+```
+typedef const CUrl* LPCURL;
+```
 
 ## <a name="requirements"></a>Требования
 
@@ -316,12 +318,12 @@ typedef const CUrl* LPCURL;
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
-      #if defined(_MT)  
-   typedef CRTThreadTraits DefaultThreadTraits;  
-#else  
-   typedef Win32ThreadTraits DefaultThreadTraits;  
-#endif  
+```
+#if defined(_MT)
+   typedef CRTThreadTraits DefaultThreadTraits;
+#else
+   typedef Win32ThreadTraits DefaultThreadTraits;
+#endif
 ```
 
 ## <a name="remarks"></a>Примечания
@@ -336,9 +338,9 @@ typedef const CUrl* LPCURL;
 
 Указатель на [CUrl](../../atl/reference/curl-class.md) объекта.
 
-```   
-typedef CUrl* LPURL;   
-```  
+```
+typedef CUrl* LPURL;
+```
 
 ## <a name="requirements"></a>Требования
 
@@ -346,8 +348,8 @@ typedef CUrl* LPURL;
 
 ## <a name="see-also"></a>См. также
 
-[Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)   
-[Функции](../../atl/reference/atl-functions.md)   
-[Глобальные переменные](../../atl/reference/atl-global-variables.md)   
-[Классы и структуры](../../atl/reference/atl-classes.md)   
-[Макросы](../../atl/reference/atl-macros.md)   
+[Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)<br/>
+[Функции](../../atl/reference/atl-functions.md)<br/>
+[Глобальные переменные](../../atl/reference/atl-global-variables.md)<br/>
+[Классы и структуры](../../atl/reference/atl-classes.md)<br/>
+[Макросы](../../atl/reference/atl-macros.md)

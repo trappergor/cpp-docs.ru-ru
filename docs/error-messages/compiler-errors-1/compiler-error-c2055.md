@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2055 | Документы Microsoft
+title: Ошибка компилятора C2055 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f16d9c3948c0211da69142f1b9c7c1a6a32d8c37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6c63d79325417fbd9b1f451fb4a51f13957b4df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019346"
 ---
 # <a name="compiler-error-c2055"></a>Ошибка компилятора C2055
-требуется список формальных параметров, а не список типов  
-  
- Определение функции содержит список типов параметра, а не список формальных параметров. ANSI C требует формальных параметров, чтобы иметь имя, если они не являются пустыми или многоточием (`...`).  
-  
- Следующий пример приводит к возникновению ошибки C2055:  
-  
-```  
-// C2055.c  
-// compile with: /c  
-void func(int, char) {}  // C2055  
-void func (int i, char c) {}   // OK  
+
+требуется список формальных параметров, а не список типов
+
+Определение функции содержит список параметров типа вместо списка формальных параметров. ANSI C требует формальных параметров, чтобы присвоить имя, если они не являются пустыми или многоточием (`...`).
+
+Следующий пример приводит к возникновению ошибки C2055:
+
+```
+// C2055.c
+// compile with: /c
+void func(int, char) {}  // C2055
+void func (int i, char c) {}   // OK
 ```

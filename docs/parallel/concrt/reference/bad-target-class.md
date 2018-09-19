@@ -1,5 +1,5 @@
 ---
-title: Класс bad_target | Документы Microsoft
+title: Класс bad_target | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be10e5e4105dd16a68ad2854538d6181e90bfbe9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 12e035a27693fcad095cd83880aba99c37ba1c1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705345"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027639"
 ---
 # <a name="badtarget-class"></a>Класс bad_target
 Этот класс описывает исключение, которое создается, если блок обмена сообщениями получает указатель на целевой объект, который неверен для выполняемой операции.  
@@ -43,7 +43,7 @@ class bad_target : public std::exception;
 |[bad_target](#ctor)|Перегружен. Создает объект `bad_target`.|  
   
 ## <a name="remarks"></a>Примечания  
- Это исключение обычно вызывается по причинам, например попытка получить сообщение, которое зарезервировано для другой целевой объект или освобождение резервирование, которое не содержит целевой объект.  
+ Это исключение обычно вызывается по причинам, например попытка получить сообщение, которое зарезервировано для другой целевой объект или освобождение резервирование, которое не содержит целевого объекта.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
@@ -66,8 +66,8 @@ bad_target() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   

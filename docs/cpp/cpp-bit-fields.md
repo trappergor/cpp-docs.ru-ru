@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029472"
 ---
 # <a name="c-bit-fields"></a>Битовые поля в C++
 
@@ -38,7 +38,7 @@ ms.locfileid: "39408051"
 > [!NOTE]
 > Неименованное битовое поле шириной 0 обеспечивает выравнивание следующего битового поля к следующему **тип** границы, где **тип** тип члена.
 
- В следующем примере объявляется структура, которая содержит битовые поля:
+В следующем примере объявляется структура, которая содержит битовые поля:
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ struct Date {
 - Инициализация отличный от**const** ссылку с битовым полем.
 
 ## <a name="see-also"></a>См. также
- [Классы и структуры](../cpp/classes-and-structs-cpp.md)
+
+[Классы и структуры](../cpp/classes-and-structs-cpp.md)

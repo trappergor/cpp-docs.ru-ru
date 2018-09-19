@@ -1,5 +1,5 @@
 ---
-title: Ошибка BSCMAKE BK1507 | Документы Microsoft
+title: Ошибка BSCMAKE BK1507 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8f7b931f81d53dd156f8442994229f20d4bc9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34352b35c1938e2374666a00777d4a125982006f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024794"
 ---
 # <a name="bscmake-error-bk1507"></a>Ошибка BSCMAKE BK1507
-не удается открыть временный файл «имя_файла» [: причина]  
-  
- BSCMAKE не удается открыть временный файл.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.  
-  
-1.  **TMP** переменная среды не устанавливается допустимый диск и каталог.  
-  
-2.  Диск переполнен.
+
+не удается открыть временный файл «имя_файла» [: причина]
+
+BSCMAKE не удается открыть временный файл.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.
+
+1. **TMP** переменная среды не задано допустимое диск и каталог.
+
+1. Диск переполнен.

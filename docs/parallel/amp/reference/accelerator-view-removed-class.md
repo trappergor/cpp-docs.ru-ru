@@ -1,5 +1,5 @@
 ---
-title: Класс accelerator_view_removed | Документы Microsoft
+title: Класс accelerator_view_removed | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020264"
 ---
 # <a name="acceleratorviewremoved-class"></a>Класс accelerator_view_removed
-Исключение, возникающее при сбое внутренний вызов DirectX из-за механизм обнаружения и восстановления Windows время ожидания.  
+Исключение, возникающее при сбое основного вызова DirectX из-за механизм обнаружения и восстановления времени ожидания Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,7 +63,7 @@ class accelerator_view_removed : public runtime_exception;
 
 ## <a name="ctor"></a> accelerator_view_removed 
 
-Инициализирует новый экземпляр [accelerator_view_removed](accelerator-view-removed-class.md) класса.  
+Инициализирует новый экземпляр класса [accelerator_view_removed](accelerator-view-removed-class.md) класса.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -77,11 +77,11 @@ explicit accelerator_view_removed(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описание ошибки.  
+*_Message*<br/>
+Описание ошибки.  
   
- `_View_removed_reason`  
- Код ошибки HRESULT, указывающее причину удаления `accelerator_view` объекта.  
+*_View_removed_reason*<br/>
+Код ошибки HRESULT, указывающее причину удаления `accelerator_view` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Новый экземпляр класса accelerator_view_removed.  

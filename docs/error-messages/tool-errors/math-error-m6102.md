@@ -1,5 +1,5 @@
 ---
-title: Математическая ошибка M6102 | Документы Microsoft
+title: Математическая ошибка M6102 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc1d1064e6ed18870d60e3a421ceec0c54ca855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae8ee21b8cb8f2a5bffe471019e65d32c8872af3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037506"
 ---
 # <a name="math-error-m6102"></a>Математическая ошибка M6102
-Denormal  
-  
- Операция вызвала очень небольшое число с плавающей запятой, которое недопустимо потеря значимости. Denormal исключений с плавающей запятой обычно замаскированы, что им быть перехвату и обработке.  
-  
- Программа завершается с кодом завершения 130.
+
+Denormal
+
+Операции создается очень маленького числа с плавающей запятой, которое недопустимо потеря значимости. Denormal исключения с плавающей запятой обычно замаскированы, что им быть перехвату и обработке.
+
+Программа завершается с кодом завершения 130.

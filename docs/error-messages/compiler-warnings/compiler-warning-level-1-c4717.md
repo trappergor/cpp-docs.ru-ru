@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4717 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4717 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa953d8d41003ff53e721671845c1ddee26da640
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9bb7c37cd4a9da8844f30463c6e2d73fcc04609
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022426"
 ---
 # <a name="compiler-warning-level-1-c4717"></a>Предупреждение компилятора (уровень 1) C4717
-«функция»: рекурсия на всех путях, функция вызовет переполнение стека времени выполнения  
-  
- Каждый путь через функцию содержит вызов функции. Поскольку нет возможности для выхода из функции без предварительного вызова функции себя рекурсивно, функция никогда не будет завершена.  
-  
- Следующий пример приводит к возникновению ошибки C4717:  
-  
-```  
-// C4717.cpp  
-// compile with: /W1 /c  
-// C4717 expected  
-int func(int x) {  
-   if (x > 1)  
-      return func(x - 1); // recursive call  
-   else {  
-      int y = func(0) + 1; // recursive call  
-      return y;  
-   }  
-}  
-  
-int main(){  
-   func(1);  
-}  
+
+«функция»: рекурсия на всех путях, функция вызовет переполнение стека среды выполнения
+
+Каждый путь через функцию содержит вызов функции. Поскольку нет способа для выхода из функции без предварительного вызова функции, сама рекурсивно, функция никогда не завершает работу.
+
+Следующий пример приводит к возникновению ошибки C4717:
+
+```
+// C4717.cpp
+// compile with: /W1 /c
+// C4717 expected
+int func(int x) {
+   if (x > 1)
+      return func(x - 1); // recursive call
+   else {
+      int y = func(0) + 1; // recursive call
+      return y;
+   }
+}
+
+int main(){
+   func(1);
+}
 ```

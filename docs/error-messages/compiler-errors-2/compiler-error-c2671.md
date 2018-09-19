@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2671 | Документы Microsoft
+title: Ошибка компилятора C2671 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22812808ce6e159c0f35d9dc2de8e269ecc23cac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b37d9dc1e50da921bdbe758e73257100853517eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026163"
 ---
 # <a name="compiler-error-c2671"></a>Ошибка компилятора C2671
-«функция»: статические функции-члены не имеют указателей «this»  
-  
- Объект `static` функция-член пытается получить доступ к `this`.  
-  
- В следующем примере возникает ошибка C2671:  
-  
-```  
-// C2671.cpp  
-struct S {  
-   static S* const func() { return this; }  // C2671  
-};  
+
+«функция»: статические функции-члены не имеют указателей «this»
+
+Объект `static` функция-член пытается получить доступ к `this`.
+
+В следующем примере возникает ошибка C2671:
+
+```
+// C2671.cpp
+struct S {
+   static S* const func() { return this; }  // C2671
+};
 ```

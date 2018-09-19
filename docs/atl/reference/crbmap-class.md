@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f4ce858949aafe1a448fc51b8ecd5591270184
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0ffdb791355aa40a33d80104af540b856cdf601
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764846"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019488"
 ---
 # <a name="crbmap-class"></a>Класс CRBMap
 
@@ -38,22 +38,22 @@ ms.locfileid: "43764846"
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*K*  
+*K*<br/>
 Тип ключа элемента.
 
-*V*  
+*V*<br/>
 Тип значения элемента.
 
-*KTraits*  
+*KTraits*<br/>
 Код, используемый для копирования или перемещения ключевые элементы. См. в разделе [класс CElementTraits](../../atl/reference/celementtraits-class.md) для получения дополнительных сведений.
 
-*VTraits*  
+*VTraits*<br/>
 Код, используемый для копирования или перемещения элементов value.
 
 ## <a name="members"></a>Участники
@@ -107,7 +107,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Размер блока.
 
 ### <a name="remarks"></a>Примечания
@@ -146,10 +146,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Задает ключ, определяющий элемент, выполняется поиск.
 
-*значение*  
+*значение*<br/>
 Переменная, которая получает искомого значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -174,7 +174,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ, соответствующий пары элементов действительно необходимо удалить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -201,10 +201,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Значение ключа, чтобы добавить `CRBMap` объекта.
 
-*значение*  
+*значение*<br/>
 Значение, которое нужно добавить `CRBMap` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -223,7 +223,7 @@ POSITION SetAt(
 
 ## <a name="see-also"></a>См. также
 
-[Класс CRBTree](../../atl/reference/crbtree-class.md)   
-[Класс CAtlMap](../../atl/reference/catlmap-class.md)   
-[Класс CRBMultiMap](../../atl/reference/crbmultimap-class.md)   
+[Класс CRBTree](../../atl/reference/crbtree-class.md)<br/>
+[Класс CAtlMap](../../atl/reference/catlmap-class.md)<br/>
+[Класс CRBMultiMap](../../atl/reference/crbmultimap-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

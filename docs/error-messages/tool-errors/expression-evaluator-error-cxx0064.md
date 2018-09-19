@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0064 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0064 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7964eac628fa89695d1757cff8b7b329fd7fe713
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b16133484af5a2225f79c5d293a2c8edd948bdb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025897"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>Ошибка вычислителя выражений CXX0064
-Невозможно задать точку останова на связанный виртуальная функция-член  
-  
- Была задана точка останова виртуальная функция-член через указатель на объект, например:  
-  
-```  
-pClass->vfunc( int );  
-```  
-  
- Точки останова можно задать для виртуальной функции путем ввода класса, например:  
-  
-```  
-Class::vfunc( int );  
-```  
-  
- Эта ошибка идентична ошибке CAN0064.
+
+Невозможно задать точку останова на привязанных виртуальная функция-член
+
+Была задана точка останова на виртуальная функция-член через указатель на объект, например:
+
+```
+pClass->vfunc( int );
+```
+
+Точки останова можно задать для виртуальной функции путем ввода класса, такие как:
+
+```
+Class::vfunc( int );
+```
+
+Эта ошибка идентична ошибке CAN0064.

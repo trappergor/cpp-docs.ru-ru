@@ -18,36 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5687adfada8657ae26edd9001db8990ff08864e9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: a8f09109aab5823f339de76a1337eea77a0794cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037753"
 ---
 # <a name="results-of-calling-example"></a>Пример результатов вызова
 
 **Блок, относящийся только к системам Microsoft**
 
 ## <a name="cdecl"></a>__cdecl
+
 — Имя функции на языке C `_MyFunc`.
 
-![Соглашение о вызовах CDECL](../cpp/media/vc37i01.gif "vc37I01")  
-**__Cdecl** соглашение о вызовах
+![Соглашение о вызовах CDECL](../cpp/media/vc37i01.gif "vc37I01") **__cdecl** соглашение о вызовах
 
 ## <a name="stdcall-and-thiscall"></a>__stdcall и thiscall
 
 C внутреннее имя (**__stdcall**) является `_MyFunc@20`. Имя C++ декорированные зависит от реализации.
 
-![&#95;&#95;STDCALL и соглашения о вызовах thiscall](../cpp/media/vc37i02.gif "vc37I02")  
-Соглашения о вызовах __stdcall и thiscall
+![&#95;&#95;STDCALL и соглашения о вызовах thiscall](../cpp/media/vc37i02.gif "vc37I02") __stdcall и thiscall, соглашения о вызовах
 
 ## <a name="fastcall"></a>__fastcall
 
 C внутреннее имя (**__fastcall**) является `@MyFunc@20`. Имя C++ декорированные зависит от реализации.
 
-![Соглашение о вызовах для &#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03")  
-Соглашение о вызовах __fastcall
+![Соглашение о вызовах для &#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03") соглашение о вызовах __fastcall
 
 **Завершение блока, относящегося только к системам Майкрософт**
 

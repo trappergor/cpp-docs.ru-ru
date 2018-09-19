@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1603 | Документы Microsoft
+title: Неустранимая ошибка C1603 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39835900b1286fbc4e23f10b6135c625646c6a0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8481b23970bb95125258fde680897b9cb2bbd67d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040971"
 ---
 # <a name="fatal-error-c1603"></a>Неустранимая ошибка C1603
-конечный адрес ветвления встроенной сборки вне диапазона на «число» байт  
-  
- Рассчитанное расстояние между JCXZ или JECXZ и указанной целевой меткой был больше 128 байт. Обновите код, чтобы метка располагалась ближе к инструкции.
+
+адрес ветви языке ассемблера вне диапазона на «число» байт
+
+Рассчитанное расстояние между JCXZ или JECXZ и указанной целевой меткой был больше 128 байт. Обновите код, чтобы метка располагалась ближе к инструкции.

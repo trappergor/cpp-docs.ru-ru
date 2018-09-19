@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fb1c50b6bdd46cc6cf0efe7739e8ada60f3274
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9acbb55f09df3912ff61a54557cb013e86c48834
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762639"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036635"
 ---
 # <a name="ctokenprivileges-class"></a>Класс CTokenPrivileges
 
@@ -98,19 +98,19 @@ class CTokenPrivileges
 Добавляет один или несколько прав для `CTokenPrivileges` объекта маркера доступа.
 
 ```
-bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);  
+bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);
 void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее имя права, как определено в WINNT. Файл заголовка.
 
-*bEnable*  
+*bEnable*<br/>
 Значение true, если включена право доступа. Если значение равно false, привилегии отключен.
 
-*rPrivileges*  
+*rPrivileges*<br/>
 Ссылка на [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) структуры. Права и атрибуты, копируемых из этой структуры и добавляются в `CTokenPrivileges` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -123,16 +123,16 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 
 ```
 CTokenPrivileges() throw();
-CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );  
+CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );
 CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `CTokenPrivileges` Объекта, чтобы назначить новый объект.
 
-*rPrivileges*  
+*rPrivileges*<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) структуры, чтобы назначить новый `CTokenPrivileges` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -161,7 +161,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее имя права, как определено в WINNT. Файл заголовка. Например этот параметр может указать константой SE_SECURITY_NAME или его соответствующую строку «SeSecurityPrivilege.»
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -194,7 +194,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pDisplayNames*  
+*pDisplayNames*<br/>
 Указатель на массив объектов `CString`. `CNames` определяется как определение типа: `CTokenPrivileges::CAtlArray<CString>`.
 
 ### <a name="remarks"></a>Примечания
@@ -239,10 +239,10 @@ void GetLuidsAndAttributes(
 
 ### <a name="parameters"></a>Параметры
 
-*pPrivileges*  
+*pPrivileges*<br/>
 Указатель на массив [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) объектов. `CLUIDArray` typedef определяется как `CAtlArray<LUID> CLUIDArray`.
 
-*pAttributes*  
+*pAttributes*<br/>
 Указатель на массив объектов типа DWORD. Если этот параметр опущен или имеет значение NULL, то атрибуты не извлекаются. `CAttributes` typedef определяется как `CAtlArray <DWORD> CAttributes`.
 
 ### <a name="remarks"></a>Примечания
@@ -261,10 +261,10 @@ void GetNamesAndAttributes(
 
 ### <a name="parameters"></a>Параметры
 
-*pNames*  
+*pNames*<br/>
 Указатель на массив `CString` объектов. `CNames` typedef определяется как `CAtlArray <CString> CNames`.
 
-*pAttributes*  
+*pAttributes*<br/>
 Указатель на массив объектов типа DWORD. Если этот параметр опущен или имеет значение NULL, то атрибуты не извлекаются. `CAttributes` typedef определяется как `CAtlArray <DWORD> CAttributes`.
 
 ### <a name="remarks"></a>Примечания
@@ -297,10 +297,10 @@ bool LookupPrivilege(
 
 ### <a name="parameters"></a>Параметры
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее имя права, как определено в WINNT. Файл заголовка. Например этот параметр может указать константой SE_SECURITY_NAME или его соответствующую строку «SeSecurityPrivilege.»
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 Указатель на переменную, получающую атрибуты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -312,16 +312,16 @@ bool LookupPrivilege(
 Оператор присвоения.
 
 ```
-CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);  
+CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*rPrivileges*  
+*rPrivileges*<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) структуры, чтобы назначить `CTokenPrivileges` объекта.
 
-*правая часть*  
+*правая часть*<br/>
 `CTokenPrivileges` Для присваивания объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -332,7 +332,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 
 Приводит значение к указателю на `TOKEN_PRIVILEGES` структуры.
 
-```  
+```
 operator const TOKEN_PRIVILEGES *() const throw(...);
 ```
 
@@ -342,9 +342,9 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 ## <a name="see-also"></a>См. также
 
-[Образец безопасности](../../visual-cpp-samples.md)   
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
-[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
-[ПОДРОБНОСТИ](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Образец безопасности](../../visual-cpp-samples.md)<br/>
+[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>
+[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
+[ПОДРОБНОСТИ](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

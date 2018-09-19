@@ -1,5 +1,5 @@
 ---
-title: Класс multi_link_registry | Документы Microsoft
+title: Класс multi_link_registry | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 93d13e7d74a499091a8ad0c592b3cee45a9bbb5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688938"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029601"
 ---
 # <a name="multilinkregistry-class"></a>Класс multi_link_registry
 Объект `multi_link_registry` представляет собой `network_link_registry`, управляющий несколькими блоками источников или целевыми блоками.  
@@ -42,8 +42,8 @@ class multi_link_registry : public network_link_registry<_Block>;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_Block`  
- Тип блока данных, хранимых в `multi_link_registry` объекта.  
+*_Block*<br/>
+Тип блока данных, хранящихся в `multi_link_registry` объекта.  
   
 ## <a name="members"></a>Участники  
   
@@ -59,11 +59,11 @@ class multi_link_registry : public network_link_registry<_Block>;
 |Имя|Описание|  
 |----------|-----------------|  
 |[add](#add)|Добавляет ссылку на `multi_link_registry` объекта. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|  
-|[begin](#begin)|Возвращает итератор на первый элемент в `multi_link_registry` объекта. (Переопределяет [network_link_registry::begin](network-link-registry-class.md#begin).)|  
-|[содержит](#contains)|Поиск `multi_link_registry` объекта для указанного блока. (Переопределяет [network_link_registry::contains](network-link-registry-class.md#contains).)|  
+|[begin](#begin)|Возвращает итератор, указывающий на первый элемент в `multi_link_registry` объекта. (Переопределяет [network_link_registry::begin](network-link-registry-class.md#begin).)|  
+|[Содержит](#contains)|Поиск `multi_link_registry` объекта для указанного блока. (Переопределяет [network_link_registry::contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|Подсчитывает количество элементов в `multi_link_registry` объекта. (Переопределяет [network_link_registry::count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Удаляет ссылку из `multi_link_registry` объекта. (Переопределяет [network_link_registry::remove](network-link-registry-class.md#remove).)|  
-|[set_bound](#set_bound)|Устанавливает верхний предел на число ссылок `multi_link_registry` могут храниться в объекте.|  
+|[set_bound](#set_bound)|Устанавливает верхний предел на число ссылок, `multi_link_registry` могут храниться в объекте.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [network_link_registry](network-link-registry-class.md)  
@@ -84,27 +84,27 @@ virtual void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Link`  
- Указатель на блок для добавления.  
+*_Связать*<br/>
+Указатель на блок для добавления.  
   
 ### <a name="remarks"></a>Примечания  
- Метод создает [invalid_link_target](invalid-link-target-class.md) Если связь уже существует в реестре или если ограничение уже было установлено исключение с `set_bound` функции и ссылки был удален.  
+ Метод вызывает [invalid_link_target](invalid-link-target-class.md) исключения Если ссылка уже существует в реестре или связанного уже задана `set_bound` функции и ссылки был удален.  
   
 ##  <a name="begin"></a> начать 
 
- Возвращает итератор на первый элемент в `multi_link_registry` объекта.  
+ Возвращает итератор, указывающий на первый элемент в `multi_link_registry` объекта.  
   
 ```
 virtual iterator begin();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Итератор, обращающийся к первому элементу в `multi_link_registry` объекта.  
+ Итератор, адресующий первый элемент в `multi_link_registry` объекта.  
   
 ### <a name="remarks"></a>Примечания  
  Конечное состояние обозначается `NULL` ссылку.  
   
-##  <a name="contains"></a> содержит 
+##  <a name="contains"></a> Содержит 
 
  Поиск `multi_link_registry` объекта для указанного блока.  
   
@@ -113,13 +113,13 @@ virtual bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Link`  
- Указатель на блок, который необходимо найти в `multi_link_registry` объекта.  
+*_Связать*<br/>
+Указатель на блок, который необходимо найти в `multi_link_registry` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true` Если указанная блокировка найдена, `false` в противном случае.  
+ `true` Если указанный блок был найден, `false` в противном случае.  
   
-##  <a name="count"></a> Счетчик 
+##  <a name="count"></a> число 
 
  Подсчитывает количество элементов в `multi_link_registry` объекта.  
   
@@ -147,9 +147,9 @@ virtual ~multi_link_registry();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Метод создает [invalid_operation](invalid-operation-class.md) исключение, если вызывается до удаления всех связей.  
+ Метод вызывает [invalid_operation](invalid-operation-class.md) исключение, если вызывается до удаления всех связей.  
   
-##  <a name="remove"></a> Удалить 
+##  <a name="remove"></a> удалить 
 
  Удаляет ссылку из `multi_link_registry` объекта.  
   
@@ -158,23 +158,23 @@ virtual bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Link`  
- Указатель на блок удалены, если найден.  
+*_Связать*<br/>
+Указатель на блок удалены, если найден.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если ссылка была найдена и удалена, `false` в противном случае.  
   
 ##  <a name="set_bound"></a> set_bound 
 
- Устанавливает верхний предел на число ссылок `multi_link_registry` могут храниться в объекте.  
+ Устанавливает верхний предел на число ссылок, `multi_link_registry` могут храниться в объекте.  
   
 ```
 void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_MaxLinks`  
- Максимальное число ссылок, `multi_link_registry` могут храниться в объекте.  
+*_MaxLinks*<br/>
+Максимальное число ссылок, `multi_link_registry` могут храниться в объекте.  
   
 ### <a name="remarks"></a>Примечания  
  После установки границы отсоединение записи приведет к тому, что объект `multi_link_registry` войдет в неизменяемое состояние, где дальнейшие вызовы `add` создадут исключение `invalid_link_target`.  

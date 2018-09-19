@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30778524f692e19ffad205dc693dd5afd294c25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023310"
 ---
 # <a name="server-registration-global-functions"></a>Глобальные функции регистрации серверов
 
@@ -57,13 +57,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*  
+*pComModule*<br/>
 Указатель на COM-модуля.
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 Значение TRUE, если для регистрации библиотеки типов.
 
-*pCLSID*  
+*pCLSID*<br/>
 Указывает идентификатор CLSID объекта для регистрации. Если значение равно NULL, будет зарегистрировано всех объектов в карте объектов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -89,13 +89,13 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*  
+*pComModule*<br/>
 Указатель на COM-модуля.
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 Значение TRUE, если для регистрации библиотеки типов.
 
-*pCLSID*  
+*pCLSID*<br/>
 Указывает идентификатор CLSID объекта для отмены регистрации. Если значение равно NULL всех объектов в карте объектов будет отменена.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -121,13 +121,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*  
+*pComModule*<br/>
 Указатель на COM-модуля.
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. См. в разделе [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) для получения дополнительных сведений.
 
-*dwFlags*  
+*dwFlags*<br/>
 Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. См. в разделе [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -148,7 +148,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*  
+*pComModule*<br/>
 Указатель на COM-модуля.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -173,16 +173,16 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*  
+*pComModule*<br/>
 Указатель на COM-модуля.
 
-*rclsid*  
+*rclsid*<br/>
 CLSID создаваемого объекта.
 
-*riid*  
+*riid*<br/>
 Идентификатор IID запрошенного интерфейса.
 
-*ppv*  
+*ppv*<br/>
 Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppv* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение

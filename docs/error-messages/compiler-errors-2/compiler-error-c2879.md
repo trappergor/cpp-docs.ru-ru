@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2879 | Документы Microsoft
+title: Ошибка компилятора C2879 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba1738da7d349ecafd9f10f31d8f05ac1f12df0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 632142ea0efd8a9d009f18b898213cfa92514b16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042480"
 ---
 # <a name="compiler-error-c2879"></a>Ошибка компилятора C2879
-«символ»: только для существующего пространства имен может быть дано альтернативное имя при определении псевдонима пространства имен  
-  
- Не удается создать [псевдоним пространства имен](../../cpp/namespaces-cpp.md#namespace_aliases) на символ, отличный от пространства имен.  
-  
- Следующий пример приводит к возникновению ошибки C2879:  
-  
-```  
-// C2879.cpp  
-int main() {  
-   int i;  
-   namespace A = i;   // C2879 i is not a namespace  
-}  
+
+«символ»: только для существующего пространства имен можно предоставить альтернативное имя, определение псевдонима пространства имен
+
+Не удается создать [псевдоним пространства имен](../../cpp/namespaces-cpp.md#namespace_aliases) в символ, отличный от пространства имен.
+
+Следующий пример приводит к возникновению ошибки C2879:
+
+```
+// C2879.cpp
+int main() {
+   int i;
+   namespace A = i;   // C2879 i is not a namespace
+}
 ```

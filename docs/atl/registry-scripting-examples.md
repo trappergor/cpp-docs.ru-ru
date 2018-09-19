@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753153"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022115"
 ---
 # <a name="registry-scripting-examples"></a>Примеры скриптов реестра
 
@@ -32,17 +32,17 @@ ms.locfileid: "43753153"
 
 Следующее дерево синтаксического анализа показан простой сценарий, который добавляет один ключ в системный реестр. В частности, он добавляет ключ `MyVeryOwnKey`, `HKEY_CURRENT_USER`. А также назначает строковое значение по умолчанию `HowGoesIt` к новому ключу:
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 Этот сценарий можно расширить легко определить несколько подразделов, следующим образом:
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 Теперь, сценарий добавляет подраздел, `HasASubkey`, `MyVeryOwnKey`. В этом подразделе, он добавляет Оба `PrettyCool` подраздел (значение по умолчанию `DWORD` значение 55) и `ANameValue` именованное значение (со значением строки `WithANamedValue`).
@@ -61,8 +61,8 @@ HKCU
 
 Следующий сценарий регистрирует сам сервер COM регистратора.
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 Во время выполнения, в данном дереве синтаксического анализа добавляет `ATL.Registrar` ключа `HKEY_CLASSES_ROOT`. Для этого нового ключа затем ИТ:
@@ -106,15 +106,15 @@ HKCR
 
 Чтобы указать более одного дерево синтаксического анализа в сценарий, просто поместите одно дерево в конце другой. Например, следующий сценарий добавляет ключ `MyVeryOwnKey`, чтобы деревьях синтаксического анализа для обоих `HKEY_CLASSES_ROOT` и `HKEY_CURRENT_USER`:
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]

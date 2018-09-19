@@ -1,5 +1,5 @@
 ---
-title: Класс message_processor | Документы Microsoft
+title: Класс message_processor | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f720ad2590a731792f79ef66a68dd2894a15517d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689393"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026924"
 ---
 # <a name="messageprocessor-class"></a>Класс message_processor
 Класс `message_processor` — это абстрактный базовый класс для обработки объектов `message`. Упорядочивание сообщений не гарантируется.  
@@ -39,8 +39,8 @@ class message_processor;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Тип данных полезных данных внутри сообщений обрабатываемые этим `message_processor` объекта.  
+*T*<br/>
+Тип данных полезных данных внутри сообщений обрабатываемые этим `message_processor` объекта.  
   
 ## <a name="members"></a>Участники  
   
@@ -62,7 +62,7 @@ class message_processor;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|При переопределении в производном классе выполняет прямую обработки сообщений в блок. Вызывается один раз, каждый раз, добавляется новое сообщение и очередь оказывается пустой.|  
+|[process_incoming_message](#process_incoming_message)|При переопределении в производном классе, выполняет прямой обработку сообщений в блок. Вызывается один раз при каждом добавлении нового сообщения и очередь оказывается пустой.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `message_processor`  
@@ -81,22 +81,22 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Msg`  
- Объект `message` объект отправлять в асинхронном режиме.  
+*_Msg*<br/>
+Объект `message` объекта для асинхронной отправки.  
   
 ### <a name="remarks"></a>Примечания  
  Процессор реализации должны переопределять этот метод.  
   
 ##  <a name="process_incoming_message"></a> process_incoming_message 
 
- При переопределении в производном классе выполняет прямую обработки сообщений в блок. Вызывается один раз, каждый раз, добавляется новое сообщение и очередь оказывается пустой.  
+ При переопределении в производном классе, выполняет прямой обработку сообщений в блок. Вызывается один раз при каждом добавлении нового сообщения и очередь оказывается пустой.  
   
 ```
 virtual void process_incoming_message() = 0;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Реализации блоков сообщений должны переопределять этот метод.  
+ Этот метод необходимо переопределить реализации блоков сообщений.  
   
 ##  <a name="sync_send"></a> sync_send 
 
@@ -107,13 +107,13 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Msg`  
- Объект `message` объект для отправки в синхронном режиме.  
+*_Msg*<br/>
+Объект `message` объект для отправки в синхронном режиме.  
   
 ### <a name="remarks"></a>Примечания  
  Процессор реализации должны переопределять этот метод.  
   
-##  <a name="wait"></a> Ожидание 
+##  <a name="wait"></a> Подождите 
 
  При переопределении в производном классе, ожидает завершения всех асинхронных операций.  
   

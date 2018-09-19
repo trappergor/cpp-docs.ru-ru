@@ -1,5 +1,5 @@
 ---
-title: Класс improper_scheduler_attach | Документы Microsoft
+title: Класс improper_scheduler_attach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c5e3ede7a9aeba58c84b39f346222adde17f682
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 46f676bbe61784adab40f90e329b87aa1c1aae52
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685623"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026756"
 ---
 # <a name="improperschedulerattach-class"></a>Класс improper_scheduler_attach
 Этот класс описывает исключение, которое создается при вызове метода `Attach` на объекте `Scheduler`, который уже присоединен к текущему контексту.  
@@ -63,8 +63,8 @@ improper_scheduler_attach() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   

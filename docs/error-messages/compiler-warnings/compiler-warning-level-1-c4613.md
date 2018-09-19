@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4613 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4613 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbac6afb83e7ab44fb71a38e69860b168d45b1e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a69c1182a5ad5a25d80b5818f799bf9e684dec8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027119"
 ---
 # <a name="compiler-warning-level-1-c4613"></a>Предупреждение компилятора (уровень 1) C4613
-"сегмент": класс сегмента не может быть изменен  
-  
- Предпринята попытка создания сегмента с тем же именем класса, что и у сегмента, используемого компилятором. Новый класс сегмента не был создан.
+
+"сегмент": класс сегмента не может быть изменен
+
+Предпринята попытка создания сегмента с тем же именем класса, что и у сегмента, используемого компилятором. Новый класс сегмента не был создан.

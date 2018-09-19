@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1221 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1221 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09ce9b1b6ca1c7b873f6c87a6428a9cc6c0b2e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6347bc4e7a14f335a006b666e03851fa8979801
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023323"
 ---
 # <a name="linker-tools-error-lnk1221"></a>Ошибка средств компоновщика LNK1221
-Подсистема не могут быть получены и должен быть определен  
-  
- Компоновщик не имеет достаточно информации для определять, какие подсистемы, вы будете работать.  
-  
- Чтобы устранить эту ошибку, используйте [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md).
+
+Подсистема не могут быть получены и должен быть определен
+
+Компоновщик не имеет достаточно информации, чтобы определить, какая подсистема, вы будете работать.
+
+Чтобы устранить эту ошибку, используйте [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md).

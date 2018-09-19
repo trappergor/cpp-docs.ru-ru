@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4213 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4213 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407fac636ea33c8cbd31104460442e5ac2aaec65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 59bb2d8b2c25516558c4810d190f0bec9b98c086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025624"
 ---
 # <a name="compiler-warning-level-4-c4213"></a>Предупреждение компилятора (уровень 4) C4213
-использовано нестандартное расширение: приведение типов для l значение  
-  
- С расширениями Майкрософт по умолчанию (/Ze) можно использовать приведения на левой части оператора присваивания.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// C4213.c  
-// compile with: /W4  
-void *a;  
-void f()  
-{  
-   int   i[3];  
-   a = &i;  
-   *(( int * )a )++ = 3;  // C4213  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
- Такого приведения не допускается в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+использовано нестандартное расширение: приведение типов для левостороннего значения
+
+В расширениях Майкрософт по умолчанию (/Ze) можно использовать приведения в левой части оператора присваивания.
+
+## <a name="example"></a>Пример
+
+```
+// C4213.c
+// compile with: /W4
+void *a;
+void f()
+{
+   int   i[3];
+   a = &i;
+   *(( int * )a )++ = 3;  // C4213
+}
+
+int main()
+{
+}
+```
+
+Такого приведения являются недопустимыми в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

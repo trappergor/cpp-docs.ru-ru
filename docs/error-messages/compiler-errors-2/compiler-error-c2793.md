@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2793 | Документы Microsoft
+title: Ошибка компилятора C2793 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea378b2a875542eab431cf9cc30217f50c971af6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5b9f350a3d3845649c9423a412ed5286cb13723
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026209"
 ---
 # <a name="compiler-error-c2793"></a>Ошибка компилятора C2793
-«лексема»: непредвиденная лексема после "::", идентификатор или ключевое слово «оператор»  
-  
- Только маркеры, которые можно выполнить `__super::` идентификатор или ключевое слово `operator`.  
-  
- Следующий пример приводит к возникновению ошибки C2793  
-  
-```  
-// C2793.cpp  
-struct B {  
-   void mf();  
-};  
-  
-struct D : B {  
-   void mf() {  
-      __super::(); // C2793  
-   }  
-};  
+
+«токен»: непредвиденная лексема после "::", идентификатор или ключевое слово «operator» ожидается
+
+Только токены, которые можно выполнить `__super::` идентификатор или ключевое слово `operator`.
+
+Следующий пример приводит к возникновению ошибки C2793
+
+```
+// C2793.cpp
+struct B {
+   void mf();
+};
+
+struct D : B {
+   void mf() {
+      __super::(); // C2793
+   }
+};
 ```

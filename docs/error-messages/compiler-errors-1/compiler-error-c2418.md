@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2418 | Документы Microsoft
+title: Ошибка компилятора C2418 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6943b939fbc7095f8cbdd058ea10a7dc25f84476
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abbc4e0f0cc74ff704f74bef66a913b37cec5f7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197017"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024671"
 ---
 # <a name="compiler-error-c2418"></a>Ошибка компилятора C2418
-не удается удалить файл браузера: имя файла  
-  
- Компилятору не удалось удалить файл браузера.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.  
-  
-1.  Файл доступен только для чтения.  
-  
-2.  Файл уже используется другим процессом.
+
+не удается удалить файл браузера: имя файла
+
+Компилятору не удалось удалить файл браузера.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.
+
+1. Файл доступен только для чтения.
+
+1. Файл уже используется другим процессом.

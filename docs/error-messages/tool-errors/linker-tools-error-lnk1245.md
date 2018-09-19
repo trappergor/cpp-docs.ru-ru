@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1245 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1245 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47a1c2e5f7bf66946dcc5816d7a20fd485b59b45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef7bace5cec937399d7a2ed440e21b9b751f4141
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299244"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041796"
 ---
 # <a name="linker-tools-error-lnk1245"></a>Ошибка средств компоновщика LNK1245
-Недопустимая подсистема подсистемы задан; / SUBSYSTEM должен быть WINDOWS, WINDOWSCE или CONSOLE  
-  
- [/ CLR](../../build/reference/clr-common-language-runtime-compilation.md) был использован для компилирования объекта и одно из следующих условий верно:  
-  
--   Точка добавления настраиваемой записи был определен ([/Entry](../../build/reference/entry-entry-point-symbol.md)), таким образом, что компоновщик не может повлиять на подсистему.  
-  
--   Значение было передано [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) параметра компоновщика, который недопустим для/CLR объектов.  
-  
- Для обоих случаев решением является указать допустимое значение для параметра компоновщика/SUBSYSTEM.
+
+Недопустимая подсистема «подсистема» задан; / SUBSYSTEM должен быть WINDOWS, WINDOWSCE или CONSOLE
+
+[/ CLR](../../build/reference/clr-common-language-runtime-compilation.md) использовалась для компиляции объекта и одно из следующих условий верно:
+
+- Точка добавления настраиваемой записи был определен ([/Entry](../../build/reference/entry-entry-point-symbol.md)), таким образом, что компоновщик не может повлиять на подсистему.
+
+- Было передано значение [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) параметра компоновщика, который не является допустимым для/CLR объектов.
+
+Для обоих случаев решением является указать допустимое значение для параметра компоновщика/SUBSYSTEM.

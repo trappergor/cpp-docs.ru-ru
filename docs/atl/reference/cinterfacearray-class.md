@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b6266ac31e2d6dec6eabc847b67b080b250837
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 533458b35e4589e04d95a4618a04a90aa1994c35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039339"
 ---
 # <a name="cinterfacearray-class"></a>Класс CInterfaceArray
 
@@ -32,7 +32,7 @@ ms.locfileid: "43751427"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class I, const IID* piid=& __uuidof(I)>  
+template <class I, const IID* piid=& __uuidof(I)>
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>Параметры
 
-*I*  
+*I*<br/>
 COM-интерфейс, указав тип указателя для сохранения.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор IID *я*.
 
 ## <a name="members"></a>Участники
@@ -84,7 +84,7 @@ CInterfaceArray() throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAtlArray](../../atl/reference/catlarray-class.md)   
-[Класс CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
-[Класс CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[Класс CAtlArray](../../atl/reference/catlarray-class.md)<br/>
+[Класс CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Класс CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

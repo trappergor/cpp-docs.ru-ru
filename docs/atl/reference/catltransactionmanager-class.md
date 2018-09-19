@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1217fe9c7bbb43b578a7f7236c69531f04464a44
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6109ad46fb171d4bfe3386a4746b21768510ce0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042447"
 ---
 # <a name="catltransactionmanager-class"></a>Класс CAtlTransactionManager
 
@@ -124,10 +124,10 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 
 ### <a name="parameters"></a>Параметры
 
-*bFallback*  
+*bFallback*<br/>
 Значение TRUE указывает, поддержка резервирования. При сбое транзакционные функции класса автоматически вызывает функцию «без использования транзакций». Значение FALSE указывает вызовы не «базовом».
 
-*bAutoCreateTransaction*  
+*bAutoCreateTransaction*<br/>
 Значение TRUE указывает, что обработчик транзакций автоматически создается в конструкторе. Значение FALSE указывает, что нет.
 
 ### <a name="remarks"></a>Примечания
@@ -197,25 +197,25 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>Параметры
 
-*lpFileName*  
+*lpFileName*<br/>
 Имя объекта для создания или открытия.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Доступ к объекту, который сформулировать чтение, запись, оба или ни одного (ноль). Наиболее часто используемые значения GENERIC_READ и GENERIC_WRITE: GENERIC_READ &#124; GENERIC_WRITE.
 
-*dwShareMode*  
+*dwShareMode*<br/>
 Режим общего доступа объектом, который может быть чтение, запись и оба, удалить, все они или нет: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 Указатель на структуру SECURITY_ATTRIBUTES, которая содержит дескриптор безопасности необязательно, а также определяет, может ли возвращаемый дескриптор быть унаследован дочерними процессами. Параметр может иметь значение NULL.
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 Действия, предпринимаемые для файлов, которые существуют и не существуют. Этот параметр должен иметь одно из следующих значений, которые нельзя использовать вместе: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING или TRUNCATE_EXISTING.
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 Атрибуты файла и флаги. Этот параметр может содержать любое сочетание доступных файловых атрибутов (FILE_ATTRIBUTE_ *). Все другие атрибуты файла переопределить FILE_ATTRIBUTE_NORMAL. Этот параметр может также содержать комбинации флагов (FILE_FLAG_\*) для управления поведением буферизации, доступ к режимы и другие специальные флаги. Их сочетание с любой FILE_ATTRIBUTE_\* значения.
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 Допустимый дескриптор файла шаблона с GENERIC_READ права доступа. Файл шаблона предоставляет атрибуты файла и дополнительные атрибуты для файла, который создается. Этот параметр может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -236,7 +236,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Параметры
 
-*lpFileName*  
+*lpFileName*<br/>
 Имя файла, предназначенного для удаления.
 
 ### <a name="remarks"></a>Примечания
@@ -255,10 +255,10 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>Параметры
 
-*lpFileName*  
+*lpFileName*<br/>
 Каталог или путь и имя файла для поиска. Этот параметр может содержать подстановочные знаки, например звездочку (*) или вопросительный знак ().
 
-*pNextInfo*  
+*pNextInfo*<br/>
 Указатель на структуру WIN32_FIND_DATA, получающий сведения о найденного файла или подкаталога.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -279,7 +279,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Параметры
 
-*lpFileName*  
+*lpFileName*<br/>
 Имя файла или каталога.
 
 ### <a name="remarks"></a>Примечания
@@ -299,13 +299,13 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>Параметры
 
-*lpFileName*  
+*lpFileName*<br/>
 Имя файла или каталога.
 
-*fInfoLevelId*  
+*fInfoLevelId*<br/>
 Уровень извлекаемых данных атрибута.
 
-*lpFileInformation*  
+*lpFileInformation*<br/>
 Указатель на буфер, получающий сведения об атрибутах. Тип данных атрибута, который хранится в этот буфер определяется по значению *fInfoLevelId*. Если *fInfoLevelId* параметр имеет GetFileExInfoStandard, то этот параметр указывает на структуру WIN32_FILE_ATTRIBUTE_DATA.
 
 ### <a name="remarks"></a>Примечания
@@ -370,10 +370,10 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 ### <a name="parameters"></a>Параметры
 
-*lpOldFileName*  
+*lpOldFileName*<br/>
 Имя текущего существующий файл или каталог на локальном компьютере.
 
-*lpNewFileName*  
+*lpNewFileName*<br/>
 Новое имя для файла или каталога. Это имя не должно уже существовать. Новый файл может быть на разных файловой системы или диска. Новый каталог должен быть на одном диске.
 
 ### <a name="remarks"></a>Примечания
@@ -399,31 +399,31 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>Параметры
 
-*открываемый раздел hKey*  
+*открываемый раздел hKey*<br/>
 Дескриптор, чтобы открыть раздел реестра.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Имя раздела, который открывает эту функцию, или создает.
 
-*dwReserved*  
+*dwReserved*<br/>
 Этот параметр зарезервирован и должен быть равен нулю.
 
-*lpClass*  
+*lpClass*<br/>
 Пользовательский класс этот ключ. Этот параметр могут игнорироваться. Этот параметр может иметь значение NULL.
 
-*dwOptions*  
+*dwOptions*<br/>
 Этот параметр может принимать одно из следующих значений: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE или REG_OPTION_VOLATILE.
 
-*samDesired*  
+*samDesired*<br/>
 Маска, которая указывает права доступа для ключа.
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 Указатель на структуру SECURITY_ATTRIBUTES, которое определяет, может ли возвращаемый дескриптор быть унаследован дочерними процессами. Если *lpSecurityAttributes* имеет значение NULL, дескриптор не наследуется.
 
-*phkResult*  
+*phkResult*<br/>
 Указатель на переменную, которая получает дескриптор открыт или созданный ключ. Если ключ не является одним из предопределенных реестра, вызвать `RegCloseKey` функционировать после завершения использования дескриптора.
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 Указатель на переменную, которая получает один из следующих значений disposition: REG_CREATED_NEW_KEY или REG_OPENED_EXISTING_KEY.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -472,19 +472,19 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>Параметры
 
-*открываемый раздел hKey*  
+*открываемый раздел hKey*<br/>
 Дескриптор, чтобы открыть раздел реестра.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Имя раздела реестра, чтобы открыть.
 
-*ulOptions*  
+*ulOptions*<br/>
 Этот параметр зарезервирован и должен быть равен нулю.
 
-*samDesired*  
+*samDesired*<br/>
 Маска, которая указывает права доступа для ключа.
 
-*phkResult*  
+*phkResult*<br/>
 Указатель на переменную, которая получает дескриптор открыт или созданный ключ. Если ключ не является одним из предопределенных реестра, вызвать `RegCloseKey` функционировать после завершения использования дескриптора.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -521,10 +521,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>Параметры
 
-*lpFileName*  
+*lpFileName*<br/>
 Имя файла или каталога.
 
-*dwAttributes*  
+*dwAttributes*<br/>
 Атрибуты файла, которые следует задать для файла. Дополнительные сведения см. в разделе [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda).
 
 ### <a name="remarks"></a>Примечания

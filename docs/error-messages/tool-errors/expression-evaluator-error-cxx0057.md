@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0057 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0057 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509c7e00236ed824c3213f7ba730909873646c2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f993b435df4d0b6804ab9b31698074d65a03112
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025026"
 ---
 # <a name="expression-evaluator-error-cxx0057"></a>Ошибка вычислителя выражений CXX0057
-Нет кода в номер строки  
-  
- Код не был создан для указанного номера строки. Он не может использоваться в качестве точки останова.  
-  
- Эта ошибка идентична ошибке CAN0057.
+
+Нет кода в номер строки
+
+Код не был создан для указанного номера строки. Он не может использоваться в качестве точки останова.
+
+Эта ошибка идентична ошибке CAN0057.

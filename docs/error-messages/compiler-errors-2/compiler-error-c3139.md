@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3139 | Документы Microsoft
+title: Ошибка компилятора C3139 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06d63ef93c4924e0ee5e8808c5783ee5a0fb7f79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac401381dffab11ddb59eb05a5cafe13373d7791
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247994"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026456"
 ---
 # <a name="compiler-error-c3139"></a>Ошибка компилятора C3139
-«struct»: невозможно экспортировать UDT без членов  
-  
- Предпринята попытка применить [Экспорт](../../windows/export.md) равным пустой UDT (определяемый пользователем тип). Пример:  
-  
-```  
-// C3139.cpp  
-#include "unknwn.h"  
-[emitidl];  
-[module(name=xx)];  
-  
-[export] struct MyStruct {   // C3139 empty type  
-};  
-int main(){}  
+
+«struct»: невозможно экспортировать UDT без членов
+
+Предпринята попытка применить [Экспорт](../../windows/export.md) атрибут к пустому типу, определяемые пользователем (UDT). Пример:
+
+```
+// C3139.cpp
+#include "unknwn.h"
+[emitidl];
+[module(name=xx)];
+
+[export] struct MyStruct {   // C3139 empty type
+};
+int main(){}
 ```

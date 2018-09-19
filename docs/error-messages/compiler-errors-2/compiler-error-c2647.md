@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2647 | Документы Microsoft
+title: Ошибка компилятора C2647 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5de79746876a60cc9a64c4bf8f91e468b4d379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14187f7b74096a3a863798053ab260177d2f378b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045891"
 ---
 # <a name="compiler-error-c2647"></a>Ошибка компилятора C2647
-«оператор»: Невозможно разыменовать «тип1» в «тип2»  
-  
- Левый операнд оператора указателя на член ( `->*` или `.*` ) не может быть неявно преобразован в тип, относящийся к правому оператору.  
-  
- Следующий пример приводит к возникновению ошибки C2647:  
-  
-```  
-// C2647.cpp  
-class C {};  
-class D {};  
-  
-int main() {  
-   D d, *pd;  
-   C c, *pc = 0;  
-   int C::*pmc = 0;  
-   pd->*pmc = 0;   // C2647  
-   d.*pmc = 0;   // C2647  
-  
-   // OK  
-   pc->*pmc = 0;  
-   c.*pmc = 0;  
-}  
+
+«operator»: Невозможно разыменовать «тип1» в «тип2»
+
+Левый операнд оператора указателя на член ( `->*` или `.*` ) не может неявно преобразовать в тип, относящийся к правому оператору.
+
+Следующий пример приводит к возникновению ошибки C2647:
+
+```
+// C2647.cpp
+class C {};
+class D {};
+
+int main() {
+   D d, *pd;
+   C c, *pc = 0;
+   int C::*pmc = 0;
+   pd->*pmc = 0;   // C2647
+   d.*pmc = 0;   // C2647
+
+   // OK
+   pc->*pmc = 0;
+   c.*pmc = 0;
+}
 ```

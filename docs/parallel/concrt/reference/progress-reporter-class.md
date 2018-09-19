@@ -1,5 +1,5 @@
 ---
-title: Класс progress_reporter | Документы Microsoft
+title: Класс progress_reporter | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d4dc98c4fb411a4d63fdfad5049cf0df723bec
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016771"
 ---
 # <a name="progressreporter-class"></a>Класс progress_reporter
 Класс формирования отчетов о ходе выполнения позволяет формировать уведомления о ходе выполнения определенного типа. Каждый объект progress_reporter привязан к конкретному асинхронному действию или операции.  
@@ -37,8 +37,8 @@ class progress_reporter;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_ProgressType`  
- О типе полезных данных каждого уведомления о ходе выполнения сообщается посредством формирования отчетов о ходе выполнения.  
+*_ProgressType*<br/>
+О типе полезных данных каждого уведомления о ходе выполнения сообщается посредством формирования отчетов о ходе выполнения.  
   
 ## <a name="members"></a>Члены  
   
@@ -52,10 +52,10 @@ class progress_reporter;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Отчет](#report)|Отправляет отчет о ходе выполнения в асинхронное действие или операцию, к которому привязано это средство формирования отчетов.|  
+|[отчет](#report)|Отправляет отчет о ходе выполнения в асинхронное действие или операцию, к которому привязано это средство формирования отчетов.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот тип доступен только в приложениях среды выполнения Windows.  
+ Этот тип доступен только для приложений среды выполнения Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `progress_reporter`  
@@ -71,7 +71,7 @@ class progress_reporter;
 progress_reporter();
 ```  
   
-##  <a name="report"></a> Отчет 
+##  <a name="report"></a> отчет 
 
  Отправляет отчет о ходе выполнения в асинхронное действие или операцию, к которому привязано это средство формирования отчетов.  
   
@@ -80,8 +80,8 @@ void report(const _ProgressType& val) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `val`  
- Полезные данные в отчете с помощью уведомления о ходе выполнения.  
+*Val*<br/>
+Полезные данные требуется сообщить посредством уведомления о ходе выполнения.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)

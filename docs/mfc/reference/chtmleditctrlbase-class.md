@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e2d2bdddd950197406672c59a6577d33985d3a54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031513"
 ---
 # <a name="chtmleditctrlbase-class"></a>Класс CHtmlEditCtrlBase
 Представляет компонент редактирования HTML.  
@@ -250,7 +250,7 @@ template <class T> class CHtmlEditCtrlBase
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Добавляет запись в таблицу глифа, который задает изображения, отображаемые для конкретных тегов в режиме конструктора.|  
 |[CHtmlEditCtrlBase::Bold](#bold)|Переключает полужирным состояние выбранного текста.|  
@@ -361,8 +361,8 @@ template <class T> class CHtmlEditCtrlBase
 |[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Переключает текущее выделение между упорядоченный список и обычный формат блока.|  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Имя производного класса.  
+*T*<br/>
+Имя производного класса.  
   
 ## <a name="remarks"></a>Примечания  
  `CHtmlEditCtrlBase` предоставляет функции-члены для команд редактирования, такие как HTML WebBrowser [Полужирный](#bold). (Кроме того, можно вызвать [ExecCommand](#execcommand) для выполнения команды IDM_BOLD.)  

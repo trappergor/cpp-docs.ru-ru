@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3e0ac7cf3a5448a2963aa92c2e275be796c895d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c977ecc1094af37c5e2c2e3ed8f27a6f2bdf1c93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758343"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033879"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Класс IProvideClassInfo2Impl
 
@@ -41,28 +41,28 @@ template <const CLSID* pcoclsid,
     const IID* psrcid,
     const GUID* plibid = &CAtlModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>
 class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*pcoclsid*  
+*pcoclsid*<br/>
 Указатель на идентификатор компонентного класса.
 
-*psrcid*  
+*psrcid*<br/>
 Указатель на идентификатор компонентного класса по умолчанию исходящие disp-интерфейса.
 
-*plibid*  
+*plibid*<br/>
 Указатель на идентификатор LIBID библиотеки типов, содержащий сведения об интерфейсе. По умолчанию передается библиотеки типов на уровне сервера.
 
-*wMajor*  
+*wMajor*<br/>
 Основной номер версии для библиотеки типов. Значение по умолчанию — 1.
 
-*wMinor*  
+*wMinor*<br/>
 Дополнительный номер версии для библиотеки типов. Значение по умолчанию — 0.
 
-*tihclass*  
+*tihclass*<br/>
 Класс, используемый для управления coclass сведения о типе. Значение по умолчанию — `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Участники

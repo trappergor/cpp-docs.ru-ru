@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора ресурсов RC2170 | Документы Microsoft
+title: Ошибка компилятора ресурсов RC2170 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a421f57ca5ab896669c653b5031cc528a9aea87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea3213c01ce86f6d78a9d7b6f4cf81fe17495c72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038213"
 ---
 # <a name="resource-compiler-error-rc2170"></a>Ошибка компилятора ресурсов RC2170
-имя растрового файла не в формате 3.00  
-  
- Растровые файлы, использующие формат Windows версии 2.x, нельзя использовать в файлах ресурсов версии 3.x.  
-  
- Чтобы устранить эту проблему, перерисуйте изображение или преобразуйте растровый файл в формат 3.х.
+
+имя растрового файла не в формате 3.00
+
+Растровые файлы, использующие формат Windows версии 2.x, нельзя использовать в файлах ресурсов версии 3.x.
+
+Чтобы устранить эту проблему, перерисуйте изображение или преобразуйте растровый файл в формат 3.х.

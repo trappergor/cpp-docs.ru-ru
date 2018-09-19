@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3752 | Документы Microsoft
+title: Ошибка компилятора C3752 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcc71d7e7418571b606be96e571c2b855f8497f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d12ae854e54080fe0b80c3e4ffd2d4b3f514651f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265289"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041732"
 ---
 # <a name="compiler-error-c3752"></a>Ошибка компилятора C3752
-«класс атрибута»: не удается классифицировать атрибут; в этом контексте не следует использовать «ключевое слово»  
-  
- Определяемый пользователем атрибут был применен неправильно.
+
+«класс атрибута»: не удается классифицировать атрибут; в этом контексте не следует использовать «ключевое_слово»
+
+Определяемый пользователем атрибут был применен неправильно.

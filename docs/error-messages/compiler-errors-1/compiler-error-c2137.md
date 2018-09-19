@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2137 | Документы Microsoft
+title: Ошибка компилятора C2137 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1d546270b5f3edd71dbc0c68f2f40a6e7ba6343
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11351f62664d2404bef1217c2f0815b1047964ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036830"
 ---
 # <a name="compiler-error-c2137"></a>Ошибка компилятора C2137
-пустая символьная константа  
-  
- Пустая символьная константа (" ") не разрешена.  
-  
- При компиляции следующего примера возникнет ошибка C2137:  
-  
-```  
-// C2137.cpp  
-int main() {  
-   char c = '';   // C2137  
-   char d = ' ';   // OK  
-}  
+
+пустая символьная константа
+
+Пустая символьная константа (" ") не разрешена.
+
+При компиляции следующего примера возникнет ошибка C2137:
+
+```
+// C2137.cpp
+int main() {
+   char c = '';   // C2137
+   char d = ' ';   // OK
+}
 ```

@@ -35,29 +35,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2780697c1a50e15e170f2096a2841e2c50d844a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031450"
 ---
 # <a name="try-except-statement"></a>Оператор try-except
 
 **Блок, относящийся только к системам Microsoft**
 
-**Try-except** инструкция является расширением Microsoft для C и C++ языков, поддерживаемых структурированная обработка исключений.  
+**Try-except** инструкция является расширением Microsoft для C и C++ языков, поддерживаемых структурированная обработка исключений.
 
-## <a name="syntax"></a>Синтаксис  
-  
-> **__try**   
-> {  
->    защищенный код  
-> }  
-> **__except** ( *выражение* )  
-> {  
->    код обработчика исключений  
-> }  
+## <a name="syntax"></a>Синтаксис
+
+> **__try** {/ / защищенный код} **__except** ( *выражение* ) {/ / код обработчика исключения}
 
 ## <a name="remarks"></a>Примечания
 
@@ -74,7 +67,7 @@ ms.locfileid: "45724689"
 
 1. Сначала выполняется защищенный раздел.
 
-2. Если исключение не возникает во время выполнения защищенного раздела, выполнение продолжается с оператора после **__except** предложение.  
+2. Если исключение не возникает во время выполнения защищенного раздела, выполнение продолжается с оператора после **__except** предложение.
 
 3. Если исключение возникает во время выполнения защищенного раздела или в любой процедуре вызывает защищенного раздела, **__except** *выражение* (вызывается *фильтра* выражение) вычисляется и значение определяет способ обработки исключения. Поддерживается три значения:
 
@@ -88,10 +81,10 @@ ms.locfileid: "45724689"
 
 Каждое приложение может иметь свой собственный обработчик исключений.
 
-Не допускается для перехода в **__try** инструкции, но допускается выход из него. Обработчик исключений не вызывается, если процесс был завершен во время выполнения **try-except** инструкции.  
-  
-Дополнительные сведения см. в статье базы знаний Q315937 "Практическое руководство. Перехват переполнения стека в приложении Visual C++".  
-  
+Не допускается для перехода в **__try** инструкции, но допускается выход из него. Обработчик исключений не вызывается, если процесс был завершен во время выполнения **try-except** инструкции.
+
+Дополнительные сведения см. в статье базы знаний Q315937 "Практическое руководство. Перехват переполнения стека в приложении Visual C++".
+
 ## <a name="the-leave-keyword"></a>Ключевое слово __leave
 
 **__Leave** ключевое слово может использоваться только в пределах защищенного раздела оператора **попробуйте — за исключением** инструкции и его влияние — переход в конец защищенного раздела. Выполнение продолжается с первого оператора, следующего за обработчиком исключений.
@@ -106,12 +99,12 @@ ms.locfileid: "45724689"
 
 Встроенная функция `GetExceptionInformation` возвращает указатель на структуру, содержащую Дополнительные сведения об исключении. Через этот указатель можно обращаться к состоянию компьютера, которое существовало в момент возникновения аппаратного исключения. Эта структура выглядит следующим образом:
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 Типы указателей `PEXCEPTION_RECORD` и `PCONTEXT` определены во включаемом файле \<winnt.h >, и `_EXCEPTION_RECORD` и `_CONTEXT` определены во включаемом файле \<excpt.h >
 
@@ -123,10 +116,10 @@ excpt.h определены альтернативные имена этих в
 
 `GetExceptionCode` эквивалентно `_exception_code`
 
- `GetExceptionInformation` эквивалентно `_exception_info`
+`GetExceptionInformation` эквивалентно `_exception_info`
 
- `AbnormalTermination` эквивалентно `_abnormal_termination`
-  
+`AbnormalTermination` эквивалентно `_abnormal_termination`
+
 ## <a name="example"></a>Пример
 
 ```cpp
@@ -176,24 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>Вывод  
-  
-```Output 
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**Завершение блока, относящегося только к системам Майкрософт**  
+## <a name="output"></a>Вывод
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
- [Написание обработчика исключений](../cpp/writing-an-exception-handler.md)   
- [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
- [Ключевые слова](../cpp/keywords-cpp.md)
+
+[Написание обработчика исключений](../cpp/writing-an-exception-handler.md)<br/>
+[Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Ключевые слова](../cpp/keywords-cpp.md)

@@ -43,14 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c64d6cc460d068a5d0acf90795cb405a920b867f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3cac23621959fb71247b649171309ec9d12cf35b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572304"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038754"
 ---
 # <a name="irowsetchangeimpl-class"></a>Класс IRowsetChangeImpl
+
 Реализация шаблонов OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) интерфейс в спецификации OLE DB.  
   
 ## <a name="syntax"></a>Синтаксис
@@ -66,23 +67,25 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *T*  
- Класс, производный от `IRowsetChangeImpl`.  
+
+*T*<br/>
+Класс, производный от `IRowsetChangeImpl`.  
   
- *Хранилища*  
- Записи пользователя.  
+*Хранилища*<br/>
+Записи пользователя.  
   
- *BaseInterface*  
- Базовый класс для интерфейса, такие как `IRowsetChange`.  
+*BaseInterface*<br/>
+Базовый класс для интерфейса, такие как `IRowsetChange`.  
   
- *RowClass*  
- Единица хранения для дескриптора строки.  
+*RowClass*<br/>
+Единица хранения для дескриптора строки.  
   
- *MapClass*  
- Единица хранения для всех дескрипторов строк, удерживаемые поставщика.  
+*MapClass*<br/>
+Единица хранения для всех дескрипторов строк, удерживаемые поставщика.  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldb.h  
+
+**Заголовок:** atldb.h  
   
 ## <a name="members"></a>Участники  
   
@@ -101,22 +104,24 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 |[FlushData](#flushdata)|Переопределенная поставщиком для фиксации данных в хранилище.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот интерфейс отвечает за операции записи немедленно в хранилище данных. «Немедленно» означает, что когда конечный пользователь (пользователь, с помощью потребителя) делает все изменения, эти изменения немедленно переносятся данные хранения (и не может быть отменена).  
+
+Этот интерфейс отвечает за операции записи немедленно в хранилище данных. «Немедленно» означает, что когда конечный пользователь (пользователь, с помощью потребителя) делает все изменения, эти изменения немедленно переносятся данные хранения (и не может быть отменена).  
   
- `IRowsetChangeImpl` реализует OLE DB `IRowsetChange` интерфейс, позволяющий обновлять значения столбцов в существующих строках, удаление строк и вставки новых строк.  
+`IRowsetChangeImpl` реализует OLE DB `IRowsetChange` интерфейс, позволяющий обновлять значения столбцов в существующих строках, удаление строк и вставки новых строк.  
   
- Реализация шаблонов OLE DB поддерживает все базовые методы (`SetData`, `InsertRow`, и `DeleteRows`).  
+Реализация шаблонов OLE DB поддерживает все базовые методы (`SetData`, `InsertRow`, и `DeleteRows`).  
   
 > [!IMPORTANT]
 >  Настоятельно рекомендуется ознакомиться со следующей документацией, прежде ЧЕМ пытаться реализации поставщика:  
   
--   [Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md)  
+- [Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Глава 6 *справочнике программиста OLE DB*  
+- Глава 6 *справочнике программиста OLE DB*  
   
--   Также см. в разделе как `RUpdateRowset` класс используется в [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) образца.  
+- Также см. в разделе как `RUpdateRowset` класс используется в [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) образца.  
   
 ## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
+
 Удаляет строки из набора строк.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -129,9 +134,11 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) в *справочнике программиста OLE DB*. 
+
+См. в разделе [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) в *справочнике программиста OLE DB*. 
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
+
 Создает и инициализирует новую строку в наборе строк.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -144,9 +151,11 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+
+См. в разделе [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="setdata"></a> IRowsetChangeImpl::SetData
+
 Задает значения данных в один или несколько столбцов.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -158,9 +167,11 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+
+См. в разделе [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
+
 Переопределенная поставщиком для фиксации данных в хранилище.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -171,15 +182,18 @@ HRESULT FlushData(HROW hRowToFlush,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *hRowToFlush*  
- [in] Дескриптор строки данных. Тип этой строки будет определяться *RowClass* аргумент шаблона `IRowsetImpl` класс (`CSimpleRow` по умолчанию).  
+
+*hRowToFlush*<br/>
+[in] Дескриптор строки данных. Тип этой строки будет определяться *RowClass* аргумент шаблона `IRowsetImpl` класс (`CSimpleRow` по умолчанию).  
   
- *hAccessorToFlush*  
- [in] Дескриптор метода доступа, который содержит сведения о привязке и сведения о типе в его `PROVIDER_MAP` (см. в разделе [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).  
+*hAccessorToFlush*<br/>
+[in] Дескриптор метода доступа, который содержит сведения о привязке и сведения о типе в его `PROVIDER_MAP` (см. в разделе [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

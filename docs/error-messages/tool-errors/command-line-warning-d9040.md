@@ -1,5 +1,5 @@
 ---
-title: Предупреждение командной строки D9040 | Документы Microsoft
+title: Предупреждение командной строки D9040 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc360d0bc3c1266dc6de2b8ff2a33e1e60944989
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5eae8b471a631ed6191b9d93e72b8e5f5c240e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299930"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040847"
 ---
 # <a name="command-line-warning-d9040"></a>Предупреждение командной строки D9040
-Пропуск параметра «/ analyze»; Предупреждения анализа кода недоступны в этой версии компилятора  
-  
- **/ Analyze** параметр командной строки не доступен во всех выпусках Visual Studio. Чтобы устранить это предупреждение, переключитесь в поддерживаемый выпуск Visual Studio или удалите параметр командной строки.  
-  
-## <a name="see-also"></a>См. также  
- [Ошибки командной строки с D8000 по D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
- [Параметры компилятора](../../build/reference/compiler-options.md)
+
+Пропуск параметра «/ analyze»; Предупреждения анализа кода недоступны в этой версии компилятора
+
+**/ Analyze** параметр командной строки доступен не во всех выпусках Visual Studio. Чтобы устранить это предупреждение, или переключиться на поддерживаемый выпуск Visual Studio, или удалите параметр командной строки.
+
+## <a name="see-also"></a>См. также
+
+[Ошибки командной строки с D8000 по D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
+[Параметры компилятора](../../build/reference/compiler-options.md)

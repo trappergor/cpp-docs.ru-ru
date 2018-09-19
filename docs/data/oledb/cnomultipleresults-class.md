@@ -1,5 +1,5 @@
 ---
-title: Класс CNoMultipleResults | Документы Microsoft
+title: Класс CNoMultipleResults | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2e588021b1600b1b3ac6e04f91ab07649755a2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096834"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017360"
 ---
 # <a name="cnomultipleresults-class"></a>Класс CNoMultipleResults
-Используется в качестве аргумента шаблона (*тип TMultiple*) для [CCommand](../../data/oledb/ccommand-class.md) для создания оптимизированного команды, который обрабатывает один результирующий набор.  
+
+Используется в качестве аргумента шаблона (*тип TMultiple*) для [CCommand](../../data/oledb/ccommand-class.md) Создание оптимизированного команды, который обрабатывает один результат набора.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,11 +37,14 @@ class CNoMultipleResults
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Команда для обработки нескольких результирующих наборов, используйте [CMultipleResults](../../data/oledb/cmultipleresults-class.md) вместо него.  
+
+Команды для обработки нескольких результирующих наборов, используйте [CMultipleResults](../../data/oledb/cmultipleresults-class.md) вместо этого.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+
+**Заголовок:** atldbcli.h  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

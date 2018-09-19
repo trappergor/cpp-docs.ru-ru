@@ -1,5 +1,5 @@
 ---
-title: Класс auto_gcroot | Документы Microsoft
+title: Класс auto_gcroot | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b6afad3450aff2a9243b3e4a480a374fbcd14fc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da63d58136d61bbea75daa90ac01cee5b44ac86d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103870"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039105"
 ---
 # <a name="autogcroot-class"></a>Класс auto_gcroot
-Управлять ресурсами в автоматическом (такие как [класс auto_ptr](../standard-library/auto-ptr-class.md)) который можно использовать для внедрения виртуальный дескриптор в собственный тип.  
+Управлять ресурсами в автоматическом (таких как [класс auto_ptr](../standard-library/auto-ptr-class.md)) который можно использовать для внедрения виртуальный дескриптор в собственный тип.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,8 +37,8 @@ class auto_gcroot;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_element_type`  
- Управляемый тип для внедрения.  
+*_element_type*<br/>
+Управляемый тип, для внедрения.  
   
 ## <a name="requirements"></a>Требования  
  **Файл заголовка** \<msclr\auto_gcroot.h >  
@@ -48,5 +48,5 @@ class auto_gcroot;
 ## <a name="see-also"></a>См. также  
  [auto_gcroot](../dotnet/auto-gcroot.md)   
  [Члены auto_gcroot](../dotnet/auto-gcroot-members.md)   
- [Как: объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md)   
+ [Практическое: объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md)   
  [Класс auto_handle](../dotnet/auto-handle-class.md)

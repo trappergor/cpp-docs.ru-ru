@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2838 | Документы Microsoft
+title: Ошибка компилятора C2838 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a170e869a2d8869424b23fb154cd23f0ed26c9fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5607df86a44174536f58242c5c0a98f7fe5e7dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045280"
 ---
 # <a name="compiler-error-c2838"></a>Ошибка компилятора C2838
-«член»: Недопустимое полное имя в объявлении члена  
-  
- Класс, структура или объединение использует полное доменное имя для повторного объявления является членом другого класса, структуры или объединения.  
-  
- Следующий пример приводит к возникновению ошибки C2838:  
-  
-```  
-// C2838.cpp  
-// compile with: /c  
-class Bellini {  
-public:  
-    void Norma();  
-};  
-  
-class Bottesini {  
-   Bellini::Norma();  // C2838  
-};  
+
+«член»: Недопустимое полное имя в объявлении члена
+
+Класс, структура или объединение использует полное доменное имя для повторного объявления члена другого класса, структуры или объединения.
+
+Следующий пример приводит к возникновению ошибки C2838:
+
+```
+// C2838.cpp
+// compile with: /c
+class Bellini {
+public:
+    void Norma();
+};
+
+class Bottesini {
+   Bellini::Norma();  // C2838
+};
 ```

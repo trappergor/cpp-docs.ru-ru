@@ -1,5 +1,5 @@
 ---
-title: Класс invalid_scheduler_policy_thread_specification | Документы Microsoft
+title: Класс invalid_scheduler_policy_thread_specification | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e2d5ba1c8fd4d8afd4af88c45069b34717a66c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab180a5f52a7645b7ce6cc0f8a04e2ea506f8aa4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695919"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016615"
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>Класс invalid_scheduler_policy_thread_specification
 Данный класс описывает исключение, создаваемое при попытке установить ограничения параллельности объекта `SchedulerPolicy` таким образом, чтобы значение ключа `MinConcurrency` было меньше, чем значение ключа `MaxConcurrency`.  
@@ -38,7 +38,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_thread_specification] (Недопустимая планировщика политики — значение class.md #ctor|Перегружен. Создает объект `invalid_scheduler_policy_value`.|  
+|[invalid_scheduler_policy_thread_specification] (недопустимый scheduler политики — значение class.md #ctor|Перегружен. Создает объект `invalid_scheduler_policy_value`.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
@@ -60,8 +60,8 @@ invalid_scheduler_policy_thread_specification() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
 
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   

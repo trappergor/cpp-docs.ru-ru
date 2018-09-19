@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0741cd65924a2c968153333aa1a557c31f429d45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039781"
 ---
 # <a name="atl-operators"></a>Операторы ATL
 
@@ -42,16 +42,16 @@ ms.locfileid: "44103714"
 
 Сравнивает `CSid` объектов или `SID` структуры (идентификатором безопасности) на предмет равенства.
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 Первый `CSid` объекта или `SID` сравниваемая структура.
 
-*правая часть*  
+*правая часть*<br/>
 Второй `CSid` объекта или `SID` сравниваемая структура.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -62,16 +62,16 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 Сравнивает `CSid` объектов или `SID` структуры (идентификатором безопасности) на предмет их неравенства.
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 Первый `CSid` объекта или `SID` сравниваемая структура.
 
-*правая часть*  
+*правая часть*<br/>
 Второй `CSid` объекта или `SID` сравниваемая структура.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -82,16 +82,16 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 Проверяет `CSid` объекта или `SID` структура слева от оператора меньше, чем `CSid` объекта или `SID` структура справа (для совместимости стандартной библиотеки C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 Первый `CSid` объекта или `SID` сравниваемая структура.
 
-*правая часть*  
+*правая часть*<br/>
 Второй `CSid` объекта или `SID` сравниваемая структура.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -106,16 +106,16 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 Проверяет `CSid` объекта или `SID` структуры слева от оператора больше, чем `CSid` объекта или `SID` структура справа (для совместимости стандартной библиотеки C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 Первый `CSid` объекта или `SID` сравниваемая структура.
 
-*правая часть*  
+*правая часть*<br/>
 Второй `CSid` объекта или `SID` сравниваемая структура.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -130,16 +130,16 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 Проверяет `CSid` объекта или `SID` структуры слева от оператора меньше или равно `CSid` объекта или `SID` структура справа (для совместимости стандартной библиотеки C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 Первый `CSid` объекта или `SID` сравниваемая структура.
 
-*правая часть*  
+*правая часть*<br/>
 Второй `CSid` объекта или `SID` сравниваемая структура.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -154,16 +154,16 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 Проверяет `CSid` объекта или `SID` структуры слева от оператора больше или равно `CSid` объекта или `SID` структура справа (для совместимости стандартной библиотеки C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 Первый `CSid` объекта или `SID` сравниваемая структура.
 
-*правая часть*  
+*правая часть*<br/>
 Второй `CSid` объекта или `SID` сравниваемая структура.
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027860"
 ---
 # <a name="ithreadproxy-structure"></a>Структура IThreadProxy
 Абстракция для потока выполнения. В зависимости от ключа политики `SchedulerType` созданного планировщика, диспетчер ресурсов предоставит прокси-поток, поддерживаемый обычным потоком Win32 или потоком планировщика пользовательского режима (UMS). Потоки UMS поддерживаются в 64-разрядных операционных системах Windows 7 и более поздних версий.  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `switchState`  
- Указывает состояние прокси потока, выполняющего переключателя. Параметр имеет тип `SwitchingProxyState`.  
+*switchState*<br/>
+Указывает состояние прокси потока, выполняющего переключателя. Параметр имеет тип `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте `SwitchOut` при необходимости отсоединения контекста от корневого виртуального процессора, на котором он выполняется, по любой причине. В зависимости от значения, переданного параметру `switchState`, и от того, выполняется ли он на корневом виртуальном процессоре, вызов немедленно вернет управление или заблокирует прокси-поток, связанный с контекстом. Вызов `SwitchOut` с параметром со значением `Idle` является ошибочным. Это приведет к [invalid_argument](../../../standard-library/invalid-argument-class.md) исключение.  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pContext`  
- Контекст выполнения, чтобы переключиться совместно.  
+*pContext*<br/>
+Контекст выполнения, чтобы переключиться совместно.  
   
- `switchState`  
- Указывает состояние прокси потока, выполняющего переключателя. Параметр имеет тип `SwitchingProxyState`.  
+*switchState*<br/>
+Указывает состояние прокси потока, выполняющего переключателя. Параметр имеет тип `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод позволяет перейти от одного контекста выполнения к другому, из [IExecutionContext::Dispatch](iexecutioncontext-structure.md#dispatch) метод первого контекста выполнения. Метод связывает контекст выполнения `pContext` с прокси-поток, если он еще не связан с одним. Владение текущий прокси-поток определяется значение, указываемое для `switchState` аргумент.  

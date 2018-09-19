@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4389 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4389 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a51ad6c6cf01744a99402c4db9c7cbd8f82339
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d67ae253926e79b6bc13d339ac303cca767090
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294327"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022569"
 ---
 # <a name="compiler-warning-level-4-c4389"></a>Предупреждение компилятора (уровень 4) C4389
-«оператор»: несоответствие со знаком и без  
-  
- В операции используются переменные со знаком и без знака. Это может привести к потере данных.  
-  
- Следующий пример приводит к возникновению ошибки C4389:  
-  
-```  
-// C4389.cpp  
-// compile with: /W4  
-#pragma warning(default: 4389)  
-  
-int main()  
-{  
-   int a = 9;  
-   unsigned int b = 10;  
-   if (a == b)   // C4389  
-      return 0;  
-   else  
-      return 0;  
-};  
+
+«operator»: несоответствие со знаком и без
+
+В операции используются переменные со знаком и без знака. Это может привести к потере данных.
+
+Следующий пример приводит к возникновению ошибки C4389:
+
+```
+// C4389.cpp
+// compile with: /W4
+#pragma warning(default: 4389)
+
+int main()
+{
+   int a = 9;
+   unsigned int b = 10;
+   if (a == b)   // C4389
+      return 0;
+   else
+      return 0;
+};
 ```

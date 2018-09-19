@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 920cfbde9229131c5148c359f6a82ce002d7fb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030148"
 ---
 # <a name="ccomsafearray-class"></a>Класс CComSafeArray
 
@@ -58,7 +58,7 @@ class CComSafeArray
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип данных для сохранения в массиве.
 
 ## <a name="members"></a>Участники
@@ -158,19 +158,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*psaSrc*  
+*psaSrc*<br/>
 Указатель на объект `SAFEARRAY`.
 
-*Инициализирует метод ulCount*  
+*Инициализирует метод ulCount*<br/>
 Количество объектов, добавляемых в массив.
 
-*pT*  
+*pT*<br/>
 Указатель на один или несколько объектов, добавляемый в массив.
 
-*t*  
+*t*<br/>
 Ссылка на объект, добавляемый в массив.
 
-*bCopy*  
+*bCopy*<br/>
 Указывает, следует ли создавать копию данных. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -193,7 +193,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*psaSrc*  
+*psaSrc*<br/>
 Указатель на `SAFEARRAY` структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -220,25 +220,25 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*привязан*  
+*привязан*<br/>
 Структура `SAFEARRAYBOUND`.
 
-*Инициализирует метод ulCount*  
+*Инициализирует метод ulCount*<br/>
 Количество элементов в массиве.
 
-*lLBound*  
+*lLBound*<br/>
 Значение нижней границы; то есть индекс первого элемента в массиве.
 
-*pBound*  
+*pBound*<br/>
 Указатель на `SAFEARRAYBOUND` структуры.
 
-*uDims*  
+*uDims*<br/>
 Число измерений в массиве.
 
-*saSrc*  
+*saSrc*<br/>
 Ссылку на `SAFEARRAY` структуры или `CComSafeArray` объекта. В любом случае конструктор использует эту ссылку для создания копии массива, поэтому после создания не используется массив.
 
-*psaSrc*  
+*psaSrc*<br/>
 Указатель на `SAFEARRAY` структуры. Конструктор использует этот адрес для создания копии массива, поэтому после создания не используется массив.
 
 ### <a name="remarks"></a>Примечания
@@ -267,7 +267,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Параметры
 
-*ppArray*  
+*ppArray*<br/>
 Указатель на `SAFEARRAY` для копирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -288,7 +288,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Параметры
 
-*ppArray*  
+*ppArray*<br/>
 Указатель на расположение, в котором нужно создать объект `SAFEARRAY`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -310,16 +310,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*pBound*  
+*pBound*<br/>
 Указатель на объект `SAFEARRAYBOUND`.
 
-*uDims*  
+*uDims*<br/>
 Число измерений в массиве.
 
-*Инициализирует метод ulCount*  
+*Инициализирует метод ulCount*<br/>
 Количество элементов в массиве.
 
-*lLBound*  
+*lLBound*<br/>
 Значение нижней границы; то есть индекс первого элемента в массиве.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -372,7 +372,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс*  
+*Индекс*<br/>
 Номер индекса в массиве для возврата значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -389,7 +389,7 @@ ULONG GetCount(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Параметры
 
-*uDim*  
+*uDim*<br/>
 Измерение массива.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -422,7 +422,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Параметры
 
-*uDim*  
+*uDim*<br/>
 Измерение массива, для которого необходимо получить нижняя граница. Если не указано, значение по умолчанию равно 0.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -485,7 +485,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Параметры
 
-*uDim*  
+*uDim*<br/>
 Измерение массива, для которого необходимо получить верхнюю границу. Если не указано, значение по умолчанию равно 0.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -526,10 +526,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 
 ### <a name="parameters"></a>Параметры
 
-*alIndex*  
+*alIndex*<br/>
 Указатель на вектор индексов для каждого измерения в массиве. Крайнего левого (наиболее значительному) является измерение `alIndex[0]`.
 
-*t*  
+*t*<br/>
 Ссылка на данные, возвращенные.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -546,10 +546,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 
 ### <a name="parameters"></a>Параметры
 
-*alIndex*  
+*alIndex*<br/>
 Указатель на вектор индексов для каждого измерения в массиве. Крайний правый (наименее значительного) измерения является `alIndex`[0].
 
-*T*  
+*T*<br/>
 Указывает значение нового элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -571,7 +571,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс, nIndex*  
+*Индекс, nIndex*<br/>
 Номер индекса обязательный элемент в массиве.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -593,10 +593,10 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*saSrc*  
+*saSrc*<br/>
 Ссылка на объект `CComSafeArray`.
 
-*psaSrc*  
+*psaSrc*<br/>
 Указатель на объект `SAFEARRAY`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -626,13 +626,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*pBound*  
+*pBound*<br/>
 Указатель на `SAFEARRAYBOUND` структуру, содержащую сведения на количество элементов, а нижняя граница массива.
 
-*Инициализирует метод ulCount*  
+*Инициализирует метод ulCount*<br/>
 Запрошенное число объектов в массиве с измененным размером.
 
-*lLBound*  
+*lLBound*<br/>
 Нижняя граница.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -653,13 +653,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс*  
+*Индекс*<br/>
 Индекс элемента в массиве.
 
-*t*  
+*t*<br/>
 Новое значение указанного элемента.
 
-*bCopy*  
+*bCopy*<br/>
 Указывает, следует ли создавать копию данных. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -672,7 +672,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ## <a name="see-also"></a>См. также
 
-[SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)   
-[CComSafeArray::Create](#create)   
-[CComSafeArray::Destroy](#destroy)   
+[SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[CComSafeArray::Create](#create)<br/>
+[CComSafeArray::Destroy](#destroy)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

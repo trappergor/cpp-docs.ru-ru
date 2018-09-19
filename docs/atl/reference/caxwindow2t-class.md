@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45add5f2133191bc046d72e797a7f8374976d63
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cfb82cfa21d5cc69e66d7980c4878e1659a7a79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036232"
 ---
 # <a name="caxwindow2t-class"></a>Класс CAxWindow2T
 
@@ -46,7 +46,7 @@ template <class TBase = CWindow>
 
 #### <a name="parameters"></a>Параметры
 
-*TBase*  
+*TBase*<br/>
 Класс, от которого `CAxWindowT` является производным.
 
 ## <a name="members"></a>Участники
@@ -107,7 +107,7 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 Дескриптор существующего окна.
 
 ##  <a name="create"></a>  CAxWindow2T::Create
@@ -157,7 +157,7 @@ HRESULT CreateControlLic(
 
 ### <a name="parameters"></a>Параметры
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 Лицензионный ключ для элемента управления; Значение NULL, если создание nonlicensed элемента управления.
 
 ### <a name="remarks"></a>Примечания
@@ -194,7 +194,7 @@ HRESULT CreateControlLicEx(
 
 ### <a name="parameters"></a>Параметры
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 Лицензионный ключ для элемента управления; Значение NULL, если создание nonlicensed элемента управления.
 
 ### <a name="remarks"></a>Примечания
@@ -227,10 +227,10 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 Дескриптор существующего окна.
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Часто задаваемые вопросы о вложении элементов управления](../../atl/atl-control-containment-faq.md)

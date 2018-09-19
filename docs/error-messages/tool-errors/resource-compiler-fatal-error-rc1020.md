@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка компилятора ресурсов RC1020 | Документы Microsoft
+title: Неустранимая ошибка компилятора ресурсов RC1020 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c90d3a5bb880ad10dcc4fb24d31fdc107f898840
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe19b079a0407f07796bd8141db2cbedaf02cbbb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320347"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032969"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>Неустранимая ошибка компилятора ресурсов RC1020
-Непредвиденный «#endif»  
-  
- `#endif` Директива указана без соответствующей `#if`, **#ifdef**, или **#ifndef** директивы.  
-  
- Убедитесь, что имеется соответствующий `#endif` для каждого `#if`, **#ifdef**, и **#ifndef** инструкции.
+
+Непредвиденный «#endif»
+
+`#endif` Директива указана без соответствующей `#if`, **#ifdef**, или **#ifndef** директива.
+
+Убедитесь, что имеется соответствующий `#endif` для каждого `#if`, **#ifdef**, и **#ifndef** инструкции.

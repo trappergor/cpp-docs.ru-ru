@@ -1,5 +1,5 @@
 ---
-title: Наборы строк схемы | Документы Microsoft
+title: Наборы строк схемы | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4368f52bebf9bb171fd4b0956dfccf9794f91356
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69b4522fe2bbb49a19dc703f36b6e98d31d1a8fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021243"
 ---
 # <a name="schema-rowsets"></a>Наборы строк схемы
-Схема (или метаданные) — сведения о структуре базы данных или организации, например сведения о поставщика набора строк, таблицы, столбцы, или другие сведения, помимо фактическому содержимому базы данных. OLE DB позволяет получить такие сведения, без открытия набора строк с помощью наборов строк схемы.  
+
+Схема (или метаданные) — это любые сведения о структуре или организации, например сведения о поставщика набора строк, таблицы, столбцы, базы данных или другие сведения, помимо содержимое реальной базы данных. OLE DB позволяет получить такие сведения без открытия набора строк с помощью наборов строк схемы.  
   
- Сведения о том, как использовать наборы строк схемы см. в разделе [получение метаданных в схеме набора строк](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
+Сведения о том, как использовать наборы строк схемы, см. в разделе [получение метаданных в схеме набора строк](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

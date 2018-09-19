@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4265 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 3) C4265 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c859e69095b1a7e6b756b0bcc7ca8e74ba8826
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0df54714038ab0fb6020e34aa35d677af5e899b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016134"
 ---
 # <a name="compiler-warning-level-3-c4265"></a>Предупреждение компилятора (уровень 3) C4265
-«класс»: класс имеет виртуальные функции, но деструктор не является виртуальным  
-  
- Если класс имеет виртуальные функции, но невиртуальный деструктор, объекты типа могут быть не уничтожены надлежащим образом при уничтожении класса через указатель базового класса.  
-  
- Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Следующий пример приводит к возникновению ошибки C4265:  
-  
-```  
-// C4265.cpp  
-// compile with: /W3 /c  
-#pragma warning(default : 4265)  
-class B  
-{  
-public:  
-   virtual void vmf();  
-  
-   ~B();  
-   // try the following line instead  
-   // virtual ~B();  
-};   // C4265  
-  
-int main()  
-{  
-   B b;  
-}  
+
+«класс»: класс имеет виртуальные функции, но деструктор не является виртуальным
+
+Если класс имеет виртуальные функции, но невиртуальный деструктор, объектов типа могут быть не уничтожены надлежащим образом при уничтожении класса через указатель базового класса.
+
+Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Следующий пример приводит к возникновению ошибки C4265:
+
+```
+// C4265.cpp
+// compile with: /W3 /c
+#pragma warning(default : 4265)
+class B
+{
+public:
+   virtual void vmf();
+
+   ~B();
+   // try the following line instead
+   // virtual ~B();
+};   // C4265
+
+int main()
+{
+   B b;
+}
 ```

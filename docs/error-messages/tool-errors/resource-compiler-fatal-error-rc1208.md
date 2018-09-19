@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка компилятора ресурсов RC1208 | Документы Microsoft
+title: Неустранимая ошибка компилятора ресурсов RC1208 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4e4c1c6c922983635bacfb997ba991f57dbc52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a5c1f21052cab8b9441865c835e7e3cc26ade5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039742"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>Неустранимая ошибка компилятора ресурсов RC1208
-входной файл имеет расширение. Расширение RES  
-  
- . Расширение RES используется для выходных данных компилятора ресурсов. . Следует использовать расширений RC для компилятора ресурсов скриптов.
+
+имеет входной файл. Расширение RES
+
+. Расширение RES используется для вывода компилятора ресурсов. . Расширения версии-КАНДИДАТА следует использовать для компилятора ресурсов сценариев.

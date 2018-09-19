@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 2) C4007 компилятора | Документы Microsoft
+title: Предупреждение (уровень 2) C4007 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82e902b3e2f18332ac6a9804a14c1c39b58d74c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3c9903af3537e9e4003a913fc12412c9b87d614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044422"
 ---
-# <a name="compiler-warning-level-2-c4007"></a>Компилятор C4007 предупреждение (уровень 2)
-«функция»: должно быть «ИмяАтрибута»  
-  
- Обязательный атрибут для функции, не указан явно. Например, функция **основной** должен иметь `__cdecl` атрибута. Компилятор назначает атрибут принудительно.
+# <a name="compiler-warning-level-2-c4007"></a>Компилятор предупреждение (уровень 2) C4007
+
+«функция»: должно быть «атрибут»
+
+Обязательный атрибут для функции, не указан явно. Например, функция **основной** должен иметь `__cdecl` атрибута. Компилятор принудительно атрибута.

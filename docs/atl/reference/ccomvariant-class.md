@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9fbd4967bbd3091d734f9b70aed9350d63a25e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 89b1dbfe9dcf00582f5f8736a4706a18439b51c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042550"
 ---
 # <a name="ccomvariant-class"></a>Класс CComVariant
 
@@ -43,9 +43,8 @@ ms.locfileid: "43753198"
 
 ## <a name="syntax"></a>Синтаксис
 
-```  
-cpp
-class CComVariant : public tagVARIANT  
+```cpp
+class CComVariant : public tagVARIANT
 ```
 
 ## <a name="members"></a>Участники
@@ -108,7 +107,7 @@ HRESULT Attach(VARIANT* pSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*pSrc*  
+*pSrc*<br/>
 [in] Указывает на [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) для присоединения к объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -151,39 +150,39 @@ CComVariant(const CComBSTR& bstrSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*varSrc*  
+*varSrc*<br/>
 [in] `CComVariant` Или ВАРИАНТ, используемый для инициализации `CComVariant` объекта. Содержимое данного типа источника копируются в место назначения без преобразования.
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in] Символьная строка, используемая для инициализации `CComVariant` объекта. Можно передать LPCOLESTR версию конструктора или в строку ANSI до версии LPCSTR строкой с завершающим нулевым символом символ двухбайтовых символов (Юникод). В любом случае строка преобразуется в Юникод BSTR, выделенные с помощью `SysAllocString`. Тип `CComVariant` объект будет VT_BSTR.
 
-*bSrc*  
+*bSrc*<br/>
 [in] **Bool** используется для инициализации `CComVariant` объекта. **Bool** аргумент преобразовывается VARIANT_BOOL перед сохранением. Тип `CComVariant` объект будет VT_BOOL.
 
-*nSrc*  
+*nSrc*<br/>
 [in] **Int**, **БАЙТОВ**, **короткие**, **long**, longlong приведенным к ПУСТОМУ, ULONGLONG, **unsigned short**, **unsigned long**, или **unsigned int** используется для инициализации `CComVariant` объекта. Тип `CComVariant` объект будет VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 или VT_UI4, соответственно.
 
-*vtSrc*  
+*vtSrc*<br/>
 [in] Тип variant. Если первый аргумент принимает значение **int**, допустимые типы: VT_I4 и VT_INT. Если первый аргумент принимает значение **long**, допустимые типы: VT_I4 и VT_ERROR. Если первый аргумент принимает значение **двойные**, допустимые типы: VT_R8 и VT_DATE. Если первый аргумент принимает значение **unsigned int**, допустимые типы: VT_UI4 и VT_UINT.
 
-*fltSrc*  
+*fltSrc*<br/>
 [in] **Float** используется для инициализации `CComVariant` объекта. Тип `CComVariant` объект будет VT_R4.
 
-*dblSrc*  
+*dblSrc*<br/>
 [in] **Двойные** используется для инициализации `CComVariant` объекта. Тип `CComVariant` объект будет VT_R8.
 
-*cySrc*  
+*cySrc*<br/>
 [in] `CY` Используется для инициализации `CComVariant` объекта. Тип `CComVariant` объект будет VT_CY.
 
-*pSrc*  
+*pSrc*<br/>
 [in] `IDispatch` Или `IUnknown` указатель, используемый для инициализации `CComVariant` объекта. `AddRef` будет вызван в указателе на интерфейс. Тип `CComVariant` объект будет VT_DISPATCH или VT_UNKNOWN, соответственно.
 
 Или, SAFERRAY указатель, используемый для инициализации `CComVariant` объекта. Экземпляр массива SAFEARRAY сохраняется в `CComVariant` объекта. Тип `CComVariant` объект будет представлять собой сочетание исходного типа SAFEARRAY и VT_ARRAY.
 
-*cSrc*  
+*cSrc*<br/>
 [in] **Char** используется для инициализации `CComVariant` объекта. Тип `CComVariant` объект будет VT_I1.
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] BSTR, используемый для инициализации `CComVariant` объекта. Тип `CComVariant` объект будет VT_BSTR.
 
 ### <a name="remarks"></a>Примечания
@@ -212,10 +211,10 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*vtNew*  
+*vtNew*<br/>
 [in] Новый тип для `CComVariant` объекта.
 
-*pSrc*  
+*pSrc*<br/>
 [in] Указатель на значение VARIANT, значение которого будут преобразованы в новый тип. Значение по умолчанию имеет значение NULL, значение `CComVariant` объект будет преобразован на месте.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -252,7 +251,7 @@ HRESULT Copy(const VARIANT* pSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*pSrc*  
+*pSrc*<br/>
 [in] Указатель на [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) для копирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -269,7 +268,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 
 ### <a name="parameters"></a>Параметры
 
-*pstrDest*  
+*pstrDest*<br/>
 Указывает на строку BSTR, получит копию содержимого `CComVariant` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -290,7 +289,7 @@ HRESULT Detach(VARIANT* pDest);
 
 ### <a name="parameters"></a>Параметры
 
-*pDest*  
+*pDest*<br/>
 [out] Возвращает базовое значение VARIANT объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -352,36 +351,36 @@ CComVariant& operator=(char cSrc) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*varSrc*  
+*varSrc*<br/>
 [in] `CComVariant` Или [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) присвоить `CComVariant` объекта. Содержимое данного типа источника копируются в место назначения без преобразования.
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] BSTR, присваиваемое `CComVariant` объекта. Тип `CComVariant` объект будет VT_BSTR.
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in] Символьная строка должна назначаться `CComVariant` объекта. Можно передать LPCOLESTR версии оператора или строки ANSI до версии LPCSTR строкой с завершающим нулевым символом символ двухбайтовых символов (Юникод). В любом случае строка преобразуется в Юникод BSTR, выделенные с помощью `SysAllocString`. Тип `CComVariant` объект будет VT_BSTR.
 
-*bSrc*  
+*bSrc*<br/>
 [in] **Bool** присвоить `CComVariant` объекта. **Bool** аргумент преобразовывается VARIANT_BOOL перед сохранением. Тип `CComVariant` объект будет VT_BOOL.
 
-*nSrc*  
+*nSrc*<br/>
 [in] **Int**, BYTE, **короткие**, **long**, longlong приведенным к ПУСТОМУ, ULONGLONG, **unsigned short**, **unsigned long**, или **unsigned int** присвоить `CComVariant` объекта. Тип `CComVariant` объект будет VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 или VT_UI4, соответственно.
 
-*fltSrc*  
+*fltSrc*<br/>
 [in] **Float** присвоить `CComVariant` объекта. Тип `CComVariant` объект будет VT_R4.
 
-*dblSrc*  
+*dblSrc*<br/>
 [in] **Двойные** присвоить `CComVariant` объекта. Тип `CComVariant` объект будет VT_R8.
 
-*cySrc*  
+*cySrc*<br/>
 [in] `CY` Присвоить `CComVariant` объекта. Тип `CComVariant` объект будет VT_CY.
 
-*pSrc*  
+*pSrc*<br/>
 [in] `IDispatch` Или `IUnknown` указатель должен назначаться `CComVariant` объекта. `AddRef` будет вызван в указателе на интерфейс. Тип `CComVariant` объект будет VT_DISPATCH или VT_UNKNOWN, соответственно.
 
 Или, SAFEARRAY указатель должен назначаться `CComVariant` объекта. Экземпляр массива SAFEARRAY сохраняется в `CComVariant` объекта. Тип `CComVariant` объект будет представлять собой сочетание исходного типа SAFEARRAY и VT_ARRAY.
 
-*cSrc*  
+*cSrc*<br/>
 [in] Char, присваиваемое `CComVariant` объекта. Тип `CComVariant` объект будет VT_I1.
 
 ##  <a name="operator_eq_eq"></a>  CComVariant::operator ==
@@ -446,7 +445,7 @@ HRESULT ReadFromStream(IStream* pStream);
 
 ### <a name="parameters"></a>Параметры
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейса на поток, содержащий данные.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -468,10 +467,10 @@ void SetByRef(T* pT) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип VARIANT, например, BSTR **int**, или **char**.
 
-*pT*  
+*pT*<br/>
 Указатель, используемый для инициализации `CComVariant` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -490,7 +489,7 @@ HRESULT WriteToStream(IStream* pStream);
 
 ### <a name="parameters"></a>Параметры
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейса в потоке.
 
 ### <a name="return-value"></a>Возвращаемое значение

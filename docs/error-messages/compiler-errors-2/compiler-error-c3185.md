@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3185 | Документы Microsoft
+title: Ошибка компилятора C3185 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce6eea7c9a40f9dd38bf6892995eaa52ac540de7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd7f94f86165fdfd25bb5a901cdb4349a0e48494
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044526"
 ---
 # <a name="compiler-error-c3185"></a>Ошибка компилятора C3185
-typeid используется для управляемого типа или типа WinRT "type", вместо этого используйте operator  
-  
- Не удается применить [typeid](../../cpp/typeid-operator.md) оператора в управляемую или типу WinRT; используйте [typeid](../../windows/typeid-cpp-component-extensions.md) вместо него.  
-  
- В следующем примере показано возникновение ошибки C3185 и приводятся сведения по ее устранению.  
-  
-```  
-// C3185a.cpp  
-// compile with: /clr  
-ref class Base {};  
-ref class Derived : public Base {};  
-  
-int main() {  
-   Derived ^ pd = gcnew Derived;  
-   Base ^pb = pd;  
-   const type_info & t1 = typeid(pb);   // C3185  
-   System::Type ^ MyType = Base::typeid;   // OK  
-};  
-```  
+
+typeid используется для управляемого типа или типа WinRT "type", вместо этого используйте operator
+
+Невозможно применить [typeid](../../cpp/typeid-operator.md) оператор в управляемый "или" WinRT типа; используйте [typeid](../../windows/typeid-cpp-component-extensions.md) вместо этого.
+
+В следующем примере показано возникновение ошибки C3185 и приводятся сведения по ее устранению.
+
+```
+// C3185a.cpp
+// compile with: /clr
+ref class Base {};
+ref class Derived : public Base {};
+
+int main() {
+   Derived ^ pd = gcnew Derived;
+   Base ^pb = pd;
+   const type_info & t1 = typeid(pb);   // C3185
+   System::Type ^ MyType = Base::typeid;   // OK
+};
+```

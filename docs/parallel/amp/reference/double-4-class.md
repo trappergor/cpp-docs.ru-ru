@@ -1,5 +1,5 @@
 ---
-title: Класс double_4 | Документы Microsoft
+title: Класс double_4 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5c776784f78f79fb6d90bde96b199631d08d22
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 92f0a8ed6842986e7f64279ab0c6b23a80dab293
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694265"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028445"
 ---
 # <a name="double4-class"></a>Класс double_4
-Представляет короткого вектора четырех чисел типа Double.  
+Представляет короткий вектор из четырех значений Double.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -466,7 +466,7 @@ class double_4;
   
 |name|Описание|  
 |----------|-----------------|  
-|[Размер константы](#double_4__size)||  
+|[размер константа](#double_4__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
@@ -662,23 +662,23 @@ explicit inline double_4(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_V0`  
- Значение для инициализации элемента 0.  
+*_V0*<br/>
+Значение для инициализации элемента 0.  
   
- `_V1`  
- Значение для инициализации элемента 1.  
+*_V1*<br/>
+Значение для инициализации элемента 1.  
   
- `_V2`  
- Значение для инициализации элемента 2.  
+*_V2*<br/>
+Значение для инициализации элемента 2.  
   
- `_V3`  
- Значение для инициализации элемента 3.  
+*_V3*<br/>
+Значение для инициализации элемента 3.  
   
- `_V`  
- Значение для инициализации.  
+*_V*<br/>
+Значение для инициализации.  
   
- `_Other`  
- Объект, используемый для инициализации.  
+*_Другое*<br/>
+Объект, используемый для инициализации.  
   
 ##  <a name="double_4__size"></a> Размер 
 

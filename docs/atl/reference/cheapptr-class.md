@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033983"
 ---
 # <a name="cheapptr-class"></a>Класс CHeapPtr
 
@@ -37,16 +37,16 @@ ms.locfileid: "43762084"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип объекта для сохранения в куче.
 
-*Распределитель*  
+*Распределитель*<br/>
 Класс выделения памяти для использования.
 
 ## <a name="members"></a>Участники
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nElements*  
+*nElements*<br/>
 Число элементов, используемых для вычисления объема памяти для выделения. Значение по умолчанию — 1.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Существующего указателя кучи или `CHeapPtr`.
 
 ### <a name="remarks"></a>Примечания
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Существующий объект `CHeapPtr`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nElements*  
+*nElements*<br/>
 Новый номер элементов, используемый для вычисления объема памяти для выделения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -177,6 +177,6 @@ bool Reallocate(size_t nElements) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)   
-[Класс CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
+[Класс CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
+[Класс CCRTAllocator](../../atl/reference/ccrtallocator-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

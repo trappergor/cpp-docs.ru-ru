@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caf648b0c62827e9532fa3776def1a4e459a64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042888"
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 
@@ -153,7 +153,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*открываемый раздел hKey*  
+*открываемый раздел hKey*<br/>
 Дескриптор раздела реестра.
 
 ### <a name="remarks"></a>Примечания
@@ -189,25 +189,25 @@ LONG Create(
 
 ### <a name="parameters"></a>Параметры
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Дескриптор открытый ключ.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Указывает имя ключа для создания или открытия. Это имя должно быть подразделом *hKeyParent*.
 
-*lpszClass*  
+*lpszClass*<br/>
 Указывает класс ключа, который требуется создать или открыть. Значение по умолчанию — REG_NONE.
 
-*dwOptions*  
+*dwOptions*<br/>
 Параметры для ключа. Значение по умолчанию — REG_OPTION_NON_VOLATILE. Список возможных значений и описаний, см. в разделе [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) в пакете Windows SDK.
 
-*samDesired*  
+*samDesired*<br/>
 Безопасный доступ для ключа. Значение по умолчанию — KEY_READ &#124; KEY_WRITE. Список возможных значений и описаний, см. в разделе `RegCreateKeyEx`.
 
-*lpSecAttr*  
+*lpSecAttr*<br/>
 Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структуру, которая указывает, может ли дескриптор ключа наследоваться дочерним процессом. По умолчанию этот параметр имеет значение NULL (что означает, что дескриптор не наследуется).
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 [out] Если не NULL, извлекает REG_CREATED_NEW_KEY (если ключ не существовал и был создан) или REG_OPENED_EXISTING_KEY (если ключ существовал и был открыт).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -231,13 +231,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ссылка на объект `CRegKey`.
 
-*открываемый раздел hKey*  
+*открываемый раздел hKey*<br/>
 Дескриптор раздела реестра.
 
-*pTM*  
+*pTM*<br/>
 Указатель на объект CAtlTransactionManager.
 
 ### <a name="remarks"></a>Примечания
@@ -266,7 +266,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSubKey*  
+*lpszSubKey*<br/>
 Имя удаляемого раздела. Это имя должно быть подразделом [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -287,7 +287,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszValue*  
+*lpszValue*<br/>
 Задает поле значений для удаления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -320,16 +320,16 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>Параметры
 
-*iIndex*  
+*iIndex*<br/>
 Индекс подраздела. Этот параметр должен быть равен нулю, при первом вызове и затем увеличивается на единицу при последующих вызовах
 
-*pszName*  
+*pszName*<br/>
 Указатель на буфер, получающий имя подраздела, включая завершающий нуль-символ. Только имя подраздела копируется в буфер, а не полного ключа иерархию.
 
-*pnNameLength*  
+*pnNameLength*<br/>
 Указатель на переменную, которая задает размер в TCHARs из буфера, заданного *pszName* параметра. Размер должен учитывать завершающий нуль-символ. Когда этот метод возвращает, переменной, на которые указывают *pnNameLength* содержит число символов, сохраненных в буфере. Возвращенное число не включает завершающий нуль-символ.
 
-*pftLastWriteTime*  
+*pftLastWriteTime*<br/>
 Указатель на переменную, которая получает время перечисляемых подраздел последней операции записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -369,13 +369,13 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Параметры
 
-*SI*  
+*SI*<br/>
 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) значение, указывающее сведения запрошенного типа безопасности.
 
-*PSD*  
+*PSD*<br/>
 Указатель на буфер, получающий копию дескриптора запрошенного типа безопасности.
 
-*pnBytes*  
+*pnBytes*<br/>
 Размер в байтах буфера, на которые указывают *psd*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -418,10 +418,10 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>Параметры
 
-*bWatchSubtree*  
+*bWatchSubtree*<br/>
 Задает флаг, указывающий, следует ли сообщать изменения в указанные ключ и все его подразделы или только указанный ключ. Если этот параметр имеет значение TRUE, метод сообщает об изменениях и подразделах реестра. Если параметр имеет значение FALSE, метод сообщает об изменениях только ключ.
 
-*dwNotifyFilter*  
+*dwNotifyFilter*<br/>
 Указывает, что набор флагов, определяющие, какие изменения должны выводиться. Этот параметр может быть сочетанием следующих значений:
 
 |Значение|Значение|
@@ -431,10 +431,10 @@ LONG NotifyChangeKeyValue(
 |REG_NOTIFY_CHANGE_LAST_SET|Уведомить вызывающий объект изменений в значение ключа. Это могут быть Добавление или удаление значения или изменения существующего значения.|
 |REG_NOTIFY_CHANGE_SECURITY|Уведомить вызывающий объект изменений в дескриптор безопасности ключа.|
 
-*hEvent*  
+*hEvent*<br/>
 Дескриптор события. Если *bAsync* параметр имеет значение TRUE, метод немедленно возвращает и изменения передаются, обмениваясь сигналами это событие. Если *bAsync* имеет значение FALSE, *hEvent* учитывается.
 
-*bAsync*  
+*bAsync*<br/>
 Задает флаг, указывающий, как метод сообщает об изменениях. Если этот параметр имеет значение TRUE, метод возвращается немедленно и сообщает об изменениях, обмениваясь сигналами указанное событие. Если этот параметр имеет значение FALSE, метод не возвращает пока не произошло изменение. Если *hEvent* не содержит допустимого события, *bAsync* параметр не может иметь значение TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -461,13 +461,13 @@ LONG Open(
 
 ### <a name="parameters"></a>Параметры
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Дескриптор открытый ключ.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Указывает имя ключа для создания или открытия. Это имя должно быть подразделом *hKeyParent*.
 
-*samDesired*  
+*samDesired*<br/>
 Безопасный доступ для ключа. Значение по умолчанию — KEY_ALL_ACCESS. Список возможных значений и описаний, см. в разделе [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -484,7 +484,7 @@ LONG Open(
 
 Преобразует `CRegKey` объект HKEY.
 
-```  
+```
 operator HKEY() const throw();
 ```
 
@@ -498,7 +498,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ для копирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -522,13 +522,13 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащая имя значения для запроса.
 
-*pValue*  
+*pValue*<br/>
 Указатель на буфер, получающий его значение.
 
-*pnBytes*  
+*pnBytes*<br/>
 Указатель на переменную, которая указывает размер в байтах буфера, на которые указывают *pValue* параметра. При возвращении метода эта переменная содержит размер данных, копируемых в буфер.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -554,10 +554,10 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащая имя значения для запроса.
 
-*dwValue*  
+*dwValue*<br/>
 Указатель на буфер, получающий DWORD.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -583,10 +583,10 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащая имя значения для запроса.
 
-*guidValue*  
+*guidValue*<br/>
 Указатель на переменную, которая получает идентификатор GUID.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -613,13 +613,13 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащая имя значения для запроса.
 
-*размер pszValue*  
+*размер pszValue*<br/>
 Указатель на буфер, получающий данные, состоящие из нескольких строк. Мультистрока представляет собой массив строк, завершающаяся нулем, завершаемый двумя символами null.
 
-*pnChars*  
+*pnChars*<br/>
 Размер в TCHARs буфера, на которые указывают *размер pszValue*. При возвращении метода *pnChars* содержит размер в TCHARs из мультистрока извлечена, включая завершающий нуль-символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -645,10 +645,10 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащая имя значения для запроса.
 
-*qwValue*  
+*qwValue*<br/>
 Указатель на буфер, получающий QWORD.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -675,13 +675,13 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащая имя значения для запроса.
 
-*размер pszValue*  
+*размер pszValue*<br/>
 Указатель на буфер, получающий данные строки.
 
-*pnChars*  
+*pnChars*<br/>
 Размер в TCHARs буфера, на которые указывают *размер pszValue*. При возвращении метода *pnChars* содержит размер в TCHARs строки извлечена, включая завершающий нуль-символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -718,28 +718,28 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащая имя значения для запроса. Если *pszValueName* имеет значение NULL или пустая строка, «», метод возвращает тип и данных для ключа неименованными или значение по умолчанию, если таковое имеется.
 
-*pdwType*  
+*pdwType*<br/>
 Указатель на переменную, которая получает код, указывающий тип данных, хранящихся в указанное значение. *PdwType* параметр может иметь значение NULL, если код типа не требуется.
 
-*pData*  
+*pData*<br/>
 Указатель на буфер, получающий его значение. Этот параметр может иметь значение NULL, если данные не требуется.
 
-*pnBytes*  
+*pnBytes*<br/>
 Указатель на переменную, которая указывает размер в байтах буфера, на которые указывают *pData* параметра. При возвращении метода эта переменная содержит размер данных, копируемых в *pData.*
 
-*dwValue*  
+*dwValue*<br/>
 Поле значения числовых данных.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Задает поле значений должны запрашиваться.
 
-*szValue*  
+*szValue*<br/>
 Поле значения строковых данных.
 
-*pdwCount*  
+*pdwCount*<br/>
 Размер строковых данных. Его значение первоначально задается размер *szValue* буфера.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -765,7 +765,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszKey*  
+*lpszKey*<br/>
 Имя удаляемого раздела. Это имя должно быть подразделом [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -789,13 +789,13 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на строку, содержащую имя присваиваемое значение. Если значение с таким именем не существует, метод добавляет его к ключу.
 
-*pValue*  
+*pValue*<br/>
 Указатель на буфер, содержащий данные для хранения с именем указанного значения.
 
-*nBytes*  
+*nBytes*<br/>
 Указывает размер в байтах информации, на которые указывают *pValue* параметра.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -816,10 +816,10 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на строку, содержащую имя присваиваемое значение. Если значение с таким именем не существует, метод добавляет его к ключу.
 
-*dwValue*  
+*dwValue*<br/>
 Данные DWORD для хранения с именем указанного значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -840,10 +840,10 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на строку, содержащую имя присваиваемое значение. Если значение с таким именем не существует, метод добавляет его к ключу.
 
-*guidValue*  
+*guidValue*<br/>
 Ссылка на идентификатор GUID для хранения с именем указанного значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -867,13 +867,13 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Задает имя ключа, который требуется создать или открыть. Это имя должно быть подразделом [m_hKey](#m_hkey).
 
-*lpszValue*  
+*lpszValue*<br/>
 Указывает данные для сохранения. Этот параметр должен иметь отличное от NULL.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Задает поле значение, устанавливаемое значение. Если значение поля с таким именем еще не существует в ключе, он добавляется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -894,7 +894,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*SI*  
+*SI*<br/>
 Указывает компоненты дескриптора безопасности для задания. Значение может быть сочетанием следующих значений:
 
 |Значение|Значение|
@@ -904,7 +904,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |OWNER_SECURITY_INFORMATION|Задает владельца для ключа безопасности. Ключ должен иметь доступ WRITE_OWNER или вызывающий процесс должен быть владельцем объекта или иметь активировать права SE_TAKE_OWNERSHIP_NAME.|
 |SACL_SECURITY_INFORMATION|Задает список управления доступом (SACL) для ключа системы. Ключ должен иметь доступ ACCESS_SYSTEM_SECURITY. Правильный способ получить такой доступ является возможность SE_SECURITY_NAME [привилегий](https://msdn.microsoft.com/library/windows/desktop/aa379306) в вызывающей стороны текущего маркера доступа, открыть дескриптор ACCESS_SYSTEM_SECURITY доступ, а затем отключить привилегии.|
 
-*PSD*  
+*PSD*<br/>
 Указатель на [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) структура, задающая атрибуты безопасности для задания для указанного ключа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -925,10 +925,10 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на строку, содержащую имя присваиваемое значение. Если значение с таким именем не существует, метод добавляет его к ключу.
 
-*размер pszValue*  
+*размер pszValue*<br/>
 Указатель на данные, состоящие из нескольких строк для хранения с именем указанного значения. Мультистрока представляет собой массив строк, завершающаяся нулем, завершаемый двумя символами null.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -949,10 +949,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на строку, содержащую имя присваиваемое значение. Если значение с таким именем не существует, метод добавляет его к ключу.
 
-*qwValue*  
+*qwValue*<br/>
 QWORD данные, сохраняемые с именем указанного значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -976,13 +976,13 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на строку, содержащую имя присваиваемое значение. Если значение с таким именем не существует, метод добавляет его к ключу.
 
-*размер pszValue*  
+*размер pszValue*<br/>
 Указатель на строку данных для хранения с именем указанного значения.
 
-*dwType*  
+*dwType*<br/>
 Тип строка для записи в реестр: REG_SZ (по умолчанию) или REG_EXPAND_SZ (для нескольких строк).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1023,37 +1023,37 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pszValueName*  
+*pszValueName*<br/>
 Указатель на строку, содержащую имя присваиваемое значение. Если значение с таким именем уже отсутствует в ключе, метод добавляет его к ключу. Если *pszValueName* имеет значение NULL или пустая строка, «», метод устанавливает тип и данных для ключа неименованными или значение по умолчанию.
 
-*dwType*  
+*dwType*<br/>
 Указывает код, указывающий тип данных, на которые указывают *pValue* параметра.
 
-*pValue*  
+*pValue*<br/>
 Указатель на буфер, содержащий данные для хранения с именем указанного значения.
 
-*nBytes*  
+*nBytes*<br/>
 Указывает размер в байтах информации, на которые указывают *pValue* параметра. Если данные имеют тип REG_SZ, REG_EXPAND_SZ или REG_MULTI_SZ, *nBytes* должен включать размер завершающего нуль-символа.
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Дескриптор открытый ключ.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Указывает имя ключа для создания или открытия. Это имя должно быть подразделом *hKeyParent*.
 
-*lpszValue*  
+*lpszValue*<br/>
 Указывает данные для сохранения. Этот параметр должен иметь отличное от NULL.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Задает поле значение, устанавливаемое значение. Если значение поля с таким именем еще не существует в ключе, он добавляется.
 
-*dwValue*  
+*dwValue*<br/>
 Указывает данные для сохранения.
 
-*bMulti*  
+*bMulti*<br/>
 Если значение равно false, указывает, что строка имеет тип REG_SZ. Если значение равно true, указывает, что строка является мультистрока типа REG_MULTI_SZ.
 
-*nValueLen*  
+*nValueLen*<br/>
 Если *bMulti* имеет значение true, *nValueLen* длина *lpszValue* строки в символах. Если *bMulti* имеет значение false, значение -1 указывает, что метод будет вычислять длину автоматически.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1068,5 +1068,5 @@ ATL_DEPRECATED LONG SetValue(
 
 ## <a name="see-also"></a>См. также
 
-[Образец DCOM](../../visual-cpp-samples.md)   
+[Образец DCOM](../../visual-cpp-samples.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)
