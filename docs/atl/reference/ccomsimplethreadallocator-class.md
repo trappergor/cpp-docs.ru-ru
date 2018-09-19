@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c8c7b2e6132bb39c8e548f6057ded0b0ca6c1e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1538d5148eeb1eb95c51150a43ef5dd7b107cae3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033554"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Класс CComSimpleThreadAllocator
 
@@ -64,10 +64,10 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 
 ### <a name="parameters"></a>Параметры
 
-*pApt*  
+*pApt*<br/>
 Не используется в реализации библиотеки ATL по умолчанию.
 
-*nThreads*  
+*nThreads*<br/>
 Максимальное число потоков в модуле exe-файла.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -82,5 +82,5 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComApartment](../../atl/reference/ccomapartment-class.md)   
+[Класс CComApartment](../../atl/reference/ccomapartment-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

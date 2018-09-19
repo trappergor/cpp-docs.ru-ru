@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0007 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0007 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab244578d7a44b1fd952ee441cd8cc51f1ca1fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a331f5e696ffa368e17599df76577b9e3354435
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024870"
 ---
 # <a name="expression-evaluator-error-cxx0007"></a>Ошибка вычислителя выражений CXX0007
-Отсутствует правая круглая скобка  
-  
- Несогласованные круглые скобки в выражении найдены. Повторно введите выражение с балансировкой круглые скобки.  
-  
- Эта ошибка идентична ошибке CAN0007.
+
+Отсутствует правая круглая скобка
+
+В выражении найдены открывающих и закрывающих скобок. Повторно введите выражение с сбалансированной круглые скобки.
+
+Эта ошибка идентична ошибке CAN0007.

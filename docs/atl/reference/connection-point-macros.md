@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226c0b0d0f1fc316d5b78884a4d6e260296c52f9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039547"
 ---
 # <a name="connection-point-macros"></a>Макросы точки подключения
 
@@ -49,7 +49,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Имя класса, содержащего точки подключения.
 
 ### <a name="remarks"></a>Примечания
@@ -73,10 +73,10 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID интерфейса, добавляемое сопоставление точки подключения. 
 
-*piid*  
+*piid*<br/>
 [in] Указатель на идентификатор GUID интерфейса, добавить.
 
 ### <a name="remarks"></a>Примечания
@@ -111,5 +111,5 @@ END_CONNECTION_POINT_MAP()
 
 ## <a name="see-also"></a>См. также
 
-[Макросы](../../atl/reference/atl-macros.md)   
+[Макросы](../../atl/reference/atl-macros.md)<br/>
 [Глобальные функции точек подключения](../../atl/reference/connection-point-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2628 | Документы Microsoft
+title: Ошибка компилятора C2628 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3f9813f103f59e61093ab82366e50a7ef6dae46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43a7d0515013158932f627b883ab36a2793ab5bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230249"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051353"
 ---
 # <a name="compiler-error-c2628"></a>Ошибка компилятора C2628
-«тип1» и «тип2» не допускается (возможно, вы забыли «;»?)  
-  
- Возможно, отсутствует точка с запятой.  
-  
- Следующий пример приводит к возникновению ошибки C2628:  
-  
-```  
-// C2628.cpp  
-class CMyClass {}  
-int main(){}   // C2628 error  
-```  
-  
- Возможное решение  
-  
-```  
-// C2628b.cpp  
-class CMyClass {};  
-int main(){}  
+
+«тип1» следуют «тип2» не допускается (возможно, вы забыли «;»?)
+
+Возможно, отсутствует точка с запятой.
+
+Следующий пример приводит к возникновению ошибки C2628:
+
+```
+// C2628.cpp
+class CMyClass {}
+int main(){}   // C2628 error
+```
+
+Возможное решение
+
+```
+// C2628b.cpp
+class CMyClass {};
+int main(){}
 ```

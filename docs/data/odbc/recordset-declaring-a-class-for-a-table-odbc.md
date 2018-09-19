@@ -1,5 +1,5 @@
 ---
-title: 'Набор записей: Объявление класса таблицы (ODBC) | Документы Microsoft'
+title: 'Набор записей: Объявление класса таблицы (ODBC) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 460b09d32b46bb9f15a95bcb976afa63519b8263
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea4a816053a548ac8e3292d0416fe68da2dc4296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107677"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Набор записей. Объявление класса таблицы (ODBC)
-Этот раздел относится к классам MFC ODBC.  
+
+Этот раздел относится к классам ODBC библиотеки MFC.  
   
- Наиболее распространенные класса набора записей для открытия одной таблицы. Чтобы объявить класс набора записей для одной таблицы, используйте [мастер потребителей ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) из **Добавление класса** и выберите необходимые столбцы, присвоив имена соответствующим членам данных полей набора записей.  
+Наиболее распространенные класса набора записей для открытия одной таблицы. Чтобы объявить класс набора записей для одной таблицы, используйте [Мастер потребителя MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) из **Добавление класса** и выберите каждый столбец, присвоив имена соответствующим членам данных полей набора записей.  
   
- Другие способы использования наборов записей включают:  
+Другие способы для набора записей:  
   
--   Объединение двух или более таблиц.  
+- Объединение двух или более таблиц.  
   
--   Содержащий результаты предопределенного запроса.  
+- Содержащая результаты предопределенного запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Набор записей: Создание и закрытие наборов записей (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
- [Набор записей: Объявление класса для предопределенного запроса (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Набор записей. Объединение (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+
+[Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Набор записей. Создание и закрытие наборов записей (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Набор записей. Объявление класса для предопределенного запроса (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Набор записей. Объединение (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

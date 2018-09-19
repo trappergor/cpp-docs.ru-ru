@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ac0528f383f1d379699c153a87507a1a292e21
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eff9e2211d0ddf9cf2d9c4bb0c10040ae20a53e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020267"
 ---
 # <a name="ca2wex-class"></a>Класс CA2WEX
 
@@ -43,7 +43,7 @@ class CA2WEX
 
 #### <a name="parameters"></a>Параметры
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Размер буфера, используемого в процессе перевода. Длина по умолчанию равен 128 байтам.
 
 ## <a name="members"></a>Участники
@@ -113,10 +113,10 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Текстовая строка для преобразования.
 
-*nCodePage*  
+*nCodePage*<br/>
 Кодовую страницу, используемую для выполнения преобразования. См. в обсуждении параметр кода страницы для функции Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) для получения дополнительных сведений.
 
 ### <a name="remarks"></a>Примечания
@@ -155,7 +155,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 Оператор преобразования.
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -165,9 +165,9 @@ operator LPWSTR() const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Класс CA2CAEX](../../atl/reference/ca2caex-class.md)   
-[Класс CW2AEX](../../atl/reference/cw2aex-class.md)   
-[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)   
-[Класс CW2WEX](../../atl/reference/cw2wex-class.md)   
+[Класс CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
+[Класс CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
+[Класс CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
+[Класс CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

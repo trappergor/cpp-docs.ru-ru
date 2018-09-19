@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d6ff72f9f5011d7c4e0f0b65cca9a82227b70d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4ec124d1010a5870d47b9f1504655a7822505fe6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753257"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040496"
 ---
 # <a name="catlfile-class"></a>Класс CAtlFile
 
@@ -107,13 +107,13 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*file*  
+*file*<br/>
 Объект файла.
 
-*hFile*  
+*hFile*<br/>
 Дескриптор файла.
 
-*pTM*  
+*pTM*<br/>
 Указатель на объект CAtlTransactionManager.
 
 ### <a name="remarks"></a>Примечания
@@ -137,25 +137,25 @@ HRESULT Create(
 
 ### <a name="parameters"></a>Параметры
 
-*szFilename*  
+*szFilename*<br/>
 Имя файла.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Необходимый доступ. См. в разделе *dwDesiredAccess* в [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) в пакете Windows SDK.
 
-*dwShareMode*  
+*dwShareMode*<br/>
 Режим общего доступа. См. в разделе *dwShareMode* в `CreateFile`.
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 Расположение для создания. См. в разделе *dwCreationDisposition* в `CreateFile`.
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 Флаги и атрибуты. См. в разделе *dwFlagsAndAttributes* в `CreateFile`.
 
-*lpsa*  
+*lpsa*<br/>
 Атрибуты безопасности. См. в разделе *lpSecurityAttributes* в `CreateFile`.
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 Файл шаблона. См. в разделе *hTemplateFile* в `CreateFile`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -195,13 +195,13 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>Параметры
 
-*pOverlapped*  
+*pOverlapped*<br/>
 Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) в пакете Windows SDK.
 
-*dwBytesTransferred*  
+*dwBytesTransferred*<br/>
 Число переданных байтов. См. в разделе *lpNumberOfBytesTransferred* в `GetOverlappedResult`.
 
-*bWait*  
+*bWait*<br/>
 Параметр ожидания. См. в разделе *bWait* в `GetOverlappedResult`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -222,7 +222,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nPos*  
+*nPos*<br/>
 Позиция, в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -243,7 +243,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nLen*  
+*nLen*<br/>
 Число байтов в файле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -264,10 +264,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nPos*  
+*nPos*<br/>
 Позиция в файле, где должна начинаться блокировки.
 
-*nCount*  
+*nCount*<br/>
 Длина диапазона байтов, который будет заблокирован.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -316,19 +316,19 @@ HRESULT Read(
 
 ### <a name="parameters"></a>Параметры
 
-*pBuffer*  
+*pBuffer*<br/>
 Указатель на буфер, который будет получать данные, считанные из файла.
 
-*nBufSize*  
+*nBufSize*<br/>
 Размер буфера в байтах.
 
-*nBytesRead*  
+*nBytesRead*<br/>
 Количество прочитанных байтов.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) в пакете Windows SDK.
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 Подпрограммы завершения. См. в разделе *lpCompletionRoutine* в [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -351,10 +351,10 @@ HRESULT Seek(
 
 ### <a name="parameters"></a>Параметры
 
-*nOffset*  
+*nOffset*<br/>
 Смещение от начальной точки, заданной параметром *dwFrom*.
 
-*dwFrom*  
+*dwFrom*<br/>
 Начальная точка (FILE_BEGIN, FILE_CURRENT или FILE_END).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -375,7 +375,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nNewLen*  
+*nNewLen*<br/>
 Новая длина файла в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -396,10 +396,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nPos*  
+*nPos*<br/>
 Позиция в файле, где должна начинаться снятие блокировки.
 
-*nCount*  
+*nCount*<br/>
 Длина диапазона байтов должен быть разблокирован.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -434,19 +434,19 @@ HRESULT Write(
 
 ### <a name="parameters"></a>Параметры
 
-*pBuffer*  
+*pBuffer*<br/>
 Буфер, содержащий данные для записи в файл.
 
-*nBufSize*  
+*nBufSize*<br/>
 Число байтов, передаваемых из буфера.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) в пакете Windows SDK.
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 Подпрограммы завершения. См. в разделе *lpCompletionRoutine* в [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) в пакете Windows SDK.
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 Байты для записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -459,6 +459,6 @@ HRESULT Write(
 
 ## <a name="see-also"></a>См. также
 
-[Пример бегущей строки](../../visual-cpp-samples.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Пример бегущей строки](../../visual-cpp-samples.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Класс CHandle](../../atl/reference/chandle-class.md)

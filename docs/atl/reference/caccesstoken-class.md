@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e680bf4c84087db90c794c772f58691a5b2932d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136326"
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 
@@ -160,7 +160,7 @@ void Attach(HANDLE hToken) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hToken*  
+*hToken*<br/>
 Дескриптор маркера доступа.
 
 ### <a name="remarks"></a>Примечания
@@ -191,10 +191,10 @@ bool CheckTokenMembership(
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 Ссылка на [класс CSid](../../atl/reference/csid-class.md) объекта.
 
-*pbIsMember*  
+*pbIsMember*<br/>
 Указатель на переменную, получающую результаты проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -222,10 +222,10 @@ bool CreateImpersonationToken(
 
 ### <a name="parameters"></a>Параметры
 
-*pImp*  
+*pImp*<br/>
 Указатель на новый `CAccessToken` объекта.
 
-*инвентаризацию программного обеспечения*  
+*инвентаризацию программного обеспечения*<br/>
 Указывает [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) перечислимый тип, который предоставляет уровень олицетворения новый маркер.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -249,13 +249,13 @@ bool CreatePrimaryToken(
 
 ### <a name="parameters"></a>Параметры
 
-*pPri*  
+*pPri*<br/>
 Указатель на новый `CAccessToken` объекта.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Указывает права доступа, запрошенный для нового токена. По умолчанию, MAXIMUM_ALLOWED, запрашивает все права доступа, которые являются допустимыми для вызывающего объекта. См. в разделе [права доступа и масок доступа](/windows/desktop/SecAuthZ/access-rights-and-access-masks) дополнительные права на доступ.
 
-*pTokenAttributes*  
+*pTokenAttributes*<br/>
 Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового токена и определяет, могут ли дочерние процессы наследуют маркер. Если *pTokenAttributes* имеет значение NULL, маркер возвращает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -286,34 +286,34 @@ bool CreateProcessAsUser(
 
 ### <a name="parameters"></a>Параметры
 
-*pApplicationName*  
+*pApplicationName*<br/>
 Указатель на заканчивающуюся нулем строку, указывающую модуле выполнялись. Этот параметр не может иметь значение NULL.
 
-*pCommandLine*  
+*pCommandLine*<br/>
 Указатель на заканчивающуюся нулем строку, которая указывает командную строку для выполнения.
 
-*pProcessInformation*  
+*pProcessInformation*<br/>
 Указатель на [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information) структуру, которая получает идентификационную информацию о новом процессе.
 
-*pStartupInfo*  
+*pStartupInfo*<br/>
 Указатель на [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) структуру, которая указывает, как должно выглядеть главного окна для нового процесса.
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 Задает дополнительные флаги, определяющие с приоритетом и создание процесса. Функция Win32 см. в разделе [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) список флагов.
 
-*bLoadProfile*  
+*bLoadProfile*<br/>
 Значение TRUE, если профиль пользователя загружен с [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
-*pProcessAttributes*  
+*pProcessAttributes*<br/>
 Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового процесса и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pProcessAttributes* имеет значение NULL, процесс получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.
 
-*pThreadAttributes*  
+*pThreadAttributes*<br/>
 Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового потока и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pThreadAttributes* имеет значение NULL, поток получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.
 
-*bInherit*  
+*bInherit*<br/>
 Указывает, является ли новый процесс наследует маркеры из вызывающего процесса. Значение TRUE, если каждый наследуемые открытый дескриптор в вызывающий процесс наследуется новый процесс. Унаследованные дескрипторы обладают теми же привилегиями значение и доступа исходные дескрипторы.
 
-*pCurrentDirectory*  
+*pCurrentDirectory*<br/>
 Указатель на заканчивающуюся нулем строку, которая указывает текущий диск и каталог для нового процесса. Строка должна быть полный путь, который содержит букву диска. Если этот параметр имеет значение NULL, новый процесс будет иметь диск и каталог как вызывающий процесс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -340,16 +340,16 @@ bool CreateRestrictedToken(
 
 ### <a name="parameters"></a>Параметры
 
-*pRestrictedToken*  
+*pRestrictedToken*<br/>
 Новый, ограниченные `CAccessToken` объекта.
 
-*SidsToDisable*  
+*SidsToDisable*<br/>
 Объект `CTokenGroups` , указывающий только идентификаторы безопасности.
 
-*SidsToRestrict*  
+*SidsToRestrict*<br/>
 Объект `CTokenGroups` , указывающий ограничивающими идентификаторами безопасности.
 
-*PrivilegesToDelete*  
+*PrivilegesToDelete*<br/>
 Объект `CTokenPrivileges` , указывающий удаляемых прав в маркер ограничения. Значение по умолчанию создает пустой объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -391,10 +391,10 @@ bool DisablePrivilege(
 
 ### <a name="parameters"></a>Параметры
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Указатель на строку, содержащую привилегий, чтобы отключить в `CAccessToken` объекта.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Указатель на `CTokenPrivileges` объект, который будет содержать предыдущее состояние прав доступа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -413,10 +413,10 @@ bool DisablePrivileges(
 
 ### <a name="parameters"></a>Параметры
 
-*rPrivileges*  
+*rPrivileges*<br/>
 Указатель на массив строк, содержащий привилегии, чтобы отключить в `CAccessToken` объекта.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Указатель на `CTokenPrivileges` объект, который будет содержать предыдущее состояние прав доступа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -435,10 +435,10 @@ bool EnablePrivilege(
 
 ### <a name="parameters"></a>Параметры
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Указатель на строку, содержащую привилегий, чтобы включить в `CAccessToken` объекта.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Указатель на `CTokenPrivileges` объект, который будет содержать предыдущее состояние прав доступа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -457,10 +457,10 @@ bool EnablePrivileges(
 
 ### <a name="parameters"></a>Параметры
 
-*rPrivileges*  
+*rPrivileges*<br/>
 Указатель на массив строк, содержащий привилегии, чтобы включить в `CAccessToken` объекта.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Указатель на `CTokenPrivileges` объект, который будет содержать предыдущее состояние прав доступа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -477,7 +477,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pDacl*  
+*pDacl*<br/>
 Указатель на [класс CDacl](../../atl/reference/cdacl-class.md) объект, который будет получать `CAccessToken` объекта по умолчанию DACL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -494,7 +494,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Указывает маски доступа, указывающее запрошенных типов доступа к маркеру доступа. Эти требуемые типы доступа сравниваются с DACL маркера, чтобы определить, какой доступ разрешен или запрещен.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -511,7 +511,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pGroups*  
+*pGroups*<br/>
 Указатель на [класс CTokenGroups](../../atl/reference/ctokengroups-class.md) объект, который будет получать сведения о группе.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -541,7 +541,7 @@ bool GetImpersonationLevel(
 
 ### <a name="parameters"></a>Параметры
 
-*pImpersonationLevel*  
+*pImpersonationLevel*<br/>
 Указатель на [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) тип перечисления, который будет получать информацию об уровне олицетворения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -558,7 +558,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pluid*  
+*pluid*<br/>
 Указатель на [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) которого будет получать идентификатор сеанса входа в систему.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -579,7 +579,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pSid*  
+*pSid*<br/>
 Указатель на [класс CSid](../../atl/reference/csid-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -600,7 +600,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pSid*  
+*pSid*<br/>
 Указатель на [класс CSid](../../atl/reference/csid-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -621,7 +621,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pSid*  
+*pSid*<br/>
 Указатель на [класс CSid](../../atl/reference/csid-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -642,7 +642,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pPrivileges*  
+*pPrivileges*<br/>
 Указатель на [класс CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md) объект, который будет получать привилегии.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -659,10 +659,10 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Указывает маски доступа, указывающее запрошенных типов доступа к маркеру доступа. Эти требуемые типы доступа сравниваются с DACL маркера, чтобы определить, какой доступ разрешен или запрещен.
 
-*hProcess*  
+*hProcess*<br/>
 Дескриптор процесса открыт которого маркер доступа. Если используется значение по умолчанию NULL, используется текущий процесс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -695,7 +695,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pSource*  
+*pSource*<br/>
 Указатель на [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -712,7 +712,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pStatistics*  
+*pStatistics*<br/>
 Указатель на [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -729,7 +729,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pdwSessionId*  
+*pdwSessionId*<br/>
 Идентификатор сеанса служб терминалов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -749,13 +749,13 @@ bool GetThreadToken(
 
 ### <a name="parameters"></a>Параметры
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Указывает маски доступа, указывающее запрошенных типов доступа к маркеру доступа. Эти требуемые типы доступа сравниваются с DACL маркера, чтобы определить, какой доступ разрешен или запрещен.
 
-*hThread*  
+*hThread*<br/>
 Дескриптор потока, открывается которого маркер доступа.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока `GetThreadToken` метода или в контексте безопасности процесса для вызывающего потока.
 
 Если этот параметр имеет значение FALSE, проверка доступа выполняется с помощью контекста безопасности для вызывающего потока. Если олицетворение потока выполняется в клиент, этот контекст безопасности может быть имя клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа с помощью контекст безопасности процесса для вызывающего потока.
@@ -774,7 +774,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pluid*  
+*pluid*<br/>
 Указатель на [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) которого будет получать идентификатор маркера.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -791,7 +791,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pType*  
+*pType*<br/>
 Адрес [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) переменную, которая, в случае успешного выполнения получает тип токена.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -812,7 +812,7 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pSid*  
+*pSid*<br/>
 Указатель на [класс CSid](../../atl/reference/csid-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -841,7 +841,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*hThread*  
+*hThread*<br/>
 Дескриптор потока, чтобы присвоить маркер олицетворения для. Этот дескриптор должен быть открыт с правами доступа TOKEN_IMPERSONATE. Если *hThread* имеет значение NULL, метод приводит к прекращению использования маркер олицетворения потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -914,19 +914,19 @@ bool LogonUser(
 
 ### <a name="parameters"></a>Параметры
 
-*pszUserName*  
+*pszUserName*<br/>
 Указатель на заканчивающуюся нулем строку, которая указывает имя пользователя. Это имя учетной записи пользователя, войдите в систему.
 
-*pszDomain*  
+*pszDomain*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее имя домена или сервера, базу данных которой учетная запись содержит *pszUserName* учетной записи.
 
-*pszPassword*  
+*pszPassword*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее пароль для учетной записи пользователя, открытый текст *pszUserName*.
 
-*dwLogonType*  
+*dwLogonType*<br/>
 Указывает тип выполняемой операции входа в систему. См. в разделе [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) для получения дополнительных сведений.
 
-*dwLogonProvider*  
+*dwLogonProvider*<br/>
 Указывает поставщика входа в систему. См. в разделе [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -950,13 +950,13 @@ bool OpenCOMClientToken(
 
 ### <a name="parameters"></a>Параметры
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Указывает маски доступа, указывающее запрошенных типов доступа к маркеру доступа. Эти требуемые типы доступа сравниваются с DACL маркера, чтобы определить, какой доступ разрешен или запрещен.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 Значение TRUE, если текущий поток будет олицетворять вызывающий клиент COM, если этот вызов завершается успешно. Если значение равно FALSE, маркер доступа будет открыт, но поток не получит маркер олицетворения после завершения этого вызова.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) метода или в контексте безопасности процесса для вызывающего потока.
 
 Если этот параметр имеет значение FALSE, проверка доступа выполняется с помощью контекста безопасности для вызывающего потока. Если олицетворение потока выполняется в клиент, этот контекст безопасности может быть имя клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа с помощью контекст безопасности процесса для вызывающего потока.
@@ -983,16 +983,16 @@ bool OpenNamedPipeClientToken(
 
 ### <a name="parameters"></a>Параметры
 
-*hPipe*  
+*hPipe*<br/>
 Дескриптор именованного канала.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Указывает маски доступа, указывающее запрошенных типов доступа к маркеру доступа. Эти требуемые типы доступа сравниваются с DACL маркера, чтобы определить, какой доступ разрешен или запрещен.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 Значение TRUE, если текущий поток будет олицетворять вызывающий клиент канала, если этот вызов завершается успешно. Если значение равно FALSE, маркер доступа будет открыт, но поток не получит маркер олицетворения после завершения этого вызова.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) метода или в контексте безопасности процесса для вызывающего потока.
 
 Если этот параметр имеет значение FALSE, проверка доступа выполняется с помощью контекста безопасности для вызывающего потока. Если олицетворение потока выполняется в клиент, этот контекст безопасности может быть имя клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа с помощью контекст безопасности процесса для вызывающего потока.
@@ -1019,16 +1019,16 @@ bool OpenRPCClientToken(
 
 ### <a name="parameters"></a>Параметры
 
-*BindingHandle*  
+*BindingHandle*<br/>
 Дескриптор привязки на сервере, представляющий привязку к клиенту.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Указывает маски доступа, указывающее запрошенных типов доступа к маркеру доступа. Эти требуемые типы доступа сравниваются с DACL маркера, чтобы определить, какой доступ разрешен или запрещен.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 Значение TRUE, если текущий поток будет олицетворять вызывающий клиент RPC, если этот вызов завершается успешно. Если значение равно FALSE, маркер доступа будет открыт, но поток не получит маркер олицетворения после завершения этого вызова.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) метода или в контексте безопасности процесса для вызывающего потока.
 
 Если этот параметр имеет значение FALSE, проверка доступа выполняется с помощью контекста безопасности для вызывающего потока. Если олицетворение потока выполняется в клиент, этот контекст безопасности может быть имя клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа с помощью контекст безопасности процесса для вызывающего потока.
@@ -1055,18 +1055,18 @@ bool OpenThreadToken(
 
 ### <a name="parameters"></a>Параметры
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Указывает маски доступа, указывающее запрошенных типов доступа к маркеру доступа. Эти требуемые типы доступа сравниваются с DACL маркера, чтобы определить, какой доступ разрешен или запрещен.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 Значение TRUE, если поток остается на уровне запрошенного олицетворения после завершения этого метода. Если значение равно FALSE, поток вернется к исходный уровень олицетворения.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Указывает, является ли проверка доступа, которые должны выполняться контекст безопасности вызывающего потока [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) метода или в контексте безопасности процесса для вызывающего потока.
 
 Если этот параметр имеет значение FALSE, проверка доступа выполняется с помощью контекста безопасности для вызывающего потока. Если олицетворение потока выполняется в клиент, этот контекст безопасности может быть имя клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа с помощью контекст безопасности процесса для вызывающего потока.
 
-*инвентаризацию программного обеспечения*  
+*инвентаризацию программного обеспечения*<br/>
 Указывает [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) перечислимый тип, который предоставляет уровень олицетворения маркера.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1091,10 +1091,10 @@ bool PrivilegeCheck(
 
 ### <a name="parameters"></a>Параметры
 
-*RequiredPrivileges*  
+*RequiredPrivileges*<br/>
 Указатель на [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set) структуры.
 
-*pbResult*  
+*pbResult*<br/>
 Указатель на значение задает метод, чтобы указать любые или все из заданного права, включены ли в `CAccessToken` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1115,7 +1115,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hThread*  
+*hThread*<br/>
 Дескриптор потока для возврата от олицетворения. Если *hThread* имеет значение NULL, предполагается, что текущий поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1136,7 +1136,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*rDacl*  
+*rDacl*<br/>
 Новое значение по умолчанию [класс CDacl](../../atl/reference/cdacl-class.md) сведения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1157,7 +1157,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 [Класс CSid](../../atl/reference/csid-class.md) объект, содержащий сведения о владельце.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1178,7 +1178,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 [Класс CSid](../../atl/reference/csid-class.md) объект, содержащий сведения основную группу.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1191,6 +1191,6 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ## <a name="see-also"></a>См. также
 
-[Пример ATLSecurity](../../visual-cpp-samples.md)   
-[Маркеры доступа](/windows/desktop/SecAuthZ/access-tokens)   
+[Пример ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Маркеры доступа](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

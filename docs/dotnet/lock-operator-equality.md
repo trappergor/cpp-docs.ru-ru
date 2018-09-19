@@ -1,5 +1,5 @@
 ---
-title: Lock::operator == | Документы Microsoft
+title: Lock::operator == | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 276ad5b44dd2112abad2c7c2e293fc65b173fffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38cefb80b1c4c6969cba976c30383c1499a4968d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048894"
 ---
 # <a name="lockoperator"></a>lock::operator==
 Оператор равенства.  
@@ -39,11 +39,11 @@ template<class T> bool operator==(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `t`  
- Объект для сравнения на равенство.  
+*t*<br/>
+Объект для сравнения на равенство.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает `true` Если `t` является таким же, как объект блокировки, `false` в противном случае.  
+ Возвращает `true` Если `t` совпадает со значением объект блокировки, `false` в противном случае.  
   
 ## <a name="example"></a>Пример  
   

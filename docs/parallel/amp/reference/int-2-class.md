@@ -1,5 +1,5 @@
 ---
-title: Класс int_2 | Документы Microsoft
+title: Класс int_2 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7368607fd3041895d2f84553d64395ed1bd54820
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7c3e3d61179717648c50709dc219038956438f3e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080302"
 ---
 # <a name="int2-class"></a>Класс int_2
-Представляет короткого вектора из двух целых чисел.  
+Представляет короткий вектор из двух целых чисел.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -109,7 +109,7 @@ class int_2;
   
 |name|Описание|  
 |----------|-----------------|  
-|[Размер константы](#int_2__size)||  
+|[размер константа](#int_2__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
@@ -183,17 +183,17 @@ explicit inline int_2(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_V0`  
- Значение для инициализации элемента 0.  
+*_V0*<br/>
+Значение для инициализации элемента 0.  
   
- `_V1`  
- Значение для инициализации элемента 1.  
+*_V1*<br/>
+Значение для инициализации элемента 1.  
   
- `_V`  
- Значение для инициализации.  
+*_V*<br/>
+Значение для инициализации.  
   
- `_Other`  
- Объект, используемый для инициализации.  
+*_Другое*<br/>
+Объект, используемый для инициализации.  
   
 ##  <a name="int_2__size"></a> Размер 
 

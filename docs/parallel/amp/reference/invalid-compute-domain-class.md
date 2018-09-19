@@ -1,5 +1,5 @@
 ---
-title: Класс invalid_compute_domain | Документы Microsoft
+title: Класс invalid_compute_domain | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705215"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116013"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain - класс
-Исключение, возникающее, когда среда выполнения не может запустить ядро, используя указанные в домене вычислений [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) место вызова.  
+Исключение, возникающее, когда среда выполнения не может запустить ядро с помощью вычислительного домена, указанного в [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) место вызова.  
 
   
 ## <a name="syntax"></a>Синтаксис  
@@ -70,8 +70,8 @@ invalid_compute_domain() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описание ошибки.  
+*_Message*<br/>
+Описание ошибки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Экземпляр `invalid_compute_domain` класса  

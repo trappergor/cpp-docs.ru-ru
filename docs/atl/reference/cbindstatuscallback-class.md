@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d18a6b5eae55373be9ddc71a4d856547bf420c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a816d10a0cb9665938e77ae8c649464b7b6768c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108486"
 ---
 # <a name="cbindstatuscallback-class"></a>Класс CBindStatusCallback
 
@@ -57,17 +57,17 @@ ms.locfileid: "43758434"
 
 ```
 template <class T,
-    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>  
+    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>
 class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadModel::ThreadModelNoCS>,
     public IBindStatusCallbackImpl<T>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, содержащий функцию, которая будет вызываться при получении данных.
 
-*nBindFlags*  
+*nBindFlags*<br/>
 Указывает флаги привязки, возвращаемые [GetBindInfo](#getbindinfo). Реализация по умолчанию задает привязку, чтобы асинхронными, извлекает последнюю версию данных или объекта и не сохранять извлеченные данные в дисковом кэше.
 
 ## <a name="members"></a>Участники
@@ -162,7 +162,7 @@ CBindStatusCallback();
 Создает `CBindStatusCallback` и вызывает `StartAsyncDownload` запустить асинхронную загрузку данных из указанного URL-адреса.
 
 ```
-static HRESULT Download(  
+static HRESULT Download(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -172,21 +172,21 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>Параметры
 
-*pT*  
+*pT*<br/>
 [in] Указатель на объекте, запрашивающем асинхронная передача данных. `CBindStatusCallback` Шаблонизируется в объект класса этого объекта.
 
-*pFunc*  
+*pFunc*<br/>
 [in] Указатель на функцию, которая получает данные, доступен для чтения. Функция является членом класса объекта типа `T`. См. в разделе [StartAsyncDownload](#startasyncdownload) синтаксис и примеры.
 
-*bstrURL*  
+*bstrURL*<br/>
 [in] Для получения данных из URL-адрес. Может быть любой допустимый URL-адрес или имя файла. Не может принимать значение NULL. Пример:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in] `IUnknown` Контейнера. Значение NULL по умолчанию.
 
-*bRelative*  
+*bRelative*<br/>
 [in] Флаг, указывающий, является ли URL-адрес является относительным или абсолютным. Значение FALSE по умолчанию, то есть URL-адрес является абсолютным.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -209,7 +209,7 @@ STDMETHOD(GetBindInfo)(
 
 ### <a name="parameters"></a>Параметры
 
-*pgrfBSCF*  
+*pgrfBSCF*<br/>
 [out] Указатель на значения перечисления BINDF, указывающее, как должно выполняться операции привязки. По умолчанию значение с помощью следующих значений перечисления:
 
 BINDF_ASYNCHRONOUS асинхронной загрузки.
@@ -220,7 +220,7 @@ BINDF_GETNEWESTVERSION операция привязки должна получ
 
 BINDF_NOWRITECACHE, операция привязки не следует хранить полученные данные в дисковом кэше.
 
-*pbindinfo*  
+*pbindinfo*<br/>
 [in, out] Указатель на `BINDINFO` структуры, предоставляя дополнительные сведения о том, как объект намеревается привязки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -241,7 +241,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="parameters"></a>Параметры
 
-*pnPriority*  
+*pnPriority*<br/>
 [out] Адрес **LONG** переменную, которая, в случае успешного выполнения получает приоритет.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -284,12 +284,12 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 Функция, на которые указывают `m_pFunc` является членом класса объекта и имеет следующий синтаксис:
 
-```  
-void Function_Name(  
-   CBindStatusCallback<T>* pbsc,  
-   BYTE* pBytes,  
-   DWORD dwSize  
-   );  
+```
+void Function_Name(
+   CBindStatusCallback<T>* pbsc,
+   BYTE* pBytes,
+   DWORD dwSize
+   );
 ```
 
 ##  <a name="m_pt"></a>  CBindStatusCallback::m_pT
@@ -357,7 +357,7 @@ CComPtr<IStream> m_spStream;
 Вызовы асинхронных моникеров, предоставляемых системой `OnDataAvailable` предоставлять данные для объекта, так как она станет доступной.
 
 ```
-STDMETHOD(  
+STDMETHOD(
     OnDataAvailable)(DWORD grfBSCF,
     DWORD dwSize,
     FORMATETC* /* pformatetc */,
@@ -366,16 +366,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Параметры
 
-*grfBSCF*  
+*grfBSCF*<br/>
 [in] Значение перечисления BSCF. Один или несколько из следующих: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION или BSCF_LASTDATANOTIFICATION.
 
-*dwSize*  
+*dwSize*<br/>
 [in] Совокупное объем (в байтах) данных, доступных с начала выполнения привязки. Может быть 0, указывающее, что объем данных, не соответствующие или стала доступной, не определенный срок.
 
-*pFormatEtc*  
+*pFormatEtc*<br/>
 [in] Указатель на [FORMATETC](/windows/desktop/com/the-formatetc-structure) структуру, содержащую формат доступных данных. Если формат не существует, может быть CF_NULL.
 
-*pstgmed*  
+*pstgmed*<br/>
 [in] Указатель на [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure) структура, которая содержит фактические данные теперь доступна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -396,7 +396,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 
 ### <a name="parameters"></a>Параметры
 
-*dwReserved*  
+*dwReserved*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -413,10 +413,10 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 
 ### <a name="parameters"></a>Параметры
 
-*riid*  
+*riid*<br/>
 Идентификатор запрошенного интерфейса. Не используется.
 
-*pUnk*  
+*pUnk*<br/>
 Адрес интерфейса IUnknown. Не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -437,16 +437,16 @@ STDMETHOD(OnProgress)(
 
 ### <a name="parameters"></a>Параметры
 
-*ulProgress*  
+*ulProgress*<br/>
 Длинное целое без знака. Не используется.
 
-*ulProgressMax*  
+*ulProgressMax*<br/>
 Длинное целое без знака не используется.
 
-*ulStatusCode*  
+*ulStatusCode*<br/>
 Длинное целое без знака. Не используется.
 
-*szStatusText*  
+*szStatusText*<br/>
 Адрес строковое значение. Не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -463,10 +463,10 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 
 ### <a name="parameters"></a>Параметры
 
-*dwReserved*  
+*dwReserved*<br/>
 Зарезервировано для будущего использования.
 
-*pBinding*  
+*pBinding*<br/>
 [in] Операция привязки адрес интерфейса IBinding текущего. Это не может быть NULL. Клиент должен вызвать метод AddRef на этот указатель, чтобы хранить ссылку на объект привязки.
 
 ##  <a name="onstopbinding"></a>  CBindStatusCallback::OnStopBinding
@@ -479,11 +479,11 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Параметры
 
-*значение HRESULT*  
+*значение HRESULT*<br/>
 Код состояния, возвращенный из операции привязки.
 
-szStatusText  
-Адрес строковое значение не используется.
+*szError*<br/>
+Адрес строковое значение. Не используется.
 
 ### <a name="remarks"></a>Примечания
 
@@ -494,7 +494,7 @@ szStatusText
 Начинает асинхронную загрузку данных из указанного URL-адреса.
 
 ```
-HRESULT StartAsyncDownload(  
+HRESULT StartAsyncDownload(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -504,21 +504,21 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>Параметры
 
-*pT*  
+*pT*<br/>
 [in] Указатель на объекте, запрашивающем асинхронная передача данных. `CBindStatusCallback` Шаблонизируется в объект класса этого объекта.
 
-*pFunc*  
+*pFunc*<br/>
 [in] Указатель на функцию, которая получает считываемых данных. Функция является членом класса объекта типа `T`. См. в разделе **"Примечания"** синтаксис и примеры.
 
-*bstrURL*  
+*bstrURL*<br/>
 [in] Для получения данных из URL-адрес. Может быть любой допустимый URL-адрес или имя файла. Не может принимать значение NULL. Пример:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in] `IUnknown` Контейнера. Значение NULL по умолчанию.
 
-*bRelative*  
+*bRelative*<br/>
 [in] Флаг, указывающий, является ли URL-адрес является относительным или абсолютным. Значение FALSE по умолчанию, то есть URL-адрес является абсолютным.
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -17,31 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed2b8d1d8bc3ac516b3d605f13e02bda37bb0122
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028549"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Динамическая привязка столбцов в поставщике
+
 Убедитесь, что вам действительно необходим динамическая привязка столбцов. Так как он может понадобиться:  
   
--   Во время компиляции не определены столбцы набора строк.  
+- Во время компиляции не определены столбцы набора строк.  
   
--   Чтобы помочь элемент, такой как закладки, добавляет столбцы.  
+- Чтобы помочь элемент, такой как закладки, добавляет столбцы.  
   
 ### <a name="to-implement-dynamic-column-binding"></a>Для реализации динамическая привязка столбцов  
   
-1.  Удалите все `PROVIDER_COLUMN_MAP`s из кода.  
+1. Удалите все `PROVIDER_COLUMN_MAP`s из кода.  
   
-2.  В записи пользователя (структуру) добавьте следующее объявление:  
+1. В записи пользователя (структуру) добавьте следующее объявление:  
   
     ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Реализуйте `GetColumnInfo` функции. Эта функция определяет схему хранения информации. Может потребоваться получить свойства или другие сведения для этой функции. Может потребоваться создать макрос, аналогичную [COLUMN_ENTRY](../../data/oledb/column-entry.md) макрос для добавления своих собственных сведений.  
+1. Реализуйте `GetColumnInfo` функции. Эта функция определяет схему хранения информации. Может потребоваться получить свойства или другие сведения для этой функции. Может потребоваться создать макрос, аналогичную [COLUMN_ENTRY](../../data/oledb/column-entry.md) макрос для добавления своих собственных сведений.  
   
      В следующем примере показан `GetColumnInfo` функции.  
   
@@ -97,4 +98,5 @@ ms.locfileid: "39336694"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Работа с шаблонами поставщика OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Работа с шаблонами поставщика OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

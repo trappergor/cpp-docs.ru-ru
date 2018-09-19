@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2163 | Документы Microsoft
+title: Ошибка компилятора C2163 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cbb110cf226a0a36a121ac9aa1901782357b04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 974488a2f587c2fde02dd74baf64a98a7590e9b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066575"
 ---
 # <a name="compiler-error-c2163"></a>Ошибка компилятора C2163
-«функция»: недоступна в качестве подставляемой функции  
-  
- `intrinsic` Или `function` pragma перечислены функции, доступно не во встроенную форму. Например некоторые встроенные функции недоступны при компиляции программы с использованием параметра/CLR.
+
+«функция»: недоступен в качестве подставляемой функции
+
+`intrinsic` Или `function` pragma перечислены функции, не доступен, встроенную форму. Например некоторые встроенные функции недоступны при компиляции программы с использованием параметра/CLR.

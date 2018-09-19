@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1332 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1332 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8558ae80fa3c21d01f276e010409dd9d47a67af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b256c61b9e9de6bf19e754054de1f55fcdec5f0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094524"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Ошибка средств компоновщика LNK1332
-Обнаружена\<count > типов среды выполнения Windows, импортированных в один модуль и определен в другом модуле  
-  
- Когда он создан текущий целевой объект, Компоновщик обнаружил <`count`> типы среды выполнения Windows, каждый из которых импортируется в одном модуле и также определены в другом модуле.  
-  
-### <a name="to-correct-this-error"></a>Исправление ошибки  
-  
--   Исправьте все ошибки LNK2039 в построении согласно рекомендация в сообщении об ошибке.  
-  
-## <a name="see-also"></a>См. также  
- [Средств компоновщика LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)   
- [Ошибки и предупреждения средств компоновщика](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)
+
+обнаружено\<count > типы среды выполнения Windows, импортированных в один модуль и определен в другом модуле
+
+Когда он преобразовывался в текущий целевой объект, Компоновщик обнаружил <`count`> типы среды выполнения Windows, каждый из которых импортируется в одном модуле и в другом модуле также определен.
+
+### <a name="to-correct-this-error"></a>Исправление ошибки
+
+- Исправьте все ошибки LNK2039 в сборке, в соответствии с рекомендация в сообщении об ошибке.
+
+## <a name="see-also"></a>См. также
+
+[Ошибка средств компоновщика LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)<br/>
+[Ошибки и предупреждения средств компоновщика](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

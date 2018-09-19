@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3709 | Документы Microsoft
+title: Ошибка компилятора C3709 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e42cb78c54dd1529a02733b5d8e0246ab6806289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0e64a07257cf55df028383cd5347ad64eb702f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263876"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091729"
 ---
 # <a name="compiler-error-c3709"></a>Ошибка компилятора C3709
-«функция»: неправильный синтаксис для задания события в __hook или\__unhook  
-  
- При указании источника события с [__hook](../../cpp/hook.md) или [__unhook](../../cpp/unhook.md), первый параметр должен быть действительным методом события, а второй параметр должен быть допустимым событий исходного объекта (а не метода).  
-  
- Следующий пример приводит к возникновению ошибки C3709:  
-  
-```  
-// C3709.cpp  
-// compile with: /LD  
-[event_source(native)]  
-class CEventSrc  
-{  
-public:  
-   __event void event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec  
-{  
-public:  
-   void handler1()  
-   {  
-   }  
-  
-   void HookEvents(CEventSrc* pSrc)  
-   {  
-      __hook(bad, pSrc, CEventRec::handler1);   // C3709  
-      // Try the following line instead:  
-      // __hook(&CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-  
-   void UnhookEvents(CEventSrc* pSrc)  
-   {  
-      __unhook(&CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-};  
+
+«функция»: неправильный синтаксис для задания события в __hook или\__unhook
+
+При указании источника событий с [__hook](../../cpp/hook.md) или [__unhook](../../cpp/unhook.md), первый параметр должен быть действительным методом события, и второй параметр должен быть объектом источника допустимого события (а не метод).
+
+Следующий пример приводит к возникновению ошибки C3709:
+
+```
+// C3709.cpp
+// compile with: /LD
+[event_source(native)]
+class CEventSrc
+{
+public:
+   __event void event1();
+};
+
+[event_receiver(native)]
+class CEventRec
+{
+public:
+   void handler1()
+   {
+   }
+
+   void HookEvents(CEventSrc* pSrc)
+   {
+      __hook(bad, pSrc, CEventRec::handler1);   // C3709
+      // Try the following line instead:
+      // __hook(&CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+
+   void UnhookEvents(CEventSrc* pSrc)
+   {
+      __unhook(&CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+};
 ```

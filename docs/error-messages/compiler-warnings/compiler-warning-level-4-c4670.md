@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4670 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4670 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bec30fff715984073aa3061979fff11923f0bf8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f1f406442e763175da1bb0220925a1a43d8825d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118262"
 ---
 # <a name="compiler-warning-level-4-c4670"></a>Предупреждение компилятора (уровень 4) C4670
-"идентификатор": этот базовый класс недоступен  
-  
- Указанный базовый класс объекта, который необходимо создать в блоке **try** , недоступен. Если объект возник, то его экземпляры создавать нельзя. Обратите внимание, что базовый класс наследуется вместе с правильным спецификатором доступа.  
-  
- Следующий пример приводит к возникновению предупреждения C4670:  
-  
-```  
-// C4670.cpp  
-// compile with: /EHsc /W4  
-class A  
-{  
-};  
-  
-class B : /* public */ A  
-{  
-} b;   // inherits A with private access by default  
-  
-int main()  
-{  
-    try  
-    {  
-       throw b;   // C4670  
-    }  
-    catch( B )  
-    {  
-    }  
-}  
+
+"идентификатор": этот базовый класс недоступен
+
+Указанный базовый класс объекта, который необходимо создать в блоке **try** , недоступен. Если объект возник, то его экземпляры создавать нельзя. Обратите внимание, что базовый класс наследуется вместе с правильным спецификатором доступа.
+
+Следующий пример приводит к возникновению предупреждения C4670:
+
+```
+// C4670.cpp
+// compile with: /EHsc /W4
+class A
+{
+};
+
+class B : /* public */ A
+{
+} b;   // inherits A with private access by default
+
+int main()
+{
+    try
+    {
+       throw b;   // C4670
+    }
+    catch( B )
+    {
+    }
+}
 ```

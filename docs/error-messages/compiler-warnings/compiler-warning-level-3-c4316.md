@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4316 компилятора | Документы Microsoft
+title: Предупреждение (уровень 3) C4316 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 609f3bbe9f338c5d53491190512ce2b9c290cdb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4170481b95cca0d43aa03c776009a5030194a4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298386"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032930"
 ---
-# <a name="compiler-warning-level-3-c4316"></a>Компилятор C4316 предупреждение (уровень 3)
-Объект, размещенный в куче не может быть выровнены для этого типа.  
-  
- Объект чрезмерно выровнены, выделенной с помощью `operator new` не может иметь указанное выравнивание. Переопределить [оператор new](../../c-runtime-library/operator-new-crt.md) и [оператор delete](../../c-runtime-library/operator-delete-crt.md) для чрезмерно выравниваются типов, чтобы они использовали процедур выровненных выделения — например, [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) и [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Следующий пример приводит к возникновению ошибки C4316:  
-  
-```cpp  
-// C4316.cpp  
-// Test: cl /W3 /c C4316.cpp  
-  
-__declspec(align(32)) struct S {}; // C4324  
-  
-int main() {  
-    new S; // C4316  
-}  
+# <a name="compiler-warning-level-3-c4316"></a>Компилятор предупреждение (уровень 3) C4316
+
+Объект, размещенный в куче может быть не выровнен для данного типа.
+
+Сверх-выровненный объект, выделенный с помощью `operator new` может не иметь заданного выравнивания. Переопределить [оператор new](../../c-runtime-library/operator-new-crt.md) и [оператор delete](../../c-runtime-library/operator-delete-crt.md) для чрезмерно выровненных типов, чтобы они использовали процедуры выровненного выделения, например, [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) и [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Следующий пример приводит к возникновению ошибки C4316:
+
+```cpp
+// C4316.cpp
+// Test: cl /W3 /c C4316.cpp
+
+__declspec(align(32)) struct S {}; // C4324
+
+int main() {
+    new S; // C4316
+}
 ```

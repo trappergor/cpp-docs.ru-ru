@@ -18,20 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ddfe6660854ae4cbdba2398aa4102fd612d17ddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114583"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Обработка уведомления TTN_NEEDTEXT для всплывающих подсказок
 Как часть [Включение всплывающих подсказок](../mfc/enabling-tool-tips.md), вы обрабатываете **TTN_NEEDTEXT** сообщения, добавив следующую запись в схеме сообщений для окна-владельца:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
- `memberFxn`  
- Функция-член вызывается в том случае, когда требуется текст для данной кнопки.  
+*memberFxn*<br/>
+Функция-член вызывается в том случае, когда требуется текст для данной кнопки.  
   
  Обратите внимание, что идентификатор подсказки всегда равно 0.  
   
@@ -41,14 +41,14 @@ ms.locfileid: "43200522"
   
  выделенный курсивом используются следующие параметры:  
   
- `id`  
- Идентификатор элемента управления, которому было отправлено уведомление. Не используется. Идентификатор элемента управления берется из **NMHDR** структуры.  
+*id*<br/>
+Идентификатор элемента управления, которому было отправлено уведомление. Не используется. Идентификатор элемента управления берется из **NMHDR** структуры.  
   
- `pNMHDR`  
- Указатель на [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) структуры. Эта структура также рассматривается далее в [структура TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
+*pNMHDR*<br/>
+Указатель на [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) структуры. Эта структура также рассматривается далее в [структура TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
   
- `pResult`  
- Указатель на код результата можно задать перед возвратом. **TTN_NEEDTEXT** обработчики можно игнорировать *pResult* параметра.  
+*pResult*<br/>
+Указатель на код результата можно задать перед возвратом. **TTN_NEEDTEXT** обработчики можно игнорировать *pResult* параметра.  
   
  Пример обработчика уведомлений представление формы:  
   

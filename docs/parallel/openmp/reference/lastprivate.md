@@ -1,5 +1,5 @@
 ---
-title: lastprivate | Документы Microsoft
+title: lastprivate | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aaf80e3061877c42154ab9ee5ccd30f47f17135
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028198"
 ---
 # <a name="lastprivate"></a>lastprivate
-Указывает, что версия контекст внешней переменной приравнивается к закрытой версии поток выполняет последней итерации (конструкция цикла for) или последний раздел (#pragma разделов).  
+Указывает, что версия переменной в охватывающем контексте приравнивается к закрытой версии потока, который выполняет последней итерации (конструкция цикл "for") или последний раздел (#pragma разделов).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,14 +32,13 @@ ms.locfileid: "33696231"
 lastprivate(var)  
 ```  
   
-## <a name="remarks"></a>Примечания  
- где  
+### <a name="parameters"></a>Параметры
   
- `var`  
- Переменная, которая задана равной закрытой версии поток выполняет последней итерации (конструкция цикла for) или последний раздел (#pragma разделов).  
+*var*<br/>
+Переменная, которая задана равной закрытой версии потока, который выполняет последней итерации (конструкция цикл "for") или последний раздел (#pragma разделов).  
   
 ## <a name="remarks"></a>Примечания  
- `lastprivate` применяется к следующие директивы:  
+ `lastprivate` область применения следующих директив:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
@@ -48,7 +47,7 @@ lastprivate(var)
  Дополнительные сведения см. в разделе [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).  
   
 ## <a name="example"></a>Пример  
- В разделе [расписания](../../../parallel/openmp/reference/schedule.md) пример использования `lastprivate` предложения.  
+ См. в разделе [расписание](../../../parallel/openmp/reference/schedule.md) пример использования `lastprivate` предложение.  
   
 ## <a name="see-also"></a>См. также  
  [Предложения](../../../parallel/openmp/reference/openmp-clauses.md)

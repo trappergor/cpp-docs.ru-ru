@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0055 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0055 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce01ecbc6913c844cadcf2d3f761cfe815f68a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ee5fc5467e656bd811c89f78ecf7d36f6df1b54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066392"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Ошибка вычислителя выражений CXX0055
-неоднозначный символ в операторе контекста  
-  
- Символ в операторе контекста (**{}**) ссылается на более чем один символ в программе.  
-  
- Оператор разрешения области (`::`) можно использовать для устранения неоднозначности.  
-  
- Эта ошибка идентична ошибке CAN0055.
+
+неоднозначный символ в операторе контекста
+
+Символ в операторе контекста (**{}**) ссылается на более чем один символ в программе.
+
+Оператор разрешения области (`::`) можно попытаться устранить неоднозначность.
+
+Эта ошибка идентична ошибке CAN0055.

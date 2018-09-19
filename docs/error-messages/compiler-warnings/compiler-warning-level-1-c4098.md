@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4098 компилятора | Документы Microsoft
+title: Предупреждение (уровень 1) C4098 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 889c9aa926a8400d977de00ef5c288316ae84782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84b3cdcdbb487774a92361d3a003ba83895d475e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276390"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118314"
 ---
-# <a name="compiler-warning-level-1-c4098"></a>Предупреждение (уровень 1) C4098 компилятора
-«функция»: функция void, возвращаемое значение  
-  
- Функция, объявленная с типом возвращаемого значения [void](../../cpp/void-cpp.md) имеет `return` инструкции, которая возвращает значение. Функция возвращает значение типа, компилятор предполагает `int`.
+# <a name="compiler-warning-level-1-c4098"></a>Компилятор предупреждение (уровень 1) C4098
+
+«функция»: функция типа void, возвращая значение
+
+Функция, объявленная с типом возвращаемого значения [void](../../cpp/void-cpp.md) имеет `return` инструкцию, которая возвращает значение. Компилятор предполагает, что функция возвращает значение типа `int`.

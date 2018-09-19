@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f7c9360af2b5e2220daacabcd9ac04e108871dc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe2cf03debbfd88f19ccc77d3922a9a5c50a50d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764232"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091274"
 ---
 # <a name="atl-connection-points"></a>Точки подключения ATL
 
@@ -33,18 +33,18 @@ ms.locfileid: "43764232"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Классы точки подключения библиотеки ATL](../atl/atl-connection-point-classes.md)  
+[Классы точки подключения библиотеки ATL](../atl/atl-connection-point-classes.md)<br/>
 Краткое описание классов ATL, поддерживающих точки подключения.
 
-[Добавление точек подключения к объектам](../atl/adding-connection-points-to-an-object.md)  
+[Добавление точек подключения к объектам](../atl/adding-connection-points-to-an-object.md)<br/>
 Описываются действия для добавления точек подключения к объекту.
 
-[Пример точки подключения ATL](../atl/atl-connection-point-example.md)  
+[Пример точки подключения ATL](../atl/atl-connection-point-example.md)<br/>
 Пример объявления точки подключения.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Ссылки на разделы о программировании с использованием библиотеки ATL.
 
 ## <a name="see-also"></a>См. также

@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118912"
 ---
 # <a name="runtimeclass-class"></a>Класс RuntimeClass
 
@@ -69,7 +69,8 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ## <a name="members"></a>Участники
 
-`RuntimeClassInitialize` Функция, которая инициализирует объект, если `MakeAndInitialize` функция-шаблон используется для создания объекта. Возвращается значение S_OK, если объект успешно инициализирован, или код ошибки COM. Если не удалось инициализировать. Код ошибки COM. распространяется как возвращаемое значение `MakeAndInitialize`. Обратите внимание, что `RuntimeClassInitialize` метод не вызывается, если `Make` функция-шаблон используется для создания объекта.
+`RuntimeClassInitialize`<br/>
+Функция, которая инициализирует объект, если `MakeAndInitialize` функция-шаблон используется для создания объекта. Возвращается значение S_OK, если объект успешно инициализирован, или код ошибки COM. Если не удалось инициализировать. Код ошибки COM. распространяется как возвращаемое значение `MakeAndInitialize`. Обратите внимание, что `RuntimeClassInitialize` метод не вызывается, если `Make` функция-шаблон используется для создания объекта.
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2698 | Документы Microsoft
+title: Ошибка компилятора C2698 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c466e39702f1e408ad96d79c16c4a5953fa373f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7ca3e7568640aabd2b7960d97ea94a11a1d5d59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233821"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118925"
 ---
 # <a name="compiler-error-c2698"></a>Ошибка компилятора C2698
-объявление using для "объявления 1" не могут сосуществовать с существующие объявление using для "объявления 2"  
-  
- После получения [объявление using](../../cpp/using-declaration.md) для члена данных, любое с помощью объявления в той же области, которая использует то же имя, не разрешено, как только функции могут быть перегружены.  
-  
- Следующий пример приводит к возникновению ошибки C2698:  
-  
-```  
-// C2698.cpp  
-struct A {  
-   int x;  
-};  
-  
-struct B {  
-   int x;  
-};  
-  
-struct C : A, B {  
-   using A::x;  
-   using B::x;   // C2698  
-}  
+
+объявление using для "объявления 1" не могут сосуществовать с существующей объявление using для "объявления 2"
+
+При наличии [объявление using](../../cpp/using-declaration.md) для члена данных, любое использование не допускается объявление в той же области, которая использует то же имя, как только функции могут быть перегружены.
+
+Следующий пример приводит к возникновению ошибки C2698:
+
+```
+// C2698.cpp
+struct A {
+   int x;
+};
+
+struct B {
+   int x;
+};
+
+struct C : A, B {
+   using A::x;
+   using B::x;   // C2698
+}
 ```

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70ac6f333312fc62854478897912fc28f3c2f8e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756565"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093965"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Добавление объектов и элементов управления в проект ATL
 
@@ -56,10 +56,10 @@ ms.locfileid: "43756565"
 
 ## <a name="see-also"></a>См. также
 
-[Мастер проектов ATL](../../atl/reference/atl-project-wizard.md)   
-[Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)   
-[Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)   
-[Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Мастер проектов ATL](../../atl/reference/atl-project-wizard.md)<br/>
+[Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Конфигурации проектов ATL по умолчанию](../../atl/reference/default-atl-project-configurations.md)
 

@@ -17,52 +17,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deee0209866580afd038fbce068a9275f5b5874
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2de25452d708545481bdc4a65cab998930b2778e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068439"
 ---
 # <a name="novtable"></a>novtable
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
- Это **__declspec** расширенный атрибут.  
-  
- Такая форма **__declspec** могут применяться к любым объявлениям классов, но должно применяться только к чистым классам интерфейсов, то есть классы, которые никогда не будет создаваться сами по себе. **__Declspec** предотвращает компилятором код для инициализации vfptr в конструкторах и деструкторе класса. Во многих случаях это приводит к удалению единственной ссылки на связанную с классом таблицу vtable, в результате чего компоновщик удаляет ее. Использование такой формы **__declspec** может привести к значительному сокращению размера кода.  
-  
- Если попытаться создать экземпляр класса, помеченного **novtable** и затем получить доступ к члену класса, вы получите нарушение прав доступа (AV).  
-  
-## <a name="example"></a>Пример  
-  
-```cpp 
-// novtable.cpp  
-#include <stdio.h>  
-  
-struct __declspec(novtable) X {  
-   virtual void mf();  
-};  
-  
-struct Y : public X {  
-   void mf() {  
-      printf_s("In Y\n");  
-   }  
-};  
-  
-int main() {  
-   // X *pX = new X();  
-   // pX->mf();   // Causes a runtime access violation.  
-  
-   Y *pY = new Y();  
-   pY->mf();  
-}  
-```  
-  
-```Output  
-In Y  
-```  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [__declspec](../cpp/declspec.md)   
- [Ключевые слова](../cpp/keywords-cpp.md)
+
+## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
+
+Это **__declspec** расширенный атрибут.
+
+Такая форма **__declspec** могут применяться к любым объявлениям классов, но должно применяться только к чистым классам интерфейсов, то есть классы, которые никогда не будет создаваться сами по себе. **__Declspec** предотвращает компилятором код для инициализации vfptr в конструкторах и деструкторе класса. Во многих случаях это приводит к удалению единственной ссылки на связанную с классом таблицу vtable, в результате чего компоновщик удаляет ее. Использование такой формы **__declspec** может привести к значительному сокращению размера кода.
+
+Если попытаться создать экземпляр класса, помеченного **novtable** и затем получить доступ к члену класса, вы получите нарушение прав доступа (AV).
+
+## <a name="example"></a>Пример
+
+```cpp
+// novtable.cpp
+#include <stdio.h>
+
+struct __declspec(novtable) X {
+   virtual void mf();
+};
+
+struct Y : public X {
+   void mf() {
+      printf_s("In Y\n");
+   }
+};
+
+int main() {
+   // X *pX = new X();
+   // pX->mf();   // Causes a runtime access violation.
+
+   Y *pY = new Y();
+   pY->mf();
+}
+```
+
+```Output
+In Y
+```
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[__declspec](../cpp/declspec.md)<br/>
+[Ключевые слова](../cpp/keywords-cpp.md)
