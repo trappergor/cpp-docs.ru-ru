@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22e4cf19ec3b85d14d346bd56697f4bcc4ff687b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194472"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716811"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Перечисления &lt;filesystem&gt;
 
@@ -34,7 +34,9 @@ ms.locfileid: "43194472"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<экспериментальная/filesystem > **пространство имен:** std::experimental:: FileSystem
+**Заголовок:** \<experimental/filesystem>
+
+**Пространство имен:** std::experimental::filesystem
 
 ## <a name="copy_options"></a>  copy_options
 
@@ -59,7 +61,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Значения
 
-|`Name`|Описание:|
+|`Name`|Описание|
 |------------|-----------------|
 |`none`|Выполнять поведение по умолчанию для операции.|
 |`skip_existing`|Не копировать, если файл уже существует, не сообщать об ошибке.|
@@ -88,7 +90,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Значения
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`none`|Поведение по умолчанию: игнорировать символические ссылки на каталоги. Отказ в разрешении является ошибкой.|
 |`follow_directory_symlink`|Символьные ссылки на каталоги можно рассматривать как фактические каталоги.|
@@ -116,7 +118,7 @@ enum class file_type {
 
 ### <a name="values"></a>Значения
 
-|Имя|Значение|Описание:|
+|Имя|Значение|Описание|
 |----------|-----------|-----------------|
 |`not_found`|-1|Представляет несуществующий файл.|
 |`none`|0|Представляет файл, у которого нет атрибута типа. (Не поддерживается.)|

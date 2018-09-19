@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3671 | Документы Microsoft
+title: Ошибка компилятора C3671 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50b52bb30b24204e810dc350cdb7fef502a93852
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 455b9e2a6accbc98ee8bce49a35a672d9cd9c20d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263639"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017078"
 ---
 # <a name="compiler-error-c3671"></a>Ошибка компилятора C3671
-«функция_1»: функция не переопределяет функцию «функция_2»  
-  
- При использовании синтаксис явного переопределения, компилятор создает ошибку, если функция не переопределена.  В разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md) для получения дополнительной информации.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C3671.  
-  
-```  
-// C3671.cpp  
-// compile with: /clr /c  
-ref struct S {  
-   virtual void f();  
-};  
-  
-ref struct S1 : S {  
-   virtual void f(int) new sealed = S::f;   // C3671  
-   virtual void f() new sealed = S::f;  
-};  
+
+«function_1»: функция не переопределяет «function_2»
+
+При использовании синтаксис явного переопределения, компилятор создает ошибку, если функция не переопределена.  См. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md) Дополнительные сведения.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3671.
+
+```
+// C3671.cpp
+// compile with: /clr /c
+ref struct S {
+   virtual void f();
+};
+
+ref struct S1 : S {
+   virtual void f(int) new sealed = S::f;   // C3671
+   virtual void f() new sealed = S::f;
+};
 ```

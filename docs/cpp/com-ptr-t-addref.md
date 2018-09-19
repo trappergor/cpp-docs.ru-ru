@@ -16,28 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bf56e87b8b7949048b1e6006d3aa32f00af1462
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b66f4944d9ccdfb36587817c5f856c127513784e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087715"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
-**Блок, относящийся только к системам Microsoft**  
-  
- Вызовы `AddRef` функцию-член `IUnknown` на инкапсулированный указатель на интерфейс.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void AddRef( );  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Вызовы `IUnknown::AddRef` на инкапсулированный указатель на интерфейс, вызов `E_POINTER` ошибка, если указатель имеет значение NULL.  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Класс _com_ptr_t](../cpp/com-ptr-t-class.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+Вызовы `AddRef` функцию-член `IUnknown` на инкапсулированный указатель на интерфейс.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void AddRef( );
+```
+
+## <a name="remarks"></a>Примечания
+
+Вызовы `IUnknown::AddRef` на инкапсулированный указатель на интерфейс, вызов `E_POINTER` ошибка, если указатель имеет значение NULL.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Класс _com_ptr_t](../cpp/com-ptr-t-class.md)

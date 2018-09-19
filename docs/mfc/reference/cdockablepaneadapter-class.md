@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d89020869db10b45688dbaae71f38711d2667c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676367"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712079"
 ---
 # <a name="cdockablepaneadapter-class"></a>Класс CDockablePaneAdapter
 Обеспечивает поддержку прикрепления производных панелей от `CWnd`.  
@@ -90,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszProfileName*  
- Имя профиля.  
+*lpszProfileName*<br/>
+[in] Имя профиля.  
   
- [in] *nIndex*  
- Индекс профиля.  
+*nIndex*<br/>
+[in] Индекс профиля.  
   
- [in] *uiID*  
- Идентификатор области.  
+*uiID*<br/>
+[in] Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -114,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszProfileName*  
- Имя профиля.  
+*lpszProfileName*<br/>
+[in] Имя профиля.  
   
- [in] *nIndex*  
- Индекс профиля (по умолчанию — идентификатор элемента управления окна).  
+*nIndex*<br/>
+[in] Индекс профиля (по умолчанию — идентификатор элемента управления окна).  
   
- [in] *uiID*  
- Идентификатор области.  
+*uiID*<br/>
+[in] Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -135,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- Указатель на окно для адаптера области программы-оболочки.  
+*pWnd*<br/>
+[in] Указатель на окно для адаптера области программы-оболочки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   

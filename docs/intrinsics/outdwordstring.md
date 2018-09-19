@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ff43920400028e0fb13fc17615fb58cc551726b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539898"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704227"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Блок, относящийся только к системам Microsoft**  
@@ -41,14 +41,14 @@ void __outdwordstring(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in] `Port`  
- Порт для отправки данных.  
+*Порт*<br/>
+[in] Порт для отправки данных.  
   
- [in] `Buffer`  
- Указатель на данные, которые будут отправлены для указанного порта.  
+*буфер*<br/>
+[in] Указатель на данные, которые будут отправлены для указанного порта.  
   
- [in] `Count`  
- Число двойных слов для отправки.  
+*Количество*<br/>
+[in] Число двойных слов для отправки.  
   
 ## <a name="requirements"></a>Требования  
   

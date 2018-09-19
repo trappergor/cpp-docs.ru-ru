@@ -37,14 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 542c97c1e13d5979290772668b6dccebe1ece9f9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113166"
 ---
 # <a name="irowsetinfoimpl-class"></a>Класс IRowsetInfoImpl
+
 Предоставляет реализацию для [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
@@ -57,14 +58,16 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *T*  
- Ваш класс, производный от `IRowsetInfoImpl`.  
+
+*T*<br/>
+Ваш класс, производный от `IRowsetInfoImpl`.  
   
- *PropClass*  
- Класс определяемые пользователем свойства, который по умолчанию используется *T*. 
+*PropClass*<br/>
+Класс определяемые пользователем свойства, который по умолчанию используется *T*. 
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** altdb.h   
+
+**Заголовок:** altdb.h   
   
 ## <a name="members"></a>Участники  
   
@@ -77,9 +80,11 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 |[GetSpecification](#getspecification)|Возвращает указатель интерфейса объекта (команды или сеанса), создавшего этот набор строк.|  
   
 ## <a name="remarks"></a>Примечания  
- Обязательный интерфейс наборов строк. Этот класс реализует свойства набора строк с помощью [сопоставление набора свойств](../../data/oledb/begin-propset-map.md) определен в классе вашей команды. Несмотря на то, что класса набора строк отображается для класса команды свойство задает, набор строк предоставляется вместе с свою собственную копию свойства времени выполнения при его создании с помощью команды или сеанса работы объекта.  
+
+Обязательный интерфейс наборов строк. Этот класс реализует свойства набора строк с помощью [сопоставление набора свойств](../../data/oledb/begin-propset-map.md) определен в классе вашей команды. Несмотря на то, что класса набора строк отображается для класса команды свойство задает, набор строк предоставляется вместе с свою собственную копию свойства времени выполнения при его создании с помощью команды или сеанса работы объекта.  
   
 ## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
+
 Возвращает текущие параметры для свойств в `DBPROPSET_ROWSET` группы.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -92,9 +97,11 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+
+См. в разделе [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
+
 Возвращает указатель интерфейса на набор строк, к которому применяется закладка.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -106,9 +113,11 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) в *справочнике программиста OLE DB*. *IOrdinal* параметр должен быть столбца закладки. 
+
+См. в разделе [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) в *справочнике программиста OLE DB*. *IOrdinal* параметр должен быть столбца закладки. 
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
+
 Возвращает указатель интерфейса объекта (команды или сеанса), создавшего этот набор строк.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -119,11 +128,14 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+
+См. в разделе [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод используется с [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) извлекаемого свойства из объекта источника данных.  
+
+Этот метод используется с [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) извлекаемого свойства из объекта источника данных.  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

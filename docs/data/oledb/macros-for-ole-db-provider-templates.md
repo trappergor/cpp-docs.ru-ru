@@ -62,14 +62,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b2728c88e320fab192563f21ebcdde934be9da84
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8953b277ff5512e71b3821d6f1f32bc897322d8c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100504"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Макросы для шаблонов поставщика OLE DB
+
 Макросы шаблонов поставщик данных OLE DB предоставляют функции в следующих категориях:  
   
 ## <a name="property-set-map-macros"></a>Макросы сопоставления набора свойств  
@@ -109,9 +110,11 @@ ms.locfileid: "43687116"
 |[SCHEMA_ENTRY](#schema_entry)|Связывает GUID с классом.|  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldb.h  
+
+**Заголовок:** atldb.h  
 
 ### <a name="begin_property_set"></a> BEGIN_PROPERTY_SET
+
 Отмечает начало свойства задайте в свойстве сопоставлением набора.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -121,13 +124,16 @@ BEGIN_PROPERTY_SET(guid)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Идентификатор GUID*  
- [in] Свойство GUID.  
+
+*Идентификатор GUID*<br/>
+[in] Свойство GUID.  
   
 #### <a name="example"></a>Пример  
- См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
+
 Отмечает начало свойства задайте в свойстве сопоставлением набора.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -137,16 +143,19 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Идентификатор GUID*  
- [in] Свойство GUID.  
+
+*Идентификатор GUID*<br/>
+[in] Свойство GUID.  
   
- *flags*  
- [in] UPROPSET_HIDDEN любые наборы свойств, которые вы не хотите предоставлять или UPROPSET_PASSTHROUGH для поставщика, предоставление доступа к свойствам, определенные за пределами области поставщика.  
+*flags*<br/>
+[in] UPROPSET_HIDDEN любые наборы свойств, которые вы не хотите предоставлять или UPROPSET_PASSTHROUGH для поставщика, предоставление доступа к свойствам, определенные за пределами области поставщика.  
   
 #### <a name="example"></a>Пример  
- См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
+
 Знаки начала свойства можно настроить записи карты.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -156,21 +165,24 @@ BEGIN_PROPSET_MAP(Class)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Класс*  
- [in] Указывается класс, в котором значение этого свойства. Набор свойств можно задать следующие объекты OLE DB.  
+
+*Класс*<br/>
+[in] Указывается класс, в котором значение этого свойства. Набор свойств можно задать следующие объекты OLE DB.  
   
--   [Объекты источника данных](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
+- [Объекты источника данных](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
   
--   [Объекты сеанса](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
+- [Объекты сеанса](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
   
--   [Команды](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
+- [Команды](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
   
 #### <a name="example"></a>Пример  
- Ниже приведен пример карты набора свойств.  
+
+Ниже приведен пример карты набора свойств.  
   
- [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
+[!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
 
 ### <a name="chain_property_set"></a> CHAIN_PROPERTY_SET
+
 Этот макрос объединяются в цепочку группы свойств.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -180,16 +192,19 @@ CHAIN_PROPERTY_SET(ChainClass)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ChainClass*  
- [in] Имя класса для свойства цепочки. Это класс, созданный программой мастер проектов ATL, который уже содержит схему (например, сеанса, команды или данные исходного объекта класса).  
+
+*ChainClass*<br/>
+[in] Имя класса для свойства цепочки. Это класс, созданный программой мастер проектов ATL, который уже содержит схему (например, сеанса, команды или данные исходного объекта класса).  
   
 #### <a name="remarks"></a>Примечания  
- Можно привязать набор свойств от другого класса, чтобы ваш собственный класс, а затем доступ к свойствам непосредственно из вашего класса.  
+
+Можно привязать набор свойств от другого класса, чтобы ваш собственный класс, а затем доступ к свойствам непосредственно из вашего класса.  
   
 > [!CAUTION]
 >  Используйте этот макрос только в случае необходимости. Неправильное использование может привести к потребителя к сбою проверка на совместимость OLE DB.  
 
 ### <a name="end_property_set"></a> END_PROPERTY_SET
+
 Помечает конец набор свойств.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -199,13 +214,16 @@ END_PROPERTY_SET(guid)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Идентификатор GUID*  
- [in] Свойство GUID.  
+
+*Идентификатор GUID*<br/>
+[in] Свойство GUID.  
   
 #### <a name="example"></a>Пример  
- См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="end_propset_map"></a> END_PROPSET_MAP
+
 Метки в конец свойства набора записей карты.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -215,9 +233,11 @@ END_PROPSET_MAP()
 ```  
   
 #### <a name="example"></a>Пример  
- См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
+
 Представляет конкретное свойство в наборе свойств.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -227,16 +247,20 @@ PROPERTY_INFO_ENTRY(dwPropID)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *dwPropID*  
- [in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
+
+*dwPropID*<br/>
+[in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
   
 #### <a name="remarks"></a>Примечания  
- Этот макрос задает в качестве значения свойства типа `DWORD` значение по умолчанию, определенное в ATLDB.H. Чтобы задать свойству нужное вам значение, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Чтобы задать `VARTYPE` и [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) для свойства, в то же время, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+
+Этот макрос задает в качестве значения свойства типа `DWORD` значение по умолчанию, определенное в ATLDB.H. Чтобы задать свойству нужное вам значение, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Чтобы задать `VARTYPE` и [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) для свойства, в то же время, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Пример  
- См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
+
 Представляет конкретное свойство в наборе свойств.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -246,28 +270,32 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *dwPropID*  
- [in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
+
+*dwPropID*<br/>
+[in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
   
- *vt*  
- [in] `VARTYPE` Этой записи свойства. (Определяется в файле wtypes.h)  
+*vt*<br/>
+[in] `VARTYPE` Этой записи свойства. (Определяется в файле wtypes.h)  
   
- *dwFlags*  
- [in] Объект [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) значение, описывающее эту запись свойства.  
+*dwFlags*<br/>
+[in] Объект [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) значение, описывающее эту запись свойства.  
   
- *значение*  
- [входные данные] Значение свойства с типом `DWORD`.  
+*значение*<br/>
+[входные данные] Значение свойства с типом `DWORD`.  
   
- *Параметры*  
- DBPROPOPTIONS_REQUIRED или DBPROPOPTIONS_SETIFCHEAP. Как правило, поставщик не нужно задавать *параметры* так как он задан потребителем.  
+*options*<br/>
+DBPROPOPTIONS_REQUIRED или DBPROPOPTIONS_SETIFCHEAP. Как правило, поставщик не нужно задавать *параметры* так как он задан потребителем.  
   
 #### <a name="remarks"></a>Примечания  
- С помощью этого макроса можно напрямую указать значение свойства типа `DWORD` , а также параметры и флаги. Чтобы задать свойству значение по умолчанию, определенное в ATLDB. H, используйте [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Чтобы задать свойству значение по своему усмотрению без параметров или флагов, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).  
+
+С помощью этого макроса можно напрямую указать значение свойства типа `DWORD` , а также параметры и флаги. Чтобы задать свойству значение по умолчанию, определенное в ATLDB. H, используйте [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Чтобы задать свойству значение по своему усмотрению без параметров или флагов, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).  
   
 #### <a name="example"></a>Пример  
- См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
+
 Представляет конкретное свойство в наборе свойств.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -277,19 +305,23 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *dwPropID*  
- [in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
+
+*dwPropID*<br/>
+[in] Объект [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID для идентификации свойства задать значение, которое можно использовать в сочетании со свойством.  
   
- *значение*  
- [входные данные] Значение свойства с типом `DWORD`.  
+*значение*<br/>
+[входные данные] Значение свойства с типом `DWORD`.  
   
 #### <a name="remarks"></a>Примечания  
- С помощью этого макроса можно напрямую указать значение свойства типа `DWORD`. Чтобы задать свойство, значение по умолчанию, определенное в ATLDB. H, используйте [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Чтобы задать значение, флаги и параметры для свойства, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+
+С помощью этого макроса можно напрямую указать значение свойства типа `DWORD`. Чтобы задать свойство, значение по умолчанию, определенное в ATLDB. H, используйте [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Чтобы задать значение, флаги и параметры для свойства, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Пример  
- См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ### <a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
+
 Отмечает начало карты записей столбцов поставщика.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -299,15 +331,18 @@ BEGIN_PROVIDER_COLUMN_MAP(theClass)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *theClass*  
- [in] Имя класса, к которому принадлежит эта карта.  
+
+*theClass*<br/>
+[in] Имя класса, к которому принадлежит эта карта.  
   
 #### <a name="example"></a>Пример  
- Ниже приведен пример карты столбцов поставщика.  
+
+Ниже приведен пример карты столбцов поставщика.  
   
- [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]  
+[!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]  
 
 ### <a name="end_provider_column_map"></a> END_PROVIDER_COLUMN_MAP
+
 Помечает конец карты записей столбцов поставщика.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -317,9 +352,11 @@ END_PROVIDER_COLUMN_MAP()
 ```  
   
 #### <a name="example"></a>Пример  
- См. в разделе [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
+
+См. в разделе [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
 
 ### <a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
+
 Представляет конкретного столбца, поддерживаемых поставщиком.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -329,16 +366,18 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *name*  
- [in] Имя столбца.  
+
+*name*<br/>
+[in] Имя столбца.  
   
- *Порядковый номер*  
- [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
+*Порядковый номер*<br/>
+[in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
- *Член*  
- [in] Переменная-член в `dataClass` соответствующую столбцу.  
+*Член*<br/>
+[in] Переменная-член в `dataClass` соответствующую столбцу.  
 
 ### <a name="provider_column_entry_fixed"></a> PROVIDER_COLUMN_ENTRY_FIXED
+
 Представляет конкретного столбца, поддерживаемых поставщиком.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -348,25 +387,29 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *name*  
- [in] Имя столбца.  
+
+*name*<br/>
+[in] Имя столбца.  
   
- *Порядковый номер*  
- [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
+*Порядковый номер*<br/>
+[in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
- *dbType*  
- [in] Тип данных в [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+*dbType*<br/>
+[in] Тип данных в [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
- *Член*  
- [in] Переменная-член в `dataClass` , где хранятся данные.  
+*Член*<br/>
+[in] Переменная-член в `dataClass` , где хранятся данные.  
   
 #### <a name="remarks"></a>Примечания  
- Позволяет указать тип данных столбца.  
+
+Позволяет указать тип данных столбца.  
   
 #### <a name="example"></a>Пример  
- См. в разделе [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
+
+См. в разделе [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
 
 ### <a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
+
 Представляет конкретного столбца, поддерживаемых поставщиком.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -376,34 +419,37 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *name*  
- [in] Имя столбца.  
+
+*name*<br/>
+[in] Имя столбца.  
   
- *Порядковый номер*  
- [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
+*Порядковый номер*<br/>
+[in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
- *flags*  
- [in] Указывает, каким образом данные возвращаются. См. в разделе `dwFlags` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+*flags*<br/>
+[in] Указывает, каким образом данные возвращаются. См. в разделе `dwFlags` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
- *colSize*  
- [in] Размер столбца.  
+*colSize*<br/>
+[in] Размер столбца.  
   
- *dbType*  
- [in] Указывает тип данных значения. См. в разделе `wType` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+*dbType*<br/>
+[in] Указывает тип данных значения. См. в разделе `wType` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
- *precision*  
- [in] Указывающее точность для использования при получении данных, если *dbType* DBTYPE_NUMERIC или DBTYPE_DECIMAL. См. в разделе `bPrecision` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+*precision*<br/>
+[in] Указывающее точность для использования при получении данных, если *dbType* DBTYPE_NUMERIC или DBTYPE_DECIMAL. См. в разделе `bPrecision` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
- *Масштаб*  
- [in] Указывает шкалу для использования при получении данных, если тип dbType DBTYPE_NUMERIC или DBTYPE_DECIMAL. См. в разделе `bScale` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
+*Масштаб*<br/>
+[in] Указывает шкалу для использования при получении данных, если тип dbType DBTYPE_NUMERIC или DBTYPE_DECIMAL. См. в разделе `bScale` описание в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
- *Идентификатор GUID*  
- GUID набора строк схемы. См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по* список наборов строк схемы и их идентификаторы GUID.  
+*Идентификатор GUID*<br/>
+GUID набора строк схемы. См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по* список наборов строк схемы и их идентификаторы GUID.  
   
 #### <a name="remarks"></a>Примечания  
- Позволяет указать размер столбца, тип данных, точность, масштаб и GUID набора строк схемы.  
+
+Позволяет указать размер столбца, тип данных, точность, масштаб и GUID набора строк схемы.  
 
 ### <a name="provider_column_entry_length"></a> PROVIDER_COLUMN_ENTRY_LENGTH
+
 Представляет конкретного столбца, поддерживаемых поставщиком.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -413,25 +459,29 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *name*  
- [in] Имя столбца.  
+
+*name*<br/>
+[in] Имя столбца.  
   
- *Порядковый номер*  
- [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
+*Порядковый номер*<br/>
+[in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
- *size*  
- [in] Размер столбца в байтах.  
+*size*<br/>
+[in] Размер столбца в байтах.  
   
- *Член*  
- [in] Переменная-член в `dataClass` , где хранятся данные столбца.  
+*Член*<br/>
+[in] Переменная-член в `dataClass` , где хранятся данные столбца.  
   
 #### <a name="remarks"></a>Примечания  
- Позволяет указать размер столбца.  
+
+Позволяет указать размер столбца.  
   
 #### <a name="example"></a>Пример  
- См. в разделе [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md). 
+
+См. в разделе [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md). 
 
 ### <a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
+
 Представляет конкретного столбца, поддерживаемых поставщиком.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -441,22 +491,26 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *name*  
- [in] Имя столбца.  
+
+*name*<br/>
+[in] Имя столбца.  
   
- *Порядковый номер*  
- [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
+*Порядковый номер*<br/>
+[in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
- *Член*  
- [in] Переменная-член в классе данных, в которой хранятся данные.  
+*Член*<br/>
+[in] Переменная-член в классе данных, в которой хранятся данные.  
   
 #### <a name="remarks"></a>Примечания  
- Используйте этот макрос, если столбец данных предполагается, что [DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+
+Используйте этот макрос, если столбец данных предполагается, что [DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
 #### <a name="example"></a>Пример  
- См. в разделе [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).   
+
+См. в разделе [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).   
 
 ### <a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+
 Представляет конкретного столбца, поддерживаемых поставщиком.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -466,25 +520,28 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *name*  
- [in] Имя столбца.  
+
+*name*<br/>
+[in] Имя столбца.  
   
- *Порядковый номер*  
- [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
+*Порядковый номер*<br/>
+[in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
- *dbType*  
- [in] Тип данных в [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+*dbType*<br/>
+[in] Тип данных в [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
- *size*  
- [in] Размер столбца в байтах.  
+*size*<br/>
+[in] Размер столбца в байтах.  
   
- *Член*  
- [in] Переменная-член в классе данных, в которой хранятся данные.  
+*Член*<br/>
+[in] Переменная-член в классе данных, в которой хранятся данные.  
   
 #### <a name="remarks"></a>Примечания  
- Аналогичную [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , но также позволяет указать тип данных столбца, а также размер.  
+
+Аналогичную [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , но также позволяет указать тип данных столбца, а также размер.  
 
 ### <a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
+
 Представляет конкретного столбца, поддерживаемых поставщиком.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -494,19 +551,22 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *name*  
- [in] Имя столбца.  
+
+*name*<br/>
+[in] Имя столбца.  
   
- *Порядковый номер*  
- [in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
+*Порядковый номер*<br/>
+[in] Номер столбца. Если столбец является столбцом закладки, номер столбца не должно быть 0.  
   
- *Член*  
- [in] Переменная-член в классе данных, в которой хранятся данные.  
+*Член*<br/>
+[in] Переменная-член в классе данных, в которой хранятся данные.  
   
 #### <a name="remarks"></a>Примечания  
- Используйте этот макрос в том случае, когда данные столбца нулем строка в Юникоде, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
+
+Используйте этот макрос в том случае, когда данные столбца нулем строка в Юникоде, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
+
 Обозначает начало карте схемы.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -516,13 +576,16 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *SchemaClass*  
- Класс, содержащий Сопоставления. Как правило, это будет класс сеанса.  
+
+*SchemaClass*<br/>
+Класс, содержащий Сопоставления. Как правило, это будет класс сеанса.  
   
 #### <a name="remarks"></a>Примечания  
- См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения о наборах строк схемы.  
+
+См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения о наборах строк схемы.  
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
+
 Обозначает конец схемы.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -532,9 +595,11 @@ END_SCHEMA_MAP()
 ```  
   
 #### <a name="see-also"></a>См. также  
- [Класс IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)
+
+[Класс IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
+
 Связывает GUID с классом.  
   
 #### <a name="syntax"></a>Синтаксис  
@@ -545,14 +610,16 @@ SCHEMA_ENTRY(guid,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Идентификатор GUID*  
- GUID набора строк схемы. См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по* список наборов строк схемы и их идентификаторы GUID.  
+
+*Идентификатор GUID*<br/>
+GUID набора строк схемы. См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по* список наборов строк схемы и их идентификаторы GUID.  
   
- *RowsetClass*  
- Класс, который будет создан для представления набора строк схемы.  
+*RowsetClass*<br/>
+Класс, который будет создан для представления набора строк схемы.  
   
 #### <a name="remarks"></a>Примечания  
- [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) можно затем запрос на карте список идентификаторов GUID, или его можно создать набор строк, если ему присваивается идентификатор GUID. Набор строк схемы `IDBSchemaRowsetImpl` создает аналогична стандартной `CRowsetImpl`-производного класса, за исключением того, он должен предоставлять `Execute` метод, который имеет следующую сигнатуру:  
+
+[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) можно затем запрос на карте список идентификаторов GUID, или его можно создать набор строк, если ему присваивается идентификатор GUID. Набор строк схемы `IDBSchemaRowsetImpl` создает аналогична стандартной `CRowsetImpl`-производного класса, за исключением того, он должен предоставлять `Execute` метод, который имеет следующую сигнатуру:  
   
 ```cpp  
 HRESULT Execute (LONG* pcRowsAffected,  
@@ -560,19 +627,20 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);  
 ```  
   
- Это `Execute` функция заполняет данные набора строк. Создает мастер проектов ATL, как описано в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по*, три начальной наборы строк схемы в проекте для каждого из трех обязательной схемы OLE DB:  
+Это `Execute` функция заполняет данные набора строк. Создает мастер проектов ATL, как описано в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по*, три начальной наборы строк схемы в проекте для каждого из трех обязательной схемы OLE DB:  
   
--   DBSCHEMA_TABLES  
+- DBSCHEMA_TABLES  
   
--   DBSCHEMA_COLUMNS  
+- DBSCHEMA_COLUMNS  
   
--   DBSCHEMA_PROVIDER_TYPES  
+- DBSCHEMA_PROVIDER_TYPES  
   
- Мастер также добавляет три соответствующие записи в карте схемы. См. в разделе [Создание поставщика OLE DB шаблона](../../data/oledb/creating-an-ole-db-provider.md) Дополнительные сведения об использовании мастера для создания поставщика.  
+Мастер также добавляет три соответствующие записи в карте схемы. См. в разделе [Создание поставщика OLE DB шаблона](../../data/oledb/creating-an-ole-db-provider.md) Дополнительные сведения об использовании мастера для создания поставщика.  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Создание поставщика OLE DB](../../data/oledb/creating-an-ole-db-provider.md)   
- [Ссылка на шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)    
- [Макросы для шаблонов поставщика OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+
+[Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Создание поставщика OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>
+[Ссылка на шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Макросы для шаблонов поставщика OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   

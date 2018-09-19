@@ -1,5 +1,5 @@
 ---
-title: copyprivate | Документы Microsoft
+title: copyprivate | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071137"
 ---
 # <a name="copyprivate"></a>copyprivate
-Указывает, что один или несколько переменных должны совместно используются всеми потоками.  
+Указывает, что один или несколько переменных следует использовать совместно используются всеми потоками.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,14 +32,13 @@ ms.locfileid: "33692942"
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>Примечания  
- где  
+### <a name="parameters"></a>Параметры
   
- `var`  
- Одна или несколько переменных для совместного использования. Если указано более одной переменной, разделяйте имена переменных запятыми.  
+*var*<br/>
+Одну или несколько переменных для совместного использования. Если указано более одной переменной, разделите имена переменных запятыми.  
   
 ## <a name="remarks"></a>Примечания  
- `copyprivate` применяется к [одного](../../../parallel/openmp/reference/single.md) директивы.  
+ `copyprivate` применяется к [единый](../../../parallel/openmp/reference/single.md) директива.  
   
  Дополнительные сведения см. в разделе [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md).  
   

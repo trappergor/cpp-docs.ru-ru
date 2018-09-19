@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ddb7092b1a5556485848d122e21ac54b6efe182
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606959"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721349"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -56,14 +56,14 @@ SafeInt (
 
 ### <a name="parameters"></a>Параметры
 
-[in] *я*  
-Значение для нового **SafeInt** объекта. Это должен быть параметр типа T или U, в зависимости от конструктора.
+*i*<br/>
+[in] Значение для нового **SafeInt** объекта. Это должен быть параметр типа T или U, в зависимости от конструктора.
 
-[in] *b*  
-Логическое значение для нового **SafeInt** объекта.
+*b*<br/>
+[in] Логическое значение для нового **SafeInt** объекта.
 
-[in] *u*  
-Объект **SafeInt** типа u. Новый **SafeInt** объект будет иметь то же значение, что *u*, но будет иметь тип T.
+*u*<br/>
+[in] Объект **SafeInt** типа u. Новый **SafeInt** объект будет иметь то же значение, что *u*, но будет иметь тип T.
 
 Тип данных, хранящихся в U **SafeInt**. Это может быть значение типа Boolean, символьного или целочисленного типа. Если это целочисленный тип, он может быть подписанные или не подписанные и находиться в диапазоне от 8 до 64 бит.
 

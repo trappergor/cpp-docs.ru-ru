@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка NMAKE U1001 | Документы Microsoft
+title: Неустранимая ошибка NMAKE U1001 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68699a235f461a0f5550802cc009d345ecdba7c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4e465af5b4fa22c5f0ba5a9e01ebde0a7ee89e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068147"
 ---
 # <a name="nmake-fatal-error-u1001"></a>Неустранимая ошибка NMAKE U1001
-Синтаксическая ошибка: недопустимый символ «символ» в макросе  
-  
- Данный символ отображается в макросе, но не является буквой, цифрой или символ подчеркивания.  
-  
- Эта ошибка может вызываться отсутствует двоеточие в расширении макроса:  
-  
-```  
-syntax error : illegal character '=' in macro  
+
+Синтаксическая ошибка: недопустимый символ «символ» в макросе
+
+Данный символ отображается в макросе, но не является буквой, цифрой или символом подчеркивания.
+
+Эта ошибка может быть вызвана отсутствует двоеточие в раскрытии макроса:
+
+```
+syntax error : illegal character '=' in macro
 ```

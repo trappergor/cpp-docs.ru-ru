@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad99ccf1f037d16bcff57f9a643f2332f36e7d7a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2b1ee8e1beb6022d6a940e7036d9673e3844f35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220438"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726730"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Класс CMFCToolBarDateTimeCtrl
 Кнопка панели инструментов, которая содержит элемент управления выбора даты и времени.  
@@ -78,14 +78,14 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl](#cmfctoolbardatetimectrl)|Создает объект `CMFCToolBarDateTimeCtrl`.|  
 |`CMFCToolBarDateTimeCtrl::~CMFCToolBarDateTimeCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|Указывает, может ли пользователь растянуть кнопки во время настройки. (Переопределяет [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|  
 |[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|Копирует свойства другую кнопку панели инструментов для текущей кнопки. (Переопределяет [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
@@ -155,17 +155,17 @@ CMFCToolBarDateTimeCtrl(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiID*  
- Идентификатор элемента управления.  
+*uiID*<br/>
+[in] Идентификатор элемента управления.  
   
- [in] *iImage*  
- Индекс изображения в панели инструментов `CMFCToolBarImages` объекта.  
+*iImage*<br/>
+[in] Индекс изображения в панели инструментов `CMFCToolBarImages` объекта.  
   
- [in] *dwStyle*  
- Стиль `CMFCToolBarDateTimeCtrlImpl` окно, которое создается, когда пользователь нажимает кнопку.  
+*dwStyle*<br/>
+[in] Стиль `CMFCToolBarDateTimeCtrlImpl` окно, которое создается, когда пользователь нажимает кнопку.  
   
- [in] *iWidth*  
- Ширина элемента управления (в пикселях).  
+*iWidth*<br/>
+[in] Ширина элемента управления в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
  Этот объект инициализируется системной даты и времени. Стиль окна внутреннего `CMFCToolBarDateTimeCtrlImpl` объект включает *dwStyle* параметр и стили WS_CHILD и WS_VISIBLE. Нельзя изменить с помощью этих стилей `CMFCToolBarDateTimeCtrl::SetStyle`. Используйте `SetStyle` Чтобы изменить стиль `CMFCToolBarDateTimeCtrl` элемента управления.  
@@ -183,8 +183,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *src*  
- Ссылка «источник» из которого необходимо скопировать.  
+*src*<br/>
+[in] Ссылка «источник» из которого необходимо скопировать.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод используется для копирования другую кнопку панели инструментов, чтобы эта кнопка панели инструментов. *src* должен иметь тип `CMFCToolBarDateTimeCtrl`.  
@@ -197,8 +197,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *menuButton*  
- Ссылка на кнопке меню целевой объект.  
+*MenuButton*<br/>
+[in] Ссылка на кнопке меню целевой объект.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает значение TRUE.  
@@ -214,8 +214,8 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiCmd*  
- Идентификатор команды для получения кнопки.  
+*uiCmd*<br/>
+[in] Идентификатор команды для получения кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Первый `CMFCToolBarDateTimeCtrl` объект в приложении, имеющий заданный идентификатор команды, или значение NULL, если не `CMFCToolBarDateTimeCtrl` объекты имеют идентификатор указанной команды.  
@@ -259,11 +259,11 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *timeDest*  
- В первой перегрузке [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объект, который будет получать сведения о времени системы. Во второй перегрузке [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, который будет получать сведения о времени системы.  
+*timeDest*<br/>
+[out] В первой перегрузке [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объект, который будет получать сведения о времени системы. Во второй перегрузке [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, который будет получать сведения о времени системы.  
   
- [out] *pTimeDest*  
- Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведения о времени системы. Не должен иметь значение NULL.  
+*pTimeDest*<br/>
+[out] Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведения о времени системы. Не должен иметь значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  В первой перегрузке, ненулевое значение, если время успешно записан [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объекта; в противном случае — значение 0. В перегрузках второй и третий, возвращается значение типа DWORD, равное dwFlag член, который был задан в [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) структуры.  
@@ -289,14 +289,14 @@ static DWORD GetTimeAll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiCmd*  
- Указывает идентификатор команды кнопки панели инструментов.  
+*uiCmd*<br/>
+[in] Указывает идентификатор команды кнопки панели инструментов.  
   
- [out] *timeDest*  
- В первой перегрузке [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объект, который будет получать сведения о времени системы. Во второй перегрузке [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, который будет получать сведения о времени системы.  
+*timeDest*<br/>
+[out] В первой перегрузке [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объект, который будет получать сведения о времени системы. Во второй перегрузке [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, который будет получать сведения о времени системы.  
   
- [out] *pTimeDest*  
- Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведения о времени системы. Не должен иметь значение NULL.  
+*pTimeDest*<br/>
+[out] Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведения о времени системы. Не должен иметь значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если платформа не удается найти кнопку панели инструментов, соответствующий Идентификатору команды *uiCmd*, возвращаемое значение равно нулю в первой перегрузке и GDT_NONE в других перегрузок. При обнаружении кнопки панели инструментов, возвращаемое значение является таким же, как возвращаемое значение из вызова [CMFCToolBarDateTimeCtrl::GetTime](#gettime) этой кнопки. Возвращаемое значение из нуля или GDT_NONE возникает, когда найден кнопки, которое указывает, что вызов `GetTime` не возвратил допустимую дату по другой причине.  
@@ -325,8 +325,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *iNotifyCode*  
- Сообщение уведомления, который связан с командой.  
+*iNotifyCode*<br/>
+[in] Сообщение уведомления, который связан с командой.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если кнопки обрабатывает сообщение WM_COMMAND, или FALSE для указания, что сообщения должны обрабатываться родительской панели инструментов.  
@@ -356,8 +356,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWndParent*  
- Нового родительского окна.  
+*pWndParent*<br/>
+[in] Нового родительского окна.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет реализацию базового класса ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)), повторно создав внутренний `CMFCToolBarDateTimeCtrlImpl` объекта.  
@@ -372,11 +372,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- Не используется.  
+*pWnd*<br/>
+[in] Не используется.  
   
- [in] *bDelay*  
- Не используется.  
+*bDelay*<br/>
+[in] Не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если кнопки обрабатывает сообщение щелкните; в противном случае 0.  
@@ -394,11 +394,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Контекст устройства, которое отображает кнопки.  
+*основного контроллера домена*<br/>
+[in] Контекст устройства, которое отображает кнопки.  
   
- [in] *nCtlColor*  
- Не используется.  
+*nCtlColor*<br/>
+[in] Не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор глобального кисть, которая инфраструктура использует для рисования фона кнопки.  
@@ -438,8 +438,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bShow*  
- Указывает, видима ли кнопка. Если этот параметр имеет значение TRUE, то кнопка отображается. В противном случае кнопка не видна.  
+*bShow*<br/>
+[in] Указывает, видима ли кнопка. Если этот параметр имеет значение TRUE, то кнопка отображается. В противном случае кнопка не видна.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)), отображая кнопку, если *bShow* имеет значение TRUE. В противном случае этот метод скрывает кнопку.  
@@ -452,8 +452,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *iSize*  
- Новая ширина кнопки, в пикселях.  
+*iSize*<br/>
+[in] Новая ширина кнопки, в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет реализацию класса по умолчанию ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)), обновив размер и положение внутреннего `CMFCToolBarDateTimeCtrlImpl` объекта.  
@@ -470,17 +470,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWndParent*  
- Родительское окно.  
+*pWndParent*<br/>
+[in] Родительское окно.  
   
- [in] *iButtonIndex*  
- Отсчитываемый от нуля индекс кнопок в коллекции кнопок панели родительского.  
+*iButtonIndex*<br/>
+[in] Отсчитываемый от нуля индекс кнопок в коллекции кнопок панели родительского.  
   
- [in] *wndToolTip*  
- Элемент управления, отображающий текст всплывающей подсказки.  
+*wndToolTip*<br/>
+[in] Элемент управления, отображающий текст всплывающей подсказки.  
   
- [out] *str*  
- Объект `CString` объект, получающий обновленный подсказку.  
+*str*<br/>
+[out] Объект `CString` объект, получающий обновленный подсказку.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если метод обновляет текст подсказки; в противном случае 0.  
@@ -498,11 +498,11 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *timeNew*  
- В первой версии, ссылку на [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий время, к которому будет задано элемента управления. Во второй версии, указатель на [CTime](../../atl-mfc-shared/reference/ctime-class.md) , содержащий время, к которому будет задано элемента управления.  
+*timeNew*<br/>
+[in] В первой версии, ссылку на [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий время, к которому будет задано элемента управления. Во второй версии, указатель на [CTime](../../atl-mfc-shared/reference/ctime-class.md) , содержащий время, к которому будет задано элемента управления.  
   
- [in] *pTimeNew*  
- Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет задано элемента управления.  
+*pTimeNew*<br/>
+[in] Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет задано элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -528,14 +528,14 @@ static BOOL SetTimeAll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *uiCmd*  
- Указывает идентификатор команды кнопки панели инструментов.  
+*uiCmd*<br/>
+[in] Указывает идентификатор команды кнопки панели инструментов.  
   
- [in] *timeNew*  
- В первой версии [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий время, к которому будет задано элемента управления. Во второй версии, указатель на [CTime](../../atl-mfc-shared/reference/ctime-class.md) , содержащий время, к которому будет задано элемента управления.  
+*timeNew*<br/>
+[in] В первой версии [класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий время, к которому будет задано элемента управления. Во второй версии, указатель на [CTime](../../atl-mfc-shared/reference/ctime-class.md) , содержащий время, к которому будет задано элемента управления.  
   
- [in] *pTimeNew*  
- Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет задано элемента управления.  
+*pTimeNew*<br/>
+[in] Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет задано элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  

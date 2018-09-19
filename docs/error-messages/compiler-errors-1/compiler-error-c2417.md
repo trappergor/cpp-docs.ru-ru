@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2417 | Документы Microsoft
+title: Ошибка компилятора C2417 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1da77d529c81fe6eaff493afc756852e5be9d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5126a44961b1e1469c50601fbab29e7eda2cdef2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089064"
 ---
 # <a name="compiler-error-c2417"></a>Ошибка компилятора C2417
-деление на ноль в "контекст"  
-  
- Параметр справа от оператора деления является нулем в данном контексте.
+
+деление на ноль в "контекст"
+
+Параметр справа от оператора деления является нулем в данном контексте.

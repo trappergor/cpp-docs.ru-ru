@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2e448d5fa73c64e9abb66ef70e513bc9fa0728
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0abc7e3b87ef23e6350b54c3f64b50fbcfdd5b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759250"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031149"
 ---
 # <a name="ienumonstlimpl-class"></a>Класс IEnumOnSTLImpl
 
@@ -40,25 +40,25 @@ ms.locfileid: "43759250"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType>  
+    const IID* piid, class T, class Copy, class CollType>
 class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 COM-перечислитель. См. в разделе [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) пример.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор интерфейса интерфейса перечислителя.
 
-*T*  
+*T*<br/>
 Тип элемента, доступные в интерфейсе перечислителя.
 
-*Копировать*  
+*Копировать*<br/>
 Объект [скопируйте класс политики](../../atl/atl-copy-policy-classes.md).
 
-*CollType*  
+*CollType*<br/>
 Класс контейнера стандартной библиотеки C++.
 
 ## <a name="members"></a>Участники
@@ -114,10 +114,10 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkForRelease*  
+*pUnkForRelease*<br/>
 [in] `IUnknown` Указатель на объект, который должен поддерживаться в течение времени существования перечислителя. Передайте значение NULL, если объект не существует.
 
-*коллекция*  
+*коллекция*<br/>
 Ссылка на контейнер стандартной библиотеки C++, который содержит элементы, которые необходимо перечислить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -140,7 +140,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Параметры
 
-*ppEnum*  
+*ppEnum*<br/>
 [out] Интерфейс перечислителя для вновь созданного объекта, клонированный из текущего перечислителя.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -192,13 +192,13 @@ STDMETHOD(Next)(
 
 ### <a name="parameters"></a>Параметры
 
-*celt*  
+*celt*<br/>
 [in] Количество запрошенных элементов.
 
-*rgelt*  
+*rgelt*<br/>
 [out] Массив, заполненный элементы.
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out] Число элементов, фактически возвращенных в *rgelt*. Это может быть меньше, чем *celt* если меньше, чем *celt* элементы остаются в списке.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -227,7 +227,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Параметры
 
-*celt*  
+*celt*<br/>
 [in] Количество пропускаемых элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение

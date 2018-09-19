@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 163d6f90d31e27cc4d8a616074f7f4153ab58876
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451957"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685499"
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Сопоставляет одну строку символов другой, выполняя указанное преобразование, зависящее от языкового стандарта. Эту функцию можно также использовать для создания ключа сортировки для входной строки.  
@@ -78,7 +78,7 @@ int __crtLCMapStringW(
  Нулевое значение означает сбой. Чтобы получить расширенные сведения об ошибке, следует вызвать функцию `GetLastError` .  
   
 ## <a name="remarks"></a>Примечания  
- Если значение `cchSrc` больше нуля и параметр `lpSrcStr` представляет собой строку, завершающуюся нуль-символом, то функция `__crtLCMapStringW` устанавливает для параметра `cchSrc` значение, равное длине строки. Затем функция `__crtLCMapStringW` вызывает версию для расширенных символов (Юникод) функции `LCMapString` с указанными параметрами. Дополнительные сведения о параметрах и значениях, возвращаемых этой функцией, см. в разделе о функции `LCMapString` в [библиотеке MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542).  
+ Если значение `cchSrc` больше нуля и параметр `lpSrcStr` представляет собой строку, завершающуюся нуль-символом, то функция `__crtLCMapStringW` устанавливает для параметра `cchSrc` значение, равное длине строки. Затем функция `__crtLCMapStringW` вызывает версию для расширенных символов (Юникод) функции `LCMapString` с указанными параметрами. Дополнительные сведения о параметрах и значениях, возвращаемых этой функцией, см. в разделе о функции [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa).  
   
 ## <a name="requirements"></a>Требования  
   

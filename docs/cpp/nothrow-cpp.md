@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0261ed9d1e84849f408c3d764693cb95ac7019d2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 65b8a0420bc996812eed5996757e05d50aafc030
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408070"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023531"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
@@ -30,8 +30,8 @@ ms.locfileid: "39408070"
 
 Объект **__declspec** расширенный атрибут, который может использоваться в объявлении функции.
 
-## <a name="syntax"></a>Синтаксис  
-  
+## <a name="syntax"></a>Синтаксис
+
 > *тип возвращаемой* __declspec(nothrow) [*соглашение вызова*] *имя функции* ([*список аргументов*])
 
 ## <a name="remarks"></a>Примечания
@@ -57,6 +57,7 @@ void __stdcall f3() throw();
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
- [__declspec](../cpp/declspec.md)  
- [noexcept](noexcept-cpp.md)  
- [Ключевые слова](../cpp/keywords-cpp.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[noexcept](noexcept-cpp.md)<br/>
+[Ключевые слова](../cpp/keywords-cpp.md)

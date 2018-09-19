@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a1c08e8e50e8ef1236b253d471c2332c4e6e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1479ced25a741e27a195b529b6bf8825b47ce41e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099607"
 ---
 # <a name="ipersiststorageimpl-class"></a>Класс IPersistStorageImpl
 
@@ -42,13 +42,13 @@ ms.locfileid: "43763774"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IPersistStorageImpl`.
 
 ## <a name="members"></a>Участники
@@ -185,7 +185,7 @@ STDMETHOD(SaveCompleted)(IStorage*);
 
 ## <a name="see-also"></a>См. также
 
-[Хранилищ и потоков](/windows/desktop/Stg/storages-and-streams)   
-[Класс IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)   
-[Класс IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)   
+[Хранилищ и потоков](/windows/desktop/Stg/storages-and-streams)<br/>
+[Класс IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
+[Класс IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

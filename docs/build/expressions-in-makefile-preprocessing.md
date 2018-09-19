@@ -1,5 +1,5 @@
 ---
-title: Выражения в предобработке | Документы Microsoft
+title: Выражения в предобработке | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a53e5e6fe45c2c846cae3fb9e973fe1c712107
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1070eb01802bd4b39f62ae24519ad6dabca7eb90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367272"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719011"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Выражения в предобработке файлов makefile
-**! Если** или **! ELSE IF** `constantexpression` состоит из целочисленных констант (в десятичной нотации или языка C нотации), строковых констант или команд. Используйте круглые скобки для группирования выражений. Выражения используют C-стиле длинное целое число со знаком арифметические; числа являются в виде 32-разрядных дополнительном в диапазоне от-2147483648 до 2147483647.  
-  
- Выражения могут использовать операторы, выполняющие действия с константными значениями, кодами завершения команд, строки, макросами и путями файловой системы.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
- [Операторы предварительной обработки файлов makefile](../build/makefile-preprocessing-operators.md)  
-  
- [Выполнение программ в ходе предварительной обработки](../build/executing-a-program-in-preprocessing.md)  
-  
-## <a name="see-also"></a>См. также  
- [Предварительная обработка файла Makefile](../build/makefile-preprocessing.md)
+
+**! Если** или **! ELSE IF** `constantexpression` состоит из целочисленных констант (в нотации десятичное или языка C), строковых констант или команд. Используйте скобки для группирования выражений. Выражения используют стиле длинное целое число со знаком арифметические; числа являются в виде 32-разрядных дополнительном в диапазоне от-2147483648 до 2147483647.
+
+Выражения могут использовать операторы, выполняющие действия с константными значениями, кодами завершения команд, строки, макросы и путями файловой системы.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
+
+[Операторы предварительной обработки файлов makefile](../build/makefile-preprocessing-operators.md)
+
+[Выполнение программ в ходе предварительной обработки](../build/executing-a-program-in-preprocessing.md)
+
+## <a name="see-also"></a>См. также
+
+[Предварительная обработка файла Makefile](../build/makefile-preprocessing.md)

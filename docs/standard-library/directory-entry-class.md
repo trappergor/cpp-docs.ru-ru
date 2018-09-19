@@ -1,7 +1,7 @@
 ---
 title: Класс directory_entry | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb2962d2d1dc4e39d2528c89267a9cf8871937a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 46a031b727f5c592925aaa4d343fc1299f6d4cdf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105787"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701523"
 ---
 # <a name="directoryentry-class"></a>Класс directory_entry
 
@@ -115,13 +115,13 @@ void assign(const std::experimental::filesystem::path& pval,
 ### <a name="parameters"></a>Параметры
 
 *PVal*<br/>
-Путь имя сохраненного файла.  
+Путь имя сохраненного файла.
 
 *stat_arg*<br/>
-Состояние имени сохраненного файла.  
+Состояние имени сохраненного файла.
 
 *symstat_arg*<br/>
-Состояние символьной ссылки имени сохраненного файла.  
+Состояние символьной ссылки имени сохраненного файла.
 
 ## <a name="directory_entry"></a> directory_entry
 
@@ -139,13 +139,13 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 ### <a name="parameters"></a>Параметры
 
 *PVal*<br/>
-Путь имя сохраненного файла.  
+Путь имя сохраненного файла.
 
 *stat_arg*<br/>
-Состояние имени сохраненного файла.  
+Состояние имени сохраненного файла.
 
 *symstat_arg*<br/>
-Состояние символьной ссылки имени сохраненного файла.  
+Состояние символьной ссылки имени сохраненного файла.
 
 ## <a name="op_neq"></a> оператор! =
 
@@ -158,7 +158,7 @@ bool operator!=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Параметры
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.
 
 ## <a name="op_as"></a> оператор =
 
@@ -172,7 +172,7 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 ### <a name="parameters"></a>Параметры
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) копируется в `directory_entry`.  
+[Directory_entry](../standard-library/directory-entry-class.md) копируется в `directory_entry`.
 
 ## <a name="op_eq"></a> оператор ==
 
@@ -185,7 +185,7 @@ bool operator==(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Параметры
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.
 
 ## <a name="op_lt"></a> Оператор&lt;
 
@@ -198,7 +198,7 @@ bool operator<(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Параметры
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.
 
 ## <a name="op_lteq"></a> Оператор&lt;=
 
@@ -211,7 +211,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Параметры
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.
 
 ## <a name="op_gt"></a> Оператор&gt;
 
@@ -224,7 +224,7 @@ bool operator&gt;(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Параметры
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.
 
 ## <a name="op_gteq"></a> Оператор&gt;=
 
@@ -237,7 +237,7 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>Параметры
 
 *right*<br/>
-[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.  
+[Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.
 
 ## <a name="path_type"></a> оператор const path_type &
 
@@ -269,13 +269,13 @@ void replace_filename(
 ### <a name="parameters"></a>Параметры
 
 *PVal*<br/>
-Путь имя сохраненного файла.  
+Путь имя сохраненного файла.
 
 *stat_arg*<br/>
-Состояние имени сохраненного файла.  
+Состояние имени сохраненного файла.
 
 *symstat_arg*<br/>
-Состояние символьной ссылки имени сохраненного файла.  
+Состояние символьной ссылки имени сохраненного файла.
 
 ## <a name="status"></a> состояние
 
@@ -293,7 +293,7 @@ file_status status(error_code& ec) const noexcept;
 ### <a name="parameters"></a>Параметры
 
 *EC*<br/>
-Код состояния ошибки.  
+Код состояния ошибки.
 
 ## <a name="symlink_status"></a> symlink_status
 
@@ -307,9 +307,9 @@ file_status symlink_status(error_code& ec) const noexcept;
 ### <a name="parameters"></a>Параметры
 
 *EC*<br/>
-Код состояния ошибки.  
+Код состояния ошибки.
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)  
-[\<файловая система&gt;](../standard-library/filesystem.md)  
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<файловая система&gt;](../standard-library/filesystem.md)<br/>

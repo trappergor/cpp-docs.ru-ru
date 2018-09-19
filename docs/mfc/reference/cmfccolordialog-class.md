@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3cf85ec6de81ca18f32b8cd6bea015341f78287c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680614"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715368"
 ---
 # <a name="cmfccolordialog-class"></a>Класс CMFCColorDialog
 `CMFCColorDialog` Класс представляет диалоговое окно выбора цвета.  
@@ -125,17 +125,17 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *clrInit*  
- Выбранный цвет по умолчанию. Если значение не указано, по умолчанию используется RGB(0,0,0) (черный).  
+*clrInit*<br/>
+[in] Выбранный цвет по умолчанию. Если значение не указано, по умолчанию используется RGB(0,0,0) (черный).  
   
- [in] *dwFlags*  
- (Зарезервировано).  
+*dwFlags*<br/>
+[in] Зарезервировано.
   
- [in] *pParentWnd*  
- Указатель на окно родительский объект или владельца диалогового окна.  
+*pParentWnd*<br/>
+[in] Указатель на окно родительский объект или владельца диалогового окна.  
   
- [in] *hPal*  
- Дескриптор палитры.  
+*hPal*<br/>
+[in] Дескриптор палитры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -182,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *rgb*  
- Значение цвета RGB  
+*rgb*<br/>
+[in] Значение цвета RGB  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -195,8 +195,8 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *rgb*  
- Объект [COLORREF](/windows/desktop/gdi/colorref) , указывающее цвета RGB.  
+*rgb*<br/>
+[in] Объект [COLORREF](/windows/desktop/gdi/colorref) , указывающее цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -211,14 +211,14 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *R*  
- Указывает красный компонент RGB-значение.  
+*R*<br/>
+[in] Указывает красный компонент RGB-значение.  
   
- [in] *G*  
- Задает компонент прокрутки на зеленый значения RGB.  
+*G*<br/>
+[in] Задает компонент прокрутки на зеленый значения RGB.  
   
- [in] *B*  
- Задает компонент прокрутки на синий значения RGB.  
+*B*<br/>
+[in] Задает компонент прокрутки на синий значения RGB.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -233,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *R*  
- Указывает красный компонент RGB-значение  
+*R*<br/>
+[in] Указывает красный компонент RGB-значение  
   
- [in] *G*  
- Задает зеленый компонент значения RGB  
+*G*<br/>
+[in] Задает зеленый компонент значения RGB  
   
- [in] *B*  
- Задает синий компонент RGB-значение  
+*B*<br/>
+[in] Задает синий компонент RGB-значение  
   
 ### <a name="remarks"></a>Примечания  
   

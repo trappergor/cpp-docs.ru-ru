@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894763"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708675"
 ---
 # <a name="cl-command-files"></a>Командные файлы компилятора CL
 
@@ -37,25 +37,25 @@ ms.locfileid: "43894763"
 
 Например, если в файле с именем Кэшировано следующую команду:
 
-```  
+```
 /Og /link LIBC.LIB
-```  
+```
 
 и введите следующую команду CL.
 
-```  
+```
 CL /Ob2 @RESP MYAPP.C
-```  
+```
 
 Команда для компилятора CL выглядит следующим образом:
 
-```  
+```
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB
-```  
+```
 
 Обратите внимание на то, что в командной строке и команды командного файла эффективно объединяются.
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
-[параметры компилятора](../../build/reference/compiler-options.md)
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
+[Параметры компилятора](../../build/reference/compiler-options.md)

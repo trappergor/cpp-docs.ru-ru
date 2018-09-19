@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e8a7e2cd3d05795e35b97069491f3fdc57c3f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028341"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Глобальные функции реестра и библиотеки типов
 
@@ -72,14 +72,14 @@ ms.locfileid: "43753270"
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
-ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);  
+```
+ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[out] *pEnabled*  
-Значение TRUE указывает, что данные реестра направляется **HKCU** узла; Значение FALSE указывает, что приложение записывает данные реестра в узел по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** (**HKCR**).
+*pEnabled*<br/>
+[out] Значение TRUE указывает, что данные реестра направляется **HKCU** узла; Значение FALSE указывает, что приложение записывает данные реестра в узел по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -101,22 +101,22 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
-LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*открываемый раздел hKey*  
+*открываемый раздел hKey*<br/>
 Дескриптор, чтобы открыть раздел реестра.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Имя ключа, который открывает эту функцию, или создает.
 
-*phkResult*  
+*phkResult*<br/>
 Указатель на переменную, которая получает дескриптор открыт или созданный ключ.
 
-*pTM*  
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -133,19 +133,19 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
-LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*открываемый раздел hKey*  
+*открываемый раздел hKey*<br/>
 Дескриптор, чтобы открыть раздел реестра.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Имя ключа для удаления.
 
-*pTM*  
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -162,19 +162,19 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
-BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);  
+```
+BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 Указывает CLSID обработчика.
 
-*lpszShortTypeName*  
+*lpszShortTypeName*<br/>
 Указывает идентификатор ProgID для обработчика.
 
-*lpszFilterExt*  
+*lpszFilterExt*<br/>
 Указывает расширение файла, зарегистрированные с данным обработчиком.
 
 ### <a name="requirements"></a>Требования
@@ -191,10 +191,10 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Дескриптор экземпляра модуля.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Строка в формате "\\\N», где N — это целочисленный индекс ресурса библиотеки типов. Может иметь значение NULL, если индекс не является обязательным.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -203,7 +203,8 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="remarks"></a>Примечания
 
-Эта вспомогательная функция используемой [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) и [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).  
+Эта вспомогательная функция используемой [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) и [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
+
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
@@ -214,22 +215,22 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
-LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*открываемый раздел hKey*  
+*открываемый раздел hKey*<br/>
 Дескриптор, чтобы открыть раздел реестра.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Имя ключа, который открывает эту функцию, или создает.
 
-*phkResult*  
+*phkResult*<br/>
 Указатель на переменную, которая получает дескриптор созданный ключ.
 
-*pTM*  
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -246,28 +247,28 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
-LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*открываемый раздел hKey*  
+*открываемый раздел hKey*<br/>
 Дескриптор, чтобы открыть раздел реестра.
 
-*lpSubKey*  
+*lpSubKey*<br/>
 Имя ключа, который открывает эту функцию, или создает.
 
-*ulOptions*  
+*ulOptions*<br/>
 Этот параметр зарезервирован и должен быть равен нулю.
 
-*samDesired*  
+*samDesired*<br/>
 Маска, которая определяет требуемые права доступа к ключу.
 
-*phkResult*  
+*phkResult*<br/>
 Указатель на переменную, которая получает дескриптор открытого ключа.
 
-*pTM*  
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -284,13 +285,13 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
-BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);  
+```
+BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 Указывает CLSID обработчика для отмены регистрации.
 
 ### <a name="requirements"></a>Требования
@@ -303,14 +304,14 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
-ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);  
+```
+ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bEnable*  
-Значение TRUE указывает, что данные реестра направляется **HKCU** узла; Значение FALSE указывает, что приложение записывает данные реестра в узел по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** (**HKCR**).
+*bEnable*<br/>
+[in] Значение TRUE указывает, что данные реестра направляется **HKCU** узла; Значение FALSE указывает, что приложение записывает данные реестра в узел по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -321,6 +322,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 Перенаправление системного реестра не включена по умолчанию. Если этот параметр включен, доступ к реестру перенаправляется на **HKEY_CURRENT_USER\Software\Classes**.
 
 Перенаправление не является общим. Только платформы MFC и ATL затрагивает это перенаправление системного реестра.  
+
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h  
@@ -339,10 +341,10 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="parameters"></a>Параметры
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Дескриптор экземпляра модуля.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Строка в формате "\\\N», где N — это целочисленный индекс ресурса библиотеки типов. Может иметь значение NULL, если индекс не является обязательным.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -352,6 +354,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="remarks"></a>Примечания
 
 Эта вспомогательная функция используемой [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) и [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
@@ -372,16 +375,16 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ### <a name="parameters"></a>Параметры
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 Дескриптор модуля, связанных с библиотекой типов.
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Строка в формате "\\\N», где N — это целочисленный индекс ресурса библиотеки типов. Может иметь значение NULL, если индекс не является обязательным.
 
-*pbstrPath*  
+*pbstrPath*<br/>
 При успешном возвращении содержит полный путь модуля, связанных с библиотекой типов.
 
-*ppTypeLib*  
+*ppTypeLib*<br/>
 При успешном возвращении содержит указатель на указатель на библиотеку типов для загрузки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -415,13 +418,13 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>Параметры
 
-*pT*  
+*pT*<br/>
 Указатель на текущий объект.
 
-*rdxOp*  
+*rdxOp*<br/>
 Значение перечисления, указывающее, какую операцию следует выполнять функцию. См. в таблице в разделе "Примечания" для допустимых значений.
 
-*pItem*  
+*pItem*<br/>
 Указатель на данные, должен быть считан или записать в реестр. Данные также представляет ключ, удаляемый из реестра. Значение по умолчанию имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -446,5 +449,5 @@ HRESULT RegistryDataExchange(
 
 ## <a name="see-also"></a>См. также
 
-[Функции](atl-functions.md)   
+[Функции](atl-functions.md)<br/>
 [Макросы для обмена данными с реестром](registry-data-exchange-macros.md)

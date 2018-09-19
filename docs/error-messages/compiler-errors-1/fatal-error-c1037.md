@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1037 | Документы Microsoft
+title: Неустранимая ошибка C1037 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12c6720219a638d15b1b7bf684531dfe4d752d49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8091eb7316531c6bdda9bf714ec7a195b5406182
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047685"
 ---
 # <a name="fatal-error-c1037"></a>Неустранимая ошибка C1037
-не удается открыть объектный файл "имя_файла"  
-  
- Не удается открыть объектный файл, заданный с помощью параметра [/Fo](../../build/reference/fo-object-file-name.md) .  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.  
-  
-1.  Недопустимое имя файла.  
-  
-2.  Недостаточно памяти для открытия файла.  
-  
-3.  Файл используется другим процессом.  
-  
-4.  Существует доступный только для чтения файл с таким же именем.  
-  
+
+не удается открыть объектный файл "имя_файла"
+
+Не удается открыть объектный файл, заданный с помощью параметра [/Fo](../../build/reference/fo-object-file-name.md) .
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.
+
+1. Недопустимое имя файла.
+
+1. Недостаточно памяти для открытия файла.
+
+1. Файл используется другим процессом.
+
+1. Существует доступный только для чтения файл с таким же именем.
+

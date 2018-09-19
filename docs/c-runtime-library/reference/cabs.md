@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085292"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -64,11 +64,11 @@ double _cabs(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_cabs** возвращает абсолютное значение своего аргумента в случае успешного выполнения. В случае переполнения **_cabs** возвращает **HUGE_VAL** и задает **errno** для **ERANGE**. Изменить обработку ошибок можно с помощью функции [_matherr](matherr.md).
+**_cabs** возвращает абсолютное значение своего аргумента, при успешном выполнении. В случае переполнения **_cabs** возвращает **HUGE_VAL** и задает **errno** для **ERANGE**. Изменить обработку ошибок можно с помощью функции [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_Cabs** функция вычисляет абсолютное значение комплексного числа, который должен быть на структуру типа [_complex](../../c-runtime-library/standard-types.md). Структура *z* состоит из вещественной части *x* и мнимой *y*. Вызов **_cabs** возвращает значение, эквивалентное значению выражения `sqrt( z.x * z.x + z.y * z.y )`.
+**_Cabs** функция вычисляет абсолютное значение комплексного числа, которое должно быть структурой типа [_complex](../../c-runtime-library/standard-types.md). Структура *z* состоит из вещественной *x* а мнимая часть *y*. Вызов **_cabs** возвращает значение, эквивалентное значению выражения `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Требования
 
@@ -107,4 +107,4 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)   
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

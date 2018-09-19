@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4621 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4621 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efefe6feacd79833e3ec51cc1f2274c142b2426a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70b9273e1c3a91db37be6bee2c1c33a0a4e30b17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090832"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>Предупреждение компилятора (уровень 1) C4621
-не постфиксная форма «operator--» для типа «тип»; используется префиксная форма  
-  
- Произошла постфиксный оператор декремента, определенные для данного типа. Компилятор использовал перегруженный префиксный оператор.  
-  
- Это предупреждение можно избежать, определив постфиксный `--` оператор. Создать версию с двумя аргументами `--` оператора, как показано ниже:  
-  
-```  
-// C4621.cpp  
-// compile with: /W1  
-class A  
-{  
-public:  
-   A(int nData) : m_nData(nData)  
-   {  
-   }  
-  
-   A operator--()  
-   {  
-      m_nData -= 1;  
-      return *this;  
-   }  
-  
-   // A operator--(int)  
-   // {  
-   //    A tmp = *this;  
-   //    m_nData -= 1;  
-   //    return tmp;  
-   // }  
-  
-private:  
-   int m_nData;  
-};  
-  
-int main()  
-{  
-   A a(10);  
-   --a;  
-   a--;   // C4621  
-}  
+
+не постфиксная форма «operator--» для типа «тип»; используется префиксная форма
+
+Возникла не постфиксного оператора декремента, определенные для заданного типа. Компилятор использовал перегруженный префиксный оператор.
+
+Это предупреждение можно избежать, определив постфиксный `--` оператор. Создание двух аргументных версии `--` оператор, как показано ниже:
+
+```
+// C4621.cpp
+// compile with: /W1
+class A
+{
+public:
+   A(int nData) : m_nData(nData)
+   {
+   }
+
+   A operator--()
+   {
+      m_nData -= 1;
+      return *this;
+   }
+
+   // A operator--(int)
+   // {
+   //    A tmp = *this;
+   //    m_nData -= 1;
+   //    return tmp;
+   // }
+
+private:
+   int m_nData;
+};
+
+int main()
+{
+   A a(10);
+   --a;
+   a--;   // C4621
+}
 ```

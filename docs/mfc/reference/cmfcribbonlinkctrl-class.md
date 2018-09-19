@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538353"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712521"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Класс CMFCRibbonLinkCtrl
 Реализует гиперссылку, которая расположена на ленте. Гиперссылка при щелчке открывает веб-страницу.  
@@ -63,13 +63,13 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl](#cmfcribbonlinkctrl)|Создает и инициализирует объект `CMFCRibbonLinkCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Переопределяет `CMFCRibbonButton::CopyFrom`.)|  
 |[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Переопределяет [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nID*  
- Указывает идентификатор команды команда, выполняемая при нажатии ссылки элемента управления.  
+*nID*<br/>
+[in] Указывает идентификатор команды команда, выполняемая при нажатии ссылки элемента управления.  
   
- [in] *lpszText*  
- Указывает метку, которая отображается в элементе управления ссылку.  
+*lpszText*<br/>
+[in] Указывает метку, которая отображается в элементе управления ссылку.  
   
- [in] *lpszLink*  
- Определяет гиперссылку, связанную с элементом управления link.  
+*lpszLink*<br/>
+[in] Определяет гиперссылку, связанную с элементом управления link.  
   
 ### <a name="example"></a>Пример  
  Следующий пример демонстрирует способы использования конструктора `CMFCRibbonLinkCtrl` класса. Этот фрагмент кода является частью [пример мини-приложения ленты](../../visual-cpp-samples.md).  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszLink*  
- Задает текст гиперссылки.  
+*lpszLink*<br/>
+[in] Задает текст гиперссылки.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

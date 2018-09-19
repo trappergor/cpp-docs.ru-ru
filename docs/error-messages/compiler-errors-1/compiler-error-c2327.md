@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2327 | Документы Microsoft
+title: Ошибка компилятора C2327 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,124 +16,125 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcfa48667b20082090fc85079ac5df184f2b10fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d8b5b0172d73ab76eb9500dddc6dfe264064ccd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097956"
 ---
 # <a name="compiler-error-c2327"></a>Ошибка компилятора C2327
-«символ»: не является именем типа, статическим или перечислителя  
-  
- Код во вложенном классе пытается получить доступ к члену типа включающего класса, который не является именем типа, статическим членом или перечислитель.  
-  
- При компиляции с параметром **/CLR**, обычно причина C2327 — это свойство с тем же именем, что и тип свойства.  
-  
- Следующий пример приводит к возникновению ошибки C2327:  
-  
-```  
-// C2327.cpp  
-int x;  
-class enclose {  
-public:  
-   int x;  
-   static int s;  
-   class inner {  
-      void f() {  
-         x = 1;   // C2327; enclose::x is not static  
-         s = 1;   // ok; enclose::s is static  
-         ::x = 1;   // ok; ::x refers to global  
-      }  
-   };  
-};  
-```  
-  
- C2327 также может возникнуть, если имя типа будет скрыт от имени члена.  
-  
-```  
-// C2327b.cpp  
-class X {};  
-  
-class S {  
-   X X;  
-   // try the following line instead  
-   // X MyX;  
-   X other;   // C2327, rename member X  
-};  
-```  
-  
- C2327 также возникает в этой ситуации, когда необходимо полностью указывать тип данных параметра:  
-  
-```  
-// C2327c.cpp  
-// compile with: /c  
-struct A {};  
-  
-struct B {  
-   int A;  
-   void f(A a) {   // C2327  
-   void f2(struct A a) {}   // OK  
-   }  
-};  
-```  
-  
- Следующий пример приводит к возникновению ошибки C2327:  
-  
-```  
-// C2327d.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-namespace NA {  
-   public enum class E : Int32 {  
-      one = 1,  
-      two = 2,  
-      three = 3  
-   };  
-  
-   public ref class A {  
-   private:  
-      E m_e;  
-   public:  
-      property E E {  
-         NA::E get() {  
-            return m_e;  
-         }  
-         // At set, compiler doesn't know whether E is get_E or   
-         // Enum E, therefore fully qualifying Enum E is necessary  
-         void set( E e ) {   // C2327  
-            // try the following line instead  
-            // void set(NA::E e) {  
-            m_e = e;  
-         }  
-      }  
-   };  
-}  
-```  
-  
-В следующем примере показано C2327, когда свойство имеет то же имя, как тип свойства:  
-  
-```  
-// C2327f.cpp  
-// compile with: /clr /c  
-public value class Address {};  
-  
-public ref class Person {  
-public:  
-   property Address Address {  
-      ::Address get() {     
-         return address;  
-      }  
-      void set(Address addr) {   // C2327  
-      // try the following line instead  
-      // set(::Address addr) {  
-         address = addr;   
-      }  
-   }  
-private:  
-   Address address;   // C2327  
-   // try the following line instead  
-   // ::Address address;  
-};  
-```  
+
+«символ»: не является именем типа, статическим или перечислителя
+
+Код во вложенном классе пытается обратиться к членом внешнего класса, которое не является именем типа, статическим или перечислитель.
+
+При компиляции с параметром **/CLR**, обычно причина C2327 — это свойство с тем же именем, что тип свойства.
+
+В следующем примере возникает ошибка C2327:
+
+```
+// C2327.cpp
+int x;
+class enclose {
+public:
+   int x;
+   static int s;
+   class inner {
+      void f() {
+         x = 1;   // C2327; enclose::x is not static
+         s = 1;   // ok; enclose::s is static
+         ::x = 1;   // ok; ::x refers to global
+      }
+   };
+};
+```
+
+C2327 также может возникнуть, если имя типа скрыт по имени элемента.
+
+```
+// C2327b.cpp
+class X {};
+
+class S {
+   X X;
+   // try the following line instead
+   // X MyX;
+   X other;   // C2327, rename member X
+};
+```
+
+C2327 также могут запускать в этой ситуации, когда необходимо полностью указать тип данных параметра:
+
+```
+// C2327c.cpp
+// compile with: /c
+struct A {};
+
+struct B {
+   int A;
+   void f(A a) {   // C2327
+   void f2(struct A a) {}   // OK
+   }
+};
+```
+
+В следующем примере возникает ошибка C2327:
+
+```
+// C2327d.cpp
+// compile with: /clr /c
+using namespace System;
+
+namespace NA {
+   public enum class E : Int32 {
+      one = 1,
+      two = 2,
+      three = 3
+   };
+
+   public ref class A {
+   private:
+      E m_e;
+   public:
+      property E E {
+         NA::E get() {
+            return m_e;
+         }
+         // At set, compiler doesn't know whether E is get_E or
+         // Enum E, therefore fully qualifying Enum E is necessary
+         void set( E e ) {   // C2327
+            // try the following line instead
+            // void set(NA::E e) {
+            m_e = e;
+         }
+      }
+   };
+}
+```
+
+В следующем примере показано C2327, когда свойство имеет имя, совпадающее с именем тип свойства:
+
+```
+// C2327f.cpp
+// compile with: /clr /c
+public value class Address {};
+
+public ref class Person {
+public:
+   property Address Address {
+      ::Address get() {
+         return address;
+      }
+      void set(Address addr) {   // C2327
+      // try the following line instead
+      // set(::Address addr) {
+         address = addr;
+      }
+   }
+private:
+   Address address;   // C2327
+   // try the following line instead
+   // ::Address address;
+};
+```

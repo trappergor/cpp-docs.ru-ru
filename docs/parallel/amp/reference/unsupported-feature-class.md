@@ -1,5 +1,5 @@
 ---
-title: Класс unsupported_feature | Документы Microsoft
+title: Класс unsupported_feature | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ccc811e3459fe668b6a8dbd255007cb60bf0cf1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7472e8fa8932983569ad9e2a9c1fe6cdfc9318b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059687"
 ---
 # <a name="unsupportedfeature-class"></a>Класс unsupported_feature
-Исключение, возникающее при использовании неподдерживаемой возможности.  
+Исключение, возникающее, когда используется неподдерживаемое свойство.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ class unsupported_feature : public runtime_exception;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор unsupported_feature](#ctor)|Создает новый экземпляр класса `unsupported_feature` исключение.|  
+|[unsupported_feature конструктор](#ctor)|Создает новый экземпляр класса `unsupported_feature` исключение.|  
 
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
@@ -64,8 +64,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описание ошибки.  
+*_Message*<br/>
+Описание ошибки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `unsupported_feature`.  

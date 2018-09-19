@@ -1,5 +1,5 @@
 ---
-title: Класс CRecentDockSiteInfo | Документы Microsoft
+title: Класс CRecentDockSiteInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079004"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702615"
 ---
 # <a name="crecentdocksiteinfo-class"></a>Класс CRecentDockSiteInfo
-`CRecentDockSiteInfo` Класс — это вспомогательный класс, который хранит актуальные сведения о состоянии [класса CPane](../../mfc/reference/cpane-class.md).  
+`CRecentDockSiteInfo` Класс — это вспомогательный класс, который хранит актуальные сведения о состоянии [класс CPane](../../mfc/reference/cpane-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,13 +60,13 @@ class CRecentDockSiteInfo : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CRecentDockSiteInfo::CRecentDockSiteInfo`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRecentDockSiteInfo::CleanUp](#cleanup)||  
 |[CRecentDockSiteInfo::GetRecentDefaultPaneDivider](#getrecentdefaultpanedivider)||  
@@ -85,7 +85,7 @@ class CRecentDockSiteInfo : public CObject
 ## <a name="remarks"></a>Примечания  
  Класс `CRecentDockSiteInfo` предназначен для управления данными. Он отслеживает последнее состояние объекта `CPane` при переходе от закрепленного режима к плавающему. Когда пользователь дважды щелкает плавающую закрепляемую панель, она становится закрепленной. Дважды щелкнув закрепленную панель, можно вернуть ее на прежнее место, с прежним размером и состоянием. Аналогичным образом повторное закрепление возвращает панель на предыдущее место закрепления. Именно этот класс данных открывает эту возможность. Поскольку члены этого класса хранят сведения о состоянии закрепленной панели, они не должны напрямую изменяться вашим приложением.  
   
- Объект `CRecentDockSiteInfo` создается при каждом создании панели. Каждый `CPane` объект имеет переменную-член, [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), чтобы сохранить эти сведения.  
+ Объект `CRecentDockSiteInfo` создается при каждом создании панели. Каждый `CPane` объект имеет переменную-член, [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), для хранения подобной информации.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -244,8 +244,8 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *CList < HWND*  
- [in] *lstOrg*  
+*CList < HWND*<br/>
+[in] [in] *lstOrg*  
  [in] *bForSlider*  
   
 ### <a name="remarks"></a>Примечания  
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bForSlider*  
- [in] *srcInfo*  
+*bForSlider*<br/>
+[in] [in] *srcInfo*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -275,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pRecentContainer*  
- [in] *pTabbedBar*  
+*pRecentContainer*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Примечания  
   

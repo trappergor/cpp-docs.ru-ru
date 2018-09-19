@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4071 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4071 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cb0d4b8d78eb8c7cf1812abb1a7981c605f2c4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d11247c823a93604359b4cab6995b694bcf5a2f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064684"
 ---
 # <a name="linker-tools-warning-lnk4071"></a>Предупреждение средств компоновщика LNK4071
-не удается выполнить инкрементную компоновку последующих связей  
-  
- LINK обнаружено несколько определений для одного или нескольких символов, но [/FORCE](../../build/reference/force-force-file-output.md) или **/FORCE: Multiple** был использован для создания выходного файла вне зависимости от ошибок. СВЯЗИ удален файл инкрементного состояния ().
+
+не удается выполнить инкрементную компоновку последующих связей
+
+LINK обнаружено несколько определений для одного или нескольких символов, но [/FORCE](../../build/reference/force-force-file-output.md) или **/FORCE: Multiple** был использован для создания выходного файла вне зависимости от ошибок. ССЫЛКА удален файл инкрементного состояния ().

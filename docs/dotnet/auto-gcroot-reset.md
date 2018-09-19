@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::Reset | Документы Microsoft
+title: auto_gcroot::Reset | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d2ff59b6fc9c4f893f87fbb59b0531c5ba8917fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f461958a09212f5beb562b5b8e92fa6f39711ec5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106379"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082278"
 ---
 # <a name="autogcrootreset"></a>auto_gcroot::reset
-Удаление текущего владельца объекта и при необходимости выполните владения создается новый объект.  
+Уничтожить текущий собственный объект и при необходимости воспользуйтесь владеющий объект.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,8 +39,8 @@ void reset(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_new_ptr`  
- (Необязательно) Новый объект.  
+*_new_ptr*<br/>
+(Необязательно) Новый объект.  
   
 ## <a name="example"></a>Пример  
   

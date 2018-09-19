@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d771b24db830a03101b7a0041b02aeaeaf3b3b3d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116871"
 ---
 # <a name="csecuritydesc-class"></a>Класс CSecurityDesc
 
@@ -129,13 +129,13 @@ class CSecurityDesc
 
 ```
 CSecurityDesc() throw();
-CSecurityDesc(const CSecurityDesc& rhs) throw(... );  
+CSecurityDesc(const CSecurityDesc& rhs) throw(... );
 CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `CSecurityDesc` Объекта или `SECURITY_DESCRIPTOR` структуры, чтобы назначить новый `CSecurityDesc` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -164,7 +164,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pstr*  
+*pstr*<br/>
 Указатель на заканчивающуюся нулем строку, которая содержит [формат строки дескриптора безопасности](/windows/desktop/SecAuthZ/security-descriptor-string-format) для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -187,7 +187,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*psdc*  
+*psdc*<br/>
 Указатель на `SECURITY_DESCRIPTOR_CONTROL` структуры, который получает сведения об управлении дескриптор безопасности.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -211,13 +211,13 @@ bool GetDacl(
 
 ### <a name="parameters"></a>Параметры
 
-*pDacl*  
+*pDacl*<br/>
 Указатель на `CDacl` структуры, в котором следует сохранить копию списка DACL в дескрипторе безопасности. Если существует таблицы управления Доступом, метод устанавливает *pDacl* адрес дескриптора безопасности списка управления Доступом на уровне пользователей. Если таблицы управления Доступом не существует, значение не сохраняется.
 
-*pbPresent*  
+*pbPresent*<br/>
 Указатель на значение, указывающее наличие таблицы управления Доступом в дескрипторе безопасности. Если дескриптор безопасности содержит таблицы управления Доступом, этот параметр устанавливается в значение true. Если дескриптор безопасности не содержит таблицы управления Доступом, этот параметр имеет значение false.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Указатель на флаг, присвоено значение флага SE_DACL_DEFAULTED в `SECURITY_DESCRIPTOR_CONTROL` структуры, если существует таблицы управления Доступом для дескриптора безопасности. Если этот флаг имеет значение true, извлекается список управления Доступом на уровне пользователей с помощью механизма по умолчанию; Если значение равно false, таблицы управления Доступом явно указано пользователем.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -236,10 +236,10 @@ bool GetGroup(
 
 ### <a name="parameters"></a>Параметры
 
-*pSid*  
+*pSid*<br/>
 Указатель на [CSid](../../atl/reference/csid-class.md) (идентификатором безопасности), который получает копию группы, хранящиеся в CDacl.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Указатель на флаг, присвоено значение флага SE_GROUP_DEFAULTED в `SECURITY_DESCRIPTOR_CONTROL` структуры при возврате метода.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -258,10 +258,10 @@ bool GetOwner(
 
 ### <a name="parameters"></a>Параметры
 
-*pSid*  
+*pSid*<br/>
 Указатель на [CSid](../../atl/reference/csid-class.md) (идентификатором безопасности), который получает копию группы, хранящиеся в CDacl.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Указатель на флаг, присвоено значение флага SE_OWNER_DEFAULTED в `SECURITY_DESCRIPTOR_CONTROL` структуры при возврате метода.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -293,13 +293,13 @@ bool GetSacl(
 
 ### <a name="parameters"></a>Параметры
 
-*pSacl*  
+*pSacl*<br/>
 Указатель на `CSacl` структуры, в котором следует сохранить копию дескриптора безопасности системного списка управления ДОСТУПОМ. Если существует системы ACL, метод устанавливает *pSacl* адрес системы дескриптора безопасности списка управления Доступом. Если список управления Доступом системы не существует, значение не сохраняется.
 
-*pbPresent*  
+*pbPresent*<br/>
 Указатель на флаг, метод устанавливает для обозначения присутствия системы ACL в указанного дескриптора безопасности. Если дескриптор безопасности содержит список управления Доступом системы, этот параметр устанавливается в значение true. Если дескриптор безопасности содержит список управления Доступом системы, этот параметр имеет значение false.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Указатель на флаг, присвоено значение флага SE_SACL_DEFAULTED в `SECURITY_DESCRIPTOR_CONTROL` структуры, если список управления Доступом системы для дескриптора безопасности.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -529,13 +529,13 @@ bool MakeSelfRelative() throw(...);
 Оператор присвоения.
 
 ```
-CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);  
+CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);
 CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `SECURITY_DESCRIPTOR` Структуры или `CSecurityDesc` объект для назначения `CSecurityDesc` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -546,7 +546,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 
 Приводит значение к указателю на `SECURITY_DESCRIPTOR` структуры.
 
-```  
+```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
@@ -562,10 +562,10 @@ bool SetControl(
 
 ### <a name="parameters"></a>Параметры
 
-*ControlBitsOfInterest*  
+*ControlBitsOfInterest*<br/>
 Маска SECURITY_DESCRIPTOR_CONTROL, которая указывает управляющие биты для задания. Список флагов, которые можно задать, см. в разделе [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
 
-*ControlBitsToSet*  
+*ControlBitsToSet*<br/>
 SECURITY_DESCRIPTOR_CONTROL маску, которая указывает новые значения управляющих битов, заданных *ControlBitsOfInterest* маски. Этот параметр может быть сочетанием флагов, указанных для *ControlBitsOfInterest* параметра.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -592,13 +592,13 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>Параметры
 
-*Dacl*  
+*Dacl*<br/>
 Ссылка на `CDacl` объект, указывающий список DACL для дескриптора безопасности. Этот параметр не должен иметь значение NULL. Чтобы задать НУЛЕВОЙ DACL в дескрипторе безопасности, в первой форме метода следует использовать с *bPresent* значение false.
 
-*bPresent*  
+*bPresent*<br/>
 Задает флаг, указывающий на наличие списка DACL в дескрипторе безопасности. Если этот параметр имеет значение true, метод устанавливает флаг SE_DACL_PRESENT `SECURITY_DESCRIPTOR_CONTROL` структурировать и использует значения в *Dacl* и *bDefaulted* параметров. Если он имеет значение false, метод очищает флаг SE_DACL_PRESENT и *bDefaulted* учитывается.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Задает флаг, указывающий источник списка DACL. Если этот флаг имеет значение true, получения списка DACL по какой-либо механизм по умолчанию. Если значение равно false, списка DACL был явно задан пользователем. Метод сохраняет его в флаг SE_DACL_DEFAULTED `SECURITY_DESCRIPTOR_CONTROL` структуры. Если этот параметр не указан, снят флаг SE_DACL_DEFAULTED.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -619,10 +619,10 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*ИД безопасности*  
+*ИД безопасности*<br/>
 Ссылка на [CSid](../../atl/reference/csid-class.md) объект для новой группы основной дескриптор безопасности. Этот параметр не должен иметь значение NULL. Дескриптор безопасности может быть помечен как не имеющий DACL и SACL, но он должен иметь группу и владелец, даже они являются пустой идентификатор безопасности (который является встроенной безопасности со специальным значением).
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Указывает ли основная группа сведений является производным от механизма по умолчанию. Если это значение равно true, сведения по умолчанию и метод сохраняет это значение как флаг SE_GROUP_DEFAULTED в `SECURITY_DESCRIPTOR_CONTROL` структуры. Если этот параметр равен нулю, флаг SE_GROUP_DEFAULTED очищается.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -639,10 +639,10 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*ИД безопасности*  
+*ИД безопасности*<br/>
 [CSid](../../atl/reference/csid-class.md) объекта для нового основного владельца дескриптора безопасности. Этот параметр не должен иметь значение NULL.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Указывает, является ли информация о владельце производным от механизма по умолчанию. Если это значение равно true, то сведения по умолчанию. Метод сохраняет это значение как флаг SE_OWNER_DEFAULTED в `SECURITY_DESCRIPTOR_CONTROL` структуры. Если этот параметр равен нулю, флаг SE_OWNER_DEFAULTED очищается.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -659,10 +659,10 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*Системный список управления доступом*  
+*Системный список управления доступом*<br/>
 Указатель на `CSacl` указании списка SACL для дескриптора безопасности объекта. Этот параметр не должен иметь значение NULL и должен быть объектом CSacl. В отличие от списков DACL нет никакой разницы между NULL и пустые системный список управления ДОСТУПОМ, как системный список управления ДОСТУПОМ объекта задают права доступа, только информации аудита.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Задает флаг, указывающий источник списка SACL. Если этот флаг имеет значение true, получения списка SACL по какой-либо механизм по умолчанию. Если значение равно false, системный список управления ДОСТУПОМ был явно задан пользователем. Метод сохраняет его в флаг SE_SACL_DEFAULTED `SECURITY_DESCRIPTOR_CONTROL` структуры. Если этот параметр не указан, снят флаг SE_SACL_DEFAULTED.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -682,10 +682,10 @@ bool ToString(
 
 ### <a name="parameters"></a>Параметры
 
-*pstr*  
+*pstr*<br/>
 Указатель на заканчивающуюся нулем строку, которая получит [формат строки дескриптора безопасности](/windows/desktop/SecAuthZ/security-descriptor-string-format).
 
-*SI*  
+*SI*<br/>
 Задает сочетание SECURITY_INFORMATION битовых флагов, чтобы указать компоненты для включения в выходной строке дескриптора безопасности.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -713,7 +713,7 @@ bool ToString(
 
 ## <a name="see-also"></a>См. также
 
-[Образец безопасности](../../visual-cpp-samples.md)   
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Образец безопасности](../../visual-cpp-samples.md)<br/>
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

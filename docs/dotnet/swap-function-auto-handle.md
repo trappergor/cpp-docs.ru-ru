@@ -1,5 +1,5 @@
 ---
-title: Функция Swap (auto_handle) | Документы Microsoft
+title: Функция Swap (auto_handle) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c616a391db07a9c6116c96c1b0242714a0ad958b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66416bf19a154a5ea1f4a52728f97bbfbd3477f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103240"
 ---
 # <a name="swap-function-autohandle"></a>Функция swap (auto_handle)
-Меняет местами объекты между `auto_handle` и другого.  
+Меняет местами объекты между одним `auto_handle` и другого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_left`  
- Объект `auto_handle`.  
+*_слева*<br/>
+Объект `auto_handle`.  
   
- `_right`  
- Другой `auto_handle`.  
+*_справа*<br/>
+Другой `auto_handle`.  
   
 ## <a name="example"></a>Пример  
   

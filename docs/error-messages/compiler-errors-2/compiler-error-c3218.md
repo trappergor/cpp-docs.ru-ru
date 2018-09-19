@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3218 | Документы Microsoft
+title: Ошибка компилятора C3218 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6938768211a78ca2a72c78ebb03a8972e0a86a74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a21050e49a05980a4e4a644fa9f08bc42f23310
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030824"
 ---
 # <a name="compiler-error-c3218"></a>Ошибка компилятора C3218
-«Тип»: не допускается в качестве ограничения типа  
-  
- Тип, который будет ограничения должен быть типом значения или ссылка на управляемый класс или интерфейс.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C3218.  
-  
-```  
-// C3218.cpp  
-// compile with: /clr /c  
-class A {};  
-ref class B {};  
-  
-// Delete the following 3 lines to resolve.  
-generic <class T>  
-where T : A   // C3218  
-ref class C {};  
-  
-// OK  
-generic <class T>  
-where  T : B  
-ref class D {};  
+
+«Тип»: не допускается в качестве ограничения типа
+
+Быть задано ограничение типа должен быть типом значения или ссылки на управляемый класс или интерфейс.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3218.
+
+```
+// C3218.cpp
+// compile with: /clr /c
+class A {};
+ref class B {};
+
+// Delete the following 3 lines to resolve.
+generic <class T>
+where T : A   // C3218
+ref class C {};
+
+// OK
+generic <class T>
+where  T : B
+ref class D {};
 ```

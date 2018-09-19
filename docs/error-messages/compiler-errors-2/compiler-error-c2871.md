@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2871 | Документы Microsoft
+title: Ошибка компилятора C2871 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aae5cc8200599b5f6b0643f07cbd342ec7d47c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e960dd6bc9fdf81d6a1bb127330f1066628fffd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117625"
 ---
 # <a name="compiler-error-c2871"></a>Ошибка компилятора C2871
-«Имя»: пространство имен с таким именем не существует.  
-  
-Эта ошибка возникает при передаче идентификатора, который не является пространством имен для [с помощью](../../cpp/namespaces-cpp.md#using_directives) директивы.  
-  
-## <a name="example"></a>Пример  
-Следующий пример приводит к возникновению ошибки C2871:  
-  
-```cpp  
-// C2871.cpp  
+
+«name»: пространство имен с таким именем не существует
+
+Эта ошибка возникает при передаче идентификатор, который не является пространством имен для [с помощью](../../cpp/namespaces-cpp.md#using_directives) директива.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2871:
+
+```cpp
+// C2871.cpp
 // compile with: /c
 namespace a {
    int fn(int i) { return i; }
-} 
-namespace b { 
-   using namespace d;   // C2871 because d is not a namespace  
+}
+namespace b {
+   using namespace d;   // C2871 because d is not a namespace
    using namespace a;   // OK
-}  
+}
 ```

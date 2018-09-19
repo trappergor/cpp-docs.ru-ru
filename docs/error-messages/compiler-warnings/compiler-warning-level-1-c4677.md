@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4677 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4677 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3511ad3100bf695cec5df97703b39e5926c71c11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6a3f57ba0e3d4c15c83711a86bb8482fa8b0596
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049394"
 ---
 # <a name="compiler-warning-level-1-c4677"></a>Предупреждение компилятора (уровень 1) C4677
-«функция»: подпись не частного члена содержит частный тип сборки «private_type»  
-  
- Тип, открытым вне сборки использует тип, имеющий доступ к закрытому за пределами сборки. Компонент, ссылающийся на открытый тип сборки нельзя будет использовать член типа или элементы, которые ссылаются на частный тип сборки.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C4677.  
-  
-```  
-// C4677.cpp  
-// compile with: /clr /c /W1  
-delegate void TestDel();  
-public delegate void TestDel2();  
-  
-public ref class MyClass {  
-public:  
-   static event TestDel^ MyClass_Event;   // C4677  
-   static event TestDel2^ MyClass_Event2;   // OK  
-};  
+
+«функция»: подпись не частного члена содержит частный тип сборки «private_type»
+
+Тип, открытым вне сборки использует тип, имеющий закрытый доступ за пределами сборки. Компонент, ссылающийся на открытый тип сборки не будут иметь возможность использовать член типа или члены, ссылающиеся на частный тип сборки.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C4677.
+
+```
+// C4677.cpp
+// compile with: /clr /c /W1
+delegate void TestDel();
+public delegate void TestDel2();
+
+public ref class MyClass {
+public:
+   static event TestDel^ MyClass_Event;   // C4677
+   static event TestDel2^ MyClass_Event2;   // OK
+};
 ```

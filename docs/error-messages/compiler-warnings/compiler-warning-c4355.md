@@ -1,5 +1,5 @@
 ---
-title: Предупреждение компилятора C4355 | Документы Microsoft
+title: Предупреждение компилятора C4355 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f57b8a7c279b820f4f9fc4a68715804a12e625
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44833c8e640002f2f94d44938641fa3c1fa33db7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115311"
 ---
 # <a name="compiler-warning-c4355"></a>Предупреждение компилятора C4355
-'this': используется в основном списке инициализации членов  
-  
- **Это** указатель допустим только в нестатических функциях-членах. Он не может использоваться в списке инициализаторов для базового класса.  
-  
- Конструкторы базового класса и конструкторы члена класса вызываются до **это** конструктор. Фактически Вы передали указатель на объект сконструированным с другим конструктором. Если эти другие конструкторы, доступ к любым элементам или вызывать функции-члены в этом, результат будет неопределенным. Не следует использовать **это** указателя до завершения всех построения.  
-  
- Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Следующий пример приводит к возникновению ошибки C4355:  
-  
-```  
-// C4355.cpp  
-// compile with: /w14355 /c  
-#include <tchar.h>  
-  
-class CDerived;  
-class CBase {  
-public:  
-   CBase(CDerived *derived): m_pDerived(derived) {};  
-   ~CBase();  
-   virtual void function() = 0;  
-  
-   CDerived * m_pDerived;  
-};  
-  
-class CDerived : public CBase {  
-public:  
-   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor  
-   virtual void function() {};  
-};  
-  
-CBase::~CBase() {  
-   m_pDerived -> function();  
-}  
-  
-int main() {  
-   CDerived myDerived;  
-}  
+
+'this': используется в основном списке инициализации членов
+
+**Это** указатель допустим только в нестатических функциях-членах. Он не может использоваться в списке инициализации для базового класса.
+
+Конструкторы базового класса и конструкторы члена класса вызываются до **это** конструктор. По сути Вы передали указатель на объект несконструированное с другим конструктором. Если эти другие конструкторы, доступ к любым элементам или вызов функций-членов на это, результат будет неопределенным. Не следует использовать **это** указатель, пока завершит все конструкторы.
+
+Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Следующий пример приводит к возникновению ошибки C4355:
+
+```
+// C4355.cpp
+// compile with: /w14355 /c
+#include <tchar.h>
+
+class CDerived;
+class CBase {
+public:
+   CBase(CDerived *derived): m_pDerived(derived) {};
+   ~CBase();
+   virtual void function() = 0;
+
+   CDerived * m_pDerived;
+};
+
+class CDerived : public CBase {
+public:
+   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor
+   virtual void function() {};
+};
+
+CBase::~CBase() {
+   m_pDerived -> function();
+}
+
+int main() {
+   CDerived myDerived;
+}
 ```

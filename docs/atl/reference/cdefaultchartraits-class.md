@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080a7b9f5da71535f8b141555ec1890a521fe715
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69b6a7b94e993641452154ede11d65929424df5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095759"
 ---
 # <a name="cdefaultchartraits-class"></a>Класс CDefaultCharTraits
 
@@ -33,13 +33,13 @@ ms.locfileid: "43761986"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <typename T>  
+template <typename T>
 class CDefaultCharTraits
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип данных, хранимых в коллекции.
 
 ## <a name="members"></a>Участники
@@ -64,13 +64,13 @@ class CDefaultCharTraits
 Вызывайте эту функцию для преобразования символа в нижний регистр.
 
 ```
-static wchar_t CharToLower(wchar_t x);  
+static wchar_t CharToLower(wchar_t x);
 static char CharToLower(char x);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 Знак для преобразования в нижний регистр.
 
 ### <a name="example"></a>Пример
@@ -82,13 +82,13 @@ static char CharToLower(char x);
 Вызывайте эту функцию для преобразования символа в верхний регистр.
 
 ```
-static wchar_t CharToUpper(wchar_t x);  
+static wchar_t CharToUpper(wchar_t x);
 static char CharToUpper(char x);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 Знак для преобразования в верхний регистр.
 
 ## <a name="see-also"></a>См. также

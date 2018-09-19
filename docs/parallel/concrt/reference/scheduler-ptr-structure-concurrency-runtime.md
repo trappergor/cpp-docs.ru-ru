@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dd15238408f90f268a5fea96635136077c795779
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541853"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059112"
 ---
 # <a name="schedulerptr-structure"></a>Структура scheduler_ptr
 Представляет указатель на планировщик. Этот класс существует в том, чтобы разрешить в спецификации общего времени жизни путем применения shared_ptr или простой ссылки с помощью необработанного указателя.  
@@ -38,19 +38,19 @@ struct scheduler_ptr;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[scheduler_ptr::scheduler_ptr](#ctor)|Перегружен. Создает указатель планировщика из shared_ptr планировщику|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[scheduler_ptr::get](#get)|Возвращает необработанный указатель планировщику|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[scheduler_ptr::operator bool](#operator_bool)|Проверьте, является ли указатель планировщика отличным от null|  
 |[scheduler_ptr::operator-&gt;](#operator_ptr)|Поведение, как у указателя|  
@@ -97,8 +97,11 @@ scheduler_interface * operator -> () const;
 ```  
   
 ### Parameters  
- `scheduler`  
- `pScheduler`  
+*scheduler*<br/>
+The scheduler to convert.
+
+*pScheduler*<br/>
+The scheduler pointer to convert.
   
 ## See Also  
  [concurrency Namespace](concurrency-namespace.md)

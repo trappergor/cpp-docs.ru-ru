@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 889a6f083cb4aace6e93d221a33caef29155d7f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543218"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725016"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Класс CMFCRibbonStatusBarPane
 `CMFCRibbonStatusBarPane` Класс реализует элемент ленты, который можно добавить в строку состояния ленты.  
@@ -62,13 +62,13 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|Создает и инициализирует объект `CMFCRibbonStatusBarPane`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Возвращает строку, определяющую самая длинная текстовая строка, который может быть отображен в области без усечения.|  
 |[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Возвращает текущее значение параметра Выравнивание текста.|  
@@ -84,7 +84,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Вызывается платформой при остановке анимации, присвоенный области.|  
   
@@ -136,32 +136,32 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nCmdID*  
- Указывает идентификатор команды панели.  
+*nCmdID*<br/>
+[in] Указывает идентификатор команды панели.  
   
- [in] *lpszText*  
- Задает текстовую строку для отображения на панели.  
+*lpszText*<br/>
+[in] Задает текстовую строку для отображения на панели.  
   
- [in] *bIsStatic*  
- Значение TRUE, если панель состояния не может быть выделены или выбрать, щелкнув его.  
+*bIsStatic*<br/>
+[in] Значение TRUE, если панель состояния не может быть выделены или выбрать, щелкнув его.  
   
- [in] *hIcon*  
- Указывает дескриптор для значка для отображения в области.  
+*hIcon*<br/>
+[in] Указывает дескриптор для значка для отображения в области.  
   
- [in] *lpszAlmostLargeText*  
- Указывает самая длинная текстовая строка, который может быть отображен на область.  
+*lpszAlmostLargeText*<br/>
+[in] Указывает самая длинная текстовая строка, который может быть отображен на область.  
   
- [in] *hBmpAnimationList*  
- Указывает дескриптор к списку изображений, который используется для анимации.  
+*hBmpAnimationList*<br/>
+[in] Указывает дескриптор к списку изображений, который используется для анимации.  
   
- [in] *cxAnimation*  
- Ширина в пикселях значка в списке изображений, который используется для анимации.  
+*cxAnimation*<br/>
+[in] Ширина в пикселях значка в списке изображений, который используется для анимации.  
   
- [in] *clrTrnsp*  
- Указывает прозрачный цвет изображения в списке изображений, которые используются для анимации.  
+*clrTrnsp*<br/>
+[in] Указывает прозрачный цвет изображения в списке изображений, которые используются для анимации.  
   
- [in] *uiAnimationListResID*  
- Указывает идентификатор ресурса из списка изображений, который используется для анимации.  
+*uiAnimationListResID*<br/>
+[in] Указывает идентификатор ресурса из списка изображений, который используется для анимации.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Получает самая длинная текстовую строку, которая может отображать панель строки состояния.  
@@ -253,8 +253,8 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszAlmostLargeText*  
- Указывает максимальной длины, которые могут отображаться на панели строки состояния без усечения.  
+*lpszAlmostLargeText*<br/>
+[in] Указывает максимальной длины, которые могут отображаться на панели строки состояния без усечения.  
   
 ### <a name="remarks"></a>Примечания  
  Библиотека вычисляет размер текста, *lpszAlmostLargeText* указывает и соответствующим образом изменяет размер панели. Текст усекается, если он по-прежнему не умещается в области.  
@@ -275,17 +275,17 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *hBmpAnimationList*  
- Указывает дескриптор к списку изображений.  
+*hBmpAnimationList*<br/>
+[in] Указывает дескриптор к списку изображений.  
   
- [in] *cxAnimation*  
- Задает ширину в пикселях кадра, в списке изображений.  
+*cxAnimation*<br/>
+[in] Задает ширину в пикселях кадра, в списке изображений.  
   
- [in] *clrTransp*  
- Указывает прозрачный цвет из списка изображений.  
+*clrTransp*<br/>
+[in] Указывает прозрачный цвет из списка изображений.  
   
- [in] *uiAnimationListResID*  
- Указывает идентификатор ресурса для списка изображений.  
+*uiAnimationListResID*<br/>
+[in] Указывает идентификатор ресурса для списка изображений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если список изображений успешно подключен к панель строки состояния; Значение FALSE в противном случае.  
@@ -298,8 +298,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nAlign*  
- Задает выравнивание текста.  
+*nAlign*<br/>
+[in] Задает выравнивание текста.  
   
 ### <a name="remarks"></a>Примечания  
  *nAlign* может иметь одно из следующих значений:  
@@ -320,11 +320,11 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nFrameDelay*  
- Указывает частоту кадров анимации, в миллисекундах.  
+*nFrameDelay*<br/>
+[in] Указывает частоту кадров анимации, в миллисекундах.  
   
- [in] *nDuration*  
- Задает промежуток времени для воспроизведения анимации, в миллисекундах. Используйте значение -1 для бесконечный цикл.  
+*nDuration*<br/>
+[in] Задает промежуток времени для воспроизведения анимации, в миллисекундах. Используйте значение -1 для бесконечный цикл.  
   
 ### <a name="remarks"></a>Примечания  
  Необходимо указать дескриптор списка изображений, перед вызовом метода `StartAnimation` с помощью `SetAnimationList`.  

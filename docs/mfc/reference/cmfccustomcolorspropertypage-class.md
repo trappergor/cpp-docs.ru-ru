@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCCustomColorsPropertyPage | Документы Microsoft
+title: Класс CMFCCustomColorsPropertyPage | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6c8fea125c61bebe836a31c0b2718741e8c531d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041985"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716869"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>Класс CMFCCustomColorsPropertyPage
-Представляет страницы свойств, можно выбрать пользовательские цвета в диалоговом окне цвет.  
+Представляет страницу свойств, можно выбрать цвет в диалоговом окне цвет.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +40,23 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |`CMFCCustomColorsPropertyPage::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
-|`CMFCCustomColorsPropertyPage::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
-|[CMFCCustomColorsPropertyPage::Setup](#setup)|Задает цвет компоненты на странице свойств.|  
+|`CMFCCustomColorsPropertyPage::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
+|[CMFCCustomColorsPropertyPage::Setup](#setup)|Задает компоненты цвет страницы свойств.|  
   
 ### <a name="remarks"></a>Примечания  
- `CMFCColorDialog` Использует этот класс для отображения страницы свойств пользовательский цвет. Дополнительные сведения о `CMFCColorDialog`, в разделе [CMFCColorDialog класса](../../mfc/reference/cmfccolordialog-class.md).  
+ `CMFCColorDialog` Использует этот класс для отображения страницы свойств пользовательского цвета. Дополнительные сведения о `CMFCColorDialog`, см. в разделе [класс CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md).  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует `CMFCCustomColorsPropertyPage` и задайте для его компонентов цвета страницы свойств.  
+ В следующем примере демонстрируется создание `CMFCCustomColorsPropertyPage` и задайте компонентов цвета страницы свойств.  
   
  [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
   
@@ -77,7 +77,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
  **Заголовок:** afxcustomcolorspropertypage.h  
   
 ##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup  
- Задает цвет компоненты на странице свойств.  
+ Задает компоненты цвет страницы свойств.  
   
 ```  
 void Setup(
@@ -90,13 +90,13 @@ void Setup(
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *R*|RGB-значение красного компонента.|  
-|[in] *G*|Зеленый компонент значения RGB.|  
-|[in] *B*|Синий компонент RGB-значение.|  
+|Параметр|Описание|  
+|*R*|[in] Красный компонент RGB-значение.|  
+|*G*|[in] Зеленый компонент RGB-значение.|  
+|*B*|[in] Синий компонент RGB-значение.|  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод обновляет текущее RGB и связанные HLS (оттенок, светлые и насыщенность) цвет значения страницы свойств. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) метод вызывает этот метод, когда платформа инициализирует диалоговое окно «цвет» или нажатии левой кнопки мыши. Дополнительные сведения о `CMFCColorDialog`, в разделе [CMFCColorDialog класса](../../mfc/reference/cmfccolordialog-class.md).  
+ Этот метод обновляет текущий RGB и связанные HLS (hue, освещенность и насыщенность) цвет значения страницы свойств. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) метод вызывает этот метод, когда платформа инициализирует диалоговое окно «цвет» или нажатии левой кнопки мыши. Дополнительные сведения о `CMFCColorDialog`, см. в разделе [класс CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md).  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

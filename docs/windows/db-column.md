@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195794"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715407"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -51,20 +51,20 @@ ms.locfileid: "43195794"
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbType* (необязательно)  
-OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) для записи в столбце.
+*dbType*  
+(Необязательно) OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) для записи в столбце.
 
-*точность* (необязательно)  
-Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+(Необязательно) Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Масштаб* (необязательно)  
-Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Масштаб*  
+(Необязательно) Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*состояние* (необязательно)  
-Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по*.
+*status*  
+(Необязательно) Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по*.
 
-*Длина* (необязательно)  
-Переменную-член используется для хранения размера столбца в байтах.
+*length*  
+(Необязательно) Переменную-член используется для хранения размера столбца в байтах.
 
 ## <a name="remarks"></a>Примечания
 

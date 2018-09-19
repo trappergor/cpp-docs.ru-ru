@@ -25,27 +25,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9c8a3605a94e0feffa1072d1c7cd92a8bdfecb66
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056031"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Методы, создаваемые мастером объекта-получателя
+
 Мастер потребителя ATL OLE DB и мастер приложений MFC создают определенные функции, которые следует иметь в виду. Обратите внимание, что некоторые методы реализуются по-разному в проектах с атрибутами существует несколько моментов; Ниже описаны все случаи. Сведения о просмотре внедренного кода см. в разделе [Отладка внедренного кода](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll` Открывает источник данных, наборы строк и включает закладки, если они доступны.  
+- `OpenAll` Открывает источник данных, наборы строк и включает закладки, если они доступны.  
   
--   `CloseAll` Закрывает все открытые наборы строк и прекращает выполнение всех команд.  
+- `CloseAll` Закрывает все открытые наборы строк и прекращает выполнение всех команд.  
   
--   `OpenRowset` вызывается методом OpenAll для открытия набора строк потребителя или наборы строк.  
+- `OpenRowset` вызывается методом OpenAll для открытия набора строк потребителя или наборы строк.  
   
--   `GetRowsetProperties` Извлекает указатель на свойство в наборе строк с помощью свойства, которые могут быть заданы.  
+- `GetRowsetProperties` Извлекает указатель на свойство в наборе строк с помощью свойства, которые могут быть заданы.  
   
--   `OpenDataSource` Открывает источник данных, используя указанный в строке инициализации **свойства канала передачи данных** диалоговое окно.  
+- `OpenDataSource` Открывает источник данных, используя указанный в строке инициализации **свойства канала передачи данных** диалоговое окно.  
   
--   `CloseDataSource` закрывает источник данных соответствующим образом.  
+- `CloseDataSource` закрывает источник данных соответствующим образом.  
   
 ## <a name="openall-and-closeall"></a>OpenAll и CloseAll  
   
@@ -55,7 +56,7 @@ HRESULT OpenAll();
 void CloseAll();  
 ```  
   
- В следующем примере показано, как можно вызвать `OpenAll` и `CloseAll` при выполнении той же команды несколько раз. Сравните пример кода в [CCommand::Close](../../data/oledb/ccommand-close.md), который показан вариант, который вызывает `Close` и `ReleaseCommand` вместо `CloseAll`.  
+В следующем примере показано, как можно вызвать `OpenAll` и `CloseAll` при выполнении той же команды несколько раз. Сравните пример кода в [CCommand::Close](../../data/oledb/ccommand-close.md), который показан вариант, который вызывает `Close` и `ReleaseCommand` вместо `CloseAll`.  
   
 ```cpp  
 int main(int argc, char* argv[])  
@@ -89,7 +90,8 @@ int main(int argc, char* argv[])
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Обратите внимание, что при определении `HasBookmark` метод, `OpenAll` код задает свойства DBPROP_IRowsetLocate; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
+
+Обратите внимание, что при определении `HasBookmark` метод, `OpenAll` код задает свойства DBPROP_IRowsetLocate; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -100,7 +102,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- `OpenAll` вызывает этот метод для открытия набора или наборов строк в объекте-получателе. Как правило, не нужно вызывать `OpenRowset` только если вы хотите работать с несколькими источниками данных и сеансы либо/строк. `OpenRowset` объявляется в файле заголовка класса команд или таблиц:  
+`OpenAll` вызывает этот метод для открытия набора или наборов строк в объекте-получателе. Как правило, не нужно вызывать `OpenRowset` только если вы хотите работать с несколькими источниками данных и сеансы либо/строк. `OpenRowset` объявляется в файле заголовка класса команд или таблиц:  
   
 ```  
 // OLE DB Template version:  
@@ -115,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
- Атрибуты реализуют этот метод по-разному. Эта версия принимает объект сеанса и командной строки, который по умолчанию для командной строки, указанной в db_command, несмотря на то, что вы можете передать его. Обратите внимание, что при определении `HasBookmark` метод, `OpenRowset` код задает свойства DBPROP_IRowsetLocate; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
+Атрибуты реализуют этот метод по-разному. Эта версия принимает объект сеанса и командной строки, который по умолчанию для командной строки, указанной в db_command, несмотря на то, что вы можете передать его. Обратите внимание, что при определении `HasBookmark` метод, `OpenRowset` код задает свойства DBPROP_IRowsetLocate; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
   
 ```cpp  
 // Attribute-injected version:  
@@ -140,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Этот метод извлекает указатель на набор свойств набора строк; Этот указатель можно использовать для задания свойства, такие как DBPROP_IRowsetChange. `GetRowsetProperties` используется в класс записей пользователя следующим образом. Можно изменить этот код, чтобы задать дополнительные свойства набора строк:  
+Этот метод извлекает указатель на набор свойств набора строк; Этот указатель можно использовать для задания свойства, такие как DBPROP_IRowsetChange. `GetRowsetProperties` используется в класс записей пользователя следующим образом. Можно изменить этот код, чтобы задать дополнительные свойства набора строк:  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -153,7 +155,8 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Не следует определять глобальный `GetRowsetProperties` метод, так как он может конфликтовать с одним определен с помощью мастера. Обратите внимание, что это созданный мастером метод, который вы получаете с атрибутами и шаблонного проектов; атрибуты не вводят этот код.  
+
+Не следует определять глобальный `GetRowsetProperties` метод, так как он может конфликтовать с одним определен с помощью мастера. Обратите внимание, что это созданный мастером метод, который вы получаете с атрибутами и шаблонного проектов; атрибуты не вводят этот код.  
   
 ## <a name="opendatasource-and-closedatasource"></a>OpenDataSource и CloseDataSource  
   
@@ -164,7 +167,9 @@ void CloseDataSource();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Мастер определяет методы `OpenDataSource` и `CloseDataSource`; `OpenDataSource` вызовы [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).  
+
+Мастер определяет методы `OpenDataSource` и `CloseDataSource`; `OpenDataSource` вызовы [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание объекта-получателя OLE DB с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Создание объекта-получателя OLE DB с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

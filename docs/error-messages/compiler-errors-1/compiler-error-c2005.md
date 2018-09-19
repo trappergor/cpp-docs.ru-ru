@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2005 | Документы Microsoft
+title: Ошибка компилятора C2005 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c6b690b54ea7f847128091500e75192440bc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6dfba3b960a046bf40751c135c3b99fbe843545
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169294"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100685"
 ---
 # <a name="compiler-error-c2005"></a>Ошибка компилятора C2005
-\#строки требуется номер строки, найден «токен»  
-  
- `#line` Директивы должен следовать номер строки.  
-  
- Следующий пример приводит к возникновению ошибки C2005:  
-  
-```  
-// C2005.cpp  
-int main() {  
-   int i = 0;  
-   #line i   // C2005  
-}  
-```  
-  
- Возможное решение  
-  
-```  
-// C2005b.cpp  
-int main() {  
-   int i = 0;  
-   #line 0  
-}  
+
+\#строки требуется номер строки, найден «токен»
+
+`#line` Должен располагаться после директивы с номером строки.
+
+Следующий пример приводит к возникновению ошибки C2005:
+
+```
+// C2005.cpp
+int main() {
+   int i = 0;
+   #line i   // C2005
+}
+```
+
+Возможное решение
+
+```
+// C2005b.cpp
+int main() {
+   int i = 0;
+   #line 0
+}
 ```

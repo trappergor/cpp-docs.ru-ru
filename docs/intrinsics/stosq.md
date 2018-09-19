@@ -1,5 +1,5 @@
 ---
-title: __stosq | Документы Microsoft
+title: __stosq | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332030"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715511"
 ---
 # <a name="stosq"></a>__stosq
 **Блок, относящийся только к системам Microsoft**  
   
- Создает инструкцию строка хранилища (`rep stosq`).  
+ Создает инструкцию строка магазина (`rep stosq`).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,14 +41,14 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [выходной] `Dest`  
- Целевой для операции.  
+*dest*<br/>
+[out] Целевой для операции.  
   
- [in] `Data`  
- Для хранения данных.  
+*Данные*<br/>
+[in] Сохраняемые данные.  
   
- [in] `Count`  
- Длина блока учетверенных слова для записи.  
+*Количество*<br/>
+[in] Длина блока учетверенных слова для записи.  
   
 ## <a name="requirements"></a>Требования  
   

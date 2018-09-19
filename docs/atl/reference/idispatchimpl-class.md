@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756367"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709804"
 ---
 # <a name="idispatchimpl-class"></a>Класс IDispatchImpl
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>Параметры
 
-[in] *T*  
-Сдвоенный интерфейс.
+*T*<br/>
+[in] Сдвоенный интерфейс.
 
-[in] *piid*  
-Указатель на идентификатор IID *T*.
+*piid*<br/>
+[in] Указатель на идентификатор IID *T*.
 
-[in] *plibid*  
-Указатель на идентификатор LIBID библиотеки типов, содержащий сведения об интерфейсе. По умолчанию передается библиотеки типов на уровне сервера.
+*plibid*<br/>
+[in] Указатель на идентификатор LIBID библиотеки типов, содержащий сведения об интерфейсе. По умолчанию передается библиотеки типов на уровне сервера.
 
-[in] *wMajor*  
-Основной номер версии для библиотеки типов. По умолчанию значение равно 1.
+*wMajor*<br/>
+[in] Основной номер версии библиотеки типов. По умолчанию значение равно 1.
 
-[in] *wMinor*  
-Дополнительный номер версии для библиотеки типов. По умолчанию значение равно 0.
+*wMinor*<br/>
+[in] Дополнительный номер версии библиотеки типов. По умолчанию значение равно 0.
 
-[in] *tihclass*  
-Класс, используемый для управления сведения о типе *T*. Значение по умолчанию `CComTypeInfoHolder`.
+*tihclass*<br/>
+[in] Класс, используемый для управления сведения о типе *T*. Значение по умолчанию `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Участники
 

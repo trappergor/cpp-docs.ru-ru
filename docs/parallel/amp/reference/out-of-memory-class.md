@@ -1,5 +1,5 @@
 ---
-title: Класс out_of_memory | Документы Microsoft
+title: Класс out_of_memory | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab3285e0b37b8af93803a1a2752e25b6d91ab2f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b57e27647f61b551f8ea5c2770290e1ae9627014
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695299"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070929"
 ---
 # <a name="outofmemory-class"></a>out_of_memory - класс
-Исключение, возникающее при сбое метода из-за недостатка памяти системы или устройства.  
+Исключение, возникающее при сбое метода из-за нехватки памяти системы или устройства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,8 +67,8 @@ out_of_memory () throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описание ошибки.  
+*_Message*<br/>
+Описание ошибки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Новый экземпляр класса `out_of_memory`.  

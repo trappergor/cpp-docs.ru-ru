@@ -1,5 +1,5 @@
 ---
-title: Ошибка построения проекта PRJ0014 | Документы Microsoft
+title: Ошибка построения проекта PRJ0014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d088acfe817dc2980f593d3e013a021646586f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc13a7eb9a9b86ac57c66ff8c09c03ea9b3f3e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074749"
 ---
 # <a name="project-build-error-prj0014"></a>Ошибка построения проекта PRJ0014
-Сбой задания объект, используемый для контроля созданных процессов.  Не удается продолжить сборку.  
-  
- Произошла ошибка в среде разработки.  
-  
- Чтобы устранить эту ошибку, закройте и перезагрузите проект. При необходимости, закройте и перезапустите Visual Studio.
+
+Сбой задания объект, используемый для контроля порожденных процессов.  Невозможно продолжить сборку.
+
+Произошла ошибка в среде разработки.
+
+Чтобы устранить эту ошибку, закройте и перезагрузите проект. При необходимости, закройте и перезапустите Visual Studio.

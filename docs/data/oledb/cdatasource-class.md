@@ -68,14 +68,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 984bdabb9d67b157468287fa64f9f21ddabdd5d1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df5a93ae8b646eb0b4f012484ef8c13d07d328da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106315"
 ---
 # <a name="cdatasource-class"></a>Класс CDataSource
+
 Соответствующий объект источника данных OLE DB, который представляет подключение через поставщика к источнику данных.  
   
 ## <a name="syntax"></a>Синтаксис
@@ -85,7 +86,8 @@ class CDataSource
 ```  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h 
+
+**Заголовок:** atldbcli.h 
   
 ## <a name="members"></a>Участники  
   
@@ -104,11 +106,13 @@ class CDataSource
 |[OpenWithServiceComponents](#openwithservicecomponents)|Открывает объект источника данных, с помощью диалогового окна Data Link.|  
   
 ## <a name="remarks"></a>Примечания  
- Один или несколько сеансов базы данных могут создаваться для одного подключения. Эти сеансы, представляются `CSession`. Необходимо вызвать [CDataSource::Open](../../data/oledb/cdatasource-open.md) для открытия подключения перед созданием сеанса с `CSession::Open`.  
+
+Один или несколько сеансов базы данных могут создаваться для одного подключения. Эти сеансы, представляются `CSession`. Необходимо вызвать [CDataSource::Open](../../data/oledb/cdatasource-open.md) для открытия подключения перед созданием сеанса с `CSession::Open`.  
   
- Пример использования `CDataSource`, см. в разделе ["CatDB"](../../visual-cpp-samples.md) образца.  
+Пример использования `CDataSource`, см. в разделе ["CatDB"](../../visual-cpp-samples.md) образца.  
 
 ## <a name="close"></a> CDataSource::Close
+
 Закрывает соединение, выпустив `m_spInit` указатель.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -118,6 +122,7 @@ void Close() throw();
 ``` 
 
 ## <a name="getinitializationstring"></a> CDataSource::GetInitializationString
+
 Извлекает строку инициализации источника данных, который в данный момент открыт.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -128,19 +133,23 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *pInitializationString*  
- [out] Указатель на строку инициализации.  
+
+*pInitializationString*<br/>
+[out] Указатель на строку инициализации.  
   
- *bIncludePassword*  
- [in] **true** Если строка содержит пароль; в противном случае **false**.  
+*bIncludePassword*<br/>
+[in] **true** Если строка содержит пароль; в противном случае **false**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Результирующая строка инициализации можно использовать для более поздней версии повторного открытия соединения с источником данных. 
+
+Результирующая строка инициализации можно использовать для более поздней версии повторного открытия соединения с источником данных. 
  
 ## <a name="getproperties"></a> CDataSource::GetProperties
+
 Возвращает сведения о свойствах, запрошенный для объекта источника данных.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -153,15 +162,19 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK.  
+
+См. в разделе [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы получить одно свойство, используйте [GetProperty](../../data/oledb/cdatasource-getproperty.md).
+
+Чтобы получить одно свойство, используйте [GetProperty](../../data/oledb/cdatasource-getproperty.md).
 
 ## <a name="getproperty"></a> CDataSource::GetProperty
+
 Возвращает значение указанного свойства для объекта источника данных.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -173,22 +186,26 @@ HRESULT GetProperty(const GUID& guid,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Идентификатор GUID*  
- [in] Идентификатор GUID, определяющий свойство, для которого возвращаются свойства.  
+
+*Идентификатор GUID*<br/>
+[in] Идентификатор GUID, определяющий свойство, для которого возвращаются свойства.  
   
- *PropID*  
- [in] Идентификатор свойства для свойства для возврата.  
+*PropID*<br/>
+[in] Идентификатор свойства для свойства для возврата.  
   
- *pVariant*  
- [out] Указатель на значение variant, где `GetProperty` возвращает значение свойства.  
+*pVariant*<br/>
+[out] Указатель на значение variant, где `GetProperty` возвращает значение свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы получить несколько свойств, используйте [GetProperties](../../data/oledb/cdatasource-getproperties.md).
+
+Чтобы получить несколько свойств, используйте [GetProperties](../../data/oledb/cdatasource-getproperties.md).
 
 ## <a name="open"></a> CDataSource::Open
+
 Открывает подключение к источнику данных с помощью `CLSID`, `ProgID`, или `CEnumerator` моникер или предлагает пользователю диалоговое окно для выбора.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -234,53 +251,58 @@ HRESULT Open(LPCSTR szProgID,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *CLSID*  
- [in] `CLSID` Поставщика данных.  
+
+*CLSID*<br/>
+[in] `CLSID` Поставщика данных.  
   
- *pPropSet*  
- [in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK.  
+*pPropSet*<br/>
+[in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK.  
   
- *nPropertySets*  
- [in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры, передаются в *pPropSet* аргумент.  
+*nPropertySets*<br/>
+[in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры, передаются в *pPropSet* аргумент.  
   
- *pName*  
- [входные данные] Имя базы данных, к которой необходимо подключиться.  
+*pName*<br/>
+[входные данные] Имя базы данных, к которой необходимо подключиться.  
   
- *pUserName*  
- [входные данные] Имя пользователя.  
+*pUserName*<br/>
+[входные данные] Имя пользователя.  
   
- *pPassword*  
- [входные данные] Пароль пользователя.  
+*pPassword*<br/>
+[входные данные] Пароль пользователя.  
   
- *nInitMode*  
- [входные данные] Режим инициализации базы данных. См. в разделе [свойства инициализации](/previous-versions/windows/desktop/ms723127\(v=vs.85\))в *Справочник программиста OLE DB по* в пакете SDK Windows для получения списка допустимых режимов инициализации. Если *nInitMode* — это инициализация нулю, то режим включается в набор свойств, используемых для открытия соединения.  
+*nInitMode*<br/>
+[входные данные] Режим инициализации базы данных. См. в разделе [свойства инициализации](/previous-versions/windows/desktop/ms723127\(v=vs.85\))в *Справочник программиста OLE DB по* в пакете SDK Windows для получения списка допустимых режимов инициализации. Если *nInitMode* — это инициализация нулю, то режим включается в набор свойств, используемых для открытия соединения.  
   
- *szProgID*  
- [входные данные] Идентификатор программы.  
+*szProgID*<br/>
+[входные данные] Идентификатор программы.  
   
- *enumerator*  
- [in] Объект [CEnumerator](../../data/oledb/cenumerator-class.md) объект, используемый для получения моникера для открытия соединения, если вызывающий объект не указывает `CLSID`.  
+*enumerator*<br/>
+[in] Объект [CEnumerator](../../data/oledb/cenumerator-class.md) объект, используемый для получения моникера для открытия соединения, если вызывающий объект не указывает `CLSID`.  
   
- *hWnd*  
- [входные данные] Дескриптор окна, которое является родительским объектом диалогового окна. Перегрузки функции, которая использует *hWnd* параметр будет автоматически вызываются компоненты службы; Дополнительные сведения см. в разделе "Примечания".  
+*hWnd*<br/>
+[входные данные] Дескриптор окна, которое является родительским объектом диалогового окна. Перегрузки функции, которая использует *hWnd* параметр будет автоматически вызываются компоненты службы; Дополнительные сведения см. в разделе "Примечания".  
   
- *dwPromptOptions*  
- [входные данные] Определяет стиль отображаемого диалогового окна выбора. Возможные значения см. в файле Msdasc.h.  
+*dwPromptOptions*<br/>
+[входные данные] Определяет стиль отображаемого диалогового окна выбора. Возможные значения см. в файле Msdasc.h.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Перегрузка метода, который использует *hWnd* параметра открывает объект источника данных с помощью компонентов службы в oledb32.dll; эта библиотека DLL содержит реализацию возможностей компонентов службы, такие как создание пулов ресурсов, автоматически Прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+
+Перегрузка метода, который использует *hWnd* параметра открывает объект источника данных с помощью компонентов службы в oledb32.dll; эта библиотека DLL содержит реализацию возможностей компонентов службы, такие как создание пулов ресурсов, автоматически Прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
- Перегрузки метода, не использующих *hWnd* параметр откройте объект источника данных без использования компонентов службы в oledb32.dll. Объект [CDataSource](../../data/oledb/cdatasource-class.md) открытый с помощью этих перегрузок функций не смогут использовать все функции службы компонентов.  
+Перегрузки метода, не использующих *hWnd* параметр откройте объект источника данных без использования компонентов службы в oledb32.dll. Объект [CDataSource](../../data/oledb/cdatasource-class.md) открытый с помощью этих перегрузок функций не смогут использовать все функции службы компонентов.  
   
 ### <a name="example"></a>Пример  
- В следующем коде показано, как открыть источник данных Jet 4.0 с помощью шаблонов OLE DB. Источник данных Jet обрабатывается так же, как источник данных OLE DB. Тем не менее при вызове `Open` требуется два набора свойства: один для DBPROPSET_DBINIT, а другой — для DBPROPSET_JETOLEDB_DBINIT, таким образом, можно задать DBPROP_JETOLEDB_DATABASEPASSWORD.  
+
+В следующем коде показано, как открыть источник данных Jet 4.0 с помощью шаблонов OLE DB. Источник данных Jet обрабатывается так же, как источник данных OLE DB. Тем не менее при вызове `Open` требуется два набора свойства: один для DBPROPSET_DBINIT, а другой — для DBPROPSET_JETOLEDB_DBINIT, таким образом, можно задать DBPROP_JETOLEDB_DATABASEPASSWORD.  
   
- [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]  
 
 ## <a name="openfromfilename"></a> CDataSource::OpenFromFileName
+
 Открывает источник данных из файла, указанного пользователем по имени.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -290,18 +312,22 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *szFileName*  
- [входные данные] Имя файла (обычно это файл подключения к источнику данных (UDL)).  
+
+*szFileName*<br/>
+[входные данные] Имя файла (обычно это файл подключения к источнику данных (UDL)).  
   
- Дополнительные сведения о файлах передачи данных (UDL-файлах) см. в разделе [Обзор API связи данных](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) в пакете Windows SDK.  
+Дополнительные сведения о файлах передачи данных (UDL-файлах) см. в разделе [Обзор API связи данных](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+
+Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
 
 ## <a name="openfrominitializationstring"></a> CDataSource::OpenFromInitializationString
+
 Открывает источник данных, указанная в строке инициализации, предоставленные пользователем.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -312,21 +338,25 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *szInitializationString*  
- [in] Строка инициализации.  
+
+*szInitializationString*<br/>
+[in] Строка инициализации.  
   
- *fPromptForInfo*  
- [in] Если этот аргумент имеет значение **true**, затем `OpenFromInitializationString` установит свойство свойство DBPROP_INIT_PROMPT DBPROMPT_COMPLETEREQUIRED, который указывает, что пользователю запрос только в том случае, если необходима дополнительная информация. Это удобно для ситуаций, в которых в строке инициализации указан базу данных, требующий пароль, но строка не содержит пароль. Пользователь будет запрашиваться пароль (или все отсутствующие сведения) при попытке подключения к базе данных.  
+*fPromptForInfo*<br/>
+[in] Если этот аргумент имеет значение **true**, затем `OpenFromInitializationString` установит свойство свойство DBPROP_INIT_PROMPT DBPROMPT_COMPLETEREQUIRED, который указывает, что пользователю запрос только в том случае, если необходима дополнительная информация. Это удобно для ситуаций, в которых в строке инициализации указан базу данных, требующий пароль, но строка не содержит пароль. Пользователь будет запрашиваться пароль (или все отсутствующие сведения) при попытке подключения к базе данных.  
   
- Значение по умолчанию — **false**, который указывает, что пользователь никогда не быть запросом (наборы свойство DBPROP_INIT_PROMPT в значение DBPROMPT_NOPROMPT).  
+Значение по умолчанию — **false**, который указывает, что пользователь никогда не быть запросом (наборы свойство DBPROP_INIT_PROMPT в значение DBPROMPT_NOPROMPT).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д.  
+
+Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д.  
 
 ## <a name="openwithpromptfilename"></a> CDataSource::OpenWithPromptFileName
+
 Этот метод отображает диалоговое окно, а затем открывает источник данных, используя указанный пользователем файл.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -338,22 +368,26 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *hWnd*  
- [входные данные] Дескриптор окна, которое является родительским объектом диалогового окна.  
+
+*hWnd*<br/>
+[входные данные] Дескриптор окна, которое является родительским объектом диалогового окна.  
   
- *dwPromptOptions*  
- [входные данные] Определяет стиль отображаемого диалогового окна выбора. Возможные значения см. в файле Msdasc.h.  
+*dwPromptOptions*<br/>
+[входные данные] Определяет стиль отображаемого диалогового окна выбора. Возможные значения см. в файле Msdasc.h.  
   
- *szInitialDirectory*  
- [входные данные] Исходный каталог для отображения в диалоговом окне выбора.  
+*szInitialDirectory*<br/>
+[входные данные] Исходный каталог для отображения в диалоговом окне выбора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+
+Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
 ## <a name="openwithservicecomponents"></a> CDataSource::OpenWithServiceComponents
+
 Открывает объект источника данных с помощью компонентов службы в oledb32.dll.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -369,24 +403,28 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *CLSID*  
- [in] `CLSID` Поставщика данных.  
+
+*CLSID*<br/>
+[in] `CLSID` Поставщика данных.  
   
- *szProgID*  
- [входные данные] Идентификатор программы поставщика данных.  
+*szProgID*<br/>
+[входные данные] Идентификатор программы поставщика данных.  
   
- *pPropset*  
- [in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK. При инициализации объекта источника данных свойства должны принадлежать к группе свойств источника данных. Если в то же свойство указано более одного раза *pPropset*, то используется значение, которое зависит от поставщика. Если *ulPropSets* равен нулю, этот параметр учитывается.  
+*pPropset*<br/>
+[in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) в *справочнике программиста OLE DB* в Windows SDK. При инициализации объекта источника данных свойства должны принадлежать к группе свойств источника данных. Если в то же свойство указано более одного раза *pPropset*, то используется значение, которое зависит от поставщика. Если *ulPropSets* равен нулю, этот параметр учитывается.  
   
- *ulPropSets*  
- [in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры, передаются в *pPropSet* аргумент. Если это равно нулю, поставщик не учитывает *pPropset*.  
+*ulPropSets*<br/>
+[in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры, передаются в *pPropSet* аргумент. Если это равно нулю, поставщик не учитывает *pPropset*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
+
+Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB в [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
 
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

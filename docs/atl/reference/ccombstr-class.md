@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54677e573f36fca65cc46dc5207e8812e4fa4fa6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2045a6c14a37d270d895a5eeb4fa455711e7354
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097683"
 ---
 # <a name="ccombstr-class"></a>Класс CComBSTR
 
@@ -141,16 +141,16 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] Объект `CComBSTR` добавляемый объект.
 
-*ch*  
+*ch*<br/>
 [in] Добавляемый символ.
 
-*lpsz*  
+*lpsz*<br/>
 [in] Строка символов с завершающим нулевым символом, для добавления. Вы можете передать строку Юникода через перегрузку LPCOLESTR или строка ANSI через LPCSTR версии.
 
-*nLen*  
+*nLen*<br/>
 [in] Число символов из *lpsz* для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -175,7 +175,7 @@ HRESULT AppendBSTR(BSTR p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 [in] BSTR, для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -200,10 +200,10 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpsz*  
+*lpsz*<br/>
 [in] Указатель на массив байтов для добавления.
 
-*p*  
+*p*<br/>
 [in] Число байтов для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -224,7 +224,7 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pSrc*  
+*pSrc*<br/>
 [in] Массив safearray, содержащий элементы, используемые для создания строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -241,7 +241,7 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] BSTR, чтобы назначить текущего `CComBSTR` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -258,7 +258,7 @@ void Attach(BSTR src) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*src*  
+*src*<br/>
 [in] BSTR, для прикрепления к объекту.
 
 ### <a name="remarks"></a>Примечания
@@ -282,7 +282,7 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*ppArray*  
+*ppArray*<br/>
 [out] Указатель на safearray, используемый для хранения результатов функции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -315,31 +315,31 @@ unsigned int ByteLength() const throw();
 
 ```
 CComBSTR() throw();
-CComBSTR(const CComBSTR& src);  
-CComBSTR(REFGUID  guid);  
-CComBSTR(int nSize);  
-CComBSTR(int nSize, LPCOLESTR sz);  
-CComBSTR(int nSize, LPCSTR sz);  
-CComBSTR(LPCOLESTR pSrc);  
-CComBSTR(LPCSTR pSrc);  
+CComBSTR(const CComBSTR& src);
+CComBSTR(REFGUID  guid);
+CComBSTR(int nSize);
+CComBSTR(int nSize, LPCOLESTR sz);
+CComBSTR(int nSize, LPCSTR sz);
+CComBSTR(LPCOLESTR pSrc);
+CComBSTR(LPCSTR pSrc);
 CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nSize*  
+*nSize*<br/>
 [in] Число символов для копирования из *sz* или начальный размер в символах для `CComBSTR`.
 
-*sz*  
+*sz*<br/>
 [входные данные] Строка для копирования. Версия Юникода указывает LPCOLESTR; версия ANSI указывает LPCSTR.
 
-*pSrc*  
+*pSrc*<br/>
 [входные данные] Строка для копирования. Версия Юникода указывает LPCOLESTR; версия ANSI указывает LPCSTR.
 
-*src*  
+*src*<br/>
 [входные данные] Объект `CComBSTR`.
 
-*Идентификатор GUID*  
+*Идентификатор GUID*<br/>
 [in] Ссылку на `GUID` структуры.
 
 ### <a name="remarks"></a>Примечания
@@ -396,10 +396,10 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pbstr*  
+*pbstr*<br/>
 [out] Адрес строку BSTR, в котором для возврата строки, выделенной с помощью этого метода.
 
-*pvarDest*  
+*pvarDest*<br/>
 [out] Адрес объекта типа VARIANT, в котором для возврата строки, выделенной с помощью этого метода.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -499,7 +499,7 @@ BSTR m_str;
 
 Приведения `CComBSTR` объекта на строку BSTR.
 
-```  
+```
 operator BSTR() const throw();
 ```
 
@@ -544,13 +544,13 @@ bool operator!= (int nNull) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [входные данные] Объект `CComBSTR`.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Строка с завершающим нулевым символом.
 
-*nNull*  
+*nNull*<br/>
 [in] Должен иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -586,16 +586,16 @@ BSTR* operator&() throw();
 Добавляет строку в `CComBSTR` объекта.
 
 ```
-CComBSTR& operator+= (const CComBSTR& bstrSrc);  
+CComBSTR& operator+= (const CComBSTR& bstrSrc);
 CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] Объект `CComBSTR` добавляемый объект.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Добавляемая строка с завершающим нулевым символом.
 
 ### <a name="remarks"></a>Примечания
@@ -629,8 +629,8 @@ bool operator<(LPCSTR pszSrc) const throw();
 Наборы [m_str](#m_str) члена на копию *pSrc* или копию BSTR членом *src*. Оператор присваивания перемещения перемещает `src` не копируя его.
 
 ```
-CComBSTR& operator= (const CComBSTR& src);  
-CComBSTR& operator= (LPCOLESTR pSrc);  
+CComBSTR& operator= (const CComBSTR& src);
+CComBSTR& operator= (LPCOLESTR pSrc);
 CComBSTR& operator= (LPCSTR pSrc);
 CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
@@ -656,13 +656,13 @@ bool operator== (int nNull) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [входные данные] Объект `CComBSTR`.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Строка с завершающим нулевым символом.
 
-*nNull*  
+*nNull*<br/>
 [in] Должен иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -699,7 +699,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейса на поток, содержащий данные.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -756,7 +756,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейса в потоке.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -773,5 +773,5 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [ATL и макросов преобразования MFC из строки](string-conversion-macros.md)

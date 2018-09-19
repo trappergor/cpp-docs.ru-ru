@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c6db8a46e0b0e8d490019b18fc67dc7bf1e226
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6eb8c7ed32e780ddaf31dfd6167f59fd55de9da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116780"
 ---
 # <a name="ccomcurrency-class"></a>Класс CComCurrency
 
@@ -118,45 +118,45 @@ CComCurrency() throw();
 CComCurrency(const CComCurrency& curSrc) throw();
 CComCurrency(CURRENCY cySrc) throw();
 CComCurrency(DECIMAL dSrc);
-CComCurrency(ULONG ulSrc);  
-CComCurrency(USHORT usSrc);  
-CComCurrency(CHAR cSrc);  
-CComCurrency(DOUBLE dSrc);  
-CComCurrency(FLOAT fSrc);  
-CComCurrency(LONG lSrc);  
-CComCurrency(SHORT sSrc);  
-CComCurrency(BYTE bSrc);  
-CComCurrency(LONGLONG nInteger, SHORT nFraction);  
-explicit CComCurrency(LPDISPATCH pDispSrc);  
-explicit CComCurrency(const VARIANT& varSrc);  
-explicit CComCurrency(LPCWSTR szSrc);  
+CComCurrency(ULONG ulSrc);
+CComCurrency(USHORT usSrc);
+CComCurrency(CHAR cSrc);
+CComCurrency(DOUBLE dSrc);
+CComCurrency(FLOAT fSrc);
+CComCurrency(LONG lSrc);
+CComCurrency(SHORT sSrc);
+CComCurrency(BYTE bSrc);
+CComCurrency(LONGLONG nInteger, SHORT nFraction);
+explicit CComCurrency(LPDISPATCH pDispSrc);
+explicit CComCurrency(const VARIANT& varSrc);
+explicit CComCurrency(LPCWSTR szSrc);
 explicit CComCurrency(LPCSTR szSrc);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*curSrc*  
+*curSrc*<br/>
 Существующий объект `CComCurrency`.
 
-*cySrc*  
+*cySrc*<br/>
 Переменная типа валюты.
 
-*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc usSrc*  
+*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc usSrc*<br/>
 Начальное значение, присваиваемое переменной-члену `m_currency`.
 
-*cSrc*  
+*cSrc*<br/>
 Символ, содержащий начальное значение, присваиваемое переменной-члену `m_currency`.
 
-*nInteger*, *nFraction*  
+*nInteger*, *nFraction*<br/>
 Целого и дробного компонента начального денежные значения. См. в разделе [CComCurrency](../../atl/reference/ccomcurrency-class.md) Дополнительные сведения.
 
-*pDispSrc*  
+*pDispSrc*<br/>
 `IDispatch` Указатель.
 
-*varSrc*  
+*varSrc*<br/>
 Переменная типа VARIANT. Языковой стандарт текущего потока используется для выполнения преобразования.
 
-*szSrc*  
+*szSrc*<br/>
 Строка Юникода или ANSI, содержащая начальное значение. Языковой стандарт текущего потока используется для выполнения преобразования.
 
 ### <a name="remarks"></a>Примечания
@@ -238,7 +238,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 Объект `CComCurrency`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -259,7 +259,7 @@ bool operator!= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 Сравниваемый объект `CComCurrency`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -281,10 +281,10 @@ CComCurrency operator*(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nOperand*  
+*nOperand*<br/>
 Множитель.
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Объект, используемый как множитель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -306,10 +306,10 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Параметры
 
-*nOperand*  
+*nOperand*<br/>
 Множитель.
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Объект, используемый как множитель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -330,7 +330,7 @@ CComCurrency operator/(long nOperand) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nOperand*  
+*nOperand*<br/>
 Делитель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -351,7 +351,7 @@ const CComCurrency& operator/= (long nOperand);
 
 ### <a name="parameters"></a>Параметры
 
-*nOperand*  
+*nOperand*<br/>
 Делитель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -372,7 +372,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Объект для добавления к исходному объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -393,7 +393,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 Объект `CComCurrency`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -414,7 +414,7 @@ bool operator<(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 Объект `CComCurrency`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -435,7 +435,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 Объект `CComCurrency`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -466,13 +466,13 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*curSrc*  
+*curSrc*<br/>
 Объект `CComCurrency`.
 
-*cySrc*  
+*cySrc*<br/>
 Переменная типа валюты.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*  
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
 Числовое значение, присваиваемое `CComCurrency` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -493,7 +493,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 Объект `CComCurrency`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -514,7 +514,7 @@ bool operator== (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Объект для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -535,7 +535,7 @@ bool operator>(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 Объект `CComCurrency`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -556,7 +556,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Параметры
 
-*cur*  
+*cur*<br/>
 Объект `CComCurrency`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -571,7 +571,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 Эти операторы используются для приведения `CComCurrency` объект в тип данных валюты.
 
-```  
+```
 operator CURRENCY&() throw();
 operator const CURRENCY&() const throw();
 ```
@@ -594,7 +594,7 @@ HRESULT Roundint nDecimals);
 
 ### <a name="parameters"></a>Параметры
 
-*nDecimals*  
+*nDecimals*<br/>
 Количество цифр, к которому `m_currency` округляется, в диапазоне от 0 до 4.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -615,7 +615,7 @@ HRESULT SetFraction(SHORT nFraction);
 
 ### <a name="parameters"></a>Параметры
 
-*nFraction*  
+*nFraction*<br/>
 Значение, присваиваемое дробная часть `m_currency` элемента данных. Знак дробная должно быть таким же, как компонент целое число, а значение должно быть в диапазоне от-(CY_MIN_FRACTION) на 9 (CY_MAX_FRACTION).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -636,7 +636,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ### <a name="parameters"></a>Параметры
 
-*nInteger*  
+*nInteger*<br/>
 Значение, присваиваемое целой части `m_currency` элемент данных. Знак целой должно соответствовать знак существующий компонент долей.
 
 *nInteger* должно находиться в диапазоне CY_MIN_INTEGER для CY_MAX_INTEGER включительно. Эти значения определены в файле atlcur.h.
@@ -651,6 +651,6 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ## <a name="see-also"></a>См. также
 
-[Класс COleCurrency](../../mfc/reference/colecurrency-class.md)   
-[ВАЛЮТА](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
+[Класс COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
+[ВАЛЮТА](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2341 | Документы Microsoft
+title: Ошибка компилятора C2341 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18cc222129f3f12b5e7b5c6cb66e090907ff42a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adac1e6f6e5f5d58b6091a389537a42f0e496b31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197381"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020203"
 ---
 # <a name="compiler-error-c2341"></a>Ошибка компилятора C2341
-» Имя раздела: сегмент должен быть определен с помощью #pragma data_seg, code_seg или предыдущего раздела, для использования  
-  
- [Выделить](../../cpp/allocate.md) Инструкция ссылается на еще не определен сегмент [code_seg](../../preprocessor/code-seg.md), [data_seg](../../preprocessor/data-seg.md), или [раздел](../../preprocessor/section.md) директивы pragma.  
-  
- Следующий пример приводит к возникновению ошибки C2341:  
-  
-```  
-// C2341.cpp  
-// compile with: /c  
-__declspec(allocate(".test"))   // C2341  
-int j = 1;  
-```  
-  
- Возможное решение  
-  
-```  
-// C2341b.cpp  
-// compile with: /c  
-#pragma data_seg(".test")  
-__declspec(allocate(".test"))  
-int j = 1;  
+
+«имя_раздела»: сегмент должен быть определен с помощью #pragma data_seg, code_seg или предыдущего раздела, для использования
+
+[Выделить](../../cpp/allocate.md) Инструкция ссылается на сегмент, который еще не определен [code_seg](../../preprocessor/code-seg.md), [data_seg](../../preprocessor/data-seg.md), или [разделе](../../preprocessor/section.md) директивы pragma.
+
+Следующий пример приводит к возникновению ошибки C2341:
+
+```
+// C2341.cpp
+// compile with: /c
+__declspec(allocate(".test"))   // C2341
+int j = 1;
+```
+
+Возможное решение
+
+```
+// C2341b.cpp
+// compile with: /c
+#pragma data_seg(".test")
+__declspec(allocate(".test"))
+int j = 1;
 ```

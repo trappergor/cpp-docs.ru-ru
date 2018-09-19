@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 14c231edc5395515836ccbbe9adea87e0f31b33d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068413"
 ---
 # <a name="diagnostic-services"></a>Диагностические службы
 Библиотека Microsoft Foundation Class предоставляет множество служб диагностики, которые упрощают отладку программ. Эти службы включают в себя макросы и глобальные функции, позволяющие отслеживать выделение памяти для программы, записывать дамп содержимого объектов во время выполнения и печатать сообщения отладки во время выполнения. Макросы и глобальные функции диагностических служб сгруппированы в следующие категории:  
@@ -546,55 +546,37 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="remarks"></a>Примечания  
  В приведенном ниже примере отражает одной строки выходных данных, полученных из вызова метода `AfxDumpStack` из обработчика кнопки в диалоговом окне MFC-приложении:  
   
- `=== begin AfxDumpStack output ===`  
-  
- `00427D55: DUMP2\DEBUG\DUMP2.EXE! void AfxDumpStack(unsigned long) + 181 bytes`  
-  
- `0040160B: DUMP2\DEBUG\DUMP2.EXE! void CDump2Dlg::OnClipboard(void) + 14 bytes`  
-  
- `0044F884: DUMP2\DEBUG\DUMP2.EXE! int _AfxDispatchCmdMsg(class CCmdTarget *,`  
-  
- `unsigned int,int,void ( CCmdTarget::*)(void),void *,unsigned int,struct AFX_CMDHANDLE`  
-  
- `0044FF7B: DUMP2\DEBUG\DUMP2.EXE! virtual int CCmdTarget::OnCmdMsg(unsigned`  
-  
- `int,int,void *,struct AFX_CMDHANDLERINFO *) + 626 bytes`  
-  
- `00450C71: DUMP2\DEBUG\DUMP2.EXE! virtual int CDialog::OnCmdMsg(unsigned`  
-  
- `int,int,void *,struct AFX_CMDHANDLERINFO *) + 36 bytes`  
-  
- `00455B27: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnCommand(unsigned`  
-  
- `int,long) + 312 bytes`  
-  
- `00454D3D: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnWndMsg(unsigned`  
-  
- `int,unsigned int,long,long *) + 83 bytes`  
-  
- `00454CC0: DUMP2\DEBUG\DUMP2.EXE! virtual long CWnd::WindowProc(unsigned`  
-  
- `int,unsigned int,long) + 46 bytes`  
-  
- `004528D9: DUMP2\DEBUG\DUMP2.EXE! long AfxCallWndProc(class CWnd *,struct`  
-  
- `HWND__ *,unsigned int,unsigned int,long) + 237 bytes`  
-  
- `00452D34: DUMP2\DEBUG\DUMP2.EXE! long AfxWndProc(struct HWND__ *,unsigned`  
-  
- `int,unsigned int,long) + 129 bytes`  
-  
- `BFF73663: WINDOWS\SYSTEM\KERNEL32.DLL! ThunkConnect32 + 2148 bytes`  
-  
- `BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes`  
-  
- `=== end AfxDumpStack() output ===`  
+```Output
+=== begin AfxDumpStack output ===
+00427D55: DUMP2\DEBUG\DUMP2.EXE! void AfxDumpStack(unsigned long) + 181 bytes
+0040160B: DUMP2\DEBUG\DUMP2.EXE! void CDump2Dlg::OnClipboard(void) + 14 bytes
+0044F884: DUMP2\DEBUG\DUMP2.EXE! int _AfxDispatchCmdMsg(class CCmdTarget *,
+unsigned int,int,void ( CCmdTarget::*)(void),void *,unsigned int,struct 
+AFX_CMDHANDLE
+0044FF7B: DUMP2\DEBUG\DUMP2.EXE! virtual int CCmdTarget::OnCmdMsg(unsigned
+int,int,void *,struct AFX_CMDHANDLERINFO *) + 626 bytes
+00450C71: DUMP2\DEBUG\DUMP2.EXE! virtual int CDialog::OnCmdMsg(unsigned
+int,int,void *,struct AFX_CMDHANDLERINFO *) + 36 bytes
+00455B27: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnCommand(unsigned
+int,long) + 312 bytes
+00454D3D: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnWndMsg(unsigned
+int,unsigned int,long,long *) + 83 bytes
+00454CC0: DUMP2\DEBUG\DUMP2.EXE! virtual long CWnd::WindowProc(unsigned
+int,unsigned int,long) + 46 bytes
+004528D9: DUMP2\DEBUG\DUMP2.EXE! long AfxCallWndProc(class CWnd *,struct
+HWND__ *,unsigned int,unsigned int,long) + 237 bytes
+00452D34: DUMP2\DEBUG\DUMP2.EXE! long AfxWndProc(struct HWND__ *,unsigned
+int,unsigned int,long) + 129 bytes
+BFF73663: WINDOWS\SYSTEM\KERNEL32.DLL! ThunkConnect32 + 2148 bytes
+BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
+=== end AfxDumpStack() output ===
+```
   
  Каждая строка в приведенном выше примере адрес последнего вызова функции, имя модуля, содержащего вызов функции и прототип функции вызывается полный путь. Если вызов функции в стеке происходит не на адрес функции, отображается смещение байтов.  
   
  Например в следующей таблице описаны первая часть приведенных выше выходных данных:  
   
-|Вывод|Описание:|  
+|Вывод|Описание|  
 |------------|-----------------|  
 |`00427D55:`|Обратный адрес последнего вызова функции.|  
 |`DUMP2\DEBUG\DUMP2.EXE!`|Полный путь имя модуля, содержащего вызов функции.|  
@@ -619,8 +601,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bDump*  
- Значение TRUE указывает, что дамп утечки памяти включен; Значение FALSE указывает, что дамп утечки памяти отключен.  
+*bDump*<br/>
+[in] Значение TRUE указывает, что дамп утечки памяти включен; Значение FALSE указывает, что дамп утечки памяти отключен.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Предыдущее значение для этого флага.  

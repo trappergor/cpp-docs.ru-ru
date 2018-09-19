@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3396 | Документы Microsoft
+title: Ошибка компилятора C3396 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7bc75aec0cd4f92ebced316c76f95598802e4e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e96231cf72b144c58e925fb2f74a6be29e9030f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047451"
 ---
 # <a name="compiler-error-c3396"></a>Ошибка компилятора C3396
-"атрибут": настраиваемый атрибут не найден в "пространство_имен"  
-  
- Ошибка C3396 указывает, что актуальная версия среды CLR не используется.  Чтобы устранить эту ошибку, переустановите среду CLR.
+
+"атрибут": настраиваемый атрибут не найден в "пространство_имен"
+
+Ошибка C3396 указывает, что актуальная версия среды CLR не используется.  Чтобы устранить эту ошибку, переустановите среду CLR.

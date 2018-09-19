@@ -20,17 +20,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 758208de2ee27dba64808c60b1d94bed5bdeafa4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88b6884ff8543b3aa6ec329330563fbe1ad27b8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071592"
 ---
 # <a name="transaction-object-interfaces"></a>Интерфейсы объекта транзакции
+
 Объект транзакции определяет атомарной единицей работы над источником данных и определяет, каким образом эти единицы работы связаны друг с другом. Этот объект не поддерживается напрямую с помощью шаблонов поставщика OLE DB (то есть необходимо создать собственный объект).  
   
- В следующей таблице показаны обязательные и необязательные интерфейсы, определенные в OLE DB для объекта транзакции.  
+В следующей таблице показаны обязательные и необязательные интерфейсы, определенные в OLE DB для объекта транзакции.  
   
 |Интерфейс|Обязательный?|Реализовано с помощью шаблонов OLE DB?|  
 |---------------|---------------|--------------------------------------|  
@@ -39,4 +40,5 @@ ms.locfileid: "43194578"
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|Нет|  
   
 ## <a name="see-also"></a>См. также  
- [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

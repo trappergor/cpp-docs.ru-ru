@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857fae2e9c38dfe2c5cd468c6d1b50c6fdd2f317
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 196f95ae134458f2eaf00ab037c3a560d1317515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109706"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -53,10 +53,10 @@ void longjmp(
 
 ### <a name="parameters"></a>Параметры
 
-*env*  
+*env*<br/>
 Переменная, в которой хранится среда.
 
-*значение*  
+*значение*<br/>
 Значение, возвращаемое в вызов `setjmp`.
 
 ## <a name="remarks"></a>Примечания
@@ -83,7 +83,7 @@ void longjmp(
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-> [!NOTE]  
+> [!NOTE]
 > В переносимом коде C++, нельзя рассчитывать на `setjmp` и `longjmp` поддерживают семантику объекта C++. В частности `setjmp` / `longjmp` пары приводит к неопределенному поведению замены вызова `setjmp` и `longjmp` по **catch** и **throw** вызовет нетривиальные деструкторы для любой автоматически создаваемых объектов. В программах на C++ мы рекомендуем использовать механизм обработки исключений C++.
 
 Дополнительные сведения см. в разделе [Использование setjmp и longjmp](../../cpp/using-setjmp-longjmp.md).
@@ -102,5 +102,5 @@ void longjmp(
 
 ## <a name="see-also"></a>См. также
 
-[Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)  
-[setjmp](setjmp.md)  
+[Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
+[setjmp](setjmp.md)

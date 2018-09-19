@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c33c3524d0fb6b39208e2cb7be57805a3ff043f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761203"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046762"
 ---
 # <a name="cautoptrlist-class"></a>Класс CAutoPtrList
 
@@ -35,14 +35,14 @@ ms.locfileid: "43761203"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<typename E>  
-class CAutoPtrList : 
+template<typename E>
+class CAutoPtrList :
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*E*  
+*E*<br/>
 Тип указателя.
 
 ## <a name="members"></a>Участники
@@ -79,7 +79,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Размер блока по умолчанию 10.
 
 ### <a name="remarks"></a>Примечания
@@ -88,6 +88,6 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAtlList](../../atl/reference/catllist-class.md)   
-[Класс CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+[Класс CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Класс CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

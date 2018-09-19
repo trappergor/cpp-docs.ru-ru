@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050317be4c5f933ca9e08055a02555f5597c583c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116000"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
@@ -42,7 +42,7 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- В 32-разрядной системе указатель, объявленный с **__ptr64** усекается до 32-разрядного указателя. В 64-разрядной системе указатель, объявленный с **__ptr32** приводится к 64-разрядного указателя.
+В 32-разрядной системе указатель, объявленный с **__ptr64** усекается до 32-разрядного указателя. В 64-разрядной системе указатель, объявленный с **__ptr32** приводится к 64-разрядного указателя.
 
 > [!NOTE]
 > Нельзя использовать **__ptr32** или **__ptr64** при компиляции с параметром **/CLR: pure**. В противном случае будет создаваться Ошибка компилятора C2472. **/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
@@ -80,4 +80,5 @@ int main()
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
- [Фундаментальные типы](../cpp/fundamental-types-cpp.md)
+
+[Фундаментальные типы](../cpp/fundamental-types-cpp.md)

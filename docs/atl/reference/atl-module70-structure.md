@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7afe6867f359b334654f58aad39ad7f143dd428
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f84b90613bcf542a9ace44505565951819fcaa91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108447"
 ---
 # <a name="atlmodule70-structure"></a>Структура _ATL_MODULE70
 
@@ -43,16 +43,16 @@ struct _ATL_MODULE70 {
 
 ## <a name="members"></a>Участники
 
-`cbSize`  
+`cbSize`<br/>
 Размер структуры, используемые для управления версиями.
 
-`m_nLockCnt`  
+`m_nLockCnt`<br/>
 Чтобы определить, как долго должны оставаться активным модуль счетчика ссылок.
 
-`m_pTermFuncs`  
+`m_pTermFuncs`<br/>
 Отслеживает функции, которые были зарегистрированы для вызова при закрытии ATL.
 
-`m_csStaticDataInitAndTypeInfo`  
+`m_csStaticDataInitAndTypeInfo`<br/>
 Используется для управления доступом к внутренним данным в многопоточной ситуации.
 
 ## <a name="remarks"></a>Примечания

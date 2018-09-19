@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2259 | Документы Microsoft
+title: Ошибка компилятора C2259 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,108 +16,109 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e5c415a7669a6e26ecba6ee8ce40f8a42d94a16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f64d61d30e8e805aae4ec1f9343de4dc817f66b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172294"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101596"
 ---
 # <a name="compiler-error-c2259"></a>Ошибка компилятора C2259
-«класс»: не удается создать экземпляр абстрактного класса  
-  
- Код объявляет экземпляр абстрактного класса или структуры.  
-  
- Не удается создать экземпляр класса или структуры с одного или нескольких чистые виртуальные функции. Для создания экземпляров объектов производного класса, производный класс должен переопределять каждую чисто виртуальную функцию.  
-  
- Дополнительные сведения см. в разделе [неявно абстрактные классы](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).  
-  
- Следующий пример приводит к возникновению ошибки C2259:  
-  
-```  
-// C2259.cpp  
-// compile with: /c  
-class V {  
-public:  
-   void virtual func() = 0;  
-};  
-class A : public V {};  
-class B : public V {  
-public:  
-   void func();  
-};  
-V v;  // C2259, V is an abstract class  
-A a;  // C2259, A inherits func() as pure virtual  
-B b;  // OK, B defines func()  
-```  
-  
- Каждый раз, когда производный от интерфейса и реализации методов интерфейса в производном классе, кроме public разрешения на доступ, может появиться C2259.  Это происходит потому, что компилятор ожидает реализации в производном классе, общий доступ к методов интерфейса. При реализации функции-члены для интерфейса с более строгими разрешениями доступа, компилятор не учитывает их как реализации методов, определенных в интерфейсе, который в свою очередь, делает производный класс абстрактный класс.  
-  
- Существует два способа решения этой проблемы:  
-  
--   Сделайте открытым и позволить реализованные методы разрешения на доступ.  
-  
--   Используйте оператор разрешения области для методов интерфейса реализации в производном классе для уточнения имени реализованный метод с именем интерфейса.  
-  
- Ошибка C2259 также может произойти в результате совместимости, выполненной в Visual C++ 2005 **/Zc: wchar_t** теперь по умолчанию включен. В этом случае можно устранить путем компиляции с C2599 **/Zc:wchar_t-**, чтобы получить поведение предыдущих версий. Дополнительные сведения см. в разделе [/Zc:wchar_t (wchar_t — это собственный тип)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
-  
- Следующий пример приводит к возникновению ошибки C2259:  
-  
-```  
-// C2259b.cpp  
-// compile with: /c  
-#include <windows.h>   
-  
-class MyClass {  
-public:  
-   // WCHAR now typedef'ed to wchar_t  
-   virtual void func(WCHAR*) = 0;  
-};  
-  
-class MyClass2 : MyClass {  
-public:  
-   void func(unsigned short*);  
-};  
-  
-MyClass2 x;   // C2259  
-  
-// OK  
-class MyClass3 {  
-public:  
-   virtual void func(WCHAR*) = 0;  
-   virtual void func2(wchar_t*) = 0;  
-   virtual void func3(unsigned short*) = 0;  
-};  
-  
-class MyClass4 : MyClass3 {  
-public:  
-   void func(WCHAR*) {}  
-   void func2(wchar_t*) {}  
-   void func3(unsigned short*) {}  
-};  
-  
-MyClass4 y;  
-```  
-  
- Следующий пример приводит к возникновению ошибки C2259:  
-  
-```  
-// C2259c.cpp  
-// compile with: /clr  
-interface class MyInterface {  
-   void MyMethod();  
-};  
-  
-ref class MyDerivedClass: public MyInterface {  
-private:  
-   // Uncomment the following line to resolve.  
-   // public:  
-   void MyMethod(){}  
-   // or the following line  
-   // void MyInterface::MyMethod() {};  
-};  
-  
-int main() {  
-   MyDerivedClass^ instance = gcnew MyDerivedClass; // C2259  
-}  
-```  
+
+«класс»: не удается создать экземпляр абстрактного класса
+
+Код объявляет экземпляр абстрактного класса или структуры.
+
+Не удается создать экземпляр класса или структуры с один или несколько чистых виртуальных функций. Для создания экземпляров объектов производного класса, производного класса необходимо переопределить каждую чисто виртуальную функцию.
+
+Дополнительные сведения см. в разделе [неявно абстрактные классы](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
+
+Следующий пример приводит к возникновению ошибки C2259:
+
+```
+// C2259.cpp
+// compile with: /c
+class V {
+public:
+   void virtual func() = 0;
+};
+class A : public V {};
+class B : public V {
+public:
+   void func();
+};
+V v;  // C2259, V is an abstract class
+A a;  // C2259, A inherits func() as pure virtual
+B b;  // OK, B defines func()
+```
+
+Каждый раз, когда наследуется от интерфейса и реализовывать методы интерфейсов в производном классе с разрешениями доступа являются открытыми, может появиться C2259.  Это происходит, потому что компилятор ожидает, что реализации в производном классе, общий доступ к методов интерфейса. При реализации функции-члены для интерфейса с более строгими разрешениями доступа, компилятор не рассматривает их как реализации методов, определенных в интерфейсе, что в свою очередь делает абстрактный класс для производного класса.
+
+Существует два способа решения проблемы:
+
+- Сделайте открытым в реализованные методы разрешения на доступ.
+
+- Используйте оператор разрешения области для методов интерфейса реализации в производном классе для уточнения имени реализованный метод с именем интерфейса.
+
+C2259 также может возникнуть в результате изменений работы в Visual C++ 2005 **/Zc: wchar_t** теперь включен по умолчанию. В этом случае можно устранить путем компиляции с C2599 **/Zc:wchar_t-**, чтобы получить поведение предыдущих версий. Дополнительные сведения см. в разделе [/Zc:wchar_t (wchar_t — это собственный тип)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+
+Следующий пример приводит к возникновению ошибки C2259:
+
+```
+// C2259b.cpp
+// compile with: /c
+#include <windows.h>
+
+class MyClass {
+public:
+   // WCHAR now typedef'ed to wchar_t
+   virtual void func(WCHAR*) = 0;
+};
+
+class MyClass2 : MyClass {
+public:
+   void func(unsigned short*);
+};
+
+MyClass2 x;   // C2259
+
+// OK
+class MyClass3 {
+public:
+   virtual void func(WCHAR*) = 0;
+   virtual void func2(wchar_t*) = 0;
+   virtual void func3(unsigned short*) = 0;
+};
+
+class MyClass4 : MyClass3 {
+public:
+   void func(WCHAR*) {}
+   void func2(wchar_t*) {}
+   void func3(unsigned short*) {}
+};
+
+MyClass4 y;
+```
+
+Следующий пример приводит к возникновению ошибки C2259:
+
+```
+// C2259c.cpp
+// compile with: /clr
+interface class MyInterface {
+   void MyMethod();
+};
+
+ref class MyDerivedClass: public MyInterface {
+private:
+   // Uncomment the following line to resolve.
+   // public:
+   void MyMethod(){}
+   // or the following line
+   // void MyInterface::MyMethod() {};
+};
+
+int main() {
+   MyDerivedClass^ instance = gcnew MyDerivedClass; // C2259
+}
+```

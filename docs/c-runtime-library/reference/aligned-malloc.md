@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94c97eaa987163aa35a3f763a1d56c2e6db6050c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b500471a3580af9045f1c42707a543669da48c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405218"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063181"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -55,10 +55,10 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Параметры
 
-*size*  
+*size*<br/>
 Размер запрошенного размещения памяти.
 
-*Выравнивание*  
+*Выравнивание*<br/>
 Значение выравнивания, которое должно быть целой степенью числа 2.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -163,4 +163,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>См. также
 
-[Выравнивание данных](../../c-runtime-library/data-alignment.md)  
+[Выравнивание данных](../../c-runtime-library/data-alignment.md)

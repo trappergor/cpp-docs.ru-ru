@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3455 | Документы Microsoft
+title: Ошибка компилятора C3455 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f48f16164327645eb0c1982e9e11e8ea394276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253384"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089363"
 ---
 # <a name="compiler-error-c3455"></a>Ошибка компилятора C3455
-"атрибут": ни один из конструкторов атрибута не соответствует аргументам  
-  
- Недопустимое значение использовалось для объявления атрибута.  Дополнительные сведения см. в разделе [attribute](../../windows/attribute.md) .  
-  
-## <a name="example"></a>Пример  
- В следующем примере возникает ошибка C3455:  
-  
-```  
-// C3455.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[attribute("MyAt")]   // C3455  
-// try the following line instead  
-// [attribute(All)]  
-ref struct MyAttr {  
-   MyAttr() {}  
-};  
+
+"атрибут": ни один из конструкторов атрибута не соответствует аргументам
+
+Недопустимое значение использовалось для объявления атрибута.  Дополнительные сведения см. в разделе [attribute](../../windows/attribute.md) .
+
+## <a name="example"></a>Пример
+
+В следующем примере возникает ошибка C3455:
+
+```
+// C3455.cpp
+// compile with: /clr /c
+using namespace System;
+
+[attribute("MyAt")]   // C3455
+// try the following line instead
+// [attribute(All)]
+ref struct MyAttr {
+   MyAttr() {}
+};
 ```

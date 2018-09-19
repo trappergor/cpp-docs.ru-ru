@@ -1,5 +1,5 @@
 ---
-title: omp_set_lock | Документы Microsoft
+title: функции omp_set_lock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d905da37b6e3203fcf37611d7404fa2e4f9ea96
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 390090b0f4bf5f8795373db9f61f8365257ee95b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024917"
 ---
 # <a name="ompsetlock"></a>omp_set_lock
-Блоки потоков выполнения, пока блокировка не освободится.  
+Блокирует выполнение потока, пока не станет доступна блокировка.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,17 +34,16 @@ void omp_set_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Примечания  
- где  
+### <a name="parameters"></a>Параметры
   
- `lock`  
- Переменная типа [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) , инициализированный с [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
+*lock*<br/>
+Переменная типа [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) , инициализированный с [функции omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [3.2.3 функции omp_set_lock и omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).  
+ Дополнительные сведения см. в разделе [3.2.3 функции omp_set_lock и omp_set_nest_lock функции](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).  
   
 ## <a name="examples"></a>Примеры  
- В разделе [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) пример использования `omp_set_lock`.  
+ См. в разделе [функции omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) пример использования `omp_set_lock`.  
   
 ## <a name="see-also"></a>См. также  
  [Функции](../../../parallel/openmp/reference/openmp-functions.md)

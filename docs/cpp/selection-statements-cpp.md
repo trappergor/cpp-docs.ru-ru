@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c4241621383936c477514bb6881330c514548a81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117709"
 ---
 # <a name="selection-statements-c"></a>Операторы выбора (C++)
-Операторы выбора C++, [Если](../cpp/if-else-statement-cpp.md) и [переключения](../cpp/switch-statement-cpp.md), предоставляют средства для условного выполнения части кода.  
-  
- [__If_exists](../cpp/if-exists-statement.md) и [__if_not_exists](../cpp/if-not-exists-statement.md) позволяют включать код в зависимости от наличия определенного символа.  
-  
- Синтаксис этих операторов см. в соответствующих разделах.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения об операторах в C++](../cpp/overview-of-cpp-statements.md)
+
+Операторы выбора C++, [Если](../cpp/if-else-statement-cpp.md) и [переключения](../cpp/switch-statement-cpp.md), предоставляют средства для условного выполнения части кода.
+
+[__If_exists](../cpp/if-exists-statement.md) и [__if_not_exists](../cpp/if-not-exists-statement.md) позволяют включать код в зависимости от наличия определенного символа.
+
+Синтаксис этих операторов см. в соответствующих разделах.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения об операторах в C++](../cpp/overview-of-cpp-statements.md)

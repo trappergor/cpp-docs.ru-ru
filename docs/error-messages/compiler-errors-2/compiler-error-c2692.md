@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2692 | Документы Microsoft
+title: Ошибка компилятора C2692 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a02110750a748b5c520df7d202a87957f227a802
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03a9006889c5853e77b5603484ea9d18f2474241
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231000"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088375"
 ---
 # <a name="compiler-error-c2692"></a>Ошибка компилятора C2692
-«имя функции»: компилятора C необходимы полные прототипы функций "/ clr" параметр  
-  
- При компиляции для .NET управляемый код, компилятор C требует объявления функций ANSI. Кроме того, если функция не принимает параметров, его необходимо явно объявить `void` типа параметра.
+
+«имя функции»: полным прототипом функции, необходимые в компиляторе C с "/ clr" параметр
+
+При компиляции для .NET, управляемый код, компилятор C требует объявления функций ANSI. Кроме того, если функция не принимает параметров, его необходимо явно объявить `void` тип параметра.

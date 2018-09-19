@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754817"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017967"
 ---
 # <a name="cdynamicchain-class"></a>Класс CDynamicChain
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>Параметры
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Уникальный идентификатор, связанный с объектом цепочки и схему сообщений.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна, принимающего сообщение.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Сообщение, отправленное окну.
 
-*wParam*  
+*wParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lParam*  
+*lParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lResult*  
+*lResult*<br/>
 [out] Результат обработки сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>Параметры
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Уникальный идентификатор, связанный с объектом цепочки и схему сообщений. Изначально вы определите это значение путем вызова [SetChainEntry](#setchainentry).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>Параметры
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Уникальный идентификатор, связанный с объектом цепочки и схему сообщений.
 
-*pObject*  
+*pObject*<br/>
 [in] Указатель на объект цепочки объявление схемы сообщений. Этот объект должен быть производным от [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Идентификатор схемы сообщений в цепочке объекта. Значение по умолчанию — 0, который определяет схему сообщений по умолчанию, объявленные с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Чтобы указать альтернативную схему сообщений, объявленные с [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), передайте `msgMapID`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -201,5 +201,5 @@ BOOL SetChainEntry(
 
 ## <a name="see-also"></a>См. также
 
-[Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
+[Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

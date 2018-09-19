@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5e71fbf1a24a38b0a18e70ce7d0fa044ad4ec5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: db7903dccfd851bb4bf76f1990424f887686d344
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070110"
 ---
 # <a name="cacl-class"></a>Класс CAcl
 
@@ -161,7 +161,7 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 Существующий объект `CAcl`.
 
 ### <a name="remarks"></a>Примечания
@@ -206,16 +206,16 @@ void GetAclEntries(
 
 ### <a name="parameters"></a>Параметры
 
-*pSids*  
+*pSids*<br/>
 Указатель на массив [CSid](../../atl/reference/csid-class.md) объектов.
 
-*pAccessMasks*  
+*pAccessMasks*<br/>
 Маски доступа.
 
-*pAceTypes*  
+*pAceTypes*<br/>
 Управление доступом (ACE) типы.
 
-*pAceFlags*  
+*pAceFlags*<br/>
 Флаги элементов управления ДОСТУПОМ.
 
 ### <a name="remarks"></a>Примечания
@@ -243,25 +243,25 @@ void GetAclEntry(
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс извлекаемой записи ACL.
 
-*pSid*  
+*pSid*<br/>
 [CSid](../../atl/reference/csid-class.md) объекта, к которому относится запись ACL.
 
-*pMask*  
+*pMask*<br/>
 Маска, задающая разрешения, чтобы предоставить или запретить доступ.
 
-*pType*  
+*pType*<br/>
 Тип элемента управления ДОСТУПОМ.
 
-*pFlags*  
+*pFlags*<br/>
 Флаги элементов управления ДОСТУПОМ.
 
-*pObjectType*  
+*pObjectType*<br/>
 Тип объекта. Это будет присвоено значение GUID_NULL, если тип объекта не указан в записи ACE, или в том случае, если элемент управления ДОСТУПОМ не запись ACE для ОБЪЕКТА.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 Типом наследуемого объекта. Это будут устанавливаться значение GUID_NULL, если типом наследуемого объекта не указан в записи ACE, или в том случае, если элемент управления ДОСТУПОМ не элемент управления ДОСТУПОМ ОБЪЕКТА.
 
 ### <a name="remarks"></a>Примечания
@@ -322,7 +322,7 @@ bool IsNull() const throw();
 
 Приведения `CAcl` объект `ACL` структуры (список управления доступом).
 
-```  
+```
 operator const ACL *() const throw(...);
 ```
 
@@ -340,7 +340,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `CAcl` Для назначения к существующему объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -357,7 +357,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс записи ACE, которую требуется удалить.
 
 ### <a name="remarks"></a>Примечания
@@ -374,7 +374,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 Ссылка на объект `CSid`.
 
 ##  <a name="setempty"></a>  CAcl::SetEmpty
@@ -403,5 +403,5 @@ void SetNull() throw();
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

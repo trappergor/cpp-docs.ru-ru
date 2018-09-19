@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324039"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715472"
 ---
 # <a name="general-property-page-file"></a>Страница свойств "Общие" (файл)
 
 При выборе файла в **обозревателе решений** страница свойств **Общие** в узле **Свойства конфигурации** содержит следующие свойства:
 
-**Исключить из сборки**  
-Определяет, должен ли файл входить в сборку для текущей конфигурации.
+- **Исключить из сборки**
 
-Для программного доступа к этому свойству см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
+   Определяет, должен ли файл входить в сборку для текущей конфигурации.
 
-**Средство**  
-Средство, которое будет использоваться для сборки этого файла. Дополнительные сведения см. в разделе [Задание пользовательских средств сборки](../ide/specifying-custom-build-tools.md).
+   Для программного доступа к этому свойству см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-Для программного доступа к этому свойству см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+- **Средство**
+
+   Средство, которое будет использоваться для сборки этого файла. Дополнительные сведения см. в разделе [Задание пользовательских средств сборки](../ide/specifying-custom-build-tools.md).
+
+   Для программного доступа к этому свойству см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
 Сведения о доступе к странице свойств **Общие** в узле **Свойства конфигурации** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).
 

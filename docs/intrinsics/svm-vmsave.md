@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc66784a9f5b6c953516bb30271c973779340e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680641"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722856"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Блок, относящийся только к системам Microsoft**  
@@ -41,7 +41,7 @@ void __svm_vmsave(
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|Физический адрес VMCB.|  
+|*VmcbPhysicalAddress*|[in] Физический адрес VMCB.|  
   
 ## <a name="remarks"></a>Примечания  
  `__svm_vmsave` Функция эквивалентна `VMSAVE` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер документа 24593, редакция 3.11 и более поздних версиях в [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.  

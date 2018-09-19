@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 099bd36908ef12d2cd4c6b4603dc047d7ed6e74f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: aefb11f8028aa2af9822bc6433e85d06d0609a9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039170"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Функции пространства имен Concurrency::Direct3D (AMP)
 ||||
@@ -60,7 +60,7 @@ inline int abs(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -83,13 +83,13 @@ inline int clamp(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Ограничиваемое значение
 
-`_Min`  
+*_Min*<br/>
 Нижняя граница граница диапазона ограничения.
 
-`_Max`  
+*_Max*<br/>
 Верхняя граница граница диапазона ограничения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -103,7 +103,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целое число без знака
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -126,16 +126,16 @@ accelerator_view create_accelerator_view(
 ```  
 
 #### <a name="parameters"></a>Параметры
-`_Accelerator`  
+*_Accelerator*<br/>
 Ускоритель, на которой будет создаваться новый accelerator_view.
 
-`_D3D_device`  
+*_D3D_device*<br/>
 Указатель на интерфейс устройства Direct3D.
 
-`_Disable_timeout`  
+*_Disable_timeout*<br/>
 Логический параметр, который указывает, следует ли отключить время ожидания для созданного accelerator_view. Это соответствует флагу d3d11_create_device_disable_gpu_timeout для создания устройства Direct3D и используется для указания того, если операционная система должна позволяет нагрузки, которые принимают более 2 секунд выполняться без сбросить устройство за время ожидания Windows механизм обнаружения и восстановления. Если вам нужно выполнять много времени задачи на accelerator_view, рекомендуется использовать этот флаг.
 
-`_Qmode`  
+*_Qmode*<br/>
 [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) для созданного accelerator_view. Этот параметр имеет значение по умолчанию `queuing_mode_automatic`.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -157,7 +157,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Av`  
+*_Av*<br/>
 Accelerator_view, который требуется заблокировать.
 
 ##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock
@@ -168,7 +168,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Av`  
+*_Av*<br/>
 Accelerator_view, который требуется заблокировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -182,7 +182,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Av`  
+*_Av*<br/>
 Accelerator_view, для которого выполняется снятия блокировки.
 
 ##  <a name="firstbithigh"></a>  firstbithigh
@@ -193,7 +193,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -207,7 +207,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -226,13 +226,13 @@ IUnknown *get_buffer(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`value_type`  
+*value_type*<br/>
 Тип элементов в массиве.
 
-`_Rank`  
+*_Rank*<br/>
 Ранг массива.
 
-`_Array`  
+*_Array*<br/>
 Массив на accelerator_view Direct3D, для которого возвращается базовый интерфейс буфера Direct3D.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -263,10 +263,10 @@ inline int imax(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целочисленное значение
 
-`_Y`  
+*_Y*<br/>
 Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -282,10 +282,10 @@ inline int imin(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целочисленное значение
 
-`_Y`  
+*_Y*<br/>
 Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -299,7 +299,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Accelerator_view`  
+*_Accelerator_view*<br/>
 Accelerator_view, для которого время ожидания в отключенном состоянии объект запроса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -334,13 +334,13 @@ inline unsigned int mad(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Первый указанный аргумент.
 
-`_Y`  
+*_Y*<br/>
 Второй заданный аргумент.
 
-`_Z`  
+*_Z*<br/>
 Третий заданный аргумент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -361,19 +361,19 @@ array<value_type, _Rank> make_array(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`value_type`  
+*value_type*<br/>
 Тип элемента создаваемого массива.
 
-`_Rank`  
+*_Rank*<br/>
 Ранг массива должен быть создан.
 
-`_Extent`  
+*_Extent*<br/>
 Область памяти, которая описывает форму агрегата массива.
 
-`_Rv`  
+*_Rv*<br/>
 Представление ускорителя D3D, на которой будет создаваться массива.
 
-`_D3D_buffer`  
+*_D3D_buffer*<br/>
 Указатель на интерфейс IUnknown буфера D3D для создания массива.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -387,7 +387,7 @@ inline float noise(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Значение с плавающей запятой, из которого требуется создать шума Перлина
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -401,7 +401,7 @@ inline float radians(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Значение с плавающей запятой
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -418,7 +418,7 @@ inline double rcp(double _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Значение, для которого вычисляется обратная величина.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -432,7 +432,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целое число без знака
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -446,7 +446,7 @@ inline float saturate(float _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Значение с плавающей запятой
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -460,7 +460,7 @@ inline int sign(int _X) restrict(amp);
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -477,13 +477,13 @@ inline float smoothstep(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Min`  
+*_Min*<br/>
 Значение с плавающей запятой
 
-`_Max`  
+*_Max*<br/>
 Значение с плавающей запятой
 
-`_X`  
+*_X*<br/>
 Значение с плавающей запятой
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -499,10 +499,10 @@ inline float step(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_Y`  
+*_Y*<br/>
 Значение с плавающей запятой
 
-`_X`  
+*_X*<br/>
 Значение с плавающей запятой
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -518,10 +518,10 @@ inline unsigned int umax(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целочисленное значение
 
-`_Y`  
+*_Y*<br/>
 Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -537,10 +537,10 @@ inline unsigned int umin(
 ```  
 
 ### <a name="parameters"></a>Параметры
-`_X`  
+*_X*<br/>
 Целочисленное значение
 
-`_Y`  
+*_Y*<br/>
 Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение

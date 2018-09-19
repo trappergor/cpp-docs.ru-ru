@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914619c2790a904530f6efe2324549402d9b6785
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085229"
 ---
 # <a name="cominterfaceentry-macros"></a>Макросы COM_INTERFACE_ENTRY  
 
@@ -72,7 +72,8 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>Параметры
 
-x [in] Имя интерфейса класс объекта является производным от напрямую.
+*x*<br/>
+[in] Имя интерфейса класс объекта является производным от напрямую.
 
 ### <a name="remarks"></a>Примечания
 
@@ -101,10 +102,10 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Имя интерфейса, которому требуется предоставить доступ из объекта.
 
-*x2*  
+*x2*<br/>
 [in] Имя ветви наследования, из которого *x* предоставляется.
 
 ### <a name="remarks"></a>Примечания
@@ -125,10 +126,10 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID интерфейса, предоставляемые.
 
-*x*  
+*x*<br/>
 [in] Имя класса, на которых vtable будет представляться как интерфейс, определенный *iid*.
 
 ### <a name="example"></a>Пример
@@ -145,13 +146,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID, который вы указываете для интерфейса.
 
-*x*  
+*x*<br/>
 [in] Имя интерфейса, класс объекта является производным от напрямую.
 
-*x2*  
+*x2*<br/>
 [in] Имя второй интерфейс, класс объекта является производным от напрямую.
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -164,10 +165,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID интерфейса, запрашивается.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Имя `IUnknown` указатель.
 
 ### <a name="remarks"></a>Примечания
@@ -188,7 +189,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 [in] Имя `IUnknown` указатель.
 
 ### <a name="remarks"></a>Примечания
@@ -209,13 +210,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID интерфейса, запрашивается.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Имя `IUnknown` указатель. Необходимо быть членом класса, содержащего COM карты.
 
-*CLSID*  
+*CLSID*<br/>
 [in] Идентификатор агрегата, который будет создан в том случае, если *punk* имеет значение NULL.
 
 ### <a name="remarks"></a>Примечания
@@ -234,10 +235,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 [in] Имя `IUnknown` указатель. Необходимо быть членом класса, содержащего COM карты.
 
-*CLSID*  
+*CLSID*<br/>
 [in] Идентификатор агрегата, который будет создан в том случае, если *punk* имеет значение NULL.
 
 ### <a name="remarks"></a>Примечания
@@ -258,7 +259,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Текст, используемый для создания идентификатора интерфейса.
 
 ### <a name="remarks"></a>Примечания
@@ -275,13 +276,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID интерфейса перемещаемой.
 
-*x*  
+*x*<br/>
 [in] Имя класса, реализующего интерфейс.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Имя `IUnknown` указатель. Необходимо быть членом класса, содержащего COM карты. Должен быть инициализирован NULL в конструктор класса объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -302,10 +303,10 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID интерфейса перемещаемой.
 
-*x*  
+*x*<br/>
 [in] Имя класса, реализующего интерфейс.
 
 ### <a name="remarks"></a>Примечания
@@ -326,7 +327,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>Параметры
 
-*classname*  
+*classname*<br/>
 [in] Базовый класс текущего объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -349,13 +350,13 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID интерфейса, предоставляемые.
 
-*dw*  
+*dw*<br/>
 [in] Параметр, передаваемый через *func*.
 
-*Func*  
+*Func*<br/>
 [in] Указатель на функцию, которая вернет *iid*.
 
 ### <a name="remarks"></a>Примечания
@@ -376,10 +377,10 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Параметры
 
-*dw*  
+*dw*<br/>
 [in] Параметр, передаваемый через *func*.
 
-*Func*  
+*Func*<br/>
 [in] Функция, которая вызывается при обработке данной записи в COM карты.
 
 ### <a name="remarks"></a>Примечания
@@ -396,7 +397,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Текст, используемый для создания идентификатора интерфейса.
 
 ### <a name="remarks"></a>Примечания

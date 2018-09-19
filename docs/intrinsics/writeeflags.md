@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8c01e10a77278f0a02658778ec178f0a4226eb36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539705"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704864"
 ---
 # <a name="writeeflags"></a>__writeeflags
 Записывает указанное значение в программу состояния и управления (EFLAGS) регистрации.  
@@ -35,9 +35,9 @@ void __writeeflags(unsigned __int64 Value);
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] `Value`|Значение для записи в EFLAGS регистр. `Value` Равен 32 бита времени для 32-разрядной платформе и 64 бита времени для 64-разрядной платформе.|  
+|*Значение*|[in] Значение для записи в EFLAGS регистр. `Value` Равен 32 бита времени для 32-разрядной платформе и 64 бита времени для 64-разрядной платформе.|  
   
 ## <a name="remarks"></a>Примечания  
  Эти процедуры доступны только как встроенные функции.  

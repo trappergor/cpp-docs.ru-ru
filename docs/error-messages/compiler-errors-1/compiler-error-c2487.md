@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2487 | Документы Microsoft
+title: Ошибка компилятора C2487 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d2f74f1d189cf2be71d812dd8da01bb6fe8bdb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2b0a71ef29edc7bbd7fec7b359c4a5a10df1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018917"
 ---
 # <a name="compiler-error-c2487"></a>Ошибка компилятора C2487
-«Идентификатор»: член класса интерфейса dll не могут объявляться в интерфейсе dll  
-  
- Можно объявить целый класс или определенные элементы класса интерфейса не DLL, в интерфейсе DLL. Невозможно объявить класс с интерфейсом DLL и затем объявить член этого класса с интерфейсом DLL.
+
+«Идентификатор»: член класса интерфейса dll не могут объявляться в интерфейсе dll
+
+Можно объявить целый класс, или определенных членов класса интерфейса не библиотеки DLL, с помощью интерфейса DLL. Нельзя объявить класс с интерфейсом DLL, а затем объявить член этого класса с интерфейсом DLL.

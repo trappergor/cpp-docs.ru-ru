@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021139"
 ---
 # <a name="ccomcompositecontrol-class"></a>Класс CComCompositeControl
 
@@ -43,13 +43,13 @@ ms.locfileid: "43756578"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), как хорошо от любых других интерфейсов, которую требуется поддерживать для составного элемента управления.
 
 ## <a name="members"></a>Участники
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Параметры
 
-*bAdvise*  
+*bAdvise*<br/>
 Значение true, если все элементы управления, которому необходимо предоставить рекомендацию; в противном случае — false.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-S_OK  
-Все элементы управления в случае приемника карты были подключены или успешно отключен от их источника события.
-
-E_FAIL  
-Не все элементы управления в событии приемника карты может быть подключен или успешно отключен от их источника события.
-
-E_POINTER  
-Эта ошибка обычно указывает на проблему с записью в сопоставлении приемника событий элемента управления или неполадки аргумент шаблона, используемый в `IDispEventImpl` или `IDispEventSimpleImpl` базового класса.
-
-CONNECT_E_ADVISELIMIT  
-Точка подключения уже достигнут лимит подключений и не может принимать любое другое.
-
-CONNECT_E_CANNOTCONNECT  
-Приемник не поддерживает интерфейс, необходимый для этой точки подключения.
-
-CONNECT_E_NOCONNECTION  
-Значение файла cookie не представляет допустимое соединение. Эта ошибка обычно указывает на проблему с записью в сопоставлении приемника событий элемента управления или неполадки аргумент шаблона, используемый в `IDispEventImpl` или `IDispEventSimpleImpl` базового класса.
+|||
+|-|-|
+|S_OK  |Все элементы управления в случае приемника карты были подключены или успешно отключен от их источника события.|
+|E_FAIL  |Не все элементы управления в событии приемника карты может быть подключен или успешно отключен от их источника события.|
+|E_POINTER  |Эта ошибка обычно указывает на проблему с записью в сопоставлении приемника событий элемента управления или неполадки аргумент шаблона, используемый в `IDispEventImpl` или `IDispEventSimpleImpl` базового класса.|
+|CONNECT_E_ADVISELIMIT  |Точка подключения уже достигнут лимит подключений и не может принимать любое другое.|
+|CONNECT_E_CANNOTCONNECT  |Приемник не поддерживает интерфейс, необходимый для этой точки подключения.|
+|CONNECT_E_NOCONNECTION  |Значение файла cookie не представляет допустимое соединение. Эта ошибка обычно указывает на проблему с записью в сопоставлении приемника событий элемента управления или неполадки аргумент шаблона, используемый в `IDispEventImpl` или `IDispEventSimpleImpl` базового класса.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>Параметры
 
-*size*  
+*size*<br/>
 Ссылку на `SIZE` структура заполняется с помощью данного метода.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 Дескриптор родительского окна элемента управления.
 
-*rcPos*  
+*rcPos*<br/>
 Зарезервировано.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 Данные должны передаваться элементу управления во время создания элемента управления. Данные, передаваемые как *dwInitParam* будут отображаться как параметр LPARAM [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) сообщения, которое будет отправляться в составной элемент управления, он будет создан.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 Дескриптор родительского окна элемента управления.
 
-*rcPos*  
+*rcPos*<br/>
 Прямоугольник позиции составного элемента управления в клиенте координаты относительно *hWndParent*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -280,6 +271,6 @@ HRESULT SetBackgroundColorFromAmbient();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Основы составного элемента управления](../../atl/atl-composite-control-fundamentals.md)   
+[Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Основы составного элемента управления](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

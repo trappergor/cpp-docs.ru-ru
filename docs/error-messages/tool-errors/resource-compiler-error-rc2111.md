@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора ресурсов RC2111 | Документы Microsoft
+title: Ошибка компилятора ресурсов RC2111 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5c47c83c75a9bdb62bf0cb6594399e5a551bb76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8e0e0f153b5eed21f906dd228072a4239dec63e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076454"
 ---
 # <a name="resource-compiler-error-rc2111"></a>Ошибка компилятора ресурсов RC2111
-Недопустимый тип элемента управления  
-  
- Каждой инструкции УПРАВЛЕНИЯ **диалоговое ОКНО** инструкция должна быть одно из следующих: 3STATE AUTO3, автоматическая проверка, AUTORADIO, BEDIT, ФЛАЖОК, поле со СПИСКОМ, элемент УПРАВЛЕНИЯ, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, HEDIT, значок, IEDIT, LISTBOX, LTEXT, PUSHBOX, КНОПКИ, RADIOBUTTON, RTEXT, ПОЛОСЫ ПРОКРУТКИ, USERBUTTON.  
-  
- Убедитесь, что эти операторы УПРАВЛЕНИЯ написаны правильно.
+
+Недопустимый тип элемента управления
+
+Каждого оператора CONTROL в **диалоговое ОКНО** инструкция должна быть одно из следующих: 3STATE, AUTO3, автоматическая проверка, AUTORADIO, BEDIT, ФЛАЖОК, поле со СПИСКОМ, элемент УПРАВЛЕНИЯ, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, HEDIT, значок, IEDIT, LISTBOX, LTEXT, PUSHBOX, КНОПКА, ПЕРЕКЛЮЧАТЕЛЬ, RTEXT, ПОЛОСЫ ПРОКРУТКИ, USERBUTTON.
+
+Убедитесь, что эти операторы УПРАВЛЕНИЯ написаны правильно.

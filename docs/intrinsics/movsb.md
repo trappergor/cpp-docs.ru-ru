@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 34fedf8a30a5ed47837f593012e4cd836782bb66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541495"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720139"
 ---
 # <a name="movsb"></a>__movsb
 **Блок, относящийся только к системам Microsoft**  
@@ -41,14 +41,14 @@ void __movsb(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [выходной] `Destination`  
- Указатель на место назначения копирования.  
+*Назначение*<br/>
+[out] Указатель на место назначения копирования.  
   
- [in] `Source`  
- Указатель на источник копирования.  
+*Source*<br/>
+[in] Указатель на источник копирования.  
   
- [in] `Count`  
- Число байт для копирования.  
+*Количество*<br/>
+[in] Число байтов для копирования.  
   
 ## <a name="requirements"></a>Требования  
   

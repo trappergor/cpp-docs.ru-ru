@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63c3134dee6c316519dfcc34cff30b591b56460
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3edc24b2b8dc869022039d4aaaea73af06eac16b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092547"
 ---
 # <a name="using-abort"></a>Использование функции abort
-Вызов [прервать](../c-runtime-library/reference/abort.md) функции приводит к немедленному завершению. Выполняется обход нормального процесса удаления для инициализированных глобальных статических объектов. Также осуществляется обход всей специальной обработки, которая была задана с помощью функции `atexit`.  
-  
-## <a name="see-also"></a>См. также  
- [Дополнительные сведения о завершении](../cpp/additional-termination-considerations.md)
+
+Вызов [прервать](../c-runtime-library/reference/abort.md) функции приводит к немедленному завершению. Выполняется обход нормального процесса удаления для инициализированных глобальных статических объектов. Также осуществляется обход всей специальной обработки, которая была задана с помощью функции `atexit`.
+
+## <a name="see-also"></a>См. также
+
+[Дополнительные сведения о завершении](../cpp/additional-termination-considerations.md)

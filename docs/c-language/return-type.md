@@ -20,61 +20,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d90604ccaebab2d3ed7812835c711d4d56995a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f76c8c5db7771eff303b750e85e1264a06311da
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390191"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756260"
 ---
 # <a name="return-type"></a>Тип возвращаемого значения
 Тип возвращаемого значения функции задает размер и тип значения, возвращаемого функцией, и соответствует спецификатору типа в приведенном ниже синтаксисе.  
   
-## <a name="syntax"></a>Синтаксис  
- *function-definition*:  
- *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
+## <a name="syntax"></a>Синтаксис
+
+*function-definition*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
+
+/\* *attribute-seq* Поддерживается только компилятором Microsoft\*/
   
- /\* *attribute-seq* относится только к системам Microsoft */  
+*declaration-specifiers*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>  
   
- *declaration-specifiers*:  
- *storage-class-specifier declaration-specifiers* opt  
+*type-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int8** /\* Поддерживается только компилятором Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int16** /\* Поддерживается только компилятором Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int32** /\* Поддерживается только компилятором Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int64** /\* Поддерживается только компилятором Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
+
+Компонент *type-specifier* может задавать любой базовый тип, тип структуры или тип объединения. Если *type-specifier* не включен, предполагается тип возвращаемого значения `int`.  
   
- *type-specifier declaration-specifiers* opt  
+Тип возвращаемого значения, указанный в определении функции, должен соответствовать возвращаемому типу в объявлениях функций в любом другом месте программы. Функция возвращает значение при выполнении оператора `return`, содержащего выражение. Выражение вычисляется, преобразуется в тип возвращаемого значения (при необходимости) и осуществляется возврат в точку, где была вызвана функция. Если функция объявляется с типом возвращаемого значения `void`, оператор return, содержащий выражение, выдает предупреждение и выражение не вычисляется.  
   
- *type-qualifier declaration-specifiers* opt  
+В приведенных ниже примерах показываются возвращаемые значения функции.  
   
- *type-specifier*:  
- **void**  
-  
- **char**  
-  
- **short**  
-  
- **int**  
-  
- **long**  
-  
- **float**  
-  
- **double**  
-  
- **signed**  
-  
- **unsigned**  
-  
- *struct-or-union-specifier*  
-  
- *enum-specifier*  
-  
- *typedef-name*  
-  
- Компонент *type-specifier* может задавать любой базовый тип, тип структуры или тип объединения. Если *type-specifier* не включен, предполагается тип возвращаемого значения `int`.  
-  
- Тип возвращаемого значения, указанный в определении функции, должен соответствовать возвращаемому типу в объявлениях функций в любом другом месте программы. Функция возвращает значение при выполнении оператора `return`, содержащего выражение. Выражение вычисляется, преобразуется в тип возвращаемого значения (при необходимости) и осуществляется возврат в точку, где была вызвана функция. Если функция объявляется с типом возвращаемого значения `void`, оператор return, содержащий выражение, выдает предупреждение и выражение не вычисляется.  
-  
- В приведенных ниже примерах показываются возвращаемые значения функции.  
-  
-```  
+```C
 typedef struct    
 {  
     char name[20];  
@@ -90,12 +82,12 @@ STUDENT sortstu( STUDENT a, STUDENT b )
 }  
 ```  
   
- В этом примере определяются тип `STUDENT` с помощью объявления `typedef`, а также функция `sortstu`, чтобы иметь возвращаемый тип `STUDENT`. Функция выбирает и возвращает один из двух своих аргументов структуры. В последующих вызовах этой функции компилятор проверяет, что аргументы имеют тип `STUDENT`.  
+В этом примере определяются тип `STUDENT` с помощью объявления `typedef`, а также функция `sortstu`, чтобы иметь возвращаемый тип `STUDENT`. Функция выбирает и возвращает один из двух своих аргументов структуры. В последующих вызовах этой функции компилятор проверяет, что аргументы имеют тип `STUDENT`.  
   
 > [!NOTE]
->  Эффективность можно увеличить путем передачи указателей на конкретную структуру, а не на всю структуру.  
+> Эффективность можно увеличить путем передачи указателей на конкретную структуру, а не на всю структуру.  
   
-```  
+```C
 char *smallstr( char s1[], char s2[] )  
 {  
     int i;  
@@ -110,9 +102,9 @@ char *smallstr( char s1[], char s2[] )
 }  
 ```  
   
- В этом примере определяется функция, возвращающая указатель на массив символов. Функция принимает в качестве аргументов две строки (два массива) символов и возвращает указатель на более короткую из них. Указатель на массив указывает на первый из элементов массива и имеет его тип; таким образом, возвращаемый тип функции — указатель на тип `char`.  
+В этом примере определяется функция, возвращающая указатель на массив символов. Функция принимает в качестве аргументов две строки (два массива) символов и возвращает указатель на более короткую из них. Указатель на массив указывает на первый из элементов массива и имеет его тип; таким образом, возвращаемый тип функции — указатель на тип `char`.  
   
- Объявлять функции с возвращаемым типом `int` перед их вызовом не требуется, хотя рекомендуется использовать прототипы, чтобы для аргументов и возвращаемых значений включалась правильная проверка типа.  
+Объявлять функции с возвращаемым типом `int` перед их вызовом не требуется, хотя рекомендуется использовать прототипы, чтобы для аргументов и возвращаемых значений включалась правильная проверка типа.  
   
 ## <a name="see-also"></a>См. также  
- [Определения функций в C](../c-language/c-function-definitions.md)
+[Определения функций в C](../c-language/c-function-definitions.md)

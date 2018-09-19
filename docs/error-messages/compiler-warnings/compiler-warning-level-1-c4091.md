@@ -1,5 +1,5 @@
 ---
-title: Предупреждение компилятора (уровень 1) предупреждение C4091 | Документы Microsoft
+title: Предупреждение (уровень 1) C4091 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79a0a74ad2cf6471679fd776f296d465ee8dd29c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b8fd377ed8b1f6425f0a1c13a83531fca1b797f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276520"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114102"
 ---
-# <a name="compiler-warning-level-1-c4091"></a>Предупреждение компилятора (уровень 1) предупреждение C4091
-«Ключевое слово»: игнорируется слева от «тип», когда переменная не объявлена  
-  
- Компилятор обнаружил ситуацию, когда пользователь, вероятно, предназначен для объявления переменной, но компилятор не может объявить переменную.  
-  
-## <a name="example"></a>Пример  
- Объект `__declspec` атрибут в начале объявления пользовательского типа относится к переменной этого типа. C4091 указывает, что переменная не объявлена. Следующий пример приводит к возникновению ошибки C4091.  
-  
-```  
-// C4091.cpp  
-// compile with: /W1 /c  
-__declspec(dllimport) class X {}; // C4091  
-  
-// __declspec attribute applies to varX  
-__declspec(dllimport) class X2 {} varX;  
-  
-// __declspec attribute after the class or struct keyword   
-// applies to user defined type  
-class __declspec(dllimport) X3 {};  
-```  
-  
-## <a name="example"></a>Пример  
- Если идентификатор объявлен как typedef, он также не может быть имя переменной. Следующий пример приводит к возникновению ошибки C4091.  
-  
-```  
-// C4091_b.cpp  
-// compile with: /c /W1 /WX  
-#define LIST 4  
-typedef struct _LIST {} LIST;   // C4091  
+# <a name="compiler-warning-level-1-c4091"></a>Компилятор предупреждение (уровень 1) C4091
+
+«ключевое_слово»: игнорируется слева от «тип», когда переменная не объявлена
+
+Компилятор обнаружил ситуацию, когда пользователь, вероятно, предназначен для объявления переменной, когда компилятор не удается объявить переменную.
+
+## <a name="example"></a>Пример
+
+Объект `__declspec` атрибут в начале объявления пользовательского типа относится к переменной этого типа. C4091 указывает, что переменная не объявлена. Следующий пример приводит к возникновению ошибки C4091.
+
+```
+// C4091.cpp
+// compile with: /W1 /c
+__declspec(dllimport) class X {}; // C4091
+
+// __declspec attribute applies to varX
+__declspec(dllimport) class X2 {} varX;
+
+// __declspec attribute after the class or struct keyword
+// applies to user defined type
+class __declspec(dllimport) X3 {};
+```
+
+## <a name="example"></a>Пример
+
+Если идентификатор является определением типа, он также не может быть имя переменной. Следующий пример приводит к возникновению ошибки C4091.
+
+```
+// C4091_b.cpp
+// compile with: /c /W1 /WX
+#define LIST 4
+typedef struct _LIST {} LIST;   // C4091
 ```

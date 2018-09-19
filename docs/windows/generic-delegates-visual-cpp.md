@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9556aee6ef2d9d7cf10e0bb2bd24bdc61c9a0ecd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583477"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702537"
 ---
 # <a name="generic-delegates-visual-c"></a>Универсальные делегаты (Visual C++)
 
@@ -39,8 +39,8 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Параметры
 
-*атрибуты* (необязательно)  
-Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе "Атрибуты".
+*Атрибуты*  
+(Необязательно) Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе "Атрибуты".
 
 *Тип-параметр-идентификаторы*  
 Разделенный запятыми список идентификаторов параметров типа.
@@ -48,8 +48,8 @@ generic < [class | typename] type-parameter-identifiers>
 *Тип параметра — ограничения предложения*  
 Имеет формат, определенный в [ограничений для параметров универсального типа (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*модификаторы доступа* (необязательно)  
-Модификаторы доступа (например **открытый**, **частного**).
+*модификаторы доступа*  
+(Необязательно) Модификаторы доступа (например **открытый**, **частного**).
 
 *Тип результата*  
 Возвращаемый тип делегата.
@@ -57,8 +57,8 @@ generic < [class | typename] type-parameter-identifiers>
 *identifier*  
 Имя делегата.
 
-*формальные_параметры* (необязательно)  
-Список параметров делегата.
+*формальных параметров*  
+(Необязательно) Список параметров делегата.
 
 ## <a name="example"></a>Пример
 

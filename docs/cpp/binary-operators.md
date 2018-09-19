@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76250926ab89c14dfa26f0df3bb5571c1dae10
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6c5ad5997657ce9f8a61383a2cd7e685f0a28751
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036557"
 ---
 # <a name="binary-operators"></a>Бинарные операторы
 
@@ -80,4 +80,5 @@ ms.locfileid: "39408819"
 > Ограничений на типы возвращаемого значения бинарных операторов нет, однако большинство пользовательских бинарных операторов возвращает тип класса или ссылку на тип класса.
 
 ## <a name="see-also"></a>См. также
- [Перегрузка операторов](../cpp/operator-overloading.md)
+
+[Перегрузка операторов](../cpp/operator-overloading.md)

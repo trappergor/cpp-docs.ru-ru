@@ -27,14 +27,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2f3f4c32e2e87fdd905949ffd6cebac89a5023a
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b31a023e39241a5393fbb9f36177ca42f88fd57e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070903"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Класс ICommandPropertiesImpl
+
 Предоставляет реализацию [ICommandProperties](/previous-versions/windows/desktop/ms723044\(v=vs.85\)) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
@@ -46,14 +47,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *T*  
- Класс, производный от  
+
+*T*<br/>
+Класс, производный от  
   
- *PropClass*  
- Класс свойств.  
+*PropClass*<br/>
+Класс свойств.  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldb.h  
+
+**Заголовок:** atldb.h  
   
 ## <a name="members"></a>Участники  
   
@@ -65,9 +68,11 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 |[SetProperties](#setproperties)|Задает свойства в группе свойств набора строк.|  
   
 ## <a name="remarks"></a>Примечания  
- Это обязательно на команды. Реализация предоставляется с определением статическую функцию [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) макрос.  
+
+Это обязательно на команды. Реализация предоставляется с определением статическую функцию [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) макрос.  
 
 ## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
+
 Возвращает все наборы запрошенного свойства, с помощью команды сопоставление свойств.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -80,12 +85,15 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+
+См. в разделе [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
- См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
 ## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+
 Задает свойства для объекта команды.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -96,8 +104,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+
+См. в разделе [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\)) в *справочнике программиста OLE DB*.  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

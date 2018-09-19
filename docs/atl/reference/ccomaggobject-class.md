@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a85b840aba9d52600b3cf730eada0e8095eb98
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ffe21526dd106ad067c68da49d6b07bb9e50cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039833"
 ---
 # <a name="ccomaggobject-class"></a>Класс CComAggObject
 
@@ -41,14 +41,14 @@ ms.locfileid: "43756328"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class contained>  
-class CComAggObject : public IUnknown, 
+template<class contained>
+class CComAggObject : public IUnknown,
    public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*содержится*  
+*содержится*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также от любых других интерфейсов, которую требуется поддерживать на объекте.
 
 ## <a name="members"></a>Участники
@@ -119,7 +119,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Параметры
 
-*PV*  
+*PV*<br/>
 [in] Внешняя Неизвестная строка.
 
 ### <a name="remarks"></a>Примечания
@@ -152,7 +152,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Параметры
 
-*PP*  
+*PP*<br/>
 [out] Указатель на **CComAggObject\<**<em>содержится</em> **>** указатель. Если `CreateInstance` завершилась неудачно, *pp* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -195,7 +195,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Параметры
 
-*содержится*  
+*содержится*<br/>
 [in] Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также от любых других интерфейсов, которую требуется поддерживать на объекте.
 
 ### <a name="remarks"></a>Примечания
@@ -214,13 +214,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор запрашиваемого интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *iid*. Если объект не поддерживает этот интерфейс *ppvObject* имеет значение NULL.
 
-*PP*  
+*PP*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый по типу `Q`. Если объект не поддерживает этот интерфейс *pp* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -245,9 +245,9 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComObject](../../atl/reference/ccomobject-class.md)   
-[Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[Класс CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

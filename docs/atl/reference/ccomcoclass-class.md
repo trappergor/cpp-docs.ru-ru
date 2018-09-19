@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37df260d16c04210fb7e66c0ec9a747a3dad7da4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11c391e6ad467c835cd8c65ec872db74b85404a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097618"
 ---
 # <a name="ccomcoclass-class"></a>Класс CComCoClass
 
@@ -36,16 +36,16 @@ ms.locfileid: "43760166"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, const CLSID* pclsid = &CLSID_NULL>  
+template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `CComCoClass`.
 
-*pclsid*  
+*pclsid*<br/>
 Указатель на идентификатор CLSID объекта.
 
 ## <a name="members"></a>Участники
@@ -91,13 +91,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>Параметры
 
-*Q*  
+*Q*<br/>
 COM-интерфейс, который должен возвращаться через *pp*.
 
-*punkOuter*  
+*punkOuter*<br/>
 [in] Внешняя Неизвестная строка или управляющий unknown агрегатной функции.
 
-*PP*  
+*PP*<br/>
 [out] Адрес переменной указателя, получающей указатель запрошенный интерфейс в том случае, если успешно создана.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -166,24 +166,25 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszDesc*  
-[in] Строка, описывающая ошибку. Версия Юникода `Error` указывает, что *lpszDesc* имеет тип LPCOLESTR; версия ANSI указывает тип LPCSTR.  
-*IID*  
+*lpszDesc*<br/>
+[in] Строка, описывающая ошибку. Версия Юникода `Error` указывает, что *lpszDesc* имеет тип LPCOLESTR; версия ANSI указывает тип LPCSTR.
+
+*IID*<br/>
 [in] Идентификатор IID интерфейса, определяющего GUID_NULL (значение по умолчанию) или ошибка, если ошибки определяется операционной системой.
 
-*hRes*  
+*hRes*<br/>
 [in] Значение HRESULT, который вы хотите возвращается вызывающей стороне. Значение по умолчанию — 0. Дополнительные сведения о *hRes*, см. в разделе "Примечания".
 
-*nID*  
+*nID*<br/>
 [in] Идентификатор ресурса, где хранится строка описания ошибки. Это значение должно лежать между 0x0200 и 0xFFFF, включительно. В отладочных сборках **ASSERT** Если *nID* индекса не является допустимой строкой. Строка описания ошибки в сборках выпуска будет указано значение «Unknown Error».
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] Идентификатор контекста справки для ошибки.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] Путь и имя файла справки, описывающий ошибку.
 
-*hInst*  
+*hInst*<br/>
 [in] Дескриптор для ресурса. По умолчанию этот параметр является `_AtlModule::GetResourceInstance`, где `_AtlModule` — это глобальный экземпляр [CAtlModule](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Возвращаемое значение

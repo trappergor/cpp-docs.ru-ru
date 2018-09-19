@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3914 | Документы Microsoft
+title: Ошибка компилятора C3914 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3818c54f3720bdff92280e04a4750ed1b4f238c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bb10652a6328bb8ddcc3a8e62755a960a7fc850
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029420"
 ---
 # <a name="compiler-error-c3914"></a>Ошибка компилятора C3914
-свойство по умолчанию не может быть статическим  
-  
-Свойство по умолчанию был объявлен неправильно.  Дополнительные сведения см. в разделе [как: используйте свойства в C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
-  
-## <a name="example"></a>Пример  
-Следующий пример приводит к возникновению ошибки C3914 и приводятся сведения по ее устранению.  
-  
-```  
-// C3914.cpp  
-// compile with: /clr /c  
-ref struct X {  
-   static property int default[int] {   // C3914  
-   // try the following line instead  
-   // property int default[int] {  
-      int get(int) { return 0; }  
-      void set(int, int) {}  
-   }  
-};  
+
+свойство по умолчанию не может быть статическим
+
+Свойство по умолчанию был объявлен неправильно.  Дополнительные сведения см. в разделе [как: используйте свойства в C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+
+## <a name="example"></a>Пример
+
+В следующем примере возникает ошибка C3914 и показано, как ее исправить.
+
+```
+// C3914.cpp
+// compile with: /clr /c
+ref struct X {
+   static property int default[int] {   // C3914
+   // try the following line instead
+   // property int default[int] {
+      int get(int) { return 0; }
+      void set(int, int) {}
+   }
+};
 ```

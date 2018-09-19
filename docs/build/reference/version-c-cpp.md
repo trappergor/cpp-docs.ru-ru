@@ -1,5 +1,5 @@
 ---
-title: ВЕРСИЯ (C/C++) | Документы Microsoft
+title: ВЕРСИЯ (C/C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcaf4e113af6182a2d3d735e4c668b62336e2c79
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7330d979e841d952f7e800e52ae762256ede6808
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375026"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718306"
 ---
 # <a name="version-cc"></a>VERSION (C/C++)
-Указывает ССЫЛКУ, чтобы поместить число в заголовке файла .exe или DLL.  
-  
-```  
-VERSION major[.minor]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- *Основных* и *дополнительный* аргументами являются десятичные числа в диапазоне от 0 до 65 535. Значение по умолчанию используется версия 0.0.  
-  
- Можно указать номер версии — с [сведения о версии](../../build/reference/version-version-information.md) (или версия) параметра.  
-  
-## <a name="see-also"></a>См. также  
- [Правила для операторов определения модуля](../../build/reference/rules-for-module-definition-statements.md)
+
+Указывает ССЫЛКУ, чтобы поместить номер в заголовке файла .exe или DLL.
+
+```
+VERSION major[.minor]
+```
+
+## <a name="remarks"></a>Примечания
+
+*Основных* и *незначительные* аргументами являются десятичные числа в диапазоне от 0 до 65 535. По умолчанию используется версия 0.0.
+
+Эквивалентный способ указать номер версии — с помощью [сведения о версии](../../build/reference/version-version-information.md) (/ версии) параметр.
+
+## <a name="see-also"></a>См. также
+
+[Правила для операторов определения модуля](../../build/reference/rules-for-module-definition-statements.md)

@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1152 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1152 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b15185977dfdaa6c6cad154889e95f59ab27c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22276d0b3189f93f57f8337b22b5d6070cd3db0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034477"
 ---
 # <a name="linker-tools-error-lnk1152"></a>Ошибка средств компоновщика LNK1152
-не удается разрешить один или более упрощенных имен  
-  
- Перед этой ошибкой возникает предупреждение [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) для каждого упрощенного символа, который не удалось разрешить и по крайней мере два предупреждения [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) для повторяющихся символов, найденных для упрощенного символа.
+
+не удается разрешить один или более упрощенных
+
+Перед этой ошибкой возникает предупреждение [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) для каждого упрощенного символа, который не удалось разрешить и по крайней мере два предупреждения [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) для повторяющихся символов, найденных для упрощенного символа.

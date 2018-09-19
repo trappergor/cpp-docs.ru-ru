@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1943895b8db663239ed1bfb27b8e97fc3c416e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1173633cd720ed6ee0e4aacdf75a8b305fdbfe4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043369"
 ---
 # <a name="celementtraitsbase-class"></a>Класс CElementTraitsBase
 
@@ -35,13 +35,13 @@ ms.locfileid: "43767910"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraitsBase
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип данных, хранимых в коллекции.
 
 ## <a name="members"></a>Участники
@@ -83,13 +83,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>Параметры
 
-*pDest*  
+*pDest*<br/>
 Указатель на первый элемент, который будет отправляться скопированные данные.
 
-*pSrc*  
+*pSrc*<br/>
 Указатель на первый элемент, для копирования.
 
-*nElements*  
+*nElements*<br/>
 Число элементов для копирования.
 
 ### <a name="remarks"></a>Примечания
@@ -125,13 +125,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>Параметры
 
-*pDest*  
+*pDest*<br/>
 Указатель на первый элемент, который будет получать перемещенные данные.
 
-*pSrc*  
+*pSrc*<br/>
 Указатель на первый элемент, чтобы переместить.
 
-*nElements*  
+*nElements*<br/>
 Число элементов для перемещения.
 
 ### <a name="remarks"></a>Примечания

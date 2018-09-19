@@ -17,33 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de433a1eccab3b58858aaf5fd3aa9ddb04d0cc1c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c7a2831251d00f0dc24b1cfab7beeecaff100962
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092294"
 ---
 # <a name="noinline"></a>noinline
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
- **__declspec(noinline)** указывает компилятору не функция-член (функция в классе).  
-  
- Запрещать использовать функцию как встроенную имеет смысл, если она небольшая и не оказывает критического влияния на производительность кода. То есть, если функция небольшая и вряд ли будет вызываться часто (например, функция, которая обрабатывает условие ошибки).  
-  
- Имейте в виду, что если функция отмечена **noinline**, вызывающая функция будет уменьшается и она сама является кандидатом для встраивания компилятором.  
-  
-```cpp 
-class X {  
-   __declspec(noinline) int mbrfunc() {  
-      return 0;   
-   }   // will not inline  
-};  
-```  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [__declspec](../cpp/declspec.md)   
- [Ключевые слова](../cpp/keywords-cpp.md)   
- [inline, __inline, \__forceinline](inline-functions-cpp.md)
+
+## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
+
+**__declspec(noinline)** указывает компилятору не функция-член (функция в классе).
+
+Запрещать использовать функцию как встроенную имеет смысл, если она небольшая и не оказывает критического влияния на производительность кода. То есть, если функция небольшая и вряд ли будет вызываться часто (например, функция, которая обрабатывает условие ошибки).
+
+Имейте в виду, что если функция отмечена **noinline**, вызывающая функция будет уменьшается и она сама является кандидатом для встраивания компилятором.
+
+```cpp
+class X {
+   __declspec(noinline) int mbrfunc() {
+      return 0;
+   }   // will not inline
+};
+```
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[__declspec](../cpp/declspec.md)<br/>
+[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[inline, __inline, \__forceinline](inline-functions-cpp.md)
 

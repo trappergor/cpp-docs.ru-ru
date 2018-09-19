@@ -1,7 +1,7 @@
 ---
 title: Класс COleCmdUI | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b057620e0ea348559b9c37f55ba7658b7f5270c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4ece2d45bdce490d09c7195deec380728d79392d
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851487"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535248"
 ---
 # <a name="colecmdui-class"></a>Класс COleCmdUI
 Реализует метод для MFC, позволяющий обновлять состояние объектов ИП, связанных с зависимыми от `IOleCommandTarget`функциями вашего приложения.  
@@ -44,13 +44,13 @@ class COleCmdUI : public CCmdUI
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleCmdUI::COleCmdUI](#colecmdui)|Создает объект `COleCmdUI`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleCmdUI::Enable](#enable)|Устанавливает или снимает флаг команды enable.|  
 |[COleCmdUI::SetCheck](#setcheck)|Задает состояние включения/выключения переключателя команды.|  
@@ -61,7 +61,7 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI` позволяет DocObject для получения команд, поступающих в пользовательском интерфейсе контейнера (например, FileNew, открыть, печать и т. д.), а контейнер для получения команд, поступающих в пользовательском интерфейсе DocObject. Несмотря на то что `IDispatch` может использоваться для отправки те же команды `IOleCommandTarget` предоставляет простой способ запроса и выполнить, так как он использует стандартный набор команд, обычно без аргументов, и сведения о типе не участвует. `COleCmdUI` можно использовать для включения, обновления и задать другие свойства DocObject команд пользовательского интерфейса. Если вы хотите вызвать команду, вызовите [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
- Дополнительные сведения о DocObjects см. в разделе [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) и [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). Также см. в разделе [Internet первые шаги: активные документы](../../mfc/active-documents-on-the-internet.md) и [активные документы](../../mfc/active-documents-on-the-internet.md).  
+ Дополнительные сведения о DocObjects см. в разделе [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) и [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CCmdUI](../../mfc/reference/ccmdui-class.md)  
@@ -116,7 +116,7 @@ virtual void SetCheck(int nCheck);
  *Проверьте*  
  Значение, определяющее состояние требуется установить переключатель включить или выключить команды. Доступны следующие значения:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Задает команду включено.|  
 |**2**|Задает команду, чтобы определено; не удается определить состояние, так как атрибут этой команды выполняется как и отключение состояний в подходящий вариант выбора.|  

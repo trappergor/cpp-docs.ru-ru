@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2465 | Документы Microsoft
+title: Ошибка компилятора C2465 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5318fd04a79de7e49a3218dbbef6100c4fbe3dba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f27ea349e4955bc78b2115d3de4622a09290eb22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240809"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060555"
 ---
 # <a name="compiler-error-c2465"></a>Ошибка компилятора C2465
-Невозможно определить анонимный тип в пределах круглых скобок  
-  
- Анонимная структура, объединение или перечисляемый тип определен в скобках. Это недопустимо на C++, так как такое определение не имеет смысла в области функции.
+
+Невозможно определить анонимный тип в пределах круглых скобок
+
+Анонимная структура, объединение или перечисляемый тип определен в скобках. Это недопустимо на C++, так как такое определение не имеет смысла в области функции.

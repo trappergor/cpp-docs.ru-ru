@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b0b63f4054459b7d8b3c8aae45cf583f635cd95
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49e364e2676242ad75f185792faa545bbb90ef1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071215"
 ---
 # <a name="ca2aex-class"></a>Класс CA2AEX
 
@@ -43,7 +43,7 @@ class CA2AEX
 
 #### <a name="parameters"></a>Параметры
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Размер буфера, используемого в процессе перевода. Длина по умолчанию равен 128 байтам.
 
 ## <a name="members"></a>Участники
@@ -109,10 +109,10 @@ CA2AEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Текстовая строка для преобразования.
 
-*nCodePage*  
+*nCodePage*<br/>
 Не используется в этом классе.
 
 ### <a name="remarks"></a>Примечания
@@ -161,9 +161,9 @@ operator LPSTR() const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CA2CAEX](../../atl/reference/ca2caex-class.md)   
-[Класс CA2WEX](../../atl/reference/ca2wex-class.md)   
-[Класс CW2AEX](../../atl/reference/cw2aex-class.md)   
-[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)   
-[Класс CW2WEX](../../atl/reference/cw2wex-class.md)   
+[Класс CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
+[Класс CA2WEX](../../atl/reference/ca2wex-class.md)<br/>
+[Класс CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
+[Класс CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

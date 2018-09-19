@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2094 | Документы Microsoft
+title: Ошибка компилятора C2094 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4db86a805118cbdbf74f21737b4a331fc59237c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e3591fef423bc24562a2f2edf18f7f2774cfcc4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167324"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073529"
 ---
 # <a name="compiler-error-c2094"></a>Ошибка компилятора C2094
-метка "идентификатор" не определена  
-  
-Метка, используемая оператором [goto](../../cpp/goto-statement-cpp.md) , не существует в функции.  
-  
-## <a name="example"></a>Пример  
-Следующий пример приводит к возникновению ошибки C2094:  
-  
-```cpp  
-// C2094.c  
-int main() {  
-   goto test;  
-}   // C2094  
-```  
-  
- Возможное решение  
-  
-```cpp  
-// C2094b.c  
-int main() {  
-   goto test;  
-   test:   
-   {  
-   }  
-}  
+
+метка "идентификатор" не определена
+
+Метка, используемая оператором [goto](../../cpp/goto-statement-cpp.md) , не существует в функции.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2094:
+
+```cpp
+// C2094.c
+int main() {
+   goto test;
+}   // C2094
+```
+
+Возможное решение
+
+```cpp
+// C2094b.c
+int main() {
+   goto test;
+   test:
+   {
+   }
+}
 ```

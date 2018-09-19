@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5136826b62fb5c0e6b8e7affd06be3aa81c03d6
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e946406a708f26685d6f1b7307476b6253c5362e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572421"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713297"
 ---
 # <a name="eh-exception-handling-model"></a>Параметр /EH (модель обработки исключений)
 
@@ -117,8 +117,8 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)  
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)  
-[Обработка ошибок и исключений](../../cpp/errors-and-exception-handling-modern-cpp.md)  
-[Спецификации исключений (throw)](../../cpp/exception-specifications-throw-cpp.md)  
-[Структурированная обработка исключений (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)  
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
+[Обработка ошибок и исключений](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Спецификации исключений (throw)](../../cpp/exception-specifications-throw-cpp.md)
+[структурированная обработка исключений (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

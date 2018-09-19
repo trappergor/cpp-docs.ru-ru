@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761356"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036180"
 ---
 # <a name="ccomcontrol-class"></a>Класс CComControl
 
@@ -46,17 +46,17 @@ ms.locfileid: "43761356"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Класс, реализация элемента управления.
 
-*WinBase*  
+*WinBase*<br/>
 Базовый класс, реализующий функции управления окнами. По умолчанию используется [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
 ## <a name="members"></a>Участники
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID запрашиваемого интерфейса.
 
-*ppv*  
+*ppv*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *iid*, или значение NULL, если интерфейс не найден.
 
 ### <a name="remarks"></a>Примечания
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Дескриптор окна родительского или владельца. Необходимо указать действительный дескриптор окна. Окно управления сводится к области его родительского окна.
 
-*rcPos*  
+*rcPos*<br/>
 [in] Первоначальный размер и положение окна должен быть создан.
 
 ### <a name="remarks"></a>Примечания
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>Параметры
 
-*dispID*  
+*dispID*<br/>
 [in] Идентификатор измененного свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>Параметры
 
-*dispID*  
+*dispID*<br/>
 [in] Идентификатор свойства изменением.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -203,7 +203,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="remarks"></a>Примечания
 
-Если класса элемента управления является производным от [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), этот метод вызывает метод [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного как изменить свойства элемента управления. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK.  
+Если класса элемента управления является производным от [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), этот метод вызывает метод [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного как изменить свойства элемента управления. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK.
 
 Этот метод можно вызвать, даже если элемент управления не поддерживает точки подключения.
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszText*  
+*lpszText*<br/>
 Текст, отображаемый в окне сообщения.
 
-*lpszCaption*  
+*lpszCaption*<br/>
 Заголовок диалогового окна. Если значение NULL (по умолчанию), заголовок, используемый «Error».
 
-*nType*  
+*nType*<br/>
 Указывает содержимое и поведение диалогового окна. См. в разделе [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) запись в документации по Windows SDK для получения списка доступных полей другое сообщение. Значение по умолчанию предоставляет простой **ОК** кнопки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -243,7 +243,7 @@ int MessageBox(
 
 ## <a name="see-also"></a>См. также
 
-[Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[Класс CComControlBase](../../atl/reference/ccomcontrolbase-class.md)   
+[Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Класс CComControlBase](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [Класс CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0934a3c6690b75ffa2eca18f1fd38662bc2a9fd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e747386c37e760793ceaa0396f217304cbe621d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756994"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022686"
 ---
 # <a name="ccomautothreadmodule-class"></a>Класс CComAutoThreadModule
 
@@ -44,13 +44,13 @@ ms.locfileid: "43756994"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class ThreadAllocator = CComSimpleThreadAllocator>  
+template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
 #### <a name="parameters"></a>Параметры
 
-`ThreadAllocator`  
+*ThreadAllocator*<br/>
 [in] Класс управления выбора потоков. Значение по умолчанию — [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
 ## <a name="members"></a>Участники
@@ -122,13 +122,13 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Параметры
 
-*pfnCreateInstance*  
+*pfnCreateInstance*<br/>
 [in] Указатель на функцию создателя.
 
-*riid*  
+*riid*<br/>
 [in] Идентификатор IID запрошенного интерфейса.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppvObj* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -181,16 +181,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 [in] Указатель на массив элементов объекта map.
 
-*h*  
+*h*<br/>
 [in] Передаваемый объект HINSTANCE `DLLMain` или `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Указатель на идентификатор LIBID библиотеки типов, связанных с проектом.
 
-*nThreads*  
+*nThreads*<br/>
 [in] Число потоков должен быть создан. По умолчанию *nThreads* является значение, возвращенное [GetDefaultThreads](#getdefaultthreads).
 
 ### <a name="remarks"></a>Примечания
@@ -269,5 +269,5 @@ LONG Unlock();
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Модульные классы](../../atl/atl-module-classes.md)

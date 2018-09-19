@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758135"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033957"
 ---
 # <a name="ccomgitptr-class"></a>Класс CComGITPtr
 
@@ -38,13 +38,13 @@ ms.locfileid: "43758135"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>Параметры
 
-`T`  
+*T*<br/>
 Тип указателя интерфейса для сохранения в GIT.
 
 ## <a name="members"></a>Участники
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на интерфейс, добавляемых к GIT.
 
-*dwCookie*  
+*dwCookie*<br/>
 Файл cookie, используемый для идентификации указатель интерфейса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *p*  
-Указатель интерфейса, для сохранения в глобальной таблицы интерфейсов (GIT).
+*p*<br/>
+[in] Указатель интерфейса, для сохранения в глобальной таблицы интерфейсов (GIT).
 
-[in] *git*  
-Ссылка на существующий `CComGITPtr` объекта.
+*Git*<br/>
+[in] Ссылка на существующий `CComGITPtr` объекта.
 
-[in] *dwCookie*  
-Файл cookie, используемый для идентификации указатель интерфейса.
+*dwCookie*<br/>
+[in] Файл cookie, используемый для идентификации указатель интерфейса.
 
-[in] *rv*  
-Источник `CComGITPtr` объект для перемещения данных.
+*rv*<br/>
+[in] Источник `CComGITPtr` объект для перемещения данных.
 
 ### <a name="remarks"></a>Примечания
 
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*PP*  
+*PP*<br/>
 Указатель, который должен получать интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *p*  
-Указатель на интерфейс.
+*p*<br/>
+[in] Указатель на интерфейс.
 
-[in] *git*  
-Ссылка на объект `CComGITPtr`.
+*Git*<br/>
+[in] Ссылку на `CComGITPtr` объекта.
 
-[in] *dwCookie*  
-Файл cookie, используемый для идентификации указатель интерфейса.
+*dwCookie*<br/>
+[in] Файл cookie, используемый для идентификации указатель интерфейса.
 
-[in] *rv*  
-`CComGITPtr` Для перемещения данных из.
+*rv*<br/>
+[in] `CComGITPtr` Для перемещения данных из.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -262,7 +262,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 Возвращает файл cookie, связанный с `CComGITPtr` объекта.
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ HRESULT Revoke() throw();
 
 ## <a name="see-also"></a>См. также
 
-[Упаковщик в режиме свободного](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[Доступ к интерфейсам между подразделениями](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[Когда следует использовать глобальной таблицы интерфейсов](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[Упаковщик в режиме свободного](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[Доступ к интерфейсам между подразделениями](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[Когда следует использовать глобальной таблицы интерфейсов](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

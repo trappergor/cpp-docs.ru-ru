@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3116 | Документы Microsoft
+title: Ошибка компилятора C3116 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fde589df31e6e3b75f9a0153d7383ab1e85ed180
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1104b731fa565991615eb88cc34fa946e2bfb505
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250347"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077854"
 ---
 # <a name="compiler-error-c3116"></a>Ошибка компилятора C3116
-«спецификатор»: недопустимый класс хранения для метода интерфейса  
-  
- Вы использовали `typedef`, `register`, или `static` как класс хранения для метода интерфейса. Эти классы хранения не допускаются для членов интерфейса.  
-  
- Следующий пример приводит к возникновению ошибки C3116:  
-  
-```  
-// C3116.cpp  
-__interface ImyInterface  
-{  
-   static void myFunc();   // C3116  
-};  
+
+«спецификатор хранения»: недопустимый класс хранения для метода интерфейса
+
+Вы использовали `typedef`, `register`, или `static` как класс хранения для метода интерфейса. Эти классы хранения не разрешены для членов интерфейса.
+
+Следующий пример приводит к возникновению ошибки C3116:
+
+```
+// C3116.cpp
+__interface ImyInterface
+{
+   static void myFunc();   // C3116
+};
 ```

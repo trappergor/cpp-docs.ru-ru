@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2181 | Документы Microsoft
+title: Ошибка компилятора C2181 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f655c4807d86b5325aaab1807558750527535201
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d449bb011b63034df49fe4e3d13b373e0ca2c827
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062284"
 ---
 # <a name="compiler-error-c2181"></a>Ошибка компилятора C2181
-недопустимый else без парного if  
-  
- Каждое ключевое слово `else` должно иметь соответствующее ключевое слово `if`.  
-  
- Следующий пример приводит к возникновению ошибки C2181:  
-  
-```  
-// C2181.cpp  
-int main() {  
-   int i = 0;  
-   else   // C2181  
-      i = 1;  
-}  
-```  
-  
- Возможное решение  
-  
-```  
-// C2181b.cpp  
-int main() {  
-   int i = 0;  
-   if(i)  
-      i = 0;  
-   else  
-      i = 1;  
-}  
+
+недопустимый else без парного if
+
+Каждое ключевое слово `else` должно иметь соответствующее ключевое слово `if`.
+
+Следующий пример приводит к возникновению ошибки C2181:
+
+```
+// C2181.cpp
+int main() {
+   int i = 0;
+   else   // C2181
+      i = 1;
+}
+```
+
+Возможное решение
+
+```
+// C2181b.cpp
+int main() {
+   int i = 0;
+   if(i)
+      i = 0;
+   else
+      i = 1;
+}
 ```

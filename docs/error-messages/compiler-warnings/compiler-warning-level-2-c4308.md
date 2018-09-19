@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 2) C4308 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 2) C4308 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3daff15f8e6eee179f04fd466f3595af1154e035
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddb57d4d603be3182be8a77dc020ce0e0a673115
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039638"
 ---
 # <a name="compiler-warning-level-2-c4308"></a>Предупреждение компилятора (уровень 2) C4308
-Отрицательная целая константа преобразована в тип без знака  
-  
- Выражение константы отрицательное целое число преобразуется в тип без знака. Результат выражения, возможно, не имеющие значения.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// C4308.cpp  
-// compile with: /W2  
-unsigned int u = (-5 + 3U);   // C4308  
-  
-int main()  
-{  
-}  
+
+Отрицательная целая константа преобразована к беззнаковому типу
+
+Выражение константы отрицательное целое число преобразуется в тип без знака. Результат выражения имеет вероятно смысла.
+
+## <a name="example"></a>Пример
+
+```
+// C4308.cpp
+// compile with: /W2
+unsigned int u = (-5 + 3U);   // C4308
+
+int main()
+{
+}
 ```

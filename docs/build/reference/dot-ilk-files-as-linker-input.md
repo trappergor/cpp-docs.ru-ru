@@ -1,5 +1,5 @@
 ---
-title: . Компоновщик-ввод ILK-файлы | Документы Microsoft
+title: . ILK-файлы в качестве входных данных компоновщика | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fea585b86114373017b6d73948cb1438b7185e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3b8de3758daf59a543cdcc9f3b73e1d6c6f0ce8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371688"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720594"
 ---
 # <a name="ilk-files-as-linker-input"></a>ILK-файлы в качестве входных файлов компоновщика
-При связывании постепенно, LINK обновляет состояние ILK-файл, созданный во время первого инкрементной компоновки. Этот файл имеет такое же базовое имя файла .exe или DLL-файл, и имеет расширение .ilk. При выполнении последующих LINK обновляет ILK-файл. Если отсутствует ILK-файл, LINK выполняет полною компоновку и создает новый ILK-файл. Если ILK-файл не может использоваться, LINK выполняет компоновку недобавочная. Дополнительные сведения об инкрементной компоновке см. в разделе [постепенно связи (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) параметр.  
-  
-## <a name="see-also"></a>См. также  
- [Входные LINK-файлы](../../build/reference/link-input-files.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+При связывании постепенно, ссылка обновляет состояние ILK-файл, созданный им во время первого инкрементной компоновки. Этот файл имеет такое же базовое имя файла .exe или DLL-файл, и имеет расширение .ilk. Во время последовательных инкрементных компоновок обновление ссылки в ILK-файл. Если отсутствует ILK-файл, ссылка выполняет полную компоновку и создает новый ILK-файл. Если в ILK-файл не работает, LINK выполняет недобавочная компоновку. Дополнительные сведения о инкрементную компоновку, см. в разделе [инкрементная компоновка (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) параметр.
+
+## <a name="see-also"></a>См. также
+
+[Входные LINK-файлы](../../build/reference/link-input-files.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

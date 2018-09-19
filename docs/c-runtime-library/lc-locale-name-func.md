@@ -27,38 +27,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a88a518483e9ea668b98b054453e7f449e99048b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb94b73bf3f32c61fae37f7d3c9b9c51d012bfb6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390623"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087920"
 ---
 # <a name="lclocalenamefunc"></a>___lc_locale_name_func
-Внутренняя функция CRT. Получает имя текущего языкового стандарта потока.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-wchar_t** ___lc_locale_name_func(void);  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Указатель на строку, которая содержит имя текущего языкового стандарта потока.  
-  
-## <a name="remarks"></a>Примечания  
- `___lc_locale_name_func` — это внутренняя функция CRT, которая используется другими функциями CRT для получения текущего языкового стандарта из локального хранилища потока для данных CRT. Эти сведения можно также получить с помощью функции [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) или функций [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
-  
- Внутренние функции CRT связаны с конкретной реализацией и подлежат изменению в каждом выпуске. Мы не рекомендуем использовать их в коде.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`___lc_locale_name_func`|crt\src\setlocal.h|  
-  
-## <a name="see-also"></a>См. также  
- [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)   
- [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale](../c-runtime-library/reference/free-locale.md)
+
+Внутренняя функция CRT. Получает имя текущего языкового стандарта потока.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+wchar_t** ___lc_locale_name_func(void);
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Указатель на строку, которая содержит имя текущего языкового стандарта потока.
+
+## <a name="remarks"></a>Примечания
+
+`___lc_locale_name_func` — это внутренняя функция CRT, которая используется другими функциями CRT для получения текущего языкового стандарта из локального хранилища потока для данных CRT. Эти сведения можно также получить с помощью функции [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) или функций [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
+
+Внутренние функции CRT связаны с конкретной реализацией и подлежат изменению в каждом выпуске. Мы не рекомендуем использовать их в коде.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|`___lc_locale_name_func`|crt\src\setlocal.h|
+
+## <a name="see-also"></a>См. также
+
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[_free_locale](../c-runtime-library/reference/free-locale.md)

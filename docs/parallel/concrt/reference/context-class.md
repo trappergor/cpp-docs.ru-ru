@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a4a62f6e569e123b9612e922e2d7c70787371afc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541872"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136183"
 ---
 # <a name="context-class"></a>Класс Context
 Представляет абстракцию для контекста выполнения.  
@@ -50,13 +50,13 @@ class Context;
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[~ Деструктор контекста](#dtor)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Block](#block)|Блокирует текущий контекст.|  
 |[CurrentContext](#currentcontext)|Возвращает указатель на текущий контекст.|  
@@ -210,8 +210,8 @@ void operator delete(void* _PObject);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_PObject`  
- Указатель на объект для удаления.  
+*_PObject*<br/>
+Указатель на объект для удаления.  
   
 ##  <a name="oversubscribe"></a> Превысить предел подписок 
 
@@ -222,8 +222,8 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_BeginOversubscription`  
- Если `true`, указывает на то что дополнительный виртуальный процессор должны быть добавлены в течение превышения лимита подписки. Если `false`, указывает на то что должен заканчиваться на превышение лимита подписки, и должны быть удалены ранее добавленный виртуальный процессор.  
+*_BeginOversubscription*<br/>
+Если `true`, указывает на то что дополнительный виртуальный процессор должны быть добавлены в течение превышения лимита подписки. Если `false`, указывает на то что должен заканчиваться на превышение лимита подписки, и должны быть удалены ранее добавленный виртуальный процессор.  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 

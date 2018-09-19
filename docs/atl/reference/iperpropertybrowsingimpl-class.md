@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b35d851858eaab5ba0df471cc2d0bd30f19bc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8fc5cc44eeb06c5afec23b6a0a094c14987c599
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096097"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>Класс IPerPropertyBrowsingImpl
 
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IPerPropertyBrowsingImpl`.
 
 ## <a name="members"></a>Участники
@@ -153,6 +153,6 @@ ATL использует сопоставление свойств объект�
 
 ## <a name="see-also"></a>См. также
 
-[Класс IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)   
-[Класс ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[Класс IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)<br/>
+[Класс ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

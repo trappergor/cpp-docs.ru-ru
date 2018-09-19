@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d7b8ee240b94fe6a9b05d5c06c960ab8857ed6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093445"
 ---
 # <a name="catlmodule-class"></a>Класс CAtlModule
 
@@ -106,7 +106,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="parameters"></a>Параметры
 
-*pRegistrar*  
+*pRegistrar*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -129,10 +129,10 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pFunc*  
+*pFunc*<br/>
 Указатель на функцию, чтобы добавить.
 
-*dw*  
+*dw*<br/>
 Определяемые пользователем данные, передаваемые функции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -173,7 +173,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*ppGIT*  
+*ppGIT*<br/>
 Указатель на переменную, которая получит указатель на общая таблица интерфейса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -270,16 +270,16 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRes*  
+*lpszRes*<br/>
 Имя ресурса.
 
-*nResID*  
+*nResID*<br/>
 Идентификатор ресурса.
 
-*bЗарегистрируйтесь участия*  
+*bЗарегистрируйтесь участия*<br/>
 Значение TRUE, если объект должен быть зарегистрирован; Значение FALSE в противном случае.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Указатель на карте замены хранения значений, связанных с подстановочных параметров сценария. ATL автоматически использует модуль %. Чтобы использовать дополнительные подстановочные параметры, см. в разделе [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). В противном случае используйте значение по умолчанию NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -307,13 +307,13 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRes*  
+*lpszRes*<br/>
 Имя ресурса.
 
-*bЗарегистрируйтесь участия*  
+*bЗарегистрируйтесь участия*<br/>
 Указывает, является ли объект должен быть зарегистрирован.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Указатель на карте замены хранения значений, связанных с подстановочных параметров сценария. ATL автоматически использует модуль %. Чтобы использовать дополнительные подстановочные параметры, см. в разделе [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). В противном случае используйте значение по умолчанию NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -342,16 +342,16 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Параметры
 
-*nResID*  
+*nResID*<br/>
 Идентификатор ресурса.
 
-*lpszRes*  
+*lpszRes*<br/>
 Имя ресурса.
 
-*bЗарегистрируйтесь участия*  
+*bЗарегистрируйтесь участия*<br/>
 Указывает, является ли файл скрипта ресурсов должен быть зарегистрирован.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Указатель на карте замены хранения значений, связанных с подстановочных параметров сценария. ATL автоматически использует модуль %. Чтобы использовать дополнительные подстановочные параметры, см. в разделе [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). В противном случае используйте значение по умолчанию NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -364,7 +364,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ## <a name="see-also"></a>См. также
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[Модульные классы](../../atl/atl-module-classes.md)   
+[_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Модульные классы](../../atl/atl-module-classes.md)<br/>
 [Компонент реестра (регистратор)](../../atl/atl-registry-component-registrar.md)  

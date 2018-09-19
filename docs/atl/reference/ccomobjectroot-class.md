@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d30c1af67159c04546076a07c78fbaec9cbb91
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2647ea3ac46ec3783f584de996c3d988c168980d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762323"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054867"
 ---
 # <a name="ccomobjectroot-class"></a>Класс CComObjectRoot
 
@@ -46,8 +46,8 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Класс CComObject](../../atl/reference/ccomobject-class.md)   
-[Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
+[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Класс CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

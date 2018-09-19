@@ -1,7 +1,7 @@
 ---
-title: Интернет-классы Win32 | Документы Microsoft
+title: Классы Win32 в Интернете | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,42 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1fa996ad36970faa97c9c6d248060a8121680a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1e93c2c3ea9efeb8be6ec5d79b9f2ef7729b9e9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383228"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534941"
 ---
 # <a name="win32-internet-classes"></a>Классы Win32 для работы в Интернете
-MFC создает оболочку для Win32 Internet (WinInet) и технология ActiveX для упрощения процесса программирования Интернета.  
+MFC создает оболочку для Win32 Internet (WinInet) и технология ActiveX упрощает программирование для Интернета.
+
+>[!IMPORTANT]
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
+  
   
  [CInternetSession](../mfc/reference/cinternetsession-class.md)  
- Создает и инициализирует один сеанс Интернета или несколько параллельных сеансов Интернета и, при необходимости, описывает подключение к прокси-сервер.  
+ Создает и инициализирует один сеанс Интернет или несколько параллельных сеансов Интернета и, при необходимости, описывает подключение к прокси-сервер.  
   
  [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
  Управление подключением к интернет-серверу.  
   
- [Классе CInternetFile](../mfc/reference/cinternetfile-class.md)  
- Этот класс и его производные классы позволяют получить доступ к файлам на удаленных компьютерах, использующих протоколы Интернета.  
+ [CInternetFile](../mfc/reference/cinternetfile-class.md)  
+ Этот класс и его производные классы обеспечивают доступ к файлам на удаленных компьютерах, использующих протоколы Интернета.  
   
  [CHttpConnection](../mfc/reference/chttpconnection-class.md)  
  Управление подключением к HTTP-серверу.  
   
  [CHttpFile](../mfc/reference/chttpfile-class.md)  
- Предоставляет функциональные возможности для поиска и чтения файлов на HTTP-сервере.  
+ Предоставляет возможность поиска и чтения файлов на HTTP-сервере.  
   
  [CGopherFile](../mfc/reference/cgopherfile-class.md)  
  Обеспечивает возможность поиска и чтения файлов на сервере gopher.  
   
- [Классе CFtpConnection](../mfc/reference/cftpconnection-class.md)  
+ [CFtpConnection](../mfc/reference/cftpconnection-class.md)  
  Управление подключением к серверу FTP.  
   
  [CGopherConnection](../mfc/reference/cgopherconnection-class.md)  
  Управление подключением к серверу gopher.  
   
  [CFileFind](../mfc/reference/cfilefind-class.md)  
- Выполняет локальную и поиске файлов Интернета.  
+ Выполняет локальное и поиске файлов Интернета.  
   
  [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)  
  Помогает в поиске файлов Интернета на FTP-серверах.  

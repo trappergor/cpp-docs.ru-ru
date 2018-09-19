@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e23b4d3521e4068d8f7cee8aa6041d57375ec1b2
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a74edb512f545f9da8d222535f84f6bac34d094f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851480"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096240"
 ---
 # <a name="crecordset-class"></a>Класс CRecordset
 Представляет набор записей, выбранных из источника данных.  
@@ -160,13 +160,13 @@ class CRecordset : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRecordset::CRecordset](#crecordset)|Создает объект `CRecordset`. Вашей производный класс должен предоставлять конструктор, который вызывает этот.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRecordset::AddNew](#addnew)|Подготавливает для добавления новой записи. Вызовите `Update` для завершения добавления.|  
 |[CRecordset::CanAppend](#canappend)|Возвращает ненулевое значение, если новые записи добавляются в набор записей с помощью `AddNew` функция-член.|  
@@ -226,7 +226,7 @@ class CRecordset : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRecordset::m_hstmt](#m_hstmt)|Содержит дескриптор инструкции ODBC для набора записей. Введите `HSTMT`.|  
 |[CRecordset::m_nFields](#m_nfields)|Содержит номер поля элементов данных в наборе записей. Введите `UINT`.|  
@@ -416,7 +416,7 @@ virtual void CheckRowsetError(RETCODE nRetCode);
   
  `CheckRowsetError` вызывается автоматически при выполнении операции навигации курсора, таких как `Open`, `Requery`, или любой `Move` операции. Он передается возвращаемое значение функции ODBC API `SQLExtendedFetch`. В следующей таблице перечислены возможные значения для *nRetCode* параметра.  
   
-|nRetCode|Описание:|  
+|nRetCode|Описание|  
 |--------------|-----------------|  
 |ЗНАЧЕНИЕ SQL_SUCCESS, УКАЗЫВАЯ|Функция успешно завершена; Дополнительные сведения недоступны.|  
 |SQL_SUCCESS_WITH_INFO|Функция успешно завершена, возможно с некритичные ошибки. Дополнительные сведения можно получить путем вызова `SQLError`.|  
@@ -847,7 +847,7 @@ WORD GetRowStatus(WORD wRow) const;
 ### <a name="remarks"></a>Примечания  
  `GetRowStatus` Возвращает значение, указывающее любое изменение в состоянии, чтобы строка с момента его последнего полученных из источника данных, или нет соответствующей строки для *wRow* была сделана выборка. В следующей таблице перечислены возможные возвращаемые значения.  
   
-|Значение состояния|Описание:|  
+|Значение состояния|Описание|  
 |------------------|-----------------|  
 |SQL_ROW_SUCCESS|Строка не содержит изменений.|  
 |SQL_ROW_UPDATED|Строка была обновлена.|  
@@ -874,15 +874,13 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
  `CRecordsetStatus` Структура имеет следующий вид:  
   
- `struct CRecordsetStatus`  
-  
- `{`  
-  
- `long m_lCurrentRecord;`  
-  
- `BOOL m_bRecordCountFinal;`  
-  
- `};`  
+```cpp
+struct CRecordsetStatus
+{
+    long m_lCurrentRecord;
+    BOOL m_bRecordCountFinal;
+};
+```
   
  Два члена `CRecordsetStatus` имеют следующий смысл:  
   
@@ -1493,7 +1491,7 @@ void RefreshRowset(
   
  `RefreshRowset` вызывает функцию ODBC API `SQLSetPos`. *WLockType* параметр указывает состояние блокировки строки после `SQLSetPos` выполнен. В следующей таблице описаны возможные значения для *wLockType*.  
   
-|wLockType|Описание:|  
+|wLockType|Описание|  
 |---------------|-----------------|  
 |SQL_LOCK_NO_CHANGE (значение по умолчанию)|Драйвер или источник данных гарантирует, что строка является в то же состояние заблокирован или разблокирован, как было до `RefreshRowset` был вызван.|  
 |SQL_LOCK_EXCLUSIVE|Драйвер или источник данных исключительно блокирует строку. Не все источники данных поддерживают этот тип блокировки.|  
@@ -1717,7 +1715,7 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
   
  `SetRowsetCursorPosition` вызывает функцию ODBC API `SQLSetPos`. *WLockType* параметр указывает состояние блокировки строки после `SQLSetPos` выполнен. В следующей таблице описаны возможные значения для *wLockType*.  
   
-|wLockType|Описание:|  
+|wLockType|Описание|  
 |---------------|-----------------|  
 |SQL_LOCK_NO_CHANGE (значение по умолчанию)|Драйвер или источник данных гарантирует, что строка является в то же состояние заблокирован или разблокирован, как было до `SetRowsetCursorPosition` был вызван.|  
 |SQL_LOCK_EXCLUSIVE|Драйвер или источник данных исключительно блокирует строку. Не все источники данных поддерживают этот тип блокировки.|  

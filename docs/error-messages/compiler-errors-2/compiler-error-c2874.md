@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2874 | Документы Microsoft
+title: Ошибка компилятора C2874 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aebe8054c68e1474a2597da5bda7bb985eb205dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da285053507865d88fef31fac485c2a77a918d52
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243291"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031097"
 ---
 # <a name="compiler-error-c2874"></a>Ошибка компилятора C2874
-с помощью объявление вызвало наличие нескольких объявлений для «символ»  
-  
- Объявление вызывает один и тот же элемент дважды определен.  
-  
- Следующий пример приводит к возникновению ошибки C2874:  
-  
-```  
-// C2874.cpp  
-namespace Z {  
-   int i;  
-}  
-  
-int main() {  
-   int i;  
-   using Z::i;   // C2874, i already declared  
-}  
+
+с помощью объявление вызвало наличие нескольких объявлений для «символ»
+
+Объявление вызывает один и тот же элемент определяется два раза.
+
+Следующий пример приводит к возникновению ошибки C2874:
+
+```
+// C2874.cpp
+namespace Z {
+   int i;
+}
+
+int main() {
+   int i;
+   using Z::i;   // C2874, i already declared
+}
 ```

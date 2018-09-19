@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2421 | Документы Microsoft
+title: Ошибка компилятора C2421 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52545e38207eda1ea941e100a23876e326c2a6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d35b3249be3805d2f4898c4a8007aaa5f849ca4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135951"
 ---
 # <a name="compiler-error-c2421"></a>Ошибка компилятора C2421
-Оператор PTR, использованный с регистром в «контекст»  
-  
- `PTR` Оператор не может использоваться с `register` операнда.
+
+Оператор PTR, использованный с регистром в «контекст»
+
+`PTR` Оператор не может использоваться с `register` операнд.

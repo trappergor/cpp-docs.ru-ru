@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9ee4c25932064ddb76078701a1a6606f27cb1a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075166"
 ---
 # <a name="security-global-functions"></a>Глобальные функции безопасности
 
@@ -72,13 +72,13 @@ inline bool AtlGetDacl(
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Дескриптор объекта, для которого требуется извлечь сведения о безопасности.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указывает значение из [работать пример](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) перечисление, указывающее тип объекта, идентифицируемое по *hObject* параметра.
 
-*pDacl*  
+*pDacl*<br/>
 Указатель на объект списка DACL, который будет содержать сведения о полученных безопасности.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -106,16 +106,16 @@ inline bool AtlSetDacl(
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Дескриптор объекта, для которого устанавливаются сведения о безопасности.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указывает значение из [работать пример](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) перечисление, указывающее тип объекта, идентифицируемое по *hObject* параметра.
 
-*rDacl*  
+*rDacl*<br/>
 Список DACL, содержащий новые сведения о безопасности.
 
-*dwInheritanceFlowControl*  
+*dwInheritanceFlowControl*<br/>
 Управление потоком наследования. Это значение может быть 0 (по умолчанию), PROTECTED_DACL_SECURITY_INFORMATION или UNPROTECTED_DACL_SECURITY_INFORMATION.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -124,7 +124,7 @@ inline bool AtlSetDacl(
 
 ### <a name="remarks"></a>Примечания
 
-В отладочных сборках, произойдет ошибка утверждения, если *hObject* является недопустимым, или если *dwInheritanceFlowControl* не является одним из трех разрешенных значений.  
+В отладочных сборках, произойдет ошибка утверждения, если *hObject* является недопустимым, или если *dwInheritanceFlowControl* не является одним из трех разрешенных значений.
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** atlsecurity.h 
@@ -145,13 +145,13 @@ inline bool AtlGetGroupSid(
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Дескриптор объекта, из которого требуется извлечь сведения о безопасности.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указывает значение из [работать пример](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) перечисление, указывающее тип объекта, идентифицируемое по *hObject* параметра.
 
-*pSid*  
+*pSid*<br/>
 Указатель на `CSid` объект, который будет содержать новые сведения о безопасности.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -178,13 +178,13 @@ inline bool AtlSetGroupSid(
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Дескриптор объекта, для которого устанавливаются сведения о безопасности.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указывает значение из [работать пример](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) перечисление, указывающее тип объекта, идентифицируемое по *hObject* параметра.
 
-*rSid*  
+*rSid*<br/>
 `CSid` Объект, содержащий новые сведения о безопасности.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -211,13 +211,13 @@ inline bool AtlGetOwnerSid(
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Дескриптор объекта, из которого требуется извлечь сведения о безопасности.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указывает значение из [работать пример](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) перечисление, указывающее тип объекта, идентифицируемое по *hObject* параметра.
 
-*pSid*  
+*pSid*<br/>
 Указатель на `CSid` объект, который будет содержать новые сведения о безопасности.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -244,13 +244,13 @@ inline bool AtlSetOwnerSid(
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Дескриптор объекта, для которого устанавливаются сведения о безопасности.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указывает значение из [работать пример](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) перечисление, указывающее тип объекта, идентифицируемое по *hObject* параметра.
 
-*rSid*  
+*rSid*<br/>
 `CSid` Объект, содержащий новые сведения о безопасности.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -278,16 +278,16 @@ inline bool AtlGetSacl(
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Дескриптор объекта, из которого требуется извлечь сведения о безопасности.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указывает значение из [работать пример](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) перечисление, указывающее тип объекта, идентифицируемое по *hObject* параметра.
 
-*pSacl*  
+*pSacl*<br/>
 Указатель на объект системного списка управления ДОСТУПОМ, который будет содержать сведения о полученных безопасности.
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 Если значение равно true, функция попытается включить привилегией SE_SECURITY_NAME — в и восстановить его после завершения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -320,19 +320,19 @@ inline bool AtlSetSacl(
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Дескриптор объекта, для которого устанавливаются сведения о безопасности.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указывает значение из [работать пример](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) перечисление, указывающее тип объекта, идентифицируемое по *hObject* параметра.
 
-*rSacl*  
+*rSacl*<br/>
 Системный список управления ДОСТУПОМ, информацией безопасности.
 
-*dwInheritanceFlowControl*  
+*dwInheritanceFlowControl*<br/>
 Управление потоком наследования. Это значение может быть 0 (по умолчанию), PROTECTED_SACL_SECURITY_INFORMATION или UNPROTECTED_SACL_SECURITY_INFORMATION.
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 Если значение равно true, функция попытается включить привилегией SE_SECURITY_NAME — в и восстановить его после завершения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -369,19 +369,19 @@ bool bRequestNeededPrivileges = true) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*pszObjectName*  
+*pszObjectName*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее имя объекта, из которого требуется извлечь сведения о безопасности.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указывает значение из [работать пример](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) перечисление, указывающее тип объекта, идентифицируемое по *pszObjectName* параметра.
 
-*pSecurityDescriptor*  
+*pSecurityDescriptor*<br/>
 Объект, который получает дескриптор запрошенного типа безопасности.
 
-*requestedInfo*  
+*requestedInfo*<br/>
 Набор [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) битовые флаги, указывающие тип извлекаемых данных безопасности. Этот параметр может быть сочетанием следующих значений.
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 Если значение равно true, функция попытается включить привилегией SE_SECURITY_NAME — в и восстановить его после завершения.
 
 ### <a name="return-value"></a>Возвращаемое значение

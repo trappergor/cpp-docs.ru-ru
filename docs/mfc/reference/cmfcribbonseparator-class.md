@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9112a6790175709a2575319c6f71a55d1303a83
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849773"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705319"
 ---
 # <a name="cmfcribbonseparator-class"></a>Класс CMFCRibbonSeparator
 Реализует разделителя ленты.  
@@ -54,14 +54,14 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Создает объект `CMFCRibbonSeparator`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Добавляет разделитель для **команды** в списке **Настройка** диалоговое окно. (Переопределяет [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
 |`CMFCRibbonSeparator::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCRibbonSeparator::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -70,7 +70,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Метод копирования, который задает разделитель элементов переменные из другого объекта.|  
 |[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Возвращает размер разделителя.|  
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|Указывает, является ли разделитель.|  
@@ -113,11 +113,11 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWndListBox*  
- Указатель на **команды** списка, где добавляется разделитель.  
+*pWndListBox*<br/>
+[in] Указатель на **команды** списка, где добавляется разделитель.  
   
- [in] *bDeep*  
- Не обрабатывается.  
+*bDeep*<br/>
+[in] Игнорируется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс строки в поле со списком определяется *pWndListBox*.  
@@ -130,8 +130,8 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bIsHoriz*  
- Значение TRUE, если разделитель является горизонтальной; Если значение равно FALSE, разделитель является вертикальным.  
+*bIsHoriz*<br/>
+[in] Значение TRUE, если разделитель является горизонтальной; Если значение равно FALSE, разделитель является вертикальным.  
   
 ### <a name="remarks"></a>Примечания  
  Разделителей используются в меню приложения. Вертикальная разделители используются в панели инструментов.  
@@ -149,8 +149,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *Src*  
- Исходный элемент ленты для копирования из.  
+*src*<br/>
+[in] Исходный элемент ленты для копирования из.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  Возвращает размер разделителя.  
@@ -160,8 +160,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на содержимое устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на содержимое устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер разделителя в данном контексте.  
@@ -197,8 +197,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  Вызывается системой для рисования разделителя на **команды** списка.  
@@ -217,13 +217,13 @@ virtual void OnDrawOnList(
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
-|[in] *основного контроллера домена*|Указатель на контекст устройства.|  
-|[in] *strText*|Текст, отображаемый в списке.|  
-|[in] *nTextOffset*|Расстояние между текстом и левой стороны обрамляющего прямоугольника.|  
-|[in] *rect*|Указывает ограничивающий прямоугольник.|  
-|[in] *bIsSelected*|Не обрабатывается.|  
-|[in] *bHighlighted*|Не обрабатывается.|  
+|Параметр|Описание|  
+|*основного контроллера домена*|[in] Указатель на контекст устройства.|  
+|*strText*|[in] Текст, отображаемый в списке.|  
+|*nTextOffset*|[in] Расстояние между текстом и левой стороны обрамляющего прямоугольника.|  
+|*Rect*|[in] Указывает ограничивающий прямоугольник.|  
+|*bIsSelected*|[in] Игнорируется.|  
+|*bHighlighted*|[in] Игнорируется.|  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

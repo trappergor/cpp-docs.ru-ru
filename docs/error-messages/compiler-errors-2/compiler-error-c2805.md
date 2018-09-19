@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2805 | Документы Microsoft
+title: Ошибка компилятора C2805 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17885edc9cc508455cf780c7089f6ba3f9c793d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad07ea30d4124c0655e739e0e9222b3dc428a0a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237561"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032241"
 ---
 # <a name="compiler-error-c2805"></a>Ошибка компилятора C2805
-двоичный оператор «оператор» содержит слишком мало параметров  
-  
- Бинарный оператор не имеет параметров.  
-  
- Следующий пример приводит к возникновению ошибки C2805:  
-  
-```  
-// C2805.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X operator< ( void );   // C2805 must take one parameter  
-   X operator< ( X );   // OK  
-};  
+
+двоичный оператор «оператор» содержит слишком много параметров
+
+Бинарный оператор не имеет параметров.
+
+Следующий пример приводит к возникновению ошибки C2805:
+
+```
+// C2805.cpp
+// compile with: /c
+class X {
+public:
+   X operator< ( void );   // C2805 must take one parameter
+   X operator< ( X );   // OK
+};
 ```

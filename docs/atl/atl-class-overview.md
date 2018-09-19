@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e64ecd708f5ff159b61a6b7601c74dbf2b6abda6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de241532763267f5d20d051121e501934da972cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055160"
 ---
 # <a name="atl-class-overview"></a>Обзор класса ATL
 
@@ -52,10 +52,10 @@ ms.locfileid: "43758671"
 
 ## <a name="see-also"></a>См. также
 
-[Классы и структуры](../atl/reference/atl-classes.md)   
-[Компоненты ATL COM Desktop](../atl/atl-com-desktop-components.md)  
-[Функции](../atl/reference/atl-functions.md)   
-[Глобальные переменные](../atl/reference/atl-global-variables.md)   
-[Макросы](../atl/reference/atl-macros.md)   
+[Классы и структуры](../atl/reference/atl-classes.md)<br/>
+[Компоненты ATL COM Desktop](../atl/atl-com-desktop-components.md)<br/>
+[Функции](../atl/reference/atl-functions.md)<br/>
+[Глобальные переменные](../atl/reference/atl-global-variables.md)<br/>
+[Макросы](../atl/reference/atl-macros.md)<br/>
 [Typedefs](../atl/reference/atl-typedefs.md)
 

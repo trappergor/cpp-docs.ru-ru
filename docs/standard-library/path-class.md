@@ -1,7 +1,7 @@
 ---
 title: Класс Path | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4559bec84d7e6051155ad73f68a1ef8ae13ca6cc
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104164"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725313"
 ---
 # <a name="path-class"></a>Класс path
 
-Класс **path** хранит объект типа string\_type (называемый здесь myname в целях демонстрации), подходящий для использования в качестве пути. string\_type является синонимом basic\_string\<value_type>, где value\_type является синонимом типа char в Windows или wchar_t в Posix.
+**Путь** класс сохраняет объект типа `string_type`, который называется `myname` здесь в целях надстройках, подходящий для использования в качестве пути. `string_type` является синонимом для `basic_string<value_type>`, где `value_type` является синонимом **char** в группе Windows или **wchar_t** в Posix.
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 
@@ -443,7 +443,7 @@ class iterator
 
 ## <a name="make_preferred"></a> PATH::make_preferred
 
-Преобразует каждый разделитель в preferred_separator при необходимости.
+Преобразует каждый разделитель для `preferred_separator` при необходимости.
 
 ```cpp
 path& make_preferred();
@@ -529,7 +529,7 @@ path& operator+=(Elem elem);
 
 1. `concat(source);`
 
-1. `concat(path(basic_string\<Elem>(1, elem)));`
+1. `concat(path(basic_string<Elem>(1, elem)));`
 
 ## <a name="op_divide"></a> PATH::operator / =
 
@@ -576,7 +576,7 @@ path parent_path() const;
 
 ### <a name="remarks"></a>Примечания
 
-Возвращает родительский компонент пути `myname`, а именно префикс `myname` после удаления `filename().native()` и любой непосредственно предшествующих разделителей каталога. (Аналогично, если `begin() != end()`, это сочетание всех элементов в диапазоне [begin(),--end()) при успешном применении operator / =.) Компонент может быть пустым.
+Возвращает родительский компонент пути `myname`, а именно префикс `myname` после удаления `filename().native()` и любой непосредственно предшествующих разделителей каталога. (Аналогично, если `begin() != end()`, это сочетание всех элементов в диапазоне `[begin(), --end())` путем последовательного применения `operator/=`.) Компонент может быть пустым.
 
 ## <a name="path"></a> PATH::path
 
@@ -638,7 +638,7 @@ path(InIt first, InIt last, const locale& loc);
 
 ## <a name="preferred_separator"></a> PATH::preferred_separator
 
-Постоянный объект предоставляет предпочтительный символ для разделения компонентов пути в зависимости от операционной системы размещения. 
+Постоянный объект предоставляет предпочтительный символ для разделения компонентов пути в зависимости от операционной системы размещения.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -654,7 +654,7 @@ static constexpr value_type preferred_separator == '/';
 
 ## <a name="relative_path"></a> PATH::relative_path
 
-Возвращает компонент относительного пути `myname`. 
+Возвращает компонент относительного пути `myname`.
 
 ```cpp
 path relative_path() const;
@@ -674,7 +674,7 @@ path& remove_filename();
 
 ## <a name="replace_extension"></a> PATH::replace_extension
 
-Заменяет расширение `myname`. 
+Заменяет расширение `myname`.
 
 ```cpp
 path& replace_extension(const path& newext = path());
@@ -687,7 +687,7 @@ path& replace_extension(const path& newext = path());
 
 ### <a name="remarks"></a>Примечания
 
-Сначала удаляет суффикс `extension().native()` из `myname`. Затем, если `!newext.empty() && newext[0] != dot` (где `dot` — `*path(".").c_str()`), затем `dot` добавляется к `myname`. Затем `newext` добавляется к `myname`.
+Сначала удаляет суффикс `extension().native()` из `myname`. Затем, если `!newext.empty() && newext[0] != dot` (где `dot` — `*path(".").c_str()`), затем `dot` добавляется к `myname`. Затем *newext* добавляется к `myname`.
 
 ## <a name="replace_filename"></a> PATH::replace_filename
 
@@ -715,7 +715,7 @@ return (*this);
 
 ## <a name="root_directory"></a> PATH::root_directory
 
-Возвращает компонент корневого каталога `myname`. 
+Возвращает компонент корневого каталога `myname`.
 
 ```cpp
 path root_directory() const;
@@ -727,7 +727,7 @@ path root_directory() const;
 
 ## <a name="root_name"></a> PATH::root_name
 
-Возвращает компонент корневого имени `myname`. 
+Возвращает компонент корневого имени `myname`.
 
 ```cpp
 path root_name() const;
@@ -747,7 +747,7 @@ path root_path() const;
 
 ### <a name="remarks"></a>Примечания
 
-Возвращает компонент корневого пути `myname`, а именно root_name() / root_directory. Компонент может быть пустым.
+Возвращает компонент корневого пути `myname`, в частности `root_name()`  /  `root_directory`. Компонент может быть пустым.
 
 ## <a name="stem"></a> PATH::stem
 
@@ -773,7 +773,7 @@ string string() const;
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-член (шаблон) преобразует последовательность, хранимую в mypath, так же, как:
+Первая функция-член (шаблон) преобразует последовательность, хранимую в `mypath` так же, как:
 
 1. `string()` для `string<char, Traits, Alloc>()`
 
@@ -783,7 +783,7 @@ string string() const;
 
 1. `u32string()` для `string<char32_t, Traits, Alloc>()`
 
-Вторая функция-член преобразует последовательность, хранимую в `mypath` кодировку, предпочитаемую в системе размещения для последовательности char и возвращает ее, сохранив в объекте типа string.
+Вторая функция-член преобразует последовательность, хранимую в `mypath` кодировку, предпочитаемую в системе размещения для **char** последовательности и возвращает ее, сохранив в объект типа `string`.
 
 ## <a name="string_type"></a> PATH::STRING_TYPE
 
@@ -827,7 +827,7 @@ string u8string() const;
 
 ## <a name="value_type"></a> PATH::value_type
 
-Тип описывает элементы пути, предпочитаемые в системе размещения.
+Этот тип описывает `path` элементы по операционной системы.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -839,7 +839,7 @@ typedef char value_type;
 
 ## <a name="wstring"></a> PATH::wstring
 
-Преобразует последовательность, хранимую в `mypath` кодировку, предпочитаемую в системе размещения для `wchar_t` последовательности и возвращает ее, сохранив в объект типа `wstring`.
+Преобразует последовательность, хранимую в `mypath` кодировку, предпочитаемую в системе размещения для **wchar_t** последовательности и возвращает ее, сохранив в объект типа `wstring`.
 
 ```cpp
 wstring wstring() const;

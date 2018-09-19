@@ -1,7 +1,7 @@
 ---
 title: Создание элемента управления ActiveX в MFC | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,15 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ecae8445368357da3bc7b271156f961c1c1dca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0278ce0349b24680252100704031645c995fef51
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687150"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535084"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Создание элемента управления ActiveX MFC
 Программы управления ActiveX являются модульные программы, разработанные для предоставления определенной функциональности в родительское приложение. Например можно создать элемент управления, например кнопки для использования в диалоговом окне или панели инструментов для использования на веб-странице.  
+
+>[!IMPORTANT]
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения см. в разделе [элементы управления ActiveX](../activex-controls.md).
   
  Самый простой способ создания элемента управления MFC ActiveX является использование [мастер элементов управления ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCWindowsManagerDialog | Документы Microsoft
+title: Класс CMFCWindowsManagerDialog | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 71c85d3061da7cf4c87abef9549542900e962f64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042105"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707009"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>Класс CMFCWindowsManagerDialog
-`CMFCWindowsManagerDialog` Объектов позволяет пользователю управлять дочерними окнами MDI в приложении MDI.  
+`CMFCWindowsManagerDialog` Объекта позволяет пользователю управлять дочерними окнами MDI в приложении MDI.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,17 +38,17 @@ class CMFCWindowsManagerDialog : public CDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|Создает объект `CMFCWindowsManagerDialog`.|  
   
 ## <a name="remarks"></a>Примечания  
- `CMFCWindowsManagerDialog` Содержит список дочерних MDI-окон, которые в настоящее время открыты в приложении. Пользователь вручную можно контролировать состояние дочерних MDI-окон в этом диалоговом окне.  
+ `CMFCWindowsManagerDialog` Содержит список дочерних MDI-окон, открытых в настоящий момент в приложении. Пользователь вручную можно контролировать состояние дочерних окон интерфейса MDI с помощью это диалоговое окно.  
   
- `CMFCWindowsManagerDialog` встроенный [класс CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md). `CMFCWindowsManagerDialog` Не является классом, который необходимо создать вручную. Вместо этого вызовите функцию [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog), и он будет создавать и отображать `CMFCWindowsManagerDialog` объекта.  
+ `CMFCWindowsManagerDialog` встроенный [класс CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md). `CMFCWindowsManagerDialog` Не является классом, который необходимо создать вручную. Вместо этого вызовите функцию [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog), и он будет создать и отобразить `CMFCWindowsManagerDialog` объекта.  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует `CMFCWindowsManagerDialog` путем вызова метода `CMDIFrameWndEx::ShowWindowsDialog`. Этот фрагмент кода является частью [Visual Studio демонстрационный пример](../../visual-cpp-samples.md).  
+ В следующем примере демонстрируется создание `CMFCWindowsManagerDialog` путем вызова метода `CMDIFrameWndEx::ShowWindowsDialog`. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]  
   
@@ -76,14 +76,14 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pMDIFrame*  
- Указатель на окно родительского или владельца.  
+*pMDIFrame*<br/>
+[in] Указатель на родительский объект или владельца окна.  
   
- [in] *bHelpButton*  
- Логический параметр, указывает, отображаются ли платформа **справки** кнопки.  
+*bHelpButton*<br/>
+[in] Логический параметр, который указывает, отображает ли платформа **помочь** кнопки.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о диспетчерах visual см [диспетчер визуализации](../../mfc/visualization-manager.md).  
+ Дополнительные сведения о диспетчеров визуального представления, см. в разделе [диспетчер визуализации](../../mfc/visualization-manager.md).  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

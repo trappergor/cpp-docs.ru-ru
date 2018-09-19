@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f89df62f35e37e1ab74fc177167cbd82f92f7d9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bfd7d5a040da4d27838e8045b6c4c64950e515dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054848"
 ---
 # <a name="ccrtallocator-class"></a>Класс CCRTAllocator
 
@@ -65,7 +65,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBytes*  
+*nBytes*<br/>
 Количество байтов, которые необходимо выделить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -86,7 +86,7 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на выделенную область памяти.
 
 ### <a name="remarks"></a>Примечания
@@ -103,10 +103,10 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на выделенную область памяти.
 
-*nBytes*  
+*nBytes*<br/>
 Количество байтов, которые необходимо выделить повторно.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -119,6 +119,6 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Класс CComAllocator](../../atl/reference/ccomallocator-class.md)   
+[Класс CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Класс CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

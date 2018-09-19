@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8c6298c7b66c8967a4e5e23a37c3614edcddf3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c5272f662580eff92e9ec15860b978ab739e613
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415533"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691605"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 
@@ -88,23 +88,23 @@ errno_t _wtmpnam_s(
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**Возвращаемое значение**|**Содержимое***str* |
+|*str*|*sizeInChars*|**Возвращаемое значение**|**Содержание***str* |
 |**NULL**|any|**EINVAL**|не изменено|
-|Не **NULL** (указывает на допустимый адрес в памяти)|слишком короткий|**ERANGE**|не изменено|
+|Не **NULL** (указывает на допустимую память)|слишком короткий|**ERANGE**|не изменено|
 
-Если *str* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают **EINVAL**.
+Если *str* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и вернуть **EINVAL**.
 
 ## <a name="remarks"></a>Примечания
 
-Каждая из этих функций возвращает имя файла, который в данный момент не существует. **tmpnam_s** возвращает имя, уникальное в текущем рабочем каталоге. Заметьте, что если в начало имени файла добавляется обратная косая черта без сведений о пути, например \fname21, это означает, что имя является допустимым для текущей рабочей папки.
+Каждая из этих функций возвращает имя файла, который в данный момент не существует. **tmpnam_s** возвращает имя, уникальное в заданный Windows каталог временного возвращаемые [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). Заметьте, что если в начало имени файла добавляется обратная косая черта без сведений о пути, например \fname21, это означает, что имя является допустимым для текущей рабочей папки.
 
-Для **tmpnam_s**, можно сохранить это сформированное имя файла в *str*. Максимальная длина строки, возвращенные **tmpnam_s** — **L_tmpnam_s**, определенный в STDIO. З. Если *str* — **NULL**, затем **tmpnam_s** оставляет результат во внутреннем статическом буфере. Поэтому все последующие вызовы уничтожают это значение. Имя, созданное **tmpnam_s** состоит из имени файла, созданный программой и после первого вызова **tmpnam_s**, расширение файла из последовательных чисел с основанием 32 (.1-.1vvvvvu, если **TMP _MAX_S** в STDIO. H- **INT_MAX**).
+Для **tmpnam_s**, вы можете хранить это имя созданного файла в *str*. Максимальная длина строки, возвращенной **tmpnam_s** — **L_tmpnam_s**, определенный в STDIO. З. Если *str* — **NULL**, затем **tmpnam_s** оставляет результат во внутреннем статическом буфере. Поэтому все последующие вызовы уничтожают это значение. Имя, созданное функцией **tmpnam_s** состоит из имени файла и после первого вызова **tmpnam_s**, расширение файла из последовательных чисел с основанием 32 (.1-.1vvvvvu, где **TMP _MAX_S** в STDIO. H- **INT_MAX**).
 
-**tmpnam_s** автоматически обрабатывает многобайтовые строковые аргументы соответствующим образом, распознавая последовательности многобайтовых символов согласно кодовой странице OEM, полученной от операционной системы. **_wtmpnam_s** — это двухбайтовая версия **tmpnam_s**; аргумент и возвращаемое значение **_wtmpnam_s** представляют собой строки расширенных символов. **_wtmpnam_s** и **tmpnam_s** ведут себя одинаково, за исключением того, что **_wtmpnam_s** не обрабатывает многобайтовые строки.
+**tmpnam_s** автоматически обрабатывает многобайтовые строковые аргументы должным образом, распознавая последовательности многобайтовых символов согласно кодовой странице OEM, полученная от операционной системы. **_wtmpnam_s** — это двухбайтовая версия **tmpnam_s**; аргумент и возвращаемое значение **_wtmpnam_s** представляют собой строки расширенных символов. **_wtmpnam_s** и **tmpnam_s** ведут себя одинаково, за исключением случаев, **_wtmpnam_s** не обрабатывает многобайтовые строки.
 
 В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -150,6 +150,24 @@ int main( void )
       }
    }
 }
+```
+
+```Output
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.0 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.1 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.2 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.3 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.4 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.5 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.6 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.7 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.8 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.9 is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.a is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.b is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.c is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.d is safe to use as a temporary file.
+C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file.
 ```
 
 ## <a name="see-also"></a>См. также

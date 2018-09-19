@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f860d90905c244327787182c40505207c4745201
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965747"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069174"
 ---
 # <a name="ltallocatorsgt"></a>&lt;Распределители&gt;
 
@@ -47,9 +47,10 @@ Allocator — это класс шаблона, описывающий объе
 
 Распределители представляют собой шаблоны типа
 
-`template<class` `Type` `>`
-
-`class allocator;`
+```cpp
+template<class Type>
+class allocator;
+```
 
 где аргумент шаблона `Type` — это тип, управляемый экземпляром распределителя. Стандартная библиотека C++ предоставляет распределитель по умолчанию, [allocator](../standard-library/allocator-class.md) класса шаблона, который задается в [ \<memory>](../standard-library/memory.md). Заголовок \<allocators> предоставляет следующие распределители:
 
@@ -67,23 +68,22 @@ Allocator — это класс шаблона, описывающий объе
 
 При создании контейнера используйте соответствующий экземпляр распределителя как второй аргумент типа, как показано в следующем примере кода.
 
-`#include <list>`
-
-`#include <allocators>`
-
-`std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`
+```cpp
+#include <list>
+#include <allocators>
+std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;
+```
 
 _List0 выделяет узлы с `allocator_chunklist` и фильтром синхронизации по умолчанию.
 
 Используйте макрос [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) для создания шаблонов распределителя с фильтрами синхронизации, отличными от установленных по умолчанию:
 
-`#include <list>`
-
-`#include <allocators>`
-
-`ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);`
-
-`std::list<int, alloc<int> > _List1;`
+```cpp
+#include <list>
+#include <allocators>
+ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);
+std::list<int, alloc<int> > _List1;
+```
 
 _Lst1 выделяет узлы с `allocator_chunklist` и фильтр синхронизации [sync_per_thread](../standard-library/sync-per-thread-class.md).
 
@@ -129,7 +129,7 @@ _Lst1 выделяет узлы с `allocator_chunklist` и фильтр син�
 
 ### <a name="macros"></a>Макросы
 
-|Макрос|Описание:|
+|Макрос|Описание|
 |-|-|
 |[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Создает класс шаблона распределителя.|
 |[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Создает `stdext::allocators::cache_chunklist<sizeof(Type)>`.|
@@ -139,14 +139,14 @@ _Lst1 выделяет узлы с `allocator_chunklist` и фильтр син�
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[operator!= (\<allocators>)](../standard-library/allocators-operators.md#op_neq)|Проверяет на неравенство между объектами распределителя указанного класса.|
 |[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|Проверяет на равенство объекты распределителя указанного класса.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[allocator_base](../standard-library/allocator-base-class.md)|Определяет базовый класс и общие функции, необходимые для создания определяемого пользователем распределителя из фильтра синхронизации.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Описывает объект, который управляет выделением и освобождением памяти для объектов, использующих кэш типа [cache_chunklist](../standard-library/cache-chunklist-class.md).|

@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4032 компилятора | Документы Microsoft
+title: Предупреждение (уровень 4) C4032 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb61588c12378972194305d979ecdd89140ac6f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 608c99c81fac0088a4d1d8bb8a6d3b0b61c7af50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291691"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086045"
 ---
-# <a name="compiler-warning-level-4-c4032"></a>Предупреждение (уровень 4) C4032 компилятора
-формальный параметр «число» имеет другой тип после расширения  
-  
- Тип параметра несовместим через продвижения по умолчанию, с типом в предыдущем объявлении.  
-  
- Это ошибка в ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) и предупреждение при использовании расширений Майкрософт (/Ze).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// C4032.c  
-// compile with: /W4  
-void func();  
-void func(char);   // C4032, char promotes to int  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4032"></a>Компилятор предупреждение (уровень 4) C4032
+
+формальный параметр «число» имеет другой тип после расширения
+
+Тип параметра несовместим, по умолчанию повышениями с типом в предыдущем объявлении.
+
+Это ошибка в ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) и предупреждение при использовании расширений Майкрософт (/Ze).
+
+## <a name="example"></a>Пример
+
+```
+// C4032.c
+// compile with: /W4
+void func();
+void func(char);   // C4032, char promotes to int
+
+int main()
+{
+}
 ```

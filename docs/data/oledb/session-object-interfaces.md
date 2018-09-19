@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8208a372989fac5fa7c7b0c13b83eb27a4d1444b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e8c641cc543f213b6c81950c22b97f25b31d6c4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057332"
 ---
 # <a name="session-object-interfaces"></a>Интерфейсы объекта сеанса
+
 В следующей таблице показаны обязательные и необязательные интерфейсы, определенные в OLE DB для объекта сеанса.  
   
 |Интерфейс|Обязательный?|Реализовано с помощью шаблонов OLE DB?|  
@@ -50,9 +51,10 @@ ms.locfileid: "42571436"
 |[Интерфейс ITransactionLocal](/previous-versions/windows/desktop/ms714893\(v=vs.85\))|Optional|Нет|  
 |[ITransactionObject](/previous-versions/windows/desktop/ms713659\(v=vs.85\))|Optional|Нет|  
   
- Объект сеанса создает объект набора строк. Если поставщик поддерживает команды, сеанс также создает объект command (`CCommand`, реализации OLE DB `TCommand`). Реализует объект команды `ICommand` интерфейс и использует `ICommand::Execute` метод для выполнения команд на наборе строк, как показано на рисунке ниже.  
+Объект сеанса создает объект набора строк. Если поставщик поддерживает команды, сеанс также создает объект command (`CCommand`, реализации OLE DB `TCommand`). Реализует объект команды `ICommand` интерфейс и использует `ICommand::Execute` метод для выполнения команд на наборе строк, как показано на рисунке ниже.  
   
- ![Концептуальная схема поставщика](../../data/oledb/media/vc4u551.gif "vc4u551")  
+![Концептуальная схема поставщика](../../data/oledb/media/vc4u551.gif "vc4u551")  
   
 ## <a name="see-also"></a>См. также  
- [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

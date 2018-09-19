@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676784"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716174"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Класс CMFCPropertyGridToolTipCtrl
 Реализует подсказку, управления, [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) используется для отображения подсказки.  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWndParent*  
- Указатель на родительское окно.  
+*pWndParent*<br/>
+[in] Указатель на родительское окно.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если окно был успешно создан; в противном случае — значение FALSE.  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *rect*  
- Содержит последней позиции элемента управления tooltip.  
+*Rect*<br/>
+[out] Содержит последней позиции элемента управления tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Скрывает элемент управления tooltip.  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nTextMargin*  
- Задает расстояние между текст всплывающей подсказки элемента управления и границей окна всплывающей подсказки. Значение по умолчанию — 10 пикселей.  
+*nTextMargin*<br/>
+[in] Задает расстояние между текст всплывающей подсказки элемента управления и границей окна всплывающей подсказки. Значение по умолчанию — 10 пикселей.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Отображает элемент управления tooltip.  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *rect*  
- Указывает положение и размер элемента управления tooltip.  
+*Rect*<br/>
+[in] Указывает положение и размер элемента управления tooltip.  
   
- [in] *strText*  
- Задает текст, отображаемый во всплывающей подсказке.  
+*strText*<br/>
+[in] Задает текст, отображаемый во всплывающей подсказке.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отображает элемент управления всплывающей подсказки в положение и размер, указанный параметром *rect*. Если позиция, размер и текст не изменились с момента последнего этот метод был вызван, этот метод не действует.  

@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3932195fe115038b9e065b4121636fdbdb82e78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 924af1a31cccea117ee8cd2cf909c2947c6dc3b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385716"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064169"
 ---
 # <a name="unrepresented-character-constants"></a>Непредставимые символьные константы
-**ANSI 3.1.3.4** Значение целочисленной символьной константы, которая содержит символ или escape-последовательность, не представленную в базовой кодировке выполнения или в расширенной кодировке для расширенной символьной константы  
-  
- Все символьные константы или escape-последовательности можно представить в виде расширенной кодировки.  
-  
-## <a name="see-also"></a>См. также  
- [Символы](../c-language/characters.md)
+
+**ANSI 3.1.3.4** Значение целочисленной символьной константы, которая содержит символ или escape-последовательность, не представленную в базовой кодировке выполнения или в расширенной кодировке для расширенной символьной константы
+
+Все символьные константы или escape-последовательности можно представить в виде расширенной кодировки.
+
+## <a name="see-also"></a>См. также
+
+[Символы](../c-language/characters.md)

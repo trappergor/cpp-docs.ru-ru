@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ee17d8c944fa41bcca9b255c12cc4c2b0c3f565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3750b26643bc2ceb33e49723d1586ba5350fe4db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055212"
 ---
 # <a name="debugging-and-exceptions-classes"></a>Классы исключений для отладки и
 
@@ -31,7 +31,7 @@ ms.locfileid: "43753819"
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../atl/atl-class-overview.md)   
-[Отладка и глобальные функции отчетов об ошибках](../atl/reference/debugging-and-error-reporting-global-functions.md)   
+[Общие сведения о классе](../atl/atl-class-overview.md)<br/>
+[Глобальные функции для отладки и создания отчетов об ошибках](../atl/reference/debugging-and-error-reporting-global-functions.md)<br/>
 [Макросы для отладки и создания отчетов об ошибках](../atl/reference/debugging-and-error-reporting-macros.md)
 

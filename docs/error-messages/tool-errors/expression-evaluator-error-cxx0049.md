@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0049 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0049 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d40a823ebcac377198254555181d9821320a848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9193363ca5d2fa03ad585816ee618e3c194a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097081"
 ---
 # <a name="expression-evaluator-error-cxx0049"></a>Ошибка вычислителя выражений CXX0049
-устаревший формат OMF - повторите компоновку программы  
-  
- Программа использует устаревший формат OMF (формат модуля объекта).  
-  
- Повторное связывание ее с помощью текущей версии компоновщика.  
-  
- Эта ошибка идентична ошибке CAN0049.
+
+устаревший формат OMF — следует выполнить повторную компоновку программы
+
+Программа использует устаревший формат OMF (формат модуля объекта).
+
+Повторно связать ее с помощью текущей версии компоновщика.
+
+Эта ошибка идентична ошибке CAN0049.

@@ -1,5 +1,5 @@
 ---
-title: Командная строка EDITBIN | Документы Microsoft
+title: Командная строка EDITBIN | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23fb39a614854912a8de52ac606009f3de19b497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8868b455c135d12d2fffaf0ae5ab5632c51a324
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371181"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700598"
 ---
 # <a name="editbin-command-line"></a>Командная строка EDITBIN
-Чтобы запустить EDITBIN, используйте следующий синтаксис:  
-  
-```  
-EDITBIN [options] files...  
-```  
-  
- Укажите один или несколько файлов, объекты или изображений, которые необходимо изменить и один или несколько параметров для изменения этих файлов.  
-  
- При вводе команды `editbin` без любые другие данные в командной строке, будет выведен оператор использования, группирующий параметры.  
-  
-## <a name="see-also"></a>См. также  
- [Средства построения C/C++](../../build/reference/c-cpp-build-tools.md)   
- [Справочник ЕDITBIN](../../build/reference/editbin-reference.md)
+
+Чтобы запустить (программа EDITBIN), используйте следующий синтаксис:
+
+```
+EDITBIN [options] files...
+```
+
+Укажите один или несколько файлов для объектов или изображения, которые необходимо изменить и один или несколько параметров для изменения этих файлов.
+
+При вводе команды `editbin` без других командной строки ввода, EDITBIN отображает инструкцию использования параметров.
+
+## <a name="see-also"></a>См. также
+
+[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Справочник ЕDITBIN](../../build/reference/editbin-reference.md)

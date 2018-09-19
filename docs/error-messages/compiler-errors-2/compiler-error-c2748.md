@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2748 | Документы Microsoft
+title: Ошибка компилятора C2748 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 336a2eb10f0a39f81547361e982aa744be88149e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d57c7919cd33f9e27ad34b1298d8af36ec360200
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236135"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058072"
 ---
 # <a name="compiler-error-c2748"></a>Ошибка компилятора C2748
-при создании управляемого массива или массива WinRT следует указать размер массива или инициализатор массива  
-  
- Неправильный формат управляемого массива или массива WinRT. Дополнительные сведения см. в описании [array](../../windows/arrays-cpp-component-extensions.md).  
-  
- В следующем примере показано возникновение ошибки C2748 и приводятся сведения по ее устранению.  
-  
-```  
-// C2748.cpp  
-// compile with: /clr  
-int main() {  
-   array<int> ^p1 = new array<int>();   // C2748  
-   // try the following line instead  
-   array<int> ^p2 = new array<int>(2);  
-}  
+
+при создании управляемого массива или массива WinRT следует указать размер массива или инициализатор массива
+
+Неправильный формат управляемого массива или массива WinRT. Дополнительные сведения см. в описании [array](../../windows/arrays-cpp-component-extensions.md).
+
+В следующем примере показано возникновение ошибки C2748 и приводятся сведения по ее устранению.
+
+```
+// C2748.cpp
+// compile with: /clr
+int main() {
+   array<int> ^p1 = new array<int>();   // C2748
+   // try the following line instead
+   array<int> ^p2 = new array<int>(2);
+}
 ```

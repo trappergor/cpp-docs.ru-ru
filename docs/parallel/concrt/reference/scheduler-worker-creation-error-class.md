@@ -1,5 +1,5 @@
 ---
-title: Класс scheduler_worker_creation_error | Документы Microsoft
+title: Класс scheduler_worker_creation_error | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077c5a52cf7ac8383fa3b917b3d53867e19ca370
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9c81b62cee3a8c26b0d4ace61b8104f6eaee9db6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686429"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114388"
 ---
 # <a name="schedulerworkercreationerror-class"></a>Класс scheduler_worker_creation_error
 Этот класс описывает исключение, которое создается из-за сбоя создания рабочего контекста выполнения в исполняющей среде с параллелизмом.  
@@ -71,11 +71,11 @@ explicit _CRTIMP scheduler_worker_creation_error(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
   
- `_Hresult`  
- `HRESULT` Значение ошибки, вызвавшей исключение.  
+*_Hresult*<br/>
+`HRESULT` Значение ошибки, вызвавшей исключение.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)

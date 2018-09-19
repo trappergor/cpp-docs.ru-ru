@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4557 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 3) C4557 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1065d412a2f977e1784ba739d1226d08e28bc8ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97423da084c005e427b21043e75ebe850623c63b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289962"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055316"
 ---
 # <a name="compiler-warning-level-3-c4557"></a>Предупреждение компилятора (уровень 3) C4557
-"__assume" содержит эффект "эффект"  
-  
- Значение, передаваемое [__assume](../../intrinsics/assume.md) Выражение2 был изменен.  
-  
- Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Следующий пример приводит к возникновению ошибки C4557:  
-  
-```  
-// C4557.cpp  
-// compile with: /W3  
-#pragma warning(default : 4557)  
-int main()  
-{  
-   int i;  
-   __assume(i++);   // C4557  
-}  
+
+"__assume" содержит эффект "эффект"
+
+Значение, передаваемое [__assume](../../intrinsics/assume.md) оператор2 был изменен.
+
+Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Следующий пример приводит к возникновению ошибки C4557:
+
+```
+// C4557.cpp
+// compile with: /W3
+#pragma warning(default : 4557)
+int main()
+{
+   int i;
+   __assume(i++);   // C4557
+}
 ```

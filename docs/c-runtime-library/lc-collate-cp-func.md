@@ -27,38 +27,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd67abc48af35b5e538b8ad1928269d10f9a71aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d239820221c696dbb8d27e2824ed871a7e2d5ad8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063061"
 ---
 # <a name="lccollatecpfunc"></a>___lc_collate_cp_func
-Внутренняя функция CRT. Получает текущую кодовую страницу сортировки потока.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-UINT ___lc_codepage_func(void);  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Текущая кодовая страница сортировки потока.  
-  
-## <a name="remarks"></a>Примечания  
- `___lc_collate_cp_func` — это внутренняя функция CRT, которая используется другими функциями CRT для получения текущей кодовой страницы сортировки из локального хранилища потока для данных CRT. Эти сведения также доступны при использовании функции [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).  
-  
- Внутренние функции CRT связаны с конкретной реализацией и подлежат изменению в каждом выпуске. Мы не рекомендуем использовать их в коде.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`___lc_collate_cp_func`|crt\src\setlocal.h|  
-  
-## <a name="see-also"></a>См. также  
- [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)   
- [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale](../c-runtime-library/reference/free-locale.md)
+
+Внутренняя функция CRT. Получает текущую кодовую страницу сортировки потока.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+UINT ___lc_codepage_func(void);
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Текущая кодовая страница сортировки потока.
+
+## <a name="remarks"></a>Примечания
+
+`___lc_collate_cp_func` — это внутренняя функция CRT, которая используется другими функциями CRT для получения текущей кодовой страницы сортировки из локального хранилища потока для данных CRT. Эти сведения также доступны при использовании функции [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
+
+Внутренние функции CRT связаны с конкретной реализацией и подлежат изменению в каждом выпуске. Мы не рекомендуем использовать их в коде.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|`___lc_collate_cp_func`|crt\src\setlocal.h|
+
+## <a name="see-also"></a>См. также
+
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[_free_locale](../c-runtime-library/reference/free-locale.md)

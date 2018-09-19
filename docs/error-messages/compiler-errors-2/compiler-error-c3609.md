@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3609 | Документы Microsoft
+title: Ошибка компилятора C3609 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0f3ec99e5d528967fb7b02bc9d198402b16e18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0048d1493a540bfb460d03ae514b6b191ead39d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016914"
 ---
 # <a name="compiler-error-c3609"></a>Ошибка компилятора C3609
-member: запечатанная или окончательная функция должна быть виртуальной  
-  
- [Запечатанный](../../windows/sealed-cpp-component-extensions.md) и [окончательного](../../cpp/final-specifier.md) ключевые слова допустимы только для класса, структуры или члена функции, помеченной `virtual`.  
-  
- Следующий пример приводит к возникновению ошибки C3609:  
-  
-```  
-// C3609.cpp  
-// compile with: /clr /c  
-ref class C {  
-   int f() sealed;   // C3609  
-   virtual int f2() sealed;   // OK  
-};  
-```  
+
+member: запечатанная или окончательная функция должна быть виртуальной
+
+[Запечатанный](../../windows/sealed-cpp-component-extensions.md) и [окончательный](../../cpp/final-specifier.md) ключевые слова допустимы только в функции класса, структуры или члена, помеченной `virtual`.
+
+Следующий пример приводит к возникновению ошибки C3609:
+
+```
+// C3609.cpp
+// compile with: /clr /c
+ref class C {
+   int f() sealed;   // C3609
+   virtual int f2() sealed;   // OK
+};
+```

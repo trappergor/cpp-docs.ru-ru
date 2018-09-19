@@ -240,12 +240,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd52e1437146c5584fa6240b4423462401921b44
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6ed2a1b24269adb197d9e13d5ae39f25128a414a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541335"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716603"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>Класс CMFCVisualManagerOffice2007
 `CMFCVisualManagerOffice2007` Придает приложению внешний вид Microsoft Office 2007. 
@@ -262,7 +262,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)||  
 |[CMFCVisualManagerOffice2007::CleanStyle](#cleanstyle)||  
@@ -462,8 +462,8 @@ virtual COLORREF GetMenuItemTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pButton*  
- [in] *bHighlighted*  
+*pButton*<br/>
+[in] [in] *bHighlighted*  
  [in] *bDisabled*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -586,8 +586,8 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *sizeDefault*  
+*основного контроллера домена*<br/>
+[in] [in] *sizeDefault*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -603,8 +603,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pStatusBar*  
- [in] *pPane*  
+*pStatusBar*<br/>
+[in] [in] *pPane*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -627,14 +627,14 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pTabWnd*  
- [in] *clrDark*  
- [in] *clrBlack*  
- [in] *clrHighlight*  
- [in] *clrFace*  
- [in] *clrDarkShadow*  
- [in] *clrLight*  
- [in] *pbrFace*  
+*pTabWnd*<br/>
+[in] [in] *clrDark*  
+*clrBlack*<br/>
+[in] [in] *clrHighlight*  
+*clrFace*<br/>
+[in] [in] *clrDarkShadow*  
+*clrLight*<br/>
+[in] [in] *pbrFace*  
  [in] *pbrBlack*  
   
 ### <a name="remarks"></a>Примечания  
@@ -664,8 +664,8 @@ virtual COLORREF GetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pTabWnd*  
- [in] *iTab*  
+*pTabWnd*<br/>
+[in] [in] *iTab*  
  [in] *bIsActive*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -682,8 +682,8 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pButton*  
- [in] *состояния*  
+*pButton*<br/>
+[in] [in] *состояния*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -710,8 +710,8 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *params*  
- [in] *nType*  
+*params*<br/>
+[in] [in] *nType*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -787,10 +787,10 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectGripper*  
- [in] *bHorz*  
- [in] *pBar*  
+*основного контроллера домена*<br/>
+[in] [in] *rectGripper*  
+*bHorz*<br/>
+[in] [in] *pBar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -806,10 +806,10 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
- [in] *rect*  
- [in] *состояния*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *состояния*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -826,10 +826,10 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
- [in] *rect*  
- [in] *состояния*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *состояния*  
  [in] *bHorz*  
   
 ### <a name="remarks"></a>Примечания  
@@ -845,8 +845,8 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pBar*  
+*основного контроллера домена*<br/>
+[in] [in] *pBar*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
@@ -865,12 +865,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *nState*  
- [in] *bHighlighted*  
- [in] *bPressed*  
- [in] *bEnabled*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*nState*<br/>
+[in] [in] *bHighlighted*  
+*bPressed*<br/>
+[in] [in] *bEnabled*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -888,12 +888,12 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *bDisabled*  
- [in] *bIsDropped*  
- [in] *bIsHighlighted*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*bDisabled*<br/>
+[in] [in] *bIsDropped*  
+*bIsHighlighted*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -911,12 +911,12 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *bDisabled*  
- [in] *bIsDropped*  
- [in] *bIsHighlighted*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*bDisabled*<br/>
+[in] [in] *bIsDropped*  
+*bIsHighlighted*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -933,10 +933,10 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectImage*  
- [in] *bIsDisabled*  
- [in] *bIsPressed*  
+*основного контроллера домена*<br/>
+[in] [in] *rectImage*  
+*bIsDisabled*<br/>
+[in] [in] *bIsPressed*  
  [in] *bIsHighlighted*  
   
 ### <a name="remarks"></a>Примечания  
@@ -954,10 +954,10 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *bDisabled*  
- [in] *bIsHighlighted*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*bDisabled*<br/>
+[in] [in] *bIsHighlighted*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
@@ -974,10 +974,10 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pToolBar*  
- [in] *rectBorder*  
- [in] *rectBorderSize*  
+*основного контроллера домена*<br/>
+[in] [in] *pToolBar*  
+*rectBorder*<br/>
+[in] [in] *rectBorderSize*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -994,10 +994,10 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pCtrl*  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *bIsPressed*  
+*pCtrl*<br/>
+[in] [in] *основного контроллера домена*  
+*Rect*<br/>
+[in] [in] *bIsPressed*  
  [in] *bIsHighlighted*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1013,8 +1013,8 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pMenu*  
+*основного контроллера домена*<br/>
+[in] [in] *pMenu*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1032,10 +1032,10 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
- [in] *rect*  
- [in] *bHighlight*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *bHighlight*  
  [in] *bIsRadio*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1053,10 +1053,10 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
- [in] *rectButton*  
- [in] *bHighlight*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
+*rectButton*<br/>
+[in] [in] *bHighlight*  
  [in] *bDisabled*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1071,8 +1071,8 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1089,8 +1089,8 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
  [in] *nResizeFlags*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1109,12 +1109,12 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *bIsScrollDown*  
- [in] *bIsHighlited*  
- [in] *bIsPressed*  
- [in] *bIsDisabled*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*bIsScrollDown*<br/>
+[in] [in] *bIsHighlited*  
+*bIsPressed*<br/>
+[in] [in] *bIsDisabled*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1131,10 +1131,10 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *uiSystemCommand*  
- [in] *nStyle*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*uiSystemCommand*<br/>
+[in] [in] *nStyle*  
  [in] *bHighlight*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1151,10 +1151,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pFrameWnd*  
- [in] *rectBorder*  
- [in] *rectBorderSize*  
+*основного контроллера домена*<br/>
+[in] [in] *pFrameWnd*  
+*rectBorder*<br/>
+[in] [in] *rectBorderSize*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1168,8 +1168,8 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectSplitter*  
+*основного контроллера домена*<br/>
+[in] [in] *rectSplitter*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1185,10 +1185,10 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectBtn*  
- [in] *bIsHighlighted*  
- [in] *bIsPressed*  
+*основного контроллера домена*<br/>
+[in] [in] *rectBtn*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsPressed*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1205,10 +1205,10 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pBar*  
- [in] *bActive*  
- [in] *rectCaption*  
+*основного контроллера домена*<br/>
+[in] [in] *pBar*  
+*bActive*<br/>
+[in] [in] *rectCaption*  
  [in] *rectButtons*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1226,8 +1226,8 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectCaption*  
+*основного контроллера домена*<br/>
+[in] [in] *rectCaption*  
  [in] *pPopupWnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1247,10 +1247,10 @@ virtual COLORREF OnDrawPropertySheetListItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pParent*  
- [in] *rect*  
- [in] *bIsHighlihted*  
+*основного контроллера домена*<br/>
+[in] [in] *pParent*  
+*Rect*<br/>
+[in] [in] *bIsHighlihted*  
  [in] *bIsSelected*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1267,8 +1267,8 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1282,8 +1282,8 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1298,8 +1298,8 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pGroup*  
+*основного контроллера домена*<br/>
+[in] [in] *pGroup*  
  [in] *rectGroup*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1318,10 +1318,10 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pBar*  
- [in] *rectCaption*  
- [in] *rectText*  
+*основного контроллера домена*<br/>
+[in] [in] *pBar*  
+*rectCaption*<br/>
+[in] [in] *rectText*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1335,8 +1335,8 @@ virtual void OnDrawRibbonCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1351,8 +1351,8 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pCategory*  
+*основного контроллера домена*<br/>
+[in] [in] *pCategory*  
  [in] *rectCategory*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1367,8 +1367,8 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pContextCaption*  
+*основного контроллера домена*<br/>
+[in] [in] *pContextCaption*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1384,8 +1384,8 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pScroll*  
+*основного контроллера домена*<br/>
+[in] [in] *pScroll*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1400,8 +1400,8 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pTab*  
+*основного контроллера домена*<br/>
+[in] [in] *pTab*  
  [in] *bIsActive*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1421,10 +1421,10 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pCheckBox*  
- [in] *rect*  
- [in] *bIsSelected*  
+*основного контроллера домена*<br/>
+[in] [in] *pCheckBox*  
+*Rect*<br/>
+[in] [in] *bIsSelected*  
  [in] *bHighlighted*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1439,8 +1439,8 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1457,10 +1457,10 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
- [in] *rect*  
- [in] *bIsSelected*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *bIsSelected*  
  [in] *bHighlighted*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1476,8 +1476,8 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
  [in] *rectBorder*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1492,8 +1492,8 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1509,10 +1509,10 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pElement*  
- [in] *rect*  
- [in] *str*  
+*основного контроллера домена*<br/>
+[in] [in] *pElement*  
+*Rect*<br/>
+[in] [in] *str*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1526,8 +1526,8 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1542,8 +1542,8 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pPanel*  
+*основного контроллера домена*<br/>
+[in] [in] *pPanel*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1559,8 +1559,8 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1577,10 +1577,10 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pPanel*  
- [in] *rectPanel*  
- [in] *rectCaption*  
+*основного контроллера домена*<br/>
+[in] [in] *pPanel*  
+*rectPanel*<br/>
+[in] [in] *rectCaption*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1597,8 +1597,8 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pPanel*  
+*основного контроллера домена*<br/>
+[in] [in] *pPanel*  
  [in] *rectCaption*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1616,10 +1616,10 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pProgress*  
- [in] *rectProgress*  
- [in] *rectChunk*  
+*основного контроллера домена*<br/>
+[in] [in] *pProgress*  
+*rectProgress*<br/>
+[in] [in] *rectChunk*  
  [in] *bInfiniteMode*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1635,8 +1635,8 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pPanel*  
+*основного контроллера домена*<br/>
+[in] [in] *pPanel*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1652,8 +1652,8 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pSlider*  
+*основного контроллера домена*<br/>
+[in] [in] *pSlider*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1672,12 +1672,12 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pSlider*  
- [in] *rect*  
- [in] *bIsHighlighted*  
- [in] *bIsPressed*  
- [in] *bIsDisabled*  
+*основного контроллера домена*<br/>
+[in] [in] *pSlider*  
+*Rect*<br/>
+[in] [in] *bIsHighlighted*  
+*bIsPressed*<br/>
+[in] [in] *bIsDisabled*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1696,12 +1696,12 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pSlider*  
- [in] *rect*  
- [in] *bIsZoomOut*  
- [in] *bIsHighlighted*  
- [in] *bIsPressed*  
+*основного контроллера домена*<br/>
+[in] [in] *pSlider*  
+*Rect*<br/>
+[in] [in] *bIsZoomOut*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsPressed*  
  [in] *bIsDisabled*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1717,8 +1717,8 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pBar*  
+*основного контроллера домена*<br/>
+[in] [in] *pBar*  
  [in] *pPane*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1736,8 +1736,8 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pWndRibbonBar*  
+*основного контроллера домена*<br/>
+[in] [in] *pWndRibbonBar*  
  [in] *rectTab*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1757,10 +1757,10 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *nBorderSize*  
- [in] *iImage*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*nBorderSize*<br/>
+[in] [in] *iImage*  
  [in] *bHilited*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1777,10 +1777,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pBar*  
- [in] *rect*  
- [in] *bIsHoriz*  
+*основного контроллера домена*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsHoriz*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1795,8 +1795,8 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
  [in] *состояния*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1814,10 +1814,10 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pBar*  
- [in] *rectPane*  
- [in] *uiID*  
+*основного контроллера домена*<br/>
+[in] [in] *pBar*  
+*rectPane*<br/>
+[in] [in] *uiID*  
  [in] *nStyle*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1833,8 +1833,8 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pStatBar*  
+*основного контроллера домена*<br/>
+[in] [in] *pStatBar*  
  [in] *rectSizeBox*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1852,10 +1852,10 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectTab*  
- [in] *iTab*  
- [in] *bIsActive*  
+*основного контроллера домена*<br/>
+[in] [in] *rectTab*  
+*iTab*<br/>
+[in] [in] *bIsActive*  
  [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1873,10 +1873,10 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *pButton*  
- [in] *uiState*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*pButton*<br/>
+[in] [in] *uiState*  
  [in] *pWndTab*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1894,10 +1894,10 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pTask*  
- [in] *pIcons*  
- [in] *bIsHighlighted*  
+*основного контроллера домена*<br/>
+[in] [in] *pTask*  
+*pIcons*<br/>
+[in] [in] *bIsHighlighted*  
  [in] *bIsSelected*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1915,10 +1915,10 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pGroup*  
- [in] *bIsHighlighted*  
- [in] *bIsSelected*  
+*основного контроллера домена*<br/>
+[in] [in] *pGroup*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsSelected*  
  [in] *bCanCollapse*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1934,8 +1934,8 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
  [in] *bIsActive*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1950,8 +1950,8 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectClient*  
+*основного контроллера домена*<br/>
+[in] [in] *rectClient*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1968,8 +1968,8 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
  [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Примечания  
@@ -1986,10 +1986,10 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *pButton*  
- [in] *pWndTab*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*pButton*<br/>
+[in] [in] *pWndTab*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2004,8 +2004,8 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
  [in] *pTabWnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2025,10 +2025,10 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pBar*  
- [in] *rectClient*  
- [in] *rectClip*  
+*основного контроллера домена*<br/>
+[in] [in] *pBar*  
+*rectClient*<br/>
+[in] [in] *rectClip*  
  [in] *bNCArea*  
   
 ### <a name="remarks"></a>Примечания  
@@ -2045,10 +2045,10 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
- [in] *rect*  
- [in] *состояния*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *состояния*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2068,14 +2068,14 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pBar*  
- [in] *rect*  
- [in] *bIsPressed*  
- [in] *bIsHighlighted*  
- [in] *bIsDisabled*  
- [in] *bHasDropDownArrow*  
- [in] *bIsSysButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsPressed*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsDisabled*  
+*bHasDropDownArrow*<br/>
+[in] [in] *bIsSysButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -2093,10 +2093,10 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *pBrush*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*pBrush*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2112,10 +2112,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectCaption*  
- [in] *pFrameWnd*  
- [in] *bActive*  
+*основного контроллера домена*<br/>
+[in] [in] *rectCaption*  
+*pFrameWnd*<br/>
+[in] [in] *bActive*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -2132,8 +2132,8 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectCaption*  
+*основного контроллера домена*<br/>
+[in] [in] *rectCaption*  
  [in] *clrText*  
   
 ### <a name="remarks"></a>Примечания  
@@ -2151,10 +2151,10 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
- [in] *bIsHighlighted*  
- [in] *bIsPressed*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsPressed*  
  [in] *clrText*  
   
 ### <a name="remarks"></a>Примечания  
@@ -2169,8 +2169,8 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2184,8 +2184,8 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -2208,14 +2208,14 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pEdit*  
- [in] *rect*  
- [in] *bIsHighlighted*  
- [in] *bIsPaneHighlighted*  
- [in] *bIsDisabled*  
- [in] *clrText*  
- [in] *clrSelBackground*  
+*основного контроллера домена*<br/>
+[in] [in] *pEdit*  
+*Rect*<br/>
+[in] [in] *bIsHighlighted*  
+*bIsPaneHighlighted*<br/>
+[in] [in] *bIsDisabled*  
+*clrText*<br/>
+[in] [in] *clrSelBackground*  
  [in] *clrSelText*  
   
 ### <a name="remarks"></a>Примечания  
@@ -2230,8 +2230,8 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -2248,8 +2248,8 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pPanel*  
+*основного контроллера домена*<br/>
+[in] [in] *pPanel*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
@@ -2265,8 +2265,8 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pMenuBar*  
+*основного контроллера домена*<br/>
+[in] [in] *pMenuBar*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
@@ -2285,12 +2285,12 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectFill*  
- [in] *pbrFill*  
- [in] *iTab*  
- [in] *bIsActive*  
- [in] *pTabWnd*  
+*основного контроллера домена*<br/>
+[in] [in] *rectFill*  
+*pbrFill*<br/>
+[in] [in] *iTab*  
+*bIsActive*<br/>
+[in] [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2306,10 +2306,10 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *pButton*  
- [in] *rect*  
- [in] *clrText*  
+*основного контроллера домена*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *clrText*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2323,8 +2323,8 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rectRarelyUsed*  
+*основного контроллера домена*<br/>
+[in] [in] *rectRarelyUsed*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2338,8 +2338,8 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- [in] *bActive*  
+*pWnd*<br/>
+[in] [in] *bActive*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -2356,8 +2356,8 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- [in] *lstSysButtons*  
+*pWnd*<br/>
+[in] [in] *lstSysButtons*  
  [in] *rectRedraw*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2374,8 +2374,8 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pWnd*  
- [in] *sizeWindow*  
+*pWnd*<br/>
+[in] [in] *sizeWindow*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   

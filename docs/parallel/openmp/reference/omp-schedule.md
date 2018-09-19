@@ -1,5 +1,5 @@
 ---
-title: OMP_SCHEDULE | Документы Microsoft
+title: OMP_SCHEDULE | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5052aaadc673e38a844ea5b0d1e11ff3a96f3fbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fd5bf96706b94ffbba8cb1b9aeeee8701b266e5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691759"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115051"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
-Изменяет поведение [расписания](../../../parallel/openmp/reference/schedule.md) предложение при `schedule(runtime)` указывается в `for` или `parallel for` директивы.  
+Изменяет поведение [расписание](../../../parallel/openmp/reference/schedule.md) предложение при `schedule(runtime)` указывается в `for` или `parallel for` директива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,14 +32,13 @@ ms.locfileid: "33691759"
 set OMP_SCHEDULE[=type[,size]]  
 ```  
   
-## <a name="remarks"></a>Примечания  
- где  
+## <a name="arguments"></a>Аргументы
+
+*size*<br/>
+(Необязательно) Указывает размер итераций. `size` Должно быть положительным целым числом. Значение по умолчанию равно 1, за исключением случаев `type` является статическим. Не является допустимым, если `type` является `runtime`.  
   
- `size` (необязательно)  
- Указывает размер итераций. `size` Должно быть положительным целым числом. Значение по умолчанию — 1, за исключением случаев `type` является статическим. Если не является допустимым `type` — `runtime`.  
-  
- `type`  
- Тип расписания:  
+*type*<br/>
+Тип расписания:  
   
 -   `dynamic`  
   
@@ -50,7 +49,7 @@ set OMP_SCHEDULE[=type[,size]]
 -   `static`  
   
 ## <a name="remarks"></a>Примечания  
- Значение по умолчанию в Visual C++ реализации стандартной OpenMP — `OMP_SCHEDULE=static,0`.  
+ Значение по умолчанию в Visual C++ реализации стандарта OpenMP — `OMP_SCHEDULE=static,0`.  
   
  Дополнительные сведения см. в разделе [4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md).  
   

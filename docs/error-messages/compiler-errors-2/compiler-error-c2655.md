@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2655 | Документы Microsoft
+title: Ошибка компилятора C2655 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77869c646e0804b5f3d942ea3acc97b0810196a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 456fd31e6d618774bff13c9800d6a44ffd3deb73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078690"
 ---
 # <a name="compiler-error-c2655"></a>Ошибка компилятора C2655
-«Идентификатор»: определение или повторное объявление недопустимые в текущей области  
-  
- Идентификатор может быть повторно объявлен только в глобальной области видимости.  
-  
- Следующий пример приводит к возникновению ошибки C2655:  
-  
-```  
-// C2655.cpp  
-class A {};  
-class B {  
-public:  
-   static int i;  
-};  
-  
-int B::i;  // OK  
-  
-int main() {  
-   A B::i;  // C2655  
-}  
+
+«Идентификатор»: определение или переобъявление некорректно в текущей области
+
+Идентификатор можно объявить повторно только в глобальной области.
+
+Следующий пример приводит к возникновению ошибки C2655:
+
+```
+// C2655.cpp
+class A {};
+class B {
+public:
+   static int i;
+};
+
+int B::i;  // OK
+
+int main() {
+   A B::i;  // C2655
+}
 ```

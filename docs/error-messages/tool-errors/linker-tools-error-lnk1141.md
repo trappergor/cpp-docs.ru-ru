@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1141 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1141 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cee194889f6b25842be49edf4dbc7ff4edf9ff1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c1046f240a701883058a4eede9670645dd12bcc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113634"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Ошибка средств компоновщика LNK1141
-Сбой при построении файла экспорта  
-  
- [ССЫЛКА](../../build/reference/linker-command-line-syntax.md) не удалось создать файл экспорта (EXP).  
-  
- Эта ошибка причины проблемы системы, например недостаточно памяти и ошибки синтаксиса в параметрах или операторов определения модуля.  
-  
- Перед этой ошибкой возникает другая ошибка, содержащая дополнительные сведения.  
-  
-## <a name="see-also"></a>См. также  
- [EXP-файлы в качестве входных файлов компоновщика](../../build/reference/dot-exp-files-as-linker-input.md)
+
+Сбой при сборке файла экспорта
+
+[ССЫЛКА](../../build/reference/linker-command-line-syntax.md) не удалось создать файл экспорта (EXP).
+
+Причины этой ошибки включают системных проблем, таких как недостаточно памяти и ошибки синтаксиса в параметры или операторов определения модуля.
+
+Эта ошибка предшествует другая ошибка, которая предоставляет дополнительную информацию.
+
+## <a name="see-also"></a>См. также
+
+[EXP-файлы в качестве входных файлов компоновщика](../../build/reference/dot-exp-files-as-linker-input.md)

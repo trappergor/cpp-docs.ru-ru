@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 2) C4396 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 2) C4396 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b937b6ecebedc6984279502a5f64b287f09bd2d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa0a084e90db9d48f517bfe65c6340eb532f0ae6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118574"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Предупреждение компилятора (уровень 2) C4396
-"имя": если дружественное объявление ссылается на специализацию функции-шаблона, встроенный спецификатор использовать невозможно  
-  
- Специализации шаблона функции нельзя задавать любые [встроенного](../../cpp/inline-functions-cpp.md) спецификаторы. В этом случае при компиляции возникает предупреждение C4396, а спецификатор inline пропускается.  
-  
-### <a name="to-correct-this-error"></a>Исправление ошибки  
-  
--   Удалите спецификатор `inline`, `__inline`или `__forceinline` из объявления дружественной функции.  
-  
-## <a name="example"></a>Пример  
- В приведенном ниже примере показано недопустимое объявление дружественной функции со спецификатором `inline` .  
-  
-```  
-// C4396.cpp  
-// compile with: /W2 /c  
-  
-class X;   
-template<class T> void Func(T t, int i);  
-  
-class X {  
-    friend inline void Func<char>(char t, int i);  //C4396  
-// try the following line instead  
-//    friend void Func<char>(char t, int i);   
-    int i;  
-};  
+
+"имя": если дружественное объявление ссылается на специализацию функции-шаблона, встроенный спецификатор использовать невозможно
+
+В специализации шаблона функции нельзя указывать любой из [встроенного](../../cpp/inline-functions-cpp.md) спецификаторы. В этом случае при компиляции возникает предупреждение C4396, а спецификатор inline пропускается.
+
+### <a name="to-correct-this-error"></a>Исправление ошибки
+
+- Удалите спецификатор `inline`, `__inline`или `__forceinline` из объявления дружественной функции.
+
+## <a name="example"></a>Пример
+
+В приведенном ниже примере показано недопустимое объявление дружественной функции со спецификатором `inline` .
+
+```
+// C4396.cpp
+// compile with: /W2 /c
+
+class X;
+template<class T> void Func(T t, int i);
+
+class X {
+    friend inline void Func<char>(char t, int i);  //C4396
+// try the following line instead
+//    friend void Func<char>(char t, int i);
+    int i;
+};
 ```

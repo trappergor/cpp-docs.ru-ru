@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3f82633c9bd48ede71853dbe383352b0b3d6f5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7ce27566075e48fb90b894a21e7a74a3ef1fdbea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692868"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705111"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Блок, относящийся только к системам Microsoft**  
@@ -41,7 +41,7 @@ void __svm_vmload(
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|Физический адрес VMCB.|  
+|*VmcbPhysicalAddress*|[in] Физический адрес VMCB.|  
   
 ## <a name="remarks"></a>Примечания  
  `__svm_vmload` Функция эквивалентна `VMLOAD` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер 24593, 3.11, версия документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c8081b5a85b09f513152861cb09758b61df8d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d3b10648a3251a705085e31559a98b6ee4957c72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763257"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088479"
 ---
 # <a name="cwin32heap-class"></a>Класс CWin32Heap
 
@@ -101,7 +101,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBytes*  
+*nBytes*<br/>
 Запрошенное число байтов в новом блоке памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -124,10 +124,10 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hHeap*  
+*hHeap*<br/>
 Дескриптор существующей кучи.
 
-*bTakeOwnership*  
+*bTakeOwnership*<br/>
 Флаг, указывающий, в том случае, если `CWin32Heap` объект является владельцем по отношению к ресурсам кучи.
 
 ### <a name="remarks"></a>Примечания
@@ -149,16 +149,16 @@ CWin32Heap(
 
 ### <a name="parameters"></a>Параметры
 
-*hHeap*  
+*hHeap*<br/>
 Существующий объект кучи.
 
-*dwFlags*  
+*dwFlags*<br/>
 Флаги, используемые при создании кучи.
 
-*nInitialSize*  
+*nInitialSize*<br/>
 Начальный размер кучи.
 
-*nMaxSize*  
+*nMaxSize*<br/>
 Максимальный размер кучи.
 
 ### <a name="remarks"></a>Примечания
@@ -213,7 +213,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на блок памяти, который необходимо освободить. Значение NULL является допустимым значением и не выполняет никаких действий.
 
 ##  <a name="getsize"></a>  CWin32Heap::GetSize
@@ -226,7 +226,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на блок памяти, размер которого будет получать метод. Это является указателем, возвращенным [CWin32Heap::Allocate](#allocate) или [CWin32Heap::Reallocate](#reallocate).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -263,10 +263,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на блок памяти для перераспределения.
 
-*nBytes*  
+*nBytes*<br/>
 Новый размер выделенного блока в байтах. Блок можно увеличить или уменьшить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -279,9 +279,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)   
-[Класс CLocalHeap](../../atl/reference/clocalheap-class.md)   
-[Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
-[Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)<br/>
+[Класс CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
+[Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
+[Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
 [Класс CComHeap](../../atl/reference/ccomheap-class.md)

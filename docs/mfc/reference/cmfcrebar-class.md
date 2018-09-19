@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af74ab381293e04c08a1fa8c601558edaeacf6c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689196"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721517"
 ---
 # <a name="cmfcrebar-class"></a>Класс CMFCReBar
 Объект `CMFCReBar` объект является панель элементов управления, которая предоставляет макет, сохраняемость и сведения о состоянии для элементов управления "Главная панель".  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in] [out] *pBar*  
  Указатель на дочернему окну, которое должен быть вставлен в главной панели. Упоминаемый объект должен иметь **WS_CHILD** стиль окна.  
   
- [in] *pszText*  
- Задает текст, появляющийся на главной панели. Текст не является частью дочернего окна. Вместо этого он отображается на главной панели, сам.  
+*pszText*<br/>
+[in] Задает текст, появляющийся на главной панели. Текст не является частью дочернего окна. Вместо этого он отображается на главной панели, сам.  
   
  [in] [out] *pbmp*  
  Указывает битовую карту для отображения на заднем плане главной панели.  
   
- [in] *dwStyle*  
- Содержит стиль, применяемый к полосе. Полный список стилей аппаратного контроллера управления, см. в описании для `fStyle` в [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) структуры в документации по Windows SDK.  
+*dwStyle*<br/>
+[in] Содержит стиль, применяемый к полосе. Полный список стилей аппаратного контроллера управления, см. в описании для `fStyle` в [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) структуры в документации по Windows SDK.  
   
- [in] *clrFore*  
- Представляет цвет переднего плана для главной панели.  
+*clrFore*<br/>
+[in] Представляет цвет переднего плана для главной панели.  
   
- [in] *clrBack*  
- Представляет цвет фона элемента главной панели.  
+*clrBack*<br/>
+[in] Представляет цвет фона элемента главной панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если диапазон успешно добавлен в главной панели; в противном случае — значение FALSE.  
@@ -146,14 +146,14 @@ BOOL Create(
  [in] [out] *pParentWnd*  
  Указатель на родительское окно элемента управления "Главная панель".  
   
- [in] *dwCtrlStyle*  
- Задает стиль для элемента управления "Главная панель". Значение по умолчанию стиль — **RBS_BANDBORDERS**, который отображает ограничить строки для разделения смежные полосами в элементе управления "Главная панель". Список допустимых стили, см. в разделе [стили элемента управления главной панели](/windows/desktop/Controls/rebar-control-styles) в документации по Windows SDK.  
+*dwCtrlStyle*<br/>
+[in] Задает стиль для элемента управления "Главная панель". Значение по умолчанию стиль — **RBS_BANDBORDERS**, который отображает ограничить строки для разделения смежные полосами в элементе управления "Главная панель". Список допустимых стили, см. в разделе [стили элемента управления главной панели](/windows/desktop/Controls/rebar-control-styles) в документации по Windows SDK.  
   
- [in] *dwStyle*  
- Стиль окна элемента управления "Главная панель". Список допустимых стили, см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Стиль окна элемента управления "Главная панель". Список допустимых стили, см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *nID*  
- Идентификатор элемента главной панели дочернего окна.  
+*nID*<br/>
+[in] Идентификатор элемента главной панели дочернего окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если "Главная панель" создан успешно; в противном случае — значение FALSE.  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *точки*  
- [in] *pTI*  
+*точка*<br/>
+[in] [in] *pTI*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Примечания  
   

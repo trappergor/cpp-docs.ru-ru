@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bebc10481c446edfa29d09663ac3139ecc5391b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dee005091c95bbac5fca64851f631b443bd33cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106776"
 ---
 # <a name="accelerator-class"></a>Класс accelerator
 Ускоритель — это возможность оборудования, которая оптимизирована для параллельной обработки данных. Ускоритель может быть устройство, подключенное к шине PCIe (например, GPU), или может быть расширенным набором инструкций на главном ЦП.  
@@ -70,14 +70,14 @@ class accelerator;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор сочетаний клавиш](#ctor)|Инициализирует новый экземпляр класса `accelerator`.|  
 |[~ accelerator, деструктор](#ctor)|Уничтожает `accelerator` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[create_view](#create_view)|Создает и возвращает `accelerator_view` на этом ускорителе.|  
 |[get_all](#get_all)|Возвращает вектор `accelerator` объекты, которые представляют все допустимые ускорители.|  
@@ -99,7 +99,7 @@ class accelerator;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор!=](#operator_neq)|Сравнивает этот `accelerator` объект с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.|  
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `accelerator` в данный объект.|  
@@ -107,7 +107,7 @@ class accelerator;
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[cpu_accelerator](#cpu_accelerator)|Получает строковую константу для ЦП `accelerator`.|  
 |[dedicated_memory](#dedicated_memory)|Получает выделенную память для `accelerator`, в килобайтах.|  
@@ -164,11 +164,11 @@ accelerator(const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Device_path`  
- Путь к физическому устройству.  
+*_Device_path*<br/>
+Путь к физическому устройству.  
   
- `_Other`  
- Ускоритель, подлежащий копированию.  
+*_Другое*<br/>
+Ускоритель, подлежащий копированию.  
   
 ##  <a name="cpu_accelerator"></a> cpu_accelerator 
 
@@ -187,8 +187,8 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `qmode`  
- Режим организации очереди.  
+*qmode*<br/>
+Режим организации очереди.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Новый `accelerator_view` на этом ускорителе, используя указанный режим организации очереди.  
@@ -470,8 +470,8 @@ bool operator!= (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Other`  
- `accelerator` Объект, сравниваемый с данным элементом.  
+*_Другое*<br/>
+`accelerator` Объект, сравниваемый с данным элементом.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `false` Если два `accelerator` объекты совпадают; в противном случае `true`.  
@@ -485,8 +485,8 @@ accelerator& operator= (const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Other`  
- `accelerator` Для копирования.  
+*_Другое*<br/>
+`accelerator` Для копирования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на этот `accelerator` объекта.  
@@ -502,8 +502,8 @@ bool operator== (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Other`  
- `accelerator` Объект, сравниваемый с данным элементом.  
+*_Другое*<br/>
+`accelerator` Объект, сравниваемый с данным элементом.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если другой `accelerator` объект то же, что это `accelerator` объекта; в противном случае `false`.  
@@ -517,8 +517,8 @@ static inline bool set_default(std::wstring _Path);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Path`  
- Путь к ускорителю.  
+*_Путь*<br/>
+Путь к ускорителю.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если вызов завершается успешно задан ускоритель по умолчанию. В противном случае — значение `false`.  
@@ -532,8 +532,8 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Default_cpu_access_type`  
- Access_type ЦП по умолчанию, используемый для выделения памяти массива или array_view на этом ускорителе.  
+*_Default_cpu_access_type*<br/>
+Access_type ЦП по умолчанию, используемый для выделения памяти массива или array_view на этом ускорителе.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Логическое значение, указывающее, был успешно задан access_type ЦП по умолчанию для сочетания клавиш.  
@@ -597,8 +597,8 @@ accelerator_view(const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Other`  
- `accelerator_view` Копируемый объект.  
+*_Другое*<br/>
+`accelerator_view` Копируемый объект.  
   
 ##  <a name="create_marker"></a> create_marker 
 
@@ -714,8 +714,8 @@ bool operator!= (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Other`  
- `accelerator_view` Объект, сравниваемый с данным элементом.  
+*_Другое*<br/>
+`accelerator_view` Объект, сравниваемый с данным элементом.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `false`, если объекты совпадают; в противном случае — значение `true`.  
@@ -729,8 +729,8 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Other`  
- `accelerator_view` Для копирования.  
+*_Другое*<br/>
+`accelerator_view` Для копирования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на измененный `accelerator_view` объекта.  
@@ -746,8 +746,8 @@ bool operator== (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Other`  
- `accelerator_view` Объект, сравниваемый с данным элементом.  
+*_Другое*<br/>
+`accelerator_view` Объект, сравниваемый с данным элементом.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если объекты совпадают; в противном случае — значение `false`.  

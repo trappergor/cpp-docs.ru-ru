@@ -1,5 +1,5 @@
 ---
-title: Класс task_completion_event | Документы Microsoft
+title: Класс task_completion_event | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088999"
 ---
 # <a name="taskcompletionevent-class"></a>Класс task_completion_event
 Класс `task_completion_event` позволяет отложить выполнение задачи до выполнения условия или запустить задачу в ответ на внешнее событие.  
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_ResultType`  
- Тип результата данного класса `task_completion_event`.  
-  
- `T`  
+*_ResultType*<br/>
+Тип результата данного класса `task_completion_event`.  
+
   
 ## <a name="members"></a>Члены  
   
@@ -87,14 +86,14 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Result`  
- Чтобы установить это событие с результат.  
+*_Result*<br/>
+Результат, чтобы задать для события.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Метод возвращает `true` успешную при задании события. Он возвращает `false` Если событие уже установлено.  
+ Этот метод возвращает `true` если ему удалось успешно задать событие. Он возвращает `false` Если событие уже задано.  
   
 ### <a name="remarks"></a>Примечания  
- При наличии нескольких или одновременных вызовов `set`, только первый вызов будет выполнен успешно, и его результат (если таковые имеются) будут храниться в событие завершения задачи. Остальные наборы учитываются, и метод будет возвращать значение false. При установке события завершения задачи всех задачах, созданных из немедленно завершит событие, которое ее продолжение, если таковые имеются, будет запланирована. Задача выполнения объектов, у которых `_ResultType` отличный от `void` передает значение их продолжениями.  
+ При наличии множества или параллельных вызовов к `set`, только первый вызов будет успешен и его результат (если таковые имеются) будут храниться в событие завершения задачи. Остальные наборы игнорируются и метод возвращает значение false. При установке события завершения задачи все задачи, созданные из событий будут немедленно завершены, что их продолжения, если таковые имеются, будут планироваться. Объекты завершения задачи `_ResultType` отличное от `void` передаст значение их продолжения.  
   
 ##  <a name="set_exception"></a> set_exception 
 
@@ -108,9 +107,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+Тип исключения.
+
+*_Except.*<br/>
+Исключение, чтобы задать.
+
+*_ExceptionPtr*<br/>
+Задать указатель исключение.
   
 ### <a name="return-value"></a>Возвращаемое значение  
   

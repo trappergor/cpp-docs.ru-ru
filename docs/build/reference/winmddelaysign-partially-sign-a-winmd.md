@@ -1,5 +1,5 @@
 ---
-title: -WINMDDELAYSIGN (частично подпишите файл winmd) | Документы Microsoft
+title: -WINMDDELAYSIGN (частично подпишите файл winmd) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c50480fae1f4f3e7421236615d059a642d1074f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b31f6ae5baf9aadbb40b4b45f532b344b6b2e037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375562"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723857"
 ---
 # <a name="winmddelaysign-partially-sign-a-winmd"></a>/WINMDDELAYSIGN (частично подпишите файл winmd)
-Позволяет частичной подписи файла метаданных среды выполнения Windows (.winmd), помещая открытый ключ в файле.  
-  
-```  
-/WINMDDELAYSIGN[:NO]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Напоминает [/delaysign](../../build/reference/delaysign-partially-sign-an-assembly.md) параметра компоновщика, который применяется к winmd-файл. Используйте **параметр/winmddelaysign** Если вы хотите поместить только открытый ключ в файле winmd. По умолчанию компоновщик работает как если бы **/winmddelaysign: no** указаны; то есть он не подписывает winmd-файл.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  Выберите **компоновщика** папки.  
-  
-3.  Выберите **метаданных Windows** страницу свойств.  
-  
-4.  В **отложенная подпись метаданных Windows** раскрывающемся списке выберите нужный вариант.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+Включает частичную подпись файла метаданных среды выполнения Windows (.winmd), поместив открытый ключ в файле.
+
+```
+/WINMDDELAYSIGN[:NO]
+```
+
+## <a name="remarks"></a>Примечания
+
+Напоминает [/delaysign](../../build/reference/delaysign-partially-sign-an-assembly.md) параметра компоновщика, который применяется к winmd-файл. Используйте **параметр/winmddelaysign** Если вы хотите поместить только открытый ключ в файл winmd. По умолчанию компоновщик работает так, как если **/winmddelaysign: no** указаны; то есть он не подписывает файл winmd.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Выберите **компоновщика** папки.
+
+1. Выберите **метаданных Windows** страницу свойств.
+
+1. В **отложенная подпись метаданных Windows** раскрывающемся списке выберите нужный вариант.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

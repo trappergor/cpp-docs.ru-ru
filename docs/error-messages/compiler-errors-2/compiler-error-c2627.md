@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2627 | Документы Microsoft
+title: Ошибка компилятора C2627 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67123349dd782beb9b547d3497d6c71d4390e434
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7548e2154144ca502ab581bf804018b80cc0d8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072671"
 ---
 # <a name="compiler-error-c2627"></a>Ошибка компилятора C2627
-«функция»: функция-член не разрешается в анонимном объединении  
-  
- [Анонимное объединение](../../cpp/unions.md#anonymous_unions) не может иметь функций-членов.  
-  
- Следующий пример приводит к возникновению ошибки C2627:  
-  
-```  
-// C2627.cpp  
-int main() {  
-   union { void f(){} };   // C2627  
-   union X { void f(){} };  
-}  
+
+«функция»: функция-член не разрешается в анонимном объединении
+
+[Анонимное объединение](../../cpp/unions.md#anonymous_unions) не могут иметь функции-члены.
+
+Следующий пример приводит к возникновению ошибки C2627:
+
+```
+// C2627.cpp
+int main() {
+   union { void f(){} };   // C2627
+   union X { void f(){} };
+}
 ```

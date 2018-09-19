@@ -1,5 +1,5 @@
 ---
-title: Сообщение об ошибке элемента управления Edit | Документы Microsoft
+title: Сообщение об ошибке элемента управления Edit | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49a0852b0b73adb3c70ba1b01b8c7f4805f80321
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa0851f31487bf79ba3977bdedee86ce3b718f21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369618"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701901"
 ---
 # <a name="error-message-edit-control"></a>Элемент управления изменением сообщений об ошибке
-**Сообщение об ошибке** поле содержит текст системное сообщение об ошибке или сообщение ошибки модуля на основании введенное значение.  
-  
-## <a name="see-also"></a>См. также  
- [Элемент управления "Поле ввода значений"](../../build/reference/value-edit-control.md)
+
+**Сообщение об ошибке** поле с текстом системное сообщение об ошибке или модуль сообщение об ошибке, на основе введенные значения.
+
+## <a name="see-also"></a>См. также
+
+[Элемент управления "Поле ввода значений"](../../build/reference/value-edit-control.md)

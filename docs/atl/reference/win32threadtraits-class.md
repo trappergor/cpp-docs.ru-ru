@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b8b481c917292c672711c308ac39c052ed4ea1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: baab04880c19cac1e0c291f2b4d8a274dea1c21b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752125"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044942"
 ---
 # <a name="win32threadtraits-class"></a>Класс Win32ThreadTraits
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>Параметры
 
-*lpsa*  
+*lpsa*<br/>
 Атрибуты безопасности для нового потока.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 Размер стека для нового потока.
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 Процедура потока нового потока.
 
-*pvParam*  
+*pvParam*<br/>
 Параметр, передаваемый в процедуру потока.
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 Создание флагов ("0" или "CREATE_SUSPENDED").
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out] Адрес переменной DWORD, который, в случае успешного выполнения получает идентификатор только что созданному потоку.
 
 ### <a name="return-value"></a>Возвращаемое значение

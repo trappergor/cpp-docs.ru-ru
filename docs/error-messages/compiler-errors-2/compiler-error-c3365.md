@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3365 | Документы Microsoft
+title: Ошибка компилятора C3365 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a41fc5b1eb5c93bf73685b5141bd91ab7a6058e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8cb585c2d1142651e5edd01085dd904be60bc86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044721"
 ---
 # <a name="compiler-error-c3365"></a>Ошибка компилятора C3365
-оператор "оператор": отличающиеся операнды типов "тип1" и "тип2"  
-  
-Попытка компоновки делегатов различного типа.  В разделе [как: определение и использование делегатов (C + +/ CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) Дополнительные сведения о делегатах.  
-  
-## <a name="example"></a>Пример  
-Следующий пример приводит к возникновению ошибки C3365:  
-  
-```cpp  
-// C3365.cpp  
-// compile with: /clr  
-delegate void D1();  
-delegate void D2(int);  
-  
-ref class R {  
-public:  
-   void f(){}  
-   void g(int){}  
-};  
-  
-int main() {  
-   D1^ d1 = gcnew D1(gcnew R, &R::f);  
-   D2^ d2 = gcnew D2(gcnew R, &R::g);  
-   D1^ d3 = gcnew D1(gcnew R, &R::f);  
-  
-   d1 += d2;   // C3365  
-   d1 += d3;   // OK  
-   d1();  
-}  
+
+оператор "оператор": отличающиеся операнды типов "тип1" и "тип2"
+
+Попытка компоновки делегатов различного типа.  См. в разделе [как: определение и использование делегатов (C + +/ CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) Дополнительные сведения о делегатах.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3365:
+
+```cpp
+// C3365.cpp
+// compile with: /clr
+delegate void D1();
+delegate void D2(int);
+
+ref class R {
+public:
+   void f(){}
+   void g(int){}
+};
+
+int main() {
+   D1^ d1 = gcnew D1(gcnew R, &R::f);
+   D2^ d2 = gcnew D2(gcnew R, &R::g);
+   D1^ d3 = gcnew D1(gcnew R, &R::f);
+
+   d1 += d2;   // C3365
+   d1 += d3;   // OK
+   d1();
+}
 ```

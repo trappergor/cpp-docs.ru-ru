@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4222 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4222 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359af4c4d3b1079b2d56f108bff0ee1488ea71f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abc4f85fbc361b37d9325f9d395a1c34e1eeed2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302153"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106944"
 ---
 # <a name="linker-tools-warning-lnk4222"></a>Предупреждение средств компоновщика LNK4222
-экспортированному символу «символ» не следует присваивать порядковое число  
-  
- Следующие символы не должны быть экспортированы по порядковому номеру:  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllUnregisterServer`  
-  
- Эти функции всегда находятся по имени, с помощью `GetProcAddress`. Компоновщик предупреждает об этом типе экспорта, поскольку это может привести к более крупного изображения. Это может произойти, если диапазон порядковых номеров экспортов велик с относительно небольшим числом экспортов. Например:  
-  
-```  
-EXPORTS  
-   DllGetClassObject   @1  
-   MyOtherAPI      @100  
-```  
-  
- потребуется 100 областей в таблице экспорта адресов с 98 их просто заполнитель (2-99). С другой стороны  
-  
-```  
-EXPORTS  
-   DllGetClassObject  
-   MyOtherAPI      @100  
-```  
-  
- потребуется две области. (Имейте в виду, что можно также экспортировать [и экспорт](../../build/reference/export-exports-a-function.md) компоновщика.)
+
+экспортированному символу «символ» не следует назначать порядковый номер
+
+Следующие символы не должны быть экспортированы по порядковому номеру:
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllUnregisterServer`
+
+Эти функции всегда находятся по имени, с помощью `GetProcAddress`. Компоновщик предупреждает об этом типе экспорта, так как это может привести чтобы увеличить изображение. Это может произойти, если диапазон порядковых номеров экспортов велик с относительно небольшое количество экспортов. Например, примененная к объекту директива
+
+```
+EXPORTS
+   DllGetClassObject   @1
+   MyOtherAPI      @100
+```
+
+потребуется 100 областей в таблице экспорта адрес 98 из них просто заполнитель (2-99). С другой стороны
+
+```
+EXPORTS
+   DllGetClassObject
+   MyOtherAPI      @100
+```
+
+потребуется две области. (Имейте в виду, что можно также экспортировать [/EXPORT](../../build/reference/export-exports-a-function.md) параметр компоновщика.)

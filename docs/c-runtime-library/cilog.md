@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb6b88af98c047f4de641eba92033c0b2ac0c26
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c24925108ff6a0d2c5af1140bfb000a21eef55e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030343"
 ---
 # <a name="cilog"></a>_CIlog
-Вычисляет натуральный логарифм верхнего значения в стеке.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __cdecl _CIlog();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Эта версия функции `log` включает специальные соглашения о вызовах, распознаваемые компилятором. Это ускоряет выполнение, поскольку исключает создание копий и помогает распределять регистры.  
-  
- Полученное значение помещается в верхнюю часть стека.  
-  
-## <a name="requirements"></a>Требования  
- **Платформа:** x86  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)
+
+Вычисляет натуральный логарифм верхнего значения в стеке.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __cdecl _CIlog();
+```
+
+## <a name="remarks"></a>Примечания
+
+Эта версия функции `log` включает специальные соглашения о вызовах, распознаваемые компилятором. Это ускоряет выполнение, поскольку исключает создание копий и помогает распределять регистры.
+
+Полученное значение помещается в верхнюю часть стека.
+
+## <a name="requirements"></a>Требования
+ **Платформа:** x86
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

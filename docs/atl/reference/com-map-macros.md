@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524f360f2dcc2e1eaec11723395da0be7058c21a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028055"
 ---
 # <a name="com-map-macros"></a>Макросы сопоставления COM
 
@@ -47,7 +47,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Имя объекта класса, которую необходимо предоставить интерфейсы на.
 
 ### <a name="remarks"></a>Примечания
@@ -70,5 +70,5 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>См. также
 
-[Макросы](../../atl/reference/atl-macros.md)   
+[Макросы](../../atl/reference/atl-macros.md)<br/>
 [Глобальные функции сопоставления COM](../../atl/reference/com-map-global-functions.md)

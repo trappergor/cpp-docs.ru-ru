@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aab6e168970ff740f68d1338a05d51c691fd116d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf80d51cdf45b6298255a252124ace9568953b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082534"
 ---
 # <a name="ccomenumimpl-class"></a>Класс CComEnumImpl
 
@@ -43,22 +43,22 @@ ms.locfileid: "43759991"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy>  
+    const IID* piid, class T, class Copy>
 class ATL_NO_VTABLE CComEnumImpl : public Base
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 COM-интерфейса перечислителя. См. в разделе [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) пример.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор интерфейса интерфейса перечислителя.
 
-*T*  
+*T*<br/>
 Тип элемента, доступные в интерфейсе перечислителя.
 
-*Копировать*  
+*Копировать*<br/>
 Однородную [скопируйте класс политики](../../atl/atl-copy-policy-classes.md).
 
 ## <a name="members"></a>Участники
@@ -143,16 +143,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Параметры
 
-*begin*  
+*begin*<br/>
 Указатель на первый элемент массива, содержащего элементы, которые необходимо перечислить.
 
-*end*  
+*end*<br/>
 Указатель на расположение после последнего элемента массива, содержащего элементы, которые необходимо перечислить.
 
-*pUnk*  
+*pUnk*<br/>
 [in] `IUnknown` Указатель на объект, который должен поддерживаться в течение времени существования перечислителя. Передайте значение NULL, если объект не существует.
 
-*flags*  
+*flags*<br/>
 Флаги, указывающие, следует ли перечислитель стать владельцем массива или сделать его копию. Ниже описаны возможные значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -167,13 +167,13 @@ HRESULT Init(
 
 *Флаги* параметр позволяет указать, как перечислитель должен интерпретировать элементы массива, переданного ему. *флаги* может принимать одно из значений из `CComEnumFlags` перечисления, показано ниже:
 
-```  
-enum CComEnumFlags  
-   {  
-   AtlFlagNoCopy = 0,  
-   AtlFlagTakeOwnership = 2, // BitOwn  
-   AtlFlagCopy = 3           // BitOwn | BitCopy  
-   };  
+```
+enum CComEnumFlags
+   {
+   AtlFlagNoCopy = 0,
+   AtlFlagTakeOwnership = 2, // BitOwn
+   AtlFlagCopy = 3           // BitOwn | BitCopy
+   };
 ```
 
 `AtlFlagNoCopy` означает, что время существования массива не контролируется перечислитель. В этом случае либо массив будет иметь статический метод или объект, определяемый *pUnk* будете нести ответственность за освобождение массива в том случае, когда он больше не используется.
@@ -195,7 +195,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Параметры
 
-*ppEnum*  
+*ppEnum*<br/>
 [out] Интерфейс перечислителя для вновь созданного объекта, клонированный из текущего перечислителя.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -256,13 +256,13 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 ### <a name="parameters"></a>Параметры
 
-*celt*  
+*celt*<br/>
 [in] Количество запрошенных элементов.
 
-*rgelt*  
+*rgelt*<br/>
 [out] Массив для заполнения элементов.
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out] Число элементов, фактически возвращенных в *rgelt*. Это может быть меньше, чем *celt* если меньше, чем *celt* элементы остаются в списке.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -291,7 +291,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Параметры
 
-*celt*  
+*celt*<br/>
 [in] Количество пропускаемых элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -304,6 +304,6 @@ STDMETHOD(Skip)(ULONG celt);
 
 ## <a name="see-also"></a>См. также
 
-[Класс IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
-[Класс CComEnum](../../atl/reference/ccomenum-class.md)   
+[Класс IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[Класс CComEnum](../../atl/reference/ccomenum-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

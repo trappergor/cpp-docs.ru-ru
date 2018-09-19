@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f468117cc4d3fad8f3eb1d94abc948c9a4a032b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a88ecf9c5fcffa07066c3ab988fde1f36adf8d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057487"
 ---
 # <a name="catlmodulet-class"></a>Класс CAtlModuleT
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766832"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `CAtlModuleT`.
 
 ## <a name="members"></a>Участники
@@ -74,7 +74,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [CAtlModule](../../atl/reference/catlmodule-class.md)
 
@@ -132,10 +132,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 Значение TRUE, если для регистрации библиотеки типов. Значение по умолчанию — FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Указывает идентификатор CLSID объекта для регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет зарегистрировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -166,10 +166,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 Значение TRUE, если библиотека типов также для отмены регистрации.
 
-*pCLSID*  
+*pCLSID*<br/>
 Указывает идентификатор CLSID объекта для отмены регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет отменена.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -186,7 +186,7 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bЗарегистрируйтесь участия*  
+*bЗарегистрируйтесь участия*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -195,6 +195,6 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAtlModule](../../atl/reference/catlmodule-class.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Класс CAtlModule](../../atl/reference/catlmodule-class.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Модульные классы](../../atl/atl-module-classes.md)

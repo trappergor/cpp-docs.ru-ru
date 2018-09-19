@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3354 | Документы Microsoft
+title: Ошибка компилятора C3354 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4bcc36580a453932068350f01b53c5f09f2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40f86702be19259bed7899cdbc5106346d6c6594
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257360"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058540"
 ---
 # <a name="compiler-error-c3354"></a>Ошибка компилятора C3354
-"функция": функция, используемая для создания делегата, не может иметь тип возврата "тип"  
-  
- Следующие типы недопустимы в качестве типов возврата для `delegate`:  
-  
--   Указатель на функцию  
-  
--   Указатель на член  
-  
--   Указатель на функцию-член  
-  
--   Ссылка на функцию  
-  
--   Ссылка на функцию-член  
-  
- В следующем примере возникает ошибка C3354:  
-  
-```  
-// C3354_2.cpp  
-// compile with: /clr /c  
-using namespace System;  
-typedef void ( *VoidPfn )();  
-  
-delegate VoidPfn func(); // C3354  
-// try the following line instead  
-// delegate  void func();  
-```  
+
+"функция": функция, используемая для создания делегата, не может иметь тип возврата "тип"
+
+Следующие типы недопустимы в качестве типов возврата для `delegate`:
+
+- Указатель на функцию
+
+- Указатель на член
+
+- Указатель на функцию-член
+
+- Ссылка на функцию
+
+- Ссылка на функцию-член
+
+В следующем примере возникает ошибка C3354:
+
+```
+// C3354_2.cpp
+// compile with: /clr /c
+using namespace System;
+typedef void ( *VoidPfn )();
+
+delegate VoidPfn func(); // C3354
+// try the following line instead
+// delegate  void func();
+```

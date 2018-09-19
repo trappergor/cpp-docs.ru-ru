@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a5b30ca507387b1529c9e9726e48735c844fac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3455e88c5a9852c902702544a0f915e8d20dc64e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043239"
 ---
 # <a name="ccomheapptr-class"></a>Класс CComHeapPtr
 
@@ -32,13 +32,13 @@ ms.locfileid: "43764833"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<typename T>  
+template<typename T>
 class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип объекта для сохранения в куче.
 
 ## <a name="members"></a>Участники
@@ -76,7 +76,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pData*  
+*pData*<br/>
 Существующий объект `CComHeapPtr`.
 
 ### <a name="remarks"></a>Примечания
@@ -85,7 +85,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Класс CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)   
-[Класс CComAllocator](../../atl/reference/ccomallocator-class.md)   
+[Класс CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Класс CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
+[Класс CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

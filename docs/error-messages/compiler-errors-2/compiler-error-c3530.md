@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3530 | Документы Microsoft
+title: Ошибка компилятора C3530 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6514d655ab813ae21ecb440415f87bce63f3591
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5866e2ea44b84f3afeb0cef8423abc28f8e056ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094797"
 ---
 # <a name="compiler-error-c3530"></a>Ошибка компилятора C3530
-«auto» не может объединяться с любыми другими спецификаторами типа  
-  
- Описатель типа используется с `auto` ключевое слово.  
-  
-### <a name="to-correct-this-error"></a>Исправление ошибки  
-  
-1.  Не используйте описатель типа в объявлении переменной, которая использует `auto` ключевое слово.  
-  
-## <a name="example"></a>Пример  
- Следующий пример вызывает ошибку C3530, так как переменная `x` объявлен с обоими `auto` ключевое слово и тип `int`, а потому, что код примера компилируется с **/Zc: auto**.  
-  
-```  
-// C3530.cpp  
-// Compile with /Zc:auto  
-int main()  
-{  
-   auto int x;   // C3530  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Ключевое слово auto](../../cpp/auto-keyword.md)
+
+«auto» нельзя использовать вместе с любой другими описателями типа
+
+Спецификатор типа используется с `auto` ключевое слово.
+
+### <a name="to-correct-this-error"></a>Исправление ошибки
+
+1. Не используйте описатель типа в объявлении переменной, которая использует `auto` ключевое слово.
+
+## <a name="example"></a>Пример
+
+Следующий пример вызывает ошибку C3530, так как переменная `x` объявляется с обоими `auto` ключевое слово и тип `int`, и потому, что код примера компилируется с **/Zc: auto**.
+
+```
+// C3530.cpp
+// Compile with /Zc:auto
+int main()
+{
+   auto int x;   // C3530
+   return 0;
+}
+```
+
+## <a name="see-also"></a>См. также
+
+[Ключевое слово auto](../../cpp/auto-keyword.md)

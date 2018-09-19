@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2577 | Документы Microsoft
+title: Ошибка компилятора C2577 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4fb6d5a2d7621df1b11e9040ca7dd4f5551289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d9a2b09fc9b8b15c4fc21f5eb537f18f5d3b03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065820"
 ---
 # <a name="compiler-error-c2577"></a>Ошибка компилятора C2577
-«член»: деструктор или метод завершения не может иметь тип возвращаемого значения  
-  
- Деструктор или метод завершения не может возвращать значение `void` или любого другого типа. Удалить `return` оператора из определения деструктора.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2577.  
-  
-```  
-// C2577.cpp  
-// compile with: /c  
-class A {  
-public:  
-   A() {}  
-   ~A(){  
-      return 0;   // C2577  
-   }  
-};  
+
+«член»: деструктор или метод завершения не может иметь тип возвращаемого значения
+
+Деструктор или метод завершения не может возвращать значение `void` или любого другого типа. Удалить `return` оператора из определения деструктора.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2577.
+
+```
+// C2577.cpp
+// compile with: /c
+class A {
+public:
+   A() {}
+   ~A(){
+      return 0;   // C2577
+   }
+};
 ```

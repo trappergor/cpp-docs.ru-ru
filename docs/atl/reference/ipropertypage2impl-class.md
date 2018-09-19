@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e0059c88d7aa99340568405150244152800684a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9329888f9a97c9bf5fad0d3834bde33845943edd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093313"
 ---
 # <a name="ipropertypage2impl-class"></a>Класс IPropertyPage2Impl
 
@@ -37,13 +37,13 @@ ms.locfileid: "43751840"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T>  
+template<class T>
 class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IPropertyPage2Impl`.
 
 ## <a name="members"></a>Участники
@@ -94,6 +94,6 @@ HRESULT EditProperty(DISPID dispID);
 
 ## <a name="see-also"></a>См. также
 
-[Класс IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)   
-[Класс ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[Класс IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[Класс ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

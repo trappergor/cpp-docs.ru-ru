@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ae4ddf3c3b17023f3a6968e3498c178813d039
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765349"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053717"
 ---
 # <a name="service-map-macros"></a>Макросы сопоставления служб
 
@@ -49,7 +49,7 @@ BEGIN_SERVICE_MAP(theClass)
 
 ### <a name="parameters"></a>Параметры
 
-*theClass*  
+*theClass*<br/>
 [in] Указывает класс, содержащий схемы услуги.
 
 ### <a name="remarks"></a>Примечания
@@ -86,7 +86,7 @@ SERVICE_ENTRY( SID )
 
 ### <a name="parameters"></a>Параметры
 
-*ИД БЕЗОПАСНОСТИ*  
+*ИД БЕЗОПАСНОСТИ*<br/>
 Идентификатор службы.
 
 ### <a name="example"></a>Пример
@@ -103,7 +103,7 @@ SERVICE_ENTRY_CHAIN( punk )
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 Указатель на **IUnknown** интерфейс, к которому цепочки.
 
 ### <a name="example"></a>Пример
@@ -123,14 +123,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Параметры
 
-[IN] *guidService*  
-Указатель на идентификатор службы (SID).
+*guidService*<br/>
+[in] Указатель на идентификатор службы (SID).
 
-[IN] *riid*  
-Идентификатор интерфейса, к которому вызывающий объект для получения доступа.
+*riid*<br/>
+[in] Идентификатор интерфейса, к которому вызывающий объект для получения доступа.
 
-[OUT] *ppvObj*  
-Косвенный указатель на запрашиваемый интерфейс.
+*ppvObj*<br/>
+[out] Косвенный указатель на запрашиваемый интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

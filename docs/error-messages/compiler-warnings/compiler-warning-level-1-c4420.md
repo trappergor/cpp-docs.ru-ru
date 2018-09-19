@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4420 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4420 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98336a30e7174b62df48e93a04ba9ee7ddcc919a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1ba4ef4c4fc006e1a5950d0d16dc530ccc06a1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279114"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049752"
 ---
 # <a name="compiler-warning-level-1-c4420"></a>Предупреждение компилятора (уровень 1) C4420
-«оператор»: оператор недоступен, вместо этого использовать «оператор»; проверки во время выполнения могут выдать ошибку  
-  
- Это предупреждение создается при использовании [правильной/RTCv](../../build/reference/rtc-run-time-error-checks.md) (vector проверка) и если найдена ни одна форма вектор. В этом случае используется не векторная форма.  
-  
- Для правильной работы правильно/RTCv компилятор должен всегда вызывать векторную форму [новый](../../cpp/new-operator-cpp.md)/[удалить](../../cpp/delete-operator-cpp.md) Если использовался синтаксис вектор.
+
+«operator»: оператор недоступен, вместо этого «operator»; проверки времени выполнения могут быть скомпрометированы
+
+Это предупреждение создается при использовании [правильной/RTCv](../../build/reference/rtc-run-time-error-checks.md) (vector проверка) и при обнаружении не векторную форму. В этом случае используется не векторную форму.
+
+Для правильной работы правильно/RTCv, компилятор должен всегда вызывать векторную форму [новый](../../cpp/new-operator-cpp.md)/[удалить](../../cpp/delete-operator-cpp.md) Если использовался синтаксис вектор.

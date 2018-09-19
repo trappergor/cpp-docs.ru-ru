@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d5983795dbb5711452db2f59b07cb6aa8b22a8c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083981"
 ---
 # <a name="time-management"></a>Управление временем
 
 Эти функции следует использовать для получения текущего времени, его преобразования, корректировки и хранения, как требуется. Текущее время представляет собой системное время.
 
- Подпрограммы **_Ftime** и **localtime** используют переменную среды **TZ**. Если переменная **TZ** не задана, библиотека времени выполнения пытается использовать данные часового пояса, определенные операционной системой. Если такие сведения недоступны, эти функции используют значение по умолчанию PST8PDT. Дополнительные сведения о переменной **TZ** см. в разделе [_tzset](../c-runtime-library/reference/tzset.md); также см. раздел [_daylight, timezone и _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Подпрограммы **_Ftime** и **localtime** используют переменную среды **TZ**. Если переменная **TZ** не задана, библиотека времени выполнения пытается использовать данные часового пояса, определенные операционной системой. Если такие сведения недоступны, эти функции используют значение по умолчанию PST8PDT. Дополнительные сведения о переменной **TZ** см. в разделе [_tzset](../c-runtime-library/reference/tzset.md); также см. раздел [_daylight, timezone и _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ### <a name="time-routines"></a>Подпрограммы времени
 

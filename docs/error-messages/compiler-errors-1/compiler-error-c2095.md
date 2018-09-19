@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2095 | Документы Microsoft
+title: Ошибка компилятора C2095 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7214862ba35c627987c6dace2d5d4c8c4d042fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42fa7432dce465257b8179ba8a52b2654e0e5507
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168322"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032483"
 ---
 # <a name="compiler-error-c2095"></a>Ошибка компилятора C2095
-«функция»: фактический параметр имеет тип «void»: параметр «число»  
-  
- Параметр, переданный в функцию, тип `void`, который не является допустимым. Используйте указатель на void ( `void *`) вместо него.  
-  
- `number` Указывает, какой параметр `void`.
+
+«функция»: фактический параметр имеет тип «void»: параметр «число»
+
+Параметр, передаваемый функции является типом `void`, что недопустимо. Использование указателя на void ( `void *`) вместо этого.
+
+`number` Указывает, какой параметр `void`.

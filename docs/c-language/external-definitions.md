@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1ce5a214e33fed66aa5f54a57c1cc1d15473e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 193ba8b853fbdbe16f906e1cdf82dd22a40f36bb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383109"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759500"
 ---
 # <a name="external-definitions"></a>Внешние определения
-*translation-unit*:  
- *external-declaration*  
+
+*translation-unit*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*  
   
- *translation-unit external-declaration*  
-  
- *external-declaration*:       /\* Разрешается только во внешней области (области файла) \*/  
- *function-definition*  
-  
- `declaration`  
-  
- *function-definition*:         /\* Декларатор здесь является декларатором функции \*/  
- *declaration-specifiers* opt*declarator declaration-list* opt*compound-statement*  
-  
-## <a name="see-also"></a>См. также  
- [Грамматика структуры фразы](../c-language/phrase-structure-grammar.md)
+*external-declaration*: /\* Допускается только в области видимости файла (внешней) \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+
+*function-definition*: /\*Здесь декларатор является декларатором функции \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
+
+## <a name="see-also"></a>См. также
+
+[Грамматика структуры фразы](../c-language/phrase-structure-grammar.md)

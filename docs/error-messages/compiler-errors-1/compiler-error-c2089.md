@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2089 | Документы Microsoft
+title: Ошибка компилятора C2089 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f76c5b5ae8212e463a7022680ffca5dd4ca498
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb64f1f0c2a8c5af2a8b8625cd1a05c530066185
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046158"
 ---
 # <a name="compiler-error-c2089"></a>Ошибка компилятора C2089
-«Идентификатор»: «ключ класса» слишком велик  
-  
- Указанной структуры или объединения превышает предел в 4 ГБ.
+
+«Идентификатор»: «ключ класса» слишком велик
+
+Указанной структуры или объединения превышает предел в 4 ГБ.

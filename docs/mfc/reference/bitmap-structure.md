@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 56e93bf1485cefed9a44e0e6260358650ab8b296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032592"
 ---
 # <a name="bitmap-structure"></a>Структура BITMAP
 **Точечного РИСУНКА** структура определяет высоту, ширину, формат цвета и значения битов Битовая карта логических **.**  
@@ -67,19 +67,15 @@ typedef struct tagBITMAP {  /* bm */
   
  Сканирование упорядочены следующим образом для монохромную битовую карту от высоты *n*:  
   
- `Scan 0`  
-  
- `Scan 1`  
-  
- `.`  
-  
- `.`  
-  
- `.`  
-  
- `Scan n-2`  
-  
- `Scan n-1`  
+```
+Scan 0
+Scan 1
+.
+.
+.
+Scan n-2
+Scan n-1
+```
   
  Пиксели на устройстве монохромный являются либо черный или белый. В случае соответствующий бит в битовой карте 1 пикселя включен (белый). Если соответствующий бит в битовой карте равно 0, пикселя будет отключено (черный).  
   

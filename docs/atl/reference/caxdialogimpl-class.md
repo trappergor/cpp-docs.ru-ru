@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 965aa7256fadd00d2ef435b6df64467460322991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a22b04bd0a362824e20621eaa7f66cafd0e55cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024507"
 ---
 # <a name="caxdialogimpl-class"></a>Класс CAxDialogImpl
 
@@ -44,16 +44,16 @@ ms.locfileid: "43753062"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, class TBase = CWindow>  
+template <class T, class TBase = CWindow>
 class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `CAxDialogImpl`.
 
-*TBase*  
+*TBase*<br/>
 Класс базового окна для `CDialogImplBaseT`.
 
 ## <a name="members"></a>Участники
@@ -121,7 +121,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Параметры
 
-*bAdvise*  
+*bAdvise*<br/>
 Значение true, если все записи в качестве приемника, которому необходимо предоставить рекомендацию; приемник значение false, если все операции должны быть негативной рекомендации.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -139,13 +139,13 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Дескриптор окна-владельца.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.
 
-*RECT &AMP;*  
+*RECT &AMP;*<br/>
 Этот параметр не используется. Этот параметр передается с `CComControl`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -180,16 +180,16 @@ BOOL DestroyWindow();
 
 ```
 INT_PTR DoModal(
-    HWND hWndParent = ::GetActiveWindow(), 
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Дескриптор окна-владельца. Значение по умолчанию — возвращаемое значение [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) функции Win32.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -212,7 +212,7 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>Параметры
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] Значение, возвращаемое по [DoModal](#domodal).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -264,7 +264,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 
 ### <a name="parameters"></a>Параметры
 
-*pMsg*  
+*pMsg*<br/>
 Указатель на [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) структуру, содержащую сообщения для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -285,5 +285,5 @@ bool m_bModal;
 
 ## <a name="see-also"></a>См. также
 
-[CDialogImpl-класс](../../atl/reference/cdialogimpl-class.md)   
+[Класс CDialogImpl](../../atl/reference/cdialogimpl-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

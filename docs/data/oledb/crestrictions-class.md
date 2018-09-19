@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572216"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072086"
 ---
 # <a name="crestrictions-class"></a>Класс CRestrictions
+
 Универсальный класс, который позволяет указать ограничения для наборов строк схемы.  
   
 ## <a name="syntax"></a>Синтаксис
@@ -43,17 +44,19 @@ class CRestrictions :
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *T*  
- Класс, используемый для метода доступа.  
+
+*T*<br/>
+Класс, используемый для метода доступа.  
   
- *nRestrictions*  
- Число столбцов ограничений для набора строк схемы.  
+*nRestrictions*<br/>
+Число столбцов ограничений для набора строк схемы.  
   
- *pguid*  
- Указатель на идентификатор GUID для схемы.  
+*pguid*<br/>
+Указатель на идентификатор GUID для схемы.  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldbsch.h 
+
+**Заголовок:** atldbsch.h 
   
 ## <a name="members"></a>Участники  
   
@@ -64,6 +67,7 @@ class CRestrictions :
 |[Открыть](#open)|Возвращает результирующий набор в соответствии с ограничения, предоставленное пользователем.|   
 
 ## <a name="open"></a> CRestrictions::Open
+
 Возвращает результирующий набор в соответствии с ограничения, предоставленное пользователем.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -81,24 +85,28 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Сеанс*  
- [in] Указывает существующий объект сеанса, используемый для подключения к источнику данных.  
+
+*Сеанс*<br/>
+[in] Указывает существующий объект сеанса, используемый для подключения к источнику данных.  
   
- *lpszParam*  
- [in] Задает ограничения в наборе строк схемы.  
+*lpszParam*<br/>
+[in] Задает ограничения в наборе строк схемы.  
   
- *bBind*  
- [in] Указывает, нужно ли автоматически привязывать сопоставление столбцов. По умолчанию используется **true**, что приводит в сопоставление столбцов, автоматически привязываться. Установка *bBind* для **false** предотвращает автоматическое связывание сопоставление столбцов, можно привязать вручную. (Привязке вручную является особый интерес для пользователей OLAP).  
+*bBind*<br/>
+[in] Указывает, нужно ли автоматически привязывать сопоставление столбцов. По умолчанию используется **true**, что приводит в сопоставление столбцов, автоматически привязываться. Установка *bBind* для **false** предотвращает автоматическое связывание сопоставление столбцов, можно привязать вручную. (Привязке вручную является особый интерес для пользователей OLAP).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Одно из стандартных значений HRESULT.  
+
+Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Можно указать максимум семь ограничений в наборе строк схемы.  
+
+Можно указать максимум семь ограничений в наборе строк схемы.  
   
- См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) сведения об определенных ограничениях на все наборы строк схемы.  
+См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) сведения об определенных ограничениях на все наборы строк схемы.  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны OLE DB потребителя](../../data/oledb/ole-db-consumer-templates-reference.md)    
- [Классы Rowset и Typedef схемы](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Классы Rowset и Typedef схемы](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

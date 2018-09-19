@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8af4a1b2ee763dfc28288058d27b1b08721fd97
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019428"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Отладка и глобальные функции отчетов об ошибках
 
@@ -63,7 +63,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>Параметры
 
-*Ошибка*  
+*Ошибка*<br/>
 Значение ошибки, которое необходимо преобразовать.
 
 ### <a name="remarks"></a>Примечания
@@ -129,28 +129,28 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 [in] CLSID объекта с сообщением об ошибке.
 
-*lpszDesc*  
+*lpszDesc*<br/>
 [in] Строка, описывающая ошибку. Указать, что версии Юникода *lpszDesc* имеет тип LPCOLESTR; версия ANSI указывает тип LPCSTR.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор IID интерфейса, определяющего ошибку или GUID_NULL, если ошибки определяется операционной системой.
 
-*hRes*  
+*hRes*<br/>
 [in] Значение HRESULT, который вы хотите возвращается вызывающей стороне.
 
-*nID*  
+*nID*<br/>
 [in] Идентификатор ресурса, где хранится строка описания ошибки. Это значение должно лежать между 0x0200 и 0xFFFF, включительно. В отладочных сборках **ASSERT** Если *nID* индекса не является допустимой строкой. Строка описания ошибки в сборках выпуска будет указано значение «Unknown Error».
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] Идентификатор контекста справки для ошибки.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] Путь и имя файла справки, описывающий ошибку.
 
-*hInst*  
+*hInst*<br/>
 [in] Дескриптор для ресурса. По умолчанию этот параметр является `__AtlBaseModuleModule::GetResourceInstance`, где `__AtlBaseModuleModule` — это глобальный экземпляр [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) или класс, производный от него.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -182,7 +182,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>Параметры
 
-*hr*  
+*hr*<br/>
 Стандартное значение HRESULT.
 
 ### <a name="remarks"></a>Примечания
@@ -233,6 +233,6 @@ inline void AtlThrowLastWin32();
 
 ## <a name="see-also"></a>См. также
 
-[Функции](../../atl/reference/atl-functions.md)   
+[Функции](../../atl/reference/atl-functions.md)<br/>
 [Макросы для отладки и создания отчетов об ошибках](../../atl/reference/debugging-and-error-reporting-macros.md)
 

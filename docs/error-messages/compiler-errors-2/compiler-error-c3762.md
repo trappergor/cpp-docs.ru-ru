@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3762 | Документы Microsoft
+title: Ошибка компилятора C3762 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40134353b713c855199ae0b062e263d31c37522
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4c9f5dc1c270f59dafa9e1076e3641cd1cd2c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267232"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103351"
 ---
 # <a name="compiler-error-c3762"></a>Ошибка компилятора C3762
-не удается обработать атрибут «атрибут»  
-  
- Пользовательского атрибута, который наследует от `System.Security.Permissions.SecurityAttribute` , используется для определения атрибута безопасности. Такой атрибут не может использоваться в той же сборке, в которой она определена.
+
+не удается обработать атрибут «атрибут»
+
+Определяемый пользователем атрибут, который наследует от `System.Security.Permissions.SecurityAttribute` , используется для определения атрибута безопасности. Такой атрибут не может использоваться в той же сборке, в котором он определен.

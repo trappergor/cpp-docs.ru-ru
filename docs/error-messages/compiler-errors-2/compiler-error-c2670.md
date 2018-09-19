@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2670 | Документы Microsoft
+title: Ошибка компилятора C2670 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0579e22906e2acfa2d8aa3f2952ae05a7a44a5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c3c41ff5e8aba8011a4e82c870f53a3f65455b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083188"
 ---
 # <a name="compiler-error-c2670"></a>Ошибка компилятора C2670
-«Идентификатор»: шаблон функции не может преобразовать номер параметра из типа «тип»  
-  
- Не удалось преобразовать параметр в требуемый тип.  
-  
- Чтобы устранить эту ошибку, создайте явное преобразование.
+
+«Идентификатор»: шаблон функции не удается преобразовать параметр с номером из типа «тип»
+
+Не удалось преобразовать параметр в требуемый тип.
+
+Чтобы устранить эту ошибку, создать явное преобразование.

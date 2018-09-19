@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476edd2a199ca21a9067a72cac82a6ac7b608112
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 269fd977bf57f1b2daff4ec5550b1d2da97b58d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757382"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114167"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Класс CComClassFactoryAutoThread
 
@@ -85,13 +85,13 @@ STDMETHODIMP CreateInstance(
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Если объект создается как часть агрегата, затем *pUnkOuter* должен быть внешняя Неизвестная строка. В противном случае *pUnkOuter* должен иметь значение NULL.
 
-*riid*  
+*riid*<br/>
 [in] Идентификатор IID запрошенного интерфейса. Если *pUnkOuter* отлично от NULL, *riid* должно быть `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppvObj* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -112,7 +112,7 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="parameters"></a>Параметры
 
-*fLock*  
+*fLock*<br/>
 [in] Если значение равно TRUE, увеличивается счетчик блокировок; в противном случае уменьшается количество блокировок.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -127,9 +127,9 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ## <a name="see-also"></a>См. также
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
-[Класс CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)   
-[Класс CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[Класс CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[Класс CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

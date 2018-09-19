@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024402"
 ---
 # <a name="cmessagemap-class"></a>Класс CMessageMap
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна, принимающего сообщение.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Сообщение, отправленное окну.
 
-*wParam*  
+*wParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lParam*  
+*lParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lResult*  
+*lResult*<br/>
 [out] Результат обработки сообщения.
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Идентификатор схемы сообщений, который будет обрабатывать сообщения. Сопоставление сообщений по умолчанию, объявленные с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), определяется по 0. Альтернативную схему сообщений, объявленных с [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), идентифицируемый `msgMapID`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -108,7 +108,7 @@ virtual BOOL ProcessWindowMessage(
 
 ## <a name="see-also"></a>См. также
 
-[Класс CDynamicChain](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[Класс CDynamicChain](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

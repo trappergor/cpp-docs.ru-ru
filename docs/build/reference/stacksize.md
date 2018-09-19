@@ -1,5 +1,5 @@
 ---
-title: STACKSIZE | Документы Microsoft
+title: STACKSIZE | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2093762b3c6f21d319c53a85da5ec5b430a1fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d9b61febedde1a2647df6312a8588b08c6bdad7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376251"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705566"
 ---
 # <a name="stacksize"></a>STACKSIZE
-Задает размер стека (в байтах).  
-  
-```  
-STACKSIZE reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- — Можно задать стек с [выделение памяти в стеке](../../build/reference/stack-stack-allocations.md) (/ STACK) параметра. См. в документации на соответствующий параметр подробные сведения *зарезервировать* и `commit` аргументы.  
-  
- Этот параметр не оказывает влияния на библиотеки DLL.  
-  
-## <a name="see-also"></a>См. также  
- [Правила для операторов определения модуля](../../build/reference/rules-for-module-definition-statements.md)
+
+Задает размер стека (в байтах).
+
+```
+STACKSIZE reserve[,commit]
+```
+
+## <a name="remarks"></a>Примечания
+
+Эквивалентный способ стека — с помощью [выделение памяти в стеке](../../build/reference/stack-stack-allocations.md) (/ STACK) параметр. См. в документации, на этот вариант, Дополнительные сведения *зарезервировать* и `commit` аргументы.
+
+Этот параметр не влияет на библиотеки DLL.
+
+## <a name="see-also"></a>См. также
+
+[Правила для операторов определения модуля](../../build/reference/rules-for-module-definition-statements.md)

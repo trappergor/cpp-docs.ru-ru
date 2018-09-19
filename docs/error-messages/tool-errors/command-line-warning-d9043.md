@@ -1,5 +1,5 @@
 ---
-title: Предупреждение командной строки D9043 | Документы Microsoft
+title: Предупреждение командной строки D9043 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65bf672418b49dbf6017374ab7cd18caa61d7403
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d29371e147c693b2aa49f8dcf838841af3c75c8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031877"
 ---
 # <a name="command-line-warning-d9043"></a>Предупреждение командной строки D9043
-Недопустимое значение «порог_предупреждения» для параметра «параметр_компилятора»; предполагается "4999"; Предупреждения анализа кода не связаны с уровнями предупреждений  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C9043.  
-  
-```  
-// D9043.cpp  
-// compile with: /analyze /w16001  
-// D9043 warning expected  
-int main() {}  
+
+Недопустимое значение «порог_предупреждения» для параметра «параметр_компилятора»; при условии, что "4999"; Предупреждения анализа кода не связаны с уровнями предупреждений
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C9043.
+
+```
+// D9043.cpp
+// compile with: /analyze /w16001
+// D9043 warning expected
+int main() {}
 ```

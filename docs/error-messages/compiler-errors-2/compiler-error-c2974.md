@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2974 | Документы Microsoft
+title: Ошибка компилятора C2974 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12af6bcd61642d8563eb08888229aab6217b6085
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 478639ee1eccf841361e8e7e880ac33669d69e1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100491"
 ---
 # <a name="compiler-error-c2974"></a>Ошибка компилятора C2974
-Недопустимый тип аргумента «число» требуется тип  
-  
- Универсальный класс или шаблон аргумента не соответствует объявлению универсальный класс или шаблон. Тип должен появиться в угловых скобках. Проверьте определение универсальный класс или шаблон, чтобы найти правильные типы.  
-  
- Следующий пример приводит к возникновению ошибки C2974:  
-  
-```  
-// C2974.cpp  
-// C2974 expected  
-template <class T>  
-struct TC {};  
-  
-template <typename T>  
-void tf(T){}  
-  
-int main() {  
-   // Delete the following 2 lines to resolve  
-   TC<1>* tc;  
-   tf<"abc">("abc");  
-  
-   TC<int>* tc;  
-   tf<const char *>("abc");  
-}  
-```  
-  
- C2974 также может возникнуть при использовании универсальных шаблонов:  
-  
-```  
-// C2974b.cpp  
-// compile with: /clr  
-// C2974 expected  
-using namespace System;  
-generic <class T>  
-ref struct GCtype {};  
-  
-generic <typename T>  
-void gf(T){}  
-  
-int main() {  
-   // Delete the following 2 lines to resolve  
-   GCtype<"a">^ gc;  
-   gf<"a">("abc");  
-  
-   // OK  
-   GCtype<int>^ gc;  
-   gf<String ^>("abc");  
-}  
+
+Недопустимый тип аргумента «number» требуется тип
+
+Аргумент универсального класса или шаблона не соответствует объявлению универсального класса или шаблона. Тип должен появиться в угловых скобках. Проверьте определение универсального класса или шаблона, чтобы найти правильные типы.
+
+Следующий пример приводит к возникновению ошибки C2974:
+
+```
+// C2974.cpp
+// C2974 expected
+template <class T>
+struct TC {};
+
+template <typename T>
+void tf(T){}
+
+int main() {
+   // Delete the following 2 lines to resolve
+   TC<1>* tc;
+   tf<"abc">("abc");
+
+   TC<int>* tc;
+   tf<const char *>("abc");
+}
+```
+
+C2974 также может возникнуть при использовании универсальных шаблонов:
+
+```
+// C2974b.cpp
+// compile with: /clr
+// C2974 expected
+using namespace System;
+generic <class T>
+ref struct GCtype {};
+
+generic <typename T>
+void gf(T){}
+
+int main() {
+   // Delete the following 2 lines to resolve
+   GCtype<"a">^ gc;
+   gf<"a">("abc");
+
+   // OK
+   GCtype<int>^ gc;
+   gf<String ^>("abc");
+}
 ```

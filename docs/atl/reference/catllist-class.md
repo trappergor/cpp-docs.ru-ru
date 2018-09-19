@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a24a98e7780a98726df29452a9878c8abf3d81
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 596fe8bb4a656eb5ebdc7bef855b5e6db8ab6196
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090805"
 ---
 # <a name="catllist-class"></a>Класс CAtlList
 
@@ -61,16 +61,16 @@ ms.locfileid: "43756448"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<typename E, class ETraits = CElementTraits<E>>  
+template<typename E, class ETraits = CElementTraits<E>>
 class CAtlList
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*E*  
+*E*<br/>
 Тип элемента.
 
-*ETraits*  
+*ETraits*<br/>
 Код, используемый для копирования или перемещения элементов. См. в разделе [класс CElementTraits](../../atl/reference/celementtraits-class.md) для получения дополнительных сведений.
 
 ## <a name="members"></a>Участники
@@ -144,7 +144,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>Параметры
 
-*Элемент*  
+*Элемент*<br/>
 Новый элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -169,7 +169,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Параметры
 
-*plNew*  
+*plNew*<br/>
 Список для добавления.
 
 ### <a name="remarks"></a>Примечания
@@ -191,7 +191,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>Параметры
 
-*Элемент*  
+*Элемент*<br/>
 Добавляемый элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -216,7 +216,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Параметры
 
-*plNew*  
+*plNew*<br/>
 Список для добавления.
 
 ### <a name="remarks"></a>Примечания
@@ -253,7 +253,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Размер блока.
 
 ### <a name="remarks"></a>Примечания
@@ -288,10 +288,10 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Элемент*  
+*Элемент*<br/>
 Элемент, который требуется найти в списке.
 
-*posStartAfter*  
+*posStartAfter*<br/>
 Начальное положение для поиска. Если значение не указано, поиск начинается с головным элементом.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -316,7 +316,7 @@ POSITION FindIndex(size_t iElement) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*iElement*  
+*iElement*<br/>
 Отсчитываемый от нуля индекс элемента списка требуется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -344,7 +344,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 ПОЗИЦИЯ значение, указывающее конкретный элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -435,7 +435,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение ПОЗИЦИИ, возвращенный предыдущим вызовом `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), или других `CAtlList` метод.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -463,7 +463,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение ПОЗИЦИИ, возвращенный предыдущим вызовом `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), или других `CAtlList` метод.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -543,10 +543,10 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение ПОЗИЦИИ, после чего будет вставлен новый элемент.
 
-*Элемент*  
+*Элемент*<br/>
 Вставляемый элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -571,10 +571,10 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 В списке перед этой ПОЗИЦИИ значение будет вставлен новый элемент.
 
-*Элемент*  
+*Элемент*<br/>
 Вставляемый элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -615,7 +615,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение ПОЗИЦИИ элемента, который требуется переместить.
 
 ### <a name="remarks"></a>Примечания
@@ -636,7 +636,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение ПОЗИЦИИ элемента, который требуется переместить.
 
 ### <a name="remarks"></a>Примечания
@@ -673,7 +673,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение ПОЗИЦИИ элемента, который требуется удалить.
 
 ### <a name="remarks"></a>Примечания
@@ -768,10 +768,10 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение положение, соответствующее элемента, который требуется изменить.
 
-*Элемент*  
+*Элемент*<br/>
 Новое значение элемента.
 
 ### <a name="remarks"></a>Примечания
@@ -792,10 +792,10 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pos1*  
+*pos1*<br/>
 Первое значение ПОЗИЦИИ.
 
-*pos2*  
+*pos2*<br/>
 Второе значение ПОЗИЦИИ.
 
 ### <a name="remarks"></a>Примечания
@@ -808,5 +808,5 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CList](../../mfc/reference/clist-class.md)   
+[Класс CList](../../mfc/reference/clist-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2468cd05efdf732fbf955b8532a61d24fa6c0ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaa4972a12729a5697db3574fcf89b0fb2b252ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068459"
 ---
 # <a name="run-time-error-checking"></a>Проверка ошибок во время выполнения
 
 Библиотека времени выполнения C содержит функции, поддерживающие проверку ошибок во время выполнения (RTC). Проверка ошибок во время выполнения позволяет строить программы так, чтобы получать сообщения о некоторых типах ошибок, возникающих во время выполнения. Можно указать, каким образом происходит уведомление об ошибках, а также типы этих ошибок. Дополнительная информация есть в статье [Практическое руководство. Настройка проверок во время выполнения машинного кода](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
- Для настройки выполнения проверок на ошибки во время выполнения используются следующие функции.
+Для настройки выполнения проверок на ошибки во время выполнения используются следующие функции.
 
 ## <a name="run-time-error-checking-functions"></a>Функции проверки на ошибки во время выполнения
 
@@ -42,6 +42,6 @@ ms.locfileid: "32409128"
 ## <a name="see-also"></a>См. также
 
 [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [/RTC (проверки ошибок во время выполнения)](../build/reference/rtc-run-time-error-checks.md)<br/>
- [runtime_checks](../preprocessor/runtime-checks.md)<br/>
- [Процедуры отладки](../c-runtime-library/debug-routines.md)<br/>
+[/RTC (проверки ошибок во время выполнения)](../build/reference/rtc-run-time-error-checks.md)<br/>
+[runtime_checks](../preprocessor/runtime-checks.md)<br/>
+[Процедуры отладки](../c-runtime-library/debug-routines.md)<br/>

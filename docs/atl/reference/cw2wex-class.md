@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d888478be18063b00e1e5e8eabead510349584cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9f230e66689578f1b7ea95326d9bc73efc8746c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752545"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093062"
 ---
 # <a name="cw2wex-class"></a>Класс CW2WEX
 
@@ -37,13 +37,13 @@ ms.locfileid: "43752545"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <int t_nBufferLength = 128>  
+template <int t_nBufferLength = 128>
 class CW2WEX
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Размер буфера, используемого в процессе перевода. Длина по умолчанию равен 128 байтам.
 
 ## <a name="members"></a>Участники
@@ -109,10 +109,10 @@ CW2WEX( LPCWSTR  psz) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Текстовая строка для преобразования.
 
-*nCodePage*  
+*nCodePage*<br/>
 Кодовая страница. В этот класс не используется.
 
 ### <a name="remarks"></a>Примечания
@@ -151,7 +151,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 Оператор приведения.
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -161,9 +161,9 @@ operator LPWSTR() const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Класс CA2CAEX](../../atl/reference/ca2caex-class.md)   
-[Класс CA2WEX](../../atl/reference/ca2wex-class.md)   
-[Класс CW2AEX](../../atl/reference/cw2aex-class.md)   
-[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)   
+[Класс CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
+[Класс CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
+[Класс CA2WEX](../../atl/reference/ca2wex-class.md)<br/>
+[Класс CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

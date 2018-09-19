@@ -1,5 +1,5 @@
 ---
-title: PTR::CreateInstance | Документы Microsoft
+title: PTR::CreateInstance | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd4ba56b92150046b986f2b101f6a004c114bf28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f03a4f0cfb2b231e9a453009155308f7bf407db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112217"
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
-Создает экземпляр COM-объект внутри `com::ptr`.  
+Создает экземпляр COM-объекта в `com::ptr`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -72,17 +72,17 @@ void CreateInstance(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `progid`  
- Строка `ProgID`.  
+*progid*<br/>
+Строка `ProgID`.  
   
- `pouter`  
- Указатель интерфейса IUnknown Агрегатный объект (управляющий IUnknown). Если `pouter` не указан, `NULL` используется.  
+*pouter*<br/>
+Указатель на интерфейс IUnknown агрегатного объекта (управляющий IUnknown). Если `pouter` не указан, `NULL` используется.  
   
- `cls_context`  
- Контекст, в котором будет выполняться код, управляющий вновь созданный объект. Значения берутся из `CLSCTX` перечисления. Если `cls_context` не указан, значение, используемое CLSCTX_ALL.  
+*cls_context*<br/>
+Контекст, в котором будет выполняться код, который управляет вновь созданный объект. Значения берутся из `CLSCTX` перечисления. Если `cls_context` не указан, значение, используемое CLSCTX_ALL.  
   
- `rclsid`  
- `CLSID` связанные с данными и код, который будет использоваться для создания объекта.  
+*rclsid*<br/>
+`CLSID` связанный с данными и кодом, который будет использоваться для создания объекта.  
   
 ## <a name="exceptions"></a>Исключения  
  Если `com::ptr` уже владеет ссылку на COM-объект `CreateInstance` вызывает <xref:System.InvalidOperationException>.  
@@ -90,10 +90,10 @@ void CreateInstance(
  Эта функция вызывает `CoCreateInstance` и использует <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> преобразовать любой ошибки `HRESULT` в соответствующее исключение.  
   
 ## <a name="remarks"></a>Примечания  
- `CreateInstance` использует `CoCreateInstance` для создания нового экземпляра заданного объекта, определяемого с ProgID или CLSID. `com::ptr` Ссылается на вновь созданный объект и автоматически освобождает все принадлежащие ссылки после уничтожения.  
+ `CreateInstance` использует `CoCreateInstance` для создания нового экземпляра заданного объекта, определяемого с ProgID или CLSID. `com::ptr` Ссылается на вновь созданный объект и автоматически освобождает все собственные ссылки после уничтожения.  
   
 ## <a name="example"></a>Пример  
- В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта. Конструкторы класса использовать два разных вида `CreateInstance` для создания объекта документа от ProgID или CLSID, а также CLSCTX.  
+ Этот пример реализует класс CLR, который использует `com::ptr` программы-оболочки для его закрытого члена `IXMLDOMDocument` объекта. Конструкторы класса использовать два различных вида `CreateInstance` для создания объекта документа, ProgID или CLSID, а также CLSCTX.  
   
 ```  
 // comptr_createinstance.cpp  

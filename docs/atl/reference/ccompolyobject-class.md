@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec995026b0142fc30470836b29697457be91937e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fcf62e142c99fad15bec667534bc60b4d19e43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045059"
 ---
 # <a name="ccompolyobject-class"></a>Класс CComPolyObject
 
@@ -41,14 +41,14 @@ ms.locfileid: "43764814"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class contained>  
+template<class contained>
 class CComPolyObject : public IUnknown,
       public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*содержится*  
+*содержится*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также от любых других интерфейсов, которую требуется поддерживать на объекте.
 
 ## <a name="members"></a>Участники
@@ -127,7 +127,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>Параметры
 
-*PV*  
+*PV*<br/>
 [in] Указатель на внешний unknown, если объект должен выполнить статистическую обработку, или значение NULL, если объект, если объект не является агрегатом.
 
 ### <a name="remarks"></a>Примечания
@@ -160,7 +160,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Параметры
 
-*PP*  
+*PP*<br/>
 [out] Указатель на **CComPolyObject <** `contained` **>** указатель. Если `CreateInstance` завершилась неудачно, *pp* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -203,7 +203,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Параметры
 
-*содержится*  
+*содержится*<br/>
 [in] Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также от любых других интерфейсов, которую требуется поддерживать на объекте.
 
 ### <a name="remarks"></a>Примечания
@@ -216,22 +216,22 @@ CComContainedObject<contained> m_contained;
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Q*  
+*Q*<br/>
 COM-интерфейса.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор запрашиваемого интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *iid*. Если объект не поддерживает этот интерфейс *ppvObject* имеет значение NULL.
 
-*PP*  
+*PP*<br/>
 [out] Указатель на интерфейс, определенный `__uuidof(Q)`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -256,6 +256,6 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
+[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

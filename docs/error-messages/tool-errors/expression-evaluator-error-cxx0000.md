@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0000 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0000 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61099ba206269f13413fefe14ef02002968c65b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f028f53075aa540338e7abcce7f42fa132ad1af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059126"
 ---
 # <a name="expression-evaluator-error-cxx0000"></a>Ошибка вычислителя выражений CXX0000
-ошибочное условие отсутствует  
-  
- Без ошибок. Можно продолжить отладку в обычном режиме.  
-  
- Задокументируйте обстоятельства и уведомите службу технической поддержки Майкрософт.
+
+Нет ошибки
+
+Нет ошибки. Вы можете продолжить отладку в обычном режиме.
+
+Обратите внимание, условиях ее возникновения и уведомите службу технической поддержки Майкрософт.

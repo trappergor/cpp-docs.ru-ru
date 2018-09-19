@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2451 | Документы Microsoft
+title: Ошибка компилятора C2451 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2344ba4629a4f35556d8fc6c2e6760cadbc6392b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8fcf5291e664b63047801563cd3fc7118fa0ba5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198356"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051637"
 ---
 # <a name="compiler-error-c2451"></a>Ошибка компилятора C2451
-Условное выражение типа «тип» не допускается  
-  
- Условное выражение вычислено с целочисленным типом.  
-  
- Следующий пример приводит к возникновению ошибки C2451:  
-  
-```  
-// C2451.cpp  
-class B {};  
-  
-int main () {  
-   B b1;  
-   int i = 0;  
-   if (b1)   // C2451  
-   // try the following line instead  
-   // if (i)  
-      ;  
-}  
+
+Недопустимое условное выражение типа «тип»
+
+Условное выражение вычислено к целочисленному типу.
+
+Следующий пример приводит к возникновению ошибки C2451:
+
+```
+// C2451.cpp
+class B {};
+
+int main () {
+   B b1;
+   int i = 0;
+   if (b1)   // C2451
+   // try the following line instead
+   // if (i)
+      ;
+}
 ```

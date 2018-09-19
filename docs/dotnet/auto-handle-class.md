@@ -1,5 +1,5 @@
 ---
-title: Класс auto_handle | Документы Microsoft
+title: Класс auto_handle | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bd6675f725e2a987a85cc73d6eec92f2b496df09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bddacec4e416173fc60ceb1c2c6ee71b3a198e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029719"
 ---
 # <a name="autohandle-class"></a>Класс auto_handle
 Управление ресурсами в автоматическом, которое можно использовать для внедрения виртуальный дескриптор в управляемый тип.  
@@ -36,8 +36,8 @@ ref class auto_handle;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_element_type`  
- Управляемый тип для внедрения.  
+*_element_type*<br/>
+Управляемый тип, для внедрения.  
   
 ## <a name="requirements"></a>Требования  
  **Файл заголовка** \<msclr\auto_handle.h >  

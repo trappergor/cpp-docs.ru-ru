@@ -17,45 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 014027f9b9917f6490bb54eaf21a05230ef5f2a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a55f4ac98a712d8166c3d0ca5e22e13cb8c9145
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382443"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758821"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Расширенные атрибуты классов хранения в C
 **Блок, относящийся только к системам Microsoft**  
   
- Более актуальные сведения по этой теме вы найдете в [описании __declspec](../cpp/declspec.md) в справочнике по языку C++.  
+Более актуальные сведения по этой теме вы найдете в [описании __declspec](../cpp/declspec.md) в справочнике по языку C++.  
   
- Расширенный синтаксис атрибутов упрощает и стандартизирует расширения для систем Microsoft в соответствии с правилами языка C. К атрибутам класса хранения, в которых используется расширенный синтаксис атрибутов, относятся: thread, naked, dllimport и dllexport.  
+Расширенный синтаксис атрибутов упрощает и стандартизирует расширения для систем Microsoft в соответствии с правилами языка C. К атрибутам класса хранения, в которых используется расширенный синтаксис атрибутов, относятся: thread, naked, dllimport и dllexport.  
   
- Расширенный синтаксис атрибутов для указания информации о классе памяти использует ключевое слово , которое указывает, что экземпляр заданного типа должен храниться с соответствующим атрибутом класса хранения для систем Microsoft (thread, naked, dllimport или dllexport). Имеются и другие модификаторы класса хранения: ключевые слова static и extern. Однако эти ключевые слова входят в стандарт ANSI C, и как таковые они не используются с расширенным синтаксисом атрибутов.  
+Расширенный синтаксис атрибутов для указания информации о классе памяти использует ключевое слово , которое указывает, что экземпляр заданного типа должен храниться с соответствующим атрибутом класса хранения для систем Microsoft (thread, naked, dllimport или dllexport). Имеются и другие модификаторы класса хранения: ключевые слова static и extern. Однако эти ключевые слова входят в стандарт ANSI C, и как таковые они не используются с расширенным синтаксисом атрибутов.  
   
-## <a name="syntax"></a>Синтаксис  
- *storage-class-specifier*:  
- `__declspec` (*extended-decl-modifier-seq*) /* Относится только к системам Microsoft \*/  
+## <a name="syntax"></a>Синтаксис
+
+*storage-class-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Поддерживается только компилятором Майкрософт \*/
+
+*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Поддерживается только компилятором Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
+
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Поддерживается только компилятором Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
+
+Модификаторы объявления разделяются пробелами. Обратите внимание, что *extended-decl-modifier-seq* может быть пустой, в этом случае ключевое слово __declspec игнорируется.
   
- *extended-decl-modifier-seq*:  
- *extended-decl-modifier* opt  
+Атрибуты класса хранения thread, naked, dllimport и dllexport являются свойством только объявления данных или функции, к которому они применяются; они не переопределяют атрибуты типа самой функции. Атрибут thread влияет только на данные. Атрибут naked влияет только на функции. Атрибуты dllimport и dllexport влияют на функции и данные.  
   
- *extended-decl-modifier-seq extended-decl-modifier*  
-  
- *extended-decl-modifier*:  
- **thread**  
-  
- **naked**  
-  
- **dllimport**  
-  
- `dllexport`  
-  
- Модификаторы объявления разделяются пробелами. Обратите внимание, что *extended-decl-modifier-seq* может быть пустой, в этом случае ключевое слово __declspec игнорируется.  
-  
- Атрибуты класса хранения thread, naked, dllimport и dllexport являются свойством только объявления данных или функции, к которому они применяются; они не переопределяют атрибуты типа самой функции. Атрибут thread влияет только на данные. Атрибут naked влияет только на функции. Атрибуты dllimport и dllexport влияют на функции и данные.  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
 ## <a name="see-also"></a>См. также  
- [Объявления и типы](../c-language/declarations-and-types.md)
+[Объявления и типы](../c-language/declarations-and-types.md)

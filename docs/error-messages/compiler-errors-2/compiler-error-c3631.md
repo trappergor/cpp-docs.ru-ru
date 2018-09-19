@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3631 | Документы Microsoft
+title: Ошибка компилятора C3631 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da206faed773c89ec9c3b64f962d8569d1d87bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 146358f9653acd36c855fa74f202e37d0656ad00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111347"
 ---
 # <a name="compiler-error-c3631"></a>Ошибка компилятора C3631
-function: перегрузка управляемых событий или событий WinRT невозможна  
-  
- Управляемые события и события WinRT не могут быть перегружены.  
-  
- Ошибка C3631 доступен только с помощью параметра компилятора устаревшие **/CLR: oldSyntax**.  
+
+function: перегрузка управляемых событий или событий WinRT невозможна
+
+Управляемые события и события WinRT не могут быть перегружены.
+
+Ошибка C3631 возникает только недоступна при использовании параметра компилятора устаревшие **/CLR: oldSyntax**.

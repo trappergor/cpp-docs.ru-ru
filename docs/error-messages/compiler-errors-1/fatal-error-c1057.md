@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1057 | Документы Microsoft
+title: Неустранимая ошибка C1057 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3e00b79757d87b54efd8be2492b473a54c73d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2fde010917e9e22c523b86ad816929e8526b6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092689"
 ---
 # <a name="fatal-error-c1057"></a>Неустранимая ошибка C1057
-непредвиденный конец файла в раскрытии макроса  
-  
- Компилятор достиг конца исходного файла при сборе аргументов вызова макроса, возможно, из-за отсутствия закрывающей скобки в вызове макроса.
+
+непредвиденный конец файла в раскрытии макроса
+
+Компилятор достиг конца исходного файла при сборе аргументов вызова макроса, возможно, из-за отсутствия закрывающей скобки в вызове макроса.

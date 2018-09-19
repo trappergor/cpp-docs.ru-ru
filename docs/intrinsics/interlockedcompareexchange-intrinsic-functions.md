@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eff5cab57c1288af1f6e1109fae458c35e0fa7b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b301483e2c2f76838054059af838b282aee2d523
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611387"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711260"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchange
 **Блок, относящийся только к системам Microsoft**  
@@ -186,14 +186,14 @@ __int64 _InterlockedCompareExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [in, out] `Destination`  
- Указатель на значение назначения. Знак игнорируется.  
+*Назначение*<br/>
+[in, out] Указатель на значение назначения. Знак игнорируется.  
   
- [in] `Exchange`  
- Значение для обмена. Знак игнорируется.  
+*Exchange*<br/>
+[in] Значение Exchange. Знак игнорируется.  
   
- [in] `Comparand`  
- Значение для сравнения со значением назначения. Знак игнорируется.  
+*Сравниваемый операнд*<br/>
+[in] Значение для сравнения с местом назначения. Знак игнорируется.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Начальное значение является значением, возвращаемым указателем `Destination`.  

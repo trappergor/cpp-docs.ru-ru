@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3322 | Документы Microsoft
+title: Ошибка компилятора C3322 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dc9ad0604bfed9cfabdc2ab2f180d3db3ef804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9447dde4c20d2c29a2894d810a73d1db3997d237
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104267"
 ---
 # <a name="compiler-error-c3322"></a>Ошибка компилятора C3322
-"свойство": недопустимое свойство для атрибута "атрибут"  
-  
- В атрибут передано недопустимое или нераспознанное свойство (или параметр). Обратитесь к документации по атрибуту.
+
+"свойство": недопустимое свойство для атрибута "атрибут"
+
+В атрибут передано недопустимое или нераспознанное свойство (или параметр). Обратитесь к документации по атрибуту.

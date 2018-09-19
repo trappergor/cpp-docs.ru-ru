@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687939"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726304"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>Функции LoadLibrary и AfxLoadLibrary
 
@@ -39,7 +39,7 @@ ms.locfileid: "43687939"
 
 Если Windows не удается загрузить библиотеку DLL, процесс может попытаться восстановить выполнение после ошибки. Например процесс может уведомить пользователя об ошибке и попросите пользователя указать другой путь к библиотеке DLL.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Не забудьте указать полный путь для всех библиотек DLL. Текущий каталог выполняется поиск при загрузке файлов. Если вы не рассматриваются как предназначенные путь к файлу, файл, который не является тот могут быть загружены. Другой способ избежать этого, — с помощью [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) параметр компоновщика.
 
 ## <a name="what-do-you-want-to-do"></a>Выберите действие

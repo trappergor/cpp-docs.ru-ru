@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cf8c27d118984422ec3a78f442a3f11f13e1c75
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bee312cd5e7a88dd0798778d5f8385df265d78a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099781"
 ---
 # <a name="iaxwinhostwindow-interface"></a>Интерфейс IAxWinHostWindow
 
@@ -79,10 +79,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in] Указатель на `IUnknown` интерфейса элемента управления должны быть присоединены к объекта узла.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна, используемый для размещения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -102,13 +102,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Параметры
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Строка, определяющая элемент управления для создания. Может быть (необходимо использовать фигурные скобки) CLSID, ProgID, URL-адрес или необработанное HTML (с префиксом **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна, используемый для размещения.
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на интерфейс для поток, содержащий данные инициализации для элемента управления. Может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -139,22 +139,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Параметры
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Строка, определяющая элемент управления для создания. Может быть (необходимо использовать фигурные скобки) CLSID, ProgID, URL-адрес или необработанное HTML (с префиксом **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна, используемый для размещения.
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на интерфейс для поток, содержащий данные инициализации для элемента управления. Может иметь значение NULL.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Адрес указателя, который будет получать `IUnknown` интерфейса созданный элемент управления. Может иметь значение NULL.
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in] Идентификатор исходящего интерфейса на содержащийся объект. Может быть IID_NULL.
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in] Указатель на `IUnknown` интерфейс приемника объекта должен быть подключен к точкой соединения в автономной объекта, заданного параметром `iidSink`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -179,10 +179,10 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>Параметры
 
-*riid*  
+*riid*<br/>
 [in] Идентификатор интерфейса для запрашиваемого элемента управления.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Адрес указателя, который получит указанный интерфейс созданный элемент управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -199,7 +199,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Параметры
 
-*pDisp*  
+*pDisp*<br/>
 [in] Указатель на `IDispatch` интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -216,7 +216,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Параметры
 
-*pDisp*  
+*pDisp*<br/>
 [in] Указатель на `IDocHostUIHandlerDispatch` интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -229,7 +229,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[Интерфейс IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

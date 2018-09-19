@@ -1,5 +1,5 @@
 ---
-title: Ошибка построения проекта PRJ0046 | Документы Microsoft
+title: Ошибка построения проекта PRJ0046 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3571570fb00b25a42412ac8305623271ff0364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c6c02e6644391f0e4848b43f3a9f47364b41ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111593"
 ---
 # <a name="project-build-error-prj0046"></a>Ошибка построения проекта PRJ0046
-Не удалось вызвать командной строки, так как она пуста.  
-  
- Указана пустая Командная строка конфигурации makefile; в командной строке не требуется.
+
+Не удалось породить командную строку, так как она пуста.
+
+Пустая Командная строка был указан для конфигурации makefile; команда является обязательным.

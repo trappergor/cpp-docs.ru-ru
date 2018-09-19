@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1301 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1301 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b4e298ad3815c741ff6c901ac39bf7838ed135d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8646de5bb81120f6445e16b819b27da62ed9d5ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299709"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039950"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Ошибка средств компоновщика LNK1301
-Найти, несовместимые с /LTCG:parameter модули среды LTCG clr  
-  
- Модуле, скомпилированном с параметром/CLR и /GL был передан компоновщику вместе с профильной оптимизации (PGO) параметров/LTCG.  
-  
- Профильной оптимизации для модулей, / CLR не поддерживаются.  
-  
- Дополнительные сведения:  
-  
--   [/GL (оптимизация всей программы)](../../build/reference/gl-whole-program-optimization.md)  
-  
--   [/LTCG (создание кода во время компоновки)](../../build/reference/ltcg-link-time-code-generation.md)  
-  
--   [/clr (компиляция среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [Профильная оптимизация](../../build/reference/profile-guided-optimizations.md)  
-  
-### <a name="to-correct-this-error"></a>Исправление ошибки  
-  
-1.  Не компилировать с параметром/CLR или не создавать связь с одним из параметров профильной Оптимизации/LTCG.  
-  
-## <a name="example"></a>Пример  
- В следующем примере возникает ошибка LNK1301:  
-  
-```  
-// LNK1301.cpp  
-// compile with: /clr /GL /link /LTCG:PGI LNK1301.obj  
-// LNK1301 expected  
-class MyClass {  
-public:  
-   int i;  
-};  
+
+Найден, несовместимые с /LTCG:parameter модули среды LTCG clr
+
+Модуле, скомпилированном с параметром/CLR и /GL передан компоновщику вместе с одной из профильной оптимизации (PGO) параметров/LTCG.
+
+Оптимизация, управляемая профилями, не поддерживаются для модулей/CLR.
+
+Дополнительные сведения:
+
+- [/GL (оптимизация всей программы)](../../build/reference/gl-whole-program-optimization.md)
+
+- [/LTCG (создание кода во время компоновки)](../../build/reference/ltcg-link-time-code-generation.md)
+
+- [/clr (компиляция среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [Профильная оптимизация](../../build/reference/profile-guided-optimizations.md)
+
+### <a name="to-correct-this-error"></a>Исправление ошибки
+
+1. Не компилировать с параметром/CLR или не создавать связь с одним из параметров профильной Оптимизации/LTCG.
+
+## <a name="example"></a>Пример
+
+В следующем примере возникает ошибка LNK1301:
+
+```
+// LNK1301.cpp
+// compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
+// LNK1301 expected
+class MyClass {
+public:
+   int i;
+};
 ```

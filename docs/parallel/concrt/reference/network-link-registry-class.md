@@ -1,5 +1,5 @@
 ---
-title: Класс network_link_registry | Документы Microsoft
+title: Класс network_link_registry | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ae551c934c4286a321772fb01a21260c36dfccff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080328"
 ---
 # <a name="networklinkregistry-class"></a>Класс network_link_registry
 Абстрактный базовый класс `network_link_registry` управляет связями между блоками источников и целевыми блоками.  
@@ -40,8 +40,8 @@ class network_link_registry;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_Block`  
- Тип блока данных, хранимых в `network_link_registry`.  
+*_Block*<br/>
+Тип блока данных, хранящихся в `network_link_registry`.  
   
 ## <a name="members"></a>Участники  
   
@@ -49,7 +49,7 @@ class network_link_registry;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|`const_pointer`|Тип, предоставляющий указатель на `const` элемент в `network_link_registry` объекта.|  
+|`const_pointer`|Тип, предоставляющий указатель на `const` элемент `network_link_registry` объекта.|  
 |`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `network_link_registry` объект для чтения и выполнения операций const.|  
 |`iterator`|Тип, предоставляющий итератор, который может считывать или изменять любой элемент в `network_link_registry` объекта.|  
 |`type`|Тип, представляющий тип блока, хранящиеся в `network_link_registry` объекта.|  
@@ -58,10 +58,10 @@ class network_link_registry;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[add](#add)|При переопределении в производном классе, добавляет ссылку на `network_link_registry` объекта.|  
-|[begin](#begin)|При переопределении в производном классе, возвращает итератор на первый элемент в `network_link_registry` объекта.|  
-|[содержит](#contains)|При переопределении в производном классе выполняет `network_link_registry` объекта для указанного блока.|  
-|[count](#count)|При переопределении в производном классе, возвращает количество элементов в `network_link_registry` объекта.|  
+|[add](#add)|При переопределении в производном классе добавляет ссылку на `network_link_registry` объекта.|  
+|[begin](#begin)|При переопределении в производном классе, возвращает итератор, указывающий на первый элемент в `network_link_registry` объекта.|  
+|[Содержит](#contains)|При переопределении в производном классе выполняет `network_link_registry` объекта для указанного блока.|  
+|[count](#count)|При переопределении в производном классе возвращает число элементов в `network_link_registry` объекта.|  
 |[remove](#remove)|При переопределении в производном классе удаляет заданный блок из `network_link_registry` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -77,31 +77,31 @@ class network_link_registry;
   
 ##  <a name="add"></a> Добавить 
 
- При переопределении в производном классе, добавляет ссылку на `network_link_registry` объекта.  
+ При переопределении в производном классе добавляет ссылку на `network_link_registry` объекта.  
   
 ```
 virtual void add(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Link`  
- Указатель на блок для добавления.  
+*_Связать*<br/>
+Указатель на блок для добавления.  
   
 ##  <a name="begin"></a> начать 
 
- При переопределении в производном классе, возвращает итератор на первый элемент в `network_link_registry` объекта.  
+ При переопределении в производном классе, возвращает итератор, указывающий на первый элемент в `network_link_registry` объекта.  
   
 ```
 virtual iterator begin() = 0;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Итератор, обращающийся к первому элементу в `network_link_registry` объекта.  
+ Итератор, адресующий первый элемент в `network_link_registry` объекта.  
   
 ### <a name="remarks"></a>Примечания  
  Конечное состояние итератора обозначается `NULL` ссылку.  
   
-##  <a name="contains"></a> содержит 
+##  <a name="contains"></a> Содержит 
 
  При переопределении в производном классе выполняет `network_link_registry` объекта для указанного блока.  
   
@@ -110,15 +110,15 @@ virtual bool contains(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Link`  
- Указатель на блок, которая ищется в `network_link_registry` объекта.  
+*_Связать*<br/>
+Указатель на блок, который ищется в `network_link_registry` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если блокировка была найдена, `false` в противном случае.  
   
-##  <a name="count"></a> Счетчик 
+##  <a name="count"></a> число 
 
- При переопределении в производном классе, возвращает количество элементов в `network_link_registry` объекта.  
+ При переопределении в производном классе возвращает число элементов в `network_link_registry` объекта.  
   
 ```
 virtual size_t count() = 0;
@@ -127,7 +127,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Число элементов в `network_link_registry` объекта.  
   
-##  <a name="remove"></a> Удалить 
+##  <a name="remove"></a> удалить 
 
  При переопределении в производном классе удаляет заданный блок из `network_link_registry` объекта.  
   
@@ -136,8 +136,8 @@ virtual bool remove(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Link`  
- Указатель на блок удалены, если найден.  
+*_Связать*<br/>
+Указатель на блок удалены, если найден.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если ссылка была найдена и удалена, `false` в противном случае.  

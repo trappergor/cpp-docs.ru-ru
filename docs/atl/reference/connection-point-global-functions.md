@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68c22ff88ac92357dabfef8076c160271a76378
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756494"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025546"
 ---
 # <a name="connection-point-global-functions"></a>Глобальные функции точек подключения
 
@@ -59,16 +59,16 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Указатель на `IUnknown` объекта клиент хочет подключиться с помощью.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Указатель на клиент `IUnknown`.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID точки подключения. Как правило это так же, как выходящего интерфейса, управляемого с использованием точки подключения.
 
-*PDW*  
+*PDW*<br/>
 [out] Указатель на файл cookie, который однозначно идентифицирует соединение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -99,13 +99,13 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Указатель на `IUnknown` объекта, который клиент подключен с.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID точки подключения. Как правило это так же, как выходящего интерфейса, управляемого с использованием точки подключения.
 
-*dw*  
+*dw*<br/>
 [in] Файл cookie, однозначно определяющее соединение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -129,10 +129,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Параметры
 
-*pT*  
+*pT*<br/>
 [in] Указатель на объект, содержащий карту в качестве приемника.
 
-*bAdvise*  
+*bAdvise*<br/>
 [in] Значение TRUE, если все записи в качестве приемника, которому необходимо предоставить рекомендацию; Значение FALSE, если все записи в качестве приемника должны быть негативной рекомендации.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -145,5 +145,5 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ## <a name="see-also"></a>См. также
 
-[Функции](../../atl/reference/atl-functions.md)   
+[Функции](../../atl/reference/atl-functions.md)<br/>
 [Макросы для работы с точками подключения](../../atl/reference/connection-point-macros.md)

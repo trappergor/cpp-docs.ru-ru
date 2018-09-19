@@ -1,5 +1,5 @@
 ---
-title: критические | Документы Microsoft
+title: критические | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691304"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716954"
 ---
 # <a name="critical"></a>critical
-Указывает, что код является только выполняться в одном потоке одновременно.  
+Указывает, что код будет выполняться только в одном потоке за раз.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,16 +35,15 @@ ms.locfileid: "33691304"
 }  
 ```  
   
+## <a name="arguments"></a>Аргументы
+
+*name*<br/>
+(Необязательно) Имя для идентификации кода уровня critical. Обратите внимание, что это имя должно заключаться в круглые скобки.  
+  
 ## <a name="remarks"></a>Примечания  
- где  
+ **Критических** директива поддерживает без предложения OpenMP.  
   
- (`name`) (необязательно)  
- Имя для идентификации критический код. Обратите внимание, что имя должно быть заключено в круглые скобки.  
-  
-## <a name="remarks"></a>Примечания  
- **Критические** директива поддерживает без предложения OpenMP.  
-  
- Дополнительные сведения см. в разделе [2.6.2 критические создания](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Дополнительные сведения см. в разделе [2.6.2 критических создания](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
 ## <a name="example"></a>Пример  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27def7f37bda8d4ed5fe5e37a8b5907b542a6ba
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106237"
 ---
 # <a name="marshaling-global-functions"></a>Глобальные функции для маршалинга
 
@@ -50,7 +50,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 
 ### <a name="parameters"></a>Параметры
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на `IStream` интерфейса на поток, используемый для маршалинга.
 
 ### <a name="example"></a>Пример
@@ -70,13 +70,13 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 [in] Указатель на интерфейс для маршалинга.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID интерфейса маршалируемого.
 
-*ppStream*  
+*ppStream*<br/>
 [out] Указатель на `IStream` интерфейса на новый объект-поток, используемый для маршалинга.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -108,13 +108,13 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="parameters"></a>Параметры
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на поток обрабатывает команды.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID интерфейса обрабатывает команды.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Указатель на интерфейс неупакованный.
 
 ### <a name="return-value"></a>Возвращаемое значение

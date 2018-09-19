@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0006 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0006 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636708042b2291e4edd295baa0da1ffb57dde4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c44f950955db71e2f81873513a9052e345799d4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300245"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070266"
 ---
 # <a name="expression-evaluator-error-cxx0006"></a>Ошибка вычислителя выражений CXX0006
-отсутствует левая круглая скобка  
-  
- Несогласованные круглые скобки в выражении найдены. Повторно введите выражение с балансировкой круглые скобки.  
-  
- Эта ошибка идентична CAN0006.
+
+пропущена левая круглая скобка
+
+В выражении найдены открывающих и закрывающих скобок. Повторно введите выражение с сбалансированной круглые скобки.
+
+Эта ошибка идентична CAN0006.

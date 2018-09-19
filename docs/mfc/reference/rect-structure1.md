@@ -1,5 +1,5 @@
 ---
-title: RECT Structure1 | Документы Microsoft
+title: RECT Structure1 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b61c794b8fa383eeea62459a5a83948ef2efe10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e71459a1c22b9295c5c88ce29da9e494660fa26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372597"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046307"
 ---
 # <a name="rect-structure1"></a>RECT Structure1
 `RECT` Структура определяет координаты верхнего левого и правого нижнего углов прямоугольника.  
@@ -40,17 +40,17 @@ typedef struct tagRECT {
 ```  
   
 ## <a name="members"></a>Участники  
- `left`  
- Указывает Координата по оси x верхнего левого угла прямоугольника.  
+`left`<br/>
+Задает координату по оси x верхнего левого угла прямоугольника.  
   
- `top`  
- Задает координату y верхнего левого угла прямоугольника.  
+`top`<br/>
+Указывает Координата по оси y верхнего левого угла прямоугольника.  
   
- `right`  
- Указывает Координата по оси x нижнего правого угла прямоугольника.  
+`right`<br/>
+Задает координату по оси x нижнего правого угла прямоугольника.  
   
- `bottom`  
- Указывает Координата по оси y нижнего правого угла прямоугольника.  
+`bottom`<br/>
+Задает координату по оси y правого нижнего угла прямоугольника.  
   
 ## <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_Utilities#38](../../mfc/codesnippet/cpp/rect-structure1_1.cpp)]  

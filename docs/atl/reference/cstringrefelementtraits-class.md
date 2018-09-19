@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223d781e879f2d1c3a35fce00e788a42247299eb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8369afbbf423f85df0e38f7f2979b3b7e48f8591
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067926"
 ---
 # <a name="cstringrefelementtraits-class"></a>Класс CStringRefElementTraits
 
@@ -34,13 +34,13 @@ ms.locfileid: "43760101"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <typename T>  
+template <typename T>
 class CStringRefElementTraits : public CElementTraitsBase<T>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип данных, хранимых в коллекции.
 
 ## <a name="members"></a>Участники
@@ -79,10 +79,10 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*element1*  
+*element1*<br/>
 Первая строка, элемент.
 
-*элемент элемент2*  
+*элемент элемент2*<br/>
 Вторая строка элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -99,10 +99,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str1*  
+*str1*<br/>
 Первая строка, элемент.
 
-*str2*  
+*str2*<br/>
 Вторая строка элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -119,7 +119,7 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str*  
+*str*<br/>
 Элемент строку.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -128,5 +128,5 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
+[Класс CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

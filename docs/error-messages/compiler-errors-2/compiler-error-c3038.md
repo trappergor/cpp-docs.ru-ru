@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3038 | Документы Microsoft
+title: Ошибка компилятора C3038 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f65f2c1f2d872353ee60b805618c539355602c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dfdfe8ce50765bf4f94bff7acb0837ddb3fd8ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057994"
 ---
 # <a name="compiler-error-c3038"></a>Ошибка компилятора C3038
-"переменная": переменная в предложении private не может быть редукционной переменной в охватывающем контексте  
-  
- Переменная, используемая в предложении [reduction](../../parallel/openmp/reference/reduction.md) параллельной директивы, не может быть указана в предложении [private](../../parallel/openmp/reference/private-openmp.md) в директиве распределения рабочей нагрузки, которая привязывается к параллельной конструкции.  
-  
- Следующий пример приводит к возникновению ошибки C3038:  
-  
-```  
-// C3038.cpp  
-// compile with: /openmp /c  
-int g_i, g_i2;  
-  
-int main() {  
-   int i;  
-  
-   #pragma omp parallel reduction(+: g_i)  
-   {  
-      #pragma omp for private(g_i)   // C3038  
-      // try the following line instead  
-      // #pragma omp for private(g_i2)  
-      for (i = 0; i < 10; ++i)  
-         g_i += i;  
-   }  
-}  
+
+"переменная": переменная в предложении private не может быть редукционной переменной в охватывающем контексте
+
+Переменная, используемая в предложении [reduction](../../parallel/openmp/reference/reduction.md) параллельной директивы, не может быть указана в предложении [private](../../parallel/openmp/reference/private-openmp.md) в директиве распределения рабочей нагрузки, которая привязывается к параллельной конструкции.
+
+Следующий пример приводит к возникновению ошибки C3038:
+
+```
+// C3038.cpp
+// compile with: /openmp /c
+int g_i, g_i2;
+
+int main() {
+   int i;
+
+   #pragma omp parallel reduction(+: g_i)
+   {
+      #pragma omp for private(g_i)   // C3038
+      // try the following line instead
+      // #pragma omp for private(g_i2)
+      for (i = 0; i < 10; ++i)
+         g_i += i;
+   }
+}
 ```

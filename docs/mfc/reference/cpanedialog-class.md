@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682331"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710155"
 ---
 # <a name="cpanedialog-class"></a>Класс CPaneDialog
 `CPaneDialog` Класс поддерживает Закрепляемое безрежимное диалоговое окно.  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszWindowName*  
- Имя диалогового окна закрепления.  
+*lpszWindowName*<br/>
+[in] Имя диалогового окна закрепления.  
   
- [in] *pParentWnd*  
- Указатель на родительское окно.  
+*pParentWnd*<br/>
+[in] Указатель на родительское окно.  
   
- [in] *bHasGripper*  
- Значение TRUE, чтобы создать закрепления диалоговое окно с заголовком (захвата); в противном случае — значение FALSE.  
+*bHasGripper*<br/>
+[in] Значение TRUE, чтобы создать закрепления диалоговое окно с заголовком (захвата); в противном случае — значение FALSE.  
   
- [in] *lpszTemplateName*  
- Имя ресурса шаблона диалогового окна.  
+*lpszTemplateName*<br/>
+[in] Имя ресурса шаблона диалогового окна.  
   
- [in] *nStyle*  
- Стиль Windows.  
+*nStyle*<br/>
+[in] Стиль Windows.  
   
- [in] *nID*  
- Идентификатор элемента управления.  
+*nID*<br/>
+[in] Идентификатор элемента управления.  
   
- [in] *nIDTemplate*  
- Идентификатор ресурса шаблона диалогового окна.  
+*nIDTemplate*<br/>
+[in] Идентификатор ресурса шаблона диалогового окна.  
   
- [in] *dwTabbedStyle*  
- Стиль окна с вкладками, что происходит, когда пользователь перетаскивает другую панель элемента управления на заголовок этой панели управления. Значение по умолчанию — AFX_CBRS_REGULAR_TABS. Дополнительные сведения см. в разделе "Примечания" [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) метод.  
+*dwTabbedStyle*<br/>
+[in] Стиль окна с вкладками, что происходит, когда пользователь перетаскивает другую панель элемента управления на заголовок этой панели управления. Значение по умолчанию — AFX_CBRS_REGULAR_TABS. Дополнительные сведения см. в разделе "Примечания" [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) метод.  
   
- [in] *dwControlBarStyle*  
- Атрибуты дополнительного стиля. Значение по умолчанию — AFX_DEFAULT_DOCKING_PANE_STYLE. Дополнительные сведения см. в разделе "Примечания" [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) метод.  
+*dwControlBarStyle*<br/>
+[in] Атрибуты дополнительного стиля. Значение по умолчанию — AFX_DEFAULT_DOCKING_PANE_STYLE. Дополнительные сведения см. в разделе "Примечания" [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *wParam*  
- Дескриптор элемента управления, который должен получить фокус клавиатуры по умолчанию.  
+*wParam*<br/>
+[in] Дескриптор элемента управления, который должен получить фокус клавиатуры по умолчанию.  
   
- [in] *lParam*  
- Указывает дополнительную инициализацию данных.  
+*lParam*<br/>
+[in] Указывает дополнительную инициализацию данных.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE. Кроме того, значение TRUE Задает фокус клавиатуры на элемент управления, заданный *wParam* параметра; Значение FALSE, не позволяет установить фокус клавиатуры по умолчанию.  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pOccDialogInfo*  
- Указатель на шаблон диалогового окна, используемый для создания объекта поле диалогового окна. Значение этого параметра впоследствии передается в [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) метод.  
+*pOccDialogInfo*<br/>
+[in] Указатель на шаблон диалогового окна, используемый для создания объекта поле диалогового окна. Значение этого параметра впоследствии передается в [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Всегда возвращает значение TRUE.  

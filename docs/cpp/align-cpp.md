@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076298"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "39405874"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **__declspec (выравнивание (** *#* **))** *декларатор*  
+> **__declspec (выравнивание (** *#* **))** *декларатор*
 
 ## <a name="remarks"></a>Примечания
 
@@ -251,6 +251,7 @@ struct S {
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
-[__declspec](../cpp/declspec.md)  
-[Обзор соглашений ABI ARM](../build/overview-of-arm-abi-conventions.md)  
-[Общие сведения о соглашениях о вызовах для архитектуры x64](../build/overview-of-x64-calling-conventions.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Обзор соглашений ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Общие сведения о соглашениях о вызовах для архитектуры x64](../build/overview-of-x64-calling-conventions.md)

@@ -20,41 +20,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61bf8844a5471a97214ca6f3d3b5b473c9cd6217
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2ef8aaf1e2b3f1dd75f7ca2669aaf09f3d121a98
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710064"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Оптимизация для приложений Windows)
-Результаты в более эффективный код для файла .exe для доступа к переменным локальное хранилище потока (TLS).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/GA  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **/GA** ускоряет доступ к данным объявлен с [__declspec(thread)](../../cpp/declspec.md) в приложении на базе Windows. Если этот параметр имеет значение, [__tls_index](/windows/desktop/ProcThread/thread-local-storage) макрос полагается равным 0.  
-  
- С помощью **/GA** для библиотеки DLL может привести к созданию неверного кода.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  Откройте папку **C/C++** .  
-  
-3.  Выберите страницу свойств **Командная строка** .  
-  
-4.  Введите параметр компилятора в поле **Дополнительные параметры** .  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+
+Результаты в более эффективный код для файла .exe для доступа к переменным локальное хранилище потока (TLS).
+
+## <a name="syntax"></a>Синтаксис
+
+```
+/GA
+```
+
+## <a name="remarks"></a>Примечания
+
+**/GA** ускоряет доступ к данным объявлен с [__declspec(thread)](../../cpp/declspec.md) в приложении на базе Windows. Если этот параметр имеет значение, [__tls_index](/windows/desktop/ProcThread/thread-local-storage) макрос полагается равным 0.
+
+С помощью **/GA** для библиотеки DLL может привести к созданию неверного кода.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Откройте папку **C/C++** .
+
+1. Выберите страницу свойств **Командная строка** .
+
+1. Введите параметр компилятора в поле **Дополнительные параметры** .
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

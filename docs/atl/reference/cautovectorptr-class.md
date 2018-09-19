@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa4a34915547b726494ea9f461b7eba24c617dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d60a7f40fc90d5586d7a8a7d41cab81a4d97c85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755727"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054484"
 ---
 # <a name="cautovectorptr-class"></a>Класс CAutoVectorPtr
 
@@ -40,13 +40,13 @@ ms.locfileid: "43755727"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<typename T>  
+template<typename T>
 class CAutoVectorPtr
 ```
 
 #### <a name="parameters"></a>Параметры
 
-`T`  
+*T*<br/>
 Тип указателя.
 
 ## <a name="members"></a>Участники
@@ -82,7 +82,7 @@ class CAutoVectorPtr
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс предоставляет методы для создания и управления смарт-указатель, который поможет защититься от утечки памяти, автоматически освобождение ресурсов, когда оно выпадает из области. `CAutoVectorPtr` аналогичен `CAutoPtr`, единственное отличие —, `CAutoVectorPtr` использует [вектор new&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) и [вектор delete&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) для выделения и освобождения памяти вместо C++ **новый** и **удалить** операторы. См. в разделе [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) если коллекцию классов `CAutoVectorPtr` являются обязательными.  
+Этот класс предоставляет методы для создания и управления смарт-указатель, который поможет защититься от утечки памяти, автоматически освобождение ресурсов, когда оно выпадает из области. `CAutoVectorPtr` аналогичен `CAutoPtr`, единственное отличие —, `CAutoVectorPtr` использует [вектор new&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) и [вектор delete&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) для выделения и освобождения памяти вместо C++ **новый** и **удалить** операторы. См. в разделе [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) если коллекцию классов `CAutoVectorPtr` являются обязательными.
 
 См. в разделе [CAutoPtr](../../atl/reference/cautoptr-class.md) пример использования класса смарт-указатель.
 
@@ -100,7 +100,7 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nElements*  
+*nElements*<br/>
 Количество элементов в массиве.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -121,7 +121,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 `CAutoVectorPtr` Объект будет стать владельцем этого указателя.
 
 ### <a name="remarks"></a>Примечания
@@ -142,7 +142,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Существующего указателя.
 
 ### <a name="remarks"></a>Примечания
@@ -211,7 +211,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -226,7 +226,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 Оператор приведения типов.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -236,5 +236,5 @@ operator T*() const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAutoPtr](../../atl/reference/cautoptr-class.md)   
+[Класс CAutoPtr](../../atl/reference/cautoptr-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

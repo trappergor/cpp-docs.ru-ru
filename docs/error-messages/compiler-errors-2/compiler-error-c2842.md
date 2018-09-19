@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2842 | Документы Microsoft
+title: Ошибка компилятора C2842 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0a95edfa484eb8606b914424e52483c4c1c52d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20967ab4cd047f62a5cf692c91fec90148b4f470
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118821"
 ---
 # <a name="compiler-error-c2842"></a>Ошибка компилятора C2842
-class: управляемый тип или тип WinRT не может определять свой собственный operator new или operator delete  
-  
- Можно определить собственные ** оператор new или **оператор delete** для управления выделением памяти в неуправляемой куче. Однако эти операторы не могут быть определены в ссылочных классах , так как только они выделяются в управляемой куче.  
 
-  
- Дополнительные сведения см. в разделе [определяемые пользователем операторы (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2842:  
-  
-```  
-// C2842.cpp  
-// compile with: /clr /c  
-ref class G {  
-   void* operator new( size_t nSize );   // C2842  
-};  
-```  
+class: управляемый тип или тип WinRT не может определять свой собственный operator new или operator delete
+
+Можно определить собственные ** оператор new или **оператор delete** для управления выделением памяти в неуправляемой куче. Однако эти операторы не могут быть определены в ссылочных классах , так как только они выделяются в управляемой куче.
+
+
+Дополнительные сведения см. в разделе [определяемые пользователем операторы (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2842:
+
+```
+// C2842.cpp
+// compile with: /clr /c
+ref class G {
+   void* operator new( size_t nSize );   // C2842
+};
+```

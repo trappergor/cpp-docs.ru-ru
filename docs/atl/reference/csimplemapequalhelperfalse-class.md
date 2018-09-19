@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa615af00535d899533f21abf933f35bcd5bbf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f26deca76ff887eff2cd0a2c33dad94fbdbff8ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052746"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>Класс CSimpleMapEqualHelperFalse
 
@@ -33,7 +33,7 @@ ms.locfileid: "43767999"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class TKey, class TVal>  
+template <class TKey, class TVal>
 class CSimpleMapEqualHelperFalse
 ```
 
@@ -66,10 +66,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>Параметры
 
-*K1*  
+*K1*<br/>
 Первый ключ.
 
-*K2*  
+*K2*<br/>
 Второй ключ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -98,5 +98,5 @@ static bool IsEqualValue(const TVal&, const TVal&);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)   
+[Класс CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

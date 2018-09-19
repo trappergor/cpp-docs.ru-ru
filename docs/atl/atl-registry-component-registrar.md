@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d3f8f52e237fe364f73057c81eb17c8fd3def18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759435"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041042"
 ---
 # <a name="atl-registry-component-registrar"></a>Компонент реестра ATL (регистратор)
 
@@ -36,14 +36,14 @@ ms.locfileid: "43759435"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Создание скриптов регистратора](../atl/creating-registrar-scripts.md)  
+[Создание скриптов регистратора](../atl/creating-registrar-scripts.md)<br/>
 Руководство по созданию скриптов регистратора. Содержит разделы, посвященные синтаксиса BNF, деревьях синтаксического анализа, реестра, примеры, использование подстановочных параметров и вызов скриптов скриптов.
 
-[Настройка статической ссылки на код регистратора (только C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+[Настройка статической ссылки на код регистратора (только C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
 Перечислены шаги для настройки статическое связывание для регистратора.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Ссылки на разделы о программировании с использованием библиотеки ATL.
 

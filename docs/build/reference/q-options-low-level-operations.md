@@ -1,5 +1,5 @@
 ---
-title: Параметры -Q (низкоуровневые операции) | Документы Microsoft
+title: Параметры -Q (низкоуровневые операции) | Документация Майкрософт
 ms.custom: ''
 ms.date: 1/23/2018
 ms.technology:
@@ -17,34 +17,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8a18c5d790cf21e8eb130a2b2baa152e20d79a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15854333a9f26f87d20f7819327e68050ab37bf6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375039"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717794"
 ---
 # <a name="q-options-low-level-operations"></a>Параметры /Q (низкоуровневые операции)
 
-Можно использовать **/q** параметры компилятора для выполнения следующих операций компилятора низкого уровня:
+Можно использовать **/Q** параметры компилятора для выполнения следующих операций низкого уровня компилятора:
 
 - [/ Qfast_transcendentals (принудительное использование быстрых трансцендентных функций)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): создает быстрые трансцендентные функции.
 
-- [/ QIfist (отключение _ftol)](../../build/reference/qifist-suppress-ftol.md): подавляет `_ftol` при необходимости преобразования из типа с плавающей запятой в целочисленный тип является обязательным (x86 только).
+- [/ QIfist (Suppress _ftol)](../../build/reference/qifist-suppress-ftol.md): подавляет `_ftol` при преобразования из типа с плавающей запятой в целочисленный тип является обязательным (x86 только).
 
-- [/ Qimprecise_fwaits (удалить ожидания в блоке Try)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Удаляет `fwait` команды внутрь `try` блоков.
+- [/ Qimprecise_fwaits (удалить ожидания в блоке Try)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Удаляет `fwait` команды внутри `try` блоков.
 
-- [/ Qpar (автоматический Параллелизатор)](../../build/reference/qpar-auto-parallelizer.md): включает автоматическую параллелизацию циклов, которые отмечены [#pragma loop()](../../preprocessor/loop.md) директивы.
+- [/ Qpar (автоматический Параллелизатор)](../../build/reference/qpar-auto-parallelizer.md): включает автоматическую параллелизацию циклов, которые помечены с [#pragma loop()](../../preprocessor/loop.md) директива.
 
 - [/ Qpar-report (уровень отчетности автоматического Параллелизатора)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): включает уровни отчетов для автоматической параллелизации.
 
-- [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): подавляет оптимизацию для регистре с плавающей запятой, загружает и перемещение между памяти и MMX регистры.
+- [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): замедляет процессы оптимизации регистре с плавающей запятой, загружает и переход между памятью и MMX регистрирует.
 
-- [/ Qspectre](../../build/reference/qspectre.md): создает инструкции для устранения определенных Spectre уязвимостей безопасности.
+- [/ Qspectre](../../build/reference/qspectre.md): создает инструкции для устранения уязвимостей безопасности, определенных Spectre.
 
 - [/ Qvec-report (уровень отчетности автоматического Векторизатора)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): включает уровни отчетов для автоматической векторизации.
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)  
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)  
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

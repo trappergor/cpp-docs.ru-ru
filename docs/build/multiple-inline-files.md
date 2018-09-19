@@ -1,5 +1,5 @@
 ---
-title: Использование нескольких встроенных файлов | Документы Microsoft
+title: Несколько встроенных файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee9be15f029c0aaab3ca4bc47fb183e1499c2e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87d68034c4f0018d65020915d24d0b5c2ec5d61a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368217"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725599"
 ---
 # <a name="multiple-inline-files"></a>Использование нескольких встроенных файлов
-Команду можно создать несколько встроенных файлов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      command << <<  
-inlinetext  
-<<[KEEP | NOKEEP]  
-inlinetext  
-<<[KEEP | NOKEEP]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Для каждого файла укажите один или несколько строк встроенного текста, следуют закрывающая строка, содержащая разделитель. Начало второй файл текст строки, следующей за разделяющей строкой первого файла.  
-  
-## <a name="see-also"></a>См. также  
- [Подставляемые файлы в Makefile](../build/inline-files-in-a-makefile.md)
+
+Команду можно создать несколько встроенных файлов.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+command << <<
+inlinetext
+<<[KEEP | NOKEEP]
+inlinetext
+<<[KEEP | NOKEEP]
+```
+
+## <a name="remarks"></a>Примечания
+
+Для каждого файла укажите один или несколько строк встроенного текста, за которым следует закрывающая строка, содержащая разделитель по. Начните второй файл текст в строке после разделителя строки, для первого файла.
+
+## <a name="see-also"></a>См. также
+
+[Подставляемые файлы в Makefile](../build/inline-files-in-a-makefile.md)

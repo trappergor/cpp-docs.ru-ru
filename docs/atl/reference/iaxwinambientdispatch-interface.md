@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5bb644e43a5dd5085c53d0428f892cccd424fc1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf8747275325332f6a2d0072e2c0ba2a66ae276
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057617"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Интерфейс IAxWinAmbientDispatch
 
@@ -130,7 +130,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>Параметры
 
-*pbAllowContextMenu*  
+*pbAllowContextMenu*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -151,7 +151,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>Параметры
 
-*pbAllowShowUI*  
+*pbAllowShowUI*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -172,7 +172,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>Параметры
 
-*pbAllowWindowless*  
+*pbAllowWindowless*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -193,7 +193,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>Параметры
 
-*pclrBackground*  
+*pclrBackground*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -214,7 +214,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>Параметры
 
-*pbDisplayAsDefault*  
+*pbDisplayAsDefault*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -235,7 +235,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Параметры
 
-*pdwDocHostDoubleClickFlags*  
+*pdwDocHostDoubleClickFlags*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -256,7 +256,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>Параметры
 
-*pdwDocHostFlags*  
+*pdwDocHostFlags*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -277,7 +277,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>Параметры
 
-*pFont*  
+*pFont*<br/>
 [out] Адрес `IFontDisp` указатель на интерфейс, используемый для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -298,7 +298,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>Параметры
 
-*pclrForeground*  
+*pclrForeground*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -319,7 +319,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>Параметры
 
-*plcidLocaleID*  
+*plcidLocaleID*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -342,7 +342,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>Параметры
 
-*pbMessageReflect*  
+*pbMessageReflect*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -363,7 +363,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>Параметры
 
-*pbstrOptionKeyPath*  
+*pbstrOptionKeyPath*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -380,7 +380,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>Параметры
 
-*pbShowGrabHandles*  
+*pbShowGrabHandles*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -401,7 +401,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>Параметры
 
-*pbShowHatching*  
+*pbShowHatching*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -422,7 +422,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>Параметры
 
-*pbUserMode*  
+*pbUserMode*<br/>
 [out] Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -443,7 +443,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>Параметры
 
-*bAllowContextMenu*  
+*bAllowContextMenu*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -464,7 +464,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>Параметры
 
-*bAllowShowUI*  
+*bAllowShowUI*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -485,7 +485,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>Параметры
 
-*bAllowWindowless*  
+*bAllowWindowless*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -506,7 +506,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>Параметры
 
-*clrBackground*  
+*clrBackground*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -527,7 +527,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>Параметры
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -548,7 +548,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Параметры
 
-*dwDocHostDoubleClickFlags*  
+*dwDocHostDoubleClickFlags*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -569,7 +569,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>Параметры
 
-*dwDocHostFlags*  
+*dwDocHostFlags*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -590,7 +590,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Параметры
 
-*pFont*  
+*pFont*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -611,7 +611,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>Параметры
 
-*clrForeground*  
+*clrForeground*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -632,7 +632,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>Параметры
 
-*lcidLocaleID*  
+*lcidLocaleID*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -653,7 +653,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>Параметры
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -674,7 +674,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>Параметры
 
-*bstrOptionKeyPath*  
+*bstrOptionKeyPath*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -691,7 +691,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>Параметры
 
-*bUserMode*  
+*bUserMode*<br/>
 [in] Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -704,8 +704,8 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)   
-[Интерфейс IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[Интерфейс IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)<br/>
+[Интерфейс IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

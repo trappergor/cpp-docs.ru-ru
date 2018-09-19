@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 57c7c55ae2214c4123973e93c65f5e189d32b99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849169"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701653"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Класс CMFCTasksPaneTaskGroup
 `CMFCTasksPaneTaskGroup` Класс — это вспомогательный класс, используемый [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) элемента управления. Объекты типа `CMFCTasksPaneTaskGroup` представляют *группу задач*. Группа задач — это список элементов, отображаемых структурой в отдельном поле с кнопкой "Свернуть". Поле может иметь необязательный заголовок (имя группы). Если группа свернута, список задач не отображается.  
@@ -54,20 +54,20 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Создает объект `CMFCTasksPaneTaskGroup`.|  
 |`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Определяет, какие данные специальных возможностей для текущей группы задач.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Определяет, выровнены ли группа задач в нижней части элемента управления области задач.|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Определяет, свернута ли группа задач.|  
@@ -216,11 +216,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pParent*  
- Представляет родительское окно текущей группы задач.  
+*pParent*<br/>
+[in] Представляет родительское окно текущей группы задач.  
   
- [out] *данных*  
- Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей группы задач.  
+*data*<br/>
+[out] Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей группы задач.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если *данных* параметр был успешно заполнен данные специальных возможностей текущей группы задач; в противном случае — значение FALSE.  

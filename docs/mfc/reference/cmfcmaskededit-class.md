@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2739b9306647b1929a0ad51aca8e0b66a65e9d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849475"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018266"
 ---
 # <a name="cmfcmaskededit-class"></a>Класс CMFCMaskedEdit
 `CMFCMaskedEdit` Класс поддерживает элемент управления masked edit, который проверяет введенные пользователем данные соответствие маске и отображает установленные результаты в соответствии с шаблоном.  
@@ -54,14 +54,14 @@ class CMFCMaskedEdit : public CEdit
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Конструктор по умолчанию.|  
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Отключение проверки ввода пользователя.|  
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Указывает, является ли `GetWindowText` метод извлекает только маскированные символы.|  
@@ -75,7 +75,7 @@ class CMFCMaskedEdit : public CEdit
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Вызывается платформой для проверки указанного знака от соответствующего символа маски.|  
   
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bEnable*  
- Значение TRUE, чтобы указать, что [CMFCMaskedEdit::GetWindowText](#getwindowtext) метод извлечения только маскируются символов; Значение FALSE, чтобы указать, что метод получения по всему тексту. Значение по умолчанию — TRUE.  
+*bEnable*<br/>
+[in] Значение TRUE, чтобы указать, что [CMFCMaskedEdit::GetWindowText](#getwindowtext) метод извлечения только маскируются символов; Значение FALSE, чтобы указать, что метод получения по всему тексту. Значение по умолчанию — TRUE.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод позволяет включить получение маскированные символы. Создайте элемент управления masked edit, соответствующий номер телефона, например (425) 555-0187. При вызове метода `GetWindowText` метод, он возвращает «4255550187». Если отключить получение маскированные символы `GetWindowText` метод возвращает текст, отображаемый в элементе управления, например «(425) 555-0187».  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszMask*  
- Строка маска, указывающая тип символа, который может появляться в каждой позиции в вводимых пользователем данных. Длина *lpszInputTemplate* и *lpszMask* строки параметров должны быть одинаковыми. Дополнительные сведения о символах маски в разделе "Примечания".  
+*lpszMask*<br/>
+[in] Строка маска, указывающая тип символа, который может появляться в каждой позиции в вводимых пользователем данных. Длина *lpszInputTemplate* и *lpszMask* строки параметров должны быть одинаковыми. Дополнительные сведения о символах маски в разделе "Примечания".  
   
- [in] *lpszInputTemplate*  
- Строка шаблона маски, в которой указывается литерала символов, который может присутствовать в каждой позиции в вводимых пользователем данных. Используйте символ подчеркивания («_») в качестве заполнителя символов. Длина *lpszInputTemplate* и *lpszMask* строки параметров должны быть одинаковыми.  
+*lpszInputTemplate*<br/>
+[in] Строка шаблона маски, в которой указывается литерала символов, который может присутствовать в каждой позиции в вводимых пользователем данных. Используйте символ подчеркивания («_») в качестве заполнителя символов. Длина *lpszInputTemplate* и *lpszMask* строки параметров должны быть одинаковыми.  
   
- [in] *chMaskInputTemplate*  
- Символ по умолчанию, который замещает платформы для каждый недопустимый символ в вводимых пользователем данных. Значение по умолчанию этого параметра — символ подчеркивания («_»).  
+*chMaskInputTemplate*<br/>
+[in] Символ по умолчанию, который замещает платформы для каждый недопустимый символ в вводимых пользователем данных. Значение по умолчанию этого параметра — символ подчеркивания («_»).  
   
- [in] *lpszValid*  
- Строка, содержащая набор допустимых символов. Значение NULL указывает, что все символы являются допустимыми. Значение по умолчанию этого параметра равно NULL.  
+*lpszValid*<br/>
+[in] Строка, содержащая набор допустимых символов. Значение NULL указывает, что все символы являются допустимыми. Значение по умолчанию этого параметра равно NULL.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод для создания маски для элемент управления masked edit. Наследуйте класс от `CMFCMaskedEdit` класса и переопределить [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) метод, чтобы использовать собственный код для обработки пользовательских маски.  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bEnable*  
- Значение TRUE, чтобы выбрать только группы; Значение FALSE, чтобы выбрать весь текст. Значение по умолчанию — TRUE.  
+*bEnable*<br/>
+[in] Значение TRUE, чтобы выбрать только группы; Значение FALSE, чтобы выбрать весь текст. Значение по умолчанию — TRUE.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция используется для указания того, допускает ли элемент управления masked edit пользователю выбирать по группе или по всему тексту.  
@@ -196,18 +196,17 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  Например можно использовать следующий элемент управления masked edit подтверждения номера телефона:  
   
- `m_wndMaskEdit.EnableMask(`  
-  
- `_T(" ddd  ddd dddd"),// Mask string`  
-  
- `_T("(___) ___-____"),// Template string`  
-  
- `_T(' '));// Default char`  
-  
- `m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.`  
-  
- `m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt`  
-  
+```cpp
+m_wndMaskEdit.EnableMask(
+    _T(" ddd  ddd dddd"),  // Mask string
+    _T("(___) ___-____"),  // Template string
+    _T(' '));              // Default char
+
+m_wndMaskEdit.SetValidChars(NULL); // All characters are valid.
+
+m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt
+```
+
  Если выбор по группе включен, пользователь может получить только «425», «555» или «0187» строки группы. Если Выбор группы отключен пользователя можно получить по всему тексту номер телефона: «(425) 555-0187».  
   
 ##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
@@ -218,8 +217,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *bEnable*  
- Значение TRUE для проверки пользовательского ввода от только маскируются символов; Значение FALSE, чтобы проверить всю маски. Значение по умолчанию — TRUE.  
+*bEnable*<br/>
+[in] Значение TRUE для проверки пользовательского ввода от только маскируются символов; Значение FALSE, чтобы проверить всю маски. Значение по умолчанию — TRUE.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Извлекает проверить текст из элемент управления masked edit.  
@@ -233,14 +232,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *lpszStringBuf*  
- Указатель на буфер, получающий текст из элемента управления редактирования.  
+*lpszStringBuf*<br/>
+[out] Указатель на буфер, получающий текст из элемента управления редактирования.  
   
- [in] *nMaxCount*  
- Максимальное количество символов для получения.  
+*nMaxCount*<br/>
+[in] Максимальное количество символов для получения.  
   
- [out] *rstrString*  
- Ссылка на строковый объект, который получает текст из элемента управления редактирования.  
+*rstrString*<br/>
+[out] Ссылка на строковый объект, который получает текст из элемента управления редактирования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  По первой перегрузке метода возвращает количество байтов строки, в который копируется для *lpszStringBuf* буфером параметров; 0, если элемент управления masked edit не содержит текста.  
@@ -260,11 +259,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *chChar*  
- Символ для проверки.  
+*chChar*<br/>
+[in] Символ для проверки.  
   
- [in] *chMaskChar*  
- Соответствующий символ из строки маски.  
+*chMaskChar*<br/>
+[in] Соответствующий символ из строки маски.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если *chChar* параметр представляет собой тип знака по *chMaskChar* параметра; в противном случае — значение FALSE.  
@@ -280,15 +279,24 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszValid*  
- Строка, содержащая набор допустимых входных символов. Значение NULL означает, что все символы являются допустимыми. Значение по умолчанию этого параметра равно NULL.  
+*lpszValid*<br/>
+[in] Строка, содержащая набор допустимых входных символов. Значение NULL означает, что все символы являются допустимыми. Значение по умолчанию этого параметра равно NULL.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод позволяет определить список допустимых символов. Если входной символ не находится в этом списке, он не будет принимать в элемент управления masked edit.  
   
  В следующем примере кода принимает только шестнадцатеричные числа.  
   
- `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
+```cpp
+//Mask: 0xFFFF
+m_wndMaskEdit.EnableMask( 
+    _T(" AAAA"),                // The mask string.
+    _T("0x____"),               // The literal template string.
+    _T('_'));                   // The default character that 
+                                // replaces the backspace character.
+// Valid string characters
+m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));
+```
   
 ##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
  Отображает запрос в элемент управления masked edit.  
@@ -298,8 +306,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszString*  
- Указатель на заканчивающуюся нулем строку, которая будет использоваться в качестве запроса.  
+*lpszString*<br/>
+[in] Указатель на заканчивающуюся нулем строку, которая будет использоваться в качестве запроса.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод задает текст элемента управления.  

@@ -1,28 +1,46 @@
 ---
 title: Класс FtmBase | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase
+- ftm/Microsoft::WRL::FtmBaseCreateGlobalInterfaceTable
+- ftm/Microsoft::WRL::FtmBase::DisconnectObject
+- ftm/Microsoft::WRL::FtmBase::FtmBase
+- ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax
+- ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass
+- ftm/Microsoft::WRL::FtmBase::MarshalInterface
+- ftm/Microsoft::WRL::FtmBase::marshaller_
+- ftm/Microsoft::WRL::FtmBase::ReleaseMarshalData
+- ftm/Microsoft::WRL::FtmBase::UnmarshalInterface
 dev_langs:
 - C++
 helpviewer_keywords:
-- FtmBase class
+- Microsoft::WRL::FtmBase class
+- Microsoft::WRL::FtmBase::CreateGlobalInterfaceTable method
+- Microsoft::WRL::FtmBase::DisconnectObject method
+- Microsoft::WRL::FtmBase::FtmBase, constructor
+- Microsoft::WRL::FtmBase::GetMarshalSizeMax method
+- Microsoft::WRL::FtmBase::GetUnmarshalClass method
+- Microsoft::WRL::FtmBase::MarshalInterface method
+- Microsoft::WRL::FtmBase::marshaller_ data member
+- Microsoft::WRL::FtmBase::ReleaseMarshalData method
+- Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb3b9ecae955ac78c6139156c3379fcd97511671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584377"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601461"
 ---
 # <a name="ftmbase-class"></a>FtmBase - класс
 
@@ -44,27 +62,27 @@ class FtmBase : public Microsoft::WRL::Implements<
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Конструктор FtmBase::FtmBase](../windows/ftmbase-ftmbase-constructor.md)|Инициализирует новый экземпляр класса **FtmBase** класса.|
+| Имя                         | Описание                                        |
+| ---------------------------- | -------------------------------------------------- |
+| [FtmBase::FtmBase](#ftmbase) | Инициализирует новый экземпляр класса `FtmBase`. |
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Метод FtmBase::CreateGlobalInterfaceTable](../windows/ftmbase-createglobalinterfacetable-method.md)|Создает общую таблицу интерфейса (GIT).|
-|[Метод FtmBase::DisconnectObject](../windows/ftmbase-disconnectobject-method.md)|Принудительно освобождает все внешние подключения к объекту. Сервер объекта вызывает реализацию объекта этот метод перед завершением работы системы.|
-|[Метод FtmBase::GetMarshalSizeMax](../windows/ftmbase-getmarshalsizemax-method.md)|Получите верхнюю границу на число байтов, необходимая для маршалинга заданный указатель интерфейса на указанный объект.|
-|[Метод FtmBase::GetUnmarshalClass](../windows/ftmbase-getunmarshalclass-method.md)|Возвращает идентификатор CLSID, модель COM использует для поиска библиотеки DLL, содержащей код для соответствующего прокси-сервера. COM загружает эту библиотеку DLL для создания неинициализированным экземпляром прокси-сервера.|
-|[Метод FtmBase::MarshalInterface](../windows/ftmbase-marshalinterface-method.md)|Записывает в поток данные, необходимые для инициализации прокси-объект в какой-либо процесс клиента.|
-|[Метод FtmBase::ReleaseMarshalData](../windows/ftmbase-releasemarshaldata-method.md)|Уничтожает пакет маршалированного данных.|
-|[Метод FtmBase::UnmarshalInterface](../windows/ftmbase-unmarshalinterface-method.md)|Инициализирует только что созданный прокси-сервер и возвращает указатель интерфейса для этого прокси-сервера.|
+| Имя                                                               | Описание                                                                                                                                                          |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | Создает общую таблицу интерфейса (GIT).                                                                                                                              |
+| [FtmBase::DisconnectObject](#disconnectobject)                     | Принудительно освобождает все внешние подключения к объекту. Сервер объекта вызывает реализацию объекта этот метод перед завершением работы системы.                |
+| [FtmBase::GetMarshalSizeMax](#getmarshalsizemax)                   | Получите верхнюю границу на число байтов, необходимая для маршалинга заданный указатель интерфейса на указанный объект.                                                |
+| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | Возвращает идентификатор CLSID, модель COM использует для поиска библиотеки DLL, содержащей код для соответствующего прокси-сервера. COM загружает эту библиотеку DLL для создания неинициализированным экземпляром прокси-сервера. |
+| [FtmBase::MarshalInterface](#marshalinterface)                     | Записывает в поток данные, необходимые для инициализации прокси-объект в какой-либо процесс клиента.                                                                          |
+| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | Уничтожает пакет маршалированного данных.                                                                                                                                    |
+| [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | Инициализирует только что созданный прокси-сервер и возвращает указатель интерфейса для этого прокси-сервера.                                                                                    |
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Элемент данных FtmBase::marshaller_](../windows/ftmbase-marshaller-data-member.md)|Хранит ссылку на бесплатный упаковщик.|
+| Имя                                | Описание                                       |
+| ----------------------------------- | ------------------------------------------------- |
+| [FtmBase::marshaller_](#marshaller) | Хранит ссылку на бесплатный упаковщик. |
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -76,6 +94,240 @@ class FtmBase : public Microsoft::WRL::Implements<
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
 
-[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+Создает общую таблицу интерфейса (GIT).
+
+```cpp
+static HRESULT CreateGlobalInterfaceTable(
+   __out IGlobalInterfaceTable **git
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Git*  
+После завершения этой операции указатель на общую таблицу интерфейса.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+### <a name="remarks"></a>Примечания
+
+Дополнительные сведения см. в разделе `IGlobalInterfaceTable` подразделы `COM Interfaces` подраздела `COM Reference` раздела в библиотеке MSDN.
+
+## <a name="disconnectobject"></a>FtmBase::DisconnectObject
+
+Принудительно освобождает все внешние подключения к объекту. Сервер объекта вызывает реализацию объекта этот метод перед завершением работы системы.
+
+```cpp
+STDMETHODIMP DisconnectObject(
+   __in DWORD dwReserved
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*dwReserved*  
+Зарезервировано для будущего использования; должно иметь значение нуль.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="ftmbase"></a>FtmBase::FtmBase
+
+Инициализирует новый экземпляр класса `FtmBase`.
+
+```cpp
+FtmBase();
+```
+
+## <a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
+
+Получите верхнюю границу на число байтов, необходимая для маршалинга заданный указатель интерфейса на указанный объект.
+
+```cpp
+STDMETHODIMP GetMarshalSizeMax(
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags,
+   __out DWORD *pSize
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*  
+Ссылка на идентификатор интерфейса для маршалинга.
+
+*PV*  
+Указатель на интерфейс, который должен быть маршалирован; может иметь значение NULL.
+
+*dwDestContext*  
+Контекст назначения, где должен быть неупакованный указанный интерфейс.
+
+Укажите одно или несколько значений перечисления MSHCTX.
+
+В настоящее время распаковка может произойти в другое подразделение текущего процесса (MSHCTX_INPROC) или в другом процессе на том же компьютере, что и текущий процесс (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Зарезервировано для будущего использования; должен иметь значение NULL.
+
+*mshlflags*  
+Флаг, указывающий, является ли данных для маршалинга для передачи обратно в клиентском процессе, типичный случай — диска или записываются на глобальной таблицы, где его можно получить несколькими клиентами. Укажите одно или несколько значений перечисления MSHLFLAGS.
+
+*pSize*  
+После завершения этой операции, указатель на верхнюю границу объема данных, записываемых в поток маршалинга.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае — значение E_FAIL или E_NOINTERFACE.
+
+## <a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
+
+Возвращает идентификатор CLSID, модель COM использует для поиска библиотеки DLL, содержащей код для соответствующего прокси-сервера. COM загружает эту библиотеку DLL для создания неинициализированным экземпляром прокси-сервера.
+
+```cpp
+STDMETHODIMP GetUnmarshalClass(
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags,
+   __out CLSID *pCid
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*  
+Ссылка на идентификатор интерфейса для маршалинга.
+
+*PV*  
+Указатель на интерфейс, который должен быть маршалирован; может иметь значение NULL, если вызывающий объект не имеет указатель на нужный интерфейс.
+
+*dwDestContext*  
+Контекст назначения, где должен быть неупакованный указанный интерфейс.
+
+Укажите одно или несколько значений перечисления MSHCTX.
+
+Распаковка может произойти либо в другое подразделение текущего процесса (MSHCTX_INPROC) или в другом процессе на том же компьютере, что и текущий процесс (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Зарезервировано для будущего использования; должен иметь значение NULL.
+
+*mshlflags*  
+После завершения этой операции, указатель на идентификатор CLSID, используемый для создания прокси-сервера в клиентском процессе.
+
+*pCid*
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае значение S_FALSE.
+
+## <a name="marshalinterface"></a>FtmBase::MarshalInterface
+
+Записывает в поток данные, необходимые для инициализации прокси-объект в какой-либо процесс клиента.
+
+```cpp
+STDMETHODIMP MarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*pStm*  
+Указатель на поток, который используется во время маршалинга.
+
+*riid*  
+Ссылка на идентификатор интерфейса для маршалинга. Этот интерфейс должен быть производным от `IUnknown` интерфейс.
+
+*PV*  
+Указатель на указатель интерфейса, который должен быть маршалирован; может иметь значение NULL, если вызывающий объект не имеет указатель на нужный интерфейс.
+
+*dwDestContext*  
+Контекст назначения, где должен быть неупакованный указанный интерфейс.
+
+Укажите одно или несколько значений перечисления MSHCTX.
+
+Распаковка может произойти в другое подразделение текущего процесса (MSHCTX_INPROC) или в другом процессе на том же компьютере, что и текущий процесс (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Зарезервировано для будущего использования; должно иметь значение нуль.
+
+*mshlflags*  
+Указывает, являются ли данные должны быть маршалированы для передачи обратно в клиентском процессе, типичный случай — диска или записываются на глобальной таблицы, где его можно получить несколькими клиентами.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK указатель интерфейса был маршалирован успешно.
+
+E_NOINTERFACE указанный интерфейс не поддерживается.
+
+Заполнен STG_E_MEDIUMFULL потока.
+
+Не удалось выполнить операцию E_FAIL.
+
+## <a name="marshaller"></a>FtmBase::marshaller_
+
+Хранит ссылку на бесплатный упаковщик.
+
+```cpp
+Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
+```
+
+## <a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
+
+Уничтожает пакет маршалированного данных.
+
+```cpp
+STDMETHODIMP ReleaseMarshalData(
+   __in IStream *pStm
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*pStm*  
+Указатель на поток, содержащий пакет данных будут уничтожены.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
+
+## <a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
+
+Инициализирует только что созданный прокси-сервер и возвращает указатель интерфейса для этого прокси-сервера.
+
+```cpp
+STDMETHODIMP UnmarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __deref_out void **ppv
+) override;
+```
+
+### <a name="parameters"></a>Параметры
+
+*pStm*  
+Указатель на поток, из которого должен быть неупакованный указатель на интерфейс.
+
+*riid*  
+Ссылка на идентификатор интерфейса необходимо распаковать.
+
+*ppv*  
+После завершения операции адрес переменной указателя, получающей указатель интерфейса, запрашиваемый в *riid*. Если операция выполнена успешно, **ppv* содержит запрошенный указатель интерфейса интерфейса необходимо распаковать.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае — значение E_NOINTERFACE или E_FAIL.

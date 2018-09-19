@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2134 | Документы Microsoft
+title: Ошибка компилятора C2134 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,41 +14,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8390e720e1a4389e43c263faf0c7582eaccfceec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e616540fdb83619096ae24533380c559aa4759da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168299"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101453"
 ---
 # <a name="compiler-error-c2134"></a>Ошибка компилятора C2134
-«функция»: вызов не связан в константном выражении  
-  
- Функция, объявленная как constexpr может вызывать только другие функции, объявленные как constexpr.  
-  
- Следующий пример приводит к возникновению ошибки C2134:  
-  
-```  
-// C2134.cpp  
-// compile with: /c  
-int A() {  
-    return 42;  
-};  
-  
-constexpr int B() {  
-    return A();  // Error C2134: 'A': call does not result in a constant expression.  
-}  
-```  
-  
- Возможное решение  
-  
-```  
-// C2134b.cpp  
-constexpr int A() {  // add constexpr to A, since it meets the requirements of constexpr.  
-    return 42;  
-};  
-  
-constexpr int B() {  
-    return A();  // No error  
-}  
+
+«функция»: вызов не связан в константном выражении
+
+Функция, объявленная как constexpr только могут вызывать другие функции, объявленные как constexpr.
+
+Следующий пример приводит к возникновению ошибки C2134:
+
+```
+// C2134.cpp
+// compile with: /c
+int A() {
+    return 42;
+};
+
+constexpr int B() {
+    return A();  // Error C2134: 'A': call does not result in a constant expression.
+}
+```
+
+Возможное решение
+
+```
+// C2134b.cpp
+constexpr int A() {  // add constexpr to A, since it meets the requirements of constexpr.
+    return 42;
+};
+
+constexpr int B() {
+    return A();  // No error
+}
 ```

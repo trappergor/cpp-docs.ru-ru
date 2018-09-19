@@ -35,14 +35,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a74d2c06f5de9956056c9d8e82d35b64c65cb16f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 15e00f27c5ad5d5312928bda8f73304a8417a6bc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071826"
 ---
 # <a name="irowsetnotifycp-class"></a>Класс IRowsetNotifyCP
+
 Реализует поставщик сайта для точки подключения интерфейса [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)).  
   
 ## <a name="syntax"></a>Синтаксис
@@ -58,20 +59,22 @@ class IRowsetNotifyCP :
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *T*  
- Класс, производный от `IRowsetNotifyCP`.  
+
+*T*<br/>
+Класс, производный от `IRowsetNotifyCP`.  
   
- *ReentrantEventSync*  
- Класс mutex, поддерживающий повторного входа (по умолчанию используется `CComSharedMutex`). Мьютекс — объект синхронизации, позволяющий один поток взаимно исключают друг друга доступ к ресурсу.  
+*ReentrantEventSync*<br/>
+Класс mutex, поддерживающий повторного входа (по умолчанию используется `CComSharedMutex`). Мьютекс — объект синхронизации, позволяющий один поток взаимно исключают друг друга доступ к ресурсу.  
   
- *piid*  
- Указатель на интерфейс идентификатор (`IID*`) для `IRowsetNotify` интерфейса точки подключения. Значение по умолчанию — `&__uuidof(IRowsetNotify)`.  
+*piid*<br/>
+Указатель на интерфейс идентификатор (`IID*`) для `IRowsetNotify` интерфейса точки подключения. Значение по умолчанию — `&__uuidof(IRowsetNotify)`.  
   
- *DynamicUnkArray*  
- Массив объектов типа [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), которая представляет динамический массив `IUnknown` указатели на клиенте приемник интерфейсов. 
+*DynamicUnkArray*<br/>
+Массив объектов типа [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), которая представляет динамический массив `IUnknown` указатели на клиенте приемник интерфейсов. 
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldb.h   
+
+**Заголовок:** atldb.h   
   
 ## <a name="members"></a>Участники  
   
@@ -84,13 +87,15 @@ class IRowsetNotifyCP :
 |[Fire_OnRowsetChange](#onrowsetchange)|Уведомляет объект-получатель изменений, влияющих на весь набор строк.|  
   
 ## <a name="remarks"></a>Примечания  
- `IRowsetNotifyCP` реализует широковещательных функции для в точке подключения `IID_IRowsetNotify` об изменениях содержимого набора строк.  
+
+`IRowsetNotifyCP` реализует широковещательных функции для в точке подключения `IID_IRowsetNotify` об изменениях содержимого набора строк.  
   
- Обратите внимание, что необходимо также реализовать и зарегистрировать `IRowsetNotify` на объекте-получателе (также называется «приемник») с помощью [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) потребитель может обрабатывать уведомления. См. в разделе [получение уведомлений](../../data/oledb/receiving-notifications.md) о реализации интерфейса точки подключения на объекте-получателе.  
+Обратите внимание, что необходимо также реализовать и зарегистрировать `IRowsetNotify` на объекте-получателе (также называется «приемник») с помощью [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) потребитель может обрабатывать уведомления. См. в разделе [получение уведомлений](../../data/oledb/receiving-notifications.md) о реализации интерфейса точки подключения на объекте-получателе.  
   
- Подробные сведения о реализации уведомлений см. в разделе «Поддержка уведомления» в [Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md).  
+Подробные сведения о реализации уведомлений см. в разделе «Поддержка уведомления» в [Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md).  
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
+
 Осуществляет широковещательную передачу [OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) событие для уведомления пользователей об изменении значения столбца.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -106,9 +111,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+
+См. в разделе [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) в *справочнике программиста OLE DB*. 
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
+
 Осуществляет широковещательную передачу [OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) событий все прослушиватели в точке подключения `IID_IRowsetNotify` для уведомления потребителей изменений, влияющих на строки.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -123,9 +130,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+
+См. в разделе [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) в *справочнике программиста OLE DB*.  
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
+
 Осуществляет широковещательную передачу [OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) событий все прослушиватели в точке подключения `IID_IRowsetNotify` для уведомления потребителей изменений, влияющих на весь набор строк.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -138,13 +147,15 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- См. в разделе [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) в *справочнике программиста OLE DB*.
+
+См. в разделе [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) в *справочнике программиста OLE DB*.
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Уведомления (COM)](/windows/desktop/com/notifications)   
- [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)   
- [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)   
- [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)   
- [Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md)
+
+[Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Уведомления (COM)](/windows/desktop/com/notifications)<br/>
+[BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
+[END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>
+[CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)<br/>
+[Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md)

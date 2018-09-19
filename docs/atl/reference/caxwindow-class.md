@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda5fc385f094bd7a18bff521250453ebb66c84
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39b376d6e65a5002487cbf51186fdab9ccb3fc46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110150"
 ---
 # <a name="caxwindow-class"></a>Класс CAxWindow
 
@@ -94,10 +94,10 @@ HRESULT AttachControl(
 
 ### <a name="parameters"></a>Параметры
 
-*pControl*  
+*pControl*<br/>
 [in] Указатель на `IUnknown` элемента управления.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Указатель на `IUnknown` узла ( `AxWin` объекта).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -118,7 +118,7 @@ CAxWindow(HWND hWnd = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 Дескриптор существующего объекта окна.
 
 ##  <a name="createcontrol"></a>  CAxWindow::CreateControl
@@ -139,7 +139,7 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszName*  
+*lpszName*<br/>
 Указатель на строку для создания элемента управления. Должен быть отформатирован в одном из следующих способов:
 
 - ProgID, например «MSCAL. Calendar.7»
@@ -155,13 +155,13 @@ HRESULT CreateControl(
    > [!NOTE]
    > «MSHTML:» должен предшествовать фрагмент HTML, таким образом, чтобы он обозначается как поток MSHTML. На платформах Windows Mobile, поддерживаются только идентификаторы ProgID и CLSID. Windows CE внедренные платформ, отличных от Windows Mobile с CE IE поддерживает использование всех типов, включая идентификатор ProgID, CLSID, URL-адрес, ссылка на активный документ и фрагмент кода HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на поток, который используется для инициализации свойств элемента управления. Может иметь значение NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Адрес указателя, который будет получать `IUnknown` контейнера. Может иметь значение NULL.
 
-*dwResID*  
+*dwResID*<br/>
 Идентификатор ресурса ресурс HTML. Элемент управления WebBrowser будет создан и загружен с указанным ресурсом.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -206,7 +206,7 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszName*  
+*lpszName*<br/>
 Указатель на строку для создания элемента управления. Должен быть отформатирован в одном из следующих способов:
 
 - ProgID, например «MSCAL. Calendar.7»
@@ -222,22 +222,22 @@ HRESULT CreateControlEx(
    > [!NOTE]
    > «MSHTML:» должен предшествовать фрагмент HTML, таким образом, чтобы он обозначается как поток MSHTML. На платформах Windows Mobile, поддерживаются только идентификаторы ProgID и CLSID. Windows CE внедренные платформ, отличных от Windows Mobile с CE IE поддерживает использование всех типов, включая идентификатор ProgID, CLSID, URL-адрес, ссылка на активный документ и фрагмент кода HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на поток, который используется для инициализации свойств элемента управления. Может иметь значение NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Адрес указателя, который будет получать `IUnknown` контейнера. Может иметь значение NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Адрес указателя, который будет получать `IUnknown` элемента управления. Может иметь значение NULL.
 
-*iidSink*  
+*iidSink*<br/>
 [in] Идентификатор исходящего интерфейса на содержащийся объект. Может быть IID_NULL.
 
-*punkSink*  
+*punkSink*<br/>
 [in] Указатель на `IUnknown` интерфейс приемника объекта должен быть подключен к точкой соединения в автономной объекта, заданного параметром *iidSink*.
 
-*dwResID*  
+*dwResID*<br/>
 [in] Идентификатор ресурса ресурс HTML. Элемент управления WebBrowser будет создан и загружен с указанным ресурсом.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -276,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 Дескриптор к существующему окну.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -295,13 +295,13 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Указывает идентификатор IID интерфейса элемента управления.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Указатель на интерфейс элемента управления. В шаблоне версия этого метода нет необходимости для идентификатора ссылки, до тех пор, пока передается типизированный интерфейс с связанные UUID.
 
-*Q*  
+*Q*<br/>
 [in] Интерфейс, запрашиваемый для.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -320,13 +320,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Указывает идентификатор IID интерфейса элемента управления.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Указатель на интерфейс на узле. В шаблоне версия этого метода нет необходимости для идентификатора ссылки, до тех пор, пока передается типизированный интерфейс с связанные UUID.
 
-*Q*  
+*Q*<br/>
 [in] Интерфейс, запрашиваемый для.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -347,7 +347,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Параметры
 
-*pDisp*  
+*pDisp*<br/>
 [in] Указатель на `IDispatch` интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -364,7 +364,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="parameters"></a>Параметры
 
-*pUIHandler*  
+*pUIHandler*<br/>
 [in] Указатель на `IDocHostUIHandlerDispatch` интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -377,9 +377,9 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ## <a name="see-also"></a>См. также
 
-[Образец ATLCON](../../visual-cpp-samples.md)   
-[Класс CWindow](../../atl/reference/cwindow-class.md)   
-[Основы составного элемента управления](../../atl/atl-composite-control-fundamentals.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Образец ATLCON](../../visual-cpp-samples.md)<br/>
+[Класс CWindow](../../atl/reference/cwindow-class.md)<br/>
+[Основы составного элемента управления](../../atl/atl-composite-control-fundamentals.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Часто задаваемые вопросы о вложении элементов управления](../../atl/atl-control-containment-faq.md)
 

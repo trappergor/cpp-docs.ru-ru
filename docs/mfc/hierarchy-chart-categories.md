@@ -1,5 +1,5 @@
 ---
-title: Категории таблицы иерархии | Документы Microsoft
+title: Категории таблицы иерархии | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a40b76075678fb91cc3c4dfde579d08ef0e6e538
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/14/2018
 ms.locfileid: "33345001"
 ---
 # <a name="hierarchy-chart-categories"></a>Категории таблицы иерархии

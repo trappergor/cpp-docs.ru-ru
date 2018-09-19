@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3555 | Документы Microsoft
+title: Ошибка компилятора C3555 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd5c40ae2be3473c0a06d12662c811edc93db2c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1db56676ef9d737fab97a5b2826e1b0fe43bc3c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069655"
 ---
 # <a name="compiler-error-c3555"></a>Ошибка компилятора C3555
-  
-> неправильный аргумент для "decltype"  
-  
- Аргумент для спецификатора типа `decltype(`*expression*`)` не является допустимым выражением.  
-  
+
+> неправильный аргумент для "decltype"
+
+Аргумент для спецификатора типа `decltype(`*expression*`)` не является допустимым выражением.
+
 > [!NOTE]
->  Возникновение ошибки C3555 маловероятно. Если компилятор выдает ошибку C3555, то, скорее всего, произошла внутренняя ошибка компилятора.  
-  
-## <a name="see-also"></a>См. также  
-  
- [Ошибка компилятора C3556](../../error-messages/compiler-errors-2/compiler-error-c3556.md)   
- [Неустранимая ошибка C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)
+>  Возникновение ошибки C3555 маловероятно. Если компилятор выдает ошибку C3555, то, скорее всего, произошла внутренняя ошибка компилятора.
+
+## <a name="see-also"></a>См. также
+
+[Ошибка компилятора C3556](../../error-messages/compiler-errors-2/compiler-error-c3556.md)<br/>
+[Неустранимая ошибка C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)

@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4197 компилятора | Документы Microsoft
+title: Предупреждение (уровень 3) C4197 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa119e0b1afd3f660dd04040965006f1b52cad01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e3651a305b8654b9d7d36238885233b8e583f27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043616"
 ---
-# <a name="compiler-warning-level-3-c4197"></a>Предупреждение (уровень 3) C4197 компилятора
-«Тип»: приведение volatile верхнего уровня игнорируется  
-  
- Компилятор обнаружил приведения к типу значения, который квалифицировался [volatile](../../cpp/volatile-cpp.md), или преобразование типа r-значение для некоторого типа, дополнены volatile. В соответствии со стандартом C (6.5.3) свойства, связанные с определенными типами имеют смысл только для выражения l значением.  
-  
- Следующий пример приводит к возникновению ошибки C4197:  
-  
-```  
-// C4197.cpp  
-// compile with: /W3  
-#include <stdio.h>  
-#include <signal.h>  
-#include <stdlib.h>  
-  
-void sigproc(int);  
-struct S  
-{  
-   int i;  
-} s;  
-  
-int main()  
-{  
-   signal(SIGINT, sigproc);  
-   s.i = 1;  
-   S *pS = &s;  
-   for ( ; (volatile int)pS->i ; )   // C4197  
-      break;  
-   // for ( ; *(volatile int *)&pS->i ; )   // OK  
-   //    break;  
-}  
-  
-void sigproc(int) // ctrl-C  
-{  
-   signal(SIGINT, sigproc);  
-   s.i = 0;  
-}  
-  
+# <a name="compiler-warning-level-3-c4197"></a>Компилятор предупреждение (уровень 3) C4197
+
+«Тип»: входящее приведение volatile верхнего уровня игнорируется
+
+Компилятор обнаружил приведения к типу значения, который определен с помощью [volatile](../../cpp/volatile-cpp.md), или преобразование типа значения к такому типу, который дополнены volatile. В соответствии со стандартом C (6.5.3) свойства, связанные с определенными типами имеют смысл только для выражения l значением.
+
+Следующий пример приводит к возникновению ошибки C4197:
+
+```
+// C4197.cpp
+// compile with: /W3
+#include <stdio.h>
+#include <signal.h>
+#include <stdlib.h>
+
+void sigproc(int);
+struct S
+{
+   int i;
+} s;
+
+int main()
+{
+   signal(SIGINT, sigproc);
+   s.i = 1;
+   S *pS = &s;
+   for ( ; (volatile int)pS->i ; )   // C4197
+      break;
+   // for ( ; *(volatile int *)&pS->i ; )   // OK
+   //    break;
+}
+
+void sigproc(int) // ctrl-C
+{
+   signal(SIGINT, sigproc);
+   s.i = 0;
+}
+
 ```

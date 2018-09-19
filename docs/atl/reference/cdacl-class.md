@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ce384c2478359b3496aa2d816a30e9a240c998
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036142"
 ---
 # <a name="cdacl-class"></a>Класс CDacl
 
@@ -108,19 +108,19 @@ bool AddAllowedAce(
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 Объект [CSid](../../atl/reference/csid-class.md) объекта.
 
-*AccessMask*  
+*AccessMask*<br/>
 Указывает маску прав доступа разрешается для указанного `CSid` объекта.
 
-*AceFlags*  
+*AceFlags*<br/>
 Набор битовых флагов, контролировать и наследование ACE.
 
-*pObjectType*  
+*pObjectType*<br/>
 Тип объекта.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 Типом наследуемого объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -153,19 +153,19 @@ bool AddDeniedAce(
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 Объект `CSid`.
 
-*AccessMask*  
+*AccessMask*<br/>
 Указывает маску прав доступа, запрещается для указанного `CSid` объекта.
 
-*AceFlags*  
+*AceFlags*<br/>
 Набор битовых флагов, контролировать и наследование ACE. По умолчанию равен 0 в первой форме метода.
 
-*pObjectType*  
+*pObjectType*<br/>
 Тип объекта.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 Типом наследуемого объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -183,13 +183,13 @@ bool AddDeniedAce(
 Конструктор.
 
 ```
-CDacl (const ACL& rhs) throw(...);  
+CDacl (const ACL& rhs) throw(...);
 CDacl () throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 Существующий `ACL` структуры (список управления доступом).
 
 ### <a name="remarks"></a>Примечания
@@ -230,7 +230,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 ACL (список управления доступом) для назначения к существующему объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -251,7 +251,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс записи ACE, которую требуется удалить.
 
 ### <a name="remarks"></a>Примечания
@@ -272,9 +272,9 @@ void RemoveAllAces() throw();
 
 ## <a name="see-also"></a>См. также
 
-[Образец безопасности](../../visual-cpp-samples.md)   
-[Класс CAcl](../../atl/reference/cacl-class.md)   
-[Списки управления доступом](/windows/desktop/SecAuthZ/access-control-lists)   
-[Элементы управления доступом](/windows/desktop/SecAuthZ/access-control-entries)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Образец безопасности](../../visual-cpp-samples.md)<br/>
+[Класс CAcl](../../atl/reference/cacl-class.md)<br/>
+[Списки управления доступом](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[Элементы управления доступом](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2151 | Документы Microsoft
+title: Ошибка компилятора C2151 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfd708c64beffe3be3e7bf127547c904cc39709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae236956d991aae2b62db704acbd4d736cbc56bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101557"
 ---
 # <a name="compiler-error-c2151"></a>Ошибка компилятора C2151
-несколько атрибутов языка  
-  
- Функция имеет несколько ключевых слов ( `__cdecl`, `__stdcall`, или `__fastcall`) Указание соглашений о вызовах.
+
+несколько атрибутов языка
+
+Функция имеет несколько ключевых слов ( `__cdecl`, `__stdcall`, или `__fastcall`) указание соглашение о вызовах.

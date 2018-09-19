@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1350 | Документы Microsoft
+title: Неустранимая ошибка C1350 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa392805c85e5158fa90618638d6c9075b4fa91c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e3ae307f316cd3d7a7921c6c6a246a2eae4c83d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198447"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023219"
 ---
 # <a name="fatal-error-c1350"></a>Неустранимая ошибка C1350
-Произошла ошибка при загрузке dll «библиотека dll»: dll не найдена  
-  
- Библиотеки DLL, которая поддерживает Запрошенная операция не найдена.  
-  
- Это указывает на проблему с установкой, и необходимо переустановить библиотеки DLL с установочного компакт-диска.
+
+Ошибка при загрузке dll «библиотека dll»: dll не найдена
+
+Библиотеки DLL, которая поддерживает Запрошенная операция не найдена.
+
+Это указывает на проблему с установкой, и необходимо переустановить библиотеки DLL с компакт-диска продукта.

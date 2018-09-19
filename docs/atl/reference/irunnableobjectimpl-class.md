@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3526425bac6591b9330e0915d717ba5b47ee7b3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ad1efa3badf310a78b69d3abba5b9874e01daf7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020970"
 ---
 # <a name="irunnableobjectimpl-class"></a>Класс IRunnableObjectImpl
 
@@ -43,13 +43,13 @@ ms.locfileid: "43755103"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T>  
+template<class T>
 class IRunnableObjectImpl
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IRunnableObjectImpl`.
 
 ## <a name="members"></a>Участники
@@ -162,5 +162,5 @@ HRESULT SetContainedObject(BOOL fContained);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
+[Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

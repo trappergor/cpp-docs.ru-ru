@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора ресурсов RC2175 | Документы Microsoft
+title: Ошибка компилятора ресурсов RC2175 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac5abdfde314220e8478a524d5b0b2e9ea15dcf4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8aa622d1864a9f302c51fe90bd77f58c2829859b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084241"
 ---
 # <a name="resource-compiler-error-rc2175"></a>Ошибка компилятора ресурсов RC2175
-Имя файла ресурсов не соответствует формату 3.00  
-  
- Указанного ресурса используется более ранний формат версии 3.00. Файл ресурса необходимо преобразовать или создать заново в формате версии 3.00 или более поздней версии.
+
+Имя файла ресурсов не в формате 3.00
+
+Указанный ресурс используется более ранний формат версии 3.00. Файл ресурса необходимо преобразовать или создать заново, используя формат версии 3.00 или более поздней версии.

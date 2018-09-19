@@ -1,5 +1,5 @@
 ---
-title: Поддержка плавающей запятой для устаревшего кода (Visual C++) | Документы Microsoft
+title: Поддержка плавающей запятой для устаревшего кода (Visual C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7cbf955fbf795d06d9cd2448d0736dc435f3b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7285325bf1a934afcef337da318d019ec6fe375c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367164"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706814"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Поддержка плавающей запятой для устаревшего кода (Visual C++)
-MMX и регистры с плавающей запятой стека (MM0-MM7/ST0-ST7) сохраняются между переключений контекста.  Нет явного соглашение о вызовах для этих регистров.  Запрещено использование этих регистров в коде режима ядра.  
-  
-## <a name="see-also"></a>См. также  
- [Соглашение о вызовах](../build/calling-convention.md)
+
+MMX и регистры с плавающей запятой стека (MM0-MM7/ST0-ST7) сохраняются на протяжении переключений контекста.  Отсутствует явное соглашение о вызовах для этих регистров.  Запрещено использование этих регистров в коде режима ядра.
+
+## <a name="see-also"></a>См. также
+
+[Соглашение о вызовах](../build/calling-convention.md)

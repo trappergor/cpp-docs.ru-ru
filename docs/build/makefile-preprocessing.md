@@ -1,5 +1,5 @@
 ---
-title: Предварительная обработка файла makefile | Документы Microsoft
+title: Предварительная обработка файла makefile | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4b304276f20f66e02808f3894e5b948dd994cbb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11bd2b74a17e5fd7b2507a531fda6da0a31e53c8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368230"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722886"
 ---
 # <a name="makefile-preprocessing"></a>Предварительная обработка файла makefile
-Сеанс программы NMAKE можно управлять с помощью предварительной обработки директив и выражений. Инструкции предварительной обработки могут размещаться в файле makefile или Tools.ini. С помощью директив вам можно условно обработку файла makefile, отображать сообщения об ошибках, включать другие файлы makefile, отменить определение макроса и выключать определенные параметры.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
- [Директивы предварительной обработки файлов makefile](../build/makefile-preprocessing-directives.md)  
-  
- [Выражения в предобработке файлов makefile](../build/expressions-in-makefile-preprocessing.md)  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по программе NMAKE](../build/nmake-reference.md)
+
+Сеанс (NMAKE) можно управлять с помощью предварительной обработки директив и выражений. Инструкции предварительной обработки можно поместить в файл makefile или Tools.ini. Директивы using, можно условно обработку файла makefile, отображения сообщений об ошибках, включать другие файлы makefile, отменить определение макроса и выключать определенные параметры.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
+
+[Директивы предварительной обработки файла makefile](../build/makefile-preprocessing-directives.md)
+
+[Выражения в предобработке файлов makefile](../build/expressions-in-makefile-preprocessing.md)
+
+## <a name="see-also"></a>См. также
+
+[Справочник по программе NMAKE](../build/nmake-reference.md)

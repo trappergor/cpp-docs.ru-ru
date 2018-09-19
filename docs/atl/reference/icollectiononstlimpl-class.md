@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbfb34d34f6bd920744621042f5f3e09143e896
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2b70e7332c5f0a24af80ddb5cfd14a8ecf146de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751323"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025156"
 ---
 # <a name="icollectiononstlimpl-class"></a>Класс ICollectionOnSTLImpl
 
@@ -35,25 +35,25 @@ ms.locfileid: "43751323"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
+template <class T, class CollType, class ItemType, class CopyItem, class EnumType>
 class ICollectionOnSTLImpl : public T
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 COM-интерфейс коллекции.
 
-*CollType*  
+*CollType*<br/>
 Класс контейнера стандартной библиотеки C++.
 
-*ItemType*  
+*ItemType*<br/>
 Тип элемента, предоставляемых интерфейсом контейнера.
 
-*CopyItem*  
+*CopyItem*<br/>
 Объект [скопируйте класс политики](../../atl/atl-copy-policy-classes.md).
 
-*EnumType*  
+*EnumType*<br/>
 Объект [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-класс совместимой перечислителя.
 
 ## <a name="members"></a>Участники
@@ -111,7 +111,7 @@ STDMETHOD(getcount)(long* pcount);
 
 ### <a name="parameters"></a>Параметры
 
-*pcount*  
+*pcount*<br/>
 [out] Число элементов в коллекции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -128,10 +128,10 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>Параметры
 
-*Index*  
+*Index*<br/>
 [in] Отсчитываемый от единицы индекс элемента в коллекции.
 
-*pvar*  
+*pvar*<br/>
 [out] Элемент, соответствующий параметру *индекс*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -152,7 +152,7 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>Параметры
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] **IUnknown** указатель объекта только что созданный перечислитель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -173,5 +173,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>См. также
 
-[Пример ATLCollections](../../visual-cpp-samples.md)   
+[Пример ATLCollections](../../visual-cpp-samples.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

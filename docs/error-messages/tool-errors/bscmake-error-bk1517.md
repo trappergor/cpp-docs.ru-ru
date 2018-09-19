@@ -1,5 +1,5 @@
 ---
-title: Ошибка BSCMAKE BK1517 | Документы Microsoft
+title: Ошибка BSCMAKE BK1517 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6f5619a7c2a6ccf671845b27bbedf93d8eb2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 941773fbcf65a3b1c1a6041a1e7a067cfc286823
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097059"
 ---
 # <a name="bscmake-error-bk1517"></a>Ошибка BSCMAKE BK1517
-исходный SBR-файл скомпилирован с параметрами /Yc и /Yu  
-  
- SBR-файл ссылается само на себя. Возможно, он был перекомпилирован с параметром /Yu после компиляции с параметром/Yc. Восстановите /Yc параметр компилятора для исходного файла, а затем выберите **Перестроить** , чтобы создать новый SBR-файлы. Не перекомпилируйте исходный файл с /Yu.
+
+Источник SBR-файл скомпилирован с помощью параметров компилятора /Yc и /Yu
+
+SBR-файл ссылается само на себя. Возможно, он был перекомпилирован с /Yu после компиляции с параметром/Yc. Восстановите /Yc параметр компилятора для исходного файла, а затем выберите **Перестроить** Чтобы создать новый SBR-файлы. Не перекомпилируется с /Yu исходного файла.

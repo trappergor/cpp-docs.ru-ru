@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4010 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4010 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 266e377a917fe3ce9ae7bae228134f49384e15cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e214f603c31c72533d81a140023363880532191c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068075"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>Предупреждение средств компоновщика LNK4010
-Недопустимый номер версии подсистемы чисел; принята версия подсистемы по умолчанию  
-  
- Можно указать версию подсистемы изображения ([/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)). Каждая подсистема имеет минимальное требование к версии. Если указанная версия меньше минимального, это предупреждение может возникнуть и компоновщик будет использовать подсистему по умолчанию.
+
+Недопустимый номер версии подсистемы чисел; версия подсистемы по умолчанию
+
+Можно указать версию подсистемы изображения ([/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)). Каждая подсистема имеется требование минимальной версии. Если указанная версия меньше минимального, это предупреждение, и компоновщик будет использовать подсистему по умолчанию.

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 078d4b01d2c797fa11c3603c79a341f75e11f18c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42544510"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115480"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
 Указывает, что один или несколько переменных следует использовать совместно используются всеми потоками.  
@@ -32,11 +32,10 @@ ms.locfileid: "42544510"
 shared(var)  
 ```  
   
-## <a name="remarks"></a>Примечания  
- где  
+### <a name="parameters"></a>Параметры
   
- `var`  
- Одну или несколько переменных для совместного использования. Если указано более одной переменной, разделите имена переменных запятыми.  
+*var*<br/>
+Одну или несколько переменных для совместного использования. Если указано более одной переменной, разделите имена переменных запятыми.  
   
 ## <a name="remarks"></a>Примечания  
  Другой способ совместного использования переменных потоков — с помощью [copyprivate](../../../parallel/openmp/reference/copyprivate.md) предложение.  

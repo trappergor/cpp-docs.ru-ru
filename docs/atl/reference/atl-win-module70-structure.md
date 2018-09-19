@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4c5d7ad570d9745e10107f0df09faccd9eb42e3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c000175c031868136aad44e59644d0fa122d213e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761557"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084514"
 ---
 # <a name="atlwinmodule70-structure"></a>Структура _ATL_WIN_MODULE70
 
@@ -43,16 +43,16 @@ struct _ATL_WIN_MODULE70 {
 
 ## <a name="members"></a>Участники
 
-`cbSize`  
+`cbSize`<br/>
 Размер структуры, используемые для управления версиями.
 
-`m_csWindowCreate`  
+`m_csWindowCreate`<br/>
 Используется для сериализации доступа к коду окно регистрации. Используется системой ATL.
 
-`m_pCreateWndList`  
+`m_pCreateWndList`<br/>
 Используется для привязки windows к соответствующим объектам. Используется системой ATL.
 
-`m_rgWindowClassAtoms`  
+`m_rgWindowClassAtoms`<br/>
 Используется для отслеживания регистрации класса окна, чтобы можно было правильно отменить регистрацию при завершении. Используется системой ATL.
 
 ## <a name="remarks"></a>Примечания

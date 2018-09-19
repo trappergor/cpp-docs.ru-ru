@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2261 | Документы Microsoft
+title: Ошибка компилятора C2261 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45050daf3149cd813fb23b5814be5fe49c375f03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed43dc43fb6ceaf514a8e7452b06eb7bdaf7362
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051650"
 ---
 # <a name="compiler-error-c2261"></a>Ошибка компилятора C2261
-«Строка»: ссылка на сборку, является недопустимым и не может быть разрешена  
-  
- Значение не является допустимым.  
-  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется для указания дружественной сборки. Например, если указать в качестве дружественной сборки b.dll a.dll, следует указать (в a.dll): InternalsVisibleTo("b"). Затем среда выполнения позволяет b.dll полный доступ к a.dll (за исключением частных типов).  
-  
- Дополнительные сведения об использовании правильного синтаксиса при указании дружественных сборок см [дружественные сборки (C++)](../../dotnet/friend-assemblies-cpp.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2261.  
-  
-```  
-// C2261.cpp  
-// compile with: /clr /c  
-using namespace System::Runtime::CompilerServices;  
-[assembly: InternalsVisibleTo("a,a,a")];   // C2261  
-[assembly: InternalsVisibleTo("a.a")];   // OK  
-[assembly: InternalsVisibleTo("a")];   // OK  
+
+«Строка»: ссылка на сборку, является недопустимым и не может быть разрешена
+
+Передано недопустимое значение.
+
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется для указания дружественной сборки. Например, если указать в качестве дружественной сборки b.dll a.dll, следует указать (в a.dll): InternalsVisibleTo("b"). Затем среда выполнения позволяет b.dll, доступ к a.dll (за исключением закрытые типы).
+
+Дополнительные сведения об использовании правильного синтаксиса при указании дружественных сборок, см. в разделе [дружественные сборки (C++)](../../dotnet/friend-assemblies-cpp.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2261.
+
+```
+// C2261.cpp
+// compile with: /clr /c
+using namespace System::Runtime::CompilerServices;
+[assembly: InternalsVisibleTo("a,a,a")];   // C2261
+[assembly: InternalsVisibleTo("a.a")];   // OK
+[assembly: InternalsVisibleTo("a")];   // OK
 ```

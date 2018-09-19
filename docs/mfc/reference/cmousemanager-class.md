@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852481"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720282"
 ---
 # <a name="cmousemanager-class"></a>Класс CMouseManager
 Позволяет пользователю связать различные команды с указанным [CView](../../mfc/reference/cview-class.md) объекта, когда пользователь дважды щелкает внутри представления.  
@@ -52,7 +52,7 @@ class CMouseManager : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMouseManager::AddView](#addview)|Добавляет `CView` объект **настройки** диалоговое окно. **Настройки** диалоговое окно позволяет пользователю связать двойным щелчком с помощью команды для каждого из перечисленных видов.|  
 |[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|Возвращает команду, которая выполняется, когда пользователь дважды щелкает внутри указанного представления.|  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *iViewId*  
- Код представления.  
+*iViewId*<br/>
+[in] Код представления.  
   
- [in] *uiViewNameResId*  
- Идентификатор строки ресурса, который ссылается на имя представления.  
+*uiViewNameResId*<br/>
+[in] Идентификатор строки ресурса, который ссылается на имя представления.  
   
- [in] *uiIconId*  
- Значок код представления.  
+*uiIconId*<br/>
+[in] Значок код представления.  
   
- [in] *iId*  
- Код представления.  
+*iId*<br/>
+[in] Код представления.  
   
- [in] *lpszViewName*  
- Имя представления.  
+*lpszViewName*<br/>
+[in] Имя представления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *iId*  
- Код представления.  
+*iId*<br/>
+[in] Код представления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор команды, если представление связан с помощью команды; в противном случае 0.  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *iViewId*  
- Код представления.  
+*iViewId*<br/>
+[in] Код представления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор ресурса значка в случае успешного выполнения; в противном случае 0.  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszName*  
- Имя представления.  
+*lpszName*<br/>
+[in] Имя представления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор представления, если выполнение прошло успешно; в противном случае 0.  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *listOfNames*  
- Ссылку на `CStringList` объекта.  
+*listOfNames*<br/>
+[out] Ссылку на `CStringList` объекта.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод заполняет параметр `listOfNames` с именами всех представлений, зарегистрированные с помощью [CMouseManager::AddView](#addview).  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszProfileName*  
- Путь реестра.  
+*lpszProfileName*<br/>
+[in] Путь реестра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszProfileName*  
- Путь реестра.  
+*lpszProfileName*<br/>
+[in] Путь реестра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *iViewId*  
- Идентификатор представления.  
+*iViewId*<br/>
+[in] Идентификатор представления.  
   
- [in] *uiCmd*  
- Идентификатор команды.  
+*uiCmd*<br/>
+[in] Идентификатор команды.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы связать пользовательскую команду с помощью представления, необходимо сначала зарегистрировать представление с помощью [CMouseManager::AddView](#addview). `AddView` Метод требует идентификатора представления в качестве входного параметра. После регистрации представления, можно вызвать `CMouseManager::SetCommandForDblClk` с тем же представления идентификатор входным параметром, который введен для `AddView`. После этого при двойном щелчке мыши в представлении зарегистрированных, приложение выполнит команду обозначается *uiCmd.* Для поддержки поведения пользовательского мыши, также необходимо будет настроить представление, зарегистрированных диспетчером мыши. Дополнительные сведения о поведении пользовательских мыши см. в разделе [Настройка мыши и клавиатуры](../keyboard-and-mouse-customization.md).  

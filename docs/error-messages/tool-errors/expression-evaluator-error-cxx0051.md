@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0051 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0051 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a922738aa9ba3672e1f8f7c801f02d13a90a99c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b89fb8de6bd9331a85d79ec8d8e21ba746c5c88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065053"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>Ошибка вычислителя выражений CXX0051
-более одного перегруженного символа в точке останова указано  
-  
- Средство оценки выражений не удалось определить которой более одного перегруженного символа для использования в качестве точки останова.  
-  
- Эта ошибка идентична CAN0051.
+
+несколько перегруженных символу, указанному в точке останова
+
+Средство оценки выражений не удалось определить какие из более чем один перегруженный символ для использования в качестве точки останова.
+
+Эта ошибка идентична CAN0051.

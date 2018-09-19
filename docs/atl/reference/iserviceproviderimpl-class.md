@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7a39149969b7e85685930d6e901bf81db99d64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef8c497a681ae1b54ec833a048cddba29a72be7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759407"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067597"
 ---
 # <a name="iserviceproviderimpl-class"></a>Класс IServiceProviderImpl
 
@@ -33,13 +33,13 @@ ms.locfileid: "43759407"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IServiceProviderImpl`.
 
 ## <a name="members"></a>Участники
@@ -83,14 +83,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Параметры
 
-[IN] *guidService*  
-Указатель на идентификатор службы (SID).
+*guidService*<br/>
+[in] Указатель на идентификатор службы (SID).
 
-[IN] *riid*  
-Идентификатор интерфейса, к которому вызывающий объект для получения доступа.
+*riid*<br/>
+[in] Идентификатор интерфейса, к которому вызывающий объект для получения доступа.
 
-[OUT] *ppvObj*  
-Косвенный указатель на запрашиваемый интерфейс.
+*ppvObj*<br/>
+[out] Косвенный указатель на запрашиваемый интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

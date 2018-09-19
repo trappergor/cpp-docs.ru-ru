@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7079cf657d1be545f8ddb915815448a1d3b870f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1007a0bc5d63f5836aaf8925bced6b5ef84b020f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339336"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726210"
 ---
 # <a name="clist-class"></a>Класс CList
 Поддерживает упорядоченные списки неуникальных объектов, доступные последовательно или по значению.  
@@ -81,13 +81,13 @@ class CList : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CList::CList](#clist)|Создает пустой упорядоченный список.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CList::AddHead](#addhead)|Добавляет элемент (или все элементы из другого списка) в начало списка (делает нового заголовка).|  
 |[CList::AddTail](#addtail)|Добавляет в конец списка (делает новый tail) элемента (или все элементы из другого списка).|  
@@ -115,7 +115,7 @@ class CList : public CObject
  *ТИП*  
  Тип объекта, который хранится в списке.  
   
- *ARG* *_* *ТИПА*  
+ *ARG_TYPE*  
  Тип, используемый для ссылки на объекты, хранящиеся в списке. Может быть ссылкой.  
   
 ## <a name="remarks"></a>Примечания  

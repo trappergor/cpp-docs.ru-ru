@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba3d4e2b6e9661f936337cefcd6e660fc91c35eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5e95a8c84c8d705c6f140358de842313d0ac936
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106126"
 ---
 # <a name="statements-limits-on-switch-statements"></a>Операторы: пределы операторов выбора
-**ANSI 3.6.4.2** Максимальное число значений **case** в операторе `switch`  
-  
- Microsoft C не ограничивает количество значений **case** в операторе **switch**. Это число ограничивается только объемом доступной памяти.  
-  
-## <a name="see-also"></a>См. также  
- [Поведение, определяемое реализацией](../c-language/implementation-defined-behavior.md)
+
+**ANSI 3.6.4.2** Максимальное число значений **case** в операторе `switch`
+
+Microsoft C не ограничивает количество значений **case** в операторе **switch**. Это число ограничивается только объемом доступной памяти.
+
+## <a name="see-also"></a>См. также
+
+[Поведение, определяемое реализацией](../c-language/implementation-defined-behavior.md)

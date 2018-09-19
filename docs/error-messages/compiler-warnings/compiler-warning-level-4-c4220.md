@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4220 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4220 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5a48bc836bbead8bc9004f797855fcc4c1baaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70c6b104c924a09570d4bd77191f1df715726370
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294171"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118782"
 ---
 # <a name="compiler-warning-level-4-c4220"></a>Предупреждение компилятора (уровень 4) C4220
-varargs соответствует оставшимся параметрам  
-  
- При использовании расширений Майкрософт по умолчанию (/Ze) указатель на функцию соответствует указатель на функцию с аналогичными, но переменными, аргументы.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// C4220.c  
-// compile with: /W4  
-  
-int ( *pFunc1) ( int a, ... );  
-int ( *pFunc2) ( int a, int b);  
-  
-int main()  
-{  
-   if ( pFunc1 != pFunc2 ) {};  // C4220  
-}  
-```  
-  
- Такие указатели не совпадают в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+varargs соответствует оставшимся параметрам
+
+При использовании расширений Майкрософт по умолчанию (/Ze) указатель на функцию соответствует указатель на функцию с аналогичными, но переменными, аргументы.
+
+## <a name="example"></a>Пример
+
+```
+// C4220.c
+// compile with: /W4
+
+int ( *pFunc1) ( int a, ... );
+int ( *pFunc2) ( int a, int b);
+
+int main()
+{
+   if ( pFunc1 != pFunc2 ) {};  // C4220
+}
+```
+
+Такие указатели не совпадают в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6822957abfa98dab737494bb2924c3ecf84090e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 16f812fc941284122ce2a869786ae73447bff83a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337506"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722635"
 ---
 # <a name="cdocument-class"></a>Класс CDocument
 Предоставляет базовую функциональность для определяемых пользователем классов документа.  
@@ -150,13 +150,13 @@ class CDocument : public CCmdTarget
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocument::CDocument](#cdocument)|Создает объект `CDocument`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocument::AddView](#addview)|Присоединяет представление документа.|  
 |[CDocument::BeginReadChunks](#beginreadchunks)|Инициализирует Фрагментирование чтения.|  
@@ -209,14 +209,14 @@ class CDocument : public CCmdTarget
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocument::OnFileSendMail](#onfilesendmail)|Отправляет сообщение электронной почты с вложенным документом.|  
 |[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Включает команду Отправить почту, если присутствует поддержка электронной почты.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|Указывает, что `CDocument` объект был создан при dllhost для эскизов. Должен быть установлен в `CView::OnDraw`.|  
 |[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|Указывает, что `CDocument` объект был создан при prevhost для `Rich Preview`. Должен быть установлен в `CView::OnDraw`.|  
@@ -659,8 +659,8 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *deEvent*  
- Тип перечислимых данных, который описывает тип события.  
+*deEvent*<br/>
+[in] Тип перечислимых данных, который описывает тип события.  
   
 ### <a name="remarks"></a>Примечания  
  События документа может повлиять на несколько классов. Этот метод отвечает за обработку события документа, которые влияют на классы, отличные от [класс CDocument](../../mfc/reference/cdocument-class.md). В настоящее время является единственным классом, должны реагировать на события документа [класс CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md). `CDocument` Класс имеет другие переопределяемые методы, отвечающий за обработку эффект на `CDocument`.  

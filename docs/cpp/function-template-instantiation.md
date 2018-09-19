@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e773fd8e2c38311a1c36aff4c97199cbebb503e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fb94a54c4f99b79e3be742c5b1448151cff140c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406485"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116793"
 ---
 # <a name="function-template-instantiation"></a>Создание экземпляра шаблона функции
-При первом вызове шаблона функции для каждого типа компилятор создает экземпляр. Каждый экземпляр представляет собой шаблонную функцию, специализированную для данного типа. Этот экземпляр будет вызваться каждый раз, когда функция используется для данного типа. Если имеется несколько одинаковых экземпляров, даже в различных модулях, в исполняемый файл будет помещен только один экземпляр.  
-  
- В шаблонах функций преобразование аргументов функции разрешается для любых пар аргументов и параметров, в которых параметр не зависит от аргумента шаблона.  
-  
- Можно явно создавать экземпляры шаблонов функций, объявляя шаблон с определенным типом в качестве аргумента. Например, приведенный ниже код допустим:  
-  
+
+При первом вызове шаблона функции для каждого типа компилятор создает экземпляр. Каждый экземпляр представляет собой шаблонную функцию, специализированную для данного типа. Этот экземпляр будет вызваться каждый раз, когда функция используется для данного типа. Если имеется несколько одинаковых экземпляров, даже в различных модулях, в исполняемый файл будет помещен только один экземпляр.
+
+В шаблонах функций преобразование аргументов функции разрешается для любых пар аргументов и параметров, в которых параметр не зависит от аргумента шаблона.
+
+Можно явно создавать экземпляры шаблонов функций, объявляя шаблон с определенным типом в качестве аргумента. Например, приведенный ниже код допустим:
+
 ```cpp
-// function_template_instantiation.cpp  
-template<class T> void f(T) { }  
-  
-// Instantiate f with the explicitly specified template.  
-// argument 'int'  
-//  
-template void f<int> (int);  
-  
-// Instantiate f with the deduced template argument 'char'.  
-template void f(char);  
-int main()  
-{  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Шаблоны функций](../cpp/function-templates.md)
+// function_template_instantiation.cpp
+template<class T> void f(T) { }
+
+// Instantiate f with the explicitly specified template.
+// argument 'int'
+//
+template void f<int> (int);
+
+// Instantiate f with the deduced template argument 'char'.
+template void f(char);
+int main()
+{
+}
+```
+
+## <a name="see-also"></a>См. также
+
+[Шаблоны функций](../cpp/function-templates.md)

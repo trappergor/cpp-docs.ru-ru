@@ -1,5 +1,5 @@
 ---
-title: -DEPENDENTS | Документы Microsoft
+title: -DEPENDENTS | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 644387e935622a470253411068165680a611e698
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6b9a9ffad3511d01cfc18187d80d1844f040719
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370964"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700067"
 ---
 # <a name="dependents"></a>/DEPENDENTS
-```  
-/DEPENDENTS  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Этот параметр выводит имена библиотек DLL, из которых образ импортирует функции. Не выводятся имена импортируемых функций.  
-  
- Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/DEPENDENTS
+```
+
+## <a name="remarks"></a>Примечания
+
+Выводит имена библиотек DLL, из которых образ импортирует функции. Не выводятся имена импортируемых функций.
+
+Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.
+
+## <a name="see-also"></a>См. также
+
+[Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

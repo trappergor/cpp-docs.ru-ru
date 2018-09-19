@@ -1,5 +1,5 @@
 ---
-title: Ошибка BSCMAKE BK1514 | Документы Microsoft
+title: Ошибка BSCMAKE BK1514 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23f1c72760f0597709de430588052445366e434d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20f66c5c48547e92aef00568d5488a6293303be1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094719"
 ---
 # <a name="bscmake-error-bk1514"></a>Ошибка BSCMAKE BK1514
-все. Усечение SBR-файлы, не найдено в имя файла  
-  
- Ни один из SBR-файлов, заданных для обновления были частью исходного файла для просмотра информации (.bsc). Чтобы найти имена SBR-файлов, вызвавшей эту ошибку, прочитайте [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) предупреждения, расположенные перед ним.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.  
-  
-1.  Неверное имя файла SBR- или BSC-файл.  
-  
-2.  BSC-файл поврежден BSCMAKE перестроить его.
+
+все. SBR-файлы усечены; ничего не найдено в имени файла
+
+Ни один из SBR-файлов, заданных для обновления были частью исходного файла для просмотра информации (.bsc). Чтобы найти имена SBR-файлов, вызвавшей эту ошибку, прочитайте [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) предупреждения, расположенные перед ним.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.
+
+1. Неверное имя файла, указанное для SBR- или BSC-файл.
+
+1. BSC-файл поврежден BSCMAKE перестроить его.

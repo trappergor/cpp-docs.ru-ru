@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132841c8c24e2b625dad218aaaef2a19cba0a264
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f52c2c2ca60f66218b669201f293ca377d4ca5a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680502"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707022"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Блок, относящийся только к системам Microsoft**  
@@ -42,8 +42,8 @@ unsigned char __vmx_vmwrite(
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[in] `Field`|Поле VMCS для записи.|  
-|[in] `FieldValue`|Значение для записи в поле VMCS.|  
+|*Поле*|[in] Поле VMCS для записи.|  
+|*FieldValue*|[in] Значение для записи в поле VMCS.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  0  

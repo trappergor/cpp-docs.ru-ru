@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147814856e1e447894fd9826b9620ea8d762d48c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4abf96e3850f88b58e138745536ffc40aef11b68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024545"
 ---
 # <a name="ca2caex-class"></a>Класс CA2CAEX
 
@@ -36,13 +36,13 @@ ms.locfileid: "43764983"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CA2CAEX
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Размер буфера, используемого в процессе перевода. Длина по умолчанию равен 128 байтам.
 
 ## <a name="members"></a>Участники
@@ -103,10 +103,10 @@ CA2CAEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Текстовая строка для преобразования.
 
-*nCodePage*  
+*nCodePage*<br/>
 Не используется в этом классе.
 
 ### <a name="remarks"></a>Примечания
@@ -137,7 +137,7 @@ LPCSTR m_psz;
 
 Оператор преобразования.
 
-```  
+```
 operator LPCSTR() const throw();
 ```
 
@@ -147,9 +147,9 @@ operator LPCSTR() const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Класс CA2WEX](../../atl/reference/ca2wex-class.md)   
-[Класс CW2AEX](../../atl/reference/cw2aex-class.md)   
-[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)   
-[Класс CW2WEX](../../atl/reference/cw2wex-class.md)   
+[Класс CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
+[Класс CA2WEX](../../atl/reference/ca2wex-class.md)<br/>
+[Класс CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
+[Класс CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

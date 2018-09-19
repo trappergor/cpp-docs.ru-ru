@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3501 | Документы Microsoft
+title: Ошибка компилятора C3501 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a74c3f06165765f971a8999dfe80412dd99dc719
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdf614c8b04dc9695d870aa8254cff8a2b75ca26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086282"
 ---
 # <a name="compiler-error-c3501"></a>Ошибка компилятора C3501
-нет библиотеки типов, зарегистрированной для ProgID «идентификатор программы»  
-  
- Идентификатор класса для заданного идентификатора программы не связана библиотека типов. Таким образом, невозможно передать это идентификатор progid для `#import` инструкции.
+
+нет библиотеки типов, зарегистрированной для ProgID «идентификатор программы»
+
+Идентификатор класса для заданного идентификатора программы не связана библиотека типов. Таким образом, невозможно передать это идентификатор progid для `#import` инструкции.

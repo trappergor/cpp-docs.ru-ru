@@ -21,31 +21,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a204118656625fc08a13738b128a41facf15673
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8a9cfa63b4d076a5ffc25389192032990dcf95c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082395"
 ---
 # <a name="expressions-and-assignments"></a>Выражения и присваивания
-В этом разделе описывается, как создать выражения и присвоить значения в языке C. Константы, идентификаторы, строки и вызовы функций являются операндами, управляемыми в выражениях. В языке C имеются все простые операторы языка. В этом разделе описываются эти простые операторы и операторы, которые являются уникальными для C или Microsoft C. Рассматриваются следующие темы:  
-  
--   [Выражения L-Value и R-Value](../c-language/l-value-and-r-value-expressions.md)  
-  
--   [Константные выражения](../c-language/c-constant-expressions.md)  
-  
--   [Побочные эффекты](../c-language/side-effects.md)  
-  
--   [Точки последовательности](../c-language/c-sequence-points.md)  
-  
--   [Операторы](../c-language/c-operators.md)  
-  
--   [Приоритет операторов](../c-language/precedence-and-order-of-evaluation.md)  
-  
--   [Преобразования типов](../c-language/type-conversions-c.md)  
-  
--   [Приведение типов](../c-language/type-cast-conversions.md)  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по языку C#](../c-language/c-language-reference.md)
+
+В этом разделе описывается, как создать выражения и присвоить значения в языке C. Константы, идентификаторы, строки и вызовы функций являются операндами, управляемыми в выражениях. В языке C имеются все простые операторы языка. В этом разделе описываются эти простые операторы и операторы, которые являются уникальными для C или Microsoft C. Рассматриваются следующие темы:
+
+- [Выражения L-Value и R-Value](../c-language/l-value-and-r-value-expressions.md)
+
+- [Константные выражения](../c-language/c-constant-expressions.md)
+
+- [Побочные эффекты](../c-language/side-effects.md)
+
+- [Точки последовательности](../c-language/c-sequence-points.md)
+
+- [Операторы](../c-language/c-operators.md)
+
+- [Приоритет операторов](../c-language/precedence-and-order-of-evaluation.md)
+
+- [Преобразования типов](../c-language/type-conversions-c.md)
+
+- [Приведение типов](../c-language/type-cast-conversions.md)
+
+## <a name="see-also"></a>См. также
+
+[Справочник по языку C#](../c-language/c-language-reference.md)

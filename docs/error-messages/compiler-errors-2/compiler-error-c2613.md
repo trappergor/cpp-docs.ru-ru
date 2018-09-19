@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2613 | Документы Microsoft
+title: Ошибка компилятора C2613 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b86737654a8b3643b473703e6d5f3acece3e29db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 590171fb3a7927e205494dd88bb3351756e75fe7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228860"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041900"
 ---
 # <a name="compiler-error-c2613"></a>Ошибка компилятора C2613
-недопустимый завершающий символ "," в списке базовых классов  
-  
- Запятая после последнего класса в списке базовых классов.
+
+недопустимый завершающий символ "," в списке базовых классов
+
+Запятая после последнего класса в списке базовых классов.

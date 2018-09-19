@@ -141,7 +141,6 @@
 ### [Создание приложений MFC](writing-mfc-applications.md)
 ### [Элементы управления ActiveX в Интернете](activex-controls-on-the-internet.md)
 ### [Обновление существующего элемента управления ActiveX](upgrading-an-existing-activex-control.md)
-### [Активные документы в Интернете](active-documents-on-the-internet.md)
 ### [Асинхронные моникеры в Интернете](asynchronous-monikers-on-the-internet.md)
 ### [Тестирование интернет-приложений](testing-internet-applications.md)
 ### [Безопасность в Интернете (C++)](internet-security-cpp.md)

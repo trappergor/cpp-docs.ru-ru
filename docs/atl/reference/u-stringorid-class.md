@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c465e5da4d3822782bd9c7b81e497ea544e3bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 000e43926a83bdd7457c33c656383ae44dce6259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046281"
 ---
 # <a name="ustringorid-class"></a>Класс _U_STRINGorID
 
@@ -76,16 +76,16 @@ LPCTSTR m_lpstr;
 Конструктор целое число без знака преобразует свой аргумент к типу ресурса, совместимый с функциями управления ресурсами Windows, с помощью макроса MAKEINTRESOURCE и результат сохраняется в одном данные-член класса, [m_lpstr](#_u_stringorid__m_lpstr).
 
 ```
-_U_STRINGorID(UINT nID);  
+_U_STRINGorID(UINT nID);
 _U_STRINGorID(LPCTSTR lpString);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nID*  
+*nID*<br/>
 Идентификатор ресурса.
 
-*lpString*  
+*lpString*<br/>
 Имя ресурса.
 
 ### <a name="remarks"></a>Примечания

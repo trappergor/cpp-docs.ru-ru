@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4747 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4747 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203943f3741d07e278652a7032a6dcdcb305a384
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d3eb5b83fedc7455cbf1b97119296a6eb6a1ab1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118483"
 ---
 # <a name="compiler-warning-level-1-c4747"></a>Предупреждение компилятора (уровень 1) C4747
-Вызов управляемого «точка входа»: управляемый код может не выполняться во время блокировки загрузчика, включая точки входа DLL и поступившим из них вызовам  
-  
- Компилятор обнаружил (вероятного) точки входа библиотеки DLL, скомпилированные в MSIL.  Из-за потенциальных проблем с загрузкой был скомпилирован в код MSIL, точка входа библиотеки DLL рекомендуется компилировать функцию точки входа DLL в MSIL-код.  
-  
- Дополнительные сведения см. в разделе [Инициализация смешанных сборок](../../dotnet/initialization-of-mixed-assemblies.md) и [Ошибка средств компоновщика LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).  
-  
-### <a name="to-correct-this-error"></a>Исправление ошибки  
-  
-1.  Не компилировать модуль с **/CLR**.  
-  
-2.  Пометьте функцию точки входа с `#pragma unmanaged`.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C4747.  
-  
-```  
-// C4747.cpp  
-// compile with: /clr /c /W1  
-// C4747 expected  
-#include <windows.h>  
-  
-// Uncomment the following line to resolve.  
-// #pragma unmanaged  
-  
-BOOL WINAPI DllMain(HANDLE hInstance, ULONG Command, LPVOID Reserved) {  
-   return TRUE;  
-};  
+
+Вызов управляемого «entrypoint»: управляемый код может не выполняться во время блокировки загрузчика, точки входа библиотеки DLL и поступившим из них вызовам
+
+Компилятор обнаружил (возможно) точка входа библиотеки DLL, скомпилированные в MSIL.  Из-за потенциальных проблем при загрузке библиотеки DLL, точка входа была скомпилирована в MSIL рекомендуется компилировать функцию точки входа DLL в MSIL.
+
+Дополнительные сведения см. в разделе [Инициализация смешанных сборок](../../dotnet/initialization-of-mixed-assemblies.md) и [Ошибка средств компоновщика LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).
+
+### <a name="to-correct-this-error"></a>Исправление ошибки
+
+1. Не компилировать модуль с помощью **/CLR**.
+
+1. Пометьте функцию точки входа с `#pragma unmanaged`.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C4747.
+
+```
+// C4747.cpp
+// compile with: /clr /c /W1
+// C4747 expected
+#include <windows.h>
+
+// Uncomment the following line to resolve.
+// #pragma unmanaged
+
+BOOL WINAPI DllMain(HANDLE hInstance, ULONG Command, LPVOID Reserved) {
+   return TRUE;
+};
 ```

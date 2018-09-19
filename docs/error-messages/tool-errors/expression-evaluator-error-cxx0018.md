@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0018 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0018 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fbc4f2a4df7233b13579cb1dd4f9fa9679eb4e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d5bd4808d1e03252e5b3df4cee2955bb6a456d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051104"
 ---
 # <a name="expression-evaluator-error-cxx0018"></a>Ошибка вычислителя выражений CXX0018
-Неправильное имя регистра  
-  
- Указанный регистр не существует или не может быть отображена.  
-  
- Следующие регистры могут отображаться в окне контрольных значений:  
-  
- AX SP ДОМЕННЫХ СЛУЖБ ACTIVE DIRECTORY IP  
-  
- BX BP ES FL  
-  
- CX SI SS GS  
-  
- DX DI CS SS  
-  
- EIP ДОМЕННЫХ СЛУЖБ ACTIVE DIRECTORY EAX ESP  
-  
- EBX EBP ES EFL  
-  
- ECX ESI FS  
-  
- EDX EDI CS  
-  
- Эта ошибка идентична ошибке CAN0018.
+
+Неправильное имя регистра
+
+Указанный регистр не существует или не может быть отображена.
+
+Окно контрольных значений можно отобразить следующие регистры:
+
+AX SP ДОМЕННЫХ СЛУЖБ ACTIVE DIRECTORY, IP-АДРЕС
+
+BX BP ES, ШТАТ ФЛОРИДА
+
+CX SI SS GS
+
+DX DI CS SS
+
+EIP ДОМЕННЫХ СЛУЖБ ACTIVE DIRECTORY EAX ESP
+
+EBX EBP ES EFL
+
+ECX ESI FS
+
+EDX EDI CS
+
+Эта ошибка идентична ошибке CAN0018.

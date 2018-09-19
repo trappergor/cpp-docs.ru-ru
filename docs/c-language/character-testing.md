@@ -12,26 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdf65de941486cb8256ba8e30a3f186d3e3702d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2c558c5d32f75561d5722a656450d5f18f5166a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084943"
 ---
 # <a name="character-testing"></a>Тестирование символов
-**ANSI 4.3.1** Наборы символов, тестируемые функциями `isalnum`, `isalpha`, `iscntrl`, `islower`, `isprint` и `isupper`  
-  
- В следующей таблице приведено описание этих функций в соответствии с реализацией компилятором Microsoft C.  
-  
-|Функция|Тестируемые наборы символов|  
-|--------------|---------------|  
-|`isalnum`|Символы 0–9, A–Z, a–z (коды ASCII 48–57, 65–90, 97–122)|  
-|`isalpha`|Символы A–Z, a–z (коды ASCII 65–90, 97–122)|  
-|`iscntrl`|Коды ASCII 0–31, 127|  
-|`islower`|Символы a–z (коды ASCII 97–122)|  
-|`isprint`|Символы A–Z, a–z, 0–9, пунктуация, пробел (коды ASCII 32–126)|  
-|`isupper`|Символы A–Z (коды ASCII 65–90)|  
-  
-## <a name="see-also"></a>См. также  
- [Функции библиотеки](../c-language/library-functions.md)
+
+**ANSI 4.3.1** Наборы символов, тестируемые функциями `isalnum`, `isalpha`, `iscntrl`, `islower`, `isprint` и `isupper`
+
+В следующей таблице приведено описание этих функций в соответствии с реализацией компилятором Microsoft C.
+
+|Функция|Тестируемые наборы символов|
+|--------------|---------------|
+|`isalnum`|Символы 0–9, A–Z, a–z (коды ASCII 48–57, 65–90, 97–122)|
+|`isalpha`|Символы A–Z, a–z (коды ASCII 65–90, 97–122)|
+|`iscntrl`|Коды ASCII 0–31, 127|
+|`islower`|Символы a–z (коды ASCII 97–122)|
+|`isprint`|Символы A–Z, a–z, 0–9, пунктуация, пробел (коды ASCII 32–126)|
+|`isupper`|Символы A–Z (коды ASCII 65–90)|
+
+## <a name="see-also"></a>См. также
+
+[Функции библиотеки](../c-language/library-functions.md)

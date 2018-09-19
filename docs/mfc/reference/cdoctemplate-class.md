@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cd7e80d3c01cf84080ba2b5851da99584122ec4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023947"
 ---
 # <a name="cdoctemplate-class"></a>Класс CDocTemplate
 Абстрактный базовый класс, который определяет базовую функциональность шаблонов документов.  
@@ -76,13 +76,13 @@ class CDocTemplate : public CCmdTarget
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocTemplate::CDocTemplate](#cdoctemplate)|Создает объект `CDocTemplate`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDocTemplate::AddDocument](#adddocument)|Добавляет документ в шаблон.|  
 |[CDocTemplate::CloseAllDocuments](#closealldocuments)|Закрывает все документы, связанные с этим шаблоном.|  
@@ -167,17 +167,15 @@ CDocTemplate (
  Указывает идентификатор ресурсы, используемые с типом документа. Это может включать меню, значок, таблицу сочетаний клавиш и строковые ресурсы.  
   
  Строковый ресурс состоит из до семи подстрок, разделенных символом '\n' ('\n' символ необходим в качестве заполнителя, если подстрока не включается; тем не менее, конечные символы '\n' не требуются); Эти подстроки описания типа документа. Сведения о подстроках, см. в разделе [GetDocString](#getdocstring). Этот строковый ресурс находится в файле ресурсов приложения. Пример:  
-  
- `// MYCALC.RC`  
-  
- `STRINGTABLE PRELOAD DISCARDABLE`  
-  
- `BEGIN`  
-  
- `IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"`  
-  
- `END`  
-  
+
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"
+END
+```
+
  Обратите внимание, что строка начинается со знака «\n»; Это обусловлено первую подстроку не используется в приложениях MDI и поэтому не включается. Можно изменить эту строку, с помощью редактора; вся строка представляется как одна запись в редакторе строку не семь отдельных записей.  
   
  *pDocClass*  
@@ -431,11 +429,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *lpszPathName*  
- Указатель на путь к файлу, содержащему открываемого документа.  
+*lpszPathName*<br/>
+[in] Указатель на путь к файлу, содержащему открываемого документа.  
   
- [in] *bAddToMRU*  
- Значение TRUE указывает, что документ является одним из последних файлов; Значение FALSE указывает, что документ не является ни один из последних файлов.  
+*bAddToMRU*<br/>
+[in] Значение TRUE указывает, что документ является одним из последних файлов; Значение FALSE указывает, что документ не является ни один из последних файлов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на документ, именем которого файл *lpszPathName*; Имеет значение NULL, если операция завершилась неудачей.  

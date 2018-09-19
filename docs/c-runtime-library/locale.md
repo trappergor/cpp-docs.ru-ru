@@ -20,22 +20,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 638d4fbe6fd4dfce1fb3eeb246ef85c5b60fada0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f3bf660b2e1c8301e9c6c8ba1bd1e11fa3956de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082226"
 ---
 # <a name="locale"></a>Языковой стандарт
 
 *Языковой стандарт* — это настройки страны/региона и языковые настройки, с помощью которых можно настраивать программы. К числу категорий, зависящих от языкового стандарта, относится отображение форматов дат и денежных значений. Дополнительные сведения см. в разделе [Категории языковых стандартов](../c-runtime-library/locale-categories.md).
 
- Используйте функцию [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) для изменения или запроса некоторой или всей информации о языковом стандарте текущей программы или потока при использовании функций без суффикса **_l**. Функции с суффиксом **_l** используют переданные им параметры языкового стандарта только во время выполнения этой конкретной функции. Чтобы создать языковой стандарт для использования в функции с суффиксом **_l**, используйте функцию [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Для освобождения этого языкового стандарта используйте функцию [_free_locale](../c-runtime-library/reference/free-locale.md). Чтобы получить текущий языковой стандарт, можно использовать функцию [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
+Используйте функцию [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) для изменения или запроса некоторой или всей информации о языковом стандарте текущей программы или потока при использовании функций без суффикса **_l**. Функции с суффиксом **_l** используют переданные им параметры языкового стандарта только во время выполнения этой конкретной функции. Чтобы создать языковой стандарт для использования в функции с суффиксом **_l**, используйте функцию [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Для освобождения этого языкового стандарта используйте функцию [_free_locale](../c-runtime-library/reference/free-locale.md). Чтобы получить текущий языковой стандарт, можно использовать функцию [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
- Используйте функцию [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) для управления тем, имеет ли каждый поток собственный языковой стандарт или все потоки в программе используют один и тот же языковой стандарт. Дополнительные сведения см. в разделе [Языковые стандарты и кодовые страницы](../text/locales-and-code-pages.md).
+Используйте функцию [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) для управления тем, имеет ли каждый поток собственный языковой стандарт или все потоки в программе используют один и тот же языковой стандарт. Дополнительные сведения см. в разделе [Языковые стандарты и кодовые страницы](../text/locales-and-code-pages.md).
 
- Доступны более безопасные версии этих функций, в следующей таблице они отмечены суффиксом **_s** (secure, безопасная). Для получения дополнительной информации см. [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Доступны более безопасные версии этих функций, в следующей таблице они отмечены суффиксом **_s** (secure, безопасная). Для получения дополнительной информации см. [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="locale-dependent-routines"></a>Зависимые от языковых стандартов подпрограммы
 
@@ -82,4 +82,4 @@ ms.locfileid: "32392514"
 ## <a name="see-also"></a>См. также
 
 [Интернационализация](../c-runtime-library/internationalization.md)<br/>
- [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

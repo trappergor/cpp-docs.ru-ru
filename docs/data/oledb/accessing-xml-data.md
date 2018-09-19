@@ -20,14 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 006b3d05db35aa690e02ab68056732a48acb11c7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: cfde3980e58ba86d6923eaac765332a23e40ad7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062505"
 ---
 # <a name="accessing-xml-data"></a>Доступ к данным XML
+
 Существует два различных метода получения XML-данных из источника данных: одна использует [CStreamRowset](../../data/oledb/cstreamrowset-class.md) и с помощью [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  
   
 |Функция|Класс CStreamRowset|CXMLAccessor|  
@@ -36,46 +37,48 @@ ms.locfileid: "39340541"
 |Строка форматирования|SQL Server форматирует строку XML и отправляет его получателю.|Извлекает данные набора строк в его собственном формате (запросы, которые поставщик отправить его как строки в Юникоде) и затем создает строку, содержащую данные в формате XML.|  
 |Управление форматированием|У вас есть определенный уровень контроля над форматом XML-строки, задав некоторые свойства связанные с SQL Server 2000.|У вас нет контроля над форматом созданный XML-строки.|  
   
- Хотя `CStreamRowset` предоставляет более эффективный способ получения данных в формате XML, он поддерживается только SQL Server 2000.  
+Хотя `CStreamRowset` предоставляет более эффективный способ получения данных в формате XML, он поддерживается только SQL Server 2000.  
   
 ## <a name="retrieving-xml-data-using-cstreamrowset"></a>Получение данных XML, с помощью CStreamRowset  
- Указать [CStreamRowset](../../data/oledb/cstreamrowset-class.md) набора строк в качестве типа вашего `CCommand` или `CTable` объявления. Можно использовать его с методом доступа или без него, например:  
+
+Указать [CStreamRowset](../../data/oledb/cstreamrowset-class.md) набора строк в качестве типа вашего `CCommand` или `CTable` объявления. Можно использовать его с методом доступа или без него, например:  
   
 ```cpp  
 CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;  
 ```  
   
- - или -  
+- или -  
   
 ```cpp  
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- Обычно при вызове `CCommand::Open` (указание, например, `CRowset` как `TRowset` класс), он получает `IRowset` указатель. `ICommand::Execute` Возвращает `IRowset` указатель, который хранится в `m_spRowset` членом `CRowset` объекта. Методы, такие как `MoveFirst`, `MoveNext`, и `GetData` используют этот указатель для получения данных.  
+Обычно при вызове `CCommand::Open` (указание, например, `CRowset` как `TRowset` класс), он получает `IRowset` указатель. `ICommand::Execute` Возвращает `IRowset` указатель, который хранится в `m_spRowset` членом `CRowset` объекта. Методы, такие как `MoveFirst`, `MoveNext`, и `GetData` используют этот указатель для получения данных.  
   
- Напротив, при вызове `CCommand::Open` (но указать `CStreamRowset` как `TRowset` класс), `ICommand::Execute` возвращает `ISequentialStream` указатель, который хранится в `m_spStream` данными-членом [CStreamRowset](../../data/oledb/cstreamrowset-class.md). Затем используйте `Read` метод для извлечения данных (строка Юникод) в формате XML. Пример:  
+Напротив, при вызове `CCommand::Open` (но указать `CStreamRowset` как `TRowset` класс), `ICommand::Execute` возвращает `ISequentialStream` указатель, который хранится в `m_spStream` данными-членом [CStreamRowset](../../data/oledb/cstreamrowset-class.md). Затем используйте `Read` метод для извлечения данных (строка Юникод) в формате XML. Пример:  
   
 ```cpp  
 myCmd.m_spStream->Read()  
 ```  
   
- SQL Server 2000 выполняет форматирование XML и возвращает все столбцы и строки набора строк как одну строку XML.  
+SQL Server 2000 выполняет форматирование XML и возвращает все столбцы и строки набора строк как одну строку XML.  
   
- В качестве примера использования `Read` метод, см. в разделе «Добавление XML поддержки в код потребителя» в [реализация простых объектов получателей](../../data/oledb/implementing-a-simple-consumer.md).  
+В качестве примера использования `Read` метод, см. в разделе «Добавление XML поддержки в код потребителя» в [реализация простых объектов получателей](../../data/oledb/implementing-a-simple-consumer.md).  
   
 > [!NOTE]
 >  Поддержка XML с использованием `CStreamRowset` работает только с SQL Server 2000 и требуется наличие поставщика OLE DB для SQL Server 2000 (установлена с компонентами MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Получение данных XML, с помощью CXMLAccessor  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) позволяет получить доступ к данным из источника данных как строковые данные при наличии схема хранилища данных. `CXMLAccessor` работает аналогично `CDynamicStringAccessorW` за исключением того, что первый преобразует все данные из хранилища данных в виде XML-данных (с тегами). Имена тегов XML, как можно точнее соответствовать имена столбцов в хранилище данных.  
+
+[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) позволяет получить доступ к данным из источника данных как строковые данные при наличии схема хранилища данных. `CXMLAccessor` работает аналогично `CDynamicStringAccessorW` за исключением того, что первый преобразует все данные из хранилища данных в виде XML-данных (с тегами). Имена тегов XML, как можно точнее соответствовать имена столбцов в хранилище данных.  
   
- Используйте `CXMLAccessor` как и любого другого метода доступа класса, передавая его как параметр шаблона для `CCommand` или `CTable`:  
+Используйте `CXMLAccessor` как и любого другого метода доступа класса, передавая его как параметр шаблона для `CCommand` или `CTable`:  
   
 ```cpp  
 CTable<CXMLAccessor, CRowset> rs;  
 ```  
   
- Используйте [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md) для получения данных из одной строки таблицы за раз и перемещения строк с помощью методов, таких как `MoveNext`, например:  
+Используйте [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md) для получения данных из одной строки таблицы за раз и перемещения строк с помощью методов, таких как `MoveNext`, например:  
   
 ```cpp  
 // Open data source, session, and rowset  
@@ -92,7 +95,8 @@ while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )
 }  
 ```  
   
- Можно использовать [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) получить сведения о столбцах (тип данных), как строковые данные в формате XML.  
+Можно использовать [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) получить сведения о столбцах (тип данных), как строковые данные в формате XML.  
   
 ## <a name="see-also"></a>См. также  
- [Использование методов доступа](../../data/oledb/using-accessors.md)
+
+[Использование методов доступа](../../data/oledb/using-accessors.md)

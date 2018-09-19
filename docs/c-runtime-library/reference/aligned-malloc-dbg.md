@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 076ccfcf164eb17e2a855f175c8714cd63a91817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093059"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,16 +56,16 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>Параметры
 
-*size*  
+*size*<br/>
 Размер запрошенного размещения памяти.
 
-*Выравнивание*  
+*Выравнивание*<br/>
 Значение выравнивания, которое должно быть целой степенью числа 2.
 
-*filename*  
+*filename*<br/>
 Указатель на имя исходного файла, который запросил операцию выделения, или NULL.
 
-*linenumber*  
+*linenumber*<br/>
 Номер строки в исходном файле, в которой была запрошена операция выделения, или NULL.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -96,4 +96,4 @@ void * _aligned_malloc_dbg(
 
 ## <a name="see-also"></a>См. также
 
-[Процедуры отладки](../../c-runtime-library/debug-routines.md)  
+[Процедуры отладки](../../c-runtime-library/debug-routines.md)

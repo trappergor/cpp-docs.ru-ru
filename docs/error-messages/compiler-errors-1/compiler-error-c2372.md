@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2372 | Документы Microsoft
+title: Ошибка компилятора C2372 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 864162b02a2c7575809887bb638bb703219eea71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61407ef7d3c0ca11ac5d95e25cc27c1abc9bf0d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33194870"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041965"
 ---
 # <a name="compiler-error-c2372"></a>Ошибка компилятора C2372
-«Идентификатор»: переопределение; различные типы косвенного обращения  
-  
- Идентификатор уже объявлен с другим производным типом.  
-  
- При компиляции следующего примера возникнет ошибка C2326:  
-  
-```  
-// C2372.cpp  
-// compile with: /c  
-extern int *fp;  
-extern int fp[];   // C2372  
-extern int fp2[];   // OK  
+
+«Идентификатор»: переопределение; различные типы косвенного обращения
+
+Идентификатор уже определен с другим производным типом.
+
+При компиляции следующего примера возникнет ошибка C2326:
+
+```
+// C2372.cpp
+// compile with: /c
+extern int *fp;
+extern int fp[];   // C2372
+extern int fp2[];   // OK
 ```

@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: da3f7882a24d31f1a8560cdc9c038081324bf675
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208628"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715615"
 ---
 # <a name="wildcards-and-nmake"></a>Использование подстановочных знаков в программе NMAKE
-NMAKE разворачивает подстановочные знаки в имени файла (\* и?) в строках зависимостей. Подстановочные знаки, указанный в команде передается в команду; NMAKE не развертывает его.  
-  
-## <a name="see-also"></a>См. также  
- [Содержимое файла Makefile](../build/contents-of-a-makefile.md)
+
+NMAKE разворачивает подстановочные знаки в имени файла (\* и?) в строках зависимостей. Подстановочные знаки, указанный в команде передается в команду; NMAKE не развертывает его.
+
+## <a name="see-also"></a>См. также
+
+[Содержимое файла Makefile](../build/contents-of-a-makefile.md)

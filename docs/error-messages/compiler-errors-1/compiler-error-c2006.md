@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2006 | Документы Microsoft
+title: Ошибка компилятора C2006 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93880e7d767de3101cd7a292af5fa2874cae86bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9468be17584a54047563bace2b35f5cb4888b41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031214"
 ---
 # <a name="compiler-error-c2006"></a>Ошибка компилятора C2006
-«Директива» вместо имени файла, найден «токен»  
-  
- Директивы, такие как [#include](../../preprocessor/hash-include-directive-c-cpp.md) или [#import](../../preprocessor/hash-import-directive-cpp.md) должно использоваться имя файла. Чтобы устранить эту ошибку, убедитесь, что *маркера* является допустимым именем файла. Кроме того необходимо заключите имя файла в двойные кавычки или угловые скобки.  
-  
- Следующий пример приводит к возникновению ошибки C2006:  
-  
-```  
-// C2006.cpp  
-#include stdio.h   // C2006  
-```  
-  
- Возможное решение  
-  
-```  
-// C2006b.cpp  
-// compile with: /c  
-#include <stdio.h>  
+
+«Директива» требуется имя файла, найден «токен»
+
+Директивы, такие как [#include](../../preprocessor/hash-include-directive-c-cpp.md) или [#import](../../preprocessor/hash-import-directive-cpp.md) должно использоваться имя файла. Чтобы устранить эту ошибку, убедитесь, что *маркера* является допустимым именем файла. Кроме того поместите имя файла в двойных кавычках или угловых скобках.
+
+Следующий пример приводит к возникновению ошибки C2006:
+
+```
+// C2006.cpp
+#include stdio.h   // C2006
+```
+
+Возможное решение
+
+```
+// C2006b.cpp
+// compile with: /c
+#include <stdio.h>
 ```

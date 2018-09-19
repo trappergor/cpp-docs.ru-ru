@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959073"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716198"
 ---
 # <a name="tupleelement-class"></a>Класс tuple_element
 
@@ -66,22 +66,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Параметры
 
-*Index*  
+*Index*<br/>
 Индекс указанного элемента.
 
-*Tuple*  
+*Tuple*<br/>
 Тип кортежа.
 
-*Elem*  
+*Elem*<br/>
 Тип элемента массива.
 
-*Size*  
+*Size*<br/>
 Размер массива.
 
-*T1*  
+*T1*<br/>
 Тип первого элемента в паре.
 
-*T2*  
+*T2*<br/>
 Тип второго элемента в паре.
 
 ## <a name="remarks"></a>Примечания
@@ -184,7 +184,13 @@ int main() {
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<кортежа > **заголовка:** \<array > (для специализации массива) **заголовка:** \<служебной программы > (для специализаций пар)  **Пространство имен:** std
+**Заголовок:** \<tuple>
+
+**Заголовок:** \<array> (для специализации массива)
+
+**Заголовок:** \<программа > (для специализаций пар)
+
+**Пространство имен:** std
 
 ## <a name="see-also"></a>См. также
 

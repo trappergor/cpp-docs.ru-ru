@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f395ae726725507bf27f5033b20a4ece2a226a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539134"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715667"
 ---
 # <a name="cmfctooltipctrl-class"></a>Класс CMFCToolTipCtrl
 Расширенная реализация всплывающей подсказки на основе класса [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Подсказка на основе класса `CMFCToolTipCtrl` может отображать значок, метку и описание. Можно настроить его внешний вид с помощью градиентной заливки, пользовательских цветов текста и границы, полужирного шрифта, скругленных углов или стиля всплывающего предупреждения.  
@@ -64,13 +64,13 @@ class CMFCToolTipCtrl : public CToolTipCtrl
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCToolTipCtrl::CMFCToolTipCtrl`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolTipCtrl::GetIconSize](#geticonsize)|Возвращает размер значка во всплывающей подсказке.|  
 |[CMFCToolTipCtrl::GetParams](#getparams)|Возвращает параметры отображения всплывающей подсказки.|  
@@ -204,14 +204,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
- [in] *rect*  
- Ограничивающий прямоугольник всплывающей подсказки.  
+*Rect*<br/>
+[in] Ограничивающий прямоугольник всплывающей подсказки.  
   
- [in] *clrLine*  
- Цвет границы.  
+*clrLine*<br/>
+[in] Цвет границы.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить внешний вид границы всплывающей подсказки.  
@@ -227,8 +227,8 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- [in] *rect*  
+*основного контроллера домена*<br/>
+[in] [in] *rect*  
  [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -245,11 +245,11 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
- [in] *rectImage*  
- Координаты значка.  
+*rectImage*<br/>
+[in] Координаты значка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если значок рисования. В противном случае — значение FALSE.  
@@ -268,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
- [in] *rect*  
- Ограничивающий прямоугольник области метки.  
+*Rect*<br/>
+[in] Ограничивающий прямоугольник области метки.  
   
- [in] *bCalcOnly*  
- Значение TRUE, если метка не будет рисоваться.  
+*bCalcOnly*<br/>
+[in] Значение TRUE, если метка не будет рисоваться.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер метки, в пикселях.  
@@ -295,17 +295,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
- [in] *x1*  
- Горизонтальная координата в левый конец разделителя.  
+*x1*<br/>
+[in] Горизонтальная координата в левый конец разделителя.  
   
- [in] *x2*  
- Горизонтальная координата справа от разделителя.  
+*x2*<br/>
+[in] Горизонтальная координата справа от разделителя.  
   
- [in] *Y*  
- Вертикальная координата разделителя.  
+*Y*<br/>
+[in] Вертикальная координата разделителя.  
   
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию проводит линию из точки (x1, y) до точки (x2, y).  
@@ -324,17 +324,17 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *основного контроллера домена*  
- Указатель на контекст устройства.  
+*основного контроллера домена*<br/>
+[in] Указатель на контекст устройства.  
   
- [in] *rect*  
- Указывает прямоугольник, ограничивающий область для заливки.  
+*Rect*<br/>
+[in] Указывает прямоугольник, ограничивающий область для заливки.  
   
- [in] *clrText*  
- Цвет фона всплывающей подсказки.  
+*clrText*<br/>
+[in] Цвет фона всплывающей подсказки.  
   
- [in] *clrLine*  
- Цвет границы и линии разделителя между элементами label и описание.  
+*clrLine*<br/>
+[in] Цвет границы и линии разделителя между элементами label и описание.  
   
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию заполняет прямоугольник, который задается параметром *rect* цветом или шаблону, указанному в последний вызов к [CMFCToolTipCtrl::SetParams](#setparams).  
@@ -349,8 +349,8 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *strDesrciption*  
- Текст описания.  
+*strDesrciption*<br/>
+[in] Текст описания.  
   
 ### <a name="remarks"></a>Примечания  
  Текст описания отображается на всплывающей подсказки в поле разделитель.  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *nWidthRegular*  
- [in] *nWidthLargeImage*  
+*nWidthRegular*<br/>
+[in] [in] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -402,8 +402,8 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pParams*  
- Указатель на [класс CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) объект, содержащий параметры отображения.  
+*pParams*<br/>
+[in] Указатель на [класс CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) объект, содержащий параметры отображения.  
   
 ### <a name="remarks"></a>Примечания  
  Каждый раз, когда подсказка отображается, он отрисовывается с помощью цвета и визуальные стили, *pParams* указывает. Значение *pParams* хранится в защищенный член `m_Params`, который может осуществляться с помощью производного класса, который переопределяет [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), или [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)для сохранения указанного внешнего вида.  

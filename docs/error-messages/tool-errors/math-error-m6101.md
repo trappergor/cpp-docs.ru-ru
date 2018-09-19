@@ -1,5 +1,5 @@
 ---
-title: Математическая ошибка M6101 | Документы Microsoft
+title: Математическая ошибка M6101 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb428cb7f4ad59300de0ceab9a6faa727e44f9c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60ef740d94672b0828b97cc39c2b6a50054443a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041640"
 ---
 # <a name="math-error-m6101"></a>Математическая ошибка M6101
-недействительные  
-  
- Недопустимая операция.  
-  
- Это ошибка может возникать, если операнд имеет значение NaN (не число) или бесконечность.  
-  
- Программа завершается с кодом завершения 129.
+
+недействительные
+
+Недопустимая операция.
+
+Это ошибка может возникать, если операнд имеет значение NaN (не число) или бесконечность.
+
+Программа завершается с кодом завершения 129.

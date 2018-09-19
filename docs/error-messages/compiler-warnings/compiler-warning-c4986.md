@@ -1,5 +1,5 @@
 ---
-title: Предупреждение компилятора C4986 | Документы Microsoft
+title: Предупреждение компилятора C4986 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c5342a65e9f900582246bb007d9dd67338dd8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f464f2a6e1f76c7d8b9de8bcc2353766aff0854
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077065"
 ---
 # <a name="compiler-warning-c4986"></a>Предупреждение компилятора C4986
-«функция»: спецификация исключения не соответствует предыдущему объявлению  
-  
- Это предупреждение может возникать, когда спецификацией исключений в одном объявлении, а не другой.  
-  
- По умолчанию C4986 — off. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C4986.  
-  
-```cpp  
-class X { };  
-void f1() throw (X*);  
-// ...  
-void f1()  
-{  
-    // ...  
-}    
-```  
-  
-## <a name="example"></a>Пример  
- Следующий пример позволяет устранить это предупреждение.  
-  
-```cpp  
-class X { };  
-void f1() throw (X*);  
-// ...  
-void f1() throw (X*)  
-{  
-    // ...  
-}    
+
+«функция»: спецификация исключения не соответствует предыдущему объявлению
+
+Это предупреждение может создаваться при отсутствии спецификацию исключений в одном объявлении, а не другой.
+
+По умолчанию C4986 — off. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C4986.
+
+```cpp
+class X { };
+void f1() throw (X*);
+// ...
+void f1()
+{
+    // ...
+}
+```
+
+## <a name="example"></a>Пример
+
+Следующий пример позволяет исключить это предупреждение.
+
+```cpp
+class X { };
+void f1() throw (X*);
+// ...
+void f1() throw (X*)
+{
+    // ...
+}
 ```

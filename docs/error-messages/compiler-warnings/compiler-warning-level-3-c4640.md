@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4640 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 3) C4640 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34c55334b49ac325d23f73e9ceaaa8613ca9c45d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 945e6c792a3200bfa115dfffaba216ed43266cde
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097514"
 ---
 # <a name="compiler-warning-level-3-c4640"></a>Предупреждение компилятора (уровень 3) C4640
-«экземпляр»: создание в конструкторе локального статического объекта не является потокобезопасной  
-  
- Статический экземпляр объекта не является потокобезопасным.  
-  
- Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Следующий пример приводит к возникновению ошибки C4640:  
-  
-```  
-// C4640.cpp  
-// compile with: /W3  
-#pragma warning(default:4640)  
-  
-class X {  
-public:  
-   X() {  
-   }  
-};  
-  
-void f() {  
-   static X aX;   // C4640  
-}  
-  
-int main() {  
-   f();  
-}  
+
+«instance»: Создание локального статического объекта может привести к поточно ориентированными
+
+Статический экземпляр объекта не является потокобезопасным.
+
+Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Следующий пример приводит к возникновению ошибки C4640:
+
+```
+// C4640.cpp
+// compile with: /W3
+#pragma warning(default:4640)
+
+class X {
+public:
+   X() {
+   }
+};
+
+void f() {
+   static X aX;   // C4640
+}
+
+int main() {
+   f();
+}
 ```

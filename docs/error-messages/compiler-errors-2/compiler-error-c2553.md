@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2553 | Документы Microsoft
+title: Ошибка компилятора C2553 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfb09f2701b418ab5570641a78c465ff72ed943
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38fb61b7281dd0371c546fd7b7bc960232cf2e00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043993"
 ---
 # <a name="compiler-error-c2553"></a>Ошибка компилятора C2553
-«базовая_функция»: переопределение виртуальной функции возвращают тип отличается от «переопределяющая_функция»  
-  
- Функция в производном классе предпринята попытка переопределения виртуальной функции в базовом классе, но функция производного класса не имело тип значения, возвращаемого в качестве функции базового класса.  Подпись переопределяющей функции должна соответствовать сигнатуре переопределяемой функции.  
-  
- Следующий пример приводит к возникновению ошибки C2553:  
-  
-```  
-// C2553.cpp  
-// compile with: /clr /c  
-ref struct C {  
-   virtual void f();  
-};  
-  
-ref struct D : C {  
-   virtual int f() override ;   // C2553   
-  
-   // try the following line instead  
-   // virtual void f() override;  
-};  
+
+«базовая_функция»: переопределение виртуальной функции возвращают тип отличается от «переопределяющая_функция»
+
+Функция в производном классе предпринята попытка переопределить виртуальную функцию в базовом классе, но функция производного класса не было совпадает с типом возвращаемого значения функции базового класса.  Подпись переопределяющей функции должна соответствовать сигнатуре функции переопределения.
+
+Следующий пример приводит к возникновению ошибки C2553:
+
+```
+// C2553.cpp
+// compile with: /clr /c
+ref struct C {
+   virtual void f();
+};
+
+ref struct D : C {
+   virtual int f() override ;   // C2553
+
+   // try the following line instead
+   // virtual void f() override;
+};
 ```

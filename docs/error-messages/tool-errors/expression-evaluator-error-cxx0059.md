@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0059 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0059 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dbd0944eabe57dc3dd1cc224da220ee7f6435c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55fc60014bdc408d581ed8299715aad139ef9862
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295864"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050467"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Ошибка вычислителя выражений CXX0059
-левый операнд является классом, не именем функции  
-  
- Левый операнд вызова функции именем класса и не удалось разрешить вызов функции. Имя функции-члена в выражении может вызвать эту ошибку.  
-  
- Эта ошибка идентична ошибке CAN0059.
+
+левый операнд является класс не является именем функции
+
+Левый операнд вызова функции именем класса и не удалось разрешить для вызова функции. Эта ошибка может возникать при пропуске названия функции-члена в выражении.
+
+Эта ошибка идентична ошибке CAN0059.

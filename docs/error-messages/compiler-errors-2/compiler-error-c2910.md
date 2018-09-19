@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2910 | Документы Microsoft
+title: Ошибка компилятора C2910 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,71 +16,72 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec2baafae0647964a56afaed3286140f8b9f759
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d726fffa61ed80352626df7a6f89467c420152bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136131"
 ---
 # <a name="compiler-error-c2910"></a>Ошибка компилятора C2910
-«функция»: явная специализация невозможна  
-  
- Компилятор обнаружил попытку явно специализации функции.  
-  
- Следующий пример приводит к возникновению ошибки C2910:  
-  
-```  
-// C2910.cpp  
-// compile with: /c  
-template <class T>  
-struct S;  
-  
-template <> struct S<int> { void f() {} };  
-template <> void S<int>::f() {}   // C2910 delete this specialization  
-```  
-  
- C2910 также может возникать при попытке явной специализации нешаблонного элемента. То есть можно только явно специализировать шаблон функции.  
-  
- Следующий пример приводит к возникновению ошибки C2910:  
-  
-```  
-// C2910b.cpp  
-// compile with: /c  
-template <class T> struct A {  
-   A(T* p);  
-};  
-  
-template <> struct A<void> {  
-   A(void* p);  
-};  
-  
-template <class T>  
-inline A<T>::A(T* p) {}  
-  
-template <> A<void>::A(void* p){}   // C2910  
-// try the following line instead  
-// A<void>::A(void* p){}  
-```  
-  
- Эта ошибка может также возникать в результате изменений работы компилятора в Visual Studio .NET 2003:.  
-  
- Код будет допустим в версиях Visual C++ для Visual Studio .NET 2003 и Visual Studio .NET, удалите `template <>`.  
-  
- Следующий пример приводит к возникновению ошибки C2910:  
-  
-```  
-// C2910c.cpp  
-// compile with: /c  
-template <class T> class A {  
-   void f();  
-};  
-  
-template <> class A<int> {  
-   void f();  
-};  
-  
-template <> void A<int>::f() {}   // C2910  
-// try the following line instead  
-// void A<int>::f(){}   // OK  
+
+«функция»: явная специализация невозможна
+
+Компилятор обнаружил попытку явно специализации функции.
+
+Следующий пример приводит к возникновению ошибки C2910:
+
+```
+// C2910.cpp
+// compile with: /c
+template <class T>
+struct S;
+
+template <> struct S<int> { void f() {} };
+template <> void S<int>::f() {}   // C2910 delete this specialization
+```
+
+C2910 также может возникать при попытке явная специализация члена нешаблонных. То есть можно только явно специализировать шаблон функции.
+
+Следующий пример приводит к возникновению ошибки C2910:
+
+```
+// C2910b.cpp
+// compile with: /c
+template <class T> struct A {
+   A(T* p);
+};
+
+template <> struct A<void> {
+   A(void* p);
+};
+
+template <class T>
+inline A<T>::A(T* p) {}
+
+template <> A<void>::A(void* p){}   // C2910
+// try the following line instead
+// A<void>::A(void* p){}
+```
+
+Эта ошибка может также возникать в результате изменений работы компилятора в Visual Studio .NET 2003:.
+
+Код будет допустимым в версии Visual C++ в Visual Studio .NET 2003 и Visual Studio .NET, удалите `template <>`.
+
+Следующий пример приводит к возникновению ошибки C2910:
+
+```
+// C2910c.cpp
+// compile with: /c
+template <class T> class A {
+   void f();
+};
+
+template <> class A<int> {
+   void f();
+};
+
+template <> void A<int>::f() {}   // C2910
+// try the following line instead
+// void A<int>::f(){}   // OK
 ```

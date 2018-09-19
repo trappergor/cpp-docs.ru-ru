@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6835cb1f8fb6365149b91c30881b4966b4b644
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075713"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Класс CComCachedTearOffObject
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Параметры
 
-`contained`  
+*содержится*<br/>
 Ваш перемещаемой класс, производный от `CComTearOffObjectBase` и интерфейсы объекта перемещаемой для поддержки.
 
 ## <a name="members"></a>Участники
@@ -121,7 +121,7 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Параметры
 
-*PV*  
+*PV*<br/>
 [in] Указатель на `IUnknown` из `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Примечания
@@ -170,7 +170,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Параметры
 
-*содержится*  
+*содержится*<br/>
 [in] Ваш перемещаемой класс, производный от `CComTearOffObjectBase` и интерфейсы объекта перемещаемой для поддержки.
 
 ### <a name="remarks"></a>Примечания
@@ -187,10 +187,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID запрашиваемого интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *iid*, или значение NULL, если интерфейс не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -215,6 +215,6 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)   
-[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
+[Класс CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

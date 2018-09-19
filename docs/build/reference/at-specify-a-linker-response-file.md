@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ff031c64ab57373beadd8a88235d018f2e5c0f5
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f692dd8006618661d6710ee6e8e681047fea3b1f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894425"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706321"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Определение файла ответов компоновщика)
 
@@ -37,7 +37,7 @@ ms.locfileid: "43894425"
 
 ## <a name="arguments"></a>Аргументы
 
-*response_file*  
+*response_file*<br/>
 Текстовый файл, определяющий команды компоновщика.
 
 ## <a name="remarks"></a>Примечания
@@ -54,5 +54,5 @@ ms.locfileid: "43894425"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)  
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
 [Параметры компоновщика](../../build/reference/linker-options.md)

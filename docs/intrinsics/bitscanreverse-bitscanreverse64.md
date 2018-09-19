@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe9fc90556c15cdab13f68647f07b877aa15abf
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ab174484cb305e26c23d1c1d6b5e573341c9035c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540326"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716973"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 **Блок, относящийся только к системам Microsoft**  
@@ -47,11 +47,11 @@ unsigned char _BitScanReverse64(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- [выходной] `Index`  
- Загруженный с позиции разряда первый значащий разряд (1) найден.  
+*Index*<br/>
+[out] Загрузить с позиции разряда Первый значащий разряд (1) найден.  
   
- [in] `Mask`  
- 32-разрядное или 64-разрядное значение для поиска.  
+*Маска*<br/>
+[in] 32-разрядная или 64-разрядное значение для поиска.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Не нуль, если `Index` был установлен, или 0, если значащие разряды не найдены.  

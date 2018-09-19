@@ -1,5 +1,5 @@
 ---
-title: -ПРОФИЛЬ (профилировщик средств обеспечения производительности) | Документы Microsoft
+title: -PROFILE (производительности средства Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15379914b4c4852e3065d1abc03c2ce1b17fb044
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 859ea4091502fa6c339a809a5b9e439c91462bd7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377122"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707772"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (профилировщик средств обеспечения производительности)
-Создает выходной файл, который может быть использован для профилировщика производительности инструментов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/PROFILE  
-```  
-  
-## <a name="remarks"></a>Примечания  
- / PROFILE подразумевает следующие параметры компоновщика:  
-  
--   [/ OPT: REF](../../build/reference/opt-optimizations.md)  
-  
--   / OPT: NOICF  
-  
--   [/ INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)  
-  
--   [/ FIXED: NO](../../build/reference/fixed-fixed-base-address.md)  
-  
- Или профиль указывает компоновщику создает раздел переадресации в образе программы.  Он позволяет профилировщику преобразовать образ программы, чтобы получить данные профилирования.  
-  
- **/ ПРОФИЛЯ** доступна только в версиях Enterprise (командной разработки).  Дополнительные сведения о PREfast см. в разделе [анализа кода C/C++ Обзор](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  Разверните **свойства конфигурации** узла.  
-  
-3.  Разверните **компоновщика** узла.  
-  
-4.  Выберите **Дополнительно** страницу свойств.  
-  
-5.  Изменить **профиль** свойство.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
-1.  См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+Создает выходной файл, который может быть использован для профилировщика производительности инструментов.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+/PROFILE
+```
+
+## <a name="remarks"></a>Примечания
+
+/ PROFILE подразумевает следующие параметры компоновщика:
+
+- [/ OPT: REF](../../build/reference/opt-optimizations.md)
+
+- / OPT: NOICF
+
+- [/ INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)
+
+- [/ FIXED: NO](../../build/reference/fixed-fixed-base-address.md)
+
+/ PROFILE предписывает компоновщику создавать секцию перемещения в образе программы.  Он позволяет профилировщику преобразовать образ программы, чтобы получить данные профилирования.
+
+**/ ПРОФИЛИРОВАНИЕ** доступна только в версиях Enterprise (коллективной разработке).  Дополнительные сведения о PREfast см. в разделе [анализ кода для C/C++ Обзор](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Разверните узел **Свойства конфигурации**.
+
+1. Разверните **компоновщика** узла.
+
+1. Выберите **Дополнительно** страницу свойств.
+
+1. Изменить **профиль** свойство.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+1. См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

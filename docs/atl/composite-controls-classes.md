@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9f9359bb6dfa1204c32e6902e12c62423291db
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e3c7c930df13c09afc48f17e7042f2fe846b095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075284"
 ---
 # <a name="composite-controls-classes"></a>Классы составных элементов управления
 
@@ -36,7 +36,7 @@ ms.locfileid: "43765886"
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../atl/atl-class-overview.md)   
-[Макросы составного элемента управления](../atl/reference/composite-control-macros.md)   
+[Общие сведения о классе](../atl/atl-class-overview.md)<br/>
+[Макросы для работы с составными элементами управления](../atl/reference/composite-control-macros.md)<br/>
 [Глобальные функции составных элементов управления](../atl/reference/composite-control-global-functions.md)
 

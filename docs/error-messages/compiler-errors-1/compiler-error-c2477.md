@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2477 | Документы Microsoft
+title: Ошибка компилятора C2477 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1212a664582f19e91fbf21bde36431ec715946
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a3e8a9f76526ecc170b30436ff395d54f8d5395
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020177"
 ---
 # <a name="compiler-error-c2477"></a>Ошибка компилятора C2477
-«член»: не удается инициализировать статические данные-член в производном классе  
-  
- Статические данные-член шаблона класса был инициализирован неправильно. Это критическое изменение в версии компилятора Visual C++ до Visual Studio .NET 2003, в целях обеспечения соответствия стандарту ISO c++.  
-  
- Следующий пример приводит к возникновению ошибки C2477:  
-  
-```  
-// C2477.cpp  
-// compile with: /Za /c  
-template <class T>  
-struct S {  
-   static int n;  
-};  
-  
-struct X {};  
-struct A: S<X> {};  
-  
-int A::n = 0;   // C2477  
-  
-template<>  
-int S<X>::n = 0;  
+
+«член»: статические данные-член не могут быть инициализированы в производном классе
+
+Статические данные-член шаблона класса был инициализирован неправильно. Это критическое изменение с помощью версии компилятора Visual C++ до Visual Studio .NET 2003, чтобы соответствовать стандарту ISO C++.
+
+Следующий пример приводит к возникновению ошибки C2477:
+
+```
+// C2477.cpp
+// compile with: /Za /c
+template <class T>
+struct S {
+   static int n;
+};
+
+struct X {};
+struct A: S<X> {};
+
+int A::n = 0;   // C2477
+
+template<>
+int S<X>::n = 0;
 ```

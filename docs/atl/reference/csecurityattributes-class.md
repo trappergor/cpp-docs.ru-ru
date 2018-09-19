@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8642bf2bb6b2db06ecb33fa6ec1cc44d5e68317c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 672da1c98ebc51a7440e29234950be2adb5e1c0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766234"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093074"
 ---
 # <a name="csecurityattributes-class"></a>Класс CSecurityAttributes
 
@@ -80,10 +80,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>Параметры
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Ссылка на дескриптор безопасности.
 
-*bInheritsHandle*  
+*bInheritsHandle*<br/>
 Определяет, наследуется ли возвращаемый дескриптор при создании процесса. Если этот элемент имеет значение true, новый процесс наследует дескриптор.
 
 ##  <a name="set"></a>  CSecurityAttributes::Set
@@ -96,10 +96,10 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>Параметры
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Ссылка на дескриптор безопасности.
 
-*bInheritHandle*  
+*bInheritHandle*<br/>
 Определяет, наследуется ли возвращаемый дескриптор при создании процесса. Если этот элемент имеет значение true, новый процесс наследует дескриптор.
 
 ### <a name="remarks"></a>Примечания
@@ -108,8 +108,8 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ## <a name="see-also"></a>См. также
 
-[Образец безопасности](../../visual-cpp-samples.md)   
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
-[Дескриптор безопасности](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Образец безопасности](../../visual-cpp-samples.md)<br/>
+[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
+[Дескриптор безопасности](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

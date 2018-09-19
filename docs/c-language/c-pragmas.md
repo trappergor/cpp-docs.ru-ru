@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87a6518eec495961d1f8d40c625e589db01bd3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a31d32ce7bdf89cd0216926c6628b4fa7bdd27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027355"
 ---
 # <a name="c-pragmas"></a>Прагмы C
 
@@ -37,8 +37,8 @@ ms.locfileid: "32382118"
 
 Описание директив pragma для компилятора Microsoft C см. в разделе [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
- **Завершение блока, относящегося только к системам Майкрософт**
+**Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Файлы с исходным кодом и исходные программы](../c-language/source-files-and-source-programs.md)  
+[Файлы с исходным кодом и исходные программы](../c-language/source-files-and-source-programs.md)

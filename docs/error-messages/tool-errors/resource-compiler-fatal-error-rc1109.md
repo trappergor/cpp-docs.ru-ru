@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка компилятора ресурсов RC1109 | Документы Microsoft
+title: Неустранимая ошибка компилятора ресурсов RC1109 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71123230318d2da006be3c09fdb5855f713220f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61197a4322690646bf3f89d155fbb526b00ba0de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044812"
 ---
 # <a name="resource-compiler-fatal-error-rc1109"></a>Неустранимая ошибка компилятора ресурсов RC1109
-Ошибка при создании имя ресурса  
-  
- Не удалось создать указанный RES-файл. Убедитесь, что она не была создана на диске только для чтения. Параметр /V узнать, создается ли файл.
+
+Ошибка при создании имя ресурса
+
+Не удалось создать указанный RES-файл. Убедитесь, что она не была создана на диске только для чтения. Используйте параметр /V, чтобы узнать, создается ли файл.

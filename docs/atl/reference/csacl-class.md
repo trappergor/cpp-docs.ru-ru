@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f42d90fa2fb04c75f6c45db8d099d4a1a9a74c2a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d408ab5d0575984fb597cec28f01484d9b878ebf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763107"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108395"
 ---
 # <a name="csacl-class"></a>Класс CSacl
 
@@ -110,25 +110,25 @@ bool AddAuditAce(
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md) объекта.
 
-*AccessMask*  
+*AccessMask*<br/>
 Указывает маску прав доступа для аудита для указанного `CSid` объекта.
 
-*bSuccess*  
+*bSuccess*<br/>
 Указывает, являются ли попытки доступа, разрешенных для аудита. Установка этого флага значение true, чтобы включить аудит; в противном случае — значение false.
 
-*bFailure*  
+*bFailure*<br/>
 Указывает, попытки запрещен доступ, нужно ли проводить аудит. Установка этого флага значение true, чтобы включить аудит; в противном случае — значение false.
 
-*AceFlags*  
+*AceFlags*<br/>
 Набор битовых флагов, контролировать и наследование ACE.
 
-*pObjectType*  
+*pObjectType*<br/>
 Тип объекта.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 Типом наследуемого объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -152,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 Существующий `ACL` структуры (список управления доступом).
 
 ### <a name="remarks"></a>Примечания
@@ -193,7 +193,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `ACL` (Список управления доступом) для назначения к существующему объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -210,7 +210,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*  
+*nIndex*<br/>
 Индекс записи ACE, которую требуется удалить.
 
 ### <a name="remarks"></a>Примечания
@@ -231,8 +231,8 @@ void RemoveAllAces() throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAcl](../../atl/reference/cacl-class.md)   
-[Списки управления доступом](/windows/desktop/SecAuthZ/access-control-lists)   
-[Элементы управления доступом](/windows/desktop/SecAuthZ/access-control-entries)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Класс CAcl](../../atl/reference/cacl-class.md)<br/>
+[Списки управления доступом](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[Элементы управления доступом](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

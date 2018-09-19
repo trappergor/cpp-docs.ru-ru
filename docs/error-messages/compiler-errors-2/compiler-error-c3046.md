@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3046 | Документы Microsoft
+title: Ошибка компилятора C3046 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d39290f821b96c7b94018f3f28910a480ff0102
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c2cd4ab2d1b0e85a33ba2e01d4c2115f0084e98a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070321"
 ---
 # <a name="compiler-error-c3046"></a>Ошибка компилятора C3046
-Отсутствует структурированный блок в области OpenMP "#pragma omp sections"  
-  
- Директива [sections](../../parallel/openmp/reference/sections-openmp.md) имеет пустой блок кода.  
-  
- В следующем примере возникает ошибка C3046:  
-  
-```  
-// C3046.cpp  
-// compile with: /openmp /c  
-#include "omp.h"  
-  
-int main() {  
-   int n2 = 2, n3 = 3;  
-  
-   #pragma omp parallel  
-   {  
-      ++n2;  
-  
-      #pragma omp sections  
-      {  
-/*  
-         ++n2;  
-  
-         #pragma omp section  
-         {  
-            ++n3;  
-         }  
-*/  
-       }   // C3046 uncomment code to resolve this C3046  
-   }  
-}  
+
+Отсутствует структурированный блок в области OpenMP "#pragma omp sections"
+
+Директива [sections](../../parallel/openmp/reference/sections-openmp.md) имеет пустой блок кода.
+
+В следующем примере возникает ошибка C3046:
+
+```
+// C3046.cpp
+// compile with: /openmp /c
+#include "omp.h"
+
+int main() {
+   int n2 = 2, n3 = 3;
+
+   #pragma omp parallel
+   {
+      ++n2;
+
+      #pragma omp sections
+      {
+/*
+         ++n2;
+
+         #pragma omp section
+         {
+            ++n3;
+         }
+*/
+       }   // C3046 uncomment code to resolve this C3046
+   }
+}
 ```

@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2021f98389177e7c3172fd142172c6bc85f6724
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8de0378e34212649f7e1149bd038587f547e4eb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032033"
 ---
 # <a name="cstockpropimpl-class"></a>Класс CStockPropImpl
 
@@ -95,7 +95,7 @@ template <class T, class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
 plibid,
     wMajor,
@@ -105,25 +105,25 @@ wMinor,
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Реализация элемента управления и наследование от класса `CStockPropImpl`.
 
-*Имя интерфейса*  
+*Имя интерфейса*<br/>
 Сдвоенный интерфейс, предоставление доступа к свойствам акций.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор IID `InterfaceName`.
 
-*plibid*  
+*plibid*<br/>
 Указатель на идентификатор LIBID библиотеки типов, содержащие определение `InterfaceName`.
 
-*wMajor*  
+*wMajor*<br/>
 Основной номер версии для библиотеки типов. Значение по умолчанию — 1.
 
-*wMinor*  
+*wMinor*<br/>
 Дополнительный номер версии для библиотеки типов. Значение по умолчанию — 0.
 
-*tihclass*  
+*tihclass*<br/>
 Класс, используемый для управления сведения о типе *T*. Значение по умолчанию — `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Участники
@@ -228,7 +228,7 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="parameters"></a>Параметры
 
-*pnAppearance*  
+*pnAppearance*<br/>
 Переменная, которая получает стиль рисования элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -245,7 +245,7 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="parameters"></a>Параметры
 
-*pbAutoSize*  
+*pbAutoSize*<br/>
 Переменная, которая получает состояние флага. Значение TRUE указывает, что элемент управления не может быть любой другой размер.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -262,7 +262,7 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 
 ### <a name="parameters"></a>Параметры
 
-*pclrBackColor*  
+*pclrBackColor*<br/>
 Переменная, которая получает цвет фона элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -279,7 +279,7 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*pnBackStyle*  
+*pnBackStyle*<br/>
 Переменная, которая получает стиль фона элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -296,7 +296,7 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 
 ### <a name="parameters"></a>Параметры
 
-*pclrBorderColor*  
+*pclrBorderColor*<br/>
 Переменная, которая получает цвет границы элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -313,7 +313,7 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*pnBorderStyle*  
+*pnBorderStyle*<br/>
 Переменная, которая получает стиль границы элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -330,7 +330,7 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="parameters"></a>Параметры
 
-*pbBorderVisible*  
+*pbBorderVisible*<br/>
 Переменная, которая получает состояние флага. Значение TRUE указывает, что границы элемента управления является видимым.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -347,7 +347,7 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 
 ### <a name="parameters"></a>Параметры
 
-*pnBorderWidth*  
+*pnBorderWidth*<br/>
 Переменная, которая получает ширину границы элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -364,7 +364,7 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="parameters"></a>Параметры
 
-*pbstrCaption*  
+*pbstrCaption*<br/>
 Текст, отображаемый с элементом управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -381,7 +381,7 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 
 ### <a name="parameters"></a>Параметры
 
-*pnDrawMode*  
+*pnDrawMode*<br/>
 Переменная, которая получает режим рисования элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -398,7 +398,7 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*pnDrawStyle*  
+*pnDrawStyle*<br/>
 Переменная, которая получает стиль рисования элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -415,7 +415,7 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 
 ### <a name="parameters"></a>Параметры
 
-*pnDrawWidth*  
+*pnDrawWidth*<br/>
 Переменная, которая получает значение ширины элемента управления, в пикселях.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -432,7 +432,7 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>Параметры
 
-*pbEnabled*  
+*pbEnabled*<br/>
 Переменная, которая получает состояние флага. Значение TRUE указывает, что элемент управления включен.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -449,7 +449,7 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 
 ### <a name="parameters"></a>Параметры
 
-*pclrFillColor*  
+*pclrFillColor*<br/>
 Переменная, которая получает цвета заливки элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -466,7 +466,7 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*pnFillStyle*  
+*pnFillStyle*<br/>
 Переменная, которая получает стиль заливки элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -483,7 +483,7 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>Параметры
 
-*ppFont*  
+*ppFont*<br/>
 Переменная, которая получает указатель на свойства шрифта элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -500,7 +500,7 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="parameters"></a>Параметры
 
-*pclrForeColor*  
+*pclrForeColor*<br/>
 Переменная, которая получает основной цвет элементов управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -517,7 +517,7 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*phWnd*  
+*phWnd*<br/>
 Дескриптор окна, связанный с элементом управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -534,7 +534,7 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Параметры
 
-*ppPicture*  
+*ppPicture*<br/>
 Переменная, которая получает указатель на свойствах изображения рисунка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -551,7 +551,7 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="parameters"></a>Параметры
 
-*pnMousePointer*  
+*pnMousePointer*<br/>
 Переменная, которая получает тип указателя мыши.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -568,7 +568,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Параметры
 
-*ppPicture*  
+*ppPicture*<br/>
 Переменная, которая получает указатель на свойствах изображения. См. в разделе [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -585,7 +585,7 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 
 ### <a name="parameters"></a>Параметры
 
-*pnReadyState*  
+*pnReadyState*<br/>
 Переменная, которая получает состояние готовности элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -602,7 +602,7 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 
 ### <a name="parameters"></a>Параметры
 
-*pbTabStop*  
+*pbTabStop*<br/>
 Переменная, которая получает состояние флага. Значение TRUE указывает, что элемент управления является позицией табуляции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -619,7 +619,7 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="parameters"></a>Параметры
 
-*pbstrText*  
+*pbstrText*<br/>
 Текст, отображаемый с элементом управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -636,7 +636,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="parameters"></a>Параметры
 
-*pbValid*  
+*pbValid*<br/>
 Переменная, которая получает состояние флага. Значение TRUE указывает, что элемент управления является допустимым.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -653,7 +653,7 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*phWnd*  
+*phWnd*<br/>
 Дескриптор окна, связанный с элементом управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -670,7 +670,7 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>Параметры
 
-*nAppearance*  
+*nAppearance*<br/>
 Новый стиль рисования для использования элементом управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -687,7 +687,7 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 
 ### <a name="parameters"></a>Параметры
 
-*bAutoSize*  
+*bAutoSize*<br/>
 Значение TRUE, если элемент управления не может быть любой другой размер.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -704,7 +704,7 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="parameters"></a>Параметры
 
-*clrBackColor*  
+*clrBackColor*<br/>
 Новый цвет фона элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -721,7 +721,7 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*nBackStyle*  
+*nBackStyle*<br/>
 Новый стиль фона элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -738,7 +738,7 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 
 ### <a name="parameters"></a>Параметры
 
-*clrBorderColor*  
+*clrBorderColor*<br/>
 Новый цвет границы. Тип данных OLE_COLOR внутренне представлено как 32-разрядных длинное целое число.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -755,7 +755,7 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*nBorderStyle*  
+*nBorderStyle*<br/>
 Новый стиль границы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -772,7 +772,7 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 
 ### <a name="parameters"></a>Параметры
 
-*bBorderVisible*  
+*bBorderVisible*<br/>
 Значение TRUE, если граница является видимым.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -789,7 +789,7 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="parameters"></a>Параметры
 
-*nBorderWidth*  
+*nBorderWidth*<br/>
 Новая ширина границы элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -806,7 +806,7 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="parameters"></a>Параметры
 
-*bstrCaption*  
+*bstrCaption*<br/>
 Текст, отображаемый с элементом управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -823,7 +823,7 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="parameters"></a>Параметры
 
-*nDrawMode*  
+*nDrawMode*<br/>
 Новый режим рисования для элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -840,7 +840,7 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*nDrawStyle*  
+*nDrawStyle*<br/>
 Новый стиль рисования для элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -857,7 +857,7 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="parameters"></a>Параметры
 
-*nDrawWidth*  
+*nDrawWidth*<br/>
 Новое значение ширины для использования элементом управления графические методы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -874,7 +874,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Параметры
 
-*bEnabled*  
+*bEnabled*<br/>
 Значение TRUE, если включен элемент управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -891,7 +891,7 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="parameters"></a>Параметры
 
-*clrFillColor*  
+*clrFillColor*<br/>
 Новый цвет заливки для элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -908,7 +908,7 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*nFillStyle*  
+*nFillStyle*<br/>
 Новый стиль заливки для элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -925,7 +925,7 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Параметры
 
-*pFont*  
+*pFont*<br/>
 Указатель на свойства шрифта элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -942,7 +942,7 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="parameters"></a>Параметры
 
-*clrForeColor*  
+*clrForeColor*<br/>
 Новый цвет переднего плана элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -959,7 +959,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>Параметры
 
-*/\* hWnd \*/*  
+*/&ast; hWnd &ast;/*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -980,7 +980,7 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Параметры
 
-*pPicture*  
+*pPicture*<br/>
 Указатель на свойствах изображения рисунка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -997,7 +997,7 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="parameters"></a>Параметры
 
-*nMousePointer*  
+*nMousePointer*<br/>
 Тип указателя мыши.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1014,7 +1014,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Параметры
 
-*pPicture*  
+*pPicture*<br/>
 Указатель на свойствах изображения. См. в разделе [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1031,7 +1031,7 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="parameters"></a>Параметры
 
-*nReadyState*  
+*nReadyState*<br/>
 Состояние готовности элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1048,7 +1048,7 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 
 ### <a name="parameters"></a>Параметры
 
-*bTabStop*  
+*bTabStop*<br/>
 Значение TRUE, если элемент управления является позицией табуляции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1065,7 +1065,7 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="parameters"></a>Параметры
 
-*bstrText*  
+*bstrText*<br/>
 Текст, отображаемый с элементом управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1082,7 +1082,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 
 ### <a name="parameters"></a>Параметры
 
-*bValid*  
+*bValid*<br/>
 Значение TRUE, если элемент управления является допустимым.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1099,7 +1099,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 Дескриптор окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1120,7 +1120,7 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Параметры
 
-*pFont*  
+*pFont*<br/>
 Указатель на свойства шрифта элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1141,7 +1141,7 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Параметры
 
-*pPicture*  
+*pPicture*<br/>
 Указатель на свойствах изображения рисунка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1162,7 +1162,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Параметры
 
-*pPicture*  
+*pPicture*<br/>
 Указатель на свойствах изображения. См. в разделе [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1175,5 +1175,5 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Класс IDispatchImpl](../../atl/reference/idispatchimpl-class.md)

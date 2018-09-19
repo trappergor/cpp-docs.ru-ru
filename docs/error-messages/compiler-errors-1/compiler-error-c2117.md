@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2117 | Документы Microsoft
+title: Ошибка компилятора C2117 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a51bebc1edf7398d91356adb16f35443820cef2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5579a6f05e1de768aebd2e68b64d0b861688607
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030999"
 ---
 # <a name="compiler-error-c2117"></a>Ошибка компилятора C2117
-«Идентификатор»: переполнение границ массива  
-  
- Массив имеет слишком много инициализаторов:  
-  
--   Размер и количество инициализаторов и элементов массива не совпадают.  
-  
--   Нет места для завершающего нуль-символа в строке.  
-  
- Следующий пример приводит к возникновению ошибки C2117:  
-  
-```  
-// C2117.cpp  
-int main() {  
-   char abc[4] = "abcd";   // C2117  
-   char def[4] = "abd";   // OK  
-}  
+
+«Идентификатор»: переполнение границ массива
+
+Массив имеет слишком много инициализаторов:
+
+- Размер и количество инициализаторов и элементов массива не совпадают.
+
+- Нет места для завершающего в строке.
+
+Следующий пример приводит к возникновению ошибки C2117:
+
+```
+// C2117.cpp
+int main() {
+   char abc[4] = "abcd";   // C2117
+   char def[4] = "abd";   // OK
+}
 ```

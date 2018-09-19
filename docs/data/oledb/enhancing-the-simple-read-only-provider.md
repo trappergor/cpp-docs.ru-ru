@@ -1,5 +1,5 @@
 ---
-title: Усовершенствование простого поставщика только для чтения | Документы Microsoft
+title: Усовершенствование простого поставщика только для чтения | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c88714e4e1651839cdc5fd4b92d3c5222aa08d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28a92f6193053baca80ca078bddc0de862f50279
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036453"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Усовершенствование простого поставщика только для чтения
-В этом разделе показано, как улучшить [простого поставщика только для чтения](../../data/oledb/implementing-the-simple-read-only-provider.md) создан в предыдущем разделе. `IRowsetLocateImpl` Создает реализацию `IRowsetLocate` интерфейс и добавляет поддержку закладки для вас.  
+
+В этом разделе показано, как улучшить [простого поставщика только для чтения](../../data/oledb/implementing-the-simple-read-only-provider.md) создан в предыдущем разделе. `IRowsetLocateImpl` Создает реализацию `IRowsetLocate` интерфейс и добавляет поддержку закладку для вас.  
   
- При наличии действующий поставщик, может потребоваться расширить его возможности для обеспечения обновления, обработки транзакций или повышения производительности алгоритма выборки строк. Большинство поставщика усовершенствования включают Добавление интерфейса в существующий объект COM.  
+Если у вас есть действующий поставщик, может потребоваться расширить его возможности для обеспечения обновления, обработки транзакций или повышения производительности алгоритма выборки строк. Усовершенствования, реализованные в поставщик, предполагает Добавление интерфейса в существующий объект COM.  
   
- В примере в следующих разделах улучшает механизма выборки строк путем добавления `IRowsetLocate` интерфейс `CAgentRowset`. В разделах показано, как для:  
+В примере в следующих разделах улучшает механизм извлечения строк, добавив `IRowsetLocate` интерфейс `CAgentRowset`. В подразделах показано, как для:  
   
--   [Сделать RMyProviderRowset наследовать IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).  
+- [Сделать RMyProviderRowset наследовать от IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).  
   
--   [Динамически определить столбцы, возвращенные объекту-получателю](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+- [Динамически определять столбцы, возвращенные объекту-получателю](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание простого поставщика только для чтения](../../data/oledb/creating-a-simple-read-only-provider.md)
+
+[Создание простого поставщика только для чтения](../../data/oledb/creating-a-simple-read-only-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2172 | Документы Microsoft
+title: Ошибка компилятора C2172 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21dbef0cccd2cbd5221854972ca030e601695e3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d71acb91503900733ea805225670ce9e979e6d84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060100"
 ---
 # <a name="compiler-error-c2172"></a>Ошибка компилятора C2172
-"функция": фактический параметр не является указателем: номер параметра  
-  
- Параметр `number` не является указателем. Функция ожидает указатель.
+
+"функция": фактический параметр не является указателем: номер параметра
+
+Параметр `number` не является указателем. Функция ожидает указатель.

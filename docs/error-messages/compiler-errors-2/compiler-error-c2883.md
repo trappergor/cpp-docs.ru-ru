@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2883 | Документы Microsoft
+title: Ошибка компилятора C2883 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3119db27127521f5078a5753bb82c82da381ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50cc5b2abb34fae21bea78aa146e74b9aa9491c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019267"
 ---
 # <a name="compiler-error-c2883"></a>Ошибка компилятора C2883
-«Имя»: объявление функции вступает в противоречие с «идентификатор», представленный с помощью объявления  
-  
- Предпринята попытка определить функцию более одного раза. Первое определение выполнено из пространства имен с `using` объявления. Второй был локальное определение.  
-  
- Следующий пример приводит к возникновению ошибки C2883:  
-  
-```  
-// C2883.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-int main() {  
-   using A::z;  
-   void z(int);   // C2883  z is already defined  
-}  
+
+«name»: объявление функции вступает в конфликт с «идентификатор», представленное в объявление using
+
+Предпринята попытка определить функцию более одного раза. Первое определение был сделан из пространства имен с `using` объявления. Вторая была локальное определение.
+
+Следующий пример приводит к возникновению ошибки C2883:
+
+```
+// C2883.cpp
+namespace A {
+   void z(int);
+}
+
+int main() {
+   using A::z;
+   void z(int);   // C2883  z is already defined
+}
 ```

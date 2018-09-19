@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 463f005388a066776d7db8b1701850e08888de76
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 335f81a204ec91361c51f7573e58b61fad91f97b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061712"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
@@ -46,7 +46,7 @@ typedef struct {
    __m256 y;
    __m256 z;
 } hva3;    // 3 element HVA type on __m256
-```  
+```
 
 Явным образом с помощью функции необходимо объявлять **__vectorcall** ключевое слово в файлы заголовка, чтобы отдельно скомпилированный код мог компоноваться без ошибок. Функции должны быть прототипом для использования **__vectorcall**и не может использовать `vararg` список аргументов переменной длины.
 
@@ -60,25 +60,25 @@ typedef struct {
 struct MyClass {
    void __vectorcall mymethod();
 };
-```  
+```
 
 В этом случае следующий код:
 
 ```cpp
 void MyClass::mymethod() { return; }
-```  
+```
 
 эквивалентен следующему:
 
 ```cpp
 void __vectorcall MyClass::mymethod() { return; }
-```  
+```
 
 **__Vectorcall** модификатор соглашения о вызовах должен быть указан при создании указателя на **__vectorcall** будет создана функция. В следующем примере создается **typedef** для указателя на **__vectorcall** функция, которая принимает четыре **двойные** аргументы и возвращает **__m256**значение:
 
 ```cpp
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
-```  
+```
 
 ## <a name="vectorcall-convention-on-x64"></a>Соглашение о вызовах __vectorcall для архитектуры x64
 
@@ -167,7 +167,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -188,7 +188,7 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 ## <a name="vectorcall-convention-on-x86"></a>Соглашение о вызовах __vectorcall для архитектуры x86
 
@@ -273,7 +273,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -294,11 +294,11 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Передача аргументов и соглашения об именовании](../cpp/argument-passing-and-naming-conventions.md)   
+[Передача аргументов и соглашения об именовании](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

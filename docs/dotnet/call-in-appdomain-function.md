@@ -1,5 +1,5 @@
 ---
-title: Функция call_in_appdomain | Документы Microsoft
+title: Функция call_in_appdomain | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105249"
 ---
 # <a name="callinappdomain-function"></a>Функция call_in_appdomain
 Выполняет функцию в указанном домене приложения.  
@@ -49,20 +49,20 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `appdomainId`  
- Домен приложения, в котором для вызова функции.  
+*appdomainId*<br/>
+Домен приложения для вызова функции.  
   
- `voidFunc`  
- Указатель на `void` функцию, которая принимает параметры N (0 < = N < = 15).  
+*voidFunc*<br/>
+Указатель на `void` функцию, которая принимает параметры N (0 < = N < = 15).  
   
- `nonvoidFunc`  
- Указатель на значение, отличное от`void` функцию, которая принимает параметры N (0 < = N < = 15).  
+*nonvoidFunc*<br/>
+Указатель на отличный от`void` функцию, которая принимает параметры N (0 < = N < = 15).  
   
- `arg1...argN`  
- 0 до 15 параметров должны быть переданы `voidFunc` или `nonvoidFunc` в другом домене приложения.  
+*arg1... argN*<br/>
+От 0 до 15 параметров должны быть переданы `voidFunc` или `nonvoidFunc` в другом домене приложения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- В результате выполнения `voidFunc` или `nonvoidFunc` в заданный домен приложения.  
+ Результат выполнения `voidFunc` или `nonvoidFunc` в указанный домен приложения.  
   
 ## <a name="remarks"></a>Примечания  
  Аргументы функции передаются в `call_in_appdomain` не должны быть типами среды CLR.  

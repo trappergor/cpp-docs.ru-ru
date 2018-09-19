@@ -1,5 +1,5 @@
 ---
-title: -LIBPATH (дополнительный параметр Libpath) | Документы Microsoft
+title: -LIBPATH (дополнительный параметр Libpath) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,41 +22,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ccb94ad20735e81fc3d83f757cc0265cdc32169
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784281df23b0a8d43625766297b6cbbd20179c14
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372884"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717201"
 ---
 # <a name="libpath-additional-libpath"></a>Параметр /LIBPATH (дополнительный параметр libpath)
-```  
-/LIBPATH:dir  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Здесь:  
-  
- `dir`  
- Указывает путь, компоновщик будет поиска перед поиском по пути, указанного в параметре среды LIB.  
-  
-## <a name="remarks"></a>Примечания  
- Используйте параметр/LIBPATH, чтобы переопределить путь к библиотеке среды. Компоновщик будет сначала выполнить поиск в каталоге, указанном этим параметром и выполните поиск в каталоге, указанном в переменной среды LIB. Можно указать только один каталог для каждого вводимого параметра/LIBPATH. Если вы хотите указать несколько каталогов, необходимо указать несколько параметров/LIBPATH. Затем компоновщик выполняет поиск указанных каталогах в порядке.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Нажмите кнопку **компоновщика** папки.  
-  
-3.  Нажмите кнопку **Общие** страницу свойств.  
-  
-4.  Изменить **Дополнительные каталоги библиотек** свойство.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalLibraryDirectories%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+```
+/LIBPATH:dir
+```
+
+## <a name="parameters"></a>Параметры
+
+*dir*<br/>
+Указывает путь, компоновщик будет поиска, затем путь, указанный в параметре среды LIB.
+
+## <a name="remarks"></a>Примечания
+
+Параметр/LIBPATH переопределять путь окружения библиотеки. Компоновщик сначала попытайтесь найти в каталоге, указанном этим параметром и выполните поиск в каталоге, указанном в переменной среды LIB. Можно указать только один каталог для каждого вводимого параметра/LIBPATH. Если вы хотите указать несколько каталогов, необходимо указать несколько параметров/LIBPATH. Поиска указанные папки в порядке.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+
+1. Нажмите кнопку **компоновщика** папки.
+
+1. Нажмите кнопку **Общие** страницу свойств.
+
+1. Изменить **Дополнительные каталоги библиотек** свойство.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalLibraryDirectories%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
+[Параметры компоновщика](../../build/reference/linker-options.md)

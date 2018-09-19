@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da456b7caca59fb874f4da87a342162b53c09319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3da47c4d6c5af518660b5799b3bf9ae3f512a6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029225"
 ---
 # <a name="dll-import-and-export-functions"></a>Функции импорта и экспорта DLL
-**Блок, относящийся только к системам Microsoft**  
-  
- Наиболее полную и актуальную информацию по этой теме можно найти в статье [dllexport, dllimport](../cpp/dllexport-dllimport.md).  
-  
- Модификаторы класса хранения **dllimport** и `dllexport` — это расширения языка С для систем Microsoft. Эти модификаторы явным образом определяют интерфейс библиотеки DLL к ее клиенту (исполняемому файлу или другой библиотеке DLL). Объявление функции в качестве `dllexport` позволяет обойтись без файла определения модуля (.DEF). Кроме того, модификаторы **dllimport** и `dllexport` можно использовать с данными и объектами.  
-  
- Модификаторы класса хранения **dllimport** и `dllexport` должны использоваться с ключевым словом расширенного синтаксиса атрибутов `__declspec`, как показано в следующем примере:  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-#define DllExport   __declspec( dllexport )  
-  
-DllExport void func();  
-DllExport int i = 10;  
-DllExport int j;  
-DllExport int n;  
-```  
-  
- Дополнительные сведения о синтаксисе расширенных модификаторов класса хранения см. в статье [C Extended Storage-Class Attributes](../c-language/c-extended-storage-class-attributes.md) (Расширенные атрибуты классов хранения C).  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Определения функций в C](../c-language/c-function-definitions.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+Наиболее полную и актуальную информацию по этой теме можно найти в статье [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+
+Модификаторы класса хранения **dllimport** и `dllexport` — это расширения языка С для систем Microsoft. Эти модификаторы явным образом определяют интерфейс библиотеки DLL к ее клиенту (исполняемому файлу или другой библиотеке DLL). Объявление функции в качестве `dllexport` позволяет обойтись без файла определения модуля (.DEF). Кроме того, модификаторы **dllimport** и `dllexport` можно использовать с данными и объектами.
+
+Модификаторы класса хранения **dllimport** и `dllexport` должны использоваться с ключевым словом расширенного синтаксиса атрибутов `__declspec`, как показано в следующем примере:
+
+```
+#define DllImport   __declspec( dllimport )
+#define DllExport   __declspec( dllexport )
+
+DllExport void func();
+DllExport int i = 10;
+DllExport int j;
+DllExport int n;
+```
+
+Дополнительные сведения о синтаксисе расширенных модификаторов класса хранения см. в статье [C Extended Storage-Class Attributes](../c-language/c-extended-storage-class-attributes.md) (Расширенные атрибуты классов хранения C).
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Определения функций в C](../c-language/c-function-definitions.md)

@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4131 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4131 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6563d5faf3a9f050deb3cb7831c1a908739c8532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43de917b2a6aff38602a6118e599c0d9df262a70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291994"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033190"
 ---
 # <a name="compiler-warning-level-4-c4131"></a>Предупреждение компилятора (уровень 4) C4131
-"функция": используется декларатор старого стиля  
-  
- Указанное объявление функции имеет отличную от прототипа форму.  
-  
- Использующие старый стиль объявления функций следует преобразовать в форму прототипа.  
-  
- В следующем примере показан старый стиль объявления функции:  
-  
-```  
-// C4131.c  
-// compile with: /W4 /c  
-void addrec( name, id ) // C4131 expected  
-char *name;  
-int id;  
-{ }  
-```  
-  
- В следующем примере показана форма прототипа:  
-  
-```  
-void addrec( char *name, int id )  
-{ }  
+
+"функция": используется декларатор старого стиля
+
+Указанное объявление функции имеет отличную от прототипа форму.
+
+Использующие старый стиль объявления функций следует преобразовать в форму прототипа.
+
+В следующем примере показан старый стиль объявления функции:
+
+```
+// C4131.c
+// compile with: /W4 /c
+void addrec( name, id ) // C4131 expected
+char *name;
+int id;
+{ }
+```
+
+В следующем примере показана форма прототипа:
+
+```
+void addrec( char *name, int id )
+{ }
 ```

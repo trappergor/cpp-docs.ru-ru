@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f258740c32cf232c93926efb3efa98e2596ff108
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eafccc1a2dda9143a39516878851f2c3a62a2d32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103338"
 ---
 # <a name="file-position-in-append-mode"></a>Позиция файла в режиме добавления
-**ANSI 4.9.3** Индикатор позиции в файле потока в режиме добавления изначально указывает на начале или конец файла  
-  
- Когда файл открывается в режиме добавления, исходное положение индикатора позиции файла указывает на конец файла.  
-  
-## <a name="see-also"></a>См. также  
- [Функции библиотеки](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Индикатор позиции в файле потока в режиме добавления изначально указывает на начале или конец файла
+
+Когда файл открывается в режиме добавления, исходное положение индикатора позиции файла указывает на конец файла.
+
+## <a name="see-also"></a>См. также
+
+[Функции библиотеки](../c-language/library-functions.md)

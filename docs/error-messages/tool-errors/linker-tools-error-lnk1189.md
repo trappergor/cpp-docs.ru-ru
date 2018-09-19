@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1189 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1189 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c54181c042d51dc0a3317c81978b25b33d936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9527c7a741c34f9f75967d9d5465b65cbd1dcfe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301441"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087933"
 ---
 # <a name="linker-tools-error-lnk1189"></a>Ошибка средств компоновщика LNK1189
-LIBTOOMANYMEMBERS:: превышено предельное количество объектов в библиотеке  
-  
- Превышено предельное количество объектов в библиотеке, равное 65535.  
-  
- Чтобы устранить эту проблему, разделите библиотеку на две или несколько библиотек, содержащих меньше объектов или элементов.
+
+LIBTOOMANYMEMBERS:: превышено предельное количество объектов в библиотеке
+
+Превышено предельное количество объектов в библиотеке, равное 65535.
+
+Чтобы устранить эту проблему, разделите библиотеку на две или несколько библиотек, содержащих меньше объектов или элементов.

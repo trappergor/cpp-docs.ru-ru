@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85a31aea113514651fc3e81ac147b5ea2974920c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2ea52c91391800b25ab9a71d977300dd1705fb51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025533"
 ---
 # <a name="floating-limits"></a>Пределы констант с плавающей запятой
 
 **Блок, относящийся только к системам Microsoft**
 
-В следующей таблице представлены ограничения на значения констант с плавающей запятой. Эти ограничения также заданы в стандартном файле заголовка \<float.h >.  
+В следующей таблице представлены ограничения на значения констант с плавающей запятой. Эти ограничения также заданы в стандартном файле заголовка \<float.h >.
 
 ## <a name="limits-on-floating-point-constants"></a>Ограничения на константы с плавающей запятой
 
@@ -57,4 +57,4 @@ ms.locfileid: "39604298"
 
 ## <a name="see-also"></a>См. также
 
-[Пределы целых чисел](../cpp/integer-limits.md)  
+[Пределы целых чисел](../cpp/integer-limits.md)

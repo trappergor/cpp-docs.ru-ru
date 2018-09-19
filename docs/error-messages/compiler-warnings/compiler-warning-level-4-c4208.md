@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4208 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4208 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61f8b0a6a0ac61982bee79abb81f083d40a48f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ee87ad1d43b20c4d0a72b877b05b1ba4c084a1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292367"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064628"
 ---
 # <a name="compiler-warning-level-4-c4208"></a>Предупреждение компилятора (уровень 4) C4208
-использовано нестандартное расширение: delete [exp] — exp вычислено, но игнорируется  
-  
- С расширениями Майкрософт (/Ze), можно удалить массив с помощью значения в скобках с [оператор delete](../../cpp/delete-operator-cpp.md). Значение учитывается.  
-  
-```  
-// C4208.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int * MyArray = new int[18];  
-   delete [18] MyArray;      // C4208  
-   MyArray = new int[18];  
-   delete [] MyArray;        // ok  
-}  
-```  
-  
- Такие значения недопустимы в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+использовано нестандартное расширение: delete [exp] - exp вычислено, но игнорируется
+
+В расширениях Майкрософт (/Ze), можно удалить массив с помощью значения в скобках с [оператор delete](../../cpp/delete-operator-cpp.md). Значение учитывается.
+
+```
+// C4208.cpp
+// compile with: /W4
+int main()
+{
+   int * MyArray = new int[18];
+   delete [18] MyArray;      // C4208
+   MyArray = new int[18];
+   delete [] MyArray;        // ok
+}
+```
+
+Такие значения недопустимы в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

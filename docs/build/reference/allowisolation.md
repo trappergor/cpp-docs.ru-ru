@@ -18,33 +18,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9511ce2d94a426756581b87d863051da25a627b
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 12ee07a0ea6dbe2c3bea21aaa6b394b4c3e6f156
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571734"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704097"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
-Задает поведение нахождения файлов манифеста.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-/ALLOWISOLATION[:NO]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **/ ALLOWISOLATION** вынуждает операционную систему на поиск и загрузку манифеста.  
-  
- **/ ALLOWISOLATION** используется по умолчанию.  
-  
- **/ALLOWISOLATION:no** указывает, что исполняемые файлы загружены, как если бы без манифеста, а также причины [Справочник ЕDITBIN](../../build/reference/editbin-reference.md) присвоить `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` бит в необязательном заголовке `DllCharacteristics` поля.  
-  
- Если изоляция для исполняемого файла отключена, загрузчик Windows не пытается найти манифест приложения для нового процесса. Новый процесс не имеет контекста активации по умолчанию, даже в том случае, если отсутствует манифест в исполняемом файле сам или при наличии манифеста с именем *имя исполняемого файла*. exe.manifest.  
-  
-## <a name="see-also"></a>См. также  
- [Параметры EDITBIN](../../build/reference/editbin-options.md)   
- [/ ALLOWISOLATION (поиск манифеста)](../../build/reference/allowisolation-manifest-lookup.md)   
- [Ссылки на файлы манифеста](/windows/desktop/SbsCs/manifest-files-reference)
+
+Задает поведение нахождения файлов манифеста.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+
+/ALLOWISOLATION[:NO]
+```
+
+## <a name="remarks"></a>Примечания
+
+**/ ALLOWISOLATION** вынуждает операционную систему на поиск и загрузку манифеста.
+
+**/ ALLOWISOLATION** используется по умолчанию.
+
+**/ALLOWISOLATION:no** указывает, что исполняемые файлы загружены, как если бы без манифеста, а также причины [Справочник ЕDITBIN](../../build/reference/editbin-reference.md) присвоить `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` бит в необязательном заголовке `DllCharacteristics` поля.
+
+Если изоляция для исполняемого файла отключена, загрузчик Windows не пытается найти манифест приложения для нового процесса. Новый процесс не имеет контекста активации по умолчанию, даже в том случае, если отсутствует манифест в исполняемом файле сам или при наличии манифеста с именем *имя исполняемого файла*. exe.manifest.
+
+## <a name="see-also"></a>См. также
+
+[Параметры EDITBIN](../../build/reference/editbin-options.md)<br/>
+[/ ALLOWISOLATION (поиск манифеста)](../../build/reference/allowisolation-manifest-lookup.md)
+[ссылки на файлы манифеста](/windows/desktop/SbsCs/manifest-files-reference)

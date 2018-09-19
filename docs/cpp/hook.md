@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd5ebd1b70476fd4248d3e309dec967ea471cf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197401"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719294"
 ---
 # <a name="hook"></a>__hook
 
@@ -75,8 +75,8 @@ long __hook(
 
 - Управляемые события: *ReceiverClass* является классом приемника событий и `HandlerMethod` является обработчиком.
 
-*получатель* (необязательно)<br/>
-Указатель на экземпляр класса приемника событий. Если получатель не указан, по умолчанию используется класс приемника или структура, в которой **__hook** вызывается.
+*Получатель*<br/>
+(Необязательно) Указатель на экземпляр класса приемника событий. Если получатель не указан, по умолчанию используется класс приемника или структура, в которой **__hook** вызывается.
 
 ## <a name="usage"></a>Использование
 

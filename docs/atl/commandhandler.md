@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019475"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -29,7 +29,7 @@ ms.locfileid: "43752819"
 
 ## <a name="syntax"></a>Синтаксис
 
-```  
+```cpp
 LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
@@ -39,16 +39,16 @@ LRESULT CommandHandler(
 
 #### <a name="parameters"></a>Параметры
 
-*wNotifyCode*  
+*wNotifyCode*<br/>
 Код уведомления.
 
-*wID*  
+*wID*<br/>
 Идентификатор пункта меню, элемент управления или сочетаний клавиш.
 
-*hWndCtl*  
+*hWndCtl*<br/>
 Дескриптор окна элемента управления.
 
-*bHandled*  
+*bHandled*<br/>
 Карта наборов сообщений *bHandled* значение TRUE перед `CommandHandler` вызывается. Если `CommandHandler` не полностью обрабатывает сообщение, она должна задать *bHandled* значение false, чтобы указать, должна дальнейшей обработки сообщения.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -61,7 +61,7 @@ LRESULT CommandHandler(
 
 ## <a name="see-also"></a>См. также
 
-[Реализация окна](../atl/implementing-a-window.md)   
-[Схемы сообщений](../atl/message-maps-atl.md)   
+[Реализация окна](../atl/implementing-a-window.md)<br/>
+[Схемы сообщений](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

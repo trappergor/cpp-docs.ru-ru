@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2942 | Документы Microsoft
+title: Ошибка компилятора C2942 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55dc1fc5c2762751762b3798d28245224281ce67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024557750def49151d835545eec62bfc6f4727e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033203"
 ---
 # <a name="compiler-error-c2942"></a>Ошибка компилятора C2942
-"класс": идентификатор класса типа переопределен как формальный аргумент функции  
-  
- Универсальный класс или класс-шаблон нельзя использовать в качестве формального аргумента. Аргумент нельзя передать прямо в конструктор универсального класса или класса-шаблона.  
-  
- Следующий пример приводит к возникновению ошибки C2942:  
-  
-```  
-  
-// C2942.cpp  
-// compile with: /c  
-template<class T>  
-struct TC {};   
-void f(int TC<int>) {}   // C2942  
-  
-// OK  
-struct TC2 {};  
-void f(TC2 i) {}  
-```  
-  
- Ошибка C2942 также может возникнуть при использовании универсальных шаблонов:  
-  
-```  
-// C2942b.cpp  
-// compile with: /clr /c  
-generic<class T>  
-ref struct GC {};  
-void f(int GC<int>) {}   // C2942  
-ref struct GC2 { };  
-void f(int GC2) {}  
+
+"класс": идентификатор класса типа переопределен как формальный аргумент функции
+
+Универсальный класс или класс-шаблон нельзя использовать в качестве формального аргумента. Аргумент нельзя передать прямо в конструктор универсального класса или класса-шаблона.
+
+Следующий пример приводит к возникновению ошибки C2942:
+
+```
+
+// C2942.cpp
+// compile with: /c
+template<class T>
+struct TC {};
+void f(int TC<int>) {}   // C2942
+
+// OK
+struct TC2 {};
+void f(TC2 i) {}
+```
+
+Ошибка C2942 также может возникнуть при использовании универсальных шаблонов:
+
+```
+// C2942b.cpp
+// compile with: /clr /c
+generic<class T>
+ref struct GC {};
+void f(int GC<int>) {}   // C2942
+ref struct GC2 { };
+void f(int GC2) {}
 ```

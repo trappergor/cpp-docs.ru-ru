@@ -1,5 +1,5 @@
 ---
-title: copyin | Документы Microsoft
+title: copyin | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688249"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059333"
 ---
 # <a name="copyin"></a>copyin
-Позволяет потокам для доступа к значению главного потока для [threadprivate](../../../parallel/openmp/reference/threadprivate.md) переменной.  
+Позволяет потокам для доступа к значение главного потока для [threadprivate](../../../parallel/openmp/reference/threadprivate.md) переменной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,14 +32,13 @@ ms.locfileid: "33688249"
 copyin(var)  
 ```  
   
-## <a name="remarks"></a>Примечания  
- где  
+## <a name="parameters"></a>Параметры
   
- `var`  
- `threadprivate` Переменную, которая будет инициализироваться со значением переменной в главного потока, которое существовало до параллельной конструкции.  
+*var*<br/>
+`threadprivate` Переменную, которая будет инициализирован со значением переменной в основной поток, так как она существует до параллельной конструкции.  
   
 ## <a name="remarks"></a>Примечания  
- `copyin` применяется к следующие директивы:  
+ `copyin` область применения следующих директив:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
@@ -50,7 +49,7 @@ copyin(var)
  Дополнительные сведения см. в разделе [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).  
   
 ## <a name="example"></a>Пример  
- В разделе [threadprivate](../../../parallel/openmp/reference/threadprivate.md) пример использования `copyin`.  
+ См. в разделе [threadprivate](../../../parallel/openmp/reference/threadprivate.md) пример использования `copyin`.  
   
 ## <a name="see-also"></a>См. также  
  [Предложения](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -16,39 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f777b1de83b19727bca5e1b498c5380604f6688
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5b6712734cd7283558ad5776444586f8c0b3fa6e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404545"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077572"
 ---
 # <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
-**Блок, относящийся только к системам Microsoft**  
-  
- Сопоставляет 16-разрядный *wCode* 32-разрядное значение HRESULT.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```    
-static HRESULT WCodeToHRESULT(  
-   WORD wCode   
-) throw( );  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *WCode*  
- 16-разрядный *wCode* сопоставляться с 32-разрядное значение HRESULT.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- 32-разрядное значение HRESULT, сопоставленное с 16-разрядной *wCode*.  
-  
-## <a name="remarks"></a>Примечания  
- См. в разделе [WCode](../cpp/com-error-wcode.md) функция-член.  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [_com_error::WCode](../cpp/com-error-wcode.md)   
- [_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)   
- [Класс _com_error](../cpp/com-error-class.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+Сопоставляет 16-разрядный *wCode* 32-разрядное значение HRESULT.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+static HRESULT WCodeToHRESULT(
+   WORD wCode
+) throw( );
+```
+
+#### <a name="parameters"></a>Параметры
+
+*WCode*<br/>
+16-разрядный *wCode* сопоставляться с 32-разрядное значение HRESULT.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+32-разрядное значение HRESULT, сопоставленное с 16-разрядной *wCode*.
+
+## <a name="remarks"></a>Примечания
+
+См. в разделе [WCode](../cpp/com-error-wcode.md) функция-член.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[_com_error::WCode](../cpp/com-error-wcode.md)<br/>
+[_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)<br/>
+[Класс _com_error](../cpp/com-error-class.md)

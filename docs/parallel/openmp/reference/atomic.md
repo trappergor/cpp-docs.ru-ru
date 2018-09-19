@@ -1,5 +1,5 @@
 ---
-title: atomic | Документы Microsoft
+title: atomic | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6287ff3c44d508a3e4293340e652edb201282f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e7e9e9ecad2f6ea53e2f922799340eee47dd4a7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037493"
 ---
 # <a name="atomic"></a>атомарный
-Указывает, что области памяти, которая будет обновляться автоматически.  
+Указывает, что ячейку памяти, которая обновляется атомарно.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,8 +34,8 @@ ms.locfileid: "33694411"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `expression`  
- Инструкции, содержащей lvalue, расположение памяти, которую необходимо защитить от несколько операций записи. Дополнительные сведения о формах допустимые выражения см. в спецификации OpenMP.  
+*Выражение*<br/>
+Инструкции, содержащей lvalue местоположением памяти, необходимо обеспечить защиту от операций записи. Дополнительные сведения о формах допустимые выражения см. в спецификации OpenMP.  
   
 ## <a name="remarks"></a>Примечания  
  `atomic` Директива поддерживает без предложения OpenMP.  

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3632 | Документы Microsoft
+title: Ошибка компилятора C3632 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7f41465cf8181b7f19aa4267fd680e49a04b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdacb6463e99d4cb125199a32dfc5ef01ea76e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110085"
 ---
 # <a name="compiler-error-c3632"></a>Ошибка компилятора C3632
-«событие»: недопустимый тип события для конструкции  
-  
- [__event](../../cpp/event.md) объявления являются недопустимыми во всех конструкциях.  
-  
- C3632 доступен только с помощью параметра компилятора устаревшие **/CLR: oldSyntax**.  
+
+«событие»: недопустимый тип события для построения
+
+[__event](../../cpp/event.md) объявления являются недопустимыми во всех конструкциях.
+
+C3632 доступен только с помощью параметра компилятора устаревшие **/CLR: oldSyntax**.
