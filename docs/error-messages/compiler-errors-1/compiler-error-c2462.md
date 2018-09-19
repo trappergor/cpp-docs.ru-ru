@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2462 | Документы Microsoft
+title: Ошибка компилятора C2462 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce82ed15bdb8844f69abc260446c1af2fd4a0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65df7f4fe7f3822f2723a1709751e3b9b0f23ade
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198564"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082861"
 ---
 # <a name="compiler-error-c2462"></a>Ошибка компилятора C2462
-«Идентификатор»: не удается определить тип в «выражении new»  
-  
- Не удается определить тип в поле операнда `new` оператор. Поместите определение типа в отдельной инструкции.  
-  
- Следующий пример приводит к возникновению ошибки C2462:  
-  
-```  
-// C2462.cpp  
-int main() {  
-   new struct S { int i; };   // C2462  
-}  
+
+«Идентификатор»: не удается определить тип в «выражении new»
+
+Не удается определить тип в поле операнда `new` оператор. Поместите определение типа в отдельном выражении.
+
+Следующий пример приводит к возникновению ошибки C2462:
+
+```
+// C2462.cpp
+int main() {
+   new struct S { int i; };   // C2462
+}
 ```

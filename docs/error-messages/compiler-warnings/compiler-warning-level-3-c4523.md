@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4523 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 3) C4523 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4dc1e95b60b36b42d8617611a15aff966386c33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06a76aaf4878b9238da6d34de66ef40a260a5a5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290066"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118535"
 ---
 # <a name="compiler-warning-level-3-c4523"></a>Предупреждение компилятора (уровень 3) C4523
-«класс»: заданы несколько деструкторов  
-  
- Класс имеет несколько деструкторов.
+
+«класс»: заданы несколько деструкторов
+
+Класс имеет несколько деструкторов.

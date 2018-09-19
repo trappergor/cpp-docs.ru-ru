@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dcf5cbf6522d90b6338b817eebac434c81bf7c9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080692"
 ---
 # <a name="crgn-class"></a>Crgn-класс
 Инкапсулирует область интерфейса графических устройств Windows (GDI).  
@@ -76,13 +76,13 @@ class CRgn : public CGdiObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRgn::CRgn](#crgn)|Создает объект `CRgn`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRgn::CombineRgn](#combinergn)|Наборы `CRgn` таким образом, чтобы она эквивалентна объединение двух указанных `CRgn` объектов.|  
 |[CRgn::CopyRgn](#copyrgn)|Наборы `CRgn` таким образом, чтобы он является копией указанного `CRgn` объекта.|  
@@ -106,7 +106,7 @@ class CRgn : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRgn::operator HRGN](#operator_hrgn)|Возвращает дескриптор Windows, содержащийся в `CRgn` объекта.|  
   
@@ -326,13 +326,12 @@ BOOL CreatePolygonRgn(
  *lpPoints*  
  Указывает на массив из `POINT` структур или массив `CPoint` объектов. Каждая структура указывает координаты x и y координаты одной вершины многоугольника. `POINT` Структура имеет следующий вид:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *nCount*  
  Указывает количество `POINT` структуры или `CPoint` объектов в массиве, на которые указывают *lpPoints*.  
@@ -372,13 +371,12 @@ BOOL CreatePolyPolygonRgn(
  *lpPoints*  
  Указывает на массив из `POINT` структур или массив `CPoint` объектов, определяющего вершины закрашиваемого многоугольников. Каждого многоугольника должны быть явно закрыты, так как система не закрывает их автоматически. Последовательно указываются многоугольников. `POINT` Структура имеет следующий вид:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *lpPolyCounts*  
  Указывает массив целых чисел. Первое целое число указывает количество вершин в первом многоугольника в *lpPoints* массив, второе указывает количество вершин в многоугольник, второй и т. д.  
@@ -453,17 +451,14 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
  *lpRect*  
  Указывает на `RECT` структуры или `CRect` , содержащий логические координаты верхнего левого и правого нижнего углов области. `RECT` Структура имеет следующий вид:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если операция выполнена успешно; в противном случае 0.  
@@ -715,17 +710,14 @@ BOOL RectInRegion(LPCRECT lpRect) const;
  *lpRect*  
  Указывает на `RECT` структуры или `CRect` объекта. `RECT` Структура имеет следующий вид:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если они вызваны любую часть указанного прямоугольника в пределах области; в противном случае 0.  

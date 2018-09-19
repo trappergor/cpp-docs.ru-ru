@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0012 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0012 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7043eaf6654670935301c1f49ba88aed5745a96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024811c13fb27cb2da88bdddc9965d8a124e341a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135910"
 ---
 # <a name="expression-evaluator-error-cxx0012"></a>Ошибка вычислителя выражений CXX0012
-отсутствует левая фигурная скобка  
-  
- Выражение содержит несбалансированной фигурную скобку. Повторно введите выражение с балансировкой фигурные скобки.  
-  
- Эта ошибка идентична ошибке CAN0012.
+
+отсутствует открывающая фигурная скобка
+
+Выражение содержит несбалансированное фигурную скобку. Повторно введите выражение с сбалансированной фигурные скобки.
+
+Эта ошибка идентична ошибке CAN0012.

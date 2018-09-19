@@ -41,14 +41,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0179bbc68bb6ed60f6fadf26f98be492c2eeb4c1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e1f22b0206499b227b8b7812e004e46f565d803a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575518"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105418"
 ---
 # <a name="cutlprops-class"></a>Класс CUtlProps
+
 Реализует свойства для различных интерфейсов свойство OLE DB (например, `IDBProperties`, `IDBProperties`, и `IRowsetInfo`).  
   
 ## <a name="syntax"></a>Синтаксис
@@ -59,11 +60,13 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *T*  
- Класс, содержащий `BEGIN_PROPSET_MAP`.  
+
+*T*<br/>
+Класс, содержащий `BEGIN_PROPSET_MAP`.  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldb.h  
+
+**Заголовок:** atldb.h  
 
 ## <a name="members"></a>Участники  
   
@@ -78,13 +81,15 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 |[SetPropValue](#setpropvalue)|Задает свойство в наборе свойств.|  
   
 ## <a name="remarks"></a>Примечания  
- Большая часть этого класса является элементом реализации.  
+
+Большая часть этого класса является элементом реализации.  
   
- `CUtlProps` содержит два члена для задания свойств внутренне: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) и [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
+`CUtlProps` содержит два члена для задания свойств внутренне: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) и [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
   
- Дополнительные сведения о макросы, используемые в сопоставление набора свойств, см. в разделе [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) и [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).  
+Дополнительные сведения о макросы, используемые в сопоставление набора свойств, см. в разделе [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) и [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).  
   
 ## <a name="getpropvalue"></a> CUtlProps::GetPropValue
+
 Получает свойство из набора свойств.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -96,19 +101,22 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *pguidPropSet*  
- [in] Идентификатор GUID для набор свойств.  
+
+*pguidPropSet*<br/>
+[in] Идентификатор GUID для набор свойств.  
   
- *dwPropId*  
- [in] Индекс свойства.  
+*dwPropId*<br/>
+[in] Индекс свойства.  
   
- *pvValue*  
- [out] Указатель на значение variant, содержащий новое значение свойства.  
+*pvValue*<br/>
+[out] Указатель на значение variant, содержащий новое значение свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `Failure` Сбой и S_OK в случае успешного выполнения.
+
+`Failure` Сбой и S_OK в случае успешного выполнения.
 
 ## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
+
 Используется для проверки значения перед заданием свойства.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -119,19 +127,23 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *iCurSet*  
- Индекс в массиве набора свойств. нуль, если есть только одно свойство набор.  
+
+*iCurSet*<br/>
+Индекс в массиве набора свойств. нуль, если есть только одно свойство набор.  
   
- *pDBProp*  
- Идентификатор свойства и новое значение в [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) структуры.  
+*pDBProp*<br/>
+Идентификатор свойства и новое значение в [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT. По умолчанию возвращает значение S_OK.  
+
+Стандартный HRESULT. По умолчанию возвращает значение S_OK.  
   
 ### <a name="remarks"></a>Примечания  
- Если у вас есть все процедуры проверки, которые вы хотите запустить на значение, которое вы собираетесь использовать для задания свойства, необходимо переопределить эту функцию. Например можно проверить DBPROP_AUTH_PASSWORD из таблицы пароль, чтобы определить, является допустимым значением. 
+
+Если у вас есть все процедуры проверки, которые вы хотите запустить на значение, которое вы собираетесь использовать для задания свойства, необходимо переопределить эту функцию. Например можно проверить DBPROP_AUTH_PASSWORD из таблицы пароль, чтобы определить, является допустимым значением. 
 
 ## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
+
 Обрабатывает запросы к необязательный интерфейс, когда потребитель вызывает метод на одном из объекта создания интерфейсов.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -141,29 +153,32 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *riid*  
- [in] Идентификатор IID запрошенного интерфейса. Дополнительные сведения см. в описании *riid* параметр `ICommand::Execute` в *Справочник программиста OLE DB по* (в *MDAC SDK*).  
+
+*riid*<br/>
+[in] Идентификатор IID запрошенного интерфейса. Дополнительные сведения см. в описании *riid* параметр `ICommand::Execute` в *Справочник программиста OLE DB по* (в *MDAC SDK*).  
   
 ### <a name="remarks"></a>Примечания  
- `OnInterfaceRequested` обрабатывает запросы потребителей к необязательный интерфейс в том случае, когда потребитель вызывает метод на одном из объекта создания интерфейсов (такие как `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`, или `ICommand`). Оно задает соответствующее свойство OLE DB для запрошенного интерфейса. Например, если потребитель запрашивает `IID_IRowsetLocate`, `OnInterfaceRequested` задает `DBPROP_IRowsetLocate` интерфейс. Это обеспечивает правильные данные о состоянии во время создания набора строк.  
+
+`OnInterfaceRequested` обрабатывает запросы потребителей к необязательный интерфейс в том случае, когда потребитель вызывает метод на одном из объекта создания интерфейсов (такие как `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`, или `ICommand`). Оно задает соответствующее свойство OLE DB для запрошенного интерфейса. Например, если потребитель запрашивает `IID_IRowsetLocate`, `OnInterfaceRequested` задает `DBPROP_IRowsetLocate` интерфейс. Это обеспечивает правильные данные о состоянии во время создания набора строк.  
   
- Этот метод вызывается, когда потребитель вызывает метод `IOpenRowset::OpenRowset` или `ICommand::Execute`.  
+Этот метод вызывается, когда потребитель вызывает метод `IOpenRowset::OpenRowset` или `ICommand::Execute`.  
   
- Если объект-получатель открывает объект, а также запрашивает необязательный интерфейс, поставщик следует задать свойство, связанное с этого интерфейса в значение VARIANT_TRUE. Чтобы разрешить обработку свойств `OnInterfaceRequested` вызывается перед поставщика `Execute` вызывается метод. По умолчанию `OnInterfaceRequested` обрабатывает следующие интерфейсы:  
+Если объект-получатель открывает объект, а также запрашивает необязательный интерфейс, поставщик следует задать свойство, связанное с этого интерфейса в значение VARIANT_TRUE. Чтобы разрешить обработку свойств `OnInterfaceRequested` вызывается перед поставщика `Execute` вызывается метод. По умолчанию `OnInterfaceRequested` обрабатывает следующие интерфейсы:  
   
--   `IRowsetLocate`  
+- `IRowsetLocate`  
   
--   `IRowsetChange`  
+- `IRowsetChange`  
   
--   `IRowsetUpdate`  
+- `IRowsetUpdate`  
   
--   `IConnectionPointContainer`  
+- `IConnectionPointContainer`  
   
--   `IRowsetScroll`  
+- `IRowsetScroll`  
   
- Если вы хотите обрабатывать другие интерфейсы, переопределите эту функцию в классе источника, сеанс, команду или набор строк данных для функций процесса. Переопределение должны проходить через интерфейсы обычный set или get свойства убедитесь, что установка свойств устанавливает какие-либо связанные свойства (см. в разделе [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
+Если вы хотите обрабатывать другие интерфейсы, переопределите эту функцию в классе источника, сеанс, команду или набор строк данных для функций процесса. Переопределение должны проходить через интерфейсы обычный set или get свойства убедитесь, что установка свойств устанавливает какие-либо связанные свойства (см. в разделе [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
 
 ## <a name="onpropertychanged"></a> CUtlProps::OnPropertyChanged
+
 Вызывается после задания свойства для обработки связанных свойств.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -174,24 +189,29 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *iCurSet*  
- Индекс в массиве набора свойств. нуль, если есть только одно свойство набор.  
+
+*iCurSet*<br/>
+Индекс в массиве набора свойств. нуль, если есть только одно свойство набор.  
   
- *pDBProp*  
- Идентификатор свойства и новое значение в [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) структуры.  
+*pDBProp*<br/>
+Идентификатор свойства и новое значение в [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT. По умолчанию возвращает значение S_OK.  
+
+Стандартный HRESULT. По умолчанию возвращает значение S_OK.  
   
 ### <a name="remarks"></a>Примечания  
- Если вы хотите обрабатывать связанные свойства, такие как закладки и обновления, значения которых зависят от значения другого свойства, необходимо переопределить эту функцию.  
+
+Если вы хотите обрабатывать связанные свойства, такие как закладки и обновления, значения которых зависят от значения другого свойства, необходимо переопределить эту функцию.  
   
 ### <a name="example"></a>Пример  
- В этой функции пользователь получает идентификатор свойства из `DBPROP*` параметра. Теперь можно сравнить идентификатор к свойству в цепочку. Если свойство найдено, `SetProperties` вызывается со свойством, которое теперь устанавливается вместе с другим свойством. В данном случае, если вы получаете `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, или `DBPROP_ORDEREDBOOKMARKS` свойство, можно установить `DBPROP_BOOKMARKS` свойство.  
+
+В этой функции пользователь получает идентификатор свойства из `DBPROP*` параметра. Теперь можно сравнить идентификатор к свойству в цепочку. Если свойство найдено, `SetProperties` вызывается со свойством, которое теперь устанавливается вместе с другим свойством. В данном случае, если вы получаете `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, или `DBPROP_ORDEREDBOOKMARKS` свойство, можно установить `DBPROP_BOOKMARKS` свойство.  
   
- [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]  
+[!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]  
   
 ## <a name="setpropvalue"></a> CUtlProps::SetPropValue
+
 Задает свойство в наборе свойств.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -203,18 +223,21 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *pguidPropSet*  
- [in] Идентификатор GUID для набор свойств.  
+
+*pguidPropSet*<br/>
+[in] Идентификатор GUID для набор свойств.  
   
- *dwPropId*  
- [in] Индекс свойства.  
+*dwPropId*<br/>
+[in] Индекс свойства.  
   
- *pvValue*  
- [in] Указатель на значение variant, содержащий новое значение свойства.  
+*pvValue*<br/>
+[in] Указатель на значение variant, содержащий новое значение свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `Failure` Сбой и S_OK в случае успешного выполнения. 
+
+`Failure` Сбой и S_OK в случае успешного выполнения. 
 
 ## <a name="see-also"></a>См. также  
- [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

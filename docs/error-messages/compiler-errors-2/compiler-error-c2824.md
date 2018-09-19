@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2824 | Документы Microsoft
+title: Ошибка компилятора C2824 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc654f60d9494480e0551f4de3ec1e041938cea2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 310156e82f69622a5c4a2315e204ccaa146e2c00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237168"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077416"
 ---
 # <a name="compiler-error-c2824"></a>Ошибка компилятора C2824
-Тип возвращаемого значения для «operator new» должен быть "void *"  
-  
- Не на основе указателей, при перегрузке оператора `new` должен возвращать `void *`.  
-  
- Следующий пример приводит к возникновению ошибки C2824:  
-  
-```  
-// C2824.cpp  
-// compile with: /c  
-class   A {  
-   A* operator new(size_t i, char *m);   // C2824  
-   // try the following line instead  
-   // void* operator new(size_t i, char *m);  
-};  
+
+возвращаемый тип для «operator new» должен быть "void *"
+
+Не на основе указателей, при перегрузке оператора `new` должен возвращать `void *`.
+
+Следующий пример приводит к возникновению ошибки C2824:
+
+```
+// C2824.cpp
+// compile with: /c
+class   A {
+   A* operator new(size_t i, char *m);   // C2824
+   // try the following line instead
+   // void* operator new(size_t i, char *m);
+};
 ```

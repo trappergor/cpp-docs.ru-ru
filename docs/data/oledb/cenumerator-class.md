@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117482"
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
+
 Использует объект перечисления OLE DB, который предоставляет [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) интерфейс, чтобы вернуть набор строк, описывающий все источники данных и перечислителей.  
   
 ## <a name="syntax"></a>Синтаксис
@@ -51,7 +52,8 @@ class CEnumerator :
 ```  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h
+
+**Заголовок:** atldbcli.h
   
 ## <a name="members"></a>Участники  
   
@@ -64,9 +66,11 @@ class CEnumerator :
 |[Открыть](#open)|Открывает перечислитель.|  
   
 ## <a name="remarks"></a>Примечания  
- Вы можете получить `ISourcesRowset` данных косвенно от этого класса.  
+
+Вы можете получить `ISourcesRowset` данных косвенно от этого класса.  
 
 ## <a name="find"></a> CEnumerator::Find
+
 Выполняет поиск указанного имени среди доступных поставщиков.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -76,16 +80,20 @@ bool Find(TCHAR* szSearchName) throw();
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *szSearchName*  
- [in] Имя для поиска.  
+
+*szSearchName*<br/>
+[in] Имя для поиска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если имя найдено. В противном случае **false**.  
+
+**значение true,** Если имя найдено. В противном случае **false**.  
   
 ### <a name="remarks"></a>Примечания  
- Это имя сопоставляется `SOURCES_NAME` членом [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) интерфейс.  
+
+Это имя сопоставляется `SOURCES_NAME` членом [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) интерфейс.  
   
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
+
 Выполняет синтаксический анализ отображаемое имя извлекаемого компонента строки, который можно преобразовать в моникер.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -98,16 +106,19 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ppMoniker*  
- [out] Синтаксический анализ моникера из отображаемого имени ([CEnumeratorAccessor::m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) текущей строки.  
+
+*ppMoniker*<br/>
+[out] Синтаксический анализ моникера из отображаемого имени ([CEnumeratorAccessor::m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) текущей строки.  
   
- *lpszDisplayName*  
- [in] Отображаемое имя для синтаксического анализа.  
+*lpszDisplayName*<br/>
+[in] Отображаемое имя для синтаксического анализа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
 
 ## <a name="open"></a> CEnumerator::Open
+
 Привязывает моникера для перечислителя, если один указан, а затем получает набор строк для перечислителя, вызывая [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -121,19 +132,22 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *pMoniker*  
- [in] Указатель на моникер для перечислителя.  
+
+*pMoniker*<br/>
+[in] Указатель на моникер для перечислителя.  
   
- *pClsid*  
- [in] Указатель на `CLSID` перечислителя.  
+*pClsid*<br/>
+[in] Указатель на `CLSID` перечислителя.  
   
- *enumerator*  
- [in] Ссылка на перечислитель.  
+*enumerator*<br/>
+[in] Ссылка на перечислитель.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ## <a name="see-also"></a>См. также  
- [DBViewer](../../visual-cpp-samples.md)   
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

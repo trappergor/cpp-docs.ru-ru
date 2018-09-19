@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3e29c3eed99c95ee92841413ceaca6e17e8565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 277951a5425a75c9769c5a2c4104421303f677c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755070"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065345"
 ---
 # <a name="ccomobjectstack-class"></a>Класс CComObjectStack
 
@@ -36,13 +36,13 @@ ms.locfileid: "43755070"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class  Base>  
+template <class  Base>
 class CComObjectStack : public Base
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также как и из любого другого интерфейса, которые должны поддерживаться в объекте.
 
 ## <a name="members"></a>Участники
@@ -170,7 +170,7 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Класс CComObject](../../atl/reference/ccomobject-class.md)   
-[Класс CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)   
+[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Класс CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Класс CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

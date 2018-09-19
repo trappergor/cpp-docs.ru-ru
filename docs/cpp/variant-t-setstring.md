@@ -16,32 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 090fd7ed027738ebe7bc9276e3b3f124b9212c4a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 52ea719a2c9296ca1e64d881ac150994c041e206
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018734"
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
-**Блок, относящийся только к системам Microsoft**  
-  
- Присваивает строку данному объекту `_variant_t`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void SetString(const char* pSrc);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *pSrc*  
- Указатель на строку знаков.  
-  
-## <a name="remarks"></a>Примечания  
- Преобразует символьную строку ANSI в строку `BSTR` Юникода и присваивает ее данному объекту `_variant_t`.  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Класс _variant_t](../cpp/variant-t-class.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+Присваивает строку данному объекту `_variant_t`.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void SetString(const char* pSrc);
+```
+
+#### <a name="parameters"></a>Параметры
+
+*pSrc*<br/>
+Указатель на строку знаков.
+
+## <a name="remarks"></a>Примечания
+
+Преобразует символьную строку ANSI в строку `BSTR` Юникода и присваивает ее данному объекту `_variant_t`.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Класс _variant_t](../cpp/variant-t-class.md)

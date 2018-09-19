@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b712b44c2908df1163380a76909884e4ab87d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 788188814de37214f397632161de55b54a28421e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755759"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073269"
 ---
 # <a name="default-atl-project-configurations"></a>Конфигурации проектов ATL по умолчанию
 
@@ -34,8 +34,8 @@ ms.locfileid: "43755759"
 
 ## <a name="see-also"></a>См. также
 
-[Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Работа со свойствами проектов](../../ide/working-with-project-properties.md)   
-[Диалоговое окно «Диспетчер конфигурации»](/visualstudio/ide/understanding-build-configurations)   
+[Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Работа со свойствами проектов](../../ide/working-with-project-properties.md)<br/>
+[Диалоговое окно «Диспетчер конфигурации»](/visualstudio/ide/understanding-build-configurations)<br/>
 [Компилирование и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

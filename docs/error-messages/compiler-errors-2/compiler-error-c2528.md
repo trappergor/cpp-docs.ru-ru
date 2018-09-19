@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2528 | Документы Microsoft
+title: Ошибка компилятора C2528 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 347330600e9b912d50522532f0c64e789e385520
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c588457743c601e31c24fd0a53de652477fbf05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072606"
 ---
 # <a name="compiler-error-c2528"></a>Ошибка компилятора C2528
-«Имя»: недопустимый указатель на ссылку  
-  
- Невозможно объявить указатель на ссылку. Разыменуйте переменной перед объявлением указателя на него.  
-  
- Следующий пример приводит к возникновению ошибки C2528:  
-  
-```  
-// C2528.cpp  
-int i;  
-int &ir = i;  
-int & (*irptr) = ir;    // C2528  
+
+«name»: недопустимый указатель на ссылку
+
+Не удается объявить указатель на ссылку. Разыменование переменной перед объявлением указателя к нему.
+
+Следующий пример приводит к возникновению ошибки C2528:
+
+```
+// C2528.cpp
+int i;
+int &ir = i;
+int & (*irptr) = ir;    // C2528
 ```

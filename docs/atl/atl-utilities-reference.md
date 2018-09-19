@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc56d4e0f9c31a9b37fb5044a284a229a6ed669
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eadb1edc174d07fbc6e9ef1bfb24b436bd76033d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758496"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056154"
 ---
 # <a name="atl-utilities-reference"></a>Справочник по служебным программам ATL
 
@@ -68,5 +68,5 @@ ms.locfileid: "43758496"
 
 ## <a name="see-also"></a>См. также
 
-[Основные понятия](../atl/active-template-library-atl-concepts.md)   
+[Основные понятия](../atl/active-template-library-atl-concepts.md)<br/>
 [Компоненты ATL COM Desktop](../atl/atl-com-desktop-components.md)

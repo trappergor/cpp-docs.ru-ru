@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4631 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4631 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc158f56344e3c81d48deba3fe1c5cf29efa1404
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c20493005933570df97a8e03bab7acc8bd4ae28f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053808"
 ---
 # <a name="compiler-warning-level-1-c4631"></a>Предупреждение компилятора (уровень 1) C4631
-MSXML или XPath недоступны, комментарии XML-документа не будут обработаны. reason  
-  
- В установке среды CLR отсутствуют необходимые файлы для поддержки обработки DOC-комментариев. Переустановите среду CLR.
+
+MSXML или XPath недоступны, комментарии XML-документа не будут обработаны. reason
+
+В установке среды CLR отсутствуют необходимые файлы для поддержки обработки DOC-комментариев. Переустановите среду CLR.

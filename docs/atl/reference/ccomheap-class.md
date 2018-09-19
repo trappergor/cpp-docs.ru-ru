@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09696f6a13c11fbb37fa6e89ccb9b1241cadd0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b38aabbb418a355f85917a2d287c2f473cb2e7df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062921"
 ---
 # <a name="ccomheap-class"></a>Класс CComHeap
 
@@ -80,7 +80,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBytes*  
+*nBytes*<br/>
 Запрошенное число байтов в новом блоке памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -103,7 +103,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.
 
 ### <a name="remarks"></a>Примечания
@@ -120,7 +120,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -141,10 +141,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти.
 
-*nBytes*  
+*nBytes*<br/>
 Запрошенное число байтов в новом блоке памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -159,10 +159,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Образец DynamicConsumer](../../visual-cpp-samples.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)   
-[Класс CLocalHeap](../../atl/reference/clocalheap-class.md)   
-[Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
-[Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+[Образец DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
+[Класс CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
+[Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
+[Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
 [Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)

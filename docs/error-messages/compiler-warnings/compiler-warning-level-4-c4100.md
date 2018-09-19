@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4100 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4100 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3cf831590af2e1f2f7cd13d93c9d13ba217e11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6ad1b8bab287f4c16b00781e90351bbb204aa91
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292809"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099472"
 ---
 # <a name="compiler-warning-level-4-c4100"></a>Предупреждение компилятора (уровень 4) C4100
-«Идентификатор»: неиспользованный формальный параметр  
-  
- Формальный параметр не используется в теле функции. Неиспользуемые параметр учитывается.  
-  
- C4100 также могут быть выданы, когда код вызывает деструктор, в противном случае неиспользуемых параметр типа-примитива.  Это является ограничением компилятора Visual C++.  
-  
- Следующий пример приводит к возникновению ошибки C4100:  
-  
-```  
-// C4100.cpp  
-// compile with: /W4  
-void func(int i) {   // C4100, delete the unreferenced parameter to  
-                     //resolve the warning  
-   // i;   // or, add a reference like this  
-}  
-  
-int main()  
-{  
-   func(1);  
-}  
+
+«Идентификатор»: неиспользованный формальный параметр
+
+Формальный параметр не используется в теле функции. Неиспользованный параметр игнорируется.
+
+C4100 также может быть выпущен, когда код вызывает деструктор для неиспользованного параметра типа-примитива.  Это ограничение компилятора Visual C++.
+
+Следующий пример приводит к возникновению ошибки C4100:
+
+```
+// C4100.cpp
+// compile with: /W4
+void func(int i) {   // C4100, delete the unreferenced parameter to
+                     //resolve the warning
+   // i;   // or, add a reference like this
+}
+
+int main()
+{
+   func(1);
+}
 ```

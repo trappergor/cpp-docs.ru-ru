@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2170 | Документы Microsoft
+title: Ошибка компилятора C2170 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad0d19dff10d04d155d8071ffb349664f6b3104e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b75d4c54bc6ec24cb182f3b6fb37ff4b8cd1ddfc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055732"
 ---
 # <a name="compiler-error-c2170"></a>Ошибка компилятора C2170
-«Идентификатор»: не объявлена как функция, не может быть встроенной  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.  
-  
-1.  Директива pragma `intrinsic` используется для элемента, не являющихся функциями.  
-  
-2.  Директива pragma `intrinsic` используется для функции, не имеющей форму.
+
+«Идентификатор»: не объявлена как функция, не может быть встроенной
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.
+
+1. Директива pragma `intrinsic` используется для элемента, не функции.
+
+1. Директива pragma `intrinsic` используется для функции, не имеющей форму.

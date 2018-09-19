@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272c9674270c1c600fee697dd77d050d6adb4e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 79cace12447eccb9ac7dc560b6add45bd0dc81c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045085"
 ---
 # <a name="catlfilemappingbase-class"></a>Класс CAtlFileMappingBase
 
@@ -89,13 +89,13 @@ class CAtlFileMappingBase
 Конструктор.
 
 ```
-CAtlFileMappingBase(CAtlFileMappingBase& orig);  
+CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*ORIG*  
+*ORIG*<br/>
 Исходный объект сопоставления файлов для копирования для создания нового объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -128,7 +128,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*ORIG*  
+*ORIG*<br/>
 Исходный объект сопоставления файлов для копирования из.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -190,19 +190,19 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Параметры
 
-*hFile*  
+*hFile*<br/>
 Дескриптор файла, из которого создается объект сопоставления. *hFile* должен быть допустимым и не может быть присвоено значение INVALID_HANDLE_VALUE.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Размер сопоставления. Если значение равно 0, объект сопоставления файлов максимальный размер равен текущий размер файла, определенного *hFile.*
 
-*nOffset*  
+*nOffset*<br/>
 Смещение файла, в котором начинается сопоставление. Значение смещения должно быть кратно гранулярность выделения памяти системы.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 Защита, требуемого для представления файла, при сопоставлении файла. См. в разделе *flProtect* в [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) в пакете Windows SDK.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -233,22 +233,22 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>Параметры
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Размер сопоставления. Если значение равно 0, максимальный размер объекта сопоставления файлов равен текущий размер сопоставления файлов объекта, идентифицируемое по *szName*.
 
-*szName*  
+*szName*<br/>
 Имя объекта сопоставления.
 
-*pbAlreadyExisted*  
+*pbAlreadyExisted*<br/>
 Указывает на значение BOOL, которой присваивается значение TRUE, если объект сопоставления уже существует.
 
-*lpsa*  
+*lpsa*<br/>
 Указатель на `SECURITY_ATTRIBUTES` структуру, которая указывает, может ли возвращаемый дескриптор быть унаследован дочерними процессами. См. в разделе *lpAttributes* в [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) в пакете Windows SDK.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 Защита, требуемого для представления файла, при сопоставлении файла. См. в разделе *flProtect* в `CreateFileMapping` в пакете Windows SDK.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -273,16 +273,16 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>Параметры
 
-*szName*  
+*szName*<br/>
 Имя объекта сопоставления. Если имеется открытый дескриптор в объект сопоставления файлов с таким именем и дескриптор безопасности в объект сопоставления не конфликтует с *dwViewDesiredAccess* параметр, откройте операция прошла успешно.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Размер сопоставления. Если значение равно 0, максимальный размер объекта сопоставления файлов равен текущий размер сопоставления файлов объекта, идентифицируемое по *szName*.
 
-*nOffset*  
+*nOffset*<br/>
 Смещение файла, в котором начинается сопоставление. Значение смещения должно быть кратно гранулярность выделения памяти системы.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -303,7 +303,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>Параметры
 
-*ORIG*  
+*ORIG*<br/>
 Текущий объект сопоставления файлов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -328,5 +328,5 @@ HRESULT Unmap() throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)   
+[Класс CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

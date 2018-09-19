@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0010 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0010 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed62ecba1d25882a95f6555c48d43b3ae405110
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bcc7231f3dca4c46c2ace410b9444c472880ff7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086802"
 ---
 # <a name="expression-evaluator-error-cxx0010"></a>Ошибка вычислителя выражений CXX0010
-отсутствует левая квадратная скобка  
-  
- Выражение содержит несогласованные квадратные скобки. Перепишите выражение квадратных скобок.  
-  
- Эта ошибка идентична ошибке CAN0010.
+
+отсутствует открывающая скобка
+
+Выражение содержит несогласованные квадратные скобки. Повторно введите выражение с помощью квадратных скобок.
+
+Эта ошибка идентична ошибке CAN0010.

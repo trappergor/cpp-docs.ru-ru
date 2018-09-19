@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c1095df6caae94cac86e5e205507e0ed9eeb98e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075726"
 ---
 # <a name="catlmap-class"></a>Класс CAtlMap
 
@@ -70,15 +70,16 @@ class CAtlMap
 
 #### <a name="parameters"></a>Параметры
 
-*K*  
+*K*<br/>
 Тип ключа элемента.
 
-*V* значение типа элемента.
+*V*<br/>
+Тип значения элемента.
 
-*KTraits*  
+*KTraits*<br/>
 Код, используемый для копирования или перемещения ключевые элементы. См. в разделе [класс CElementTraits](../../atl/reference/celementtraits-class.md) для получения дополнительных сведений.
 
-*VTraits*  
+*VTraits*<br/>
 Код, используемый для копирования или перемещения элементов value.
 
 ## <a name="members"></a>Участники
@@ -195,19 +196,19 @@ CAtlMap(
 
 ### <a name="parameters"></a>Параметры
 
-*nBins*  
+*nBins*<br/>
 Количество ячеек, предоставляя указатели хранимых элементы. См. в разделе "Примечания" Далее в этом разделе объяснение ячейки.
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Отношение оптимальной нагрузки.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Нижнее пороговое значение коэффициента нагрузки.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Верхнее пороговое значение коэффициента нагрузки.
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Размер блока.
 
 ### <a name="remarks"></a>Примечания
@@ -297,13 +298,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
-*key*  
+*key*<br/>
 Параметр шаблона, указывающий тип ключа карты.
 
-*значение*  
+*значение*<br/>
 Параметр шаблона, указывающий тип значения карты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -352,7 +353,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -374,7 +375,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -394,13 +395,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
-*key*  
+*key*<br/>
 Параметр шаблона, указывающий тип ключа карты.
 
-*значение*  
+*значение*<br/>
 Параметр шаблона, указывающий тип значения карты.
 
 ### <a name="remarks"></a>Примечания
@@ -417,7 +418,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -439,7 +440,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -488,7 +489,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -507,10 +508,10 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>Параметры
 
-*nBins*  
+*nBins*<br/>
 Количество ячеек, используемых хэш-таблице. См. в разделе [CAtlMap::CAtlMap](#catlmap) объяснение.
 
-*bAllocNow*  
+*bAllocNow*<br/>
 Флаг указывает, когда памяти необходимо выделить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -567,10 +568,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Задает ключ, определяющий элемент, выполняется поиск.
 
-*значение*  
+*значение*<br/>
 Переменная, которая получает искомого значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -591,7 +592,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ элемента для добавления или замены.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -612,7 +613,7 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*nBins*  
+*nBins*<br/>
 Новое число ячеек для использования в хэш-таблице. См. в разделе [CAtlMap::CAtlMap](#catlmap) объяснение.
 
 ### <a name="remarks"></a>Примечания
@@ -641,7 +642,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Примечания
@@ -658,7 +659,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Ключ, соответствующий пары элементов действительно необходимо удалить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -681,10 +682,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Значение ключа, чтобы добавить `CAtlMap` объекта.
 
-*значение*  
+*значение*<br/>
 Значение, которое нужно добавить `CAtlMap` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -709,16 +710,16 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>Параметры
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Отношение оптимальной нагрузки.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Нижнее пороговое значение коэффициента нагрузки.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Верхнее пороговое значение коэффициента нагрузки.
 
-*bRehashNow*  
+*bRehashNow*<br/>
 Флаг, указывающий, если хэш-таблицы должны быть пересчитаны.
 
 ### <a name="remarks"></a>Примечания
@@ -737,10 +738,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
-*значение*  
+*значение*<br/>
 Значение, которое нужно добавить `CAtlMap` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -773,7 +774,7 @@ const K m_key;
 
 ### <a name="parameters"></a>Параметры
 
-*K*  
+*K*<br/>
 Тип ключа элемента.
 
 ##  <a name="m_value"></a>  CAtlMap::CPair::m_value
@@ -786,11 +787,11 @@ V  m_value;
 
 ### <a name="parameters"></a>Параметры
 
-*V*  
+*V*<br/>
 Тип значения элемента.
 
 ## <a name="see-also"></a>См. также
 
-[Пример бегущей строки](../../visual-cpp-samples.md)   
-[Образец UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
+[Пример бегущей строки](../../visual-cpp-samples.md)<br/>
+[Образец UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

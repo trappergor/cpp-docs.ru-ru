@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4673 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4673 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aecb4b3590a3cb1a1b055cd1e3377d00c5d0e5bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ab61a71a747b1fd917db579a57700107d12da87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085827"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Предупреждение компилятора (уровень 4) C4673
-Создание следующих типов «идентификатор» не будет рассматриваться в узле catch  
-  
- Созданный объект исключения не может быть обработан в **перехватывать** блока. Каждого типа, который не может быть обработан отображается в выводе ошибок сразу после строки, содержащей это предупреждение. Каждый Необработанный тип имеет свой собственный предупреждение. Прочтите предупреждение для каждого конкретного типа для получения дополнительной информации.  
-  
- Следующий пример приводит к возникновению ошибки C4673:  
-  
-```  
-// C4673.cpp  
-// compile with: /EHsc /W4  
-class Base {  
-private:  
-   char * m_chr;  
-public:  
-   Base() {  
-      m_chr = 0;  
-   }  
-  
-   ~Base() {  
-      if(m_chr)  
-         delete m_chr;  
-   }  
-};  
-  
-class Derv : private Base {  
-public:  
-   Derv() {}  
-   ~Derv() {}  
-};  
-  
-int main() {  
-   try {  
-      Derv D1;  
-      // delete previous line, uncomment the next line to resolve  
-      // Base D1;  
-      throw D1;   // C4673  
-   }  
-  
-   catch(...) {}  
-}  
+
+Создание следующих типов «идентификатор» не будет учитываться на сайте получателя
+
+Объект исключения не может быть обработано в **catch** блока. Каждый тип, который не может быть обработано отображается в выводе ошибок сразу после строки, содержащей это предупреждение. Каждый необработанное тип имеет свой собственный предупреждение. Прочтите предупреждение для каждого отдельного типа, Дополнительные сведения.
+
+Следующий пример приводит к возникновению ошибки C4673:
+
+```
+// C4673.cpp
+// compile with: /EHsc /W4
+class Base {
+private:
+   char * m_chr;
+public:
+   Base() {
+      m_chr = 0;
+   }
+
+   ~Base() {
+      if(m_chr)
+         delete m_chr;
+   }
+};
+
+class Derv : private Base {
+public:
+   Derv() {}
+   ~Derv() {}
+};
+
+int main() {
+   try {
+      Derv D1;
+      // delete previous line, uncomment the next line to resolve
+      // Base D1;
+      throw D1;   // C4673
+   }
+
+   catch(...) {}
+}
 ```

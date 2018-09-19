@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139a20eb3db99ce87b2de51aa1ef7602f7b5a36a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d7ac74d1b310f4db7bfc4a558db5b89df5d8df5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758580"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109851"
 ---
 # <a name="atl-project-wizard"></a>Мастер проектов ATL
 
@@ -58,10 +58,10 @@ Active Template Library (ATL) — это набор основанных на ш
 
 ## <a name="see-also"></a>См. также
 
-[Создание проектов Visual C++ и управление ими](../../ide/creating-and-managing-visual-cpp-projects.md)   
-[Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)   
-[Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)   
-[Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Создание проектов Visual C++ и управление ими](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
+[Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Учебник](../../atl/active-template-library-atl-tutorial.md)
 

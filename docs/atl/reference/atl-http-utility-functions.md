@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdec5fe54a581d2654e2945a0012c5261608d1e4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ddb5d764fd79f72a37027d9adb1c9b0c6e599f10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069850"
 ---
 # <a name="atl-http-utility-functions"></a>Служебные функции HTTP ATL
 
@@ -32,40 +32,46 @@ ms.locfileid: "43762516"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** файлов atlutil.h  
+**Заголовок:** файлов atlutil.h
 
 ## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 
 Вызывайте эту функцию для приведения URL-адреса к каноническому виду, что включает преобразование небезопасных символов и пробелов в escape-последовательности.
 
-```    
-inline BOOL AtlCanonicalizeUrl(  
-   LPCTSTR szUrl,  
-   LPTSTR szCanonicalized,  
-   DWORD* pdwMaxLength,  
-   DWORD dwFlags = 0) throw();  
+```cpp
+inline BOOL AtlCanonicalizeUrl(
+   LPCTSTR szUrl,
+   LPTSTR szCanonicalized,
+   DWORD* pdwMaxLength,
+   DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*szUrl*  
+*szUrl*<br/>
 URL-адрес для каноникализации.
 
-*szCanonicalized*  
+*szCanonicalized*<br/>
 Выделенный вызывающим объектом буфер для получения канонический URL-адрес.
 
-*pdwMaxLength*  
+*pdwMaxLength*<br/>
 Указатель на переменную, которая содержит длину в символах *szCanonicalized*. Если функция выполняется успешно, переменная получает количество символов, записанных в буфер, включая завершающий нуль-символ. Если функция завершается с ошибкой, переменная получает требуемую длину в байтах буфера, включая пространство для завершающего нуль-символа.
 
-*dwFlags*  
-ATL_URL флагов управления поведением этой функции. 
+*dwFlags*<br/>
+ATL_URL флагов управления поведением этой функции.
 
 - Не ATL_URL_BROWSER_MODE кодировать и декодировать знаки после «#» или «?» и не удаляет пробелы после «?». Если это значение не указано, кодируется весь URL-адрес и конечный пробел удаляется.
+
 - ATL_URL_DECODE преобразует все % XX последовательности символов, включая escape-последовательности, прежде чем анализируется URL-адрес.
+
 - Кодирует ATL_URL_ENCODE_PERCENT обнаружил любые знаки процента. По умолчанию символы процента не кодируются.
+
 - Кодирует ATL_URL_ENCODE_SPACES_ONLY только пробелы.
+
 - ATL_URL_ESCAPE преобразует все escape-последовательности (% XX) свои соответствующие символы.
+
 - Не выполняет ATL_URL_NO_ENCODE преобразование небезопасных символов в escape-последовательности.
+
 - ATL_URL_NO_META не удаляет meta последовательности (такие как «. «и»..») из URL-адрес.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -84,30 +90,30 @@ ATL_URL флагов управления поведением этой функ
 
 Вызывайте эту функцию для объединения базового и относительного URL-адресов в один канонический URL-адрес.
 
-```    
-inline BOOL AtlCombineUrl(  
-   LPCTSTR szBaseUrl,  
-   LPCTSTR szRelativeUrl,  
-   LPTSTR szBuffer,  
-   DWORD* pdwMaxLength,  
-   DWORD dwFlags = 0) throw();  
+```cpp
+inline BOOL AtlCombineUrl(
+   LPCTSTR szBaseUrl,
+   LPCTSTR szRelativeUrl,
+   LPTSTR szBuffer,
+   DWORD* pdwMaxLength,
+   DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*szBaseUrl*  
+*szBaseUrl*<br/>
 Базовый URL-адрес.
 
-*szRelativeUrl*  
+*szRelativeUrl*<br/>
 URL-адрес относительно базового URL-адреса.
 
-*szBuffer*  
+*szBuffer*<br/>
 Выделенный вызывающим объектом буфер для получения канонический URL-адрес.
 
-*pdwMaxLength*  
+*pdwMaxLength*<br/>
 Указатель на переменную, которая содержит длину в символах *szBuffer*. Если функция выполняется успешно, переменная получает количество символов, записанных в буфер, включая завершающий нуль-символ. Если функция завершается с ошибкой, переменная получает требуемую длину в байтах буфера, включая пространство для завершающего нуль-символа.
 
-*dwFlags*  
+*dwFlags*<br/>
 Флаги, управляющие поведением этой функции. См. в разделе [AtlCanonicalizeUrl](#atlcanonicalizeurl).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -122,37 +128,37 @@ URL-адрес относительно базового URL-адреса.
 
 Вызывайте эту функцию для преобразования всех небезопасных символов в escape-последовательности.
 
-```    
-inline BOOL AtlEscapeUrl(  
-   LPCSTR szStringIn,  
-   LPSTR szStringOut,  
-   DWORD* pdwStrLen,  
-   DWORD dwMaxLength,  
+```cpp
+inline BOOL AtlEscapeUrl(
+   LPCSTR szStringIn,
+   LPSTR szStringOut,
+   DWORD* pdwStrLen,
+   DWORD dwMaxLength,
    DWORD dwFlags = 0) throw();
 
-inline BOOL AtlEscapeUrl(  
-   LPCWSTR szStringIn,  
-   LPWSTR szStringOut,  
-   DWORD* pdwStrLen,  
-   DWORD dwMaxLength,  
-   DWORD dwFlags = 0) throw();  
+inline BOOL AtlEscapeUrl(
+   LPCWSTR szStringIn,
+   LPWSTR szStringOut,
+   DWORD* pdwStrLen,
+   DWORD dwMaxLength,
+   DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lpszStringIn*  
+*lpszStringIn*<br/>
 URL-адрес для преобразования.
 
-*lpszStringOut*  
+*lpszStringOut*<br/>
 Выделенный вызывающим объектом буфер, в который будет сохраняться преобразованный URL-адрес.
 
-*pdwStrLen*  
+*pdwStrLen*<br/>
 Указатель на переменную типа DWORD. Если функция выполняется успешно, *pdwStrLen* Получает количество символов, записанных в буфер, включая завершающий нуль-символ. Если функция завершается с ошибкой, переменная получает требуемую длину в байтах буфера, включая пространство для завершающего нуль-символа. При использовании этого метода версии расширенных символов *pdwStrLen* Получает число символов, не число байтов.
 
-*dwMaxLength*  
+*dwMaxLength*<br/>
 Размер буфера *lpszStringOut*.
 
-*dwFlags*  
+*dwFlags*<br/>
 ATL_URL флагов управления поведением этой функции. См. в разделе [ATLCanonicalizeUrl](#atlcanonicalizeurl) возможные значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -163,30 +169,30 @@ ATL_URL флагов управления поведением этой функ
 
 Вызывайте эту функцию для получения номера порта по умолчанию, связанного с определенным интернет-протоколом или схемой.
 
-```  
-inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();  
+```
+inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*m_nScheme*  
+*m_nScheme*<br/>
 [ATL_URL_SCHEME](atl-url-scheme-enum.md) значение, определяющий схему, для которого требуется получить номер порта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[ATL_URL_PORT](atl-typedefs.md#atl_url_port) связанные с заданной схемой или ATL_URL_INVALID_PORT_NUMBER, если схема не распознан.  
+[ATL_URL_PORT](atl-typedefs.md#atl_url_port) связанные с заданной схемой или ATL_URL_INVALID_PORT_NUMBER, если схема не распознан.
 
 ## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
 
 Вызывайте эту функцию, чтобы определить, безопасно ли использовать символ в URL-адресе.
 
-```  
-inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();  
+```
+inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Чэнь*  
+*Чэнь*<br/>
 Символ, который требуется проверить безопасность.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -201,32 +207,32 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 Вызывайте эту функцию для обратного преобразования escape-символов в первоначальные значения.
 
-```    
-inline BOOL AtlUnescapeUrl(  
-   LPCSTR szStringIn,  
-   LPSTR szStringOut,  
-   LPDWORD pdwStrLen,  
-   DWORD dwMaxLength) throw();  
+```cpp
+inline BOOL AtlUnescapeUrl(
+   LPCSTR szStringIn,
+   LPSTR szStringOut,
+   LPDWORD pdwStrLen,
+   DWORD dwMaxLength) throw();
 
-inline BOOL AtlUnescapeUrl(  
-   LPCWSTR szStringIn,  
-   LPWSTR szStringOut,  
-   LPDWORD pdwStrLen,  
-   DWORD dwMaxLength) throw();  
+inline BOOL AtlUnescapeUrl(
+   LPCWSTR szStringIn,
+   LPWSTR szStringOut,
+   LPDWORD pdwStrLen,
+   DWORD dwMaxLength) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lpszStringIn*  
+*lpszStringIn*<br/>
 URL-адрес для преобразования.
 
-*lpszStringOut*  
+*lpszStringOut*<br/>
 Выделенный вызывающим объектом буфер, в который будет сохраняться преобразованный URL-адрес.
 
-*pdwStrLen*  
+*pdwStrLen*<br/>
 Указатель на переменную типа DWORD. Если функция выполняется успешно, переменная получает количество символов, записанных в буфер, включая завершающий нуль-символ. Если функция завершается с ошибкой, переменная получает требуемую длину в байтах буфера, включая пространство для завершающего нуль-символа.
 
-*dwMaxLength*  
+*dwMaxLength*<br/>
 Размер буфера *lpszStringOut*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -241,22 +247,22 @@ URL-адрес для преобразования.
 
 Преобразует [COLORREF](/windows/desktop/gdi/colorref) значение HTML-текст, соответствующий этому значению цвета.
 
-```  
-bool inline RGBToHtml(  
-   COLORREF color,  
-   LPTSTR pbOut,  
-   long nBuffer);  
+```cpp
+bool inline RGBToHtml(
+   COLORREF color,
+   LPTSTR pbOut,
+   long nBuffer);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*  
+*Цвет*<br/>
 Значение цвета RGB.
 
-*pbOut*  
+*pbOut*<br/>
 Выделенный вызывающим объектом буфер для получения текст для значения цвета HTML. Буфер должен иметь места для по крайней мере 8 символов, включая пространство для завершающего).
 
-*nBuffer*  
+*nBuffer*<br/>
 Размер в байтах буфера (включая пространство для завершающего).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -271,22 +277,21 @@ bool inline RGBToHtml(
 
 Вызывайте эту функцию для преобразования системного времени в строку в формате, пригодном для использования в заголовках HTTP.
 
-```  
-inline void SystemTimeToHttpDate( 
-   const SYSTEMTIME& st,  
-   CStringA& strTime);  
+```cpp
+inline void SystemTimeToHttpDate(
+   const SYSTEMTIME& st,
+   CStringA& strTime);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*ST*  
+*ST*<br/>
 Системное время должны быть получены в виде строки формата HTTP.
 
-*strTime*  
+*strTime*<br/>
 Ссылку на строковую переменную для получения HTTP Дата и время, как определено в RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) и RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).
 
 ## <a name="see-also"></a>См. также
 
-[Основные понятия](../../atl/active-template-library-atl-concepts.md)   
-[Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)   
-
+[Основные понятия](../../atl/active-template-library-atl-concepts.md)<br/>
+[Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)

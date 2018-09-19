@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4205 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4205 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1764f04f7733cfb6b9a9a033b8667e53fbbfcc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e76cef24436fc5ce3468a1c94be2d1a49733525a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300720"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105535"
 ---
 # <a name="linker-tools-warning-lnk4205"></a>Предупреждение средств компоновщика LNK4205
-«имя_файла» отсутствует текущие отладочные данные для ссылок на модуль; компоновка объекта выполняется как при отсутствии отладочных данных  
-  
- PDB-файл содержит устаревшие данные. Компоновщик продолжит компоновку объекта без отладочной информации. Может потребоваться перекомпилировать файл объекта с помощью [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) параметр.
+
+«имя_файла» содержит текущей отладочной информации для ссылающегося модуля; компоновка объекта выполняется как при отсутствии отладочных данных
+
+PDB-файл содержит устаревшие данные. Компоновщик продолжит компоновку объекта без отладочной информации. Можно перекомпилировать файл объекта с помощью [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) параметр.

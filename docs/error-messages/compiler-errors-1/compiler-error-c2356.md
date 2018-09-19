@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2356 | Документы Microsoft
+title: Ошибка компилятора C2356 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9dfb13f388c6c40c6c1853ab8e87b2e39edbc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dfad1703b36e1cd995207d35b99b323c883f828
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065417"
 ---
 # <a name="compiler-error-c2356"></a>Ошибка компилятора C2356
-сегмент инициализации не должен изменяться во время записи преобразования  
-  
- Возможные причины:  
-  
--   `#pragma init_seg` предшествует код инициализации сегмента  
-  
--   `#pragma init_seg` предшествует другая директива `#pragma init_seg`  
-  
- Чтобы решить, переместите код инициализации сегмента в начало модуля. Если необходимо инициализировать несколько областей, переместите их в разные модули.  
-  
- Следующий пример приводит к возникновению ошибки C2356:  
-  
-```  
-// C2356.cpp  
-#pragma warning(disable : 4075)  
-  
-int __cdecl myexit(void (__cdecl *)());  
-int __cdecl myexit2(void (__cdecl *)());  
-  
-#pragma init_seg(".mine$m",myexit)  
-#pragma init_seg(".mine$m",myexit2)   // C2356  
+
+сегмент инициализации не должен изменяться во время преобразования
+
+Возможные причины:
+
+- `#pragma init_seg` предшествует код инициализации сегмента
+
+- `#pragma init_seg` предшествует другая директива `#pragma init_seg`
+
+Чтобы устранить проблему, переместите код инициализации сегмента в начало модуля. Если необходимо инициализировать несколько областей, переместите их в разные модули.
+
+Следующий пример приводит к возникновению ошибки C2356:
+
+```
+// C2356.cpp
+#pragma warning(disable : 4075)
+
+int __cdecl myexit(void (__cdecl *)());
+int __cdecl myexit2(void (__cdecl *)());
+
+#pragma init_seg(".mine$m",myexit)
+#pragma init_seg(".mine$m",myexit2)   // C2356
 ```

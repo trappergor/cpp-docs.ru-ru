@@ -14,106 +14,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7767b833fb80926e425e14a209c3d97a778e72b5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1c0d7a50be0ab940ebff82cd8a21fb5ac3aed075
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404230"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107009"
 ---
 # <a name="member-function-templates"></a>Шаблоны функций-членов
 
-Шаблон элементов терминов относится как к шаблонам функций-членов, так и к шаблонам вложенных классов. Шаблоны функций-членов — это функции-шаблоны, являющиеся членами класса или шаблона класса.  
-  
- Функции-члены могут являться функциями-шаблонами в нескольких контекстах. Все функции шаблонов классов являются общими, однако они не являются шаблонами элементов или шаблонами функций-членов. Если такие функции-члены принимают собственные аргументы шаблона, они считаются шаблонами функций-членов.  
-  
+Шаблон элементов терминов относится как к шаблонам функций-членов, так и к шаблонам вложенных классов. Шаблоны функций-членов — это функции-шаблоны, являющиеся членами класса или шаблона класса.
+
+Функции-члены могут являться функциями-шаблонами в нескольких контекстах. Все функции шаблонов классов являются общими, однако они не являются шаблонами элементов или шаблонами функций-членов. Если такие функции-члены принимают собственные аргументы шаблона, они считаются шаблонами функций-членов.
+
 ## <a name="example"></a>Пример
 
- Шаблоны функции-члена нешаблонных или шаблонных классов объявляются в виде шаблонов функций с собственными шаблонными параметрами.  
-  
+Шаблоны функции-члена нешаблонных или шаблонных классов объявляются в виде шаблонов функций с собственными шаблонными параметрами.
+
 ```cpp
-// member_function_templates.cpp  
-struct X  
-{  
-   template <class T> void mf(T* t) {}  
-};  
-  
-int main()  
-{  
-   int i;  
-   X* x = new X();  
-   x->mf(&i);  
-}  
-```  
-  
+// member_function_templates.cpp
+struct X
+{
+   template <class T> void mf(T* t) {}
+};
+
+int main()
+{
+   int i;
+   X* x = new X();
+   x->mf(&i);
+}
+```
+
 ## <a name="example"></a>Пример
 
- В следующем примере показан шаблон функции-члена шаблонного класса.  
-  
+В следующем примере показан шаблон функции-члена шаблонного класса.
+
 ```cpp
-// member_function_templates2.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u)  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
-## <a name="example"></a>Пример
-  
-```cpp
-// defining_member_templates_outside_class.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u);  
-};  
-  
-template<typename T> template <typename U>  
-void X<T>::mf(const U &u)  
-{  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
+// member_function_templates2.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u)
+   {
+   }
+};
+
+int main()
+{
+}
+```
+
 ## <a name="example"></a>Пример
 
- Локальные классы не могут иметь шаблоны элементов.  
-  
- Функции шаблонов-элементов не могут быть виртуальными функциями или переопределять виртуальные функции из базового класса, если они объявлены с тем же именем, что и виртуальная функция базового класса.  
-  
-В следующем примере показано шаблонного пользовательского преобразования:  
-  
 ```cpp
-// templated_user_defined_conversions.cpp  
-template <class T>  
-struct S  
-{  
-   template <class U> operator S<U>()  
-   {  
-      return S<U>();  
-   }  
-};  
-  
-int main()  
-{  
-   S<int> s1;  
-   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.  
-}  
-```  
-  
+// defining_member_templates_outside_class.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u);
+};
+
+template<typename T> template <typename U>
+void X<T>::mf(const U &u)
+{
+}
+
+int main()
+{
+}
+```
+
+## <a name="example"></a>Пример
+
+Локальные классы не могут иметь шаблоны элементов.
+
+Функции шаблонов-элементов не могут быть виртуальными функциями или переопределять виртуальные функции из базового класса, если они объявлены с тем же именем, что и виртуальная функция базового класса.
+
+В следующем примере показано шаблонного пользовательского преобразования:
+
+```cpp
+// templated_user_defined_conversions.cpp
+template <class T>
+struct S
+{
+   template <class U> operator S<U>()
+   {
+      return S<U>();
+   }
+};
+
+int main()
+{
+   S<int> s1;
+   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.
+}
+```
+
 ## <a name="see-also"></a>См. также
- [Шаблоны функций](../cpp/function-templates.md)
+
+[Шаблоны функций](../cpp/function-templates.md)

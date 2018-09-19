@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3248 | Документы Microsoft
+title: Ошибка компилятора C3248 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88a11f9d85d3e4885fd7c4aacf6d71b00a3e32ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b273f116c473b73a0cf3e9a5f2184d4dfbf89bd9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109747"
 ---
 # <a name="compiler-error-c3248"></a>Ошибка компилятора C3248
-"функция1": функцию, объявленную как "__sealed", нельзя переопределить с помощью "функция2"  
-  
-Производный класс попытался переопределить виртуальный метод **__sealed** .  
-  
-Ошибка C3248 возникает только недоступна при использовании параметра компилятора устаревшие **/CLR: oldSyntax**.  
+
+"функция1": функцию, объявленную как "__sealed", нельзя переопределить с помощью "функция2"
+
+Производный класс попытался переопределить виртуальный метод **__sealed** .
+
+Ошибка C3248 возникает только недоступна при использовании параметра компилятора устаревшие **/CLR: oldSyntax**.

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2048 | Документы Microsoft
+title: Ошибка компилятора C2048 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33d99b54300d3676039b2f2bda24b9bab302027e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dca0cf7e95f2a876760415d5c628287fab47227c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055836"
 ---
 # <a name="compiler-error-c2048"></a>Ошибка компилятора C2048
-несколько вариантов, используемых по умолчанию  
-  
- Оператор `switch` содержит несколько меток `default` . Удалите одну из меток `default` для устранения этой ошибки.  
-  
- В следующем примере возникает ошибка C2048:  
-  
-```  
-// C2048.cpp  
-int main() {  
-   int a = 1;  
-   switch (a) {  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-      default:   // C2048  
-         a = 3;  
-   }  
-}  
-```  
-  
- Возможное решение  
-  
-```  
-// C2048b.cpp  
-int main() {  
-   int a = 1;  
-   switch (a) {  
-      case 1:  
-         a = 0;  
-      default:  
-         a = 2;  
-   }  
-}  
+
+несколько вариантов, используемых по умолчанию
+
+Оператор `switch` содержит несколько меток `default` . Удалите одну из меток `default` для устранения этой ошибки.
+
+В следующем примере возникает ошибка C2048:
+
+```
+// C2048.cpp
+int main() {
+   int a = 1;
+   switch (a) {
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+      default:   // C2048
+         a = 3;
+   }
+}
+```
+
+Возможное решение
+
+```
+// C2048b.cpp
+int main() {
+   int a = 1;
+   switch (a) {
+      case 1:
+         a = 0;
+      default:
+         a = 2;
+   }
+}
 ```

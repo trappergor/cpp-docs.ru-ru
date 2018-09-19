@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06b34099ecdb9c61d3580586bcb3bcd73eaf709
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab3c4b349b64b96b8aeb7a53d6bf8809f41cea7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097787"
 ---
 # <a name="ccomcritseclock-class"></a>Класс CComCritSecLock
 
@@ -39,7 +39,7 @@ template<class TLock> class CComCritSecLock
 
 #### <a name="parameters"></a>Параметры
 
-*TLock*  
+*TLock*<br/>
 Объект для блокировки и разблокировать.
 
 ## <a name="members"></a>Участники
@@ -76,10 +76,10 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>Параметры
 
-*cs*  
+*cs*<br/>
 Объект критической секции.
 
-*bInitialLock*  
+*bInitialLock*<br/>
 Состояние начального блокировки: **true** означает, что заблокирована.
 
 ### <a name="remarks"></a>Примечания
@@ -128,5 +128,5 @@ void Unlock() throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
+[Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Класс CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)

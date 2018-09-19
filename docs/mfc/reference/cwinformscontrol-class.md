@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797903c3f558cff9a0ff5addb689e31ae2adbed7
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5c39d289ae2cf7580eba5a36257b7f5ea8ed061d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105405"
 ---
 # <a name="cwinformscontrol-class"></a>Класс CWinFormsControl
 Предоставляет базовую функцию для размещения элементов управления Windows Forms.  
@@ -42,20 +42,20 @@ class CWinFormsControl : public CWnd
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `TManagedControl`  
- Элемент управления .NET Framework Windows Forms для отображения в приложении MFC.  
+*TManagedControl*<br/>
+Элемент управления .NET Framework Windows Forms для отображения в приложении MFC.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Создает объект управления оболочки MFC Windows Forms.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Создает элемент управления Windows Forms в контейнере MFC.|  
 |[CWinFormsControl::GetControl](#getcontrol)|Извлекает указатель на элемент управления Windows Forms.|  
@@ -63,7 +63,7 @@ class CWinFormsControl : public CWnd
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWinFormsControl::operator-&gt;](#operator_-_gt)|Заменяет [CWinFormsControl::GetControl](#getcontrol) в выражениях.|  
 |[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Приводит тип указателя на элемент управления Windows Forms.|  

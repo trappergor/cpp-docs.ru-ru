@@ -1,5 +1,5 @@
 ---
-title: Предупреждение командной строки D9027 | Документы Microsoft
+title: Предупреждение командной строки D9027 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe2493290c4e4cc5b744136b8e7036c6559220a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105ebbf62027ac3d9377c513c4f7c59e261b983d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112529"
 ---
 # <a name="command-line-warning-d9027"></a>Предупреждение командной строки D9027
-исходный файл "\<имя_файла >" игнорируется  
-  
- CL.exe учитывается входного исходного файла.  
-  
- Это предупреждение может быть вызвано пробел между параметром /Fo и именем выходного файла в командной строке с параметром. Пример:  
-  
-```  
-cl /c /Fo output.obj input.c   
-```  
-  
- Так как отсутствует пробел между /Fo и `output.obj`, принимает CL.exe `output.obj` как имя входного файла. Чтобы исправить эту проблему, удалите пространство:  
-  
-```  
-cl /c /Fooutput.obj input.c   
+
+исходный файл "\<имя_файла >" игнорируется
+
+CL.exe учитывается файла исходных данных.
+
+Это предупреждение может быть вызвано пробел между параметром /Fo и имя выходного файла в командной строке с параметром. Пример:
+
+```
+cl /c /Fo output.obj input.c
+```
+
+Поскольку нет пробела между /Fo и `output.obj`, принимает CL.exe `output.obj` как имя входного файла. Чтобы исправить эту проблему, удалите пространство:
+
+```
+cl /c /Fooutput.obj input.c
 ```

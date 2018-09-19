@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2152 | Документы Microsoft
+title: Ошибка компилятора C2152 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e241f918191547812854de9734995b9f0b10770
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3a2215e43573b08a69501edfbd0c7c86897fdd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064925"
 ---
 # <a name="compiler-error-c2152"></a>Ошибка компилятора C2152
-«Идентификатор»: указатели на функции с разными атрибутами  
-  
- Указатель на функцию с определенным соглашением вызова (`__cdecl`, `__stdcall`, или `__fastcall`) присвоить указателю на функцию с другим соглашением вызова.
+
+«Идентификатор»: указатели на функции с разными атрибутами
+
+Указатель на функцию с одно соглашение о вызовах (`__cdecl`, `__stdcall`, или `__fastcall`) присвоить указателю на функцию с другим соглашением вызова.

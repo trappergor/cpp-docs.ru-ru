@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4935c4cb936b803170f0fc11db5adb3f477a05a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8e74df913b22684a61ab4f45ade561e55db18544
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044513"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Класс IOleInPlaceActiveObjectImpl
 
@@ -49,7 +49,7 @@ class IOleInPlaceActiveObjectImpl
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IOleInPlaceActiveObjectImpl`.
 
 ## <a name="members"></a>Участники
@@ -201,6 +201,6 @@ S_FALSE, если сообщение не было преобразовано.
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComControl](../../atl/reference/ccomcontrol-class.md)  
-[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)  
+[Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Создание потребителя OLE DB | Документы Microsoft
+title: Создание объекта-получателя OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e68aacb013cb7f91d0225094cfd941eae5e2c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034093"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Создание объекта-получателя OLE DB
-Потребитель OLE DB-шаблоны можно создать с или без мастер потребителей OLE DB ATL на то, что с помощью мастера — это рекомендуемый способ. Потребитель может действовать в любое приложение, поддерживающее ATL.  
+
+Можно создать объект-получатель шаблоны OLE DB с или без OLE DB мастер потребителя ATL, хотя с помощью мастера является рекомендуемым методом. Объект-получатель может работать в любом приложении, поддерживающем ATL.  
   
- Данный раздел охватывает следующее:  
+Данный раздел охватывает следующее:  
   
--   [Создание объекта-получателя OLE DB с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
+- [Создание объекта-получателя OLE DB с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
   
--   [Создание объекта-получателя OLE DB без помощи мастера](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
+- [Создание объекта-получателя OLE DB без помощи мастера](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

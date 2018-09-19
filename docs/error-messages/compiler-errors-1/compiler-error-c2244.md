@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2244 | Документы Microsoft
+title: Ошибка компилятора C2244 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,78 +16,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c5822a2e7fc2bc33f7c42f1ec2478899d69ca78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b8c812b2443bdfada71dbb99dbceddb9074c02b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172018"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061556"
 ---
 # <a name="compiler-error-c2244"></a>Ошибка компилятора C2244
-«Идентификатор»: не удается сопоставить определение функции существующему объявлению  
-  
- Нестандартное использование унарного оператора использовался перед вызовом функции, не содержит скобку.  
-  
- Эта ошибка возникает только в проектах C++.  
-  
- Следующий пример приводит к возникновению ошибки C2244:  
-  
-```  
-// C2244.cpp  
-int func(char) {  
-   return 0;  
-}   
-  
-int func(int) {  
-   return 0;  
-}  
-  
-int main() {  
-   +func;   // C2244  
-}  
-```  
-  
- C2244 также может возникать при использовании неверной подписи функции для функции-члена шаблона класса.  
-  
-```  
-// C2244b.cpp  
-// compile with: /c  
-template<class T>   
-class XYZ {  
-   void func(T t);  
-};  
-  
-template<class T>  
-void XYZ<T>::func(int i) {}   // C2244 wrong function signature  
-// try the following line instead  
-// void XYZ<T>::func(T t) {}  
-```  
-  
- C2244 также может возникать при использовании неверной подписи функции для функции-члена шаблона.  
-  
-```  
-// C2244c.cpp  
-// compile with: /c  
-class ABC {  
-   template<class T>   
-   void func(int i, T t);  
-};  
-  
-template<class T>  
-void ABC::func(int i) {}   // C2244 wrong signature  
-// try the following line instead  
-// void ABC::func(int i, T t) {}  
-```  
-  
- Не удается частично специализировать шаблон функции.  
-  
-```  
-// C2244d.cpp  
-template<class T, class U>  
-class QRS {  
-   void func(T t, U u);  
-};  
-  
-template<class T>  
-void QRS<T,int>::func(T t, int u) {}   // C2244  
+
+«Идентификатор»: не удается сопоставить определение функции существующему объявлению
+
+Нестандартное использование унарного оператора использовался перед вызовом функции, но не имеют скобки.
+
+Эта ошибка возникает только в проектах C++.
+
+В следующем примере возникает ошибка C2244:
+
+```
+// C2244.cpp
+int func(char) {
+   return 0;
+}
+
+int func(int) {
+   return 0;
+}
+
+int main() {
+   +func;   // C2244
+}
+```
+
+C2244 также может возникать при использовании неверной подписи функции для функции-члена шаблона класса.
+
+```
+// C2244b.cpp
+// compile with: /c
+template<class T>
+class XYZ {
+   void func(T t);
+};
+
+template<class T>
+void XYZ<T>::func(int i) {}   // C2244 wrong function signature
+// try the following line instead
+// void XYZ<T>::func(T t) {}
+```
+
+C2244 также может возникать при использовании неверной подписи функции для функции-члена шаблона.
+
+```
+// C2244c.cpp
+// compile with: /c
+class ABC {
+   template<class T>
+   void func(int i, T t);
+};
+
+template<class T>
+void ABC::func(int i) {}   // C2244 wrong signature
+// try the following line instead
+// void ABC::func(int i, T t) {}
+```
+
+Не удается частично специализировать шаблон функции.
+
+```
+// C2244d.cpp
+template<class T, class U>
+class QRS {
+   void func(T t, U u);
+};
+
+template<class T>
+void QRS<T,int>::func(T t, int u) {}   // C2244
 ```

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eb34b0ce7b087a457b751604ffd86e61085bf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c89f577168593dcb22570af63801fc05654eb4b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100701"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Класс CSnapInPropertyPageImpl
 
@@ -125,7 +125,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszTitle*  
+*lpszTitle*<br/>
 [in] Заголовок страницы свойств.
 
 ### <a name="remarks"></a>Примечания
@@ -326,10 +326,10 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 
 ### <a name="parameters"></a>Параметры
 
-*wParam*  
+*wParam*<br/>
 [in] Указывает Дополнительные сведения, зависящие от сообщения.
 
-*lParam*  
+*lParam*<br/>
 [in] Указывает Дополнительные сведения, зависящие от сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -350,7 +350,7 @@ void SetModified(BOOL bChanged = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bChanged*  
+*bChanged*<br/>
 [in] Значение TRUE указывает, что параметрах страницы свойств были изменены с момента последнего они были применены; Значение FALSE, чтобы указать, что были применены параметры страницы, или следует игнорировать.
 
 ### <a name="remarks"></a>Примечания

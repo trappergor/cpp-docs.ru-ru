@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68e6b4730be3679e4309a298d40657dcecde94b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eb111b3fa1376be8a43bfc9a04c7865164bff76
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084579"
 ---
 # <a name="idispeventsimpleimpl-class"></a>Класс IDispEventSimpleImpl
 
@@ -42,19 +42,19 @@ ms.locfileid: "43755714"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <UINT nID, class T, const IID* pdiid>  
+template <UINT nID, class T, const IID* pdiid>
 class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*nID*  
+*nID*<br/>
 Уникальный идентификатор для исходного объекта. Когда `IDispEventSimpleImpl` является базовым классом для составного элемента управления, используйте идентификатор ресурса для нужного элемента управления в контейнере для этого параметра. В других случаях используйте произвольное целое положительное число.
 
-*T*  
+*T*<br/>
 Класс пользователя, который является производным от `IDispEventSimpleImpl`.
 
-*pdiid*  
+*pdiid*<br/>
 Указатель на идентификатор IID disp-интерфейс событий, реализованные этим классом.
 
 ## <a name="members"></a>Участники
@@ -119,7 +119,7 @@ HRESULT Advise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 [in] Указатель на `IUnknown` интерфейс объекта источника события.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -145,10 +145,10 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 [in] Указатель на `IUnknown` интерфейс объекта источника события.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор IID объект источника события.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -174,10 +174,10 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 [in] Указатель на `IUnknown` интерфейс объекта источника события.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор IID объект источника события.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -267,7 +267,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 [in] Указатель на `IUnknown` интерфейс объекта источника события.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -287,8 +287,8 @@ HRESULT Unadvise(IUnknown* pUnk);
 
 ## <a name="see-also"></a>См. также
 
-[Структура _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)   
-[Класс IDispatchImpl](../../atl/reference/idispatchimpl-class.md)   
-[Класс IDispEventImpl](../../atl/reference/idispeventimpl-class.md)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[Структура _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)<br/>
+[Класс IDispatchImpl](../../atl/reference/idispatchimpl-class.md)<br/>
+[Класс IDispEventImpl](../../atl/reference/idispeventimpl-class.md)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

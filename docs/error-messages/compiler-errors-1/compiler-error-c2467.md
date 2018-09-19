@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2467 | Документы Microsoft
+title: Ошибка компилятора C2467 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ed9b1b50c63852ed830c2072d7cd8fce668a671
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8bab320bfdba9fcbd408771b7859a22fc85fa06e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048779"
 ---
 # <a name="compiler-error-c2467"></a>Ошибка компилятора C2467
-Недопустимое объявление анонимного «пользовательского типа»  
-  
- Вложенные определяемый пользователем тип был объявлен. Это ошибка при компиляции исходный код C с параметром совместимости ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) включен.  
-  
- Следующий пример приводит к возникновению ошибки C2467:  
-  
-```  
-//C2467.c  
-// compile with: /Za   
-int main() {  
-   struct X {  
-      union { int i; };   // C2467, nested declaration  
-   };  
-}  
+
+Недопустимое объявление анонимного «пользователь типа»
+
+Вложенные определяемый пользователем тип был объявлен. Это ошибка, при компиляции исходного кода C с параметром совместимости ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) включен.
+
+Следующий пример приводит к возникновению ошибки C2467:
+
+```
+//C2467.c
+// compile with: /Za
+int main() {
+   struct X {
+      union { int i; };   // C2467, nested declaration
+   };
+}
 ```

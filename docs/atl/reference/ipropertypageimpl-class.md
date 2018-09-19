@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28af5343f761f89678768133c9114e3cf23be8e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b07609b792b7080e2c4c432ed435381007ba286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075232"
 ---
 # <a name="ipropertypageimpl-class"></a>Класс IPropertyPageImpl
 
@@ -58,13 +58,13 @@ ms.locfileid: "43755990"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T>  
+template<class T>
 class IPropertyPageImpl
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IPropertyPageImpl`.
 
 ## <a name="members"></a>Участники
@@ -311,7 +311,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>Параметры
 
-*bDirty*  
+*bDirty*<br/>
 [in] Значение TRUE, если состояние страницы свойств помечается как измененный. В противном случае он помечается как без изменений.
 
 ### <a name="remarks"></a>Примечания
@@ -368,7 +368,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 ## <a name="see-also"></a>См. также
 
-[Класс IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)   
-[Класс IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)   
-[Класс ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[Класс IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)<br/>
+[Класс IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[Класс ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

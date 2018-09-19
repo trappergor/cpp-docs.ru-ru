@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914e11c71d4f015f7b62797d4ba2ab3bfca3c7fb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 42c42b43fdc04978fabe36b0ea64f39b9a5d333f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754137"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098489"
 ---
 # <a name="iunknown-implementation-classes"></a>Классы для реализации IUnknown
 
@@ -55,8 +55,8 @@ ms.locfileid: "43754137"
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../atl/atl-class-overview.md)   
-[Агрегирование и макросов фабрики класса](../atl/reference/aggregation-and-class-factory-macros.md)   
-[Макросы сопоставления COM](../atl/reference/com-map-macros.md)   
+[Общие сведения о классе](../atl/atl-class-overview.md)<br/>
+[Макросы агрегирования и фабрик классов](../atl/reference/aggregation-and-class-factory-macros.md)<br/>
+[Макросы сопоставления COM](../atl/reference/com-map-macros.md)<br/>
 [Глобальные функции сопоставления COM](../atl/reference/com-map-global-functions.md)
 

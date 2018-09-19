@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3657 | Документы Microsoft
+title: Ошибка компилятора C3657 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c81a26ab0f0c47e620b3451c06f7bc6fdced7731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1462ac1c63104406473fde2c839d490bdfb24c6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117040"
 ---
 # <a name="compiler-error-c3657"></a>Ошибка компилятора C3657
-деструкторы не может явно переопределять или явно переопределяться  
-  
- Не удается, явное переопределение деструкторов или методов завершения. Дополнительные сведения см. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C3657.  
-  
-```  
-// C3657.cpp  
-// compile with: /clr  
-public ref struct I {  
-   virtual ~I() { }  
-   virtual void a();  
-};  
-  
-public ref struct D : I {  
-   virtual ~D() = I::~I {}   // C3657  
-   virtual void a() = I::a {}   // OK  
-};  
+
+деструкторы не может явно переопределять или явно переопределяться
+
+Деструкторы и методы завершения не может переопределить явным образом. Дополнительные сведения см. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3657.
+
+```
+// C3657.cpp
+// compile with: /clr
+public ref struct I {
+   virtual ~I() { }
+   virtual void a();
+};
+
+public ref struct D : I {
+   virtual ~D() = I::~I {}   // C3657
+   virtual void a() = I::a {}   // OK
+};
 ```

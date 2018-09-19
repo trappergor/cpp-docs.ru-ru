@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf6f830441482e17bd45c331f4281cb49312337
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ebf8112650cf1908225d0fc2c79d61d26dd606fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051013"
 ---
 # <a name="ccomclassfactory-class"></a>Класс CComClassFactory
 
@@ -79,13 +79,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Если объект создается как часть агрегата, затем *pUnkOuter* должен быть внешняя Неизвестная строка. В противном случае *pUnkOuter* должен иметь значение NULL.
 
-*riid*  
+*riid*<br/>
 [in] Идентификатор IID запрошенного интерфейса. Если *pUnkOuter* отлично от NULL, *riid* должно быть `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppvObj* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -102,7 +102,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Параметры
 
-*fLock*  
+*fLock*<br/>
 [in] Если значение равно TRUE, увеличивается счетчик блокировок; в противном случае уменьшается количество блокировок.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -117,6 +117,6 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

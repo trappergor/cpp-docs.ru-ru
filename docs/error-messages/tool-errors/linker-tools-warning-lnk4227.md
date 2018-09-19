@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4227 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4227 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,74 +16,74 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b56617ee355654dfbb198252ea37cdb344950cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28bcf242e48046278030ec4259b7ae3edd1c4a61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302114"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088869"
 ---
-# <a name="linker-tools-warning-lnk4227"></a>Предупреждение средств компоновщика LNK4227  
-  
-> Предупреждение операции метаданных (*HRESULT*): *предупреждающее_сообщение*  
-  
-Компоновщик обнаружил различия в метаданных при слиянии:  
-  
--   Один или несколько ссылочных сборок с сборка, построенная в настоящее время.  
-  
--   Один или несколько файлов исходного кода при компиляции.  
-  
-Например, LNK4227 может появиться при наличии двух глобальных функций с одинаковыми именами, но объявить иначе, сведения о параметрах (то есть объявления не являются согласованными во всех компилируемых объектах). Используйте ildasm.exe/Text/Metadata *object_file* на каждый OBJ-файл, чтобы увидеть, как типы различаются.  
-  
-LNK4227 также позволяет сообщать о проблемах, возникших с помощью другого средства. Поиск предупреждение для получения дополнительной информации.  
-  
-Чтобы устранить это предупреждение, должны быть устранены проблемы с метаданными.  
-  
-## <a name="example"></a>Пример  
-  
-LNK4227 создается в том случае, когда ссылочной сборки был подписан иначе, чем в сборке, ссылающейся на него.  
-  
-Следующий пример приводит к возникновению ошибки LNK4227:  
-  
-```cpp  
-// LNK4227.cpp  
-// compile with: /clr  
-using namespace System::Reflection;  
-  
-[assembly:AssemblyDelaySignAttribute(false)];  
-  
-int main() {}  
-```  
-  
- И потом  
-  
-```cpp  
-// LNK4227b.cpp  
-// compile with: /clr LNK4227.cpp /FeLNK4227b.exe  
-using namespace System::Reflection;  
-using namespace System::Runtime::CompilerServices;  
-  
-[assembly:AssemblyDelaySignAttribute(true)];  
-// Try the following line instead  
-// [assembly:AssemblyDelaySignAttribute(false)];  
-  
-ref class MyClass  
-{  
-};  
-```  
-  
-## <a name="example"></a>Пример  
-  
-LNK4227 также может возникать, если атрибуты сборки передаются номера версий в неверном формате.  "*" Нотации относится только к `AssemblyVersionAttribute`.  Чтобы устранить это предупреждение, используйте только цифры в атрибутах версии отличный от `AssemblyVersionAttribute`.  
-  
-Следующий пример приводит к возникновению ошибки LNK4227:  
-  
-```cpp  
-// LNK4227e.cpp  
-// compile with: /clr /LD /W1  
-using namespace System::Reflection;  
-[assembly:AssemblyVersionAttribute("2.3.*")];   // OK  
-[assembly:AssemblyFileVersionAttribute("2.3.*")];   // LNK4227  
-// try the following line instead  
-// [assembly:AssemblyFileVersionAttribute("2.3")];  
+# <a name="linker-tools-warning-lnk4227"></a>Предупреждение средств компоновщика LNK4227
+
+> Предупреждение при операции с метаданными (*HRESULT*): *предупреждающее_сообщение*
+
+Компоновщик обнаружены различия в метаданных при слиянии:
+
+- Один или несколько указанных ссылками сборок с идет построение сборки.
+
+- Один или несколько файлов исходного кода при компиляции.
+
+Например, LNK4227 может появиться при наличии двух глобальных функций с одинаковыми именами, но сведения о параметрах, объявленные по-разному (то есть объявления не являются согласованными во всех компилируемых объектах). Используйте ildasm.exe/Text/Metadata *object_file* в каждый OBJ-файл, чтобы увидеть, как типы отличаются.
+
+LNK4227 также позволяет сообщать о проблемах, которые создаются с помощью другого средства. Поиск предупреждающее сообщение, Дополнительные сведения.
+
+Чтобы устранить это предупреждение, необходимо исправить проблемы с метаданными.
+
+## <a name="example"></a>Пример
+
+LNK4227 создается в том случае, когда сборку был подписан иначе, чем сборка, ссылающаяся на нее.
+
+Следующий пример приводит к возникновению ошибки LNK4227:
+
+```cpp
+// LNK4227.cpp
+// compile with: /clr
+using namespace System::Reflection;
+
+[assembly:AssemblyDelaySignAttribute(false)];
+
+int main() {}
+```
+
+И потом
+
+```cpp
+// LNK4227b.cpp
+// compile with: /clr LNK4227.cpp /FeLNK4227b.exe
+using namespace System::Reflection;
+using namespace System::Runtime::CompilerServices;
+
+[assembly:AssemblyDelaySignAttribute(true)];
+// Try the following line instead
+// [assembly:AssemblyDelaySignAttribute(false)];
+
+ref class MyClass
+{
+};
+```
+
+## <a name="example"></a>Пример
+
+LNK4227 также может возникать, если атрибуты сборки передаются номера версий в неверном формате.  "*" Нотации относится только к `AssemblyVersionAttribute`.  Чтобы устранить это предупреждение, используйте только числа в атрибуты версии отличное от `AssemblyVersionAttribute`.
+
+Следующий пример приводит к возникновению ошибки LNK4227:
+
+```cpp
+// LNK4227e.cpp
+// compile with: /clr /LD /W1
+using namespace System::Reflection;
+[assembly:AssemblyVersionAttribute("2.3.*")];   // OK
+[assembly:AssemblyFileVersionAttribute("2.3.*")];   // LNK4227
+// try the following line instead
+// [assembly:AssemblyFileVersionAttribute("2.3")];
 ```

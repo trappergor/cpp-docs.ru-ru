@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1061b105b7fd1e344223da3850275910c164774b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040444"
 ---
 # <a name="object-map-macros"></a>Макросы сопоставления объектов
 
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Описание класса объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -74,10 +74,10 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 [in] CLSID объекта COM-класса, реализованного в классе C++ с именем *класс*.
 
-*class*  
+*class*<br/>
 [in] Имя класса C++, реализующего класс COM, представленный *clsid*.
 
 ### <a name="remarks"></a>Примечания
@@ -106,10 +106,10 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 [in] CLSID объекта COM-класса, реализованного в классе C++ с именем *класс*.
 
-*class*  
+*class*<br/>
 [in] Имя класса C++, реализующего класс COM, представленный *clsid*.
 
 ### <a name="remarks"></a>Примечания

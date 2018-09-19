@@ -1,5 +1,5 @@
 ---
-title: Ошибка BSCMAKE BK1516 | Документы Microsoft
+title: Ошибка BSCMAKE BK1516 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95b76d41719da17e6e69d88d17a45269fff75cac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9be9eeb1043c28806d28cf216bc87931015695d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030018"
 ---
 # <a name="bscmake-error-bk1516"></a>Ошибка BSCMAKE BK1516
-BSC-файл поврежден. Добавочное обновление невозможно  
-  
- BSC-файл поврежден, возможно из-за сбоя системы во время сборки. Удаление BSC-файл, перестроить все SBR-файлы, а затем перестроить BSC-файл.
+
+BSC-файл поврежден. Добавочное обновление невозможно
+
+BSC-файл был поврежден, возможно из-за сбоя системы во время сборки. Удалить BSC-файле, перестроить все SBR-файлы, а затем перестройте BSC-файле.

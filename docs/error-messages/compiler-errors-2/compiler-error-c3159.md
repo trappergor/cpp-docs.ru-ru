@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3159 | Документы Microsoft
+title: Ошибка компилятора C3159 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e77311823977522952d4fe1ca79c41f7edc6b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc9cd34233fdc508d24a295495c4442ab16b7a9c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105015"
 ---
 # <a name="compiler-error-c3159"></a>Ошибка компилятора C3159
-«указатель»: нельзя объявить массив указателей на тип значения  
-  
- Нельзя объявить массив указателей на тип значения.  
-  
- C3159 доступен только с помощью параметра компилятора устаревшие **/CLR: oldSyntax**.  
+
+«указатель»: нельзя объявить массив указателей на тип значения
+
+Невозможно объявить массив указателей на тип значения.
+
+C3159 доступен только с помощью параметра компилятора устаревшие **/CLR: oldSyntax**.

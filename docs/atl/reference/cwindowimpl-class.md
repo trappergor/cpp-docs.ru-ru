@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3582f3fff0ee683889e1b0403554c59835293889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39a0938f6faadc05b2fdb3d716417a56512768b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084565"
 ---
 # <a name="cwindowimpl-class"></a>Класс CWindowImpl
 
@@ -45,19 +45,19 @@ ms.locfileid: "43756110"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Новый класс, производный от `CWindowImpl`.
 
-*TBase*  
+*TBase*<br/>
 Базовый класс для класса. По умолчанию является базовым классом [CWindow](../../atl/reference/cwindow-class.md).
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Объект [класс характеристик](../../atl/understanding-window-traits.md) , определяющий стили для окна. Значение по умолчанию — `CControlWinTraits`.
 
 ## <a name="members"></a>Участники
@@ -153,25 +153,25 @@ HWND Create(
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Дескриптор окна родительского или владельца.
 
-*Rect*  
+*Rect*<br/>
 [in] Объект [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий положение окна. `RECT` Могут передаваться, указателем или по ссылке.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Задает имя окна. Значение по умолчанию имеет значение NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Стиль окна. Это значение объединяется со стилем, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Стиль окна расширенного. Это значение объединяется со стилем, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Для дочернего окна, окна идентификатор. Для окна верхнего уровня, дескриптор меню для окна. Значение по умолчанию — **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Указатель на окно создания данных. Полное описание см. в описании для конечного параметра для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -205,13 +205,13 @@ LRESULT DefWindowProc();
 
 ### <a name="parameters"></a>Параметры
 
-*uMsg*  
+*uMsg*<br/>
 [in] Сообщение, отправленное окну.
 
-*wParam*  
+*wParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lParam*  
+*lParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -300,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна уничтожения.
 
 ### <a name="remarks"></a>Примечания
@@ -317,7 +317,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна подкласса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -357,16 +357,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Сообщение, отправленное окну.
 
-*wParam*  
+*wParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lParam*  
+*lParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -387,6 +387,6 @@ static LRESULT CALLBACK WindowProc(
 
 ## <a name="see-also"></a>См. также
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

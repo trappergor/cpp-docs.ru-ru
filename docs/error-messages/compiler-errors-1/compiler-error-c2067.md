@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2067 | Документы Microsoft
+title: Ошибка компилятора C2067 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc2fc49dba0696de748129e589c3958a1274c791
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c0b7be7998b083a60f2a9c413f64889311db6f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038468"
 ---
 # <a name="compiler-error-c2067"></a>Ошибка компилятора C2067
-недопустимое приведение к типу массива  
-  
- Объект приведен к типу массива.
+
+недопустимое приведение к типу массива
+
+Объект приведен к типу массива.

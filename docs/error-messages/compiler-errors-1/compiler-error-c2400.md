@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2400 | Документы Microsoft
+title: Ошибка компилятора C2400 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b6eb9ea25428138297cf85fe71e9c84b2364199
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 303a0aacbcde0fcf495469ed9cb9310ddb7710e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225480"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115168"
 ---
 # <a name="compiler-error-c2400"></a>Ошибка компилятора C2400
-Синтаксическая ошибка во встроенном ассемблерном коде в «context»; найден «токен»  
-  
- Токен является причиной синтаксической ошибки в указанном контексте.  
-  
- Следующий пример приводит к возникновению ошибки C2400:  
-  
-```  
-// C2400.cpp  
-// processor: x86  
-int main() {  
-   __asm {  
-      heh ax,bx;   // C2400, heh is not a valid x86 instruction  
-      mov ax,bx;   // OK  
-   }  
-}  
+
+встроенный ассемблер синтаксическая ошибка в «контекст»; найден «токен»
+
+Токен является причиной синтаксической ошибки в заданном контексте.
+
+Следующий пример приводит к возникновению ошибки C2400:
+
+```
+// C2400.cpp
+// processor: x86
+int main() {
+   __asm {
+      heh ax,bx;   // C2400, heh is not a valid x86 instruction
+      mov ax,bx;   // OK
+   }
+}
 ```

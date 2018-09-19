@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec36cddae835d46c5db6245f85e4294aa52225e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 170f46424e8eb4db4c38c91f01a89b53d5cbce0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107833"
 ---
 # <a name="catldllmodulet-class"></a>Класс CAtlDllModuleT
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766578"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `CAtlDllModuleT`.
 
 ## <a name="members"></a>Участники
@@ -128,13 +128,13 @@ HRESULT DllGetClassObject(
 
 ### <a name="parameters"></a>Параметры
 
-*rclsid*  
+*rclsid*<br/>
 CLSID создаваемого объекта.
 
-*riid*  
+*riid*<br/>
 Идентификатор IID запрошенного интерфейса.
 
-*ppv*  
+*ppv*<br/>
 Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppv* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -151,10 +151,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*параметр dwReason*  
+*параметр dwReason*<br/>
 Если набор вызовам уведомления DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH и DLL_THREAD_DETACH функции будут отключены.
 
-*lpReserved*  
+*lpReserved*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -175,7 +175,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 Значение TRUE, если для регистрации библиотеки типов. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -192,7 +192,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 Значение TRUE, если библиотека типов удаляются из реестра. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -212,13 +212,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Параметры
 
-*rclsid*  
+*rclsid*<br/>
 CLSID создаваемого объекта.
 
-*riid*  
+*riid*<br/>
 Идентификатор IID запрошенного интерфейса.
 
-*ppv*  
+*ppv*<br/>
 Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppv* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -231,7 +231,7 @@ CLSID создаваемого объекта.
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAtlModuleT](../../atl/reference/catlmodulet-class.md)   
-[Класс CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Класс CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
+[Класс CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Модульные классы](../../atl/atl-module-classes.md)

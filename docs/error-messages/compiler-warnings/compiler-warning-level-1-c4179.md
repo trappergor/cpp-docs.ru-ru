@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4179 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4179 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a47c8da89df03e9c33e968574e81bef304a00dd
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0a5f51e334062badafed5a78c675442e9805d20c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032182"
 ---
 # <a name="compiler-warning-level-1-c4179"></a>Предупреждение компилятора (уровень 1) C4179
 
-> "/ / *": интерпретировать как «/» и "/\*": несогласованность со стандартными "/ /" комментарии  
-  
-__//\*__ является неправильным разделителем комментариев. Используйте __//__ или __/ \*__ вместо него.
+> "/ / *": интерпретировать как «/» и "/\*": несогласованность со стандартными "/ /" комментарии
+
+__//\*__ является неправильным разделителем комментариев. Используйте __//__ или __/ \*__ вместо этого.

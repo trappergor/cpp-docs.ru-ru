@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1014 | Документы Microsoft
+title: Неустранимая ошибка C1014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52f0d998e124412c3cf81de4efa762d1c0c346e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c85cff5895326b9a96e9254cebb27fc267550f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224815"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103975"
 ---
 # <a name="fatal-error-c1014"></a>Неустранимая ошибка C1014
-слишком много включаемых файлов: глубина = уровень  
-  
- Вложение директив `#include` является слишком глубоким. Вложенные директивы могут включать открытые файлы. Исходный файл, содержащий директиву, подсчитывается как один из файлов.
+
+слишком много включаемых файлов: глубина = уровень
+
+Вложение директив `#include` является слишком глубоким. Вложенные директивы могут включать открытые файлы. Исходный файл, содержащий директиву, подсчитывается как один из файлов.

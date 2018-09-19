@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2224 | Документы Microsoft
+title: Ошибка компилятора C2224 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0830018d514f5a58bdc1f2989ae0f3106483dcce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4420e0e2f89c50bbc7d0748779efcc0eccf117d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169534"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098164"
 ---
 # <a name="compiler-error-c2224"></a>Ошибка компилятора C2224
-слева от «.identifier» должен иметь тип структуры или объединения  
-  
- Операнд слева от точки (.) не класса, структуры или объединения.  
-  
- Эта ошибка может быть вызвано что левый операнд является неопределенной переменной (следовательно, имеющий тип `int`).
+
+слева от «.identifier» должен иметь тип структуры или объединения
+
+Операнд слева от точки (.) не класса, структуры или объединения.
+
+Эта ошибка может быть вызвана, что левый операнд является неопределенной переменной (следовательно ввести `int`).

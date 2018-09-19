@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4198e08a4c126a180006a088d4fc1509643824f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 141940ef5d5c7d23ea3cf049e64e9f4c6974fce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076662"
 ---
 # <a name="ccomobjectglobal-class"></a>Класс CComObjectGlobal
 
@@ -42,7 +42,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также как и из любого другого интерфейса, которые должны поддерживаться в объекте.
 
 ## <a name="members"></a>Участники
@@ -142,10 +142,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID запрашиваемого интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый iid, или значение NULL, если интерфейс не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -174,7 +174,7 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComObjectStack](../../atl/reference/ccomobjectstack-class.md)   
-[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Класс CComObject](../../atl/reference/ccomobject-class.md)   
+[Класс CComObjectStack](../../atl/reference/ccomobjectstack-class.md)<br/>
+[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Класс CComObject](../../atl/reference/ccomobject-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a66946ced067e720a7e907bf39ffdd10327bc5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 27c1d945cf9e801ec1fe2346232aebcad559982a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019910"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>Класс IConnectionPointContainerImpl
 
@@ -35,14 +35,14 @@ ms.locfileid: "43760660"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IConnectionPointContainerImpl 
    : public IConnectionPointContainer
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IConnectionPointContainerImpl`.
 
 ## <a name="members"></a>Участники
@@ -100,5 +100,5 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 
 ## <a name="see-also"></a>См. также
 
-[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)   
+[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

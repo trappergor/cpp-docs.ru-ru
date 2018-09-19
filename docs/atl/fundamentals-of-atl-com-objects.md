@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7873b7006962449a40a8e67d118b6699ac61f263
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b90d8901a60b5945b2b29db2c378a0cd29939f63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059281"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Основы COM-объектов ATL
 
@@ -57,30 +57,30 @@ ms.locfileid: "43762097"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Реализация CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+[Реализация CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
 Показать пример записи сопоставления COM для реализации `CComObjectRootEx`.
 
-[Реализация CComObject, CComAggObject и CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+[Реализация CComObject, CComAggObject и CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
 Рассматриваются как **DECLARE_\*_AGGREGATABLE** макросы влияют на использование `CComObject`, `CComAggObject`, и `CComPolyObject`.
 
-[Поддержка IDispatch и IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+[Поддержка IDispatch и IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
 Список классов ATL реализации для поддержки `IDispatch` и `IErrorInfo` интерфейсов.
 
-[Поддержка IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+[Поддержка IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
 Описывает шаги по реализации точки подключения для вашего класса.
 
-[Изменение модели агрегирования и фабрики класса по умолчанию](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+[Изменение модели агрегирования и фабрики класса по умолчанию](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
 Показано, какие макросы, чтобы использовать для изменения модели фабрики и статистической обработки классов по умолчанию.
 
-[Создание объединенного объекта](../atl/creating-an-aggregated-object.md)  
+[Создание объединенного объекта](../atl/creating-an-aggregated-object.md)<br/>
 Приводятся инструкции по созданию вычисляемого объекта.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Создание проекта ATL](../atl/reference/creating-an-atl-project.md)  
+[Создание проекта ATL](../atl/reference/creating-an-atl-project.md)<br/>
 Содержит сведения о создании ATL COM-объекта.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Ссылки на разделы о программировании с использованием библиотеки ATL.
 
 ## <a name="see-also"></a>См. также

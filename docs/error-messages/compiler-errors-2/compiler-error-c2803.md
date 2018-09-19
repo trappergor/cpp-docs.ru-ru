@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2803 | Документы Microsoft
+title: Ошибка компилятора C2803 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51cf2a8b38a86fcd97ab693b3853fe25527a0bb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7885735ebad1ff90afaf4ba8eaf6dfca9f3e0ab3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027045"
 ---
 # <a name="compiler-error-c2803"></a>Ошибка компилятора C2803
-«оператор» должен иметь по крайней мере один формальный параметр типа класса  
-  
- Перегруженный оператор не имеет параметра типа класса.  
-  
- Нужно передать хотя бы один параметр по ссылке (без использования указателей, но ссылки на) или по значению, чтобы иметь возможность писать «< b» (тип класса A и b).  
-  
- Если оба параметра являются указателями, они будут простое сравнение адресов указателей и не будет использовать определенное пользователем преобразование.  
-  
- Следующий пример приводит к возникновению ошибки C2803:  
-  
-```  
-// C2803.cpp  
-// compile with: /c  
-class A{};  
-bool operator< (const A *left, const A *right);   // C2803  
-// try the following line instead  
-// bool operator< (const A& left, const A& right);  
+
+«оператор» должен иметь по крайней мере один формальный параметр типа класса
+
+Перегруженный оператор не имеет параметра типа класса.
+
+Необходимо передать по крайней мере один параметр по ссылке (без использования указателей, но ссылки) или по значению, чтобы иметь возможность записи «< b» (тип класса A и b).
+
+Если оба аргумента являются указателями, он будет простое сравнение адресов указателя и не будет использовать определенное пользователем преобразование.
+
+Следующий пример приводит к возникновению ошибки C2803:
+
+```
+// C2803.cpp
+// compile with: /c
+class A{};
+bool operator< (const A *left, const A *right);   // C2803
+// try the following line instead
+// bool operator< (const A& left, const A& right);
 ```

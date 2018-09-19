@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2403 | Документы Microsoft
+title: Ошибка компилятора C2403 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed937f2b6d0ca15b1c16470c239484a4996b019
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99de310b70b351730f181f332fc9ce8d68b7d45a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041887"
 ---
 # <a name="compiler-error-c2403"></a>Ошибка компилятора C2403
-"идентификатор": регистр должен быть базовым или индексным в контексте "контекст"  
-  
- Регистр, используемый в косвенном операнде памяти, должен быть базовым или индексным регистром в данном контексте.
+
+"идентификатор": регистр должен быть базовым или индексным в контексте "контекст"
+
+Регистр, используемый в косвенном операнде памяти, должен быть базовым или индексным регистром в данном контексте.

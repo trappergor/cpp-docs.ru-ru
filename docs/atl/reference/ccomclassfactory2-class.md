@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e4b8fe74355d99258677fd4746ad2461f508d3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 05fcef5ee1141de8261bc4ecc813cd573fb8f901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757807"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099509"
 ---
 # <a name="ccomclassfactory2-class"></a>Класс CComClassFactory2
 
@@ -36,7 +36,7 @@ ms.locfileid: "43757807"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class license>  
+template <class license>
 class CComClassFactory2 : public IClassFactory2,
     public CComObjectRootEx<CComGlobalsThreadModel>,
     public license
@@ -44,7 +44,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>Параметры
 
-*лицензии*  
+*лицензии*<br/>
 Класс, реализующий следующие статические функции:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -105,13 +105,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Если объект создается как часть агрегата, затем *pUnkOuter* должен быть внешняя Неизвестная строка. В противном случае *pUnkOuter* должен иметь значение NULL.
 
-*riid*  
+*riid*<br/>
 [in] Идентификатор IID запрошенного интерфейса. Если *pUnkOuter* отлично от NULL, *riid* должно быть `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppvObj* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -138,19 +138,19 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Если объект создается как часть агрегата, затем *pUnkOuter* должен быть внешняя Неизвестная строка. В противном случае *pUnkOuter* должен иметь значение NULL.
 
-*pUnkReserved*  
+*pUnkReserved*<br/>
 [in] Не используется. Должен иметь значение NULL.
 
-*riid*  
+*riid*<br/>
 [in] Идентификатор IID запрошенного интерфейса. Если *pUnkOuter* отлично от NULL, *riid* должно быть `IID_IUnknown`.
 
-*bstrKey*  
+*bstrKey*<br/>
 [in] Во время выполнения лицензионный ключ, ранее полученный из вызова `RequestLicKey`. Этот ключ необходим для создания объекта.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, заданный параметром *riid*. Если объект не поддерживает этот интерфейс *ppvObject* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -171,7 +171,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="parameters"></a>Параметры
 
-*pLicInfo*  
+*pLicInfo*<br/>
 [out] Указатель на `LICINFO` структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -192,7 +192,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Параметры
 
-*fLock*  
+*fLock*<br/>
 [in] Если значение равно TRUE, увеличивается счетчик блокировок; в противном случае уменьшается количество блокировок.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -215,10 +215,10 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="parameters"></a>Параметры
 
-*dwReserved*  
+*dwReserved*<br/>
 [in] Не используется. Должен равняться нулю.
 
-*pbstrKey*  
+*pbstrKey*<br/>
 [out] Указатель на лицензионный ключ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -233,8 +233,8 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[Класс CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[Класс CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[Класс CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

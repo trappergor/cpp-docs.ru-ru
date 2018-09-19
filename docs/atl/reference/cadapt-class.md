@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 503ce18d5ffa966f6c216468b487851207313937
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9292c354b630ca5aea8bda7c88f5beab6691ba08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052846"
 ---
 # <a name="cadapt-class"></a>Класс CAdapt
 
@@ -36,13 +36,13 @@ ms.locfileid: "44105358"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class CAdapt
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Адаптированный тип.
 
 ## <a name="members"></a>Участники
@@ -97,10 +97,10 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Параметры
 
-*rSrc*  
+*rSrc*<br/>
 Переменная типа, адаптации для копирования в объект нового созданного адаптера.
 
-*rSrCA*  
+*rSrCA*<br/>
 Объект адаптера, содержащиеся данные следует копировать (или перемещать) в объект нового созданного адаптера.
 
 ##  <a name="m_t"></a>  CAdapt::m_T
@@ -119,7 +119,7 @@ T m_T;
 
 Возвращает **const** ссылка [m_T](#m_t) член, позволяя объекте адаптера рассматриваться, как если бы это был объект типа *T*.
 
-```  
+```
 operator const T&() const;
 ```
 
@@ -131,7 +131,7 @@ operator const T&() const;
 
 Возвращает ссылку на [m_T](#m_t) член, позволяя объекте адаптера рассматриваться, как если бы это был объект типа *T*.
 
-```  
+```
 operator T&();
 ```
 
@@ -149,7 +149,7 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="parameters"></a>Параметры
 
-*rSrc*  
+*rSrc*<br/>
 Ссылка на объект для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -168,10 +168,10 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Параметры
 
-*rSrc*  
+*rSrc*<br/>
 Ссылка на объект адаптированного типа для копирования.
 
-*rSrCA*  
+*rSrCA*<br/>
 Ссылка на объект для перемещения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -188,7 +188,7 @@ bool operator== (const T& rSrc) const;
 
 ### <a name="parameters"></a>Параметры
 
-*rSrc*  
+*rSrc*<br/>
 Ссылка на объект для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение

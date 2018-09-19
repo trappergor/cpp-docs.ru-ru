@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 2) C4302 компилятора | Документы Microsoft
+title: Предупреждение (уровень 2) C4302 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f9a94e75b0d2ce522c2ec9f45d8a2386e85b136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31ff3bebf07d87b507a18998658966b2c5a789b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025585"
 ---
 # <a name="compiler-warning-level-2-c4302"></a>Предупреждение компилятора (уровень 1) C4302
-«Преобразование»: усечение из «типа 1"в «тип 2"  
-  
- Компилятор обнаружил преобразование большего типа к типу меньшего размера. Данные могут быть потеряны.  
-  
- Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Следующий пример приводит к возникновению ошибки C4302:  
-  
-```  
-// C4302.cpp  
-// compile with: /W2  
-#pragma warning(default : 4302)  
-int main() {  
-   int i;  
-   char c = (char) &i;     // C4302  
-   short s = (short) &i;   // C4302  
-}  
+
+«Преобразование»: усечение из «типа 1"в «тип 2"
+
+Компилятор обнаружил преобразование из большего типа в тип меньшего размера. Данные могут быть потеряны.
+
+Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Следующий пример приводит к возникновению ошибки C4302:
+
+```
+// C4302.cpp
+// compile with: /W2
+#pragma warning(default : 4302)
+int main() {
+   int i;
+   char c = (char) &i;     // C4302
+   short s = (short) &i;   // C4302
+}
 ```

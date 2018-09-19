@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2060 | Документы Microsoft
+title: Ошибка компилятора C2060 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6e23bd3f67bb6e2b100b8afa483b2be8fc68fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5584bf596a507a3055cc9196acd233da8139523b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171341"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101583"
 ---
 # <a name="compiler-error-c2060"></a>Ошибка компилятора C2060
-Синтаксическая ошибка: обнаружен конец файла  
-  
- Ожидается по крайней мере еще одна лексема.
+
+Синтаксическая ошибка: обнаружен конец файла
+
+Ожидался хотя бы один более токена.

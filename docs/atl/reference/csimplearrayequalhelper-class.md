@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b23ba46ee4a8e25c15b4d9e51b87c444da67f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2613a885dd5399c3655ecb853f3977be71928526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758219"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021061"
 ---
 # <a name="csimplearrayequalhelper-class"></a>Класс CSimpleArrayEqualHelper
 
@@ -32,13 +32,13 @@ ms.locfileid: "43758219"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class CSimpleArrayEqualHelper
 ```
 
 #### <a name="parameters"></a>Параметры
 
-`T`  
+*T*<br/>
 Производный класс.
 
 ## <a name="members"></a>Участники
@@ -69,10 +69,10 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>Параметры
 
-*T1*  
+*T1*<br/>
 Объект типа T.
 
-*T2*  
+*T2*<br/>
 Объект типа T.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -81,6 +81,6 @@ static bool IsEqual(
 
 ## <a name="see-also"></a>См. также
 
-[Класс CSimpleArray](../../atl/reference/csimplearray-class.md)   
-[Класс CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
+[Класс CSimpleArray](../../atl/reference/csimplearray-class.md)<br/>
+[Класс CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3213 | Документы Microsoft
+title: Ошибка компилятора C3213 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfdbb3554aad858cf412ace7709bbf63b3ae311
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a23f61dc8170ff7cd5638d2b2f394d288f48c5f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112984"
 ---
 # <a name="compiler-error-c3213"></a>Ошибка компилятора C3213
-базовый класс "базовый_тип" менее доступен, чем "производный_тип"  
-  
- Тип, который будет видимым из сборки, должен использовать публично видимые базовые классы.  
-  
- В следующем примере возникает ошибка C3213:  
-  
-```  
-// C3213.cpp  
-// compile with: /clr  
-private ref struct privateG {  
-public:  
-   int i;  
-};  
-  
-public ref struct publicG {  
-public:  
-   int i;  
-};  
-  
-public ref struct V : public privateG {   // C3213  
-public:  
-   int j;  
-};  
-  
-public ref struct W: public publicG {   // OK  
-public:  
-   int j;  
-};  
+
+базовый класс "базовый_тип" менее доступен, чем "производный_тип"
+
+Тип, который будет видимым из сборки, должен использовать публично видимые базовые классы.
+
+В следующем примере возникает ошибка C3213:
+
+```
+// C3213.cpp
+// compile with: /clr
+private ref struct privateG {
+public:
+   int i;
+};
+
+public ref struct publicG {
+public:
+   int i;
+};
+
+public ref struct V : public privateG {   // C3213
+public:
+   int j;
+};
+
+public ref struct W: public publicG {   // OK
+public:
+   int j;
+};
 ```

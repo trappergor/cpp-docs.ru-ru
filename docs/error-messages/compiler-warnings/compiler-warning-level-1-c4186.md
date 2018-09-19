@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4186 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4186 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc40d2b9f43d041c7b04ba2bc77a0aba0630274c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bfc722a07d2ddb10e5be8c6d8fde60956b297c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277596"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079782"
 ---
 # <a name="compiler-warning-level-1-c4186"></a>Предупреждение компилятора (уровень 1) C4186
-\#Импорт атрибут «атрибут» требуется другое число аргументов; обрабатывается  
-  
- Атрибут `#import` имеет неправильное число аргументов.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// C4186.cpp  
-// compile with: /W1 /c  
-#import "stdole2.tlb" no_namespace("abc") rename("a","b","c")  // C4186  
-```  
-  
- Атрибут `no_namespace` не имеет аргументов. Атрибут **rename** имеет только два аргумента.
+
+\#Импорт «атрибут» требует число аргументов; игнорируется
+
+Атрибут `#import` имеет неправильное число аргументов.
+
+## <a name="example"></a>Пример
+
+```
+// C4186.cpp
+// compile with: /W1 /c
+#import "stdole2.tlb" no_namespace("abc") rename("a","b","c")  // C4186
+```
+
+Атрибут `no_namespace` не имеет аргументов. Атрибут **rename** имеет только два аргумента.

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a312ca8aa7afe39a301607e6b091341adbb89bc4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3066f4586d34c4742cc03511d7f8739b642ccbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066249"
 ---
 # <a name="cautoptr-class"></a>Класс CAutoPtr
 
@@ -39,13 +39,13 @@ ms.locfileid: "43761086"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <typename T>  
+template <typename T>
 class CAutoPtr
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип указателя.
 
 ## <a name="members"></a>Участники
@@ -109,7 +109,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 `CAutoPtr` Объект будет стать владельцем этого указателя.
 
 ### <a name="remarks"></a>Примечания
@@ -133,16 +133,16 @@ explicit CAutoPtr(T* p) throw();
 template<typename TSrc>
 CAutoPtr(CAutoPtr<TSrc>& p) throw();
 
-template<> 
+template<>
 CAutoPtr(CAutoPtr<T>& p) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Существующего указателя.
 
-*TSrc*  
+*TSrc*<br/>
 Под управлением другой тип `CAutoPtr`, которое используется для инициализации текущего объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -223,10 +223,10 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель.
 
-*TSrc*  
+*TSrc*<br/>
 Тип класса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -265,7 +265,7 @@ T* operator->() const throw();
 
 Оператор приведения типов.
 
-```  
+```
 operator T* () const throw();
 ```
 
@@ -279,6 +279,6 @@ operator T* () const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Класс CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)   
+[Класс CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Класс CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

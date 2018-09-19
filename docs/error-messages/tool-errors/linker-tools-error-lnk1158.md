@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1158 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1158 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cee2a31d1a7b05104031fbf41e8e3addb82d7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ce319aa4529c74cad00342b09aa0ed98bb49ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300190"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094173"
 ---
 # <a name="linker-tools-error-lnk1158"></a>Ошибка средств компоновщика LNK1158
-не удается запустить «имя_файла»  
-  
- Данный исполняемый файл, вызванных [ССЫЛКУ](../../build/reference/linker-command-line-syntax.md) не в каталог, содержащий связь, так и в каталоге, указанном в переменной среды PATH.  
-  
- Например, вы получите эту ошибку при попытке использовать параметр PGOPTIMIZE [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) компоновщика на компьютере с 32-разрядной операционной системе.
+
+не удается запустить «имя_файла»
+
+Данного исполняемого файла, вызывается [ССЫЛКУ](../../build/reference/linker-command-line-syntax.md) не в каталог, содержащий ССЫЛКУ, так и в каталоге, указанном в переменной среды PATH.
+
+Например, эта ошибка может возникнуть при попытке использовать параметр PGOPTIMIZE [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) параметр компоновщика на компьютере с 32-разрядной операционной системе.

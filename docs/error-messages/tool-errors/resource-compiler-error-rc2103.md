@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора ресурсов RC2103 | Документы Microsoft
+title: Ошибка компилятора ресурсов RC2103 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c70c89c927dca59f9bc242245d19f91e9e4a3894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bfdfefa0ee66093708ea7f839d7fbe8630ffe81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093471"
 ---
 # <a name="resource-compiler-error-rc2103"></a>Ошибка компилятора ресурсов RC2103
-непредвиденный конец файла в строковом литерале  
-  
- Конец файла, найден до конца строки. Строка, возможно, отсутствует закрывающая двойная кавычка (**»**).
+
+Неожиданный конец файла в строковом литерале
+
+Конец файла найден до конца строки. В строке, возможно, отсутствует закрывающая двойная кавычка (**"**).

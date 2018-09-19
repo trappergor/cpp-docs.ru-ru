@@ -1,5 +1,5 @@
 ---
-title: Предупреждение компилятора (уровень 1) C4272 | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4272 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6de736c3226a9d3377769b65604a458c08e25df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00e30646c9fe56132da9cf87ba71cb54ae6a3e8f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277203"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052963"
 ---
 # <a name="compiler-warning-level-1-c4272"></a>Предупреждение компилятора (уровень 1) C4272
-«функция»: помечается как __declspec(dllimport); При импорте функции необходимо указать собственное соглашение о вызовах.  
-  
- Это ошибка для экспорта функции, помеченной [__clrcall](../../cpp/clrcall.md) соглашение о вызовах и компилятор выдает это предупреждение, если вы попытаетесь импортировать функции, помеченной `__clrcall`.  
-  
- Следующий пример приводит к возникновению ошибки C4272:  
-  
-```  
-// C4272.cpp  
-// compile with: /c /W1 /clr  
-__declspec(dllimport) void __clrcall Test();   // C4272  
-__declspec(dllimport) void Test2();   // OK  
+
+«функция»: помечается как __declspec(dllimport); При импорте функции необходимо указать собственное соглашение о вызове.
+
+Является ошибкой экспортировать функцию, отмеченные [__clrcall](../../cpp/clrcall.md) соглашение о вызовах и компилятор выдает это предупреждение, если вы попытаетесь импортировать функции, помеченной `__clrcall`.
+
+Следующий пример приводит к возникновению ошибки C4272:
+
+```
+// C4272.cpp
+// compile with: /c /W1 /clr
+__declspec(dllimport) void __clrcall Test();   // C4272
+__declspec(dllimport) void Test2();   // OK
 ```

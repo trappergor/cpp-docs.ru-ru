@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора ресурсов RC2122 | Документы Microsoft
+title: Ошибка компилятора ресурсов RC2122 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d468686fa874afbcf3d1d95517afe7fbcff8d2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c836819f1267056e21596274d46101ad75f970fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105503"
 ---
 # <a name="resource-compiler-error-rc2122"></a>Ошибка компилятора ресурсов RC2122
-Неизвестный подтип меню  
-  
- *Определение элемента* поле **меню** оператор может содержать только **MENUITEM** и **всплывающее ОКНО** инструкции.
+
+Неизвестный подтип меню
+
+*Определение элемента* поле **меню** оператор может содержать только **MENUITEM** и **всплывающее ОКНО** инструкций.

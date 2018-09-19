@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116754"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Вызов неуправляемых функций из управляемого кода
 Среда CLR предоставляет службы вызова неуправляемого или PInvoke, которая позволяет управляемому коду вызывать функции C-стиля в собственные библиотеки динамической компоновки (DLL). Такой же маршалинг данных применяется и для COM-взаимодействие со средой выполнения и для механизма «It Just Works» или IJW.  
@@ -105,7 +105,7 @@ int main() {
   
  В этом примере программы Visual C++ взаимодействует с функцией MessageBox, являющейся частью API-интерфейса Win32.  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -132,16 +132,17 @@ int main() {
   
  Если PInvoke используется в приложении Visual C++, можно написать что-то подобное следующему:  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  Основная трудность здесь заключается в том, что мы не можем удалить память для неуправляемых строк, возвращаемых MakeSpecial. Другие функции, вызываемые посредством PInvoke возвращают указатель на внутренний буфер, который пользователю освобождать не нужно. В этом случае с помощью функции IJW является очевидным выбором.  
   
 ## <a name="limitations-of-pinvoke"></a>Ограничения PInvoke  
  Невозможно вернуть точно тот же указатель из неуправляемой функции, которая была взята в качестве параметра. Если неуправляемая функция возвращает указатель, который был передан на него посредством PInvoke, может возникнуть повреждение области памяти и исключения.  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  

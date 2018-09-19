@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3891 | Документы Microsoft
+title: Ошибка компилятора C3891 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 021f19d50d0b83c9526956684737ad23fea9fb01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c85e5fa5ed5e6f202750fef05ffc96e9a0c86bc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272712"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051702"
 ---
 # <a name="compiler-error-c3891"></a>Ошибка компилятора C3891
-«переменная»: данные-член литерала не может использоваться как l значение  
-  
- Объект [литерала](../../windows/literal-cpp-component-extensions.md) переменной является константным выражением, и его значение нельзя изменить после инициализации в объявлении.  
-  
- Следующий пример приводит к возникновению ошибки C3891:  
-  
-```  
-// C3891.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   literal int staticConst = 9;  
-};  
-  
-int main() {  
-   Y1::staticConst = 0;   // C3891  
-}  
+
+«var»: данные-член литерала нельзя использовать в качестве левого операнда
+
+Объект [литерала](../../windows/literal-cpp-component-extensions.md) переменной является константным выражением, и его значение нельзя изменить после инициализации в объявлении.
+
+Следующий пример приводит к возникновению ошибки C3891:
+
+```
+// C3891.cpp
+// compile with: /clr
+ref struct Y1 {
+   literal int staticConst = 9;
+};
+
+int main() {
+   Y1::staticConst = 0;   // C3891
+}
 ```

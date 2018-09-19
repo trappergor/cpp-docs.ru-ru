@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da9a0299679ec140888e9536329f0957a786279
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760007"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095863"
 ---
 # <a name="atl-com-property-pages"></a>Страницы свойств COM в ATL
 
@@ -38,18 +38,18 @@ ms.locfileid: "43760007"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Указание страниц свойств](../atl/specifying-property-pages.md)  
+[Указание страниц свойств](../atl/specifying-property-pages.md)<br/>
 Действия по указание страниц свойств для элемента управления вы и показывает пример класса.
 
-[Реализация страниц свойств](../atl/implementing-property-pages.md)  
+[Реализация страниц свойств](../atl/implementing-property-pages.md)<br/>
 Приводятся инструкции по реализации страницы свойств, включая методы для переопределения. Описывается полный пример на основе образца программы ATLPages.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Пример ATLPages](../visual-cpp-samples.md)  
+[Пример ATLPages](../visual-cpp-samples.md)<br/>
 Абстрактный пример ATLPages образец, который реализует свойство страницы с помощью `IPropertyPageImpl`.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Ссылки на разделы о программировании с использованием библиотеки ATL.
 
 ## <a name="see-also"></a>См. также

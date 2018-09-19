@@ -18,27 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0b114089567de06a71f15b69c556e08d1e4e9c6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 888ec19eaedf881fed97a14a7f3f8b5ee673ce7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056291"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
-Помечает функцию как значимую для 64-разрядной среды CLR. Этот модификатор используется с определенными функциями в библиотеках Microsoft.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-__declspec(jitintrinsic)  
-```  
-  
-## <a name="remarks"></a>Примечания  
- **jitintrinsic** добавляет MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) к сигнатуре функции.  
-  
- Пользователям не рекомендуется применять этот **__declspec** модификатор, как непредвиденные результаты могут возникать.  
-  
-## <a name="see-also"></a>См. также  
- [__declspec](../cpp/declspec.md)   
- [Ключевые слова](../cpp/keywords-cpp.md)
+
+Помечает функцию как значимую для 64-разрядной среды CLR. Этот модификатор используется с определенными функциями в библиотеках Microsoft.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+__declspec(jitintrinsic)
+```
+
+## <a name="remarks"></a>Примечания
+
+**jitintrinsic** добавляет MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) к сигнатуре функции.
+
+Пользователям не рекомендуется применять этот **__declspec** модификатор, как непредвиденные результаты могут возникать.
+
+## <a name="see-also"></a>См. также
+
+[__declspec](../cpp/declspec.md)<br/>
+[Ключевые слова](../cpp/keywords-cpp.md)

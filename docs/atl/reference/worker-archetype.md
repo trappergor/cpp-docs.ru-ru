@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f34f7ceca5cf958e981f8390044863a07b4317
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767169"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118457"
 ---
 # <a name="worker-archetype"></a>Рабочий Архетип
 
@@ -68,7 +68,7 @@ ms.locfileid: "43767169"
 
 Вызывается для обработки рабочего элемента.
 
-```  
+```
 void Execute(
     RequestType request,  
     void* pvWorkerParam,  
@@ -77,25 +77,25 @@ void Execute(
 
 #### <a name="parameters"></a>Параметры
 
-*Запрос*  
+*Запрос*<br/>
 Рабочий элемент должен быть обработан. Рабочий элемент имеет тот же тип, что `RequestType`.
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Пользовательский параметр, воспринимаемый рабочий класс. Также передается `WorkerArchetype::Initialize` и `Terminate`.
 
-*pOverlapped*  
+*pOverlapped*<br/>
 Указатель на [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) структура, используемая для создания очереди, на какие рабочие элементы были поставлены в очередь.
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 
-Вызывается для инициализации объекта рабочей роли, прежде чем все запросы передаются `WorkerArchetype::Execute`.  
+Вызывается для инициализации объекта рабочей роли, прежде чем все запросы передаются `WorkerArchetype::Execute`.
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*pvParam*  
+*pvParam*<br/>
 Пользовательский параметр, воспринимаемый рабочий класс. Также передается `WorkerArchetype::Terminate` и `WorkerArchetype::Execute`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -106,8 +106,8 @@ BOOL Initialize(void* pvParam) throw();
 
 Typedef для типа рабочего элемента, который может быть обработан с помощью класса рабочих.
 
-```  
-typedef MyRequestType RequestType;    
+```
+typedef MyRequestType RequestType;
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -118,17 +118,17 @@ typedef MyRequestType RequestType;
 
 Для отмены инициализации рабочий объект после все запросы были переданы вызванной `WorkerArchetype::Execute`).
 
-``` 
+```
 void Terminate(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*pvParam*  
+*pvParam*<br/>
 Пользовательский параметр, воспринимаемый рабочий класс. Также передается `WorkerArchetype::Initialize` и `WorkerArchetype::Execute`.
 
 ## <a name="see-also"></a>См. также
 
-[Основные понятия](../../atl/active-template-library-atl-concepts.md)   
+[Основные понятия](../../atl/active-template-library-atl-concepts.md)<br/>
 [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2802 | Документы Microsoft
+title: Ошибка компилятора C2802 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe069b93c8dc6bb098927925e93f10cec2dbc4c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95b4f64aad9cb14151ca6128bedebcd15ece17ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061259"
 ---
 # <a name="compiler-error-c2802"></a>Ошибка компилятора C2802
-статический член «оператор» не имеет формальных параметров  
-  
- Оператор объявления `static` функция-член должен иметь по крайней мере один параметр.  
-  
- Следующий пример приводит к возникновению ошибки C2802:  
-  
-```  
-// C2802.cpp  
-// compile with: /clr /c  
-ref class A {  
-   static operator+ ();   // C2802  
-   static operator+ (A^, A^);   // OK  
-};  
+
+статический член «оператор» не имеет формальных параметров
+
+Оператор объявлен с `static` функция-член должна иметь по крайней мере один параметр.
+
+Следующий пример приводит к возникновению ошибки C2802:
+
+```
+// C2802.cpp
+// compile with: /clr /c
+ref class A {
+   static operator+ ();   // C2802
+   static operator+ (A^, A^);   // OK
+};
 ```

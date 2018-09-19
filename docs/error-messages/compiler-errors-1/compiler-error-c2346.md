@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2346 | Документы Microsoft
+title: Ошибка компилятора C2346 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9459d7330738180e92776e93fcba9a07bfd39640
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ec916bcdce1a43c597d8cfae10e5393cbeb99ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108618"
 ---
 # <a name="compiler-error-c2346"></a>Ошибка компилятора C2346
-«функция» не может быть скомпилирована как управляемая: причина  
-  
- Компилятору не удалось скомпилировать функцию на языке MSIL.  
-  
- Дополнительные сведения см. в разделе [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md) и [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-### <a name="to-correct-this-error"></a>Исправление ошибки  
-  
-1.  Удалите этот код в функцию, которую нельзя скомпилировать в MSIL-код.  
-  
-2.  Либо не компилируйте модуль с **/CLR**, либо пометьте функцию как неуправляемую с неуправляемая прагма.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2346.  
-  
-```  
-// C2346.cpp  
-// processor: x86  
-// compile with: /clr   
-// C2346 expected  
-struct S  
-{  
-   S()  
-   {  
-      { __asm { nop } }  
-   }  
-   virtual __clrcall ~S() { }  
-};  
-  
-void main()  
-{  
-   S s;  
-}  
+
+«функция» не может компилироваться как машинный код: причина
+
+Компилятору не удалось скомпилировать функцию в код MSIL.
+
+Дополнительные сведения см. в разделе [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md) и [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+### <a name="to-correct-this-error"></a>Исправление ошибки
+
+1. Удалите код в функции, которая не может компилироваться в MSIL.
+
+1. Либо не компилируйте модуль с помощью **/CLR**, или пометьте ее как неуправляемые и неуправляемая прагма.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2346.
+
+```
+// C2346.cpp
+// processor: x86
+// compile with: /clr
+// C2346 expected
+struct S
+{
+   S()
+   {
+      { __asm { nop } }
+   }
+   virtual __clrcall ~S() { }
+};
+
+void main()
+{
+   S s;
+}
 ```

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebf3ba07ac5608a47f4e2bbbe853cb37c033e5f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46198390ce25cb655b94c0ca4769321fc3e9362d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757619"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099711"
 ---
 # <a name="catlautothreadmodulet-class"></a>Класс CAtlAutoThreadModuleT
 
@@ -35,21 +35,21 @@ ms.locfileid: "43757619"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, 
+template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
-         DWORD dwWait = INFINITE>  
+         DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Класс, который реализует COM-сервера.
 
-*ThreadAllocator*  
+*ThreadAllocator*<br/>
 Класс управления выбора потоков. Значение по умолчанию — [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
-*dwWait*  
+*dwWait*<br/>
 Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, что означает интервал времени ожидания для метода, никогда не истекает.
 
 ## <a name="members"></a>Участники
@@ -95,7 +95,7 @@ static int GetDefaultThreads();
 
 ## <a name="see-also"></a>См. также
 
-[Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+[Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Модульные классы](../../atl/atl-module-classes.md)

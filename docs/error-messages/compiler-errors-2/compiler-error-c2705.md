@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2705 | Документы Microsoft
+title: Ошибка компилятора C2705 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dce6bdb0a5c20fbe54b04eaf83ee8f90427017c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c0eefd19645ee6ac06664249f7953d904cd5896
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093705"
 ---
 # <a name="compiler-error-c2705"></a>Ошибка компилятора C2705
-«Метка»: Недопустимый переход в область видимости «блок обработчика исключений»  
-  
- Выполнение переходит к метке внутри `try` / `catch`, `__try` / `__except`, `__try` / `__finally` блока. Дополнительные сведения см. в разделе [Обработка исключений](../../cpp/exception-handling-in-visual-cpp.md).  
-  
- Следующий пример приводит к возникновению ошибки C2705:  
-  
-```  
-// C2705.cpp  
-int main() {  
-goto trouble;  
-   __try {  
-      trouble: ;   // C2705  
-   }  
-   __finally {}  
-  
-   // try the following line instead  
-   // trouble: ;  
-}  
+
+«Метка»: Недопустимый переход в область «блока обработки исключений»
+
+Выполнение переходит к метке внутри `try` / `catch`, `__try` / `__except`, `__try` / `__finally` блока. Дополнительные сведения см. в разделе [Обработка исключений](../../cpp/exception-handling-in-visual-cpp.md).
+
+Следующий пример приводит к возникновению ошибки C2705:
+
+```
+// C2705.cpp
+int main() {
+goto trouble;
+   __try {
+      trouble: ;   // C2705
+   }
+   __finally {}
+
+   // try the following line instead
+   // trouble: ;
+}
 ```

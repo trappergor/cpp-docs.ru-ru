@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb24b1d00c7c70b545213a64e685f238d6b5157
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029017"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Класс CPrivateObjectSecurityDesc
 
@@ -93,16 +93,16 @@ bool ConvertToAutoInherit(
 
 ### <a name="parameters"></a>Параметры
 
-*pParent*  
+*pParent*<br/>
 Указатель на [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) объекта, ссылающегося на родительский контейнер объекта. Если родительского контейнера нет, этот параметр имеет значение NULL.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указатель на `GUID` структура, определяющая тип объекта, связанного с текущим объектом. Задайте *ObjectType* значение NULL, если объект не является идентификатором GUID.
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 Указывает, является ли новый объект может содержать другие объекты. Значение true указывает, что новый объект является контейнером. Значение false указывает, что новый объект не является контейнером.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Указатель на [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) структуру, которая задает сопоставление каждой универсального направо особые права для объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -161,28 +161,28 @@ bool Create(
 
 ### <a name="parameters"></a>Параметры
 
-*pParent*  
+*pParent*<br/>
 Указатель на [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) объекта, ссылающегося на родительский каталог, в которой создается новый объект. Задайте значение NULL, если нет родительского каталога.
 
-*pCreator*  
+*pCreator*<br/>
 Указатель на дескриптор безопасности, предоставляемые создателю объекта. Если создатель объекта явным образом не передает сведения о безопасности для нового объекта, этот параметр равен NULL.
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 Указывает, является ли новый объект может содержать другие объекты. Значение true указывает, что новый объект является контейнером. Значение false указывает, что новый объект не является контейнером.
 
-*Маркер*  
+*Маркер*<br/>
 Ссылка на [CAccessToken](../../atl/reference/caccesstoken-class.md) объекта для процесса клиента, от имени которого создается объект.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Указатель на [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) структуру, которая задает сопоставление каждой универсального направо особые права для объекта.
 
-*Тип объекта*  
+*Тип объекта*<br/>
 Указатель на `GUID` структура, определяющая тип объекта, связанного с текущим объектом. Задайте *ObjectType* значение NULL, если объект не является идентификатором GUID.
 
-*bIsContainerObject*  
+*bIsContainerObject*<br/>
 Указывает, является ли новый объект может содержать другие объекты. Значение true указывает, что новый объект является контейнером. Значение false указывает, что новый объект не является контейнером.
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -210,10 +210,10 @@ bool Get(
 
 ### <a name="parameters"></a>Параметры
 
-*SI*  
+*SI*<br/>
 Набор битовых флагов, указывающие части для получения дескриптора безопасности. Это значение может представлять собой сочетание [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) битовые флаги.
 
-*pResult*  
+*pResult*<br/>
 Указатель на [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) , получающий копию запрошенные сведения из указанного дескриптора безопасности.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -234,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `CPrivateObjectSecurityDesc` Объект текущему объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -262,19 +262,19 @@ bool Set(
 
 ### <a name="parameters"></a>Параметры
 
-*SI*  
+*SI*<br/>
 Набор битовых флагов, указывающие части дескриптора безопасности. Это значение может представлять собой сочетание [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) битовые флаги.
 
-*Изменения*  
+*Изменения*<br/>
 Указатель на [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) объекта. Указывает части данного дескриптора безопасности *si* параметра применяются в дескрипторе безопасности объекта.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Указатель на [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) структуру, которая задает сопоставление каждой универсального направо особые права для объекта.
 
-*Маркер*  
+*Маркер*<br/>
 Ссылка на [CAccessToken](../../atl/reference/caccesstoken-class.md) объекта для процесса клиента, от имени которого создается объект.
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -287,7 +287,7 @@ bool Set(
 
 ## <a name="see-also"></a>См. также
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[Глобальные функции безопасности](../../atl/reference/security-global-functions.md)   
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Глобальные функции безопасности](../../atl/reference/security-global-functions.md)<br/>
 [Класс CSecurityDesc](../../atl/reference/csecuritydesc-class.md)

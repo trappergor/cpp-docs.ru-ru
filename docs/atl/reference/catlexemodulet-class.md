@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa212a6a58d1de417035f002b2caf3e206dabf1c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b9b19888f6eae3efe7baf4429ec1174432f99a10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757589"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118561"
 ---
 # <a name="catlexemodulet-class"></a>Класс CAtlExeModuleT
 
@@ -46,13 +46,13 @@ ms.locfileid: "43757589"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `CAtlExeModuleT`.
 
 ## <a name="members"></a>Участники
@@ -100,7 +100,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [CAtlModule](../../atl/reference/catlmodule-class.md)
 
@@ -200,10 +200,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 Командной строки, передаваемые от приложения.
 
-*pnRetCode*  
+*pnRetCode*<br/>
 Значение HRESULT, соответствующее регистрации (если она была выполнена).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -240,7 +240,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Значения, переданного как *nShowCmd* параметр в WinMain.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -261,10 +261,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER.
 
-*dwFlags*  
+*dwFlags*<br/>
 Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -293,7 +293,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел. По умолчанию SW_HIDE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -350,7 +350,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -363,7 +363,7 @@ int WinMain(int nShowCmd) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Образец ATLDuck](../../visual-cpp-samples.md)   
-[Класс CAtlModuleT](../../atl/reference/catlmodulet-class.md)   
-[Класс CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)   
+[Образец ATLDuck](../../visual-cpp-samples.md)<br/>
+[Класс CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
+[Класс CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

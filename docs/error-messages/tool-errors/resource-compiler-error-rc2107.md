@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора ресурсов RC2107 | Документы Microsoft
+title: Ошибка компилятора ресурсов RC2107 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6f613b92260d92cf8e6fd55d617b2b6f2a214d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b2062e54fecee218d8b59b3f6a37accb9b65d45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035255"
 ---
 # <a name="resource-compiler-error-rc2107"></a>Ошибка компилятора ресурсов RC2107
-**Ожидается числовое командное значение**  
-  
- Компилятор ресурсов ожидал числовой *idvalue* в **АКСЕЛЕРАТОРЫ** инструкции. Убедитесь, что использовалась `#define` константы для указания значения и константа была написана верно.
+
+**ожидалось значение числовых команд**
+
+Компилятор ресурсов ожидал числовой *idvalue* в **УСКОРИТЕЛИ** инструкции. Убедитесь, что вы использовали `#define` константы для указания значения и константа была написана верно.

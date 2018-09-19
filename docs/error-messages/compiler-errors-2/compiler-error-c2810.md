@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2810 | Документы Microsoft
+title: Ошибка компилятора C2810 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a07beb36269e45388f43d4eb5cfafbd909ac6dd3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a98d0dacf1823dd5b4f376a55279ec1e8cbff2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075765"
 ---
 # <a name="compiler-error-c2810"></a>Ошибка компилятора C2810
-«интерфейс»: интерфейс может наследовать только от другого интерфейса  
-  
- [Интерфейс](../../cpp/interface.md) может наследовать только от другого интерфейса и не могут наследовать от класса или структуры.  
-  
- В следующем примере возникает ошибка C2810:  
-  
-```  
-// C2810.cpp  
-#include <unknwn.h>  
-class CBase1 {  
-public:  
-  HRESULT mf1();  
-  int  m_i;  
-};  
-  
-[object, uuid="40719E20-EF37-11D1-978D-0000F805D73B"]  
-__interface IDerived : public CBase1 {  // C2810  
-// try the following line instead  
-// __interface IDerived {  
-   HRESULT mf2(void *a);  
-};  
-  
-struct CBase2 {  
-   HRESULT mf1(int a, char *b);  
-   HRESULT mf2();  
-};  
+
+«интерфейс»: интерфейс может наследовать только от другого интерфейса
+
+[Интерфейс](../../cpp/interface.md) может наследовать только от другого интерфейса и не могут наследовать от класса или структуры.
+
+В следующем примере возникает ошибка C2810:
+
+```
+// C2810.cpp
+#include <unknwn.h>
+class CBase1 {
+public:
+  HRESULT mf1();
+  int  m_i;
+};
+
+[object, uuid="40719E20-EF37-11D1-978D-0000F805D73B"]
+__interface IDerived : public CBase1 {  // C2810
+// try the following line instead
+// __interface IDerived {
+   HRESULT mf2(void *a);
+};
+
+struct CBase2 {
+   HRESULT mf1(int a, char *b);
+   HRESULT mf2();
+};
 ```

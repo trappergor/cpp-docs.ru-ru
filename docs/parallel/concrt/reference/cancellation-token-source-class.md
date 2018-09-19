@@ -1,5 +1,5 @@
 ---
-title: Класс cancellation_token_source | Документы Microsoft
+title: Класс cancellation_token_source | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053652"
 ---
 # <a name="cancellationtokensource-class"></a>Класс cancellation_token_source
 Класс `cancellation_token_source` представляет возможность отмены некоторой отменяемой операции.  
@@ -97,7 +97,8 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
+*_Src*<br/>
+Объект для копирования или перемещения.  
   
 ##  <a name="create_linked_source"></a> create_linked_source 
 
@@ -112,15 +113,17 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Iter`  
- `_Src`  
- Токен, отмена которого приведет к отмене возвращаемого источника токена. Обратите внимание, что возвращаемый источник токена также можно отменить независимо от источника, содержащегося в этом параметре.  
+*_Iter*<br/>
+Тип итератора.
+
+*_Src*<br/>
+Токен, отмена которого приведет к отмене возвращаемого источника токена. Обратите внимание, что возвращаемый источник токена также можно отменить независимо от источника, содержащегося в этом параметре.  
   
- `_Begin`  
- Итератор стандартной библиотеки C++, соответствующий началу диапазона токенов, которые требуется прослушивать на предмет отмены.  
+*Н_ачать*<br/>
+Итератор стандартной библиотеки C++, соответствующий началу диапазона токенов, которые требуется прослушивать на предмет отмены.  
   
- `_End`  
- Итератор стандартной библиотеки C++, соответствующий концу диапазона токенов, которые требуется прослушивать на предмет отмены.  
+*_Окончания*<br/>
+Итератор стандартной библиотеки C++, соответствующий концу диапазона токенов, которые требуется прослушивать на предмет отмены.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `cancellation_token_source`, который отменяется при отмене токена, предоставляемого параметром `_Src`.  
@@ -143,7 +146,8 @@ bool operator!= (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
+*_Src*<br/>
+Операнд.
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -156,8 +160,9 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
-  
+*_Src*<br/>
+Операнд.
+
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ##  <a name="operator_eq_eq"></a> оператор == 
@@ -167,7 +172,8 @@ bool operator== (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Src`  
+*_Src*<br/>
+Операнд.
   
 ### <a name="return-value"></a>Возвращаемое значение  
   

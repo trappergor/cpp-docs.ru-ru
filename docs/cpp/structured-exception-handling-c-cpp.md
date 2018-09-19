@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861cb216dba1e8b3d451d6120dba897e06ba910a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 72c82ce5885b8b40613a65bab72958d6ae7c1a2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050863"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -154,8 +154,8 @@ Executing SEH __except block
 
 ## <a name="see-also"></a>См. также
 
-[Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)  
-[Ключевые слова](../cpp/keywords-cpp.md)  
-[\<exception>](../standard-library/exception.md)  
-[Обработка ошибок и исключений](../cpp/errors-and-exception-handling-modern-cpp.md)  
-[Структурированные исключения, обработка (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  
+[Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)<br/>
+[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[\<exception>](../standard-library/exception.md)<br/>
+[Обработка ошибок и исключений](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Структурированные исключения, обработка (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)

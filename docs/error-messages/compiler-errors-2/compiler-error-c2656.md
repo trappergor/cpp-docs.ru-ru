@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2656 | Документы Microsoft
+title: Ошибка компилятора C2656 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e4dbae6232f50b9241f5542928311e8944501e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd4b0e4ee89bc2cd2c31e476bdc4ee19bfb8a3aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043772"
 ---
 # <a name="compiler-error-c2656"></a>Ошибка компилятора C2656
-«функция»: функция не допускается в качестве битового поля  
-  
- Функция объявлена как член является битовым полем.  
-  
- Эта ошибка может быть вызвано синтаксическая ошибка в списке инициализации конструктора.
+
+«функция»: функция не допускается в качестве битового поля
+
+Функция объявлена как член является битовым полем.
+
+Эта ошибка может быть вызвана синтаксические ошибки в списке инициализаторов конструктора.

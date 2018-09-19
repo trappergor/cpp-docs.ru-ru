@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2908 | Документы Microsoft
+title: Ошибка компилятора C2908 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d84f7fbda450b0830125a30898480ea94455332
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 913a01a21c75933688c55bbb79c3621124601745
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053119"
 ---
 # <a name="compiler-error-c2908"></a>Ошибка компилятора C2908
-явная специализация; «template» уже создан  
-  
- Специализация первичного шаблона предшествует явной специализации.  
-  
- Следующий пример приводит к возникновению ошибки C2908:  
-  
-```  
-// C2908.cpp  
-// compile with: /c  
-template<class T> class X {};  
-  
-void f() {  
-X<int> x;   //specialization and instantiation  
-            //of X<int>  
-}  
-  
-template<> class X<int> {}  // C2908, explicit specialization  
+
+явная специализация; «template» уже создан
+
+Специализация первичного шаблона происходит до явной специализации.
+
+Следующий пример приводит к возникновению ошибки C2908:
+
+```
+// C2908.cpp
+// compile with: /c
+template<class T> class X {};
+
+void f() {
+X<int> x;   //specialization and instantiation
+            //of X<int>
+}
+
+template<> class X<int> {}  // C2908, explicit specialization
 ```

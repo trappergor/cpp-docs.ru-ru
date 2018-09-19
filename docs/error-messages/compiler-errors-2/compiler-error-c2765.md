@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2765 | Документы Microsoft
+title: Ошибка компилятора C2765 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926cc1657db67530f866a2b2e00e4b23f4ccd0bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 708a4c326e87cf580208e26ef5ffe540afd52f95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085138"
 ---
 # <a name="compiler-error-c2765"></a>Ошибка компилятора C2765
-«функция»: явная специализация шаблона функции не может иметь аргументов по умолчанию  
-  
- Аргументы по умолчанию не разрешены для явной специализации шаблона функции. Дополнительные сведения см. в разделе [явной специализации шаблонов функций](../../cpp/explicit-specialization-of-function-templates.md).  
-  
- Следующий пример приводит к возникновению ошибки C2765:  
-  
-```  
-// C2765.cpp  
-template<class T> void f(T t) {};  
-  
-template<> void f<char>(char c = 'a') {}   // C2765  
-// try the following line instead  
-// template<> void f<char>(char c) {}  
+
+«функция»: явная специализация шаблона функции не может иметь аргументы по умолчанию
+
+Аргументы по умолчанию не разрешены для явной специализации шаблона функции. Дополнительные сведения см. в разделе [явная специализация шаблонов функций](../../cpp/explicit-specialization-of-function-templates.md).
+
+Следующий пример приводит к возникновению ошибки C2765:
+
+```
+// C2765.cpp
+template<class T> void f(T t) {};
+
+template<> void f<char>(char c = 'a') {}   // C2765
+// try the following line instead
+// template<> void f<char>(char c) {}
 ```

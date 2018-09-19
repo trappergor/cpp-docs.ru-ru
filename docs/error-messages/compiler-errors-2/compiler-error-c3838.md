@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3838 | Документы Microsoft
+title: Ошибка компилятора C3838 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea27fde00773ccdaf7acb2dff135cd3cf894da4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcf01ba87dc2e179e055417b6e2b78a90fd67cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267330"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064195"
 ---
 # <a name="compiler-error-c3838"></a>Ошибка компилятора C3838
-Невозможно явно наследовать из «тип»  
-  
- Указанный `type` не может выступать в качестве базового класса в любом классе.  
-  
+
+нельзя явно наследоваться от «тип»
+
+Указанный `type` не может использоваться в качестве базового класса в любом классе.
+
 ## <a name="example"></a>Пример
- Следующий пример приводит к возникновению ошибки C3838:  
-  
-```  
-// C3838a.cpp  
-// compile with: /clr /c  
-public ref class B : public System::Enum {};   // C3838  
-```  
+
+Следующий пример приводит к возникновению ошибки C3838:
+
+```
+// C3838a.cpp
+// compile with: /clr /c
+public ref class B : public System::Enum {};   // C3838
+```

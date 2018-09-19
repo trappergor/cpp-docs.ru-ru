@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3345 | Документы Microsoft
+title: Ошибка компилятора C3345 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e6b3a021d9c747e4ec30278d8a22bde899cb39a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 191c2184d14f991ab62f439b492c7fd7f4a00be5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254239"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118951"
 ---
 # <a name="compiler-error-c3345"></a>Ошибка компилятора C3345
-"идентификатор": недопустимый идентификатор для имени модуля  
-  
- *Идентификатор* для модуля содержит как минимум один недопустимый символ. В правильном идентификаторе первым символом должна быть буква, подчеркивание или расширенный символ ANSI (0x80-FF), а все последующие символы должны быть буквами, цифрами, подчеркиваниями или расширенными символами ANSI.  
-  
-### <a name="to-correct-this-error"></a>Исправление ошибки  
-  
-1.  Убедитесь, что *идентификатор* не содержит пробелы или другие недопустимые символы.  
-  
-## <a name="example"></a>Пример  
- В следующем примере возникает ошибка C3345, поскольку параметр `name` атрибута `module` содержит пробел.  
-  
-```  
-// cpp_attr_name_module.cpp  
-// compile with: /LD /link /OPT:NOREF  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlwin.h>  
-#include <atltypes.h>  
-#include <atlctl.h>  
-#include <atlhost.h>  
-#include <atlplus.h>  
-  
-// C3345 expected  
-[module(dll, name="My Library", version="1.2", helpfile="MyHelpFile")]   
-// Try the following line instead  
-//[module(dll, name="MyLibrary", version="1.2", helpfile="MyHelpFile")]   
-// Module attribute now applies to this class  
-class CMyClass {  
-public:  
-BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {  
-   // add your own code here  
-   return __super::DllMain(dwReason, lpReserved);  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>См. также  
- [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)   
- [Классификация символов](../../c-runtime-library/character-classification.md)   
- [Модуль](../../windows/module-cpp.md)
+
+"идентификатор": недопустимый идентификатор для имени модуля
+
+*Идентификатор* для модуля содержит как минимум один недопустимый символ. В правильном идентификаторе первым символом должна быть буква, подчеркивание или расширенный символ ANSI (0x80-FF), а все последующие символы должны быть буквами, цифрами, подчеркиваниями или расширенными символами ANSI.
+
+### <a name="to-correct-this-error"></a>Исправление ошибки
+
+1. Убедитесь, что *идентификатор* не содержит пробелы или другие недопустимые символы.
+
+## <a name="example"></a>Пример
+
+В следующем примере возникает ошибка C3345, поскольку параметр `name` атрибута `module` содержит пробел.
+
+```
+// cpp_attr_name_module.cpp
+// compile with: /LD /link /OPT:NOREF
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlwin.h>
+#include <atltypes.h>
+#include <atlctl.h>
+#include <atlhost.h>
+#include <atlplus.h>
+
+// C3345 expected
+[module(dll, name="My Library", version="1.2", helpfile="MyHelpFile")]
+// Try the following line instead
+//[module(dll, name="MyLibrary", version="1.2", helpfile="MyHelpFile")]
+// Module attribute now applies to this class
+class CMyClass {
+public:
+BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
+   // add your own code here
+   return __super::DllMain(dwReason, lpReserved);
+   }
+};
+```
+
+## <a name="see-also"></a>См. также
+
+[__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
+[Классификация символов](../../c-runtime-library/character-classification.md)<br/>
+[модуль](../../windows/module-cpp.md)

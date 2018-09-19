@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора ресурсов RC2147 | Документы Microsoft
+title: Ошибка компилятора ресурсов RC2147 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434e61f701bf74ad77b5a8a210ebf1002bb95e6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f3ca510dfd61e92a33f599c7ef261e03b8ad2cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032855"
 ---
 # <a name="resource-compiler-error-rc2147"></a>Ошибка компилятора ресурсов RC2147
-Идентификатор варианта языка не является числом  
-  
- Значение идентификатора варианта языка должен быть числом.  
-  
- Оператор **LANGUAGE** должен использовать следующий синтаксис:  
-  
- **LANGUAGE** *ИД_основного_языка*,*ИД_дополнительного_языка*  
-  
- Допустимые идентификаторы ДИАЛЕКТЕ определяются как **SUBLANG_** константы в файле WINNT.h.
+
+Идентификатор варианта языка не является числом
+
+Значение идентификатора варианта языка должно быть числом.
+
+Оператор **LANGUAGE** должен использовать следующий синтаксис:
+
+**LANGUAGE** *ИД_основного_языка*,*ИД_дополнительного_языка*
+
+Допустимые идентификаторы варианта языка, определяются как **SUBLANG_** константы в файле WINNT.h.

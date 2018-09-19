@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2856 | Документы Microsoft
+title: Ошибка компилятора C2856 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac67538a10d39bc68059b0a7d1aaf73a381abb2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6226bfd2fc11f05f894091f4ff02c145d09e11
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244137"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072723"
 ---
 # <a name="compiler-error-c2856"></a>Ошибка компилятора C2856
-\#Директива #pragma hdrstop не может находиться внутри блока #if  
-  
- `hdrstop` Нельзя помещать внутрь блока условной компиляции.  
-  
- Переместить `#pragma hdrstop` область, которая не содержится в инструкции `#if/#endif` блока.
+
+\#Директива #pragma hdrstop не может быть в пределах блока #if
+
+`hdrstop` Нельзя помещать в теле блока условной компиляции.
+
+Переместить `#pragma hdrstop` инструкцию, чтобы область, которая не содержится в `#if/#endif` блока.

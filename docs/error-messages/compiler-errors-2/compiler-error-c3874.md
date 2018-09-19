@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3874 | Документы Microsoft
+title: Ошибка компилятора C3874 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb1224b1e5b14c0f34e10b7eff972d4014cccdff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70f6773e65c167b980a4fd9967b910a3f760d58f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268259"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059274"
 ---
 # <a name="compiler-error-c3874"></a>Ошибка компилятора C3874
-возвращаемый тип «функция» должен быть «int» вместо «тип»  
-  
- Функция имеет возвращаемый тип, отличный от ожидаемого компилятором.  
-  
- Следующий пример приводит к возникновению ошибки C3874:  
-  
-```  
-// C3874b.cpp  
-double main()  
-{   // C3874  
-}  
+
+Тип возвращаемого значения «function» должен быть «int» вместо «тип»
+
+Функция не имеет тип возвращаемого значения, которое должно было компилятором.
+
+Следующий пример приводит к возникновению ошибки C3874:
+
+```
+// C3874b.cpp
+double main()
+{   // C3874
+}
 ```

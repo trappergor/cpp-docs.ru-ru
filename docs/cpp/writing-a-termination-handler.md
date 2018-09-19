@@ -21,27 +21,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 85241d9dde87e929b02328a6e7d0c75b5ce068ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116234"
 ---
 # <a name="writing-a-termination-handler"></a>Написание обработчика завершения
-В отличие от обработчика исключений, обработчик завершения выполняется всегда независимо от того, завершен ли в обычном режиме защищенный блок кода. Единственным назначением обработчика завершения должна быть проверка правильности закрытия таких ресурсов, как память, дескрипторы и файлы, независимо от того, как завершается выполнение фрагмента кода.  
-  
- Обработчики завершения используют оператор try-finally.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
-  
--   [Оператор try-finally](../cpp/try-finally-statement.md)  
-  
--   [Очистка ресурсов](../cpp/cleaning-up-resources.md)  
-  
--   [Время действий в обработке исключений](../cpp/timing-of-exception-handling-a-summary.md)  
-  
--   [Ограничения обработчиков завершения](../cpp/restrictions-on-termination-handlers.md)  
-  
-## <a name="see-also"></a>См. также  
- [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+В отличие от обработчика исключений, обработчик завершения выполняется всегда независимо от того, завершен ли в обычном режиме защищенный блок кода. Единственным назначением обработчика завершения должна быть проверка правильности закрытия таких ресурсов, как память, дескрипторы и файлы, независимо от того, как завершается выполнение фрагмента кода.
+
+Обработчики завершения используют оператор try-finally.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
+
+- [Оператор try-finally](../cpp/try-finally-statement.md)
+
+- [Очистка ресурсов](../cpp/cleaning-up-resources.md)
+
+- [Время действий в обработке исключений](../cpp/timing-of-exception-handling-a-summary.md)
+
+- [Ограничения обработчиков завершения](../cpp/restrictions-on-termination-handlers.md)
+
+## <a name="see-also"></a>См. также
+
+[Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

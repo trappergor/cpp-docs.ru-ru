@@ -1,5 +1,5 @@
 ---
-title: Класс SchedulerPolicy | Документы Microsoft
+title: Класс SchedulerPolicy | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f23e95bafa9920c520fa7c01518873769945770
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d7cf95898afa5e669d52b8bf18ad0cfc8733cb37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691785"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076272"
 ---
 # <a name="schedulerpolicy-class"></a>Класс SchedulerPolicy
 Класс `SchedulerPolicy` содержит набор пар «ключ — значение» по одной для каждого элемента политики, управляющего поведением экземпляра планировщика.  
@@ -43,25 +43,25 @@ class SchedulerPolicy;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[SchedulerPolicy](#ctor)|Перегружен. Создает новую политику планировщик и заполняет ее значения для [ключей политики](concurrency-namespace-enums.md) поддерживаемые планировщики среда выполнения с параллелизмом и диспетчер ресурсов.|  
-|[~ Деструктор SchedulerPolicy](#dtor)|Удаляет политики планировщика.|  
+|[SchedulerPolicy](#ctor)|Перегружен. Создает новую политику планировщик и заполняет его значения для [ключи политики](concurrency-namespace-enums.md) поддерживаемых планировщиков исполняющей среды с параллелизмом и Resource Manager.|  
+|[~ Деструктор SchedulerPolicy](#dtor)|Уничтожает политики планировщика.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
 |[GetPolicyValue](#getpolicyvalue)|Извлекает значение ключа политики передано в качестве `key` параметра.|  
-|[SetConcurrencyLimits](#setconcurrencylimits)|Одновременно задает `MinConcurrency` и `MaxConcurrency` политик на `SchedulerPolicy` объекта.|  
-|[SetPolicyValue](#setpolicyvalue)|Задает значение параметра политики задано как `key` параметр и возвращает старое значение.|  
+|[SetConcurrencyLimits](#setconcurrencylimits)|Одновременно задает `MinConcurrency` и `MaxConcurrency` политики на `SchedulerPolicy` объекта.|  
+|[SetPolicyValue](#setpolicyvalue)|Задает значение ключа политики передано в качестве `key` параметр и возвращает старое значение.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[оператор=](#operator_eq)|Назначает политику планировщика из другой политики планировщика.|  
+|[оператор=](#operator_eq)|Назначает политики планировщика из другой политики планировщика.|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о политиках, которые могут управляться с помощью `SchedulerPolicy` см. в описании [PolicyElementKey](concurrency-namespace-enums.md).  
+ Дополнительные сведения о политиках, которыми можно управлять с помощью `SchedulerPolicy` , представлена в разделе [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `SchedulerPolicy`  
@@ -80,26 +80,26 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
- Ключ политики для извлечения значения.  
+*key*<br/>
+Ключ политики для получения значений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если ключ, указанный параметром `key` параметр поддерживается, значение политики для ключа приводит к `unsigned int`.  
   
 ### <a name="remarks"></a>Примечания  
- Метод вызывает исключение [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) для ключа Недопустимая политика.  
+ Метод вызовет [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) для ключа Недопустимая политика.  
   
 ##  <a name="operator_eq"></a> оператор = 
 
- Назначает политику планировщика из другой политики планировщика.  
+ Назначает политики планировщика из другой политики планировщика.  
   
 ```
 SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_RhsPolicy`  
- Политика для назначения этой политике.  
+*_RhsPolicy*<br/>
+Политики, чтобы назначить эту политику.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на политику планировщика.  
@@ -109,7 +109,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
   
 ##  <a name="ctor"></a> SchedulerPolicy 
 
- Создает новую политику планировщик и заполняет ее значения для [ключей политики](concurrency-namespace-enums.md) поддерживаемые планировщики среда выполнения с параллелизмом и диспетчер ресурсов.  
+ Создает новую политику планировщик и заполняет его значения для [ключи политики](concurrency-namespace-enums.md) поддерживаемых планировщиков исполняющей среды с параллелизмом и Resource Manager.  
   
 ```
 SchedulerPolicy();
@@ -123,22 +123,22 @@ SchedulerPolicy(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_PolicyKeyCount`  
- Число ключей и значений пар ниже `_PolicyKeyCount` параметра.  
+*_PolicyKeyCount*<br/>
+Число ключей и значений в виде пары ниже `_PolicyKeyCount` параметра.  
   
- `_SrcPolicy`  
- Политика источника для копирования.  
+*_SrcPolicy*<br/>
+Исходная политика для копирования.  
   
 ### <a name="remarks"></a>Примечания  
- Первый конструктор создает новую политику планировщика, где все политики, будут присвоены значения по умолчанию.  
+ Первый конструктор создает новую политику планировщика, где все политики будут инициализированы значениями по умолчанию.  
   
- Второй конструктор создает новую политику планировщика, которая использует стиль с именем параметра инициализации. Значения после `_PolicyKeyCount` параметров передаются в виде пар "ключ значение". Любой ключ политики, который не указан в этом конструкторе будет иметь значение по умолчанию. Этот конструктор может вызывать исключения [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) или [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).  
+ Второй конструктор создает новую политику планировщика, использующий стиль с именем параметра инициализации. Значения после `_PolicyKeyCount` параметра передаются в виде пар "ключ значение". Любой ключ политики, который не указан в этом конструкторе будет иметь значение по умолчанию. Этот конструктор может вызывать исключения [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) или [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).  
   
- Третий конструктор является конструктором копирования. Часто наиболее удобным способом для определения новой политики планировщика является копирование существующей политики и изменение ее методами `SetPolicyValue` или `SetConcurrencyLimits`.  
+ Третий конструктор является конструктором копии. Часто наиболее удобным способом для определения новой политики планировщика является копирование существующей политики и изменение ее методами `SetPolicyValue` или `SetConcurrencyLimits`.  
   
 ##  <a name="dtor"></a> ~ SchedulerPolicy 
 
- Удаляет политики планировщика.  
+ Уничтожает политики планировщика.  
   
 ```
 ~SchedulerPolicy();
@@ -146,7 +146,7 @@ SchedulerPolicy(
   
 ##  <a name="setconcurrencylimits"></a> SetConcurrencyLimits 
 
- Одновременно задает `MinConcurrency` и `MaxConcurrency` политик на `SchedulerPolicy` объекта.  
+ Одновременно задает `MinConcurrency` и `MaxConcurrency` политики на `SchedulerPolicy` объекта.  
   
 ```
 void SetConcurrencyLimits(
@@ -155,20 +155,20 @@ void SetConcurrencyLimits(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_MinConcurrency`  
- Значение для `MinConcurrency` ключ политики.  
+*_MinConcurrency*<br/>
+Значение для `MinConcurrency` ключ политики.  
   
- `_MaxConcurrency`  
- Значение для `MaxConcurrency` ключ политики.  
+*_MaxConcurrency*<br/>
+Значение для `MaxConcurrency` ключ политики.  
   
 ### <a name="remarks"></a>Примечания  
- Метод вызывает исключение [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) Если значение, указанное для `MinConcurrency` политики больше, чем указано для `MaxConcurrency` политики.  
+ Метод вызовет [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) Если значение, заданное для `MinConcurrency` политики больше, чем указано для `MaxConcurrency` политики.  
   
- Метод также может вызвать исключение [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) другие недопустимые значения.  
+ Метод также может породить [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) для других недопустимых значений.  
   
 ##  <a name="setpolicyvalue"></a> SetPolicyValue 
 
- Задает значение параметра политики задано как `key` параметр и возвращает старое значение.  
+ Задает значение ключа политики передано в качестве `key` параметр и возвращает старое значение.  
   
 ```
 unsigned int SetPolicyValue(
@@ -177,19 +177,19 @@ unsigned int SetPolicyValue(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
- Ключ для установки значения для политики.  
+*key*<br/>
+Ключ политики, чтобы задать значение для.  
   
- `value`  
- Значение присваивается ключу политики.  
+*значение*<br/>
+Задаваемое значение ключа политики.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если ключ, указанный параметром `key` параметр поддерживается, старое значение политики для ключа приводит к `unsigned int`.  
   
 ### <a name="remarks"></a>Примечания  
- Метод вызывает исключение [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) ключ Недопустимая политика или любой политики ключ, значение которого не может задаваться `SetPolicyValue` метод.  
+ Метод вызовет [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) ключ Недопустимая политика или любой ключ политики, значение которого не может задать `SetPolicyValue` метод.  
   
- Метод вызывает исключение [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) значения, которое не поддерживается для ключа, заданного параметром `key` параметр.  
+ Метод вызовет [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) значения, которое не поддерживается для ключа, заданного параметром `key` параметр.  
   
  Обратите внимание, что этот метод не разрешен для задания `MinConcurrency` или `MaxConcurrency` политики. Чтобы задать эти значения, используйте [SetConcurrencyLimits](#setconcurrencylimits) метод.  
   

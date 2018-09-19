@@ -1,5 +1,5 @@
 ---
-title: Класс invalid_multiple_scheduling | Документы Microsoft
+title: Класс invalid_multiple_scheduling | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f693c884542b93431a77e914d210f76721c5a0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3cc4e3b2a23dd5c617b70a7a4b992323a0e963f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067352"
 ---
 # <a name="invalidmultiplescheduling-class"></a>Класс invalid_multiple_scheduling
 Этот класс описывает исключение, создаваемое, если объект `task_handle` запланирован несколько раз с помощью метода `run` объекта `task_group` или `structured_task_group` без промежуточных вызовов любого из методов `wait` или `run_and_wait`.  
@@ -63,14 +63,14 @@ invalid_multiple_scheduling() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс task_handle](task-handle-class.md)   
  [Класс task_group](task-group-class.md)   
- [Запустите](task-group-class.md)   
- [Ожидание](task-group-class.md)   
+ [запустить](task-group-class.md)   
+ [Подождите](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [Класс structured_task_group](structured-task-group-class.md)

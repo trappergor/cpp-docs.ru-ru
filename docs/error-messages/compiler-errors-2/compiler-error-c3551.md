@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3551 | Документы Microsoft
+title: Ошибка компилятора C3551 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9f69adcf071415d3c1760294bdaaaec7b71f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b45a6f66ab7cf2a5ebb7ae6b2a2f78e664092604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257866"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035738"
 ---
 # <a name="compiler-error-c3551"></a>Ошибка компилятора C3551
-Ожидался тип возвращаемого значения с поздним заданием  
-  
- Если вы используете ключевое слово `auto` для типа возвращаемого значения функции, необходимо использовать тип возвращаемого значения с поздним заданием. В следующем примере тип возвращаемого значения с поздним заданием для функции `myFunction` является указателем на массив из четырех элементов типа `int`.  
-  
-```  
-auto myFunction()->int(*)[4];   
-```  
-  
-## <a name="see-also"></a>См. также  
- [auto](../../cpp/auto-cpp.md)
+
+Ожидался тип возвращаемого значения с поздним заданием
+
+Если вы используете ключевое слово `auto` для типа возвращаемого значения функции, необходимо использовать тип возвращаемого значения с поздним заданием. В следующем примере тип возвращаемого значения с поздним заданием для функции `myFunction` является указателем на массив из четырех элементов типа `int`.
+
+```
+auto myFunction()->int(*)[4];
+```
+
+## <a name="see-also"></a>См. также
+
+[auto](../../cpp/auto-cpp.md)

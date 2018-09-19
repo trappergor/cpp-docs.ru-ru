@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f0ab7906961936239ac564137d0760e6d64de9de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068225"
 ---
 # <a name="curl-class"></a>Класс cUrl
 
@@ -154,7 +154,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwFlags*  
+*dwFlags*<br/>
 Флаги, определяющие канонизации. Если флаги не указаны (*dwFlags* = 0), метод преобразует все небезопасные символы и последовательности meta (такие как \\., \.., и \\...) для escape-последовательности. *dwFlags* может принимать одно из следующих значений:
 
 - ATL_URL_BROWSER_MODE: Не кодирование или декодирование символов после «#» или «» и не удаляет пробелы после «». Если это значение не указано, кодируется весь URL-адрес и конечный пробел удаляется.
@@ -195,10 +195,10 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszUrl*  
+*lpszUrl*<br/>
 URL-адрес.
 
-*dwFlags*  
+*dwFlags*<br/>
 Укажите ATL_URL_DECODE или ATL_URL_ESCAPE, чтобы преобразовать все escape-символов в *lpszUrl* реальные значения после синтаксического анализа. (Ранее Visual C++ 2005 ATL_URL_DECODE преобразовать все escape-символы перед анализом.)
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -218,13 +218,13 @@ inline BOOL CreateUrl(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszUrl*  
+*lpszUrl*<br/>
 Строковый буфер для хранения полной строки URL-адрес.
 
-*pdwMaxLength*  
+*pdwMaxLength*<br/>
 Максимальная длина *lpszUrl* строковый буфер.
 
-*dwFlags*  
+*dwFlags*<br/>
 Укажите ATL_URL_ESCAPE для преобразования все escape-символов в *lpszUrl* реальные значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -256,7 +256,7 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*URL-адрес*  
+*URL-адрес*<br/>
 `CUrl` Объект для копирования для создания URL-адрес.
 
 ##  <a name="dtor"></a>  CUrl:: ~ CUrl
@@ -457,7 +457,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*URL-адрес*  
+*URL-адрес*<br/>
 `CUrl` Объект для копирования в текущий объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -474,7 +474,7 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszInfo*  
+*lpszInfo*<br/>
 Строка, содержащая дополнительные сведения для включения в URL-адрес.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -491,7 +491,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszHost*  
+*lpszHost*<br/>
 Имя узла.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -508,7 +508,7 @@ inline BOOL SetPassword(LPCTSTR lpszPass) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszPass*  
+*lpszPass*<br/>
 Пароль.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -525,7 +525,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nPrt*  
+*nPrt*<br/>
 Номер порта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -542,7 +542,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nScheme*  
+*nScheme*<br/>
 Один из [ATL_URL_SCHEME](atl-url-scheme-enum.md) значения для схемы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -563,7 +563,7 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSchm*  
+*lpszSchm*<br/>
 Имя схемы, URL-адрес.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -584,7 +584,7 @@ inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszPath*  
+*lpszPath*<br/>
 URL-адрес.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -601,7 +601,7 @@ inline BOOL SetUserName(LPCTSTR lpszUser) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszUser*  
+*lpszUser*<br/>
 Имя пользователя.
 
 ### <a name="return-value"></a>Возвращаемое значение

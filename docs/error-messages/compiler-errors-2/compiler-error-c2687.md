@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2687 | Документы Microsoft
+title: Ошибка компилятора C2687 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54c3be7a3706dd5471b21c2a1779e9990eae678
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1333d26a7733ffeb0876a9b563377e5ead010261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042680"
 ---
 # <a name="compiler-error-c2687"></a>Ошибка компилятора C2687
-«Тип»: объявление исключения не может быть «void» и не может обозначать неполный тип, указатель или ссылку на неполный тип  
-  
- Для типа частью объявления исключения он должен быть определен и не пустой.  
-  
- Следующий пример приводит к возникновению ошибки C2687:  
-  
-```  
-// C2687.cpp  
-class C;  
-  
-int main() {  
-   try {}  
-   catch (C) {}   // C2687 error  
-}  
-```  
-  
- Возможное решение  
-  
-```  
-// C2687b.cpp  
-// compile with: /EHsc  
-class C {};  
-  
-int main() {  
-   try {}  
-   catch (C) {}  
-}  
+
+«Тип»: объявление исключения не может быть «void» и не может обозначать неполный тип либо указатель или ссылку на неполный тип
+
+Для типа как часть объявления исключения он должен быть определен и не void.
+
+Следующий пример приводит к возникновению ошибки C2687:
+
+```
+// C2687.cpp
+class C;
+
+int main() {
+   try {}
+   catch (C) {}   // C2687 error
+}
+```
+
+Возможное решение
+
+```
+// C2687b.cpp
+// compile with: /EHsc
+class C {};
+
+int main() {
+   try {}
+   catch (C) {}
+}
 ```

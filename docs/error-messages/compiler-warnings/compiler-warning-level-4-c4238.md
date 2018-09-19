@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4238 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4238 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06dbec01da8d1b47cb7b93c90a22ae5266e9b4c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4d5f358d08f81e6b8097140ad47d54f4b3b3fed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057032"
 ---
 # <a name="compiler-warning-level-4-c4238"></a>Предупреждение компилятора (уровень 4) C4238
-использовано нестандартное расширение: значение rvalue класса использовано как значение lvalue  
-  
- Для обеспечения совместимости с предыдущими версиями Visual C++ расширения Microsoft (**/Ze**) позволяют использование типа класса как значение rvalue в контексте, который явно или неявно принимает его адрес. В некоторых случаях, как показано в примере ниже это может быть опасно.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// C4238.cpp  
-// compile with: /W4 /c  
-struct C {  
-   C() {}  
-};  
-  
-C * pC = &C();   // C4238  
-```  
-  
- Такое использование приводит к ошибке в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+использовано нестандартное расширение: правостороннего значения класса в качестве левостороннего значения
+
+Для совместимости с предыдущими версиями Visual c++, расширения Microsoft (**/Ze**) можно будет использовать тип класса, как rvalue в контексте, который явно или неявно принимает его адрес. В некоторых случаях, как показано в примере ниже это может быть опасно.
+
+## <a name="example"></a>Пример
+
+```
+// C4238.cpp
+// compile with: /W4 /c
+struct C {
+   C() {}
+};
+
+C * pC = &C();   // C4238
+```
+
+Такое использование вызывает ошибку совместимости ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

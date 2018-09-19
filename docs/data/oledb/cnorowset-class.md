@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074842"
 ---
 # <a name="cnorowset-class"></a>Класс CNoRowset
+
 Можно использовать в качестве аргумента шаблона (`TRowset`) для [CCommand](../../data/oledb/ccommand-class.md) или [CTable](../../data/oledb/ctable-class.md).  
   
 ## <a name="syntax"></a>Синтаксис
@@ -39,31 +40,35 @@ class CNoRowset
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *TAccessor*  
- Класс, метод доступа. Значение по умолчанию — `CAccessorBase`.  
+
+*TAccessor*<br/>
+Класс, метод доступа. Значение по умолчанию — `CAccessorBase`.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `CNoRowset` как аргумент шаблона, если команда не возвращает набор строк.  
+
+Используйте `CNoRowset` как аргумент шаблона, если команда не возвращает набор строк.  
   
- `CNoRowset` реализует следующие методы-заглушки, каждый из которых соответствуют другим методам класса метода доступа:  
+`CNoRowset` реализует следующие методы-заглушки, каждый из которых соответствуют другим методам класса метода доступа:  
   
--   `BindFinished` — Указывает, когда привязка завершена (возвращает `S_OK`).  
+- `BindFinished` — Указывает, когда привязка завершена (возвращает `S_OK`).  
   
--   `Close` -Освобождает строки и текущий интерфейс IRowset.  
+- `Close` -Освобождает строки и текущий интерфейс IRowset.  
   
--   `GetIID` — Извлекает идентификатор интерфейса точки подключения.  
+- `GetIID` — Извлекает идентификатор интерфейса точки подключения.  
   
--   `GetInterface` — Извлекает интерфейс.  
+- `GetInterface` — Извлекает интерфейс.  
   
--   `GetInterfacePtr` — Извлекает инкапсулированный указатель на интерфейс.  
+- `GetInterfacePtr` — Извлекает инкапсулированный указатель на интерфейс.  
   
--   `SetAccessor` — Задает указатель метода доступа.  
+- `SetAccessor` — Задает указатель метода доступа.  
   
--   `SetupOptionalRowsetInterfaces` — Устанавливает дополнительные интерфейсы для набора строк.  
+- `SetupOptionalRowsetInterfaces` — Устанавливает дополнительные интерфейсы для набора строк.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+
+**Заголовок:** atldbcli.h  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

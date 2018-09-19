@@ -1,5 +1,5 @@
 ---
-title: Класс Call | Документы Microsoft
+title: Класс Call | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 585a490ec64152a1268b7707971ea94e69bf9fbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689705"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109721"
 ---
 # <a name="call-class"></a>Класс call
 Блок обмена сообщениями `call` — это упорядоченный блок `target_block` с несколькими источниками, который вызывает заданную функцию при получении сообщения.  
@@ -41,11 +41,11 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Тип полезных данных сообщения, распространяются в этот блок.  
+*T*<br/>
+Тип полезных данных сообщения передаются от этого блока.  
   
- `_FunctorType`  
- Подпись функции, которые может принимать этот блок.  
+*_FunctorType*<br/>
+Сигнатура функции, которые могут принимать этот блок.  
   
 ## <a name="members"></a>Участники  
   
@@ -53,17 +53,17 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Вызов](#ctor)|Перегружен. Создает `call` блока обмена сообщениями.|  
-|[~ вызова деструктора](#dtor)|Уничтожает `call` блока обмена сообщениями.|  
+|[Вызов](#ctor)|Перегружен. Создает `call` блок обмена сообщениями.|  
+|[~ вызова деструктора](#dtor)|Уничтожает `call` блок обмена сообщениями.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[process_input_messages](#process_input_messages)|Выполняет функцию вызвать для входящих сообщений.|  
-|[process_message](#process_message)|Обрабатывает сообщение, которое было принято данным `call` блока обмена сообщениями.|  
-|[propagate_message](#propagate_message)|Асинхронно передает сообщение от `ISource` блока к этому `call` блока обмена сообщениями. Он вызывается по `propagate` метод при вызове исходного блока.|  
-|[send_message](#send_message)|Синхронно передает сообщение от `ISource` блока к этому `call` блока обмена сообщениями. Он вызывается по `send` метод при вызове исходного блока.|  
+|[process_input_messages](#process_input_messages)|Выполняет функцию вызов для входящих сообщений.|  
+|[process_message](#process_message)|Обрабатывает сообщение, которое ранее было принято данным `call` блок обмена сообщениями.|  
+|[propagate_message](#propagate_message)|Асинхронно передает сообщение от `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `propagate` метод, при вызове исходного блока.|  
+|[send_message](#send_message)|Синхронно передает сообщение от `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `send` метод, при вызове исходного блока.|  
 |[supports_anonymous_source](#supports_anonymous_source)|Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником. (Переопределяет [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Примечания  
@@ -83,7 +83,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 ##  <a name="ctor"></a> Вызов 
 
- Создает `call` блока обмена сообщениями.  
+ Создает `call` блок обмена сообщениями.  
   
 ```
 call(
@@ -113,28 +113,28 @@ call(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Func`  
- Функция, которая будет вызываться для каждого принятого сообщения.  
+*_Func*<br/>
+Функция, которая будет вызываться для каждого принятого сообщения.  
   
- `_Filter`  
- Функции фильтров, который определяет, следует ли принять предложенное сообщения.  
+*_Фильтр*<br/>
+Функция фильтра, который определяет, следует ли принять предлагаемые сообщения.  
   
- `_PScheduler`  
- `Scheduler` Объекта, в течение которого задача распространения для `call` запланирована блока обмена сообщениями.  
+*_PScheduler*<br/>
+`Scheduler` Объекта, в течение которого задача распространения для `call` запланировано блок обмена сообщениями.  
   
- `_PScheduleGroup`  
- `ScheduleGroup` Объекта, в течение которого задача распространения для `call` запланирована блока обмена сообщениями. Используемый объект `Scheduler` подразумевается группой расписаний.  
+*_PScheduleGroup*<br/>
+`ScheduleGroup` Объекта, в течение которого задача распространения для `call` запланировано блок обмена сообщениями. Используемый объект `Scheduler` подразумевается группой расписаний.  
   
 ### <a name="remarks"></a>Примечания  
  Среда выполнения использует планировщик по умолчанию, если вы не указали параметры `_PScheduler` или `_PScheduleGroup` .  
   
- Тип `_Call_method` является функтор с сигнатурой `void (T const &)` которого вызывается этим `call` блока обмена сообщениями для обработки сообщения.  
+ Тип `_Call_method` является функтор с сигнатурой `void (T const &)` которого вызывается этим `call` блок обмена сообщениями для обработки сообщения.  
   
- Тип `filter_method` является функтор с сигнатурой `bool (T const &)` которого вызывается этим `call` блока обмена сообщениями, чтобы определить ли он должен принять предложенное сообщение.  
+ Тип `filter_method` является функтор с сигнатурой `bool (T const &)` которого вызывается этим `call` блок обмена сообщениями, чтобы определить ли он должен принять предложенное сообщение.  
   
 ##  <a name="dtor"></a> ~ вызова 
 
- Уничтожает `call` блока обмена сообщениями.  
+ Уничтожает `call` блок обмена сообщениями.  
   
 ```
 ~call();
@@ -142,30 +142,31 @@ call(
   
 ##  <a name="process_input_messages"></a> process_input_messages 
 
- Выполняет функцию вызвать для входящих сообщений.  
+ Выполняет функцию вызов для входящих сообщений.  
   
 ```
 virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_PMessage`  
+*_PMessage*<br/>
+Указатель на сообщение, которое будет обрабатываться.  
   
 ##  <a name="process_message"></a> process_message 
 
- Обрабатывает сообщение, которое было принято данным `call` блока обмена сообщениями.  
+ Обрабатывает сообщение, которое ранее было принято данным `call` блок обмена сообщениями.  
   
 ```
 virtual void process_message(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_PMessage`  
- Указатель на сообщение, которое будет обрабатываться.  
+*_PMessage*<br/>
+Указатель на сообщение, которое будет обрабатываться.  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- Асинхронно передает сообщение от `ISource` блока к этому `call` блока обмена сообщениями. Он вызывается по `propagate` метод при вызове исходного блока.  
+ Асинхронно передает сообщение от `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `propagate` метод, при вызове исходного блока.  
   
 ```
 virtual message_status propagate_message(
@@ -174,18 +175,18 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_PMessage`  
- Указатель на объект `message`.  
+*_PMessage*<br/>
+Указатель на объект `message`.  
   
- `_PSource`  
- Указатель на исходный блок, предлагающий сообщение.  
+*_PSource*<br/>
+Указатель на блок источника, предлагающий сообщение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [message_status](concurrency-namespace-enums.md) , указывающее, что целевой объект решил сделать с сообщением.  
+ Объект [message_status](concurrency-namespace-enums.md) указывает, что целевой объект решил сделать с сообщением.  
   
 ##  <a name="send_message"></a> send_message 
 
- Синхронно передает сообщение от `ISource` блока к этому `call` блока обмена сообщениями. Он вызывается по `send` метод при вызове исходного блока.  
+ Синхронно передает сообщение от `ISource` блока к этому `call` блок обмена сообщениями. Он вызывается по `send` метод, при вызове исходного блока.  
   
 ```
 virtual message_status send_message(
@@ -194,14 +195,14 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_PMessage`  
- Указатель на объект `message`.  
+*_PMessage*<br/>
+Указатель на объект `message`.  
   
- `_PSource`  
- Указатель на исходный блок, предлагающий сообщение.  
+*_PSource*<br/>
+Указатель на блок источника, предлагающий сообщение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [message_status](concurrency-namespace-enums.md) , указывающее, что целевой объект решил сделать с сообщением.  
+ Объект [message_status](concurrency-namespace-enums.md) указывает, что целевой объект решил сделать с сообщением.  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 

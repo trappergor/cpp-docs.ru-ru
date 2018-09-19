@@ -1,5 +1,5 @@
 ---
-title: Запись (доступ к данным MFC) | Документы Microsoft
+title: Запись (доступ к данным MFC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b03bfb65bd10787f41d30c63117fec54e8dc30ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe348043d991aa04652eae02ba0f2efa393bcf5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098138"
 ---
 # <a name="record-mfc-data-access"></a>Запись (доступ к данным MFC)
+
 Запись — это набор данных об одной сущности, например организации или клиенте, который хранится в таблице (в строке таблицы). Запись состоит из группы смежных столбцов (их иногда называют полями), содержащих данные различных типов. Набор записей, выбранных из источника данных, в терминах баз данных его часто называют результирующим набором, в MFC он называется набором записей. Дополнительные сведения см. в разделе [записей (ODBC)](../data/odbc/recordset-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к данным программирования (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+
+[Доступ к данным, программирование (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2774 | Документы Microsoft
+title: Ошибка компилятора C2774 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6fc100bf7cd4a57c5c23630b28c41d92cf43d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 500dc43dbc4e8d3c5768c6cc71226e5f1025564a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110475"
 ---
 # <a name="compiler-error-c2774"></a>Ошибка компилятора C2774
-«Идентификатор»: ни один метод «put» связан с этим свойством  
-  
- Элемент данных объявлен с [свойство](../../cpp/property-cpp.md) не имеет `put` функцию, но выражение пытается задать для него значение.  
-  
- Следующий пример приводит к возникновению ошибки C2774:  
-  
-```  
-// C2774.cpp  
-struct A {  
-   __declspec(property(get=GetProp)) int prop;  
-   int GetProp(void);  
-  
-   __declspec(property(get=GetProp2, put=PutProp2)) int prop2;  
-   int GetProp2(void);  
-   void PutProp2(int);  
-};  
-  
-int main() {  
-   A* pa = new A;  
-   int val = 0;  
-   pa->prop = val;   // C2774  
-   pa->prop++;   // C2774  
-}  
+
+«Идентификатор»: нет метода «put» связан с этим свойством
+
+Элемент данных объявлен с [свойство](../../cpp/property-cpp.md) не имеет `put` функция, но выражение пытается задать для него значение.
+
+Следующий пример приводит к возникновению ошибки C2774:
+
+```
+// C2774.cpp
+struct A {
+   __declspec(property(get=GetProp)) int prop;
+   int GetProp(void);
+
+   __declspec(property(get=GetProp2, put=PutProp2)) int prop2;
+   int GetProp2(void);
+   void PutProp2(int);
+};
+
+int main() {
+   A* pa = new A;
+   int val = 0;
+   pa->prop = val;   // C2774
+   pa->prop++;   // C2774
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2381 | Документы Microsoft
+title: Ошибка компилятора C2381 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bd5f5edcf95144333524c41b803c24b728a621f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f09cd8c16eeb5ec797643cb6653d069df41b136
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225281"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076948"
 ---
 # <a name="compiler-error-c2381"></a>Ошибка компилятора C2381
-«функция»: переопределение; __declspec(noreturn) отличается  
-  
- Функция была объявлена и затем определено, но определение, используемое [noreturn](../../cpp/noreturn.md) `__declspec` модификатор. Использование `noreturn` представляет собой переопределение функции; объявление и определение необходимо согласовать по использованию `noreturn`.  
-  
- Следующий пример приводит к возникновению ошибки C2381:  
-  
-```  
-// C2381.cpp  
-// compile with: /c  
-void f1();  
-void __declspec(noreturn) f1() {}   // C2381  
-void __declspec(noreturn) f2() {}   // OK  
+
+«функция»: переопределение; __declspec(noreturn) отличается
+
+Функция объявлена и затем определено, но определение, используемое [noreturn](../../cpp/noreturn.md) `__declspec` модификатор. Использование `noreturn` представляет собой переопределение функции; в объявлении и определении должны согласовать использование `noreturn`.
+
+Следующий пример приводит к возникновению ошибки C2381:
+
+```
+// C2381.cpp
+// compile with: /c
+void f1();
+void __declspec(noreturn) f1() {}   // C2381
+void __declspec(noreturn) f2() {}   // OK
 ```

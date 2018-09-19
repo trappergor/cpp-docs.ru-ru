@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82aa22c3cc1c217ba4dfd332c43f6663c94638e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe5f3234738a16b4c072b667982d36032e30f7dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107121"
 ---
 # <a name="ioleobjectimpl-class"></a>Класс IOleObjectImpl
 
@@ -76,13 +76,13 @@ ms.locfileid: "43761879"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IOleObjectImpl`.
 
 ## <a name="members"></a>Участники
@@ -219,10 +219,10 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Параметры
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Указатель на прямоугольник, контейнер хочет для рисования в элемент управления.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Дескриптор окна, содержащего элемент управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -239,10 +239,10 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Параметры
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Указатель на прямоугольник, контейнер хочет для рисования в элемент управления.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Дескриптор окна, содержащего элемент управления. В реализации ATL не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -259,10 +259,10 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Параметры
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Указатель на прямоугольник, контейнер хочет для рисования в элемент управления.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Дескриптор окна, содержащего элемент управления. В реализации ATL не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -283,10 +283,10 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Параметры
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Указатель на прямоугольник, контейнер хочет для рисования в элемент управления.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Дескриптор окна, содержащего элемент управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -303,10 +303,10 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>Параметры
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Указатель на прямоугольник, контейнер хочет для рисования в элемент управления.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Дескриптор окна, содержащего элемент управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -327,10 +327,10 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Параметры
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Указатель на прямоугольник, контейнер хочет для рисования в элемент управления.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Дескриптор окна, содержащего элемент управления. В реализации ATL не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -347,10 +347,10 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Параметры
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Указатель на прямоугольник, контейнер хочет для рисования в элемент управления.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Дескриптор окна, содержащего элемент управления. В реализации ATL не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -833,6 +833,6 @@ STDMETHOD(Update)(void);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)   
+[Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

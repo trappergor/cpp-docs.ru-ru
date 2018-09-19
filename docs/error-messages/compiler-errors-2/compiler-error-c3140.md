@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3140 | Документы Microsoft
+title: Ошибка компилятора C3140 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2c8c9e47020fe53e87b985b5db6192cd26098fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a40cec364af10f4b61c19b9a28646279a8efca43
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246908"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111747"
 ---
 # <a name="compiler-error-c3140"></a>Ошибка компилятора C3140
-не может иметь несколько атрибутов «module» в одном блоке компиляции  
-  
- [Модуль](../../windows/module-cpp.md) атрибута могут определяться только один раз на один проект.  
-  
- Следующий пример приводит к возникновению ошибки C3140:  
-  
-```  
-// C3140.cpp  
-// compile with: /c  
-[emitidl];  
-[module(name = "MyLibrary")];  
-[module(name = "MyLibrary2")];   // C3140  
+
+в одном блоке компиляции не может быть несколько атрибутов «module»
+
+[Модуль](../../windows/module-cpp.md) атрибута может быть определен для проекта только один раз.
+
+Следующий пример приводит к возникновению ошибки C3140:
+
+```
+// C3140.cpp
+// compile with: /c
+[emitidl];
+[module(name = "MyLibrary")];
+[module(name = "MyLibrary2")];   // C3140
 ```

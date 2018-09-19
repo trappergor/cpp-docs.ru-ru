@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2948 | Документы Microsoft
+title: Ошибка компилятора C2948 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ee324ebbdbc1d9dc19c6a1323f2f47c370f08b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 052bfdb49e965b0d42a8af2c7cf2e57ee1af6f6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243529"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020866"
 ---
 # <a name="compiler-error-c2948"></a>Ошибка компилятора C2948
-явное создание экземпляра; спецификатор класса хранения «спецификатор» не разрешен при специализации  
-  
- Не допускается использование спецификаторов класса хранения (например, `extern`) в специализации класса шаблона, который был ранее явно создан.
+
+явное создание экземпляра; спецификатор класса хранения «спецификатор» не разрешен при специализации
+
+Нельзя использовать спецификаторы классов хранения (такие как `extern`) в специализации шаблона класса, который был ранее явно создан.

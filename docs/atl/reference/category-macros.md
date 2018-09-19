@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f07a559c6353bb66a210bf450c15376720cdac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753039"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078703"
 ---
 # <a name="category-macros"></a>Макросы категорий
 
@@ -67,7 +67,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>Параметры
 
-*theClass*  
+*theClass*<br/>
 [in] Имя класса, содержащего карту категории.
 
 ### <a name="remarks"></a>Примечания
@@ -109,7 +109,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>Параметры
 
-*catID*  
+*catID*<br/>
 [in] CATID константой или переменной, содержащей глобальный уникальный идентификатор (GUID) для реализованного категории. Адрес *catID* будут выполнены и добавлены на карту. В приведенной ниже таблице для выделения из стандартных категорий.
 
 ### <a name="remarks"></a>Примечания
@@ -146,7 +146,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>Параметры
 
-*catID*  
+*catID*<br/>
 [in] CATID константой или переменной, содержащей глобальный уникальный идентификатор (GUID) для необходимые категории. Адрес *catID* будут выполнены и добавлены на карту. В приведенной ниже таблице для выделения из стандартных категорий.
 
 ### <a name="remarks"></a>Примечания

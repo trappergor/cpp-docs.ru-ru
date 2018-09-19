@@ -1,5 +1,5 @@
 ---
-title: Класс norm_4 | Документы Microsoft
+title: Класс norm_4 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a2b5c47f6283f4a4b9fefb5683c8e7be0c4bdb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058098"
 ---
 # <a name="norm4-class"></a>Класс norm_4
-Представляет короткий вектор из четырех чисел обычного.  
+Представляет короткий вектор из четырех чисел normal.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -466,7 +466,7 @@ class norm_4;
   
 |name|Описание|  
 |----------|-----------------|  
-|[Размер константы](#norm_4__size)||  
+|[размер константа](#norm_4__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
@@ -683,23 +683,23 @@ explicit inline norm_4(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_V0`  
- Значение для инициализации элемента 0.  
+*_V0*<br/>
+Значение для инициализации элемента 0.  
   
- `_V1`  
- Значение для инициализации элемента 1.  
+*_V1*<br/>
+Значение для инициализации элемента 1.  
   
- `_V2`  
- Значение для инициализации элемента 2.  
+*_V2*<br/>
+Значение для инициализации элемента 2.  
   
- `_V3`  
- Значение для инициализации элемента 3.  
+*_V3*<br/>
+Значение для инициализации элемента 3.  
   
- `_V`  
- Значение для инициализации.  
+*_V*<br/>
+Значение для инициализации.  
   
- `_Other`  
- Объект, используемый для инициализации.  
+*_Другое*<br/>
+Объект, используемый для инициализации.  
   
 ##  <a name="norm_4__size"></a> Размер 
 

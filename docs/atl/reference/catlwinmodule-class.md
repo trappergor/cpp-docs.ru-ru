@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e52f21eea272f34bdc6594dcdb8f57c8538ac50
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b516b3a2f1089408688a7db4d131b4569b733755
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017369"
 ---
 # <a name="catlwinmodule-class"></a>Класс CAtlWinModule
 
@@ -80,10 +80,10 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 
 ### <a name="parameters"></a>Параметры
 
-*pData*  
+*pData*<br/>
 Указатель на `_AtlCreateWndData` структуры для инициализации и добавления к текущему модулю.
 
-*pObject*  
+*pObject*<br/>
 Указатель на объект **это** указатель.
 
 ### <a name="remarks"></a>Примечания
@@ -128,6 +128,6 @@ void* ExtractCreateWndData();
 
 ## <a name="see-also"></a>См. также
 
-[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Модульные классы](../../atl/atl-module-classes.md)

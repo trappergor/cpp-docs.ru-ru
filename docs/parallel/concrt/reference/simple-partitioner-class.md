@@ -1,5 +1,5 @@
 ---
-title: Класс simple_partitioner | Документы Microsoft
+title: Класс simple_partitioner | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ef53ed9fa69dc77c93b90f9f24fa8628d589b07
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 98c4c82bcf858215ceba31e2ddd0770511446f72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075648"
 ---
 # <a name="simplepartitioner-class"></a>Класс simple_partitioner
 Класс `simple_partitioner` представляет статическое разделение диапазона, в котором итерации выполняются с помощью `parallel_for`. Разделитель делит диапазон на фрагменты таким образом, что каждый фрагмент имеет число итераций не менее указанного размера фрагмента.  
@@ -68,7 +68,8 @@ explicit simple_partitioner(_Size_type _Chunk_size);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Chunk_size`  
+*_Chunk_size*<br/>
+Минимальный размер раздела.
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)

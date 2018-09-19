@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760836"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039068"
 ---
 # <a name="cdebugreporthook-class"></a>Класс CDebugReportHook
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Параметры
 
-*szMachineName*  
+*szMachineName*<br/>
 Имя компьютера, на который будут отправляться данные отладки. По умолчанию на локальном компьютере.
 
-*szPipeName*  
+*szPipeName*<br/>
 Имя именованного канала, к которому следует отправлять выходные данные отладки.
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Время в миллисекундах, что этот класс будет ожидать именованного канала станет доступным.
 
 ##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Параметры
 
-*reportType*  
+*reportType*<br/>
 Тип отчета (_CRT_WARN, _CRT_ERROR или _CRT_ASSERT).
 
-*message*  
+*message*<br/>
 Строка сообщения.
 
-*returnValue*  
+*returnValue*<br/>
 Значение, которое должен вернуть [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Параметры
 
-*szMachineName*  
+*szMachineName*<br/>
 Имя компьютера, на который будут отправляться данные отладки.
 
-*szPipeName*  
+*szPipeName*<br/>
 Имя именованного канала, к которому следует отправлять выходные данные отладки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>Параметры
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Время в миллисекундах, что этот класс будет ожидать именованного канала станет доступным.
 
 ## <a name="see-also"></a>См. также

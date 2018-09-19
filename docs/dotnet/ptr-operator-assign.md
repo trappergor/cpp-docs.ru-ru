@@ -1,5 +1,5 @@
 ---
-title: PTR::operator = | Документы Microsoft
+title: PTR::operator = | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075089"
 ---
 # <a name="ptroperator"></a>ptr::operator=
-Присоединяет на COM-объект `com::ptr`.  
+Присоединяет COM-объекту `com::ptr`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,8 +39,8 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_right`  
- Указатель интерфейса COM для присоединения.  
+*_справа*<br/>
+Указатель на интерфейс COM для присоединения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Отслеживаемая ссылка на `com::ptr`.  
@@ -49,12 +49,12 @@ ptr<_interface_type> % operator=(
  Если `com::ptr` уже владеет ссылку на COM-объект `operator=` вызывает <xref:System.InvalidOperationException>.  
   
 ## <a name="remarks"></a>Примечания  
- Назначение на COM-объект `com::ptr` ссылается на COM-объекта, но не освобождает вызывающего ссылку на него.  
+ Назначение COM-объекту `com::ptr` ссылается на объект COM, но не освобождает вызывающего ссылку на него.  
   
  Этот оператор имеет тот же эффект, что `Attach`.  
   
 ## <a name="example"></a>Пример  
- В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта.  `ReplaceDocument` Функция-член первого вызывает `Release` для какого-либо ранее принадлежит объект и затем использует `operator=` для присоединения объекта документа.  
+ Этот пример реализует класс CLR, который использует `com::ptr` программы-оболочки для его закрытого члена `IXMLDOMDocument` объекта.  `ReplaceDocument` Функция-член первого вызывает `Release` для какого-либо прежде был владельцем объекта, а затем используется `operator=` для присоединения объекта документа.  
   
 ```  
 // comptr_op_assign.cpp  

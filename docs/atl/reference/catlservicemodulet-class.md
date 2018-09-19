@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff071ad298d379dd8d063d5f71287da9a567b49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 74d36c7b13be3653a0c17f763e37447d5541c5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086464"
 ---
 # <a name="catlservicemodulet-class"></a>Класс CAtlServiceModuleT
 
@@ -62,16 +62,16 @@ ms.locfileid: "43755567"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, UINT nServiceNameID>  
+template <class T, UINT nServiceNameID>
 class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `CAtlServiceModuleT`.
 
-*nServiceNameID*  
+*nServiceNameID*<br/>
 Идентификатор ресурса службы.
 
 ## <a name="members"></a>Участники
@@ -163,7 +163,7 @@ void Handler(DWORD dwOpcode) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwOpcode*  
+*dwOpcode*<br/>
 Переключатель, который определяет операцию обработчика. Дополнительные сведения см. в разделе "Примечания".
 
 ### <a name="remarks"></a>Примечания
@@ -246,10 +246,10 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pszFormat*  
+*pszFormat*<br/>
 Строка для записи в журнал событий.
 
-...  
+*...*<br/>
 Необязательный дополнительный строки для записи в журнал событий.
 
 ### <a name="remarks"></a>Примечания
@@ -366,7 +366,7 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwOpcode*  
+*dwOpcode*<br/>
 Зарезервировано.
 
 ##  <a name="parsecommandline"></a>  CAtlServiceModuleT::ParseCommandLine
@@ -379,10 +379,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 Командная строка.
 
-*pnRetCode*  
+*pnRetCode*<br/>
 Значение HRESULT, соответствующее регистрации (если она была выполнена).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -403,7 +403,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Этот параметр передается [CAtlExeModuleT::PreMessageLoop](../../atl/reference/catlexemodulet-class.md#premessageloop).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -424,7 +424,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bService*  
+*bService*<br/>
 Должно быть значение true, чтобы зарегистрировать в качестве службы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -441,7 +441,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел. Значение по умолчанию — SW_HIDE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -462,10 +462,10 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwArgc*  
+*dwArgc*<br/>
 Argc-аргумент.
 
-*lpszArgv*  
+*lpszArgv*<br/>
 Argv-аргумент.
 
 ### <a name="remarks"></a>Примечания
@@ -484,7 +484,7 @@ void SetServiceStatus(DWORD dwState) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwState*  
+*dwState*<br/>
 Новое состояние. См. в разделе [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) возможные значения.
 
 ### <a name="remarks"></a>Примечания
@@ -501,7 +501,7 @@ HRESULT Start(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -562,7 +562,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -575,5 +575,5 @@ int WinMain(int nShowCmd) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)   
+[Класс CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

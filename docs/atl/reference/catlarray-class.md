@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753016"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097800"
 ---
 # <a name="catlarray-class"></a>Класс CAtlArray
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>Параметры
 
-*E*  
+*E*<br/>
 Тип данных для сохранения в массиве.
 
-*ETraits*  
+*ETraits*<br/>
 Код, используемый для копирования или перемещения элементов.
 
 ## <a name="members"></a>Участники
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Параметры
 
-*Элемент*  
+*Элемент*<br/>
 Элемент, добавляемый в массив.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*aSrc*  
+*aSrc*<br/>
 Массив, для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*aSrc*  
+*aSrc*<br/>
 Источник копируемых в массив элементов.
 
 ### <a name="remarks"></a>Примечания
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*iElement*  
+*iElement*<br/>
 Значение индекса элемента массива для возврата.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>Параметры
 
-*iStart*  
+*iStart*<br/>
 Индекс, по которому вставляется массив.
 
-*paNew*  
+*paNew*<br/>
 Массив для вставки.
 
 ### <a name="remarks"></a>Примечания
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>Параметры
 
-*iElement*  
+*iElement*<br/>
 Индекс, где один или несколько элементов, которые должны быть вставлены.
 
-*Элемент*  
+*Элемент*<br/>
 Значение или несколько элементов для вставки.
 
-*nCount*  
+*nCount*<br/>
 Число элементов для добавления.
 
 ### <a name="remarks"></a>Примечания
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*iElement*  
+*iElement*<br/>
 Значение индекса элемента массива для возврата.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>Параметры
 
-*iElement*  
+*iElement*<br/>
 Индекс первого удаляемого элемента.
 
-*nCount*  
+*nCount*<br/>
 Число удаляемых элементов.
 
 ### <a name="remarks"></a>Примечания
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Параметры
 
-*iElement*  
+*iElement*<br/>
 Индекс, указывающий на элемент массива для задания.
 
-*Элемент*  
+*Элемент*<br/>
 Новое значение указанного элемента.
 
 ### <a name="remarks"></a>Примечания
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>Параметры
 
-*nNewSize*  
+*nNewSize*<br/>
 Требуемый размер массива.
 
-*nGrowBy*  
+*nGrowBy*<br/>
 Значение, используемое для определения размера буфера. Значение-1 вызывает внутренне вычисляемого значения, используемого.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Параметры
 
-*iElement*  
+*iElement*<br/>
 Индекс, указывающий на элемент массива для задания.
 
-*Элемент*  
+*Элемент*<br/>
 Новое значение указанного элемента.
 
 ### <a name="remarks"></a>Примечания
@@ -559,9 +559,9 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MMXSwarm](../../visual-cpp-samples.md)   
-[Образец DynamicConsumer](../../visual-cpp-samples.md)   
-[Образец UpdatePV](../../visual-cpp-samples.md)   
-[Пример бегущей строки](../../visual-cpp-samples.md)   
-[CArray-класс](../../mfc/reference/carray-class.md)   
+[Пример MMXSwarm](../../visual-cpp-samples.md)<br/>
+[Образец DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Образец UpdatePV](../../visual-cpp-samples.md)<br/>
+[Пример бегущей строки](../../visual-cpp-samples.md)<br/>
+[Класс CArray](../../mfc/reference/carray-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

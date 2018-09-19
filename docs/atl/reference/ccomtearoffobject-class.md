@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752766"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089584"
 ---
 # <a name="ccomtearoffobject-class"></a>Класс CComTearOffObject
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 Ваш перемещаемой класс, производный от `CComTearOffObjectBase` и интерфейсы объекта перемещаемой для поддержки.
 
 ATL реализует его перемещаемые интерфейсы в два этапа — `CComTearOffObjectBase` методы обрабатывают счетчик ссылок и `QueryInterface`, хотя `CComTearOffObject` реализует [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Параметры
 
-*PV*  
+*PV*<br/>
 [in] Указатель, который будет преобразован в указатель на `CComObject<Owner>` объект.
 
 ### <a name="remarks"></a>Примечания
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Параметры
 
-*Владелец*  
+*Владелец*<br/>
 [in] Класс, для которого перемещаемой реализуется.
 
 ### <a name="remarks"></a>Примечания
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор IID интерфейса, запрашиваемый.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *iid*, или значение NULL, если интерфейс не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -209,5 +209,5 @@ STDMETHOD_ULONG Release();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[Класс CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

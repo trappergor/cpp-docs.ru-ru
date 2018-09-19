@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079340"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Класс CAtlPreviewCtrlImpl
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 Дескриптор главного окна, предоставленный оболочкой для расширенного просмотра.
 
-*КНР*  
+*КНР*<br/>
 Задает первоначальный размер и положение окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Параметры
 
-*hdc*  
+*hdc*<br/>
 Дескриптор контекста устройства для рисования.
 
 ### <a name="remarks"></a>Примечания
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Параметры
 
-*nMsg*  
+*nMsg*<br/>
 Присвоено WM_PAINT.
 
-*wParam*  
+*wParam*<br/>
 Этот параметр не используется.
 
-*lParam*  
+*lParam*<br/>
 Этот параметр не используется.
 
-*bHandled*  
+*bHandled*<br/>
 Когда эта функция возвращает значение, он содержит значение TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 Дескриптор нового родительского окна.
 
 ### <a name="remarks"></a>Примечания
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Параметры
 
-*clrBack*  
+*clrBack*<br/>
 Цвет фона окна предварительного просмотра.
 
-*clrText*  
+*clrText*<br/>
 Цвет текста окна предварительного просмотра.
 
-*plf*  
+*plf*<br/>
 Шрифт, используемый для отображения текста в окне предварительного просмотра.
 
 ### <a name="remarks"></a>Примечания
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Параметры
 
-*КНР*  
+*КНР*<br/>
 Указывает новый размер и положение элемента управления предварительной версии.
 
-*bRedraw*  
+*bRedraw*<br/>
 Указывает ли перерисовки элемента управления.
 
 ### <a name="remarks"></a>Примечания

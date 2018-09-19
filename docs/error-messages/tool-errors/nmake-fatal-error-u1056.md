@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка NMAKE U1056 | Документы Microsoft
+title: Неустранимая ошибка NMAKE U1056 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19890e290c98fd9602d755ad35f9d47204bd6c24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0a83c62bedf995708d5e99fee19f05696d05c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065703"
 ---
 # <a name="nmake-fatal-error-u1056"></a>Неустранимая ошибка NMAKE U1056
-не удается найти процессор команд  
-  
- Обработчик команд не находился в пути, указанном в **COMSPEC** или **путь** переменные среды.  
-  
- Программа NMAKE использует COMMAND.COM или CMD. EXE от имени командного процессора при выполнении команд. Выполняет поиск обработчика команд сначала в пути, заданном в **COMSPEC**. Если **COMSPEC** не существует, NMAKE поиск в каталогах, указанных в **путь**.
+
+не удается найти процессор команд
+
+Интерпретатор командной строки не находился в каталоге, указанном в **COMSPEC** или **путь** переменные среды.
+
+Программа NMAKE использует COMMAND.COM или CMD. EXE-файла в качестве обработчика команды при выполнении команд. Он сначала ищет для обработки команды в пути, заданном в **COMSPEC**. Если **COMSPEC** не существует, поиск NMAKE, каталоги, заданные в **путь**.

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2191 | Документы Microsoft
+title: Ошибка компилятора C2191 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa4b590b494355450909032c78822553004beddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e739c5c9fc77c4c9658afb2f5f6d9568c6f43bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088362"
 ---
 # <a name="compiler-error-c2191"></a>Ошибка компилятора C2191
-второй список параметров длиннее первого  
-  
- Функция C была объявлена во второй раз с более длинным списком параметров. C не поддерживает перегруженные функции.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2191:  
-  
-```  
-// C2191.c  
-// compile with: /Za /c  
-void func( int );  
-void func( int, float );   // C2191 different parameter list  
-void func2( int, float );   // OK  
+
+второй список параметров длиннее первого
+
+Функция C была объявлена во второй раз с более длинный список параметров. C не поддерживает перегруженные функции.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2191:
+
+```
+// C2191.c
+// compile with: /Za /c
+void func( int );
+void func( int, float );   // C2191 different parameter list
+void func2( int, float );   // OK
 ```

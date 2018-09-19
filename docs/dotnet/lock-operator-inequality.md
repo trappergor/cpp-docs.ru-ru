@@ -1,5 +1,5 @@
 ---
-title: Lock::operator! = | Документы Microsoft
+title: Lock::operator! = | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6b34eb410e05bd102f7a10205e57b3731b8f476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca39249a73df4519c741182827036158169fd3ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130351"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043018"
 ---
 # <a name="lockoperator"></a>lock::operator!=
 Оператор неравенства.  
@@ -39,11 +39,11 @@ template<class T> bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `t`  
- Объект для сравнения на неравенство.  
+*t*<br/>
+Объект для сравнения на предмет их неравенства.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает `true` Если `t` , отличается от объекта блокировки `false` в противном случае.  
+ Возвращает `true` Если `t` отличается от объект блокировки, `false` в противном случае.  
   
 ## <a name="example"></a>Пример  
   

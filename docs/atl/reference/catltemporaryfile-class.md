@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30a0080dd576add0433421bb465d89b2967b9acd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8d32094dd8ee55cdd76fc21f51a2f809b1b341d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753127"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034932"
 ---
 # <a name="catltemporaryfile-class"></a>Класс CAtlTemporaryFile
 
@@ -136,7 +136,7 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*szNewName*  
+*szNewName*<br/>
 Имя для нового файла для хранения временных файлов в содержимое. Если этот аргумент равен NULL, содержимое временный файл удаляется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -157,10 +157,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 
 ### <a name="parameters"></a>Параметры
 
-*pszDir*  
+*pszDir*<br/>
 Путь для временного файла. Если имеет значение NULL, [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) будет вызываться для присвоения пути.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Необходимый доступ. См. в разделе *dwDesiredAccess* в [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -201,7 +201,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nPos*  
+*nPos*<br/>
 Позиция, в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -222,7 +222,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nLen*  
+*nLen*<br/>
 Число байтов в файле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -271,10 +271,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nPos*  
+*nPos*<br/>
 Позиция в файле, где должна начинаться блокировки.
 
-*nCount*  
+*nCount*<br/>
 Длина диапазона байтов, который будет заблокирован.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -289,7 +289,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 Возвращает дескриптор во временный файл.
 
-```  
+```
 operator HANDLE() throw();
 ```
 
@@ -306,13 +306,13 @@ HRESULT Read(
 
 ### <a name="parameters"></a>Параметры
 
-*pBuffer*  
+*pBuffer*<br/>
 Указатель на буфер, который будет получать данные, считанные из файла.
 
-*nBufSize*  
+*nBufSize*<br/>
 Размер буфера в байтах.
 
-*nBytesRead*  
+*nBytesRead*<br/>
 Количество прочитанных байтов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -337,10 +337,10 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nOffset*  
+*nOffset*<br/>
 Смещение в байтах от начала точки, заданной параметром *dwFrom.*
 
-*dwFrom*  
+*dwFrom*<br/>
 Начальная точка (FILE_BEGIN, FILE_CURRENT или FILE_END).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -365,7 +365,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nNewLen*  
+*nNewLen*<br/>
 Новая длина файла в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -402,10 +402,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nPos*  
+*nPos*<br/>
 Позиция в файле, где должна начинаться снятие блокировки.
 
-*nCount*  
+*nCount*<br/>
 Длина диапазона байтов должен быть разблокирован.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -421,7 +421,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 Этот метод используется для записи данных во временный файл, начиная с позиции, указанной проверкой указатель файла.
 
 ```
-HRESULT Write(  
+HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
     DWORD* pnBytesWritten = NULL) throw();
@@ -429,13 +429,13 @@ HRESULT Write(
 
 ### <a name="parameters"></a>Параметры
 
-*pBuffer*  
+*pBuffer*<br/>
 Буфер, содержащий данные для записи в файл.
 
-*nBufSize*  
+*nBufSize*<br/>
 Число байтов, передаваемых из буфера.
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 Число записанных байтов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -452,5 +452,5 @@ HRESULT Write(
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Класс CAtlFile](../../atl/reference/catlfile-class.md)

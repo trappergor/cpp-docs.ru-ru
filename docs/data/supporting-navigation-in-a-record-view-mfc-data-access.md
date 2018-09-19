@@ -1,5 +1,5 @@
 ---
-title: Поддержка навигации в представлении записей (доступ к данным MFC) | Документы Microsoft
+title: Поддержка навигации в представлении записей (доступ к данным MFC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22a3e59a441c6724676521cb50daa523b84d9ee3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1cb1b6bb4fa69bb89dd7ddd6b9483b36ea5552a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078846"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Поддержка навигации в представлении записей (доступ к данным MFC)
+
 В этом разделе объясняется, как поддерживать перемещение по записям в вашей [CRecordView](../mfc/reference/crecordview-class.md) класса, включая сведения о:  
   
--   [Обработка команд](../data/command-handlers-for-record-scrolling-mfc-data-access.md) команд перемещения по записям.  
+- [Обработка команд](../data/command-handlers-for-record-scrolling-mfc-data-access.md) для команд прокрутки по записям.  
   
--   [Обработчики обновлений пользовательского интерфейса для прокрутки](../data/user-interface-updating-for-record-views-mfc-data-access.md) команд.  
+- [Обработчики обновления пользовательского интерфейса для прокрутки](../data/user-interface-updating-for-record-views-mfc-data-access.md) команды.  
   
 ## <a name="see-also"></a>См. также  
- [Представления записей (доступ к данным MFC)](../data/record-views-mfc-data-access.md)   
- [Список драйверов ODBC](../data/odbc/odbc-driver-list.md)
+
+[Представления записей (доступ к данным MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Список драйверов ODBC](../data/odbc/odbc-driver-list.md)

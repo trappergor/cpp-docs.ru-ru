@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4820 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4820 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea99ca177a90281ca02e44265f603045b72845f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c27466912956988a2396b8e3c52fc41ed2caa604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016343"
 ---
 # <a name="compiler-warning-level-4-c4820"></a>Предупреждение компилятора (уровень 4) C4820
-"bytes" заполнение байт добавляется после создания "member_name"  
-  
- Тип и порядок элементов вызвал компилятор добавляет заполнение в конце структуры. В разделе [выравнивание](../../cpp/align-cpp.md) Дополнительные сведения о заполнении в структуре.  
-  
- Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Следующий пример приводит к возникновению ошибки C4820:  
-  
-```  
-// C4820.cpp  
-// compile with: /W4 /c  
-#pragma warning(default : 4820)   
-  
-// Delete the following 4 lines to resolve.  
-__declspec(align(2)) struct MyStruct {  
-   char a;  
-   int i;   // C4820  
-};  
-  
-// OK  
-#pragma pack(1)  
-__declspec(align(1)) struct MyStruct2 {  
-   char a;  
-   int i;  
-};  
+
+"bytes" заполнение байт добавляется после создания "member_name"
+
+Тип и порядок элементов вызвал компилятору о необходимости добавления заполнения в конец структуры. См. в разделе [выровнять](../../cpp/align-cpp.md) Дополнительные сведения о заполнении в структуре.
+
+Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Следующий пример приводит к возникновению ошибки C4820:
+
+```
+// C4820.cpp
+// compile with: /W4 /c
+#pragma warning(default : 4820)
+
+// Delete the following 4 lines to resolve.
+__declspec(align(2)) struct MyStruct {
+   char a;
+   int i;   // C4820
+};
+
+// OK
+#pragma pack(1)
+__declspec(align(1)) struct MyStruct2 {
+   char a;
+   int i;
+};
 ```

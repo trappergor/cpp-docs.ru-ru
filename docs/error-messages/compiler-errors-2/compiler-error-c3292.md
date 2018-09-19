@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3292 | Документы Microsoft
+title: Ошибка компилятора C3292 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a7f91bb9d47f2675525cf17096deddae30be71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fc5f89978a7ecaff526fa05ca7a47494aada987
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112464"
 ---
 # <a name="compiler-error-c3292"></a>Ошибка компилятора C3292
-пространство имен CLI нельзя открыть повторно  
-  
- Пространство имен cli не может быть объявлено в вашем коде.  Дополнительные сведения см. в разделе [платформы, по умолчанию и пространства имен cli](../../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Пример  
- В следующем примере возникает ошибка C3292.  
-  
-```  
-// C3292.cpp  
-// compile with: /clr /c  
-namespace cli {};   // C3292  
+
+пространство имен CLI нельзя открыть повторно
+
+Пространство имен cli не может быть объявлено в вашем коде.  Дополнительные сведения см. в разделе [Platform, default и cli пространства имен](../../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).
+
+## <a name="example"></a>Пример
+
+В следующем примере возникает ошибка C3292.
+
+```
+// C3292.cpp
+// compile with: /clr /c
+namespace cli {};   // C3292
 ```

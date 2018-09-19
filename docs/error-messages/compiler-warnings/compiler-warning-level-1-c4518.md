@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4518 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4518 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9dc0c7def2819f3a882667efb073c565707712
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90936d7ad695cb826e7fc58798706822ca1b8f24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037792"
 ---
 # <a name="compiler-warning-level-1-c4518"></a>Предупреждение компилятора (уровень 1) C4518
-«спецификатор»: класс хранения или спецификатор(ы) типа; обрабатывается  
-  
- Следующий пример приводит к возникновению ошибки C4518:  
-  
-```  
-// C4518.cpp  
-// compile with: /c /W1  
-_declspec(dllexport) extern "C" void MyFunction();   // C4518  
-  
-extern "C" void MyFunction();   // OK  
+
+«спецификатор»: класс хранения или выполните ввод s: непредвиденный здесь; игнорируется
+
+Следующий пример приводит к возникновению ошибки C4518:
+
+```
+// C4518.cpp
+// compile with: /c /W1
+_declspec(dllexport) extern "C" void MyFunction();   // C4518
+
+extern "C" void MyFunction();   // OK
 ```

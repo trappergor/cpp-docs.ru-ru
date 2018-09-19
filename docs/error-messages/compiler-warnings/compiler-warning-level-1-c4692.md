@@ -1,5 +1,5 @@
 ---
-title: Предупреждение компилятора (уровень 1) C4692 | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4692 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a908aae7e561f78514cda1f31b78060ce88d90ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 691be92230341d0cbf83b361310de4aab60f6859
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117742"
 ---
 # <a name="compiler-warning-level-1-c4692"></a>Предупреждение компилятора (уровень 1) C4692
-"функция": подпись не частного члена содержит частный собственный тип сборки "частныйТип"  
-  
- Тип, видимый за пределами сборки, содержит функцию-член, сигнатура которого содержит собственный тип, который не отображается за пределами сборки. Таким образом функция-член не должен вызываться, если его содержащий тип создается за пределами сборки.  
-  
- Дополнительные сведения см. в разделе [введите видимость](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).  
-  
- Это предупреждение отключено по умолчанию. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C4692.  
-  
-```  
-// C4692.cpp  
-// compile with: /W1 /c /clr  
-#pragma warning(default:4692)  
-class Private_Native_Class {};  
-public class Public_Native_Class {};  
-public ref class Public_Ref_Class {  
-public:  
-   void Test(Private_Native_Class *) {}   // C4692  
-   void Test2(Public_Native_Class *) {}   // OK  
-};  
+
+"функция": подпись не частного члена содержит частный собственный тип сборки "частныйТип"
+
+Тип, видимый за пределами сборки, содержит функцию-член, сигнатура которого содержит собственный тип, не отображается за пределами сборки. Таким образом функция-член не должен вызываться, если его содержащий тип создается за пределами сборки.
+
+Дополнительные сведения см. в разделе [введите видимость](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).
+
+Это предупреждение отключено по умолчанию. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C4692.
+
+```
+// C4692.cpp
+// compile with: /W1 /c /clr
+#pragma warning(default:4692)
+class Private_Native_Class {};
+public class Public_Native_Class {};
+public ref class Public_Ref_Class {
+public:
+   void Test(Private_Native_Class *) {}   // C4692
+   void Test2(Public_Native_Class *) {}   // OK
+};
 ```

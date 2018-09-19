@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2129 | Документы Microsoft
+title: Ошибка компилятора C2129 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d151c774672b1788ca893a9812deb3e41100dc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e86515a7d7c8954271578291c4ebcb1a52fc9863
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054289"
 ---
 # <a name="compiler-error-c2129"></a>Ошибка компилятора C2129
-Статическая функция «функция» объявлена, но не определена  
-  
- При попытке отправить прямая ссылка `static` функция, которая не определена.  
-  
- Объект `static` функция должна быть определена в области файла. Если функция определена в другом файле, он должен быть объявлен `extern`.
+
+Статическая функция «функция» объявлена, но не определена
+
+Прямая ссылка при попытке `static` функция, которая не определена.
+
+Объект `static` функция должна быть определена в области файла. Если функция определена в другом файле, он должен быть объявлен `extern`.

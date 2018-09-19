@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2800 | Документы Microsoft
+title: Ошибка компилятора C2800 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dd9723513042ae7ef6d63914f5abecd63192e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23441361ea0c8dbc241f5bf655186f0399b6b42f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016381"
 ---
 # <a name="compiler-error-c2800"></a>Ошибка компилятора C2800
-«оператор» не может быть перегружен  
-  
- Следующие операторы не могут быть перегружены: доступ к члену класса (`.`), указатель на член (`.*`), разрешение области действия (`::`), условное выражение (`? :`), и `sizeof`.  
-  
- Следующий пример приводит к возникновению ошибки C2800:  
-  
-```  
-// C2800.cpp  
-// compile with: /c  
-class C {  
-   operator:: ();   // C2800  
-};  
+
+«оператор» не может быть перегружен
+
+Следующие операторы не могут быть перегружены: доступ к члену класса (`.`), указатель на член (`.*`), разрешение области (`::`), условного выражения (`? :`), и `sizeof`.
+
+Следующий пример приводит к возникновению ошибки C2800:
+
+```
+// C2800.cpp
+// compile with: /c
+class C {
+   operator:: ();   // C2800
+};
 ```

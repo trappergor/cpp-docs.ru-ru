@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4659 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4659 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643b599cd11d0935f1769ad37dca4e764f0418e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d00c54fa77d68722b2e47a9d49832911b398deca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285620"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110065"
 ---
 # <a name="compiler-warning-level-1-c4659"></a>Предупреждение компилятора (уровень 1) C4659
-\#Директива #pragma «pragma»: использование зарезервированного сегмента «сегмент» поведение не определено, используйте #pragma comment (linker,...)  
-  
- Параметр .drectve использовался для передачи параметра компоновщика. Вместо этого используйте директиву #pragma [комментарий](../../preprocessor/comment-c-cpp.md) для передачи параметра компоновщика.  
-  
-```  
-// C4659.cpp  
-// compile with: /W1 /LD  
-#pragma code_seg(".drectve")   // C4659  
+
+\#Директива pragma «pragma»: использование зарезервированного сегмента «сегмент» приводит к неопределенному поведению, используйте #pragma comment (linker,...)
+
+Параметр .drectve использовался для передачи параметра компоновщика. Вместо этого используйте директиву #pragma [комментарий](../../preprocessor/comment-c-cpp.md) для передачи параметра компоновщика.
+
+```
+// C4659.cpp
+// compile with: /W1 /LD
+#pragma code_seg(".drectve")   // C4659
 ```

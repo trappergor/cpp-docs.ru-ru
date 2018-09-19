@@ -12,26 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 711e28a569cefbb500a98ab33cd22c527a5fd7c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1ddecf1e205cc9a6d7f09a27fbf243417540e49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033567"
 ---
 # <a name="directives-to-the-preprocessor"></a>Директивы препроцессору
-Директива указывает препроцессору C выполнять определенное действие в тексте программы перед компиляцией. [Директивы препроцессора](../preprocessor/preprocessor-directives.md) полностью описаны в *справочнике по препроцессору*. В следующем примере используется директива препроцессора `#define`.  
-  
-```  
-#define MAX 100  
-```  
-  
- Этот оператор указывает компилятору заменять каждое вхождение `MAX` на `100` перед компиляцией. Ниже перечислены директивы препроцессора компилятора C.  
-  
-|#define|#endif|#ifdef|#line|  
-|--------------|-------------|-------------|------------|  
-|`#elif`|`#error`|**#ifndef**|**#pragma**|  
-|`#else`|`#if`|`#include`|`#undef`|  
-  
-## <a name="see-also"></a>См. также  
- [Файлы с исходным кодом и исходные программы](../c-language/source-files-and-source-programs.md)
+
+Директива указывает препроцессору C выполнять определенное действие в тексте программы перед компиляцией. [Директивы препроцессора](../preprocessor/preprocessor-directives.md) полностью описаны в *справочнике по препроцессору*. В следующем примере используется директива препроцессора `#define`.
+
+```
+#define MAX 100
+```
+
+Этот оператор указывает компилятору заменять каждое вхождение `MAX` на `100` перед компиляцией. Ниже перечислены директивы препроцессора компилятора C.
+
+|#define|#endif|#ifdef|#line|
+|--------------|-------------|-------------|------------|
+|`#elif`|`#error`|**#ifndef**|**#pragma**|
+|`#else`|`#if`|`#include`|`#undef`|
+
+## <a name="see-also"></a>См. также
+
+[Файлы с исходным кодом и исходные программы](../c-language/source-files-and-source-programs.md)

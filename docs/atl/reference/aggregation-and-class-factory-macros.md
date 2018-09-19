@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752792"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043421"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Агрегирование и макросов фабрики класса
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Имя класса, который был определен как подлежащий статистической обработке.
 
 ### <a name="remarks"></a>Примечания
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Параметры
 
-*CF*  
+*CF*<br/>
 [in] Имя класса, реализующего объект фабрики класса.
 
 ### <a name="remarks"></a>Примечания
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Параметры
 
-*Лицензионное соглашение*  
+*Лицензионное соглашение*<br/>
 [in] Класс, реализующий `VerifyLicenseKey`, `GetLicenseKey`, и `IsLicenseValid`.
 
 ### <a name="remarks"></a>Примечания
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Параметры
 
-*лицензии*  
+*лицензии*<br/>
 Класс, реализующий следующие статические функции:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>Параметры
 
-*obj*  
+*obj*<br/>
 [in] Имя класса объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Класс.
 
 `CComClassFactorySingleton` является производным от [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) и использует [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) для создания объекта. Каждый вызов `CreateInstance` метод просто запрашивает этот объект для указателя на интерфейс.
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Имя объекта класса был определен как невозможна.
 
 ### <a name="remarks"></a>Примечания
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Имя объекта класса вы определяете как только статистически.
 
 ### <a name="remarks"></a>Примечания
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Параметры
 
-*x*  
+*x*<br/>
 [in] Имя объекта класса был определен как статистическую обработку или невозможна.
 
 ### <a name="remarks"></a>Примечания
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>Параметры
 
-*statusFlags*  
+*statusFlags*<br/>
 [in] Просмотр СОСТОЯНИЯ флаги. См. в разделе [Просмотр СОСТОЯНИЯ](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) список флагов.
 
 ### <a name="example"></a>Пример

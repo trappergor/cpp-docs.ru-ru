@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2743 | Документы Microsoft
+title: Ошибка компилятора C2743 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a762a7c816f713f9371ff50524ccb582753535b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4217a1e7a8475362c654ac34b6a345846341ec35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056497"
 ---
 # <a name="compiler-error-c2743"></a>Ошибка компилятора C2743
-«Тип»: невозможно перехватить собственный тип с деструктором __clrcall или конструктором копии  
-  
- Модуль компиляции с **/CLR** была предпринята попытка перехвата исключения собственного типа там, где деструктор или конструктор копии этого типа используют `__clrcall` соглашение о вызовах.  
-  
- При компиляции с параметром **/CLR**, обработка исключений ожидает, что функции-члены собственного типа будут использовать [__cdecl](../../cpp/cdecl.md) и не [__clrcall](../../cpp/clrcall.md). Собственные типы с функциями-членами с помощью `__clrcall` соглашение о вызовах, не может быть перехвачено в модуле, скомпилированном с **/CLR**.  
-  
- Дополнительные сведения см. в разделе [/clr (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2743.  
-  
-```  
-// C2743.cpp  
-// compile with: /clr  
-public struct S {  
-   __clrcall ~S() {}  
-};  
-  
-public struct T {  
-   ~T() {}  
-};  
-  
-int main() {  
-   try {}  
-   catch(S) {}   // C2743  
-   // try the following line instead  
-   // catch(T) {}  
-  
-   try {}  
-   catch(S*) {}   // OK  
-}  
+
+«Тип»: невозможно перехватить собственный тип с деструктором __clrcall или конструктором копий
+
+Модуль компиляции с **/CLR** предпринята попытка перехвата исключения собственного типа, где тип деструктор или конструктор копии используют `__clrcall` соглашение о вызовах.
+
+При компиляции с **/CLR**, обработка исключений ожидает, что функции-члены в собственный тип быть [__cdecl](../../cpp/cdecl.md) и не [__clrcall](../../cpp/clrcall.md). Собственные типы с помощью функции-члены `__clrcall` соглашение о вызовах, не может быть перехвачено в модуле, скомпилированном с **/CLR**.
+
+Дополнительные сведения см. в разделе [/clr (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2743.
+
+```
+// C2743.cpp
+// compile with: /clr
+public struct S {
+   __clrcall ~S() {}
+};
+
+public struct T {
+   ~T() {}
+};
+
+int main() {
+   try {}
+   catch(S) {}   // C2743
+   // try the following line instead
+   // catch(T) {}
+
+   try {}
+   catch(S*) {}   // OK
+}
 ```

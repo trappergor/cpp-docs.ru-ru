@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087959"
 ---
 # <a name="csimpledialog-class"></a>Класс CSimpleDialog
 
@@ -35,7 +35,7 @@ ms.locfileid: "43754895"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 Идентификатор ресурса ресурс шаблона диалоговых окон.
 
-*t_bCenter*  
+*t_bCenter*<br/>
 Значение TRUE, если объект диалогового окна должен быть отцентрован в окно-владелец; в противном случае — значение FALSE.
 
 ## <a name="members"></a>Участники
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*  
+*hWndParent*<br/>
 Дескриптор родительского окна. Если значение не указано, родительский присваивается текущее активное окно.
 
 ### <a name="return-value"></a>Возвращаемое значение

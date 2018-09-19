@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2255 | Документы Microsoft
+title: Ошибка компилятора C2255 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 314d53017cf809e0ca38838cdfb3b3bb4b22437c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6a5a2d2237373fb1321dc6d3059f20a9ddb159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112256"
 ---
 # <a name="compiler-error-c2255"></a>Ошибка компилятора C2255
-"элемент": не допускается вне определения класса  
-  
- Например, функция, не являющаяся членом класса, объявлена с модификатором `friend`.  
-  
- При компиляции следующего примера возникнет ошибка C2255:  
-  
-```  
-// C2255.cpp  
-// compile with: /c  
-class A {  
-private:  
-   void func1();  
-   friend void func2();  
-};  
-  
-friend void func1() {}   // C2255  
-void func2(){}  
+
+"элемент": не допускается вне определения класса
+
+Например, функция, не являющаяся членом класса, объявлена с модификатором `friend`.
+
+При компиляции следующего примера возникнет ошибка C2255:
+
+```
+// C2255.cpp
+// compile with: /c
+class A {
+private:
+   void func1();
+   friend void func2();
+};
+
+friend void func1() {}   // C2255
+void func2(){}
 ```

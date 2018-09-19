@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1277 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1277 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec8f00793fcda748c60d9d8ea775611e3d025cd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c48bd23b3f84ab301404987c77d964f51823e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082542"
 ---
 # <a name="linker-tools-error-lnk1277"></a>Ошибка средств компоновщика LNK1277
-запись объекта не найдена в pgd (имя файла)  
-  
- При использовании [/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), один из входных файлов LIB, def или OBJ путь отличался от пути, на котором они были найдены во время/LTCG: PGINSTRUMENT. Это может быть описано изменение переменной среды LIB после/LTCG: PGINSTRUMENT. Полный путь во входных файлах хранится в PGD-файл.  
-  
- / LTCG: PGOPTIMIZE требует идентичности к этапу/LTCG: PGINSTRUMENT входные данные.  
-  
- Чтобы устранить это предупреждение, выполните одно из следующих действий.  
-  
--   Запустите/LTCG: PGINSTRUMENT, вернуть все тестовые запуски и запустите/LTCG: PGOPTIMIZE.  
-  
--   Изменение значения переменной среды LIB в том случае если пользователь выполнял/LTCG: PGINSTRUMENT.  
-  
- Обойти LNK1277, используя/LTCG: PGUPDATE не рекомендуется.
+
+запись объекта не найдена в pgd (имя файла)
+
+При использовании [/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), путь к одной из входных файлов LIB "," def "или" obj отличался от пути, на котором они были найдены во время/LTCG: PGINSTRUMENT. Это может объясняться изменение в переменной среды LIB после/LTCG: PGINSTRUMENT. Полный путь к входных файлов хранится в PGD-файла.
+
+/ LTCG: PGOPTIMIZE требует идентична на этапе/LTCG: PGINSTRUMENT входные данные.
+
+Чтобы устранить это предупреждение, выполните одно из следующих действий.
+
+- Запуск/LTCG: PGINSTRUMENT, вернуть все тестовые запуски и запустите/LTCG: PGOPTIMIZE.
+
+- Изменение переменной среды LIB существовавшие при запуске/LTCG: PGINSTRUMENT.
+
+Не рекомендуется решить LNK1277 с использованием/LTCG: PGUPDATE.

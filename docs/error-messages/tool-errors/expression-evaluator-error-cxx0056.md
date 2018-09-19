@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0056 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0056 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da79a78753a9847686eca6952767fdefbe27005a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cd3c2401516ee986d283dab62703c3a0dc8df42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298477"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019854"
 ---
 # <a name="expression-evaluator-error-cxx0056"></a>Ошибка вычислителя выражений CXX0056
-Ошибка в строке с номером  
-  
- Указан недопустимый номер строки.  
-  
- Эта ошибка идентична ошибке CAN0056.
+
+Ошибка в номер строки
+
+Указан недопустимый номер строки.
+
+Эта ошибка идентична ошибке CAN0056.

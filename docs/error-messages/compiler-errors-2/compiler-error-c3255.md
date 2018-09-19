@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3255 | Документы Microsoft
+title: Ошибка компилятора C3255 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740deb9a2981839a12d2570328369daf741a8da9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f77ad1530b59c01d36a7144e2074a4b1731a9db3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043486"
 ---
 # <a name="compiler-error-c3255"></a>Ошибка компилятора C3255
-«Тип значения»: не удается динамически выделить этот объект типа значения в собственной куче  
-  
- Экземпляры типа значения (в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md)), содержащие управляемые члены могут создаваться в стеке, но не в куче.  
-  
- Следующий пример приводит к возникновению ошибки C3255:  
-  
-```  
-// C3255.cpp  
-// compile with: /clr  
-using namespace System;  
-value struct V {  
-   Object^ o;  
-};  
-  
-value struct V2 {  
-   int i;  
-};  
-  
-int main() {  
-   V* pv = new V;   // C3255  
-   V2* pv2 = new V2;  
-   V v2;  
-}  
-```  
+
+«Тип значения»: не удается динамически выделить этот объект типа значения в собственной куче
+
+Экземпляры типа значения (см. в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md)), содержащие управляемые члены могут быть созданы в стеке, но не в куче.
+
+Следующий пример приводит к возникновению ошибки C3255:
+
+```
+// C3255.cpp
+// compile with: /clr
+using namespace System;
+value struct V {
+   Object^ o;
+};
+
+value struct V2 {
+   int i;
+};
+
+int main() {
+   V* pv = new V;   // C3255
+   V2* pv2 = new V2;
+   V v2;
+}
+```

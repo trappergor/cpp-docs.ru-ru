@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1053 | Документы Microsoft
+title: Неустранимая ошибка C1053 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0db5c678b257e3039644627e958bd67b8e4e0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe111f84a5ebf056cb0a806e90cb660060bbf3b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226409"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135923"
 ---
 # <a name="fatal-error-c1053"></a>Неустранимая ошибка C1053
-"\<идентификатор >": слишком большая функция  
-  
- Функция слишком большая для компиляции.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Возможные способы устранения этой ошибки  
-  
-1.  Попробуйте компилировать без оптимизации.  
-  
-2.  Разбейте функцию на более мелкие.  
-  
-3.  Уменьшите количество вызовов встроенных функций.
+
+"\<идентификатор >": слишком большая функция
+
+Функция слишком большая для компиляции.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Возможные способы устранения этой ошибки
+
+1. Попробуйте компилировать без оптимизации.
+
+1. Разбейте функцию на более мелкие.
+
+1. Уменьшите количество вызовов встроенных функций.

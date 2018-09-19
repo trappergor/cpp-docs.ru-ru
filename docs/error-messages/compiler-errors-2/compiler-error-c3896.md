@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3896 | Документы Microsoft
+title: Ошибка компилятора C3896 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc60c09d6fd99e56f0261409099e56713604a76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6714d356fa2f09bdfce2750ff31432b5b4e14461
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109734"
 ---
 # <a name="compiler-error-c3896"></a>Ошибка компилятора C3896
-«член»: недопустимый инициализатор: этот член данных литерала можно инициализировать только с «nullptr»  
-  
- Объект [литерала](../../windows/literal-cpp-component-extensions.md) член данных инициализирован неправильно.  В разделе [nullptr](../../windows/nullptr-cpp-component-extensions.md) для получения дополнительной информации.  
-  
- Следующий пример приводит к возникновению ошибки C3896:  
-  
-```  
-// C3896.cpp  
-// compile with: /clr /c  
-ref class R{};  
-  
-value class V {  
-   literal R ^ r = "test";   // C3896  
-   literal R ^ r2 = nullptr;   // OK  
-};  
+
+«член»: недопустимый инициализатор: этот член данных литерала можно инициализировать только с «nullptr»
+
+Объект [литерала](../../windows/literal-cpp-component-extensions.md) член данных инициализирован неправильно.  См. в разделе [nullptr](../../windows/nullptr-cpp-component-extensions.md) Дополнительные сведения.
+
+Следующий пример приводит к возникновению ошибки C3896:
+
+```
+// C3896.cpp
+// compile with: /clr /c
+ref class R{};
+
+value class V {
+   literal R ^ r = "test";   // C3896
+   literal R ^ r2 = nullptr;   // OK
+};
 ```

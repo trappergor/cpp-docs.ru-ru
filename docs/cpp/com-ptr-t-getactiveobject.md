@@ -16,52 +16,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0555b050770d5fbd411e1720282e3fb50769385b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b9f77a894c39fc907367e5d4f8c7a687cc703331
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056512"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
-**Блок, относящийся только к системам Microsoft**  
-  
- Присоединяет к существующему экземпляру объекта, учитывая `CLSID` или `ProgID`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-HRESULT GetActiveObject(  
-   const CLSID& rclsid   
-) throw( );  
-HRESULT GetActiveObject(  
-   LPCWSTR clsidString   
-) throw( );  
-HRESULT GetActiveObject(  
-   LPCSTR clsidStringA   
-) throw( );  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *rclsid*  
- `CLSID` Объекта.  
-  
- *clsidString*  
- Строка Юникода, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.  
-  
- *clsidStringA*  
- Многобайтовая строка, с помощью кодовой страницы ANSI, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.  
-  
-## <a name="remarks"></a>Примечания  
- Эти функции-члены вызывают **GetActiveObject** извлекаемого указатель на выполняющийся объект, который был зарегистрирован с OLE и затем запросы этого интеллектуального указателя интерфейса типа. Результирующий указатель затем инкапсулируется в этот объект `_com_ptr_t`. `Release` вызывается для уменьшения счетчика ссылок для ранее инкапсулированного указателя. Эта процедура возвращает значение HRESULT, указывающее успех или неудачу.  
-  
--   **GetActiveObject (**`rclsid`**)** присоединяет к существующему экземпляру объекта, учитывая `CLSID`.  
-  
--   **GetActiveObject (**`clsidString`**)** присоединяет к существующему экземпляру объекта, учитывая строку Юникода, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.  
-  
--   **GetActiveObject (**`clsidStringA`**)** присоединяет к существующему экземпляру объекта, учитывая строку многобайтовых символов, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`. Вызовы [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), который предполагает, что строка имеет кодовую страницу ANSI, а не кодовую страницу OEM.  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Класс _com_ptr_t](../cpp/com-ptr-t-class.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+Присоединяет к существующему экземпляру объекта, учитывая `CLSID` или `ProgID`.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+HRESULT GetActiveObject(
+   const CLSID& rclsid
+) throw( );
+HRESULT GetActiveObject(
+   LPCWSTR clsidString
+) throw( );
+HRESULT GetActiveObject(
+   LPCSTR clsidStringA
+) throw( );
+```
+
+#### <a name="parameters"></a>Параметры
+
+*rclsid*<br/>
+`CLSID` Объекта.
+
+*clsidString*<br/>
+Строка Юникода, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.
+
+*clsidStringA*<br/>
+Многобайтовая строка, с помощью кодовой страницы ANSI, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.
+
+## <a name="remarks"></a>Примечания
+
+Эти функции-члены вызывают **GetActiveObject** извлекаемого указатель на выполняющийся объект, который был зарегистрирован с OLE и затем запросы этого интеллектуального указателя интерфейса типа. Результирующий указатель затем инкапсулируется в этот объект `_com_ptr_t`. `Release` вызывается для уменьшения счетчика ссылок для ранее инкапсулированного указателя. Эта процедура возвращает значение HRESULT, указывающее успех или неудачу.
+
+- **GetActiveObject (**`rclsid`**)** присоединяет к существующему экземпляру объекта, учитывая `CLSID`.
+
+- **GetActiveObject (**`clsidString`**)** присоединяет к существующему экземпляру объекта, учитывая строку Юникода, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.
+
+- **GetActiveObject (**`clsidStringA`**)** присоединяет к существующему экземпляру объекта, учитывая строку многобайтовых символов, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`. Вызовы [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), который предполагает, что строка имеет кодовую страницу ANSI, а не кодовую страницу OEM.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Класс _com_ptr_t](../cpp/com-ptr-t-class.md)

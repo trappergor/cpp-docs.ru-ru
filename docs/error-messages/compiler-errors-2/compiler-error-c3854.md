@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3854 | Документы Microsoft
+title: Ошибка компилятора C3854 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbaed18984dbcc06b976a367ef9911528792ce52
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d94d2462662fd5f99e80ba205b8e2df41d7c716b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099555"
 ---
 # <a name="compiler-error-c3854"></a>Ошибка компилятора C3854
-выражение слева от «=» сводится к функции. Не удается назначить функцию (функция не является l значение)  
-  
- Ссылка не может быть инициализирована повторно. Разыменование ссылки на функцию дает функцию, которая представляет собой rvalue, к которому невозможно присвоить. Таким образом нельзя назначить через ссылку на функцию.  
-  
- Следующий пример приводит к возникновению ошибки C3854:  
-  
-```  
-// C3854.cpp  
-int afunc(int i)  
-{  
-   return i;  
-}  
-  
-typedef int (& rFunc_t)(int);  
-typedef int (* pFunc_t)(int);  
-  
-int main()  
-{  
-   rFunc_t rf = afunc;   // OK binding a reference to function  
-   pFunc_t pf = &afunc;   // OK initializing a pointer to function  
-  
-   *pf = &afunc;   // C3854  
-   // try the following line instead  
-   // pf = &afunc;  
-   *rf = &afunc;   // C3854  
-}  
+
+выражение слева от «=» дает функцию. Не удается назначить функцию (функция не является l значение)
+
+Ссылка не может быть инициализирована повторно. Разыменование ссылки на функцию дает функцию, которая представляет собой rvalue, к которому нельзя назначать. Таким образом нельзя назначить через ссылку на функцию.
+
+Следующий пример приводит к возникновению ошибки C3854:
+
+```
+// C3854.cpp
+int afunc(int i)
+{
+   return i;
+}
+
+typedef int (& rFunc_t)(int);
+typedef int (* pFunc_t)(int);
+
+int main()
+{
+   rFunc_t rf = afunc;   // OK binding a reference to function
+   pFunc_t pf = &afunc;   // OK initializing a pointer to function
+
+   *pf = &afunc;   // C3854
+   // try the following line instead
+   // pf = &afunc;
+   *rf = &afunc;   // C3854
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0002 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0002 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3faf350fa14156a82218fed506f50e45084501dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77e5db3859e0ada60999f329fddc82926b607579
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295705"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081043"
 ---
 # <a name="expression-evaluator-error-cxx0002"></a>Ошибка вычислителя выражений CXX0002
-Ошибка при обращении к пользовательской памяти  
-  
- Выражение пытается ссылаться на память, не назначенные отлаживаемой программы.  
-  
- Эта ошибка идентична ошибке CAN0002.
+
+Ошибка доступа к пользовательской памяти
+
+Выражение пытается выполнить ссылку памяти, который не выделен для отлаживаемой программы.
+
+Эта ошибка идентична ошибке CAN0002.

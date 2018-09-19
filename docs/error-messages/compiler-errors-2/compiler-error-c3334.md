@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3334 | Документы Microsoft
+title: Ошибка компилятора C3334 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326ad5a8a131e5000d618316eebb09774781970d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a09dfe5b613cdd75e08218ab675ef5343633df8c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021711"
 ---
 # <a name="compiler-error-c3334"></a>Ошибка компилятора C3334
-директива #import не может быть выполнена для поврежденной библиотеки типов  
-  
- Файл библиотеки в операторе `#import` поврежден и не может быть использован компилятором.  Повреждение может быть результатом неправильного создания модуля, повреждения диска или изменения двоичного файла каким-либо образом.  
-  
- Дополнительные сведения см. в разделе [директива #import](../../preprocessor/hash-import-directive-cpp.md).
+
+директива #import не может быть выполнена для поврежденной библиотеки типов
+
+Файл библиотеки в операторе `#import` поврежден и не может быть использован компилятором.  Повреждение может быть результатом неправильного создания модуля, повреждения диска или изменения двоичного файла каким-либо образом.
+
+Дополнительные сведения см. в разделе [директива #import](../../preprocessor/hash-import-directive-cpp.md).

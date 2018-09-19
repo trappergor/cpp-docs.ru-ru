@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3283 | Документы Microsoft
+title: Ошибка компилятора C3283 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bc23270d70a2fec1c0ac9cc5f6b96541085cfc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0feaad0e0eb1b9dc5ee6c5b2f47e8f2a425b6d99
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096474"
 ---
 # <a name="compiler-error-c3283"></a>Ошибка компилятора C3283
-"тип": интерфейс не может иметь конструктор экземпляров  
-  
- [Интерфейс](../../windows/interface-class-cpp-component-extensions.md) CLR не может иметь конструктора экземпляров.  Статический конструктор разрешен.  
-  
- При компиляции следующего примера возникнет ошибка C3283:  
-  
-```  
-// C3283.cpp  
-// compile with: /clr  
-interface class I {  
-   I();   // C3283  
-};  
-```  
-  
- Возможное решение  
-  
-```  
-// C3283b.cpp  
-// compile with: /clr /c  
-interface class I {  
-   static I(){}  
-};  
+
+"тип": интерфейс не может иметь конструктор экземпляров
+
+[Интерфейс](../../windows/interface-class-cpp-component-extensions.md) CLR не может иметь конструктора экземпляров.  Статический конструктор разрешен.
+
+При компиляции следующего примера возникнет ошибка C3283:
+
+```
+// C3283.cpp
+// compile with: /clr
+interface class I {
+   I();   // C3283
+};
+```
+
+Возможное решение
+
+```
+// C3283b.cpp
+// compile with: /clr /c
+interface class I {
+   static I(){}
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4366 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4366 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12410a567cb55d6dea74b8e5e595009e56b1071f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb24c65605857124edf608bec88f1399d9df607d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047048"
 ---
 # <a name="compiler-warning-level-4-c4366"></a>Предупреждение компилятора (уровень 4) C4366
-Результатом унарного оператора «оператор» может быть невыровненным  
-  
- Если член структуры не выровнен вследствие упаковки, компилятор выдает предупреждение, когда этот адрес участника назначается для выровненного указателя. По умолчанию все указатели являются выровненными.  
-  
- Чтобы устранить предупреждение C4366, изменении выравнивания структуры или объявить указатель с [__unaligned](../../cpp/unaligned.md) ключевое слово.  
-  
- Дополнительные сведения см. в разделе __unaligned и [пакет](../../preprocessor/pack.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C4366.  
-  
-```  
-// C4366.cpp  
-// compile with: /W4 /c  
-// processor: IPF x64  
-#pragma pack(1)  
-struct X {  
-   short s1;  
-   int s2;  
-};  
-  
-int main() {  
-   X x;  
-   short * ps1 = &x.s1;   // OK  
-   int * ps2 = &x.s2;   // C4366  
-}  
+
+Результатом унарного оператора «operator» может быть невыровненным
+
+Если член структуры не выровнен вследствие упаковки, компилятор выдает предупреждение, когда что адреса элемента назначен выровненного указателя. По умолчанию все указатели выравниваются.
+
+Чтобы устранить C4366, изменить выравнивание структуры или объявить указатель с [__unaligned](../../cpp/unaligned.md) ключевое слово.
+
+Дополнительные сведения см. в разделе __unaligned и [пакет](../../preprocessor/pack.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C4366.
+
+```
+// C4366.cpp
+// compile with: /W4 /c
+// processor: IPF x64
+#pragma pack(1)
+struct X {
+   short s1;
+   int s2;
+};
+
+int main() {
+   X x;
+   short * ps1 = &x.s1;   // OK
+   int * ps2 = &x.s2;   // C4366
+}
 ```

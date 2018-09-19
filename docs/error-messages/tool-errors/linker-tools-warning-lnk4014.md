@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4014 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb86efbdc70342861a87a233ab687f7564cb48b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df0a3b6f30733413a0f27c0b8daa07394bb04b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300063"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023115"
 ---
 # <a name="linker-tools-warning-lnk4014"></a>Предупреждение средств компоновщика LNK4014
-не удается найти объект члена «objectname»  
-  
- Не удалось найти LIB `objectname` в библиотеке.  
-  
- **/Удаление** и **/EXTRACT** параметров требуется полное имя объекта-члена, удаляемого или скопировать в файл. Полное имя включает путь к исходному файлу объекта. Для просмотра полных имен объектов-членов в библиотеке, использование служебной программы DUMPBIN [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md) или LIB [/LIST](../../build/reference/managing-a-library.md).
+
+не удается найти объект члена «objectname»
+
+Не удалось найти LIB `objectname` в библиотеке.
+
+**/REMOVE** и **/EXTRACT** параметров необходимо полное имя объекта-члена, удалить или скопировать в файл. Полное имя включает в себя путь исходного файла объекта. Для просмотра полных имен объектов-членов в библиотеке, использование служебной программы DUMPBIN [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md) или LIB [/LIST](../../build/reference/managing-a-library.md).

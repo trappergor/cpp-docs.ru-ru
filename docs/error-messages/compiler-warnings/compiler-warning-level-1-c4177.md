@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора предупреждение (уровень 1) C4177 | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4177 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae001b593d965ead0c834793dbbeee3972a5b0bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 489b3a23fa17cbe7fac473c7c0b51f1c680c234a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032553"
 ---
 # <a name="compiler-warning-level-1-c4177"></a>Предупреждение компилятора (уровень 1) C4177
-\##pragma директива pragma должна быть в глобальной области видимости  
-  
- Прагма [Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) не должна использоваться в локальной области. Прагма **pragma** будет недействительна до появления глобальной области после текущей области.  
-  
- В следующем примере возникает ошибка C4177:  
-  
-```  
-// C4177.cpp  
-// compile with: /W1  
-// #pragma bss_seg("global")   // OK  
-  
-int main() {  
-   #pragma bss_seg("local")    // C4177  
-}  
+
+\#Директива pragma директивы pragma должны находиться в глобальной области видимости
+
+Прагма [Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) не должна использоваться в локальной области. Прагма **pragma** будет недействительна до появления глобальной области после текущей области.
+
+В следующем примере возникает ошибка C4177:
+
+```
+// C4177.cpp
+// compile with: /W1
+// #pragma bss_seg("global")   // OK
+
+int main() {
+   #pragma bss_seg("local")    // C4177
+}
 ```

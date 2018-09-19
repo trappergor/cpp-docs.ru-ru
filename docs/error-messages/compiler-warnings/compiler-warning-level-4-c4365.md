@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 4) C4365 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4365 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496f26046803efdd2b67cdc6d5a5ec74a3cbb90d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8188e3fc861573025a4855102e3ced14d3136fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293391"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079704"
 ---
 # <a name="compiler-warning-level-4-c4365"></a>Предупреждение компилятора (уровень 4) C4365
-«Операция»: преобразование «тип_1» в «тип2», несоответствие со знаком и без  
-  
- Например попытка преобразовать значение без знака в значение со знаком.  
-  
- C4365 по умолчанию отключено.  Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C4365.  
-  
-```  
-// C4365.cpp  
-// compile with: /W4  
-#pragma warning(default:4365)  
-  
-int f(int) { return 0; }  
-void Test(size_t i) {}  
-  
-int main() {  
-   unsigned int n = 10;  
-   int o = 10;  
-   n++;  
-   f(n);   // C4365  
-   f(o);   // OK  
-  
-   Test( -19 );   // C4365  
-}  
+
+«Операция»: преобразование «type_1» в «type_2», несоответствие со знаком и без
+
+Например вы попытались преобразовать целое число без знака в значение со знаком.
+
+C4365 по умолчанию отключены.  Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C4365.
+
+```
+// C4365.cpp
+// compile with: /W4
+#pragma warning(default:4365)
+
+int f(int) { return 0; }
+void Test(size_t i) {}
+
+int main() {
+   unsigned int n = 10;
+   int o = 10;
+   n++;
+   f(n);   // C4365
+   f(o);   // OK
+
+   Test( -19 );   // C4365
+}
 ```

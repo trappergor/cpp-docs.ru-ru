@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3388 | Документы Microsoft
+title: Ошибка компилятора C3388 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481096aa870d7e66df032f4d297c652417a7b487
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4447d2d72c2a0a56df9f3a64549f201f86ddf129
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073477"
 ---
 # <a name="compiler-error-c3388"></a>Ошибка компилятора C3388
-"тип": не допускается в качестве ограничения; предполагается, что "класс ref" продолжит синтаксический разбор  
-  
- Ограничение для универсального типа указано неправильно. В разделе [ограничений для параметров универсального типа (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) для получения дополнительной информации.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C3388:  
-  
-```  
-// C3388.cpp  
-// compile with: /clr /c  
-interface class AA {};  
-  
-generic <class T>  
-where T : interface class   // C3388  
-ref class C {};  
-  
-// OK  
-generic <class T>  
-where T : AA  
-ref class D {};  
+
+"тип": не допускается в качестве ограничения; предполагается, что "класс ref" продолжит синтаксический разбор
+
+Ограничение для универсального типа указано неправильно. См. в разделе [ограничений для параметров универсального типа (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) Дополнительные сведения.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3388:
+
+```
+// C3388.cpp
+// compile with: /clr /c
+interface class AA {};
+
+generic <class T>
+where T : interface class   // C3388
+ref class C {};
+
+// OK
+generic <class T>
+where T : AA
+ref class D {};
 ```

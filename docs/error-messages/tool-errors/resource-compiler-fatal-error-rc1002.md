@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка компилятора ресурсов RC1002 | Документы Microsoft
+title: Неустранимая ошибка компилятора ресурсов RC1002 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 886b44d0a51df10295428daa69c8ea358660fd25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d54f49b7cce988c5902a01142efe061ba03e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114531"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>Неустранимая ошибка компилятора ресурсов RC1002
-хватает размера кучи  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Возможные способы устранения этой ошибки  
-  
-1.  Увеличьте размер файла подкачки Windows. См. Дополнительные сведения об увеличении размер файла подкачки виртуальной памяти в справочной системе Windows.  
-  
-2.  Разделите данный файл на меньшие файлы и компилировать их по отдельности.  
-  
-3.  Удалите другие программы или драйверы, запущенные в системе.
+
+хватает размера кучи
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Возможные способы устранения этой ошибки
+
+1. Увеличьте размер файла подкачки Windows. Дополнительные сведения об увеличении размер файла подкачки см. в разделе виртуальной памяти в справке Windows.
+
+1. Разделите данный файл на меньшие файлы и компилировать их отдельно.
+
+1. Удалите другие программы или драйверы, запущенные в системе.

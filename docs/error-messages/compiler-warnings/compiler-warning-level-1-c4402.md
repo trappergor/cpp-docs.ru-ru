@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4402 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4402 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019171730d81697676a935bf3745eb29083fe88a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 395fe8a9621923bbb4e4667921bce2540bfef8b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274337"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118379"
 ---
 # <a name="compiler-warning-level-1-c4402"></a>Предупреждение компилятора (уровень 1) C4402
-необходимо использовать оператор PTR  
-  
- Тип используется для операнда без оператора PTR при обращении или преобразовании к типу во встроенном ассемблерном коде.  
-  
- Компилятор предполагает наличие оператора PTR.
+
+необходимо использовать оператор PTR
+
+Тип используется для операнда без оператора PTR при обращении или преобразовании к типу в встроенный код ассемблера.
+
+Компилятор предполагает, что оператор PTR.

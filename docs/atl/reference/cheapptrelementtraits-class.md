@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28136c9fa131d525878fe0551f5ba2421576951
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b873a615e04bd92e08abb51a048f227f19fd9eec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057500"
 ---
 # <a name="cheapptrelementtraits-class"></a>Класс CHeapPtrElementTraits
 
@@ -36,17 +36,17 @@ ms.locfileid: "43760088"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<typename T, class Allocator = ATL::CCRTAllocator>  
+template<typename T, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrElementTraits : 
    public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип объекта для сохранения в класс коллекции.
 
-*Распределитель*  
+*Распределитель*<br/>
 Класс выделения памяти для использования. По умолчанию используется [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Участники
@@ -98,6 +98,6 @@ typedef T *& OUTARGTYPE;
 
 ## <a name="see-also"></a>См. также
 
-[Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
-[Класс CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+[Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[Класс CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

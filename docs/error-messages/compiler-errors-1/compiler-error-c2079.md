@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2079 | Документы Microsoft
+title: Ошибка компилятора C2079 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,67 +16,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b29200be08c10dcfaeb178941309c6f3aec6ff9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ddea9a8651a62f7cbb857e1d53962142471c2cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032189"
 ---
 # <a name="compiler-error-c2079"></a>Ошибка компилятора C2079
-«Идентификатор» использует неопределенный класса, структуры или объединения «имя»  
-  
- Указанный идентификатор является неопределенным класса, структуры или объединения.  
-  
- Эта ошибка может быть вызвана инициализация анонимного объединения.  
-  
- Следующий пример приводит к возникновению ошибки C2079:  
-  
-```  
-// C2079.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-int main() {  
-   std::ifstream g;   // C2079  
-}  
-```  
-  
- Возможное решение  
-  
-```  
-// C2079b.cpp  
-// compile with: /EHsc  
-#include <fstream>  
-int main( ) {  
-   std::ifstream g;  
-}  
-```  
-  
- C2079 также может возникать при попытке объявления объекта в стеке типы, у которого опережающего объявления только в области.  
-  
-```  
-// C2079c.cpp  
-class A;  
-  
-class B {  
-   A a;   // C2079  
-};  
-  
-class A {};  
-```  
-  
- Возможное решение  
-  
-```  
-// C2079d.cpp  
-// compile with: /c  
-class A;  
-class C {};  
-  
-class B {  
-   A * a;  
-   C c;  
-};  
-  
-class A {};  
+
+«Идентификатор» использует неопределенный класс, структуру или объединение «name»
+
+Указанный идентификатор является неопределенным класса, структуры или объединения.
+
+Эта ошибка может быть вызвана инициализация анонимного объединения.
+
+Следующий пример приводит к возникновению ошибки C2079:
+
+```
+// C2079.cpp
+// compile with: /EHsc
+#include <iostream>
+int main() {
+   std::ifstream g;   // C2079
+}
+```
+
+Возможное решение
+
+```
+// C2079b.cpp
+// compile with: /EHsc
+#include <fstream>
+int main( ) {
+   std::ifstream g;
+}
+```
+
+C2079 также может возникать при попытке объявить объект в стеке которого опережающее объявление находится только в области типа.
+
+```
+// C2079c.cpp
+class A;
+
+class B {
+   A a;   // C2079
+};
+
+class A {};
+```
+
+Возможное решение
+
+```
+// C2079d.cpp
+// compile with: /c
+class A;
+class C {};
+
+class B {
+   A * a;
+   C c;
+};
+
+class A {};
 ```

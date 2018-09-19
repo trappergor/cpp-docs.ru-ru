@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106913"
 ---
 # <a name="window-class-macros"></a>Макросы класса окна
 
@@ -29,8 +29,8 @@ ms.locfileid: "43752567"
 
 |||
 |-|-|
-|[DECLARE_WND_CLASS](#declare_wnd_class)|Позволяет указать имя класса окна.| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017 г.) Позволяет указать имя нового класса окна и включающего класса Оконная процедура которого будет использоваться новый класс.| 
+|[DECLARE_WND_CLASS](#declare_wnd_class)|Позволяет указать имя класса окна.|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017 г.) Позволяет указать имя нового класса окна и включающего класса Оконная процедура которого будет использоваться новый класс.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Позволяет указать имя существующий класс окон, на котором будет основан новый класс окна.|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Позволяет указать параметры типа класса.|  
 
@@ -48,7 +48,7 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>Параметры
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Имя нового класса окна. Если значение равно NULL, ATL создаст имя класса окна.
 
 ### <a name="remarks"></a>Примечания
@@ -83,10 +83,10 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>Параметры
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Имя нового класса окна. Если значение равно NULL, ATL создаст имя класса окна. 
 
-*EnclosingClass*  
+*EnclosingClass*<br/>
 [in] Имя класса окна, ограничивающий новый класс окна. Не может принимать значение NULL.
 
 ### <a name="remarks"></a>Примечания
@@ -104,10 +104,10 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>Параметры
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Имя окна класса суперкласса, будет *OrigWndClassName*. Если значение равно NULL, ATL создаст имя класса окна.
 
-*OrigWndClassName*  
+*OrigWndClassName*<br/>
 [in] Имя существующего класса окна.
 
 ### <a name="remarks"></a>Примечания
@@ -134,13 +134,13 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>Параметры
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Имя нового класса окна. Если значение равно NULL, ATL создаст имя класса окна.
 
-*Стиль*  
+*Стиль*<br/>
 [in] Стиль окна.
 
-*фоновый*  
+*фоновый*<br/>
 [in] Цвет фона окна.
 
 ### <a name="remarks"></a>Примечания

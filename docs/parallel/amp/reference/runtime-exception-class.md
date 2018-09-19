@@ -1,5 +1,5 @@
 ---
-title: Класс runtime_exception | Документы Microsoft
+title: Класс runtime_exception | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff10cb3958ffa82e3ef2bb70d8370d1a52c4a929
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8f0cd5e025e8f8b442c47cb5e115766478ff1d4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019912"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception - класс
-Базовый тип для исключений C++ Accelerated Massive параллелизма (AMP) библиотеки.  
+Базовый тип для исключений в библиотеке C++ Accelerated Massive Parallelism (AMP).  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -48,14 +48,14 @@ class runtime_exception : public std::exception;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[get_error_code](#runtime_exception__get_error_code)|Возвращает код ошибки, которая вызвала исключение.|  
+|[get_error_code](#runtime_exception__get_error_code)|Возвращает код ошибки, вызвавшей исключение.|  
 
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[оператор=](#operator_eq)|Копирует содержимое указанного `runtime_exception` объекта в другой.|  
+|[оператор=](#operator_eq)|Копирует содержимое указанного объекта `runtime_exception` в данный объект.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
@@ -85,20 +85,20 @@ runtime_exception(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описание ошибки, вызвавшей исключение.  
+*_Message*<br/>
+Описание ошибки, вызвавшей исключение.  
   
- `_Hresult`  
- HRESULT ошибки, вызвавшей исключение.  
+*_Hresult*<br/>
+Значение HRESULT ошибки, вызвавшей исключение.  
   
- `_Other`  
- `runtime_exception` Объект, подлежащий копированию.  
+*_Другое*<br/>
+`runtime_exception` Копируемый объект.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `runtime_exception`.  
 
 ## <a name="dtor"></a>  ~ runtime_exception деструктор  
-Удаляет объект.  
+Уничтожает объект.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -107,7 +107,7 @@ virtual ~runtime_exception() throw();
 ```  
   
 ## <a name="runtime_exception__get_error_code"></a>  get_error_code   
-Возвращает код ошибки, которая вызвала исключение.  
+Возвращает код ошибки, вызвавшей исключение.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -116,10 +116,10 @@ HRESULT get_error_code() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- HRESULT ошибки, вызвавшей исключение.  
+ Значение HRESULT ошибки, вызвавшей исключение.  
   
 ## <a name="runtime_exception__operator_eq"></a>  оператор=   
-  Копирует содержимое указанного `runtime_exception` объекта в другой.  
+  Копирует содержимое указанного объекта `runtime_exception` в данный объект.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -128,11 +128,11 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Other`  
- `runtime_exception` Объект, подлежащий копированию.  
+*_Другое*<br/>
+`runtime_exception` Копируемый объект.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ссылку на это `runtime_exception` объекта.  
+ Ссылка на этот `runtime_exception` объекта.  
   
 
   

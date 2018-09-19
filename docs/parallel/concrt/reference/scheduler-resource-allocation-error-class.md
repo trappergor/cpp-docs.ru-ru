@@ -1,5 +1,5 @@
 ---
-title: Класс scheduler_resource_allocation_error | Документы Microsoft
+title: Класс scheduler_resource_allocation_error | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b11a548bc98c44697de45c628205dc3e720971
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9ede37cec7b654c2d5ead32f117e4fe76f28fa60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686689"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101700"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>Класс scheduler_resource_allocation_error
 Этот класс описывает исключение, возникающее из-за сбоя получения критического ресурса в исполняющей среде с параллелизмом.  
@@ -47,10 +47,10 @@ class scheduler_resource_allocation_error : public std::exception;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[get_error_code](#get_error_code)|Возвращает код ошибки, которая вызвала исключение.|  
+|[get_error_code](#get_error_code)|Возвращает код ошибки, вызвавшей исключение.|  
   
 ## <a name="remarks"></a>Примечания  
- Это исключение обычно вызывается при сбое вызова операционной системы в среде выполнения с параллелизмом. Код ошибки, который обычно возвращается из вызова метода Win32 `GetLastError`, преобразуется в значение типа `HRESULT` и может быть получен посредством метода `get_error_code`.  
+ Это исключение обычно возникает при сбое вызова операционной системы в среде выполнения с параллелизмом. Код ошибки, который обычно возвращается из вызова метода Win32 `GetLastError`, преобразуется в значение типа `HRESULT` и может быть получен посредством метода `get_error_code`.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
@@ -64,7 +64,7 @@ class scheduler_resource_allocation_error : public std::exception;
   
 ##  <a name="get_error_code"></a> get_error_code 
 
- Возвращает код ошибки, которая вызвала исключение.  
+ Возвращает код ошибки, вызвавшей исключение.  
   
 ```
 HRESULT get_error_code() const throw();
@@ -87,11 +87,11 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
   
- `_Hresult`  
- `HRESULT` Значение ошибки, вызвавшей исключение.  
+*_Hresult*<br/>
+`HRESULT` Значение ошибки, вызвавшей исключение.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)

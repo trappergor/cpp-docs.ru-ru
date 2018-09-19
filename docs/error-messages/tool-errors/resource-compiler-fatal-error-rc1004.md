@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка компилятора ресурсов RC1004 | Документы Microsoft
+title: Неустранимая ошибка компилятора ресурсов RC1004 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa3846d0cf65b3dbca31e04999b955b1d58a4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c86822ea9dcdbb16c437e10cf81bc1c8107da0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327542"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113595"
 ---
 # <a name="resource-compiler-fatal-error-rc1004"></a>Неустранимая ошибка компилятора ресурсов RC1004
-Непредвиденное обнаружение конца файла  
-  
- Эта ошибка может быть вызвана с отсутствием символов перевода строки и возврата каретки в последней строке текстового файла.
+
+Неожиданный конец файла найден
+
+Эта ошибка может быть вызвана отсутствуют параметры перевода строки и возврата каретки в последней строке текстового файла.

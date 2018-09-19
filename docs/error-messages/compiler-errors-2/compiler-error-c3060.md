@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3060 | Документы Microsoft
+title: Ошибка компилятора C3060 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c443517edb26258f91497a4d82fcfd7ff26893d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c053f7b92ae12b3e99792603cf7b3c5ac9b49227
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108603"
 ---
 # <a name="compiler-error-c3060"></a>Ошибка компилятора C3060
-"член": дружественную функцию нельзя определить внутри класса с помощью полного имени (ее можно только объявить)  
-  
- Дружественная функция была определена с помощью полного имени, что не допускается.  
-  
- В следующем примере возникает ошибка C3060.  
-  
-```  
-// C3060.cpp  
-class A {  
-public:  
-   void func();  
-};  
-  
-class C {  
-public:  
-   friend void A::func() { }   // C3060  
-   // Try the following line and the out of class definition:  
-   // friend void A::func();  
-};  
-  
-// void A::func(){}  
+
+"член": дружественную функцию нельзя определить внутри класса с помощью полного имени (ее можно только объявить)
+
+Дружественная функция была определена с помощью полного имени, что не допускается.
+
+В следующем примере возникает ошибка C3060.
+
+```
+// C3060.cpp
+class A {
+public:
+   void func();
+};
+
+class C {
+public:
+   friend void A::func() { }   // C3060
+   // Try the following line and the out of class definition:
+   // friend void A::func();
+};
+
+// void A::func(){}
 ```

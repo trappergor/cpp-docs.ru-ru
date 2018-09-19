@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 138275468801f3db2f2c64f06e5a505c412723b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050961"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 Классы [CObject](../../mfc/reference/cobject-class.md) и [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) инкапсулировать несколько служб объектов, включая доступ к сведениям о классе среды выполнения, сериализации и динамическое создание объектов. Все классы, производные от `CObject` наследуют эти функциональные возможности.  
@@ -260,8 +260,8 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
  *class_name*  
  Фактическое имя класса.  
   
- `base_class_name`  
- Имя базового класса.  
+*base_class_name*<br/>
+Имя базового класса.  
   
 ### <a name="remarks"></a>Примечания  
  Использовать implement_dynamic-макрос в .cpp модуля, а затем свяжите результирующий код объекта только один раз.  

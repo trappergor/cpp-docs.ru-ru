@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032436"
 ---
 # <a name="cinterfacelist-class"></a>Класс CInterfaceList
 
@@ -32,7 +32,7 @@ ms.locfileid: "43752753"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Параметры
 
-*I*  
+*I*<br/>
 COM-интерфейс, указав тип указателя для сохранения.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор IID *я*.
 
 ## <a name="members"></a>Участники
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Размер блока по умолчанию 10.
 
 ### <a name="remarks"></a>Примечания
@@ -89,7 +89,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAtlList](../../atl/reference/catllist-class.md)   
-[Класс CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
-[Класс CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[Класс CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Класс CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Класс CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

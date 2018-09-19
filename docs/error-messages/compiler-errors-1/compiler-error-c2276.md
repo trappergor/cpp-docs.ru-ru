@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2276 | Документы Microsoft
+title: Ошибка компилятора C2276 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5d0b8b533567884d574cc81ef74010beeacf55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a39c006acc3b5e3e74a738ba89c8ea6f56b889d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114180"
 ---
 # <a name="compiler-error-c2276"></a>Ошибка компилятора C2276
-«оператор»: Недопустимая операция с функция выражение связанного элемента  
-  
- Компилятор обнаружил проблему с помощью синтаксиса для создания указателя на член.  
-  
- Следующий пример приводит к возникновению ошибки C2276:  
-  
-```  
-// C2276.cpp  
-class A {  
-public:  
-   int func(){return 0;}  
-} a;  
-  
-int (*pf)() = &a.func;   // C2276  
-// try the following line instead  
-// int (A::*pf3)() = &A::func;  
-  
-class B {  
-public:  
-   void mf() {  
-      &this -> mf;   // C2276  
-      // try the following line instead  
-      // &B::mf;  
-   }  
-};  
-  
-int main() {  
-   A a;  
-   &a.func;   // C2276  
-   // try the following line instead  
-   // &A::func;  
-}  
+
+«operator»: Недопустимая операция с выражение функции привязанного элемента
+
+Компилятор обнаружил проблему с помощью синтаксиса для создания указателя на член.
+
+Следующий пример приводит к возникновению ошибки C2276:
+
+```
+// C2276.cpp
+class A {
+public:
+   int func(){return 0;}
+} a;
+
+int (*pf)() = &a.func;   // C2276
+// try the following line instead
+// int (A::*pf3)() = &A::func;
+
+class B {
+public:
+   void mf() {
+      &this -> mf;   // C2276
+      // try the following line instead
+      // &B::mf;
+   }
+};
+
+int main() {
+   A a;
+   &a.func;   // C2276
+   // try the following line instead
+   // &A::func;
+}
 ```

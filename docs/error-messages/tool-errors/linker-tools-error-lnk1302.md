@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1302 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1302 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa84a411f91303c84acb44e2e6c0ab3d975e19f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc85b37d58e12602c02c2207c1f38bda9344e59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045514"
 ---
 # <a name="linker-tools-error-lnk1302"></a>Ошибка средств компоновщика LNK1302
-поддерживается только компоновка безопасных .netmodule; не удалось связать файл NETMODULE-файл  
-  
- .Netmodule (скомпилированный с **/LN**) был передан компоновщику пользователя при попытке вызвать компоновку MSIL.  Модуль C++ является допустимым компоновка MSIL, если она скомпилирована с **/CLR: safe**.  
-  
- Чтобы исправить эту ошибку, компиляция с **/CLR: safe** Чтобы включить компоновку MSIL, либо передайте **/CLR** или **/CLR: pure** вместо модуле компоновщик OBJ-файл.  
-  
- Дополнительные сведения см. в разделе .  
-  
--   [/LN (создание модуля MSIL)](../../build/reference/ln-create-msil-module.md)  
-  
--   [NETMODULE-файлы в качестве входных файлов компоновщика](../../build/reference/netmodule-files-as-linker-input.md)
+
+поддерживается только компоновка безопасных .netmodule; не удалось связать файл .netmodule
+
+.Netmodule (скомпилированные с использованием **/LN**) был передан компоновщику при попытке пользователя вызвать компоновку MSIL.  Модуля C++ является допустимым компоновка MSIL, если он скомпилирован с **/CLR: safe**.
+
+Чтобы исправить эту ошибку, компиляцию с параметром **/CLR: safe** Включить компоновку MSIL или передать **/CLR** или **/CLR: pure** OBJ-файле компоновщику вместо модуля.
+
+Дополнительные сведения см. в разделе .
+
+- [/LN (создание модуля MSIL)](../../build/reference/ln-create-msil-module.md)
+
+- [NETMODULE-файлы в качестве входных файлов компоновщика](../../build/reference/netmodule-files-as-linker-input.md)

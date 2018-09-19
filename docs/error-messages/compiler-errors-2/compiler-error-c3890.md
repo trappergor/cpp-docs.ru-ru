@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3890 | Документы Microsoft
+title: Ошибка компилятора C3890 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc1bfbba9cfb8991491bcbb42d2e13c586c7fc26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e599150c1e8d62d751f9dca67cffc99fb079bd32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104928"
 ---
 # <a name="compiler-error-c3890"></a>Ошибка компилятора C3890
-«переменная»: невозможно получить адрес данных-члена литерала  
-  
- Данные-член литерала существует в куче сбора мусора.  Можно переместить объекта в куче сбора мусора, поэтому получение адреса не является полезным.  
-  
- Следующий пример приводит к возникновению ошибки C3890:  
-  
-```  
-// C3890.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   literal int staticConst = 9;  
-};  
-  
-int main() {  
-   int p = &Y1::staticConst;   // C3890  
-   int p2 = Y1::staticConst;   // OK  
-}  
+
+«var»: невозможно получить адрес данные-член литерала
+
+Данные-член литерала существует в куче сбора мусора.  Можно перемещать объект в куче сбора мусора, поэтому получение адреса не используется.
+
+Следующий пример приводит к возникновению ошибки C3890:
+
+```
+// C3890.cpp
+// compile with: /clr
+ref struct Y1 {
+   literal int staticConst = 9;
+};
+
+int main() {
+   int p = &Y1::staticConst;   // C3890
+   int p2 = Y1::staticConst;   // OK
+}
 ```

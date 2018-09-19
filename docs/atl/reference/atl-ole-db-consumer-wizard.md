@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315381"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020437"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Мастер потребителя ATL OLE DB
 
@@ -193,6 +193,6 @@ ms.locfileid: "44315381"
 
 ## <a name="see-also"></a>См. также
 
-[Потребителя ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)
-[Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)
-[строки подключения и связи данных (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Потребителя ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
+[Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Строки подключения и связи данных (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

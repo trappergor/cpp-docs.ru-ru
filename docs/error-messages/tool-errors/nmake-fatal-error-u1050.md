@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка NMAKE U1050 | Документы Microsoft
+title: Неустранимая ошибка NMAKE U1050 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5bce5812a7a3d16ec26ba5cf590ac6b33a3f5b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 59ef6377f7d99de753a6940d17d2d91d48fe6d2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079210"
 ---
 # <a name="nmake-fatal-error-u1050"></a>Неустранимая ошибка NMAKE U1050
-сообщение  
-  
- Сообщения, заданного с **! Ошибка** был отображен директивы.
+
+сообщение
+
+Сообщения, заданного с помощью **! Ошибка** директива было отображено.

@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97c88b73499948db4e8fc0645b2d59f7b92b3cfe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 77e7cd29c38706078dbcb2cc9718827d8c8cc583
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022998"
 ---
 # <a name="csid-class"></a>Класс CSid
 
@@ -156,22 +156,22 @@ explicit CSid(
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 Существующий `CSid` объекта или `SID` структуры (идентификатором безопасности).
 
-*IdentifierAuthority*  
+*IdentifierAuthority*<br/>
 Центр сертификации.
 
-*nSubAuthorityCount*  
+*nSubAuthorityCount*<br/>
 Счетчик защитного кода.
 
-*pszAccountName*  
+*pszAccountName*<br/>
 Имя учетной записи.
 
-*pszSystem*  
+*pszSystem*<br/>
 Системное имя. Эта строка может быть имя удаленного компьютера. Если эта строка имеет значение NULL, вместо него используется локальной системе.
 
-*pSid*  
+*pSid*<br/>
 Указатель на `SID` структуры.
 
 ### <a name="remarks"></a>Примечания
@@ -233,7 +233,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `SID` Структуры (идентификатором безопасности) или `CSid` объект для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -300,7 +300,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nSubAuthority*  
+*nSubAuthority*<br/>
 Защитного кода.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -363,13 +363,13 @@ bool LoadAccount(
 
 ### <a name="parameters"></a>Параметры
 
-*pszAccountName*  
+*pszAccountName*<br/>
 Имя учетной записи.
 
-*pszSystem*  
+*pszSystem*<br/>
 Системное имя. Эта строка может быть имя удаленного компьютера. Если эта строка имеет значение NULL, вместо него используется локальной системе.
 
-*pSid*  
+*pSid*<br/>
 Указатель на [SID](/windows/desktop/api/winnt/ns-winnt-_sid) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -385,13 +385,13 @@ bool LoadAccount(
 Оператор присвоения.
 
 ```
-CSid& operator= (const CSid& rhs) throw(...);  
+CSid& operator= (const CSid& rhs) throw(...);
 CSid& operator= (const SID& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `SID` (Идентификатором безопасности) или `CSid` присваиваемое `CSid` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -410,10 +410,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в левой части оператора ==.
 
-*правая часть*  
+*правая часть*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в правой части оператора ==.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -432,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в левой части! =-оператор.
 
-*правая часть*  
+*правая часть*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в правой части! =-оператор.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -454,10 +454,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в левой части! =-оператор.
 
-*правая часть*  
+*правая часть*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в правой части! =-оператор.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -476,10 +476,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в левой части! =-оператор.
 
-*правая часть*  
+*правая часть*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в правой части! =-оператор.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -498,10 +498,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в левой части! =-оператор.
 
-*правая часть*  
+*правая часть*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в правой части! =-оператор.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -520,10 +520,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в левой части! =-оператор.
 
-*правая часть*  
+*правая часть*<br/>
 `SID` (Идентификатором безопасности) или `CSid` , отображаемый в правой части! =-оператор.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -534,7 +534,7 @@ bool operator>=(
 
 Приведения `CSid` объекта в указатель на `SID` структуры (идентификатором безопасности).
 
-```  
+```
 operator const SID *() const throw(...);
 ```
 
@@ -584,7 +584,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Образец безопасности](../../visual-cpp-samples.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[Глобальные функции безопасности](../../atl/reference/security-global-functions.md)   
+[Образец безопасности](../../visual-cpp-samples.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Глобальные функции безопасности](../../atl/reference/security-global-functions.md)<br/>
 [Операторы](../../atl/reference/atl-operators.md)

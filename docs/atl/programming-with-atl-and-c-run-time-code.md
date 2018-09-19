@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 506dc7179db367d4683a180d6148a07e9f2916ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 473c4f20f1271e82ba69b50bfe4b392975f21489
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088778"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Программирование с использованием ATL и кода среды выполнения C
 
@@ -30,21 +30,21 @@ ms.locfileid: "43755142"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Преимущества и недостатки метода, используемого для ссылки на CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
+[Преимущества и недостатки метода, используемого для ссылки на CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)<br/>
 Перечислены преимущества и недостатки, участвующих в связывание с CRT статически или динамически связывание.
 
-[Связывание с CRT в проекте ATL](../atl/linking-to-the-crt-in-your-atl-project.md)  
+[Связывание с CRT в проекте ATL](../atl/linking-to-the-crt-in-your-atl-project.md)<br/>
 Обсуждаются параметры проекта и параметры компоновщика для связывания с библиотекой CRT; также содержит сведения о том, как связывание с CRT влияет на образа программы.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Ссылки на разделы о программировании с использованием библиотеки ATL.
 
-[Библиотеки DLL и поведение библиотеки времени выполнения Visual C++](../build/run-time-library-behavior.md)  
+[Библиотеки DLL и поведение библиотеки времени выполнения Visual C++](../build/run-time-library-behavior.md)<br/>
 Содержит сведения о том, как работает код запуска VCRuntime и CRT.
 
-[CRT Library Features](../c-runtime-library/crt-library-features.md) (Функции библиотек времени выполнения)  
+[CRT Library Features](../c-runtime-library/crt-library-features.md) (Функции библиотек времени выполнения)<br/>
 Обсуждаются различные LIB-файлы, которые входят в библиотеки времени выполнения C и перечисляет их соответствующих параметрах компилятора и директивы препроцессора.
 
 ## <a name="see-also"></a>См. также

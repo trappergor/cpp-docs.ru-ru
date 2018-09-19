@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580fb4c96db70b612135ac48e30bd9c0d45c4d1c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1edd35ac9f32a28a19c4ea54b7e9fba2820d6095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031630"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Сочетание исключений C++ C (структурированные) и
 
@@ -47,10 +47,10 @@ ms.locfileid: "42571910"
 
   Дополнительные сведения см. в разделе об использовании `setjmp` и `longjmp` в программах на C++.
 
-- [Обрабатывать структурированные исключения в C++](../cpp/exception-handling-differences.md)
+- [Обработка структурированных исключений в C++](../cpp/exception-handling-differences.md)
 
   См. в разделе примеров того, можно использовать для структурированной обработки исключений C++.
 
 ## <a name="see-also"></a>См. также
 
-[Обработка исключений С++](../cpp/cpp-exception-handling.md)  
+[Обработка исключений С++](../cpp/cpp-exception-handling.md)

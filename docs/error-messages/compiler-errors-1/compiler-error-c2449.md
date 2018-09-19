@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2449 | Документы Microsoft
+title: Ошибка компилятора C2449 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a2ea92f79125e4e3b96f35229a487a5ab787e1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e92638eaca1fe951d6b67da7563930214198926
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224236"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018773"
 ---
 # <a name="compiler-error-c2449"></a>Ошибка компилятора C2449
-найден "{" в области видимости файла (отсутствует заголовок функции)  
-  
- Открывающая фигурная скобка происходит на уровне файла.  
-  
- Эта ошибка может вызываться точкой с запятой между заголовком функции и открывающей скобкой определения функции.  
-  
- Следующий пример приводит к возникновению ошибки C2499:  
-  
-```  
-// C2449.c  
-// compile with: /c  
-void __stdcall func(void) {}   // OK  
-void __stdcall func(void);  // extra semicolon on this line  
-{                         // C2449 detected here  
+
+найти "{" в области видимости файла (отсутствует заголовок функции)?
+
+В области видимости файла происходит открывающую фигурную скобку.
+
+Это ошибка может быть вызвана точкой с запятой между заголовком функции и открывающей скобки определения функции.
+
+Следующий пример приводит к возникновению ошибки C2499:
+
+```
+// C2449.c
+// compile with: /c
+void __stdcall func(void) {}   // OK
+void __stdcall func(void);  // extra semicolon on this line
+{                         // C2449 detected here
 ```

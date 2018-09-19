@@ -1,5 +1,5 @@
 ---
-title: Класс norm_3 | Документы Microsoft
+title: Класс norm_3 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe4852313d6eb445b3ea242f13e5dc5f6e90def2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074387"
 ---
 # <a name="norm3-class"></a>Класс norm_3
-Представляет короткого вектора трех обычных чисел.  
+Представляет короткий вектор из трех чисел normal.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -170,7 +170,7 @@ class norm_3;
   
 |name|Описание|  
 |----------|-----------------|  
-|[Размер константы](#size)||  
+|[размер константа](#size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
@@ -264,22 +264,22 @@ explicit inline norm_3(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_V0`  
- Значение для инициализации элемента 0.  
+*_V0*<br/>
+Значение для инициализации элемента 0.  
   
- `_V1`  
- Значение для инициализации элемента 1.  
+*_V1*<br/>
+Значение для инициализации элемента 1.  
   
- `_V2`  
- Значение для инициализации элемента 2.  
+*_V2*<br/>
+Значение для инициализации элемента 2.  
   
- `_V`  
- Значение для инициализации.  
+*_V*<br/>
+Значение для инициализации.  
   
- `_Other`  
- Объект, используемый для инициализации.  
+*_Другое*<br/>
+Объект, используемый для инициализации.  
   
-## <a name="a-namesize-size-constant"></a><a name="size"> Размер константы
+## <a name="a-namesize-size-constant"></a><a name="size"> размер константа
 ### <a name="syntax"></a>Синтаксис  
   
 ```  

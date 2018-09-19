@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4133 компилятора | Документы Microsoft
+title: Предупреждение (уровень 3) C4133 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f01a3a4b6ccf1750ec3cd0df643c02b7678bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f22878ebb7caa5549779d4c53b1f6b7068dc480
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291041"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056837"
 ---
-# <a name="compiler-warning-level-3-c4133"></a>Предупреждение (уровень 3) C4133 компилятора
-«Тип»: несовместимые типы - из «тип1» в «тип2»  
-  
- Это предупреждение может быть вызвано попытке вычесть два указателя разных типов.  
-  
- Чтобы избежать этого предупреждения, укажите соответствующее приведение типов.
+# <a name="compiler-warning-level-3-c4133"></a>Компилятор предупреждение (уровень 3) C4133
+
+«Тип»: несовместимые типы - из «тип1» в «тип2»
+
+Это предупреждение может быть вызвано попытке вычитания двух указателей разных типов.
+
+Чтобы устранить это предупреждение, укажите соответствующее приведение типов.

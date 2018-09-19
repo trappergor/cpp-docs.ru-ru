@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1241 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1241 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b02b1d9d06706c70478d958dd3c2af8dbc9c2c03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4c11a97dd99515ff7623b77ff31de5fb8577b5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040626"
 ---
 # <a name="linker-tools-error-lnk1241"></a>Ошибка средств компоновщика LNK1241
-файл ресурсов «файл ресурсов» уже указан  
-  
- Эта ошибка возникает при запуске **cvtres** вручную из командной строки и затем передать OBJ-файл, полученный файл в компоновщик Кроме в других RES-файлы.  
-  
- Чтобы задать несколько RES-файлов, следует передавать их компоновщику в виде RES-файлов, не OBJ-файлы созданных с помощью **cvtres**.
+
+файл ресурсов «файл ресурсов» уже указан
+
+Эта ошибка возникает в том случае, если вы выполняете **cvtres** вручную из командной строки и затем передать OBJ-файл, полученный файл компоновщику также в других RES-файлы.
+
+Чтобы задать несколько RES-файлов, передавать их компоновщику в виде RES-файлов, не OBJ-файлы созданных с помощью **cvtres**.

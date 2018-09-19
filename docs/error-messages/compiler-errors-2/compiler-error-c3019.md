@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3019 | Документы Microsoft
+title: Ошибка компилятора C3019 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390a05af4c81104c081376d45f12f1a9cd8a91d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e71f6741ba499855a4ac06ed578bd1f713e700dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046619"
 ---
 # <a name="compiler-error-c3019"></a>Ошибка компилятора C3019
-шаг в OpenMP инструкции «for» имеет недопустимую форму  
-  
- Приращение часть OpenMP `for` цикла должна использоваться переменная индекса как в левой и правой части оператора.  
-  
- Следующий пример приводит к возникновению ошибки C3019:  
-  
-```  
-// C3019.cpp  
-// compile with: /openmp  
-int main()  
-{  
-   int i = 0, j = 1, n = 3;  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      for (i = 0; i < 10; i = j + n)   // C3019  
-      // Try the following line instead:  
-      // for (i = 0; i < 10; i++)  
-         j *= 2;  
-   }  
-}  
+
+шаг в OpenMP инструкции «for» имеет недопустимую форму
+
+Приращение частью OpenMP `for` цикла должна использоваться переменная индекса, как с левой и правой части оператора.
+
+Следующий пример приводит к возникновению ошибки C3019:
+
+```
+// C3019.cpp
+// compile with: /openmp
+int main()
+{
+   int i = 0, j = 1, n = 3;
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      for (i = 0; i < 10; i = j + n)   // C3019
+      // Try the following line instead:
+      // for (i = 0; i < 10; i++)
+         j *= 2;
+   }
+}
 ```

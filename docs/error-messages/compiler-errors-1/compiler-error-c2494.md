@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2494 | Документы Microsoft
+title: Ошибка компилятора C2494 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071be235ac17fb541dc8c96871057f089646da5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e651e66ce571ddd084c470b52494235f35f2b008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198382"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066808"
 ---
 # <a name="compiler-error-c2494"></a>Ошибка компилятора C2494
-«Ключевое слово» нельзя вызвать из выражения фильтра или __finally/finally  
-  
- Нельзя использовать `keyword` в `__finally` или в блоке finally.  
-  
- Следующий пример приводит к возникновению ошибки C2494:  
-  
-```  
-// C2494.cpp  
-#include <malloc.h>  
-  
-int main() {  
-   __try {}  
-   __except ( _alloca(100), 1 ) {}   // C2494  
-   __try {}  
-   __finally {  
-      _alloca(100);   // C2494  
-   }  
-}  
-```  
-  
- Ошибка C2494 также может возникнуть при использовании **/CLR**.  
-  
-```  
-// C2494b.cpp  
-// compile with: /clr  
-#include <malloc.h>  
-  
-int main() {  
-   char * buf;  
-   try {}  
-   catch (char * buf2) {}  
-   finally {  
-      _alloca(100);   // C2494  
-   }  
-}  
+
+«ключевое_слово» нельзя вызывать из выражения фильтра или __finally/finally
+
+Нельзя использовать `keyword` в `__finally` или в блоке finally.
+
+В следующем примере возникает ошибка C2494:
+
+```
+// C2494.cpp
+#include <malloc.h>
+
+int main() {
+   __try {}
+   __except ( _alloca(100), 1 ) {}   // C2494
+   __try {}
+   __finally {
+      _alloca(100);   // C2494
+   }
+}
+```
+
+C2494 также может возникнуть при использовании **/CLR**.
+
+```
+// C2494b.cpp
+// compile with: /clr
+#include <malloc.h>
+
+int main() {
+   char * buf;
+   try {}
+   catch (char * buf2) {}
+   finally {
+      _alloca(100);   // C2494
+   }
+}
 ```

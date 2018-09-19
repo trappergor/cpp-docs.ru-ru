@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708218"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095459"
 ---
 # <a name="cframewndex-class"></a>Класс CFrameWndEx
 Реализует функции однодокументного интерфейса Windows (SDI) с наложенным или всплывающим фреймовым окном, а также предоставляет элементы для управления окном. Он расширяет [CFrameWnd](../../mfc/reference/cframewnd-class.md) класса.  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Старшее слово должно быть одно из следующих значений.  
-  
- `0`  
- Платформа должна игнорировать нажатие клавиши.  
-  
- `1`  
- Платформа должна закрыть меню.  
-  
- `2`  
- Платформы следует выбрать один из элементов, отображаемых в меню. Младшее слово содержит идентификатор команды для выбора.  
-  
-### <a name="remarks"></a>Примечания  
+
+|||
+|-|-|
+ `0` | Платформа должна игнорировать нажатие клавиши.  
+ `1`  | Платформа должна закрыть меню.  
+ `2`  | Платформы следует выбрать один из элементов, отображаемых в меню. Младшее слово содержит идентификатор команды для выбора.  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  Этот метод вызывается платформой при перемещении указателя.  

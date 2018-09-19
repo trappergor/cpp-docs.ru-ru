@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c8221b7e379d739dda3ebfa9cbc205d9f88af6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de307c1b4f3d910615061915a240bf7b2c61b337
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090364"
 ---
 # <a name="crbtree-class"></a>Класс CRBTree
 
@@ -54,22 +54,22 @@ ms.locfileid: "43759549"
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBTree
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*K*  
+*K*<br/>
 Тип ключа элемента.
 
-*V*  
+*V*<br/>
 Тип значения элемента.
 
-*KTraits*  
+*KTraits*<br/>
 Код, используемый для копирования или перемещения ключевые элементы. См. в разделе [класс CElementTraits](../../atl/reference/celementtraits-class.md) для получения дополнительных сведений.
 
-*VTraits*  
+*VTraits*<br/>
 Код, используемый для копирования или перемещения элементов value.
 
 ## <a name="members"></a>Участники
@@ -169,7 +169,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Значение ключа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -192,13 +192,13 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение позиции.
 
-*key*  
+*key*<br/>
 Переменная, которая получает ключ.
 
-*значение*  
+*значение*<br/>
 Переменная, которая получает значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -249,7 +249,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение позиции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -271,7 +271,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращается предыдущим вызовом методов, таких как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -295,13 +295,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращается предыдущим вызовом методов, таких как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*key*  
+*key*<br/>
 Параметр шаблона, указывающий тип ключа, как дерево.
 
-*значение*  
+*значение*<br/>
 Параметр шаблона, указывающий тип значения, как дерево.
 
 ### <a name="remarks"></a>Примечания
@@ -318,7 +318,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращается предыдущим вызовом методов, таких как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -340,7 +340,7 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращается предыдущим вызовом методов, таких как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -362,7 +362,7 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращается предыдущим вызовом методов, таких как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -400,7 +400,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращается предыдущим вызовом методов, таких как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -457,7 +457,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращается предыдущим вызовом методов, таких как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="remarks"></a>Примечания
@@ -474,10 +474,10 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Счетчик позиции, возвращается предыдущим вызовом методов, таких как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*значение*  
+*значение*<br/>
 Значение, которое нужно добавить `CRBTree` объекта.
 
 ### <a name="remarks"></a>Примечания

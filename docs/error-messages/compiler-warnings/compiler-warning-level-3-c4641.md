@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4641 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 3) C4641 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8413971353e7ffbe6579412d0eed9c735b91b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44e94868f6a7b379fb1a2f75bbd28ce011b54c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291441"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112113"
 ---
 # <a name="compiler-warning-level-3-c4641"></a>Предупреждение компилятора (уровень 3) C4641
-в документирующем комментарии XML присутствует неоднозначная перекрестная ссылка  
-  
- Компилятору не удалось однозначно разрешить ссылку. Чтобы устранить это предупреждение, укажите сведения о параметрах, необходимо сделать ссылку однозначной.  
-  
- Дополнительные сведения см. в разделе [XML Documentation](../../ide/xml-documentation-visual-cpp.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C4641.  
-  
-```  
-// C4641.cpp  
-// compile with: /W3 /doc /clr /c  
-  
-/// <see cref="f" />   // C4641  
-// try the following line instead  
-// /// <see cref="f(int)" />  
-public ref class GR {  
-public:  
-   void f( int ) {}  
-   void f( char ) {}  
-};  
+
+в документирующем комментарии XML присутствует неоднозначная перекрестная ссылка
+
+Компилятору не удалось однозначно разрешить ссылку. Чтобы устранить это предупреждение, укажите сведения о параметрах, необходимо сделать ссылку однозначной.
+
+Дополнительные сведения см. в разделе [XML Documentation](../../ide/xml-documentation-visual-cpp.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C4641.
+
+```
+// C4641.cpp
+// compile with: /W3 /doc /clr /c
+
+/// <see cref="f" />   // C4641
+// try the following line instead
+// /// <see cref="f(int)" />
+public ref class GR {
+public:
+   void f( int ) {}
+   void f( char ) {}
+};
 ```

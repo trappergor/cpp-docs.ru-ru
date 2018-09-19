@@ -48,14 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d87bcf20957b69577e709c8fcbd2c6a5f3c9b770
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215615"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075927"
 ---
 # <a name="cenumeratoraccessor-class"></a>Класс CEnumeratorAccessor
+
 Используемые [CEnumerator](../../data/oledb/cenumerator-class.md) доступ к данным из перечислитель набора строк.  
   
 ## <a name="syntax"></a>Синтаксис
@@ -65,7 +66,8 @@ class CEnumeratorAccessor
 ```  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+
+**Заголовок:** atldbcli.h  
   
 ## <a name="members"></a>Участники  
   
@@ -80,9 +82,11 @@ class CEnumeratorAccessor
 |[m_szParseName](#szparsename)|Строка, передаваемая для [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) для получения моникера для источника данных или перечислителя.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот набор строк состоит из источников данных и перечислители, отображается в текущий перечислитель.  
+
+Этот набор строк состоит из источников данных и перечислители, отображается в текущий перечислитель.  
   
 ## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
+
 Переменная, указывающее, является ли перечислитель перечислитель родительского, если строка не содержит перечислителя.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -92,9 +96,11 @@ VARIANT_BOOL m_bIsParent;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения. 
+
+См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения. 
 
 ## <a name="ntype"></a> CEnumeratorAccessor::m_nType
+
 Переменная, указывающее, является ли строка описывает источник данных или перечислителя.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -104,9 +110,11 @@ USHORT m_nType;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.
+
+См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.
 
 ## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
+
 Описание источника данных или перечислителя.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -116,9 +124,11 @@ WCHAR m_szDescription[129];
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.
+
+См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.
 
 ## <a name="szname"></a> CEnumeratorAccessor::m_szName
+
 Имя источника данных или перечислителя.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -128,9 +138,11 @@ WCHAR m_szName[129];
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.  
+
+См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.  
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
+
 Строка, передаваемая для [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) для получения моникера для источника данных или перечислителя.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -140,8 +152,10 @@ WCHAR m_szParseName[129];
 ```  
   
 ### <a name="remarks"></a>Примечания  
- См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.  
+
+См. в разделе [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) в *Справочник программиста OLE DB по* Дополнительные сведения.  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

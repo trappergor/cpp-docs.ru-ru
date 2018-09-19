@@ -36,14 +36,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 6de23571f30373e5ddd3940bcae4be9fa176539a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086841"
 ---
 # <a name="caccessorbase-class"></a>Класс CAccessorBase
+
 Все методы доступа в шаблонах OLE DB являются производными от этого класса. `CAccessorBase` позволяет одному набору строк для управления несколько методов доступа. Он также предоставляет привязки параметров и выходных столбцов.  
   
 ## <a name="syntax"></a>Синтаксис
@@ -65,9 +66,11 @@ ms.locfileid: "39340668"
 |[ReleaseAccessors](#release)|Освобождает методов доступа.|  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+
+**Заголовок:** atldbcli.h  
 
 ## <a name="close"></a> CAccessorBase::Close
+
 Закрывает методов доступа.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -77,9 +80,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Необходимо вызвать [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) первого.  
+
+Необходимо вызвать [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) первого.  
 
 ## <a name="geth"></a> CAccessorBase::GetHAccessor
+
 Извлекает дескриптор метода доступа указанного метода доступа.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -89,13 +94,16 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *nAccessor*  
- [in] Число ноль смещение для метода доступа.  
+
+*nAccessor*<br/>
+[in] Число ноль смещение для метода доступа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор метода доступа.  
+
+Дескриптор метода доступа.  
 
 ## <a name="getnum"></a> CAccessorBase::GetNumAccessors
+
 Получает число методов доступа, созданный классом.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -105,9 +113,11 @@ ULONG GetNumAccessors() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Число методов доступа, созданный классом.  
+
+Число методов доступа, созданный классом.  
 
 ## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
+
 Возвращает значение true, если данные извлекаются автоматически для метода доступа во время операции перемещения.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -117,13 +127,16 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *nAccessor*  
- [in] Число ноль смещение для метода доступа.  
+
+*nAccessor*<br/>
+[in] Число ноль смещение для метода доступа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **true** Если метод доступа является автоматическим. В противном случае возвращается значение **false**.  
+
+Возвращает **true** Если метод доступа является автоматическим. В противном случае возвращается значение **false**.  
 
 ## <a name="release"></a> CAccessorBase::ReleaseAccessors
+
 Освобождает методы доступа, созданный классом.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -133,16 +146,20 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *pUnk*  
- [in] Указатель на `IUnknown` интерфейса для COM-объекта, для которого будут созданы методы доступа.  
+
+*pUnk*<br/>
+[in] Указатель на `IUnknown` интерфейса для COM-объекта, для которого будут созданы методы доступа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартный HRESULT.  
+
+Стандартный HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Вызывается из [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md). 
+
+Вызывается из [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md). 
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны OLE DB потребителя](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Класс CAccessorBase](../../data/oledb/caccessorbase-class.md)
+
+[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Класс CAccessorBase](../../data/oledb/caccessorbase-class.md)

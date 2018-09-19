@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b977875655182f1cbc822540cf021635f525f7e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cab0ea4ecf4bfabede365b9e0fbc9d4a02e2515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057461"
 ---
 # <a name="ccomunkarray-class"></a>Класс CComUnkArray
 
@@ -45,7 +45,7 @@ class CComUnkArray
 
 #### <a name="parameters"></a>Параметры
 
-*nMaxSize*  
+*nMaxSize*<br/>
 Максимальное число `IUnknown` указатели, которые могут храниться в статического массива.
 
 ## <a name="members"></a>Участники
@@ -92,7 +92,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*  
+*pUnk*<br/>
 Вызовите этот метод для добавления `IUnknown` указатель на массив.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -159,7 +159,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>Параметры
 
-*ppFind*  
+*ppFind*<br/>
 `IUnknown` Указатель, для которого необходим соответствующий файл cookie.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -180,7 +180,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>Параметры
 
-*dwCookie*  
+*dwCookie*<br/>
 Файл cookie, для которого связанного `IUnknown` указатель является обязательным.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -197,7 +197,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>Параметры
 
-*dwCookie*  
+*dwCookie*<br/>
 Ссылка на файл cookie `IUnknown` указатель, который необходимо удалить из массива.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -206,5 +206,5 @@ BOOL Remove(DWORD dwCookie);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)   
+[Класс CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

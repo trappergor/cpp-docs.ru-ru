@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::auto_gcroot | Документы Microsoft
+title: auto_gcroot::auto_gcroot | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df9650c5a013d6308869de002919c33a08b2ae04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc168596c43c4ea8f26da5157656822b862bdc1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100445"
 ---
 # <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
 `auto_gcroot` Конструктор.  
@@ -46,14 +46,14 @@ auto_gcroot(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `_ptr`  
- Объект, являющейся владельцем.  
+*_ptr*<br/>
+Объект, являющейся владельцем.  
   
- `_right`  
- Существующий `auto_gcroot`.  
+*_справа*<br/>
+Существующий `auto_gcroot`.  
   
 ## <a name="remarks"></a>Примечания  
- При создании `auto_gcroot` из существующего `auto_gcroot`, существующий `auto_gcroot` освобождает его объекта перед передачей владельца объекта в новый `auto_gcroot`.  
+ При создании `auto_gcroot` из существующего `auto_gcroot`, существующий `auto_gcroot` освобождает его объекта перед передачей принадлежность объекта к новому `auto_gcroot`.  
   
 ## <a name="example"></a>Пример  
   

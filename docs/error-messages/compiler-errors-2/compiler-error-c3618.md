@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3618 | Документы Microsoft
+title: Ошибка компилятора C3618 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78fb928c9e86105c97f1feb37ae8765c5e68b153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28371c211238aaabdadcb6c2b21284beb672dbe9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111645"
 ---
 # <a name="compiler-error-c3618"></a>Ошибка компилятора C3618
-«функция»: метод, помеченный как DllImport не может быть определен  
-  
- Метод, помеченный атрибутом <xref:System.Runtime.InteropServices.DllImportAttribute> определен в указанном массиве. БИБЛИОТЕКИ DLL.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C3618.  
-  
-```  
-// C3618.cpp  
-// compile with: /clr /c  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-[ DllImport("user32.dll", EntryPoint="MessageBox", CharSet=CharSet::Ansi) ]  // CHANGED   
-void Func();   
-  
-void Func() {}   // C3618, remove this function definition to resolve  
+
+«функция»: метод, помеченный как DllImport не может быть определен
+
+Метод, помеченный атрибутом <xref:System.Runtime.InteropServices.DllImportAttribute> определен в указанном. БИБЛИОТЕКА DLL.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3618.
+
+```
+// C3618.cpp
+// compile with: /clr /c
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[ DllImport("user32.dll", EntryPoint="MessageBox", CharSet=CharSet::Ansi) ]  // CHANGED
+void Func();
+
+void Func() {}   // C3618, remove this function definition to resolve
 ```

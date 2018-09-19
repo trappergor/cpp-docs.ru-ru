@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0b81d1baddfd8d89112f7f7b9d63624a6aa3b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ae9a83ff8cc8e4909e23e7751e0c82da690a0c21
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757771"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093822"
 ---
 # <a name="crbmultimap-class"></a>Класс CRBMultiMap
 
@@ -40,22 +40,22 @@ ms.locfileid: "43757771"
 template<typename K,
          typename V, 
          class KTraits = CElementTraits<K>, 
-         class VTraits = CElementTraits<V>>  
+         class VTraits = CElementTraits<V>>
 class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*K*  
+*K*<br/>
 Тип ключа элемента.
 
-*V*  
+*V*<br/>
 Тип значения элемента.
 
-*KTraits*  
+*KTraits*<br/>
 Код, используемый для копирования или перемещения ключевые элементы. См. в разделе [класс CElementTraits](../../atl/reference/celementtraits-class.md) для получения дополнительных сведений.
 
-*VTraits*  
+*VTraits*<br/>
 Код, используемый для копирования или перемещения элементов value.
 
 ## <a name="members"></a>Участники
@@ -111,7 +111,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Размер блока.
 
 ### <a name="remarks"></a>Примечания
@@ -148,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Задает ключ, определяющий элемента, который требуется найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -180,10 +180,10 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение позиции, полученные с помощью вызова к [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) или [CRBMultiMap::GetNextWithKey](#getnextwithkey), или предыдущим вызовом `GetNextValueWithKey`.
 
-*key*  
+*key*<br/>
 Задает ключ, определяющий элемента, который требуется найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -215,10 +215,10 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Значение позиции, полученные с помощью вызова к [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) или [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), или предыдущим вызовом `GetNextWithKey`.
 
-*key*  
+*key*<br/>
 Задает ключ, определяющий элемента, который требуется найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -241,10 +241,10 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Значение ключа, чтобы добавить `CRBMultiMap` объекта.
 
-*значение*  
+*значение*<br/>
 Значение, которое нужно добавить `CRBMultiMap` объект, связанный с *ключ*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -269,7 +269,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*key*  
+*key*<br/>
 Задает ключ, определяющий элементы для удаления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -288,7 +288,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CRBTree](../../atl/reference/crbtree-class.md)   
-[Класс CAtlMap](../../atl/reference/catlmap-class.md)   
-[Класс CRBMap](../../atl/reference/crbmap-class.md)   
+[Класс CRBTree](../../atl/reference/crbtree-class.md)<br/>
+[Класс CAtlMap](../../atl/reference/catlmap-class.md)<br/>
+[Класс CRBMap](../../atl/reference/crbmap-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

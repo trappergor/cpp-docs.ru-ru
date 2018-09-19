@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27d327fbac5e92ddb2fee50c30d57a46658e889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 28404c4f8dddeafb624b873448d4dc7aaa5dc0d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076818"
 ---
 # <a name="iolecontrolimpl-class"></a>Класс IOleControlImpl
 
@@ -44,7 +44,7 @@ class IOleControlImpl
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IOleControlImpl`.
 
 ## <a name="members"></a>Участники
@@ -138,6 +138,6 @@ HRESULT OnMnemonic(LPMSG pMsg);
 
 ## <a name="see-also"></a>См. также
 
-[Класс IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)   
-[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)   
+[Класс IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)<br/>
+[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

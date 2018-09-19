@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b379cdff5f2f0b0e5bf00a6e67b9320cd5150f47
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6cdc20d536ab4043a24263aebeb0576c379b2f1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756168"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091339"
 ---
 # <a name="cglobalheap-class"></a>Класс CGlobalHeap
 
@@ -83,7 +83,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBytes*  
+*nBytes*<br/>
 Запрошенное число байтов в новом блоке памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -106,7 +106,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.
 
 ### <a name="remarks"></a>Примечания
@@ -123,7 +123,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -144,10 +144,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*  
+*p*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти.
 
-*nBytes*  
+*nBytes*<br/>
 Запрошенное число байтов в новом блоке памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -162,9 +162,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[Класс CComHeap](../../atl/reference/ccomheap-class.md)   
-[Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)   
-[Класс CLocalHeap](../../atl/reference/clocalheap-class.md)   
-[Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Класс CComHeap](../../atl/reference/ccomheap-class.md)<br/>
+[Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
+[Класс CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
+[Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
 [Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)

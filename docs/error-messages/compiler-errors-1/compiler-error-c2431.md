@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2431 | Документы Microsoft
+title: Ошибка компилятора C2431 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a3f94163e02b953a4739b56a04f92f2499d27f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 944bead5439abf686fd18e436664e3c1cf7bccb5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049962"
 ---
 # <a name="compiler-error-c2431"></a>Ошибка компилятора C2431
-Недопустимый индексный регистр в «идентификатор»  
-  
- Регистр ESP масштабируется или использовать в качестве индекса и базовым регистром. SIB, кодировку для процессора не допускает либо x86.  
-  
- Следующий пример приводит к возникновению ошибки C2431:  
-  
-```  
-// C2431.cpp  
-// processor: x86  
-int main() {  
-   _asm mov ax, [ESI + 2*ESP]   // C2431  
-   _asm mov ax, [esp + esp]   // C2431  
-}  
+
+Недопустимый индексный регистр в «идентификатор»
+
+Регистр ESP масштабируется или использовать в качестве индекса и базовым регистром. SIB, кодировку для x86, процессор не поддерживает либо.
+
+Следующий пример приводит к возникновению ошибки C2431:
+
+```
+// C2431.cpp
+// processor: x86
+int main() {
+   _asm mov ax, [ESI + 2*ESP]   // C2431
+   _asm mov ax, [esp + esp]   // C2431
+}
 ```

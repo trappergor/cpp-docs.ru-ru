@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028640"
 ---
 # <a name="traversing-a-simple-rowset"></a>Перебор простого набора строк
+
 В следующем примере показано быстрый и простой базы данных доступа, не связанных с командами. Следующий код потребителя, в проект ATL, извлекает записи из таблицы с именем *исполнители* в Microsoft Access базу данных, используя поставщик Microsoft OLE DB для ODBC. Код создает [CTable](../../data/oledb/ctable-class.md) таблицы с методом доступа на основе класс записей пользователя `CArtists`. Открывает соединение, открывается сеанс подключения и открывает таблицу в сеансе.  
   
 ```cpp  
@@ -53,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Записи пользователя `CArtists`, выглядит следующим образом:  
+Записи пользователя `CArtists`, выглядит следующим образом:  
   
 ```cpp  
 class CArtists  
@@ -73,4 +74,5 @@ END_COLUMN_MAP()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Работа с шаблонами объекта-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Работа с шаблонами объекта-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

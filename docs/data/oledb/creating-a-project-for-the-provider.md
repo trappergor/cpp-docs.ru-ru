@@ -17,29 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dad3b020cb7f66fc4ba6535f79393c2d0ad0333f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 573cfdf3abda8f8190ceb7bca447e40130ea8610
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339845"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103328"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Создание проекта для поставщика
+
 ### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Чтобы создать проект, в которой будет находиться поставщик OLE DB  
   
-1.  В меню **Файл** последовательно выберите пункты **Создать** и **Проект**.  
+1. В меню **Файл** последовательно выберите пункты **Создать** и **Проект**.  
   
      Откроется диалоговое окно **Новый проект** .  
   
-2.  В области типов проектов щелкните папку проектов Visual C++. В области «Шаблоны» щелкните **проекта ATL**.  
+1. В области типов проектов щелкните папку проектов Visual C++. В области «Шаблоны» щелкните **проекта ATL**.  
   
-3.  В **имя** введите имя для проекта и нажмите кнопку **ОК**.  
+1. В **имя** введите имя для проекта и нажмите кнопку **ОК**.  
   
      Откроется мастер проектов ATL.  
   
-4.  В мастере проектов ATL. выберите **библиотеки динамической компоновки (DLL)** для **тип сервера**.  
+1. В мастере проектов ATL. выберите **библиотеки динамической компоновки (DLL)** для **тип сервера**.  
   
-5.  Нажмите кнопку **Готово**.  
+1. Нажмите кнопку **Готово**.  
   
 ## <a name="see-also"></a>См. также  
- [Создание поставщика OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Создание поставщика OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

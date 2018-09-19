@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b792bc02cf620cbd961830a99e35ae0c61898fed
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 34f8a45dfa9de9a5a48e13cb6a38f667e5963f2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409349"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068550"
 ---
 # <a name="arrays-in-expressions"></a>Массивы в выражениях
-Если идентификатор типа массива отображается в выражении, отличное от `sizeof`, взятия адреса (**&**), или инициализации ссылки, он преобразуется в указатель на первый элемент массива. Пример:  
-  
-```cpp 
-char szError1[] = "Error: Disk drive not ready.";  
-char *psz = szError1;  
-```  
-  
- Указатель `psz` указывает на первый элемент массива `szError1`. Обратите внимание, что массивы, в отличие от указателей, не являются изменяемыми l-значениями. Таким образом, следующее присвоение незаконно.  
-  
-```cpp 
-szError1 = psz;  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Массивы](../cpp/arrays-cpp.md)
+
+Если идентификатор типа массива отображается в выражении, отличное от `sizeof`, взятия адреса (**&**), или инициализации ссылки, он преобразуется в указатель на первый элемент массива. Пример:
+
+```cpp
+char szError1[] = "Error: Disk drive not ready.";
+char *psz = szError1;
+```
+
+Указатель `psz` указывает на первый элемент массива `szError1`. Обратите внимание, что массивы, в отличие от указателей, не являются изменяемыми l-значениями. Таким образом, следующее присвоение незаконно.
+
+```cpp
+szError1 = psz;
+```
+
+## <a name="see-also"></a>См. также
+
+[Массивы](../cpp/arrays-cpp.md)

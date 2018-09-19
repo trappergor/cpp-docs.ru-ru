@@ -1,5 +1,5 @@
 ---
-title: Класс writeonly_texture_view | Документы Microsoft
+title: Класс writeonly_texture_view | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65e4895af0903008e17b75a38981c169f07fc1c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695409"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047763"
 ---
 # <a name="writeonlytextureview-class"></a>Класс writeonly_texture_view
-Предоставляет доступ writeonly до текстуры.  
+Предоставляет доступ к текстуре.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,11 +45,11 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `value_type`  
- Тип элементов в текстуре.  
+*value_type*<br/>
+Тип элементов в текстуре.  
   
- `_Rank`  
- Ранг текстуры.  
+*_Rank*<br/>
+Ранг текстуры.  
   
 ## <a name="members"></a>Участники  
   
@@ -77,13 +77,13 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[оператор=](#operator_eq)|Копирует указанный `writeonly_texture_view` этого объекта.|  
+|[оператор=](#operator_eq)|Копирует указанный `writeonly_texture_view` в данный объект.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
 |name|Описание|  
 |----------|-----------------|  
-|[Ранг константа](#rank)|Возвращает ранг `writeonly_texture_view` объекта.|  
+|[Ранг константа](#rank)|Получает ранг объекта `writeonly_texture_view` объекта.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `_Texture_base`  
@@ -105,7 +105,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="operator_eq"></a> оператор = 
 
- Копирует указанный `writeonly_texture_view` этого объекта.  
+ Копирует указанный `writeonly_texture_view` в данный объект.  
   
 ```  
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -113,15 +113,15 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Other`  
- `writeonly_texture_view` объект для копирования из.  
+*_Другое*<br/>
+`writeonly_texture_view` объект для копирования из.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ссылку на это `writeonly_texture_view` объекта.  
+ Ссылка на этот `writeonly_texture_view` объекта.  
   
 ##  <a name="rank"></a> Ранг 
 
- Возвращает ранг `writeonly_texture_view` объекта.  
+ Получает ранг объекта `writeonly_texture_view` объекта.  
   
 ```  
 static const int rank = _Rank;  
@@ -138,11 +138,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Index`  
- Индекс элемента.  
+*_Index*<br/>
+Индекс элемента.  
   
- `value`  
- Новое значение элемента.  
+*значение*<br/>
+Новое значение элемента.  
   
 ##  <a name="ctor"></a> writeonly_texture_view 
 
@@ -160,14 +160,14 @@ writeonly_texture_view(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Rank`  
- Ранг текстуры.  
+*_Rank*<br/>
+Ранг текстуры.  
   
- `value_type`  
- Тип элементов в текстуре.  
+*value_type*<br/>
+Тип элементов в текстуре.  
   
- `_Src`  
- Текстуры, которая используется для создания `writeonly_texture_view`.  
+*_Src*<br/>
+Текстуры, который используется для создания `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

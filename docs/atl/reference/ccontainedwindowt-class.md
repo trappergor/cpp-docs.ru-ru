@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040483"
 ---
 # <a name="ccontainedwindowt-class"></a>Класс CContainedWindowT
 
@@ -49,16 +49,16 @@ ms.locfileid: "43755805"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*TBase*  
+*TBase*<br/>
 Базовый класс для нового класса. По умолчанию используется базовый класс `CWindow`.
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Класс признаков, который определяет стили для окна. Значение по умолчанию — `CControlWinTraits`.
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] Имя существующий класс окон, на котором будет основываться содержащееся окно.
 
-*pObject*  
+*pObject*<br/>
 [in] Указатель на вмещающего объекта, который объявляет сопоставление сообщений. Класс этот объект должен быть производным от [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Определяет схему сообщений, которая будет обрабатывать содержащееся окно сообщения. Значение по умолчанию, 0, указывает сопоставление сообщений по умолчанию, объявленные с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Чтобы использовать альтернативную схему сообщений, объявленные с [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), передайте `msgMapID`.
 
 ### <a name="remarks"></a>Примечания
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] Имя существующий класс окон, на котором будет основываться содержащееся окно.
 
-*pObject*  
+*pObject*<br/>
 [in] Указатель на вмещающего объекта, который объявляет сопоставление сообщений. Класс этот объект должен быть производным от [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Определяет схему сообщений, которая будет обрабатывать содержащееся окно сообщения. Значение по умолчанию, 0, указывает сопоставление сообщений по умолчанию, объявленные с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Чтобы использовать альтернативную схему сообщений, объявленные с [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), передайте `msgMapID`.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Дескриптор окна родительского или владельца.
 
-*Rect*  
+*Rect*<br/>
 [in] Объект [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий положение окна. `RECT` Могут передаваться, указателем или по ссылке.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Задает имя окна. Значение по умолчанию имеет значение NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Стиль окна. Значение по умолчанию — WS_CHILD &#124; WS_VISIBLE. Список возможных значений см. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Стиль окна расширенного. Значение по умолчанию — 0, то есть без расширенного стиля. Список возможных значений см. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Для дочернего окна, окна идентификатор. Для окна верхнего уровня, дескриптор меню для окна. Значение по умолчанию — **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Указатель на окно создания данных. Полное описание см. в описании для конечного параметра для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Параметры
 
-*uMsg*  
+*uMsg*<br/>
 [in] Сообщение, отправленное окну.
 
-*wParam*  
+*wParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lParam*  
+*lParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна подкласса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>Параметры
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Идентификатор сопоставления сообщения. Чтобы использовать сопоставление по умолчанию сообщения, объявленные с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), передать нулевое значение. Чтобы использовать альтернативную схему сообщений, объявленные с [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), передайте `msgMapID`.
 
 ### <a name="remarks"></a>Примечания
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-*bForce*  
+*bForce*<br/>
 [in] Имеет значение true, чтобы принудительно восстановить исходный текст процедуры окна даже в том случае, если процедура окна для данного `CContainedWindowT` объект не является активным. Если *bForce* имеет значение FALSE, а также процедура окна для данного `CContainedWindowT` объект не является активным, не будет восстановлен исходный текст процедуры окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Сообщение, отправленное окну.
 
-*wParam*  
+*wParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lParam*  
+*lParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -472,9 +472,9 @@ static LRESULT CALLBACK WindowProc(
 
 ## <a name="see-also"></a>См. также
 
-[Класс CWindow](../../atl/reference/cwindow-class.md)   
-[Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
-[Класс CMessageMap](../../atl/reference/cmessagemap-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[Класс CWindow](../../atl/reference/cwindow-class.md)<br/>
+[Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
+[Класс CMessageMap](../../atl/reference/cmessagemap-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

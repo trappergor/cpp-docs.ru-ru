@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656ede7c36fae4619cd356421a302b142a08ff19
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136300"
 ---
 # <a name="composite-control-macros"></a>Макросы составного элемента управления
 
@@ -34,7 +34,7 @@ ms.locfileid: "43761892"
 |[BEGIN_SINK_MAP](#begin_sink_map)|Отмечает начало карты приемника событий для составного элемента управления.|
 |[END_SINK_MAP](#end_sink_map)|Помечает конец карты приемника событий для составного элемента управления.|
 |[SINK_ENTRY](#sink_entry)|Запись для карты приемника событий.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Запись для карты приемника событий с дополнительным параметром.| 
+|[SINK_ENTRY_EX](#sink_entry_ex)|Запись для карты приемника событий с дополнительным параметром.|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017 г.) Аналогичен SINK_ENTRY_EX, за исключением того, что он принимает указатель на iid.|
 |[SINK_ENTRY_INFO](#sink_entry_info)|Запись к схеме событий приемника данными вручную указанного типа для использования с [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017 г.) Аналогичен SINK_ENTRY_INFO, за исключением того, что он принимает указатель на iid.|
@@ -53,7 +53,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Параметры
 
-*_класса*  
+*_класса*<br/>
 [in] Определяет элемент управления.
 
 ### <a name="example"></a>Пример
@@ -90,13 +90,13 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>Параметры
 
-*id*  
+*id*<br/>
 [in] Определяет элемент управления.
 
-*Идентификатор DISPID*  
+*Идентификатор DISPID*<br/>
 [in] Определяет указанное событие.
 
-*fn*  
+*fn*<br/>
 [in] Имя функции обработчика событий. Эту функцию необходимо использовать `_stdcall` соглашение о вызовах и иметь сигнатуру, соответствующую disp-интерфейс в стиле.
 
 ### <a name="example"></a>Пример
@@ -118,19 +118,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Параметры
 
-*id*  
+*id*<br/>
 [in] Определяет элемент управления.
 
-*IID*  
+*IID*<br/>
 [in] Определяет интерфейс диспетчеризации.  
 
-*piid*  
+*piid*<br/>
 [in] Указатель на интерфейс диспетчеризации.
 
-*Идентификатор DISPID*  
+*Идентификатор DISPID*<br/>
 [in] Определяет указанное событие.
 
-*fn*  
+*fn*<br/>
 [in] Имя функции обработчика событий. Эту функцию необходимо использовать `_stdcall` соглашение о вызовах и иметь сигнатуру, соответствующую disp-интерфейс в стиле.
 
 ### <a name="example"></a>Пример
@@ -152,22 +152,22 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Параметры
 
-*id*  
+*id*<br/>
 [in] Целое число без знака, определяющий источник событий. Это значение должно соответствовать *nID* параметр шаблона, используемый в связанном [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) базового класса.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор IID, определяющий интерфейс диспетчеризации.  
 
-*piid*  
+*piid*<br/>
 [in] Указатель на IID, определяющий интерфейс диспетчеризации.
 
-*Идентификатор DISPID*  
+*Идентификатор DISPID*<br/>
 [in] Идентификатор DISPID, определение указанного события.
 
-*fn*  
+*fn*<br/>
 [in] Имя функции обработчика событий. Эту функцию необходимо использовать `_stdcall` соглашение о вызовах и иметь сигнатуру, соответствующую disp-интерфейс в стиле.
 
-*Сведения о*  
+*Сведения о*<br/>
 [in] Сведения о типе для функция обработчика событий. Эти сведения о типах предоставляется в виде указателя на `_ATL_FUNC_INFO` структуры. CC_CDECL является единственным параметром, поддерживаемые в Windows CE для поля CALLCONV `_ATL_FUNC_INFO` структуры. Любое другое значение не поддерживается таким образом его поведение не определено.
 
 ### <a name="remarks"></a>Примечания
@@ -176,5 +176,5 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ## <a name="see-also"></a>См. также
 
-[Макросы](../../atl/reference/atl-macros.md)   
+[Макросы](../../atl/reference/atl-macros.md)<br/>
 [Глобальные функции составных элементов управления](../../atl/reference/composite-control-global-functions.md)

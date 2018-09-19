@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a6bb4cbd80cf0fa36b65d81a327b822493e264
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040236"
 ---
 # <a name="cworkerthread-class"></a>Класс CWorkerThread
 
@@ -42,13 +42,13 @@ ms.locfileid: "43752701"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class ThreadTraits = DefaultThreadTraits>  
+template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 Класс, предоставляющий функции создания потока, такие как [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) или [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
 
 ## <a name="members"></a>Участники
@@ -115,13 +115,13 @@ HRESULT AddHandle(
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Дескриптор ожидающий объект.
 
-*pClient*  
+*pClient*<br/>
 Указатель на [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) интерфейс объекта, который должен вызываться при дескриптор получает сигнал.
 
-*dwParam*  
+*dwParam*<br/>
 Параметр передается [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) когда дескриптор получает сигнал.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -146,16 +146,16 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>Параметры
 
-*dwInterval*  
+*dwInterval*<br/>
 Указывает период таймера в миллисекундах.
 
-*pClient*  
+*pClient*<br/>
 Указатель на [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) интерфейс объекта, который должен вызываться при дескриптор получает сигнал.
 
-*dwParam*  
+*dwParam*<br/>
 Параметр передается [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) когда дескриптор получает сигнал.
 
-*phTimer*  
+*phTimer*<br/>
 [out] Адрес переменной ДЕСКРИПТОРА, в случае успешного выполнения принимает дескриптор только что созданный таймера.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -224,7 +224,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pThread*  
+*pThread*<br/>
 Существующий рабочий поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -249,7 +249,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hObject*  
+*hObject*<br/>
 Handle для удаления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -270,7 +270,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwWait*  
+*dwWait*<br/>
 Время в миллисекундах для ожидания рабочий поток для завершения работы. ATL_WORKER_THREAD_WAIT по умолчанию 10 секунд. При необходимости можно определить собственное значение для этого символа перед включением файлов atlutil.h.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -285,7 +285,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ## <a name="see-also"></a>См. также
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
-[Классы](../../atl/reference/atl-classes.md)   
-[Многопоточность: Создание рабочих потоков](../../parallel/multithreading-creating-worker-threads.md)   
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[Классы](../../atl/reference/atl-classes.md)<br/>
+[Многопоточность. Создание рабочих потоков](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [Интерфейс IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87f5b9f8295b49b9c1c4bec45cad96e3dec0872
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040808"
 ---
 # <a name="catlcommodule-class"></a>Класс CAtlComModule
 
@@ -107,10 +107,10 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 Значение TRUE, если для регистрации библиотеки типов. Значение по умолчанию — FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Указывает идентификатор CLSID объекта для регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет зарегистрировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -132,7 +132,7 @@ HRESULT RegisterTypeLib();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Строка в формате "\\\N», где N — это целочисленный индекс ресурса библиотеки ТИПОВ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -155,10 +155,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 Значение TRUE, если для отмены регистрации библиотеки типов. Значение по умолчанию — FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Указывает идентификатор CLSID объекта для отмены регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет отменена.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -180,7 +180,7 @@ HRESULT UnRegisterTypeLib();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Строка в формате "\\\N», где N — это целочисленный индекс ресурса библиотеки ТИПОВ.
 
 ### <a name="remarks"></a>Примечания
@@ -193,5 +193,5 @@ HRESULT UnRegisterTypeLib();
 
 ## <a name="see-also"></a>См. также
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

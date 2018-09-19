@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4619 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 3) C4619 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd598c99e87947d60831a1d62c268e3b5797b4ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5af0541451d780408af94a8953588f4764b58ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039055"
 ---
 # <a name="compiler-warning-level-3-c4619"></a>Предупреждение компилятора (уровень 3) C4619
-\#в директиве pragma warning: нет предупреждения с номером «number»  
-  
- Была предпринята попытка отключить предупреждение, не существует.  
-  
- Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Следующий пример приводит к возникновению ошибки C4619:  
-  
-```  
-// C4619.cpp  
-// compile with: /W3 /c  
-#pragma warning(default : 4619)  
-#pragma warning(disable : 4354)   // C4619, C4354 does not exist  
+
+\#в директиве pragma warning: нет предупреждения с номером «number»
+
+Выполнена попытка отключить это предупреждение, которое не существует.
+
+Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Следующий пример приводит к возникновению ошибки C4619:
+
+```
+// C4619.cpp
+// compile with: /W3 /c
+#pragma warning(default : 4619)
+#pragma warning(disable : 4354)   // C4619, C4354 does not exist
 ```

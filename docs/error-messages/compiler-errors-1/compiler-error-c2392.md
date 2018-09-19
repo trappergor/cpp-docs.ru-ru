@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2392 | Документы Microsoft
+title: Ошибка компилятора C2392 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb2ce4ef752d91eaadc66d17aadf3838ee560df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c45c5b271235e4ada0945a79087186a213c75343
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197914"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064273"
 ---
 # <a name="compiler-error-c2392"></a>Ошибка компилятора C2392
-«метод1»: ковариантные возвращаемые типы не поддерживаются в управляемых или WinRTtypes, в противном случае «метод2» был бы переопределен  
-  
- Ковариантные возвращаемые типы недопустимы для функций-членов среды выполнения Windows или при компиляции с параметром [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) параметр.  
-  
-## <a name="example"></a>Пример  
- В следующем примере показано возникновение ошибки C2392 и приводятся сведения по ее устранению.  
-  
-```  
-// C2392.cpp  
-// compile with: /clr  
-public ref struct B {  
-public:  
-   int i;  
-};  
-  
-public ref struct D: public B{};  
-  
-public ref struct B1 {  
-public:  
-   virtual B^ mf() {  
-      B^ pB = gcnew B;  
-      pB->i = 11;  
-      return pB;  
-   }  
-};  
-  
-public ref struct D1: public B1 {  
-public:  
-   virtual D^ mf() override {  // C2392  
-   // try the following line instead  
-   // virtual B^ mf() override {  
-   // return type D^ is covariant with B^, not allowed with CLR types  
-      D^ pD = gcnew D;  
-      pD->i = 12;  
-      return pD;  
-   }  
-};  
-  
-int main() {  
-   B1^ pB1 = gcnew D1;  
-   B^ pB = pB1->mf();  
-   D^ pD = dynamic_cast<D^>(pB);  
-}  
+
+«метод1»: ковариантные возвращаемые типы не поддерживаются в управляемых или WinRTtypes, в противном случае «метод2» был бы переопределен
+
+Ковариантные типы возвращаемого значения недопустимы для функций-членов среды выполнения Windows или при компиляции с параметром [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) параметр.
+
+## <a name="example"></a>Пример
+
+В следующем примере показано возникновение ошибки C2392 и приводятся сведения по ее устранению.
+
+```
+// C2392.cpp
+// compile with: /clr
+public ref struct B {
+public:
+   int i;
+};
+
+public ref struct D: public B{};
+
+public ref struct B1 {
+public:
+   virtual B^ mf() {
+      B^ pB = gcnew B;
+      pB->i = 11;
+      return pB;
+   }
+};
+
+public ref struct D1: public B1 {
+public:
+   virtual D^ mf() override {  // C2392
+   // try the following line instead
+   // virtual B^ mf() override {
+   // return type D^ is covariant with B^, not allowed with CLR types
+      D^ pD = gcnew D;
+      pD->i = 12;
+      return pD;
+   }
+};
+
+int main() {
+   B1^ pB1 = gcnew D1;
+   B^ pB = pB1->mf();
+   D^ pD = dynamic_cast<D^>(pB);
+}
 ```

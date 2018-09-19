@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1021 | Документы Microsoft
+title: Неустранимая ошибка C1021 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06ec8f9aeca3b88b1c14c8dddfc625aae0b185d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcb464a676b47baa4589c17269819d3a84d058fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029916"
 ---
 # <a name="fatal-error-c1021"></a>Неустранимая ошибка C1021
-недопустимая команда препроцессора "строка"  
-  
- `string` не является допустимой [директивой препроцессора](../../preprocessor/preprocessor-directives.md). Чтобы устранить эту ошибку, используйте допустимое имя директивы препроцессора для `string`.  
-  
- Следующий пример приводит к возникновению ошибки C1021:  
-  
-```  
-// C1021.cpp  
-#BadPreProcName    // C1021 delete line  
+
+недопустимая команда препроцессора "строка"
+
+`string` не является допустимой [директивой препроцессора](../../preprocessor/preprocessor-directives.md). Чтобы устранить эту ошибку, используйте допустимое имя директивы препроцессора для `string`.
+
+Следующий пример приводит к возникновению ошибки C1021:
+
+```
+// C1021.cpp
+#BadPreProcName    // C1021 delete line
 ```

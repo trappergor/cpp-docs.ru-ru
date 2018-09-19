@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4532 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4532 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37d36f565cc63c7cef9954a78e14ed60d676996
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 717af9626866fb20e92342fe90f4dde2b5030774
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285864"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025481"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>Предупреждение компилятора (уровень 1) C4532
-«continue»: переход из блока __finally/finally не определено поведение при обработке завершения  
-  
- Компилятор обнаружил одно из следующих ключевых слов:  
-  
--   [continue](../../cpp/continue-statement-cpp.md)  
-  
--   [break](../../cpp/break-statement-cpp.md)  
-  
--   [goto](../../cpp/goto-statement-cpp.md)  
-  
- что вызвало переход из [__finally](../../cpp/try-finally-statement.md) или [наконец](../../dotnet/finally.md) блок во время аварийного завершения.  
-  
- При возникновении исключения, и во время стек развертывается во время выполнения обработчиков завершения ( `__finally` или блоков finally), и код переходит из `__finally` блокировать перед `__finally` завершения блока, поведение не определено. Элемент управления могут не возвращать в развертываемый код, исключение не может быть обработано должным образом.  
-  
- Если необходимо перейти из **__finally** блока, сначала проверьте аварийного завершения.  
-  
- Следующий пример приводит к возникновению ошибки C4532; просто комментарий преобразовать операторы для разрешения предупреждения.  
-  
-```  
-// C4532.cpp  
-// compile with: /W1  
-// C4532 expected  
-int main() {  
-   int i;  
-   for (i = 0; i < 10; i++) {  
-      __try {  
-      } __finally {  
-         // Delete the following line to resolve.  
-         continue;  
-      }  
-  
-      __try {  
-      } __finally {  
-         // Delete the following line to resolve.  
-         break;  
-      }  
-   }  
-}  
+
+«continue»: перехода из блока __finally/finally не определено поведение при обработке завершения
+
+Компилятор обнаружил одно из следующих ключевых слов:
+
+- [continue](../../cpp/continue-statement-cpp.md)
+
+- [break](../../cpp/break-statement-cpp.md)
+
+- [goto](../../cpp/goto-statement-cpp.md)
+
+вызывает переход из [__finally](../../cpp/try-finally-statement.md) или [наконец](../../dotnet/finally.md) блок во время аварийного завершения.
+
+При возникновении исключения, и хотя стек развертывается во время выполнения обработчиков завершения ( `__finally` или блоков finally), и код переходит из `__finally` блокировать перед `__finally` завершения блока, поведение не определено. Элемент управления может не вернуться к развертываемый код, чтобы исключение не может быть обработано должным образом.
+
+Если необходим переход из **__finally** block, сначала проверьте аварийное завершение.
+
+Следующий пример приводит к возникновению ошибки C4532; просто закомментируйте операторов перехода, чтобы разрешить предупреждения.
+
+```
+// C4532.cpp
+// compile with: /W1
+// C4532 expected
+int main() {
+   int i;
+   for (i = 0; i < 10; i++) {
+      __try {
+      } __finally {
+         // Delete the following line to resolve.
+         continue;
+      }
+
+      __try {
+      } __finally {
+         // Delete the following line to resolve.
+         break;
+      }
+   }
+}
 ```

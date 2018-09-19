@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035543"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Переопределение динамического метода доступа
+
 При использовании динамического метода доступа, такие как `CDynamicAccessor`, команда `Open` метод создает метод доступа, вы автоматически, на основе сведения о столбцах из открытого набора строк. Вы можете переопределить динамического метода доступа для управления точно, как связаны столбцы.  
   
- Переопределение динамического метода доступа, передайте **false** как последний параметр `CCommand::Open` метод. Это предотвращает `Open` автоматически создать метод доступа. Затем можно вызвать `GetColumnInfo` и вызвать `AddBindEntry` для каждого столбца, который вы хотите выполнить привязку. Ниже показано, как это сделать:  
+Переопределение динамического метода доступа, передайте **false** как последний параметр `CCommand::Open` метод. Это предотвращает `Open` автоматически создать метод доступа. Затем можно вызвать `GetColumnInfo` и вызвать `AddBindEntry` для каждого столбца, который вы хотите выполнить привязку. Ниже показано, как это сделать:  
   
 ```cpp  
 USES_CONVERSION;  
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование методов доступа](../../data/oledb/using-accessors.md)
+
+[Использование методов доступа](../../data/oledb/using-accessors.md)

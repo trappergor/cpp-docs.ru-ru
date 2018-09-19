@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2423 | Документы Microsoft
+title: Ошибка компилятора C2423 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96408323c7afd9e15fee521c9d20005dfc6da21
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e7a974a83935dbbcc9cd78bcc9280c9f0fbc2a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029316"
 ---
 # <a name="compiler-error-c2423"></a>Ошибка компилятора C2423
-«число»: недопустимый масштаб  
-  
- Для масштабирования регистра встроенного кода ассемблера используется число, отличное от 1, 2, 4 или 8.  
-  
- Следующий пример приводит к возникновению ошибки C2423:  
-  
-```  
-// C2423.cpp  
-// processor: x86  
-int main() {  
-   _asm {  
-      lea EAX, [EAX*3]   // C2423  
-      lea EAX, [EAX+EAX*2]   // OK  
-   }  
-}  
+
+«число»: недопустимый масштаб
+
+Встроенный код ассемблера использует значение, отличное от 1, 2, 4 или 8 для масштабирования регистра.
+
+Следующий пример приводит к возникновению ошибки C2423:
+
+```
+// C2423.cpp
+// processor: x86
+int main() {
+   _asm {
+      lea EAX, [EAX*3]   // C2423
+      lea EAX, [EAX+EAX*2]   // OK
+   }
+}
 ```

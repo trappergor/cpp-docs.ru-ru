@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2927 | Документы Microsoft
+title: Ошибка компилятора C2927 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2d9057019c073035dfc07399e8c56580c8052d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c37b45cb86793c3c4ca7066f9d7adc047188f658
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241727"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026340"
 ---
 # <a name="compiler-error-c2927"></a>Ошибка компилятора C2927
-"функция": шаблон функции должен вызываться по крайней мере с одним аргументом  
-  
- Нельзя вызвать функцию шаблона без аргументов. Тип аргументов шаблона определяет, какую версию функции нужно создать.
+
+"функция": шаблон функции должен вызываться по крайней мере с одним аргументом
+
+Нельзя вызвать функцию шаблона без аргументов. Тип аргументов шаблона определяет, какую версию функции нужно создать.

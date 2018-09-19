@@ -1,5 +1,5 @@
 ---
-title: C3446 Ошибка компилятора | Документы Microsoft
+title: Ошибка компилятора C3446 | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/21/2017
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7715ebbc094c2c3c91aa3a0bb42f7df97bef08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a88bb77489d2596c271842e7becb0214d1af2821
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257004"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018871"
 ---
-# <a name="compiler-error-c3446"></a>C3446 ошибки компилятора  
-  
->"*класс*": Инициализатор члена по умолчанию не допускается для члена класса значения  
-  
+# <a name="compiler-error-c3446"></a>Ошибка компилятора C3446
+
+>"*класс*": инициализатор элементов по умолчанию не допускается для члена класса значений
+
 В Visual Studio 2015 и более ранних версиях компилятор допускал (но игнорировал) инициализатор членов по умолчанию для члена класса значений. Инициализатор по умолчанию для класса значений всегда инициализирует члены нулевым значением. Конструктор по умолчанию не допускается. В Visual Studio 2017 инициализаторы членов по умолчанию вызывают ошибку компилятора, как показано в следующем примере:
 
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C3446 в Visual Studio 2017 г. и более поздних версий:  
-  
-```cpp  
-// C3446.cpp  
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3446 в Visual Studio 2017 и более поздних версий:
+
+```cpp
+// C3446.cpp
 value struct V
 {
-       int i = 0; // error C3446: 'V::i': a default member initializer  
+       int i = 0; // error C3446: 'V::i': a default member initializer
                   // is not allowed for a member of a value class
-       int j {0}; // C3446           
+       int j {0}; // C3446
 };
-```  
-  
-Чтобы исправить эту ошибку, удалите инициализатора:  
-  
-```cpp  
-// C3446b.cpp  
+```
+
+Чтобы исправить эту ошибку, удалите инициализатора:
+
+```cpp
+// C3446b.cpp
 value struct V
 {
-       int i;  
+       int i;
        int j;
 };
-```  
-  
+```
+

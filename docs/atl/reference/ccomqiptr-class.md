@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d4437d06a7308505c2338f37deea1126fcb0605
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e4c35ab13d5cf2448135b1e07405a1e31a5eec86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752918"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116676"
 ---
 # <a name="ccomqiptr-class"></a>Класс CComQIPtr
 
@@ -32,16 +32,16 @@ ms.locfileid: "43752918"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T, const IID* piid= &__uuidof(T)>  
+template<class T, const IID* piid= &__uuidof(T)>
 class CComQIPtr: public CComPtr<T>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 COM-интерфейс, указав тип указателя для сохранения.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор IID *T*.
 
 ## <a name="members"></a>Участники
@@ -87,13 +87,13 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*к пулу журналов*  
+*к пулу журналов*<br/>
 Позволяет инициализировать указатель интерфейса.
 
-*T*  
+*T*<br/>
 COM-интерфейса.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор IID *T*.
 
 ##  <a name="operator_eq"></a>  CComQIPtr::operator =
@@ -108,13 +108,13 @@ T* operator= (IUnknown* lp) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*к пулу журналов*  
+*к пулу журналов*<br/>
 Позволяет инициализировать указатель интерфейса.
 
-*T*  
+*T*<br/>
 COM-интерфейса.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор IID *T*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -123,8 +123,8 @@ COM-интерфейса.
 
 ## <a name="see-also"></a>См. также
 
-[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
-[CComQIPtr::CComQIPtr](#ccomqiptr)   
-[Класс CComPtrBase](../../atl/reference/ccomptrbase-class.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](#ccomqiptr)<br/>
+[Класс CComPtrBase](../../atl/reference/ccomptrbase-class.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Класс CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)

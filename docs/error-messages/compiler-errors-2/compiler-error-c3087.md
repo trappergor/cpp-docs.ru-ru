@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3087 | Документы Microsoft
+title: Ошибка компилятора C3087 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6e1446d8d062f97e9161e62fae5052580174c83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a95b14df3701d26a249e8e0d0e8ec4bafe5eb0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041614"
 ---
 # <a name="compiler-error-c3087"></a>Ошибка компилятора C3087
-"именованный_аргумент": вызов атрибута "атрибут" уже инициализирует данный член  
-  
- Именованный аргумент был указан в том же блоке атрибута, что и неименованный аргумент для того же значения. Укажите только именованный или неименованный аргумент.  
-  
-## <a name="example"></a>Пример  
- В следующем примере возникает ошибка C3087:  
-  
-```  
-// C3087.cpp  
-// compile with: /c  
-[idl_quote("quote1", text="quote2")];   // C3087  
-[idl_quote(text="quote3")];   // OK  
-[idl_quote("quote4")];   // OK  
+
+"именованный_аргумент": вызов атрибута "атрибут" уже инициализирует данный член
+
+Именованный аргумент был указан в том же блоке атрибута, что и неименованный аргумент для того же значения. Укажите только именованный или неименованный аргумент.
+
+## <a name="example"></a>Пример
+
+В следующем примере возникает ошибка C3087:
+
+```
+// C3087.cpp
+// compile with: /c
+[idl_quote("quote1", text="quote2")];   // C3087
+[idl_quote(text="quote3")];   // OK
+[idl_quote("quote4")];   // OK
 ```

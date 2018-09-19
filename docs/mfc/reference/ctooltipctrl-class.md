@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 148bb42b7dc6b650bb85860b0bcce3b70c61318e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726756"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099918"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 Инкапсулирует функциональность элемента управления "всплывающая подсказка" — небольшого всплывающего окна, в котором отображается одна строка текста, описывающая назначение инструмента в приложении.  
@@ -573,24 +573,25 @@ BOOL HitTest(
   
  `TTHITTESTINFO` Структура определена следующим образом:  
   
- `typedef struct _TT_HITTESTINFO { // tthti`  
+```cpp
+typedef struct _TT_HITTESTINFO { // tthti
+    HWND hwnd;   // handle of tool or window with tool
+    POINT pt;    // client coordinates of point to test
+    TOOLINFO ti; // receives information about the tool
+} TTHITTESTINFO, FAR * LPHITTESTINFO;
+```
   
- `HWND hwnd;   // handle of tool or window with tool`  
+- `hwnd`  
+
+   Указывает дескриптор этого средства.  
   
- `POINT pt;    // client coordinates of point to test`  
+- `pt`  
+
+   Задает координаты точки, если точка находится в инструменте ограничивающий прямоугольник.  
   
- `TOOLINFO ti; // receives information about the tool`  
-  
- `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
-  
- `hwnd`  
- Указывает дескриптор этого средства.  
-  
- `pt`  
- Задает координаты точки, если точка находится в инструменте ограничивающий прямоугольник.  
-  
- `ti`  
- Сведения о средстве. Дополнительные сведения о `TOOLINFO` структуры, см. в разделе [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
+- `ti`  
+
+   Сведения о средстве. Дополнительные сведения о `TOOLINFO` структуры, см. в разделе [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
  Удаляет отображаемые подсказки из представления.  

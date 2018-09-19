@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b534190a4e7243f5192e6d703b056d8bcb327ca
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 882a32b1a9f08f3fd07f1d53d508b101c5500f5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037064"
 ---
 # <a name="catlautothreadmodule-class"></a>Класс CAtlAutoThreadModule
 
@@ -62,7 +62,7 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)   
-[Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Класс CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)<br/>
+[Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Модульные классы](../../atl/atl-module-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Ошибка вычислителя выражений CXX0032 | Документы Microsoft
+title: Ошибка вычислителя выражений CXX0032 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1df20ab022df9ce1321c2f6de77bf7591fec3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a320fb08eaf19b5ed53000ffecd17d747e7a3000
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33304730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019709"
 ---
 # <a name="expression-evaluator-error-cxx0032"></a>Ошибка вычислителя выражений CXX0032
-деление на 0  
-  
- Выражение содержит делитель, равный нулю, что недопустимо. В этом случае делителем может быть литерал нуль или он может быть выражением, результатом которого является ноль.  
-  
- Эта ошибка идентична ошибке CAN0032.
+
+деление на 0
+
+Выражение содержит делитель, равный нулю, что недопустимо. Этот делитель может представлять собой числовой литерал нулевой, или он может быть выражение, результатом которого является ноль.
+
+Эта ошибка идентична ошибке CAN0032.

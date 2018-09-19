@@ -1,5 +1,5 @@
 ---
-title: omp_set_dynamic | Документы Microsoft
+title: omp_set_dynamic | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18521113125eb49fa413568b6a62472bb50a7924
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c3e8ac574ce304238affbab41acc415e1d8de697
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026911"
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
-Указывает, что число потоков, доступных в последующих параллельной области может настраиваться по времени выполнения.  
+Указывает, что количество потоков, доступных в последующих параллельной области могут быть изменены при время выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,18 +34,17 @@ void omp_set_dynamic(
 );  
 ```  
   
-## <a name="remarks"></a>Примечания  
- где  
+### <a name="parameters"></a>Параметры
   
- `val`  
- Значение, указывающее, если число потоков, доступных в последующих параллельной области может настраиваться средой выполнения.  Если значение ненулевое, среда выполнения можно настроить количество потоков, если значение равно нулю, среда выполнения не динамически изменяются число потоков.  
+*Val*<br/>
+Значение, указывающее, если количество потоков, доступных в последующих параллельной области могут быть изменены при выполнении.  Если значение ненулевое, среда выполнения можно изменить число потоков, если значение равно нулю, среда выполнения не будет динамически корректировать число потоков.  
   
 ## <a name="remarks"></a>Примечания  
- Число потоков, не может превышать значение, установленное [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) или [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
+ Число потоков никогда не превысит значение, заданное параметром [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) или [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
   
  Используйте [omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) для отображения текущего значения параметра `omp_set_dynamic`.  
   
- Параметр для `omp_set_dynamic` переопределит параметр [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) переменной среды.  
+ Параметр для `omp_set_dynamic` переопределит параметр из [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) переменной среды.  
   
  Дополнительные сведения см. в разделе [3.1.7 функция omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
   

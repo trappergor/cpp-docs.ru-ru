@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3707 | Документы Microsoft
+title: Ошибка компилятора C3707 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7268f584d9f269b4f2f15b837379ec12ab0185d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d18d4a82d06018cdba6147ba6756b1718648847a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273729"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052791"
 ---
 # <a name="compiler-error-c3707"></a>Ошибка компилятора C3707
-«функция»: метод disp-интерфейса должен иметь dispid  
-  
- Если вы используете `dispinterface` метод, необходимо назначить `dispid`. Чтобы устранить эту ошибку, назначьте `dispid` для `dispinterface` метода, например, Раскомментировать `id` атрибута в методе в примере ниже. Дополнительные сведения см. в разделе атрибуты [disp-интерфейса](../../windows/dispinterface.md) и [идентификатор](../../windows/id.md).  
-  
- Следующий пример приводит к возникновению ошибки C3707:  
-  
-```  
-// C3707.cpp  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlctl.h>  
-  
-[module(name="xx")];  
-[dispinterface]  
-__interface IEvents : IDispatch  
-{  
-   HRESULT event1([in] int i);   // C3707  
-   // try the following line instead  
-   // [id(1)] HRESULT event1([in] int i);  
-};  
-  
-int main() {  
-}  
+
+«функция»: метод disp-интерфейса должен иметь dispid
+
+Если вы используете `dispinterface` метод, его значение необходимо присваивать `dispid`. Чтобы устранить эту ошибку, назначьте `dispid` для `dispinterface` метод, например, раскомментировав `id` атрибута метода в приведенном ниже примере. Дополнительные сведения см. в разделе атрибуты [disp-интерфейс](../../windows/dispinterface.md) и [идентификатор](../../windows/id.md).
+
+Следующий пример приводит к возникновению ошибки C3707:
+
+```
+// C3707.cpp
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlctl.h>
+
+[module(name="xx")];
+[dispinterface]
+__interface IEvents : IDispatch
+{
+   HRESULT event1([in] int i);   // C3707
+   // try the following line instead
+   // [id(1)] HRESULT event1([in] int i);
+};
+
+int main() {
+}
 ```

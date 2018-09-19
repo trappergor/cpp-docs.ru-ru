@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e70e744ca4eb9cfa4b84ac0cca58be2452a8e25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756955"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044279"
 ---
 # <a name="atl-collections-and-enumerators"></a>Коллекции и перечислители ATL
 
@@ -36,21 +36,21 @@ ms.locfileid: "43756955"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Классы коллекций и перечислителей ATL](../atl/atl-collection-and-enumerator-classes.md)  
+[Классы коллекций и перечислителей ATL](../atl/atl-collection-and-enumerator-classes.md)<br/>
 Краткое описание и приводятся ссылки на классы ATL, которые помогут вам реализовать коллекции и перечислители.
 
-[Принципы разработки интерфейсов для коллекций и перечислителей](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+[Принципы разработки интерфейсов для коллекций и перечислителей](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
 Описание принципов проектирования каждого типа интерфейса.
 
-[Реализация коллекции на основе стандартной библиотеки C++](../atl/implementing-an-stl-based-collection.md)  
+[Реализация коллекции на основе стандартной библиотеки C++](../atl/implementing-an-stl-based-collection.md)<br/>
 Развернутый пример, в котором описывается реализация коллекции на основе стандартной библиотеки C++.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Ссылки на разделы о программировании с использованием библиотеки ATL.
 
-[Пример ATLCollections](../visual-cpp-samples.md)  
+[Пример ATLCollections](../visual-cpp-samples.md)<br/>
 Пример, демонстрирующий использование `ICollectionOnSTLImpl` и `CComEnumOnSTL`и реализация пользовательских классов политики копирования.
 
 ## <a name="see-also"></a>См. также
