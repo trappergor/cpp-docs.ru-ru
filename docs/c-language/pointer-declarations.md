@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752727"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095941"
 ---
 # <a name="pointer-declarations"></a>Объявления указателей
 
@@ -59,6 +59,7 @@ ms.locfileid: "43752727"
 Можно объявить указатель на структуру, объединение или тип перечисления, прежде чем определять тип структуры, объединения или перечисления. Для объявления указателя можно воспользоваться тегом структуры или объединения, как показано в примерах ниже. Такие объявления разрешены, поскольку компилятору не обязательно знать размер структуры или объединения, чтобы выделить пространство для переменной указателя.
 
 ## <a name="examples"></a>Примеры
+
 В следующих примерах показаны объявления указателей.
 
 ```
