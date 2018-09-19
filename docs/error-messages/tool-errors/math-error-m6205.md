@@ -1,5 +1,5 @@
 ---
-title: Математическая ошибка M6205 | Документы Microsoft
+title: Математическая ошибка M6205 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8d7fbd042d8ce8210ec4fe275b0d83314f5d12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55549300a5ea603e4462d5b81679f935319838ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099759"
 ---
 # <a name="math-error-m6205"></a>Математическая ошибка M6205
-«функция»: ошибка _TLOSS  
-  
- Произошла полная потеря значимости (точность).  
-  
- Эта ошибка может быть вызвана заданием слишком большое значение как операнд sin, cos или tan, поскольку операнд необходимо уменьшить число от 0 до 2 * pi.
+
+«функция»: ошибка _TLOSS
+
+Произошла полная потеря значимости (точность).
+
+Эта ошибка может возникать, предоставляя очень много как операнд sin, cos или tan, поскольку операнд должен быть сокращен до число от 0 до 2 * pi.

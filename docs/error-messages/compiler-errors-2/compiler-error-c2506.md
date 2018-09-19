@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2506 | Документы Microsoft
+title: Ошибка компилятора C2506 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5369a6a5bf904f7a7492037fbad4df44de92e66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4967c410dfdce781a4191c9ac848883228ba4d3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093419"
 ---
 # <a name="compiler-error-c2506"></a>Ошибка компилятора C2506
-«член»: «__declspec(модификатор)» не может применяться к этому символу  
-  
- Для статических членов управляемого класса нельзя объявлять на уровне процесса или на уровне домена приложения.  
-  
- Дополнительные сведения см. в разделе [appdomain](../../cpp/appdomain.md) .  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2506.  
-  
-```  
-// C2506.cpp  
-// compile with: /clr /c  
-ref struct R {  
-   __declspec(process) static int n;   // C2506  
-   int o;   // OK  
-};  
+
+«член»: «__declspec(модификатор)» не может применяться к этому символу
+
+Для статических членов управляемого класса нельзя объявлять на уровне процесса или на уровне домена приложения.
+
+Дополнительные сведения см. в разделе [appdomain](../../cpp/appdomain.md) .
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2506.
+
+```
+// C2506.cpp
+// compile with: /clr /c
+ref struct R {
+   __declspec(process) static int n;   // C2506
+   int o;   // OK
+};
 ```

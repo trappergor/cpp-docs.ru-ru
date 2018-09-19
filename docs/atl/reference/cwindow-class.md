@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b27036ffe84ff915bfcda0205469ef79e00255
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109699"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 
@@ -410,7 +410,7 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hWndNew*  
+*hWndNew*<br/>
 [in] Дескриптор окна.
 
 ### <a name="example"></a>Пример
@@ -459,7 +459,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hWndCenter*  
+*hWndCenter*<br/>
 [in] Дескриптор окна, для которого по центру. Если этот параметр имеет значение NULL (значение по умолчанию), метод установит *hWndCenter* окна родительское окно, если это дочернее окно. В противном случае она будет задана *hWndCenter* окну владельца окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -566,28 +566,28 @@ HWND Create(
 
 ### <a name="parameters"></a>Параметры
 
-*lpstrWndClass*  
+*lpstrWndClass*<br/>
 [in] Указатель на класс окна.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Дескриптор окна родительского или владельца.
 
-*Rect*  
+*Rect*<br/>
 [in] Переменная типа [_U_RECT](../../atl/reference/u-rect-class.md) задают позицию окна. Значение по умолчанию имеет значение NULL. Если данный аргумент принимает значение NULL, значение `CWindow::rcDefault` используется.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Задает имя окна. Значение по умолчанию имеет значение NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Стиль окна. Значение по умолчанию равно 0, то есть стиль не указывается. Список возможных значений см. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Стиль окна расширенного. Значение по умолчанию равно 0, то есть не расширенный стиль указывается. Список возможных значений см. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Переменная типа [_U_MENUorID](../../atl/reference/u-menuorid-class.md) указывать дескриптор меню или идентификатор окна. Значение по умолчанию — 0U.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 Указатель на окно создания данных, содержащихся в [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -652,7 +652,7 @@ CWindow(HWND hWnd = NULL) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*  
+*hWnd*<br/>
 [in] Дескриптор окна.
 
 ### <a name="remarks"></a>Примечания
@@ -911,7 +911,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nID*  
+*nID*<br/>
 [in] Идентификатор окна-потомков, требуется получить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -935,13 +935,13 @@ HRESULT GetDlgControl(
 
 ### <a name="parameters"></a>Параметры
 
-*nID*  
+*nID*<br/>
 [in] Идентификатор ресурса элемента управления, который требуется получить.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор интерфейса, вы хотите получить из элемента управления.
 
-*ppCtrl*  
+*ppCtrl*<br/>
 [out] Указатель на интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -977,13 +977,13 @@ HRESULT GetDlgHost(
 
 ### <a name="parameters"></a>Параметры
 
-*nID*  
+*nID*<br/>
 [in] Идентификатор ресурса элемента управления, который требуется получить.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор интерфейса, вы хотите получить из элемента управления.
 
-*ppHost*  
+*ppHost*<br/>
 [out] Указатель на интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1098,7 +1098,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>Параметры
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] Если значение равно TRUE (значение по умолчанию) метод возвращает крупных значков. В противном случае возвращается мелкого значка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1448,16 +1448,16 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>Параметры
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 Буфер, в который записывается текст окна.
 
-*nMaxCount*  
+*nMaxCount*<br/>
 Размер буфера в символах; соответствует также максимальному числу символов для записи.
 
-*bstrText*  
+*bstrText*<br/>
 BSTR, в котором для хранения текста окна.
 
-*strText*  
+*strText*<br/>
 Объект `CString` для хранения текста окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1761,7 +1761,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Блок*  
+*Блок*<br/>
 [in] Если значение TRUE (значение по умолчанию), окно будет заблокирована. В противном случае он будет разблокирована.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1833,13 +1833,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>Параметры
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Указывает стили окна для удаления во время изменения стиля.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Указывает стили окна для добавления во время изменения стиля.
 
-*nFlags*  
+*nFlags*<br/>
 [in] Флаги размещения окна. Список возможных значений см. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функции в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1879,13 +1879,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>Параметры
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Задает расширенные стили для удаления во время изменения стиля.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Задает расширенные стили нужно добавлять во время изменения стиля.
 
-*nFlags*  
+*nFlags*<br/>
 [in] Флаги размещения окна. Список возможных значений см. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функции в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1963,7 +1963,7 @@ BOOL OpenClipboard() throw();
 
 Преобразует `CWindow` объект HWND.
 
-```  
+```
 operator HWND() const throw();
 ```
 
@@ -2018,10 +2018,10 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hDC*  
+*hDC*<br/>
 [in] Дескриптор контекста устройства.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Параметры рисования. Можно использовать один или несколько из следующих флагов:
 
 - PRF_CHECKVISIBLE рисовать окно, только в том случае, если он видим.
@@ -2046,10 +2046,10 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hDC*  
+*hDC*<br/>
 [in] Дескриптор контекста устройства.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Указывает параметры для рисования. Можно использовать один или несколько из следующих флагов:
 
 - PRF_CHECKVISIBLE рисовать окно, только в том случае, если он видим.
@@ -2122,13 +2122,13 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>Параметры
 
-*nWidth*  
+*nWidth*<br/>
 Новая ширина окна в пикселях.
 
-*nHeight*  
+*nHeight*<br/>
 Новая высота окна в пикселях.
 
-*bRedraw*  
+*bRedraw*<br/>
 Флаг, указывающий, следует ли перерисовать изменения. Значение по умолчанию — FALSE, указывает, что изменения не будут перерисовываться окна.
 
 ##  <a name="screentoclient"></a>  CWindow::ScreenToClient
@@ -2236,16 +2236,16 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Параметры
 
-*message*  
+*message*<br/>
 [in] Отправляемое сообщение.
 
-*wParam*  
+*wParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*lParam*  
+*lParam*<br/>
 [in] Дополнительные сведения, относящиеся к сообщению.
 
-*bDeep*  
+*bDeep*<br/>
 [in] Если значение равно TRUE (значение по умолчанию), будут отправляться сообщения для всех окон-потомков; в противном случае он будет отправляться только к непосредственным дочерним окнам.
 
 ### <a name="remarks"></a>Примечания
@@ -2319,7 +2319,7 @@ int SetDlgCtrlID(int nID) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nID*  
+*nID*<br/>
 [in] Новое значение, задаваемое для окна идентификатор.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2379,10 +2379,10 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hFont*  
+*hFont*<br/>
 [in] Дескриптор нового шрифта.
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Если значение TRUE (значение по умолчанию), окно перерисовывается. В противном случае он не является.
 
 ##  <a name="sethotkey"></a>  CWindow::SetHotKey
@@ -2395,10 +2395,10 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*wVirtualKeyCode*  
+*wVirtualKeyCode*<br/>
 [in] Виртуального кода клавиши сочетания клавиш. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h.
 
-*wModifiers*  
+*wModifiers*<br/>
 [in] Модификаторы клавиш. Список возможных значений см. в разделе WM_SETHOTKEY в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2415,10 +2415,10 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hIcon*  
+*hIcon*<br/>
 [in] Дескриптор значка.
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] Если значение TRUE (значение по умолчанию), метод устанавливает крупных значков. В противном случае он устанавливает маленького значка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2467,7 +2467,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Указывает состояние флага перерисовки. Если значение TRUE (значение по умолчанию), перерисовки флаг установлен; Если значение равно FALSE, флаг снят.
 
 ### <a name="remarks"></a>Примечания

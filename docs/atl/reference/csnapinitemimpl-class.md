@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091833"
 ---
 # <a name="csnapinitemimpl-class"></a>Класс CSnapInItemImpl
 
@@ -54,16 +54,16 @@ ms.locfileid: "43764947"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `CSnapInItemImpl`.
 
-*bIsExtension*  
+*bIsExtension*<br/>
 Значение TRUE, если объект является расширением оснастки; в противном случае — значение FALSE.
 
 ## <a name="members"></a>Участники
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>Параметры
 
-*piCallback*  
+*piCallback*<br/>
 [in] Указатель на `IContextMenuCallback` , способную добавлять пункты в контекстное меню.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Идентифицирует определенные в консоли управления MMC, пункт меню точки вставки, которые могут использоваться. Это может быть сочетанием следующих флагов:
 
 - CCM_INSERTIONALLOWED_TOP элементы могут быть вставлены в верхней части контекстного меню.
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - Можно вставлять элементы CCM_INSERTIONALLOWED_VIEW, в меню "Вид" панели инструментов или в представлении подменю контекстное меню панели результатов.
 
-*type*  
+*type*<br/>
 [in] Указывает тип объекта. Он может иметь одно из следующих значений:
 
 - Объект данных CCT_SCOPE для контекста панели области.
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>Параметры
 
-*lCommandID*  
+*lCommandID*<br/>
 [in] Указывает идентификатор команды этого пункта меню.
 
-*type*  
+*type*<br/>
 [in] Указывает тип объекта. Он может иметь одно из следующих значений:
 
 - Объект данных CCT_SCOPE для контекста панели области.
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>Параметры
 
-*lpProvider*  
+*lpProvider*<br/>
 [in] Указатель на `IPropertySheetCallback` интерфейс.
 
-*Дескриптор*  
+*Дескриптор*<br/>
 [in] Указывает дескриптор, используемый для отправки уведомляющего сообщения MMCN_PROPERTY_CHANGE в класс соответствующие данные.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Указатель на `IExtendPropertySheet` интерфейса на объект, содержащий контекстные сведения об узле.
 
-*type*  
+*type*<br/>
 [in] Указывает тип объекта. Он может иметь одно из следующих значений:
 
 - Объект данных CCT_SCOPE для контекста панели области.
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Параметры
 
-*CF*  
+*CF*<br/>
 [in] Формат (текст, форматированного текста или форматированного текста с помощью элементов OLE) буфера обмена.
 
-*pStream*  
+*pStream*<br/>
 [in] Указатель на поток, содержащий данные объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>Параметры
 
-*ppViewType*  
+*ppViewType*<br/>
 [out] Указатель на адрес типа возвращаемого представления.
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out] Указатель на MMC_VIEW_OPTIONS перечисления, который предоставляет консоль с характеристиками, заданными параметром-владельца оснастки. Это значение может быть одно из следующих значений:
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 указывает воздержаться от представления стандартного списка вариантов представления в консоли **представление** меню. Позволяет оснастку для отображения свои собственные пользовательские представления только в области представления результатов. Это единственный флага, определенные в данный момент.
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>Параметры
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out] Указатель на `SCOPEDATAITEM` структуры `CSnapInItemImpl` объекта.
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>Параметры
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out] Указатель на `RESULTDATAITEM` структуры `CSnapInItemImpl` объекта.
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>Параметры
 
-*event*  
+*event*<br/>
 [in] Определяет действие, выполненное пользователем. Возможны следующие уведомления:
 
 - MMCN_ACTIVATE отправляется, когда окно, активации и деактивации.
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - MMCN_VIEW_CHANGE отправляется, когда оснастки можно обновить все представления при внесении изменений.
 
-*arg*  
+*arg*<br/>
 [in] Зависит от типа уведомления.
 
-*param*  
+*param*<br/>
 [in] Зависит от типа уведомления.
 
-*pComponentData*  
+*pComponentData*<br/>
 [out] Указатель на объект, реализующий интерфейс `IComponentData`. Этот параметр имеет значение NULL, если уведомление не перенаправляется из `IComponentData::Notify`.
 
-*pComponent*  
+*pComponent*<br/>
 [out] Указатель на объект, реализующий `IComponent`. Этот параметр имеет значение NULL, если уведомление не перенаправляется из `IComponent::Notify`.
 
-*type*  
+*type*<br/>
 [in] Указывает тип объекта. Он может иметь одно из следующих значений:
 
 - Объект данных CCT_SCOPE для контекста панели области.
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>Параметры
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in] Ненулевое значение, если функция должна вызываться перед элементы добавляются в контекстное меню; в противном случае 0.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in, out] Идентифицирует определенные в консоли управления MMC, пункт меню точки вставки, которые могут использоваться. Это может быть сочетанием следующих флагов:
 
 - CCM_INSERTIONALLOWED_TOP элементы могут быть вставлены в верхней части контекстного меню.
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Параметры
 
-*id*  
+*id*<br/>
 [in] Идентификатор кнопки панели инструментов, чтобы задать.
 
-*fsState*  
+*fsState*<br/>
 [in] Флаги состояния кнопки. Может иметь одно или несколько из следующих:
 
 - TBSTATE_CHECKED кнопки имеет стиль TBSTYLE_CHECKED и нажат.
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - Разрыв строки типа TBSTATE_WRAP ниже кнопки. Кнопки необходимо также иметь TBSTATE_ENABLED.
 
-*fsType*  
+*fsType*<br/>
 [in] Флаги состояния кнопки. Может иметь одно или несколько из следующих:
 
 - TBSTYLE_BUTTON создает стандартные кнопки.
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Параметры
 
-*id*  
+*id*<br/>
 [in] Идентификатор элемента меню.
 
-*pBuf*  
+*pBuf*<br/>
 [in] Указатель на строку для обновляемого элемента меню.
 
-*flags*  
+*flags*<br/>
 [in] Указывает новые флаги состояния. Это может быть сочетанием следующих флагов:
 
 - MF_POPUP указывает, что это меню, вложенного в контекстном меню. Элементы меню, положение курсора и дальнейшей подменю могут добавляться это подменю, используя его `lCommandID` как их `IInsertionPointID`.
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Параметры
 
-*id*  
+*id*<br/>
 Указывает идентификатор кнопки панели инструментов кнопку обновления.
 
-*fsState*  
+*fsState*<br/>
 Указывает состояние кнопки панели инструментов. Если задать это состояние, возвращает значение TRUE. Это может быть сочетанием следующих флагов:
 
 - ВКЛЮЧЕНО кнопки принимает ввод данных пользователем. Кнопка, которая не поддерживает это состояние не принимает ввод данных пользователем и отображается серым цветом.

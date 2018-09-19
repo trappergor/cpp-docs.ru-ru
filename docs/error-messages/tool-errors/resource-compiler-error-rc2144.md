@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора ресурсов RC2144 | Документы Microsoft
+title: Ошибка компилятора ресурсов RC2144 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b6f83f937e881cdee16c22120e6ac1839f7ad76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62f9eb2b25919a2336c36a459ef41eece447a490
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080497"
 ---
 # <a name="resource-compiler-error-rc2144"></a>Ошибка компилятора ресурсов RC2144
-PRIMARY LANGUAGE ID не является числом  
-  
- PRIMARY LANGUAGE ID должен быть шестнадцатеричным идентификатором языка. В разделе [языка и страны или региона строки](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) в *Справочник по библиотеке времени выполнения* список допустимых идентификаторов языка.  
-  
- Эта ошибка также может возникнуть, если с помощью какого-либо средства ресурсы были добавлены в RC-файл или удалены из RC-файла. Чтобы устранить эту проблему, откройте RC-файл в текстовом редакторе и вручную удалите все неиспользуемые ресурсы.
+
+PRIMARY LANGUAGE ID не является числом
+
+PRIMARY LANGUAGE ID должен быть шестнадцатеричным идентификатором языка. См. в разделе [языка и строк страны или региона](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) в *Справочник по библиотеке времени выполнения* список допустимых идентификаторов языка.
+
+Эта ошибка также может возникнуть, если с помощью какого-либо средства ресурсы были добавлены в RC-файл или удалены из RC-файла. Чтобы устранить эту проблему, откройте RC-файл в текстовом редакторе и вручную удалите все неиспользуемые ресурсы.

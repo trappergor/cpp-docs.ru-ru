@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 3) C4357 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 3) C4357 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79bb609b051def4f84924c1d9ebbcd9574d2ce77
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5bf30112e152c473c4f88a98f5f1073b789216e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086750"
 ---
 # <a name="compiler-warning-level-3-c4357"></a>Предупреждение компилятора (уровень 3) C4357
-Аргумент array в списке формальных аргументов для делегата «del» игнорируется при создании «функция»  
-  
- `ParamArray` Атрибут был проигнорирован, и `function` не может вызываться с переменным числом аргументов.  
-  
- Следующий пример приводит к возникновению ошибки C4357:  
-  
-```  
-// C4357.cpp  
-// compile with: /clr /W3 /c  
-using namespace System;  
-public delegate void f(int i, ... array<Object^>^ varargs);   // C4357  
-  
-public delegate void g(int i, array<Object^>^ varargs);   // OK  
+
+Аргумент массива параметров в списке формальных аргументов для делегата «делегат» не учитывается при создании «function»
+
+`ParamArray` Атрибут был проигнорирован, и `function` не может вызываться с аргументами-переменными.
+
+Следующий пример приводит к возникновению ошибки C4357:
+
+```
+// C4357.cpp
+// compile with: /clr /W3 /c
+using namespace System;
+public delegate void f(int i, ... array<Object^>^ varargs);   // C4357
+
+public delegate void g(int i, array<Object^>^ varargs);   // OK
 ```

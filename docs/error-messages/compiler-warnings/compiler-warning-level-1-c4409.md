@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4409 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4409 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30abb265676f3e95b799f657487e293cceb2a053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32b6c92a34f5aa991452eca4c490d8570bd0d5b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270792"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086535"
 ---
 # <a name="compiler-warning-level-1-c4409"></a>Предупреждение компилятора (уровень 1) C4409
-Недопустимый размер инструкции  
-  
- Инструкция не имеет форму с указанным размером. Минимальный допустимый размер был использован.
+
+Недопустимый размер инструкции
+
+Инструкция не имеет форму с указанным размером. Минимальный допустимый размер был использован.

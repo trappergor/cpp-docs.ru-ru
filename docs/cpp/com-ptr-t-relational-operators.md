@@ -38,93 +38,96 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4502f4752d094805ac9e31bbd4fdcbd1b0fdbdab
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6c338009b7dcd8f3810d48e17a4af470bee0837e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403265"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109318"
 ---
 # <a name="comptrt-relational-operators"></a>Операторы отношения _com_ptr_t
-**Блок, относящийся только к системам Microsoft**  
-  
- Сравнение объекта интеллектуального указателя с другим интеллектуальным указателем, необработанным указателем на интерфейс, или значение NULL.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template<typename _OtherIID>   
-bool operator==( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>    
-bool operator==( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator==( _InterfaceType* p );  
-  
-template<>   
-bool operator==( Interface* p );  
-  
-template<>   
-bool operator==( const _com_ptr_t& p ) throw();  
-  
-template<>   
-bool operator==( _com_ptr_t& p ) throw();  
-  
-bool operator==( Int null );  
-  
-template<typename _OtherIID>   
-bool operator!=( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator!=( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator!=( _InterfaceType* p );  
-  
-bool operator!=( Int null );  
 
-template<typename _OtherIID>   
-bool operator<( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator<( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator<( _InterfaceType* p );  
+**Блок, относящийся только к системам Microsoft**
 
-template<typename _OtherIID>   
-bool operator>( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator>(_com_ptr_t< _OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator>( _InterfaceType* p );  
-  
-template<typename _OtherIID>   
-bool operator<=( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator<=( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator<=( _InterfaceType* p );  
-  
+Сравнение объекта интеллектуального указателя с другим интеллектуальным указателем, необработанным указателем на интерфейс, или значение NULL.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+template<typename _OtherIID> 
+bool operator==( const _com_ptr_t<_OtherIID>& p );
+
 template<typename _OtherIID>  
-bool operator>=( const _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _OtherIID>   
-bool operator>=( _com_ptr_t<_OtherIID>& p );  
-  
-template<typename _InterfaceType>   
-bool operator>=( _InterfaceType* p );  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Сравнивает объект интеллектуального указателя в другой смарт-указателем, необработанным указателем на интерфейс, или значение NULL. За исключением тестов указателя NULL, эти операторы сначала запрашивают оба указателя для `IUnknown`и сравните результаты.  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Класс _com_ptr_t](../cpp/com-ptr-t-class.md)
+bool operator==( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator==( _InterfaceType* p );
+
+template<> 
+bool operator==( Interface* p );
+
+template<> 
+bool operator==( const _com_ptr_t& p ) throw();
+
+template<> 
+bool operator==( _com_ptr_t& p ) throw();
+
+bool operator==( Int null );
+
+template<typename _OtherIID> 
+bool operator!=( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator!=( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator!=( _InterfaceType* p );
+
+bool operator!=( Int null );
+
+template<typename _OtherIID> 
+bool operator<( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator<( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator<( _InterfaceType* p );
+
+template<typename _OtherIID> 
+bool operator>( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator>(_com_ptr_t< _OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator>( _InterfaceType* p );
+
+template<typename _OtherIID> 
+bool operator<=( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator<=( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator<=( _InterfaceType* p );
+
+template<typename _OtherIID>
+bool operator>=( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID> 
+bool operator>=( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType> 
+bool operator>=( _InterfaceType* p );
+```
+
+## <a name="remarks"></a>Примечания
+
+Сравнивает объект интеллектуального указателя в другой смарт-указателем, необработанным указателем на интерфейс, или значение NULL. За исключением тестов указателя NULL, эти операторы сначала запрашивают оба указателя для `IUnknown`и сравните результаты.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Класс _com_ptr_t](../cpp/com-ptr-t-class.md)

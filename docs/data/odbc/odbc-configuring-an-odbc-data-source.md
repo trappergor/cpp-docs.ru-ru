@@ -1,5 +1,5 @@
 ---
-title: 'ODBC: Настройка источника данных ODBC | Документы Microsoft'
+title: 'ODBC: Настройка источника данных ODBC | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 93b2158005b7cd31fc6a3710812d54a3968ee014
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db65e27feee5ac8001cb25592e695831c431742b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089156"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104522"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC. Настройка источника данных ODBC
-Для использования [источника данных](../../data/odbc/data-source-odbc.md) с помощью приложения, разработанные вами для его настройки необходимо использовать администратор ODBC. Администратор ODBC сохраняет сведения о доступных источников данных и сведения об их подключении в реестре Windows. Используйте администратор ODBC для добавления, изменения и удаления источников данных в **источники данных** диалоговое окно и для добавления и удаления драйверов ODBC.  
+
+Чтобы использовать [источника данных](../../data/odbc/data-source-odbc.md) с приложением, вы разработали, необходимо использовать администратор ODBC для ее настройки. Администратор ODBC следит за доступные источники данных и данные о соединении в реестре Windows. Используйте администратор ODBC для добавления, изменения и удаления источников данных в **источников данных** диалоговое окно, а также добавление и удаление драйверов ODBC.  
   
 > [!NOTE]
->  Эти сведения применимы при использовании классов MFC объекта доступа к данным (DAO) для доступа к ODBC и при использовании классов MFC ODBC.  
+>  Эти сведения применимы при использовании классов MFC объекта доступа к данным (DAO) для доступа к ODBC и при использовании классам ODBC библиотеки MFC.  
   
- Администратор ODBC устанавливается автоматически вместе с поддержкой базы данных библиотеки Microsoft Foundation Classes (MFC). Дополнительные сведения о программе администратора ODBC см. в разделе [администратор ODBC](../../data/odbc/odbc-administrator.md) и системой документации ODBC API ссылку справки.  
+Администратор ODBC устанавливается автоматически вместе с поддержкой базы данных библиотеки Microsoft Foundation Classes (MFC). Дополнительные сведения о программе администратора ODBC, см. в разделе [администратор ODBC](../../data/odbc/odbc-administrator.md) и интерактивной системы справки по Справочник по API ODBC.  
   
- Сведения о способах написания программ установки и администрирования ODBC для приложений баз данных MFC[см](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).  
+Сведения о способах написания программ установки и администрирования ODBC для приложений баз данных MFC[см](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).  
   
 ## <a name="see-also"></a>См. также  
- [Основы ODBC](../../data/odbc/odbc-basics.md)   
- [ODBC. Прямой вызов функций API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
+
+[Основы ODBC](../../data/odbc/odbc-basics.md)<br/>
+[ODBC. Прямой вызов функций API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

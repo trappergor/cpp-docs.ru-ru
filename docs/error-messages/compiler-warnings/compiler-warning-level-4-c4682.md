@@ -1,5 +1,5 @@
 ---
-title: Предупреждение компилятора предупреждение (уровень 4) C4682 | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4682 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 076e8de6cbffa1f531cec875fd682a1daee42e74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa804b96c2177fc4d263b76feeaa770fea07b5de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092639"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>Предупреждение компилятора (уровень 4) C4682
-"параметр": не указан атрибут параметра направления, по умолчанию принимается [in]  
-  
- Метод параметра в интерфейсе с атрибутами не содержит атрибута направления [in](../../windows/in-cpp.md) или [out](../../windows/out-cpp.md). По умолчанию принимается атрибут in.  
-  
- Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Следующий пример приводит к возникновению предупреждения C4682:  
-  
-```  
-// C4682.cpp  
-// compile with: /W4  
-#pragma warning(default : 4682)  
-#include <windows.h>  
-[module(name="MyModule")];  
-  
-[ library_block, object, uuid("c54ad59d-d516-41dd-9acd-afda17565c2b") ]  
-__interface IMyIface : IUnknown  
-{  
-   HRESULT f1(int i, int *pi); // C4682  
-   // try the following line  
-   // HRESULT f1([in] int i, [in] int *pi);  
-};  
-  
-int main()  
-{  
-}  
+
+"параметр": не указан атрибут параметра направления, по умолчанию принимается [in]
+
+Метод параметра в интерфейсе с атрибутами не содержит атрибута направления [in](../../windows/in-cpp.md) или [out](../../windows/out-cpp.md). По умолчанию принимается атрибут in.
+
+Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+Следующий пример приводит к возникновению предупреждения C4682:
+
+```
+// C4682.cpp
+// compile with: /W4
+#pragma warning(default : 4682)
+#include <windows.h>
+[module(name="MyModule")];
+
+[ library_block, object, uuid("c54ad59d-d516-41dd-9acd-afda17565c2b") ]
+__interface IMyIface : IUnknown
+{
+   HRESULT f1(int i, int *pi); // C4682
+   // try the following line
+   // HRESULT f1([in] int i, [in] int *pi);
+};
+
+int main()
+{
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3865 | Документы Microsoft
+title: Ошибка компилятора C3865 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99a872d4cf7ed285a0798461c77adf904cfa3e71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fd5c83d922601ca4cdffe0f3772723b31e630b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275503"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090845"
 ---
 # <a name="compiler-error-c3865"></a>Ошибка компилятора C3865
-«соглашение_о_вызовах»: может использоваться только в собственных функциях-членах  
-  
- Соглашение о вызовах использовался на функцию, которая была глобальной функции или функции-члена управляемого. Соглашение о вызовах может использоваться только в функции-члене native (неуправляемой).  
-  
- Дополнительные сведения см. в разделе [соглашения о вызовах](../../cpp/calling-conventions.md).  
-  
- Следующий пример приводит к возникновению ошибки C3865:  
-  
-```  
-// C3865.cpp  
-// compile with: /clr  
-// processor: x86  
-void __thiscall Func(){}   // C3865  
-  
-// OK  
-struct MyType {  
-   void __thiscall Func(){}  
-};  
+
+«соглашение_о_вызовах»: может использоваться только в собственных функциях-членах
+
+Соглашение о вызове был использован на функцию, которая была глобальной функции или функции-члена управляемого. Соглашение о вызовах может использоваться только в функции-члене собственные (не управляемые).
+
+Дополнительные сведения см. в разделе [соглашения о вызовах](../../cpp/calling-conventions.md).
+
+Следующий пример приводит к возникновению ошибки C3865:
+
+```
+// C3865.cpp
+// compile with: /clr
+// processor: x86
+void __thiscall Func(){}   // C3865
+
+// OK
+struct MyType {
+   void __thiscall Func(){}
+};
 ```

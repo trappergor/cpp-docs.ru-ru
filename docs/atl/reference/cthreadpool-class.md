@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753599f08d1e8ee238097027c501a0b56e40300
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a5541613bddd1e6a4fbac3a5555e54ce30fb94c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091703"
 ---
 # <a name="cthreadpool-class"></a>Класс CThreadPool
 
@@ -44,16 +44,16 @@ ms.locfileid: "43757398"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template <class Worker, class ThreadTraits = DefaultThreadTraits>  
+template <class Worker, class ThreadTraits = DefaultThreadTraits>
 class CThreadPool : public IThreadPoolConfig
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*Рабочей роли*  
+*Рабочей роли*<br/>
 Класс, соответствующий требованиям к [рабочий архетип](../../atl/reference/worker-archetype.md) предоставить код, используемый для обработки рабочих элементов в очередь в пуле потоков.
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 Класс, предоставляющий функция, используемая для создания потоков в пуле.
 
 ## <a name="members"></a>Участники
@@ -180,7 +180,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Адрес переменной, которая, в случае успешного выполнения получает количество потоков в пуле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -197,7 +197,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Адрес переменной, которая, в случае успешного выполнения Получает максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -222,20 +222,20 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>Параметры
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Параметр рабочей роли будет передан в объект рабочего потока `Initialize`, `Execute`, и `Terminate` методы.
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Запрашиваемое количество потоков в пуле.
 
 Если *nNumThreads* является отрицательным, его абсолютное значение будет умножена на число процессоров в компьютере для получения общего числа потоков.
 
 Если *nNumThreads* равен нулю, ATLS_DEFAULT_THREADSPERPROC будет умножена на число процессоров в компьютере для получения общего числа потоков.  Значение по умолчанию — 2 потоков на процессор. При необходимости можно определить собственные положительное целочисленное значение для этого символа перед включением файлов atlutil.h.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 Размер стека для каждого потока в пуле.
 
-*hCompletion*  
+*hCompletion*<br/>
 Дескриптор объекта, который необходимо связать с портом завершения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -264,7 +264,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Запрос*  
+*Запрос*<br/>
 Запрос будет поставлен в очередь.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Запрашиваемое количество потоков в пуле.
 
 Если *nNumThreads* является отрицательным, его абсолютное значение будет умножена на число процессоров в компьютере для получения общего числа потоков.
@@ -326,7 +326,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Запрошенное максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -349,7 +349,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Запрошенное максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы. Если 0 или значение не указано, этот метод будет использовать время ожидания, заданное [CThreadPool::SetTimeout](#settimeout).
 
 ### <a name="remarks"></a>Примечания
@@ -358,6 +358,6 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
+[Интерфейс IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Классы](../../atl/reference/atl-classes.md)

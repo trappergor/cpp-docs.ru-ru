@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 2) C4099 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 2) C4099 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afecb3fb2420d27bedf16c81894f224a1119a67b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d7ffee02e8e5414a0e06cc4ba0da77a50c75f53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33309472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110176"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>Предупреждение компилятора (уровень 2) C4099
-«Идентификатор»: имя типа, ранее отображенное с помощью objecttype1 теперь отображено с помощью «objecttype2»  
-  
- Объект, объявленный как структура определен как класс или объекта, объявленного как класс определен как структура. Компилятор использует тип, указанный в определении.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C4099.  
-  
-```  
-// C4099.cpp  
-// compile with: /W2 /c  
-struct A;  
-class A {};   // C4099, use different identifer or use same object type  
+
+«Идентификатор»: имя типа, ранее отображенное с помощью objecttype1 теперь увидеть при помощи «objecttype2»
+
+Объект, объявленный как структура определяется как класс или объект объявлен как класс, определенный как структура. Компилятор использует тип, заданный в определении.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C4099.
+
+```
+// C4099.cpp
+// compile with: /W2 /c
+struct A;
+class A {};   // C4099, use different identifer or use same object type
 ```

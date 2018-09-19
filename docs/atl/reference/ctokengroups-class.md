@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87109793625435945c45b2643ccd674946acff49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d14a839cded7d22236912ba52a733a9ce15f7aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103247"
 ---
 # <a name="ctokengroups-class"></a>Класс CTokenGroups
 
@@ -92,19 +92,19 @@ class CTokenGroups
 Добавляет `CSid` или имеющиеся `TOKEN_GROUPS` структуру `CTokenGroups` объекта.
 
 ```
-void Add(const CSid& rSid, DWORD dwAttributes) throw(... );  
+void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 Объект [CSid](../../atl/reference/csid-class.md) объекта.
 
-*dwAttributes*  
+*dwAttributes*<br/>
 Атрибуты, связываемые с `CSid` объекта.
 
-*rTokenGroups*  
+*rTokenGroups*<br/>
 Объект [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) структуры.
 
 ### <a name="remarks"></a>Примечания
@@ -117,13 +117,13 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 
 ```
 CTokenGroups() throw();
-CTokenGroups(const CTokenGroups& rhs) throw(... );  
+CTokenGroups(const CTokenGroups& rhs) throw(... );
 CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `CTokenGroups` Объекта или [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) структуры с помощью которого создается `CTokenGroups` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -152,7 +152,7 @@ bool Delete(const CSid& rSid) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md) объекта, для которого следует удалить идентификатор безопасности (SID) и атрибутов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -215,10 +215,10 @@ void GetSidsAndAttributes(
 
 ### <a name="parameters"></a>Параметры
 
-*pSids*  
+*pSids*<br/>
 Указатель на массив [CSid](../../atl/reference/csid-class.md) объектов.
 
-*pAttributes*  
+*pAttributes*<br/>
 Указатель на массив DWORD. Если этот параметр опущен или имеет значение NULL, то атрибуты не извлекаются.
 
 ### <a name="remarks"></a>Примечания
@@ -237,10 +237,10 @@ bool LookupSid(
 
 ### <a name="parameters"></a>Параметры
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md) объекта.
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 Указатель на значение типа DWORD, который будет принимать `CSid` атрибута объекта. Если опущен, либо значение NULL, не удалось получить атрибут.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -256,13 +256,13 @@ bool LookupSid(
 Оператор присвоения.
 
 ```
-CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);  
+CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);
 CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*  
+*правая часть*<br/>
 `CTokenGroups` Объекта или [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) структуры, чтобы назначить `CTokenGroups` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -273,7 +273,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 
 Приводит значение к указателю на `TOKEN_GROUPS` структуры.
 
-```  
+```
 operator const TOKEN_GROUPS *() const throw(...);
 ```
 
@@ -283,7 +283,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ## <a name="see-also"></a>См. также
 
-[Образец безопасности](../../visual-cpp-samples.md)   
-[Класс CSid](../../atl/reference/csid-class.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
+[Образец безопасности](../../visual-cpp-samples.md)<br/>
+[Класс CSid](../../atl/reference/csid-class.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

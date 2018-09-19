@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2768 | Документы Microsoft
+title: Ошибка компилятора C2768 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ee0fd3fa213639e70199cfe5653ee2034bc39b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c76173f99dbc2fb415b60212109242845501694
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109110"
 ---
 # <a name="compiler-error-c2768"></a>Ошибка компилятора C2768
-«функция»: Недопустимое использование явных аргументов шаблона  
-  
- Компилятору не удалось определить, если определение функции должна быть явной специализации шаблона функции или определении функции должна быть новой функции.  
-  
- Эта ошибка появилась в Visual Studio .NET 2003 в составе усовершенствований согласованности компилятора.  
-  
- Следующий пример приводит к возникновению ошибки C2768:  
-  
-```  
-// C2768.cpp  
-template<typename T>  
-void f(T) {}  
-  
-void f<int>(int) {}   // C2768  
-  
-// an explicit specialization  
-template<>  
-void f<int>(int) {}   
-  
-// global nontemplate function overload  
-void f(int) {}  
+
+«функция»: Недопустимое использование явных аргументов шаблона
+
+Компилятору не удалось определить, если определение функции должна быть явной специализации шаблона функции или определении функции должна быть новой функции.
+
+Эта ошибка появилась в Visual Studio .NET 2003, в рамках улучшения соответствия компилятора.
+
+Следующий пример приводит к возникновению ошибки C2768:
+
+```
+// C2768.cpp
+template<typename T>
+void f(T) {}
+
+void f<int>(int) {}   // C2768
+
+// an explicit specialization
+template<>
+void f<int>(int) {}
+
+// global nontemplate function overload
+void f(int) {}
 ```

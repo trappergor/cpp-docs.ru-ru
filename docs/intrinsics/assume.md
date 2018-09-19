@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0cbb7f3bc7263165a988a910f0311d3d2c368e0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104326"
 ---
 # <a name="assume"></a>__assume
 **Блок, относящийся только к системам Microsoft**  
@@ -38,8 +38,8 @@ __assume(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `expression`  
- Любое выражение, которое считается, что принимает значение true.  
+*Выражение*<br/>
+Любое выражение, которое считается, что принимает значение true.  
   
 ## <a name="remarks"></a>Примечания  
  Оптимизатор предполагает, что условие, представленное `expression` имеет значение true, в точке, где появляется ключевое слово и сохраняет значение true до изменения `expression` (например, путем присваивания переменной). Выборочное использование подсказок, передаваемых оптимизатору `__assume`, может улучшить оптимизацию.  

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac922526abec73d7219f64cb1004319e9547fef6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093854"
 ---
 # <a name="idispeventimpl-class"></a>Класс IDispEventImpl
 
@@ -45,31 +45,31 @@ template <UINT nID, class T,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
     WORD wMinor = 0, 
-    class tihclass = CcomTypeInfoHolder>  
+    class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*nID*  
+*nID*<br/>
 Уникальный идентификатор для исходного объекта. Когда `IDispEventImpl` является базовым классом для составного элемента управления, используйте идентификатор ресурса для нужного элемента управления в контейнере для этого параметра. В других случаях используйте произвольное целое положительное число.
 
-*T*  
+*T*<br/>
 Класс пользователя, который является производным от `IDispEventImpl`.
 
-*pdiid*  
+*pdiid*<br/>
 Указатель на идентификатор IID disp-интерфейс событий, реализованные этим классом. Этот интерфейс должен быть определен в библиотеке типов, обозначенное с помощью *plibid*, *wMajor*, и *wMinor*.
 
-*plibid*  
+*plibid*<br/>
 Указатель на библиотеку типов, определяющий интерфейс диспетчеризации, на которые указывают *pdiid*. Если **& GUID_NULL**, будет загрузить библиотеку типов из объекта источника события.
 
-*wMajor*  
+*wMajor*<br/>
 Основной номер версии для библиотеки типов. Значение по умолчанию — 0.
 
-*wMinor*  
+*wMinor*<br/>
 Дополнительный номер версии для библиотеки типов. Значение по умолчанию — 0.
 
-*tihclass*  
+*tihclass*<br/>
 Класс, используемый для управления сведения о типе *T*. Значение по умолчанию — класс типа `CComTypeInfoHolder`; тем не менее, можно переопределить этот параметр шаблона, предоставляет класс типа, отличные от `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Участники
@@ -143,16 +143,16 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Ссылка на идентификатор функции.
 
-*dispidMember*  
+*dispidMember*<br/>
 [in] Идентификатор диспетчера функции.
 
-*lcid*  
+*lcid*<br/>
 [in] Контекст языкового идентификатора функции.
 
-*Сведения о*  
+*Сведения о*<br/>
 [in] Структура, указывающее, как эта функция вызывается.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -213,10 +213,10 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>Параметры
 
-*pTI*  
+*pTI*<br/>
 [in] Указатель на [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) интерфейса, содержащего определяемый пользователем тип.
 
-*hrt*  
+*hrt*<br/>
 [in] Дескриптор для описания типа, который требуется получить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -249,10 +249,10 @@ typedef tihclass _tihclass;
 
 ## <a name="see-also"></a>См. также
 
-[Структура _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)   
-[Класс IDispatchImpl](../../atl/reference/idispatchimpl-class.md)   
-[Класс IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)   
-[SINK_ENTRY](composite-control-macros.md#sink_entry)   
-[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[Структура _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)<br/>
+[Класс IDispatchImpl](../../atl/reference/idispatchimpl-class.md)<br/>
+[Класс IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
+[SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
+[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

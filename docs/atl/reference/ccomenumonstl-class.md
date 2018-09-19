@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5938785d7d9fdccae73048392b74cc5bb34f6680
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4821ba572d2719ebba6c693cc39b96971002512
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106328"
 ---
 # <a name="ccomenumonstl-class"></a>Класс CComEnumOnSTL
 
@@ -32,7 +32,7 @@ ms.locfileid: "43753559"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>  
+    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>
 class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
 T,
     Copy,
@@ -42,19 +42,19 @@ CollType>,
 
 #### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 COM-перечислитель. См. в разделе [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) пример.
 
-*piid*  
+*piid*<br/>
 Указатель на идентификатор интерфейса интерфейса перечислителя.
 
-*T*  
+*T*<br/>
 Тип элемента, доступные в интерфейсе перечислителя.
 
-*Копировать*  
+*Копировать*<br/>
 Объект [Копировать политику](../../atl/atl-copy-policy-classes.md) класса.
 
-*CollType*  
+*CollType*<br/>
 Класс контейнера стандартной библиотеки C++.
 
 ## <a name="remarks"></a>Примечания
@@ -111,9 +111,9 @@ COM-перечислитель. См. в разделе [IEnumString](/windows/d
 
 ## <a name="see-also"></a>См. также
 
-[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
-[ATLCollections: в нем демонстрируется пользовательских классов политики копирования, ICollectionOnSTLImpl и CComEnumOnSTL](../../visual-cpp-samples.md)   
-[Общие сведения о классе](../../atl/atl-class-overview.md)   
-[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
+[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[ATLCollections: в нем демонстрируется пользовательских классов политики копирования, ICollectionOnSTLImpl и CComEnumOnSTL](../../visual-cpp-samples.md)<br/>
+[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [Класс IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)

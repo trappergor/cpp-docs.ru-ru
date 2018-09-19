@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086310efe565e060645320db30526b03d57a68af
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b5ab980813eec09fe0eef35f54280444d8c08b80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105393"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Глобальные функции преобразования пикселей/HIMETRIC
 
@@ -46,10 +46,10 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="parameters"></a>Параметры
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [in] Указатель на размер объекта в единицах HIMETRIC.
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [out] Указатель, на которой должен возвращаться размер объекта в пикселях.
 
 ### <a name="example"></a>Пример
@@ -72,10 +72,10 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="parameters"></a>Параметры
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [in] Указатель на размер объекта в пикселях.
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [out] Где размер объекта в единицах HIMETRIC будет возвращаться указатель.
 
 ### <a name="example"></a>Пример

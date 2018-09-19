@@ -1,5 +1,5 @@
 ---
-title: Создание потребителя OLE DB с помощью мастера | Документы Microsoft
+title: Создание потребителя OLE DB с помощью мастера | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fa7b9323630307aaf959cd55267a918bbd628bc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097004"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097905"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Создание объекта-получателя OLE DB с помощью мастера
-Описано, как использовать мастер проектов ATL и Мастер потребителя ATL OLE DB для создания объекта-получателя OLE DB-шаблоны и затем изменить основной код консольного приложения, для получения и отображения данных из таблицы базы данных.  
+
+Эта процедура демонстрирует, как можно использовать мастер проектов ATL и Мастер потребителя ATL OLE DB для создания объекта-получателя шаблонов OLE DB и затем изменить основной код приложения консоли для получения и отображения данных из таблицы базы данных.  
   
- В двух последних разделах объясняется код создаваемые мастером потребителя OLE DB.  
+В последних двух разделах объясняется код создаваемые мастером потребителя OLE DB.  
   
- Данный раздел охватывает следующее:  
+Данный раздел охватывает следующее:  
   
--   [Создание простого объекта-получателя](../../data/oledb/creating-a-simple-consumer.md)  
+- [Создание простого объекта-получателя](../../data/oledb/creating-a-simple-consumer.md)  
   
--   [Реализация простых объектов-получателей](../../data/oledb/implementing-a-simple-consumer.md)  
+- [Реализация простых объектов-получателей](../../data/oledb/implementing-a-simple-consumer.md)  
   
--   [Классы, создаваемые мастером объекта-получателя](../../data/oledb/consumer-wizard-generated-classes.md)  
+- [Классы, создаваемые мастером объекта-получателя](../../data/oledb/consumer-wizard-generated-classes.md)  
   
--   [Методы, создаваемые мастером объекта-получателя](../../data/oledb/consumer-wizard-generated-methods.md)  
+- [Методы, создаваемые мастером объекта-получателя](../../data/oledb/consumer-wizard-generated-methods.md)  
   
 ## <a name="see-also"></a>См. также  
- [Создание объекта-получателя OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+
+[Создание объекта-получателя OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

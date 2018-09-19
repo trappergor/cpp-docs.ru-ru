@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dcaa927bc9fe38ca45cf938a20cf08713ecff1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755521"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098957"
 ---
 # <a name="ccomobjectrootex-class"></a>Класс CComObjectRootEx
 
@@ -44,13 +44,13 @@ ms.locfileid: "43755521"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class ThreadModel>  
+template<class ThreadModel>
 class CComObjectRootEx : public CComObjectRootBase
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*ThreadModel*  
+*ThreadModel*<br/>
 Класс, методы которого реализовать нужный потоковой модели. Можно явно выбрать потоковую модель, задав *ThreadModel* для [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), или [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Вы можете принять потоковую модель сервера по умолчанию, задав *ThreadModel* для [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) или [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
 
 ## <a name="members"></a>Участники
@@ -205,16 +205,16 @@ static HRESULT InternalQueryInterface(
 
 ### <a name="parameters"></a>Параметры
 
-*pThis*  
+*pThis*<br/>
 [in] Указатель на объект, содержащий карту COM интерфейсы, предоставляемые в `QueryInterface`.
 
-*pEntries*  
+*pEntries*<br/>
 [in] Указатель на `_ATL_INTMAP_ENTRY` структуры, который обращается к карту доступных интерфейсов.
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID запрашиваемого интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, заданный в *iid*, или значение NULL, если интерфейс не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -308,7 +308,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 ### <a name="parameters"></a>Параметры
 
-*bStarting*  
+*bStarting*<br/>
 [out] Имеет значение TRUE, если инициализируемого класса; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
@@ -343,10 +343,10 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор GUID запрашиваемого интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, заданный в *iid*, или значение NULL, если статистическая обработка не поддерживает интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -381,7 +381,7 @@ void Unlock();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Класс CComObject](../../atl/reference/ccomobject-class.md)   
-[Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
+[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Класс CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

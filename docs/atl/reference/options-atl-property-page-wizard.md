@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f3cf6a9e2c9924ae72624c931a4551736f8956
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 92f3855cf9c760ef8e6bb761f4a0bac042f8c539
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081771"
 ---
 # <a name="options-atl-property-page-wizard"></a>Параметры, мастер страниц свойств ATL
 
@@ -50,6 +50,6 @@ ms.locfileid: "45711832"
 
 ## <a name="see-also"></a>См. также
 
-[Мастер страницы свойств ATL](../../atl/reference/atl-property-page-wizard.md)   
+[Мастер страницы свойств ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Строки, мастер страницы свойств ATL](../../atl/reference/strings-atl-property-page-wizard.md)
 

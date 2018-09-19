@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2573 | Документы Microsoft
+title: Ошибка компилятора C2573 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03c874cbf2f8a8594c032506ed4e47c501cb9827
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51353430b7f2e44bd272a471dfc92a37961aa7fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232291"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083708"
 ---
 # <a name="compiler-error-c2573"></a>Ошибка компилятора C2573
-"класс": невозможно удалить указатели на объекты этого типа; в классе нет перегруженного оператора "operator delete" без аргументов размещения.  
-  
- В классе отсутствует оператор delete без аргументов размещения.
+
+"класс": невозможно удалить указатели на объекты этого типа; в классе нет перегруженного оператора "operator delete" без аргументов размещения.
+
+В классе отсутствует оператор delete без аргументов размещения.

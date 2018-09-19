@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4031 компилятора | Документы Microsoft
+title: Предупреждение (уровень 1) C4031 компилятора | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 145619065350adec057b276712f5d2f0fc3ea080
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0957c4de911f8e117198b67a9e172a8c232b5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270860"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082135"
 ---
-# <a name="compiler-warning-level-1-c4031"></a>Компилятор C4031 предупреждение (уровень 1)
-второй список формальных параметров длиннее первого  
-  
- Функция будет повторно объявлена с другими формальными параметрами. Компилятор использует формальные параметры в первом объявлении.
+# <a name="compiler-warning-level-1-c4031"></a>Компилятор предупреждение (уровень 1) C4031
+
+второй список формальных параметров длиннее первого
+
+Функция объявляется с другими формальными параметрами. Компилятор использует формальные параметры в первом объявлении.

@@ -1,5 +1,5 @@
 ---
-title: Класс improper_lock | Документы Microsoft
+title: Класс improper_lock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695604"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106198"
 ---
 # <a name="improperlock-class"></a>Класс improper_lock
 Этот класс описывает исключение, создаваемое, когда блокировка получена неправильно.  
@@ -43,7 +43,7 @@ class improper_lock : public std::exception;
 |[improper_lock](#ctor)|Перегружен. Создает элемент `improper_lock exception`.|  
   
 ## <a name="remarks"></a>Примечания  
- Как правило это исключение вызывается при попытке получить блокировку допускает повторные входы рекурсивно на том же контексте.  
+ Как правило это исключение возникает при попытке получить блокировку не допускающий повторные входы рекурсивно на том же контексте.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
@@ -66,8 +66,8 @@ improper_lock() throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_Message`  
- Описательное сообщение об ошибке.  
+*_Message*<br/>
+Описательное сообщение об ошибке.  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   

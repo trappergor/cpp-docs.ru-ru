@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3104 | Документы Microsoft
+title: Ошибка компилятора C3104 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,66 +16,69 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ded5185e3f87ce7f1b5a4a7015ce3c4476c949b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9bce4d47658b012824087f62eb55ccd7ddf669
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111151"
 ---
 # <a name="compiler-error-c3104"></a>Ошибка компилятора C3104
-Недопустимый аргумент атрибута  
-  
- Указан недопустимый аргумент для атрибута.  
-  
- В разделе [типы параметров атрибутов](../../windows/attribute-parameter-types-cpp-component-extensions.md) для получения дополнительной информации.  
-  
- Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: при передаче управляемых массивов в настраиваемых атрибутов, тип массива больше не выводится из списка инициализации статистических выражений. Компилятор теперь необходимо указать тип массива, а также список инициализаторов.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C3104.  
-  
-```  
-// C3104a.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[AttributeUsage(AttributeTargets::Class)]  
-public ref struct ABC : public Attribute {  
-   ABC(array<int>^){}  
-   array<double> ^ param;  
-};  
-  
-[ABC( {1,2,3}, param = {2.71, 3.14})]   // C3104  
-// try the following line instead  
-// [ABC( gcnew array<int> {1,2,3}, param = gcnew array<double>{2.71, 3.14})]   
-ref struct AStruct{};  
-```  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C3104.  
-  
-```  
-// C3104b.cpp  
-// compile with: /clr /c  
-// C3104 expected  
-using namespace System;  
-  
-int func() {  
-   return 0;   
-}  
-  
-[attribute(All)]  
-ref class A {  
-public:   
-   A(int) {}  
-};  
-  
-// Delete the following 2 lines to resolve.  
-[A(func())]  
-ref class B {};  
-  
-// OK  
-[A(0)]  
-ref class B {};  
-```  
+
+Недопустимый аргумент атрибута
+
+Указан недопустимый аргумент для атрибута.
+
+См. в разделе [типы параметров атрибутов](../../windows/attribute-parameter-types-cpp-component-extensions.md) Дополнительные сведения.
+
+Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: при передаче управляемых массивов в настраиваемых атрибутов, тип массива больше не выводится из списка агрегатной инициализации. Компилятор теперь требует указать тип массива, а также список инициализаторов.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3104.
+
+```
+// C3104a.cpp
+// compile with: /clr /c
+using namespace System;
+
+[AttributeUsage(AttributeTargets::Class)]
+public ref struct ABC : public Attribute {
+   ABC(array<int>^){}
+   array<double> ^ param;
+};
+
+[ABC( {1,2,3}, param = {2.71, 3.14})]   // C3104
+// try the following line instead
+// [ABC( gcnew array<int> {1,2,3}, param = gcnew array<double>{2.71, 3.14})]
+ref struct AStruct{};
+```
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3104.
+
+```
+// C3104b.cpp
+// compile with: /clr /c
+// C3104 expected
+using namespace System;
+
+int func() {
+   return 0;
+}
+
+[attribute(All)]
+ref class A {
+public:
+   A(int) {}
+};
+
+// Delete the following 2 lines to resolve.
+[A(func())]
+ref class B {};
+
+// OK
+[A(0)]
+ref class B {};
+```

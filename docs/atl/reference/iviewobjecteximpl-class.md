@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47c017a178d0a222780532b74db4135447f062
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a7364f86ad08f882660f49556853826bb7186f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108434"
 ---
 # <a name="iviewobjecteximpl-class"></a>Класс IViewObjectExImpl
 
@@ -49,14 +49,14 @@ ms.locfileid: "43760452"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IViewObjectExImpl 
    : public IViewObjectEx
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IViewObjectExImpl`.
 
 ## <a name="members"></a>Участники
@@ -309,7 +309,7 @@ HRESULT CloseHandle(HANDLE hHandle);
 
 ### <a name="parameters"></a>Параметры
 
-*hHandle*  
+*hHandle*<br/>
 Дескриптор будет закрыт.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -336,10 +336,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Параметры
 
-*dwParam*  
+*dwParam*<br/>
 Параметр user.
 
-*hObject*  
+*hObject*<br/>
 Дескриптор, который оповещения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -358,8 +358,8 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)   
-[Учебник](../../atl/active-template-library-atl-tutorial.md)   
-[Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)   
+[Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
+[Учебник](../../atl/active-template-library-atl-tutorial.md)<br/>
+[Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

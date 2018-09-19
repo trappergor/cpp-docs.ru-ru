@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2208 | Документы Microsoft
+title: Ошибка компилятора C2208 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24377d17735fc63e9dc0541dfd9fb432eb0e0cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6721166efad2fc214ccf2c2a45ec2342b67c39e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101726"
 ---
 # <a name="compiler-error-c2208"></a>Ошибка компилятора C2208
-«Тип»: нет членов, определенных с помощью этого типа  
-  
- — Идентификатор, разрешающийся в имя типа в объявлении агрегата, но компилятор не может объявить член.  
-  
- Следующий пример приводит к возникновению ошибки C2208:  
-  
-```  
-// C2208.cpp  
-class C {  
-   C;   // C2208  
-   C(){}   // OK  
-};  
+
+«Тип»: нет членов, определенных с помощью этого типа
+
+— Идентификатор, разрешающийся в имя типа в объявлении агрегата, но компилятор не может объявить элемент.
+
+Следующий пример приводит к возникновению ошибки C2208:
+
+```
+// C2208.cpp
+class C {
+   C;   // C2208
+   C(){}   // OK
+};
 ```

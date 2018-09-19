@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3053 | Документы Microsoft
+title: Ошибка компилятора C3053 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e140e2da535ebebbc332a8342d8970ff61a528d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c50112be2650c4b379b6de93acaa73a9cb285687
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112035"
 ---
 # <a name="compiler-error-c3053"></a>Ошибка компилятора C3053
-"символ": "threadprivate" допускается только для глобальных или статических элементов данных  
-  
- Символы, передаваемые в [threadprivate](../../parallel/openmp/reference/threadprivate.md) , должны быть глобальными или статическими.  
-  
- Следующий пример приводит к возникновению ошибки C3053.  
-  
-```  
-// C3053.cpp  
-// compile with: /openmp  
-void Test() {  
-   int x, y;  
-   #pragma omp threadprivate(x, y)   // C3053  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
-```  
-  
- Возможное решение  
-  
-```  
-// C3053b.cpp  
-// compile with: /openmp /LD  
-int x, y;  
-#pragma omp threadprivate(x, y)  
-  
-void Test() {  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
+
+"символ": "threadprivate" допускается только для глобальных или статических элементов данных
+
+Символы, передаваемые в [threadprivate](../../parallel/openmp/reference/threadprivate.md) , должны быть глобальными или статическими.
+
+Следующий пример приводит к возникновению ошибки C3053.
+
+```
+// C3053.cpp
+// compile with: /openmp
+void Test() {
+   int x, y;
+   #pragma omp threadprivate(x, y)   // C3053
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
+```
+
+Возможное решение
+
+```
+// C3053b.cpp
+// compile with: /openmp /LD
+int x, y;
+#pragma omp threadprivate(x, y)
+
+void Test() {
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
 ```

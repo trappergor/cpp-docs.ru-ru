@@ -1,5 +1,5 @@
 ---
-title: Дополнительные сведения о классах MFC ODBC | Документы Microsoft
+title: Дополнительные сведения о классах MFC ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,52 +15,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8e0a5a99146ae178d06e2ec097ab85c0f1c54eb9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8b935dd39d6ae3d0f59804b7145e845b807792e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093809"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Дополнительные сведения о классах ODBC MFC
+
 Дополнительно в следующих разделах описаны принципы и методы, представленные в этом разделе:  
   
--   [Поддержка базы данных, мастер приложений MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
+- [Поддержка базы данных, мастер приложений MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
--   [Добавление потребителя ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
+- [Добавление потребителя ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
   
--   [Источник данных (ODBC)](../../data/odbc/data-source-odbc.md)  
+- [Источник данных (ODBC)](../../data/odbc/data-source-odbc.md)  
   
--   [Динамический набор](../../data/odbc/dynaset.md)  
+- [Динамический набор](../../data/odbc/dynaset.md)  
   
--   [Исключения. Исключения баз данных](../../mfc/exceptions-database-exceptions.md)  
+- [Исключения. Исключения баз данных](../../mfc/exceptions-database-exceptions.md)  
   
--   [MFC. Использование классов базы данных с документами и представлениями](../../data/mfc-using-database-classes-with-documents-and-views.md)  
+- [MFC. Использование классов базы данных с документами и представлениями](../../data/mfc-using-database-classes-with-documents-and-views.md)  
   
--   [MFC. Использование классов базы данных без документов и представлений](../../data/mfc-using-database-classes-without-documents-and-views.md)  
+- [MFC. Использование классов базы данных без документов и представлений](../../data/mfc-using-database-classes-without-documents-and-views.md)  
   
--   [ODBC](../../data/odbc/odbc-basics.md)  
+- [ODBC](../../data/odbc/odbc-basics.md)  
   
--   [Администратор ODBC](../../data/odbc/odbc-administrator.md)  
+- [Администратор ODBC](../../data/odbc/odbc-administrator.md)  
   
--   [Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
+- [Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
--   [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)  
+- [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)  
   
--   [Представления записей](../../data/record-views-mfc-data-access.md)  
+- [Представления записей](../../data/record-views-mfc-data-access.md)  
   
--   [Сериализация. Сериализация или База данных ввода вывода](../../mfc/serialization-serialization-vs-database-input-output.md)  
+- [Сериализация. Сериализация или Ввод/вывод баз данных](../../mfc/serialization-serialization-vs-database-input-output.md)  
   
--   [Снимок](../../data/odbc/snapshot.md)  
+- [Снимок](../../data/odbc/snapshot.md)  
   
--   [SQL](../../data/odbc/sql.md)  
+- [SQL](../../data/odbc/sql.md)  
   
--   [Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)  
+- [Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)  
   
- — Хорошая начать ознакомление с [записей (ODBC)](../../data/odbc/recordset-odbc.md).  
+— Лучше всего начать ознакомление с [записей (ODBC)](../../data/odbc/recordset-odbc.md).  
   
- В *Справочник по библиотеке MFC*, в разделе [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [разделе](../../mfc/reference/cfieldexchange-class.md), и [CDBException](../../mfc/reference/cdbexception-class.md).  
+В *Справочник по библиотеке MFC*, см. в разделе [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md), и [CDBException](../../mfc/reference/cdbexception-class.md).  
   
 ## <a name="see-also"></a>См. также  
- [ODBC и MFC](../../data/odbc/odbc-and-mfc.md)   
- [Доступ к данным программирования (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+
+[ODBC и MFC](../../data/odbc/odbc-and-mfc.md)<br/>
+[Доступ к данным, программирование (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

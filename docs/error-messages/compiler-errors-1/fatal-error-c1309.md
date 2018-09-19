@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка C1309 | Документы Microsoft
+title: Неустранимая ошибка C1309 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91b6ab39e8a2907b03d1fe8bf6ed6094f6c14238
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf033bd134c039cf2f626842e9958abde23d811
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108559"
 ---
 # <a name="fatal-error-c1309"></a>Неустранимая ошибка C1309
-Несогласованные версии C2. Библиотеки DLL и PGODB\<версии >. БИБЛИОТЕКИ DLL  
-  
- Набор инструментов, используется для создания и использования [профильные оптимизации](../../build/reference/profile-guided-optimizations.md) содержит несовпадающие компоненты.  Если не удается устранить эту ошибку вручную, переустановите Visual C++.
+
+Несовпадение версий C2. Библиотеки DLL и PGODB\<версии >. БИБЛИОТЕКИ DLL
+
+При использовании для построения и использовать набор инструментов [профильной оптимизации](../../build/reference/profile-guided-optimizations.md) содержит несовпадающие компоненты.  Если не удается устранить эту ошибку вручную, переустановите Visual C++.

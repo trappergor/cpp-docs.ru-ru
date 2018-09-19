@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3539 | Документы Microsoft
+title: Ошибка компилятора C3539 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f704bd283ab5228a8988d587707e978aa5b49e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b2f78b69e00290dcc283e3fc340d25a4a071776
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091885"
 ---
 # <a name="compiler-error-c3539"></a>Ошибка компилятора C3539
-«Тип»: аргумент шаблона не может быть типом, содержащим «auto»  
-  
- Указанный тип аргумента шаблона не может содержать `auto` ключевое слово.  
-  
-### <a name="to-correct-this-error"></a>Исправление ошибки  
-  
-1.  Не указывайте аргумент шаблона с `auto` ключевое слово.  
-  
-## <a name="example"></a>Пример  
- Следующий пример вызывает ошибку C3539.  
-  
-```  
-// C3539.cpp  
-// Compile with /Zc:auto  
-template<class T> class C{};  
-int main()  
-{  
-   C<auto> c;   // C3539  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Ключевое слово auto](../../cpp/auto-keyword.md)
+
+«Тип»: аргумент шаблона не может быть тип, содержащий «auto»
+
+Указанный тип аргумента шаблона не может содержать `auto` ключевое слово.
+
+### <a name="to-correct-this-error"></a>Исправление ошибки
+
+1. Не указывайте аргумент шаблона с `auto` ключевое слово.
+
+## <a name="example"></a>Пример
+
+Следующий пример вызывает ошибку C3539.
+
+```
+// C3539.cpp
+// Compile with /Zc:auto
+template<class T> class C{};
+int main()
+{
+   C<auto> c;   // C3539
+   return 0;
+}
+```
+
+## <a name="see-also"></a>См. также
+
+[Ключевое слово auto](../../cpp/auto-keyword.md)

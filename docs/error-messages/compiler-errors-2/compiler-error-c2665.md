@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2665 | Документы Microsoft
+title: Ошибка компилятора C2665 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18cc99d6ea0a45e7c096a13cfe57dc841ca351bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b442e1de0481ef3d00742ed201575526332decff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109149"
 ---
 # <a name="compiler-error-c2665"></a>Ошибка компилятора C2665
-«функция»: ни одна из перегрузок Число1 число2 параметра может выполнить преобразование из типа «тип»  
-  
- Параметр перегруженной функции не может быть преобразован в требуемый тип.  Возможные решения:  
-  
--   Укажите оператор преобразования.  
-  
--   Используйте явное преобразование.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2665.  
-  
-```  
-// C2665.cpp  
-void func(short, char*){}  
-void func(char*, char*){}  
-  
-int main() {  
-   func(0, 1);   // C2665  
-   func((short)0, (char*)1);   // OK  
-}  
+
+«функция»: ни одна из перегрузок Число1 число2 параметра может выполнить преобразование из типа «тип»
+
+Параметр перегруженной функции не может быть преобразован в требуемый тип.  Возможные решения:
+
+- Введите оператор преобразования.
+
+- Используйте явное преобразование.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2665.
+
+```
+// C2665.cpp
+void func(short, char*){}
+void func(char*, char*){}
+
+int main() {
+   func(0, 1);   // C2665
+   func((short)0, (char*)1);   // OK
+}
 ```

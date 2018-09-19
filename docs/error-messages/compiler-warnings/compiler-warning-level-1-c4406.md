@@ -1,5 +1,5 @@
 ---
-title: Предупреждение (уровень 1) C4406 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 1) C4406 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64cded5192c62687006b37363c4bad6e3e001a19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26ccf67d5e80134254268d00f46181a8b5c9d9bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084917"
 ---
 # <a name="compiler-warning-level-1-c4406"></a>Предупреждение компилятора (уровень 1) C4406
-пропуск операнда в директиве  
-  
- Директива не требует операндов, однако операнд был указан.  
-  
- Компилятор проигнорировал заданного операнда или операндов.
+
+пропуск операнда в директиве
+
+Директива не требует операндов, но указан операнд.
+
+Компилятор проигнорировал заданного операнда или операндов.

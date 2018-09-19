@@ -1,5 +1,5 @@
 ---
-title: PTR::QueryInterface | Документы Microsoft
+title: PTR::QueryInterface | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd25661fc14cb9539d4b8e68f42c29895ce0d70e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3416f057d32a003eba1b9776456a60d915de95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090144"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
-Запрашивает у владельца объекта COM для интерфейса и прикрепляет результаты в другой `com::ptr`.  
+Запрашивает собственный объект COM для интерфейса и прикрепляет результаты в другой `com::ptr`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,17 +40,17 @@ void QueryInterface(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `other`  
- `com::ptr` , Получите интерфейс.  
+*other*<br/>
+`com::ptr` , Получите интерфейс.  
   
 ## <a name="exceptions"></a>Исключения  
- На внутреннем уровне `QueryInterface` будет вызван на собственный объект COM и любая ошибка `HRESULT` преобразуется в исключение по <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+ На внутреннем уровне `QueryInterface` вызывается на собственный объект COM и любая ошибка `HRESULT` преобразуется в исключение, <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте этот метод для создания оболочки COM для другой интерфейс COM-объекта, принадлежащие текущей программой-оболочкой. Этот метод вызывает метод `QueryInterface` через собственные COM-объект для запроса указатель на определенный интерфейс COM-объекта и присоединяет возвращенного указателя на интерфейс переданный `com::ptr`.  
+ Используйте этот метод для создания оболочки COM для другой интерфейс COM-объекта, принадлежащие текущей программой-оболочкой. Этот метод вызывает метод `QueryInterface` через принадлежащий COM-объект, чтобы запросить указатель на конкретный интерфейс COM-объекта и присоединяет возвращаемый указатель интерфейса для переданного `com::ptr`.  
   
 ## <a name="example"></a>Пример  
- В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта. `WriteTopLevelNode` Функция-член использует `QueryInterface` для заполнения локальной `com::ptr` с `IXMLDOMNode` , а затем передает `com::ptr` (путем отслеживания ссылок) функции закрытый член, которая выводит на консоль имя и текст свойства узла.  
+ Этот пример реализует класс CLR, который использует `com::ptr` программы-оболочки для его закрытого члена `IXMLDOMDocument` объекта. `WriteTopLevelNode` Функция-член использует `QueryInterface` для заполнения локальной `com::ptr` с `IXMLDOMNode` , а затем передает `com::ptr` (по отслеживаемая ссылка) на функцию закрытый член, которая записывает имя и текст свойства узла на консоль.  
   
 ```  
 // comptr_queryinterface.cpp  

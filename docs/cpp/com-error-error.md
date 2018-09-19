@@ -17,31 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7ddaefcf3bd46bf40b03c03d2d1fb00cf8fbbb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9d56fcf7faaee9d3b0e02964163aa62372a30a78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109302"
 ---
 # <a name="comerrorerror"></a>_com_error::Error
-**Блок, относящийся только к системам Microsoft**  
-  
- Возвращает значение HRESULT, переданный в конструктор.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-HRESULT Error( ) const throw( );  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Необработанный элемент HRESULT, переданный в конструктор.  
-  
-## <a name="remarks"></a>Примечания  
- Получает инкапсулированный элемент HRESULT в `_com_error` объекта.  
-  
- **Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Класс _com_error](../cpp/com-error-class.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+Возвращает значение HRESULT, переданный в конструктор.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+HRESULT Error( ) const throw( );
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Необработанный элемент HRESULT, переданный в конструктор.
+
+## <a name="remarks"></a>Примечания
+
+Получает инкапсулированный элемент HRESULT в `_com_error` объекта.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Класс _com_error](../cpp/com-error-class.md)

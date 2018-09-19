@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C3510 | Документы Microsoft
+title: Ошибка компилятора C3510 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb58d8d4fb9008b07579ef7fbc0066d00bcea57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cc134823abf2657426b0c1be9cfbe6d92a74035
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257798"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111336"
 ---
 # <a name="compiler-error-c3510"></a>Ошибка компилятора C3510
-не удалось найти библиотеку зависимых типов «библиотека_типов»  
-  
- [no_registry](../../preprocessor/no-registry.md) и [auto_search](../../preprocessor/auto-search.md) были переданы `#import` , но компилятор не удалось найти библиотеку типов, на которую указывает ссылка.  
-  
- Чтобы устранить эту ошибку, убедитесь, что все библиотеки типов и библиотеках типов доступны в компилятор.  
-  
- Следующий пример приводит к возникновению ошибки C3510:  
-  
- Предположим, что были созданы следующие два типа библиотеки и что C3510a.tlb был удален или не по пути.  
-  
-```  
-// C3510a.idl  
-[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12b")]  
-library C3510aLib  
-{  
-   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12c")]  
-   enum E_C3510  
-   {  
-      one, two, three  
-   };  
-};  
-```  
-  
- И исходный код для второй библиотеки типов:  
-  
-```  
-// C3510b.idl  
-// post-build command: del /f C3510a.tlb  
-[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12e")]  
-library C3510bLib  
-{  
-   importlib ("C3510a.tlb");  
-   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12d")]  
-   struct S_C3510 {  
-      enum E_C3510 e;  
-   };  
-};  
-```  
-  
- И код клиента:  
-  
-```  
-// C3510.cpp  
-#import "c3510b.tlb" no_registry auto_search   // C3510  
-int main() {  
-   C3510aLib::S_C4336 ccc;  
-}  
+
+не удается найти библиотеку зависимых типов «библиотека_типов»
+
+[no_registry](../../preprocessor/no-registry.md) и [auto_search](../../preprocessor/auto-search.md) были переданы `#import` , но компилятор не удалось найти библиотеку типов, на которую указывает ссылка.
+
+Чтобы устранить эту ошибку, убедитесь, что все библиотеки типов и библиотеках типов доступны в компилятор.
+
+Следующий пример приводит к возникновению ошибки C3510:
+
+Предполагается, что были созданы следующие два типа библиотеки, и что C3510a.tlb был удален или не по пути.
+
+```
+// C3510a.idl
+[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12b")]
+library C3510aLib
+{
+   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12c")]
+   enum E_C3510
+   {
+      one, two, three
+   };
+};
+```
+
+И исходный код для второй библиотеки типов:
+
+```
+// C3510b.idl
+// post-build command: del /f C3510a.tlb
+[uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12e")]
+library C3510bLib
+{
+   importlib ("C3510a.tlb");
+   [uuid("f87070ba-c6d9-405c-a8e4-8cd9ca25c12d")]
+   struct S_C3510 {
+      enum E_C3510 e;
+   };
+};
+```
+
+И код клиента:
+
+```
+// C3510.cpp
+#import "c3510b.tlb" no_registry auto_search   // C3510
+int main() {
+   C3510aLib::S_C4336 ccc;
+}
 ```

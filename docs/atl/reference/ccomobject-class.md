@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0600d675d37e2fed1d318645daaedcce5f80ed89
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085450"
 ---
 # <a name="ccomobject-class"></a>Класс CComObject
 
@@ -36,13 +36,13 @@ ms.locfileid: "43752375"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class Base>  
+template<class Base>
 class CComObject : public Base
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также от любых других интерфейсов, которую требуется поддерживать на объекте.
 
 ## <a name="members"></a>Участники
@@ -101,7 +101,7 @@ CComObject(void* = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-<em>void\*</em>  
+<em>void\*</em><br/>
 [in] Этот параметр без имени не используется. Он существует для согласованности с другими `CComXXXObjectXXX` конструкторы.
 
 ### <a name="remarks"></a>Примечания
@@ -132,7 +132,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Параметры
 
-*PP*  
+*PP*<br/>
 [out] Указатель на **CComObject <** `Base` **>** указатель. Если `CreateInstance` завершилась неудачно, *pp* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -157,19 +157,19 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*IID*  
+*IID*<br/>
 [in] Идентификатор запрашиваемого интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый *iid*. Если объект не поддерживает этот интерфейс *ppvObject* имеет значение NULL.
 
-*PP*  
+*PP*<br/>
 [out] Указатель на указатель интерфейса, идентифицируемый по типу `Q`. Если объект не поддерживает этот интерфейс *pp* имеет значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -190,8 +190,8 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

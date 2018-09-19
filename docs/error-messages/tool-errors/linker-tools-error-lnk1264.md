@@ -1,5 +1,5 @@
 ---
-title: Ошибка средств компоновщика LNK1264 | Документы Microsoft
+title: Ошибка средств компоновщика LNK1264 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed21327028fc9849f6e0694bb82ae34c6084842
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8232e83774dc53755b77ad9c8b3bbb2a0bcc6ae6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102753"
 ---
 # <a name="linker-tools-error-lnk1264"></a>Ошибка средств компоновщика LNK1264
-/ LTCG: PGINSTRUMENT указано, но не требуется создание кода; не удалось выполнить инструментирование  
-  
- **/ LTCG: PGINSTRUMENT** был указан, но OBJ-файлы, скомпилированные с [/GL](../../build/reference/gl-whole-program-optimization.md). Инструментирование не могут принимать месте и отказ канала. Должен существовать хотя бы один OBJ-файл в командной строке, компилируется с помощью **/GL** , чтобы инструментирование могло произойти.  
-  
- Профильная оптимизация (PGO) доступен только в 64-разрядных компиляторов.
+
+/ LTCG: PGINSTRUMENT указан, но не требуется создание кода; не удалось выполнить инструментирование
+
+**/ LTCG: PGINSTRUMENT** был указан, но OBJ-файлы, скомпилированные с [/GL](../../build/reference/gl-whole-program-optimization.md). Инструментирование не может принимать месте и отказ канала. Должен существовать по крайней мере один OBJ-файл в командной строке, который компилируется с **/GL** таким образом, чтобы инструментирование может произойти.
+
+Профильная оптимизация (PGO) доступна только в 64-разрядных компиляторов.

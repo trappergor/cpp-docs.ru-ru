@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3e7a0589c0da4d41cab419fa68039e4f0b62c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b8d3155dd63afa6deb84349c11b0b086d039c4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091326"
 ---
 # <a name="iconnectionpointimpl-class"></a>Класс IConnectionPointImpl
 
@@ -38,19 +38,19 @@ ms.locfileid: "43763358"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<class T, const IID* piid, class CDV = CComDynamicUnkArray>  
+template<class T, const IID* piid, class CDV = CComDynamicUnkArray>
 class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Ваш класс, производный от `IConnectionPointImpl`.
 
-*piid*  
+*piid*<br/>
 Указатель на IID интерфейса, представленный объектом точки подключения.
 
-*CDV*  
+*CDV*<br/>
 Класс, который управляет подключениями. Значение по умолчанию — [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), что позволяет неограниченное количество подключений. Можно также использовать [CComUnkArray](../../atl/reference/ccomunkarray-class.md), который задает фиксированное количество подключений.
 
 ## <a name="members"></a>Участники
@@ -167,5 +167,5 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 
 ## <a name="see-also"></a>См. также
 
-[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)   
+[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

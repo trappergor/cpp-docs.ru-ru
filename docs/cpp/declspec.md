@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b434ca991ef05bb90c3cbdc659cf8adc3381aa0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752919"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111327"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -34,7 +34,7 @@ ms.locfileid: "43752919"
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-decl-modifier-seq***)** 
 
 *extended-decl-modifier-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
 
 *extended-decl-modifier*:<br/>
@@ -46,7 +46,7 @@ ms.locfileid: "43752919"
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**с атрибутом naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**noalias**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**noinline**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**<br/>
@@ -58,7 +58,7 @@ ms.locfileid: "43752919"
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**поток**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**UUID («** *ComObjectGUID* **")**
 
 Пробел отделяет последовательность модификаторов объявления. Примеры приведены в дальнейших разделах.
@@ -105,5 +105,6 @@ __declspec( thread ) int tls_i = 1;
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
- [Ключевые слова](../cpp/keywords-cpp.md)  
- [Расширенные атрибуты классов хранения в C](../c-language/c-extended-storage-class-attributes.md)  
+
+[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[Расширенные атрибуты классов хранения в C](../c-language/c-extended-storage-class-attributes.md)

@@ -1,5 +1,5 @@
 ---
-title: Неустранимая ошибка NMAKE U1070 | Документы Microsoft
+title: Неустранимая ошибка NMAKE U1070 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe39a5d6f6074596561cd8e32f7b9428bc60f6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6eb462e5c3c7e497cde55151bf92c62ffb2afcd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087023"
 ---
 # <a name="nmake-fatal-error-u1070"></a>Неустранимая ошибка NMAKE U1070
-Циклическая зависимость в макроопределении «имя макроса»  
-  
- Указанное Макроопределение содержит макрос, определение которого содержится оно само. Циклическое определение макросов являются недопустимыми.  
-  
-## <a name="example"></a>Пример  
- Следующие определения макросов  
-  
-```  
-ONE=$(TWO)  
-TWO=$(ONE)  
-```  
-  
- возникает следующая ошибка:  
-  
-```  
-cycle in macro definition 'TWO'  
+
+Циклическая зависимость в макроопределении «имя макроса»
+
+Указанное Макроопределение содержит макрос, определение которого содержится оно само. Циклическое определение макросов являются недопустимыми.
+
+## <a name="example"></a>Пример
+
+Следующие определения макросов
+
+```
+ONE=$(TWO)
+TWO=$(ONE)
+```
+
+возникает следующая ошибка:
+
+```
+cycle in macro definition 'TWO'
 ```

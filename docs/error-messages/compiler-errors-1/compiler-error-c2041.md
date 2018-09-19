@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2041 | Документы Microsoft
+title: Ошибка компилятора C2041 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747dd5621aec556e89fee2ab8e7ff512736e408c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bee199ea3ddca7ae329fc17ed6c3c013dc460eb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082174"
 ---
 # <a name="compiler-error-c2041"></a>Ошибка компилятора C2041
-Недопустимая цифра «знак» для основания «число»  
-  
- Указанный символ не является допустимой цифрой для основания (например, восьмеричного или шестнадцатеричного).  
-  
- Следующий пример приводит к возникновению ошибки C2041:  
-  
-```  
-// C2041.cpp  
-int i = 081;   // C2041  8 is not a base 8 digit  
-```  
-  
- Возможное решение  
-  
-```  
-// C2041b.cpp  
-// compile with: /c  
-int j = 071;  
+
+Недопустимая цифра «character» для основания «число»
+
+Указанный символ не является допустимой цифрой для основания (например, восьмеричной или hex).
+
+Следующий пример приводит к возникновению ошибки C2041:
+
+```
+// C2041.cpp
+int i = 081;   // C2041  8 is not a base 8 digit
+```
+
+Возможное решение
+
+```
+// C2041b.cpp
+// compile with: /c
+int j = 071;
 ```

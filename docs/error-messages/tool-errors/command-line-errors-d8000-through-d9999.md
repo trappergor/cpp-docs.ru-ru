@@ -1,5 +1,5 @@
 ---
-title: Ошибки командной строки с D8000 по D9999 | Документы Microsoft
+title: Ошибки командной строки с D8000 по D9999 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e608745f4c10d915ee0fc8a2cdad2f372f81046c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bed2202c8dc7f6372a102eb3926ac49d568793a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302546"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096708"
 ---
 # <a name="command-line-errors-d8000-through-d9999"></a>Ошибки командной строки с D8000 по D9999
 
@@ -63,4 +63,4 @@ ms.locfileid: "33302546"
 
 ## <a name="see-also"></a>См. также
 
-[Ошибки сборки C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)  
+[Ошибки сборки C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)

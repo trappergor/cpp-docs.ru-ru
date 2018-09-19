@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9fcc5c6aae86aea005aef50f9083aeb718f64b19
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 5d73b7c45223c029451f300e495915eb15b0a956
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340271"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103940"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Транзакции: выполнение транзакции в наборе записей (ODBC)
+
 В этом разделе объясняется, как выполнять транзакции в наборе записей.  
   
 > [!NOTE]
@@ -30,13 +31,13 @@ ms.locfileid: "39340271"
   
 #### <a name="to-perform-a-transaction-in-a-recordset"></a>Выполнение транзакции в наборе записей  
   
-1.  Вызовите `CDatabase` объекта `BeginTrans` функция-член.  
+1. Вызовите `CDatabase` объекта `BeginTrans` функция-член.  
   
-2.  Если вы не реализовали выборка строк, вызвать `AddNew/Update`, `Edit/Update`, и `Delete` функции-члены один или несколько объектов набора записей той же базы данных столько раз, при необходимости. Дополнительные сведения см. в разделе [набор записей: Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Если вы реализовали групповая выборка строк, необходимо написать собственные функции для обновления источника данных.  
+1. Если вы не реализовали выборка строк, вызвать `AddNew/Update`, `Edit/Update`, и `Delete` функции-члены один или несколько объектов набора записей той же базы данных столько раз, при необходимости. Дополнительные сведения см. в разделе [набор записей: Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Если вы реализовали групповая выборка строк, необходимо написать собственные функции для обновления источника данных.  
   
-3.  Наконец, вызовите `CDatabase` объекта `CommitTrans` функция-член. Если вы решите отменить изменения в одно из обновлений возникает ошибка, вызовите его `Rollback` функция-член.  
+1. Наконец, вызовите `CDatabase` объекта `CommitTrans` функция-член. Если вы решите отменить изменения в одно из обновлений возникает ошибка, вызовите его `Rollback` функция-член.  
   
- В следующем примере два набора записей используется для удаления регистрации учащихся из регистрации базы данных school, удаляются из всех классов, в которых зарегистрирован студент. Так как `Delete` вызовов в обоих наборах записей должна завершиться успешно, необходима транзакция. В примере предполагается существование `m_dbStudentReg`, переменную-член типа `CDatabase` уже подключен к источнику данных и классы набора записей `CEnrollmentSet` и `CStudentSet`. `strStudentID` Переменная содержит значение, полученное от пользователя.  
+В следующем примере два набора записей используется для удаления регистрации учащихся из регистрации базы данных school, удаляются из всех классов, в которых зарегистрирован студент. Так как `Delete` вызовов в обоих наборах записей должна завершиться успешно, необходима транзакция. В примере предполагается существование `m_dbStudentReg`, переменную-член типа `CDatabase` уже подключен к источнику данных и классы набора записей `CEnrollmentSet` и `CStudentSet`. `strStudentID` Переменная содержит значение, полученное от пользователя.  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -92,7 +93,8 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 >  Вызов `BeginTrans` еще раз без вызова `CommitTrans` или `Rollback` является ошибкой.  
   
 ## <a name="see-also"></a>См. также  
- [Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Транзакция: Влияние транзакций на обновления (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
- [Класс CDatabase](../../mfc/reference/cdatabase-class.md)   
- [Класс CRecordset](../../mfc/reference/crecordset-class.md)
+
+[Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Транзакция. Влияние транзакций на обновления (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
+[Класс CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
+[Класс CRecordset](../../mfc/reference/crecordset-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Класс norm | Документы Microsoft
+title: Класс norm | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705397"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087488"
 ---
 # <a name="norm-class"></a>Класс norm
-Представляет число нормы. Каждый элемент является типом с плавающей запятой в диапазоне [-1, 0f, 1, 0f].  
+Представляет число нормы. Каждый элемент — это число с плавающей запятой в диапазоне [-1, 0f, 1.0f].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -103,11 +103,11 @@ norm(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `_V`  
- Значение, используемое для инициализации.  
+*_V*<br/>
+Значение, используемое для инициализации.  
   
- `_Other`  
- Объект, используемый для инициализации.  
+*_Другое*<br/>
+Объект, используемый для инициализации.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

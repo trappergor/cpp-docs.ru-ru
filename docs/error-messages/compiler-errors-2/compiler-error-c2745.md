@@ -1,5 +1,5 @@
 ---
-title: Ошибка компилятора C2745 | Документы Microsoft
+title: Ошибка компилятора C2745 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f371629c3811821d9c7dce56cc44137534058c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d08e89fe3dbcfbff8c947b432bda94e9ac15ef99
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099878"
 ---
 # <a name="compiler-error-c2745"></a>Ошибка компилятора C2745
-«токен»: этот токен не может преобразовать в идентификатор  
-  
- Идентификаторы должны состоять из допустимых символов.  
-  
- Следующий пример приводит к возникновению ошибки C2745:  
-  
-```  
-// C2745.cpp  
-// compile with: /clr  
-int main() {  
-   int __identifier([));   // C2745  
-}  
+
+«токен»: невозможно преобразовать этот маркер идентификатора
+
+Идентификаторы должны состоять из допустимых символов.
+
+Следующий пример приводит к возникновению ошибки C2745:
+
+```
+// C2745.cpp
+// compile with: /clr
+int main() {
+   int __identifier([));   // C2745
+}
 ```

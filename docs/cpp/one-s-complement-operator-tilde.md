@@ -20,48 +20,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d34a4057ccbe5c10a6d22a14eed4317e62c464
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 42cfc8dd3f94b5b85616297908a73c9a791b730a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409159"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111450"
 ---
 # <a name="one39s-complement-operator-"></a>Один&#39;s оператор дополнения до единицы: ~
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-~ cast-expression  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Оператор дополнения до единицы (`~`), иногда называемый оператором поразрядного отрицания, дополняет свой операнд до единицы в каждом разряде. То есть каждый бит, равный в операнде 1, в результате становится равным 0, а каждый бит, равный в операнде 0, в результате становится равным 1. Операнд оператора дополнения до единицы должен быть целочисленного типа.  
-  
-## <a name="operator-keyword-for-"></a>Ключевое слово оператора ~  
- **Compl** оператор является текстовым эквивалентом `~`. Существует два способа для доступа к **compl** оператор в программах: включить файл заголовка `iso646.h`, или выполнить компиляцию с [/Za](../build/reference/za-ze-disable-language-extensions.md).  
-  
-## <a name="example"></a>Пример  
-  
-```cpp 
-// expre_One_Complement_Operator.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-  
-int main () {  
-   unsigned short y = 0xFFFF;  
-   cout << hex << y << endl;  
-   y = ~y;   // Take one's complement  
-   cout << hex << y << endl;  
-}  
-```  
-  
- В этом примере новое значение, присвоенное переменной `y`, является дополнением до единицы значения 0xFFFF без знака, т. е. значением 0x0000.  
-  
- Над целочисленными операндами выполняется восходящее приведение целого типа, и результирующим типом является тип, до которого повышается уровень операнда. См. в разделе [стандартные преобразования](standard-conversions.md) Дополнительные сведения о том, как выполняется такое повышение.  
-  
-## <a name="see-also"></a>См. также  
- [Выражения с унарными операторами](../cpp/expressions-with-unary-operators.md)   
- [Встроенные операторы C++, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Унарные арифметические операторы](../c-language/unary-arithmetic-operators.md)
+
+## <a name="syntax"></a>Синтаксис
+
+```
+~ cast-expression
+```
+
+## <a name="remarks"></a>Примечания
+
+Оператор дополнения до единицы (`~`), иногда называемый оператором поразрядного отрицания, дополняет свой операнд до единицы в каждом разряде. То есть каждый бит, равный в операнде 1, в результате становится равным 0, а каждый бит, равный в операнде 0, в результате становится равным 1. Операнд оператора дополнения до единицы должен быть целочисленного типа.
+
+## <a name="operator-keyword-for-"></a>Ключевое слово оператора ~
+
+**Compl** оператор является текстовым эквивалентом `~`. Существует два способа для доступа к **compl** оператор в программах: включить файл заголовка `iso646.h`, или выполнить компиляцию с [/Za](../build/reference/za-ze-disable-language-extensions.md).
+
+## <a name="example"></a>Пример
+
+```cpp
+// expre_One_Complement_Operator.cpp
+// compile with: /EHsc
+#include <iostream>
+
+using namespace std;
+
+int main () {
+   unsigned short y = 0xFFFF;
+   cout << hex << y << endl;
+   y = ~y;   // Take one's complement
+   cout << hex << y << endl;
+}
+```
+
+В этом примере новое значение, присвоенное переменной `y`, является дополнением до единицы значения 0xFFFF без знака, т. е. значением 0x0000.
+
+Над целочисленными операндами выполняется восходящее приведение целого типа, и результирующим типом является тип, до которого повышается уровень операнда. См. в разделе [стандартные преобразования](standard-conversions.md) Дополнительные сведения о том, как выполняется такое повышение.
+
+## <a name="see-also"></a>См. также
+
+[Выражения с унарными операторами](../cpp/expressions-with-unary-operators.md)<br/>
+[Встроенные операторы C++, приоритет и ассоциативность](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Унарные арифметические операторы](../c-language/unary-arithmetic-operators.md)

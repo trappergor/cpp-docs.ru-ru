@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd88555ee28b7bdddef51371ba2774047464678
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0e10650235298e7a5b2931e59c39cb21a5374d0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087595"
 ---
 # <a name="cw2aex-class"></a>Класс CW2AEX
 
@@ -37,13 +37,13 @@ ms.locfileid: "43759487"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CW2AEX
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Размер буфера, используемого в процессе перевода. Длина по умолчанию равен 128 байтам.
 
 ## <a name="members"></a>Участники
@@ -107,16 +107,16 @@ class CW2AEX
 Конструктор.
 
 ```
-CW2AEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2AEX(LPCWSTR psz, UINT nCodePage) throw(...);
 CW2AEX(LPCWSTR psz) throw(...);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Текстовая строка для преобразования.
 
-*nCodePage*  
+*nCodePage*<br/>
 Кодовую страницу, используемую для выполнения преобразования. См. в обсуждении параметр кода страницы для функции Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) для получения дополнительных сведений.
 
 ### <a name="remarks"></a>Примечания
@@ -155,7 +155,7 @@ char m_szBuffer[t_nBufferLength];
 
 Оператор преобразования.
 
-```  
+```
 operator LPSTR() const throw();
 ```
 
@@ -165,9 +165,9 @@ operator LPSTR() const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Класс CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Класс CA2CAEX](../../atl/reference/ca2caex-class.md)   
-[Класс CA2WEX](../../atl/reference/ca2wex-class.md)   
-[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)   
-[Класс CW2WEX](../../atl/reference/cw2wex-class.md)   
+[Класс CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
+[Класс CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
+[Класс CA2WEX](../../atl/reference/ca2wex-class.md)<br/>
+[Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
+[Класс CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)
