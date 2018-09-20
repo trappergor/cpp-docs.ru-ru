@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0b48dc1aa1f2e966836bba8d04227f7c74d5abd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ec7072f4536dd2817ed5cef7e8dbe365fc1dd5f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208118"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399280"
 ---
 # <a name="header-control-examples"></a>Примеры элемента управления "Заголовок"
-Примеры элементов управления заголовков см. в разделе [элементы управления заголовка](/windows/desktop/Controls/header-controls) в пакете Windows SDK.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+Примеры элементов управления заголовков см. в разделе [элементы управления заголовка](/windows/desktop/Controls/header-controls) в пакете Windows SDK.
+
+## <a name="see-also"></a>См. также
+
+[Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

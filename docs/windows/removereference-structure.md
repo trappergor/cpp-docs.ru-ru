@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d73c9f99eec3fd3ec01d4ae5d41418c67cb472f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f6ab085e1bed3909090990cfa8e265bea792a483
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597469"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447028"
 ---
 # <a name="removereference-structure"></a>RemoveReference - структура
 
@@ -41,7 +41,7 @@ struct RemoveReference<T&&>;
 
 ### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Класс.
 
 ## <a name="remarks"></a>Примечания
@@ -52,7 +52,7 @@ struct RemoveReference<T&&>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`Type`|Синоним для параметра-шаблона класса.|
 

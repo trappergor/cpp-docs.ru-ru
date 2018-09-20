@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e87ea3b0e44732d4271385073c48fd92e1aa114
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 995594ee48e6ca408e88d9ab14968d88b536d309
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608931"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403520"
 ---
 # <a name="modulegetactivationfactory-method"></a>Метод Module::GetActivationFactory
 
@@ -40,13 +40,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Параметры
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 Представляет IID класса среды выполнения.
 
-*ppIFactory*  
+*ppIFactory*<br/>
 Представляет интерфейс IActivationFactory указанного класса среды выполнения.
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя подмножества фабрик класса в текущем модуле. Укажите имя сервера, используемое в [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) макрос, или указать **nullptr** для получения имени сервера по умолчанию.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -61,5 +61,5 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ## <a name="see-also"></a>См. также
 
-[Класс Module](../windows/module-class.md)  
+[Класс Module](../windows/module-class.md)<br/>
 [Макрос ActivatableClass](../windows/activatableclass-macros.md)

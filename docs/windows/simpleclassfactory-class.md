@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 4a3e262567927b818072c1e05acd18aa64cbaa6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691449"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446521"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory - класс
 
@@ -39,7 +39,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 Базовый класс.
 
 ## <a name="remarks"></a>Примечания
@@ -102,15 +102,15 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>Параметры
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Должно быть `nullptr`; в противном случае возвращается значение CLASS_E_NOAGGREGATION.
 
 SimpleClassFactory не поддерживает агрегирование. Если поддерживается агрегирование и создаваемый объект был частью агрегата, *pUnkOuter* должен быть указателем на управляющий `IUnknown` интерфейс агрегатной функции.
 
-*riid*  
+*riid*<br/>
 Идентификатор интерфейса объекта, который требуется создать.
 
-*ppvObject*  
+*ppvObject*<br/>
 После завершения операции, указатель на экземпляр объекта, заданного параметром *riid* параметра.
 
 ### <a name="return-value"></a>Возвращаемое значение

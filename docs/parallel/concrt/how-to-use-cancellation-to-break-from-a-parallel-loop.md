@@ -1,5 +1,5 @@
 ---
-title: 'Как: использование отмены для выхода из параллельного цикла | Документы Microsoft'
+title: 'Практическое: использование отмены для выхода из параллельного цикла | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1b5153c225c3bb3a67be4265cf8303da2121c2b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9172132f0bdaabea9d6959a3f947d7b50d5261da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696296"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417336"
 ---
 # <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>Практическое руководство. Использование отмены для выхода из параллельного цикла
-В этом примере показано, как использовать отмену для реализации простого алгоритма параллельного поиска.  
-  
-## <a name="example"></a>Пример  
 
- В следующем примере отмены для поиска элемента в массиве. `parallel_find_any` Функция использует [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм и [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) для поиска позиции, содержащей данное значение. Если параллельный цикл находит это значение, он вызывает [Concurrency::cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) метода для отмены дальнейшей работы.  
+В этом примере показано, как использовать отмену для реализации простого алгоритма параллельного поиска.
 
+## <a name="example"></a>Пример
 
-  
- [!code-cpp[concrt-parallel-array-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-cancellation-to-break-from-a-parallel-loop_1.cpp)]  
-  
+В следующем примере отмены для поиска элемента в массиве. `parallel_find_any` Функция использует [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм и [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) функции для поиска позиции, которая содержит заданное значение. Если параллельный цикл находит это значение, он вызывает [Concurrency::cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) метод для отмены дальнейшей работы.
 
- [Concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм работает параллельно. Таким образом он не выполняет операции в предварительно определенном порядке. Если массив содержит несколько экземпляров значения, результат может быть любым из его позиции.  
+[!code-cpp[concrt-parallel-array-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-cancellation-to-break-from-a-parallel-loop_1.cpp)]
 
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или вставить его в файл с именем `parallel-array-search.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
-  
- **/ EHsc CL.exe parallel-array-search.cpp**  
-  
-## <a name="see-also"></a>См. также  
- [Отмена в библиотеке параллельных Шаблонов](cancellation-in-the-ppl.md)   
- [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)   
- [Функция parallel_for](reference/concurrency-namespace-functions.md#parallel_for)   
- [Класс cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)
+[Concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм действует одновременно. Таким образом он не выполняет операции в заранее определенный порядок. Если массив содержит несколько вхождений значения, результат может быть любого из его позиции.
+
+## <a name="compiling-the-code"></a>Компиляция кода
+
+Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `parallel-array-search.cpp` и выполните следующую команду в окне командной строки Visual Studio.
+
+**/ EHsc CL.exe параллельного array-search.cpp**
+
+## <a name="see-also"></a>См. также
+
+[Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)<br/>
+[Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)<br/>
+[Функция parallel_for](reference/concurrency-namespace-functions.md#parallel_for)<br/>
+[Класс cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)

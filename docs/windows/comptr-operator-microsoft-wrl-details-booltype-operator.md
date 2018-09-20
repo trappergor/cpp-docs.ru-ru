@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 135c6d851be5de8f2eb976baf015f2ef449600c0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 05e26296646b61997baff880a671958769eb099b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595977"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433404"
 ---
 # <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>Оператор ComPtr::operator Microsoft::WRL::Details::BoolType
 
@@ -42,5 +42,5 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ## <a name="see-also"></a>См. также
 
-[Класс ComPtr](../windows/comptr-class.md)  
+[Класс ComPtr](../windows/comptr-class.md)<br/>
 [Метод ComPtr::Get](../windows/comptr-get-method.md)

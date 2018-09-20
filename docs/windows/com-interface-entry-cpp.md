@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c0b2c53bf06a748be522606f5904f307cc00df8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 555dcfe83ab114db48942a5be604ff344dafa8ed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591360"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398726"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "42591360"
 
 ### <a name="parameters"></a>Параметры
 
-*COM_INTERFACE_ENTRY*  
+*COM_INTERFACE_ENTRY*<br/>
 Строка, содержащая текст записи. Список возможных значений см. в разделе [Макросы COM_INTERFACE_ENTRY](../atl/reference/com-interface-entry-macros.md).
 
 ## <a name="remarks"></a>Примечания
@@ -130,6 +130,6 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты COM](../windows/com-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты COM](../windows/com-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  

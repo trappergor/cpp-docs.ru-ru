@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 257ca11dcc44b22d6ddbb5043315d29a70377148
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ebebd8d0b6dc53ef5d83374c329ebe35d23f7fe8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313953"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443544"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>Практическое: укажите каталогов включения для ресурсов (C++)
 
@@ -40,8 +40,8 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Диалоговое окно "Включения ресурсов"](../windows/resource-includes-dialog-box.md)  
-[TN035. Использование нескольких файлов ресурсов и файлов заголовков в Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
-[Символы: идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)  
-[Файлы ресурсов](../windows/resource-files-visual-studio.md)  
+[Диалоговое окно "Включения ресурсов"](../windows/resource-includes-dialog-box.md)<br/>
+[TN035. Использование нескольких файлов ресурсов и файлов заголовков в Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
+[Символы: идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)<br/>
+[Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
 [Редакторы ресурсов](../windows/resource-editors.md)

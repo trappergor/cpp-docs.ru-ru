@@ -82,205 +82,210 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1f0f26856d6da002f5ba74bbfa8e98f27e4f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69dd5e5080735c1b347b164887fdfab76aa9b178
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042589"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428400"
 ---
 # <a name="int3-class"></a>Класс int_3
-Представляет короткий вектор из трех целых чисел.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class int_3;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-typedefs"></a>Общедоступные определения типов  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Конструктор int_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|int_3::get_x||  
-|int_3::get_xy||  
-|int_3::get_xyz||  
-|int_3::get_xz||  
-|int_3::get_xzy||  
-|int_3::get_y||  
-|int_3::get_yx||  
-|int_3::get_yxz||  
-|int_3::get_yz||  
-|int_3::get_yzx||  
-|int_3::get_z||  
-|int_3::get_zx||  
-|int_3::get_zxy||  
-|int_3::get_zy||  
-|int_3::get_zyx||  
-|int_3::ref_b||  
-|int_3::ref_g||  
-|int_3::ref_r||  
-|int_3::ref_x||  
-|int_3::ref_y||  
-|int_3::ref_z||  
-|int_3::set_x||  
-|int_3::set_xy||  
-|int_3::set_xyz||  
-|int_3::set_xz||  
-|int_3::set_xzy||  
-|int_3::set_y||  
-|int_3::set_yx||  
-|int_3::set_yxz||  
-|int_3::set_yz||  
-|int_3::set_yzx||  
-|int_3::set_z||  
-|int_3::set_zx||  
-|int_3::set_zxy||  
-|int_3::set_zy||  
-|int_3::set_zyx||  
-  
-### <a name="public-operators"></a>Открытые операторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|int_3::operator-||  
-|int_3::operator--||  
-|int_3::operator % =||  
-|int_3::operator & =||  
-|int_3::operator * =||  
-|int_3::operator / =||  
-|int_3::operator ^ =||  
-|int_3::operator&#124;=||  
-|int_3::operator ~||  
-|int_3::operator ++||  
-|int_3::operator +=||  
-|int_3::operator<\<=||  
-|int_3::operator =||  
-|int_3::operator-=||  
-|int_3::operator >> =||  
-  
-### <a name="public-constants"></a>Открытые константы  
-  
-|name|Описание|  
-|----------|-----------------|  
-|[размер константа](#size)||  
-  
-### <a name="public-data-members"></a>Открытые члены данных  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|int_3::b||  
-|int_3::bg||  
-|int_3::bgr||  
-|int_3::br||  
-|int_3::brg||  
-|int_3::g||  
-|int_3::gb||  
-|int_3::gbr||  
-|int_3::gr||  
-|int_3::grb||  
-|int_3::r||  
-|int_3::rb||  
-|int_3::rbg||  
-|int_3::rg||  
-|int_3::rgb||  
-|int_3::x||  
-|int_3::xy||  
-|int_3::xyz||  
-|int_3::xz||  
-|int_3::xzy||  
-|int_3::y||  
-|int_3::yx||  
-|int_3::yxz||  
-|int_3::yz||  
-|int_3::yzx||  
-|int_3::z||  
-|int_3::zx||  
-|int_3::zxy||  
-|int_3::zy||  
-|int_3::zyx||  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `int_3`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** amp_short_vectors.h  
-  
- **Пространство имен:** Concurrency::graphics  
 
-## <a name="ctor"></a> int_3 
+Представляет короткий вектор из трех целых чисел.
 
-По умолчанию конструктор инициализирует все элементы с 0.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int_3() restrict(amp,cpu);  
-int_3(  
-   int _V0,  
-   int _V1,  
-   int _V2  
-) restrict(amp,cpu);  
-int_3(  
-   int _V  
-) restrict(amp,cpu);  
-int_3(  
-   const int_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const uint_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const float_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const unorm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const norm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const double_3& _Other  
-) restrict(amp,cpu);  
-```  
-  
-### <a name="parameters"></a>Параметры  
+## <a name="syntax"></a>Синтаксис
+
+```
+class int_3;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-typedefs"></a>Общедоступные определения типов
+
+|Имя|Описание|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[Конструктор int_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|int_3::get_x||
+|int_3::get_xy||
+|int_3::get_xyz||
+|int_3::get_xz||
+|int_3::get_xzy||
+|int_3::get_y||
+|int_3::get_yx||
+|int_3::get_yxz||
+|int_3::get_yz||
+|int_3::get_yzx||
+|int_3::get_z||
+|int_3::get_zx||
+|int_3::get_zxy||
+|int_3::get_zy||
+|int_3::get_zyx||
+|int_3::ref_b||
+|int_3::ref_g||
+|int_3::ref_r||
+|int_3::ref_x||
+|int_3::ref_y||
+|int_3::ref_z||
+|int_3::set_x||
+|int_3::set_xy||
+|int_3::set_xyz||
+|int_3::set_xz||
+|int_3::set_xzy||
+|int_3::set_y||
+|int_3::set_yx||
+|int_3::set_yxz||
+|int_3::set_yz||
+|int_3::set_yzx||
+|int_3::set_z||
+|int_3::set_zx||
+|int_3::set_zxy||
+|int_3::set_zy||
+|int_3::set_zyx||
+
+### <a name="public-operators"></a>Открытые операторы
+
+|Имя|Описание|
+|----------|-----------------|
+|int_3::operator-||
+|int_3::operator--||
+|int_3::operator % =||
+|int_3::operator & =||
+|int_3::operator * =||
+|int_3::operator / =||
+|int_3::operator ^ =||
+|int_3::operator&#124;=||
+|int_3::operator ~||
+|int_3::operator ++||
+|int_3::operator +=||
+|int_3::operator<\<=||
+|int_3::operator =||
+|int_3::operator-=||
+|int_3::operator >> =||
+
+### <a name="public-constants"></a>Открытые константы
+
+|name|Описание|
+|----------|-----------------|
+|[размер константа](#size)||
+
+### <a name="public-data-members"></a>Открытые члены данных
+
+|Имя|Описание|
+|----------|-----------------|
+|int_3::b||
+|int_3::bg||
+|int_3::bgr||
+|int_3::br||
+|int_3::brg||
+|int_3::g||
+|int_3::gb||
+|int_3::gbr||
+|int_3::gr||
+|int_3::grb||
+|int_3::r||
+|int_3::rb||
+|int_3::rbg||
+|int_3::rg||
+|int_3::rgb||
+|int_3::x||
+|int_3::xy||
+|int_3::xyz||
+|int_3::xz||
+|int_3::xzy||
+|int_3::y||
+|int_3::yx||
+|int_3::yxz||
+|int_3::yz||
+|int_3::yzx||
+|int_3::z||
+|int_3::zx||
+|int_3::zxy||
+|int_3::zy||
+|int_3::zyx||
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`int_3`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** amp_short_vectors.h
+
+**Пространство имен:** Concurrency::graphics
+
+## <a name="ctor"></a> int_3
+
+По умолчанию конструктор инициализирует все элементы с 0.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+int_3() restrict(amp,cpu);
+int_3(
+   int _V0,
+   int _V1,
+   int _V2
+) restrict(amp,cpu);
+int_3(
+   int _V
+) restrict(amp,cpu);
+int_3(
+   const int_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const uint_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const float_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const unorm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const norm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const double_3& _Other
+) restrict(amp,cpu);
+```
+
+### <a name="parameters"></a>Параметры
+
 *_V0*<br/>
-Значение для инициализации элемента 0.  
-  
-*_V1*<br/>
-Значение для инициализации элемента 1.  
-  
-*_V2*<br/>
-Значение для инициализации элемента 2.  
-  
-*_V*<br/>
-Значение для инициализации.  
-  
-*_Другое*<br/>
-Объект, используемый для инициализации.  
-  
-## <a name="size"></a> Размер 
+Значение для инициализации элемента 0.
 
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
+*_V1*<br/>
+Значение для инициализации элемента 1.
+
+*_V2*<br/>
+Значение для инициализации элемента 2.
+
+*_V*<br/>
+Значение для инициализации.
+
+*_Другое*<br/>
+Объект, используемый для инициализации.
+
+## <a name="size"></a> Размер
+
+## <a name="syntax"></a>Синтаксис
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

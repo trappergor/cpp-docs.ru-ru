@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCToolBarInfo | Документы Microsoft
+title: Класс CMFCToolBarInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,103 +32,116 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de968fe53348b4cfa3f46e999da37cdca6f88c90
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7825983fbc70dafbbcc96221b8a38c3ae4e939c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369366"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435445"
 ---
 # <a name="cmfctoolbarinfo-class"></a>Класс CMFCToolBarInfo
-Содержит идентификаторы ресурса изображений панели инструментов в различных состояниях. `CMFCToolBarInfo` — Это вспомогательный класс, используемый в качестве параметра [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) метод.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class CMFCToolBarInfo  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="data-members"></a>Элементы данных  
-  
-|name|Описание|  
-|----------|-----------------|  
-|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Идентификатор ресурса точечного рисунка панели инструментов, содержащее изображения регулярных (холодный) панели инструментов.|  
-|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Идентификатор ресурса точечного рисунка панели инструментов, содержащее изображения отключенные панели инструментов.|  
-|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|Идентификатор ресурса точечного рисунка панели инструментов, содержащее изображения выбранной панели инструментов ("горячие").|  
-|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|Идентификатор ресурса точечного рисунка панели инструментов, содержащее изображения больших, регулярного панель инструментов.|  
-|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит большие, отключить изображениям значков панели инструментов.|  
-|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит большие, выбрать изображениям значков панели инструментов.|  
-|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит отключенным изображениям значков меню.|  
-|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит изображения меню.|  
-  
-## <a name="remarks"></a>Примечания  
- Битовая карта инструментов полностью состоит из небольшого инструментов изображений (кнопки) фиксированного размера. Каждый идентификатор ресурса, которые хранятся в `CMFCToolBarInfo` объект является точечного рисунка, который содержит полный набор инструментов изображений в одно состояние (для (например, выбран будет отключен, большой или изображения меню).  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- [CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxtoolbar.h  
-  
-##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID  
- Указывает идентификатор ресурса для всех образов обычная кнопка панели инструментов.  
-  
-```  
-UINT m_uiColdResID;  
-```  
-  
-##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID  
- Указывает идентификатор ресурса для изображений недоступна кнопка панели инструментов.  
-  
-```  
-UINT m_uiDisabledResID;  
-```  
-  
-##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID  
- Указывает идентификатор ресурса для всех образов выделенной кнопки панели инструментов.  
-  
-```  
-UINT m_uiHotResID  
-```  
-  
-##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID  
- Указывает идентификатор ресурса для всех образов больших обычная кнопка панели инструментов.  
-  
-```  
-UINT m_uiLargeColdResID  
-```  
-  
-##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID  
- Указывает идентификатор ресурса для всех образов больших отключенной кнопки панели инструментов.  
-  
-```  
-UINT m_uiLargeDisabledResID;  
-```  
-  
-##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID  
- Указывает идентификатор ресурса для всех выделенных больших изображений панели инструментов.  
-  
-```  
-UINT m_uiLargeHotResID;  
-```  
-  
-##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID  
- Указывает идентификатор ресурса для изображений недоступна команда панели инструментов.  
-  
-```  
-UINT m_uiMenuDisabledResID;  
-```  
-  
-##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID  
- Указывает идентификатор ресурса для всех образов обычное меню элемента панели инструментов.  
-  
-```  
-UINT m_uiMenuResID;  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
+
+Содержит идентификаторы ресурса изображений панели инструментов в различных состояниях. `CMFCToolBarInfo` — Это вспомогательный класс, который используется как параметр [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) метод.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+class CMFCToolBarInfo
+```
+
+## <a name="members"></a>Участники
+
+### <a name="data-members"></a>Элементы данных
+
+|name|Описание|
+|----------|-----------------|
+|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит изображения регулярных (холодные) панели инструментов.|
+|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Идентификатор ресурса точечного рисунка панели инструментов, содержащее изображения отключенные панели инструментов.|
+|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит изображения выбранной панели инструментов ("Горячий").|
+|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит изображениям значков панели инструментов большой и регулярно.|
+|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит большие, отключить изображениям значков панели инструментов.|
+|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит большие, выбрать изображениям значков панели инструментов.|
+|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит отключенным изображениям значков меню.|
+|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|Идентификатор ресурса точечного рисунка панели инструментов, который содержит изображения меню.|
+
+## <a name="remarks"></a>Примечания
+
+Битовая карта инструментов полностью состоит из изображений на панели инструментов small (кнопки) фиксированного размера. Каждый идентификатор ресурса, который хранится в `CMFCToolBarInfo` объект — это битовая карта, содержит полный набор инструментов образов в одном состоянии (для примере выбран отключено, большие, образы или меню).
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+[CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxtoolbar.h
+
+##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID
+
+Указывает идентификатор ресурса для всех образов обычной кнопки панели инструментов.
+
+```
+UINT m_uiColdResID;
+```
+
+##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID
+
+Указывает идентификатор ресурса для изображений недоступна кнопка панели инструментов.
+
+```
+UINT m_uiDisabledResID;
+```
+
+##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID
+
+Указывает идентификатор ресурса для всех образов выделенной кнопки на панели инструментов.
+
+```
+UINT m_uiHotResID
+```
+
+##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID
+
+Указывает идентификатор ресурса для всех изображений больших обычной кнопки панели инструментов.
+
+```
+UINT m_uiLargeColdResID
+```
+
+##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID
+
+Указывает идентификатор ресурса для всех изображений больших отключенной кнопки панели инструментов.
+
+```
+UINT m_uiLargeDisabledResID;
+```
+
+##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID
+
+Указывает идентификатор ресурса для всех больших изображений выделенной панели инструментов.
+
+```
+UINT m_uiLargeHotResID;
+```
+
+##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID
+
+Указывает идентификатор ресурса для изображений, недоступным для команды панели инструментов.
+
+```
+UINT m_uiMenuDisabledResID;
+```
+
+##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID
+
+Указывает идентификатор ресурса для всех обычным изображениям значков меню элемента панели инструментов.
+
+```
+UINT m_uiMenuResID;
+```
+
+## <a name="see-also"></a>См. также
+
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Классы](../../mfc/reference/mfc-classes.md)<br/>
+[Класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)

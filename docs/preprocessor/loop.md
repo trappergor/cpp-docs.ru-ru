@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4881dfdcb92e778501982482abc13cc91836b0
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0850a30c0e0e85cd1d90ba5b2399a295a482a3ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42544492"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444675"
 ---
 # <a name="loop"></a>цикл
 Контролирует восприятие кода цикла автоматическим параллелизатором и(или) исключает цикл из рассмотрения автоматическим векторизатором.  
@@ -57,5 +57,5 @@ ms.locfileid: "42544492"
   
 ## <a name="see-also"></a>См. также  
  
-[Автоматическая параллелизация и автоматическая векторизация](../parallel/auto-parallelization-and-auto-vectorization.md)   
+[Автоматическая параллелизация и автоматическая векторизация](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

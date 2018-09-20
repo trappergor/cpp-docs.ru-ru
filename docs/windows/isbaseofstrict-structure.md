@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e20748f1929a00084b0fb7bf16342e48e16a82b2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 52db5abd0487624f52f692e785007adaf9eac7ee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610129"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428269"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict - структура
 
@@ -45,10 +45,10 @@ struct IsBaseOfStrict<Base, Base>;
 
 ### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 Базовый тип.
 
-*Производные*  
+*Производные*<br/>
 Производный тип.
 
 ## <a name="remarks"></a>Примечания
@@ -61,7 +61,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Константа IsBaseOfStrict::value](../windows/isbaseofstrict-value-constant.md)|Указывает, является ли один тип базовым для другого.|
 

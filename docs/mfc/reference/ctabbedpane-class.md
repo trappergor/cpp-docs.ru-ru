@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a2e61616ae6a481925bdb8b9b135f0a6a9fdfff7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712842"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407950"
 ---
 # <a name="ctabbedpane-class"></a>Класс CTabbedPane
 
@@ -183,9 +183,9 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pBar*  
+[in] *pBar*
 
-[in] *bHide*  
+[in] *bHide*
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -225,9 +225,9 @@ virtual BOOL FloatTab(
 ### <a name="parameters"></a>Параметры
 
 *pBar*<br/>
-[in] [in] *nTabID*  
+[in] [in] *nTabID*
 *dockMethod*<br/>
-[in] [in] *bHide*  
+[in] [in] *bHide*
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -308,6 +308,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 Значение по умолчанию — FALSE.
 
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+
 Сведения о классе среды выполнения для настраиваемого объекта, производного от класса `CMFCTabCtrl`.
 
 ```
@@ -351,8 +352,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ## <a name="see-also"></a>См. также
 
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)  
-[Классы](../../mfc/reference/mfc-classes.md)  
-[Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)  
-[Класс CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)  
-[Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)  
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Классы](../../mfc/reference/mfc-classes.md)<br/>
+[Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
+[Класс CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)

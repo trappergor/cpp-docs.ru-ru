@@ -1,5 +1,5 @@
 ---
-title: Обработка сообщений Windows для диалогового окна | Документы Microsoft
+title: Обработка сообщений Windows в диалоговом окне. | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7adaa21be5aada2de4cb5a4dd883e591e066185
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8773f7b93c67441fdf1cf6b6b992b152da14619
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343812"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401021"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Обработка сообщений Windows для диалогового окна
-Диалоговые окна включают windows, поэтому они могут обрабатывать сообщения Windows, при указании функции соответствующий обработчик. При создании классов диалоговых окон с помощью мастера добавления класса, мастер добавляет сопоставление пустое сообщение в класс. Используйте окно свойств для сопоставления любого сообщения Windows или команды, которые класс для обработки.  
-  
- В разделе [сопоставление сообщений Windows в свой класс диалоговых окон](../mfc/mapping-windows-messages-to-your-class.md) для получения дополнительной информации.  
-  
-## <a name="see-also"></a>См. также  
- [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)
+
+Диалоговые окна — windows, поэтому они могут обрабатывать сообщения Windows, если указать функции соответствующий обработчик. При создании классов диалоговых окон с помощью мастера добавления класса, мастер добавляет сопоставление пустое сообщение к классу. Используйте окно свойств для сопоставления любого сообщения Windows или команды, которые ваш класс для обработки.
+
+См. в разделе [сопоставление сообщений Windows, чтобы ваш класс диалогового окна](../mfc/mapping-windows-messages-to-your-class.md) Дополнительные сведения.
+
+## <a name="see-also"></a>См. также
+
+[Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)
 
