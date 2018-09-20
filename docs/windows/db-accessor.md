@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efca93e2e9b52ce646ef07465682815978550414
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61c20647d96a66cf4b50e6f0b031cc04353553e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607781"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410654"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -39,10 +39,10 @@ ms.locfileid: "42607781"
 
 #### <a name="parameters"></a>Параметры
 
-*num*  
+*num*<br/>
 Указывает номер доступа (с индексом отсчитываемый от нуля целое число). Необходимо указать номера доступа в повышении заказ, используя указанное целое число или определенные значения.
 
-*auto*  
+*auto*<br/>
 Логическое значение, указывающее, является ли метод доступа автоматически извлекается (TRUE) или не получить (FALSE).
 
 ## <a name="remarks"></a>Примечания

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876f2bde68c53a27c1c40e9206b6285b8562bd91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d570eaf3872f5d281d769e77298f9186d35e5a26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591143"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410433"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>Метод ImplementsHelper::FillArrayWithIid
 
@@ -38,10 +38,10 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс*  
+*Индекс*<br/>
 Отсчитываемый от нуля индекс, указывающий начальный элемент массива для этой операции. По завершении этой операции *индекс* увеличивается на 1.
 
-*идентификаторы IID*  
+*идентификаторы IID*<br/>
 Массив типа IID.
 
 ## <a name="remarks"></a>Примечания
@@ -56,5 +56,5 @@ void FillArrayWithIid(
 
 ## <a name="see-also"></a>См. также
 
-[Структура ImplementsHelper](../windows/implementshelper-structure.md)  
+[Структура ImplementsHelper](../windows/implementshelper-structure.md)<br/>
 [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

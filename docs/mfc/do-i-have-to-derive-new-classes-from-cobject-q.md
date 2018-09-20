@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51904ac06ae6c2db5586f8dc405f85145c5b1f30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec080e556b57afadbc3d958f4dba5ac6393108aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343064"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408912"
 ---
 # <a name="do-i-have-to-derive-new-classes-from-cobject"></a>Необходимо ли создавать новые классы как производные от CObject?
-Нет, не.  
-  
- Производный класс [CObject](../mfc/reference/cobject-class.md) при необходимости помещениях, он предоставляет, например сериализации или динамических creatability. Множество классов данных необходимо сериализовать в файлы, поэтому часто рекомендуется наследовать их из `CObject`. Для примера класса, производного от `CObject`, в разделе [пример Scribble](../visual-cpp-samples.md).  
-  
-## <a name="see-also"></a>См. также  
- [Класс CObject. Часто задаваемые вопросы](../mfc/cobject-class-frequently-asked-questions.md)
+
+Нет, это не так.
+
+Наследуйте класс от [CObject](../mfc/reference/cobject-class.md) при необходимости помещениях, он предоставляет, например сериализации или динамические creatability. Многие классы данных необходимо сериализовать в файлы, поэтому часто рекомендуется наследовать их из `CObject`. Для примера класса, производного от `CObject`, см. в разделе [пример Scribble](../visual-cpp-samples.md).
+
+## <a name="see-also"></a>См. также
+
+[Класс CObject. Часто задаваемые вопросы](../mfc/cobject-class-frequently-asked-questions.md)

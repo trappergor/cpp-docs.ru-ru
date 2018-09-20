@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cba5aaaec3303d9cd3534ff86cb677219c9c81c7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 087ecf151b17c7c505b4b70d01913a44e113ad29
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586788"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428685"
 ---
 # <a name="asyncbase-class"></a>AsyncBase - класс
 
@@ -47,26 +47,26 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 
 ### <a name="parameters"></a>Параметры
 
-*TComplete*  
+*TComplete*<br/>
 Обработчик событий, вызываемый при завершении асинхронной операции.
 
-*TProgress*  
+*TProgress*<br/>
 Обработчик событий, вызываемый при асинхронной операции отображается ход выполнения текущей операции.
 
-*Тип resultType*  
+*Тип resultType*<br/>
 Один из [AsyncResultType](../windows/asyncresulttype-enumeration.md) значений перечисления. По умолчанию `SingleResult`.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Конструктор AsyncBase::AsyncBase](../windows/asyncbase-asyncbase-constructor.md)|Инициализирует новый экземпляр класса **AsyncBase** класса.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод AsyncBase::Cancel](../windows/asyncbase-cancel-method.md)|Отменяет асинхронную операцию.|
 |[Метод AsyncBase::Close](../windows/asyncbase-close-method.md)|Закрывает асинхронной операции.|
@@ -84,7 +84,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод AsyncBase::CheckValidStateForDelegateCall](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Проверяет, является ли делегат свойства можно изменить в текущем состоянии асинхронной.|
 |[Метод AsyncBase::CheckValidStateForResultsCall](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Проверяет, является ли результаты асинхронной операции можно собирать в текущем состоянии асинхронной.|

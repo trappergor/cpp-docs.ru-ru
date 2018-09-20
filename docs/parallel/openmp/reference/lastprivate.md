@@ -16,38 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7124e51b604a55d049be13d3bbcccc4e5810ca67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028198"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412838"
 ---
 # <a name="lastprivate"></a>lastprivate
-Указывает, что версия переменной в охватывающем контексте приравнивается к закрытой версии потока, который выполняет последней итерации (конструкция цикл "for") или последний раздел (#pragma разделов).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-lastprivate(var)  
-```  
-  
+
+Указывает, что версия переменной в охватывающем контексте приравнивается к закрытой версии потока, который выполняет последней итерации (конструкция цикл "for") или последний раздел (#pragma разделов).
+
+## <a name="syntax"></a>Синтаксис
+
+```
+lastprivate(var)
+```
+
 ### <a name="parameters"></a>Параметры
-  
+
 *var*<br/>
-Переменная, которая задана равной закрытой версии потока, который выполняет последней итерации (конструкция цикл "for") или последний раздел (#pragma разделов).  
-  
-## <a name="remarks"></a>Примечания  
- `lastprivate` область применения следующих директив:  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Разделы](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Дополнительные сведения см. в разделе [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).  
-  
-## <a name="example"></a>Пример  
- См. в разделе [расписание](../../../parallel/openmp/reference/schedule.md) пример использования `lastprivate` предложение.  
-  
-## <a name="see-also"></a>См. также  
- [Предложения](../../../parallel/openmp/reference/openmp-clauses.md)
+Переменная, которая задана равной закрытой версии потока, который выполняет последней итерации (конструкция цикл "for") или последний раздел (#pragma разделов).
+
+## <a name="remarks"></a>Примечания
+
+`lastprivate` область применения следующих директив:
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Разделы](../../../parallel/openmp/reference/sections-openmp.md)
+
+Дополнительные сведения см. в разделе [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).
+
+## <a name="example"></a>Пример
+
+См. в разделе [расписание](../../../parallel/openmp/reference/schedule.md) пример использования `lastprivate` предложение.
+
+## <a name="see-also"></a>См. также
+
+[Предложения](../../../parallel/openmp/reference/openmp-clauses.md)

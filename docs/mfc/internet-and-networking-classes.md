@@ -1,5 +1,5 @@
 ---
-title: Классы сети и Интернета | Документы Microsoft
+title: Классы сети и Интернета | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c890803573f1acb45f511676cccdcc027c43223
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcce5cc8265140c8f939c17389aef1ffc82404ac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345095"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445572"
 ---
 # <a name="internet-and-networking-classes"></a>Классы сети и Интернета
-Эти классы позволяют обмениваться данными с удаленным компьютером с помощью сокетов Windows или Win32 Internet (WinInet). Существует также набор классов для работы с Windows Sockets.  
-  
- Следующие категории классов поддержки возможности подключения.  
-  
--   [Классы сокетов Windows](../mfc/windows-sockets-classes.md)  
-  
--   [Классы Win32 для работы в Интернете](../mfc/win32-internet-classes.md)  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../mfc/class-library-overview.md)
+
+Эти классы позволяют обмениваться данными с другого компьютера, с помощью сокетов Windows или Win32 Internet (WinInet). Существует также ряд классов для работы с Windows Sockets.
+
+Следующие категории классы поддерживают подключения.
+
+- [Классы сокетов Windows](../mfc/windows-sockets-classes.md)
+
+- [Классы Win32 для работы в Интернете](../mfc/win32-internet-classes.md)
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../mfc/class-library-overview.md)
 

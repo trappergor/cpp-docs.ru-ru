@@ -1,5 +1,5 @@
 ---
-title: Наконец | Документы Microsoft
+title: Наконец | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,54 +15,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 70057cad8ff5bca0606f06dd43eaa485834d2c70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 818ee6736d51303b047cb5a47aae02441557db29
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111475"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447288"
 ---
 # <a name="finally"></a>finally
-В дополнение к `try` и `catch` предложений, поддержка обработки исключений CLR `finally` предложения. Семантика идентична `__finally` блока в структурированную обработку исключений (SEH). Объект `__finally` блок можно выполнить `try` или `catch` блока.  
-  
-## <a name="remarks"></a>Примечания  
- Назначение `finally` блок — Чтобы очистить все ресурсы, после возникновения исключения. Обратите внимание, что `finally` блок выполняется всегда, даже если не возникло исключение. `catch` Блок выполняется только в том случае, если управляемое исключение возникает в пределах связанного `try` блока.  
-  
- `finally` — Контекстно-зависимое ключевое слово; в разделе [контекстно-зависимые ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md) для получения дополнительной информации.  
-  
-## <a name="example"></a>Пример  
- В следующем примере демонстрируется простой `finally` блока:  
-  
-```  
-// keyword__finally.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref class MyException: public System::Exception{};  
-  
-void ThrowMyException() {  
-   throw gcnew MyException;  
-}  
-  
-int main() {  
-   try {  
-      ThrowMyException();  
-   }  
-   catch ( MyException^ e ) {  
-      Console::WriteLine(  "in catch" );  
-      Console::WriteLine( e->GetType() );  
-   }  
-   finally {  
-      Console::WriteLine(  "in finally" );  
-   }  
-}  
-```  
-  
-```Output  
-in catch  
-MyException  
-in finally  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Обработка исключений](../windows/exception-handling-cpp-component-extensions.md)
+
+В дополнение к `try` и `catch` предложений, поддержка обработки исключений CLR `finally` предложение. Семантика идентична `__finally` блока в структурированной обработки исключений (SEH). Объект `__finally` можно выполнить блок `try` или `catch` блока.
+
+## <a name="remarks"></a>Примечания
+
+Цель `finally` блок должен освободить все ресурсы, после возникновения исключения. Обратите внимание, что `finally` блоке выполняется всегда, даже если исключение не создано. `catch` Блок выполняется только в том случае, если управляемое исключение возникает в пределах связанного `try` блока.
+
+`finally` — контекстно-зависимые ключевое слово; см. в разделе [контекстные ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md) Дополнительные сведения.
+
+## <a name="example"></a>Пример
+
+В следующем примере показано простое `finally` блок:
+
+```
+// keyword__finally.cpp
+// compile with: /clr
+using namespace System;
+
+ref class MyException: public System::Exception{};
+
+void ThrowMyException() {
+   throw gcnew MyException;
+}
+
+int main() {
+   try {
+      ThrowMyException();
+   }
+   catch ( MyException^ e ) {
+      Console::WriteLine(  "in catch" );
+      Console::WriteLine( e->GetType() );
+   }
+   finally {
+      Console::WriteLine(  "in finally" );
+   }
+}
+```
+
+```Output
+in catch
+MyException
+in finally
+```
+
+## <a name="see-also"></a>См. также
+
+[Обработка исключений](../windows/exception-handling-cpp-component-extensions.md)

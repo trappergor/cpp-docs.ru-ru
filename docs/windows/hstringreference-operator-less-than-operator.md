@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee7edbee285df6da752e875ac4d86a74e8f7893d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 17acdca8af1250b1f88fa8a6858ffa1854f8ca8c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594145"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426410"
 ---
 # <a name="hstringreferenceoperatorlt-operator"></a>Оператор HStringReference::Operator&lt; оператор
 
@@ -36,10 +36,10 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*  
+*lhs*<br/>
 Первый параметр для сравнения. *LHS* можно ссылаться на **HStringReference**.
 
-*правая часть*  
+*правая часть*<br/>
 Второй параметр для сравнения.  *правая часть* можно ссылаться на **HStringReference**.
 
 ## <a name="return-value"></a>Возвращаемое значение

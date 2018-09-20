@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6088ec152d7c91cb06c17c9dae2698f2fd983d1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 55c82290c3a96ab71419b36a7ec4a4eb2b528753
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610194"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419819"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory - класс
 
@@ -41,13 +41,13 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 
 ### <a name="parameters"></a>Параметры
 
-*I0*  
+*I0*<br/>
 Интерфейс признаками.
 
-*I1*  
+*I1*<br/>
 Первый интерфейс.
 
-*I2*  
+*I2*<br/>
 Второй интерфейс.
 
 ## <a name="remarks"></a>Примечания
@@ -66,13 +66,13 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Конструктор ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Инициализирует **ActivationFactory** класса.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Увеличивает счетчик ссылок текущего **ActivationFactory** объекта.|
 |[Метод ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Извлекает массив идентификаторов реализованного интерфейса.|

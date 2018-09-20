@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 403330097f1428ee0d7650f5931aef1621f61b11
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d460b006d2d17df308a62c0433621aac7008f4d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612605"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411421"
 ---
 # <a name="getmodulebase-function"></a>Функция GetModuleBase
 Извлекает [ModuleBase](../windows/modulebase-class.md) указатель, который позволяет увеличивать и уменьшать счетчик ссылок [RuntimeClass](../windows/runtimeclass-class.md) объекта.
@@ -32,17 +32,21 @@ inline Details::ModuleBase* GetModuleBase() throw()
 ```
   
 ## <a name="return-value"></a>Возвращаемое значение
- Указатель на объект `ModuleBase`.
+
+Указатель на объект `ModuleBase`.
   
 ## <a name="remarks"></a>Примечания
- Эта внутренняя функция используется для увеличения и уменьшения числа ссылок объекта.
+
+Эта внутренняя функция используется для увеличения и уменьшения числа ссылок объекта.
   
- Эту функцию можно использовать для управления счетчиками ссылок путем вызова [ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md) и [ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md).
+Эту функцию можно использовать для управления счетчиками ссылок путем вызова [ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md) и [ModuleBase::DecrementObjectCount](../windows/modulebase-decrementobjectcount-method.md).
   
 ## <a name="requirements"></a>Требования
- **Заголовок:** implements.h
+
+**Заголовок:** implements.h
   
- **Пространство имен:** Microsoft::WRL
+**Пространство имен:** Microsoft::WRL
   
 ## <a name="see-also"></a>См. также
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

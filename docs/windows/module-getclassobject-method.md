@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e0c8996823de35bbfd85d595556db933f34238a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90a1b527d12e581c42fc9519e56d453f845e0b63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599226"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419727"
 ---
 # <a name="modulegetclassobject-method"></a>Метод Module::GetClassObject
 
@@ -31,7 +31,7 @@ ms.locfileid: "42599226"
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
- HRESULT GetClassObject(
+HRESULT GetClassObject(
    REFCLSID clsid,
    REFIID riid,
    _Deref_out_ void **ppv,
@@ -41,16 +41,16 @@ ms.locfileid: "42599226"
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 Идентификатор класса.
 
-*riid*  
+*riid*<br/>
 Запрошенный идентификатор интерфейса.
 
-*ppv*  
+*ppv*<br/>
 Указатель на возвращаемый объект.
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя сервера, указанное в `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, или `ActivatableClass` макроса; или **nullptr** для получения имени сервера по умолчанию.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -66,4 +66,5 @@ ms.locfileid: "42599226"
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
+
 [Класс Module](../windows/module-class.md)

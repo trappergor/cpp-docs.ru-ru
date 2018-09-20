@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4e033ac940d414cb3ece11dfd927b8c2658f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762565"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444210"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Экспорт строковых классов с помощью CStringT
 
@@ -65,6 +65,6 @@ ms.locfileid: "43762565"
 
 ## <a name="see-also"></a>См. также
 
-[С помощью CStringT](../atl-mfc-shared/using-cstringt.md)   
+[Использование CStringT](../atl-mfc-shared/using-cstringt.md)<br/>
 [Использование CString](../atl-mfc-shared/using-cstring.md)
 

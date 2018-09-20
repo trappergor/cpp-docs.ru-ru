@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c295767070da04d0173e3299576338e700a1c6aa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c9b84cbcc970183222ed06752dc61b5672615868
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597017"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405389"
 ---
 # <a name="comptrcopyto-method"></a>Метод ComPtr::CopyTo
 
@@ -48,13 +48,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Параметры
 
-*U*  
+*U*<br/>
 Имя типа.
 
-*ptr*  
+*ptr*<br/>
 После завершения операции представляет указатель на запрошенный интерфейс.
 
-*riid*  
+*riid*<br/>
 Идентификатор интерфейса.
 
 ## <a name="return-value"></a>Возвращаемое значение

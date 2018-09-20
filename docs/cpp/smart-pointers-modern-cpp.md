@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2710609cbf20861c77dae1cb0aea327983efef6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098177"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425632"
 ---
 # <a name="smart-pointers-modern-c"></a>Интеллектуальные указатели (современный C++)
 
@@ -86,29 +86,39 @@ ms.locfileid: "46098177"
 
 При работе с COM-объектами создайте оболочку для указателей интерфейса в соответствующем типе интеллектуальных указателей. Библиотека шаблонных классов (ATL) определяет несколько интеллектуальных указателей для различных целей. Можно также использовать тип интеллектуального указателя `_com_ptr_t`, который компилятор использует при создании классов оболочки из файлов с расширением TLB. Это лучший вариант, если вы не хотите включать файлы заголовков ATL.
 
-[Класс CComPtr](../atl/reference/ccomptr-class.md) используйте, если невозможно использовать ATL. Выполняет подсчет ссылок с помощью методов `AddRef` и `Release`. Дополнительные сведения см. в разделе [как: Создание и использование экземпляров CComPtr и CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[Класс CComPtr](../atl/reference/ccomptr-class.md)<br/>
+Используйте, если невозможно использовать ATL. Выполняет подсчет ссылок с помощью методов `AddRef` и `Release`. Дополнительные сведения см. в разделе [как: Создание и использование экземпляров CComPtr и CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[Класс CComQIPtr](../atl/reference/ccomqiptr-class.md) Resembles `CComPtr` , но также предоставляет упрощенный синтаксис для вызова `QueryInterface` на COM-объекты. Дополнительные сведения см. в разделе [как: Создание и использование экземпляров CComPtr и CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[Класс CComQIPtr](../atl/reference/ccomqiptr-class.md)<br/>
+Похож на `CComPtr`, но также предоставляет упрощенный синтаксис для вызова `QueryInterface` COM-объекта. Дополнительные сведения см. в разделе [как: Создание и использование экземпляров CComPtr и CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[Класс CComHeapPtr](../atl/reference/ccomheapptr-class.md) смарт-указатель на объекты, использующие `CoTaskMemFree` для освобождения памяти.
+[Класс CComHeapPtr](../atl/reference/ccomheapptr-class.md)<br/>
+Интеллектуальный указатель на объекты, которые используют `CoTaskMemFree` для освобождения памяти.
 
-[Класс CComGITPtr](../atl/reference/ccomgitptr-class.md) смарт-указатель для интерфейсов, получаемых из глобальной таблицы интерфейсов (GIT).
+[Класс CComGITPtr](../atl/reference/ccomgitptr-class.md)<br/>
+Интеллектуальный указатель для интерфейсов, получаемых из глобальной таблицы интерфейсов (GIT).
 
-[Класс _com_ptr_t](../cpp/com-ptr-t-class.md) Resembles `CComQIPtr` функциональных возможностей, но не зависит от заголовков ATL.
+[Класс _com_ptr_t](../cpp/com-ptr-t-class.md)<br/>
+По функциональности аналогичен `CComQIPtr`, но не зависит от заголовков ATL.
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>Интеллектуальные указатели ATL для объектов POCO
 
 Помимо интеллектуальных указателей для COM-объектов, ATL определяет также интеллектуальные указатели и коллекции интеллектуальных указателей для простых старых объектов C++ (POCO). В классическом программировании Windows эти типы являются полезными альтернативами коллекциям стандартной библиотеки C++, особенно в том случае, если переносимость кода не требуется или если вы не хотите смешивать модели программирования стандартной библиотеки C++ и ATL.
 
-[Класс CAutoPtr](../atl/reference/cautoptr-class.md) смарт-указатель, принудительно реализующий уникальное владение путем переноса владения на копию. Сравним с нерекомендуемым классом `std::auto_ptr`.
+[Класс CAutoPtr](../atl/reference/cautoptr-class.md)<br/>
+Интеллектуальный указатель, принудительно реализующий уникальное владение путем переноса владения на копию. Сравним с нерекомендуемым классом `std::auto_ptr`.
 
-[Класс CHeapPtr](../atl/reference/cheapptr-class.md) смарт-указатель для объектов, выделенных с помощью C [malloc](../c-runtime-library/reference/malloc.md) функции.
+[Класс CHeapPtr](../atl/reference/cheapptr-class.md)<br/>
+Интеллектуальный указатель для объектов, выделенных с помощью C [malloc](../c-runtime-library/reference/malloc.md) функции.
 
-[Класс CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) смарт-указатель для массивов, выделенных с помощью `new[]`.
+[Класс CAutoVectorPtr](../atl/reference/cautovectorptr-class.md)<br/>
+Интеллектуальный указатель для массивов, память для которых выделяется с помощью `new[]`.
 
-[Класс CAutoPtrArray](../atl/reference/cautoptrarray-class.md) класс, инкапсулирующий массив `CAutoPtr` элементов.
+[Класс CAutoPtrArray](../atl/reference/cautoptrarray-class.md)<br/>
+Класс, инкапсулирующий массив элементов `CAutoPtr`.
 
-[Класс CAutoPtrList](../atl/reference/cautoptrlist-class.md) класс, инкапсулирующий методы для управления списком `CAutoPtr` узлов.
+[Класс CAutoPtrList](../atl/reference/cautoptrlist-class.md)<br/>
+Класс, инкапсулирующий методы для управления списком узлов `CAutoPtr`.
 
 ## <a name="see-also"></a>См. также
 

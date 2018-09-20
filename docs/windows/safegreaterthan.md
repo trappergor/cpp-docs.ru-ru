@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d17f464fd618f69279a5fe2e65c1abf8147eec9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eab7af0a5a72c8f5b08e046a527026e77ca67dea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724806"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411480"
 ---
 # <a name="safegreaterthan"></a>SafeGreaterThan
 
@@ -69,9 +69,9 @@ inline bool SafeGreaterThan (
 
 ## <a name="see-also"></a>См. также
 
-[Функции SafeInt](../windows/safeint-functions.md)  
-[Библиотека SafeInt](../windows/safeint-library.md)  
-[Класс SafeInt](../windows/safeint-class.md)  
-[SafeLessThan](../windows/safelessthan.md)  
-[SafeLessThanEquals](../windows/safelessthanequals.md)  
+[Функции SafeInt](../windows/safeint-functions.md)<br/>
+[Библиотека SafeInt](../windows/safeint-library.md)<br/>
+[Класс SafeInt](../windows/safeint-class.md)<br/>
+[SafeLessThan](../windows/safelessthan.md)<br/>
+[SafeLessThanEquals](../windows/safelessthanequals.md)<br/>
 [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)

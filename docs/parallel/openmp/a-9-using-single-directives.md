@@ -1,5 +1,5 @@
 ---
-title: Одной директивы Using а.9 | Документы Microsoft
+title: A.9 Использование отдельных директив | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0e0e08b0b7bdea05bf4c627ae33cc42298c6dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5a3a201450d54355aa96f0ea712ad9fa0f70f63f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690385"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448094"
 ---
 # <a name="a9---using-single-directives"></a>A.9   Использование отдельных директив
-В следующем примере демонстрируется `single` директивы ([раздел 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) на стр.). В примере, только один поток (обычно встречает первый поток `single` директива) выводит сообщения о ходе выполнения. Пользователь не должен делать никаких предположений для потока, в который будет выполняться `single` раздела. Пропускает все потоки `single` статьи и прекратит барьера в конце `single` построения. Если другие потоки могут продолжить работу без ожидания завершения потока, выполняющегося `single` разделе `nowait` предложение может быть указано в `single` директивы.  
-  
-```  
-#pragma omp parallel  
-{  
-    #pragma omp single  
-        printf_s("Beginning work1.\n");  
-    work1();  
-    #pragma omp single  
-        printf_s("Finishing work1.\n");  
-    #pragma omp single nowait  
-        printf_s("Finished work1 and beginning work2.\n");  
-    work2();  
-}  
+
+В следующем примере демонстрируется `single` директива ([разделе 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) на стр. 15). В примере, только один поток (обычно первый поток, у которых `single` директива) выводит сообщение о ходе выполнения. Пользователь не должен делать никаких предположений в каком потоке будет выполняться `single` раздел. Пропускает все прочие потоки `single` разделе и останавливать барьера в конце `single` построения. Если другие потоки могут продолжить работу без ожидания завершения потока, выполняющегося `single` разделе `nowait` предложение может быть указано в `single` директива.
+
+```
+#pragma omp parallel
+{
+    #pragma omp single
+        printf_s("Beginning work1.\n");
+    work1();
+    #pragma omp single
+        printf_s("Finishing work1.\n");
+    #pragma omp single nowait
+        printf_s("Finished work1 and beginning work2.\n");
+    work2();
+}
 ```

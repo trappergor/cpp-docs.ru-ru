@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56e3f48a3a58f25d03053867c195d11970893f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f844d63bc04deb4294203f04aef30db48f195fd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601411"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438071"
 ---
 # <a name="terminatemap-function"></a>Функция TerminateMap
 
@@ -39,13 +39,13 @@ inline bool TerminateMap(
 
 ### <a name="parameters"></a>Параметры
 
-*модуль*  
+*модуль*<br/>
 Объект [модуль](../windows/module-class.md).
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя подмножества фабрик классов в модуль, указанный параметром *модуль*.
 
-*forceTerminate*  
+*forceTerminate*<br/>
 **значение true,** завершить класс фабрик, независимо от того, они активны; **false** чтобы не завершать работу фабрик классов, если какая-либо активен.
 
 ## <a name="return-value"></a>Возвращаемое значение

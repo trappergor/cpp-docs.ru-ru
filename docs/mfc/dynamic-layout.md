@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6976669127dca79be59b85efbd15273b0f580a1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132066"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413254"
 ---
 # <a name="dynamic-layout"></a>Динамический макет
 
@@ -153,8 +153,8 @@ MFC в Visual Studio 2015 можно создавать диалоговые о�
 
 ## <a name="see-also"></a>См. также
 
-[Класс CMFCDynamicLayout](../mfc/reference/cmfcdynamiclayout-class.md)  
-[Классы элементов управления](../mfc/control-classes.md)  
-[Классы диалоговых окон](../mfc/dialog-box-classes.md)  
-[Редактор диалоговых окон](../windows/dialog-editor.md)  
+[Класс CMFCDynamicLayout](../mfc/reference/cmfcdynamiclayout-class.md)<br/>
+[Классы элементов управления](../mfc/control-classes.md)<br/>
+[Классы диалоговых окон](../mfc/dialog-box-classes.md)<br/>
+[Редактор диалоговых окон](../windows/dialog-editor.md)<br/>
 [Диалоговое окно динамического макета для MFC в Visual C++ 2015](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

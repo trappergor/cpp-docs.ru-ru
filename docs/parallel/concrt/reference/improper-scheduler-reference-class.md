@@ -18,54 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc6467a66163eeef5916580181005cac1a0a4b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5a061ca3c7bb39d90608685e04b62da9b2e83fb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016941"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410420"
 ---
 # <a name="improperschedulerreference-class"></a>Класс improper_scheduler_reference
-Данный класс описывает исключение, которое создается при вызове метода `Reference` на объекте `Scheduler`, который завершает работу, из контекста, который не является частью этого планировщика.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Данный класс описывает исключение, которое создается при вызове метода `Reference` на объекте `Scheduler`, который завершает работу, из контекста, который не является частью этого планировщика.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 class improper_scheduler_reference : public std::exception;
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[improper_scheduler_reference](#ctor)|Перегружен. Создает объект `improper_scheduler_reference`.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `exception`  
-  
- `improper_scheduler_reference`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** concrt.h  
-  
- **Пространство имен:** concurrency  
-  
-##  <a name="ctor"></a> improper_scheduler_reference 
+```
 
- Создает объект `improper_scheduler_reference`.  
-  
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[improper_scheduler_reference](#ctor)|Перегружен. Создает объект `improper_scheduler_reference`.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`exception`
+
+`improper_scheduler_reference`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** concrt.h
+
+**Пространство имен:** concurrency
+
+##  <a name="ctor"></a> improper_scheduler_reference
+
+Создает объект `improper_scheduler_reference`.
+
 ```
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
 
 improper_scheduler_reference() throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
+```
+
+### <a name="parameters"></a>Параметры
+
 *_Message*<br/>
-Описательное сообщение об ошибке.  
-  
-## <a name="see-also"></a>См. также  
- [пространство имен Concurrency](concurrency-namespace.md)   
- [Класс Scheduler](scheduler-class.md)
+Описательное сообщение об ошибке.
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен concurrency](concurrency-namespace.md)<br/>
+[Класс Scheduler](scheduler-class.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bb6c1bd23eaf705f6ceb57e5fc4ea3354c0ddfc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9406cc95804e4eb9fd76f53201118f13f0e422a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42571362"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410511"
 ---
 # <a name="importidl"></a>importidl
 
@@ -38,7 +38,7 @@ ms.locfileid: "42571362"
 
 ### <a name="parameters"></a>Параметры
 
-*idl_file*  
+*idl_file*<br/>
 Определяет имя IDL-файла, которые необходимо объединить с IDL-файла, создаваемого для вашего приложения.
 
 ## <a name="remarks"></a>Примечания
@@ -71,9 +71,9 @@ ms.locfileid: "42571362"
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты компилятора](../windows/compiler-attributes.md)  
-[Изолированные атрибуты](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importlib](../windows/importlib.md)  
-[include](../windows/include-cpp.md)  
+[Атрибуты компилятора](../windows/compiler-attributes.md)<br/>
+[Изолированные атрибуты](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importlib](../windows/importlib.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)  

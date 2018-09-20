@@ -463,14 +463,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723233"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412110"
 ---
 # <a name="reference-concurrency-runtime"></a>Справочные материалы (среда выполнения с параллелизмом)
+
 Этот раздел содержит справочные сведения о среде выполнения с параллелизмом.
 
 > [!Note]
@@ -478,7 +479,8 @@ ms.locfileid: "45723233"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[пространство имен Concurrency](concurrency-namespace.md) параллелизма пространство имен предоставляет классы и функции, предоставляющие доступ к среде выполнения с параллелизмом, является платформой параллельного программирования для C++. Дополнительные сведения см.в статье [Concurrency Runtime](../concurrency-runtime.md) (Среда выполнения с параллелизмом).
+[Пространство имен concurrency](concurrency-namespace.md)<br/>
+Пространство имен concurrency предоставляет классы и функции, предоставляющие доступ к среде выполнения с параллелизмом, является платформой параллельного программирования для C++. Дополнительные сведения см.в статье [Concurrency Runtime](../concurrency-runtime.md) (Среда выполнения с параллелизмом).
 
 [пространство имен std](std-namespace.md)
 

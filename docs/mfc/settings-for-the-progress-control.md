@@ -1,5 +1,5 @@
 ---
-title: Параметры для управления ходом выполнения | Документы Microsoft
+title: Параметры для управления ходом выполнения | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26afdcb58a64f2d2042596349acc4496aa530468
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6b11189e3e0a8381ade372841e6c7b25a5a9fa0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380013"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434639"
 ---
 # <a name="settings-for-the-progress-control"></a>Параметры элемента управления "Индикатор выполнения"
-Основные параметры управления хода выполнения ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) — это диапазон и текущее положение. Диапазон представляет всю продолжительность операции. Текущая позиция представляет ход выполнения приложения до завершения операции. Любые изменения диапазона или положение переводит элемент управления хода выполнения в перерисовывает себя.  
-  
- По умолчанию имеет значение диапазона 0 - 100, а также начальное положение имеет значение 0. Чтобы получить текущие параметры диапазона для элемента управления хода выполнения, используйте [GetRange](../mfc/reference/cprogressctrl-class.md#getrange) функции-члена. Чтобы изменить диапазон, используйте [SetRange](../mfc/reference/cprogressctrl-class.md#setrange) функции-члена.  
-  
- Чтобы установить позицию, используйте [SetPos](../mfc/reference/cprogressctrl-class.md#setpos). Получить текущую позицию без указания нового значения с помощью [GetPos](../mfc/reference/cprogressctrl-class.md#getpos). Например можно просто запросить состояние текущей операции.  
-  
- Чтобы выполнить шаг текущую позицию элемента управления хода выполнения, используйте [StepIt](../mfc/reference/cprogressctrl-class.md#stepit). Чтобы задать объем каждого шага, используйте [SetStep](../mfc/reference/cprogressctrl-class.md#setstep)  
-  
-## <a name="see-also"></a>См. также  
- [Использование CProgressCtrl](../mfc/using-cprogressctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+Основные параметры для элемента управления хода выполнения ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) — это диапазон и текущей позиции. Диапазон представляет всю продолжительность операции. Текущая позиция представляет объем работ выполнила приложения работ по завершению операции. Любые изменения диапазона или положение для перевода элемента управления хода выполнения получает команду перерисовать себя.
+
+По умолчанию имеет значение диапазона 0 - 100 и исходное положение имеет значение 0. Чтобы получить текущие параметры диапазона для индикатора хода выполнения, используйте [GetRange](../mfc/reference/cprogressctrl-class.md#getrange) функция-член. Чтобы изменить диапазон, используйте [SetRange](../mfc/reference/cprogressctrl-class.md#setrange) функция-член.
+
+Чтобы установить позицию, используйте [SetPos](../mfc/reference/cprogressctrl-class.md#setpos). Чтобы получить текущую позицию без указания нового значения, используйте [GetPos](../mfc/reference/cprogressctrl-class.md#getpos). Например можно просто запросить состояние текущей операции.
+
+Чтобы выполнить шаг текущую позицию индикатора хода выполнения, используйте [StepIt](../mfc/reference/cprogressctrl-class.md#stepit). Чтобы задать объем каждого шага, используйте [SetStep](../mfc/reference/cprogressctrl-class.md#setstep)
+
+## <a name="see-also"></a>См. также
+
+[Использование CProgressCtrl](../mfc/using-cprogressctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

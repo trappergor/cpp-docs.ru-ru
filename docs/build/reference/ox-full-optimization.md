@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d93bfe44fab0400ce4c3c173473601745f85196c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6e1da84c3a4ec481d3af2880a80f5923bf0c50cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721530"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438084"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (Включение большинства видов оптимизации скорости)
 
@@ -77,6 +77,6 @@ ms.locfileid: "45721530"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры /O (оптимизация кода)](../../build/reference/o-options-optimize-code.md)
-[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Параметры /O (оптимизация кода)](../../build/reference/o-options-optimize-code.md)<br/>
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

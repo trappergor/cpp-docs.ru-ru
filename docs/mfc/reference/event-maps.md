@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106812"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446612"
 ---
 # <a name="event-maps"></a>Схемы событий
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Параметры
 
-*theClass*  
+*theClass*<br/>
 Указывает, что имя класса элемента управления, событие которого сопоставления.
 
-*baseClass*  
+*baseClass*<br/>
 Указывает имя базового класса *theClass*.
 
 ### <a name="remarks"></a>Примечания
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Параметры
 
-*pszName*  
+*pszName*<br/>
 Имя события.
 
-*pfnFire*  
+*pfnFire*<br/>
 Имя на запуск функции события.
 
-*vtsParams*  
+*vtsParams*<br/>
 Разделенный пробелами список одной или нескольких констант, указав список параметров функции.
 
 ### <a name="remarks"></a>Примечания
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Параметры
 
-*pszName*  
+*pszName*<br/>
 Имя события.
 
-*Идентификатор DISPID*  
+*Идентификатор DISPID*<br/>
 Идентификатор диспетчеризации, используемые элементом управления, при срабатывании события.
 
-*pfnFire*  
+*pfnFire*<br/>
 Имя на запуск функции события.
 
-*vtsParams*  
+*vtsParams*<br/>
 Переменный список параметров, передаваемые от контейнера элемента управления при возникновении этого события.
 
 ### <a name="remarks"></a>Примечания
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>Параметры
 
-*iVerb*  
+*iVerb*<br/>
 Индекс обычного глагола для переопределения команды.
 
-*memberFxn*  
+*memberFxn*<br/>
 Функция вызывается платформой при вызове команды.
 
 ### <a name="remarks"></a>Примечания

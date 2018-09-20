@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27e3ad32500d1b0ff0efa2dab40888f163744bb1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 63bda924a91bb1f86494d844af037386d6e30292
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318711"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406351"
 ---
 # <a name="using-the-richedit-10-control-with-mfc"></a>Использование элемента управления RichEdit 1.0 с MFC
 
@@ -35,5 +35,5 @@ MFC
 
 ## <a name="see-also"></a>См. также
 
-[Устранение неполадок редактора диалоговых окон](../windows/troubleshooting-the-dialog-editor.md)  
+[Устранение неполадок редактора диалоговых окон](../windows/troubleshooting-the-dialog-editor.md)<br/>
 [Редактор диалоговых окон](../windows/dialog-editor.md)
