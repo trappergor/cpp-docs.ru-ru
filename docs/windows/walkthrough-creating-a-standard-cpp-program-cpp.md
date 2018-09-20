@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18b1f059ce6825e132c6fff0a52029a005442f53
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff4a2078bef03127507d1da35599ea391904bee7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598379"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382639"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Пошаговое руководство: Создание стандартной программы C++ (C++)
 
@@ -81,5 +81,5 @@ Visual C++ соответствует стандарту C++ 2003, со след
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку C++](../cpp/cpp-language-reference.md)  
+[Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
 [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)

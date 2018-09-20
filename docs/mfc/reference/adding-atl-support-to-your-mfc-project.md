@@ -1,5 +1,5 @@
 ---
-title: Добавление поддержки ATL в проект MFC | Документы Microsoft
+title: Добавление поддержки ATL в проект MFC | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2d7794d5c3777a208fef6371009771fc5b43c97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0d21202478a02980dbc94dc866b769c3c71a9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347072"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429738"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Добавление поддержки ATL в проект MFC
-Если вы уже создали приложение на основе MFC, затем можно добавить поддержку для Active Template Library (ATL) легко, запустив мастер проектов MFC добавления поддержки ATL.  
-  
+
+Если вы уже создали приложение на базе MFC, затем можно добавить поддержку для Active Template Library (ATL) легко, выполнив добавления поддержки ATL, MFC мастер проекта.
+
 > [!NOTE]
->  ATL и MFC не поддерживаются обычно в экспресс-выпусков Visual Studio.  
-  
+>  ATL и MFC не поддерживаются обычно в выпусках Express Visual Studio.
+
 > [!NOTE]
->  Эта поддержка действует только для простых объектов COM, добавленных в проект библиотеки DLL или исполняемого файла MFC. Можно добавить другие COM-объекты (включая элементы управления ActiveX) в проекты MFC, но объекты могут не работать должным образом.  
-  
-### <a name="to-add-atl-support-to-your-mfc-project"></a>Добавление поддержки ATL в проект MFC  
-  
-1.  В обозревателе решений щелкните правой кнопкой мыши проект, к которому нужно добавить поддержку ATL.  
-  
-2.  В контекстном меню выберите **добавить**, а затем нажмите кнопку **Добавление класса**.  
-  
-3.  Выберите **Добавление поддержки ATL в проект MFC** значок.  
-  
+>  Эта поддержка действует только для простых COM-объектов, добавленных в исполняемый файл MFC или проект библиотеки DLL. Проекты MFC можно добавить другие COM-объекты (включая элементы управления ActiveX), но объекты могут не работать должным образом.
+
+### <a name="to-add-atl-support-to-your-mfc-project"></a>Добавление поддержки ATL в проект MFC
+
+1. В обозревателе решений щелкните правой кнопкой мыши проект, к которому вы хотите добавить поддержку ATL.
+
+1. В контекстном меню, щелкните **добавить**, а затем нажмите кнопку **Добавление класса**.
+
+1. Выберите **Добавление поддержки ATL в проект MFC** значок.
+
     > [!NOTE]
-    >  Этот значок расположен в папке ATL в **категории** области.  
-  
-4.  При появлении запроса нажмите кнопку **Да** Добавление поддержки ATL.  
-  
- Дополнительные сведения о том, как добавление поддержки ATL изменяет код проекта MFC см. в разделе [сведения об ATL поддерживает Added мастером ATL](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
-  
-## <a name="see-also"></a>См. также  
- [Добавление класса](../../ide/adding-a-class-visual-cpp.md)   
- [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Добавление функции-члена](../../ide/adding-a-member-function-visual-cpp.md)   
- [Добавление переменной-члена](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Переопределение виртуальной функции](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Обработчик сообщений MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Перемещение по структуре класса](../../ide/navigating-the-class-structure-visual-cpp.md)
+    >  Этот значок расположен в папке ATL в **категории** области.
+
+1. При появлении запроса, щелкните **Да** Добавление поддержки ATL.
+
+Дополнительные сведения о том, как добавление поддержки ATL изменяет код проекта MFC, см. в разделе [сведения об ATL поддерживает Added мастером ATL](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
+
+## <a name="see-also"></a>См. также
+
+[Добавление класса](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Добавление функции-члена](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Добавление переменной-члена](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Переопределение виртуальной функции](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Обработчик сообщений MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Перемещение по структуре класса](../../ide/navigating-the-class-structure-visual-cpp.md)
