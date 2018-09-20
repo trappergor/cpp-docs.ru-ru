@@ -1,5 +1,5 @@
 ---
-title: Функция-член ExitInstance | Документы Microsoft
+title: Функция-член ExitInstance | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 954d2248061ec571d9d2ba8804c1f7c97275cbfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da411fbecdea0a1e7b8976ca119057204693a9bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343503"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387865"
 ---
 # <a name="exitinstance-member-function"></a>Функция-член ExitInstance
-[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) функции-члена класса [CWinApp](../mfc/reference/cwinapp-class.md) вызывается всякий раз, копия приложения завершается, обычно в результате пользователю выход из приложения.  
-  
- Переопределить `ExitInstance` необходимости обработки специальные операции очистки, например освобождение графических устройств (интерфейс) ресурсов или освобождением памяти, используемый во время выполнения программы. Тем не менее, очистку стандартных элементов, таких как документы и представления, предоставляется платформой, с другими переопределяемые функции для выполнения специальные операции очистки для этих объектов.  
-  
-## <a name="see-also"></a>См. также  
- [CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)
+
+[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) функция-член класса [CWinApp](../mfc/reference/cwinapp-class.md) вызывается каждый раз, копия приложения завершается, обычно из-за выхода из приложения пользователя.
+
+Переопределить `ExitInstance` необходимости обработки специальные операции очистки, например освобождение графических устройств (интерфейс) ресурсов или освобождение памяти, используемый во время выполнения программы. Тем не менее, очистки стандартных элементов, таких как документы и представления, предоставляется платформой, с помощью других переопределяемые функции для выполнения специальных операций очистки для этих объектов.
+
+## <a name="see-also"></a>См. также
+
+[CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)

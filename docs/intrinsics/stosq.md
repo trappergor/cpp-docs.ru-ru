@@ -18,78 +18,82 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8f8aa8c1fd1a5dad6fd70c566cb59bf8dddc4cc3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715511"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380143"
 ---
 # <a name="stosq"></a>__stosq
-**Блок, относящийся только к системам Microsoft**  
-  
- Создает инструкцию строка магазина (`rep stosq`).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+**Блок, относящийся только к системам Microsoft**
+
+Создает инструкцию строка магазина (`rep stosq`).
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __stosb( 
+   unsigned __int64* Dest, 
+   unsigned __int64 Data, 
+   size_t Count 
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *dest*<br/>
-[out] Целевой для операции.  
-  
+[out] Целевой для операции.
+
 *Данные*<br/>
-[in] Сохраняемые данные.  
-  
+[in] Сохраняемые данные.
+
 *Количество*<br/>
-[in] Длина блока учетверенных слова для записи.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__stosq`|AMD64|  
-  
- **Файл заголовка** \<intrin.h >  
-  
-## <a name="remarks"></a>Примечания  
- Результатом является то, что quadword `Data` записывается в блок `Count` учетверенных слова в `Dest` строку.  
-  
- Эта процедура доступна только как встроенная функция.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// stosq.c  
-// processor: x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__stosq)  
-  
-int main()  
-{  
-   unsigned __int64 val = 0xFFFFFFFFFFFFI64;  
-   unsigned __int64 a[10];  
-   memset(a, 0, sizeof(a));  
-   __stosq(a+1, val, 2);  
-   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);   
-}  
-```  
-  
-## <a name="output"></a>Вывод  
-  
-```  
-0 ffffffffffff ffffffffffff 0  
-```  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[in] Длина блока учетверенных слова для записи.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__stosq`|AMD64|
+
+**Файл заголовка** \<intrin.h >
+
+## <a name="remarks"></a>Примечания
+
+Результатом является то, что quadword `Data` записывается в блок `Count` учетверенных слова в `Dest` строку.
+
+Эта процедура доступна только как встроенная функция.
+
+## <a name="example"></a>Пример
+
+```
+// stosq.c
+// processor: x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__stosq)
+
+int main()
+{
+   unsigned __int64 val = 0xFFFFFFFFFFFFI64;
+   unsigned __int64 a[10];
+   memset(a, 0, sizeof(a));
+   __stosq(a+1, val, 2);
+   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);
+}
+```
+
+## <a name="output"></a>Вывод
+
+```
+0 ffffffffffff ffffffffffff 0
+```
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

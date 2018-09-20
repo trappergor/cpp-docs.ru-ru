@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 82479dab780fce677eeee84c4ccde880fe19d2bc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 43ba8086481ea2a8dde20d06b1dc143b297138f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314915"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378310"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Создание значка или другого изображения (редактор изображений для значков)
 
@@ -67,8 +67,8 @@ ms.locfileid: "44314915"
 
 ## <a name="see-also"></a>См. также
 
-[Значки и курсоры: ресурсы изображений для устройств отображения](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Преобразование растровых изображений в панель инструментов](../windows/converting-bitmaps-to-toolbars.md)  
-[Создание панелей инструментов](../windows/creating-new-toolbars.md)  
-[Изменение графических ресурсов](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Значки и курсоры: ресурсы изображений для устройств отображения](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Преобразование растровых изображений в панель инструментов](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[Создание панелей инструментов](../windows/creating-new-toolbars.md)<br/>
+[Изменение графических ресурсов](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Редактор изображений для значков](../windows/image-editor-for-icons.md)

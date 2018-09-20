@@ -16,43 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d5cabbd1d779de4c6c081b57b8f241d9fa92f62
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dffb51782e87903feaeb733765fcf9f4763a64f6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709065"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385148"
 ---
 # <a name="readdr"></a>__readdr
-Считывает значение указанного отладки регистра.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-unsigned         __readdr(unsigned int DebugRegister);  
-unsigned __int64 __readdr(unsigned int DebugRegister);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+Считывает значение указанного отладки регистра.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+unsigned         __readdr(unsigned int DebugRegister);
+unsigned __int64 __readdr(unsigned int DebugRegister);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *DebugRegister*<br/>
-[in] Зарегистрируйте константой, от 0 до 7, определяет debug.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение регистра указанного отладки.  
-  
-## <a name="remarks"></a>Примечания  
- Эти встроенные функции доступны только в режиме ядра, а процедуры доступны только как встроенные функции.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__readdr`|x86, x64|  
-  
- **Файл заголовка** \<intrin.h >  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   
- [__readeflags](../intrinsics/readeflags.md)
+[in] Зарегистрируйте константой, от 0 до 7, определяет debug.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Значение регистра указанного отладки.
+
+## <a name="remarks"></a>Примечания
+
+Эти встроенные функции доступны только в режиме ядра, а процедуры доступны только как встроенные функции.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__readdr`|x86, x64|
+
+**Файл заголовка** \<intrin.h >
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[__readeflags](../intrinsics/readeflags.md)

@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51970f99a05b587bcdbccc5d24ad21b036d87f74
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 856b704b25bed6d350d4e42cd08a138ad8fd8f8f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710818"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384576"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -377,7 +377,7 @@ CTaskDialog(
     int nTaskDialogOptions = TDF_ENABLE_HYPERLINKS | TDF_USE_COMMAND_LINKS,
     const CString& strFooter = _T(""));
 
- 
+
 CTaskDialog(
     const CString& strContent,
     const CString& strMainInstruction,
@@ -1630,7 +1630,7 @@ HRESULT TaskDialogCallback(
 
 ## <a name="see-also"></a>См. также
 
-[Классы](../../mfc/reference/mfc-classes.md)  
-[Класс CObject](../../mfc/reference/cobject-class.md)  
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)  
-[Пошаговое руководство. Добавление CTaskDialog в приложение](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)  
+[Классы](../../mfc/reference/mfc-classes.md)<br/>
+[Класс CObject](../../mfc/reference/cobject-class.md)<br/>
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Пошаговое руководство. Добавление CTaskDialog в приложение](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

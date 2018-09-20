@@ -1,5 +1,5 @@
 ---
-title: Отсоединение CWnd от HWND | Документы Microsoft
+title: Отсоединение CWnd от HWND | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a776b4ff4799750c89a322379a063030db748eec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c69703d8c528d82a696fc94be76ac4a569628b4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342684"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392652"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Отсоединение CWnd от HWND
-Для обхода объекта -`HWND` связь, MFC предоставляет другой `CWnd` функции-члена [отсоединения](../mfc/reference/cwnd-class.md#detach), отсоединяет объект window C++ из окна Windows. Это предотвращает деструктор уничтожение окна Windows при уничтожении объекта.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
-  
--   [Создание окон](../mfc/creating-windows.md)  
-  
--   [Последовательность деструкции окна](../mfc/window-destruction-sequence.md)  
-  
--   [Выделение и освобождение памяти окна](../mfc/allocating-and-deallocating-window-memory.md)  
-  
-## <a name="see-also"></a>См. также  
- [Объекты окон](../mfc/window-objects.md)
+
+Если вам нужно обойти объект -`HWND` связи, MFC предоставляет другой `CWnd` функции-члена [отсоединения](../mfc/reference/cwnd-class.md#detach), которая отсоединяет объектом окна C++ из окна Windows. Это не позволяет деструктору уничтожение окна Windows, при уничтожении объекта.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+
+- [Создание окон](../mfc/creating-windows.md)
+
+- [Последовательность деструкции окна](../mfc/window-destruction-sequence.md)
+
+- [Выделение и освобождение памяти окна](../mfc/allocating-and-deallocating-window-memory.md)
+
+## <a name="see-also"></a>См. также
+
+[Объекты окон](../mfc/window-objects.md)
 

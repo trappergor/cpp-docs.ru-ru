@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7115bd3ad6ef1a385b8c2a509f42316c9f8b69bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5ba40aa98321956f19de30f5f4002cb788ff446e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607202"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371996"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>Деструктор MakeAllocator::~MakeAllocator
 
@@ -48,5 +48,5 @@ ms.locfileid: "42607202"
 
 ## <a name="see-also"></a>См. также
 
-[Класс MakeAllocator](../windows/makeallocator-class.md)  
+[Класс MakeAllocator](../windows/makeallocator-class.md)<br/>
 [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc59b9c93cebb622f40881d961709079abcd9166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590656"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388634"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>Конструктор EventTargetArray::EventTargetArray
 
@@ -39,7 +39,7 @@ EventTargetArray(
 
 ### <a name="parameters"></a>Параметры
 
-*hr*  
+*hr*<br/>
 После этого конструктор операций параметр *hr* указывает, успешно ли выполнено выделения массива. В следующей таблице перечислены возможные значения для *hr*.
 
 Значение S_OK операция выполнена успешно.
@@ -48,7 +48,7 @@ EventTargetArray(
 
 Параметр S_FALSE *элементы* меньше или равно нулю.
 
-*Элементы*  
+*Элементы*<br/>
 Число элементов массива для выделения.
 
 ## <a name="remarks"></a>Примечания
@@ -65,5 +65,5 @@ EventTargetArray(
 
 ## <a name="see-also"></a>См. также
 
-[Класс EventTargetArray](../windows/eventtargetarray-class.md)  
+[Класс EventTargetArray](../windows/eventtargetarray-class.md)<br/>
 [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

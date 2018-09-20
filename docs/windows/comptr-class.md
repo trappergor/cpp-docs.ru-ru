@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a20dd5e2fb43dd5caae7a5185260d8c88637d33
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88d3af154993bea6df509a69b832223aede7ad81
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597966"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386513"
 ---
 # <a name="comptr-class"></a>Класс ComPtr
 
@@ -40,10 +40,10 @@ friend class ComPtr;
 
 ### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Интерфейс, **ComPtr** представляет.
 
-*U*  
+*U*<br/>
 Класс, к которому текущий **ComPtr** является дружественной. (Шаблон, который использует этот параметр, защищен.)
 
 ## <a name="remarks"></a>Примечания
@@ -56,20 +56,20 @@ friend class ComPtr;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`InterfaceType`|Синоним для типа, заданного параметром *T* параметр шаблона.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Конструктор ComPtr::ComPtr](../windows/comptr-comptr-constructor.md)|Инициализирует новый экземпляр класса **ComPtr** класса. Перегрузки предоставляют конструкторы по умолчанию, конструкторы копирования, перемещения и преобразования.|
 |[Деструктор ComPtr::~ComPtr](../windows/comptr-tilde-comptr-destructor.md)|Отменяет инициализацию экземпляра **ComPtr**.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод ComPtr::As](../windows/comptr-as-method.md)|Возвращает **ComPtr** , представляющий интерфейс, определенный параметром указанного шаблона.|
 |[Метод ComPtr::AsIID](../windows/comptr-asiid-method.md)|Возвращает **ComPtr** , представляющий интерфейс, определенный с помощью идентификатора указанного интерфейса.|
@@ -85,14 +85,14 @@ friend class ComPtr;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод ComPtr::InternalAddRef](../windows/comptr-internaladdref-method.md)|Увеличивает счетчик ссылок интерфейса, связанного с данным **ComPtr**.|
 |[Метод ComPtr::InternalRelease](../windows/comptr-internalrelease-method.md)|Выполняет операцию освобождения модели COM в интерфейсе, связанном с этим **ComPtr**.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Оператор ComPtr::operator Microsoft::WRL::Details::BoolType](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|Указывает ли **ComPtr** управление временем существования объектов интерфейса.|
 |[Оператор ComPtr::operator&](../windows/comptr-operator-ampersand-operator.md)|Извлекает адрес текущего **ComPtr**.|
@@ -103,7 +103,7 @@ friend class ComPtr;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Элемент данных ComPtr::ptr_](../windows/comptr-ptr-data-member.md)|Содержит указатель на интерфейс, который связан с и управляемые этим экземпляром **ComPtr**.|
 

@@ -1,5 +1,5 @@
 ---
-title: Структура InvokeModeOptions | Документы Microsoft
+title: Структура InvokeModeOptions | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b1eb0e7f6cf49a7c6ac12a4810ae1622e263e2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea549db29f7fcb67e4d59e341bf7d5ad085b6d7f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882841"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392714"
 ---
 # <a name="invokemodeoptions-structure"></a>Структура InvokeModeOptions
 
-Указывает, следует ли запускать все события в очереди делегата или остановить обработку после возникновения ошибки. Допустимые значения указываются в `InvokeMode` перечисления.
+Указывает, следует ли запускать все события в очереди делегат, для остановки обработки после возникновения ошибки. Допустимые значения указываются в `InvokeMode` перечисления.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,5 +51,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
-[Microsoft::WRL::AgileEventSource-класс](../windows/agileeventsource-class.md)
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)<br/>
+[Класс Microsoft::WRL::AgileEventSource](../windows/agileeventsource-class.md)

@@ -1,5 +1,5 @@
 ---
-title: CTreeView-класс | Документы Microsoft
+title: Класс CTreeView | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,72 +20,79 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d19d4958de2f7909f2072b2ae2f59c00e63d65a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a760e567718ad7a485ebe469903c7cbd566daccc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373629"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375402"
 ---
-# <a name="ctreeview-class"></a>CTreeView-класс
-Упрощает использование элемента управления дерева и [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), класс, который инкапсулирует функциональность элемента управления дерева в архитектуру представления документов MFC.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class CTreeView : public CCtrlView  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[CTreeView::CTreeView](#ctreeview)|Создает объект `CTreeView`.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[CTreeView::GetTreeCtrl](#gettreectrl)|Возвращает дерево элемента управления, связанного с представлением.|  
-  
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения об этой архитектуре см [CView](../../mfc/reference/cview-class.md) класс и перекрестные ссылки, указан.  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CView](../../mfc/reference/cview-class.md)  
-  
- [CCtrlView](../../mfc/reference/cctrlview-class.md)  
-  
- `CTreeView`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcview.h  
-  
-##  <a name="ctreeview"></a>  CTreeView::CTreeView  
- Создает объект `CTreeView`.  
-  
-```  
+# <a name="ctreeview-class"></a>Класс CTreeView
+
+Упрощает использование элемента управления дерева и [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), который инкапсулирует его функциональность, в архитектуру представления документов MFC.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+class CTreeView : public CCtrlView
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CTreeView::CTreeView](#ctreeview)|Создает объект `CTreeView`.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CTreeView::GetTreeCtrl](#gettreectrl)|Возвращает дерево, связанный с представлением.|
+
+## <a name="remarks"></a>Примечания
+
+Дополнительные сведения об этой архитектуре см. в обзоре, для [CView](../../mfc/reference/cview-class.md) класс и перекрестные ссылки, указанных там.
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CView](../../mfc/reference/cview-class.md)
+
+[CCtrlView](../../mfc/reference/cctrlview-class.md)
+
+`CTreeView`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxcview.h
+
+##  <a name="ctreeview"></a>  CTreeView::CTreeView
+
+Создает объект `CTreeView`.
+
+```
 CTreeView();
-```  
-  
-##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl  
- Возвращает ссылку на дерево, связанный с представлением.  
-  
-```  
-CTreeCtrl& GetTreeCtrl() const;  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Класс CCtrlView](../../mfc/reference/cctrlview-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CView-класс](../../mfc/reference/cview-class.md)   
- [Класс CCtrlView](../../mfc/reference/cctrlview-class.md)   
- [Класс CTreeCtrl](../../mfc/reference/ctreectrl-class.md)
+```
+
+##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl
+
+Возвращает ссылку на дерево управления, связанный с представлением.
+
+```
+CTreeCtrl& GetTreeCtrl() const;
+```
+
+## <a name="see-also"></a>См. также
+
+[Класс CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Класс CView](../../mfc/reference/cview-class.md)<br/>
+[Класс CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
+[Класс CTreeCtrl](../../mfc/reference/ctreectrl-class.md)

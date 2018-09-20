@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf6ca06ffbd3912ac3545bc3c014224412c01bc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4bbb5c62fb53d1246c1b8cc282b4ee36f0fcf58e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221174"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377322"
 ---
 # <a name="aggregates"></a>статистические выражения
 
@@ -42,10 +42,10 @@ ms.locfileid: "43221174"
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 Указывает CLSID статистически вычисляемого объекта.
 
-*имя_переменной*  
+*имя_переменной*<br/>
 Имя переменной для вставки. Эта переменная содержит `IUnknown` из статистически вычисляемого объекта.
 
 ## <a name="remarks"></a>Примечания
@@ -106,9 +106,9 @@ struct CObject : IObject
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты COM](../windows/com-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
-[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Статистическая обработка](/windows/desktop/com/aggregation)  
-[Статистическую обработку](/windows/desktop/Midl/aggregatable)  
+[Атрибуты COM](../windows/com-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Статистическая обработка](/windows/desktop/com/aggregation)<br/>
+[Статистическую обработку](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d21348d9c252fbcd3024ca6531671979d8834eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 138921cfb635125210e5f5bf9305c91243c4489c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605822"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387228"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "42605822"
 
 ### <a name="parameters"></a>Параметры
 
-*interfaces*  
+*interfaces*<br/>
 Разделенный запятыми список интерфейсов, которые будут входить в компонентного класса IDL. Метод сокращением для указания единый интерфейс является **реализует (** *interface_name* **)**.
 
-*dispinterfaces*  
+*dispinterfaces*<br/>
 Разделенный запятыми список disp-интерфейс, который будет входить компонентного класса IDL. Метод сокращением для указания одного disp-интерфейс является **реализует (диспетчерских =** *dispinterface_name* **)**.
 
 ## <a name="remarks"></a>Примечания
@@ -558,5 +558,5 @@ public:
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты компилятора](../windows/compiler-attributes.md)  
+[Атрибуты компилятора](../windows/compiler-attributes.md)<br/>
 [Атрибуты классов](../windows/class-attributes.md)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eeaaedeb4c3806af888f36e62c8fa8e54c47eb46
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d5b50c57a80b2a9aca2681c3ade3c6d4fc3568e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595698"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385993"
 ---
 # <a name="creatormapactivationid-data-member"></a>Элемент данных CreatorMap::activationId
 
@@ -39,10 +39,10 @@ union {
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 Идентификатор интерфейса.
 
-*getRuntimeName*  
+*getRuntimeName*<br/>
 Функция, которая извлекает имя объекта в среде выполнения Windows.
 
 ## <a name="remarks"></a>Примечания
@@ -57,5 +57,5 @@ union {
 
 ## <a name="see-also"></a>См. также
 
-[Структура CreatorMap](../windows/creatormap-structure.md)  
+[Структура CreatorMap](../windows/creatormap-structure.md)<br/>
 [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

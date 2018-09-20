@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 80b8546e461930ac184e0f5b3ed2b34499cc8d3c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201355"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384226"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "43201355"
 
 ### <a name="parameters"></a>Параметры
 
-*low*  
+*low*<br/>
 Значение нижняя граница диапазона.
 
-*high*  
+*high*<br/>
 Значение верхняя граница диапазона.
 
 ## <a name="remarks"></a>Примечания
@@ -80,7 +80,7 @@ __interface ICustom {
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Атрибуты метода](../windows/method-attributes.md)  
-[Атрибуты параметра](../windows/parameter-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Атрибуты метода](../windows/method-attributes.md)<br/>
+[Атрибуты параметра](../windows/parameter-attributes.md)<br/>
 [Атрибуты элементов данных](../windows/data-member-attributes.md)  

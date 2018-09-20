@@ -1,5 +1,5 @@
 ---
-title: Использование всплывающих подсказок в объекте CStatusBarCtrl | Документы Microsoft
+title: Использование всплывающих подсказок в объекте CStatusBarCtrl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cce98e4a3b3ffd506607529b9fea6f0c1114cc3
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f17dff6680209664e9d029404e4ef012b9f12046
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951272"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392363"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Использование всплывающих подсказок в объекте CStatusBarCtrl
-Чтобы включить подсказки для строки состояния, создайте `CStatusBarCtrl` объекта с использованием стиля SBT_TOOLTIPS.  
-  
+
+Чтобы включить всплывающие подсказки для строки состояния, создайте `CStatusBarCtrl` объекта со стилем SBT_TOOLTIPS.
+
 > [!NOTE]
->  Если вы используете `CStatusBar` объекта, чтобы реализовать строка состояния, используйте `CStatusBar::CreateEx` функции. Он позволяет указать дополнительные стили для embedded `CStatusBarCtrl` объекта.  
-  
- Один раз `CStatusBarCtrl` объект был успешно создан, используйте [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) и [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) и извлечения текст подсказки для определенной области.  
-  
- После задания всплывающая подсказка отображается только в том случае, если значение имеет значок, а не текста или весь текст не может быть отображен в части. Всплывающие подсказки в простом режиме не поддерживаются.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+>  Если вы используете `CStatusBar` объекта, чтобы реализовать строка состояния, используйте `CStatusBar::CreateEx` функции. Он позволяет указать дополнительные стили для встроенного `CStatusBarCtrl` объекта.
+
+Один раз `CStatusBarCtrl` объект был успешно создан, используйте [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) и [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) задание и получение текст подсказки для определенной области.
+
+После задания всплывающая подсказка отображается только в том случае, если часть содержит значок и текст, или в том случае, если невозможно отобразить весь текст в части. Всплывающие подсказки не поддерживаются в простом режиме.
+
+## <a name="see-also"></a>См. также
+
+[Использование CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

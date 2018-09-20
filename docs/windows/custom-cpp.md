@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ec3ba8280ab481211d98c9dc5256c94e76e193e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220365"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396453"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "43220365"
 
 ### <a name="parameters"></a>Параметры
 
-*uuid*  
+*uuid*<br/>
 Уникальный идентификатор.
 
-*значение*  
+*значение*<br/>
 Значение, которое можно поместить в тип variant.
 
 ## <a name="remarks"></a>Примечания
@@ -66,10 +66,10 @@ ms.locfileid: "43220365"
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Изолированные атрибуты](../windows/stand-alone-attributes.md)  
-[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Атрибуты параметра](../windows/parameter-attributes.md)  
-[Атрибуты метода](../windows/method-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Изолированные атрибуты](../windows/stand-alone-attributes.md)<br/>
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Атрибуты параметра](../windows/parameter-attributes.md)<br/>
+[Атрибуты метода](../windows/method-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
 [Атрибуты интерфейса](../windows/interface-attributes.md)  

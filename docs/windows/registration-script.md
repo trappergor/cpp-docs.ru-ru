@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 997b8bc01424b102551815f19ff9a487113e5f6b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e4aaef2cca5146291f7d3708a995a116768e0467
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601017"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382940"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -38,7 +38,7 @@ ms.locfileid: "42601017"
 
 ### <a name="parameters"></a>Параметры
 
-*сценарий*  
+*сценарий*<br/>
 Полный путь к файлу сценария (.rgs) регистрации. Значение **none**, такие как `script = "none"`, означает, что компонентный класс не требования для регистрации.
 
 ## <a name="remarks"></a>Примечания
@@ -85,6 +85,6 @@ class CMyClass:public IFace {};
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты COM](../windows/com-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты COM](../windows/com-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
 [rdx](../windows/rdx.md)  

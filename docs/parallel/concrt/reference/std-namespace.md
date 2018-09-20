@@ -1,5 +1,5 @@
 ---
-title: стандартное пространство имен | Документы Microsoft
+title: стандартные операции пространства имен | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,35 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 910b2d73d04f44282ed0106092844307aed3ba67
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 534bb31e08194c8f78c0bd28f711c2e173731c35
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695713"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395275"
 ---
 # <a name="std-namespace"></a>Пространство имен std
-## <a name="syntax"></a>Синтаксис  
-  
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 namespace std;
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="functions"></a>Функции  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[Функция make_exception_ptr](make-exception-ptr-function.md)||  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** ppltasks.h  
-  
-## <a name="see-also"></a>См. также  
- [Ссылки](reference-concurrency-runtime.md)
+```
 
+## <a name="members"></a>Участники
 
+### <a name="functions"></a>Функции
 
+|Имя|Описание|
+|----------|-----------------|
+|[Функция make_exception_ptr](make-exception-ptr-function.md)||
 
+## <a name="requirements"></a>Требования
+
+**Заголовок:** ppltasks.h
+
+## <a name="see-also"></a>См. также
+
+[Ссылки](reference-concurrency-runtime.md)
 

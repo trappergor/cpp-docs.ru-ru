@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97a0f98044e18ec6eff1f1b99e9c9178b711e040
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0f4aeb3bc5b2ee0598cf9e7d3f572f1f0e5fb5f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596027"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393182"
 ---
 # <a name="comptrrefoperator-operator"></a>Оператор ComPtrRef::operator!=
 
@@ -57,10 +57,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*a*  
+*a*<br/>
 Ссылку на **ComPtrRef** объекта.
 
-*b*  
+*b*<br/>
 Ссылка на другой **ComPtrRef** объект или указатель на анонимный объект (`void*`).
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -83,5 +83,5 @@ bool operator!=(
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)  
+[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)<br/>
 [Класс ComPtrRef](../windows/comptrref-class.md)

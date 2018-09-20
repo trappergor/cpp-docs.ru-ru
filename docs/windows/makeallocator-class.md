@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e27be8eaddfc22474f15d7f9358050273252bf8a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 460e2cdef4d0ba4252ceb8a4b7fe6defc25c183a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610328"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375378"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator - класс
 
@@ -35,7 +35,7 @@ template<
    typename T,
    bool hasWeakReferenceSupport =
          !__is_base_of(RuntimeClassFlags<InhibitWeakReference>, T)>
- class MakeAllocator;
+class MakeAllocator;
 
 template<typename T>
 class MakeAllocator<T, false>;
@@ -46,10 +46,10 @@ class MakeAllocator<T, true>;
 
 ### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Имя типа.
 
-*hasWeakReferenceSupport*  
+*hasWeakReferenceSupport*<br/>
 **значение true,** выделить память для объекта, который поддерживает слабых ссылок; **false** выделить память для объекта, который не поддерживает слабые ссылки.
 
 ## <a name="remarks"></a>Примечания
@@ -64,14 +64,14 @@ class MakeAllocator<T, true>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Конструктор MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Инициализирует новый экземпляр класса **MakeAllocator** класса.|
 |[Деструктор MakeAllocator::~MakeAllocator](../windows/makeallocator-tilde-makeallocator-destructor.md)|Деинициализирует текущий экземпляр **MakeAllocator** класса.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод MakeAllocator::Allocate](../windows/makeallocator-allocate-method.md)|Выделяет память и связывает его с текущим **MakeAllocator** объекта.|
 |[Метод MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Отменяет связь памяти, выделенной с помощью [выделения](../windows/makeallocator-allocate-method.md) метод из текущего **MakeAllocator** объекта.|

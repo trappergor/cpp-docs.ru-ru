@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ab6941e891d75e06aaea1ca492a3c64e509b0f7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd03b9371c4026282ff9e01d16b937c73bc495ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711676"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390504"
 ---
 # <a name="writecr4"></a>__writecr4
-**Блок, относящийся только к системам Microsoft**  
-  
- Записывает значение `Data` CR4 регистр.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void writecr4(   
-   unsigned __int64 Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+**Блок, относящийся только к системам Microsoft**
+
+Записывает значение `Data` CR4 регистр.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void writecr4( 
+   unsigned __int64 Data 
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *Данные*<br/>
-[in] Значение для записи в CR4 регистр.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__writecr4`|x86, x64|  
-  
- **Файл заголовка** \<intrin.h >  
-  
-## <a name="remarks"></a>Примечания  
- Эта встроенная функция доступна только в режиме ядра и процедура доступна только как встроенная.  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[in] Значение для записи в CR4 регистр.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__writecr4`|x86, x64|
+
+**Файл заголовка** \<intrin.h >
+
+## <a name="remarks"></a>Примечания
+
+Эта встроенная функция доступна только в режиме ядра и процедура доступна только как встроенная.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

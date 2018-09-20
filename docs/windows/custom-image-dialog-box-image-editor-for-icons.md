@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e5aff6796804d7868b4d61c94e4a181b88e9ab6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8376db7eb824856d84e8c742d8a187604f939455
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704844"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384719"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Диалоговое окно пользовательского образа (C++) (редактор изображений для значков)
 
@@ -41,8 +41,10 @@ ms.locfileid: "45704844"
    Поле нужно указать число цветов для пользовательского образа: 2, 16 или 256.
   
 ## <a name="requirements"></a>Требования
- Нет
+
+Нет
   
 ## <a name="see-also"></a>См. также
- [Новый \<устройства > Изображение диалогового окна типа](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)  
- [Редактор изображений для значков](../windows/image-editor-for-icons.md)
+
+[Новый \<устройства > Изображение диалогового окна типа](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)<br/>
+[Редактор изображений для значков](../windows/image-editor-for-icons.md)

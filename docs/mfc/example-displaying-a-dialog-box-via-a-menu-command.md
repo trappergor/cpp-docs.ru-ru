@@ -1,5 +1,5 @@
 ---
-title: 'Пример: Отображение диалогового окна через команду меню | Документы Microsoft'
+title: 'Пример: Отображение диалогового окна через команду меню | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,88 +20,90 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20d355215388861a7bc2586c2c253cd551124809
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2869e936115317ff34183b55ba16fe8e9cdc4d2d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347991"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378193"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Пример. Отображение диалогового окна через команду меню
-В этом разделе содержатся процедуры для:  
-  
--   Отображение модального диалогового окна через команду меню.  
-  
--   Отображение немодального диалогового окна через команду меню.  
-  
- Обе процедуры образца предназначены для приложений MFC и будет работать в приложении, создать с [мастер приложений MFC](../mfc/reference/mfc-application-wizard.md).  
-  
- В процедурах используется следующие имена и значения:  
-  
-|Элемент|Имя или значение|  
-|----------|-------------------|  
-|Приложение|DisplayDialog|  
-|Команда меню|Тестирование команды в меню «Вид»; ИД команды = ID_VIEW_TEST|  
-|Диалоговое окно|Диалоговое окно теста; Класс = CTestDialog; Файл заголовка = TestDialog.h; Переменная = testdlg ptestdlg|  
-|Обработчик команд|OnViewTest|  
-  
-### <a name="to-display-a-modal-dialog-box"></a>Для отображения модального диалогового окна  
-  
-1.  Создать команду меню; в разделе [Создание меню или пункты меню](../windows/creating-a-menu.md).  
-  
-2.  Создать диалоговое окно. в разделе [запуск редактора диалоговых окон](../windows/creating-a-new-dialog-box.md).  
-  
-3.  Добавление класса для диалогового окна. В разделе [Добавление класса](../ide/adding-a-class-visual-cpp.md) для получения дополнительной информации.  
-  
-4.  В **представление классов**, выберите класс документа (CDisplayDialogDoc). В окне **Свойства** нажмите кнопку **События** . Идентификатор команды меню (ID_VIEW_TEST) в левой области дважды щелкните **свойства** и выберите **команда**. В области справа щелкните стрелку вниз и выберите  **\<Добавить > OnViewTest**.  
-  
-     Если вы добавили команду меню мэйнфрейма MDI-приложения, выберите класс приложения (CDisplayDialogApp).  
-  
-5.  Добавьте следующие включаемых инструкции CDisplayDialogDoc.cpp (или CDisplayDialogApp.cpp) после существующего включают в себя инструкции:  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]  
-  
-6.  Добавьте следующий код в `OnViewTest` для выполнения функции:  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]  
-  
-### <a name="to-display-a-modeless-dialog-box"></a>Чтобы отобразить немодального диалогового окна  
-  
-1.  Первые четыре действий для отображения модальным диалоговым окном, за исключением того, выберите класс представления (CDisplayDialogView) на шаге 4.  
-  
-2.  Изменение DisplayDialogView.h:  
-  
-    -   Объявите класс диалогового окна поле, предшествующие объявлению первого класса:  
-  
-         [!code-cpp[NVC_MFCControlLadenDialog#44](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_3.h)]  
-  
-    -   Объявите указатель на окно после раздел общих атрибутов:  
-  
-         [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]  
-  
-3.  Изменение DisplayDialogView.cpp:  
-  
-    -   Добавьте следующий оператор #include после существующего включают в себя инструкции:  
-  
-         [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]  
-  
-    -   Добавьте следующий код в конструктор:  
-  
-         [!code-cpp[NVC_MFCControlLadenDialog#46](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_5.cpp)]  
-  
-    -   Деструктор добавьте следующий код:  
-  
-         [!code-cpp[NVC_MFCControlLadenDialog#47](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_6.cpp)]  
-  
-    -   Добавьте следующий код в `OnViewTest` для выполнения функции:  
-  
-         [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]  
-  
- Кроме того см. в следующей статье базы знаний:  
-  
--   Q251059: Практическое руководство: введите собственное имя класса окна для диалоговом окне MFC  
-  
-## <a name="see-also"></a>См. также  
- [Диалоговые окна](../mfc/dialog-boxes.md)   
- [Модальные и немодальные диалоговые окна](../mfc/modal-and-modeless-dialog-boxes.md)
+
+Этот раздел содержит процедуры для:
+
+- Отображение модального диалогового окна через команду меню.
+
+- Отобразить немодального диалогового окна через команду меню.
+
+Оба примера процедуры для приложений MFC и будет работать в приложении, созданного с использованием [мастер приложений MFC](../mfc/reference/mfc-application-wizard.md).
+
+В процедурах используются следующие имена и значения:
+
+|Элемент|Имя или значение|
+|----------|-------------------|
+|Приложение|DisplayDialog|
+|Команды меню|Тестирование команды в меню "Вид"; ИД команды = ID_VIEW_TEST|
+|Диалоговое окно|Диалоговое окно Test; Класс = CTestDialog; Файл заголовка = TestDialog.h; Переменная = testdlg ptestdlg|
+|Обработчик команд|OnViewTest|
+
+### <a name="to-display-a-modal-dialog-box"></a>Для отображения модального диалогового окна
+
+1. Создание команды меню; см. в разделе [Создание меню и пунктов меню](../windows/creating-a-menu.md).
+
+1. Создание диалогового окна; см. в разделе [запуск редактора диалоговых окон](../windows/creating-a-new-dialog-box.md).
+
+1. Добавьте класс диалогового окна. См. в разделе [Добавление класса](../ide/adding-a-class-visual-cpp.md) Дополнительные сведения.
+
+1. В **представление классов**, выберите класс документа (CDisplayDialogDoc). В окне **Свойства** нажмите кнопку **События** . Дважды щелкните идентификатор команды меню (ID_VIEW_TEST) в левой части **свойства** и выберите **команда**. В области справа щелкните стрелку вниз и выберите  **\<Добавить > OnViewTest**.
+
+     Если вы добавили команду меню мэйнфрейма MDI-приложения, выберите класс приложения (CDisplayDialogApp).
+
+1. Добавьте следующие включать инструкцию CDisplayDialogDoc.cpp (или CDisplayDialogApp.cpp) после существующего включают инструкции:
+
+     [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+
+1. Добавьте следующий код, чтобы `OnViewTest` для выполнения функции:
+
+     [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+
+### <a name="to-display-a-modeless-dialog-box"></a>Для отображения немодального диалогового окна
+
+1. Выполните первые четыре шага для отображения модальное диалоговое окно, за исключением того, выберите класс представления (CDisplayDialogView) на шаге 4.
+
+1. Измените DisplayDialogView.h:
+
+   - Объявите предшествующей первого класса объявлению класса диалогового окна:
+
+         [!code-cpp[NVC_MFCControlLadenDialog#44](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_3.h)]
+
+   - Объявите указатель на окно после открытого раздела «Attributes»:
+
+         [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]
+
+1. Измените DisplayDialogView.cpp:
+
+   - Добавьте следующие инструкции после существующего включают инструкции:
+
+         [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+
+   - Добавьте следующий код в конструктор:
+
+         [!code-cpp[NVC_MFCControlLadenDialog#46](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_5.cpp)]
+
+   - Добавьте следующий код деструктора:
+
+         [!code-cpp[NVC_MFCControlLadenDialog#47](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_6.cpp)]
+
+   - Добавьте следующий код, чтобы `OnViewTest` для выполнения функции:
+
+         [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
+
+Кроме того см. в следующей статье базы знаний:
+
+- Q251059: HOWTO: Укажите собственное имя класса окна для диалогового окна MFC
+
+## <a name="see-also"></a>См. также
+
+[Диалоговые окна](../mfc/dialog-boxes.md)<br/>
+[Модальные и немодальные диалоговые окна](../mfc/modal-and-modeless-dialog-boxes.md)
 

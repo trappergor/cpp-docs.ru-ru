@@ -70,14 +70,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1bad1ccc1671176ce213e59c5d4c8c318a441b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1af4f8bbbfc6d7a90120fe367c608db37cb055a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203428"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393000"
 ---
 # <a name="colesafearray-class"></a>Класс COleSafeArray
+
 Класс для работы с массивами произвольных типов и измерений.
 
 ## <a name="syntax"></a>Синтаксис
@@ -90,13 +91,13 @@ class COleSafeArray : public tagVARIANT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleSafeArray::COleSafeArray](#colesafearray)|Создает объект `COleSafeArray`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleSafeArray::AccessData](#accessdata)|Извлекает указатель на данные массива.|
 |[COleSafeArray::AllocData](#allocdata)|Выделяет память для массива.|
@@ -127,7 +128,7 @@ class COleSafeArray : public tagVARIANT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|Получает доступ к базовой `VARIANT` структуры `COleSafeArray` объекта.|
 |[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|Получает доступ к базовой `VARIANT` структуры `COleSafeArray` объекта.|

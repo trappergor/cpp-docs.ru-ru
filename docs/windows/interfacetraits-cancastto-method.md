@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aea326149c9748ff480d523a1078f54ba733cb14
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 705b495e3f6d626a742fd1a63989c8cc658446a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610424"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379672"
 ---
 # <a name="interfacetraitscancastto-method"></a>Метод InterfaceTraits::CanCastTo
 
@@ -41,13 +41,13 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Параметры
 
-*ptr*  
+*ptr*<br/>
 Имя указателя на тип.
 
-*riid*  
+*riid*<br/>
 Идентификатор интерфейса `Base`.
 
-*ppv*  
+*ppv*<br/>
 Если операция выполнена успешно, *ppv* указывает на интерфейсе, указанном свойством `Base`. В противном случае *ppv* присваивается **nullptr**.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -68,5 +68,5 @@ static __forceinline bool CanCastTo(
 
 ## <a name="see-also"></a>См. также
 
-[Структура InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Структура InterfaceTraits](../windows/interfacetraits-structure.md)<br/>
 [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

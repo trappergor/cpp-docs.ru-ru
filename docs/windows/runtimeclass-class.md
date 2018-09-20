@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118912"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379415"
 ---
 # <a name="runtimeclass-class"></a>Класс RuntimeClass
 
@@ -61,10 +61,10 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>Параметры
 
-*classFlags*  
+*classFlags*<br/>
 Необязательный параметр. Сочетание одного или нескольких [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значений перечисления. `__WRL_CONFIGURATION_LEGACY__` Макрос можно определить таким образом, чтобы изменить значение по умолчанию classFlags для всех классов среды выполнения в проекте. Если определено, экземпляры RuntimeClass, не являются гибкими по умолчанию. Если не определен, RuntimeClass экземпляры являются гибкими по умолчанию. Чтобы избежать неоднозначности всегда указывайте `Microsoft::WRL::FtmBase` в `TInterfaces` или `RuntimeClassType::InhibitFtmBase`. Обратите внимание, если InhibitFtmBase и FtmBase, как использовать объект будет agile.
 
-*TInterfaces*  
+*TInterfaces*<br/>
 Список интерфейсов, реализуемых объектом за пределами `IUnknown`, `IInspectable` или других интерфейсов, которые управляются [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Он также может перечислять других классов, производный от, в частности `Microsoft::WRL::FtmBase` сделать объект гибкой и вызвать его, чтобы реализовать `IMarshal`.
 
 ## <a name="members"></a>Участники
@@ -152,10 +152,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Параметры
 
-*iidCount*  
+*iidCount*<br/>
 После завершения операции, общее число элементов в массиве *идентификаторы IID*.
 
-*идентификаторы IID*  
+*идентификаторы IID*<br/>
 После завершения операции представляет указатель на массив идентификаторов интерфейса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -174,7 +174,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>Параметры
 
-*runtimeName*  
+*runtimeName*<br/>
 После завершения операции представляет имя класса среды выполнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -197,7 +197,7 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>Параметры
 
-*trustLvl*  
+*trustLvl*<br/>
 После завершения операции, уровень доверия текущего `RuntimeClass` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -220,7 +220,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Параметры
 
-*weakReference*  
+*weakReference*<br/>
 После завершения операции представляет указатель на объект слабой ссылки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -253,10 +253,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Параметры
 
-*riid*  
+*riid*<br/>
 Идентификатор интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 После завершения этого opereation указатель интерфейса, заданного параметром *riid* параметра.
 
 ### <a name="return-value"></a>Возвращаемое значение

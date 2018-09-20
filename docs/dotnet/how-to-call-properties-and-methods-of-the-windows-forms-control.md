@@ -1,5 +1,5 @@
 ---
-title: 'Как: вызов свойств и методов в Windows Forms управления | Документы Microsoft'
+title: 'Как: вызов свойств и методов элемента Windows Forms управления | Документация Майкрософт'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -20,43 +20,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 206c7bc89ce2bbc48beb1d95f3929ea4694fce20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33131359"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393403"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Практическое руководство. Вызов свойств и методов элемента управления Windows Forms
-Так как [CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) возвращает указатель на <xref:System.Windows.Forms.Control?displayProperty=fullName>, а не указатель `WindowsControlLibrary1::UserControl1`, то рекомендуется добавить член типа пользовательских элементов управления и инициализировать его в [IView::OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). После этого можно использовать методы и свойства с помощью `m_ViewControl`.  
-  
- В этом разделе предполагается, вы выполнили ранее [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) и [как: Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
-  
-### <a name="to-create-the-mfc-host-application"></a>Создание ведущего приложения MFC  
-  
-1.  Откройте приложение MFC, созданные в [как: Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
-  
-2.  Добавьте следующую строку в раздел общих переопределения `CMFC02View` объявления в файле MFC02View.h класса.  
-  
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`  
-  
-3.  Добавьте переопределение для OnInitialupdate.  
-  
-     Отображение **свойства** окна (F4). В **представление классов** (CTRL + SHIFT + C), выберите класс CMFC02View. В **свойства** окно, выберите значок для переопределений. Прокрутки вниз по списку, чтобы OnInitialUpdate. Щелкните раскрывающийся список и выберите \<Добавить >. В MFC02View.cpp. Убедитесь, что тело функции OnInitialUpdate таков:  
-  
-    ```  
-    CWinFormsView::OnInitialUpdate();  
-    m_ViewControl = safe_cast<WindowsFormsControlLibrary1::UserControl1 ^>(this->GetControl());  
-    m_ViewControl->textBox1->Text = gcnew System::String("hi");  
-    ```  
-  
-4.  Постройте и запустите проект.  
-  
-     В меню **Сборка** выберите **Собрать решение**.  
-  
-     На **отладки** меню, нажмите кнопку **Запуск без отладки**.  
-  
-     Обратите внимание, что текстовое поле теперь инициализирован.  
-  
-## <a name="see-also"></a>См. также  
- [Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)
+
+Так как [CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) возвращает указатель на <xref:System.Windows.Forms.Control?displayProperty=fullName>, а не указатель на `WindowsControlLibrary1::UserControl1`, рекомендуется добавить элемент пользовательского типа элемента управления и инициализировать его в [IView::OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). Теперь можно вызвать методы и свойства с помощью `m_ViewControl`.
+
+В этом разделе предполагается, вы выполнили ранее [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) и [как: Создание пользовательского элемента управления и представление главного приложения MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+
+### <a name="to-create-the-mfc-host-application"></a>Создание ведущего приложения MFC
+
+1. Откройте приложение MFC, созданное в [как: Создание пользовательского элемента управления и представление главного приложения MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+
+1. Добавьте следующую строку в раздел общих переопределения `CMFC02View` объявление в MFC02View.h класса.
+
+     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+
+1. Добавьте переопределение для OnInitialupdate.
+
+     Отображение **свойства** окно (F4). В **представление классов** (CTRL + SHIFT + C), выберите класс CMFC02View. В **свойства** окно, выберите значок для переопределений. Прокрутки вниз по списку, чтобы OnInitialUpdate. Щелкните раскрывающийся список и выберите \<Добавить >. В MFC02View.cpp. Убедитесь, что тело функции OnInitialUpdate выглядит следующим образом:
+
+    ```
+    CWinFormsView::OnInitialUpdate();
+    m_ViewControl = safe_cast<WindowsFormsControlLibrary1::UserControl1 ^>(this->GetControl());
+    m_ViewControl->textBox1->Text = gcnew System::String("hi");
+    ```
+
+1. Постройте и запустите проект.
+
+     В меню **Сборка** выберите **Собрать решение**.
+
+     На **Отладка** меню, щелкните **Запуск без отладки**.
+
+     Обратите внимание на то, что поле инициализируется теперь.
+
+## <a name="see-also"></a>См. также
+
+[Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)
