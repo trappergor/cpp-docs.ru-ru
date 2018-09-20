@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4b6e05e654b66c2178b7dc6e772c95df89512d1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316215"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399851"
 ---
 # <a name="dialog-editor-tab-toolbox-c"></a>Вкладка редактора диалоговых окон, элементов (C++)
 
@@ -100,10 +100,10 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Элементы управления](../mfc/controls-mfc.md)  
-[Классы элементов управления](../mfc/control-classes.md)  
-[Классы диалоговых окон](../mfc/dialog-box-classes.md)  
-[Стили полосы прокрутки](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)  
-[Примеры элементов управления "Rich Edit"](../mfc/rich-edit-control-examples.md)  
-[Добавление обработчиков событий для элементов управления диалоговых окон](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Элементы управления](../mfc/controls-mfc.md)<br/>
+[Классы элементов управления](../mfc/control-classes.md)<br/>
+[Классы диалоговых окон](../mfc/dialog-box-classes.md)<br/>
+[Стили полосы прокрутки](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)<br/>
+[Примеры элементов управления "Rich Edit"](../mfc/rich-edit-control-examples.md)<br/>
+[Добавление обработчиков событий для элементов управления диалоговых окон](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)

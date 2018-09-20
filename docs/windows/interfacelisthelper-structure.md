@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87516cf45a39602bea462b8e94f17d3ef64ad0eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600532"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431623"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper - структура
 
@@ -53,34 +53,34 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ### <a name="parameters"></a>Параметры
 
-*T0*  
+*T0*<br/>
 Параметр шаблона, 0, который обязателен.
 
-*T1*  
+*T1*<br/>
 Параметр шаблона, 1, который по умолчанию не определен.
 
-*T2*  
+*T2*<br/>
 Параметр шаблона, 2, который по умолчанию не определен. Третий параметр шаблона.
 
-*T3*  
+*T3*<br/>
 Параметр шаблона, 3, который по умолчанию не определен.
 
-*T4*  
+*T4*<br/>
 Параметр шаблона, 4, который по умолчанию не определен.
 
-*T5*  
+*T5*<br/>
 Параметр шаблона, 5, который по умолчанию не определен.
 
-*T6*  
+*T6*<br/>
 Параметр шаблона, 6, которая по умолчанию не определен.
 
-*T7*  
+*T7*<br/>
 Параметр шаблона, 7, который по умолчанию не определен.
 
-*T8*  
+*T8*<br/>
 Параметр шаблона, 8, который по умолчанию не определен.
 
-*T9*  
+*T9*<br/>
 Параметр шаблона, 9, который по умолчанию не определен.
 
 ## <a name="remarks"></a>Примечания
@@ -93,7 +93,7 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`TypeT`|Синоним для типа InterfaceList.|
 

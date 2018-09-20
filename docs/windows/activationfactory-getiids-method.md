@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49ef07365675ddb9cdedee1f6a2cdfb676188dc6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 89cebd5c6fdfa3ee523a3ab2730ba11c1e2b68ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42576713"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407625"
 ---
 # <a name="activationfactorygetiids-method"></a>Метод ActivationFactory::GetIids
 
@@ -38,10 +38,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Параметры
 
-*iidCount*  
+*iidCount*<br/>
 После завершения операции, число идентификаторов интерфейса в *идентификаторы IID* массива.
 
-*идентификаторы IID*  
+*идентификаторы IID*<br/>
 После завершения операции представляет массив идентификаторов реализованного интерфейса.
 
 ## <a name="return-value"></a>Возвращаемое значение

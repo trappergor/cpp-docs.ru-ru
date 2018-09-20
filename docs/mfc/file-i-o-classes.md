@@ -1,5 +1,5 @@
 ---
-title: Файл классов с вводом выводом | Документы Microsoft
+title: Файл классов ввода вывода | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,52 +25,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b11996aadd58b456aa919d4ff888c783b4ba486e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fad854b054ca32819597126c5a4c0b9652df9210
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442140"
 ---
 # <a name="file-io-classes"></a>Классов ввода-вывода файлов
-Эти классы обеспечивают интерфейс традиционные дисковые файлы, файлы в памяти, активных потоков и сокеты Windows. Все классы, производные от `CFile` может использоваться с `CArchive` объекта для выполнения сериализации.  
-  
- Используются следующие классы, особенно `CArchive` и `CFile`, при написании собственного обработки ввода вывода. Обычно необходимо наследование от этих классов. При использовании платформы приложений реализации по умолчанию **откройте** и **Сохранить** команды **файл** меню будет обрабатывать файлового ввода-вывода (с помощью класса `CArchive`), при условии, что переопределение документа `Serialize` функции для предоставления сведений о порядок сериализации его содержимое в документ. Дополнительные сведения о классах файла и сериализации см. в статье [файлы в MFC](../mfc/files-in-mfc.md) и статьи [сериализации](../mfc/serialization-in-mfc.md).  
-  
- [CFile](../mfc/reference/cfile-class.md)  
- Предоставляет интерфейс файл двоичных файлов.  
-  
- [CStdioFile](../mfc/reference/cstdiofile-class.md)  
- Предоставляет `CFile` интерфейс буферизованный поток в файлы на диске, обычно в текстовом режиме.  
-  
- [CMemFile](../mfc/reference/cmemfile-class.md)  
- Предоставляет `CFile` интерфейс для файлов в памяти.  
-  
- [CSharedFile](../mfc/reference/csharedfile-class.md)  
- Предоставляет `CFile` интерфейс для общих файлов в памяти.  
-  
- [COleStreamFile](../mfc/reference/colestreamfile-class.md)  
- Использует COM `IStream` интерфейс для предоставления `CFile` доступ к составные файлы.  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md)  
- Предоставляет `CFile` интерфейс Windows Socket.  
-  
-## <a name="related-classes"></a>Связанные классы  
- [CArchive](../mfc/reference/carchive-class.md)  
- Взаимодействует с `CFile` объекта для реализации постоянного хранилища для объектов с помощью сериализации (см. [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).  
-  
- [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- Исключение архива.  
-  
- [CFileException](../mfc/reference/cfileexception-class.md)  
- Исключение, ориентированного на файлы.  
-  
- [CFileDialog](../mfc/reference/cfiledialog-class.md)  
- Предоставляет стандартное диалоговое окно открытия или сохранения файла.  
-  
- [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- Сохраняет последние использовавшиеся списка файлов (MRU).  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../mfc/class-library-overview.md)
+
+Эти классы предоставляют интерфейс для традиционных дисковых файлов, файлов в памяти, активных потоков и сокеты Windows. Все классы, производные от `CFile` может использоваться с `CArchive` объект для выполнения сериализации.
+
+Используются следующие классы, особенно `CArchive` и `CFile`, при написании собственных обработки ввода вывода. Обычно вы не обязательно должны быть производным от этих классов. Если вы используете платформу приложения, реализация по умолчанию **откройте** и **Сохранить** команд на **файл** меню будет обрабатывать файлового ввода-вывода (с помощью класса `CArchive`), до тех пор, пока переопределить документа `Serialize` функции для предоставления сведений о как документ сериализует его содержимое. Дополнительные сведения о классах файла и сериализации см. в статье [файлы в MFC](../mfc/files-in-mfc.md) и статью [сериализации](../mfc/serialization-in-mfc.md).
+
+[CFile](../mfc/reference/cfile-class.md)<br/>
+Предоставляет интерфейс файл двоичных файлов.
+
+[CStdioFile](../mfc/reference/cstdiofile-class.md)<br/>
+Предоставляет `CFile` интерфейс буферизованного потока файлов, обычно в текстовом режиме.
+
+[CMemFile](../mfc/reference/cmemfile-class.md)<br/>
+Предоставляет `CFile` интерфейс к файлам в памяти.
+
+[CSharedFile](../mfc/reference/csharedfile-class.md)<br/>
+Предоставляет `CFile` интерфейс к общим файлам в памяти.
+
+[COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
+Использует COM `IStream` интерфейс, чтобы предоставить `CFile` доступ к составные файлы.
+
+[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
+Предоставляет `CFile` интерфейс сокетов Windows.
+
+## <a name="related-classes"></a>Связанные классы
+
+[CArchive](../mfc/reference/carchive-class.md)<br/>
+Взаимодействует с `CFile` объекту реализовать постоянное хранилище объектов с помощью сериализации (см. в разделе [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).
+
+[CArchiveException](../mfc/reference/carchiveexception-class.md)<br/>
+Исключение архива.
+
+[CFileException](../mfc/reference/cfileexception-class.md)<br/>
+Исключение, ориентированные на файлы.
+
+[CFileDialog](../mfc/reference/cfiledialog-class.md)<br/>
+Предоставляет стандартное диалоговое окно открытия или сохранения файла.
+
+[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
+Поддерживает наиболее часто используемое список файлов (MRU).
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../mfc/class-library-overview.md)
 

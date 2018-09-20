@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a519d9b978f5b48377b1a85d52274cba35c9d075
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197443"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401814"
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
 
@@ -63,13 +63,13 @@ class CInternetSession : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CInternetSession::CInternetSession](#cinternetsession)|Создает объект `CInternetSession`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CInternetSession::Close](#close)|Закрывает подключение к Интернету, при завершении сеанса Интернет.|
 |[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Устанавливает программу ответного вызова состояние.|
@@ -86,7 +86,7 @@ class CInternetSession : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CInternetSession::operator HINTERNET](#operator_hinternet)|Дескриптор текущего сеанса Интернет.|
 
@@ -115,7 +115,7 @@ class CInternetSession : public CObject
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CObject](../../mfc/reference/cobject-class.md)  
+[CObject](../../mfc/reference/cobject-class.md)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`CInternetSession`
 
 ## <a name="requirements"></a>Требования
@@ -138,13 +138,13 @@ CInternetSession(
 
 ### <a name="parameters"></a>Параметры
 
-*pstrAgent*  
+*pstrAgent*<br/>
 Указатель на строку, которая идентифицирует имя приложения или сущность, вызвав Интернет-функции (например, «Microsoft Интернет-браузер»). Если *pstrAgent* имеет значение NULL (по умолчанию), платформа вызывает функцию глобального [AfxGetAppName](application-information-and-management.md#afxgetappname), который возвращает заканчивающуюся нулем строку, содержащую имя приложения. Некоторые протоколы использовать эту строку для идентификации приложения на сервер.
 
-*dwContext*  
+*dwContext*<br/>
 Идентификатор контекста для операции. *dwContext* определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](#onstatuscallback). Значение по умолчанию имеет значение 1; Тем не менее можно явно назначить идентификатор контекста для операции. Объект, а вся работа, она будет связан с этим идентификатором контекста.
 
-*dwAccessType*  
+*dwAccessType*<br/>
 Тип необходимый доступ. Ниже приведены допустимые значения, только один из которых может быть предоставлен.
 
 - INTERNET_OPEN_TYPE_PRECONFIG соединиться при помощи заранее настроенные параметры в реестре. Этот тип доступа имеет значение по умолчанию. Чтобы подключаться через прокси-сервер еще ПРИВЛЕКАТЕЛЬНЕЕ, задайте *dwAccessType* этому значению; при этом установить реестра соответствующим образом.
@@ -155,13 +155,13 @@ CInternetSession(
 
 Дополнительные сведения о подключении с разными типами учетных записей-посредников, см. в разделе [шагов в обычном клиентском приложении FTP](../../mfc/steps-in-a-typical-ftp-client-application.md).
 
-*pstrProxyName*  
+*pstrProxyName*<br/>
 Имя предпочтительной прокси CERN Если *dwAccessType* задается как INTERNET_OPEN_TYPE_PROXY. Значение по умолчанию имеет значение NULL.
 
-*pstrProxyBypass*  
+*pstrProxyBypass*<br/>
 Указатель на строку, содержащую необязательный список адресов серверов. Эти адреса могут быть обойдены, при использовании прокси-доступа. Если задано значение NULL, в списке пропускаемых адресов будет считывать из реестра. Этот параметр имеет смысл только если *dwAccessType* присваивается INTERNET_OPEN_TYPE_PROXY.
 
-*dwFlags*  
+*dwFlags*<br/>
 Указывает различные параметры кэширования. Значение по умолчанию имеет значение 0. Возможные значения включают:
 
 - INTERNET_FLAG_DONT_CACHE не кэшировать данные, локально или в любой серверов шлюзов.
@@ -200,7 +200,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bEnable*  
+*bEnable*<br/>
 Указывает, включена ли обратного вызова. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -255,16 +255,16 @@ static BOOL GetCookie(
 
 ### <a name="parameters"></a>Параметры
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Указатель на строку, содержащую URL-адрес.
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Указатель на строку, содержащую имя файла cookie, чтобы получить для указанного URL-адрес.
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 В первой перегрузке указатель на строку, содержащую адрес буфера, который получает данные файла cookie. Это значение может быть NULL. Во второй перегрузке, ссылку на [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект для получения данных файлов cookie.
 
-*dwBufLen*  
+*dwBufLen*<br/>
 Переменная, указывая размер *pstrCookieData* буфера. Если функция выполняется успешно, помещаемых в буфер, объем данных, копируемых в *pstrCookieData* буфера. Если *pstrCookieData* имеет значение NULL, этот параметр получает значение, указывающее размер буфера, необходимый для копирования всех данных файлов cookie.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -291,10 +291,10 @@ static DWORD GetCookieLength(
 
 ### <a name="parameters"></a>Параметры
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Указатель на строку, содержащую URL-адрес
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Указатель на строку, содержащую имя файла cookie.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -320,13 +320,13 @@ CFtpConnection* GetFtpConnection(
 
 ### <a name="parameters"></a>Параметры
 
-*pstrServer*  
+*pstrServer*<br/>
 Указатель на строку, содержащую имя FTP-сервера.
 
-*pstrUserName*  
+*pstrUserName*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее имя пользователя для входа. Если значение равно NULL, значение по умолчанию является анонимным.
 
-*pstrPassword*  
+*pstrPassword*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее пароль, используемый для входа. Если оба *pstrPassword* и *pstrUserName* имеют значение NULL, анонимные пароль по умолчанию — имя электронной почты пользователя. Если *pstrPassword* имеет значение NULL (или пустую строку), но *pstrUserName* не равно NULL, используется пустой пароль. В следующей таблице описаны поведение четыре возможные параметры *pstrUserName* и *pstrPassword*:
 
 |*pstrUserName*|*pstrPassword*|Имя пользователя, отправляемые серверу FTP|Пароля, передаваемых на FTP-сервер|
@@ -336,10 +336,10 @@ CFtpConnection* GetFtpConnection(
 |NULL|НЕНУЛЕВЫЕ строковые|ОШИБКА|ОШИБКА||
 |НЕНУЛЕВЫЕ строковые|НЕНУЛЕВЫЕ строковые|*pstrUserName*|*pstrPassword*|
 
-*nPort*  
+*nPort*<br/>
 Число, идентифицирующее порт TCP/IP, используемый на сервере.
 
-*bPassive*  
+*bPassive*<br/>
 Задает пассивный или активный режим для этого сеанса FTP. Если задано значение TRUE, то он устанавливает Win32 API `dwFlag` для INTERNET_FLAG_PASSIVE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -368,16 +368,16 @@ CGopherConnection* GetGopherConnection(
 
 ### <a name="parameters"></a>Параметры
 
-*pstrServer*  
+*pstrServer*<br/>
 Указатель на строку, содержащую имя сервера gopher.
 
-*pstrUserName*  
+*pstrUserName*<br/>
 Указатель на строку, содержащую имя пользователя.
 
-*pstrPassword*  
+*pstrPassword*<br/>
 Указатель на строку, содержащую пароль доступа.
 
-*nPort*  
+*nPort*<br/>
 Число, идентифицирующее порт TCP/IP, используемый на сервере.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -409,19 +409,19 @@ CHttpConnection* GetHttpConnection(
 
 ### <a name="parameters"></a>Параметры
 
-*pstrServer*  
+*pstrServer*<br/>
 Указатель на строку, содержащую имя сервера HTTP.
 
-*nPort*  
+*nPort*<br/>
 Число, идентифицирующее порт TCP/IP, используемый на сервере.
 
-*pstrUserName*  
+*pstrUserName*<br/>
 Указатель на строку, содержащую имя пользователя.
 
-*pstrPassword*  
+*pstrPassword*<br/>
 Указатель на строку, содержащую пароль доступа.
 
-*dwFlags*  
+*dwFlags*<br/>
 Любое сочетание `INTERNET_FLAG_*` флаги. См. в таблице в **"Примечания"** раздел [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) описание *dwFlags* значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -446,16 +446,16 @@ virtual void OnStatusCallback(
 
 ### <a name="parameters"></a>Параметры
 
-*dwContext*  
+*dwContext*<br/>
 Значение контекста приложения.
 
-*dwInternetStatus*  
+*dwInternetStatus*<br/>
 Код состояния, указывающий причину обратного вызова. См. в разделе **"Примечания"** таблицу возможных значений.
 
-*lpvStatusInformation*  
+*lpvStatusInformation*<br/>
 Указатель на буфер, содержащий сведения, относящиеся к этой функции обратного вызова.
 
-*dwStatusInformationLength*  
+*dwStatusInformationLength*<br/>
 Размер *lpvStatusInformation*.
 
 ### <a name="remarks"></a>Примечания
@@ -484,7 +484,7 @@ virtual void OnStatusCallback(
 > [!NOTE]
 > Обратные вызовы состояние нуждаются в защите состояние потока. Если вы используете MFC в общей библиотеке, добавьте следующую строку в начало переопределение:
 
- [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
+[!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
 Дополнительные сведения об асинхронных операциях см. в статье [Internet первые шаги: WinInet](../../mfc/wininet-basics.md).
 
@@ -503,13 +503,13 @@ CStdioFile* OpenURL(
 
 ### <a name="parameters"></a>Параметры
 
-*pstrURL*  
+*pstrURL*<br/>
 Указатель на имя URL-адрес начинается чтение. Только URL-адреса начиная с файлом:, ftp:, gopher:, или http: поддерживаются. Утверждает, если *pstrURL* имеет значение NULL.
 
-*dwContext*  
+*dwContext*<br/>
 Возвращенный дескриптор в функции обратного вызова передается значение, определенное приложением.
 
-*dwFlags*  
+*dwFlags*<br/>
 Флаги, описывающие способ обработки этого подключения. См. в разделе **"Примечания"** Дополнительные сведения о Допустимые флаги. Ниже приведены допустимые флаги.
 
 - INTERNET_FLAG_TRANSFER_ASCII по умолчанию. Переместите файл в виде текста ASCII.
@@ -526,10 +526,10 @@ CStdioFile* OpenURL(
 
 - INTERNET_FLAG_PASSIVE используется для FTP-сайта. Использует семантику пассивный FTP. Используется с [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) из `OpenURL`.
 
-*pstrHeaders*  
+*pstrHeaders*<br/>
 Указатель на строку, содержащую заголовки отправку HTTP-сервера.
 
-*dwHeadersLength*  
+*dwHeadersLength*<br/>
 Длина в символах, дополнительных заголовков. Если это значение-1 L и *pstrHeaders* не равно NULL, затем *pstrHeaders* предполагается, что должно быть равно нулю завершается и вычисляется длина.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -574,13 +574,13 @@ static BOOL SetCookie(
 
 ### <a name="parameters"></a>Параметры
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Указатель на заканчивающуюся нулем строку, которая указывает URL-адрес, для которого задается файл cookie.
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Указатель на строку, содержащую имя файла cookie.
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 Указатель на строку, содержащую фактические данные, связать с URL-адрес.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -611,19 +611,19 @@ BOOL SetOption(
 
 ### <a name="parameters"></a>Параметры
 
-*dwOption*  
+*dwOption*<br/>
 Параметр Internet. См. в разделе [флаги параметров](/windows/desktop/WinInet/option-flags) в Windows SDKfor список возможных вариантов.
 
-*lpBuffer*  
+*lpBuffer*<br/>
 Буфер, содержащий значение параметра.
 
-*dwBufferLength*  
+*dwBufferLength*<br/>
 Длина *lpBuffer* или размер *dwValue*.
 
-*dwValue*  
+*dwValue*<br/>
 DWORD, содержащее значение параметра.
 
-*dwFlags*  
+*dwFlags*<br/>
 Указывает различные параметры кэширования. Значение по умолчанию имеет значение 0. Возможные значения включают:
 
 - INTERNET_FLAG_DONT_CACHE не кэшировать данные, локально или в любой серверов шлюзов.
@@ -636,9 +636,9 @@ DWORD, содержащее значение параметра.
 
 ## <a name="see-also"></a>См. также
 
-[Класс CObject](../../mfc/reference/cobject-class.md)  
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)  
-[Класс CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
-[Класс CHttpConnection](../../mfc/reference/chttpconnection-class.md)  
-[Класс CFtpConnection](../../mfc/reference/cftpconnection-class.md)  
-[Класс CGopherConnection](../../mfc/reference/cgopherconnection-class.md)  
+[Класс CObject](../../mfc/reference/cobject-class.md)<br/>
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Класс CInternetConnection](../../mfc/reference/cinternetconnection-class.md)<br/>
+[Класс CHttpConnection](../../mfc/reference/chttpconnection-class.md)<br/>
+[Класс CFtpConnection](../../mfc/reference/cftpconnection-class.md)<br/>
+[Класс CGopherConnection](../../mfc/reference/cgopherconnection-class.md)
