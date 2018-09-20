@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200150"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445182"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet-класс
 
@@ -83,13 +83,13 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Создает объект `CPropertySheet`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|
 |[CPropertySheet::Construct](#construct)|Создает объект `CPropertySheet`.|
@@ -115,7 +115,7 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) структуры. Предоставляет доступ к основным свойством параметров таблицы стилей.|
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Параметры
 
-*Физ_страница*  
+*Физ_страница*<br/>
 Указывает на страницу, чтобы добавить в лист свойств. Не может принимать значение NULL.
 
 ### <a name="remarks"></a>Примечания
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDCaption*  
+*nIDCaption*<br/>
 Идентификатор заголовка, который будет использоваться для страницы свойств.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Указатель на родительское окно страницы свойств. Если значение равно NULL, родительское окно будет главное окно приложения.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 Индекс страницы, которая изначально будет находиться в начале списка. По умолчанию используется первая страница, добавленная в выбранную таблицу.
 
-*pszCaption*  
+*pszCaption*<br/>
 Указатель на строку, содержащую заголовок, используемый для страницы свойств. Не может принимать значение NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Дескриптор растрового изображения водяного знака страницы свойств.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Дескриптор палитра растрового изображения водяного знака и/или растрового изображения заголовка.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Дескриптор точечного рисунка заголовка страницы свойств.
 
 ### <a name="remarks"></a>Примечания
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDCaption*  
+*nIDCaption*<br/>
 Идентификатор заголовка, который будет использоваться для страницы свойств.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Точки в родительское окно страницы свойств. Если значение равно NULL, родительское окно будет главное окно приложения.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 Индекс страницы, которая изначально будет находиться в начале списка. По умолчанию используется первая страница, добавленная в выбранную таблицу.
 
-*pszCaption*  
+*pszCaption*<br/>
 Указывает строку, содержащую заголовок, используемый для страницы свойств. Не может принимать значение NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Дескриптор точечного рисунка фона страницы свойств.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Дескриптор палитры растрового изображения водяного знака и/или растрового изображения заголовка.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Дескриптор к растровому изображению заголовка страницы свойств.
 
 ### <a name="remarks"></a>Примечания
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>Параметры
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Указатель на родительское окно. Если значение равно NULL, родительским является рабочий стол.
 
-*dwStyle*  
+*dwStyle*<br/>
 Стили окна для страницы свойств. Полный список доступных стилей, см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Расширенные стили окна для страницы свойств. Полный список доступных стилей, см. в разделе [расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>Параметры
 
-*bStacked*  
+*bStacked*<br/>
 Указывает, включены ли с накоплением вкладок в окне свойств. Отключить, задав с накоплением строк тегов *bStacked* значение false.
 
 ### <a name="remarks"></a>Примечания
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>Параметры
 
-*nEndID*  
+*nEndID*<br/>
 Идентификатор для использования в качестве возвращаемого значения свойств.
 
 ### <a name="remarks"></a>Примечания
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nPage*  
+*nPage*<br/>
 Индекс нужную страницу, начиная с 0. Должно быть между 0 и меньше, чем количество страниц в окне свойств, включительно.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Параметры
 
-*Физ_страница*  
+*Физ_страница*<br/>
 Указывает страницу с индексом, который требуется найти. Не может принимать значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Параметры
 
-*lpRect*  
+*lpRect*<br/>
 Указывает на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , диалоговое окно содержит координаты для преобразования.
 
 ### <a name="remarks"></a>Примечания
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Параметры
 
-*nButton*  
+*nButton*<br/>
 nButton: Определяет нажатие кнопки. Этот параметр может принимать одно из следующих значений:
 
 - PSBTN_BACK нажимает кнопку "Назад".
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Параметры
 
-*Физ_страница*  
+*Физ_страница*<br/>
 Указывает на страницу, чтобы удалить из таблицы свойств. Не может принимать значение NULL.
 
-*nPage*  
+*nPage*<br/>
 Индекс страницы для удаления. Должно быть между 0 и меньше, чем количество страниц в окне свойств, включительно.
 
 ### <a name="remarks"></a>Примечания
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Параметры
 
-*nPage*  
+*nPage*<br/>
 Индекс страницы для задания. Он должен быть между 0 и меньше, чем количество страниц в окне свойств, включительно.
 
-*Физ_страница*  
+*Физ_страница*<br/>
 Указывает страницу, чтобы задать в окне свойств. Он не может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszText*  
+*lpszText*<br/>
 Указывает на текст, отображаемый на команду "Готово".
 
 ### <a name="remarks"></a>Примечания
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>Параметры
 
-*nStyle*  
+*nStyle*<br/>
 Задает стиль заголовка листа свойств. Необходимо указать стиль, на 0 или как PSH_PROPTITLE. Если стиль имеет значение как PSH_PROPTITLE, слово «Свойства» отображается после текста, указанный в качестве заголовка. Например, вызов `SetTitle`(«Simple», PSH_PROPTITLE) приведет к заголовок таблицы свойства «Простых свойств».
 
-*lpszText*  
+*lpszText*<br/>
 Указывает на текст для использования в качестве заголовка в заголовке окна свойств.
 
 ### <a name="remarks"></a>Примечания
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>Параметры
 
-*dwFlags*  
+*dwFlags*<br/>
 Набор флагов, которые настраивать функции и внешний вид кнопок мастера. Этот параметр может быть сочетанием следующих значений:
 
 - Кнопка PSWIZB_BACK назад
@@ -847,9 +847,9 @@ void SetWizardMode();
 
 ## <a name="see-also"></a>См. также
 
-[Образец CMNCTRL1 MFC](../../visual-cpp-samples.md)  
-[Образец CMNCTRL2 MFC](../../visual-cpp-samples.md)  
-[Пример MFC PROPDLG](../../visual-cpp-samples.md)  
-[Пример MFC: SNAPVW](../../visual-cpp-samples.md)  
-[Класс CWnd](../../mfc/reference/cwnd-class.md)  
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)  
+[Образец CMNCTRL1 MFC](../../visual-cpp-samples.md)<br/>
+[Образец CMNCTRL2 MFC](../../visual-cpp-samples.md)<br/>
+[Пример MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[Пример MFC: SNAPVW](../../visual-cpp-samples.md)<br/>
+[Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)

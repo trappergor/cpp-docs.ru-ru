@@ -22,89 +22,100 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83775e04c7b5c4c104f9790870ea067392b0bce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e984bb3d616596d0e6c9439fa3096ba23059caae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209218"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428139"
 ---
 # <a name="cinstantaneoustransition-class"></a>Класс CInstantaneousTransition
-Инкапсулирует мгновенный переход.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class CInstantaneousTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Создает объект перехода и инициализирует его конечное значение.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CInstantaneousTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Открытые члены данных  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|  
-  
-## <a name="remarks"></a>Примечания  
- Во время мгновенный переход значение переменной анимации изменяется мгновенно текущее значение на указанной конечное значение. Длительность этого перехода всегда равна нулю. Так как автоматически удаляются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока то возвращается значение NULL. Изменение переменных-членов, после создания COM-объекта не оказывает влияния.  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxanimationcontroller.h  
-  
-##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition  
- Создает объект перехода и инициализирует его конечное значение.  
-  
-```  
-CInstantaneousTransition(DOUBLE dblFinalValue);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *dblFinalValue*  
- Значение переменной анимации в конце перехода.  
-  
-##  <a name="create"></a>  CInstantaneousTransition::Create  
- Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта.  
-  
-```  
-virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
-    IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Параметры  
-*pLibrary*  
- Указатель на [IUIAnimationTransitionLibrary интерфейс](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.  
 
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.  
-  
-##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue  
- Значение переменной анимации в конце перехода.  
-  
-```  
-DOUBLE m_dblFinalValue;  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+Инкапсулирует мгновенный переход.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+class CInstantaneousTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Создает объект перехода и инициализирует его конечное значение.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CInstantaneousTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Открытые члены данных
+
+|Имя|Описание|
+|----------|-----------------|
+|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
+
+## <a name="remarks"></a>Примечания
+
+Во время мгновенный переход значение переменной анимации изменяется мгновенно текущее значение на указанной конечное значение. Длительность этого перехода всегда равна нулю. Так как автоматически удаляются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока то возвращается значение NULL. Изменение переменных-членов, после создания COM-объекта не оказывает влияния.
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+[CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxanimationcontroller.h
+
+##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition
+
+Создает объект перехода и инициализирует его конечное значение.
+
+```
+CInstantaneousTransition(DOUBLE dblFinalValue);
+```
+
+### <a name="parameters"></a>Параметры
+
+*dblFinalValue*<br/>
+Значение переменной анимации в конце перехода.
+
+##  <a name="create"></a>  CInstantaneousTransition::Create
+
+Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта.
+
+```
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,
+    IUIAnimationTransitionFactory* \*not used*\);
+```
+
+### <a name="parameters"></a>Параметры
+
+*pLibrary*<br/>
+Указатель на [IUIAnimationTransitionLibrary интерфейс](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
+
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.
+
+##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue
+
+Значение переменной анимации в конце перехода.
+
+```
+DOUBLE m_dblFinalValue;
+```
+
+## <a name="see-also"></a>См. также
+
+[Классы](../../mfc/reference/mfc-classes.md)
