@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711091"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377270"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (расширения компонентов C++)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Параметры
 
-*access*  
+*access*<br/>
 Уровень доступа перечисления, который может быть **открытый** или **частного**.
 
-*enumeration-identifier*  
+*enumeration-identifier*<br/>
 Имя перечисления.
 
-*underlying-type*  
+*underlying-type*<br/>
 (Необязательно) Базовый тип перечисления.
 
 (Необязательно. Windows только среда выполнения) базовый тип перечисления, который может быть **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, или `uint64`.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Разделенный запятыми список имен перечислителей.
 
 Значение каждого перечислителя — константное выражение, которое или определяется неявно компилятором, или явно нотацией *enumerator*`=`*constant-expression*. По умолчанию значение первого перечислителя ноль, если он определен неявно. Значение каждого следующего неявно определенного перечислителя — значение предыдущего перечислителя + 1.
 
-*var*  
+*var*<br/>
 (Необязательно) Имя переменной типа перечисления.
 
 ### <a name="remarks"></a>Примечания
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Параметры
 
-*access*  
+*access*<br/>
 Уровень доступа перечисления. Может быть либо **открытый** или **частного**.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Разделенный запятыми список идентификаторов (перечислителей) в перечислении.
 
-*name*  
+*name*<br/>
 Имя перечисления. Анонимные управляемые перечисления не допускаются.
 
-*type*  
+*type*<br/>
 (Необязательно) Базовый тип *идентификаторы*. Это может быть любой скалярный тип, например со знаком или без знака версии **int**, **короткие**, или **long**.  **bool** или **char** также допустимы.
 
-*var*  
+*var*<br/>
 (Необязательно) Имя переменной типа перечисления.
 
 ### <a name="remarks"></a>Примечания
