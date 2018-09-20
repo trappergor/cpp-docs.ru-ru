@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abbe93f5359171c88134ff61759e9edc63db2451
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7cccebf6e1c6004a2416f4fdeb254369f9aa7b72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610437"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410316"
 ---
 # <a name="moduleregistercomobject-method"></a>Метод Module::RegisterCOMObject
 
@@ -42,19 +42,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Параметры
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Полное имя сервера.
 
-*идентификаторов CLSID*  
+*идентификаторов CLSID*<br/>
 Массив регистрируемых идентификаторов CLSID.
 
-*фабрики*  
+*фабрики*<br/>
 Массив интерфейсов IUnknown объектов класса, чья доступность публикуется.
 
-*Файлы cookie*  
+*Файлы cookie*<br/>
 После завершения операции представляет массив указателей на значения, которые определяют зарегистрированные объекты класса. Эти значения в дальнейшем используются для отмены регистрации.
 
-*count*  
+*count*<br/>
 Количество идентификаторов CLSID, которые необходимо зарегистрировать.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -74,4 +74,5 @@ COM-объекты зарегистрированы с помощью переч
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
+
 [Класс Module](../windows/module-class.md)

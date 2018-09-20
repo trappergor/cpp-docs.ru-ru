@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 109ca7b833791aa982e17335801e8fe1fc538987
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e6b610ce888e91ed8029c4166fa79a847d700dba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606640"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436524"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "42606640"
 
 #### <a name="parameters"></a>Параметры
 
-*значение*  
+*значение*<br/>
 Возможное значение ввода, для которого вы хотите предоставить обработки. Тип **значение** может принимать одно из следующих типов:
 
 - `int`
@@ -91,6 +91,6 @@ struct SizedValue2 {
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Атрибуты классов](../windows/class-attributes.md)  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a99b66588b3158252106ba95aaddfc73e260c9ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2cabf76b4d98fc1732fdc2761b89774164595116
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613726"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419413"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Редактирование изображения за пределами проекта (редактор изображений для значков)
 
@@ -43,5 +43,5 @@ ms.locfileid: "42613726"
 
 ## <a name="see-also"></a>См. также
 
-[Изменение графических ресурсов](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Изменение графических ресурсов](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Редактор изображений для значков](../windows/image-editor-for-icons.md)

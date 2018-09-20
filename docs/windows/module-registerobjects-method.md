@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c9a44fed853fe2f4dcd3196e926b3848566ab4e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d332d59ed821e433e0ec1ba025f882b4339ad69a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597030"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440905"
 ---
 # <a name="moduleregisterobjects-method"></a>Метод Module::RegisterObjects
 
@@ -38,10 +38,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Параметры
 
-*модуль*  
+*модуль*<br/>
 Массив объектов COM или среду выполнения Windows.
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя сервера, который создал объекты.
 
 ## <a name="return-value"></a>Возвращаемое значение

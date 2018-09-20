@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6d6bd580faf8c242ca5ac5e9b4b29ded9a7750a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612214"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441932"
 ---
 # <a name="key-wrl-apis-by-category"></a>Основные API WRL по категориям
 В следующих таблицах перечислены основной классы, структуры, функции и макросы библиотека шаблонов C++ среды выполнения Windows. Конструкции в вспомогательные пространства имен и классы, опущены. Эти списки дополнить документации по API, упорядоченных по степени пространства имен.
   
 ### <a name="classes"></a>Классы
   
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Класс ActivationFactory](../windows/activationfactory-class.md)|Позволяет одному или нескольким классам быть активированными средой выполнения Windows.|
 |[Класс AsyncBase](../windows/asyncbase-class.md)|Реализует асинхронный конечный автомат среды выполнения Windows.|
@@ -49,7 +49,7 @@ ms.locfileid: "42612214"
   
 ### <a name="structures"></a>Структуры
   
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Структура ChainInterfaces](../windows/chaininterfaces-structure.md)|Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.|
 |[Структура CloakedIid](../windows/cloakediid-structure.md)|Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, что заданный интерфейс недоступен в списке IID.|
@@ -58,7 +58,7 @@ ms.locfileid: "42612214"
   
 ### <a name="functions"></a>Функции
   
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Функция ActivateInstance](../windows/activateinstance-function.md)|Регистрирует и возвращает экземпляр заданного типа, определенного в идентификатор указанного класса.|
 |[Функция AsWeak](../windows/asweak-function.md)|Извлекает слабую ссылку на определенный экземпляр.|
@@ -70,10 +70,11 @@ ms.locfileid: "42612214"
   
 ### <a name="macros"></a>Макросы
   
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Макрос ActivatableClass](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, содержащий фабрику, можно создать экземпляр указанного класса.|
 |[Макрос InspectableClass](../windows/inspectableclass-macro.md)|Задает уровень имя и доверия класса среды выполнения.|
   
 ## <a name="see-also"></a>См. также
- [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+
+[Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

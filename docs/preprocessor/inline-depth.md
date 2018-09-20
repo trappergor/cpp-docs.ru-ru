@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a6c8d05d326e11ecfef4df8d22cbf2b8d92bd77
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cbb90d36ea3da8e443eede8a3d74a35246077d52
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541068"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410273"
 ---
 # <a name="inlinedepth"></a>inline_depth
 Указывает глубину, эвристического поиска таким образом, что функция не будет встроенным, то есть на глубине (в графе вызовов) больше, чем *n*.  
@@ -53,5 +53,5 @@ ms.locfileid: "42541068"
   
 ## <a name="see-also"></a>См. также  
  
-[Директивы pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_recursion](../preprocessor/inline-recursion.md)

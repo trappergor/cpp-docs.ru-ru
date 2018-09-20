@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c504b4f9a17c65affbcc2635ef63ec743f7ad93
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b593b56a967385e823629d370967c2ef6d27ed24
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423173"
 ---
 # <a name="indwordstring"></a>__indwordstring
-**Блок, относящийся только к системам Microsoft**  
-  
- Считывает данные из указанного порта с помощью `rep insd` инструкции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __indwordstring(  
-   unsigned short Port,  
-   unsigned long* Buffer,  
-   unsigned long Count  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+**Блок, относящийся только к системам Microsoft**
+
+Считывает данные из указанного порта с помощью `rep insd` инструкции.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __indwordstring(
+   unsigned short Port,
+   unsigned long* Buffer,
+   unsigned long Count
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *Порт*<br/>
-[in] Порт для чтения из.  
-  
+[in] Порт для чтения из.
+
 *буфер*<br/>
-[out] Данные, считанные из порта записывается здесь.  
-  
+[out] Данные, считанные из порта записывается здесь.
+
 *Количество*<br/>
-[in] Число байтов данных для чтения.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__indwordstring`|x86, x64|  
-  
- **Файл заголовка** \<intrin.h >  
-  
-## <a name="remarks"></a>Примечания  
- Эта процедура доступна только как встроенная функция.  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[in] Число байтов данных для чтения.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__indwordstring`|x86, x64|
+
+**Файл заголовка** \<intrin.h >
+
+## <a name="remarks"></a>Примечания
+
+Эта процедура доступна только как встроенная функция.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

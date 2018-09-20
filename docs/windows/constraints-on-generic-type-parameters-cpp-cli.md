@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7abdc8f2deee962dc6ee5bcfa9857efb6f0bd847
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e0c6e860fa5d7633bd334d0c0a35d25936104636
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593908"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427710"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Ограничения, применяемые к параметрам универсальных типов (C++/CLI)
 
@@ -39,10 +39,10 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>Параметры
 
-*параметр типа*  
+*параметр типа*<br/>
 Один из ограниченных параметров типа.
 
-*Список ограничений*  
+*Список ограничений*<br/>
 *Список ограничений* является разделенный запятыми список спецификаций ограничений. Этот список может содержать интерфейсы, которые должны быть реализованы параметром типа.
 
 Список также может содержать класс. Чтобы аргумент типа удовлетворял ограничению базового класса, он должен быть того же класса, что и ограничение, или производным от ограничения.

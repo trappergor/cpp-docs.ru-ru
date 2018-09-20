@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bde6909716b55298a515aac32580a24f26c823fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715407"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406650"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -43,7 +43,7 @@ ms.locfileid: "45715407"
 
 #### <a name="parameters"></a>Параметры
 
-*Порядковый номер*  
+*Порядковый номер*<br/>
 Порядковый номер столбца (`DBCOLUMNINFO` порядковый номер) или имя столбца (строка ANSI или Юникод), соответствующее поле в наборе строк, к которому требуется привязать данные. Если вы используете номера, можно пропустить последовательных порядковые номера (например: 1, 2, 3, 5). Имя может содержать пробелы, если используемый поставщик OLE DB поддерживает его. Например можно использовать любой из следующих форматов:
 
 ```cpp
@@ -51,19 +51,19 @@ ms.locfileid: "45715407"
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbType*  
+*dbType*<br/>
 (Необязательно) OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) для записи в столбце.
 
-*precision*  
+*precision*<br/>
 (Необязательно) Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Масштаб*  
+*Масштаб*<br/>
 (Необязательно) Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Необязательно) Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по*.
 
-*length*  
+*length*<br/>
 (Необязательно) Переменную-член используется для хранения размера столбца в байтах.
 
 ## <a name="remarks"></a>Примечания
@@ -131,5 +131,5 @@ class CProducts {
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты объекта-получателя OLE DB](../windows/ole-db-consumer-attributes.md)  
+[Атрибуты объекта-получателя OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
 [Атрибуты классов](../windows/class-attributes.md)  

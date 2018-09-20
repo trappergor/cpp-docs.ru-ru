@@ -1,5 +1,5 @@
 ---
-title: Перечисление UICheckState | Документы Microsoft
+title: Перечисление UICheckState | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/03/2017
 ms.technology:
@@ -16,30 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c326de6b30668265ff57de73021bcd526baa5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc09dcb36d7d1ec1abd2f51fd13b6daadd74601f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375426"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403855"
 ---
 # <a name="uicheckstate-enumeration"></a>Перечисление UICheckState
-Описание состояния флажка элемента интерфейса пользователя для команды.  
-   
-### <a name="syntax"></a>Синтаксис   
-```  
-public enum class 
-{  
-   [DefaultValue(typeid<Microsoft::VisualC::MFC::UICheckState>, "Checked")]  
-   Unchecked,   
-   Checked,   
-   Indeterminate 
-};  
-```  
-   
-### <a name="remarks"></a>Примечания  
- [ICommandUI::Check](icommandui-interface.md#check) эти значения используются для описания состояния элемента интерфейса пользователя.    
- Дополнительные сведения об использовании Windows Forms см. в разделе [с помощью пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
-   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxwinforms.h (определенный в сборке atlmfc\lib\mfcmifc80.dll)  
+Описывает состояние проверки элемента интерфейса пользователя для команды.
+
+### <a name="syntax"></a>Синтаксис
+
+```
+public enum class
+{
+   [DefaultValue(typeid<Microsoft::VisualC::MFC::UICheckState>, "Checked")]
+   Unchecked,
+   Checked,
+   Indeterminate
+};
+```
+
+### <a name="remarks"></a>Примечания
+
+[ICommandUI::Check](icommandui-interface.md#check) использует эти значения, описывающие состояние элемента интерфейса пользователя.
+Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+
+### <a name="requirements"></a>Требования
+
+**Заголовок:** afxwinforms.h (определенных в сборке atlmfc\lib\mfcmifc80.dll)

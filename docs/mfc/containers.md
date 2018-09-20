@@ -1,5 +1,5 @@
 ---
-title: Контейнеры | Документы Microsoft
+title: Контейнеры | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d942dde74c25a40b5110b74f783d41684d1fdbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 914b2eccf1d9896285eca5cf714dbb4b78a4fe50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440684"
 ---
 # <a name="containers"></a>Контейнеры
-Приложения-контейнера — это приложение, которое может включать внедренные и связанные элементы в свои документы. Документы, управляемые приложения-контейнера должен иметь возможность хранения и отображения компонентов составных документов OLE, а также данные, созданные самим приложением. Приложения-контейнера необходимо также разрешить пользователям вставлять новые элементы или изменять существующие элементы.  
-  
-## <a name="in-this-section"></a>В этом разделе  
- [Реализация контейнера](../mfc/containers-implementing-a-container.md)  
-  
- [Элементы клиента контейнера](../mfc/containers-client-items.md)  
-  
- [Использовать составные файлы](../mfc/containers-compound-files.md)  
-  
- [Проблемы пользовательского интерфейса контейнера](../mfc/containers-user-interface-issues.md)  
-  
- [Дополнительные возможности контейнеров](../mfc/containers-advanced-features.md)  
-  
-## <a name="see-also"></a>См. также  
- [OLE](../mfc/ole-in-mfc.md)   
- [Серверы](../mfc/servers.md)   
- [Активация](../mfc/activation-cpp.md)   
- [Меню и ресурсы (OLE)](../mfc/menus-and-resources-ole.md)
+
+Приложения-контейнера — это приложение, которое может включать внедренные и связанные элементы в свои документы. Документы, управляемые приложения-контейнера должен иметь возможность хранения и отображения компонентов составных документов OLE, а также данные, созданные самим приложением. Приложения-контейнера необходимо также разрешить пользователям вставлять новые элементы или изменять существующие элементы.
+
+## <a name="in-this-section"></a>В этом разделе
+
+[Реализация контейнера](../mfc/containers-implementing-a-container.md)
+
+[Элементы клиента контейнера](../mfc/containers-client-items.md)
+
+[Используйте составные файлы](../mfc/containers-compound-files.md)
+
+[Проблемы пользовательского интерфейса для контейнера](../mfc/containers-user-interface-issues.md)
+
+[Расширенные возможности контейнеров](../mfc/containers-advanced-features.md)
+
+## <a name="see-also"></a>См. также
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Серверы](../mfc/servers.md)<br/>
+[Активация](../mfc/activation-cpp.md)<br/>
+[Меню и ресурсы (OLE)](../mfc/menus-and-resources-ole.md)
 

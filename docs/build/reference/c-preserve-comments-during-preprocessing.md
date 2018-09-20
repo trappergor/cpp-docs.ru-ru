@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20973969385d0b5c61872a12f4d0168420bc2eef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8716c0a0f954b0a2ad0bbe0e25c29a4445b11823
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428347"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (сохранять комментарии во время предварительной обработки)
 
@@ -76,6 +76,6 @@ int i;   // a variable
 
 [Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[/E (Предварительная обработка до stdout)](../../build/reference/e-preprocess-to-stdout.md)
-[/P (Предварительная обработка в файл)](../../build/reference/p-preprocess-to-a-file.md)
-[/EP (Предварительная обработка в stdout без директив #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+[/E (предварительная обработка в stdout)](../../build/reference/e-preprocess-to-stdout.md)<br/>
+[/P (вывод результатов предварительной обработки в файл)](../../build/reference/p-preprocess-to-a-file.md)<br/>
+[/EP (предварительная обработка в stdout без директив #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

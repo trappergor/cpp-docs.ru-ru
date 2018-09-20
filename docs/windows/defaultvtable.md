@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cec0e02a6a61638f8aed1b4015fea065cbfd343
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: baa73d252bd52f52d40c14bd8e0a411679c24b36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207692"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437629"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -38,7 +38,7 @@ ms.locfileid: "43207692"
 
 ### <a name="parameters"></a>Параметры
 
-*interface*  
+*interface*<br/>
 Указанный интерфейс, который вы хотите иметь vtable по умолчанию для COM-объекта.
 
 ## <a name="remarks"></a>Примечания
@@ -90,5 +90,5 @@ class CMyC3 : public IMyI3 {};
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
 [Атрибуты классов](../windows/class-attributes.md)  

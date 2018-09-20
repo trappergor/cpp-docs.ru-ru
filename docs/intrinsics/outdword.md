@@ -18,46 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1181cfa4fc2868fe96deb1d68d4140b9ab80e29b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c7f7d5cf08ba83f83513f591ce04b1ff527cd491
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708686"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420573"
 ---
 # <a name="outdword"></a>__outdword
-**Блок, относящийся только к системам Microsoft**  
-  
- Создает `out` инструкции для отправки двойное `Data` номера порта `Port`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __outdword(   
-   unsigned short Port,   
-   unsigned long Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+**Блок, относящийся только к системам Microsoft**
+
+Создает `out` инструкции для отправки двойное `Data` номера порта `Port`.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __outdword( 
+   unsigned short Port, 
+   unsigned long Data 
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *Порт*<br/>
-[in] Порт для отправки данных.  
-  
+[in] Порт для отправки данных.
+
 *Данные*<br/>
-[in] Двойное отправки.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__outdword`|x86, x64|  
-  
- **Файл заголовка** \<intrin.h >  
-  
-## <a name="remarks"></a>Примечания  
- Эта процедура доступна только как встроенная функция.  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[in] Двойное отправки.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__outdword`|x86, x64|
+
+**Файл заголовка** \<intrin.h >
+
+## <a name="remarks"></a>Примечания
+
+Эта процедура доступна только как встроенная функция.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

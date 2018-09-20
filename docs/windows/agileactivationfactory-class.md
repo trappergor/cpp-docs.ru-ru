@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3245c761ab998ff55ebe1c616542df79f937e9d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2d6b2ff0b9b23e8e3a540cf7bbcd6ae55ebab13d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604548"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435380"
 ---
 # <a name="agileactivationfactory-class"></a>Класс AgileActivationFactory
+
 Представляет фабрику активации подразделения с поддержкой, который реализует [FtmBase](../windows/ftmbase-class.md).
   
 ## <a name="syntax"></a>Синтаксис
@@ -38,10 +39,12 @@ class AgileActivationFactory :
 ```
   
 ## <a name="requirements"></a>Требования
- **Заголовок:** module.h
+
+**Заголовок:** module.h
   
- **Пространство имен:** Microsoft::WRL
+**Пространство имен:** Microsoft::WRL
   
 ## <a name="see-also"></a>См. также
- [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)  
- [Класс ActivationFactory](../windows/activationfactory-class.md)
+
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)<br/>
+[Класс ActivationFactory](../windows/activationfactory-class.md)

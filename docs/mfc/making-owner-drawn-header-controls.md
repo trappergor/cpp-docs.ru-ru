@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 899d51cf20d911d5ef0e46400330a59865cdd9af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214737"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435081"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Создание определяемых владельцем элементов управления "Заголовок"
-Можно определить отдельные элементы управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) быть владельцем элементы. Дополнительные сведения см. в разделе [элементы управления заголовка Owner-Drawn](/windows/desktop/Controls/header-controls) в пакете Windows SDK.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+Можно определить отдельные элементы управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) быть владельцем элементы. Дополнительные сведения см. в разделе [элементы управления заголовка Owner-Drawn](/windows/desktop/Controls/header-controls) в пакете Windows SDK.
+
+## <a name="see-also"></a>См. также
+
+[Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

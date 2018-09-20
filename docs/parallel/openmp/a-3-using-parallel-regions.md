@@ -1,5 +1,5 @@
 ---
-title: Использование параллельных областей а.3 | Документы Microsoft
+title: A.3 использование параллельных регионов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a38962043ecc29426cae3e33842957b68cf37087
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 82bc1655584af300cb2d36a62250595839d74551
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689900"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413085"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3   Использование параллельных регионов
-`parallel` Директивы ([разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8) можно использовать в крупных фрагментов данных параллельных программ. В следующем примере каждый поток в параллельной области решает, какую часть глобального массива `x` для работы, в зависимости от числа потоков:  
-  
-```  
-#pragma omp parallel shared(x, npoints) private(iam, np, ipoints)  
-{  
-    iam = omp_get_thread_num();  
-    np =  omp_get_num_threads();  
-    ipoints = npoints / np;  
-    subdomain(x, iam, ipoints);  
-}  
+
+`parallel` Директива ([разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице "8") можно использовать в крупных фрагментов данных параллельных программ. В следующем примере каждый поток в параллельной области определяет, какая часть глобального массива `x` для работы, в зависимости от числа потоков:
+
+```
+#pragma omp parallel shared(x, npoints) private(iam, np, ipoints)
+{
+    iam = omp_get_thread_num();
+    np =  omp_get_num_threads();
+    ipoints = npoints / np;
+    subdomain(x, iam, ipoints);
+}
 ```

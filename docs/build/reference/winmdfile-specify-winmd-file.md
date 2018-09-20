@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdea558f1c9a56e68a8e2e61703b92ea569a0629
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d34bdfd2d80690efae8efbc1f95ba0c50a530af3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709895"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425788"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (укажите файл winmd)
 
@@ -45,6 +45,6 @@ ms.locfileid: "45709895"
 
 ## <a name="see-also"></a>См. также
 
-[/ WINMD (Создание метаданных Windows)](../../build/reference/winmd-generate-windows-metadata.md)
+[/WINMD (создание метаданных Windows)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
 [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
 [Параметры компоновщика](../../build/reference/linker-options.md)

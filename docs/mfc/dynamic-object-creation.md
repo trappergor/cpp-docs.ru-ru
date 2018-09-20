@@ -1,5 +1,5 @@
 ---
-title: Динамическое создание объектов | Документы Microsoft
+title: Динамическое создание объектов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5763e3f0f3ee5a0e58ac20fe9f637e4f7e097999
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19f6a895eb48b3ae1816edc45747c865e7e03b96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346650"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420157"
 ---
 # <a name="dynamic-object-creation"></a>Динамическое создание объектов
-В этой статье объясняется, как создать объект динамически во время выполнения. Процедура использует сведения о классе во время выполнения, как описано в статье [доступ к сведениям о классе во время выполнения](../mfc/accessing-run-time-class-information.md).  
-  
-#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>Для динамического создания объектом по заданному его класса среды выполнения  
-  
-1.  Используйте следующий код для динамического создания объекта с помощью `CreateObject` функция `CRuntimeClass`. Обратите внимание, что в случае сбоя `CreateObject` возвращает **NULL** не вызывает исключения:  
-  
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]  
-  
-## <a name="see-also"></a>См. также  
- [Использование CObject](../mfc/using-cobject.md)
+
+В этой статье объясняется, как создать объект динамически во время выполнения. В процедуре используются сведения о классе среды выполнения, как описано в статье [доступ к сведениям о классе среды выполнения](../mfc/accessing-run-time-class-information.md).
+
+#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>Для динамического создания объекта, заданного его класс времени выполнения
+
+1. Используйте указанный ниже код для динамического создания объекта с помощью `CreateObject` функции `CRuntimeClass`. Обратите внимание, что в случае сбоя `CreateObject` возвращает **NULL** вместо активизации исключения:
+
+     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
+
+## <a name="see-also"></a>См. также
+
+[Использование CObject](../mfc/using-cobject.md)
 

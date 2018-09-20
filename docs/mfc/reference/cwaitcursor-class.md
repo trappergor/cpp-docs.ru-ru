@@ -1,5 +1,5 @@
 ---
-title: Класс CWaitCursor | Документы Microsoft
+title: Класс CWaitCursor | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,106 +20,118 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 5b7deaf83c093c16b30ee04d8c5924c1d567d86c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122675"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435809"
 ---
 # <a name="cwaitcursor-class"></a>Класс CWaitCursor
-Предоставляет односторонний способ отображения курсора ожидания (который обычно отображается как песочные часы) при выполнении длительной операции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class CWaitCursor  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CWaitCursor::CWaitCursor](#cwaitcursor)|Создает `CWaitCursor` объекта и отображает курсор ожидания.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CWaitCursor::Restore](#restore)|Восстанавливает курсор ожидания после он изменяется.|  
-  
-## <a name="remarks"></a>Примечания  
- `CWaitCursor` не имеет базового класса.  
-  
- Хороший Windows методик программирования требуют отображения курсора ожидания, при каждом выполнении операцию, занимающую длительное время.  
-  
- Для отображения курсора ожидания, просто определить `CWaitCursor` переменной перед кодом, который выполняет длительных операций. В конструктор объекта автоматически вынуждает курсор ожидания для отображения.  
-  
- Когда объект выходит за пределы области (в конце блока, в котором `CWaitCursor` объявлен объект), его деструктор задает курсор к предыдущей курсора. Другими словами объект выполняет необходимые очистки автоматически.  
-  
+
+Предоставляет односторонний способ отображения курсора ожидания (который обычно отображается как песочные часы) при выполнении длительной операции.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+class CWaitCursor
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CWaitCursor::CWaitCursor](#cwaitcursor)|Создает `CWaitCursor` и отображает курсор ожидания.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CWaitCursor::Restore](#restore)|Восстанавливает курсор ожидания после он изменяется.|
+
+## <a name="remarks"></a>Примечания
+
+`CWaitCursor` не имеет базового класса.
+
+Хороший Windows, программирования требуют отображения курсора ожидания при каждом выполнении операции, которая занимает много времени.
+
+Чтобы отобразить курсор ожидания, просто определите `CWaitCursor` переменной перед кодом, который выполняет длительной операции. Конструктор объекта автоматически вынуждает курсор ожидания для отображения.
+
+Когда объект выходит за пределы области действия (в конце блока, в котором `CWaitCursor` объявлен объект), его деструктор задает курсор до предыдущей позиции курсора. Другими словами объект выполняет необходимые очистки автоматически.
+
 > [!NOTE]
->  Из-за их конструкторы и деструкторы работе `CWaitCursor` объекты всегда объявляются как локальные переменные, они никогда не описаны как глобальные переменные и не выделяются они с **новый**.  
-  
- При выполнении операции, что может привести к курсора в их изменении, например, отображение окна сообщения или диалоговое окно, вызовите [восстановить](#restore) функции-члена для восстановления курсор ожидания. Допустимо вызывать `Restore` даже когда курсор ожидания в настоящее время отображается.  
-  
- Другой способ отображения курсора ожидания является использование сочетание [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)и, возможно, [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Однако `CWaitCursor` проще в использовании, так как не требуется установить курсор на предыдущем курсор после завершения работы с длительной операции.  
-  
+>  Из-за их конструкторы и деструкторы работы `CWaitCursor` объекты всегда объявляются как локальные переменные, они никогда не объявляются как глобальные переменные, ни их выделения с **новый**.
+
+При выполнении операции, что может привести к курсор для изменения, такие как отображение окна сообщения или диалоговое окно, вызов [восстановить](#restore) функция-член для восстановления курсор ожидания. Допустимо вызывать `Restore` даже когда курсор ожидания отображается в текущий момент.
+
+Другой способ отображения курсора ожидания является использование сочетания [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)и, возможно, [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Тем не менее `CWaitCursor` проще в использовании, поскольку вы не установите курсор в предыдущем курсор, когда все будет готово длительной операции.
+
 > [!NOTE]
->  MFC задает и восстанавливает курсора с помощью [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor) виртуальной функции. Можно переопределить эту функцию, чтобы обеспечить пользовательское поведение.  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `CWaitCursor`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
-  
-## <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
-  
-##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor  
- Для отображения курсора ожидания, просто объявите `CWaitCursor` объекта до его код, который выполняет длительных операций.  
-  
-```  
+>  MFC задает и восстанавливает курсора с помощью [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor) виртуальной функции. Можно переопределить эту функцию, чтобы обеспечить пользовательское поведение.
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`CWaitCursor`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxwin.h
+
+## <a name="example"></a>Пример
+
+[!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]
+
+##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor
+
+Чтобы отобразить курсор ожидания, просто объявите `CWaitCursor` объекта перед кодом, который выполняет длительной операции.
+
+```
 CWaitCursor();
-```  
-  
-### <a name="remarks"></a>Примечания  
- Конструктор автоматически вынуждает курсор ожидания для отображения.  
-  
- Когда объект выходит за пределы области (в конце блока, в котором `CWaitCursor` объявлен объект), его деструктор задает курсор к предыдущей курсора. Другими словами объект выполняет необходимые очистки автоматически.  
-  
- Можно воспользоваться преимуществами тот факт, что деструктор вызывается в конце блока (это может быть до окончания функции) чтобы сделать активной курсор ожидания в части функции. Этот способ показан в приведенном ниже втором примере.  
-  
+```
+
+### <a name="remarks"></a>Примечания
+
+Конструктор автоматически вынуждает курсор ожидания для отображения.
+
+Когда объект выходит за пределы области действия (в конце блока, в котором `CWaitCursor` объявлен объект), его деструктор задает курсор до предыдущей позиции курсора. Другими словами объект выполняет необходимые очистки автоматически.
+
+Можно воспользоваться преимуществами тот факт, что деструктор вызывается в конце блока (что может быть до окончания функции) курсор ожидания active только часть вашей функции. Во втором примере ниже показан этот метод.
+
 > [!NOTE]
->  Из-за их конструкторы и деструкторы работе `CWaitCursor` объекты всегда объявляются как локальные переменные, они никогда не описаны как глобальные переменные, а также их выделения с **новый**.  
-  
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
-  
-##  <a name="restore"></a>  CWaitCursor::Restore  
- Чтобы восстановить курсор ожидания, эта функция вызывается после выполнения операции, например, отображение окна сообщения или диалоговое окно «», которые могут быть изменены курсор ожидания для другого курсора.  
-  
-```  
+>  Из-за их конструкторы и деструкторы работы `CWaitCursor` объекты всегда объявляются как локальные переменные, они никогда не объявляются как глобальные переменные, а также их выделения с **новый**.
+
+### <a name="example"></a>Пример
+
+[!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]
+
+##  <a name="restore"></a>  CWaitCursor::Restore
+
+Чтобы восстановить курсор ожидания, эта функция вызывается после выполнения операции, такие как отображение окна сообщения или диалоговое окно, которое может изменить курсор ожидания для другого курсора.
+
+```
 void Restore();
-```  
-  
-### <a name="remarks"></a>Примечания  
- Может вызвать `Restore` даже когда курсор ожидания в настоящее время отображается.  
-  
- Если вам требуется восстановить курсор ожидания, пока в функции, кроме одной, в котором `CWaitCursor` объект объявлен, вы можете вызвать [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).  
-  
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing#64](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]  
-  
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)   
- [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)   
- [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)   
- [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)   
- [Как изменить курсор мыши в приложении классов Microsoft Foundation I:](http://go.microsoft.com/fwlink/p/?linkid=128044)
+```
+
+### <a name="remarks"></a>Примечания
+
+Это нормально для вызова `Restore` даже когда курсор ожидания отображается в текущий момент.
+
+Если необходимо восстановить курсор ожидания в функции, кроме того, в котором `CWaitCursor` объявлен объект, вы можете вызвать [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).
+
+### <a name="example"></a>Пример
+
+[!code-cpp[NVC_MFCWindowing#64](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]
+
+## <a name="see-also"></a>См. также
+
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)<br/>
+[CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
+[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
+[CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
+[Как изменить курсор мыши на приложение классов Microsoft Foundation I:](http://go.microsoft.com/fwlink/p/?linkid=128044)
 
 
 

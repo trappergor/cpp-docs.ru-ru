@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2080aae34a69b18286953bfa48a269b81a5a5e65
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d6feb80c93298d5fe3d2cb23f9b34727bced57d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761817"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442231"
 ---
 # <a name="atlmfc-shared-classes"></a>Общие классы ATL и MFC
 
@@ -44,16 +44,16 @@ ms.locfileid: "43761817"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Классы, совместно используемые между MFC и ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
+[Классы, совместно используемые между MFC и ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
 Ссылки на классы, совместно использовать MFC и ATL.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Справочник по библиотеке (классов ATL) активных шаблонов](../atl/atl-com-desktop-components.md)  
+[Справочник по библиотеке (классов ATL) активных шаблонов](../atl/atl-com-desktop-components.md)<br/>
 Справочные материалы по библиотеке ATL, которая представляет собой набор основанных на шаблонах классов C++, упрощающих написание объектов COM.
 
-[Справочник по библиотеке (MFC) классов Microsoft Foundation](../mfc/mfc-desktop-applications.md)  
+[Справочник по библиотеке (MFC) классов Microsoft Foundation](../mfc/mfc-desktop-applications.md)<br/>
 Предоставляет справочные материалы по библиотеке MFC, набор классов, составляют платформу приложения, который представляет собой платформу приложения, написанного для Windows API.
 
-[Отладка](/visualstudio/debugger/debugging-in-visual-studio)  
+[Отладка](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Ссылки на разделы, описывающие использование отладчика Visual Studio для устранения логических ошибок в приложениях и хранимых процедурах.

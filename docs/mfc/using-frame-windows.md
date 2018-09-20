@@ -1,5 +1,5 @@
 ---
-title: Использование окон фрейма | Документы Microsoft
+title: С помощью Windows кадра | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636762ae7e1b1d1a5dd109bb71b98c81b51fe50b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cb895c50d7265c0fd1478ba421f2da860d49a19
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381921"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400449"
 ---
 # <a name="using-frame-windows"></a>Использование окон фрейма
-Платформа MFC создает документ окна фрейма, документы и их представления — как часть своей реализации создать и открыть команды в меню «файл». Поскольку платформа выполняет большую часть работы окна фрейма для вас, вы работать лишь малую роль в создании, использовании и уничтожение этих окон. Можно Однако явно создать собственные окна фрейма и дочерние окна для особых целей.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
-  
--   [Создание окон фрейма документа](../mfc/creating-document-frame-windows.md)  
-  
--   [Время инициализации объектов CWnd](../mfc/when-to-initialize-cwnd-objects.md)  
-  
--   [Уничтожение окон фрейма](../mfc/destroying-frame-windows.md)  
-  
--   [Управление дочерними окнами MDI](../mfc/managing-mdi-child-windows.md)  
-  
--   [Управление текущим представлением](../mfc/managing-the-current-view.md)  
-  
--   [Управление меню, панелей элементов управления и ускорителями](../mfc/managing-menus-control-bars-and-accelerators.md)  
-  
--   [Перетаскивание файлов в окне фрейма](../mfc/dragging-and-dropping-files-in-a-frame-window.md)  
-  
--   [Реакция на динамический обмен данными (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
-  
--   [Оркестрация других действий окна](../mfc/orchestrating-other-window-actions.md)  
-  
--   [Управление контекстная справка](../mfc/orchestrating-other-window-actions.md)  
-  
--   [Окна фрейма роли в печать и предварительный просмотр](../mfc/orchestrating-other-window-actions.md)  
-  
-## <a name="see-also"></a>См. также  
- [Окна фрейма](../mfc/frame-windows.md)
+
+Платформа MFC создает документ окон фрейма — документы и их представления — как часть ее реализации, создать и открыть команды в меню "файл". Поскольку платформа выполняет большую часть работы окна фрейма для вас, воспроизведении лишь малую роль в создании, использовании и уничтожение этих окон. Можно тем не менее, явным образом создать собственные окна фрейма и дочерние окна для особых целей.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+
+- [Создание окон фрейма документа](../mfc/creating-document-frame-windows.md)
+
+- [Время инициализации объектов CWnd](../mfc/when-to-initialize-cwnd-objects.md)
+
+- [Уничтожение окон фрейма](../mfc/destroying-frame-windows.md)
+
+- [Управление дочерними окнами MDI](../mfc/managing-mdi-child-windows.md)
+
+- [Управление текущим представлением](../mfc/managing-the-current-view.md)
+
+- [Управление меню, панелей элементов управления и ускорителями](../mfc/managing-menus-control-bars-and-accelerators.md)
+
+- [Перетаскивание файлов в окне фрейма](../mfc/dragging-and-dropping-files-in-a-frame-window.md)
+
+- [Реагирование на динамический обмен данными (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
+
+- [Оркестрация других действий окна](../mfc/orchestrating-other-window-actions.md)
+
+- [Управление контекстной справки](../mfc/orchestrating-other-window-actions.md)
+
+- [Окна фрейма роль в печати и предварительного просмотра](../mfc/orchestrating-other-window-actions.md)
+
+## <a name="see-also"></a>См. также
+
+[Окна фрейма](../mfc/frame-windows.md)
 
