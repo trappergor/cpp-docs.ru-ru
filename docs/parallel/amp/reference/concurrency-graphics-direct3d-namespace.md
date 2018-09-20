@@ -1,5 +1,5 @@
 ---
-title: 'Пространство имен Concurrency::Graphics:: Direct3D | Документы Microsoft'
+title: 'Пространство имен Concurrency::Graphics:: Direct3D | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,38 +15,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6835297ca3248fcae92d94d98ab5620f86b5ba58
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 01d029b528280a89b2bc60639b47a23c5df6ffbc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695997"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405245"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Пространство имен Concurrency::graphics::direct3d
-Предоставляет [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) и [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) методы.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-namespace direct3d;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="functions"></a>Функции  
-  
-|Имя<br /><br /> Описание|  
-|--------------------------|  
-|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Get интерфейс конечного образцом Direct3D для данного сочетания клавиш просмотра, представляющий указанный образец объекта.|  
-|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Возвращает указанный базовый интерфейс текстуры Direct3D [текстуры](texture-class.md) объекта.|  
-|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Создайте дискретизатор от указателя интерфейса пробы состояния Direct3D.|  
-|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Создает [текстуры](texture-class.md) объекта, используя указанные параметры.|  
-|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Сравнивает значение 4-байтовые ссылки и 8-байтное исходного значения и собирает вектор 4 сумм.|  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** amp_graphics.h  
-  
- **Пространство имен:** Concurrency::graphics  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
+
+Предоставляет [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) и [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) методы.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+namespace direct3d;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="functions"></a>Функции
+
+|Имя<br /><br /> Описание|
+|--------------------------|
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Получите интерфейс состояния дискретизатора Direct3D на ускорителе данного представления, представляющее указанный объект дискретизатора.|
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Получает интерфейс текстуры Direct3D, основе заданного [текстуры](texture-class.md) объекта.|
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Создайте дискретизатор из указателя интерфейса состояния дискретизатора Direct3D.|
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Создает [текстуры](texture-class.md) с использованием указанных параметров.|
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Сравнивает 4-байтное ссылочное значение и 8-байтное исходное значение и накапливает вектор 4 сумм.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** amp_graphics.h
+
+**Пространство имен:** Concurrency::graphics
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c2f73c77e86a2b23213b3b6aabdd0bc85f91586
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 536448572b87da8a35ec949e0b438e0bf8f3b703
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317073"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445156"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Практическое руководство. Открытие файла описания ресурсов в текстовом формате
 
@@ -66,5 +66,5 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Файлы ресурсов](../windows/resource-files-visual-studio.md)  
+[Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
 [Редакторы ресурсов](../windows/resource-editors.md)

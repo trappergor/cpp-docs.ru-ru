@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8d69ccb0b5a0c0f0dd13d377841732d9f663e91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e1cf7f100c34023e6fea96c9764cce2371dcaaf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607589"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412696"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -59,9 +59,9 @@ ms.locfileid: "42607589"
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Атрибуты интерфейса](../windows/interface-attributes.md)  
-[dual](../windows/dual.md)  
-[dispinterface](../windows/dispinterface.md)  
-[Custom](../windows/custom-cpp.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Атрибуты интерфейса](../windows/interface-attributes.md)<br/>
+[dual](../windows/dual.md)<br/>
+[dispinterface](../windows/dispinterface.md)<br/>
+[Custom](../windows/custom-cpp.md)<br/>
 [__interface](../cpp/interface.md)  

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a0198649e87cbe2f2639e647327de778c96bb8
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 4c9ebcdd54e145ff17dc7c473abf6a3ae37e35e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540056"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440099"
 ---
 # <a name="nosearchnamespace"></a>no_search_namespace
 **Конкретных C++**  
@@ -40,5 +40,5 @@ no_search_namespace
   
 ## <a name="see-also"></a>См. также  
  
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [директива #import](../preprocessor/hash-import-directive-cpp.md)

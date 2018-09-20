@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434730"
 ---
 # <a name="implements-structure"></a>Implements - структура
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>Параметры
 
-*I0*  
+*I0*<br/>
 Идентификатор нулевого интерфейса. (Обязательный)
 
-*I1*  
+*I1*<br/>
 Идентификатор первого интерфейса. (Необязательный параметр).
 
-*I2*  
+*I2*<br/>
 Идентификатор второго интерфейса. (Необязательный параметр).
 
-*I3*  
+*I3*<br/>
 Идентификатор третьего интерфейса. (Необязательный параметр).
 
-*I4*  
+*I4*<br/>
 Идентификатор четвертого интерфейса. (Необязательный параметр).
 
-*I5*  
+*I5*<br/>
 Идентификатор пятого интерфейса. (Необязательный параметр).
 
-*I6*  
+*I6*<br/>
 Идентификатор шестого интерфейса. (Необязательный параметр).
 
-*I7*  
+*I7*<br/>
 Идентификатор седьмого интерфейса. (Необязательный параметр).
 
-*I8*  
+*I8*<br/>
 Идентификатор восьмого интерфейса. (Необязательный параметр).
 
-*I9*  
+*I9*<br/>
 Идентификатор девятого интерфейса. (Необязательный параметр).
 
-*flags*  
+*flags*<br/>
 Флаги конфигурации для класса. Один или несколько [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) перечисления, которые указаны в [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) структуры.
 
 ## <a name="remarks"></a>Примечания
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Параметры
 
-*riid*  
+*riid*<br/>
 Ссылку на идентификатор интерфейса.
 
-*ppv*  
+*ppv*<br/>
 Если в случае успешного выполнения указатель на интерфейс, заданный *riid*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс*  
+*Индекс*<br/>
 Отсчитываемый от нуля индекс, указывающий начальный элемент массива для этой операции. По завершении этой операции *индекс* увеличивается на 1.
 
-*идентификаторы IID*  
+*идентификаторы IID*<br/>
 Массив типа IID.
 
 ### <a name="remarks"></a>Примечания

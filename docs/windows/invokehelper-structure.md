@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0586b5073e8d97c882f33bb118d62b0c1bb04c07
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0ffef0c6a55116bf3a228d7d5da4bd698607d7fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611555"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431038"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper - структура
 
@@ -91,11 +91,11 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 
 ### <a name="parameters"></a>Параметры
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 *TCallback*  
 Тип функции обработчика событий.
 
-*argCount*  
+*argCount*<br/>
 Число аргументов в **InvokeHelper** специализации.
 
 ## <a name="remarks"></a>Примечания
@@ -106,25 +106,25 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`Traits`|Синоним для класса, который определяет тип каждого аргумента обработчика событий.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Конструктор InvokeHelper::InvokeHelper](../windows/invokehelper-invokehelper-constructor.md)|Инициализирует новый экземпляр класса **InvokeHelper** класса.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод InvokeHelper::Invoke](../windows/invokehelper-invoke-method.md)|Вызывает обработчик событий, сигнатура которого содержит указанное число аргументов.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Элемент данных InvokeHelper::callback_](../windows/invokehelper-callback-data-member.md)|Представляет обработчик событий для вызова при возникновении события.|
 

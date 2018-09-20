@@ -1,5 +1,5 @@
 ---
-title: Указание параллельных разделы A.8 | Документы Microsoft
+title: A.8 указание параллельных разделов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acb28f4e7e99ea09696d116ab031778fcf9ff919
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9d969f1a0e9d9b282104ee00a3b2d06610533ad4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694060"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440424"
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8   Указание параллельных разделов
-В следующем примере (для [раздел 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) на стр.) функции *xaxis*, *ось y*, и *zaxis* могут быть выполнены одновременно. Первый `section` директива является необязательным.  Обратите внимание, что все `section` директивы должны отображаться в лексическую область `parallel sections` построения.  
-  
-```  
-#pragma omp parallel sections  
-{  
-    #pragma omp section  
-        xaxis();  
-    #pragma omp section  
-        yaxis();  
-    #pragma omp section  
-        zaxis();  
-}  
+
+В следующем примере (для [разделе 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) на странице 14) функции *xaxis*, *ось y*, и *zaxis* могут быть выполнены одновременно. Первый `section` директива является необязательным.  Обратите внимание, что все `section` директивы должна отображаться в лексическую область `parallel sections` построения.
+
+```
+#pragma omp parallel sections
+{
+    #pragma omp section
+        xaxis();
+    #pragma omp section
+        yaxis();
+    #pragma omp section
+        zaxis();
+}
 ```

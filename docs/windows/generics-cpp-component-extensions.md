@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cc6b296684c13c2cf9c538a226fb440a2e50349
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599267"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448354"
 ---
 # <a name="generics--c-component-extensions"></a>Универсальные типы и методы (расширения компонентов C++)
 
@@ -33,35 +33,35 @@ ms.locfileid: "42599267"
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Поддержка средой выполнения Windows и средой CLR
 
-[Обзор универсальных типов в Visual C++](../windows/overview-of-generics-in-visual-cpp.md)  
+[Обзор универсальных типов в Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Сведения об универсальных шаблонах, причины использования возможности языка, определения терминов, используемых для описания универсальных шаблонов, и сведения об использовании ссылочных типов и типов значений в качестве параметров типа для универсальных шаблонов.
 
-[Универсальные интерфейсы (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
+[Универсальные интерфейсы (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Сведения об определении и использовании универсальных интерфейсов.
 
-[Универсальные делегаты (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
+[Универсальные делегаты (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
 Сведения об определении и использовании универсальных делегатов.
 
-[Ограничения, применяемые к параметрам универсальных типов (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+[Ограничения, применяемые к параметрам универсальных типов (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Сведения об использовании ограничений в универсальных типах.
 
-[Использование универсальных типов (C++/CLI)](../windows/consuming-generics-cpp-cli.md)  
+[Использование универсальных типов (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Сведения об использовании в Visual C++ универсальных шаблонов, определенных в сборках .NET, возможно, созданных на других языках.
 
-[Универсальные типы и шаблоны (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
+[Универсальные типы и шаблоны (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Сравнение универсальных и обычных шаблонов, а также сведения о том, когда использовать каждый из них и как их эффективно объединять.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Поддержка средой CLR
 
-[Универсальные функции (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
+[Универсальные функции (C++/CLI)](../windows/generic-functions-cpp-cli.md)<br/>
 Сведения об определении и использовании универсальных функций и методов.
 
-[Универсальные классы (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
+[Универсальные классы (C++/CLI)](../windows/generic-classes-cpp-cli.md)<br/>
 Сведения об определении и использовании универсальных классов.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Практическое руководство. Перебор элементов универсальной коллекции с использованием цикла for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+[Практическое руководство. Перебор элементов универсальной коллекции с использованием цикла for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 С помощью [для каждого из них в](../dotnet/for-each-in.md) ключевое слово в универсальной коллекции.
 
 ## <a name="see-also"></a>См. также

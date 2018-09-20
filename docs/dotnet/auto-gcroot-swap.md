@@ -20,60 +20,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 785480c10aff65d02280a9338e79e76cd430a57b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1a34af7717de8d3920212c28c92da05007ec90a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098086"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403634"
 ---
 # <a name="autogcrootswap"></a>auto_gcroot::swap
-Меняет местами объекты с другим `auto_gcroot`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void swap(  
-   auto_gcroot<_element_type> & _right  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+Меняет местами объекты с другим `auto_gcroot`.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void swap(
+   auto_gcroot<_element_type> & _right
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *_справа*<br/>
-`auto_gcroot` С которым производится обмен объектов.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// msl_auto_gcroot_swap.cpp  
-// compile with: /clr  
-#include <msclr\auto_gcroot.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-int main() {  
-   auto_gcroot<String^> s1 = "string one";  
-   auto_gcroot<String^> s2 = "string two";  
-  
-   Console::WriteLine( "s1 = '{0}', s2 = '{1}'",  
-      s1->ToString(), s2->ToString() );  
-   s1.swap( s2 );  
-   Console::WriteLine( "s1 = '{0}', s2 = '{1}'",  
-      s1->ToString(), s2->ToString() );  
-}  
-```  
-  
-```Output  
-s1 = 'string one', s2 = 'string two'  
-s1 = 'string two', s2 = 'string one'  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Файл заголовка** \<msclr\auto_gcroot.h >  
-  
- **Пространство имен** msclr  
-  
-## <a name="see-also"></a>См. также  
- [Члены auto_gcroot](../dotnet/auto-gcroot-members.md)   
- [Функция swap (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)
+`auto_gcroot` С которым производится обмен объектов.
+
+## <a name="example"></a>Пример
+
+```
+// msl_auto_gcroot_swap.cpp
+// compile with: /clr
+#include <msclr\auto_gcroot.h>
+
+using namespace System;
+using namespace msclr;
+
+int main() {
+   auto_gcroot<String^> s1 = "string one";
+   auto_gcroot<String^> s2 = "string two";
+
+   Console::WriteLine( "s1 = '{0}', s2 = '{1}'",
+      s1->ToString(), s2->ToString() );
+   s1.swap( s2 );
+   Console::WriteLine( "s1 = '{0}', s2 = '{1}'",
+      s1->ToString(), s2->ToString() );
+}
+```
+
+```Output
+s1 = 'string one', s2 = 'string two'
+s1 = 'string two', s2 = 'string one'
+```
+
+## <a name="requirements"></a>Требования
+
+**Файл заголовка** \<msclr\auto_gcroot.h >
+
+**Пространство имен** msclr
+
+## <a name="see-also"></a>См. также
+
+[Члены auto_gcroot](../dotnet/auto-gcroot-members.md)<br/>
+[Функция swap (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)
