@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28be2caa3477eabc8b717b387c99d65585a9ef19
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4ea5026100239f00f03147e435ddd9555617f1dd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718059"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432715"
 ---
 # <a name="dlls-in-visual-c"></a>DLL в Visual C++
 
@@ -71,46 +71,67 @@ ms.locfileid: "45718059"
 
 Следующие разделы предоставляют подробные сведения о программировании библиотек DLL в Visual C++.
 
-[Пошаговое руководство: Создание и использование библиотеки динамических ссылок (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md) описывается создание и использование библиотеки DLL с помощью Visual Studio.
+[Пошаговое руководство. Создание и использование библиотеки DLL (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+Описывает создание и использование библиотек DLL при помощи Visual Studio.
 
-[Типы библиотек DLL](../build/kinds-of-dlls.md) предоставляет сведения о различных типах библиотек DLL, которые могут создаваться.
+[Типы библиотек DLL](../build/kinds-of-dlls.md)<br/>
+Предоставляет сведения о различных типах библиотек DLL, которые доступны для сборки.
 
-[Библиотеки DLL часто задаваемые вопросы](../build/dll-frequently-asked-questions.md) содержатся ответы на часто задаваемые вопросы о библиотеках DLL.
+[Вопросы и ответы по библиотекам DLL](../build/dll-frequently-asked-questions.md)<br/>
+Ответы на часто задаваемые вопросы о библиотеках DLL.
 
-[Связывание исполняемого файла с библиотекой DLL](../build/linking-an-executable-to-a-dll.md) описание явного и неявного соединения с библиотекой DLL.
+[Связывание исполняемого файла с библиотекой DLL](../build/linking-an-executable-to-a-dll.md)<br/>
+Описание явного и неявного соединения с библиотекой DLL.
 
-[Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll) код инициализации библиотеки DLL, рассматриваются, который должен выполняться при загрузке библиотеки DLL.
+[Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+Процесс инициализации кода, необходимый для выполнения загрузки библиотеки DLL.
 
-[Библиотеки DLL и поведение библиотеки времени выполнения Visual C++](../build/run-time-library-behavior.md) описывается, как выполняется последовательность запуска DLL в библиотеке времени выполнения.
+[Библиотеки DLL и поведение библиотеки времени выполнения Visual C++](../build/run-time-library-behavior.md)<br/>
+Выполнение библиотекой времени выполнения функции запускаемой последовательности DLL.
 
-[Функции LoadLibrary и AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) обсуждается использование **LoadLibrary** и `AfxLoadLibrary` для явного связывания с библиотекой DLL во время выполнения.
+[Функции LoadLibrary и AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+Обсуждается использование **LoadLibrary** и `AfxLoadLibrary` для явного связывания с библиотекой DLL во время выполнения.
 
-[GetProcAddress](../build/getprocaddress.md) обсуждается использование **GetProcAddress** получить адрес экспортированной функции в библиотеке DLL.
+[Функция GetProcAddress](../build/getprocaddress.md)<br/>
+Обсуждается использование **GetProcAddress** получить адрес экспортированной функции в библиотеке DLL.
 
-[Функции FreeLibrary и AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md) обсуждается использование **FreeLibrary** и `AfxFreeLibrary` когда модуль DLL больше не нужны.
+[Функции FreeLibrary и AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+Обсуждается использование **FreeLibrary** и `AfxFreeLibrary` когда модуль DLL больше не нужны.
 
-[Порядок поиска библиотеки динамической компоновки](/windows/desktop/Dlls/dynamic-link-library-search-order) описание пути поиска, операционная система Windows использует для поиска библиотеки DLL в системе.
+[Порядок поиска библиотеки динамической компоновки](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+Описание пути поиска, который операционная система Windows использует для поиска библиотеки DLL в системе.
 
-[Состояние модулей регулярных MFC DLL динамически связанной с MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md) описание состояния модулей обычной MFC DLL, динамически компонуемые с MFC.
+[Состояния модулей обычной DLL-библиотеки MFC, динамически связанной с MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+Описывает состояние модулей регулярной, библиотеки DLL MFC, динамически компонуемые с MFC.
 
-[Библиотеки DLL расширений MFC](../build/extension-dlls-overview.md) объясняет DLL-библиотеки, обычно реализуют классы многократного использования, производные от существующих классов библиотеки Microsoft Foundation Class.
+[Библиотеки DLL расширений MFC](../build/extension-dlls-overview.md)<br/>
+Наличие библиотек DLL, которые обычно реализуют классы многократного использования в существующих библиотеках классов Microsoft Foundation Class.
 
-[Создание библиотеки DLL Resource-Only](../build/creating-a-resource-only-dll.md) рассматриваются только ресурсы библиотека DLL, содержащая только ресурсы, такие как значки, растровые изображения, строки и диалоговые окна.
+[Создание библиотек DLL, содержащих только ресурсы](../build/creating-a-resource-only-dll.md)<br/>
+Библиотека DLL, содержащая только ресурсы, например значки, растровые изображения, строки и диалоговые окна.
 
-[Локализованные ресурсы в приложениях MFC: вспомогательные библиотеки DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md) предоставляет улучшенную поддержку вспомогательных библиотек DLL, это функция, которая позволяет создавать приложения, локализированные на различные языки.
+[Локализованные ресурсы в приложениях MFC: вспомогательные библиотеки DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+Расширенная поддержка библиотек спутниковой связи DLL и содержит возможность, которая позволяет создавать приложения, локализированные на различные языки.
 
-[Импорт и экспорт](../build/importing-and-exporting.md) описывается импортирование открытых символов в приложение или экспортирование функций из библиотеки DLL
+[Импортирование и экспортирование](../build/importing-and-exporting.md)<br/>
+Импортирование открытых символов в приложение или экспортирование функций из библиотеки DLL
 
-[Active технология и библиотеки DLL](../build/active-technology-and-dlls.md) размещение сервера объектов внутри библиотеки DLL.
+[Технология Active и библиотеки DLL](../build/active-technology-and-dlls.md)<br/>
+Размещение серверов объектов внутри библиотеки DLL.
 
-[Автоматизация в библиотеке DLL](../build/automation-in-a-dll.md) описывает предоставляет параметр автоматизации в мастер библиотек DLL MFC.
+[Автоматизация в библиотеке DLL](../build/automation-in-a-dll.md)<br/>
+Параметр автоматизации в решениях мастера библиотек DLL MFC.
 
-[Соглашения об именовании библиотек DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions) рассматриваются как проследовать структурированное соглашение об именовании библиотек DLL и библиотек, включенных в MFC.
+[Соглашения об именовании библиотек DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
+Способ встраивания библиотек DLL в MFC, опираясь на четко структурированное соглашение об именовании.
 
-[Вызов функций библиотек DLL из приложений Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md) описывает способ вызова функций DLL из приложений Visual Basic.
+[Вызов функций библиотек DLL из приложений Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+Способ вызова функций DLL из приложений Visual Basic.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Использование MFC как часть библиотеки DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md) постоянные библиотеки DLL MFC, которые позволяют использовать библиотеку MFC как часть библиотеки динамической компоновки Windows.
+[Использование MFC как часть библиотеки DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)<br/>
+Описывает постоянные библиотеки DLL MFC, которые позволяют использовать библиотеку MFC как часть библиотеки динамической компоновки Windows.
 
-[Версия библиотеки DLL MFC](../mfc/tn033-dll-version-of-mfc.md) описано, как можно использовать MFCxx.dll и MFCxxD.dll (где x — номер версии MFC) общие библиотеки динамической компоновки с MFC-приложения и библиотеки DLL расширений MFC.
+[Версия библиотеки DLL MFC](../mfc/tn033-dll-version-of-mfc.md)<br/>
+Описывает, как можно использовать MFCxx.dll и MFCxxD.dll (где x — номер версии MFC) общие библиотеки динамической компоновки с MFC-приложения и библиотеки DLL расширений MFC.

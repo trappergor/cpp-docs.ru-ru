@@ -1,5 +1,5 @@
 ---
-title: Выбор даты и времени управляют примеры | Документы Microsoft
+title: Примерами, элементов управления выбора даты и времени | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4eb89822a5014108628687bccf0525026cca64c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa687d5b4b102db9a5aeee2bfb805f9e03550622
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341979"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432975"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Примеры элемента выбора даты и времени
-[CMNCTRL1](../visual-cpp-samples.md) образец демонстрирует различные атрибуты `CDateTimeCtrl` класса. Отдельные страницы содержит элемент выбора даты и времени, пользователю можно управлять, изменяя различные атрибуты и тестирование основные функциональные возможности элемента управления.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+[CMNCTRL1](../visual-cpp-samples.md) в нем демонстрируется различных атрибутов `CDateTimeCtrl` класса. Отдельная страница содержит элемент управления выбора даты и времени, пользователь может управлять, изменять различные атрибуты и протестировав функциональные возможности элемента управления.
+
+## <a name="see-also"></a>См. также
+
+[Использование CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

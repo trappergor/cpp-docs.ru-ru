@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7f5879a3a76e9af795a5dfc808423b43515662a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 496b1ccac5b998ba08f4e2eccfe31ffd18f2c37d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609305"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431792"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Метод Module::RegisterWinRTObject
 
@@ -39,16 +39,16 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>Параметры
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя, которое определяет подмножество объектов, затронутых этой операцией.
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 Массив активируемых идентификаторов CLSID для регистрации.
 
-*Файл cookie*  
+*Файл cookie*<br/>
 Значение, которое идентифицирует зарегистрированные объекты класса. Это значение в дальнейшем используется для отмены регистрации.
 
-*count*  
+*count*<br/>
 Количество объектов, которое необходимо зарегистрировать.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -62,4 +62,5 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
+
 [Класс Module](../windows/module-class.md)

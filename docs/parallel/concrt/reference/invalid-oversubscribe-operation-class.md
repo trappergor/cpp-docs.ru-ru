@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b4e1eaf4bfca27ef22af103a5696ca2a34265d6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e62dc4ad1600b2e5cc7f955c4a419d27482bb557
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433222"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>Класс invalid_oversubscribe_operation
-Этот класс описывает исключение, создаваемое при вызове метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, имеющим значение `false`, без предварительного вызова метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, имеющим значение `true`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class invalid_oversubscribe_operation : public std::exception;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[invalid_oversubscribe_operation](#ctor)|Перегружен. Создает объект `invalid_oversubscribe_operation`.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `exception`  
-  
- `invalid_oversubscribe_operation`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** concrt.h  
-  
- **Пространство имен:** concurrency  
-  
-##  <a name="ctor"></a> invalid_oversubscribe_operation 
 
- Создает объект `invalid_oversubscribe_operation`.  
-  
-```  
+Этот класс описывает исключение, создаваемое при вызове метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, имеющим значение `false`, без предварительного вызова метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, имеющим значение `true`.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+class invalid_oversubscribe_operation : public std::exception;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[invalid_oversubscribe_operation](#ctor)|Перегружен. Создает объект `invalid_oversubscribe_operation`.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`exception`
+
+`invalid_oversubscribe_operation`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** concrt.h
+
+**Пространство имен:** concurrency
+
+##  <a name="ctor"></a> invalid_oversubscribe_operation
+
+Создает объект `invalid_oversubscribe_operation`.
+
+```
 explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) throw();
 
- 
 invalid_oversubscribe_operation() throw();
-```  
-  
-### <a name="parameters"></a>Параметры  
+```
+
+### <a name="parameters"></a>Параметры
+
 *_Message*<br/>
-Описательное сообщение об ошибке.  
-  
-## <a name="see-also"></a>См. также  
- [Пространство имен concurrency](concurrency-namespace.md)
+Описательное сообщение об ошибке.
+
+## <a name="see-also"></a>См. также
+
+[Пространство имен concurrency](concurrency-namespace.md)

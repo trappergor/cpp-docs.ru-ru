@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bfd96962cebd4b94e9b1b50ca588ada9af69779
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719112"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418389"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -44,10 +44,10 @@ ms.locfileid: "45719112"
 
 ### <a name="parameters"></a>Параметры
 
-*Порядковый номер*  
+*Порядковый номер*<br/>
 Номер столбца (порядковый номер DBCOLUMNINFO), соответствующее полю в наборе строк, к которому требуется привязать данные.
 
-*paramtype*  
+*paramtype*<br/>
 (Необязательно) Тип, задаваемый для параметра. Поставщики поддерживают только параметр типы ввода-вывода, поддерживаемые в базовом источнике данных. Тип представляет собой сочетание одного или нескольких значений DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT входного параметра.
@@ -56,19 +56,19 @@ ms.locfileid: "45719112"
 
 - DBPARAMIO_NOTPARAM метод доступа не имеет параметров. Параметр `eParamIO` этому значению в строке методы доступа напоминает пользователям, что параметры игнорируются.
 
-*dbType*  
+*dbType*<br/>
 (Необязательно) OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) для записи в столбце.
 
-*precision*  
+*precision*<br/>
 (Необязательно) Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Масштаб*  
+*Масштаб*<br/>
 (Необязательно) Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Необязательно) Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) в *Справочник программиста OLE DB по*.
 
-*length*  
+*length*<br/>
 (Необязательно) Переменную-член используется для хранения размера столбца в байтах.
 
 ## <a name="remarks"></a>Примечания

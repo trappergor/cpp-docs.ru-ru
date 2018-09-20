@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: af227712e3ac64d69836f5cf83b6629bdbffe834
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212173"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432730"
 ---
 # <a name="reflection-ccli"></a>Отражение (C++/CLI)
 
@@ -78,7 +78,7 @@ full type name of 'sample string' is 'System.String'
 // compile with: /clr
 using namespace System;
 int main() {
-   Int32 i = 100; 
+   Int32 i = 100;
    Object ^ o = i;
    Console::WriteLine("type of i = '{0}'", o->GetType());
 }
@@ -106,7 +106,7 @@ enum class Options {   // not a native enum
 int main() {
    array<String^>^ names = Enum::GetNames(Options::typeid);
 
-   Console::WriteLine("there are {0} options in enum '{1}'", 
+   Console::WriteLine("there are {0} options in enum '{1}'",
                names->Length, Options::typeid);
 
    for (int i = 0 ; i < names->Length ; i++)
@@ -156,7 +156,7 @@ int main() {
 
 ```Output
 type information for 'String':
-assembly name: mscorlib, Version=1.0.5000.0, Culture=neutral, 
+assembly name: mscorlib, Version=1.0.5000.0, Culture=neutral,
 PublicKeyToken=b77a5c561934e089
 namespace: System
 base type: System.Object
@@ -177,7 +177,7 @@ public ref class TestClass {
 public:
    TestClass() {}
    void SimpleTestMember1() {}
-   String ^ SimpleMember2(String ^ s) { return s; } 
+   String ^ SimpleMember2(String ^ s) { return s; }
    int TestMember(int i) { return i; }
    property int Member {
       int get() { return m_i; }
@@ -227,10 +227,10 @@ int main() {
       // retrieve array of member descriptions
       array<MemberInfo^>^ member = typeArray[i]->GetMembers();
 
-      Console::WriteLine("  members of {0} ({1} members):", 
+      Console::WriteLine("  members of {0} ({1} members):",
       typeArray[i]->FullName, member->Length);
       for (int j = 0 ; j < member->Length ; j++) {
-         Console::Write("       ({0})", 
+         Console::Write("       ({0})",
          member[j]->MemberType.ToString() );
          Console::Write("{0}  ", member[j]);
          Console::WriteLine("");
@@ -244,165 +244,169 @@ int main() {
 ```
 
 ## <a name="implement"></a> Практическое: реализация архитектуры с подключаемыми компонентами с помощью отражения
-В следующих примерах кода демонстрируется использование отражения для реализации простой архитектуры «подключаемого модуля». Первый листинг — это приложение, а второй — подключаемый модуль. Приложение является формой нескольких документов, которые заполняются с помощью любой форм классы, находящиеся в библиотеку DLL подключаемого модуля, предоставляется как аргумент командной строки.  
-  
- Приложение пытается загрузить сборки, используя предоставленное <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> метод. Если в случае успешного выполнения типы в сборке перечисляются с помощью <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> метод. Каждый тип затем проверяется на совместимость с помощью <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> метод. В этом примере классов, содержащихся в предоставленной сборке должен быть производным от <xref:System.Windows.Forms.Form> класса было определено как подключаемый модуль.  
-  
- Затем совместимые классы создаются с помощью <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> метод, который принимает <xref:System.Type> как аргумент и возвращает указатель на новый экземпляр. Каждый новый экземпляр затем присоединяться к форме и отображается.  
-  
- Обратите внимание, что <xref:System.Reflection.Assembly.Load%2A> метод не принимает имена сборок, которые включают расширение файла. Функция main в приложении удаляет любые предоставленные расширения, поэтому в следующем примере кода работает в любом случае.  
-  
-### <a name="example"></a>Пример  
- Следующий код определяет приложение, которое принимает подключаемые модули. Имя сборки необходимо указать в качестве первого аргумента. Эта сборка должна содержать по крайней мере один открытый <xref:System.Windows.Forms.Form> производный тип.  
-  
+
+В следующих примерах кода демонстрируется использование отражения для реализации простой архитектуры «подключаемого модуля». Первый листинг — это приложение, а второй — подключаемый модуль. Приложение является формой нескольких документов, которые заполняются с помощью любой форм классы, находящиеся в библиотеку DLL подключаемого модуля, предоставляется как аргумент командной строки.
+
+Приложение пытается загрузить сборки, используя предоставленное <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> метод. Если в случае успешного выполнения типы в сборке перечисляются с помощью <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> метод. Каждый тип затем проверяется на совместимость с помощью <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> метод. В этом примере классов, содержащихся в предоставленной сборке должен быть производным от <xref:System.Windows.Forms.Form> класса было определено как подключаемый модуль.
+
+Затем совместимые классы создаются с помощью <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> метод, который принимает <xref:System.Type> как аргумент и возвращает указатель на новый экземпляр. Каждый новый экземпляр затем присоединяться к форме и отображается.
+
+Обратите внимание, что <xref:System.Reflection.Assembly.Load%2A> метод не принимает имена сборок, которые включают расширение файла. Функция main в приложении удаляет любые предоставленные расширения, поэтому в следующем примере кода работает в любом случае.
+
+### <a name="example"></a>Пример
+
+Следующий код определяет приложение, которое принимает подключаемые модули. Имя сборки необходимо указать в качестве первого аргумента. Эта сборка должна содержать по крайней мере один открытый <xref:System.Windows.Forms.Form> производный тип.
+
 ```cpp
-// plugin_application.cpp  
-// compile with: /clr /c  
-#using <system.dll>  
-#using <system.drawing.dll>  
-#using <system.windows.forms.dll>  
-  
-using namespace System;  
-using namespace System::Windows::Forms;  
-using namespace System::Reflection;  
-  
-ref class PluggableForm : public Form  {  
-public:  
-   PluggableForm() {}  
-   PluggableForm(Assembly^ plugAssembly) {  
-      Text = "plug-in example";  
-      Size = Drawing::Size(400, 400);  
-      IsMdiContainer = true;  
-  
-      array<Type^>^ types = plugAssembly->GetTypes( );  
-      Type^ formType = Form::typeid;  
-  
-      for (int i = 0 ; i < types->Length ; i++) {  
-         if (formType->IsAssignableFrom(types[i])) {  
-            // Create an instance given the type description.  
-            Form^ f = dynamic_cast<Form^> (Activator::CreateInstance(types[i]));  
-            if (f) {  
-               f->Text = types[i]->ToString();  
-               f->MdiParent = this;  
-               f->Show();  
-            }  
-         }  
-      }  
-   }  
-};  
-  
-int main() {  
-   Assembly^ a = Assembly::LoadFrom("plugin_application.exe");  
-   Application::Run(gcnew PluggableForm(a));  
-}  
-```  
-  
-### <a name="example"></a>Пример  
- Следующий код определяет три класса, производного от <xref:System.Windows.Forms.Form>. Если результирующее имя сборки передается к исполняемому файлу в предыдущем примере, каждый из этих трех классов будет обнаружен и создан, несмотря на то, что все они неизвестны ведущему приложению во время компиляции.  
-  
-```cpp  
-// plugin_assembly.cpp  
-// compile with: /clr /LD  
-#using <system.dll>  
-#using <system.drawing.dll>  
-#using <system.windows.forms.dll>  
-  
-using namespace System;  
-using namespace System::Windows::Forms;  
-using namespace System::Reflection;  
-using namespace System::Drawing;  
-  
-public ref class BlueForm : public Form {  
-public:  
-   BlueForm() {  
-      BackColor = Color::Blue;  
-   }  
-};  
-  
-public ref class CircleForm : public Form {  
-protected:  
-   virtual void OnPaint(PaintEventArgs^ args) override {  
-      args->Graphics->FillEllipse(Brushes::Green, ClientRectangle);  
-   }  
-};  
-  
-public ref class StarburstForm : public Form {  
-public:  
-   StarburstForm(){  
-      BackColor = Color::Black;  
-   }  
-protected:  
-   virtual void OnPaint(PaintEventArgs^ args) override {  
-      Pen^ p = gcnew Pen(Color::Red, 2);  
-      Random^ r = gcnew Random( );  
-      Int32 w = ClientSize.Width;  
-      Int32 h = ClientSize.Height;  
-      for (int i=0; i<100; i++) {  
-         float x1 = w / 2;  
-         float y1 = h / 2;  
-         float x2 = r->Next(w);  
-         float y2 = r->Next(h);  
-         args->Graphics->DrawLine(p, x1, y1, x2, y2);  
-      }  
-   }  
-};  
-```  
+// plugin_application.cpp
+// compile with: /clr /c
+#using <system.dll>
+#using <system.drawing.dll>
+#using <system.windows.forms.dll>
+
+using namespace System;
+using namespace System::Windows::Forms;
+using namespace System::Reflection;
+
+ref class PluggableForm : public Form  {
+public:
+   PluggableForm() {}
+   PluggableForm(Assembly^ plugAssembly) {
+      Text = "plug-in example";
+      Size = Drawing::Size(400, 400);
+      IsMdiContainer = true;
+
+      array<Type^>^ types = plugAssembly->GetTypes( );
+      Type^ formType = Form::typeid;
+
+      for (int i = 0 ; i < types->Length ; i++) {
+         if (formType->IsAssignableFrom(types[i])) {
+            // Create an instance given the type description.
+            Form^ f = dynamic_cast<Form^> (Activator::CreateInstance(types[i]));
+            if (f) {
+               f->Text = types[i]->ToString();
+               f->MdiParent = this;
+               f->Show();
+            }
+         }
+      }
+   }
+};
+
+int main() {
+   Assembly^ a = Assembly::LoadFrom("plugin_application.exe");
+   Application::Run(gcnew PluggableForm(a));
+}
+```
+
+### <a name="example"></a>Пример
+
+Следующий код определяет три класса, производного от <xref:System.Windows.Forms.Form>. Если результирующее имя сборки передается к исполняемому файлу в предыдущем примере, каждый из этих трех классов будет обнаружен и создан, несмотря на то, что все они неизвестны ведущему приложению во время компиляции.
+
+```cpp
+// plugin_assembly.cpp
+// compile with: /clr /LD
+#using <system.dll>
+#using <system.drawing.dll>
+#using <system.windows.forms.dll>
+
+using namespace System;
+using namespace System::Windows::Forms;
+using namespace System::Reflection;
+using namespace System::Drawing;
+
+public ref class BlueForm : public Form {
+public:
+   BlueForm() {
+      BackColor = Color::Blue;
+   }
+};
+
+public ref class CircleForm : public Form {
+protected:
+   virtual void OnPaint(PaintEventArgs^ args) override {
+      args->Graphics->FillEllipse(Brushes::Green, ClientRectangle);
+   }
+};
+
+public ref class StarburstForm : public Form {
+public:
+   StarburstForm(){
+      BackColor = Color::Black;
+   }
+protected:
+   virtual void OnPaint(PaintEventArgs^ args) override {
+      Pen^ p = gcnew Pen(Color::Red, 2);
+      Random^ r = gcnew Random( );
+      Int32 w = ClientSize.Width;
+      Int32 h = ClientSize.Height;
+      for (int i=0; i<100; i++) {
+         float x1 = w / 2;
+         float y1 = h / 2;
+         float x2 = r->Next(w);
+         float y2 = r->Next(h);
+         args->Graphics->DrawLine(p, x1, y1, x2, y2);
+      }
+   }
+};
+```
 
 ## <a name="enumerate"></a> Практическое: перечисление типов данных в сборках с помощью отражения
-В следующем коде показано перечисление открытых типов и членов с помощью <xref:System.Reflection>.  
-  
- Заданному имени сборки, в локальном каталоге или в глобальном кэше СБОРОК, приведенный ниже код пытается открыть ее и получить описания. В случае успешного выполнения каждого типа отображается с открытым членам.  
-  
- Обратите внимание, что <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> требует, чтобы использовалась без расширения файла. Таким образом используя в качестве аргумента командной строки «mscorlib.dll» завершится ошибкой, пока просто «mscorlib» приведет к Отображение типов .NET Framework. Если имя сборки не указано, код будет обнаруживать и сообщающих типы в текущей сборке (EXE-файл из этого кода).  
-  
-### <a name="example"></a>Пример  
-  
-```cpp  
-// self_reflection.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Reflection;  
-using namespace System::Collections;  
-  
-public ref class ExampleType {  
-public:  
-   ExampleType() {}  
-   void Func() {}  
-};  
-  
-int main() {  
-   String^ delimStr = " ";  
-   array<Char>^ delimiter = delimStr->ToCharArray( );  
-   array<String^>^ args = Environment::CommandLine->Split( delimiter );  
-  
-// replace "self_reflection.exe" with an assembly from either the local  
-// directory or the GAC  
-   Assembly^ a = Assembly::LoadFrom("self_reflection.exe");  
-   Console::WriteLine(a);  
-  
-   int count = 0;  
-   array<Type^>^ types = a->GetTypes();  
-   IEnumerator^ typeIter = types->GetEnumerator();  
-  
-   while ( typeIter->MoveNext() ) {  
-      Type^ t = dynamic_cast<Type^>(typeIter->Current);  
-      Console::WriteLine("   {0}", t->ToString());  
-  
-      array<MemberInfo^>^ members = t->GetMembers();  
-      IEnumerator^ memberIter = members->GetEnumerator();  
-      while ( memberIter->MoveNext() ) {  
-         MemberInfo^ mi = dynamic_cast<MemberInfo^>(memberIter->Current);  
-         Console::Write("      {0}", mi->ToString( ) );  
-         if (mi->MemberType == MemberTypes::Constructor)  
-            Console::Write("   (constructor)");  
-  
-         Console::WriteLine();  
-      }  
-      count++;  
-   }  
-   Console::WriteLine("{0} types found", count);  
-}  
-```  
+
+В следующем коде показано перечисление открытых типов и членов с помощью <xref:System.Reflection>.
+
+Заданному имени сборки, в локальном каталоге или в глобальном кэше СБОРОК, приведенный ниже код пытается открыть ее и получить описания. В случае успешного выполнения каждого типа отображается с открытым членам.
+
+Обратите внимание, что <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> требует, чтобы использовалась без расширения файла. Таким образом используя в качестве аргумента командной строки «mscorlib.dll» завершится ошибкой, пока просто «mscorlib» приведет к Отображение типов .NET Framework. Если имя сборки не указано, код будет обнаруживать и сообщающих типы в текущей сборке (EXE-файл из этого кода).
+
+### <a name="example"></a>Пример
+
+```cpp
+// self_reflection.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Reflection;
+using namespace System::Collections;
+
+public ref class ExampleType {
+public:
+   ExampleType() {}
+   void Func() {}
+};
+
+int main() {
+   String^ delimStr = " ";
+   array<Char>^ delimiter = delimStr->ToCharArray( );
+   array<String^>^ args = Environment::CommandLine->Split( delimiter );
+
+// replace "self_reflection.exe" with an assembly from either the local
+// directory or the GAC
+   Assembly^ a = Assembly::LoadFrom("self_reflection.exe");
+   Console::WriteLine(a);
+
+   int count = 0;
+   array<Type^>^ types = a->GetTypes();
+   IEnumerator^ typeIter = types->GetEnumerator();
+
+   while ( typeIter->MoveNext() ) {
+      Type^ t = dynamic_cast<Type^>(typeIter->Current);
+      Console::WriteLine("   {0}", t->ToString());
+
+      array<MemberInfo^>^ members = t->GetMembers();
+      IEnumerator^ memberIter = members->GetEnumerator();
+      while ( memberIter->MoveNext() ) {
+         MemberInfo^ mi = dynamic_cast<MemberInfo^>(memberIter->Current);
+         Console::Write("      {0}", mi->ToString( ) );
+         if (mi->MemberType == MemberTypes::Constructor)
+            Console::Write("   (constructor)");
+
+         Console::WriteLine();
+      }
+      count++;
+   }
+   Console::WriteLine("{0} types found", count);
+}
+```
 
 ## <a name="see-also"></a>См. также
 

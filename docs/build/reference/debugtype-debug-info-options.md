@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98edb5945c2cf01d90cd5dae1a750c0fdd37757f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1255c92a7de4a0f1707cd20f91e8b9f1de640942
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723285"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440463"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (параметры отладочных сведений)
 
@@ -54,7 +54,7 @@ ms.locfileid: "45723285"
 
 ## <a name="see-also"></a>См. также
 
-[/ DEBUG (создать отладочную информацию)](../../build/reference/debug-generate-debug-info.md)
-[/Driver (драйвер режима ядра Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)
-[/Profile (Profiler средства производительности)](../../build/reference/profile-performance-tools-profiler.md) 
- [Средства отладки для Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
+[/DEBUG (создание отладочной информации)](../../build/reference/debug-generate-debug-info.md)<br/>
+[/DRIVER (драйвер режима ядра Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (профилировщик средств оценки производительности)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[Средства отладки для Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)

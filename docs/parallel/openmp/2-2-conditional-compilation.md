@@ -1,5 +1,5 @@
 ---
-title: 2.2 условная компиляция | Документы Microsoft
+title: 2.2 условная компиляция | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d8c7073548c015d9982b721387176a0ca658c2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 25b52ce624777efe85e27b8ce5e7941bc2f5dcba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685909"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440385"
 ---
 # <a name="22-conditional-compilation"></a>2.2 Условная компиляция
-_**OPENMP** имя макроса определяется OpenMP совместимые реализациями десятичной константы *yyyymm*, которое будет год и месяц утвержденных спецификации. Этот макрос не должно быть субъект **#define** или **#undef** директивы предварительной обработки.  
-  
-```  
-#ifdef _OPENMP  
-iam = omp_get_thread_num() + index;  
-#endif  
-```  
-  
- Если поставщиков определяют расширения OpenMP, они могут указать дополнительные предопределенные макросы.
+
+_**OPENMP** имя макроса определяется OpenMP совместимым реализациями как десятичной константы *yyyymm*, она будет называться год и месяц утвержденных спецификации. Этот макрос не должно быть предметом **#define** или **#undef** директивы предварительной обработки.
+
+```
+#ifdef _OPENMP
+iam = omp_get_thread_num() + index;
+#endif
+```
+
+Если поставщиков определяют расширения OpenMP, они могут указать дополнительные предопределенные макросы.

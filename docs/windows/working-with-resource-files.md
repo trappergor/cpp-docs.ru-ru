@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318196"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430557"
 ---
 # <a name="working-with-resource-files"></a>Работа с файлами ресурсов
 
@@ -39,24 +39,24 @@ ms.locfileid: "44318196"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Файлы ресурсов](../windows/resource-files-visual-studio.md)  
+[Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
 В этой статье описываются файлы ресурсов и их использование в классических приложениях Windows. Здесь также представлены ссылки на разделы, посвященные применению файлов ресурсов.
 
-[Символы: идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)  
+[Символы: идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)<br/>
 В этой статье описываются символы и использование диалогового окна **Символы ресурсов** для управления символами в проекте.
 
-[Редакторы ресурсов](../windows/resource-editors.md)  
+[Редакторы ресурсов](../windows/resource-editors.md)<br/>
 В этой статье описываются редакторы ресурсов, доступные в Visual Studio, и типы ресурсов, которые можно изменить в каждом редакторе. Также здесь представлены ссылки на подробные сведения о работе с каждым редактором.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 Ссылки на документацию по Visual C++.
 
-[Обращайтесь к нам](/visualstudio/ide/talk-to-us)  
+[Обращайтесь к нам](/visualstudio/ide/talk-to-us)<br/>
 Ссылки на сведения об использовании документации, обращении в службу поддержки и использовании специальных возможностей.
 
 ## <a name="see-also"></a>См. также
 
-[Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)  
+[Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Меню и другие ресурсы](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

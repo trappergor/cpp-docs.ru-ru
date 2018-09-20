@@ -1,5 +1,5 @@
 ---
-title: Управление меню во время выполнения программы | Документы Microsoft
+title: Управление меню во время выполнения программы | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 93257b89645692885aba728f2dffa698152122db
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929764"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433716"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Управление меню во время выполнения программы
-Используйте класс `CMenu` для работы с меню и элементов меню на ходу. `CMenu` Инкапсулирует дескриптор Windows HMENU и предоставляет функции-члены для работы с меню.  
-  
- См. в обзоре класса [CMenu](../mfc/reference/cmenu-class.md) подробные сведения.  
-  
-## <a name="see-also"></a>См. также  
- [Меню](../mfc/menus-mfc.md)
+
+Используйте класс `CMenu` для работы с меню и пункты меню в режиме реального времени. `CMenu` Инкапсулирует дескриптор Windows HMENU и предоставляет функции-члены для работы с меню.
+
+См. в обзоре класса [CMenu](../mfc/reference/cmenu-class.md) подробные сведения.
+
+## <a name="see-also"></a>См. также
+
+[Меню](../mfc/menus-mfc.md)
 

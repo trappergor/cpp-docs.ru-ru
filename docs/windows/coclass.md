@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5816c62749c889cdd926ff1551f4849fd039f1f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4f2c4e41b97f8ce8224d656c9ba525d807bfa270
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42585268"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423888"
 ---
 # <a name="coclass"></a>кокласс
 
@@ -153,8 +153,8 @@ public:
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Атрибуты COM](../windows/com-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
-[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Атрибуты COM](../windows/com-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [appobject](../windows/appobject.md)

@@ -66,173 +66,178 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26ae6034e9a54a6cf198b39c81d688f10616d1d0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fc44da7470d8924900ed496958aac806d21ca5f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707867"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434925"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Встроенные функции _InterlockedAnd
-**Блок, относящийся только к системам Microsoft**  
-  
- Используется для выполнения атомарной поразрядной операции AND для переменной, которая совместно используется несколькими потоками.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-long _InterlockedAnd(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_acq(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_HLEAcquire(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_HLERelease(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_nf(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_np(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_rel(  
-   long volatile * value,  
-   long mask  
-);  
-char _InterlockedAnd8(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_acq(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_nf(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_np(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_rel(  
-   char volatile * value,  
-   char mask  
-);  
-short _InterlockedAnd16(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_acq(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_nf(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_np(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_rel(  
-   short volatile * value,  
-   short mask  
-);  
-__int64 _InterlockedAnd64(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_acq(  
-   __int64 volatile* value,  
-   __int64 mask  
-);   
-__int64 _InterlockedAnd64_HLEAcquire(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_HLERelease(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_nf(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_np(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_rel(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+**Блок, относящийся только к системам Microsoft**
+
+Используется для выполнения атомарной поразрядной операции AND для переменной, которая совместно используется несколькими потоками.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+long _InterlockedAnd(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_acq(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_HLEAcquire(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_HLERelease(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_nf(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_np(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_rel(
+   long volatile * value,
+   long mask
+);
+char _InterlockedAnd8(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_acq(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_nf(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_np(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_rel(
+   char volatile * value,
+   char mask
+);
+short _InterlockedAnd16(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_acq(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_nf(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_np(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_rel(
+   short volatile * value,
+   short mask
+);
+__int64 _InterlockedAnd64(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_acq(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_HLEAcquire(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_HLERelease(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_nf(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_np(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_rel(
+   __int64 volatile* value,
+   __int64 mask
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *значение*<br/>
-[in, out] Указатель на первый операнд заменяется результатом.  
-  
+[in, out] Указатель на первый операнд заменяется результатом.
+
 *Маска*<br/>
-[in] Второй операнд.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Исходное значение первого операнда.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|Верхний колонтитул|  
-|---------------|------------------|------------|  
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<Intrin.h >|  
-|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<Intrin.h >|  
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<Intrin.h >|  
-|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h >|  
-  
-## <a name="remarks"></a>Примечания  
- Число в имени каждой функции указывает разрядность аргументов.  
-  
- На платформах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции с суффиксом `_nf` («без границ») не действуют как барьер памяти.  
-  
- Встроенные функции с суффиксом `_np` («нет упреждающей выборки") запрещают возможную вставку компилятором операции упреждающей выборки.  
-  
- На платформах Intel ®, поддерживающих инструкции Hardware Lock Elision (HLE), встроенные функции с суффиксами `_HLEAcquire` и `_HLERelease` включают подсказку процессору, как можно повысить производительность, устраняя шаг записи с блокировкой оборудования. Если эти встроенные функции вызываются на платформах, не поддерживающих HLE, подсказка игнорируется.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// InterlockedAnd.cpp  
-// Compile with: /Oi  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_InterlockedAnd)  
-  
-int main()  
-{  
-        long data1 = 0xFF00FF00;  
-        long data2 = 0x00FFFF00;  
-        long retval;  
-        retval = _InterlockedAnd(&data1, data2);  
-        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);   
-}  
-```  
-  
-```Output  
-0xff00 0xffff00 0xff00ff00  
-```  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   
- [Конфликты с 32-разрядным (x86) компилятором](../build/conflicts-with-the-x86-compiler.md)
+[in] Второй операнд.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Исходное значение первого операнда.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|Верхний колонтитул|
+|---------------|------------------|------------|
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<Intrin.h >|
+|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<Intrin.h >|
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<Intrin.h >|
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h >|
+
+## <a name="remarks"></a>Примечания
+
+Число в имени каждой функции указывает разрядность аргументов.
+
+На платформах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции с суффиксом `_nf` («без границ») не действуют как барьер памяти.
+
+Встроенные функции с суффиксом `_np` («нет упреждающей выборки") запрещают возможную вставку компилятором операции упреждающей выборки.
+
+На платформах Intel ®, поддерживающих инструкции Hardware Lock Elision (HLE), встроенные функции с суффиксами `_HLEAcquire` и `_HLERelease` включают подсказку процессору, как можно повысить производительность, устраняя шаг записи с блокировкой оборудования. Если эти встроенные функции вызываются на платформах, не поддерживающих HLE, подсказка игнорируется.
+
+## <a name="example"></a>Пример
+
+```
+// InterlockedAnd.cpp
+// Compile with: /Oi
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_InterlockedAnd)
+
+int main()
+{
+        long data1 = 0xFF00FF00;
+        long data2 = 0x00FFFF00;
+        long retval;
+        retval = _InterlockedAnd(&data1, data2);
+        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);
+}
+```
+
+```Output
+0xff00 0xffff00 0xff00ff00
+```
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Конфликты с 32-разрядным (x86) компилятором](../build/conflicts-with-the-x86-compiler.md)

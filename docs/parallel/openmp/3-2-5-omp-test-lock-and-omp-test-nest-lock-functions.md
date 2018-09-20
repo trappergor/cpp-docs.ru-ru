@@ -1,5 +1,5 @@
 ---
-title: 3.2.5 omp_test_lock и omp_test_nest_lock функции | Документы Microsoft
+title: 3.2.5 функции omp_test_lock и omp_test_nest_lock функции | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5023f0b089d76e92be886f4917905f57dda7a018
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5349134bf92f407d4b65df9b92e3eebe87c097c1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686231"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426150"
 ---
 # <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 Функции omp_test_lock и omp_test_nest_lock
-Эти функции пытается установить блокировку, а не блокируют выполнение потока. Он следующий:  
-  
-```  
-#include <omp.h>  
-int omp_test_lock(omp_lock_t *lock);  
-int omp_test_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- Аргумент должен указывать на переменную инициализированный блокировки. Попытка установить блокировку так же, как эти функции `omp_set_lock` и `omp_set_nest_lock`, за исключением того, что они не блокировали выполнение потока.  
-  
- Простые блокировки `omp_test_lock` функция возвращает ненулевое значение, если блокировка успешно установлена; в противном случае возвращается ноль.  
-  
- Которая блокировки `omp_test_nest_lock` функция возвращает количество новых вложенности, если блокировка успешно установлена; в противном случае возвращается ноль.
+
+Эти функции пытаются установить блокировку, но не блокируют выполнение потока. Он следующий:
+
+```
+#include <omp.h>
+int omp_test_lock(omp_lock_t *lock);
+int omp_test_nest_lock(omp_nest_lock_t *lock);
+```
+
+Аргумент должен указывать на переменную инициализированный блокировки. Эти функции пытаются установить блокировку так же, как `omp_set_lock` и `omp_set_nest_lock`, за исключением того, что они не блокируют выполнение потока.
+
+Для простой блокировки `omp_test_lock` функция возвращает ненулевое значение, если блокировка успешно задан; в противном случае возвращается ноль.
+
+Вкладываемых блокировок `omp_test_nest_lock` функция возвращает новый счетчик вложенности, если блокировка успешно задан; в противном случае возвращается ноль.

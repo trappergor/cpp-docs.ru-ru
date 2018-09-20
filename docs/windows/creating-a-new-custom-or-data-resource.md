@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a92e7904b3b42422bebf5a80e0f1b03dd818f86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2e2939c7f0a68401b4c1a8c43b5c6335a0acfcb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314589"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403948"
 ---
 # <a name="creating-a-new-custom-or-data-resource-c"></a>Создание нового настраиваемого ресурса или ресурса данных (C++)
 
@@ -40,9 +40,9 @@ ms.locfileid: "44314589"
 
 3. В **директивы времени компиляции** введите `#include` инструкцию, которая предоставляет имя файла, содержащего настраиваемый ресурс. Пример:
 
-```cpp
+    ```cpp
     #include mydata.rc
- ```
+    ```
 
    Проверьте синтаксис и орфографию введенных данных. Содержимое поля **Директивы времени компиляции** будет добавляться в файл описания ресурсов в том виде, в каком оно было введено вами.
 

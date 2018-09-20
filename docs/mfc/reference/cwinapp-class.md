@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712040"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412188"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -393,7 +393,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 
 ### <a name="parameters"></a>Параметры
 
-*pTemplate*  
+*pTemplate*<br/>
 Указатель на `CDocTemplate` для добавления.
 
 ### <a name="remarks"></a>Примечания
@@ -414,7 +414,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszPathName*  
+*lpszPathName*<br/>
 Путь к файлу.
 
 ### <a name="remarks"></a>Примечания
@@ -462,7 +462,7 @@ void CloseAllDocuments(BOOL bEndSession);
 
 ### <a name="parameters"></a>Параметры
 
-*bEndSession*  
+*bEndSession*<br/>
 Указывает, выполняется ли окончания сеанса Windows. Он имеет значение TRUE, если сеанс завершен; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
@@ -479,7 +479,7 @@ BOOL CreatePrinterDC(CDC& dc);
 
 ### <a name="parameters"></a>Параметры
 
-*dc*  
+*dc*<br/>
 Ссылка на контекст устройства принтера.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -502,7 +502,7 @@ CWinApp(LPCTSTR lpszAppName = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszAppName*  
+*lpszAppName*<br/>
 Завершающаяся нулем строка, содержащая имя приложения, использующего Windows. Если этот аргумент не задан или имеет значение NULL, `CWinApp` использует строку ресурса AFX_IDS_APP_TITLE или имя исполняемого файла.
 
 ### <a name="remarks"></a>Примечания
@@ -526,13 +526,13 @@ LONG DelRegTree(
 
 ### <a name="parameters"></a>Параметры
 
-*hParentKey*  
+*hParentKey*<br/>
 Дескриптор раздела реестра.
 
-*strKeyName*  
+*strKeyName*<br/>
 Имя раздела реестра для удаления.
 
-*pTM*  
+*pTM*<br/>
 Указатель на объект CAtlTransactionManager.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -556,13 +556,13 @@ virtual int DoMessageBox(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszPrompt*  
+*lpszPrompt*<br/>
 Адрес текста в окне сообщения.
 
-*nType*  
+*nType*<br/>
 В окне сообщения [стиля](../../mfc/reference/styles-used-by-mfc.md#message-box-styles).
 
-*nIDPrompt*  
+*nIDPrompt*<br/>
 Индекс для строки контекста справки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -585,7 +585,7 @@ virtual void DoWaitCursor(int nCode);
 
 ### <a name="parameters"></a>Параметры
 
-*nCode*  
+*nCode*<br/>
 Если этот параметр равен 1, отображается курсор ожидания. Если значение равно 0, курсор ожидания восстанавливается без приращения счетчика ссылок. Если значение-1, завершает курсор ожидания.
 
 ### <a name="remarks"></a>Примечания
@@ -614,10 +614,10 @@ BOOL EnableD2DSupport(
 
 ### <a name="parameters"></a>Параметры
 
-*d2dFactoryType*  
+*d2dFactoryType*<br/>
 Потоковая модель фабрики D2D и ресурсы, которые он создает.
 
-*writeFactoryType*  
+*writeFactoryType*<br/>
 Значение, указывающее, будет ли объект фабрики записи совместно или изолированной
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -660,7 +660,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bEnable*  
+*bEnable*<br/>
 Определяет, должен быть включен (TRUE) взаимодействие с панели задач Windows 7, или выключен (FALSE).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -767,7 +767,7 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*pTM*  
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -834,7 +834,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>Параметры
 
-*торговых терминалов*  
+*торговых терминалов*<br/>
 Ссылку на ПОЗИЦИЮ, возвращенное предыдущим вызовом `GetNextDocTemplate` или [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Значение обновляется до следующей позиции этим вызовом.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -859,7 +859,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 
 ### <a name="parameters"></a>Параметры
 
-*pPrintDlg*  
+*pPrintDlg*<br/>
 Указатель на [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -888,16 +888,16 @@ BOOL GetProfileBinary(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSection*  
+*lpszSection*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее раздел, содержащий запись.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Указатель на заканчивающуюся нулем строку, содержащий элемент, значение которого равно требуется получить.
 
-*ppData*  
+*ppData*<br/>
 Указывает указатель, который будет получать адрес данных.
 
-*pBytes*  
+*pBytes*<br/>
 Указывает целое число без знака, который будет принимать размер данных (в байтах).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -933,13 +933,13 @@ UINT GetProfileInt(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSection*  
+*lpszSection*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее раздел, содержащий запись.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Указатель на заканчивающуюся нулем строку, содержащий элемент, значение которого равно требуется получить.
 
-*nDefault*  
+*nDefault*<br/>
 Задает значение по умолчанию для возврата, если платформа не найдена запись.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -974,13 +974,13 @@ CString GetProfileString(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSection*  
+*lpszSection*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее раздел, содержащий запись.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Указатель на заканчивающуюся нулем строку, содержащий записи, строка которого имеет требуется получить. Это значение не должно быть значение NULL.
 
-*lpszDefault*  
+*lpszDefault*<br/>
 Указывает строковое значение по умолчанию для определенной записи, если элемент не найден в файле настройки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1010,10 +1010,10 @@ HKEY GetSectionKey(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSection*  
+*lpszSection*<br/>
 Имя ключа может быть получена.
 
-*pTM*  
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1042,10 +1042,10 @@ virtual void HtmlHelp(
 
 ### <a name="parameters"></a>Параметры
 
-*dwData*  
+*dwData*<br/>
 Указывает дополнительные данные. Значение, используемое зависит от значения *nCmd* параметра.
 
-*nCmd*  
+*nCmd*<br/>
 Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе *uCommand* параметров, описанных в о HTMLHelp API функции в пакете Windows SDK.
 
 ### <a name="remarks"></a>Примечания
@@ -1105,10 +1105,10 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 
 ### <a name="parameters"></a>Параметры
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащую имя ресурса курсора. Можно использовать `CString` для этого аргумента.
 
-*nIDResource*  
+*nIDResource*<br/>
 Идентификатор ресурса курсора. Список ресурсов, см. в разделе [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1135,10 +1135,10 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 
 ### <a name="parameters"></a>Параметры
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащую имя ресурса значка. Можно также использовать `CString` для этого аргумента.
 
-*nIDResource*  
+*nIDResource*<br/>
 Идентификатор ресурса значка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1164,7 +1164,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIDCursor*  
+*nIDCursor*<br/>
 **OCR_** манифеста идентификатор константы, указывающее предопределенные курсора Windows. Необходимо иметь `#define OEMRESOURCE` перед `#include \<afxwin.h>` для получения доступа к **OCR_** константы в WINDOWS. З.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1191,7 +1191,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIDIcon*  
+*nIDIcon*<br/>
 **OIC_** манифеста идентификатор константы, указывающее предопределенные значок Windows. Необходимо иметь `#define OEMRESOURCE` перед `#include \<afxwin.h>` для доступа к **OIC_** константы в WINDOWS. З.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1212,7 +1212,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 
 ### <a name="parameters"></a>Параметры
 
-*lpszCursorName*  
+*lpszCursorName*<br/>
 **IDC_** манифеста идентификатор константы, указывающее предопределенные курсора Windows. Эти идентификаторы определяются в WINDOWS. З. В следующем списке приведены возможные предопределенные значения и значения для *lpszCursorName*:
 
 - IDC_ARROW стандартный курсор в виде стрелки
@@ -1261,7 +1261,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 ### <a name="parameters"></a>Параметры
 
-*lpszIconName*  
+*lpszIconName*<br/>
 Манифеста идентификатор константы, указывающее предопределенные значок Windows. Эти идентификаторы определяются в WINDOWS. З. Список возможных стандартных значений и их описания, см. в разделе *lpIconName* параметр в [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1282,7 +1282,7 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 
 ### <a name="parameters"></a>Параметры
 
-*nMaxMRU*  
+*nMaxMRU*<br/>
 Количество недавно использовавшихся файлов для отслеживания.
 
 ### <a name="remarks"></a>Примечания
@@ -1558,7 +1558,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszCommand*  
+*lpszCommand*<br/>
 Указывает строку команды DDE, полученные приложением.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1697,7 +1697,7 @@ virtual BOOL OnIdle(LONG lCount);
 
 ### <a name="parameters"></a>Параметры
 
-*lCount*  
+*lCount*<br/>
 Значение счетчика увеличивается каждый раз `OnIdle` вызывается, когда очередь сообщений приложения является пустым. Этот счетчик обнуляется каждый раз при обработке нового сообщения. Можно использовать *lCount* параметр, чтобы определить относительный продолжительность времени, приложение бездействует без обработки сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1773,7 +1773,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ### <a name="parameters"></a>Параметры
 
-*rCmdInfo*  
+*rCmdInfo*<br/>
 Ссылку на [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -1802,7 +1802,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Параметры
 
-*pMsg*  
+*pMsg*<br/>
 Указатель на [MSG](../../mfc/reference/msg-structure1.md) структуру, содержащую сообщение для обработки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1821,10 +1821,10 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Параметры
 
-*Код*  
+*Код*<br/>
 Указывает код обработчика. Эта функция-член использует код для определения способа обработки *lpMsg.*
 
-*lpMsg*  
+*lpMsg*<br/>
 Указатель на Windows [MSG](../../mfc/reference/msg-structure1.md) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1847,7 +1847,7 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 
 ### <a name="parameters"></a>Параметры
 
-*rCmdInfo*  
+*rCmdInfo*<br/>
 Ссылку на [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1892,10 +1892,10 @@ virtual LRESULT ProcessWndProcException(
 
 ### <a name="parameters"></a>Параметры
 
-*e*  
+*e*<br/>
 Указатель на неперехваченное исключение.
 
-*pMsg*  
+*pMsg*<br/>
 Объект [MSG](../../mfc/reference/msg-structure1.md) структуру, содержащую сведения о сообщения windows, которое вызвало платформа для создания исключения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2127,13 +2127,13 @@ void SelectPrinter(
 
 ### <a name="parameters"></a>Параметры
 
-*hDevNames*  
+*hDevNames*<br/>
 Дескриптор [DEVNAMES](../../mfc/reference/devnames-structure.md) структура, определяющая драйвера, устройства, а также имена портов выходные данные конкретного принтера.
 
-*hDevMode*  
+*hDevMode*<br/>
 Дескриптор [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) структуру, которая указывает сведения об инициализации устройства и среде принтера.
 
-*bFreeOld*  
+*bFreeOld*<br/>
 Освобождает ранее выбранный принтер.
 
 ### <a name="remarks"></a>Примечания
@@ -2150,7 +2150,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 ### <a name="parameters"></a>Параметры
 
-*eHelpType*  
+*eHelpType*<br/>
 Указывает тип справки для использования. См. в разделе [CWinApp::m_eHelpType](#m_ehelptype) Дополнительные сведения.
 
 ### <a name="remarks"></a>Примечания
@@ -2170,10 +2170,10 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRegistryKey*  
+*lpszRegistryKey*<br/>
 Указатель на строку, содержащую имя ключа.
 
-*nIDRegistryKey*  
+*nIDRegistryKey*<br/>
 Идентификатор строкового ресурса, содержащего имя раздела реестра.
 
 ### <a name="remarks"></a>Примечания
@@ -2266,10 +2266,10 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>Параметры
 
-*dwData*  
+*dwData*<br/>
 Указывает дополнительные данные. Значение, используемое зависит от значения *nCmd* параметра.
 
-*nCmd*  
+*nCmd*<br/>
 Задает тип запрошенной справки. Список возможных значений и как они влияют на *dwData* параметр, см. в разделе [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) функции Windows.
 
 ### <a name="remarks"></a>Примечания
@@ -2296,16 +2296,16 @@ BOOL WriteProfileBinary(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSection*  
+*lpszSection*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее раздел, содержащий запись. Если раздел не существует, он создается. Имя раздела является случай независимых; Строка может быть любое сочетание прописных и строчных букв.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Указатель на заканчивающуюся нулем строку, содержащий запись, в которую, значение которого записывается. Если запись не существует в указанном разделе, он создается.
 
-*pData*  
+*pData*<br/>
 Указывает на данные для записи.
 
-*nBytes*  
+*nBytes*<br/>
 Содержит число байтов для записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2333,13 +2333,13 @@ BOOL WriteProfileInt(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSection*  
+*lpszSection*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее раздел, содержащий запись. Если раздел не существует, он создается. Имя раздела является случай независимых; Строка может быть любое сочетание прописных и строчных букв.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Указатель на заканчивающуюся нулем строку, содержащий запись, в которую, значение которого записывается. Если запись не существует в указанном разделе, он создается.
 
-*nValue*  
+*nValue*<br/>
 Содержит значение для записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2367,13 +2367,13 @@ BOOL WriteProfileString(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSection*  
+*lpszSection*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее раздел, содержащий запись. Если раздел не существует, он создается. Имя раздела является случай независимых; Строка может быть любое сочетание прописных и строчных букв.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Указатель на заканчивающуюся нулем строку, содержащий запись, в которую, значение которого записывается. Если запись не существует в указанном разделе, он создается. Если этот параметр имеет значение NULL, определяемое разделе *lpszSection* удаляется.
 
-*lpszValue*  
+*lpszValue*<br/>
 Указывает на строку для записи. Если этот параметр имеет значение NULL, операция, заданный *lpszEntry* удаляется параметр.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2396,13 +2396,13 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 ### <a name="parameters"></a>Параметры
 
-*lpcszAppID*  
+*lpcszAppID*<br/>
 Указывает идентификатор модели пользователя приложения.
 
 ### <a name="remarks"></a>Примечания
 
 ## <a name="see-also"></a>См. также
 
-[Класс CWinThread](../../mfc/reference/cwinthread-class.md)  
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)  
-[Практическое руководство. Добавление поддержки диспетчера перезапуска](../../mfc/how-to-add-restart-manager-support.md)  
+[Класс CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Практическое руководство. Добавление поддержки диспетчера перезапуска](../../mfc/how-to-add-restart-manager-support.md)
