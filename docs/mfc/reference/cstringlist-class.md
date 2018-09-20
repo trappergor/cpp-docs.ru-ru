@@ -1,5 +1,5 @@
 ---
-title: Класс CStringList | Документы Microsoft
+title: Класс CStringList | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,92 +60,98 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a3182a9f5a53c2f086800eb0eccb7d61e423e591
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122719"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439189"
 ---
 # <a name="cstringlist-class"></a>Класс CStringList
-Поддерживает списки объектов `CString` .  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class CStringList : public CObject  
-```  
-  
-## <a name="members"></a>Участники  
- Функции-члены `CStringList` похожи на функции-члены класса [CObList](../../mfc/reference/coblist-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObList`. Если вы видите `CObject` указатель как возвращаемое значение, замените `CString` (не `CString` указатель). Если вы видите `CObject` указатель как параметр функции, замените `LPCTSTR`.  
-  
- `CObject*& CObList::GetHead() const;`  
-  
- , например, преобразуется в  
-  
- `CString& CStringList::GetHead() const;`  
-  
- и  
-  
- `POSITION AddHead( CObject* <newElement> );`  
-  
- преобразуется в  
-  
- `POSITION AddHead( LPCTSTR <newElement> );`  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Создает пустой список.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Добавляет элемент (или все элементы в другом списке) в начало списка (делает нового заголовка).|  
-|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Добавляет элемент (или все элементы в другом списке) заключительного списка (делает новый заключительного).|  
-|[CObList::Find](../../mfc/reference/coblist-class.md#find)|Возвращает положение элемента, заданного значением указателя.|  
-|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|Возвращает позицию указанного отсчитываемый от нуля индекс элемента.|  
-|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|Возвращает элемент в заданной позиции.|  
-|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|Возвращает количество элементов в этом списке.|  
-|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|Возвращает элемент head списка (не может быть пустым).|  
-|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|Возвращает позицию в ведущий элемент списка.|  
-|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|Получает следующий элемент для выполнения итерации.|  
-|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|Возвращает предыдущий элемент для выполнения итерации.|  
-|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|Возвращает количество элементов в этом списке.|  
-|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|Возвращает элемент заключительного списка (не может быть пустым).|  
-|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|Возвращает позицию заключительного элемента списка.|  
-|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|Вставляет новый элемент после заданной позиции.|  
-|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|Вставляет новый элемент до заданной позиции.|  
-|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|Проверяет условие пустой список (нет элементов).|  
-|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|Удаляет все элементы из списка.|  
-|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|Удаляет элемент из этого списка в указанной позиции.|  
-|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|Удаляет элемент в начало списка.|  
-|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|Удаляет элемент с конца списка.|  
-|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|Задает элемент в заданной позиции.|  
-  
-## <a name="remarks"></a>Примечания  
- Все сравнения выполняются по значению, это означает, что вместо адресов строк сравниваются символы в строке.  
-  
- `CStringList` включает в себя IMPLEMENT_SERIAL-макрос для поддержки сериализации и записи элементов в дамп. Если список `CString` объекты хранятся в архив с помощью перегруженного оператора вставки или `Serialize` функция-член, каждый `CString` элемент сериализуется в свою очередь.  
-  
- Если вам требуется дамп отдельных `CString` элементов, необходимо задать глубины контекста дампа 1 или больше.  
-  
- Дополнительные сведения об использовании `CStringList`, см. в статье [коллекции](../../mfc/collections.md).  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- `CStringList`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcoll.h  
-  
-## <a name="see-also"></a>См. также  
- [Пример MFC СБОРА](../../visual-cpp-samples.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+
+Поддерживает списки объектов `CString` .
+
+## <a name="syntax"></a>Синтаксис
+
+```
+class CStringList : public CObject
+```
+
+## <a name="members"></a>Участники
+
+Функции-члены `CStringList` похожи на функции-члены класса [CObList](../../mfc/reference/coblist-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObList`. Если вы видите `CObject` указатель как возвращаемое значение, замените `CString` (не `CString` указатель). Если вы видите `CObject` указатель как параметр функции, замените `LPCTSTR`.
+
+`CObject*& CObList::GetHead() const;`
+
+, например, преобразуется в
+
+`CString& CStringList::GetHead() const;`
+
+и
+
+`POSITION AddHead( CObject* <newElement> );`
+
+преобразуется в
+
+`POSITION AddHead( LPCTSTR <newElement> );`
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Создается пустой список.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Добавляет элемент (или все элементы из другого списка) в начало списка (делает нового заголовка).|
+|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Добавляет в конец списка (делает новый tail) элемента (или все элементы из другого списка).|
+|[CObList::Find](../../mfc/reference/coblist-class.md#find)|Получает положение элемента, определяемого значением указателя.|
+|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|Получает положение, определяемое отсчитываемый от нуля индекс элемента.|
+|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|Получает элемент в заданной позиции.|
+|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|Возвращает количество элементов в этом списке.|
+|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|Возвращает головной элемент списка (не может быть пустым).|
+|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|Возвращает позицию головной элемент списка.|
+|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|Получает следующий элемент для выполнения итерации.|
+|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|Возвращает предыдущий элемент для выполнения итерации.|
+|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|Возвращает количество элементов в этом списке.|
+|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|Возвращает заключительный фрагмент элемент списка (не может быть пустым).|
+|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|Возвращает позицию заключительного элемента списка.|
+|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|Вставляет новый элемент после заданной позиции.|
+|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|Вставляет новый элемент до заданной позиции.|
+|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|Проверяет условие пустой список (нет элементов).|
+|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|Удаляет все элементы из этого списка.|
+|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|Удаляет элемент из этого списка, указанного параметром position.|
+|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|Удаляет элемент из головы списка.|
+|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|Удаляет элемент из конца списка.|
+|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|Задает элемент в заданной позиции.|
+
+## <a name="remarks"></a>Примечания
+
+Все сравнения выполняются по значению, это означает, что вместо адреса строки сравниваются символы в строке.
+
+`CStringList` включает в себя IMPLEMENT_SERIAL-макрос для поддержки сериализации и записи элементов в дамп. Если список `CString` объекты хранятся в архив с помощью перегруженного оператора вставки или `Serialize` функция-член, чтобы каждый `CString` элемент сериализуется в свою очередь.
+
+Если вам требуется дамп отдельных `CString` элементов, необходимо задать глубины контекста дампа 1 или более поздней версии.
+
+Дополнительные сведения об использовании `CStringList`, см. в статье [коллекций](../../mfc/collections.md).
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+`CStringList`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxcoll.h
+
+## <a name="see-also"></a>См. также
+
+[Пример MFC СБОР](../../visual-cpp-samples.md)<br/>
+[Класс CObject](../../mfc/reference/cobject-class.md)<br/>
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)
 
 
 

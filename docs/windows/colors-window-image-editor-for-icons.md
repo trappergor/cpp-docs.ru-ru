@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e4976065d32a2f88550e5f89fc464da2dbc00e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316709"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430596"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Окно "Цвета" (редактор изображений для значков)
 
@@ -50,8 +50,8 @@ ms.locfileid: "44316709"
 
 ## <a name="see-also"></a>См. также
 
-[Отображение или скрытие окна выбора цвета](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
-[Создание прозрачных областей или областей с обращенными цветами на изображениях устройств](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
-[Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)  
-["Диалоговое окно" селектор пользовательских цветов "](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[Отображение или скрытие окна выбора цвета](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)<br/>
+[Создание прозрачных областей или областей с обращенными цветами на изображениях устройств](../windows/creating-transparent-or-inverse-regions-in-device-images.md)<br/>
+[Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+["Диалоговое окно" селектор пользовательских цветов "](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)<br/>
 [Редактор изображений для значков](../windows/image-editor-for-icons.md)

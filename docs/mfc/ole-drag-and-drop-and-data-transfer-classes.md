@@ -1,5 +1,5 @@
 ---
-title: OLE-перетаскивания и передачи данных классов | Документы Microsoft
+title: OLE и перетаскивать классы и передачи данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,28 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d55d6d171f490631afe17a605f50607fb55f070b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4b5d694d0081fbe2d852884c4a379e962c22f2a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347046"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444142"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Классы перетаскивания и передачи данных OLE
-Эти классы используются в передаче данных OLE. Они позволяют данные будут передаваться между приложениями с помощью буфера обмена или перетаскивания и drop.  
-  
- [COleDropSource](../mfc/reference/coledropsource-class.md)  
- Определяет операцию перетаскивания и вставки от начала до конца. Этот класс определяет при запуске операции перетаскивания и при ее завершении. Она также отображает курсоров во время операции перетаскивания и вставки.  
-  
- [COleDataSource](../mfc/reference/coledatasource-class.md)  
- Используется, когда приложение предоставляет данные для передачи данных. `COleDataSource` может рассматриваться как объект объектно ориентированного буфер обмена.  
-  
- [COleDropTarget](../mfc/reference/coledroptarget-class.md)  
- Представляет целевой объект операции перетаскивания и вставки. Объект `COleDropTarget` объект соответствует окна на экране. Он определяет, следует ли принять все данные перетаскиваются на него и реализует операции фактическое drop.  
-  
- [COleDataObject](../mfc/reference/coledataobject-class.md)  
- Используется в качестве стороне получателя для `COleDataSource`. `COleDataObject` объекты предоставляют доступ к данным, хранящимся в `COleDataSource` объекта.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../mfc/class-library-overview.md)
+
+Эти классы используются в передаче данных OLE. Они позволяют данные будут передаваться между приложениями с помощью буфера обмена или перетаскивания и drop.
+
+[COleDropSource](../mfc/reference/coledropsource-class.md)<br/>
+Управляет операциями перетаскивания и вставки от начала до конца. Этот класс определяет, когда начинается операция перетаскивания, и при ее окончании. Она также отображает курсор обратной связи во время операции перетаскивания и вставки.
+
+[COleDataSource](../mfc/reference/coledatasource-class.md)<br/>
+Используется, когда приложение предоставляет данные для передачи данных. `COleDataSource` может рассматриваться как объект объектно ориентированного буфер обмена.
+
+[COleDropTarget](../mfc/reference/coledroptarget-class.md)<br/>
+Представляет целевой объект операции перетаскивания и вставки. Объект `COleDropTarget` соответствует окна на экране. Он определяет, следует ли принимать любые данные перетаскиваются на него и реализует операции фактического удаления.
+
+[COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
+Использовать как на стороне получателя для `COleDataSource`. `COleDataObject` объекты предоставляют доступ к данным, хранящимся с `COleDataSource` объекта.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../mfc/class-library-overview.md)
 

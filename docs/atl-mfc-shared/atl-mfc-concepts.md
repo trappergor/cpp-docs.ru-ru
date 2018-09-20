@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0132cdfb291c7c8691a6b31f00de125cb08b702d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3bd3d0e44591ba56291a39187d373df980734a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764650"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417726"
 ---
 # <a name="atlmfc-concepts"></a>Основные понятия ATL/MFC
 
@@ -28,7 +28,7 @@ ms.locfileid: "43764650"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Описание способов управления строковыми данными в приложениях.
 
 ## <a name="see-also"></a>См. также

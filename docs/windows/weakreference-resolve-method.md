@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e0873b366c84e89b23ddbaa6c64f6b484f921e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601160"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446339"
 ---
 # <a name="weakreferenceresolve-method"></a>Метод WeakReference::Resolve
 
@@ -39,10 +39,10 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>Параметры
 
-*riid*  
+*riid*<br/>
 Идентификатор интерфейса.
 
-*ppvObject*  
+*ppvObject*<br/>
 После завершения этой операции копию текущей строгую ссылку, если величина строгая ссылка имеет ненулевое значение.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -65,5 +65,5 @@ STDMETHOD(Resolve)
 
 ## <a name="see-also"></a>См. также
 
-[Класс WeakReference](../windows/weakreference-class1.md)  
+[Класс WeakReference](../windows/weakreference-class1.md)<br/>
 [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

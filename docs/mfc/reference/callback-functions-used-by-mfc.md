@@ -19,102 +19,120 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96db2ea0c28e14f7a8e614d94e18cd3fad3cda53
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: be34fa84a05d329d26d1bc4aaacbed0c2b0a76e3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339014"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409198"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Функции обратного вызова, используемые MFC
-Отобразятся три функции обратного вызова в библиотеке Microsoft Foundation Class. Эти функции обратного вызова передаются [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), и [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Обратите внимание на то, что все функции обратного вызова должен перехват исключений MFC перед возвратом к Windows, так как исключения не может вызываться через границы обратного вызова. Дополнительные сведения об исключениях см. в статье [исключения](../../mfc/exception-handling-in-mfc.md).  
 
-|name||  
-|----------|-----------------|  
-|[Функция обратного вызова для CDC::EnumObjects](#enum_objects)||  
+Отобразятся три функции обратного вызова в библиотеке Microsoft Foundation Class. Эти функции обратного вызова передаются [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), и [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Обратите внимание на то, что все функции обратного вызова должен перехват исключений MFC перед возвратом к Windows, так как исключения не может вызываться через границы обратного вызова. Дополнительные сведения об исключениях см. в статье [исключения](../../mfc/exception-handling-in-mfc.md).
+
+|name||
+|----------|-----------------|
+|[Функция обратного вызова для CDC::EnumObjects](#enum_objects)||
 |[Функция обратного вызова для CDC::GrayString](#graystring)||
-|[Функция обратного вызова для CDC::SetAbortProc](#setabortproc)|| 
+|[Функция обратного вызова для CDC::SetAbortProc](#setabortproc)||
 
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h 
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxwin.h
 
 ## <a name="enum_objects"></a> Функция обратного вызова для CDC::EnumObjects
-*ObjectFunc* имя — это имя функции, предоставляемую приложением.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```  
+
+*ObjectFunc* имя — это имя функции, предоставляемую приложением.
+
+### <a name="syntax"></a>Синтаксис
+
+```
 int CALLBACK EXPORT ObjectFunc(
-    LPSTR lpszLogObject,  
+    LPSTR lpszLogObject,
     LPSTR* lpData);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *lpszLogObject*  
- Указывает на [LOGPEN](../../mfc/reference/logpen-structure.md) или [LOGBRUSH](../../mfc/reference/logbrush-structure.md) структура данных, которая содержит сведения о логических атрибутов объекта.  
-  
- *lpData*  
- Указывает на данные, предоставляемую приложением, передаваемый `EnumObjects` функции.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Функция обратного вызова возвращает **int**. Это значение определяется пользователем. Если функция обратного вызова возвращает значение 0, `EnumObjects` останавливает перечисления раньше.  
-  
-### <a name="remarks"></a>Примечания  
- Фактическое имя необходимо экспортировать.  
-  
+```
+
+### <a name="parameters"></a>Параметры
+
+*lpszLogObject*<br/>
+Указывает на [LOGPEN](../../mfc/reference/logpen-structure.md) или [LOGBRUSH](../../mfc/reference/logbrush-structure.md) структура данных, которая содержит сведения о логических атрибутов объекта.
+
+*lpData*<br/>
+Указывает на данные, предоставляемую приложением, передаваемый `EnumObjects` функции.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Функция обратного вызова возвращает **int**. Это значение определяется пользователем. Если функция обратного вызова возвращает значение 0, `EnumObjects` останавливает перечисления раньше.
+
+### <a name="remarks"></a>Примечания
+
+Фактическое имя необходимо экспортировать.
+
 ## <a name="graystring"></a>  Функция обратного вызова для CDC::GrayString
-*OutputFunc* — это имя функции обратного вызова, предоставляемую приложением.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```  
+
+*OutputFunc* — это имя функции обратного вызова, предоставляемую приложением.
+
+### <a name="syntax"></a>Синтаксис
+
+```
 BOOL CALLBACK EXPORT OutputFunc(
-    HDC hDC,  
-    LPARAM lpData,  
+    HDC hDC,
+    LPARAM lpData,
     int nCount);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *hDC*  
- Определяет контекст устройства памяти с растровым изображением по меньшей мере, ширины и высоты, заданной по `nWidth` и `nHeight` для `GrayString`.  
-  
- *lpData*  
- Указывает на строку символов, которую необходимо нарисовать.  
-  
- *nCount*  
- Указывает количество символов для вывода.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращаемое значение функции обратного вызова, должно иметь значение TRUE в случае успеха; в противном случае — FALSE.  
-  
-### <a name="remarks"></a>Примечания  
- Функция обратного вызова (*OutputFunc*) необходимо вывести изображение относительно координат (0,0) вместо (*x*, *y*).  
+```
+
+### <a name="parameters"></a>Параметры
+
+*hDC*<br/>
+Определяет контекст устройства памяти с растровым изображением по меньшей мере, ширины и высоты, заданной по `nWidth` и `nHeight` для `GrayString`.
+
+*lpData*<br/>
+Указывает на строку символов, которую необходимо нарисовать.
+
+*nCount*<br/>
+Указывает количество символов для вывода.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращаемое значение функции обратного вызова, должно иметь значение TRUE в случае успеха; в противном случае — FALSE.
+
+### <a name="remarks"></a>Примечания
+
+Функция обратного вызова (*OutputFunc*) необходимо вывести изображение относительно координат (0,0) вместо (*x*, *y*).
 
 ## <a name="setabortproc"></a>  Функция обратного вызова для CDC::SetAbortProc
-Имя *AbortFunc* — это имя функции, предоставляемую приложением.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```  
+
+Имя *AbortFunc* — это имя функции, предоставляемую приложением.
+
+### <a name="syntax"></a>Синтаксис
+
+```
 BOOL CALLBACK EXPORT AbortFunc(
-    HDC hPr,  
+    HDC hPr,
     int code);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *hPr*  
- Определяет контекст устройства.  
-  
- *Код*  
- Указывает, произошла ли ошибка. Это 0, если ошибки не произошло. Является SP_OUTOFDISK диспетчер печати уже недостаточно места на диске и места на диске будут доступны, если приложение ожидает. Если *кода* является SP_OUTOFDISK, приложение не имеет прервать задание печати. Если нет, она должна возвращать для диспетчера печати путем вызова `PeekMessage` или `GetMessage` функции Windows.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Функции обработчика прерывания возвращается ненулевое значение, если задание печати находится продолжить и 0, если его отмены.  
-  
-### <a name="remarks"></a>Примечания  
- Фактическое имя необходимо экспортировать, как описано в разделе "Примечания" [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
- 
-  
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](structures-styles-callbacks-and-message-maps.md) [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects) [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc) [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
+```
+
+### <a name="parameters"></a>Параметры
+
+*hPr*<br/>
+Определяет контекст устройства.
+
+*Код*<br/>
+Указывает, произошла ли ошибка. Это 0, если ошибки не произошло. Является SP_OUTOFDISK диспетчер печати уже недостаточно места на диске и места на диске будут доступны, если приложение ожидает. Если *кода* является SP_OUTOFDISK, приложение не имеет прервать задание печати. Если нет, она должна возвращать для диспетчера печати путем вызова `PeekMessage` или `GetMessage` функции Windows.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Функции обработчика прерывания возвращается ненулевое значение, если задание печати находится продолжить и 0, если его отмены.
+
+### <a name="remarks"></a>Примечания
+
+Фактическое имя необходимо экспортировать, как описано в разделе "Примечания" [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
+
+
+## <a name="see-also"></a>См. также
+
+[Структуры, стили, обратные вызовы и схемы сообщений](structures-styles-callbacks-and-message-maps.md)<br/>
+[CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
+[CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
+[CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
 

@@ -15,19 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 89a6b3392491ad36a0b0c9d542ffac4738b7c0f6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: eb3f501a2653c4d25adb195e9de9abf082179f3a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605363"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421912"
 ---
 # <a name="id-property"></a>Свойство "Идентификатор"
+
 Свойство ID ссылается на каждой записи таблицы сочетаний клавиш в программном коде. Это значение команды для программы, когда пользователь нажимает сочетание клавиш или сочетание клавиш. Чтобы назначить ускоритель, так же, как элемент меню, сделайте их идентификаторы одинаковыми (пока идентификатор таблицы сочетаний клавиш является таким же, как идентификатор ресурса меню).
   
 ## <a name="requirements"></a>Требования
- Win32
+
+Win32
   
 ## <a name="see-also"></a>См. также
- [Задание свойств сочетаний клавиш](../windows/setting-accelerator-properties.md)  
- [Редактор сочетаний клавиш](../windows/accelerator-editor.md)
+
+[Задание свойств сочетаний клавиш](../windows/setting-accelerator-properties.md)<br/>
+[Редактор сочетаний клавиш](../windows/accelerator-editor.md)

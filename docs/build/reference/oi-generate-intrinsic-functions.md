@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527f326d629bc8d41efcd73a938994570bed4d2e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 792d1e1bc0ea2f6044bc9ad145d30c1fda3e3648
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725924"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423875"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (создание встроенных функций)
 
@@ -73,7 +73,7 @@ ms.locfileid: "45725924"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры /O (оптимизация кода)](../../build/reference/o-options-optimize-code.md)
-[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Параметры /O (оптимизация кода)](../../build/reference/o-options-optimize-code.md)<br/>
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
 [Встроенные инструкции компилятора](../../intrinsics/compiler-intrinsics.md)

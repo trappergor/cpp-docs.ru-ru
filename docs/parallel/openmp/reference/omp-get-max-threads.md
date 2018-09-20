@@ -1,5 +1,5 @@
 ---
-title: omp_get_max_threads | Документы Microsoft
+title: omp_get_max_threads | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,62 +16,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 303e037d3fbeaf1958918c2ac78346bdcf01cf2a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b5c677b56d27038405237deb8c9bda2aeee87e7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695841"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446690"
 ---
 # <a name="ompgetmaxthreads"></a>omp_get_max_threads
-Возвращает целое число, равное или больше, чем число потоков, которые были бы доступны, если параллельной области без [num_threads](../../../parallel/openmp/reference/num-threads.md) были определены в этой точке в коде.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int omp_get_max_threads( )  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [3.1.3 функция omp_get_max_threads](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// omp_get_max_threads.cpp  
-// compile with: /openmp  
-#include <stdio.h>  
-#include <omp.h>  
-  
-int main( )   
-{  
-    omp_set_num_threads(8);  
-    printf_s("%d\n", omp_get_max_threads( ));  
-    #pragma omp parallel  
-        #pragma omp master  
-        {  
-            printf_s("%d\n", omp_get_max_threads( ));  
-        }  
-  
-    printf_s("%d\n", omp_get_max_threads( ));  
-  
-    #pragma omp parallel num_threads(3)  
-        #pragma omp master  
-        {  
-            printf_s("%d\n", omp_get_max_threads( ));  
-        }  
-  
-    printf_s("%d\n", omp_get_max_threads( ));  
-}  
-```  
-  
-```Output  
-8  
-8  
-8  
-8  
-8  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Функции](../../../parallel/openmp/reference/openmp-functions.md)
+
+Возвращает целое число, равное или больше, чем количество потоков, которые будут доступны, если параллельной области без [num_threads](../../../parallel/openmp/reference/num-threads.md) были определены в этой точке в коде.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+int omp_get_max_threads( )
+```
+
+## <a name="remarks"></a>Примечания
+
+Дополнительные сведения см. в разделе [3.1.3 функция omp_get_max_threads](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md).
+
+## <a name="example"></a>Пример
+
+```
+// omp_get_max_threads.cpp
+// compile with: /openmp
+#include <stdio.h>
+#include <omp.h>
+
+int main( )
+{
+    omp_set_num_threads(8);
+    printf_s("%d\n", omp_get_max_threads( ));
+    #pragma omp parallel
+        #pragma omp master
+        {
+            printf_s("%d\n", omp_get_max_threads( ));
+        }
+
+    printf_s("%d\n", omp_get_max_threads( ));
+
+    #pragma omp parallel num_threads(3)
+        #pragma omp master
+        {
+            printf_s("%d\n", omp_get_max_threads( ));
+        }
+
+    printf_s("%d\n", omp_get_max_threads( ));
+}
+```
+
+```Output
+8
+8
+8
+8
+8
+```
+
+## <a name="see-also"></a>См. также
+
+[Функции](../../../parallel/openmp/reference/openmp-functions.md)

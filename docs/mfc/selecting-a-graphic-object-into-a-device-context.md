@@ -1,5 +1,5 @@
 ---
-title: Выбор графического объекта в контексте устройства | Документы Microsoft
+title: Выбор графического объекта в контексте устройства | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,31 +19,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc605be317d51c985e32fbad038d846b056e5fe6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 406c4e7cd87b350f9317022dcf1821fa92ddf4af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379688"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427671"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>Выбор графического объекта в контексте устройства
-Этот раздел относится к использованию графические объекты в контексте устройства окна. По окончании [создайте графический объект](../mfc/one-stage-and-two-stage-construction-of-objects.md), необходимо выбрать его в контекст устройства вместо объекта по умолчанию, хранящиеся в ней:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/cpp/selecting-a-graphic-object-into-a-device-context_1.cpp)]  
-  
-## <a name="lifetime-of-graphic-objects"></a>Время существования графические объекты  
- Графический объект, возвращаемый [SelectObject](../mfc/reference/cdc-class.md#selectobject) «временный». То есть, он будет удален при [OnIdle](../mfc/reference/cwinapp-class.md#onidle) функции-члена класса `CWinApp` времени при очередном программа получает простоя. Пока используется объект, возвращаемый `SelectObject` в одной функции без возвращения управления основной цикл обработки сообщений, будет иметь никаких проблем.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
-  
--   [Графические объекты](../mfc/graphic-objects.md)  
-  
--   [Одноэтапное и двухэтапное Создание графических объектов](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
-  
--   [Контексты устройств](../mfc/device-contexts.md)  
-  
--   [Рисование в представлении](../mfc/drawing-in-a-view.md)  
-  
-## <a name="see-also"></a>См. также  
- [Графические объекты](../mfc/graphic-objects.md)
+
+Этот раздел относится к с помощью графических объектов в контексте устройства окна. После того как вы [создайте графический объект](../mfc/one-stage-and-two-stage-construction-of-objects.md), необходимо выбрать его в контекст устройства вместо объект по умолчанию, хранящиеся в ней:
+
+[!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/cpp/selecting-a-graphic-object-into-a-device-context_1.cpp)]
+
+## <a name="lifetime-of-graphic-objects"></a>Время существования графических объектов
+
+Графический объект, возвращенный [SelectObject](../mfc/reference/cdc-class.md#selectobject) «временный». То есть будет удалена при [OnIdle](../mfc/reference/cwinapp-class.md#onidle) функция-член класса `CWinApp` времени при очередном программа получает простоя. До тех пор, пока используется объект, возвращаемый `SelectObject` единственную функцию без возвращения управления основной цикл обработки сообщений, будет иметь никаких проблем.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+
+- [Графические объекты](../mfc/graphic-objects.md)
+
+- [Одноэтапное и двухэтапное Создание графических объектов](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+
+- [Контексты устройств](../mfc/device-contexts.md)
+
+- [Рисование в представлении](../mfc/drawing-in-a-view.md)
+
+## <a name="see-also"></a>См. также
+
+[Графические объекты](../mfc/graphic-objects.md)
 

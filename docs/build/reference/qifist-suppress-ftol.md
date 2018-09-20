@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7c4bacec9da22e8c8ba9fd6330637a1fb25893
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4b32557507cbe74fc1fde3963a1375318c7ef1e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714744"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448281"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Suppress _ftol)
 
@@ -75,6 +75,6 @@ ms.locfileid: "45714744"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md)
-[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

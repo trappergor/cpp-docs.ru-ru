@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6dca289631f3289a7976b6dc3482770bf5f3fe7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9f755ee59c7f0b6e4ae9897535cdc536537ba32f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200622"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446515"
 ---
 # <a name="support-for-ansi"></a>Поддержка ANSI
-Большинство классов и методов MFC поддерживает набор символов ANSI, несмотря на то, что платформа MFC в целом постепенно развивается в сторону поддержку только Юникод набор символов. Из-за текущих усовершенствований в Windows Vista и элементах управления Windows версии 6.1 будет прекращена поддержка некоторых ANSI и методов.  Дополнительные сведения см. в разделе [рекомендуется использовать интерфейсы API ANSI](../mfc/deprecated-ansi-apis.md) и [поддержка Юникода](../text/support-for-unicode.md).  
-  
-## <a name="see-also"></a>См. также  
- [Поддержка Юникода](../text/support-for-unicode.md)   
- [Нерекомендуемые API ANSI](../mfc/deprecated-ansi-apis.md)   
- [Оболочка и версии общих элементов управления](https://msdn.microsoft.com/library/windows/desktop/bb776779)
+
+Большинство классов и методов MFC поддерживает набор символов ANSI, несмотря на то, что платформа MFC в целом постепенно развивается в сторону поддержку только Юникод набор символов. Из-за текущих усовершенствований в Windows Vista и элементах управления Windows версии 6.1 будет прекращена поддержка некоторых ANSI и методов.  Дополнительные сведения см. в разделе [рекомендуется использовать интерфейсы API ANSI](../mfc/deprecated-ansi-apis.md) и [поддержка Юникода](../text/support-for-unicode.md).
+
+## <a name="see-also"></a>См. также
+
+[Поддержка Юникода](../text/support-for-unicode.md)<br/>
+[Нерекомендуемые API ANSI](../mfc/deprecated-ansi-apis.md)<br/>
+[Оболочка и версии общих элементов управления](https://msdn.microsoft.com/library/windows/desktop/bb776779)

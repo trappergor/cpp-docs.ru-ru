@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad982ee72e93a2779e4f3334984a325514248565
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02dd1b2cbe4d1da2364d884a0326cdc394bc16af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444883"
 ---
 # <a name="attributes-by-group"></a>Список атрибутов по группам
+
 Атрибуты C++ организованы в следующие функциональные группы.
   
 |Атрибут|Описание|
@@ -32,10 +33,11 @@ ms.locfileid: "44315110"
 |[Атрибуты объекта-получателя OLE DB](../windows/ole-db-consumer-attributes.md)|Ввести код, на основе [Шаблоны потребителей OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)— для создания рабочего OLE DB получателя, который выполняет задачи, такие как Открытие таблицы, выполнения команд и доступ к данным.|
 |[Атрибуты компилятора](../windows/compiler-attributes.md)|Предоставленные компилятором Visual C++.|
   
- Сведения о том, как определять настраиваемые атрибуты для приложения .NET Framework, см. в разделе [определяемые пользователем атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md).
+Сведения о том, как определять настраиваемые атрибуты для приложения .NET Framework, см. в разделе [определяемые пользователем атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md).
   
 ## <a name="see-also"></a>См. также
- [Справочник по атрибутам C++](../windows/cpp-attributes-reference.md)  
- [Основные понятия](../windows/attributed-programming-concepts.md)  
- [Список атрибутов по использованию](../windows/attributes-by-usage.md)  
- [Алфавитный указатель атрибутов](../windows/attributes-alphabetical-reference.md)
+
+[Справочник по атрибутам C++](../windows/cpp-attributes-reference.md)<br/>
+[Основные понятия](../windows/attributed-programming-concepts.md)<br/>
+[Список атрибутов по использованию](../windows/attributes-by-usage.md)<br/>
+[Алфавитный указатель атрибутов](../windows/attributes-alphabetical-reference.md)

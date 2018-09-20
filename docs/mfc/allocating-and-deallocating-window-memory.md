@@ -1,5 +1,5 @@
 ---
-title: Выделение и освобождение памяти окна | Документы Microsoft
+title: Выделение и освобождение памяти окна | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1364b4d29e2ccd2c9563359716eba6880df5436
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 149a8e860913515551fc85be9b49675856d7e129
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341463"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415201"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Выделение и освобождение памяти окна
-Не используйте C++ **удалить** оператор для уничтожения окна фрейма или представления. Вместо этого необходимо вызвать `CWnd` функции-члена `DestroyWindow`. Окна фрейма, таким образом, необходимо выделить в куче с оператором **новый**. Будьте внимательны при выделении фреймов глобально или в кадре стека. Другие окна необходимо выделить в кадре стека, когда это возможно.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
-  
--   [Создание окон](../mfc/creating-windows.md)  
-  
--   [Последовательность деструкции окна](../mfc/window-destruction-sequence.md)  
-  
--   [Отсоединение CWnd от HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
-  
-## <a name="see-also"></a>См. также  
- [Уничтожение объектов окон](../mfc/destroying-window-objects.md)
+
+Не используйте C++ **удалить** оператор для уничтожения окна фрейма или представления. Вместо этого необходимо вызвать `CWnd` функция-член `DestroyWindow`. Окна фрейма, таким образом, необходимо выделить в куче с оператором **новый**. Будьте внимательны при выделении окна фрейма в стеке или глобально. Другие окна должны быть оборудованы в кадре стека, когда это возможно.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+
+- [Создание окон](../mfc/creating-windows.md)
+
+- [Последовательность деструкции окна](../mfc/window-destruction-sequence.md)
+
+- [Отсоединение CWnd от HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+
+## <a name="see-also"></a>См. также
+
+[Уничтожение объектов окон](../mfc/destroying-window-objects.md)
 

@@ -30,14 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825e534f7cf75f693293931b20e8b982e4bbc6a8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e5a45152c5e9d966539cc4de22d587d717ae670
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220259"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424098"
 ---
 # <a name="colevariant-class"></a>Класс COleVariant
+
 Инкапсулирует [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) тип данных.
 
 ## <a name="syntax"></a>Синтаксис
@@ -50,13 +51,13 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleVariant::COleVariant](#colevariant)|Создает объект `COleVariant`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleVariant::Attach](#attach)|Присоединяет типа VARIANT в `COleVariant`.|
 |[COleVariant::ChangeType](#changetype)|Изменяет тип варианта этого `COleVariant` объекта.|
@@ -67,7 +68,7 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleVariant::operator LPCVARIANT](#operator_lpcvariant)|Преобразует `COleVariant` значение в `LPCVARIANT`.|
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Преобразует `COleVariant` в коллекцию `LPVARIANT`.|

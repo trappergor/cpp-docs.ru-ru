@@ -1,5 +1,5 @@
 ---
-title: 'Пошаговое руководство: Добавление CTaskDialog в приложение | Документы Microsoft'
+title: 'Пошаговое руководство: Добавление CTaskDialog в приложение | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0a3d93815a740be59960e6d3e0f9e9ed690923
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122958"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420488"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Пошаговое руководство. Добавление CTaskDialog в приложение
 
 В этом пошаговом руководстве содержатся сведения о [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) и показано, как добавить его в приложение.
 
-`CTaskDialog` Является диалоговым окном задачи, которое заменяет окно сообщения Windows в Windows Vista или более поздней версии. `CTaskDialog` улучшает исходное окно сообщения и расширяет его функциональные возможности. Окно сообщения Windows по-прежнему поддерживается в Visual Studio.
+`CTaskDialog` Является диалоговым окном задачи, заменяющий окно сообщения Windows в Windows Vista или более поздней версии. `CTaskDialog` улучшает исходное окно сообщения и расширяет его функциональные возможности. Окно сообщения Windows по-прежнему поддерживается в Visual Studio.
 
 > [!NOTE]
-> Версиях Windows, более ранних, чем Windows Vista не поддерживают `CTaskDialog`. Чтобы сообщение отображалось для пользователей, запускающих приложение в более ранних версиях Windows, необходимо запрограммировать альтернативный вариант диалогового окна. Статический метод [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) во время выполнения позволит определить возможность отображения `CTaskDialog`. Кроме того, `CTaskDialog` доступно только в случае, если ваше приложение построено с помощью библиотеки юникода.
+> Версиях Windows более ранних, чем Windows Vista не поддерживают `CTaskDialog`. Чтобы сообщение отображалось для пользователей, запускающих приложение в более ранних версиях Windows, необходимо запрограммировать альтернативный вариант диалогового окна. Статический метод [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) во время выполнения позволит определить возможность отображения `CTaskDialog`. Кроме того, `CTaskDialog` доступно только в случае, если ваше приложение построено с помощью библиотеки юникода.
 
 `CTaskDialog` поддерживает несколько необязательных элементов для сбора и отображения информации. Например, `CTaskDialog` может отображать ссылки на команды, настраиваемые кнопки, настраиваемые значки и нижний колонтитул. `CTaskDialog` также располагает рядом методов, которые позволяют запрашивать состояние диалогового окна задачи, чтобы определить, какие необязательные элементы выбрал пользователь.
 
@@ -47,13 +47,13 @@ ms.locfileid: "37122958"
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Замена окна сообщения Windows на CTaskDialog
 
-1. Создайте проект приложения MFC с параметрами по умолчанию. Она вызывается *MyProject*.
+1. Создайте проект приложения MFC с параметрами по умолчанию. Назовите его *MyProject*.
 
 2. С помощью **обозревателя решений** открыть файл MyProject.cpp.
 
 3. После списка включаемых файлов добавьте `#include "afxtaskdialog.h"` .
 
-4. Найдите метод `CMyProjectApp::InitInstance`. Перед инструкцией `return TRUE;` вставьте приведенные далее строки кода. Этот код создает строки, используемые в окне сообщения Windows или в `CTaskDialog`.  
+4. Найдите метод `CMyProjectApp::InitInstance`. Перед инструкцией `return TRUE;` вставьте приведенные далее строки кода. Этот код создает строки, используемые в окне сообщения Windows или в `CTaskDialog`.
 
     ```cpp
     CString message("My message to the user");
@@ -201,6 +201,6 @@ ms.locfileid: "37122958"
 
 ## <a name="see-also"></a>См. также
 
-[Диалоговые окна](../mfc/dialog-boxes.md)  
-[Класс CTaskDialog](../mfc/reference/ctaskdialog-class.md)  
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)  
+[Диалоговые окна](../mfc/dialog-boxes.md)<br/>
+[Класс CTaskDialog](../mfc/reference/ctaskdialog-class.md)<br/>
+[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 156908a1611f8a1c8b22df61e6b789468753d25d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317060"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443089"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Добавление обработчиков событий для элементов управления диалогового окна (C++)
 
@@ -76,11 +76,11 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[События по умолчанию элемента управления](../windows/default-control-events.md)  
-[Определение переменных-членов для элементов управления диалоговых окон](../windows/defining-member-variables-for-dialog-controls.md)  
-[Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)  
-[Добавление класса](../ide/adding-a-class-visual-cpp.md)  
-[Добавление функции-члена](../ide/adding-a-member-function-visual-cpp.md)  
-[Добавление переменной-члена](../ide/adding-a-member-variable-visual-cpp.md)  
-[Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[События по умолчанию элемента управления](../windows/default-control-events.md)<br/>
+[Определение переменных-членов для элементов управления диалоговых окон](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Добавление класса](../ide/adding-a-class-visual-cpp.md)<br/>
+[Добавление функции-члена](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Добавление переменной-члена](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Обработчик сообщений MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

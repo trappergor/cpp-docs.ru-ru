@@ -1,5 +1,5 @@
 ---
-title: Обработчики полей со списками | Документы Microsoft
+title: Обработчики полей со списками | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -37,30 +37,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1dcd48bfadcc4ed5a4b64fd0dcdee334c1f1b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5751fbdd4bff0cf3d42231ad00bef0c3483ccfb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368084"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424265"
 ---
 # <a name="combo-box-handlers"></a>Обработчики полей со списками
-Следующие записи карты соответствуют прототипы функций.  
-  
-|Элемент карты|Прототип функции|  
-|---------------|------------------------|  
-|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|(afx_msg void memberFxn)|  
-|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-  
-## <a name="see-also"></a>См. также  
- [Схемы сообщений](../../mfc/reference/message-maps-mfc.md)
+
+Прототипы функции соответствуют следующие записи карты.
+
+|Запись сопоставления|Прототип функции|
+|---------------|------------------------|
+|ON_CBN_CLOSEUP ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn)|
+|ON_CBN_DBLCLK ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_CBN_DROPDOWN ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_CBN_EDITCHANGE ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_CBN_EDITUPDATE ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_CBN_ERRSPACE ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_CBN_KILLFOCUS ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_CBN_SELCHANGE ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_CBN_SELENDCANCEL ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_CBN_SELENDOK ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_CBN_SETFOCUS ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+
+## <a name="see-also"></a>См. также
+
+[Схемы сообщений](../../mfc/reference/message-maps-mfc.md)
 

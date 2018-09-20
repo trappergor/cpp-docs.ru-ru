@@ -22,28 +22,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59600343a06a2c3c0d4f5b55efadaa09c43452d9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067705"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429972"
 ---
 # <a name="extent-class-c-amp"></a>Касс extent (C++ AMP)
+
 Представляет вектор из *N* целочисленных значений, которые определяют границы *N*-мерного пространства с началом координат в 0. Значения в векторе упорядочены от наиболее важных до наименее важных.
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 template <int _Rank>
 class extent;
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Rank*<br/>
 Ранг `extent` объекта.
 
 ## <a name="requirements"></a>Требования
+
 **Заголовок** : amp.h
 
 **Пространство имен** : Concurrency
@@ -80,7 +83,6 @@ class extent;
 |[оператор=](#operator_eq)|Копирует содержимое другого объекта `extent` в данный объект.|
 |[оператор-=](#operator_min_eq)|Вычитает указанное число из каждого элемента объекта `extent` объекта.|
 
-
 ### <a name="public-constants"></a>Открытые константы
 
 |name|Описание|
@@ -88,8 +90,8 @@ class extent;
 |[Ранг константа](#rank)|Получает ранг объекта `extent` объекта.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
-`extent`  
 
+`extent`
 
 ## <a name="contains"></a> Содержит
 
@@ -97,15 +99,17 @@ class extent;
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 bool contains(const index<rank>& _Index) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Index*<br/>
 `index` Значение для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 `true` Если указанный `index` значение содержится в `extent` объекта; в противном случае `false`.
 
 ##  <a name="ctor"></a> экстент
@@ -114,16 +118,17 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent() restrict(amp,cpu);
 extent(const extent<_Rank>& _Other) restrict(amp,cpu);
 explicit extent(int _I) restrict(amp,cpu);
 extent(int _I0,  int _I1) restrict(amp,cpu);
 extent(int _I0,  int _I1, int _I2) restrict(amp,cpu);
 explicit extent(const int _Array[_Rank])restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Array*<br/>
 Массив `_Rank` целых чисел, который используется для создания нового `extent` объекта.
 
@@ -143,6 +148,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 `extent` Объект, для которого новый `extent` основан объект.
 
 ## <a name="remarks"></a>Примечания
+
 Этот конструктор инициализирует `extent` объект, имеющий ранг равный трем.
 
 Если массив используется для создания `extent` объект, длина массива должна соответствовать рангу объекта `extent` объекта.
@@ -153,15 +159,17 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Rhs*<br/>
 Номер, чтобы найти модуль.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Объект `extent`.
 
 ##  <a name="operator_star_eq"></a> оператор * =
@@ -170,15 +178,17 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Rhs*<br/>
 Число для перемножения.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Объект `extent`.
 
 ## <a name="operator_add"></a> оператор +
@@ -187,15 +197,17 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Rhs*<br/>
 `index` , Содержащий добавляемые элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Новый объект `extent`.
 
 ##  <a name="operator_add_add"></a> Operator ++
@@ -204,12 +216,13 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank>& operator++() restrict(amp,cpu);
 extent<_Rank> operator++(int)restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Для префиксной формы оператора `extent` объекта (`*this`). Для суффиксной формы оператора новый `extent` объекта.
 
 ##  <a name="operator_add_eq"></a> оператор +=
@@ -218,17 +231,19 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank>& operator+=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Rhs*<br/>
 Номер, индекс или экстент для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Результирующий объект `extent`.
 
 ##  <a name="operator_min"></a> оператор-
@@ -237,15 +252,17 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Rhs*<br/>
 `index` , Содержащий элементы для вычитания.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Новый объект `extent`.
 
 ##  <a name="operator_min_min"></a> оператор--
@@ -254,12 +271,13 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank>& operator--() restrict(amp,cpu);
 extent<_Rank> operator--(int)restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Для префиксной формы оператора `extent` объекта (`*this`). Для суффиксной формы оператора новый `extent` объекта.
 
 ##  <a name="operator_div_eq"></a> оператор / =
@@ -268,15 +286,17 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Rhs*<br/>
 Число-знаменатель.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Объект `extent`.
 
 ##  <a name="operator_min_eq"></a> оператор-=
@@ -285,17 +305,19 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank>& operator-=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Rhs*<br/>
 Число для вычитания.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Результирующий объект `extent`.
 
 ##  <a name="operator_eq"></a> оператор =
@@ -304,32 +326,37 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Другое*<br/>
 `extent` Для копирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Ссылка на этот `extent` объекта.
 
 ##  <a name="operator_at"></a> Extent::operator \[\]
+
 Возвращает элемент, находящийся по указанному индексу.
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 int operator[](unsigned int _Index) const restrict(amp,cpu);
 int& operator[](unsigned int _Index) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Параметры
+
 *_Index*<br/>
 Целое число от 0 до ранга минус 1.
 
 ### <a name="return-value"></a>Возвращаемое значение
+
 Элемент, находящийся по указанному индексу.
 
 ##  <a name="rank_constant"></a> Ранг
@@ -338,9 +365,9 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 static const int rank = _Rank;
-```  
+```
 
 ##  <a name="size"></a> Размер
 
@@ -348,9 +375,9 @@ static const int rank = _Rank;
 
 ### <a name="syntax"></a>Синтаксис
 
-```  
+```
 unsigned int size() const restrict(amp,cpu);
-```  
+```
 
 ## <a name="tile"></a> Плитка
 
@@ -365,8 +392,9 @@ tiled_extent<_Dim0, _Dim1> tile() const ;
 
 template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
-```  
+```
 ### <a name="parameters"></a>Параметры
+
 *_Dim0*<br/>
 Наиболее значимый компонент замощенной области памяти.
 *_Dim1*<br/>

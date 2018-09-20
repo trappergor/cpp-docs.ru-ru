@@ -1,5 +1,5 @@
 ---
-title: Эластичные соединения и средства отслеживания | Документы Microsoft
+title: Эластичные соединения и средства отслеживания | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ed6e649309acf86e24c52bf8b50a859d0ac066ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931740"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428204"
 ---
 # <a name="rubber-banding-and-trackers"></a>Эластичные соединения и средства отслеживания
-Другой функцией, поставляемых вместе с средства отслеживания является выбор «изменяемый», который позволяет пользователю выбирать несколько элементов OLE, перетащив прямоугольник изменения размера вокруг выбираемых элементов. Когда пользователь отпускает левую кнопку мыши, элементы в пределах области, выбранных пользователем выбраны и доступными для пользователя. Например пользователь может перетащите его в другое приложение контейнера.  
-  
- Для реализации этой функции требуется дополнительный код в функции обработчика WM_LBUTTONDOWN вашего приложения.  
-  
- В следующем образце кода реализует эластичное Выбор и дополнительные функции.  
-  
- [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]  
-  
- Если вы хотите разрешить обратимое ориентации инспектор во время эластичные соединения, необходимо вызвать [CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) с указанием третьего параметра равным **TRUE**. Помните, позволяя обратимое ориентации приведет иногда [CRectTracker::m_rect](../mfc/reference/crecttracker-class.md#m_rect) чтобы стать инвертированный. Это можно исправить путем вызова [CRect::NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect).  
-  
- Дополнительные сведения см. в разделе [элементы клиента контейнера](../mfc/containers-client-items.md) и [Настройка перетаскивание](../mfc/drag-and-drop-customizing.md).  
-  
-## <a name="see-also"></a>См. также  
- [Средства отслеживания: Реализация средства отслеживания в приложении OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)   
- [Класс CRectTracker](../mfc/reference/crecttracker-class.md)
+
+Еще одна функция, в состав средства отслеживания является выбор «изменяемый», который позволяет пользователю выбирать несколько элементов OLE растягивая прямоугольник вокруг элементов для выбора размера. Когда пользователь отпускает левую кнопку мыши, элементы в пределах региона, выбранного пользователем выбраны и могут управляться пользователем. К примеру пользователь может перетаскивать выделения в другое приложение контейнера.
+
+Для реализации этой функции требуется дополнительный код в функции обработчика WM_LBUTTONDOWN вашего приложения.
+
+В следующем образце кода реализует Выбор эластичного и дополнительные функции.
+
+[!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]
+
+Если вы хотите разрешить обратимое ориентацию объекта отслеживания во время эластичные соединения, необходимо вызвать [CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) с указанием третьего параметра равным **TRUE**. Помните, что обратимое ориентации, иногда вызывает [CRectTracker::m_rect](../mfc/reference/crecttracker-class.md#m_rect) чтобы стать обращена. Это можно исправить путем вызова [CRect::NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect).
+
+Дополнительные сведения см. в разделе [элементы клиента контейнера](../mfc/containers-client-items.md) и [Настройка перетаскивания](../mfc/drag-and-drop-customizing.md).
+
+## <a name="see-also"></a>См. также
+
+[Средства отслеживания. Реализация средств отслеживания в приложении OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
+[Класс CRectTracker](../mfc/reference/crecttracker-class.md)

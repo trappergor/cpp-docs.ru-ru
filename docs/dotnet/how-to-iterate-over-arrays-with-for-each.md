@@ -1,5 +1,5 @@
 ---
-title: 'Как: перебор элементов массивов с для каждого | Документы Microsoft'
+title: 'Практическое: перебор элементов массивов с для каждого | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,139 +15,144 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3e37ea551af0e985bd4c1b76ec1cd495a24c0c07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d16281d6ee53f8e426b92c60b41dcdcae200ba6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130507"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428373"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>Практическое руководство. Перебор элементов массивов с использованием цикла for each
-В этом разделе показано, как использовать [для каждой из них, в](../dotnet/for-each-in.md) ключевое слово на различных типов массивов.  
-  
-## <a name="example"></a>Пример  
- В этом примере показано, как использовать `for each` на массив ссылочных типов.  Обратите внимание, что если любое измерение одномерным массивом multi равно нулю, `for each` цикл не будет применен к массиву.  
-  
-```  
-// for_each_arrays.cpp  
-// compile with: /clr  
-using namespace System;  
-ref struct MyClass {  
-   void Test() { Console::WriteLine("in MyClass"); }  
-};  
-  
-ref struct MyClass2 {  
-   void Test() { Console::WriteLine("in MyClass2"); }  
-};  
-  
-int main() {  
-   array<MyClass ^> ^ MyArray = gcnew array<MyClass ^>(2);  
-  
-   int i = 0;  
-   for each ( MyClass ^ c in MyArray ) {  
-      Console::Write("{0} = ", i++);  
-      c -> Test();  
-   }  
-  
-   Console::WriteLine();  
-  
-   array< MyClass2 ^, 2 > ^ MyArray2 = gcnew array< MyClass2 ^, 2 >(2, 2);  
-   i = 0;  
-   for each ( MyClass2 ^ c in MyArray2 ) {  
-      Console::Write("{0} = ", i++);  
-      c -> Test();  
-   }  
-  
-   array< MyClass2 ^, 2 > ^ MyArray3 = gcnew array< MyClass2 ^, 2 >(2, 0);  
-   i = 0;  
-   for each ( MyClass2 ^ c in MyArray3 ) {  
-      Console::Write("{0} = ", i++);  
-      c -> Test();  
-   }  
-}  
-```  
-  
-```Output  
-0 = in MyClass  
-1 = in MyClass  
-  
-0 = in MyClass2  
-1 = in MyClass2  
-2 = in MyClass2  
-3 = in MyClass2  
-```  
-  
-## <a name="example"></a>Пример  
- В этом примере показано, для каждого прохода по <xref:System.Collections.ArrayList>, который реализует <xref:System.Collections.IEnumerable>.  
-  
-```  
-// for_each_arrays_2.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Collections;  
-  
-int main() {  
-   int retval = 0;  
-  
-   ArrayList ^ arr = gcnew ArrayList();  
-   arr->Add(10);  
-   arr->Add(20);  
-   arr->Add(30);  
-  
-   for each ( int c in arr )  
-      retval += c;  
-   Console::WriteLine(retval);  
-}  
-```  
-  
-```Output  
-60  
-```  
-  
-## <a name="example"></a>Пример  
- В этом примере показано, как для перебора массива массивов.  
-  
-```  
-// for_each_arrays_3.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-#define ARRAY_SIZE 2  
-  
-int main() {  
-   int i, j;  
-  
-   // Declares an array of managed arrays of Int32.  
-   array< array< Int32 > ^ > ^ IntArray = gcnew array<array< Int32 > ^>(ARRAY_SIZE);  
-  
-   for (i = 0 ; i < ARRAY_SIZE ; i++) {  
-      IntArray[i] = gcnew array< Int32 >(ARRAY_SIZE);  
-         for ( int j = 0 ; j < ARRAY_SIZE ; j++ )   
-            IntArray[i][j] = i + 10;  
-   }  
-  
-   for (i = 0 ; i < ARRAY_SIZE ; i++)  
-      for (int j = 0 ; j < ARRAY_SIZE ; j++)  
-         Console::WriteLine("IntArray[{0}] = {1}", i, IntArray[i][j]);  
-   Console::WriteLine();  
-  
-   for each (array<Int32> ^ xyz in IntArray)  
-      for each ( int c in xyz )  
-         Console::WriteLine(c);  
-}  
-```  
-  
-```Output  
-IntArray[0] = 10  
-IntArray[0] = 10  
-IntArray[1] = 11  
-IntArray[1] = 11  
-  
-10  
-10  
-11  
-11  
-```  
-  
-## <a name="see-also"></a>См. также  
- [for each, in](../dotnet/for-each-in.md)
+
+В этом разделе показано, как использовать [для каждого из них в](../dotnet/for-each-in.md) слово для различных типов массивов.
+
+## <a name="example"></a>Пример
+
+В этом примере показано, как использовать `for each` на массив ссылочных типов.  Обратите внимание, что, если все измерения многомерного массива с несколькими равно нулю, `for each` цикл не переберет массив.
+
+```
+// for_each_arrays.cpp
+// compile with: /clr
+using namespace System;
+ref struct MyClass {
+   void Test() { Console::WriteLine("in MyClass"); }
+};
+
+ref struct MyClass2 {
+   void Test() { Console::WriteLine("in MyClass2"); }
+};
+
+int main() {
+   array<MyClass ^> ^ MyArray = gcnew array<MyClass ^>(2);
+
+   int i = 0;
+   for each ( MyClass ^ c in MyArray ) {
+      Console::Write("{0} = ", i++);
+      c -> Test();
+   }
+
+   Console::WriteLine();
+
+   array< MyClass2 ^, 2 > ^ MyArray2 = gcnew array< MyClass2 ^, 2 >(2, 2);
+   i = 0;
+   for each ( MyClass2 ^ c in MyArray2 ) {
+      Console::Write("{0} = ", i++);
+      c -> Test();
+   }
+
+   array< MyClass2 ^, 2 > ^ MyArray3 = gcnew array< MyClass2 ^, 2 >(2, 0);
+   i = 0;
+   for each ( MyClass2 ^ c in MyArray3 ) {
+      Console::Write("{0} = ", i++);
+      c -> Test();
+   }
+}
+```
+
+```Output
+0 = in MyClass
+1 = in MyClass
+
+0 = in MyClass2
+1 = in MyClass2
+2 = in MyClass2
+3 = in MyClass2
+```
+
+## <a name="example"></a>Пример
+
+В этом примере показано, для каждого прохода <xref:System.Collections.ArrayList>, который реализует <xref:System.Collections.IEnumerable>.
+
+```
+// for_each_arrays_2.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Collections;
+
+int main() {
+   int retval = 0;
+
+   ArrayList ^ arr = gcnew ArrayList();
+   arr->Add(10);
+   arr->Add(20);
+   arr->Add(30);
+
+   for each ( int c in arr )
+      retval += c;
+   Console::WriteLine(retval);
+}
+```
+
+```Output
+60
+```
+
+## <a name="example"></a>Пример
+
+В этом примере показано, как для перебора массива массивов.
+
+```
+// for_each_arrays_3.cpp
+// compile with: /clr
+using namespace System;
+
+#define ARRAY_SIZE 2
+
+int main() {
+   int i, j;
+
+   // Declares an array of managed arrays of Int32.
+   array< array< Int32 > ^ > ^ IntArray = gcnew array<array< Int32 > ^>(ARRAY_SIZE);
+
+   for (i = 0 ; i < ARRAY_SIZE ; i++) {
+      IntArray[i] = gcnew array< Int32 >(ARRAY_SIZE);
+         for ( int j = 0 ; j < ARRAY_SIZE ; j++ )
+            IntArray[i][j] = i + 10;
+   }
+
+   for (i = 0 ; i < ARRAY_SIZE ; i++)
+      for (int j = 0 ; j < ARRAY_SIZE ; j++)
+         Console::WriteLine("IntArray[{0}] = {1}", i, IntArray[i][j]);
+   Console::WriteLine();
+
+   for each (array<Int32> ^ xyz in IntArray)
+      for each ( int c in xyz )
+         Console::WriteLine(c);
+}
+```
+
+```Output
+IntArray[0] = 10
+IntArray[0] = 10
+IntArray[1] = 11
+IntArray[1] = 11
+
+10
+10
+11
+11
+```
+
+## <a name="see-also"></a>См. также
+
+[for each, in](../dotnet/for-each-in.md)

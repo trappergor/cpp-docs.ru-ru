@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a29a7ae4734e5d1f1930d5309163d1e1519aa4
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: f195a553c29c8a1cd0ef57f82c9f57a1f3672048
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540259"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405298"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Директивы Pragma и ключевое слово __Pragma
 Директивы pragma определяют возможности компилятора для конкретного компьютера или операционной системы. **__Pragma** ключевое слово, которое является специфичным для компилятора Microsoft, позволяет кодировать директивы pragma в определениях макросов.  
@@ -117,6 +117,6 @@ return _hr; \
   
 ## <a name="see-also"></a>См. также  
  
-[Справочник по препроцессору C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
-[Прагмы C](../c-language/c-pragmas.md)   
+[Справочник по препроцессору в C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Прагмы C](../c-language/c-pragmas.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

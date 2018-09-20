@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31df513a40b60fcb57c48f0d20e124fc77888d99
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2975f9648415b072c7e0cc893183b4a7880c3e43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703132"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444909"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (требование проверки подписи)
 
@@ -49,6 +49,6 @@ ms.locfileid: "45703132"
 
 [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
 [Параметры компоновщика](../../build/reference/linker-options.md)<br/>
-[Принудительно целостности подписи из переносимых исполняемых (PE) файлов](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)
+[Принудительная целостность подписи из переносимых исполняемых (PE) файлов](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
 [Пошаговое руководство о подписи кода режима ядра](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
 [Библиотеки DLL инициализации приложений в Windows 7 и Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

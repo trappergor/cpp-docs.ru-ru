@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725040"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438578"
 ---
 # <a name="errlook-reference"></a>Справочник ERRLOOK
 
@@ -30,14 +30,19 @@ ms.locfileid: "45725040"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Значение элемента управления Edit](../../build/reference/value-edit-control.md) описание элемента управления, измените значение в ERRLOOK.
+[Элемент управления "Поле ввода значений"](../../build/reference/value-edit-control.md)<br/>
+Описание элемента управления, измените значение в ERRLOOK.
 
-[Элемент управления редактирования сообщений об](../../build/reference/error-message-edit-control.md) описание элемента управления редактирование сообщения об ошибке в программе ERRLOOK.
+[Элемент управления "Редактирование сообщений об ошибке"](../../build/reference/error-message-edit-control.md)<br/>
+Описание управления редактирование сообщения об ошибке в программе ERRLOOK.
 
-[Кнопка "Модули"](../../build/reference/modules-button.md) описывает кнопка "Модули" в ERRLOOK.
+[Кнопка "Модули"](../../build/reference/modules-button.md)<br/>
+Описывает кнопка "Модули" в ERRLOOK.
 
-[Найдите кнопок](../../build/reference/look-up-button.md) описывает найти-кнопка в ERRLOOK.
+[Кнопка "Найти"](../../build/reference/look-up-button.md)<br/>
+Описывает найти-кнопка в ERRLOOK.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Средства построения C/C++](../../build/reference/c-cpp-build-tools.md) приведены ссылки на разделы, посвященные C/C++ сборки средств, предоставляемых в Visual C++.
+[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+Предоставляет ссылки на разделы, посвященные C/C++ создавать средства, предоставляемые в Visual C++.

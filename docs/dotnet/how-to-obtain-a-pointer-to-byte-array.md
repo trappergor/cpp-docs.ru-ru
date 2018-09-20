@@ -1,5 +1,5 @@
 ---
-title: 'Как: получить указатель на массив байтов | Документы Microsoft'
+title: 'Практическое: получить указатель на массив байтов | Документация Майкрософт'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1319da3f41903c469655cd533116de7a38d6b5b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c20449a5e02e7743999d02f6a03254976e58fcfb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127972"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429296"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>Практическое руководство. Получение указателя на массив байтов
-Вы можете получить указатель на блок массива в <xref:System.Byte> массива путем установки адрес первого элемента и присвоить его указателю.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// pointer_to_Byte_array.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   Byte bArr[] = {1, 2, 3};  
-   Byte* pbArr = &bArr[0];  
-  
-   array<Byte> ^ bArr2 = gcnew array<Byte>{1,2,3};  
-   interior_ptr<Byte> pbArr2 = &bArr2[0];  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Вы можете получить указатель на блок массива в <xref:System.Byte> массива адрес первого элемента и присвоить его указателю.
+
+## <a name="example"></a>Пример
+
+```
+// pointer_to_Byte_array.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   Byte bArr[] = {1, 2, 3};
+   Byte* pbArr = &bArr[0];
+
+   array<Byte> ^ bArr2 = gcnew array<Byte>{1,2,3};
+   interior_ptr<Byte> pbArr2 = &bArr2[0];
+}
+```
+
+## <a name="see-also"></a>См. также
+
+[Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

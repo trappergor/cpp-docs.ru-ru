@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755025"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404778"
 ---
 # <a name="c2-rules"></a>C.2 Правила
+
 Нотация описан в разделе 6.1 стандарта C. В этом приложении грамматики показано расширение для грамматики базовый язык для директивы OpenMP C и C++.
 
 **/\* в C++ (ISO/IEC 14882:1998) \*/**
 
 *оператор seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Инструкции*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*OpenMP директива*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*оператор seq инструкции*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*оператор seq openmp директива*
@@ -33,7 +34,7 @@ ms.locfileid: "43755025"
 **/\* в C90 (ISO/IEC 9899: 1990) \*/**
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Инструкции*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*OpenMP директива*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*список операторов оператор*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*список операторов openmp директива*
@@ -41,8 +42,8 @@ ms.locfileid: "43755025"
 **/\* в C99 (ISO/IEC 9899: 1999) \*/**
 
 *блок item*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*объявление*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Инструкции*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*OpenMP директива*
 
 **/\* стандартные инструкции \*/**
@@ -67,7 +68,7 @@ ms.locfileid: "43755025"
 &nbsp;&nbsp;&nbsp;&nbsp;*Flush директива*
 
 *структурированный блок*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Инструкции*
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
 *параллельные конструкции*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*структурированный блок параллельного директива*
@@ -100,7 +101,7 @@ ms.locfileid: "43755025"
 &nbsp;&nbsp;&nbsp;&nbsp;**расписание (** *вид расписания* **,** *выражение* **)**
 
 *Вид расписания*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Static**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**динамические**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Интерактивная**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Среда выполнения**
@@ -194,7 +195,7 @@ ms.locfileid: "43755025"
 
 **/\* Стандартные объявления \*/**
 
-*объявление*:<br/>
+*declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Директива threadprivate*
 
 *Директива threadprivate*:<br/>
@@ -217,7 +218,7 @@ ms.locfileid: "43755025"
 **/\* в C \*/**
 
 *переменная list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Идентификатор*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*переменная list* **,** *идентификатор*
 
 **/\* в C++ \*/**

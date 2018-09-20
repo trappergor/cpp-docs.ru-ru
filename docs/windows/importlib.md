@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a790887f54e01cea835c6110e3d81e1c2d3afeaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3df5a1893567b54337a5c3807fcace6a02154670
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206705"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416010"
 ---
 # <a name="importlib"></a>importlib
 
@@ -38,7 +38,7 @@ ms.locfileid: "43206705"
 
 ### <a name="parameters"></a>Параметры
 
-*tlb_file*  
+*tlb_file*<br/>
 Заключенное в кавычки имя TLB-файла, который необходимо импортировать в библиотеку типов текущего проекта.
 
 ## <a name="remarks"></a>Примечания
@@ -71,9 +71,9 @@ ms.locfileid: "43206705"
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты компилятора](../windows/compiler-attributes.md)  
-[Изолированные атрибуты](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[include](../windows/include-cpp.md)  
+[Атрибуты компилятора](../windows/compiler-attributes.md)<br/>
+[Изолированные атрибуты](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)
