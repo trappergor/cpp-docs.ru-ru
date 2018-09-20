@@ -1,5 +1,5 @@
 ---
-title: omp_get_dynamic | Документы Microsoft
+title: omp_get_dynamic | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97cae8091f88c283412b36ef757b03c72f7580d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c2b5a285ef019cd1752b60065f7040d9a937ce38
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691278"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389893"
 ---
 # <a name="ompgetdynamic"></a>omp_get_dynamic
-Возвращает значение, указывающее, если число потоков, доступных в последующих параллельной области может настраиваться по времени выполнения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int omp_get_dynamic();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Если значение ненулевое, динамическую настройку потоков включен.  
-  
-## <a name="remarks"></a>Примечания  
- Указано динамическую настройку потоков с [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) и [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).  
-  
- Дополнительные сведения см. в разделе [3.1.7 функция omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
-  
-## <a name="example"></a>Пример  
- В разделе [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) пример использования `omp_get_dynamic`.  
-  
-## <a name="see-also"></a>См. также  
- [Функции](../../../parallel/openmp/reference/openmp-functions.md)
+
+Возвращает значение, указывающее, если число потоков, доступных в последующих параллельной области могут быть изменены при время выполнения.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+int omp_get_dynamic();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Если значение ненулевое, динамическую настройку потоков включен.
+
+## <a name="remarks"></a>Примечания
+
+Динамическую настройку потоков указывается с помощью [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) и [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).
+
+Дополнительные сведения см. в разделе [3.1.7 функция omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).
+
+## <a name="example"></a>Пример
+
+См. в разделе [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) пример использования `omp_get_dynamic`.
+
+## <a name="see-also"></a>См. также
+
+[Функции](../../../parallel/openmp/reference/openmp-functions.md)

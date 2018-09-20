@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6da9451d6f009bad6163efec23bb6f920a56df49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6622e92112d9f73e673e2fb44598a393843bf0fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590534"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396343"
 ---
 # <a name="handlet-class"></a>HandleT - класс
 
@@ -39,27 +39,27 @@ class HandleT;
 
 ### <a name="parameters"></a>Параметры
 
-*HandleTraits*  
+*HandleTraits*<br/>
 Экземпляр [HandleTraits](../windows/handletraits-structure.md) структура, которая определяет общие характеристики дескриптора.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`Traits`|Синоним для `HandleTraits`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Конструктор HandleT::HandleT](../windows/handlet-handlet-constructor.md)|Инициализирует новый экземпляр класса **HandleT** класса.|
 |[Деструктор HandleT::~HandleT](../windows/handlet-tilde-handlet-destructor.md)|Отменяет инициализацию экземпляра **HandleT** класса.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод HandleT::Attach](../windows/handlet-attach-method.md)|Связывает указанный дескриптор с текущим **HandleT** объекта.|
 |[Метод HandleT::Close](../windows/handlet-close-method.md)|Закрывает текущий **HandleT** объекта.|
@@ -69,19 +69,19 @@ class HandleT;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод HandleT::InternalClose](../windows/handlet-internalclose-method.md)|Закрывает текущий **HandleT** объекта.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Оператор HandleT::operator=](../windows/handlet-operator-assign-operator.md)|Перемещает значение указанного **HandleT** объект с текущим **HandleT** объекта.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Элемент данных HandleT::handle_](../windows/handlet-handle-data-member.md)|Содержит дескриптор, представленного **HandleT** объекта.|
 

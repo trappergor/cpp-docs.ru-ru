@@ -1,5 +1,5 @@
 ---
-title: Классы массивов готовые к использованию | Документы Microsoft
+title: Классы массивов готовые к использованию | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 397b45d6304d80c90a05daf48067ca7fff03194a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ccf2238855309d080a137795630b5442f0080b76
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932049"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395626"
 ---
 # <a name="ready-to-use-array-classes"></a>Готовые классы массивов
-Следующие классы являются классы массивов готовые к использованию.  
-  
- [CByteArray](../mfc/reference/cbytearray-class.md)  
- Хранит элементы типа **БАЙТОВ** в массиве.  
-  
- [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- Хранит элементы типа **DWORD** в массиве.  
-  
- [CObArray](../mfc/reference/cobarray-class.md)  
- Хранит указатели на объекты класса `CObject` или на объекты классов, производных от `CObject` в массиве.  
-  
- [CPtrArray](../mfc/reference/cptrarray-class.md)  
- Хранит указатели на **void** (универсальных указателей) в массиве.  
-  
- [CUIntArray](../mfc/reference/cuintarray-class.md)  
- Хранит элементы типа **UINT** в массиве.  
-  
- [CWordArray](../mfc/reference/cwordarray-class.md)  
- Хранит элементы типа **WORD** в массиве.  
-  
- [CStringArray](../mfc/reference/cstringarray-class.md)  
- Магазины `CString` объекты в массиве.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../mfc/class-library-overview.md)
+
+Следующие классы являются классы массивов готовые к использованию.
+
+[CByteArray](../mfc/reference/cbytearray-class.md)<br/>
+Хранит элементы типа **БАЙТОВ** в массиве.
+
+[CDWordArray](../mfc/reference/cdwordarray-class.md)<br/>
+Хранит элементы типа **DWORD** в массиве.
+
+[CObArray](../mfc/reference/cobarray-class.md)<br/>
+Содержит указатели на объекты класса `CObject` или на объекты классов, производных от `CObject` в массиве.
+
+[CPtrArray](../mfc/reference/cptrarray-class.md)<br/>
+Содержит указатели на **void** (универсальных указателей) в массиве.
+
+[CUIntArray](../mfc/reference/cuintarray-class.md)<br/>
+Хранит элементы типа **UINT** в массиве.
+
+[CWordArray](../mfc/reference/cwordarray-class.md)<br/>
+Хранит элементы типа **WORD** в массиве.
+
+[CStringArray](../mfc/reference/cstringarray-class.md)<br/>
+Магазины `CString` объектов в массиве.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../mfc/class-library-overview.md)
 

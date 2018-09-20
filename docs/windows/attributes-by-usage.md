@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 037200c509574199dbecf56c950590e00e7aa71f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 875bc3163bc579c7d6da8055a0a24275e8be92a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313615"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393858"
 ---
 # <a name="attributes-by-usage"></a>Список атрибутов по использованию
 
@@ -43,7 +43,7 @@ ms.locfileid: "44313615"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по атрибутам C++](../windows/cpp-attributes-reference.md)  
-[Основные понятия](../windows/attributed-programming-concepts.md)  
-[Список атрибутов по группам](../windows/attributes-by-group.md)  
+[Справочник по атрибутам C++](../windows/cpp-attributes-reference.md)<br/>
+[Основные понятия](../windows/attributed-programming-concepts.md)<br/>
+[Список атрибутов по группам](../windows/attributes-by-group.md)<br/>
 [Алфавитный указатель атрибутов](../windows/attributes-alphabetical-reference.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca78687f79cdbf1d8bdb60c1a877c489498624ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766195"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390738"
 ---
 # <a name="using-cstringt"></a>С помощью CStringT
 
@@ -27,10 +27,10 @@ ms.locfileid: "43766195"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Управление памятью с помощью CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
+[Управление памятью с помощью CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)<br/>
 Обсуждается управление памятью с помощью `CStringT`, класс шаблона, используемый для работы со строками знаков переменной длины.
 
-[Экспорт строковых классов с помощью CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+[Экспорт строковых классов с помощью CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)<br/>
 Объясняется, как экспортировать свой собственный класс строку из DLL с использованием класс CStringT <> шаблона.
 
 ## <a name="reference"></a>Ссылка

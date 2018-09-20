@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64e047a832b3c097ced57f9d491b1344c51da495
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cfa59f889c472651eb40ddcf297ca51bd34f4e41
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724416"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389945"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (имя файла базы данных программы)
 
@@ -75,7 +75,7 @@ CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
 
 ## <a name="see-also"></a>См. также
 
-[Выходного файла (/ F) параметры](../../build/reference/output-file-f-options.md)
-[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Параметры выходного файла (/F)](../../build/reference/output-file-f-options.md)<br/>
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
 [Указание пути](../../build/reference/specifying-the-pathname.md)

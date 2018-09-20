@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74fb35ec25bed808e2165498c00b65723aba5bac
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 474602ce51ff9eb84f54d7580104f641d9b5b2a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702446"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396198"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>Параметр /FD (минимальное перестроение интерфейса IDE)
 
@@ -33,6 +33,6 @@ ms.locfileid: "45702446"
 
 ## <a name="see-also"></a>См. также
 
-[Выходного файла (/ F) параметры](../../build/reference/output-file-f-options.md)
-[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Параметры выходного файла (/F)](../../build/reference/output-file-f-options.md)<br/>
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

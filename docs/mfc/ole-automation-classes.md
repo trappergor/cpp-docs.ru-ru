@@ -1,5 +1,5 @@
 ---
-title: Классы автоматизации OLE | Документы Microsoft
+title: Классы автоматизации OLE | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8316030ba65796d0e9811ca35384c8a4a2a3afa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea35e51296b2fc528657c4dd9f9b9b76b84aae83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342882"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391518"
 ---
 # <a name="ole-automation-classes"></a>Классы автоматизации OLE
-Эти классы поддерживают клиенты автоматизации (приложений, управления другими приложениями). Серверы автоматизации (приложений, которыми можно управлять другими приложениями) поддерживаются с помощью [съемы](../mfc/reference/dispatch-maps.md).  
-  
- [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
- Используется для вызова из вашего клиента автоматизации серверы автоматизации. При добавлении класса, этот класс используется для создания строго типизированные классы для серверов автоматизации, которые предоставляют библиотеки типов.  
-  
- [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- Исключения, возникающие в результате ошибки во время процесса OLE-автоматизации. Автоматизации исключения создаваемые серверы автоматизации и перехвачено клиентами автоматизации.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../mfc/class-library-overview.md)
+
+Эти классы поддерживают клиенты автоматизации (приложения, которые управляют другие приложения). Серверы автоматизации (приложения, которыми можно управлять другими приложениями) поддерживаются с помощью [съемы](../mfc/reference/dispatch-maps.md).
+
+[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)<br/>
+Использовать для вызова серверы автоматизации из клиента автоматизации. При добавлении класса, этот класс используется для создания строго типизированные классы для серверов автоматизации, которые предоставляют библиотеку типов.
+
+[COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
+Исключение, полученный в результате ошибки во время процесса OLE-автоматизации. Автоматизации исключения, порождаемые серверы автоматизации и перехватываются клиенты автоматизации.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../mfc/class-library-overview.md)
 

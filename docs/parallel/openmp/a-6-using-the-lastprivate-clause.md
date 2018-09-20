@@ -1,5 +1,5 @@
 ---
-title: С помощью lastprivate предложение A.6 | Документы Microsoft
+title: A.6 использование предложения lastprivate | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec6ddc46aab36671e767963e5aaf6e25c4d25cd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 03d18d3aaf5c5d1cbe03282710ae4f4e2bb613f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690547"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390583"
 ---
 # <a name="a6---using-the-lastprivate-clause"></a>A.6   Использование предложения lastprivate
-Иногда для правильного выполнения зависит от значения, последней итерации цикла присваивается переменной. Такие программы необходимо перечислить все переменные, такие как аргументы для `lastprivate` предложение ([раздел 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) на стр.), чтобы значения переменных совпадают при последовательного выполнения цикла.  
-  
-```  
-#pragma omp parallel  
-{  
-   #pragma omp for lastprivate(i)  
-      for (i=0; i<n-1; i++)  
-         a[i] = b[i] + b[i+1];  
-}  
-a[i]=b[i];  
-```  
-  
- В предыдущем примере значение `i` в конце параллельной области будут равны `n-1`, как в случае последовательного.
+
+Иногда для правильного выполнения зависит от значения, последней итерации цикла присваивается переменной. Таких программ должен перечислить все такие переменные в качестве аргументов `lastprivate` предложение ([разделе 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) на стр. 27) таким образом, значения переменных так же, как при выполнении цикла последовательно.
+
+```
+#pragma omp parallel
+{
+   #pragma omp for lastprivate(i)
+      for (i=0; i<n-1; i++)
+         a[i] = b[i] + b[i+1];
+}
+a[i]=b[i];
+```
+
+В предыдущем примере, значение `i` в конце параллельной области будут равны `n-1`, как показано в последовательном.

@@ -1,5 +1,5 @@
 ---
-title: Сопоставление сообщений Windows с классом | Документы Microsoft
+title: Сопоставление сообщений Windows с классом | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 398888a858165197c6e35be791169a9311f3014b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e5c51cfccfa360b7f677ca3a30b7a05e0d4a799
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346273"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374468"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Сопоставление сообщений Windows с классом
-Если вам требуется диалоговое для обработки сообщений Windows, заменяют функции, соответствующий обработчик. Чтобы сделать это, используйте окно свойств для [сопоставление сообщений](../mfc/reference/mapping-messages-to-functions.md) в класс диалоговых окон. Производит запись в схеме сообщений для каждого сообщения. при этом добавляет обработчик сообщений функции-члены класса. Используйте редактор исходного кода Visual C++ для написания кода в обработчике сообщений.  
-  
- Можно также переопределить функции-члены [CDialog](../mfc/reference/cdialog-class.md) и его базовых классов, особенно [CWnd](../mfc/reference/cwnd-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
-  
--   [Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)  
-  
--   [Часто переопределяемые функции-члены](../mfc/commonly-overridden-member-functions.md)  
-  
--   [Часто добавляемые функции-члены](../mfc/commonly-added-member-functions.md)  
-  
-## <a name="see-also"></a>См. также  
- [Диалоговые окна](../mfc/dialog-boxes.md)   
- [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)
+
+Если вам нужна диалогового окна для обработки сообщений Windows, переопределяют функции соответствующий обработчик. Чтобы сделать это, используйте окно свойств для [сопоставление сообщений](../mfc/reference/mapping-messages-to-functions.md) в класс диалоговых окон. Это производит запись схемы сообщений для каждого сообщения и добавляет функции-члены обработчика сообщений для класса. Используйте редактор исходного кода Visual C++ для написания кода в обработчике сообщений.
+
+Можно также переопределить функции-члены [CDialog](../mfc/reference/cdialog-class.md) и его базовых классов, особенно [CWnd](../mfc/reference/cwnd-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+
+- [Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)
+
+- [Часто переопределяемые функции-члены](../mfc/commonly-overridden-member-functions.md)
+
+- [Часто добавляемые функции-члены](../mfc/commonly-added-member-functions.md)
+
+## <a name="see-also"></a>См. также
+
+[Диалоговые окна](../mfc/dialog-boxes.md)<br/>
+[Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)
 

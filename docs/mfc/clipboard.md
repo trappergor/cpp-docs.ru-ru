@@ -1,5 +1,5 @@
 ---
-title: Буфер обмена | Документы Microsoft
+title: Буфер обмена | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2ad21bcbff31335f6ec79a4527ef7d99e07e547
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48315b3608a5e66c2f94e1b06a038772dbb25bb4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341108"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380494"
 ---
 # <a name="clipboard"></a>буфер обмена
-Этот сборник статей способы реализации поддержки в буфер обмена Windows в приложениях MFC. В буфер обмена Windows используется двумя способами:  
-  
--   Реализация стандартных команд в меню, например, Вырезать, копировать и вставить.  
-  
--   Реализация универсального данных передачи с помощью перетаскивания и drop (OLE).  
-  
- Буфер обмена является стандартным Windows, переноса данных между источником и назначением. Также можно использовать в операциях OLE. С появлением OLE имеется два механизма буфера обмена в Windows. Стандартный API-Интерфейс буфер обмена Windows по-прежнему доступен, но она была дополнена механизм передачи данных OLE. Передача универсального данных OLE (UDT) поддерживает операции вырезания, копирования и с помощью буфера обмена и перетащите.  
-  
- Буфер обмена — это системная служба, совместно использоваться всего сеанса Windows, поэтому он не имеет дескриптор или свой собственный класс. Управление буфера обмена посредством функции-члены класса [CWnd](../mfc/reference/cwnd-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
-  
--   [Использование механизма буфера обмена](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
-  
--   [С помощью традиционных API буфера обмена Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
--   [Использование механизма буфера обмена OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [Копирование и вставка данных](../mfc/clipboard-copying-and-pasting-data.md)  
-  
--   [Добавление других форматов](../mfc/clipboard-adding-other-formats.md)  
-  
--   [В буфер обмена Windows](https://msdn.microsoft.com/library/ms648709)  
-  
--   [Реализация перетаскивание (OLE)](../mfc/drag-and-drop-ole.md)  
-  
-## <a name="see-also"></a>См. также  
- [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)
+
+Этот сборник статей описываются способы реализации поддержки в буфер обмена Windows в приложениях MFC. В буфер обмена Windows используется двумя способами:
+
+- Реализация стандартных команд в меню, таких как операции вырезания, копирования и вставки.
+
+- Реализация универсальный данных передачи с помощью перетаскивания и drop (OLE).
+
+Буфер обмена — это стандартный метод Windows передачи данных между источником и назначением. Также может быть полезным при операции OLE. С появлением OLE существует два механизма буфера обмена в Windows. Стандартный API буфера обмена Windows по-прежнему доступна, но она была дополнена механизм передачи данных OLE. Передача OLE универсальный данных (UDT) поддерживает операции вырезания, копирования и вставки с буфером обмена и перетащите.
+
+Буфер обмена — это системная служба, совместно используется весь сеанс Windows, поэтому он не имеет дескриптор или свой собственный класс. Вы управляете буфере посредством функции-члены класса [CWnd](../mfc/reference/cwnd-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+
+- [Использование механизма буфера обмена](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)
+
+- [С помощью традиционных API буфера обмена Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+
+- [Использование механизма буфера обмена OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [Копирование и вставка данных](../mfc/clipboard-copying-and-pasting-data.md)
+
+- [Добавление других форматов](../mfc/clipboard-adding-other-formats.md)
+
+- [В буфер обмена Windows](https://msdn.microsoft.com/library/ms648709)
+
+- [Реализация перетаскивание (OLE)](../mfc/drag-and-drop-ole.md)
+
+## <a name="see-also"></a>См. также
+
+[Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)

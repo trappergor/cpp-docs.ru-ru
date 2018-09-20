@@ -30,146 +30,166 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ea84af41178316085a903d2663ded74ee57c99a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716174"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389750"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Класс CMFCPropertyGridToolTipCtrl
-Реализует подсказку, управления, [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) используется для отображения подсказки.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class CMFCPropertyGridToolTipCtrl : public CWnd  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|||  
-|-|-|  
-|Имя|Описание|  
-|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Создает объект `CMFCPropertyGridToolTipCtrl`.|  
-|`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Деструктор.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|||  
-|-|-|  
-|Имя|Описание|  
-|[CMFCPropertyGridToolTipCtrl::Create](#create)|Создает окно для элемента управления tooltip.|  
-|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Отключает и скрывает элемент управления tooltip.|  
-|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Возвращает координаты последней позиции элемента управления tooltip.|  
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Скрывает элемент управления tooltip.|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Задает расстояние между текстом всплывающей подсказки и границы окна всплывающей подсказки.|  
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|Отображает элемент управления tooltip.|  
-  
-## <a name="remarks"></a>Примечания  
- Всплывающие подсказки отображаются при наведении указателя на имя свойства. [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) класс отображает подсказку, так как это читаемые пользователем. Как правило положение всплывающей подсказки определяется положением указателя. С помощью этого класса, подсказка отображается над имя свойства и напоминает расширение естественным свойство, так что имя свойства становится полностью видимым.  
-  
- MFC автоматически создает этот элемент управления и использует его в [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует создание объекта класса `CMFCPropertyGridToolTipCtrl` , а также для отображения элемента управления tooltip.  
-  
- [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxpropertygridtooltipctrl.h  
-  
-##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
- Создает объект `CMFCPropertyGridToolTipCtrl`.  
-  
-```  
+
+Реализует подсказку, управления, [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) используется для отображения подсказки.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+class CMFCPropertyGridToolTipCtrl : public CWnd
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|||
+|-|-|
+|Имя|Описание|
+|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Создает объект `CMFCPropertyGridToolTipCtrl`.|
+|`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Деструктор.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|||
+|-|-|
+|Имя|Описание|
+|[CMFCPropertyGridToolTipCtrl::Create](#create)|Создает окно для элемента управления tooltip.|
+|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Отключает и скрывает элемент управления tooltip.|
+|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Возвращает координаты последней позиции элемента управления tooltip.|
+|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Скрывает элемент управления tooltip.|
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Задает расстояние между текстом всплывающей подсказки и границы окна всплывающей подсказки.|
+|[CMFCPropertyGridToolTipCtrl::Track](#track)|Отображает элемент управления tooltip.|
+
+## <a name="remarks"></a>Примечания
+
+Всплывающие подсказки отображаются при наведении указателя на имя свойства. [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) класс отображает подсказку, так как это читаемые пользователем. Как правило положение всплывающей подсказки определяется положением указателя. С помощью этого класса, подсказка отображается над имя свойства и напоминает расширение естественным свойство, так что имя свойства становится полностью видимым.
+
+MFC автоматически создает этот элемент управления и использует его в [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример демонстрирует создание объекта класса `CMFCPropertyGridToolTipCtrl` , а также для отображения элемента управления tooltip.
+
+[!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxpropertygridtooltipctrl.h
+
+##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
+
+Создает объект `CMFCPropertyGridToolTipCtrl`.
+
+```
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
-```  
-  
-##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create  
- Создает окно для элемента управления tooltip.  
-  
-```  
+```
+
+##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create
+
+Создает окно для элемента управления tooltip.
+
+```
 BOOL Create(CWnd* pWndParent);
-```  
-  
-### <a name="parameters"></a>Параметры  
+```
+
+### <a name="parameters"></a>Параметры
+
 *pWndParent*<br/>
-[in] Указатель на родительское окно.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если окно был успешно создан; в противном случае — значение FALSE.  
-  
-##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
- Отключает и скрывает элемент управления tooltip.  
-  
-```  
+[in] Указатель на родительское окно.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение TRUE, если окно был успешно создан; в противном случае — значение FALSE.
+
+##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate
+
+Отключает и скрывает элемент управления tooltip.
+
+```
 void Deactivate();
-```  
-  
-### <a name="remarks"></a>Примечания  
- Этот метод задает положение и текст последнего пустых значениях необходимо знать, таким образом, чтобы вызовы будущего [CMFCPropertyGridToolTipCtrl::Track](#track) отображения всплывающей подсказки.  
-  
-##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
- Возвращает координаты последней позиции элемента управления tooltip.  
-  
-```  
-void GetLastRect(CRect& rect) const;  
-```  
-  
-### <a name="parameters"></a>Параметры  
+```
+
+### <a name="remarks"></a>Примечания
+
+Этот метод задает положение и текст последнего пустых значениях необходимо знать, таким образом, чтобы вызовы будущего [CMFCPropertyGridToolTipCtrl::Track](#track) отображения всплывающей подсказки.
+
+##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect
+
+Возвращает координаты последней позиции элемента управления tooltip.
+
+```
+void GetLastRect(CRect& rect) const;
+```
+
+### <a name="parameters"></a>Параметры
+
 *Rect*<br/>
-[out] Содержит последней позиции элемента управления tooltip.  
-  
-##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
- Скрывает элемент управления tooltip.  
-  
-```  
+[out] Содержит последней позиции элемента управления tooltip.
+
+##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide
+
+Скрывает элемент управления tooltip.
+
+```
 void Hide();
-```  
-  
-##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
- Задает расстояние между текстом всплывающей подсказки и границы окна всплывающей подсказки.  
-  
-```  
+```
+
+##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin
+
+Задает расстояние между текстом всплывающей подсказки и границы окна всплывающей подсказки.
+
+```
 void SetTextMargin(int nTextMargin);
-```  
-  
-### <a name="parameters"></a>Параметры  
+```
+
+### <a name="parameters"></a>Параметры
+
 *nTextMargin*<br/>
-[in] Задает расстояние между текст всплывающей подсказки элемента управления и границей окна всплывающей подсказки. Значение по умолчанию — 10 пикселей.  
-  
-##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
- Отображает элемент управления tooltip.  
-  
-```  
+[in] Задает расстояние между текст всплывающей подсказки элемента управления и границей окна всплывающей подсказки. Значение по умолчанию — 10 пикселей.
+
+##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track
+
+Отображает элемент управления tooltip.
+
+```
 void Track(
-    CRect rect,  
+    CRect rect,
     const CString& strText);
-```  
-  
-### <a name="parameters"></a>Параметры  
+```
+
+### <a name="parameters"></a>Параметры
+
 *Rect*<br/>
-[in] Указывает положение и размер элемента управления tooltip.  
-  
+[in] Указывает положение и размер элемента управления tooltip.
+
 *strText*<br/>
-[in] Задает текст, отображаемый во всплывающей подсказке.  
-  
-### <a name="remarks"></a>Примечания  
- Этот метод отображает элемент управления всплывающей подсказки в положение и размер, указанный параметром *rect*. Если позиция, размер и текст не изменились с момента последнего этот метод был вызван, этот метод не действует.  
-  
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)
+[in] Задает текст, отображаемый во всплывающей подсказке.
+
+### <a name="remarks"></a>Примечания
+
+Этот метод отображает элемент управления всплывающей подсказки в положение и размер, указанный параметром *rect*. Если позиция, размер и текст не изменились с момента последнего этот метод был вызван, этот метод не действует.
+
+## <a name="see-also"></a>См. также
+
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Классы](../../mfc/reference/mfc-classes.md)

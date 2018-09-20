@@ -1,5 +1,5 @@
 ---
-title: 'Исключения: Анализ содержимого исключений | Документы Microsoft'
+title: 'Исключения: Анализ содержимого исключений | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c7453b92ce14fbbcd20ea0f9a8bd8a7a2b5b6d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f5fb0df0c16e9aea2f334b6c08f92a3bef4ea486
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932238"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378390"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Исключения. Анализ содержимого исключений
-Несмотря на то что **перехватывать** блока аргумент может быть практически любого типа данных, типов, производных от класса исключения функции MFC `CException`. Чтобы перехватить исключение, создаваемое с помощью функции MFC, затем можно написать **перехватывать** блока, чей аргумент — указатель для `CException` объекта (или объект, производный от `CException`, такие как `CMemoryException`). В зависимости от точного типа исключения можно изучить данные элементы объекта исключения для сбора сведений о конкретной причины исключения.  
-  
- Например `CFileException` тип имеет `m_cause` член данных, который содержит тип перечисления, указывающее причину исключения файлов. Некоторые примеры возможные возвращаемые значения `CFileException::fileNotFound` и `CFileException::readOnly`.  
-  
- В следующем примере показано, как проверять содержимое `CFileException`. Аналогичным образом можно просмотреть другие типы исключений.  
-  
- [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]  
-  
- Дополнительные сведения см. в разделе [исключения: освобождение объектов в исключениях](../mfc/exceptions-freeing-objects-in-exceptions.md) и [исключений: исключения перехвата и удаление](../mfc/exceptions-catching-and-deleting-exceptions.md).  
-  
-## <a name="see-also"></a>См. также  
- [Обработка исключений](../mfc/exception-handling-in-mfc.md)
+
+Несмотря на то что **catch** блока аргумент может быть практически любого типа данных, функции MFC вызывать исключения типов, производных от класса `CException`. Для перехвата исключения, созданного с помощью функции MFC, затем можно написать **catch** блок, чей аргумент является указателем на `CException` объекта (или объекта, производного от `CException`, такие как `CMemoryException`). В зависимости от точного типа исключения можно просмотреть элементы данных объекта исключения для сбора сведений о конкретную причину исключения.
+
+Например `CFileException` тип имеет `m_cause` элемент данных, который содержит перечисление, указывающее причину исключения «файл». Некоторые примеры возможные возвращаемые значения `CFileException::fileNotFound` и `CFileException::readOnly`.
+
+В следующем примере показано, как изучение содержимого `CFileException`. Аналогичным образом можно проверить другие типы исключений.
+
+[!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
+
+Дополнительные сведения см. в разделе [исключения: освобождение объектов в исключениях](../mfc/exceptions-freeing-objects-in-exceptions.md) и [исключений: исключения для перехвата и удаление](../mfc/exceptions-catching-and-deleting-exceptions.md).
+
+## <a name="see-also"></a>См. также
+
+[Обработка исключений](../mfc/exception-handling-in-mfc.md)
 

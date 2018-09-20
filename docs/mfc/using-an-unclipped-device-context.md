@@ -1,5 +1,5 @@
 ---
-title: Использование Необрезанного контекста устройства | Документы Microsoft
+title: Использование Необрезанного контекста устройства | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d4fcfbe8e8e7eb174f85ced03bec822b4968bde
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 479009865fe9fd226466059382456f403e90c18a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389594"
 ---
 # <a name="using-an-unclipped-device-context"></a>Использование необрезанного контекста устройства
-Если имеется полная уверенность, элемент управления не рисовать за пределами его клиентской прямоугольной области, можно значительно прирост скорости небольшой, но обнаруживаются, отключив вызов `IntersectClipRect` , внесенных `COleControl`. Чтобы сделать это, удалите *clipPaintDC* флаг с набором флагов, возвращенных [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Пример:  
-  
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]  
-  
- При выборе автоматически создается код, чтобы удалить этот флаг **Необрезанного контекста устройства** параметр [параметры управления](../mfc/reference/control-settings-mfc-activex-control-wizard.md) страницы, при создании элемента управления с помощью мастера элементов управления ActiveX MFC.  
-  
- При использовании активации без окна Данная оптимизация не оказывает влияния.  
-  
-## <a name="see-also"></a>См. также  
- [Элементы ActiveX в MFC. Оптимизация](../mfc/mfc-activex-controls-optimization.md)
+
+Если имеется полная уверенность, элемент управления не рисовать за пределами его клиентской прямоугольной области, можно получить прирост скорости небольшую, но выявляемых при отключение вызова `IntersectClipRect` , сделанных `COleControl`. Чтобы сделать это, удалите *clipPaintDC* флаг из набора флагов, возвращенный [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Пример:
+
+[!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]
+
+При выборе, автоматически создается код, чтобы удалить этот флаг **Необрезанного контекста устройства** параметр [параметры управления](../mfc/reference/control-settings-mfc-activex-control-wizard.md) странице, при создании элемента управления с помощью мастера элементов управления ActiveX MFC.
+
+Если вы используете активации без окна, эта оптимизация не оказывает влияния.
+
+## <a name="see-also"></a>См. также
+
+[Элементы ActiveX в MFC. Оптимизация](../mfc/mfc-activex-controls-optimization.md)
 

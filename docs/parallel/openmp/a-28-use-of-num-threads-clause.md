@@ -1,5 +1,5 @@
 ---
-title: Использование предложения num_threads A.28 | Документы Microsoft
+title: A.28 использование предложения num_threads | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,25 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12289192d056acac684f28712ccf2aa1423b6c3e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0fb0111645e1dba42fdd3fa28a885d1ce179ef6f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689120"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387923"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   Использование предложения num_threads
-В следующем примере демонстрируется `num_threads` предложение ([разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8). Более 10 потоков выполняется параллельной области.  
-  
-```  
-#include <omp.h>  
-main()  
-{  
-    omp_set_dynamic(1);  
-    ...  
-    #pragma omp parallel num_threads(10)  
-    {  
-        ... parallel region ...  
-    }  
-}  
+
+В следующем примере демонстрируется `num_threads` предложение ([разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице "8"). Область параллельной обработки выполняется не более 10 потоков.
+
+```
+#include <omp.h>
+main()
+{
+    omp_set_dynamic(1);
+    ...
+    #pragma omp parallel num_threads(10)
+    {
+        ... parallel region ...
+    }
+}
 ```

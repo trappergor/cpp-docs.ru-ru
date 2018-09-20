@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aa64b7b4785f8865a372a256ecc5c9d3f8738dcb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717123"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385863"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -41,16 +41,16 @@ ms.locfileid: "45717123"
 
 #### <a name="parameters"></a>Параметры
 
-*db_table*  
+*db_table*<br/>
 Строка, указывающая имя таблицы базы данных (например, «продукты»).
 
-*name*  
+*name*<br/>
 (Необязательно) Имя дескриптора, который можно использовать для работы с таблицей. Необходимо указать этот параметр, если вы хотите вернуть более одной строки результатов. **db_table** создает переменную с указанным *имя* , может использоваться для просмотра набора строк или выполнения нескольких запросов.
 
-*source_name*  
+*source_name*<br/>
 (Необязательно) `CSession` Переменной или экземпляр класса, который имеет `db_source` атрибут, примененный к нему, на котором выполняется команда. См. описание [db_source](../windows/db-source.md).
 
-*значение HRESULT*  
+*значение HRESULT*<br/>
 (Необязательно) Определяет переменную, которая будет получать значение HRESULT, равное этой команды базы данных. Если переменная не существует, она будет автоматически внедрена с помощью атрибута.
 
 ## <a name="remarks"></a>Примечания

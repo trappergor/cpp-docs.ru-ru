@@ -1,5 +1,5 @@
 ---
-title: Переход TypeOf в T::typeid | Документы Microsoft
+title: Переход TypeOf в T::typeid | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0ae9f772a68735555748e6edbeb6196f1a73d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4433061fceef455685b6588c81c8c2e434253433
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164522"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374683"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>Переход typeof в T::typeid
-`typeof` Оператор, используемый в управляемых расширениях для C++ причинах замещения `typeid` ключевого слова в Visual C++.  
-  
- В управляемых расширениях `__typeof()` оператор возвращает связанный `Type*` объекта при передаче ему имени управляемого типа. Пример:  
-  
-```  
-// Creates and initializes a new Array instance.  
-Array* myIntArray =   
-   Array::CreateInstance( __typeof(Int32), 5 );  
-```  
-  
- В новом синтаксисе `__typeof` будет заменен дополнительной формы `typeid` , возвращающий `Type^` при указании управляемого типа.  
-  
-```  
-// Creates and initializes a new Array instance.  
-Array^ myIntArray =   
-   Array::CreateInstance( Int32::typeid, 5 );  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Общие изменения в языке (C + +/ CLI)](../dotnet/general-language-changes-cpp-cli.md)   
- [typeid](../windows/typeid-cpp-component-extensions.md)
+
+`typeof` Оператор, используемый в управляемых расширениях для C++ были заменены `typeid` ключевого слова в Visual C++.
+
+В управляемых расширениях `__typeof()` оператор возвращает связанный `Type*` объекта при передаче имени управляемого типа. Пример:
+
+```
+// Creates and initializes a new Array instance.
+Array* myIntArray =
+   Array::CreateInstance( __typeof(Int32), 5 );
+```
+
+В новом синтаксисе `__typeof` был заменен классом дополнительной формы `typeid` , возвращающий `Type^` при указании управляемый тип.
+
+```
+// Creates and initializes a new Array instance.
+Array^ myIntArray =
+   Array::CreateInstance( Int32::typeid, 5 );
+```
+
+## <a name="see-also"></a>См. также
+
+[Общие изменения в языке (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)<br/>
+[typeid](../windows/typeid-cpp-component-extensions.md)

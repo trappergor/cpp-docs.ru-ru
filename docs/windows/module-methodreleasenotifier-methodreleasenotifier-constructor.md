@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62f136fb9aac184d6ca81314aafea270e7b33a87
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 608a885eb446860cca43e5fabd19597d7611e633
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583875"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386826"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Конструктор Module::MethodReleaseNotifier::MethodReleaseNotifier
 
@@ -41,13 +41,13 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>Параметры
 
-*object*  
+*object*<br/>
 Объект, функция-член которого является обработчиком событий.
 
-*Метод*  
+*Метод*<br/>
 Функция-член параметра *объект* то есть обработчик событий.
 
-*release*  
+*release*<br/>
 Укажите **true** для включения вызова базового [модуль:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) метода; в противном случае укажите **false**.
 
 ## <a name="requirements"></a>Требования

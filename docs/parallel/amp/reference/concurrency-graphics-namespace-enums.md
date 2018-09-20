@@ -1,5 +1,5 @@
 ---
-title: Перечисления пространство имен Concurrency::Graphics | Документы Microsoft
+title: Перечисления пространства имен Concurrency::Graphics | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,33 +13,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbb02becbcfebf935107acb85ae3991476b67796
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b5c66771c9b27d568e32f7d4a361586ff5a62da9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695451"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384979"
 ---
-# <a name="concurrencygraphics-namespace-enums"></a>Перечисления пространство имен Concurrency::Graphics
-|||  
-|-|-|  
-|[Перечисление _mode](#address_mode)|[Перечисление filter_mode](#filter_mode)|  
-  
-##  <a name="address_mode"></a>  Перечисление address_mode  
- Для обозначения адреса режимов, поддерживаемых для дискретизации текстур используется тип перечисления.  
-  
-```  
-enum address_mode;  
-```  
-  
-##  <a name="filter_mode"></a>  Перечисление filter_mode  
- Для обозначения режимы фильтрации, поддерживаемые для дискретизации текстур используется тип перечисления.  
-  
-```  
-enum filter_mode;  
-```  
+# <a name="concurrencygraphics-namespace-enums"></a>Перечисления пространства имен Concurrency::Graphics
+
+|||
+|-|-|
+|[_режим перечисления](#address_mode)|[Перечисление filter_mode](#filter_mode)|
+
+##  <a name="address_mode"></a>  Перечисление address_mode
+
+Тип перечисления, используемый для указания режимов адресации, поддерживаемые для дискретизации текстур.
+
+```
+enum address_mode;
+```
+
+##  <a name="filter_mode"></a>  Перечисление filter_mode
+
+Тип перечисления, используемый для указания режимов фильтрации, поддерживаемые для дискретизации текстур.
+
+```
+enum filter_mode;
+```
 ## <a name="requirements"></a>Требования
+
 **Заголовок:** amp_graphics.h **пространство имен:** Concurrency::graphics
 
-## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
+## <a name="see-also"></a>См. также
+
+[Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

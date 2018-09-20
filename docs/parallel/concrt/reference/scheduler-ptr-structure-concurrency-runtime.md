@@ -18,90 +18,99 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd15238408f90f268a5fea96635136077c795779
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ea128a6122bf69735d118045eef2e8d8e323f8de
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059112"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393424"
 ---
 # <a name="schedulerptr-structure"></a>Структура scheduler_ptr
-Представляет указатель на планировщик. Этот класс существует в том, чтобы разрешить в спецификации общего времени жизни путем применения shared_ptr или простой ссылки с помощью необработанного указателя.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+Представляет указатель на планировщик. Этот класс существует в том, чтобы разрешить в спецификации общего времени жизни путем применения shared_ptr или простой ссылки с помощью необработанного указателя.
+
+## <a name="syntax"></a>Синтаксис
+
 ```
 struct scheduler_ptr;
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[scheduler_ptr::scheduler_ptr](#ctor)|Перегружен. Создает указатель планировщика из shared_ptr планировщику|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[scheduler_ptr::get](#get)|Возвращает необработанный указатель планировщику|  
-  
-### <a name="public-operators"></a>Открытые операторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[scheduler_ptr::operator bool](#operator_bool)|Проверьте, является ли указатель планировщика отличным от null|  
-|[scheduler_ptr::operator-&gt;](#operator_ptr)|Поведение, как у указателя|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- `scheduler_ptr`  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** pplinterface.h  
-  
- **Пространство имен:** concurrency  
-  
-##  <a name="get"></a>  Метод scheduler_ptr::Get  
- Возвращает необработанный указатель планировщику  
-  
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[scheduler_ptr::scheduler_ptr](#ctor)|Перегружен. Создает указатель планировщика из shared_ptr планировщику|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[scheduler_ptr::get](#get)|Возвращает необработанный указатель планировщику|
+
+### <a name="public-operators"></a>Открытые операторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[scheduler_ptr::operator bool](#operator_bool)|Проверьте, является ли указатель планировщика отличным от null|
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|Поведение, как у указателя|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+`scheduler_ptr`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** pplinterface.h
+
+**Пространство имен:** concurrency
+
+##  <a name="get"></a>  Метод scheduler_ptr::Get
+
+Возвращает необработанный указатель планировщику
+
 ```
 scheduler_interface* get() const;
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
-  
-##  <a name="operator_bool"></a>  scheduler_ptr::operator bool   
- Проверьте, является ли указатель планировщика отличным от null  
-  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+##  <a name="operator_bool"></a>  scheduler_ptr::operator bool
+
+Проверьте, является ли указатель планировщика отличным от null
+
 '''operator bool() const;
-```  
-  
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
- Behave like a pointer  
-  
+```
+
+##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
+
+Behave like a pointer
+
 ```
 scheduler_interface * operator -> () const;
-```  
-  
-### Return Value  
-  
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor  
- Creates a scheduler pointer from shared_ptr to scheduler  
-  
+```
+
+### Return Value
+
+##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
+
+Creates a scheduler pointer from shared_ptr to scheduler
+
 ```
 явные scheduler_ptr (планировщика std::shared_ptr < scheduler_interface >);
 
 явные scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
-```  
-  
-### Parameters  
+```
+
+### Parameters
+
 *scheduler*<br/>
 The scheduler to convert.
 
 *pScheduler*<br/>
 The scheduler pointer to convert.
-  
-## See Also  
- [concurrency Namespace](concurrency-namespace.md)
+
+## See Also
+
+[concurrency Namespace](concurrency-namespace.md)

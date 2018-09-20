@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbd42d3d51921ccab01dfdcaed9ad988e22ae9a8
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894711"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382223"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Использование проверяемых сборок вместе с SQL Server (C++/CLI)
 
@@ -42,19 +42,20 @@ SQL Server предоставляет расширения языка Transact-S
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
   PERMISSION_SET <permissions>
 DROP ASSEMBLY <assemblyName>
-```  
+```
 
 Команда PERMISSION_SET определяет контекст безопасности и может иметь значения, не ОГРАНИЧЕНО, SAFE или РАСШИРЕННЫЙ.
 
 Кроме того можно использовать команду CREATE FUNCTION для привязки к имена методов в классе:
 
 ```sql
-CREATE FUNCTION <FunctionName>(<FunctionParams>)  
+CREATE FUNCTION <FunctionName>(<FunctionParams>)
 RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]
-```  
+```
 
 ## <a name="example"></a>Пример
+
 Следующий скрипт SQL (например, под названием «MyScript.sql») загружает сборку в SQL Server и открывает доступ к методу класса:
 
 ```sql
@@ -69,23 +70,23 @@ with permission_set safe
 -- Create function on assembly with no external access
 drop function GetQuoteNoEA
 go
-create function GetQuoteNoEA(@sym nvarchar(10))  
+create function GetQuoteNoEA(@sym nvarchar(10))
 returns real
 external name stockNoEA:StockQuotes::GetQuote
 go
 
 -- To call the function
-select dbo.GetQuoteNoEA('MSFT')  
+select dbo.GetQuoteNoEA('MSFT')
 go
-```  
+```
 
 Скрипты SQL могут быть выполнены в интерактивном режиме, в анализаторе запросов SQL или в командной строке с помощью программы sqlcmd.exe. Следующая командная строка подключения к серверу MyServer, использует базу данных по умолчанию, использует доверительное соединение, вводов MyScript.sql и выводов MyResult.txt.
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
-```  
+```
 
 ## <a name="see-also"></a>См. также
 
-[Практическое: перенос в/CLR: safe (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+[Практическое: перенос в/CLR: safe (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
 [Классы и структуры](../cpp/classes-and-structs-cpp.md)

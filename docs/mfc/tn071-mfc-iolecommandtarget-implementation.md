@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d8d4b0f740e69b57944cb35f2213ae0fd54b511
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221398"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386292"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: Реализация IOleCommandTarget в MFC
 
@@ -59,11 +59,11 @@ DECLARE_OLECMD_MAP ()
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*theClass*  
- Имя класса, содержащего схему команды.
+*theClass*<br/>
+Имя класса, содержащего схему команды.
 
-*baseClass*  
- Имя класса базового класса, содержащего схему команды.
+*baseClass*<br/>
+Имя класса базового класса, содержащего схему команды.
 
 Этот макрос отмечает начало карты команды. Используйте этот макрос в файле реализации для класса, содержащего схему команды.
 
@@ -77,14 +77,14 @@ END_OLECMD_MAP()
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- Указатель на идентификатор GUID группы команд команду OLE. Этот параметр является **NULL** для стандартной группы команды OLE.
+*pguid*<br/>
+Указатель на идентификатор GUID группы команд команду OLE. Этот параметр является **NULL** для стандартной группы команды OLE.
 
-*olecmdid*  
- Идентификатор команды OLE команды для вызова.
+*olecmdid*<br/>
+Идентификатор команды OLE команды для вызова.
 
-*id*  
- Идентификатор сообщения WM_COMMAND отправки на приложения, содержащего карту команды при вызове этой команды OLE.
+*id*<br/>
+Идентификатор сообщения WM_COMMAND отправки на приложения, содержащего карту команды при вызове этой команды OLE.
 
 On_olecmd-макрос в сопоставлении команду можно используйте для добавления записи для команды OLE, которые необходимо обработать. При получении команд OLE, они будут преобразованы в указанное сообщение WM_COMMAND и направляться через схему сообщений приложения, с помощью стандартной архитектуры маршрутизация команд MFC.
 
@@ -158,5 +158,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>См. также
 
-[Технические примечания по номеру](../mfc/technical-notes-by-number.md)  
-[Технические примечания по категории](../mfc/technical-notes-by-category.md)  
+[Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
+[Технические примечания по категории](../mfc/technical-notes-by-category.md)

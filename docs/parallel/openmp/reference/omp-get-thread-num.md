@@ -1,5 +1,5 @@
 ---
-title: omp_get_thread_num | Документы Microsoft
+title: omp_get_thread_num | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d28b64b56ed501b47881fd9e3ba2bd2e8817e9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 42b95941e7853ec9bba830f5f5b37c0ed73b3548
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690742"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384709"
 ---
 # <a name="ompgetthreadnum"></a>omp_get_thread_num
-Возвращает количество потоков потока, выполняющегося в его команде потока.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int omp_get_thread_num( );  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [3.1.4 функция omp_get_thread_num](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md).  
-  
-## <a name="example"></a>Пример  
- В разделе [параллельных](../../../parallel/openmp/reference/parallel.md) пример использования `omp_get_thread_num`.  
-  
-## <a name="see-also"></a>См. также  
- [Функции](../../../parallel/openmp/reference/openmp-functions.md)
+
+Возвращает количество потоков потока, выполняющегося в его поток команды.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+int omp_get_thread_num( );
+```
+
+## <a name="remarks"></a>Примечания
+
+Дополнительные сведения см. в разделе [3.1.4 функция omp_get_thread_num](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md).
+
+## <a name="example"></a>Пример
+
+См. в разделе [параллельных](../../../parallel/openmp/reference/parallel.md) пример использования `omp_get_thread_num`.
+
+## <a name="see-also"></a>См. также
+
+[Функции](../../../parallel/openmp/reference/openmp-functions.md)

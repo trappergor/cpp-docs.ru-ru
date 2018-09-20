@@ -1,5 +1,5 @@
 ---
-title: 'Как: определить, является ли изображение машинный код или CLR | Документы Microsoft'
+title: 'Как: определить, является ли изображение машинный код или среда CLR | Документация Майкрософт'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,76 +18,79 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 71b13c1f82f233589102c72ed08a731db7de5c56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fb16fc3dfce2423b1d5d5b3b0e6249ac4824e7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33128229"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393013"
 ---
 # <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Практическое руководство. Машинный код или среда CLR: определение цели созданного изображения
-Чтобы определить, было ли изображение создано для общеязыковая среда выполнения является использование **dumpbin**[параметр/CLRHEADER](../build/reference/clrheader.md).  
-  
- Можно также программным путем проверять, было ли изображение создано для среды CLR. Дополнительные сведения см. в разделе [как: обнаружение/CLR компиляция](../dotnet/how-to-detect-clr-compilation.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример определяет, было ли изображение создано для выполнения в среде CLR.  
-  
-```  
-// detect_image_type.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::IO;  
-  
-enum class CompilationMode {Invalid, Native, CLR };  
-  
-static CompilationMode IsManaged(String^ filename) {  
-   try {  
-      array<Byte>^ data = gcnew array<Byte>(4096);  
-      FileInfo^ file = gcnew FileInfo(filename);  
-      Stream^ fin = file->Open(FileMode::Open, FileAccess::Read);  
-      Int32 iRead = fin->Read(data, 0, 4096);  
-      fin->Close();  
-  
-      // Verify this is a executable/dll  
-      if ((data[1] << 8 | data[0]) != 0x5a4d)  
-         return CompilationMode::Invalid;  
-  
-      // This will get the address for the WinNT header  
-      Int32 iWinNTHdr = data[63]<<24 | data[62]<<16 | data[61] << 8 | data[60];  
-  
-      // Verify this is an NT address  
-      if ((data[iWinNTHdr+3] << 24 | data[iWinNTHdr+2] << 16 | data[iWinNTHdr+1] << 8 | data[iWinNTHdr]) != 0x00004550)  
-         return CompilationMode::Invalid;  
-  
-      Int32 iLightningAddr = iWinNTHdr + 24 + 208;  
-      Int32 iSum = 0;  
-      Int32 iTop = iLightningAddr + 8;  
-  
-      for (int i = iLightningAddr; i < iTop; ++i)  
-         iSum |= data[i];  
-  
-      if (iSum == 0)  
-         return CompilationMode::Native;  
-      else  
-         return CompilationMode::CLR;  
-   }  
-   catch(Exception ^e) {  
-      throw(e);  
-   }  
-}  
-  
-int main() {  
-   array<String^>^ args = Environment::GetCommandLineArgs();  
-  
-   if (args->Length < 2) {  
-      Console::WriteLine("USAGE : detect_clr <assembly_name>\n");  
-      return -1;  
-   }  
-  
-   Console::WriteLine("{0} is compiled {1}", args[1], IsManaged(args[1]));  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Один из способов определить, было ли изображение создано для среда CLR является использование **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).
+
+Можно также программным путем проверять, было ли изображение создано для среды CLR. Дополнительные сведения см. в разделе [как: обнаружение/CLR компиляция](../dotnet/how-to-detect-clr-compilation.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример определяет ли образ был создан для выполнения в среда CLR.
+
+```
+// detect_image_type.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::IO;
+
+enum class CompilationMode {Invalid, Native, CLR };
+
+static CompilationMode IsManaged(String^ filename) {
+   try {
+      array<Byte>^ data = gcnew array<Byte>(4096);
+      FileInfo^ file = gcnew FileInfo(filename);
+      Stream^ fin = file->Open(FileMode::Open, FileAccess::Read);
+      Int32 iRead = fin->Read(data, 0, 4096);
+      fin->Close();
+
+      // Verify this is a executable/dll
+      if ((data[1] << 8 | data[0]) != 0x5a4d)
+         return CompilationMode::Invalid;
+
+      // This will get the address for the WinNT header
+      Int32 iWinNTHdr = data[63]<<24 | data[62]<<16 | data[61] << 8 | data[60];
+
+      // Verify this is an NT address
+      if ((data[iWinNTHdr+3] << 24 | data[iWinNTHdr+2] << 16 | data[iWinNTHdr+1] << 8 | data[iWinNTHdr]) != 0x00004550)
+         return CompilationMode::Invalid;
+
+      Int32 iLightningAddr = iWinNTHdr + 24 + 208;
+      Int32 iSum = 0;
+      Int32 iTop = iLightningAddr + 8;
+
+      for (int i = iLightningAddr; i < iTop; ++i)
+         iSum |= data[i];
+
+      if (iSum == 0)
+         return CompilationMode::Native;
+      else
+         return CompilationMode::CLR;
+   }
+   catch(Exception ^e) {
+      throw(e);
+   }
+}
+
+int main() {
+   array<String^>^ args = Environment::GetCommandLineArgs();
+
+   if (args->Length < 2) {
+      Console::WriteLine("USAGE : detect_clr <assembly_name>\n");
+      return -1;
+   }
+
+   Console::WriteLine("{0} is compiled {1}", args[1], IsManaged(args[1]));
+}
+```
+
+## <a name="see-also"></a>См. также
+
+[Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

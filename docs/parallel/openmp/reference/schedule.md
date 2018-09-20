@@ -16,154 +16,158 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95811d262dc674a75ded45c621212c5f4c506213
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6da15e3e9f1efa401d830240f7929eaa0b53660d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068420"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375873"
 ---
 # <a name="schedule"></a>Расписание
-Применяется к [для](../../../parallel/openmp/reference/for-openmp.md) директива.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-schedule(type[,size])  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+Применяется к [для](../../../parallel/openmp/reference/for-openmp.md) директива.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+schedule(type[,size])
+```
+
+#### <a name="parameters"></a>Параметры
+
 *type*<br/>
-Тип расписания:  
-  
--   `dynamic`  
-  
--   `guided`  
-  
--   `runtime`  
-  
--   `static`  
-  
+Тип расписания:
+
+- `dynamic`
+
+- `guided`
+
+- `runtime`
+
+- `static`
+
 *size*<br/>
-(Необязательно) Указывает размер итераций. `size` должен быть целым числом. Не является допустимым, если `type` является `runtime`.  
-  
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [2.4.1 конструкция for](../../../parallel/openmp/2-4-1-for-construct.md).  
-  
-## <a name="example"></a>Пример  
-  
-```cpp  
-// omp_schedule.cpp  
-// compile with: /openmp   
-#include <windows.h>  
-#include <stdio.h>  
-#include <omp.h>  
-  
-#define NUM_THREADS 4  
-#define STATIC_CHUNK 5  
-#define DYNAMIC_CHUNK 5  
-#define NUM_LOOPS 20  
-#define SLEEP_EVERY_N 3  
-  
-int main( )   
-{  
-    int nStatic1[NUM_LOOPS],   
-        nStaticN[NUM_LOOPS];  
-    int nDynamic1[NUM_LOOPS],   
-        nDynamicN[NUM_LOOPS];  
-    int nGuided[NUM_LOOPS];  
-  
-    omp_set_num_threads(NUM_THREADS);  
-  
-    #pragma omp parallel  
-    {  
-        #pragma omp for schedule(static, 1)  
-        for (int i = 0 ; i < NUM_LOOPS ; ++i)   
-        {  
-            if ((i % SLEEP_EVERY_N) == 0)   
-                Sleep(0);  
-            nStatic1[i] = omp_get_thread_num( );  
-        }  
-  
-        #pragma omp for schedule(static, STATIC_CHUNK)  
-        for (int i = 0 ; i < NUM_LOOPS ; ++i)   
-        {  
-            if ((i % SLEEP_EVERY_N) == 0)   
-                Sleep(0);  
-            nStaticN[i] = omp_get_thread_num( );  
-        }  
-  
-        #pragma omp for schedule(dynamic, 1)  
-        for (int i = 0 ; i < NUM_LOOPS ; ++i)   
-        {  
-            if ((i % SLEEP_EVERY_N) == 0)   
-                Sleep(0);  
-            nDynamic1[i] = omp_get_thread_num( );  
-        }  
-  
-        #pragma omp for schedule(dynamic, DYNAMIC_CHUNK)  
-        for (int i = 0 ; i < NUM_LOOPS ; ++i)   
-        {  
-            if ((i % SLEEP_EVERY_N) == 0)   
-                Sleep(0);  
-            nDynamicN[i] = omp_get_thread_num( );  
-        }  
-  
-        #pragma omp for schedule(guided)  
-        for (int i = 0 ; i < NUM_LOOPS ; ++i)   
-        {  
-            if ((i % SLEEP_EVERY_N) == 0)   
-                Sleep(0);  
-            nGuided[i] = omp_get_thread_num( );  
-        }  
-    }  
-  
-    printf_s("------------------------------------------------\n");  
-    printf_s("| static | static | dynamic | dynamic | guided |\n");  
-    printf_s("|    1   |    %d   |    1    |    %d    |        |\n",  
-             STATIC_CHUNK, DYNAMIC_CHUNK);  
-    printf_s("------------------------------------------------\n");  
-  
-    for (int i=0; i<NUM_LOOPS; ++i)   
-    {  
-        printf_s("|    %d   |    %d   |    %d    |    %d    |"  
-                 "    %d   |\n",  
-                 nStatic1[i], nStaticN[i],  
-                 nDynamic1[i], nDynamicN[i], nGuided[i]);  
-    }  
-  
-    printf_s("------------------------------------------------\n");  
-}  
-```  
-  
-```Output  
-------------------------------------------------  
-| static | static | dynamic | dynamic | guided |  
-|    1   |    5   |    1    |    5    |        |  
-------------------------------------------------  
-|    0   |    0   |    0    |    2    |    1   |  
-|    1   |    0   |    3    |    2    |    1   |  
-|    2   |    0   |    3    |    2    |    1   |  
-|    3   |    0   |    3    |    2    |    1   |  
-|    0   |    0   |    2    |    2    |    1   |  
-|    1   |    1   |    2    |    3    |    3   |  
-|    2   |    1   |    2    |    3    |    3   |  
-|    3   |    1   |    0    |    3    |    3   |  
-|    0   |    1   |    0    |    3    |    3   |  
-|    1   |    1   |    0    |    3    |    2   |  
-|    2   |    2   |    1    |    0    |    2   |  
-|    3   |    2   |    1    |    0    |    2   |  
-|    0   |    2   |    1    |    0    |    3   |  
-|    1   |    2   |    2    |    0    |    3   |  
-|    2   |    2   |    2    |    0    |    0   |  
-|    3   |    3   |    2    |    1    |    0   |  
-|    0   |    3   |    3    |    1    |    1   |  
-|    1   |    3   |    3    |    1    |    1   |  
-|    2   |    3   |    3    |    1    |    1   |  
-|    3   |    3   |    0    |    1    |    3   |  
-------------------------------------------------  
-  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Предложения](../../../parallel/openmp/reference/openmp-clauses.md)
+(Необязательно) Указывает размер итераций. `size` должен быть целым числом. Не является допустимым, если `type` является `runtime`.
+
+## <a name="remarks"></a>Примечания
+
+Дополнительные сведения см. в разделе [2.4.1 конструкция for](../../../parallel/openmp/2-4-1-for-construct.md).
+
+## <a name="example"></a>Пример
+
+```cpp
+// omp_schedule.cpp
+// compile with: /openmp
+#include <windows.h>
+#include <stdio.h>
+#include <omp.h>
+
+#define NUM_THREADS 4
+#define STATIC_CHUNK 5
+#define DYNAMIC_CHUNK 5
+#define NUM_LOOPS 20
+#define SLEEP_EVERY_N 3
+
+int main( )
+{
+    int nStatic1[NUM_LOOPS],
+        nStaticN[NUM_LOOPS];
+    int nDynamic1[NUM_LOOPS],
+        nDynamicN[NUM_LOOPS];
+    int nGuided[NUM_LOOPS];
+
+    omp_set_num_threads(NUM_THREADS);
+
+    #pragma omp parallel
+    {
+        #pragma omp for schedule(static, 1)
+        for (int i = 0 ; i < NUM_LOOPS ; ++i)
+        {
+            if ((i % SLEEP_EVERY_N) == 0)
+                Sleep(0);
+            nStatic1[i] = omp_get_thread_num( );
+        }
+
+        #pragma omp for schedule(static, STATIC_CHUNK)
+        for (int i = 0 ; i < NUM_LOOPS ; ++i)
+        {
+            if ((i % SLEEP_EVERY_N) == 0)
+                Sleep(0);
+            nStaticN[i] = omp_get_thread_num( );
+        }
+
+        #pragma omp for schedule(dynamic, 1)
+        for (int i = 0 ; i < NUM_LOOPS ; ++i)
+        {
+            if ((i % SLEEP_EVERY_N) == 0)
+                Sleep(0);
+            nDynamic1[i] = omp_get_thread_num( );
+        }
+
+        #pragma omp for schedule(dynamic, DYNAMIC_CHUNK)
+        for (int i = 0 ; i < NUM_LOOPS ; ++i)
+        {
+            if ((i % SLEEP_EVERY_N) == 0)
+                Sleep(0);
+            nDynamicN[i] = omp_get_thread_num( );
+        }
+
+        #pragma omp for schedule(guided)
+        for (int i = 0 ; i < NUM_LOOPS ; ++i)
+        {
+            if ((i % SLEEP_EVERY_N) == 0)
+                Sleep(0);
+            nGuided[i] = omp_get_thread_num( );
+        }
+    }
+
+    printf_s("------------------------------------------------\n");
+    printf_s("| static | static | dynamic | dynamic | guided |\n");
+    printf_s("|    1   |    %d   |    1    |    %d    |        |\n",
+             STATIC_CHUNK, DYNAMIC_CHUNK);
+    printf_s("------------------------------------------------\n");
+
+    for (int i=0; i<NUM_LOOPS; ++i)
+    {
+        printf_s("|    %d   |    %d   |    %d    |    %d    |"
+                 "    %d   |\n",
+                 nStatic1[i], nStaticN[i],
+                 nDynamic1[i], nDynamicN[i], nGuided[i]);
+    }
+
+    printf_s("------------------------------------------------\n");
+}
+```
+
+```Output
+------------------------------------------------
+| static | static | dynamic | dynamic | guided |
+|    1   |    5   |    1    |    5    |        |
+------------------------------------------------
+|    0   |    0   |    0    |    2    |    1   |
+|    1   |    0   |    3    |    2    |    1   |
+|    2   |    0   |    3    |    2    |    1   |
+|    3   |    0   |    3    |    2    |    1   |
+|    0   |    0   |    2    |    2    |    1   |
+|    1   |    1   |    2    |    3    |    3   |
+|    2   |    1   |    2    |    3    |    3   |
+|    3   |    1   |    0    |    3    |    3   |
+|    0   |    1   |    0    |    3    |    3   |
+|    1   |    1   |    0    |    3    |    2   |
+|    2   |    2   |    1    |    0    |    2   |
+|    3   |    2   |    1    |    0    |    2   |
+|    0   |    2   |    1    |    0    |    3   |
+|    1   |    2   |    2    |    0    |    3   |
+|    2   |    2   |    2    |    0    |    0   |
+|    3   |    3   |    2    |    1    |    0   |
+|    0   |    3   |    3    |    1    |    1   |
+|    1   |    3   |    3    |    1    |    1   |
+|    2   |    3   |    3    |    1    |    1   |
+|    3   |    3   |    0    |    1    |    3   |
+------------------------------------------------
+
+```
+
+## <a name="see-also"></a>См. также
+
+[Предложения](../../../parallel/openmp/reference/openmp-clauses.md)

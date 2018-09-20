@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3409e0e2c1cac5f3934902523edd2653839989ed
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 46450142c0455dd4eb96f627abd077e478d96fea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575762"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383510"
 ---
 # <a name="moduleunregistercomobject-method"></a>Метод Module::UnregisterCOMObject
 
@@ -39,13 +39,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Параметры
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 (Не используется)
 
-*Файлы cookie*  
+*Файлы cookie*<br/>
 Массив указателей на значения, которые идентифицируют объекты класса для отмены регистрации. Массив был создан с [RegisterCOMObject](../windows/module-registercomobject-method.md) метод.
 
-*count*  
+*count*<br/>
 Количество классов для отмены регистрации.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -59,4 +59,5 @@ virtual HRESULT UnregisterCOMObject(
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
+
 [Класс Module](../windows/module-class.md)

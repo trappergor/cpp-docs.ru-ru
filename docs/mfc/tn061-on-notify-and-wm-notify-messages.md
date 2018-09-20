@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2395cb7b1f3d719fd64494ee9b9c7c64ba222bac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218789"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381833"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061. Сообщения ON_NOTIFY и WM_NOTIFY
 
@@ -104,14 +104,14 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 Используются следующие параметры.
 
-*wNotifyCode*  
- Код для сообщения уведомления для обработки, например LVN_KEYDOWN.
+*wNotifyCode*<br/>
+Код для сообщения уведомления для обработки, например LVN_KEYDOWN.
 
-*id*  
- Идентификатор дочернего элемента элемента управления, для которого отправляется уведомление.
+*id*<br/>
+Идентификатор дочернего элемента элемента управления, для которого отправляется уведомление.
 
-*memberFxn*  
- Функция-член вызывается в том случае, когда это уведомление отправляется.
+*memberFxn*<br/>
+Функция-член вызывается в том случае, когда это уведомление отправляется.
 
 Функция-член должен объявляться с использованием следующий прототип:
 
@@ -121,11 +121,11 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 Используются следующие параметры.
 
-*pNotifyStruct*  
- Указатель на структуру уведомлений, как описано в предыдущем разделе.
+*pNotifyStruct*<br/>
+Указатель на структуру уведомлений, как описано в предыдущем разделе.
 
-*результат*  
- Указатель на код результата необходимо установить перед возвратом.
+*результат*<br/>
+Указатель на код результата необходимо установить перед возвратом.
 
 ## <a name="example"></a>Пример
 
@@ -141,7 +141,7 @@ ON_NOTIFY(LVN_KEYDOWN, IDC_LIST1, OnKeydownList1)
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 {
     LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;
-    
+
     // TODO: Add your control notification handler
     //       code here
 
@@ -167,17 +167,17 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 Используются следующие параметры.
 
-*wNotifyCode*  
- Код для сообщения уведомления для обработки, например LVN_KEYDOWN.
+*wNotifyCode*<br/>
+Код для сообщения уведомления для обработки, например LVN_KEYDOWN.
 
-*id*  
- Первый идентификатор в непрерывный диапазон идентификаторов.
+*id*<br/>
+Первый идентификатор в непрерывный диапазон идентификаторов.
 
-*idLast*  
- Идентификатор последнего в непрерывный диапазон идентификаторов.
+*idLast*<br/>
+Идентификатор последнего в непрерывный диапазон идентификаторов.
 
-*memberFxn*  
- Функция-член вызывается в том случае, когда это уведомление отправляется.
+*memberFxn*<br/>
+Функция-член вызывается в том случае, когда это уведомление отправляется.
 
 Функция-член должен объявляться с использованием следующий прототип:
 
@@ -187,14 +187,14 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 Используются следующие параметры.
 
-*id*  
- Идентификатор дочернего элемента элемента управления, который отправил уведомление.
+*id*<br/>
+Идентификатор дочернего элемента элемента управления, который отправил уведомление.
 
-*pNotifyStruct*  
- Указатель на структуру уведомлений, как описано выше.
+*pNotifyStruct*<br/>
+Указатель на структуру уведомлений, как описано выше.
 
-*результат*  
- Указатель на код результата необходимо установить перед возвратом.
+*результат*<br/>
+Указатель на код результата необходимо установить перед возвратом.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX ON_NOTIFY_EX_RANGE
 
@@ -221,5 +221,5 @@ afx_msg BOOL memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 ## <a name="see-also"></a>См. также
 
-[Технические примечания по номеру](../mfc/technical-notes-by-number.md)  
-[Технические примечания по категории](../mfc/technical-notes-by-category.md)  
+[Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
+[Технические примечания по категории](../mfc/technical-notes-by-category.md)

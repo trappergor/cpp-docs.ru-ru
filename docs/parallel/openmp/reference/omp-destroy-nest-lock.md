@@ -16,34 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37ac75158705a26b10b077652f51396dcd591740
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d5cb4e985c82bec859959f374ffe35f33548228
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104054"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377257"
 ---
 # <a name="ompdestroynestlock"></a>omp_destroy_nest_lock
-Отменяет инициализацию вкладываемых блокировок.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void omp_destroy_nest_lock(  
-   omp_nest_lock_t *lock  
-);  
-```  
-  
+
+Отменяет инициализацию вкладываемых блокировок.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void omp_destroy_nest_lock(
+   omp_nest_lock_t *lock
+);
+```
+
 ### <a name="parameters"></a>Параметры
-  
+
 *lock*<br/>
-Переменная типа [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) , инициализированный с [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
-  
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [3.2.2 функции omp_destroy_lock и omp_destroy_nest_lock функции](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).  
-  
-## <a name="example"></a>Пример  
- См. в разделе [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) пример использования `omp_destroy_nest_lock`.  
-  
-## <a name="see-also"></a>См. также  
- [Функции](../../../parallel/openmp/reference/openmp-functions.md)
+Переменная типа [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) , инициализированный с [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).
+
+## <a name="remarks"></a>Примечания
+
+Дополнительные сведения см. в разделе [3.2.2 функции omp_destroy_lock и omp_destroy_nest_lock функции](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).
+
+## <a name="example"></a>Пример
+
+См. в разделе [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) пример использования `omp_destroy_nest_lock`.
+
+## <a name="see-also"></a>См. также
+
+[Функции](../../../parallel/openmp/reference/openmp-functions.md)

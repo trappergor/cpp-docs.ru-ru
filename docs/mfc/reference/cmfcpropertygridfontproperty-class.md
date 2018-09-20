@@ -22,119 +22,131 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3d6c1f9f9b2084273345463bccfe4eb2bc78d150
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719944"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384394"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Класс CMFCPropertyGridFontProperty
-`CMFCPropertyGridFileProperty` Класс поддерживает элемент управления списка свойств, который открывает диалоговое окно выбора шрифта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|[CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty](#cmfcpropertygridfontproperty)|Создает объект `CMFCPropertyGridFontProperty`.|  
-|`CMFCPropertyGridFontProperty::~CMFCPropertyGridFontProperty`|Деструктор.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание|  
-|----------|-----------------|  
-|`CMFCPropertyGridFontProperty::FormatProperty`|Форматирует текстовое представление значения свойства. (Переопределяет [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
-|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Возвращает цвет шрифта, выбранного пользователем в диалоговом окне шрифта.|  
-|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Получает шрифт, который пользователь выбирает в диалоговом окне шрифта.|  
-|`CMFCPropertyGridFontProperty::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
-|`CMFCPropertyGridFontProperty::OnClickButton`|Вызывается платформой, когда пользователь нажимает кнопку, содержащуюся в свойстве. (Переопределяет [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
-  
-## <a name="remarks"></a>Примечания  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)  
-  
- [CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxpropertygridctrl.h  
-  
-##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
- Создает объект `CMFCPropertyGridFontProperty`.  
-  
-```  
+
+`CMFCPropertyGridFileProperty` Класс поддерживает элемент управления списка свойств, который открывает диалоговое окно выбора шрифта.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty](#cmfcpropertygridfontproperty)|Создает объект `CMFCPropertyGridFontProperty`.|
+|`CMFCPropertyGridFontProperty::~CMFCPropertyGridFontProperty`|Деструктор.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|`CMFCPropertyGridFontProperty::FormatProperty`|Форматирует текстовое представление значения свойства. (Переопределяет [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
+|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Возвращает цвет шрифта, выбранного пользователем в диалоговом окне шрифта.|
+|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Получает шрифт, который пользователь выбирает в диалоговом окне шрифта.|
+|`CMFCPropertyGridFontProperty::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
+|`CMFCPropertyGridFontProperty::OnClickButton`|Вызывается платформой, когда пользователь нажимает кнопку, содержащуюся в свойстве. (Переопределяет [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+
+## <a name="remarks"></a>Примечания
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
+
+[CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxpropertygridctrl.h
+
+##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty
+
+Создает объект `CMFCPropertyGridFontProperty`.
+
+```
 CMFCPropertyGridFontProperty(
-    const CString& strName,  
-    LOGFONT& lf,  
-    DWORD dwFontDialogFlags = CF_EFFECTS | CF_SCREENFONTS,  
-    LPCTSTR lpszDescr = NULL,  
-    DWORD_PTR dwData = 0,  
+    const CString& strName,
+    LOGFONT& lf,
+    DWORD dwFontDialogFlags = CF_EFFECTS | CF_SCREENFONTS,
+    LPCTSTR lpszDescr = NULL,
+    DWORD_PTR dwData = 0,
     COLORREF color = (COLORREF)-1);
-```  
-  
-### <a name="parameters"></a>Параметры  
+```
+
+### <a name="parameters"></a>Параметры
+
 *strName*<br/>
-[in] Имя свойства.  
-  
+[in] Имя свойства.
+
 *LF*<br/>
-[in] Структура логического шрифта, которая определяет атрибуты шрифта.  
-  
+[in] Структура логического шрифта, которая определяет атрибуты шрифта.
+
 *dwFontDialogFlags*<br/>
-[in] Стили, которые применяются в диалоговом окне шрифта, который отображается при нажатии кнопки раскрывающегося списка значение свойства. Значение по умолчанию — битовую комбинацию (OR) флагов CF_EFFECTS и CF_SCREENFONTS. Дополнительные сведения см. в разделе *флаги* параметр [структуры CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
-  
+[in] Стили, которые применяются в диалоговом окне шрифта, который отображается при нажатии кнопки раскрывающегося списка значение свойства. Значение по умолчанию — битовую комбинацию (OR) флагов CF_EFFECTS и CF_SCREENFONTS. Дополнительные сведения см. в разделе *флаги* параметр [структуры CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).
+
 *lpszDescr*<br/>
-[in] Описание свойства шрифта. Значение по умолчанию имеет значение NULL.  
-  
+[in] Описание свойства шрифта. Значение по умолчанию имеет значение NULL.
+
 *dwData*<br/>
-[in] Данные приложения, такие как целое число или указатель с другими данными, который связан со свойством. Значение по умолчанию — 0.  
-  
+[in] Данные приложения, такие как целое число или указатель с другими данными, который связан со свойством. Значение по умолчанию — 0.
+
 *Цвет*<br/>
-[in] Цвет шрифта. Значением по умолчанию является цвет по умолчанию.  
-  
-### <a name="remarks"></a>Примечания  
- Объект `CMFCPropertyGridFontProperty` объект представляет свойство font в элементе управления шрифта сетки свойств.  
-  
-### <a name="example"></a>Пример  
- В следующем примере показано, как построить объект `CMFCPropertyGridFontProperty` класса. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
-  
-##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor  
- Возвращает цвет шрифта, выбранного пользователем в диалоговом окне шрифта.  
-  
-```  
-COLORREF GetColor() const;  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Значение цвета RGB, представляющее цвет выбранного шрифта.  
-  
-### <a name="remarks"></a>Примечания  
-  
-##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont  
- Получает шрифт, который пользователь выбирает в диалоговом окне шрифта.  
-  
-```  
+[in] Цвет шрифта. Значением по умолчанию является цвет по умолчанию.
+
+### <a name="remarks"></a>Примечания
+
+Объект `CMFCPropertyGridFontProperty` объект представляет свойство font в элементе управления шрифта сетки свойств.
+
+### <a name="example"></a>Пример
+
+В следующем примере показано, как построить объект `CMFCPropertyGridFontProperty` класса. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]
+
+##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor
+
+Возвращает цвет шрифта, выбранного пользователем в диалоговом окне шрифта.
+
+```
+COLORREF GetColor() const;
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение цвета RGB, представляющее цвет выбранного шрифта.
+
+### <a name="remarks"></a>Примечания
+
+##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont
+
+Получает шрифт, который пользователь выбирает в диалоговом окне шрифта.
+
+```
 LPLOGFONT GetLogFont();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуру, которая описывает шрифт.  
-  
-### <a name="remarks"></a>Примечания  
-  
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)   
- [Класс CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Указатель на [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуру, которая описывает шрифт.
+
+### <a name="remarks"></a>Примечания
+
+## <a name="see-also"></a>См. также
+
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Классы](../../mfc/reference/mfc-classes.md)<br/>
+[Класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)<br/>
+[Класс CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)

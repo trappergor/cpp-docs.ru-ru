@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c43139dd1d927d9e6173d9e78765d0fcdbddae6a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8faad93ae57e42e0e28bcb697ed300c11e766136
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716018"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376919"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -40,13 +40,13 @@ ms.locfileid: "45716018"
 
 ### <a name="parameters"></a>Параметры
 
-*db_source*  
+*db_source*<br/>
 Строка подключения, используемая для подключения к источнику данных. Формат строки подключения, см. в разделе [строки соединения и ссылки на данные](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) в Майкрософт данных Access Components (MDAC) SDK.
 
-*name*  
+*name*<br/>
 (Необязательно) При использовании **db_source** в классе, *имя* — это экземпляр объекта источника данных, имеющий **db_source** атрибут, примененный к нему (см. Пример 1). При использовании **db_source** , встроенный в реализации метода, *имя* — переменная (локальный метода), которая может использоваться для доступа к данным источника (см. Пример 2). Передать его *имя* для *source_name* параметр `db_command` должен быть сопоставлен команды в источнике данных.
 
-*значение HRESULT*  
+*значение HRESULT*<br/>
 (Необязательно) Определяет переменную, которая будет получать значение HRESULT, равное этой команды базы данных. Если переменная не существует, она будет автоматически внедрена с помощью атрибута.
 
 ## <a name="remarks"></a>Примечания

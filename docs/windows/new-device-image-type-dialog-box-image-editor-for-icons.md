@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2bda23b6847c08096b27516fcc955e4bf68c38ba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313940"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385837"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Новый &lt;устройства&gt; изображение диалогового окна типа (C++) (редактор изображений для значков)
 
@@ -54,6 +54,6 @@ ms.locfileid: "44313940"
 
 ## <a name="see-also"></a>См. также
 
-[Значки и курсоры: ресурсы изображений для устройств отображения](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Меню "изображение"](../windows/image-menu-image-editor-for-icons.md)  
+[Значки и курсоры: ресурсы изображений для устройств отображения](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Меню "изображение"](../windows/image-menu-image-editor-for-icons.md)<br/>
 [Редактор изображений для значков](../windows/image-editor-for-icons.md)

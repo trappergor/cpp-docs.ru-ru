@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ebc8632d273e650cf11e70177bbfbeb0e90e8601
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610165"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394859"
 ---
 # <a name="hstringmakereference-method"></a>Метод HString::MakeReference
 
@@ -41,13 +41,13 @@ template<unsigned int sizeDest>
 
 ### <a name="parameters"></a>Параметры
 
-*sizeDest*  
+*sizeDest*<br/>
 Параметр шаблона, который указывает размер целевой `HStringReference` буфера.
 
-*str*  
+*str*<br/>
 Ссылка на строку расширенных символов.
 
-*функция Len*  
+*функция Len*<br/>
 Максимальная длина *str* буфером параметров для использования в данной операции. Если *len* параметр не указан, весь *str* используется параметр.
 
 ## <a name="return-value"></a>Возвращаемое значение

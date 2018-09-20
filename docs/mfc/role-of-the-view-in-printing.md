@@ -1,5 +1,5 @@
 ---
-title: Роль просмотра при печати | Документы Microsoft
+title: Роль просмотра при печати | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5735a718e353764ad8578548c965ae8a4dcd1843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c78756ea84df66b77f71d8f8ad8d0b9dfa1a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379259"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377530"
 ---
 # <a name="role-of-the-view-in-printing"></a>Роль просмотра при печати
-Представление также играет два важных ролей в печати его связанный документ.  
-  
- Представление:  
-  
--   Использует тот же самый [OnDraw](../mfc/reference/cview-class.md#ondraw) код для отображения на принтере для рисования на экране.  
-  
--   Управляет разделения документа на страницы для печати.  
-  
- Дополнительные сведения о печати и о роли представления при печати см. в разделе [печати и предварительного просмотра перед печатью](../mfc/printing-and-print-preview.md).  
-  
-## <a name="see-also"></a>См. также  
- [Использование представлений](../mfc/using-views.md)
+
+Представление также играет два важных ролей в печать его связанный документ.
+
+Представление:
+
+- Использует тот же [OnDraw](../mfc/reference/cview-class.md#ondraw) код для рисования на принтере для рисования на экране.
+
+- Управляет разделение на страницы для печати документа.
+
+Дополнительные сведения о печати и о роли представления при печати, см. в разделе [печать и предварительный просмотр печати](../mfc/printing-and-print-preview.md).
+
+## <a name="see-also"></a>См. также
+
+[Использование представлений](../mfc/using-views.md)
 

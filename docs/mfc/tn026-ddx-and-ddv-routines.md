@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18377d423ab150773ef5438f39c8e74914b5c425
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317424"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389743"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026. Процедуры DDX и DDV
 
@@ -242,5 +242,5 @@ else
 
 ## <a name="see-also"></a>См. также
 
-[Технические примечания по номеру](../mfc/technical-notes-by-number.md)  
-[Технические примечания по категории](../mfc/technical-notes-by-category.md)  
+[Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
+[Технические примечания по категории](../mfc/technical-notes-by-category.md)

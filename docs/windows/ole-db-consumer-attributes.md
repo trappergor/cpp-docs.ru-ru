@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aebe1a48e037d2780f9b0c6443cbcba3e158677f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 07b129e2810b7b1310eb8988ca60fbd6e5dcad5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318022"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391934"
 ---
 # <a name="ole-db-consumer-attributes"></a>Атрибуты потребителя OLE DB
 Атрибуты потребителя OLE DB вставки кода, на основе [Шаблоны потребителей OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), чтобы создать рабочий OLE DB получатель, который выполняет задачи, такие как Открытие таблицы, выполнения команд и доступ к данным.
@@ -40,4 +40,5 @@ ms.locfileid: "44318022"
 |[db_table](../windows/db-table.md)|Открывает таблицу OLE DB.|
   
 ## <a name="see-also"></a>См. также
- [Список атрибутов по группам](../windows/attributes-by-group.md)
+
+[Список атрибутов по группам](../windows/attributes-by-group.md)

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314777"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379792"
 ---
 # <a name="attribute"></a>Атрибут
 
@@ -43,13 +43,13 @@ ms.locfileid: "44314777"
 
 ### <a name="parameters"></a>Параметры
 
-*AllowOn*  
+*AllowOn*<br/>
 Указывает элементы языка, к которым можно применять настраиваемый атрибут. Значение по умолчанию — `System::AttributeTargets::All` (см. в разделе [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 Указывает ли настраиваемый атрибут может применяться многократно конструкции. Значение по умолчанию — FALSE.
 
-*Унаследованные*  
+*Унаследованные*<br/>
 Указывает, является ли атрибут наследуются подклассами. Компилятор не поддерживает специальные для использования этой функции; Это задание атрибута получатели (`Reflection`, например) следует учитывать эти сведения. Если *унаследованное* имеет значение TRUE, атрибут наследуется. Если *AllowMultiple* имеет значение TRUE, атрибут будет накапливаться в производный член; Если *AllowMultiple* имеет значение FALSE, атрибут будет переопределить (или замена) в наследовании. Если *унаследованное* имеет значение FALSE, атрибут не наследуется. Значение по умолчанию — TRUE.
 
 ## <a name="remarks"></a>Примечания
