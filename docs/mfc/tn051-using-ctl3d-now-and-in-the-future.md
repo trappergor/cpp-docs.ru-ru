@@ -1,5 +1,5 @@
 ---
-title: 'TN051: Использование CTL3D сегодня и в будущем | Документы Microsoft'
+title: 'TN051: Использование CTL3D сегодня и в будущем | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a19077bcba252d252418b6c3554c6172ed1aaa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfffe63e80160cab1c85ef19de321b361e1c26cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382276"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388646"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051. Использование CTL3D сегодня и в будущем
-Этот технический Обратите внимание, что обсуждалось ранее CTL3D и MFC, больше не используется. Объемные эффекты для элементов управления автоматически реализуемой MFC.  
-  
-## <a name="see-also"></a>См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+
+Этот технический нота, каковой говорилось выше CTL3D и MFC, теперь является устаревшим. Трехмерные эффекты для элементов управления MFC автоматически реализуется.
+
+## <a name="see-also"></a>См. также
+
+[Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
+[Технические примечания по категории](../mfc/technical-notes-by-category.md)
 

@@ -17,45 +17,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e879726f9ef3ad65dabd00056ddb859c72dd039e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccd691edb9ee799c8585fb33cb6b837e2871fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679571"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413981"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
-**Блок, относящийся только к системам Microsoft**  
-  
- Хранит указатель на текущий структуру управления виртуальной машины (VMCS) по указанному адресу.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __vmx_vmptrst(   
-   unsigned __int64 *VmcsPhysicalAddress   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- [in] *`VmcsPhysicalAddress`  
- Адрес, где хранится указатель текущей VMCS.  
-  
-## <a name="remarks"></a>Примечания  
- Указатель VMCS — это 64-разрядный физический адрес.  
-  
- `__vmx_vmptrst` Функция эквивалентна `VMPTRST` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__vmx_vmptrst`|x86, x64|  
-  
- **Файл заголовка** \<intrin.h >  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+Хранит указатель на текущий структуру управления виртуальной машины (VMCS) по указанному адресу.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __vmx_vmptrst( 
+   unsigned __int64 *VmcsPhysicalAddress 
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
+[in] *`VmcsPhysicalAddress` адрес, где хранится указатель текущей VMCS.
+
+## <a name="remarks"></a>Примечания
+
+Указатель VMCS — это 64-разрядный физический адрес.
+
+`__vmx_vmptrst` Функция эквивалентна `VMPTRST` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__vmx_vmptrst`|x86, x64|
+
+**Файл заголовка** \<intrin.h >
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ea891ce5ee5c3570577edf7c2122b2cd39b5c64d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711819"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378570"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,7 +52,7 @@ ms.locfileid: "45711819"
 
 ### <a name="parameters"></a>Параметры
 
-*type*  
+*type*<br/>
 (Необязательно) Может принимать одно из следующих:
 
 - `dll` Добавляет функции и классы, которые позволяют итоговому файлу DLL выступать в качестве внутрипроцессного COM-сервера. Это значение по умолчанию.
@@ -63,50 +63,50 @@ ms.locfileid: "45711819"
 
 - `unspecified` Отключает внедрение кода ATL, связанного с атрибутом module: внедрение класса ATL Module, глобальный экземпляр _AtlModule и запись функции точек. Не отключает внедрение кода ATL из-за других атрибутов в проекте.
 
-*name*  
+*name*<br/>
 (Необязательно) Имя блока библиотеки.
 
-*version*  
+*version*<br/>
 (Необязательно) Номер версии, которую вы хотите назначить блоку библиотеки. Значение по умолчанию — 1,0.
 
-*uuid*  
+*uuid*<br/>
 Уникальный идентификатор для библиотеки. Если этот параметр опущен, идентификатор для библиотеки будет создан автоматически. Может потребоваться получить *uuid* для блока библиотеки, что можно сделать с помощью идентификатора **__uuidof (** *Имя_библиотеки* **)**.
 
-*lcid*  
+*lcid*<br/>
 Параметр локализации. См. в разделе [lcid](/windows/desktop/Midl/lcid) Дополнительные сведения.
 
-*control*  
+*control*<br/>
 (Необязательно) Указывает, что все коклассы в библиотеке являются элементами управления.
 
-*helpstring*  
+*helpstring*<br/>
 Указывает библиотеку типов.
 
-*helpstringdll*  
+*helpstringdll*<br/>
 (Необязательно) Задает имя DLL-файла, в которых будет производиться уточняющего запроса строки документа. См. в разделе [helpstringdll](/windows/desktop/Midl/helpstringdll) Дополнительные сведения.
 
-*helpfile*  
+*helpfile*<br/>
 (Необязательно) Имя **помочь** файл для библиотеки типов.
 
-*helpcontext*  
+*helpcontext*<br/>
 (Необязательно) **Идентификатор справки** для этой библиотеки типов.
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (Необязательно) См. в разделе [helpstringcontext](../windows/helpstringcontext.md) Дополнительные сведения.
 
-*hidden*  
+*hidden*<br/>
 (Необязательно) Запрещает отображение всей библиотеки. Этот режим предназначен для использования с элементами управления. Узлы должны создать новую библиотеку типов, инкапсулирующую элемент управления с расширенными свойствами. См. в разделе [скрытые](/windows/desktop/Midl/hidden) описании атрибута MIDL Дополнительные сведения.
 
-*restricted*  
+*restricted*<br/>
 (Необязательно) Элементы библиотеки нельзя вызывать произвольным образом. См. в разделе [ограниченных](/windows/desktop/Midl/restricted) описании атрибута MIDL Дополнительные сведения.
 
-*Custom*  
+*Custom*<br/>
 (Необязательно) Один или несколько атрибутов; Это похоже на [пользовательских](../windows/custom-cpp.md) атрибута. Первый параметр для *пользовательских* является идентификатором GUID атрибута. Пример:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
-*имя_ресурса*  
+*имя_ресурса*<br/>
 Идентификатор строкового ресурса RGS-файла, используемый для регистрации идентификатора приложения для библиотеки DLL, исполняемого файла или службы. Если модуль имеет тип service, этот аргумент также используется для получения идентификатора строки, содержащей имя службы.
 
 > [!NOTE]
@@ -188,13 +188,13 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
-[Изолированные атрибуты](../windows/stand-alone-attributes.md)  
-[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[usesgetlasterror](../windows/usesgetlasterror.md)  
-[Библиотека](/windows/desktop/Midl/library)  
-[helpcontext](../windows/helpcontext.md)  
-[helpstring](../windows/helpstring.md)  
-[helpfile](../windows/helpfile.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
+[Изолированные атрибуты](../windows/stand-alone-attributes.md)<br/>
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[usesgetlasterror](../windows/usesgetlasterror.md)<br/>
+[Библиотека](/windows/desktop/Midl/library)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
+[helpstring](../windows/helpstring.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [version](../windows/version-cpp.md)  

@@ -1,5 +1,5 @@
 ---
-title: Обработчики элементов управления редактированием | Документы Microsoft
+title: Обработчики элемента управления редактированием | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,27 +31,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450cb2252cc7331b5a9d9f0f60c3d23b5d08bc22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4828eb2241346a0cee4a1d1a732426e28aeb61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374455"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395327"
 ---
 # <a name="edit-control-handlers"></a>Обработчики элемента управления "Изменение"
-Следующие записи карты соответствуют прототип функции.  
-  
-|Элемент карты|Прототип функции|  
-|---------------|------------------------|  
-|ON_EN_CHANGE ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_EN_ERRSPACE ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_EN_HSCROLL ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_EN_KILLFOCUS ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_EN_MAXTEXT ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_EN_SETFOCUS ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_EN_UPDATE ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-|ON_EN_VSCROLL ( \<id >, \<memberFxn >)|(afx_msg void memberFxn);|  
-  
-## <a name="see-also"></a>См. также  
- [Схемы сообщений](../../mfc/reference/message-maps-mfc.md)
+
+Следующие записи карты соответствуют прототип функции.
+
+|Запись сопоставления|Прототип функции|
+|---------------|------------------------|
+|ON_EN_CHANGE ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_EN_ERRSPACE ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_EN_HSCROLL ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_EN_KILLFOCUS ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_EN_MAXTEXT ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_EN_SETFOCUS ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_EN_UPDATE ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+|ON_EN_VSCROLL ( \<идентификатор >, \<memberFxn >)|(afx_msg void memberFxn);|
+
+## <a name="see-also"></a>См. также
+
+[Схемы сообщений](../../mfc/reference/message-maps-mfc.md)
 

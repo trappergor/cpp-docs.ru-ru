@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e18f64d48b357ed691f42fc900f68c8e8054776
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71ff4e3fdb80b48e306e543bdb683c3dd2b26ec3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317255"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443336"
 ---
 # <a name="com-attributes"></a>Атрибуты COM
 Атрибуты COM вставки кода для поддержки множество различных областей разработки COM и .NET Framework среды выполнения разработки языка. Эти области варьируются от реализации пользовательского интерфейса, а также поддержку существующих интерфейсов для поддержки стандартных свойств, методов и событий. Кроме того можно получить поддержку для составных и реализации элемента управления ActiveX.
@@ -44,4 +44,5 @@ ms.locfileid: "44317255"
 |[vi_progid](../windows/vi-progid.md)|Определяет независимый от версии идентификатор ProgID для элемента управления.|
   
 ## <a name="see-also"></a>См. также
- [Список атрибутов по группам](../windows/attributes-by-group.md)
+
+[Список атрибутов по группам](../windows/attributes-by-group.md)

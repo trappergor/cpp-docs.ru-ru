@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c97ca07e06da3663dfd0a06a125f361b4e4dc591
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7e3de9b373a80ef939f5ac5ff3d746e0ebdc8b74
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758034"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405467"
 ---
 # <a name="using-cstring"></a>Использование CString
 
@@ -54,41 +54,41 @@ int main() {
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Базовые операции CString](../atl-mfc-shared/basic-cstring-operations.md)  
+[Базовые операции CString](../atl-mfc-shared/basic-cstring-operations.md)<br/>
 Описывает базовые операции `CString`, включая создание объектов из строковых литералов C, доступ к отдельным символам в `CString`, объединение двух объектов и сравнение объектов `CString`.
 
-[Управление строковыми данными](../atl-mfc-shared/string-data-management.md)  
+[Управление строковыми данными](../atl-mfc-shared/string-data-management.md)<br/>
 Описывает использование Юникода и многобайтовой кодировки с `CString`.
 
-[Семантика CString](../atl-mfc-shared/cstring-semantics.md)  
+[Семантика CString](../atl-mfc-shared/cstring-semantics.md)<br/>
 Поясняет использование объектов `CString`.
 
-[Операции CString, связанные со строками в стиле C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)  
+[Операции CString, связанные со строками в стиле C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 Описывает операции с содержимым объекта `CString` как со строкой с завершающим нулевым байтом в стиле C.
 
-[Выделение и освобождение памяти для BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
+[Выделение и освобождение памяти для BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
 Описывает использование памяти для BSTR и COM-объектов.
 
-[Очистка исключений CString](../atl-mfc-shared/cstring-exception-cleanup.md)  
+[Очистка исключений CString](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
 Поясняет, что явная очистка в MFC 3.0 и последующих версий больше не требуется.
 
-[Передача аргументов CString](../atl-mfc-shared/cstring-argument-passing.md)  
+[Передача аргументов CString](../atl-mfc-shared/cstring-argument-passing.md)<br/>
 Поясняет, как передать объекты CString в функции и как вернуть объекты `CString` из функций.
 
-[Поддержка Юникода и многобайтовой кодировки](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
+[Поддержка Юникода и многобайтовой кодировки](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 Описывает реализацию поддержки Юникода и многобайтовой кодировки в MFC.
 
 ## <a name="reference"></a>Ссылка
 
-[CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Содержит справочные сведения о классе `CStringT`.
 
-[Класс CSimpleStringT](../atl-mfc-shared/reference/csimplestringt-class.md)  
+[Класс CSimpleStringT](../atl-mfc-shared/reference/csimplestringt-class.md)<br/>
 Содержит справочные сведения о классе `CSimpleStringT`.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Содержит ссылки на разделы, в которых описаны несколько способов управления строковыми данными.
 
 [Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

@@ -20,20 +20,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f291a05b1347254989e4876af66c5d8137864020
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 027a14213f173bdc6be5fc34e9fd4faf0eba8023
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684165"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415158"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Отношение к API языка C
-Отдельная характеристика, которая устанавливает библиотеки Microsoft Foundation Class (MFC) помимо других библиотек классов для Windows — это сопоставление очень близки к API Windows, написанных на языке C. Кроме того вы можете обычно объединять вызовы к библиотеке классов свободно с прямыми вызовами в API Windows. Этот непосредственный доступ, однако означает, что классы, полная замена для этого API. Необходимо по-прежнему периодически разработчиками прямые вызовы некоторых функций Windows, таких как [SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor) и [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics), например. Функции Windows заключается только в том случае, если есть явное преимущество для этого функции-члена класса.  
-  
- Поскольку иногда вам нужно сделать собственные вызовы функции Windows, следует имеется доступ к документации по API языка C Windows. Эта документация входит в состав Microsoft Visual C++.  
-  
+
+Отдельная характеристика, которая устанавливает библиотеки Microsoft Foundation Class (MFC) помимо других библиотек классов для Windows — это сопоставление очень близки к API Windows, написанных на языке C. Кроме того вы можете обычно объединять вызовы к библиотеке классов свободно с прямыми вызовами в API Windows. Этот непосредственный доступ, однако означает, что классы, полная замена для этого API. Необходимо по-прежнему периодически разработчиками прямые вызовы некоторых функций Windows, таких как [SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor) и [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics), например. Функции Windows заключается только в том случае, если есть явное преимущество для этого функции-члена класса.
+
+Поскольку иногда вам нужно сделать собственные вызовы функции Windows, следует имеется доступ к документации по API языка C Windows. Эта документация входит в состав Microsoft Visual C++.
+
 > [!NOTE]
->  Обзор принципов работы платформы библиотеки MFC, см. в разделе [использование классов для записи приложений для Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
-  
-## <a name="see-also"></a>См. также  
- [Общие принципы разработки классов](../mfc/general-class-design-philosophy.md)
+>  Обзор принципов работы платформы библиотеки MFC, см. в разделе [использование классов для записи приложений для Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).
+
+## <a name="see-also"></a>См. также
+
+[Общие принципы разработки классов](../mfc/general-class-design-philosophy.md)

@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 554cccba1d45cf172645c46e00fdb20c19ea42d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712534"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389607"
 ---
 # <a name="indword"></a>__indword
-**Блок, относящийся только к системам Microsoft**  
-  
- Считывает один двойное слово данных из указанного порта с помощью `in` инструкции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-unsigned long __indword(  
-   unsigned short Port  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+**Блок, относящийся только к системам Microsoft**
+
+Считывает один двойное слово данных из указанного порта с помощью `in` инструкции.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+unsigned long __indword(
+   unsigned short Port
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *Порт*<br/>
-[in] Порт для чтения из.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Слово, прочитанное из порта.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__indword`|x86, x64|  
-  
- **Файл заголовка** \<intrin.h >  
-  
-## <a name="remarks"></a>Примечания  
- Эта процедура доступна только как встроенная функция.  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[in] Порт для чтения из.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Слово, прочитанное из порта.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__indword`|x86, x64|
+
+**Файл заголовка** \<intrin.h >
+
+## <a name="remarks"></a>Примечания
+
+Эта процедура доступна только как встроенная функция.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

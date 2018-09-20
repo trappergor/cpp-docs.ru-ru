@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f0751b218fe540a49c2cf0efde1dcf8976f2ebf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752779"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387319"
 ---
 # <a name="strings-atlmfc"></a>Строки (ATL/MFC)
 
@@ -44,18 +44,18 @@ ms.locfileid: "43752779"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Использование CStringT](../atl-mfc-shared/using-cstringt.md)  
+[Использование CStringT](../atl-mfc-shared/using-cstringt.md)<br/>
 Сведения о программировании, с помощью CStringT шаблона класса.
 
-[Использование CString](../atl-mfc-shared/using-cstring.md)  
+[Использование CString](../atl-mfc-shared/using-cstring.md)<br/>
 Описывает программирование с использованием CString, реализация по умолчанию CStringT.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Общие сведения о CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[Общие сведения о CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Содержит справочные сведения об общей `CStringT` класса.
 
-[Основные понятия MFC](../mfc/mfc-concepts.md)  
+[Основные понятия MFC](../mfc/mfc-concepts.md)<br/>
 Предоставляет на основе задач и концептуальные разделы, чтобы программировать с использованием библиотеки MFC.
 
 ## <a name="see-also"></a>См. также

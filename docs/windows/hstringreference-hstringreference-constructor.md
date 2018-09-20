@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c13635f4b73ee34de11b8c18b0cdd9943b261a29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6123f87abb9922a9736ac56f64d28e78887a0fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403587"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>Конструктор HStringReference::HStringReference
 
@@ -41,16 +41,16 @@ HStringReference(HStringReference&& other) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*sizeDest*  
+*sizeDest*<br/>
 Параметр шаблона, который указывает размер целевой **HStringReference** буфера.
 
-*str*  
+*str*<br/>
 Ссылка на строку расширенных символов.
 
-*функция Len*  
+*функция Len*<br/>
 Максимальная длина *str* буфером параметров для использования в данной операции. Если *len* параметр не указан, весь *str* используется параметр. Если *len* больше, чем *sizeDest*, *len* присваивается *sizeDest*-1.
 
-*other*  
+*other*<br/>
 Другой **HStringReference** объекта.
 
 ## <a name="remarks"></a>Примечания

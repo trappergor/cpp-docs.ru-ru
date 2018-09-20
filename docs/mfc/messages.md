@@ -1,5 +1,5 @@
 ---
-title: Сообщения | Документы Microsoft
+title: Сообщения | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7544d92d55ec4a1f6d15f3c1d4358970bf2deb
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f25c9cc70cec598f975bbd242af83597311bdc7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928345"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392259"
 ---
 # <a name="messages"></a>Сообщения
-Цикл обработки сообщений в `Run` функции-члена класса `CWinApp` извлекает в очередь сообщения, сформированные при различных событий. Например когда пользователь нажимает кнопку мыши, Windows отправляет несколько сообщений, связанных с мышью, например WM_LBUTTONDOWN при нажатии левой кнопки мыши и WM_LBUTTONUP при отпускании левой кнопки мыши. Реализация framework цикл обработки сообщений приложения отправляет сообщение, соответствующее окно.  
-  
- Описываются важные категории сообщений в [категории сообщений](../mfc/message-categories.md).  
-  
-## <a name="see-also"></a>См. также  
- [Сообщения и команды платформы](../mfc/messages-and-commands-in-the-framework.md)
+
+Цикл обработки сообщений в `Run` функция-член класса `CWinApp` извлекает поставлены в очередь сообщения, сформированные при возникновении различных событий. Например когда пользователь нажимает кнопку мыши, Windows отправляет несколько сообщений, связанных с мышью, например WM_LBUTTONDOWN при нажатии левой кнопки мыши и WM_LBUTTONUP при отпускании левой кнопки мыши. Реализация платформы цикл обработки сообщений приложения отправляет сообщение в соответствующем окне.
+
+Описываются важные категории сообщений в [категории сообщений](../mfc/message-categories.md).
+
+## <a name="see-also"></a>См. также
+
+[Сообщения и команды платформы](../mfc/messages-and-commands-in-the-framework.md)
 

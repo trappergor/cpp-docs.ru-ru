@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a57cb6c72d7d444c345140f4a738a3d4a3232c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 95c3d15414dbb312c60029a86707c1d32df56adc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315617"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405519"
 ---
 # <a name="default-control-events"></a>События по умолчанию элемента управления
 
@@ -63,9 +63,9 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Определение переменных-членов для элементов управления диалоговых окон](../windows/defining-member-variables-for-dialog-controls.md)  
-[Типы сообщений, связанных с объектами пользовательского интерфейса](../mfc/reference/message-types-associated-with-user-interface-objects.md)  
-[Редактирование обработчика сообщений](../mfc/reference/editing-a-message-handler.md)  
-[Определение обработчика сообщений для отраженного сообщения](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)  
-[Объявление переменной на основании нового класса элемента управления](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)  
+[Определение переменных-членов для элементов управления диалоговых окон](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Типы сообщений, связанных с объектами пользовательского интерфейса](../mfc/reference/message-types-associated-with-user-interface-objects.md)<br/>
+[Редактирование обработчика сообщений](../mfc/reference/editing-a-message-handler.md)<br/>
+[Определение обработчика сообщений для отраженного сообщения](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)<br/>
+[Объявление переменной на основании нового класса элемента управления](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)<br/>
 [Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)

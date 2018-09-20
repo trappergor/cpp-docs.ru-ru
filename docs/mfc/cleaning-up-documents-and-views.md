@@ -1,5 +1,5 @@
 ---
-title: Очистка документов и представлений | Документы Microsoft
+title: Очистка документов и представлений | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dfe54c13db6f44bc70289380ae5f50d99c3722b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4325b0de10861fc76ee9ab816376f40ba0ba587
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341330"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437421"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Очистка документов и представлений
-При закрытии документа сначала вызывается платформой его [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) функции-члена. Если выделить память в куче в процессе операции документа `DeleteContents` — это лучшее место для его освобождения.  
-  
+
+При закрытии документа, сначала вызывается метод его [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) функция-член. Если выделить память в куче в ходе операции с документом, `DeleteContents` лучше всего для его освобождения.
+
 > [!NOTE]
->  Не следует освобождать данные документа в деструкторе документа. В случае приложения SDI объект документа может быть использован.  
-  
- Можно переопределить деструктор представления для освобождения памяти, размещенных в куче.  
-  
-## <a name="see-also"></a>См. также  
- [Инициализация и очистка документов и представлений](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+>  Не следует освобождать данные документа в деструкторе документа. В случае приложения SDI объект документа может быть использован.
+
+Вы можете переопределить деструктор представления для освобождения памяти, выделенных в куче.
+
+## <a name="see-also"></a>См. также
+
+[Инициализация и очистка документов и представлений](../mfc/initializing-and-cleaning-up-documents-and-views.md)
 

@@ -1,5 +1,5 @@
 ---
-title: __noop | Документы Microsoft
+title: __noop | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d7ab3f1a61dc0644bf5683376ac676fbfcd6b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97820367f0960925dfcac1db339260cd3f52b8bc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322618"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430219"
 ---
 # <a name="noop"></a>__noop
-**Блок, относящийся только к системам Microsoft**  
-  
- `__noop` Встроенный Указывает игнорирование функции и проанализировать список аргументов, но не удается создать код для аргументов. Он предназначен для использования в отладки глобальных функций, принимающих переменное число аргументов.  
-  
- Компилятор преобразует `__noop` встроенными в 0, во время компиляции.  
-  
-## <a name="example"></a>Пример  
- В следующем коде показано, как использовать `__noop`.  
-  
-```  
-// compiler_intrinsics__noop.cpp  
-// compile with or without /DDEBUG  
-#include <stdio.h>  
-  
-#if DEBUG  
-   #define PRINT   printf_s  
-#else  
-   #define PRINT   __noop  
-#endif  
-  
-int main() {  
-   PRINT("\nhello\n");  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   
- [Ключевые слова](../cpp/keywords-cpp.md)
+
+**Блок, относящийся только к системам Microsoft**
+
+`__noop` Встроенный указывает, что функцию следует игнорировать и проанализировать список аргументов, но не создать код для аргументов. Он предназначен для использования в глобальных отладки функций, принимающих переменное число аргументов.
+
+Компилятор преобразует `__noop` встроенными в 0, во время компиляции.
+
+## <a name="example"></a>Пример
+
+В следующем коде показано, как использовать `__noop`.
+
+```
+// compiler_intrinsics__noop.cpp
+// compile with or without /DDEBUG
+#include <stdio.h>
+
+#if DEBUG
+   #define PRINT   printf_s
+#else
+   #define PRINT   __noop
+#endif
+
+int main() {
+   PRINT("\nhello\n");
+}
+```
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Ключевые слова](../cpp/keywords-cpp.md)

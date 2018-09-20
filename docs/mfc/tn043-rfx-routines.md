@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1266097f9d548630459a3fb45ed75edb811deea
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a35fc217b6600fd701dcc1750c327ffc7f241e8e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317346"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376659"
 ---
 # <a name="tn043-rfx-routines"></a>TN043. Процедуры RFX
 
@@ -170,5 +170,5 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 ## <a name="see-also"></a>См. также
 
-[Технические примечания по номеру](../mfc/technical-notes-by-number.md)  
-[Технические примечания по категории](../mfc/technical-notes-by-category.md)  
+[Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
+[Технические примечания по категории](../mfc/technical-notes-by-category.md)

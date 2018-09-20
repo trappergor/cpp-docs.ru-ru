@@ -1,5 +1,5 @@
 ---
-title: Создание окон | Документы Microsoft
+title: Создание Windows | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446ebb4904b8f34576b03f88988bfc58138736a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf0263bfd67a2bfbd9489c7cfea6946ee2eda9f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341902"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394033"
 ---
 # <a name="creating-windows"></a>Создание окон
-Платформа автоматически создает большую часть окон, которые используются в программе framework. [Создание документов и представлений](../mfc/document-view-creation.md) показано, как платформа создает фрейм окна, связанные с документами и представлениями. Но для специальных целей, можно создать собственные windows — собственных дочерних окон фреймов или представлений, включая, помимо windows, предоставляемого платформой.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
-  
--   [Регистрация классов» окна»](../mfc/registering-window-classes.md) (в отличие от объекты окон с ++)  
-  
--   [Последовательность создания окна Общие](../mfc/general-window-creation-sequence.md)  
-  
--   [Уничтожение объектов окон](../mfc/destroying-window-objects.md)  
-  
--   [Работа с объектами окон](../mfc/working-with-window-objects.md)  
-  
-## <a name="see-also"></a>См. также  
- [Объекты окон](../mfc/window-objects.md)
+
+Платформа автоматически создает большинство окон, которые используются в программе framework. [Создание документов и представлений](../mfc/document-view-creation.md) показано, как платформа создает фрейм окна, связанные с документов и представлений. Но для специальных целей, можно создать собственный windows, включая собственные дочерних окон, окон фреймов или представлений — вместе с windows, предоставляемого платформой.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+
+- [Регистрация классов «window»](../mfc/registering-window-classes.md) (в отличие от объекты окон с ++)
+
+- [Последовательность создания окна Общие](../mfc/general-window-creation-sequence.md)
+
+- [Уничтожение объектов окон](../mfc/destroying-window-objects.md)
+
+- [Работа с объектами окон](../mfc/working-with-window-objects.md)
+
+## <a name="see-also"></a>См. также
+
+[Объекты окон](../mfc/window-objects.md)
 

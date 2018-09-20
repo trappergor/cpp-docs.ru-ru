@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4895491a6b697d33d3ba5c6070a75d037e894e46
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d420566411326b21a6d219d51ceaec476f130be4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219777"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437447"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -69,6 +69,6 @@ __interface IFireTabCtrl
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Атрибуты параметра](../windows/parameter-attributes.md)  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cee634ab62e699b4de6af54a57b0fe3d6b5e9a40
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5e223ce02fa8a50ac39298d1f45f1f531dbf1f97
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606612"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411330"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Класс Module::MethodReleaseNotifier
 
@@ -37,26 +37,26 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип объекта, функция-член которого является обработчиком событий.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Конструктор Module::MethodReleaseNotifier::MethodReleaseNotifier](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Инициализирует новый экземпляр класса **Module::MethodReleaseNotifier** класса.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод Module::MethodReleaseNotifier::Invoke](../windows/module-methodreleasenotifier-invoke-method.md)|Вызывает обработчик событий, связанный с текущим **Module::MethodReleaseNotifier** объекта.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Элемент данных Module::MethodReleaseNotifier::method_](../windows/module-methodreleasenotifier-method-data-member.md)|Содержит указатель на обработчик событий для текущего **Module::MethodReleaseNotifier** объекта.|
 |[Элемент данных Module::MethodReleaseNotifier::object_](../windows/module-methodreleasenotifier-object-data-member.md)|Содержит указатель на объект, функция-член которого является обработчиком событий для текущего **Module::MethodReleaseNotifier** объекта.|
@@ -74,4 +74,5 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
+
 [Класс Module](../windows/module-class.md)

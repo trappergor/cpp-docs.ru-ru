@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63adaad4fe074225ef32d99edd2a1402acf5e045
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 528245bd2b0ef734ce192f266fe73e813078a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709128"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407300"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate/CharSet (Проверка совместимости символов)
 
@@ -57,6 +57,6 @@ Visual Studio использует UTF-8 в качестве внутренне�
 
 [Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[/ Execution-CharSet (задать выполнение кодировки)](../../build/reference/execution-charset-set-execution-character-set.md)
-[кодировки/Source (задание исходной кодировки)](../../build/reference/source-charset-set-source-character-set.md)
- [ /UTF-8 (задать источник и исполняемый файл кодировки UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/ Execution-CharSet (задать выполнение кодировки)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source/charset (задание исходной кодировки)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf/8 (указание UTF/8 в качестве исходной кодировки и кодировки исполняемого файла)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

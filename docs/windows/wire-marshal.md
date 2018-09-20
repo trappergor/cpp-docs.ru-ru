@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94504cea86059f835d9cbda7cbf2bcdeafab589b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: db09d139227104ea15666e7333ae74943801a1b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214114"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384056"
 ---
 # <a name="wiremarshal"></a>wire_marshal
 
@@ -73,5 +73,5 @@ ms.locfileid: "43214114"
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  

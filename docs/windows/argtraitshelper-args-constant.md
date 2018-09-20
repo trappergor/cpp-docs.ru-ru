@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4817d0f0082ef4ec0a9a588982405772d733fe0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6a9b9239d7a75f17915c19e484ad25e0b230834d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598036"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395821"
 ---
 # <a name="argtraitshelperargs-constant"></a>Константа ArgTraitsHelper::args
 
@@ -46,5 +46,5 @@ static const int args = Traits::args;
 
 ## <a name="see-also"></a>См. также
 
-[Структура ArgTraitsHelper](../windows/argtraitshelper-structure.md)  
+[Структура ArgTraitsHelper](../windows/argtraitshelper-structure.md)<br/>
 [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

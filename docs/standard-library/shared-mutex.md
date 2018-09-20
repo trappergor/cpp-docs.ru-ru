@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98ceeff060436701efb60aeb59987ae087c191b1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6def4845356c542b0bdd5d0de14dc3402640dc05
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960285"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391336"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex >
 
@@ -68,13 +68,13 @@ ms.locfileid: "38960285"
 
 Заголовок &lt;shared_mutex > определяет классы `shared_mutex` и `shared_timed_mutex`, класс шаблона `shared_lock`и функция шаблона `swap` для поддержки общего мьютекса.
 
-|Классы|Описание:|
+|Классы|Описание|
 |-------------|-----------------|
 |[Класс shared_mutex](../standard-library/shared-mutex.md#class_shared_mutex)|Тип общего мьютекса, который может быть заблокирован одним агентом или совместно использоваться несколькими агентами с неисключительным доступом.|
 |[Класс shared_timed_mutex](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Тип общего мьютекса с ограничением по времени, который может быть заблокирован одним агентом или совместно использоваться несколькими агентами с неисключительным доступом.|
 |[Класс shared_lock](../standard-library/shared-mutex.md#class_shared_lock)|Класс шаблонов, создающий программу-оболочку для общего мьютекса, чтобы обеспечить поддержку операций блокировки с ограничением по времени и совместное использование несколькими агентами с неисключительными правами.|
 
-|Функции|Описание:|
+|Функции|Описание|
 |---------------|-----------------|
 |[swap](../standard-library/shared-mutex.md#function_swap)|Меняет местами содержимое общих объектов мьютекса, на которые ссылаются параметры функции.|
 
@@ -244,5 +244,5 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
-[&lt;mutex >](../standard-library/mutex.md)
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
+[&lt;mutex>](../standard-library/mutex.md)

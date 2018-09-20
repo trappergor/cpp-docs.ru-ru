@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 111015fdd8887ae779aeb8fecc8274cfcf7c6c68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691475"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441282"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory - класс
 
@@ -43,7 +43,7 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="parameters"></a>Параметры
 
-*Base*  
+*Base*<br/>
 Базовый класс.
 
 ## <a name="remarks"></a>Примечания
@@ -106,7 +106,7 @@ STDMETHOD( ActivateInstance )(
 
 #### <a name="parameters"></a>Параметры
 
-*ppvObject*  
+*ppvObject*<br/>
 После завершения операции, указатель на экземпляр объекта, заданного параметром `Base` параметре шаблона класса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -129,7 +129,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>Параметры
 
-*runtimeName*  
+*runtimeName*<br/>
 После завершения операции представляет имя класса среды выполнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -152,7 +152,7 @@ STDMETHOD(
 
 #### <a name="parameters"></a>Параметры
 
-*trustLvl*  
+*trustLvl*<br/>
 После завершения операции, уровень доверия текущего объекта класса.
 
 ### <a name="return-value"></a>Возвращаемое значение

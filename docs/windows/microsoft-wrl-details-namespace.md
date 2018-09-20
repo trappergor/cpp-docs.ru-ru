@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 095d355ae26faf447b54a99437c843322efe5cb9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611752"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436888"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Пространство имен Microsoft::WRL::Details
 
@@ -34,7 +34,7 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="classes"></a>Классы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Класс ComPtrRef](../windows/comptrref-class.md)|Представляет ссылку на объект ComPtr типа\<T >.|
 |[Класс ComPtrRefBase](../windows/comptrrefbase-class.md)|Представляет базовый класс для [ComPtrRef](../windows/comptrref-class.md) класса.|
@@ -47,7 +47,7 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="structures"></a>Структуры
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Структура ArgTraits](../windows/argtraits-structure.md)|Объявляет указанный делегат, интерфейс и анонимную функцию-член, имеющий указанное число параметров.|
 |[Структура ArgTraitsHelper](../windows/argtraitshelper-structure.md)|Помогает определить общие характеристики аргументов делегата.|
@@ -73,13 +73,13 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="enumerations"></a>Перечисления
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Перечисление AsyncStatusInternal](../windows/asyncstatusinternal-enumeration.md)|Задает сопоставление между внутренними перечислениями состояний асинхронных операций и перечислением `Windows::Foundation::AsyncStatus`.|
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Функция ActivationFactoryCallback](../windows/activationfactorycallback-function.md)|Возвращает фабрику активации для активации указанного идентификатора.|
 |[Функция Move](../windows/move-function.md)|Перемещает указанный аргумент из одного расположения в другое.|
@@ -95,5 +95,5 @@ namespace Microsoft::WRL::Details;
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)  
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)<br/>
 [Пространство имен Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)

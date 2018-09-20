@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3eade86404bcd4fef7ce3356d36a43ac6a59a8f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597759"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418402"
 ---
 # <a name="argtraits-structure"></a>ArgTraits - структура
 
@@ -120,37 +120,37 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 ### <a name="parameters"></a>Параметры
 
-*TMemberFunction*  
+*TMemberFunction*<br/>
 Параметр имени типа для структуры ArgTraits, который не соответствует ни одному `Invoke` сигнатуру метода.
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Интерфейс делегата.
 
-*TArg1*  
+*TArg1*<br/>
 Тип первого аргумента `Invoke` метод.
 
-*TArg2*  
+*TArg2*<br/>
 Тип второго аргумента `Invoke` метод.
 
-*TArg3*  
+*TArg3*<br/>
 Тип третьего аргумента `Invoke` метод.
 
-*TArg4*  
+*TArg4*<br/>
 Тип четвертого аргумента `Invoke` метод.
 
-*TArg5*  
+*TArg5*<br/>
 Тип пятого аргумента `Invoke` метод.
 
-*TArg6*  
+*TArg6*<br/>
 Тип шестого аргумента `Invoke` метод.
 
-*TArg7*  
+*TArg7*<br/>
 Тип седьмого аргумента `Invoke` метод.
 
-*TArg8*  
+*TArg8*<br/>
 Тип восьмого аргумента `Invoke` метод.
 
-*TArg9*  
+*TArg9*<br/>
 Тип девятого аргумента `Invoke` метод.
 
 ## <a name="remarks"></a>Примечания
@@ -161,7 +161,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`Arg1Type`|Typedef для TArg1.|
 |`Arg2Type`|Typedef для TArg2.|
@@ -175,7 +175,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Константа ArgTraits::args](../windows/argtraits-args-constant.md)|Ведет статистику, число параметров `Invoke` метод для интерфейса делегата.|
 

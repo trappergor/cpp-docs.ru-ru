@@ -1,5 +1,5 @@
 ---
-title: 'Серверы: Проблемы пользовательского интерфейса | Документы Microsoft'
+title: 'Серверы: Проблемы пользовательского интерфейса | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18382d305c8128a70e17651de913f38303286885
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539486ac1bce56fdc972943abcf8c7de72635f72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379675"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445559"
 ---
 # <a name="servers-user-interface-issues"></a>Серверы. Проблемы пользовательского интерфейса
-Серверное приложение имеет ряд возможностей, которые необходимо добавить в пользовательский интерфейс для предоставления OLE-элементы в контейнере приложения. Дополнительные сведения о меню и дополнительные ресурсы, которые должны быть добавлены к серверному приложению в разделе [меню и ресурсы: Добавление серверов](../mfc/menus-and-resources-server-additions.md).  
-  
-## <a name="see-also"></a>См. также  
- [Серверы](../mfc/servers.md)   
- [Меню и ресурсы (OLE)](../mfc/menus-and-resources-ole.md)
+
+Серверное приложение имеет ряд функций, которые необходимо добавить в пользовательский интерфейс для предоставления элементов OLE для приложения-контейнеры. Дополнительные сведения о меню и дополнительные ресурсы, которые должны быть добавлены к серверному приложению, см. в разделе [меню и ресурсы: Добавление серверов](../mfc/menus-and-resources-server-additions.md).
+
+## <a name="see-also"></a>См. также
+
+[Серверы](../mfc/servers.md)<br/>
+[Меню и ресурсы (OLE)](../mfc/menus-and-resources-ole.md)
 

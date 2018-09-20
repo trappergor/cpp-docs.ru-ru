@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67527717319c4b571ff4b72b83d718c0ac149586
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a2370a2f47e358358ed2c870f8fffcbe135a116f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406689"
 ---
 # <a name="symbol-name-restrictions"></a>Ограничения для имен символов
 
@@ -60,6 +60,6 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Изменение символа или символьного имени (идентификатор)](../windows/changing-a-symbol-or-symbol-name-id.md)  
-[Ограничения для символьных значений](../windows/symbol-value-restrictions.md)  
+[Изменение символа или символьного имени (идентификатор)](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Ограничения для символьных значений](../windows/symbol-value-restrictions.md)<br/>
 [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)

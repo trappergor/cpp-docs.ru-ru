@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8e7566c16abdd4540426d0c56e24c648fd0bcd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 70faf1ce75b39e0ce86dd6efda0cda8275f9dc16
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208697"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430817"
 ---
 # <a name="making-owner-drawn-tabs"></a>Создание определяемых владельцем вкладок
-Можно определить отдельные элементы элемента управления вкладки ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) быть владельцем элементы. Дополнительные сведения см. в разделе [Owner-Drawn вкладки](/windows/desktop/Controls/tab-controls) в пакете Windows SDK.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CTabCtrl](../mfc/using-ctabctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+Можно определить отдельные элементы элемента управления вкладки ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) быть владельцем элементы. Дополнительные сведения см. в разделе [Owner-Drawn вкладки](/windows/desktop/Controls/tab-controls) в пакете Windows SDK.
+
+## <a name="see-also"></a>См. также
+
+[Использование CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

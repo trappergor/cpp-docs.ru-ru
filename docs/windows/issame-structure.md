@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9e45f64d8eda3e24fb7c85120f14e981963f7f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b7d1879217ac43e2d7d3714f491f44b8245f4f27
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595789"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390530"
 ---
 # <a name="issame-structure"></a>IsSame - структура
 
@@ -44,10 +44,10 @@ struct IsSame<T1, T1>;
 
 ### <a name="parameters"></a>Параметры
 
-*T1*  
+*T1*<br/>
 Тип.
 
-*T2*  
+*T2*<br/>
 Другой тип.
 
 ## <a name="remarks"></a>Примечания
@@ -58,7 +58,7 @@ struct IsSame<T1, T1>;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Константа IsSame::value](../windows/issame-value-constant.md)|Указывает, совпадают ли заданные типы друг с другом.|
 

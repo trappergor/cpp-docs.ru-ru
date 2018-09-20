@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22e27a5dddacf87a9768d7f6b8d27765d902b5ff
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3d0cc73df8304377bde00d8da2ab3c501ea5db45
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318373"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373275"
 ---
 # <a name="dialog-editor-states-guides-and-grids-c"></a>Состояния редактора диалоговых окон (направляющие и сетки) (C++) 
 
@@ -50,6 +50,6 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Размещение элементов управления в диалоговых окнах](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)  
+[Размещение элементов управления в диалоговых окнах](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)<br/>
 [Элементы управления (MFC)](../mfc/controls-mfc.md)

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ee7ccca718a05529e5ebc88bccc7d23d258810c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758366"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434184"
 ---
 # <a name="coledatetimespan-class"></a>Класс COleDateTimeSpan
 
@@ -763,9 +763,9 @@ enum DateTimeSpanStatus{
 
 ## <a name="see-also"></a>См. также
 
-[Класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)   
-[Класс CTime](../../atl-mfc-shared/reference/ctime-class.md)   
-[Класс CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
+[Класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+[Класс CTime](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[Класс CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

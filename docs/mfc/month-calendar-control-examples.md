@@ -1,5 +1,5 @@
 ---
-title: Примеры управления Календарь на месяц | Документы Microsoft
+title: Примеры управления Календарь на месяц | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77dcf22e82fda1d0326c35f3e56ced19a1ca05fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 653c81da4cb9cd1a4beff453b4a36847e1837491
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342911"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437070"
 ---
 # <a name="month-calendar-control-examples"></a>Примеры элемента управления "Календарь на месяц"
-[CMNCTRL1](../visual-cpp-samples.md) образец приложения показывает различные атрибуты `CMonthCalCtrl` класса. Элемент управления, найденных на отдельной вкладке в образце показаны основные функции и пользователь может динамически изменять определенные атрибуты.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+[CMNCTRL1](../visual-cpp-samples.md) пример приложения демонстрирует различные атрибуты `CMonthCalCtrl` класса. Элемент управления, найденных на отдельной вкладке в этом примере показаны основные функции и позволяет динамически изменять некоторые атрибуты.
+
+## <a name="see-also"></a>См. также
+
+[Использование CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

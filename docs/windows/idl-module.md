@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0539275a09a64e31a9ecad17cab899368701e353
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715537"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412220"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -46,31 +46,31 @@ function declaration
 
 ### <a name="parameters"></a>Параметры
 
-*name*  
+*name*<br/>
 Определяемое пользователем имя для блока кода, который будет отображаться в IDL-файла.
 
-*dllname*  
+*dllname*<br/>
 (Необязательно) DLL-файл, содержащий экспорта.
 
-*uuid*  
+*uuid*<br/>
 (Необязательно) Уникальный идентификатор.
 
-*helpstring*  
+*helpstring*<br/>
 (Необязательно) Строка символов, используемый для описания библиотеки типов.
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (Необязательно) Идентификатор раздела справки в файл с расширением .hlp или .chm.
 
-*helpcontext*  
+*helpcontext*<br/>
 (Необязательно) Идентификатор справки для этой библиотеки типов.
 
-*hidden*  
+*hidden*<br/>
 (Необязательно) Параметр, который запрещает отображение библиотеки. См. в разделе [скрытые](/windows/desktop/Midl/hidden) описании атрибута MIDL Дополнительные сведения.
 
-*restricted*  
+*restricted*<br/>
 (Необязательно) Элементы библиотеки нельзя вызывать произвольным образом. См. в разделе [ограниченных](/windows/desktop/Midl/restricted) описании атрибута MIDL Дополнительные сведения.
 
-*объявление функции*  
+*объявление функции*<br/>
 Функция, которую вы создадите.
 
 ## <a name="remarks"></a>Примечания
@@ -111,6 +111,6 @@ void FuncName(int i);
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Изолированные атрибуты](../windows/stand-alone-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Изолированные атрибуты](../windows/stand-alone-attributes.md)<br/>
 [entry](../windows/entry.md)  

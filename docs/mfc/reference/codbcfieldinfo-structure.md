@@ -17,54 +17,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 797a229007be58ff3da3bb529c9e8f4a062c12b3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853086"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434314"
 ---
 # <a name="codbcfieldinfo-structure"></a>Структура CODBCFieldInfo
-`CODBCFieldInfo` Структура содержит сведения о полях в источник данных ODBC.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-struct CODBCFieldInfo  
-{  
-    CString m_strName;  
-    SWORD m_nSQLType;  
-    UDWORD m_nPrecision;  
-    SWORD m_nScale;  
-    SWORD m_nNullability;  
-};  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *m_strName*  
- Имя поля.  
-  
- *m_nSQLType*  
- Тип данных SQL поля. Это может быть типом данных ODBC SQL или типом данных специфические для драйвера SQL. Список допустимых типов данных ODBC SQL см. в разделе «Типы данных SQL» в пакете Windows SDK. Сведения о типах данных драйвера SQL см. в разделе документации по драйверу.  
-  
- *m_nPrecision*  
- Максимальная точность поля. Дополнительные сведения см. в разделе «Точность, масштаб, длину и отображаемый размер» в пакете Windows SDK.  
-  
- *m_nScale*  
- Масштаб поля. Дополнительные сведения см. в разделе «Точность, масштаб, длину и отображаемый размер» в пакете Windows SDK.  
-  
- *m_nNullability*  
- Является ли поле допускает значение Null. Это может быть одно из двух значений: SQL_NULLABLE, если поле допускает значения Null, или SQL_NO_NULLS, если поле не принимает значения Null.  
-  
-## <a name="remarks"></a>Примечания  
- Чтобы получить эти данные, вызовите [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
-  
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)   
- [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
+
+`CODBCFieldInfo` Структура содержит сведения о полях в источник данных ODBC.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+struct CODBCFieldInfo
+{
+    CString m_strName;
+    SWORD m_nSQLType;
+    UDWORD m_nPrecision;
+    SWORD m_nScale;
+    SWORD m_nNullability;
+};
+```
+
+#### <a name="parameters"></a>Параметры
+
+*m_strName*<br/>
+Имя поля.
+
+*m_nSQLType*<br/>
+Тип данных SQL поля. Это может быть типом данных ODBC SQL или типом данных специфические для драйвера SQL. Список допустимых типов данных ODBC SQL см. в разделе «Типы данных SQL» в пакете Windows SDK. Сведения о типах данных драйвера SQL см. в разделе документации по драйверу.
+
+*m_nPrecision*<br/>
+Максимальная точность поля. Дополнительные сведения см. в разделе «Точность, масштаб, длину и отображаемый размер» в пакете Windows SDK.
+
+*m_nScale*<br/>
+Масштаб поля. Дополнительные сведения см. в разделе «Точность, масштаб, длину и отображаемый размер» в пакете Windows SDK.
+
+*m_nNullability*<br/>
+Является ли поле допускает значение Null. Это может быть одно из двух значений: SQL_NULLABLE, если поле допускает значения Null, или SQL_NO_NULLS, если поле не принимает значения Null.
+
+## <a name="remarks"></a>Примечания
+
+Чтобы получить эти данные, вызовите [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxdb.h
+
+## <a name="see-also"></a>См. также
+
+[Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
+[CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
 
 

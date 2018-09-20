@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24ca52eccc814b82e5f9bdd6ddac6458fb5992fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0fd86cb8a9c9fa86da0a1781f49fe57c5ce6d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607140"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394449"
 ---
 # <a name="comptroperator-operator"></a>Оператор ComPtr::operator==
 
@@ -47,10 +47,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*a*  
+*a*<br/>
 Ссылку на **ComPtr** объекта.
 
-*b*  
+*b*<br/>
 Ссылка на другой **ComPtr** объекта.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -67,5 +67,5 @@ bool operator==(
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)  
+[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)<br/>
 [Класс ComPtr](../windows/comptr-class.md)

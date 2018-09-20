@@ -1,5 +1,5 @@
 ---
-title: Классы управления ресурсами | Документы Microsoft
+title: Классы управления ресурсами | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f5457cf9062de233a4489f92cb2a1bf561a2e30d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 511902e96870a82cfccadda4df47f47d848ae03f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161438"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417921"
 ---
 # <a name="resource-management-classes"></a>Классы управления ресурсами
-Эти классы обеспечивают автоматическое управление управляемых классов.  
-  
-## <a name="in-this-section"></a>Содержание раздела  
-  
-|||  
-|-|-|  
-|[auto_gcroot](../dotnet/auto-gcroot.md)|Внедряет виртуальный дескриптор собственного типа.|  
-|[auto_handle](../dotnet/auto-handle.md)|Внедряет виртуальный дескриптор в управляемом типе.|  
-  
-## <a name="see-also"></a>См. также  
- [Библиотека поддержки C++](../dotnet/cpp-support-library.md)
+
+Эти классы обеспечивают автоматическое управление управляемых классов.
+
+## <a name="in-this-section"></a>В этом разделе
+
+|||
+|-|-|
+|[auto_gcroot](../dotnet/auto-gcroot.md)|Внедряет виртуальный дескриптор в собственный тип.|
+|[auto_handle](../dotnet/auto-handle.md)|Внедряет виртуальный дескриптор в управляемом типе.|
+
+## <a name="see-also"></a>См. также
+
+[Библиотека поддержки C++](../dotnet/cpp-support-library.md)

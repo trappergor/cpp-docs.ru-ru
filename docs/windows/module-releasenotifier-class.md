@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6f720d0a918a22aee4a4cade6af1cb02a90e8d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b42d4c282ce710f2f08b41c4097d64aa4dc9a805
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588873"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407313"
 ---
 # <a name="modulereleasenotifier-class"></a>Класс Module::ReleaseNotifier
 
@@ -38,14 +38,14 @@ class ReleaseNotifier;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Деструктор Module::ReleaseNotifier::~ReleaseNotifier](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Деинициализирует текущий экземпляр **Module::ReleaseNotifier** класса.|
 |[Конструктор Module::ReleaseNotifier::ReleaseNotifier](../windows/module-releasenotifier-releasenotifier-constructor.md)|Инициализирует новый экземпляр класса **Module::ReleaseNotifier** класса.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод Module::ReleaseNotifier::Invoke](../windows/module-releasenotifier-invoke-method.md)|При реализации, вызывает обработчик событий при освобождении последнего объекта в модуле.|
 |[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Удаляет текущий **Module::ReleaseNotifier** объекта, если объект был создан с параметром **true**.|
@@ -61,4 +61,5 @@ class ReleaseNotifier;
 **Пространство имен:** Microsoft::WRL
 
 ## <a name="see-also"></a>См. также
+
 [Класс Module](../windows/module-class.md)

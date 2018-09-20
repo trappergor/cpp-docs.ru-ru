@@ -1,5 +1,5 @@
 ---
-title: 'TN049: MBCS MFC OLE слой трансляции Юникод (MFCANS32) | Документы Microsoft'
+title: 'Tn049 слой трансляции: MFC-OLE MBCS в Юникод (Mfcans32) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dba912886f88d4868a6d74b12ac977925d9c0f4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5950765dbbd9b0afd5142315a7da1365e6e7bd49
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380745"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403159"
 ---
 # <a name="tn049-mfcole-mbcs-to-unicode-translation-layer-mfcans32"></a>TN049. Слой трансляции MFC/OLE MBCS в Юникод (MFCANS32)
-Эта заметка, первоначально описано как MFCANS32. Библиотека предоставляет интерфейсы ANSI в основном Юникода world 32-разрядных OLE. Эта библиотека DLL MFC больше не используется.  
-  
-## <a name="see-also"></a>См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+
+Эта заметка сформулировала как MFCANS32. Библиотека DLL предоставляет интерфейсы ANSI в основном Юникода world 32-разрядных OLE. Эта библиотека DLL MFC больше не используется.
+
+## <a name="see-also"></a>См. также
+
+[Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
+[Технические примечания по категории](../mfc/technical-notes-by-category.md)
 

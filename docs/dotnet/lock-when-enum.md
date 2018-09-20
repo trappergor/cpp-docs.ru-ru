@@ -1,5 +1,5 @@
 ---
-title: Перечисление lock_when | Документы Microsoft
+title: Перечисление lock_when | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,120 +19,125 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: caf53e6bab7a3a98fd31da05d98b31d3f5077053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 98e2167ef9ce0c246947ce68f99bdcf4d68a0df2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129272"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409068"
 ---
 # <a name="lockwhen-enum"></a>Перечисление lock_when
-Указывает отложенное блокировки.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-enum lock_when {  
-   lock_later  
-};  
-```  
-  
-## <a name="remarks"></a>Примечания  
- При передаче в [lock::lock](../dotnet/lock-lock.md), `lock_later` указывает, что блокировка не, которое должно предприниматься, теперь.  
-  
-## <a name="example"></a>Пример  
- Этот пример использует один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока доступов к внутренних данных.  Основной поток приложения использует блокировку на том же экземпляре класса для периодической проверки ли все рабочие потоки по-прежнему существует и ожиданий для выхода, пока все рабочие потоки завершили свои задачи.  
-  
-```  
-// msl_lock_lock_when.cpp  
-// compile with: /clr  
-#include <msclr/lock.h>  
-  
-using namespace System;  
-using namespace System::Threading;  
-using namespace msclr;  
-  
-ref class CounterClass {  
-private:  
-   int Counter;     
-  
-public:  
-   property int ThreadCount;  
-  
-   // function called by multiple threads, use lock to keep Counter consistent  
-   // for each thread  
-   void UseCounter() {  
-      try {  
-         lock l(this); // wait infinitely  
-  
-         Console::WriteLine("In thread {0}, Counter = {1}", Thread::CurrentThread->ManagedThreadId,   
-            Counter);  
-  
-         for (int i = 0; i < 10; i++) {  
-            Counter++;  
-            Thread::Sleep(10);  
-         }  
-  
-         Console::WriteLine("In thread {0}, Counter = {1}", Thread::CurrentThread->ManagedThreadId,   
-            Counter);  
-  
-         Counter = 0;  
-         // lock is automatically released when it goes out of scope and its destructor is called  
-      }  
-      catch (...) {  
-         Console::WriteLine("Couldn't acquire lock!");  
-      }  
-  
-      ThreadCount--;  
-   }  
-};  
-  
-int main() {  
-   // create a few threads to contend for access to the shared data  
-   CounterClass^ cc = gcnew CounterClass;  
-   array<Thread^>^ tarr = gcnew array<Thread^>(5);  
-   ThreadStart^ startDelegate = gcnew ThreadStart(cc, &CounterClass::UseCounter);  
-   for (int i = 0; i < tarr->Length; i++) {  
-      tarr[i] = gcnew Thread(startDelegate);  
-      cc->ThreadCount++;  
-      tarr[i]->Start();  
-   }  
-  
-   // keep our main thread alive until all worker threads have completed  
-   lock l(cc, lock_later); // don't lock now, just create the object  
-   while (true) {  
-      if (l.try_acquire(50)) { // try to acquire lock, don't throw an exception if can't  
-         if (0 == cc->ThreadCount) {  
-            Console::WriteLine("All threads completed.");  
-            break; // all threads are gone, exit while  
-         }  
-         else {  
-            Console::WriteLine("{0} threads exist, continue waiting...", cc->ThreadCount);  
-            l.release(); // some threads exist, let them do their work  
-         }  
-      }  
-   }  
-}  
-```  
-  
-```Output  
-In thread 3, Counter = 0  
-In thread 3, Counter = 10  
-In thread 5, Counter = 0  
-In thread 5, Counter = 10  
-In thread 7, Counter = 0  
-In thread 7, Counter = 10  
-In thread 4, Counter = 0  
-In thread 4, Counter = 10  
-In thread 6, Counter = 0  
-In thread 6, Counter = 10  
-All threads completed.  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Файл заголовка** \<msclr\lock.h >  
-  
- **Пространство имен** msclr  
-  
-## <a name="see-also"></a>См. также  
- [lock](../dotnet/lock.md)
+
+Указывает отложенное блокировки.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+enum lock_when {
+   lock_later
+};
+```
+
+## <a name="remarks"></a>Примечания
+
+При передаче [lock::lock](../dotnet/lock-lock.md), `lock_later` указывает, что блокировка не предназначено для использования теперь.
+
+## <a name="example"></a>Пример
+
+В этом примере используется один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока, доступ к ее внутренним данным.  Основного потока приложения использует блокировку на том же экземпляре класса для периодической проверки любого рабочих потоков по-прежнему существовать, и ожиданий, чтобы завершить работу, пока все потоки исполнителей выполнили свои задачи.
+
+```
+// msl_lock_lock_when.cpp
+// compile with: /clr
+#include <msclr/lock.h>
+
+using namespace System;
+using namespace System::Threading;
+using namespace msclr;
+
+ref class CounterClass {
+private:
+   int Counter;
+
+public:
+   property int ThreadCount;
+
+   // function called by multiple threads, use lock to keep Counter consistent
+   // for each thread
+   void UseCounter() {
+      try {
+         lock l(this); // wait infinitely
+
+         Console::WriteLine("In thread {0}, Counter = {1}", Thread::CurrentThread->ManagedThreadId,
+            Counter);
+
+         for (int i = 0; i < 10; i++) {
+            Counter++;
+            Thread::Sleep(10);
+         }
+
+         Console::WriteLine("In thread {0}, Counter = {1}", Thread::CurrentThread->ManagedThreadId,
+            Counter);
+
+         Counter = 0;
+         // lock is automatically released when it goes out of scope and its destructor is called
+      }
+      catch (...) {
+         Console::WriteLine("Couldn't acquire lock!");
+      }
+
+      ThreadCount--;
+   }
+};
+
+int main() {
+   // create a few threads to contend for access to the shared data
+   CounterClass^ cc = gcnew CounterClass;
+   array<Thread^>^ tarr = gcnew array<Thread^>(5);
+   ThreadStart^ startDelegate = gcnew ThreadStart(cc, &CounterClass::UseCounter);
+   for (int i = 0; i < tarr->Length; i++) {
+      tarr[i] = gcnew Thread(startDelegate);
+      cc->ThreadCount++;
+      tarr[i]->Start();
+   }
+
+   // keep our main thread alive until all worker threads have completed
+   lock l(cc, lock_later); // don't lock now, just create the object
+   while (true) {
+      if (l.try_acquire(50)) { // try to acquire lock, don't throw an exception if can't
+         if (0 == cc->ThreadCount) {
+            Console::WriteLine("All threads completed.");
+            break; // all threads are gone, exit while
+         }
+         else {
+            Console::WriteLine("{0} threads exist, continue waiting...", cc->ThreadCount);
+            l.release(); // some threads exist, let them do their work
+         }
+      }
+   }
+}
+```
+
+```Output
+In thread 3, Counter = 0
+In thread 3, Counter = 10
+In thread 5, Counter = 0
+In thread 5, Counter = 10
+In thread 7, Counter = 0
+In thread 7, Counter = 10
+In thread 4, Counter = 0
+In thread 4, Counter = 10
+In thread 6, Counter = 0
+In thread 6, Counter = 10
+All threads completed.
+```
+
+## <a name="requirements"></a>Требования
+
+**Файл заголовка** \<msclr\lock.h >
+
+**Пространство имен** msclr
+
+## <a name="see-also"></a>См. также
+
+[lock](../dotnet/lock.md)

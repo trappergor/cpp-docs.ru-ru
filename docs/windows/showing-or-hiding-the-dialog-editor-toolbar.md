@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b7b6c8b01665da1effb1b3bd056c99bd82163c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02deeeed3eecf717cff380e43317e5a75c1fddf7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316020"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381248"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar-c"></a>Отображение или скрытие панели инструментов редактора диалоговых окон (C++)
 
@@ -60,7 +60,7 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Размещение элементов управления в диалоговых окнах](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Практическое руководство. Создание ресурса](../windows/how-to-create-a-resource.md)  
-[Файлы ресурсов](../windows/resource-files-visual-studio.md)  
+[Размещение элементов управления в диалоговых окнах](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Практическое руководство. Создание ресурса](../windows/how-to-create-a-resource.md)<br/>
+[Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
 [Редактор диалоговых окон](../windows/dialog-editor.md)

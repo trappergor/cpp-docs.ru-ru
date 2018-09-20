@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c2de62df47e46183c1169956a18ddc10822b22a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99e82de06f64816521c47c78648108a9ae815279
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611925"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443232"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>Оператор DontUseNewUseMake::operator new
 
@@ -39,10 +39,10 @@ void* operator new(
 
 ### <a name="parameters"></a>Параметры
 
-*__unnamed0*  
+*__unnamed0*<br/>
 Неименованный параметр, который определяет количество байт памяти для выделения.
 
-*Размещение*  
+*Размещение*<br/>
 Выделяемый тип.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -61,5 +61,5 @@ void* operator new(
 
 ## <a name="see-also"></a>См. также
 
-[Класс DontUseNewUseMake](../windows/dontusenewusemake-class.md)  
+[Класс DontUseNewUseMake](../windows/dontusenewusemake-class.md)<br/>
 [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

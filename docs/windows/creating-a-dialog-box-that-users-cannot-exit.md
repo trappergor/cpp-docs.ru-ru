@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0b9c290cb8e5ced7537fb377d6e7ac52f20d089
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5abae461b4298d8a6300f5d7ad9f3e162a5b21c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314551"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447392"
 ---
 # <a name="creating-a-dialog-box-c-that-users-cannot-exit"></a>Создание диалогового окна (C++), чтобы пользователи не могут выйти
 
@@ -51,6 +51,6 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Практическое руководство. Создание ресурса](../windows/how-to-create-a-resource.md)  
-[Файлы ресурсов](../windows/resource-files-visual-studio.md)  
+[Практическое руководство. Создание ресурса](../windows/how-to-create-a-resource.md)<br/>
+[Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
 [Редактор диалоговых окон](../windows/dialog-editor.md)

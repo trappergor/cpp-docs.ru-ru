@@ -1,5 +1,5 @@
 ---
-title: Установка режима объекта CStatusBarCtrl | Документы Microsoft
+title: Установка режима объекта CStatusBarCtrl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdad5073b3f566ad43d25258ca0b5e173f52fb57
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b398fedb8637ae6ce539a876410222485054919b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956815"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409549"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Установка режима объекта CStatusBarCtrl
-Существует два режима для `CStatusBarCtrl` объект: простые и непростые. В большинстве случаев в строке состояния будет иметь одну или несколько частей, и текст и возможно значок или значки. Это называется непростые режиме. Дополнительные сведения об этом режиме см. в разделе [инициализация частей объекта CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
-  
- Тем не менее существуют случаи, когда вам требуется для отображения одной строки текста. В этом случае для потребностей достаточно простой режим. Чтобы изменить режим `CStatusBarCtrl` значение simple, следует вызвать [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) функции-члена. Как только строки состояния в простом режиме, задайте текст, вызвав `SetText` передача 255 в качестве значения для функции-члена *nPane* параметра.  
-  
- Можно использовать [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) функции, чтобы определить, какой режим `CStatusBarCtrl` объект.  
-  
+
+Существует два режима для `CStatusBarCtrl` объект: простые и непростые. В большинстве случаев ваш элемент управления строки состояния будет иметь один или несколько частей, а также текст и возможно значок или значки. Это называется непростые режим. Дополнительные сведения об этом режиме см. в разделе [инициализация частей объекта CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).
+
+Тем не менее существуют случаи, когда необходима только для отображения одной строки текста. В этом случае для потребностей достаточно простой режим. Чтобы изменить режим `CStatusBarCtrl` объекта на simple, вызвать [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) функция-член. Когда элемент управления строки состояния в простом режиме, задать текст, вызвав `SetText` передача 255 в качестве значения для функции-члена *nPane* параметра.
+
+Можно использовать [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) функцию, чтобы определить, какой режим `CStatusBarCtrl` объект.
+
 > [!NOTE]
->  Объект строки состояние меняется с непростой простая или наоборот, немедленно перерисовке окна и, если применимо, автоматически восстанавливаются все определенные части.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+>  Если объект строки состояния, изменяется из непростой равным simple, или наоборот, немедленно перерисовке окна и, если применимо, автоматически восстанавливаются все определенные части.
+
+## <a name="see-also"></a>См. также
+
+[Использование CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

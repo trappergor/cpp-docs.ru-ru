@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fdd8e54ced5fedc5bbc1e28b8c77357c4210108b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7016a535eb420894d33cd46475ad8c1a75a10c59
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608905"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395470"
 ---
 # <a name="evening-the-spacing-between-controls"></a>Выравнивание интервалов между элементами управления
 
@@ -46,6 +46,6 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Размещение элементов управления в диалоговых окнах](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)  
+[Размещение элементов управления в диалоговых окнах](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)<br/>
 [Элементы управления](../mfc/controls-mfc.md)

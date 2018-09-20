@@ -1,5 +1,5 @@
 ---
-title: Схемы команд редактирования DHTML | Документы Microsoft
+title: Схемы команд редактирования DHTML | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,176 +12,207 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d040f3cb4c9bf8e1f3afc0e8213cd4513fc8571
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: e31490f62c170230c41a2a2a26fcbe116d39d415
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123374"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425071"
 ---
 # <a name="dhtml-editing-command-maps"></a>Схемы команд редактирования DHTML
-Следующие макросы можно использовать для сопоставления команд редактирования DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-производные классы. Пример их использования см. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).  
-  
-### <a name="dhtml-editing-command-map-macros"></a>Макросы схемы команд редактирования DHTML  
-  
-|||  
-|-|-|  
-|[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|Объявляет карты команд редактирования DHTML в классе.|  
-|[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|Запускает определения карты команд редактирования DHTML в пределах класса.|  
-|[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|Отмечает конец карты команд редактирования DHTML.|  
-|[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)|Сопоставляет идентификатор команды для команды редактирования HTML.|  
-|[DHTMLEDITING_CMD_ENTRY_FUNC](#dhtmlediting_cmd_entry_func)|Сопоставляет идентификатор команды команды редактирования HTML и обработчик сообщений.|  
-|[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Сопоставляет идентификатор команды команды редактирования HTML и элемент пользовательского интерфейса.|  
-|[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|Сопоставляет идентификатор команды для редактирования команд, обработчик сообщений и элемент пользовательского интерфейса HTML.|  
-  
-##  <a name="declare_dhtmlediting_cmdmap"></a>  DECLARE_DHTMLEDITING_CMDMAP  
- Объявляет карты команд редактирования DHTML в классе.  
-  
-```  
-DECLARE_DHTMLEDITING_CMDMAP(className)   
-```  
-  
-### <a name="parameters"></a>Параметры  
- *className*  
- Имя класса.  
-  
-### <a name="remarks"></a>Примечания  
- Этот макрос будет использоваться в определении [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-производные классы.  
-  
- Используйте [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) реализовать схему.  
-  
-### <a name="example"></a>Пример  
- В разделе [HTMLEdit пример](../../visual-cpp-samples.md).  
-  
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxhtml.h  
-  
-##  <a name="begin_dhtmlediting_cmdmap"></a>  BEGIN_DHTMLEDITING_CMDMAP  
- Запускает определения карты команд редактирования DHTML в пределах класса.  
-  
-```  
-BEGIN_DHTMLEDITING_CMDMAP(className)   
-```  
-  
-### <a name="parameters"></a>Параметры  
- *className*  
- Имя класса, содержащего карты команд редактирования DHTML. Этот класс должен наследоваться от прямо или косвенно [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) и включать [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) макрос в соответствии с определением класса.  
-  
-### <a name="remarks"></a>Примечания  
- Добавьте карту команд редактирования DHTML в класс для сопоставления команд пользовательского интерфейса команд редактирования HTML.  
-  
- Поместите begin_dhtmlediting_cmdmap-макрос в файле реализации (CPP) класса, за которым следует [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) макросы для команд, класс является сопоставление (например, ID_EDIT_CUT для IDM_CUT). Используйте [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap) макрос для обозначения конца схема событий.  
-  
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxhtml.h  
-  
-##  <a name="end_dhtmlediting_cmdmap"></a>  END_DHTMLEDITING_CMDMAP  
- Отмечает конец карты команд редактирования DHTML.  
-  
-```  
-END_DHTMLEDITING_CMDMAP()   
-```  
-  
-### <a name="remarks"></a>Примечания  
- Используется в сочетании с [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).  
-  
-### <a name="example"></a>Пример  
- В разделе [HTMLEdit пример](../../visual-cpp-samples.md).  
-  
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxhtml.h  
-  
-##  <a name="dhtmlediting_cmd_entry"></a>  DHTMLEDITING_CMD_ENTRY  
- Сопоставляет идентификатор команды для команды редактирования HTML.  
-  
-```  
-DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)   
-```  
-  
-### <a name="parameters"></a>Параметры  
- *cmdID*  
- Идентификатор команды (например, ID_EDIT_COPY).  
-  
- *dhtmlcmdID*  
- Команда, к которому изменения HTML *cmdID* сопоставляет (например, IDM_COPY).  
-  
-### <a name="example"></a>Пример  
- В разделе [HTMLEdit пример](../../visual-cpp-samples.md).  
-  
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxhtml.h  
-  
-##  <a name="dhtmlediting_cmd_entry_func"></a>  DHTMLEDITING_CMD_ENTRY_FUNC  
- Сопоставляет идентификатор команды команды редактирования HTML и обработчик сообщений.  
-  
-```  
-DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)   
-```  
-  
-### <a name="parameters"></a>Параметры  
- *cmdID*  
- Идентификатор команды (например, ID_EDIT_COPY).  
-  
- *dhtmlcmdID*  
- Команда, к которому изменения HTML *cmdID* сопоставляет (например, IDM_COPY).  
-  
- *member_func_name*  
- Имя функции обработчик сообщений, с которым сопоставлен команды.  
-  
-### <a name="example"></a>Пример  
- В разделе [HTMLEdit пример](../../visual-cpp-samples.md).  
-  
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxhtml.h  
-  
-##  <a name="dhtmlediting_cmd_entry_type"></a>  DHTMLEDITING_CMD_ENTRY_TYPE  
- Сопоставляет идентификатор команды команды редактирования HTML и элемент пользовательского интерфейса.  
-  
-```  
-DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)  
-```  
-  
-### <a name="parameters"></a>Параметры  
- *cmdID*  
- Идентификатор команды (например, ID_EDIT_COPY).  
-  
- *dhtmlcmdID*  
- Команда, к которому изменения HTML *cmdID* сопоставляет (например, IDM_COPY).  
-  
- *elemType*  
- Тип элемента пользовательского интерфейса; одно из AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX или AFX_UI_ELEMTYPE_RADIO.  
-  
-### <a name="example"></a>Пример  
- В разделе [HTMLEdit пример](../../visual-cpp-samples.md).  
-  
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxhtml.h  
-  
-##  <a name="dhtmlediting_cmd_entry_func_type"></a>  DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
- Сопоставляет идентификатор команды для редактирования команд, обработчик сообщений и элемент пользовательского интерфейса HTML.  
-  
-```  
-DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)   
-```  
-  
-### <a name="parameters"></a>Параметры  
- *cmdID*  
- Идентификатор команды (например, ID_EDIT_COPY).  
-  
- *dhtmlcmdID*  
- Команда, к которому изменения HTML *cmdID* сопоставляет (например, IDM_COPY).  
-  
- *member_func_name*  
- Имя функции обработчик сообщений, с которым сопоставлен команды.  
-  
- *elemType*  
- Тип элемента пользовательского интерфейса; одно из AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX или AFX_UI_ELEMTYPE_RADIO.  
-  
-### <a name="example"></a>Пример  
- В разделе [HTMLEdit пример](../../visual-cpp-samples.md).  
 
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxhtml.h  
-    
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+Следующие макросы можно использовать для сопоставления команд редактирования DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-производные классы. Пример их использования, см. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+
+### <a name="dhtml-editing-command-map-macros"></a>Макросы схемы команд редактирования DHTML
+
+|||
+|-|-|
+|[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|Объявляет карты команд редактирования DHTML в классе.|
+|[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|Начинается определение сопоставления команд редактирования DHTML в пределах класса.|
+|[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|Помечает конец карты команд редактирования DHTML.|
+|[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)|Сопоставляет идентификатор команды для команды редактирования HTML.|
+|[DHTMLEDITING_CMD_ENTRY_FUNC](#dhtmlediting_cmd_entry_func)|Сопоставляет идентификатор команды для команды редактирования HTML и обработчик сообщений.|
+|[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Сопоставляет идентификатор команды для команды редактирования HTML и элемент пользовательского интерфейса.|
+|[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|Сопоставляет идентификатор команды редактирования командой, обработчик сообщений и элемент пользовательского интерфейса HTML.|
+
+##  <a name="declare_dhtmlediting_cmdmap"></a>  DECLARE_DHTMLEDITING_CMDMAP
+
+Объявляет карты команд редактирования DHTML в классе.
+
+```
+DECLARE_DHTMLEDITING_CMDMAP(className)
+```
+
+### <a name="parameters"></a>Параметры
+
+*className*<br/>
+Имя класса.
+
+### <a name="remarks"></a>Примечания
+
+Этот макрос будет использоваться в определении [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-производные классы.
+
+Используйте [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) для реализации карты.
+
+### <a name="example"></a>Пример
+
+См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+
+### <a name="requirements"></a>Требования
+
+  **Заголовок** afxhtml.h
+
+##  <a name="begin_dhtmlediting_cmdmap"></a>  BEGIN_DHTMLEDITING_CMDMAP
+
+Начинается определение сопоставления команд редактирования DHTML в пределах класса.
+
+```
+BEGIN_DHTMLEDITING_CMDMAP(className)
+```
+
+### <a name="parameters"></a>Параметры
+
+*className*<br/>
+Имя класса, содержащего карту команд редактирования DHTML. Этот класс должен прямо или косвенно наследующие от [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) и включают [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) макрос в соответствии с определением класса.
+
+### <a name="remarks"></a>Примечания
+
+Добавление карты команд редактирования DHTML класса для сопоставления команд пользовательского интерфейса команды редактирования HTML.
+
+Поместите begin_dhtmlediting_cmdmap-макрос в файле реализации (CPP) класса, за которым следует [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) макросы для команд, класс является для сопоставления (например, из ID_EDIT_CUT для IDM_CUT). Используйте [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap) макрос для обозначения конца набора карты событий.
+
+### <a name="requirements"></a>Требования
+
+  **Заголовок** afxhtml.h
+
+##  <a name="end_dhtmlediting_cmdmap"></a>  END_DHTMLEDITING_CMDMAP
+
+Помечает конец карты команд редактирования DHTML.
+
+```
+END_DHTMLEDITING_CMDMAP()
+```
+
+### <a name="remarks"></a>Примечания
+
+Использовать в сочетании с [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).
+
+### <a name="example"></a>Пример
+
+См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+
+### <a name="requirements"></a>Требования
+
+  **Заголовок** afxhtml.h
+
+##  <a name="dhtmlediting_cmd_entry"></a>  DHTMLEDITING_CMD_ENTRY
+
+Сопоставляет идентификатор команды для команды редактирования HTML.
+
+```
+DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
+```
+
+### <a name="parameters"></a>Параметры
+
+*cmdID*<br/>
+Идентификатор команды (например, ID_EDIT_COPY).
+
+*dhtmlcmdID*<br/>
+HTML, команда, к которому изменения *cmdID* сопоставляет (например, IDM_COPY).
+
+### <a name="example"></a>Пример
+
+См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+
+### <a name="requirements"></a>Требования
+
+  **Заголовок** afxhtml.h
+
+##  <a name="dhtmlediting_cmd_entry_func"></a>  DHTMLEDITING_CMD_ENTRY_FUNC
+
+Сопоставляет идентификатор команды для команды редактирования HTML и обработчик сообщений.
+
+```
+DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
+```
+
+### <a name="parameters"></a>Параметры
+
+*cmdID*<br/>
+Идентификатор команды (например, ID_EDIT_COPY).
+
+*dhtmlcmdID*<br/>
+HTML, команда, к которому изменения *cmdID* сопоставляет (например, IDM_COPY).
+
+*member_func_name*<br/>
+Имя функции обработчика сообщений, с которым сопоставляется команды.
+
+### <a name="example"></a>Пример
+
+См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+
+### <a name="requirements"></a>Требования
+
+  **Заголовок** afxhtml.h
+
+##  <a name="dhtmlediting_cmd_entry_type"></a>  DHTMLEDITING_CMD_ENTRY_TYPE
+
+Сопоставляет идентификатор команды для команды редактирования HTML и элемент пользовательского интерфейса.
+
+```
+DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
+```
+
+### <a name="parameters"></a>Параметры
+
+*cmdID*<br/>
+Идентификатор команды (например, ID_EDIT_COPY).
+
+*dhtmlcmdID*<br/>
+HTML, команда, к которому изменения *cmdID* сопоставляет (например, IDM_COPY).
+
+*elemType*<br/>
+Тип элемента пользовательского интерфейса; одно из AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX или AFX_UI_ELEMTYPE_RADIO.
+
+### <a name="example"></a>Пример
+
+См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+
+### <a name="requirements"></a>Требования
+
+  **Заголовок** afxhtml.h
+
+##  <a name="dhtmlediting_cmd_entry_func_type"></a>  DHTMLEDITING_CMD_ENTRY_FUNC_TYPE
+
+Сопоставляет идентификатор команды редактирования командой, обработчик сообщений и элемент пользовательского интерфейса HTML.
+
+```
+DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
+```
+
+### <a name="parameters"></a>Параметры
+
+*cmdID*<br/>
+Идентификатор команды (например, ID_EDIT_COPY).
+
+*dhtmlcmdID*<br/>
+HTML, команда, к которому изменения *cmdID* сопоставляет (например, IDM_COPY).
+
+*member_func_name*<br/>
+Имя функции обработчика сообщений, с которым сопоставляется команды.
+
+*elemType*<br/>
+Тип элемента пользовательского интерфейса; одно из AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX или AFX_UI_ELEMTYPE_RADIO.
+
+### <a name="example"></a>Пример
+
+См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+
+### <a name="requirements"></a>Требования
+
+  **Заголовок** afxhtml.h
+
+## <a name="see-also"></a>См. также
+
+[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)

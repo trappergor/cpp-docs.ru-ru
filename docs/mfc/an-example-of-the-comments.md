@@ -1,5 +1,5 @@
 ---
-title: Пример комментариев | Документы Microsoft
+title: Пример комментариев | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6e0f0b69964ac8cadc3518e0540f4e51545fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 681c927a7e0e7960cb483e21ed2ff1e2e4b3c5f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340888"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442348"
 ---
 # <a name="an-example-of-the-comments"></a>Пример комментариев
-Следующая частичная класс `CChildFrame` использует большую часть стандартной комментарии, MFC использует в своих предложениях для разделения членов класса, способы их использования:  
-  
- [!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]  
-  
- Эти комментарии постоянно пометить разделы объявления класса, содержащие схожие члены класса. Следует помнить, что они MFC соглашения, не задан правила.  
-  
-## <a name="see-also"></a>См. также  
- [С помощью исходные файлы MFC](../mfc/using-the-mfc-source-files.md)   
- [/ / Комментарий реализации](../mfc/decrement-implementation-comment.md)   
- [/ / Комментарий конструкторов](../mfc/decrement-constructors-comment.md)   
- [/ / Комментарий атрибутов](../mfc/decrement-attributes-comment.md)   
- [/ / Комментарий операций](../mfc/decrement-operations-comment.md)   
- [Комментарий Переопределяемости](../mfc/decrement-overridables-comment.md)
+
+Следующий сокращенный листинг класса `CChildFrame` использует большую часть стандартных комментарии, MFC использует в своих предложениях для разделения членов класса, способы их использования:
+
+[!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]
+
+Эти комментарии согласованно пометить разделов объявления класса, который содержит схожие членов класса. Имейте в виду, что они MFC соглашения, не устанавливает правила.
+
+## <a name="see-also"></a>См. также
+
+[Использование файлов с исходным кодом MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[/ / Комментарий реализации](../mfc/decrement-implementation-comment.md)<br/>
+[/ / Комментарий конструкторов](../mfc/decrement-constructors-comment.md)<br/>
+[/ / Комментарий атрибутов](../mfc/decrement-attributes-comment.md)<br/>
+[/ / Комментарий операций](../mfc/decrement-operations-comment.md)<br/>
+[/ / Комментарий Переопределяемости](../mfc/decrement-overridables-comment.md)
 

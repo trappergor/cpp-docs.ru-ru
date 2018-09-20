@@ -2,7 +2,7 @@
 title: Установка поддержки C++ в Visual Studio 2017 | Документация Майкрософт
 description: Поддержка Visual C++ в Visual Studio
 ms.custom: mvc
-ms.date: 06/21/2018
+ms.date: 09/17/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6c905df6fb406b9189bd46d20c6f199d3d90a722
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702901"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441946"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Установка поддержки C++ в Visual Studio
 
@@ -37,7 +37,7 @@ ms.locfileid: "45702901"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 установки
 
-Установить Visual Studio 2015 можно из раздела [Скачивание более старых версий Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Запустите программу установки и щелкните **Выборочная установка**, а затем выберите компонент C++.
+Установить Visual Studio 2015 можно из раздела [Скачивание более старых версий Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Запустите программу установки и щелкните **Выборочная установка**, а затем выберите компонент C++. Чтобы добавить поддержку C++ в существующую установку Visual Studio 2015, нажмите кнопку Пуск Windows и введите **Установка и удаление программ**. Откройте программу из списка результатов и затем найти установку Visual Studio 2015 в списке установленных программ. Дважды щелкните его, а затем выберите **изменить** и выбрать компоненты Visual C++ для установки.
 
 Как правило, рекомендуется использовать Visual Studio 2017, даже если вам нужно скомпилировать код в компиляторе Visual Studio 2015. Дополнительные сведения см. в разделе [Использование собственного многоплатформенного нацеливания в Visual Studio для сборки старых проектов](../porting/use-native-multi-targeting.md).
 

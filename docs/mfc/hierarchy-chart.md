@@ -1,5 +1,5 @@
 ---
-title: Диаграмма иерархии | Документы Microsoft
+title: Диаграмма иерархии | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f2e3661f2c0fee43a8e8b25b9cf90b105e84308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50ad8fe96a1c18f45dbc118e29c73453f806f110
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345167"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376555"
 ---
 # <a name="hierarchy-chart"></a>Диаграмма иерархии
-На следующем рисунке показан MFC-классы, производные от `CObject`:  
-  
- ![Классы, производные от CObject](../mfc/media/mfc_heirarchy_chart1of3.png "mfc_heirarchy_chart1of3")  
-  
- На следующем рисунке показан MFC-классы, производные от `CWnd` и `CCmdTarget`:  
-  
- ![Классы, производные от CWnd или CCmdTarget](../mfc/media/mfc_heirarchy_chart2of3.png "mfc_heirarchy_chart2of3")  
-  
- На следующем рисунке показан классы MFC, не является производным от `CObject`:  
-  
- ![Классы, не унаследованные от CObject](../mfc/media/mfc_heirarchy_chart3of3.png "mfc_heirarchy_chart3of3")  
-  
- Можно загрузить всю диаграмму из следующего расположения: [загрузки диаграммы иерархии MFC](https://aka.ms/hxgg8e).  
-  
-## <a name="see-also"></a>См. также  
- [Категории таблицы иерархии](../mfc/hierarchy-chart-categories.md)   
- [Общие сведения о классе](../mfc/class-library-overview.md)
+
+На следующем рисунке показаны классы MFC, производные от `CObject`:
+
+![Классы, производные от CObject](../mfc/media/mfc_heirarchy_chart1of3.png "mfc_heirarchy_chart1of3")
+
+На следующем рисунке показаны классы MFC, производные от `CWnd` и `CCmdTarget`:
+
+![Классы, производные от CWnd или CCmdTarget](../mfc/media/mfc_heirarchy_chart2of3.png "mfc_heirarchy_chart2of3")
+
+На следующем рисунке показаны классы MFC, не являющиеся производными `CObject`:
+
+![Классы, не унаследованные от CObject](../mfc/media/mfc_heirarchy_chart3of3.png "mfc_heirarchy_chart3of3")
+
+Можно загрузить полную таблицу из следующего расположения: [загрузки диаграммы иерархии MFC](https://aka.ms/hxgg8e).
+
+## <a name="see-also"></a>См. также
+
+[Категории таблицы иерархии](../mfc/hierarchy-chart-categories.md)<br/>
+[Общие сведения о классе](../mfc/class-library-overview.md)
 

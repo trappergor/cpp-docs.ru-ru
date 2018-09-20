@@ -1,5 +1,5 @@
 ---
-title: Классы DAO | Документы Microsoft
+title: Классы DAO | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,58 +17,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f43595ca5f688372a70999231ceebec5282cd3b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5af80f7a264a15f24ced0be37102802771dc6f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348930"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416686"
 ---
 # <a name="dao-classes"></a>Классы DAO
-Эти классы работают с другими классами framework приложения предоставляют простой доступ к базам данных объекта доступа к данным (DAO), которые используют один и тот же механизм базы данных, как Microsoft Visual Basic и Microsoft Access. Кроме того, классы DAO доступны самые разнообразные баз данных, для которых доступны драйверы Open Database Connectivity (ODBC).  
-  
- Программы, которые используют баз данных DAO будет иметь по крайней мере `CDaoDatabase` объекта и `CDaoRecordset` объекта.  
-  
+
+Эти классы работают с другими классами framework в приложения, чтобы предоставить простой доступ к базам данных объекта доступа к данным (DAO), которые используют один и тот же механизм базы данных, как Microsoft Visual Basic и Microsoft Access. Кроме того, классы DAO доступны самые разнообразные баз данных, для которых доступны драйверы Open Database Connectivity (ODBC).
+
+Программы, использующие баз данных DAO будет иметь по крайней мере `CDaoDatabase` объекта и `CDaoRecordset` объекта.
+
 > [!NOTE]
->  Среда Visual C++ и мастерах больше не поддерживают DAO (хотя классы DAO включены и их можно по-прежнему использовать). Корпорация Майкрософт рекомендует использование ODBC для новых проектов MFC. DAO следует использовать только для поддержки существующих приложений.  
-  
- [CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)  
- Управление сеансом именованным, защищенным паролем базы данных от входа до выхода из системы. Большинство программ использовать рабочую область по умолчанию.  
-  
- [CDaoDatabase](../mfc/reference/cdaodatabase-class.md)  
- Подключение к базе данных, через которую могут работать с данными.  
-  
- [CDaoRecordset](../mfc/reference/cdaorecordset-class.md)  
- Представляет набор записей, выбранных из источника данных.  
-  
- [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Представление, которое отображает записи базы данных в элементах управления.  
-  
- [CDaoQueryDef](../mfc/reference/cdaoquerydef-class.md)  
- Представляет определение запроса, как правило, сохраненный в базе данных.  
-  
- [CDaoTableDef](../mfc/reference/cdaotabledef-class.md)  
- Представляет хранимое определение базовой или подключенной таблицы.  
-  
- [CDaoException](../mfc/reference/cdaoexception-class.md)  
- Представляет условие исключения, поступающее от классов DAO.  
-  
- [CDaoFieldExchange](../mfc/reference/cdaofieldexchange-class.md)  
- Поддерживает процедуры обмена полями записей (DAO DFX), используемые классами баз данных DAO. Этот класс обычно не будут использовать напрямую.  
-  
-## <a name="related-classes"></a>Связанные классы  
- [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Инкапсулирует дескриптор для хранения для большого двоичного объекта (BLOB), такие как растровое изображение. `CLongBinary` объекты используются для управления объектами больших объемов данных, хранящихся в таблицах базы данных.  
-  
- [COleCurrency](../mfc/reference/colecurrency-class.md)  
- Программа-оболочка для типа автоматизации OLE **валюты**, с фиксированной запятой арифметический тип с 15 цифр перед десятичной запятой и 4 цифры после.  
-  
- [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)  
- Программа-оболочка для типа автоматизации OLE **даты**. Представляет значения даты и времени.  
-  
- [COleVariant](../mfc/reference/colevariant-class.md)  
- Программа-оболочка для типа автоматизации OLE **VARIANT**. Данные в **VARIANT**s могут храниться в нескольких форматов.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../mfc/class-library-overview.md)
+>  Среды Visual C++ и мастерах больше не поддерживают DAO (хотя классы DAO включены и их по-прежнему можно использовать). Корпорация Майкрософт рекомендует использовать для новых проектов MFC ODBC. DAO следует использовать только для поддержки существующих приложений.
+
+[CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)<br/>
+Управляет сеансу именованный, защищенной паролем базы данных из имени входа для выхода из системы. Большинство программ использовать рабочую область по умолчанию.
+
+[CDaoDatabase](../mfc/reference/cdaodatabase-class.md)<br/>
+Подключение к базе данных, через который вы можете работать с данными.
+
+[CDaoRecordset](../mfc/reference/cdaorecordset-class.md)<br/>
+Представляет набор записей, выбранных из источника данных.
+
+[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
+Представление, которое отображает записи базы данных в элементах управления.
+
+[CDaoQueryDef](../mfc/reference/cdaoquerydef-class.md)<br/>
+Представляет определение запроса, обычно планом, сохраненным в базе данных.
+
+[CDaoTableDef](../mfc/reference/cdaotabledef-class.md)<br/>
+Представляет хранимое определение базовой или подключенной таблицы.
+
+[CDaoException](../mfc/reference/cdaoexception-class.md)<br/>
+Представляет условие исключения, поступающее от классов DAO.
+
+[CDaoFieldExchange](../mfc/reference/cdaofieldexchange-class.md)<br/>
+Поддерживает процедуры обмена полями записей (DAO DFX), используемые классами баз данных DAO. Этот класс обычно не будет использовать напрямую.
+
+## <a name="related-classes"></a>Связанные классы
+
+[CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
+Инкапсулирует маркер в хранилище для больших двоичных объектов (BLOB), например точечный рисунок. `CLongBinary` объекты используются для управления объектами больших объемов данных, хранящихся в таблицах базы данных.
+
+[COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
+Оболочка для типа автоматизации OLE **валюты**, с фиксированной запятой арифметический тип, с 15 цифр перед десятичной запятой и 4 цифры после.
+
+[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+Оболочка для типа автоматизации OLE **даты**. Представляет значения даты и времени.
+
+[COleVariant](../mfc/reference/colevariant-class.md)<br/>
+Оболочка для типа автоматизации OLE **VARIANT**. Данные в **VARIANT**s могут храниться в нескольких форматах.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../mfc/class-library-overview.md)
 

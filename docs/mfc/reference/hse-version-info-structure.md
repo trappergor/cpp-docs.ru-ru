@@ -16,35 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 08b16c59f155864a781feccbfd08842380cccd01
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335819"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433807"
 ---
 # <a name="hseversioninfo-structure"></a>Структура HSE_VERSION_INFO
-Эта структура указывает *pVer* параметр в `CHttpServer::GetExtensionVersion` функция-член. Содержит номер версии ISA и текстовое описание ISA.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-typedef struct _HSE_VERSION_INFO {  
-    DWORD dwExtensionVersion;  
-    CHAR lpszExtensionDesc[HSE_MAX_EXT_DLL_NAME_LEN];  
-} HSE_VERSION_INFO, *LPHSE_VERSION_INFO;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *dwExtensionVersion*  
- Номер версии ISA.  
-  
- *lpszExtensionDesc*  
- Текстовое описание ISA. Реализация по умолчанию предоставляет замещающий текст; переопределить `CHttpServer::GetExtensionVersion` для предоставления собственное описание.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** httpext.h  
-  
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+Эта структура указывает *pVer* параметр в `CHttpServer::GetExtensionVersion` функция-член. Содержит номер версии ISA и текстовое описание ISA.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+typedef struct _HSE_VERSION_INFO {
+    DWORD dwExtensionVersion;
+    CHAR lpszExtensionDesc[HSE_MAX_EXT_DLL_NAME_LEN];
+} HSE_VERSION_INFO, *LPHSE_VERSION_INFO;
+```
+
+#### <a name="parameters"></a>Параметры
+
+*dwExtensionVersion*<br/>
+Номер версии ISA.
+
+*lpszExtensionDesc*<br/>
+Текстовое описание ISA. Реализация по умолчанию предоставляет замещающий текст; переопределить `CHttpServer::GetExtensionVersion` для предоставления собственное описание.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** httpext.h
+
+## <a name="see-also"></a>См. также
+
+[Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c12357acf3369192248784fc6593c9b5b91b863
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316787"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438643"
 ---
 # <a name="how-to-create-a-resource"></a>Практическое руководство. Создание ресурса
 
@@ -68,6 +68,6 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Файлы ресурсов](../windows/resource-files-visual-studio.md)  
-[Редакторы ресурсов](../windows/resource-editors.md)  
+[Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
+[Редакторы ресурсов](../windows/resource-editors.md)<br/>
 [Диалоговое окно "Добавление ресурса"](../windows/add-resource-dialog-box.md)

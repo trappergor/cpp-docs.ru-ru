@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980058c588e02751113b889d44cf0bb5f69066f1
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b693d83872ca1c918c97e47f75c89f788748353c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540053"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375907"
 ---
 # <a name="preprocessor"></a>Препроцессор
 Препроцессор — это текстовый процессор, управляющий текстом файла исходного кода в ходе первого этапа трансляции. Препроцессор не производит синтаксического анализа текста исходного кода, но разбивает его на токены для обнаружения вызовов макросов. Хотя компилятор обычно вызывает препроцессор при первом проходе, препроцессор можно также вызвать отдельно для обработки текста без его компиляции.  
@@ -48,5 +48,5 @@ ms.locfileid: "42540053"
   
 ## <a name="see-also"></a>См. также  
  
-[Справочник по препроцессору C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
+[Справочник по препроцессору в C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Фазы трансляции](../preprocessor/phases-of-translation.md)

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f0f0735981c0a851bcab62ca1ad39c97af3965
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bfa68eece4a7fd626c787fd5421d9dcac58cf805
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700687"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435473"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
@@ -59,6 +59,6 @@ ms.locfileid: "45700687"
 
 ## <a name="see-also"></a>См. также
 
-[/ arch (минимальная архитектура ЦП)](../../build/reference/arch-minimum-cpu-architecture.md)
-[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[/arch (минимальная архитектура ЦПУ)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 892a32c6ff6f8e9a3a30452d05dd6e15c38a4fa8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b992f4ad781105a8795a7bf95ff8b831ab961275
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605056"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400683"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>Конструктор CriticalSection::CriticalSection
 
@@ -38,7 +38,7 @@ explicit CriticalSection(
 
 ### <a name="parameters"></a>Параметры
 
-*spinCount*  
+*spinCount*<br/>
 Счетчик прокруток для объекта критической секции. Значение по умолчанию — 0.
 
 ## <a name="remarks"></a>Примечания

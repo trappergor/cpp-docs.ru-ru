@@ -23,51 +23,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d72fc5c130f9e92cc4575510fe7565da5199a996
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719359"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380286"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
-**Блок, относящийся только к системам Microsoft**  
-  
- Добавьте одно значение в ячейку памяти, указанной в качестве смещения относительно начала `FS` сегмента.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __incfsbyte(   
-   unsigned long Offset   
-);  
-void __incfsword(   
-   unsigned long Offset   
-);  
-void __incfsdword(   
-   unsigned long Offset  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+**Блок, относящийся только к системам Microsoft**
+
+Добавьте одно значение в ячейку памяти, указанной в качестве смещения относительно начала `FS` сегмента.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __incfsbyte(
+   unsigned long Offset
+);
+void __incfsword(
+   unsigned long Offset
+);
+void __incfsdword(
+   unsigned long Offset
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *Смещение*<br/>
-[in] Смещение от начала `FS`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__incfsbyte`|x86|  
-|`__incfsword`|x86|  
-|`__incfsdword`|x86|  
-  
-## <a name="remarks"></a>Примечания  
- Эти встроенные функции доступны только в режиме ядра и процедуры доступны только как встроенные функции.  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
- [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[in] Смещение от начала `FS`.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__incfsbyte`|x86|
+|`__incfsword`|x86|
+|`__incfsdword`|x86|
+
+## <a name="remarks"></a>Примечания
+
+Эти встроенные функции доступны только в режиме ядра и процедуры доступны только как встроенные функции.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)<br/>
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ea689b2db9a34b55664b695747079ac277bae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 24e57be50c2138cb9e772f6e6a2527300c9296ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702563"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446482"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (минимизировать размер, максимизировать скорость)
 
@@ -69,7 +69,7 @@ ms.locfileid: "45702563"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры /O (оптимизация кода)](../../build/reference/o-options-optimize-code.md)
-[параметры компилятора](../../build/reference/compiler-options.md)<br/>
+[Параметры /O (оптимизация кода)](../../build/reference/o-options-optimize-code.md)<br/>
+[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
 [/EH (модель обработки исключений)](../../build/reference/eh-exception-handling-model.md)

@@ -16,30 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7ecc948910dd618f343134b0e9e3133539d9e1f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 48cbc561a7b47318749f490a209513019c2dc62e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335484"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426254"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Типы сообщений, связанных с объектами пользовательского интерфейса
-Ниже приведены типы объектов, с которыми работают и типы сообщений, связанных с ними.  
-  
-### <a name="user-interface-objects-and-associated-messages"></a>Объекты пользовательского интерфейса и связанные сообщения  
-  
-|Идентификатор объекта|Сообщения|  
-|---------------|--------------|  
-|Класс, представляющий имя содержащего его окна|Сообщения Windows, допустимые для [CWnd](../../mfc/reference/cwnd-class.md)-производный класс: диалоговое окно, окно, дочернее окно, дочернее окно MDI или верхний фрейм окна.|  
-|Идентификатор меню или сочетание клавиш|-Сообщение КОМАНДЫ (выполнение функции программы).<br />-Сообщение UPDATE_COMMAND_UI (динамически обновляет элемент меню).|  
-|Идентификатор элемента управления|Уведомляющих сообщений элемента управления типа выбранного элемента управления.|  
-  
-## <a name="see-also"></a>См. также  
- [Сопоставление сообщений с функциями](../../mfc/reference/mapping-messages-to-functions.md)   
- [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Добавление класса](../../ide/adding-a-class-visual-cpp.md)   
- [Добавление функции-члена](../../ide/adding-a-member-function-visual-cpp.md)   
- [Добавление переменной-члена](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Переопределение виртуальной функции](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Обработчик сообщений MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Перемещение по структуре класса](../../ide/navigating-the-class-structure-visual-cpp.md)
+
+Ниже приведены типы объектов, с которыми работают и типы сообщений, связанных с ними.
+
+### <a name="user-interface-objects-and-associated-messages"></a>Объекты пользовательского интерфейса и связанные сообщения
+
+|Идентификатор объекта|Сообщения|
+|---------------|--------------|
+|Класс, представляющий имя содержащего его окна|Сообщения Windows, допустимые для [CWnd](../../mfc/reference/cwnd-class.md)-производный класс: диалоговое окно, окно, дочернее окно, дочернее окно MDI или верхний фрейм окна.|
+|Идентификатор меню или сочетание клавиш|-Сообщение КОМАНДЫ (выполнение функции программы).<br />-Сообщение UPDATE_COMMAND_UI (динамически обновляет элемент меню).|
+|Идентификатор элемента управления|Уведомляющих сообщений элемента управления типа выбранного элемента управления.|
+
+## <a name="see-also"></a>См. также
+
+[Сопоставление сообщений с функциями](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Добавление класса](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Добавление функции-члена](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Добавление переменной-члена](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Переопределение виртуальной функции](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Обработчик сообщений MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Перемещение по структуре класса](../../ide/navigating-the-class-structure-visual-cpp.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e2a780719e106c6045d1f80227045ab40607b336
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685549"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426553"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Пошаговое руководство: Обновление приложения MFC Scribble (часть 1)
 
@@ -292,5 +292,5 @@ ms.locfileid: "43685549"
 
 ## <a name="see-also"></a>См. также
 
-[Пошаговые руководства](../mfc/walkthroughs-mfc.md)  
-[Пошаговое руководство: обновление приложения MFC Scribble (часть 2)] (.. / mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)  
+[Пошаговые руководства](../mfc/walkthroughs-mfc.md)<br/>
+[Пошаговое руководство: обновление приложения MFC Scribble (часть 2)] (.. / mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

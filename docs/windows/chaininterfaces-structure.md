@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fc65d2aeab01de022e23d0645682800a7d555d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88ddd3dd59000b629f6e72933b1a0b02cc582c89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602369"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409875"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces - структура
 
@@ -63,50 +63,50 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 
 ### <a name="parameters"></a>Параметры
 
-*I0*  
+*I0*<br/>
 (Обязательно) Идентификатор интерфейса 0.
 
-*I1*  
+*I1*<br/>
 (Обязательно) Идентификатор интерфейса 1.
 
-*I2*  
+*I2*<br/>
 (Необязательно) Идентификатор интерфейса 2.
 
-*I3*  
+*I3*<br/>
 (Необязательно) Идентификатор интерфейса 3.
 
-*I4*  
+*I4*<br/>
 (Необязательно) Идентификатор интерфейса. 4.
 
-*I5*  
+*I5*<br/>
 (Необязательно) Идентификатор интерфейса 5.
 
-*I6*  
+*I6*<br/>
 (Необязательно) Идентификатор интерфейса 6.
 
-*I7*  
+*I7*<br/>
 (Необязательно) Идентификатор интерфейса 7.
 
-*I8*  
+*I8*<br/>
 (Необязательно) Идентификатор интерфейса 8.
 
-*I9*  
+*I9*<br/>
 (Необязательно) Идентификатор интерфейса 9.
 
-*DerivedType*  
+*DerivedType*<br/>
 Производный тип.
 
-*BaseType*  
+*BaseType*<br/>
 Базовый тип производного типа.
 
-*hasImplements*  
+*hasImplements*<br/>
 Логическое значение, если **true**, означает, что нельзя использовать [Примеси](../windows/mixin-structure.md) структуру с классом, который является производным от [реализует](../windows/implements-structure.md) структура.
 
 ## <a name="members"></a>Участники
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Указывает ли идентификатор указанный интерфейс может быть приведен к каждому из специализаций, определяется **ChainInterface** параметров шаблона.|
 |[Метод ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Приведение указателя интерфейса типа, определенного с *I0* параметр шаблона в указатель на `IUnknown`.|
@@ -115,7 +115,7 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 
 ### <a name="protected-constants"></a>Защищенные константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Константа ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|Общее количество содержащихся в интерфейсах, указанные параметрами шаблона идентификаторы интерфейсов *I0* через *I9*.|
 

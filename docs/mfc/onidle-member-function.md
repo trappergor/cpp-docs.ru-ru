@@ -1,5 +1,5 @@
 ---
-title: Функция-член OnIdle | Документы Microsoft
+title: Функция-член OnIdle | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbe912db448e424f18b6d72f6e148312c5940687
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b334a4561af40b69bc367ab5b1129afa8fb29ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350371"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377303"
 ---
 # <a name="onidle-member-function"></a>Функция-член OnIdle
-При обработке сообщения не Windows платформа вызывает [CWinApp](../mfc/reference/cwinapp-class.md) функции-члена [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (описаны в справочнике по библиотеке MFC).  
-  
- Переопределить `OnIdle` для выполнения фоновых задач. Версия по умолчанию обновляет состояние объектов пользовательского интерфейса, таких как кнопки панели инструментов и выполняет очистку временные объекты, создаваемые средой во время операции. На следующем рисунке показано, как цикл обработки сообщений вызывает `OnIdle` при нет сообщений в очереди.  
-  
- ![Процесс цикла сообщений](../mfc/media/vc387c1.gif "vc387c1")  
-Цикл обработки сообщений  
-  
- Дополнительные сведения о том, что можно сделать на цикла простоя см. в разделе [обработку цикла простоя](../mfc/idle-loop-processing.md).  
-  
-## <a name="see-also"></a>См. также  
- [CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)
+
+При обработке сообщений Windows, платформа вызывает [CWinApp](../mfc/reference/cwinapp-class.md) функция-член [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (см. в справочном руководстве библиотеки MFC).
+
+Переопределить `OnIdle` для выполнения фоновых задач. Версия по умолчанию обновляет состояние объектов пользовательского интерфейса, таких как кнопки панели инструментов и выполняет очистку временные объекты, создаваемые платформой во время его операции. На следующем рисунке показано, как цикл обработки сообщений вызывает `OnIdle` при наличии в очереди нет сообщений.
+
+![Процесс цикла сообщений](../mfc/media/vc387c1.gif "vc387c1") цикл обработки сообщений
+
+Дополнительные сведения о возможностях в цикл простоя, см. в разделе [обработку цикла простоя](../mfc/idle-loop-processing.md).
+
+## <a name="see-also"></a>См. также
+
+[CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)

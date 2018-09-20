@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8924f7b22ed86adf7721018c4df3094a2069c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4798cf5c283fc4a663da0e1af7110df63496a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200699"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408249"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -38,7 +38,7 @@ ms.locfileid: "43200699"
 
 ### <a name="parameters"></a>Параметры
 
-*name*  
+*name*<br/>
 Идентификатор ProgID независящим от версии, представляющий объект.
 
 Идентификаторы ProgID представляют удобное для восприятия версию идентификатор класса (CLSID), используемый для идентификации объектов COM/ActiveX.
@@ -72,7 +72,7 @@ ms.locfileid: "43200699"
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
 [Идентификатор progID ключ](/windows/desktop/com/-progid--key)  

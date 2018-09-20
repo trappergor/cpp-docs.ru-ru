@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c4b19cc2bf1ed60f02687b82a57745c328fc114
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c8ee38503698f6f4553ced630e996f58c76e08c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44312694"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436563"
 ---
 # <a name="deleting-unassigned-symbols"></a>Удаление неназначенных символов
 
@@ -39,7 +39,7 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Изменение неназначенных символов](../windows/changing-unassigned-symbols.md)  
-[Ограничения для имен символов](../windows/symbol-name-restrictions.md)  
-[Ограничения для символьных значений](../windows/symbol-value-restrictions.md)  
+[Изменение неназначенных символов](../windows/changing-unassigned-symbols.md)<br/>
+[Ограничения для имен символов](../windows/symbol-name-restrictions.md)<br/>
+[Ограничения для символьных значений](../windows/symbol-value-restrictions.md)<br/>
 [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)

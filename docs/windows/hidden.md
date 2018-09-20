@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 350f1c7c844bd386191b2a236f5bc4ada4e1672a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 726a44a33be5fe82986d4696c5420e07d5c103ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204532"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416465"
 ---
 # <a name="hidden"></a>hidden
 
@@ -57,7 +57,7 @@ ms.locfileid: "43204532"
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Атрибуты интерфейса](../windows/interface-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Атрибуты интерфейса](../windows/interface-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
 [Атрибуты метода](../windows/method-attributes.md)  

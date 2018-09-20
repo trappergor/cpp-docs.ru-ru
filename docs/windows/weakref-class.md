@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691540"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386981"
 ---
 # <a name="weakref-class"></a>Класс WeakRef
 
@@ -141,10 +141,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>Параметры
 
-*U*  
+*U*<br/>
 Идентификатор интерфейса.
 
-*ptr*  
+*ptr*<br/>
 После завершения операции, объект, представляющий параметр *U*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -176,10 +176,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>Параметры
 
-*riid*  
+*riid*<br/>
 Идентификатор интерфейса.
 
-*ptr*  
+*ptr*<br/>
 После завершения операции, объект, представляющий параметр *riid*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -220,13 +220,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Параметры
 
-*U*  
+*U*<br/>
 Указатель `IInspectable` интерфейс. Если возникает ошибка *U* не является производным от `IInspectable`.
 
-*riid*  
+*riid*<br/>
 Идентификатор интерфейса. Если возникает ошибка *riid* не является производным от `IWeakReference`.
 
-*ptr*  
+*ptr*<br/>
 Двойной косвенный указатель на `IInspectable` или `IWeakReference`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -284,7 +284,7 @@ WeakRef(
 
 ### <a name="parameters"></a>Параметры
 
-*ptr*  
+*ptr*<br/>
 Указатель, ссылка или rvalue ссылка на существующий объект, который инициализирует текущий `WeakRef` объекта.
 
 ### <a name="remarks"></a>Примечания

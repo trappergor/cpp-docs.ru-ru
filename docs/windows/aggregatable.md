@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3670924bace1d76f02da816dc061616a4c39e199
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e46bcd45040ffb50ec8bbd10d8d583211d0a3316
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719216"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400501"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -38,7 +38,7 @@ ms.locfileid: "45719216"
 
 ### <a name="parameters"></a>Параметры
 
-*значение*  
+*значение*<br/>
 (Необязательно) Параметр, чтобы указать, когда может быть статистически вычислена COM-объекта:
 
 - `never` Невозможно выполнить статистическую обработку COM-объекта.
@@ -94,7 +94,7 @@ class CMyClass {};
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты IDL](../windows/idl-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
-[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты IDL](../windows/idl-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Статистическая обработка](/windows/desktop/com/aggregation)  

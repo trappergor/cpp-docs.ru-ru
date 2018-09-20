@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5fef71d3fa2ad76192a06603ed9e22d52eef71
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2d03b71f862e31a2bef25d89c0347c95da240642
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317827"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422679"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button-c"></a>Создание всплывающей подсказки для кнопки панели инструментов (C++)
 
@@ -59,5 +59,5 @@ MFC или ATL
 
 ## <a name="see-also"></a>См. также
 
-[Создание, перемещение и редактирование кнопок на панели инструментов](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Создание, перемещение и редактирование кнопок на панели инструментов](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Редактор панелей инструментов](../windows/toolbar-editor.md)

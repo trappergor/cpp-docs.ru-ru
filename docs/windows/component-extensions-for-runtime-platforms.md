@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 160ae864218304fbc94324ecfd9d6229729ca379
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318347"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386759"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Расширения компонентов для платформ среды выполнения
 
@@ -141,5 +141,5 @@ C + +/ CLI расширяет стандарт ISO/ANSI C++ и определя�
 
 ## <a name="see-also"></a>См. также
 
-[Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Взаимодействие исходного кода и платформы.NET](../dotnet/native-and-dotnet-interoperability.md)

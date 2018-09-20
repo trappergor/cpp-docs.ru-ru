@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709154"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398863"
 ---
 # <a name="generic-functions-ccli"></a>Универсальные функции (C++/CLI)
 
@@ -63,28 +63,28 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Параметры
 
-*Атрибуты*  
+*Атрибуты*<br/>
 (Необязательно) Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе "Атрибуты".
 
-*Модификаторы*  
+*Модификаторы*<br/>
 (Необязательно) Модификатор для функции, такие как статический.  **виртуальный** не разрешен, поскольку виртуальные методы не могут быть универсальными.
 
-*Тип возвращаемого значения*  
+*Тип возвращаемого значения*<br/>
 Тип, возвращаемый этим методом. Если тип возвращаемого значения — void, возвращаемое значение не требуется.
 
-*identifier*  
+*identifier*<br/>
 Имя функции.
 
-*параметр типа идентификаторы*  
+*параметр типа идентификаторы*<br/>
 Разделенный запятыми список идентификаторов.
 
-*формальных параметров*  
+*формальных параметров*<br/>
 (Необязательно) Список параметров.
 
-*Тип параметра — ограничения предложения*  
+*Тип параметра — ограничения предложения*<br/>
 Это задает ограничения на типы, которые могут использоваться в качестве аргументов типа и имеет формат, определенный в [ограничений для параметров универсального типа (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).
 
-*тело функции*  
+*тело функции*<br/>
 Тело метода, который может ссылаться на идентификаторы параметров типа.
 
 ### <a name="remarks"></a>Примечания
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)  
+[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Универсальные шаблоны](../windows/generics-cpp-component-extensions.md)

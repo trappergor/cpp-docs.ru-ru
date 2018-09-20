@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5c97d69bbca685ca64245d5d784452029c14f73f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606991"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393637"
 ---
 # <a name="activatableclass-macros"></a>Макрос ActivatableClass
 
@@ -53,13 +53,13 @@ ActivatableClassWithFactoryEx(
 
 ### <a name="parameters"></a>Параметры
 
-*className*  
+*className*<br/>
 Имя создаваемого класса.
 
-*фабрики*  
+*фабрики*<br/>
 Фабрика, которая будет создавать экземпляр указанного класса.
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя, которое определяет подмножество фабрики в модуле.
 
 ## <a name="remarks"></a>Примечания

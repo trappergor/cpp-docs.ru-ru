@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538702"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384043"
 ---
 # <a name="preprocessor-operators"></a>Операторы препроцессора
 В контексте директивы `#define` используются четыре оператора, относящихся к препроцессору (краткую информацию о них см. в приведенной ниже таблице). В следующих трех разделах рассматриваются преобразования в строку, преобразования в символы и вставки токенов. Сведения о `defined` оператора, см. в разделе [#if, #elif, #else и #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
@@ -34,6 +34,6 @@ ms.locfileid: "42538702"
   
 ## <a name="see-also"></a>См. также  
  
-[Директивы препроцессора](../preprocessor/preprocessor-directives.md)   
-[Предопределенные макросы](../preprocessor/predefined-macros.md)   
+[Директивы препроцессора](../preprocessor/preprocessor-directives.md)<br/>
+[Предопределенные макросы](../preprocessor/predefined-macros.md)<br/>
 [Справочник по препроцессору в C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

@@ -16,37 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c539feaac9cac5bca3a41868cc03379a63bf6bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1d40cd86cff4c3e58e88f9d17a551dc789bd1db4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204363"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398219"
 ---
 # <a name="rgndata-structure"></a>Структура RGNDATA
-`RGNDATA` Структура содержит заголовок и массив прямоугольников, которые составляют регион. Эти прямоугольники, отсортированный сверху вниз слева направо, не перекрываются.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-typedef struct _RGNDATA { /* rgnd */  
-    RGNDATAHEADER rdh;  
-    char Buffer[1];  
-} RGNDATA;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *rdh*  
- Указывает [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) структуры. (Дополнительные сведения об этой структуре см. в разделе Windows SDK.) Члены этой структуры укажите тип области (если он является прямоугольной или форме трапеции), количеством прямоугольников, составляющие области, размер буфера, который содержит прямоугольник структуры, и так далее.  
-  
- *буфер*  
- Указывает буфер произвольного размера, который содержит [RECT](../../mfc/reference/rect-structure1.md) структур, составляющих области.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** wingdi.h  
-  
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)   
- [CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)
+
+`RGNDATA` Структура содержит заголовок и массив прямоугольников, которые составляют регион. Эти прямоугольники, отсортированный сверху вниз слева направо, не перекрываются.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+typedef struct _RGNDATA { /* rgnd */
+    RGNDATAHEADER rdh;
+    char Buffer[1];
+} RGNDATA;
+```
+
+#### <a name="parameters"></a>Параметры
+
+*rdh*<br/>
+Указывает [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) структуры. (Дополнительные сведения об этой структуре см. в разделе Windows SDK.) Члены этой структуры укажите тип области (если он является прямоугольной или форме трапеции), количеством прямоугольников, составляющие области, размер буфера, который содержит прямоугольник структуры, и так далее.
+
+*буфер*<br/>
+Указывает буфер произвольного размера, который содержит [RECT](../../mfc/reference/rect-structure1.md) структур, составляющих области.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** wingdi.h
+
+## <a name="see-also"></a>См. также
+
+[Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)<br/>
+[CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)
 

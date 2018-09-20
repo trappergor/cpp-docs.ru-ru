@@ -18,46 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 627e6bfdb33561e3d4be55aebf07e831b6cdc035
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 330e02b4f3b96461bd1dcb0e6bc6765aa41bda3e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705137"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438513"
 ---
 # <a name="writemsr"></a>__writemsr
-**Блок, относящийся только к системам Microsoft**  
-  
- Создает запись для регистра (`wrmsr`) инструкции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __writemsr(   
-   unsigned long Register,   
-   unsigned __int64 Value   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+
+**Блок, относящийся только к системам Microsoft**
+
+Создает запись для регистра (`wrmsr`) инструкции.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+void __writemsr( 
+   unsigned long Register, 
+   unsigned __int64 Value 
+);
+```
+
+#### <a name="parameters"></a>Параметры
+
 *Регистрация*<br/>
-[in] Модельнозависимого регистра.  
-  
+[in] Модельнозависимого регистра.
+
 *Значение*<br/>
-[in] Записываемое значение.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Встроенная функция|Архитектура|  
-|---------------|------------------|  
-|`__writemsr`|x86, x64|  
-  
- **Файл заголовка** \<intrin.h >  
-  
-## <a name="remarks"></a>Примечания  
- Эта функция может использоваться только в режиме ядра, и эта процедура доступна только как встроенная.  
-  
-**Завершение блока, относящегося только к системам Майкрософт**  
-  
-## <a name="see-also"></a>См. также  
- [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[in] Записываемое значение.
+
+## <a name="requirements"></a>Требования
+
+|Встроенная функция|Архитектура|
+|---------------|------------------|
+|`__writemsr`|x86, x64|
+
+**Файл заголовка** \<intrin.h >
+
+## <a name="remarks"></a>Примечания
+
+Эта функция может использоваться только в режиме ядра, и эта процедура доступна только как встроенная.
+
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также
+
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

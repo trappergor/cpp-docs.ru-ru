@@ -1,5 +1,5 @@
 ---
-title: Класс CBitmapRenderTarget | Документы Microsoft
+title: Класс CBitmapRenderTarget | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,129 +28,146 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0eece5c7ba74f523836ab5916b8817671dac287
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ee70825711efd82ce451a0433a63d98d93850552
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956756"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417063"
 ---
 # <a name="cbitmaprendertarget-class"></a>Класс CBitmapRenderTarget
-Программа-оболочка для ID2D1BitmapRenderTarget.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-class CBitmapRenderTarget : public CRenderTarget;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Создает объект CBitmapRenderTarget.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::Attach](#attach)|Присоединяет существующую отрисовки интерфейса целевой объект|  
-|[CBitmapRenderTarget::Detach](#detach)|Отсоединяет интерфейса отрисовки целевого объекта|  
-|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Получает растровое изображение для этой цели отрисовки. Возвращаемый точечный рисунок может использоваться для операций рисования.|  
-|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Возвращает интерфейс ID2D1BitmapRenderTarget|  
-  
-### <a name="public-operators"></a>Открытые операторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Возвращает интерфейс ID2D1BitmapRenderTarget|  
-  
-### <a name="protected-data-members"></a>Защищенные члены данных  
-  
-|name|Описание:|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Указатель на объект ID2D1BitmapRenderTarget.|  
-  
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
-  
- `CBitmapRenderTarget` 
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CBitmapRenderTarget::Attach  
- Присоединяет существующую отрисовки интерфейса целевой объект  
-  
-```  
+
+Оболочка для ID2D1BitmapRenderTarget.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+class CBitmapRenderTarget : public CRenderTarget;
+```
+
+## <a name="members"></a>Участники
+
+### <a name="public-constructors"></a>Открытые конструкторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Создает объект CBitmapRenderTarget.|
+
+### <a name="public-methods"></a>Открытые методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CBitmapRenderTarget::Attach](#attach)|Присоединение существующих отрисовки целевой интерфейс к объекту|
+|[CBitmapRenderTarget::Detach](#detach)|Отсоединяет интерфейс целевой объект отрисовки из объекта|
+|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Извлекает растрового изображения для этого целевого объекта отрисовки. Возвращаемый точечный рисунок можно использовать для операций рисования.|
+|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Возвращает интерфейс ID2D1BitmapRenderTarget|
+
+### <a name="public-operators"></a>Открытые операторы
+
+|Имя|Описание|
+|----------|-----------------|
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Возвращает интерфейс ID2D1BitmapRenderTarget|
+
+### <a name="protected-data-members"></a>Защищенные члены данных
+
+|name|Описание|
+|----------|-----------------|
+|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Указатель на объект ID2D1BitmapRenderTarget.|
+
+## <a name="inheritance-hierarchy"></a>Иерархия наследования
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+
+`CBitmapRenderTarget`
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** afxrendertarget.h
+
+##  <a name="attach"></a>  CBitmapRenderTarget::Attach
+
+Присоединение существующих отрисовки целевой интерфейс к объекту
+
+```
 void Attach(ID2D1BitmapRenderTarget* pTarget);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *pTarget*  
- Существующий интерфейс цели отрисовки. Не может иметь значение NULL  
-  
-##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
- Создает объект CBitmapRenderTarget.  
-  
-```  
+```
+
+### <a name="parameters"></a>Параметры
+
+*pTarget*<br/>
+Существующий интерфейс целевой объект отрисовки. Не может иметь значение NULL
+
+##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget
+
+Создает объект CBitmapRenderTarget.
+
+```
 CBitmapRenderTarget();
-```  
-  
-##  <a name="detach"></a>  CBitmapRenderTarget::Detach  
- Отсоединяет интерфейса отрисовки целевого объекта  
-  
-```  
+```
+
+##  <a name="detach"></a>  CBitmapRenderTarget::Detach
+
+Отсоединяет интерфейс целевой объект отрисовки из объекта
+
+```
 ID2D1BitmapRenderTarget* Detach();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на отсоединенной отрисовки интерфейс целевого объекта.  
-  
-##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap  
- Получает растровое изображение для этой цели отрисовки. Возвращаемый точечный рисунок может использоваться для операций рисования.  
-  
-```  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Указатель на отсоединенной отображения интерфейса целевой объект.
+
+##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap
+
+Извлекает растрового изображения для этого целевого объекта отрисовки. Возвращаемый точечный рисунок можно использовать для операций рисования.
+
+```
 BOOL GetBitmap(CD2DBitmap& bitmap);
-```  
-  
-### <a name="parameters"></a>Параметры  
- *Растровое изображение*  
- По возвращении из этого метода содержит недопустимый точечный рисунок для этой цели отрисовки. Этот рисунок может использоваться для операций рисования.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
-  
-##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget  
- Возвращает интерфейс ID2D1BitmapRenderTarget  
-  
-```  
+```
+
+### <a name="parameters"></a>Параметры
+
+*Точечный рисунок*<br/>
+При возвращении данного метода содержит недопустимый точечный рисунок для этого целевого объекта отрисовки. Этот рисунок может использоваться для операции рисования.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.
+
+##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget
+
+Возвращает интерфейс ID2D1BitmapRenderTarget
+
+```
 ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс ID2D1BitmapRenderTarget или значение NULL, если объект еще не инициализирован.  
-  
-##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget  
- Указатель на объект ID2D1BitmapRenderTarget.  
-  
-```  
-ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
-```  
-  
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
- Возвращает интерфейс ID2D1BitmapRenderTarget  
-  
-```  
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Указатель на интерфейс ID2D1BitmapRenderTarget или значение NULL, если объект еще не инициализирован.
+
+##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget
+
+Указатель на объект ID2D1BitmapRenderTarget.
+
+```
+ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;
+```
+
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *
+
+Возвращает интерфейс ID2D1BitmapRenderTarget
+
+```
 operator ID2D1BitmapRenderTarget*();
-```   
-  
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс ID2D1BitmapRenderTarget или значение NULL, если объект еще не инициализирован.  
-  
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Указатель на интерфейс ID2D1BitmapRenderTarget или значение NULL, если объект еще не инициализирован.
+
+## <a name="see-also"></a>См. также
+
+[Классы](../../mfc/reference/mfc-classes.md)

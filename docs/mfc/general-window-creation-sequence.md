@@ -1,5 +1,5 @@
 ---
-title: Общая последовательность создания окна | Документы Microsoft
+title: Общая последовательность создания окна | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3a4b67ccbba97405678985e6412cc56911bd184
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9336e5fa19b373f07c54e758a6f939bbc63e50ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929696"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432793"
 ---
 # <a name="general-window-creation-sequence"></a>Общая последовательность создания окна
-При создании окна собственный, такие как дочерний элемент окна, платформа использует гораздо того же процесса, описанного в [создание документов и представлений](../mfc/document-view-creation.md).  
-  
- Классы окон, предоставляемых MFC используют [двухэтапного создания](../mfc/one-stage-and-two-stage-construction-of-objects.md). То есть во время вызова функций C++ **новый** оператор, конструктор выделяет и инициализирует объект C++, но не создает соответствующее окно Windows. После этого выполняется путем вызова [создать](../mfc/reference/cwnd-class.md#create) функции-члена объекта window.  
-  
- `Create` Функции-члена делает окно Windows и сохраняет его `HWND` в объекте C++ открытый элемент данных [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` позволяет выполнять гибкость за параметры создания. Перед вызовом метода `Create`, может потребоваться зарегистрировать класс окна в глобальной функции [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) Чтобы задать значок и класс стили рамки.  
-  
- Окна фрейма, можно использовать [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) вместо функции-члена `Create`. `LoadFrame` делает окно Windows, с помощью меньшее число параметров. Многие значения по умолчанию он получает от ресурсов, включая заголовок, значок, таблицу сочетаний клавиш и меню опорного кадра.  
-  
+
+При создании собственных, например дочернего окна для окна, инфраструктура использует гораздо тот же процесс, описанного в [создание документов и представлений](../mfc/document-view-creation.md).
+
+Все классы окон, предоставляемые MFC используют [конструкции двухэтапное](../mfc/one-stage-and-two-stage-construction-of-objects.md). То есть во время вызова C++ **новый** оператора, конструктор выделяет и инициализирует объект с ++, но не создает соответствующее окно Windows. Можно впоследствии сделать, вызвав [создать](../mfc/reference/cwnd-class.md#create) функция-член объекта window.
+
+`Create` Функция-член делает окно Windows и сохраняет его `HWND` в объекте C++ открытый элемент данных [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` позволяет выполнить гибкость через параметры создания. Перед вызовом `Create`, может потребоваться зарегистрировать класс окна с помощью глобальной функции [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) Чтобы задать значок и класс стили рамки.
+
+Для окна фрейма, можно использовать [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) функция-член вместо `Create`. `LoadFrame` делает окно Windows, с помощью меньшим числом параметров. Он получает множество значений по умолчанию из ресурсов, включая заголовок, значок, таблицу сочетаний клавиш и меню фрейма.
+
 > [!NOTE]
->  Ваш значок, таблицу сочетаний клавиш и ресурсов меню должны иметь общий идентификатор ресурса, например **IDR_MAINFRAME**, для них должна быть загружена по LoadFrame.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
-  
--   [Объекты окон](../mfc/window-objects.md)  
-  
--   [Регистрация классов «окон»](../mfc/registering-window-classes.md)  
-  
--   [Уничтожение объектов окон](../mfc/destroying-window-objects.md)  
-  
--   [Создание окон фрейма документа](../mfc/creating-document-frame-windows.md)  
-  
-## <a name="see-also"></a>См. также  
- [Создание окон](../mfc/creating-windows.md)
+>  Вашей значок, таблицу сочетаний клавиш и ресурсов меню должны иметь общие Идентификаторы ресурсов, таких как **IDR_MAINFRAME**, для них загружаемых LoadFrame.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+
+- [Объекты окон](../mfc/window-objects.md)
+
+- [Регистрация классов «window»](../mfc/registering-window-classes.md)
+
+- [Уничтожение объектов окон](../mfc/destroying-window-objects.md)
+
+- [Создание окон фрейма документа](../mfc/creating-document-frame-windows.md)
+
+## <a name="see-also"></a>См. также
+
+[Создание окон](../mfc/creating-windows.md)
 

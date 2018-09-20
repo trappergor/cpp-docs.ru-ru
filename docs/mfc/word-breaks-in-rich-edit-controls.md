@@ -1,5 +1,5 @@
 ---
-title: Разрывы слов в элементы управления Rich Edit | Документы Microsoft
+title: Разбиение слов с элементами управления Rich Edit | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373a30ed4a327cff99cb3cfce873707314608b57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f012897d968d108cb366126fc38992ff1dd11d0a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382964"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424616"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Разбиение слов с использованием элементов управления "Rich Edit"
-Элемент управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) вызывает функцию с именем «процедуры слово break» для поиска разрывов между словами и определить, где это может нарушить работу строк. Элемент управления использует эти сведения при выполнении операций переноса слов и при обработке сочетания клавиш CTRL + стрелка влево и CTRL + стрелка вправо. Приложение может отправлять сообщения в элементе управления rich edit для замены процедуры разбиения по умолчанию, для получения сведений о разбиения, а также для определения, какие строки определенный символ приходится на.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+Элемент управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) вызывает функцию с именем «procedure слово break» для поиска разрывов между словами и определить, где его можно переносить строку. Элемент управления использует эти сведения при выполнении операций переноса слов и при обработке сочетания клавиш CTRL + стрелка влево и CTRL + стрелка вправо. Приложение может отправлять сообщения в элементе управления rich edit для замены процедуру разбиения слов по умолчанию, для получения сведений разбиение текста на слова и определить, какие строки определенный символ ложится на.
+
+## <a name="see-also"></a>См. также
+
+[Использование CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

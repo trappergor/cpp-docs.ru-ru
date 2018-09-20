@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591735"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392766"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +51,16 @@ ms.locfileid: "42591735"
 
 ### <a name="parameters"></a>Параметры
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **const** или **volatile** квалификаторы. По умолчанию закрепляющий указатель определяется **volatile**. Она является избыточной, но не является ошибкой, чтобы объявить закрепляющий указатель **volatile**.
 
-*type*  
+*type*<br/>
 Тип *инициализатор*.
 
-*var*  
+*var*<br/>
 Имя **pin_ptr** переменной.
 
-*initializer*  
+*initializer*<br/>
 Член ссылочного типа, элемент управляемого массива или любой другой объект, который можно присвоить собственному указателю.
 
 ### <a name="remarks"></a>Примечания

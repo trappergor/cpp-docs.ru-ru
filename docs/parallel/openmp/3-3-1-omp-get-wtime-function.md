@@ -1,5 +1,5 @@
 ---
-title: 3.3.1 функция omp_get_wtime | Документы Microsoft
+title: 3.3.1 функция omp_get_wtime | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,30 +12,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d71296d23df72464ed730713566c95e2403760a1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8ec022e9c7e27c848ef535481993dd18dc45f695
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689497"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430778"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 Функция omp_get_wtime
-`omp_get_wtime` Функция возвращает значение двойной точности с плавающей запятой равно затраченное время по часам в секундах с момента некоторых «времени в прошлом».  Фактическое «время в прошлом» может быть произвольным, но оно не изменяются во время выполнения приложения. Он следующий:  
-  
-```  
-#include <omp.h>  
-double omp_get_wtime(void);  
-```  
-  
- Предполагается, что функция будет использоваться для измерения затраченного времени, как показано в следующем примере:  
-  
-```  
-double start;  
-double end;  
-start = omp_get_wtime();  
-... work to be timed ...  
-end = omp_get_wtime();  
-printf_s("Work took %f sec. time.\n", end-start);  
-```  
-  
- Возвращается выполняются «время потоков», которая предназначена, что они не должны быть глобально согласованного во всех потоках, участвующих в приложении.
+
+`omp_get_wtime` Функция возвращает значение с плавающей запятой двойной точности, равным затраченного реального времени в секундах с момента некоторые «времени в прошлом».  Фактическое «время в прошлом» может быть произвольным, но оно не меняется во время исполнения программы приложения. Он следующий:
+
+```
+#include <omp.h>
+double omp_get_wtime(void);
+```
+
+Предполагается, что функция будет использоваться для измерения времени, затраченного на, как показано в следующем примере:
+
+```
+double start;
+double end;
+start = omp_get_wtime();
+... work to be timed ...
+end = omp_get_wtime();
+printf_s("Work took %f sec. time.\n", end-start);
+```
+
+Время, возвращаемое API являются «по потокам раз», что означало, что они не обязаны быть глобально согласованным на всех потоков, участвующих в приложении.

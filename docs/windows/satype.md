@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 462dba3caaef53e49203eab6d006ea59d7b23c0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6562721cfdf1fb963a6af71e8a8665887fa4d4ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590377"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413111"
 ---
 # <a name="satype"></a>satype
 
@@ -38,7 +38,7 @@ ms.locfileid: "42590377"
 
 ### <a name="parameters"></a>Параметры
 
-*data_type*  
+*data_type*<br/>
 Тип данных для `SAFEARRAY` структура данных, которая передается как параметр метода интерфейса.
 
 ## <a name="requirements"></a>Требования
@@ -74,7 +74,7 @@ __interface A {
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты компилятора](../windows/compiler-attributes.md)  
-[Атрибуты параметра](../windows/parameter-attributes.md)  
-[Атрибуты метода](../windows/method-attributes.md)  
+[Атрибуты компилятора](../windows/compiler-attributes.md)<br/>
+[Атрибуты параметра](../windows/parameter-attributes.md)<br/>
+[Атрибуты метода](../windows/method-attributes.md)<br/>
 [id](../windows/id.md)  

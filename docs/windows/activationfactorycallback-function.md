@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7979dd21d68c5b1e2606573a5271fc8deafdfb07
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 62efb2b1aa2cd2caa0c5701696689ea3df19f962
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604184"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443622"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback - функция
 
@@ -39,10 +39,10 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 
 ### <a name="parameters"></a>Параметры
 
-*activationId*  
+*activationId*<br/>
 Дескриптор строка, задающая имя класса среды выполнения.
 
-*ppFactory*  
+*ppFactory*<br/>
 После завершения операции фабрику активации, соответствующее параметру *activationId*.
 
 ## <a name="return-value"></a>Возвращаемое значение

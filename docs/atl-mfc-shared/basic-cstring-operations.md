@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156191d09c88d8f19b3fe73108bcbca390b23f6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab2c857451e399e56e69d79240d4ace023a8b301
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760207"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424090"
 ---
 # <a name="basic-cstring-operations"></a>Базовые операции CString
 
@@ -112,8 +112,8 @@ CString cs("meow");
 
 ## <a name="see-also"></a>См. также
 
-[Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md)   
-[Специализация шаблона](../cpp/template-specialization-cpp.md)   
+[Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Специализация шаблонов](../cpp/template-specialization-cpp.md)<br/>
 [Практическое руководство. Преобразование различных типов строк](../text/how-to-convert-between-various-string-types.md)
 

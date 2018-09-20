@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c44028f834d2b3200b970fdc613d0bf4d4efd29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7d9ab5157bb39b890c867c90e3b6a77cf189c9ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702862"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421275"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (задание имени TLB-файла)
 
@@ -68,6 +68,6 @@ ms.locfileid: "45702862"
 
 [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
 [Параметры компоновщика](../../build/reference/linker-options.md)<br/>
-[/ IGNOREIDL (не процесса атрибуты в MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/MIDL (указание параметров командной строки MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)
-[сборка Атрибутированной программы](../../windows/building-an-attributed-program.md)
+[/IGNOREIDL (запрет преобразования атрибутов в MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (указание параметров командной строки MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Сборка атрибутированной программы](../../windows/building-an-attributed-program.md)

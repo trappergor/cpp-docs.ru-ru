@@ -1,5 +1,5 @@
 ---
-title: Классы, связанные с элементами управления Rich Edit | Документы Microsoft
+title: Классы, связанные с элементами управления Rich Edit | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f428242ac84adaf36ea0263f8e193dfeca7d0609
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ee7b6400dcd5c91d054b31153c21008d5302bd0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341402"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401268"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>Классы, связанные с элементами управления "Rich Edit"
-[CRichEditView](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), и [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) классы предоставляют функциональные возможности управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) в контексте архитектуры документов или представлений MFC. `CRichEditView` Сохраняет текст и параметры форматирования текста. `CRichEditDoc` поддерживает список клиентских элементов управления OLE, в представлении. `CRichEditCntrItem` Предоставляет контейнер стороне доступ к элемент клиента OLE. Чтобы изменить содержимое `CRichEditView`, используйте [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) для доступа к базовый элемент управления rich edit.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+[CRichEditView](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), и [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) классы предоставляют функциональность элемента управления форматированным редактированием ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) в контексте архитектуры документов или представлений MFC. `CRichEditView` хранит текст и параметры форматирования текста. `CRichEditDoc` поддерживает список клиентских элементов управления OLE, которые находятся в представлении. `CRichEditCntrItem` предоставляет доступ со стороны контейнера к элемент клиента OLE. Чтобы изменить содержимое `CRichEditView`, использовать [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) для доступа к основной элемент управления rich edit.
+
+## <a name="see-also"></a>См. также
+
+[Использование CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

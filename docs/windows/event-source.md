@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fc8d8100786f78d516bb5f880e4238b7e3a2388
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d2dfcf61ced958519e7255bd241d3c0ea911824e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611868"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408925"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -45,7 +45,7 @@ ms.locfileid: "42611868"
 
 ### <a name="parameters"></a>Параметры
 
-*type*  
+*type*<br/>
 Перечисление одного из следующих значений:
 
 - `native` для неуправляемого кода C/C++ (по умолчанию для неуправляемых классов).
@@ -58,10 +58,10 @@ ms.locfileid: "42611868"
     #include <atlcom.h>
     ```
 
-*optimize*  
+*optimize*<br/>
 Когда *тип* — `native`, можно указать `optimize=size`, чтобы указать, что доступно 4 байта хранилища (минимум) для всех событий в классе или `optimize=speed` (по умолчанию) для указания, что доступно 4 * (число событий) байт для хранения.
 
-*украшения*  
+*украшения*<br/>
 Когда *тип* — `native`, можно указать `decorate=false`, чтобы указать, что развернутое имя в объединенном файле (MRG) не должно содержать имя включающего класса. [/Fx](../build/reference/fx-merge-injected-code.md) позволяет создавать MRG-файлы. `decorate=false`, который используется по умолчанию, приводит-полных имен типов в объединенном файле.
 
 ## <a name="remarks"></a>Примечания
@@ -88,9 +88,9 @@ ms.locfileid: "42611868"
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты компилятора](../windows/compiler-attributes.md)  
-[event_receiver](../windows/event-receiver.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[Атрибуты компилятора](../windows/compiler-attributes.md)<br/>
+[event_receiver](../windows/event-receiver.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [Атрибуты классов](../windows/class-attributes.md)  

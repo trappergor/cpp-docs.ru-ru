@@ -1,5 +1,5 @@
 ---
-title: Элементы управления вкладки и окна свойств | Документы Microsoft
+title: Элементы управления вкладки и окна свойств | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 096c61a62ea382639356eca81483c9aacfe04b2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc03427847a64330d1ff2814d268997f63fac6bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385876"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382548"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Элементы управления "Вкладка" и вкладки свойств
-Страницы свойств, многостраничные диалоговые окна или «диалоговые окна», которое может отображаться до 24 ресурсов шаблона диалогового окна для пользователя. Примеры свойств см. в диалоговом окне Свойства экрана Windows или ниже приложение MFC:  
-  
- [CMNCTRL1: Демонстрация общих классов управления, часть 1](../visual-cpp-samples.md)  
-  
- [CMNCTRL2: Демонстрация общих классов управления, часть 2](../visual-cpp-samples.md)  
-  
- Страницы свойств можно легко реализовать с помощью класса MFC [CPropertySheet](../mfc/reference/cpropertysheet-class.md).  
-  
-## <a name="see-also"></a>См. также  
- [Использование CTabCtrl](../mfc/using-ctabctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+Страницы свойств – это многостраничные диалоговые окна или «вкладку диалоговые окна», которое может отображаться до 24 ресурсов шаблона диалогового окна для пользователя. Примеры свойств см. в разделе диалогового окна свойств отображения Windows или в следующем образце приложения MFC:
+
+[CMNCTRL1: Демонстрация общих классов управления, часть 1](../visual-cpp-samples.md)
+
+[CMNCTRL2: Демонстрация общих классов управления, часть 2](../visual-cpp-samples.md)
+
+Страницы свойств можно легко реализовать с помощью класса MFC [CPropertySheet](../mfc/reference/cpropertysheet-class.md).
+
+## <a name="see-also"></a>См. также
+
+[Использование CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4369fe312669f75eb8217be7a6a09c4287f7cc8b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c4052e06fe8aae1d149c3c09e88715d8270b361
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210717"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426566"
 ---
 # <a name="image-overlays-in-image-lists"></a>Перекрытия изображений в списках изображений
-Каждый список изображений ([CImageList](../mfc/reference/cimagelist-class.md)) включает в себя список образов для использования в качестве маски наложения. «Наложения маски» — это образ, прозрачным через другое изображение. Любое другое изображение может использоваться в качестве маски наложения. Можно указать до четырех наложения маски для списка изображений.  
-  
- Добавить индекс изображения в список масок наложения с помощью [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) функция-член, индекс изображения и индекс маски наложения. Обратите внимание, что индексы для наложения маски от единицы, а не с нуля.  
-  
- Отображение маски наложения поверх образа с помощью одного вызова `Draw`. Параметры включают индекс изображения для рисования и индекс маски наложения. Необходимо использовать [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) макрос, чтобы указать индекс маски наложения. Наложение изображения также можно указать при вызове [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) функция-член.  
-  
-## <a name="see-also"></a>См. также  
- [Использование CImageList](../mfc/using-cimagelist.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+
+Каждый список изображений ([CImageList](../mfc/reference/cimagelist-class.md)) включает в себя список образов для использования в качестве маски наложения. «Наложения маски» — это образ, прозрачным через другое изображение. Любое другое изображение может использоваться в качестве маски наложения. Можно указать до четырех наложения маски для списка изображений.
+
+Добавить индекс изображения в список масок наложения с помощью [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) функция-член, индекс изображения и индекс маски наложения. Обратите внимание, что индексы для наложения маски от единицы, а не с нуля.
+
+Отображение маски наложения поверх образа с помощью одного вызова `Draw`. Параметры включают индекс изображения для рисования и индекс маски наложения. Необходимо использовать [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) макрос, чтобы указать индекс маски наложения. Наложение изображения также можно указать при вызове [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) функция-член.
+
+## <a name="see-also"></a>См. также
+
+[Использование CImageList](../mfc/using-cimagelist.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)
 

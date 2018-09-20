@@ -1,5 +1,5 @@
 ---
-title: Размещение в Windows Forms пользовательского элемента управления в качестве представления MFC | Документы Microsoft
+title: Размещение Windows Forms пользовательского элемента управления в качестве представления MFC | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf9e54b3e2808a232bc13052c885a341cb51297f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b80b3a9d206ef48df1219d60afdc344874d3bab4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137631"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374520"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC
-MFC использует класс CWinFormsView для пользовательского элемента управления Windows Forms в представления MFC. Представления MFC Windows Forms, элементы управления ActiveX. Пользовательский элемент управления размещен как дочерние элементы собственного представления и занимает всю клиентскую область собственного представления.  
-  
- Конечный результат напоминает модель, используемая [класс CFormView](../mfc/reference/cformview-class.md). Это позволяет воспользоваться преимуществами конструктора Windows Forms и среды выполнения для создания расширенных представлений на основе форм.  
-  
- Так как представления MFC Windows Forms — элементы управления ActiveX, не имеющих одинаковое `hwnd` как представления MFC. Также они не могут быть переданы как указатель на [CView](../mfc/reference/cview-class.md) представления. Как правило использование методов .NET Framework для работы с Windows Forms представления и меньше зависят от Win32.  
-  
- Образец приложения Windows Forms используются с MFC, в разделе [MFC и интеграция с Windows Forms](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
-  
-## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)  
-  
- [Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)  
-  
- [Практическое руководство. Вызов свойств и методов элемента управления Windows Forms](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)  
-  
-## <a name="see-also"></a>См. также  
- [Использование пользовательского элемента управления формы Windows в MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Практическое руководство. Создание составных элементов управления](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+
+MFC использует класс CWinFormsView разместить пользовательский элемент управления Windows Forms в представления MFC. Представления MFC Windows Forms являются элементами управления ActiveX. Пользовательский элемент управления размещен как управляющий является потомком собственного представления и занимает всю клиентскую область собственного представления.
+
+Конечный результат напоминает модели, используемой [класс CFormView](../mfc/reference/cformview-class.md). Это позволяет воспользоваться преимуществами конструктора Windows Forms и среды выполнения для создания расширенных представлений на основе форм.
+
+Так как представления MFC Windows Forms являются элементами управления ActiveX, у которых нет же `hwnd` как представления MFC. Также они могут передаваться как указатель на [CView](../mfc/reference/cview-class.md) представления. Как правило использование методов .NET Framework для работы с представлениями Windows Forms и уменьшения Win32.
+
+Образец приложения, Windows Forms с MFC, см. в разделе [MFC и Windows Forms Integration](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+
+## <a name="in-this-section"></a>В этом разделе
+
+[Практическое руководство. Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)
+
+[Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
+
+[Практическое руководство. Вызов свойств и методов элемента управления Windows Forms](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)
+
+## <a name="see-also"></a>См. также
+
+[Использование пользовательского элемента управления формы Windows Forms в MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
+[Практическое руководство. Создание составных элементов управления](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

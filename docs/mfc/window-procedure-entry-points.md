@@ -1,5 +1,5 @@
 ---
-title: Точки входа процедуры окна | Документы Microsoft
+title: Точки входа процедуры окна | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 315526a8f95a1d62ac89f3a76fab492c9b136715
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c3226df51d2a83484de78d0d76c9af67e150e8eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956386"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403192"
 ---
 # <a name="window-procedure-entry-points"></a>Точки входа процедуры окна
-Чтобы защитить процедуры окна MFC, статические ссылки модуля с помощью реализации процедуры специальное окно. Связь происходит автоматически, когда модуль связывается с MFC. В этой процедуре окна используется макрос AFX_MANAGE_STATE правильно установить состояние действующие модуля, а затем она вызывает `AfxWndProc`, который в свою очередь делегирует `WindowProc` функция-член соответствующего `CWnd`-производного объекта.  
-  
-## <a name="see-also"></a>См. также  
- [Управление данными состояния модулей MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+Для защиты процедуры окна MFC, модуль статической ссылки на реализацию процедуры специальное окно. Связь осуществляется автоматически, когда модуль связано с MFC. В этой процедуре окна используется макрос AFX_MANAGE_STATE правильно установить состояние действующие модуля, а затем он вызывает `AfxWndProc`, который в свою очередь делегирует `WindowProc` функция-член соответствующего `CWnd`-объект, производный от.
+
+## <a name="see-also"></a>См. также
+
+[Управление данными состояния модулей MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 

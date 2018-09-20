@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6c5652f61211ebd4d33de6f2dce07bd49b4f0a0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0ab40be4843b33e98daaf0f990e10544cb966a7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313244"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404388"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Рисование линий и замкнутых фигур (редактор изображений для значков)
 
@@ -63,7 +63,7 @@ ms.locfileid: "44313244"
 
 ## <a name="see-also"></a>См. также
 
-[Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Изменение графических ресурсов](../windows/editing-graphical-resources-image-editor-for-icons.md)  
-[Редактор изображений для значков](../windows/image-editor-for-icons.md)  
+[Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Изменение графических ресурсов](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
+[Редактор изображений для значков](../windows/image-editor-for-icons.md)<br/>
 [Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)

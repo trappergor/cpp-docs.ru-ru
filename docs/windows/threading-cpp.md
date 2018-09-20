@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 899c41a65a651f7464b11639d2106b3eaa51e21b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8ab2699781526ee12784f7c048cd9a833526fd30
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708660"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415006"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -80,8 +80,8 @@ ms.locfileid: "45708660"
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты COM](../windows/com-attributes.md)  
-[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Атрибуты классов](../windows/class-attributes.md)  
-[Поддержка многопоточности для устаревшего кода (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)  
+[Атрибуты COM](../windows/com-attributes.md)<br/>
+[Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Атрибуты классов](../windows/class-attributes.md)<br/>
+[Поддержка многопоточности для устаревшего кода (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
 [Нейтральный подразделения](/windows/desktop/cossdk/neutral-apartments)  

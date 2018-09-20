@@ -16,52 +16,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dddf9c117f2366496609f8bdf4ffc2f069f66ace
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 531dbc3c0e9b609aeaf5d9179491aa0fb3990363
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199577"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382925"
 ---
 # <a name="paintstruct-structure"></a>Структура PAINTSTRUCT
-`PAINTSTRUCT` Структура содержит сведения, который может использоваться для рисования клиентской области окна.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-typedef struct tagPAINTSTRUCT {  
-    HDC hdc;  
-    BOOL fErase;  
-    RECT rcPaint;  
-    BOOL fRestore;  
-    BOOL fIncUpdate;  
-    BYTE rgbReserved[16];  
-} PAINTSTRUCT;  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *hdc*  
- Идентифицирует контекста отображения, используемый для рисования.  
-  
- *fErase*  
- Указывает, должен ли фон перерисовку. Это не 0, если приложение перерисовывать в фоновом режиме. Приложение отвечает за рисование фона, если класс окна Windows создается без кисть фона (см. в описании `hbrBackground` членом [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) структуры в пакете SDK для Windows).  
-  
- *rcPaint*  
- Указывает в верхнем левом углу и снижайте правой углов прямоугольника, в котором запрашивается заливку.  
-  
- *fRestore*  
- Зарезервированным членом. Он используется внутренним образом Windows.  
-  
- *fIncUpdate*  
- Зарезервированным членом. Он используется внутренним образом Windows.  
-  
- *rgbReserved [16]*  
- Зарезервированным членом. Зарезервированным блоком памяти, используется системой Windows.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** winuser.h  
-  
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPaintDC::m_ps](../../mfc/reference/cpaintdc-class.md#m_ps)
+
+`PAINTSTRUCT` Структура содержит сведения, который может использоваться для рисования клиентской области окна.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+typedef struct tagPAINTSTRUCT {
+    HDC hdc;
+    BOOL fErase;
+    RECT rcPaint;
+    BOOL fRestore;
+    BOOL fIncUpdate;
+    BYTE rgbReserved[16];
+} PAINTSTRUCT;
+```
+
+#### <a name="parameters"></a>Параметры
+
+*hdc*<br/>
+Идентифицирует контекста отображения, используемый для рисования.
+
+*fErase*<br/>
+Указывает, должен ли фон перерисовку. Это не 0, если приложение перерисовывать в фоновом режиме. Приложение отвечает за рисование фона, если класс окна Windows создается без кисть фона (см. в описании `hbrBackground` членом [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) структуры в пакете SDK для Windows).
+
+*rcPaint*<br/>
+Указывает в верхнем левом углу и снижайте правой углов прямоугольника, в котором запрашивается заливку.
+
+*fRestore*<br/>
+Зарезервированным членом. Он используется внутренним образом Windows.
+
+*fIncUpdate*<br/>
+Зарезервированным членом. Он используется внутренним образом Windows.
+
+*rgbReserved [16]*<br/>
+Зарезервированным членом. Зарезервированным блоком памяти, используется системой Windows.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** winuser.h
+
+## <a name="see-also"></a>См. также
+
+[Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CPaintDC::m_ps](../../mfc/reference/cpaintdc-class.md#m_ps)
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317866"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402399"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>Определение переменных-членов для элементов управления диалоговых окон (C++)
 
@@ -55,11 +55,11 @@ MFC
 
 ## <a name="see-also"></a>См. также
 
-[Сопоставление сообщений с функциями](../mfc/reference/mapping-messages-to-functions.md)  
-[Добавление функциональных возможностей с помощью мастеров кода](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Мастер классов MFC](../mfc/reference/mfc-class-wizard.md)  
-[Добавление класса](../ide/adding-a-class-visual-cpp.md)  
-[Добавление функции-члена](../ide/adding-a-member-function-visual-cpp.md)  
-[Добавление переменной-члена](../ide/adding-a-member-variable-visual-cpp.md)  
-[Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Сопоставление сообщений с функциями](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Добавление функциональных возможностей с помощью мастеров кода](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Мастер классов MFC](../mfc/reference/mfc-class-wizard.md)<br/>
+[Добавление класса](../ide/adding-a-class-visual-cpp.md)<br/>
+[Добавление функции-члена](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Добавление переменной-члена](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Обработчик сообщений MFC](../mfc/reference/adding-an-mfc-message-handler.md)

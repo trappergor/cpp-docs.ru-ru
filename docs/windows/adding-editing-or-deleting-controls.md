@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce32186083e156525ccc1f75a6d93d58c7f9294e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e52f169653222808845b0d381718e064c09fda11
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316072"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440827"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Добавление, изменение и удаление элементов управления
 
@@ -50,6 +50,6 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Элементы управления в диалоговых окнах](controls-in-dialog-boxes.md)  
-[Добавление обработчиков событий для элементов управления диалоговых окон](adding-event-handlers-for-dialog-box-controls.md)  
+[Элементы управления в диалоговых окнах](controls-in-dialog-boxes.md)<br/>
+[Добавление обработчиков событий для элементов управления диалоговых окон](adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)

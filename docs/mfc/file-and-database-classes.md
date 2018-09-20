@@ -1,5 +1,5 @@
 ---
-title: Файл и классы баз данных | Документы Microsoft
+title: Файл и классы баз данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829cbcf659b1fbd6d7aa3899d7d26c4d87096f93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b03f248b2f5a142903801dd64e8a8f5845fff1db
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344952"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377766"
 ---
 # <a name="file-and-database-classes"></a>Классы файлов и баз данных
-Эти классы позволяют хранить сведения в базу данных или файл на диске. Существуют три набора классов базы данных — OLE DB, ODBC и DAO, которые предоставляют аналогичные функциональные возможности. Группы OLE DB реализуется с помощью OLE DB и работает с шаблоны потребителя OLE DB, группе DAO реализуется с помощью объект доступа к данным и группе ODBC реализуется с помощью Open Database Connectivity. Существует также набор классов для управления стандартными файлами, активные потоки и потоки HTML.  
-  
- Следующие категории классов поддержки сохраняемости данных.  
-  
--   [Классы файлового ввода-вывода](../mfc/file-i-o-classes.md)  
-  
--   [Классы OLE DB](../mfc/ole-db-classes.md)  
-  
--   [Классы DAO](../mfc/dao-classes.md)  
-  
--   [Классы ODBC](../mfc/odbc-classes.md)  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о классе](../mfc/class-library-overview.md)
+
+Эти классы позволяют хранить данные в базу данных или файл на диске. Существует три набора классов базы данных — OLE DB, ODBC и DAO, которые предоставляют аналогичные функциональные возможности. Группа OLE DB реализуется с помощью OLE DB и работает с Шаблоны потребителей OLE DB, группе DAO реализуется с помощью объектов доступа к данным и группе ODBC реализуется с помощью Open Database Connectivity. Существует также ряд классов для манипулирования стандартные файлы, активные потоки и потоки HTML.
+
+Следующие категории классы поддерживают постоянное хранение данных.
+
+- [Классы файлового ввода-вывода](../mfc/file-i-o-classes.md)
+
+- [Классы OLE DB](../mfc/ole-db-classes.md)
+
+- [Классы DAO](../mfc/dao-classes.md)
+
+- [Классы ODBC](../mfc/odbc-classes.md)
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о классе](../mfc/class-library-overview.md)
 

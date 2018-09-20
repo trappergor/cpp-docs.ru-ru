@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da998c748a3471f053c922e0a80c33d1526b2055
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e60803ec9696e541376aa8530cb4c01d32b9e569
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313147"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418866"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>Изменение размера элемента управления при его добавлении
 
@@ -49,6 +49,6 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)  
-[Добавление обработчиков событий для элементов управления диалоговых окон](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)<br/>
+[Добавление обработчиков событий для элементов управления диалоговых окон](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)

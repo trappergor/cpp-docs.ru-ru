@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c7ebdf83730b661cbd855ba730da1abeee936c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714315"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377075"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (расширения компонентов C++)
 
@@ -36,21 +36,21 @@ ms.locfileid: "45714315"
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*interface_access*  
+*interface_access*<br/>
 Доступность интерфейса за пределы данной сборки.  Возможные значения: **открытый** и **частного**.  **закрытый** используется по умолчанию. Не может иметь вложенные интерфейсы *interface_access* спецификатор.
 
-*name*  
+*name*<br/>
 Имя интерфейса.
 
-*inherit_access*  
+*inherit_access*<br/>
 Доступность *base_interface*.  Единственными допустимыми специальных возможностей, для базового интерфейса **открытый** (по умолчанию).
 
-*base_interface*  
+*base_interface*<br/>
 (Необязательно) Базовый интерфейс для интерфейса *имя*.
 
 ### <a name="remarks"></a>Примечания

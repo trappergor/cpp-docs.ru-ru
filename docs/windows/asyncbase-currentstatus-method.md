@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 193f4d26f7e163707092f3d0bc8f981a02611a22
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 792f9f6c6d76097459498c43068f46d86b2e2349
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603706"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401489"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>Метод AsyncBase::CurrentStatus
 
@@ -38,7 +38,7 @@ inline void CurrentStatus(
 
 ### <a name="parameters"></a>Параметры
 
-*status*  
+*status*<br/>
 Расположение, в котором эта операция сохраняет текущее состояние.
 
 ## <a name="remarks"></a>Примечания
@@ -53,5 +53,5 @@ inline void CurrentStatus(
 
 ## <a name="see-also"></a>См. также
 
-[Класс AsyncBase](../windows/asyncbase-class.md)  
+[Класс AsyncBase](../windows/asyncbase-class.md)<br/>
 [Перечисление AsyncStatusInternal](../windows/asyncstatusinternal-enumeration.md)

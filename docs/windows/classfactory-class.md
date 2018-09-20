@@ -1,28 +1,38 @@
 ---
 title: Класс ClassFactory | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ClassFactory
+- module/Microsoft::WRL::ClassFactory::AddRef
+- module/Microsoft::WRL::ClassFactory::ClassFactory
+- module/Microsoft::WRL::ClassFactory::LockServer
+- module/Microsoft::WRL::ClassFactory::QueryInterface
+- module/Microsoft::WRL::ClassFactory::Release
 dev_langs:
 - C++
 helpviewer_keywords:
-- ClassFactory class
+- Microsoft::WRL::ClassFactory class
+- Microsoft::WRL::ClassFactory::AddRef method
+- Microsoft::WRL::ClassFactory::ClassFactory, constructor
+- Microsoft::WRL::ClassFactory::LockServer method
+- Microsoft::WRL::ClassFactory::QueryInterface method
+- Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f033fc20fac656e6b9fcfa9ac822099ea929d62
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bfaf95a477917fc417cfe3c296822233eca77c09
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611809"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413072"
 ---
 # <a name="classfactory-class"></a>ClassFactory - класс
 
@@ -48,18 +58,18 @@ class ClassFactory : public Details::RuntimeClass<
 
 ### <a name="parameters"></a>Параметры
 
-*I0*  
+*I0*<br/>
 Интерфейс признаками.
 
-*I1*  
+*I1*<br/>
 Первый интерфейс.
 
-*I2*  
+*I2*<br/>
 Второй интерфейс.
 
 ## <a name="remarks"></a>Примечания
 
-Использовать **ClassFactory** для обеспечения реализации пользовательской фабрики.
+Использовать `ClassFactory` для обеспечения реализации пользовательской фабрики.
 
 Следующий шаблон программирования демонстрирует использование [реализует](../windows/implements-structure.md) структура для указания более трех интерфейсов на фабрику класса.
 
@@ -69,18 +79,18 @@ class ClassFactory : public Details::RuntimeClass<
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Конструктор ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||
+Имя                                        | Описание
+------------------------------------------- | -----------
+[ClassFactory::ClassFactory](#classfactory) |
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Метод ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Увеличивает счетчик ссылок для текущего **ClassFactory** объекта.|
-|[Метод ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим **ClassFactory** объекта.|
-|[Метод ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Извлекает указатель на интерфейс, заданный параметром.|
-|[Метод ClassFactory::Release](../windows/classfactory-release-method.md)|Уменьшает счетчик ссылок для текущего **ClassFactory** объекта.|
+Имя                                            | Описание
+----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
+[ClassFactory::AddRef](#addref)                 | Увеличивает счетчик ссылок для текущего `ClassFactory` объекта.
+[ClassFactory::LockServer](#lockserver)         | Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим `ClassFactory` объекта.
+[ClassFactory::QueryInterface](#queryinterface) | Извлекает указатель на интерфейс, заданный параметром.
+[ClassFactory::Release](#release)               | Уменьшает счетчик ссылок для текущего `ClassFactory` объекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -110,7 +120,83 @@ class ClassFactory : public Details::RuntimeClass<
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="addref"></a>ClassFactory::AddRef
 
-[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)  
-[Перечисление RuntimeClassType](../windows/runtimeclasstype-enumeration.md)
+Увеличивает счетчик ссылок для текущего `ClassFactory` объекта.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
+
+## <a name="classfactory"></a>ClassFactory::ClassFactory
+
+```cpp
+WRL_NOTHROW ClassFactory();
+```
+
+## <a name="lockserver"></a>ClassFactory::LockServer
+
+Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим `ClassFactory` объекта.
+
+```cpp
+STDMETHOD(
+   LockServer
+)(BOOL fLock);
+```
+
+### <a name="parameters"></a>Параметры
+
+*fLock*<br/>
+Значение `true` для увеличения числа отслеживаемых объектов. Значение `false` для уменьшения числа отслеживаемых объектов.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение E_FAIL.
+
+### <a name="remarks"></a>Примечания
+
+`ClassFactory` следит за объектов в базовом экземпляре класса [модуль](../windows/module-class.md) класса.
+
+## <a name="queryinterface"></a>ClassFactory::QueryInterface
+
+Извлекает указатель на интерфейс, заданный параметром.
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*<br/>
+Идентификатор интерфейса.
+
+*ppvObject*<br/>
+После завершения операции, указатель на интерфейс, заданный параметром *riid*.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
+
+## <a name="release"></a>ClassFactory::Release
+
+Уменьшает счетчик ссылок для текущего `ClassFactory` объекта.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.

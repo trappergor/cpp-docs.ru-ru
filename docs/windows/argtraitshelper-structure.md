@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb0377de88ef5e782e0e11bc563409b7094eecf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 314853b103d74bd7907fb665b806f386ed7bd44e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598688"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397474"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper - структура
 
@@ -37,7 +37,7 @@ struct ArgTraitsHelper;
 
 ### <a name="parameters"></a>Параметры
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Интерфейс делегата.
 
 ## <a name="remarks"></a>Примечания
@@ -48,14 +48,14 @@ struct ArgTraitsHelper;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`methodType`|Синоним для `decltype(&TDelegateInterface::Invoke)`.|
 |`Traits`|Синоним для `ArgTraits<methodType>`.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Константа ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md)|Помогает [ArgTraits::args](../windows/argtraits-args-constant.md) следить счетчик числа параметров `Invoke` метод для интерфейса делегата.|
 
