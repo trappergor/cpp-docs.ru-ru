@@ -1,7 +1,7 @@
 ---
 title: 'Практическое: Миграция в - clr | Документация Майкрософт'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 818b6e102d9da759aa8889779515917b96e22c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412968"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494469"
 ---
 # <a name="how-to-migrate-to-clr"></a>Практическое руководство. Переход на /clr
 
-В этом разделе рассматриваются проблемы, возникающие при компиляции машинного кода с **/CLR** (см. в разделе [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) Дополнительные сведения). **/ CLR** позволяет модулям Visual C++ для вызова и вызываться из сборок .NET, сохраняя совместимость с неуправляемыми модулями. См. в разделе [смешанные (собственные и управляемые) сборки](../dotnet/mixed-native-and-managed-assemblies.md) и [машинный код и платформы.NET](../dotnet/native-and-dotnet-interoperability.md) Дополнительные сведения о преимуществах компиляции с использованием **/CLR**.
+В этом разделе рассматриваются проблемы, возникающие при компиляции машинного кода с **/CLR** (см. в разделе [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) Дополнительные сведения). **/ CLR** позволяет машинного кода C++ для вызова, а также быть вызван из сборок .NET в дополнение к другим машинного кода C++. См. в разделе [смешанные (собственные и управляемые) сборки](../dotnet/mixed-native-and-managed-assemblies.md) и [машинный код и платформы.NET](../dotnet/native-and-dotnet-interoperability.md) Дополнительные сведения о преимуществах компиляции с использованием **/CLR**.
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>Известные проблемы при компиляции проектов библиотек с параметром/CLR
 
@@ -132,7 +132,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 ### <a name="loader-lock-deadlock"></a>Взаимоблокировка при блокировке загрузчика
 
-В Visual Studio 2010 и более поздних версиях «взаимоблокировка при блокировке загрузчика» все равно может произойти в более ранних версиях, но является детерминированным и будет обнаружен и во время выполнения. См. в разделе [Инициализация смешанных сборок](../dotnet/initialization-of-mixed-assemblies.md) подробные сведения, рекомендации и решения.
+«Взаимоблокировка при блокировке загрузчика» могут возникнуть, но является детерминированным и обнаруживается и во время выполнения. См. в разделе [Инициализация смешанных сборок](../dotnet/initialization-of-mixed-assemblies.md) подробные сведения, рекомендации и решения.
 
 ### <a name="data-exports"></a>Экспорт данных
 

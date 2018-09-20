@@ -1,28 +1,36 @@
 ---
 title: Класс Module::MethodReleaseNotifier | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::MethodReleaseNotifier
+- module/Microsoft::WRL::Module::MethodReleaseNotifier::Invoke
+- module/Microsoft::WRL::Module::MethodReleaseNotifier::method_
+- module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier
+- module/Microsoft::WRL::Module::MethodReleaseNotifier::object_
 dev_langs:
 - C++
 helpviewer_keywords:
-- MethodReleaseNotifier class
+- Microsoft::WRL::Module::MethodReleaseNotifier class
+- Microsoft::WRL::Module::MethodReleaseNotifier::Invoke method
+- Microsoft::WRL::Module::MethodReleaseNotifier::method_ data member
+- Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
+- Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e223ce02fa8a50ac39298d1f45f1f531dbf1f97
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e78542e016ab0ba8ef33a5655b72fcdff45ccc4
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411330"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494456"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Класс Module::MethodReleaseNotifier
 
@@ -44,22 +52,22 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Конструктор Module::MethodReleaseNotifier::MethodReleaseNotifier](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|Инициализирует новый экземпляр класса **Module::MethodReleaseNotifier** класса.|
+Имя                                                                                                 | Описание
+---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
+[Module::methodreleasenotifier:: methodreleasenotifier](#methodreleasenotifier-methodreleasenotifier) | Инициализирует новый экземпляр класса `Module::MethodReleaseNotifier`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Метод Module::MethodReleaseNotifier::Invoke](../windows/module-methodreleasenotifier-invoke-method.md)|Вызывает обработчик событий, связанный с текущим **Module::MethodReleaseNotifier** объекта.|
+Имя                                                                   | Описание
+---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
+[Module::MethodReleaseNotifier:: Invoke](#methodreleasenotifier-invoke) | Вызывает обработчик событий, связанный с текущим `Module::MethodReleaseNotifier` объекта.
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
-|----------|-----------------|
-|[Элемент данных Module::MethodReleaseNotifier::method_](../windows/module-methodreleasenotifier-method-data-member.md)|Содержит указатель на обработчик событий для текущего **Module::MethodReleaseNotifier** объекта.|
-|[Элемент данных Module::MethodReleaseNotifier::object_](../windows/module-methodreleasenotifier-object-data-member.md)|Содержит указатель на объект, функция-член которого является обработчиком событий для текущего **Module::MethodReleaseNotifier** объекта.|
+name                                                                    | Описание
+----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
+[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Содержит указатель на обработчик событий для текущего `Module::MethodReleaseNotifier` объекта.
+[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Содержит указатель на объект, функция-член которого является обработчиком событий для текущего `Module::MethodReleaseNotifier` объекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -73,6 +81,50 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="methodreleasenotifier-invoke"></a>Module::MethodReleaseNotifier:: Invoke
 
-[Класс Module](../windows/module-class.md)
+Вызывает обработчик событий, связанный с текущим `Module::MethodReleaseNotifier` объекта.
+
+```cpp
+void Invoke();
+```
+
+## <a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
+
+Содержит указатель на обработчик событий для текущего `Module::MethodReleaseNotifier` объекта.
+
+```cpp
+void (T::* method_)();
+```
+
+## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::methodreleasenotifier:: methodreleasenotifier
+
+Инициализирует новый экземпляр класса `Module::MethodReleaseNotifier`.
+
+```cpp
+MethodReleaseNotifier(
+   _In_ T* object,
+   _In_ void (T::* method)(),
+   bool release) throw() :
+            ReleaseNotifier(release), object_(object),
+            method_(method);
+```
+
+### <a name="parameters"></a>Параметры
+
+*object*  
+Объект, функция-член которого является обработчиком событий.
+
+*Метод*  
+Функция-член параметра *объект* то есть обработчик событий.
+
+*release*  
+Укажите `true` для включения вызова базового [модуль:: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release) метода; в противном случае укажите `false`.
+
+## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
+
+Содержит указатель на объект, функция-член которого является обработчиком событий для текущего `Module::MethodReleaseNotifier` объекта.
+
+```cpp
+T* object_;
+```
