@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa9c72cbb8724da00b2d370884bd7ddbf7264cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763244"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096812"
 ---
 # <a name="while-statement-c"></a>Оператор while (C)
 
-Оператор `while` позволяет повторять выполнение оператора до тех пор, пока указанное выражение не станет ложным.  
-  
+Оператор `while` позволяет повторять выполнение оператора до тех пор, пока указанное выражение не станет ложным.
+
 ## <a name="syntax"></a>Синтаксис
 
 *оператор-итерации*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*
-  
-Выражение *expression* должно иметь арифметический тип или тип указателя. Выполнение происходит следующим образом:  
-  
-1. Вычисляется значение *expression*.  
-  
+
+Выражение *expression* должно иметь арифметический тип или тип указателя. Выполнение происходит следующим образом:
+
+1. Вычисляется значение *expression*.
+
 2. Если *expression* изначально ложно, тело оператора `while` не выполняется ни одного раза и управление передается из оператора `while` следующему оператору в программе.
 
    Если *expression* имеет значение True (то есть не равно нулю), выполняется тело оператора и процесс повторяется с шага 1.
