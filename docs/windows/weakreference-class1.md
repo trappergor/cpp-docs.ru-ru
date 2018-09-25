@@ -1,28 +1,40 @@
 ---
 title: WeakReference Class1 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::WeakReference
+- implements/Microsoft::WRL::Details::WeakReference::DecrementStrongReference
+- implements/Microsoft::WRL::Details::WeakReference::IncrementStrongReference
+- implements/Microsoft::WRL::Details::WeakReference::Resolve
+- implements/Microsoft::WRL::Details::WeakReference::SetUnknown
+- implements/Microsoft::WRL::Details::WeakReference::~WeakReference
+- implements/Microsoft::WRL::Details::WeakReference::WeakReference
 dev_langs:
 - C++
 helpviewer_keywords:
-- WeakReference class
+- Microsoft::WRL::Details::WeakReference class
+- Microsoft::WRL::Details::WeakReference::DecrementStrongReference method
+- Microsoft::WRL::Details::WeakReference::IncrementStrongReference method
+- Microsoft::WRL::Details::WeakReference::Resolve method
+- Microsoft::WRL::Details::WeakReference::SetUnknown method
+- Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
+- Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9b7270a03192a6fcf53f0c2ecfd1af07a216243
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d82dbffee5b686c6d8923f395c74fedfac54816
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595535"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169675"
 ---
 # <a name="weakreference-class1"></a>WeakReference Class1
 
@@ -38,29 +50,29 @@ class WeakReference;
 
 Представляет *слабую ссылку* , можно использовать с помощью среды выполнения Windows или классической модели COM. Слабая ссылка представляет собой объект, который может быть доступен или недоступен.
 
-Объект **WeakReference** поддерживает *строгую ссылку*, которой является указателем на объект и *число строгую ссылку*, то есть числа копий со строгими ссылки, которые были распространены, `Resolve()` метод. Несмотря на то ненулевое число строгую ссылку, строгая ссылка является действительной и объект доступен. Надежный счетчик достигает нуля, строгая ссылка является недопустимым, и объект недоступен.
+Объект `WeakReference` поддерживает *строгую ссылку*, которой является указателем на объект и *число строгую ссылку*, то есть числа копий строгую ссылку, которые были распространены, `Resolve()` метод. Несмотря на то ненулевое число строгую ссылку, строгая ссылка является действительной и объект доступен. Надежный счетчик достигает нуля, строгая ссылка является недопустимым, и объект недоступен.
 
-Объект **WeakReference** объекта обычно используется для представления объекта, существование которого управляет внешний поток или приложение. Например, конструкция **WeakReference** объект из ссылки на объект файла. Пока открыт файл, строгая ссылка является действительной. Но если закрыть файл, строгая ссылка станет недействительной.
+Объект `WeakReference` объекта обычно используется для представления объекта, существование которого управляет внешний поток или приложение. Например, конструкция `WeakReference` объект из ссылки на объект файла. Пока открыт файл, строгая ссылка является действительной. Но если закрыть файл, строгая ссылка станет недействительной.
 
-**WeakReference** методы являются потокобезопасными.
+`WeakReference` Методы являются потокобезопасными.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Конструктор WeakReference::WeakReference](../windows/weakreference-weakreference-constructor.md)|Инициализирует новый экземпляр класса **WeakReference** класса.|
-|[Деструктор WeakReference::~WeakReference](../windows/weakreference-tilde-weakreference-destructor.md)|Деинициализирует (уничтожает) текущий экземпляр **WeakReference** класса.|
+Имя                                                  | Описание
+----------------------------------------------------- | ---------------------------------------------------------------------------
+[WeakReference::WeakReference](#weakreference)        | Инициализирует новый экземпляр класса `WeakReference`.
+[WeakReference:: ~ WeakReference](#tilde-weakreference) | Деинициализирует (уничтожает) текущий экземпляр `WeakReference` класса.
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Метод WeakReference::DecrementStrongReference](../windows/weakreference-decrementstrongreference-method.md)|Уменьшает текущий счетчик строгая ссылка **WeakReference** объекта.|
-|[Метод WeakReference::IncrementStrongReference](../windows/weakreference-incrementstrongreference-method.md)|Увеличивает счетчик строгую ссылку текущего **WeakReference** объекта.|
-|[Метод WeakReference::Resolve](../windows/weakreference-resolve-method.md)|Устанавливает заданный указатель в текущее значение строгую ссылку, если строгую ссылку count не равно нулю.|
-|[Метод WeakReference::SetUnknown](../windows/weakreference-setunknown-method.md)|Задает строгая ссылка текущего **WeakReference** объект в заданный указатель интерфейса.|
+Имя                                                                 | Описание
+-------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
+[WeakReference::DecrementStrongReference](#decrementstrongreference) | Уменьшает текущий счетчик строгая ссылка `WeakReference` объекта.
+[WeakReference::IncrementStrongReference](#incrementstrongreference) | Увеличивает счетчик строгую ссылку текущего `WeakReference` объекта.
+[WeakReference::Resolve](#resolve)                                   | Устанавливает заданный указатель в текущее значение строгую ссылку, если строгую ссылку count не равно нулю.
+[WeakReference::SetUnknown](#setunknown)                             | Задает строгая ссылка текущего `WeakReference` объект в заданный указатель интерфейса.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -72,6 +84,114 @@ class WeakReference;
 
 **Пространство имен:** Microsoft::wrl:: Details
 
-## <a name="see-also"></a>См. также
+## <a name="tilde-weakreference"></a>WeakReference:: ~ WeakReference
 
-[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+virtual ~WeakReference();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+### <a name="remarks"></a>Примечания
+
+Деинициализирует текущий экземпляр `WeakReference` класса.
+
+## <a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+ULONG DecrementStrongReference();
+```
+
+### <a name="remarks"></a>Примечания
+
+Уменьшает текущий счетчик строгая ссылка `WeakReference` объекта.
+
+Надежный счетчик достигает нуля, строгая ссылка имеет значение `nullptr`.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Счетчик уменьшается на единицу строгую ссылку.
+
+## <a name="incrementstrongreference"></a>WeakReference::IncrementStrongReference
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+ULONG IncrementStrongReference();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Счетчик увеличивается строгую ссылку.
+
+### <a name="remarks"></a>Примечания
+
+Увеличивает счетчик строгую ссылку текущего `WeakReference` объекта.
+
+## <a name="resolve"></a>WeakReference::Resolve
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+STDMETHOD(Resolve)  
+   (REFIID riid,
+   _Deref_out_opt_ IInspectable **ppvObject
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*<br/>
+Идентификатор интерфейса.
+
+*ppvObject*<br/>
+После завершения этой операции копию текущей строгую ссылку, если величина строгая ссылка имеет ненулевое значение.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+- Значение S_OK, если операция выполнена успешно и строгую ссылку счетчик равен нулю. *PpvObject* параметр имеет значение `nullptr`.
+
+- Значение S_OK, если операция выполнена успешно и строгую ссылку count не равно нулю. *PpvObject* параметру присваивается строгая ссылка.
+
+- В противном случае — значение HRESULT, указывающее причину этой операции не удалось.
+
+### <a name="remarks"></a>Примечания
+
+Устанавливает заданный указатель в текущее значение строгую ссылку, если строгую ссылку count не равно нулю.
+
+## <a name="setunknown"></a>WeakReference::SetUnknown
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+void SetUnknown(
+   _In_ IUnknown* unk
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*UNK*<br/>
+Указатель на `IUnknown` интерфейс для объекта.
+
+### <a name="remarks"></a>Примечания
+
+Задает строгая ссылка текущего `WeakReference` объект в заданный указатель интерфейса.
+
+## <a name="weakreference"></a>WeakReference::WeakReference
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+WeakReference();
+```
+
+### <a name="remarks"></a>Примечания
+
+Инициализирует новый экземпляр класса `WeakReference`.
+
+Указатель строгую ссылку для `WeakReference` инициализируется с `nullptr`, и число строгую ссылку устанавливается равным 1.

@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d264c77668e0220c4198657b8133f0ebea34e6cb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 9cf2cd2828a7eb4b590cf18bcca1dcac055d5e6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578411"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439800"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Перенос и обновление: примеры и конкретные случаи
+
 Чтобы получить представление о возможных проблемах, которые могут возникать при миграции с предыдущей версии Visual C++ на текущую версию, можно ознакомиться с историями успешной миграции.  
   
 ## <a name="examples-of-successful-migrations"></a>Примеры успешной миграции 

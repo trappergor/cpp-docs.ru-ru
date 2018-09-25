@@ -21,19 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b5160061233f9d0a474385bccd324333ed9549a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 132b2e069c42d1835d6736024fc4c609d313e544
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686291"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440710"
 ---
 # <a name="resources-property-pages"></a>Страницы свойств ресурсов
-Дополнительные сведения об использовании компилятора ресурсов см. в разделе [Использование компилятора ресурсов (командной строки RC)](/windows/desktop/menurc/using-rc-the-rc-command-line-).  
-  
- Сведения о доступе к страницам свойств **Ресурсы** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).  
-  
- Для программного доступа к этим свойствам см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
-  
-## <a name="see-also"></a>См. также  
- [Страницы свойств](../ide/property-pages-visual-cpp.md)
+
+Дополнительные сведения об использовании компилятора ресурсов см. в разделе [Использование компилятора ресурсов (командной строки RC)](/windows/desktop/menurc/using-rc-the-rc-command-line-).
+
+Сведения о доступе к страницам свойств **Ресурсы** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).
+
+Для программного доступа к этим свойствам см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+
+## <a name="see-also"></a>См. также
+
+[Страницы свойств](../ide/property-pages-visual-cpp.md)

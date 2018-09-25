@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578342"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404271"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Перенос в универсальную платформу Windows (C++)
 
@@ -118,5 +118,5 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 
 ## <a name="see-also"></a>См. также
 
-[Visual C++: руководство по переносу](../porting/porting-to-the-universal-windows-platform-cpp.md)  
+[Visual C++: руководство по переносу](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [Разработка приложений для универсальной платформы Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  

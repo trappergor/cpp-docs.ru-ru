@@ -8,12 +8,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1091a28448aa6531aa909117e0284e19bbcc7cd8
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4f53ee06b4d964307cdcc294e415f6e470eb176f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578409"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401066"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Обновление кода для универсальной среды выполнения
 
@@ -51,8 +51,8 @@ UCRT можно использовать в любой версии Windows, п�
   
 ## <a name="see-also"></a>См. также  
 
-[Руководство по переносу и обновлению Visual C++](visual-cpp-porting-and-upgrading-guide.md)  
-[Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
-[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Журнал изменений Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)  
+[Руководство по переносу и обновлению Visual C++](visual-cpp-porting-and-upgrading-guide.md)<br/>
+[Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
+[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Журнал изменений Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)<br/>
 [Улучшения соответствия C++ в Visual Studio 2017](../cpp-conformance-improvements-2017.md)  

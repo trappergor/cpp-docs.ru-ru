@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8a8ab088f3fbb10b5f477d125dbf3f2a7ac932
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 8091bbba7dcee344677c54a7944708679f2ff867
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578169"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411850"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Обновление проектов, созданных в предыдущих версиях Visual C++
+
 В большинстве случаев можно открыть проект, созданный в более ранней версии Visual Studio. Однако для этого Visual Studio обновляет проект. Если сохранить этот обновленный проект, его нельзя будет открыть в более ранней версии.  
   
 > [!IMPORTANT]
@@ -44,7 +45,7 @@ ms.locfileid: "42578169"
   
 ## <a name="see-also"></a>См. также  
 
-[Изменения системы построения](../build/build-system-changes.md)  
-[Новые возможности Visual C++ в Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) 
-[Журнал изменений Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)   
+[Изменения системы построения](../build/build-system-changes.md)<br/>
+[Новые возможности Visual C++ в Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Журнал изменений Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Нестандартное поведение](../cpp/nonstandard-behavior.md)
