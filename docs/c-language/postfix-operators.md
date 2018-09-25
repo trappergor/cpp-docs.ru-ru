@@ -15,15 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338e518d1939cb6ea32aaf200c54b6c352287561
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3d8d3a762cb3eed3b0182185561c33b073b571b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036063"
 ---
 # <a name="postfix-operators"></a>Постфиксные операторы
-Постфиксные операторы имеют самый высокий приоритет (наиболее тесную привязки) в вычислении выражений.  
+
+Постфиксные операторы имеют самый высокий приоритет (наиболее тесную привязки) в вычислении выражений.
 
 ## <a name="syntax"></a>Синтаксис
 
