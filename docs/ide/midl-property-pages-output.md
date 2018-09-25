@@ -22,33 +22,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927ab1004336787131c8f92c247512d1c66caf69
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 32125de84e7aa2601c65ad7eb441fff915dcd9d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212760"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414164"
 ---
 # <a name="midl-property-pages-output"></a>Страницы свойств MIDL: "Выходные данные"
-Страница свойств **Выходные данные** в папке **MIDL** указывает следующие параметры компилятора MIDL:  
-  
--   Выходной каталог ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))  
-  
--   Файл заголовка ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))  
-  
--   Файл данных библиотеки DLL ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))  
-  
--   Файл IID ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))  
-  
--   Файл прокси ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))  
-  
--   Создание библиотеки типов ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))  
-  
--   Библиотека типов ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))  
-  
- Сведения о доступе к странице свойств **Выходные данные** в папке **MIDL** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).  
-  
- Сведения о программном доступе к параметрам MIDL для проектов C++ см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
-  
-## <a name="see-also"></a>См. также  
- [Страницы свойств MIDL](../ide/midl-property-pages.md)
+
+Страница свойств **Выходные данные** в папке **MIDL** указывает следующие параметры компилятора MIDL:
+
+- Выходной каталог ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))
+
+- Файл заголовка ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))
+
+- Файл данных библиотеки DLL ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))
+
+- Файл IID ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))
+
+- Файл прокси ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))
+
+- Создание библиотеки типов ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))
+
+- Библиотека типов ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))
+
+Сведения о доступе к странице свойств **Выходные данные** в папке **MIDL** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).
+
+Сведения о программном доступе к параметрам MIDL для проектов C++ см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.
+
+## <a name="see-also"></a>См. также
+
+[Страницы свойств MIDL](../ide/midl-property-pages.md)

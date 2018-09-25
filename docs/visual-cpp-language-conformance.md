@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70fc4705b6e150978812563fcde9e0f4d6b3cea1
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 4a40738b5a360e521ff890ef53240609a9afde32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34246237"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388987"
 ---
 # <a name="visual-c-language-conformance"></a>Соответствие стандартам языка Visual C++
 
@@ -308,10 +308,10 @@ __VS 2017 15.7__ — функции, которые поддерживают�
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку C++](cpp/cpp-language-reference.md)  
-[Стандартная библиотека C++](standard-library/cpp-standard-library-reference.md)  
-[Улучшения соответствия C++ в Visual Studio 2017](cpp-conformance-improvements-2017.md)  
-[Новые возможности Visual C++ в Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)  
-[Журнал изменений Visual C++ 2003–2015](porting/visual-cpp-change-history-2003-2015.md)  
-[Новые возможности Visual C++ 2003–2015](porting/visual-cpp-what-s-new-2003-through-2015.md)  
+[Справочник по языку C++](cpp/cpp-language-reference.md)<br/>
+[Стандартная библиотека C++](standard-library/cpp-standard-library-reference.md)<br/>
+[Улучшения соответствия C++ в Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
+[Новые возможности Visual C++ в Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Журнал изменений Visual C++ 2003–2015](porting/visual-cpp-change-history-2003-2015.md)<br/>
+[Новые возможности Visual C++ 2003–2015](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Блог команды разработчиков Visual C++](https://blogs.msdn.microsoft.com/vcblog/)  

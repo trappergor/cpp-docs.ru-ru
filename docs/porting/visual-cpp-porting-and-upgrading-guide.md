@@ -1,7 +1,7 @@
 ---
 title: Руководство по переносу и обновлению Visual C++ | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06350e851501cfa26d1ea4d326c26d7a37270889
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1b573a22b9502548cc84f2bd459cda72d071cf68
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578148"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494404"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Руководство по переносу и обновлению Visual C++
+
 В этом разделе содержится руководство по обновлению кода Visual C++. В нем рассматриваются такие вопросы, как получение кода для компиляции и корректной работы в новом выпуске инструментов, а также эффективное применение нового языка и функций Visual Studio. В этом разделе также содержатся сведения о миграции приложений прежних версий на более современные платформы.  
   
 ## <a name="reasons-to-upgrade-visual-c-code"></a>Причины обновления кода Visual C++  
@@ -92,7 +93,6 @@ ms.locfileid: "42578148"
 |[Перенос на универсальную платформу Windows](porting-to-the-universal-windows-platform-cpp.md)|Содержит сведения о переносе кода в Windows 10.|  
 |[Знакомство с Visual C++ для пользователей UNIX](introduction-to-visual-cpp-for-unix-users.md)|Содержит сведения для пользователей UNIX, которые не знакомы с Visual C++ и хотят научиться работать с этой средой.|  
 |[Перенос приложений из UNIX в Win32](porting-from-unix-to-win32.md)|Здесь описываются параметры для переноса приложений из UNIX в Windows.|  
-|[Основы миграции C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Подробно показан процесс обновления ваших управляемых расширений для синтаксиса C++ с целью использования нового синтаксиса. Дополнительные сведения см. в статье [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md).|  
   
 ## <a name="see-also"></a>См. также  
 

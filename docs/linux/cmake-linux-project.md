@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 88f5ef5379d597a81456dab7f3dd28a73a4df84b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708010"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394924"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Настройка проекта Linux CMake
 
@@ -164,5 +164,5 @@ cmake -E capabilities
 
 ## <a name="see-also"></a>См. также
 
-[Работа со свойствами проектов](../ide/working-with-project-properties.md)  
+[Работа со свойствами проектов](../ide/working-with-project-properties.md)<br/>
 [Инструменты CMake для Visual C++](../ide/cmake-tools-for-visual-cpp.md)  

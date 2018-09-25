@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327844"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430066"
 ---
 # <a name="move-definition-location"></a>Переместить расположение определения
 **Что?** Позволяет немедленно переместить определение функции в соответствующий файл заголовка.
 
-**Когда?** Имеется функция, которую нужно переместить в файл заголовка.  
+**Когда?** Имеется функция, которую нужно переместить в файл заголовка.
 
 **Зачем?** Можно переместить функцию вручную, но этот компонент переместит ее автоматически, при необходимости сформировав файл заголовка.
 

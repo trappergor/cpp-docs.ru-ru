@@ -17,23 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ea6619804c4215ecb53fa0e92a2b12bbdc5e31
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9dfadd39281143baa35d8a4e30fcef345335cacc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334403"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401929"
 ---
 # <a name="makefile-project-wizard"></a>мастер проекта Makefile
-Этот мастер используется для создания командной строки для выполнения подсистемы сборки. Создав проект, вы можете просматривать и изменять его свойства на соответствующей [странице свойств](../ide/working-with-project-properties.md).  
-  
-## <a name="overview"></a>Обзор  
- На этой странице мастера описываются текущие параметры для создаваемого проекта. По умолчанию проект настроен для сборки с обеими конфигурациями *имя_проекта*.exe —выпуска и отладки.  
-  
- Чтобы изменить эти значения по умолчанию, перейдите на вкладку [Параметры приложения](../ide/application-settings-makefile-project-wizard.md) в левом столбце мастера и внесите необходимые изменения.  
-  
-## <a name="see-also"></a>См. также  
- [Создание проекта, использующего файл makefile](../ide/creating-a-makefile-project.md)   
- [Справочник по NMAKE](../build/nmake-reference.md)   
- [Специальные символы в файле makefile](../build/special-characters-in-a-makefile.md)   
- [Содержимое файла Makefile](../build/contents-of-a-makefile.md)
+
+Этот мастер используется для создания командной строки для выполнения подсистемы сборки. Создав проект, вы можете просматривать и изменять его свойства на соответствующей [странице свойств](../ide/working-with-project-properties.md).
+
+## <a name="overview"></a>Обзор
+
+На этой странице мастера описываются текущие параметры для создаваемого проекта. По умолчанию проект настроен для сборки с обеими конфигурациями *имя_проекта*.exe —выпуска и отладки.
+
+Чтобы изменить эти значения по умолчанию, перейдите на вкладку [Параметры приложения](../ide/application-settings-makefile-project-wizard.md) в левом столбце мастера и внесите необходимые изменения.
+
+## <a name="see-also"></a>См. также
+
+[Создание проекта Makefile](../ide/creating-a-makefile-project.md)<br>
+[Справочник по программе NMAKE](../build/nmake-reference.md)<br>
+[Специальные символы в файле Makefile](../build/special-characters-in-a-makefile.md)<br>
+[Содержимое файла Makefile](../build/contents-of-a-makefile.md)

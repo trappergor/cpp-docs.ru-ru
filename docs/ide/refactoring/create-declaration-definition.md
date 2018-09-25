@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 383691a5c2da2af6e4a992ab8766cd99ffa3d781
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331287"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408392"
 ---
 # <a name="create-declaration--definition"></a>Создать объявление или определение
 **Что?** Позволяет немедленно сформировать объявление или определение для функции.
 
-**Когда?** У вас есть функция, для которой требуется объявление, или наоборот.  
+**Когда?** У вас есть функция, для которой требуется объявление, или наоборот.
 
 **Зачем?** Можно вручную создать объявление или определение, но эта функция создаст его автоматически, при необходимости сформировав файл заголовка или кода.
 
