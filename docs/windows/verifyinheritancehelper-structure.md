@@ -1,28 +1,30 @@
 ---
 title: Verifyinheritancehelper-структура | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+- implements/Microsoft::WRL::Details::VerifyInheritanceHelper::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ddd358c3eb20439f87de8614d80af01537ae31e6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6231345b837cae8f36e8441173300d804c0ea167
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396580"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169637"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper - структура
 
@@ -58,9 +60,9 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Метод VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Проверяет два интерфейса, указанные параметрами шаблона и определяет, является ли один интерфейс производным от другого.|
+Имя                                       | Описание
+------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
+[VerifyInheritanceHelper::Verify](#verify) | Проверяет два интерфейса, указанные параметрами шаблона и определяет, является ли один интерфейс производным от другого.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -72,6 +74,16 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 **Пространство имен:** Microsoft::wrl:: Details
 
-## <a name="see-also"></a>См. также
+## <a name="verify"></a>VerifyInheritanceHelper::Verify
 
-[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>Примечания
+
+Проверяет два интерфейса, указанные параметрами шаблона и определяет, является ли один интерфейс производным от другого.
+
+Если это условие не выполняется, выдается ошибка.
