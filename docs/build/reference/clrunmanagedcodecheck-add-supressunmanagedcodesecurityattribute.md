@@ -1,5 +1,5 @@
 ---
-title: / Параметр CLRUNMANAGEDCODECHECK (Добавление атрибута SupressUnmanagedCodeSecurityAttribute) | Документы Microsoft
+title: / Параметр CLRUNMANAGEDCODECHECK (Добавление SuppressUnmanagedCodeSecurityAttribute) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0a70ea74851d3a10f9d46b8289098d6fb3fe22
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
+ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705378"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47429765"
 ---
-# <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>Параметр /CLRUNMANAGEDCODECHECK (добавление атрибута SupressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/ Параметр CLRUNMANAGEDCODECHECK (Добавление SuppressUnmanagedCodeSecurityAttribute)
 
-**/ Параметр CLRUNMANAGEDCODECHECK** указывает, будет ли компоновщик применять <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> с компоновщиком `PInvoke` вызовы из управляемого кода в собственные библиотеки DLL.
+**/ Параметр CLRUNMANAGEDCODECHECK** указывает, будет ли компоновщик применять <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> до компоновщиком `PInvoke` вызовы собственных библиотек DLL из управляемого кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,27 +34,27 @@ ms.locfileid: "34705378"
 
 ## <a name="remarks"></a>Примечания
 
-По умолчанию компоновщик применяет **SuppressUnmanagedCodeSecurityAttribute** с компоновщиком `PInvoke` вызовов. Когда **/clrunmanagedcodecheck** , **SuppressUnmanagedCodeSecurityAttribute** не применяется.
+По умолчанию компоновщик применяет **SuppressUnmanagedCodeSecurityAttribute** до компоновщиком `PInvoke` вызовов. Когда **/clrunmanagedcodecheck** , **SuppressUnmanagedCodeSecurityAttribute** не применяется.
 
-Компоновщик только добавляет атрибут к объектам, которые были скомпилированы с **/CLR** или **/CLR: pure**. Тем не менее **/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017 г.
+Компоновщик только добавляет атрибут к объектам, которые компилируются с **/CLR** или **/CLR: pure**. Тем не менее **/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
 
-Объект `PInvoke` вызов создается компоновщиком, когда компоновщик не удается найти управляемый символ, удовлетворяющий ссылке от управляемого вызывающего объекта, но можно найти символ для удовлетворения этой ссылки. Дополнительные сведения о `PInvoke`, в разделе [вызов собственных функций из управляемого кода](../../dotnet/calling-native-functions-from-managed-code.md).
+Объект `PInvoke` компоновщиком создается вызов, когда компоновщик не может найти управляемый символ для удовлетворения ссылку из управляемого вызывающего объекта, но можно найти символ для удовлетворения этой ссылки. Дополнительные сведения о `PInvoke`, см. в разделе [вызов собственных функций из управляемого кода](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Обратите внимание, что при использовании <xref:System.Security.AllowPartiallyTrustedCallersAttribute> в коде, необходимо явно задать **/clrunmanagedcodecheck**. Если изображение содержит атрибуты SuppressUnmanagedCodeSecurity и AllowPartiallyTrustedCallers не потенциальной уязвимости безопасности.
+Обратите внимание, что при использовании <xref:System.Security.AllowPartiallyTrustedCallersAttribute> в коде, необходимо явно указать **/clrunmanagedcodecheck**. Это потенциальной уязвимости безопасности, если изображение содержит атрибуты AllowPartiallyTrustedCallers и SuppressUnmanagedCodeSecurity.
 
-В разделе [правила написания безопасного кода для неуправляемого кода](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) Дополнительные сведения о последствиях использования **SuppressUnmanagedCodeSecurityAttribute**.
+См. в разделе [правил написания безопасного кода для неуправляемого кода](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) Дополнительные сведения о последствиях с помощью **SuppressUnmanagedCodeSecurityAttribute**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
-1. Разверните **свойства конфигурации** узла.
+1. Разверните узел **Свойства конфигурации**.
 
 1. Разверните **компоновщика** узла.
 
 1. Выберите **Дополнительно** страницу свойств.
 
-1. Изменить **проверьте неуправляемый код CLR** свойство.
+1. Изменить **CLR неуправляемый код проверять** свойство.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 

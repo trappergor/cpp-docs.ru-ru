@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
+ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401807"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47429752"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Библиотека шаблонов C++ среды выполнения Windows (WRL)
 
@@ -50,7 +50,7 @@ C + +/ CX является высокого уровня, на основе яз
 
 Ниже приведены некоторые ресурсы, которые помогут вам начать работу с библиотека шаблонов C++ среды выполнения Windows, прямо сейчас.
 
-[Библиотека среды выполнения Windows (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
+[Библиотека среды выполнения Windows (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 В этом видео Channel 9 Дополнительные сведения о том, как библиотека шаблонов C++ среды выполнения Windows помогает написании приложений универсальной платформы Windows (UWP) и как создавать и использовать компоненты среды выполнения Windows.
 
 [Практическое: активация и использование компонента среды выполнения Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
@@ -77,16 +77,16 @@ C + +/ CX является высокого уровня, на основе яз
 [Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Демонстрируется использование [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) и [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) интерфейсы вместе с задачами отправки запросов HTTP GET и POST для веб-службы в приложении UWP.
 
-[Пример приложения Bing Maps Trip Optimizer](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
+[Пример приложения Bing Maps Trip Optimizer](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Использует `HttpRequest` класс, который определен в [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) в контексте завершения приложения универсальной платформы Windows.
 
-[Создание компонента DLL среды выполнения Windows с использованием примера C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
+[Создание компонента DLL среды выполнения Windows с использованием примера C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для создания внутрипроцессного компонента библиотеки DLL и его использования в C + +/ CX, JavaScript и C#.
 
-[Пример игры DirectX marble maze](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[Пример игры DirectX marble maze](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 В этой статье демонстрируется использование библиотека шаблонов C++ среды выполнения Windows для управления временем жизни COM-компонентов, таких как DirectX и Media Foundation в контексте полностью созданной трехмерной игры.
 
-[Отправка всплывающих уведомлений из примера классического приложения](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
+[Отправка всплывающих уведомлений из примера классического приложения](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 В этой статье демонстрируется использование библиотека шаблонов C++ среды выполнения Windows для работы с всплывающими уведомлениями из классического приложения.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Библиотека шаблонов C++ среды выполнения Windows, по сравнению с ATL
