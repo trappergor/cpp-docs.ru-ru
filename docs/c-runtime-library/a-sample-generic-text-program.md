@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb02f426e839eff20a1dcd37ab41d4a08640599
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3adde04ba8fe259c25f3439cef247192eea175f2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081537"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233686"
 ---
 # <a name="a-sample-generic-text-program"></a>Пример программы, использующей обычный текст
 
@@ -31,7 +31,7 @@ ms.locfileid: "46081537"
 
 Следующая программа, GENTEXT.C, предоставляет более подробный пример использования универсальных текстовых сопоставлений, определенных в TCHAR.H:
 
-```
+```C
 // GENTEXT.C
 // use of generic-text mappings defined in TCHAR.H
 
@@ -67,12 +67,11 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
    _tprintf(_T("'%s'\n"), _tcsrev(_tcsdup(str)));
    return 0;
 }
-
 ```
 
 Если определена константа `_MBCS`, GENTEXT.C сопоставляется следующей программе с многобайтовой кодировкой (MBCS):
 
-```
+```C
 // crt_mbcsgtxt.c
 
 /*
@@ -110,7 +109,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 
 Если определена константа `_UNICODE`, GENTEXT.C сопоставляется следующей Юникод-версии программы. Дополнительные сведения об использовании функции`wmain` в программах Юникод в качестве замены функции `main` см. в разделе [Использование функции wmain](../c-language/using-wmain.md) в *Справочнике по языку C*.
 
-```
+```C
 // crt_unicgtxt.c
 
 /*
@@ -148,7 +147,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 
 Если ни одна из констант `_MBCS` и `_UNICODE` не определена, GENTEXT.C сопоставляется однобайтовому коду ASCII следующим образом:
 
-```
+```C
 // crt_sbcsgtxt.c
 /*
  * Use of generic-text mappings defined in TCHAR.H
@@ -183,7 +182,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }
 ```
 
- **Завершение блока, относящегося только к системам Майкрософт**
+**Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
