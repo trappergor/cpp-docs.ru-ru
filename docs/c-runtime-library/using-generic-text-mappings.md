@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9435076bdc02f9f0b8a909ffdbc60dd06e1a388
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4aeee73cb065e40d345dcbfe35ac2d6a7be03d90
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097527"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234662"
 ---
 # <a name="using-generic-text-mappings"></a>Использование универсальных текстовых сопоставлений
 
@@ -105,7 +105,7 @@ RetVal = strrev(szString);
 
 Таким образом, можно создавать, обслуживать и компилировать единый исходный файл кода, который будет выполняться с подпрограммами, использующими любую из трех описанных выше кодировок.
 
- **Завершение блока, относящегося только к системам Майкрософт**
+**Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 

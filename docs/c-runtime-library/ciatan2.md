@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbeca42c9b00558823e36463eab39d5caabec632
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a79274b7614e060b681eb9d4c3ba17c14c53f7ab
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016405"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235260"
 ---
 # <a name="ciatan2"></a>_CIatan2
 
@@ -53,7 +53,8 @@ void __cdecl _CIatan2();
 Полученное значение помещается в верхнюю часть стека.
 
 ## <a name="requirements"></a>Требования
- **Платформа:** x86
+
+**Платформа:** x86
 
 ## <a name="see-also"></a>См. также
 
