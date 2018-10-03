@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b65ceb18eb6b8f24db0a85ba2ed13277b13f657
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45428f1642b428640509978f29c0a36b60696cb0
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117502"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235065"
 ---
 # <a name="string-to-numeric-value-functions"></a>Функции преобразования строк в числовое значение
 
@@ -94,7 +94,7 @@ ms.locfileid: "46117502"
 |`_strtoui64`|Переполнение|**_UI64_MAX**|
 |`_strtoui64`|Преобразование не выполнено|0|
 
- **_I64_MAX**, _**I64_MIN** и **_UI64_MAX** определены в файле LIMITS.H.
+**_I64_MAX**, _**I64_MIN** и **_UI64_MAX** определены в файле LIMITS.H.
 
 Функции `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64` и `_wcstoui64` — это, соответственно, версии функций `strtod`, `strtol`, `strtoul`, `_strtoi64` и `_strtoui64` для расширенных символов; указатель на аргумент конца преобразования в каждой из этих функций для расширенных символов представляет собой строку расширенных символов. В остальном каждая из этих функций для расширенных символов работает так же, как и ее аналог для однобайтовых символов.
 
