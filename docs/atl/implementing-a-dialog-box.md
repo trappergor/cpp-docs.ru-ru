@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 30e843c6df70548257de1bf1af8c5f0e83555652
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764297"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234070"
 ---
 # <a name="implementing-a-dialog-box"></a>Реализация диалогового окна
 
@@ -30,7 +30,7 @@ ms.locfileid: "43764297"
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Добавление диалогового окна с мастер диалоговых окон ATL
 
-В [диалоговое окно добавления класса](../ide/add-class-dialog-box.md), выберите объект диалогового окна ATL для добавления в проект ATL диалоговое окно. Заполните мастер диалоговых окон ATL соответствующим образом и нажмите кнопку **Готово**. Мастер добавляет класс, производный от [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) в проект. Откройте представление ресурсов из **представление** меню, диалоговое окно и дважды щелкните его, чтобы открыть его в редакторе ресурсов.
+В [диалоговое окно добавления класса](../ide/add-class-dialog-box.md), выберите объект диалогового окна ATL для добавления в проект ATL диалоговое окно. Заполните мастер диалоговых окон ATL соответствующим образом и нажмите кнопку **Готово**. Мастер добавляет класс, производный от [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) в проект. Откройте **представление ресурсов** из **представление** меню, диалоговое окно и дважды щелкните его, чтобы открыть его в редакторе ресурсов.
 
 > [!NOTE]
 >  Если диалоговое окно является производным от `CAxDialogImpl`, его можно разместить как ActiveX и элементов управления Windows. Если вы не хотите дополнительную нагрузку, связанную с поддержкой элементов управления ActiveX в классе диалогового окна, используйте [CSimpleDialog](../atl/reference/csimpledialog-class.md) или [CDialogImpl](../atl/reference/cdialogimpl-class.md) вместо этого.

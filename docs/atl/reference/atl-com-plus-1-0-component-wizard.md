@@ -1,7 +1,7 @@
 ---
 title: Мастер компонентов ATL COM + 1.0 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717917"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250410"
 ---
 # <a name="atl-com-10-component-wizard"></a>Мастер компонентов ATL COM+ 1.0
 
 Этот мастер используется для добавления объекта в проект, который поддерживает службы COM + 1.0, включая транзакции.
 
 Можно указать, поддерживает ли объект сдвоенные интерфейсы и автоматизацию. Можно также задать поддержку интерфейса информации об ошибках, расширенного управления объектами, транзакций и асинхронные очереди сообщений.
+
+> [!WARNING]
+> В Visual Studio 2017 версии 15.9 этот мастер кода устарела и будет удален в будущих версиях Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об этом об устаревании, заполните [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваши отзывы важным для нас.
 
 ## <a name="remarks"></a>Примечания
 

@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599305"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250449"
 ---
 # <a name="microsoftwrl-namespace"></a>Пространство имен Microsoft::WRL
 
@@ -51,7 +51,7 @@ namespace Microsoft::WRL;
 
 ### <a name="classes"></a>Классы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Класс ActivationFactory](../windows/activationfactory-class.md)|Позволяет одному или нескольким классам быть активированными средой выполнения Windows.|
 |[Класс AsyncBase](../windows/asyncbase-class.md)|Реализует асинхронный конечный автомат среды выполнения Windows.|
@@ -68,7 +68,7 @@ namespace Microsoft::WRL;
 
 ### <a name="structures"></a>Структуры
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Структура ChainInterfaces](../windows/chaininterfaces-structure.md)|Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.|
 |[Структура CloakedIid](../windows/cloakediid-structure.md)|Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, что заданный интерфейс недоступен в списке IID.|
@@ -78,7 +78,7 @@ namespace Microsoft::WRL;
 
 ### <a name="enumerations"></a>Перечисления
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Перечисление AsyncResultType](../windows/asyncresulttype-enumeration.md)|Указывает тип результата, возвращенный `GetResults()` метод.|
 |[Перечисление ModuleType](../windows/moduletype-enumeration.md)|Указывает, должен ли модуль поддерживать внутрипроцессный или внепроцессный сервер.|
@@ -86,10 +86,10 @@ namespace Microsoft::WRL;
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Функция AsWeak](../windows/asweak-function.md)|Извлекает слабую ссылку на определенный экземпляр.|
-|[Функция обратного вызова](../windows/callback-function-windows-runtime-cpp-template-library.md)|Создает объект, функция-член которого является методом обратного вызова.|
+|[Функция обратного вызова (WRL)](../windows/callback-function-wrl.md)|Создает объект, функция-член которого является методом обратного вызова.|
 |[Функция CreateActivationFactory](../windows/createactivationfactory-function.md)|Создает фабрику, производящую экземпляры указанного класса, которые могут быть активированы средой выполнения Windows.|
 |[Функция CreateClassFactory](../windows/createclassfactory-function.md)|Создает фабрику, которая создает экземпляры указанного класса.|
 |[Функция Make](../windows/make-function.md)|Инициализирует указанный класс среды выполнения Windows.|

@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713223"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250371"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Мастер ASP-компонента ATL
 
 Этот мастер вставляет в проект компонент Active Server Pages (ASP). Microsoft Internet Information Services (IIS) использует ASP-компоненты в процессе его разработки архитектуры улучшенные веб-страницы.
 
 С помощью этого мастера, можно указать, что компонент потоковой модели и статистическую схему. Можно также указать поддержку интерфейса информации об ошибках, точки подключения и свободнопоточный маршалинга.
+
+> [!WARNING]
+> В Visual Studio 2017 версии 15.9 этот мастер кода устарела и будет удален в будущих версиях Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об этом об устаревании, заполните [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваши отзывы важным для нас.
 
 ## <a name="remarks"></a>Примечания
 

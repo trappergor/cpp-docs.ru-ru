@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029623"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234330"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Пошаговое руководство: Создание стандартной программы C++ (C++)
 
