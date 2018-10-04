@@ -1,28 +1,42 @@
 ---
 title: Класс ActivationFactory | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/28/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ActivationFactory
+- module/Microsoft::WRL::ActivationFactory::ActivationFactory
+- module/Microsoft::WRL::ActivationFactory::AddRef
+- module/Microsoft::WRL::ActivationFactory::GetIids
+- module/Microsoft::WRL::ActivationFactory::GetRuntimeClassName
+- module/Microsoft::WRL::ActivationFactory::GetTrustLevel
+- module/Microsoft::WRL::ActivationFactory::QueryInterface
+- module/Microsoft::WRL::ActivationFactory::Release
 dev_langs:
 - C++
 helpviewer_keywords:
-- ActivationFactory class
+- Microsoft::WRL::ActivationFactory class
+- Microsoft::WRL::ActivationFactory::ActivationFactory, constructor
+- Microsoft::WRL::ActivationFactory::AddRef method
+- Microsoft::WRL::ActivationFactory::GetIids method
+- Microsoft::WRL::ActivationFactory::GetRuntimeClassName method
+- Microsoft::WRL::ActivationFactory::GetTrustLevel method
+- Microsoft::WRL::ActivationFactory::QueryInterface method
+- Microsoft::WRL::ActivationFactory::Release method
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55c82290c3a96ab71419b36a7ec4a4eb2b528753
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3997ee3e435aceec536215599ea0d95321fd5a38
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419819"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234675"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory - класс
 
@@ -52,7 +66,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 
 ## <a name="remarks"></a>Примечания
 
-**ActivationFactory** предоставляет методы регистрации и базовые функциональные возможности для `IActivationFactory` интерфейс. **ActivationFactory** также предоставляет возможность реализации пользовательской фабрики.
+`ActivationFactory` Предоставляет методы регистрации и базовые функциональные возможности для `IActivationFactory` интерфейс. `ActivationFactory` также предоставляет возможность реализации пользовательской фабрики.
 
 В следующем фрагменте кода символически описывается использование ActivationFactory.
 
@@ -66,20 +80,20 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Конструктор ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Инициализирует **ActivationFactory** класса.|
+Имя                                                       | Описание
+---------------------------------------------------------- | ------------------------------------------
+[ActivationFactory::ActivationFactory](#activationfactory) | Инициализирует `ActivationFactory` класса.
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Метод ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Увеличивает счетчик ссылок текущего **ActivationFactory** объекта.|
-|[Метод ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Извлекает массив идентификаторов реализованного интерфейса.|
-|[Метод ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Получает имя класса среды выполнения объекта, который текущего **ActivationFactory** создает экземпляр.|
-|[Метод ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Получает уровень доверия объект, текущий **ActivationFactory** создает экземпляр.|
-|[Метод ActivationFactory::QueryInterface](../windows/activationfactory-queryinterface-method.md)|Извлекает указатель на указанный интерфейс.|
-|[Метод ActivationFactory::Release](../windows/activationfactory-release-method.md)|Уменьшает счетчик ссылок текущего **ActivationFactory** объекта.|
+Имя                                                           | Описание
+-------------------------------------------------------------- | --------------------------------------------------------------------------------------------
+[ActivationFactory::AddRef](#addref)                           | Увеличивает счетчик ссылок текущего `ActivationFactory` объекта.
+[ActivationFactory::GetIids](#getiids)                         | Извлекает массив идентификаторов реализованного интерфейса.
+[ActivationFactory::GetRuntimeClassName](#getruntimeclassname) | Получает имя класса среды выполнения объекта, который текущего `ActivationFactory` создает экземпляр.
+[ActivationFactory::GetTrustLevel](#gettrustlevel)             | Получает уровень доверия объект, текущий `ActivationFactory` создает экземпляр.
+[ActivationFactory::QueryInterface](#queryinterface)           | Извлекает указатель на указанный интерфейс.
+[ActivationFactory::Release](#release)                         | Уменьшает счетчик ссылок текущего `ActivationFactory` объекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -109,6 +123,122 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="activationfactory"></a>ActivationFactory::ActivationFactory
 
-[Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+Инициализирует `ActivationFactory` класса.
+
+```cpp
+ActivationFactory();
+```
+
+## <a name="addref"></a>ActivationFactory::AddRef
+
+Увеличивает счетчик ссылок текущего `ActivationFactory` объекта.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
+
+## <a name="getiids"></a>ActivationFactory::GetIids
+
+Извлекает массив идентификаторов реализованного интерфейса.
+
+```cpp
+STDMETHOD(
+   GetIids
+)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>Параметры
+
+*iidCount*<br/>
+После завершения операции, число идентификаторов интерфейса в *идентификаторы IID* массива.
+
+*идентификаторы IID*<br/>
+После завершения операции представляет массив идентификаторов реализованного интерфейса.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. E_OUTOFMEMORY является возможной ошибкой HRESULT.
+
+## <a name="getruntimeclassname"></a>ActivationFactory::GetRuntimeClassName
+
+Получает имя класса среды выполнения объекта, который текущего `ActivationFactory` создает экземпляр.
+
+```cpp
+STDMETHOD(
+   GetRuntimeClassName
+)(_Out_ HSTRING* runtimeName);
+```
+
+### <a name="parameters"></a>Параметры
+
+*runtimeName*<br/>
+После завершения операции, дескриптор строка, содержащая имя класса среды выполнения объекта, текущий `ActivationFactory` создает экземпляр.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
+
+## <a name="gettrustlevel"></a>ActivationFactory::GetTrustLevel
+
+Получает уровень доверия объект, текущий `ActivationFactory` создает экземпляр.
+
+```cpp
+STDMETHOD(
+   GetTrustLevel
+)(_Out_ TrustLevel* trustLvl);
+```
+
+### <a name="parameters"></a>Параметры
+
+*trustLvl*<br/>
+После завершения этой операции, уровень доверия среды выполнения класс, который `ActivationFactory` создает экземпляр.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если выполнение прошло успешно; в противном случае выдается ошибка утверждения и *trustLvl* присваивается `FullTrust`.
+
+## <a name="queryinterface"></a>ActivationFactory::QueryInterface
+
+Извлекает указатель на указанный интерфейс.
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Параметры
+
+*riid*<br/>
+Идентификатор интерфейса.
+
+*ppvObject*<br/>
+Когда эта операция будет завершена, указатель на интерфейс, заданный параметром *riid*.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
+
+## <a name="release"></a>ActivationFactory::Release
+
+Уменьшает счетчик ссылок текущего `ActivationFactory` объекта.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.

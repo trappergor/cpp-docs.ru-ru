@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169584"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236027"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Пошаговое руководство. Создание приложения ленты с помощью MFC
 
@@ -28,7 +28,7 @@ ms.locfileid: "47169584"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-В этом пошаговом руководстве предполагается, что установки Visual Studio для использования **обычные параметры разработки**. Если вы используете другие параметры, некоторые из элементов пользовательского интерфейса, упоминаемые в приведенных ниже инструкциях, могут не отображаться.
+В этом пошаговом руководстве предполагается, что установки Visual Studio для использования **обычные параметры разработки**. Если вы используете другие параметры, некоторые элементы пользовательского интерфейса (UI), которые упоминаются в приведенных ниже инструкциях может не отображаться.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Создание приложения MFC с лентой
 

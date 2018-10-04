@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 60f82332f9dd0fa6d6e64beb2a5d793784471a1f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959811"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234603"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Использование операторов вставки и управление форматом
 
@@ -99,7 +99,7 @@ int main( )
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
    char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
-      cout << setw( 6 )  << names[i]
+      cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
 }
 ```
@@ -107,10 +107,10 @@ int main( )
 `width` Функция-член объявлен в \<iostream >. Если вы используете `setw` или любой другой манипулятор с аргументами, необходимо включить \<iomanip>. В выходных данных строки выводятся в поле шириной 6, а целые числа — в поле шириной 10:
 
 ```Output
-  Zoot      1.23
- Jimmy     35.36
-    Al     653.7
-  Stan   4358.24
+   Zoot      1.23
+  Jimmy     35.36
+     Al     653.7
+   Stan   4358.24
 ```
 
 Ни `setw` , ни `width` усекает значения. Если форматированные выходные данные превышают ширину, значения выводятся полностью в соответствии с заданной в потоке точностью. Оба `setw` и `width` воздействуют только на следующее поле. Для ширины поля восстанавливается значение по умолчанию (необходимая ширина) после вывода одного поля. Другие параметры форматирования потока остаются в силе, пока не будут изменены.

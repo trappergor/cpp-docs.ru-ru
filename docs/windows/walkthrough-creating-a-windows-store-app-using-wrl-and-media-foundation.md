@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9858ebe9affb47d61114bde072645f7002849ec7
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d745b912406407cd56252ba593601a7794fc841d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169467"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234720"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Пошаговое руководство: Создание приложения универсальной платформы Windows, с использованием WRL и Media Foundation
 
@@ -78,7 +78,7 @@ ms.locfileid: "47169467"
 
    [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]
 
-1. `GrayscaleTransform.h` в этом примере не используется. Его можно удалить из проекта при необходимости.
+1. `GrayscaleTransform.h` не используется в этом примере. Его можно удалить из проекта при необходимости.
 
 1. Используйте указанный ниже код, чтобы заменить содержимое `GrayscaleTransform.cpp`:
 

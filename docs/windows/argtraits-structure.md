@@ -1,28 +1,30 @@
 ---
 title: Argtraits-структура | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::ArgTraits
+- event/Microsoft::WRL::Details::ArgTraits::args
 dev_langs:
 - C++
 helpviewer_keywords:
-- ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b84658271793b5f8c48ad54df44aec27022ea5a1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418402"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236079"
 ---
 # <a name="argtraits-structure"></a>ArgTraits - структура
 
@@ -155,29 +157,29 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 ## <a name="remarks"></a>Примечания
 
-**ArgTraits** структура объявляет указанный делегат, интерфейс и анонимную функцию-член, имеющий указанное число параметров.
+Структура `ArgTraits` объявляет указанный интерфейс делегата и анонимную функцию-член, которая принимает указанное число параметров.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
-|----------|-----------------|
-|`Arg1Type`|Typedef для TArg1.|
-|`Arg2Type`|Typedef для TArg2.|
-|`Arg3Type`|Typedef для TArg3.|
-|`Arg4Type`|Typedef для TArg4.|
-|`Arg5Type`|Typedef для TArg5.|
-|`Arg6Type`|Typedef для TArg6.|
-|`Arg7Type`|Typedef для TArg7.|
-|`Arg8Type`|Typedef для TArg8.|
-|`Arg9Type`|Typedef для TArg9.|
+Имя       | Описание
+---------- | ----------------------
+`Arg1Type` | Typedef для TArg1.
+`Arg2Type` | Typedef для TArg2.
+`Arg3Type` | Typedef для TArg3.
+`Arg4Type` | Typedef для TArg4.
+`Arg5Type` | Typedef для TArg5.
+`Arg6Type` | Typedef для TArg6.
+`Arg7Type` | Typedef для TArg7.
+`Arg8Type` | Typedef для TArg8.
+`Arg9Type` | Typedef для TArg9.
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
-|----------|-----------------|
-|[Константа ArgTraits::args](../windows/argtraits-args-constant.md)|Ведет статистику, число параметров `Invoke` метод для интерфейса делегата.|
+name                     | Описание
+------------------------ | ---------------------------------------------------------------------------------------
+[ArgTraits::args](#args) | Ведет статистику, число параметров `Invoke` метод для интерфейса делегата.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -189,6 +191,14 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 **Пространство имен:** Microsoft::wrl:: Details
 
-## <a name="see-also"></a>См. также
+## <a name="args"></a>ArgTraits::args
 
-[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+static const int args = -1;
+```
+
+### <a name="remarks"></a>Примечания
+
+Ведет статистику, число параметров `Invoke` метод для интерфейса делегата. Когда `args` имеет значение -1, то может существовать совпадения `Invoke` сигнатуру метода.

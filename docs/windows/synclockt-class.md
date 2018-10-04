@@ -1,28 +1,38 @@
 ---
 title: Synclockt-класс | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::IsLocked
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::sync_
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::SyncLockT
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
-- SyncLockT class
+- Microsoft::WRL::Wrappers::Details::SyncLockT class
+- Microsoft::WRL::Wrappers::Details::SyncLockT::IsLocked method
+- Microsoft::WRL::Wrappers::Details::SyncLockT::sync_ data member
+- Microsoft::WRL::Wrappers::Details::SyncLockT::SyncLockT, constructor
+- Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT, destructor
+- Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock method
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d557b7ee6e6a0ae627ec7cc9a6b40b5b9dbb872c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 892da24e4c6dacf0b4a1b099d1e5e0736ac3a76a
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379571"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234103"
 ---
 # <a name="synclockt-class"></a>SyncLockT - класс
 
@@ -46,35 +56,35 @@ class SyncLockT;
 
 Представляет тип, который может занять монопольного или общее владение ресурсом.
 
-**SyncLockT** класс используется, например, чтобы реализовать [SRWLock](../windows/srwlock-class.md) класса.
+`SyncLockT` Класс используется, например, чтобы реализовать [SRWLock](../windows/srwlock-class.md) класса.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Конструктор SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Инициализирует новый экземпляр класса **SyncLockT** класса.|
-|[Деструктор SyncLockT::~SyncLockT](../windows/synclockt-tilde-synclockt-destructor.md)|Отменяет инициализацию экземпляра **SyncLockT** класса.|
+Имя                                      | Описание
+----------------------------------------- | ----------------------------------------------------
+[SyncLockT::SyncLockT](#synclockt)        | Инициализирует новый экземпляр класса `SyncLockT`.
+[SyncLockT:: ~ SyncLockT](#tilde-synclockt) | Отменяет инициализацию экземпляра `SyncLockT` класса.
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Конструктор SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Инициализирует новый экземпляр класса **SyncLockT** класса.|
+Имя                               | Описание
+---------------------------------- | ----------------------------------------------------
+[SyncLockT::SyncLockT](#synclockt) | Инициализирует новый экземпляр класса `SyncLockT`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Метод SyncLockT::IsLocked](../windows/synclockt-islocked-method.md)|Указывает ли текущий **SyncLockT** объекта, которому принадлежит ресурс, то есть, **SyncLockT** объект *заблокирован*.|
-|[Метод SyncLockT::Unlock](../windows/synclockt-unlock-method.md)|Управление ресурсы, удерживаемые текущим **SyncLockT** объекта, если таковые имеются.|
+Имя                             | Описание
+-------------------------------- | --------------------------------------------------------------------------------------------------------------
+[SyncLockT::IsLocked](#islocked) | Указывает ли текущий `SyncLockT` объекта, которому принадлежит ресурс, то есть, `SyncLockT` объект *заблокирован*.
+[SyncLockT::Unlock](#unlock)     | Управление ресурсы, удерживаемые текущим `SyncLockT` объекта, если таковые имеются.
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
-|----------|-----------------|
-|[Элемент данных SyncLockT::sync_](../windows/synclockt-sync-data-member.md)|Удерживает базовый ресурс, представленный **SyncLockT** класса.|
+name                      | Описание
+------------------------- | -------------------------------------------------------------------
+[SyncLockT::sync_](#sync) | Удерживает базовый ресурс, представленный `SyncLockT` класса.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -86,7 +96,84 @@ class SyncLockT;
 
 **Пространство имен:** Microsoft::WRL::Wrappers::Details
 
-## <a name="see-also"></a>См. также
+## <a name="tilde-synclockt"></a>SyncLockT:: ~ SyncLockT
 
-[Пространство имен Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)<br/>
-[Класс SRWLock](../windows/srwlock-class.md)
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+~SyncLockT();
+```
+
+### <a name="remarks"></a>Примечания
+
+Отменяет инициализацию экземпляра `SyncLockT` класса.
+
+Этот деструктор также разблокирует текущего `SyncLockT` экземпляра.
+
+## <a name="islocked"></a>SyncLockT::IsLocked
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+bool IsLocked() const;
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+`true` Если `SyncLockT` объектов заблокирован; в противном случае — значение `false`.
+
+### <a name="remarks"></a>Примечания
+
+Указывает ли текущий `SyncLockT` объекта, которому принадлежит ресурс, то есть, `SyncLockT` объект *заблокирован*.
+
+## <a name="sync"></a>SyncLockT::sync_
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+typename SyncTraits::Type sync_;
+```
+
+### <a name="remarks"></a>Примечания
+
+Удерживает базовый ресурс, представленный `SyncLockT` класса.
+
+## <a name="synclockt"></a>SyncLockT::SyncLockT
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+SyncLockT(
+   _Inout_ SyncLockT&& other
+);
+
+explicit SyncLockT(
+   typename SyncTraits::Type sync = SyncTraits::GetInvalidValue()  
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*other*<br/>
+Ссылка rvalue на другой `SyncLockT` объекта.
+
+*sync*<br/>
+Ссылка на другой `SyncLockWithStatusT` объекта.
+
+### <a name="remarks"></a>Примечания
+
+Инициализирует новый экземпляр класса `SyncLockT`.
+
+Первый конструктор инициализирует текущий `SyncLockT` из другого объекта `SyncLockT` объекта, указанного параметром *других*и затем недействительными другой `SyncLockT` объекта. Второй конструктор является `protected`и инициализирует текущий `SyncLockT` объекта в недопустимом состоянии.
+
+## <a name="unlock"></a>SyncLockT::Unlock
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+void Unlock();
+```
+
+### <a name="remarks"></a>Примечания
+
+Управление ресурсы, удерживаемые текущим `SyncLockT` объекта, если таковые имеются.

@@ -1,28 +1,36 @@
 ---
 title: Класс SyncLockWithStatusT | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::GetStatus
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::IsLocked
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_
+- corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT
 dev_langs:
 - C++
 helpviewer_keywords:
-- SyncLockWithStatusT class
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT class
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::GetStatus method
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::IsLocked method
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
+- Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69676651c77175b55f4363b525a3ca3acb9be46d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7473c5f0417ab214101459c9621644b97c33a047
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437460"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235533"
 ---
 # <a name="synclockwithstatust-class"></a>Класс SyncLockWithStatusT
 
@@ -46,34 +54,34 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 Представляет тип, который может занять монопольного или общее владение ресурсом.
 
-**SyncLockWithStatusT** класс используется для реализации [мьютекс](../windows/mutex-class1.md) и [семафора](../windows/semaphore-class.md) классы.
+`SyncLockWithStatusT` Класс используется для реализации [мьютекс](../windows/mutex-class1.md) и [семафора](../windows/semaphore-class.md) классы.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Конструктор SyncLockWithStatusT::SyncLockWithStatusT](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Инициализирует новый экземпляр класса **SyncLockWithStatusT** класса.|
+Имя                                                             | Описание
+---------------------------------------------------------------- | --------------------------------------------------------------
+[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | Инициализирует новый экземпляр класса `SyncLockWithStatusT`.
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Конструктор SyncLockWithStatusT::SyncLockWithStatusT](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Инициализирует новый экземпляр класса **SyncLockWithStatusT** класса.|
+Имя                                                             | Описание
+---------------------------------------------------------------- | --------------------------------------------------------------
+[SyncLockWithStatusT::SyncLockWithStatusT](#synclockwithstatust) | Инициализирует новый экземпляр класса `SyncLockWithStatusT`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Метод SyncLockWithStatusT::GetStatus](../windows/synclockwithstatust-getstatus-method.md)|Получает сведения о состоянии ожидания текущего **SyncLockWithStatusT** объекта.|
-|[Метод SyncLockWithStatusT::IsLocked](../windows/synclockwithstatust-islocked-method.md)|Указывает ли текущий **SyncLockWithStatusT** объекта, которому принадлежит ресурс, то есть, **SyncLockWithStatusT** объект *заблокирован*.|
+Имя                                         | Описание
+-------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------
+[SyncLockWithStatusT::GetStatus](#getstatus) | Получает сведения о состоянии ожидания текущего `SyncLockWithStatusT` объекта.
+[SyncLockWithStatusT::IsLocked](#islocked)   | Указывает ли текущий `SyncLockWithStatusT` объекта, которому принадлежит ресурс, то есть, `SyncLockWithStatusT` объект *заблокирован*.
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
-|----------|-----------------|
-|[Элемент данных SyncLockWithStatusT::status_](../windows/synclockwithstatust-status-data-member.md)|Содержит результат базовой операции ожидания после операции блокирования объекта на основе текущего **SyncLockWithStatusT** объекта.|
+name                                    | Описание
+--------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------
+[SyncLockWithStatusT::status_](#status) | Содержит результат базовой операции ожидания после операции блокирования объекта на основе текущего `SyncLockWithStatusT` объекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -87,6 +95,80 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 
 **Пространство имен:** Microsoft::WRL::Wrappers::Details
 
-## <a name="see-also"></a>См. также
+## <a name="getstatus"></a>SyncLockWithStatusT::GetStatus
 
-[Пространство имен Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+DWORD GetStatus() const;
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Результат операции ожидания на объект, который основан на `SyncLockWithStatusT` класс, например [мьютекс](../windows/mutex-class1.md) или [семафора](../windows/semaphore-class.md). Ноль (0) указывает, что операция ожидания возвращается в сигнальном состоянии; в противном случае — другой возникло состояние, такие как прошедшее значение времени ожидания.
+
+### <a name="remarks"></a>Примечания
+
+Получает сведения о состоянии ожидания текущего `SyncLockWithStatusT` объекта.
+
+Функция GetStatus() извлекает значение базового [status_](#status) данные-член. Если создан на основе объекта `SyncLockWithStatusT` класс выполняет операцию блокировки, объект сначала ожидает объект станет доступным. Результат этой операции ожидания сохраняется в `status_` элемент данных. Возможные значения `status_` элемент данных являются возвращаемыми значениями для операции ожидания. Дополнительные сведения см. в разделе возвращаемые значения `WaitForSingleObjectEx()` функция в библиотеке MSDN.
+
+## <a name="islocked"></a>SyncLockWithStatusT::IsLocked
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+bool IsLocked() const;
+```
+
+### <a name="remarks"></a>Примечания
+
+Указывает ли текущий `SyncLockWithStatusT` объекта, которому принадлежит ресурс, то есть, `SyncLockWithStatusT` объект *заблокирован*.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+`true` Если `SyncLockWithStatusT` объектов заблокирован; в противном случае — значение `false`.
+
+## <a name="status"></a>SyncLockWithStatusT::status_
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+DWORD status_;
+```
+
+### <a name="remarks"></a>Примечания
+
+Содержит результат базовой операции ожидания после операции блокирования объекта на основе текущего `SyncLockWithStatusT` объекта.
+
+## <a name="synclockwithstatust"></a>SyncLockWithStatusT::SyncLockWithStatusT
+
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+SyncLockWithStatusT(
+   _Inout_ SyncLockWithStatusT&& other
+);
+
+explicit SyncLockWithStatusT(
+   typename SyncTraits::Type sync,
+   DWORD status
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*other*<br/>
+Ссылка rvalue на другой `SyncLockWithStatusT` объекта.
+
+*sync*<br/>
+Ссылка на другой `SyncLockWithStatusT` объекта.
+
+*status*<br/>
+Значение [status_](#status) данными-членом *других* параметр или *синхронизации* параметра.
+
+### <a name="remarks"></a>Примечания
+
+Инициализирует новый экземпляр класса `SyncLockWithStatusT`.
+
+Первый конструктор инициализирует текущий `SyncLockWithStatusT` из другого объекта `SyncLockWithStatusT` заданный параметром *других*и затем недействительными другой `SyncLockWithStatusT` объекта. Второй конструктор является `protected`и инициализирует текущий `SyncLockWithStatusT` объекта в недопустимом состоянии.

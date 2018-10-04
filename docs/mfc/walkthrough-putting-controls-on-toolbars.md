@@ -15,22 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169753"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235520"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Пошаговое руководство. Размещение элементов управления на панели инструментов
 
-В этом разделе описывается добавление кнопки панели инструментов, содержащий элемент управления Windows на панель инструментов. Кнопки панели инструментов MFC, необходимо [класс CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-производного класса, например [класс CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [класс CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Класс CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), или [класс CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
+В этой статье описывается добавление кнопки панели инструментов, содержащий элемент управления Windows на панель инструментов. Кнопки панели инструментов MFC, необходимо [класс CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-производного класса, например [класс CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [класс CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Класс CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), или [класс CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
 ## <a name="adding-controls-to-toolbars"></a>Добавление элементов управления панели инструментов
 
 Чтобы добавить элемент управления панели инструментов, выполните следующие действия.
 
-1. Зарезервируйте идентификатор фиктивный ресурс для кнопки в панели инструментов к родительскому ресурсу. Дополнительные сведения о том, как создавать кнопки с помощью **редактор панелей инструментов** в Visual Studio, см. в разделе [редактор панелей инструментов](../windows/toolbar-editor.md) раздела.
+1. Зарезервируйте идентификатор фиктивный ресурс для кнопки в панели инструментов к родительскому ресурсу. Дополнительные сведения о том, как создавать кнопки с помощью **редактор панелей инструментов** в Visual Studio, см. в разделе [редактор панелей инструментов](../windows/toolbar-editor.md) статьи.
 
 1. Резервирование для кнопки в все битовые карты родительской панели инструментов значок панели инструментов (значок кнопки).
 
@@ -51,7 +51,7 @@ ms.locfileid: "47169753"
 
 ## <a name="example-creating-a-find-combo-box"></a>Пример: Создание поле со списком поиска
 
-В этом разделе описывается создание **найти** поле со списком, содержащие строки поиска в недавно использованные отображается на панели инструментов. Пользователь может введите строку в элементе управления и затем нажмите клавишу ВВОД для поиска документа или нажмите клавишу ESC для возвращения фокуса в главном фрейме. В этом примере предполагается, что документ отображается в [класс CEditView](../mfc/reference/ceditview-class.md)-производным представления.
+В этом разделе описывается создание **найти** поле со списком, содержащие строки поиска последних использовавшихся отображается на панели инструментов. Пользователь может введите строку в элементе управления и затем нажмите клавишу ВВОД для поиска документа или нажмите клавишу ESC для возвращения фокуса в главном фрейме. В этом примере предполагается, что документ отображается в [класс CEditView](../mfc/reference/ceditview-class.md)-производным представления.
 
 ### <a name="creating-the-find-control"></a>Создание элемента управления Find
 
@@ -72,7 +72,7 @@ ms.locfileid: "47169753"
 
 1. В `CFindComboBox` класса, переопределить `PreTranslateMessage` виртуального метода. Этот метод позволит поле со списком для обработки [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) сообщения. Если пользователь нажимает клавишу escape (`VK_ESCAPE`), Возврат фокуса к фрейма главного окна. Если пользователь нажимает клавишу ВВОД (`VK_ENTER`), учет для фрейма главного окна `WM_COMMAND` сообщение, содержащее `ID_EDIT_FIND_COMBO` команды идентификатор.
 
-1. Создание класса для **найти** кнопку в окне со списком, производный от [класс CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). В этом примере именем является `CFindComboButton`.
+1. Создание класса для **найти** кнопку в окне со списком, производный от [класс CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). В этом примере он называется `CFindComboButton`.
 
 1. Конструктор `CMFCToolbarComboBoxButton` принимает три параметра: идентификатор команды кнопки, кнопки индекс изображения и стиль поля со списком. Установите эти параметры следующим образом:
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2355a5341259978e402ecc6f8de5c684c9435e3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433066"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234997"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
 
@@ -56,7 +56,7 @@ MFC представлен класс шаблона [CWinFormsDialog](../mfc/re
 
 1. Добавьте новый класс, который наследуется от класса `CDialog`.
 
-     Щелкните правой кнопкой имя проекта и Добавление класса MFC (именем CHostForWinForm), который наследуется от класса `CDialog`. Так как ресурс диалогового окна не требуется, можно удалить идентификатор ресурса (выберите представление ресурсов, разверните папку диалоговое окно и удалите ресурс IDD_HOSTFORWINFORM.  Удалите все ссылки на идентификатор в коде.).
+     Щелкните правой кнопкой имя проекта и Добавление класса MFC (именем CHostForWinForm), который наследуется от класса `CDialog`. Так как ресурс диалогового окна не требуется, можно удалить идентификатор ресурса (выберите **представление ресурсов**, разверните **диалоговое окно** папку и удалить `IDD_HOSTFORWINFORM` ресурсов.  Удалите все ссылки на идентификатор в коде.).
 
 1. Замените `CDialog` в файлах CHostForWinForm.h и CHostForWinForm.cpp классом с `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 

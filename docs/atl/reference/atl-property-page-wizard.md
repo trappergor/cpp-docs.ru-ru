@@ -1,7 +1,7 @@
 ---
 title: Мастер страницы свойств ATL | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5a150a81ea26e34e05cbfb9199c734a1ccad9b7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 206fe83407421a7aabfd920214590a86e4727714
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094199"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250423"
 ---
 # <a name="atl-property-page-wizard"></a>Мастер страницы свойств ATL
 
 Этот мастер [добавляет страницу свойств в проект ATL](../../atl/reference/adding-an-atl-property-page.md) или в проект MFC с поддержкой ATL. Страницы свойств ATL предоставляет пользовательский интерфейс для задания свойств (или вызова методов) одного или нескольких COM-объектов.
+
+> [!WARNING]
+> В Visual Studio 2017 версии 15.9 этот мастер кода устарела и будет удален в будущих версиях Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об этом об устаревании, заполните [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваши отзывы важным для нас.
 
 ## <a name="remarks"></a>Примечания
 
