@@ -1,7 +1,7 @@
 ---
 title: Пользовательские атрибуты (расширения компонентов C++) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/02/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600385"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789232"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Пользовательские атрибуты (расширения компонентов C++)
 
@@ -47,7 +47,7 @@ ms.locfileid: "42600385"
 
 ### <a name="remarks"></a>Примечания
 
-Сведения и синтаксис, представленные в этом разделе предполагается заменяют сведения, приведенные в [атрибут](../windows/attribute.md).
+Сведения и синтаксис, представленные в этом разделе предполагается заменяют сведения, приведенные в [атрибут](attributes/attribute.md).
 
 Настраиваемый атрибут можно определить, указав тип и создав для него базовый класс <xref:System.Attribute>, а также при необходимости применив атрибут <xref:System.AttributeUsageAttribute>.
 
@@ -55,9 +55,9 @@ ms.locfileid: "42600385"
 
 Дополнительные сведения см. в следующих разделах:
 
-- [Целевые объекты атрибутов](../windows/attribute-targets-cpp-component-extensions.md)
+- [Целевые объекты атрибутов](attribute-targets-cpp-component-extensions.md)
 
-- [Типы параметров атрибутов](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [Типы параметров атрибутов](attribute-parameter-types-cpp-component-extensions.md)
 
 Сведения о подписи сборок в Visual C++, см. в разделе [сборки со строгими именами (подписывание сборок) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -177,7 +177,7 @@ Service Access = Read
 
 Аргументы атрибута должны быть константами времени компиляции; в большинстве случаев они должны быть константными литералами.
 
-См. в разделе [typeid](../windows/typeid-cpp-component-extensions.md) сведения о возврате значения типа System::Type из блока настраиваемых атрибутов.
+См. в разделе [typeid](typeid-cpp-component-extensions.md) сведения о возврате значения типа System::Type из блока настраиваемых атрибутов.
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +216,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для платформ среды выполнения](component-extensions-for-runtime-platforms.md)
