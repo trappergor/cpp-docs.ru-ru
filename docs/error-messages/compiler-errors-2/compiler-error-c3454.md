@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f85ff8c33cc43bdc1af9a3bf02d9240a0fd5e09c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e469f6715775288720c61ad8a61e16956e4c63d1
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098775"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789167"
 ---
 # <a name="compiler-error-c3454"></a>Ошибка компилятора C3454
 
@@ -29,7 +29,7 @@ ms.locfileid: "46098775"
 
 Чтобы класс был атрибутом, его необходимо определить.
 
-Для получения дополнительной информации см. [attribute](../../windows/attribute.md).
+Дополнительные сведения см. в разделе [атрибут](../../windows/attributes/attribute.md).
 
 ## <a name="example"></a>Пример
 

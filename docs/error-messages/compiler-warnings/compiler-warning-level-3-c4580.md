@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9d25a77b6936a3b5b741a1da927c6beb24cbb1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90cd0b401624ea6815b31b55a7da9c8796746ce8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072229"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789206"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Предупреждение компилятора (уровень 3) C4580
 
 использовать [attribute] не рекомендуется; вместо этого в качестве базового класса укажите System::Attribute или Platform::Metadata
 
-[[атрибут](../../windows/attribute.md)] больше не является предпочтительным синтаксисом для создания пользовательских атрибутов. Дополнительные сведения см. в разделе [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Для кода CLR атрибуты должны быть производными от `System::Attribute`. Для кода среды выполнения Windows атрибуты должны быть производными от `Platform::Metadata`.
+[[атрибут](../../windows/attributes/attribute.md)] больше не является предпочтительным синтаксисом для создания пользовательских атрибутов. Дополнительные сведения см. в разделе [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Для кода CLR атрибуты должны быть производными от `System::Attribute`. Для кода среды выполнения Windows атрибуты должны быть производными от `Platform::Metadata`.
 
 ## <a name="example"></a>Пример
 
