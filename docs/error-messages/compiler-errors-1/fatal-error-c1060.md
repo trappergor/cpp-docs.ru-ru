@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5288400b5c7303840dfef98c7e1a48e7cf5d06f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1961784efc61c3c31f87c76cd2bdfe00fe954c5d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032579"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820708"
 ---
 # <a name="fatal-error-c1060"></a>Неустранимая ошибка C1060
 
@@ -37,7 +37,7 @@ ms.locfileid: "46032579"
 
 1. Если компиляция происходит на 64-разрядной платформе, используйте 64-разрядный набор средств компиляции. Сведения см. в разделе [как: включить 64-разрядных набора инструментов Visual C++ в командной строке](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
-1. На 32-разрядной Windows, попробуйте использовать [/3 GB](https://support.microsoft.com/en-us/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) переключатель в файле boot.ini.
+1. На 32-разрядной Windows, попробуйте использовать [/3 GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) переключатель в файле boot.ini.
 
 1. Увеличьте размер файла подкачки Windows.
 

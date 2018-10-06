@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e23aa935cd0b0add664c1eeb3885181cb4e6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 320bbc9fde5888f75149d6f3f9fad60deb869924
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383757"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821436"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Макросы и функции для управления библиотеки DLL
 
@@ -34,7 +34,6 @@ ms.locfileid: "46383757"
 |[AfxInitExtensionModule]()#afxinitextensionmodule|Инициализирует библиотеку DLL.|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|Задайте флаг состояния каждого модуля, который влияет на поведение WinSxS MFC.|
 |[Функцию AfxTermExtensionModule]()#afxtermextensionmodule)|Позволяет MFC для очистки библиотеки DLL расширения MFC после отсоединения всех процессов из библиотеки DLL.|
-
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -68,6 +67,7 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 ```
 AFX_MANAGE_STATE(AFX_MODULE_STATE* pModuleState )
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *pModuleState*<br/>
@@ -77,15 +77,20 @@ AFX_MANAGE_STATE(AFX_MODULE_STATE* pModuleState )
 
 При вызове этот макрос *pModuleState* — эффективный модуля состояния в течение немедленно, содержащий область. При уходе из области, предыдущее состояние действующие модуль будет автоматически восстановлено.
 `AFX_MODULE_STATE` Структура содержит глобальные данные этого модуля, то есть часть состояния модуля, передаче или извлекается.
+
 По умолчанию MFC использует дескриптор ресурсов основного приложения для загрузки шаблона ресурсов. При наличии экспортированной функции в DLL, например, запускает диалоговое окно в библиотеке DLL, этот шаблон хранится в модуле библиотеки DLL. Необходимо переключать состояние модуля для правильного дескриптор для использования. Это можно сделать, добавив следующий код в начало функции:
+
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
-
 ```
+
 Это меняет местами текущее состояние модуля с состоянием, возвращенные [AfxGetStaticModuleState](#afxgetstaticmodulestate) до конца текущей области.
+
 Дополнительные сведения о состояния модулей и MFC, см. в разделе «Управление данными о состоянии модулей MFC» в [создание новых документов, Windows и представления](../creating-new-documents-windows-and-views.md) и [технические 58 Примечание](../tn058-mfc-module-state-implementation.md).
+
 > [!NOTE]
 >  Когда MFC создает контекст активации для сборки, он использует [AfxWinInit](#afxwininit) для создания контекста и `AFX_MANAGE_STATE` включать и отключать его. Обратите внимание, что `AFX_MANAGE_STATE` включена для статические библиотеки MFC, а также библиотеки DLL MFC, чтобы разрешить MFC код, выполняемый в контексте правильной активации выбранного библиотекой пользователя. Дополнительные сведения см. в разделе [поддержка контекстов активации в состоянии модуля MFC](../support-for-activation-contexts-in-the-mfc-module-state.md).
+
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxstat_.h
@@ -197,7 +202,6 @@ AFX_MODULE_STATE* AFXAPI AfxGetStaticModuleState( );
 
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
-
 ```
 
 Это меняет местами текущее состояние модуля с состоянием, возвращенные `AfxGetStaticModuleState` до конца текущей области.
@@ -207,7 +211,6 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxstat_.h
-
 
 ## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
 
@@ -249,13 +252,16 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
         // MFC extension DLL one-time initialization
         if (!AfxInitExtensionModule(NVC_MFC_DLLDLL, hInstance))
             return 0;
-
+...
 ```
 
 `AfxInitExtensionModule` Создает копию библиотеки DLL HMODULE и захватывает классов среды выполнения DLL (`CRuntimeClass` структур) а также производства объектов (`COleObjectFactory` объектов) для использования более поздние версии `CDynLinkLibrary` создается объект.
 Расширения MFC DLL-библиотеки нужно сделать две вещи в свои `DllMain` функции:
+
 - Вызовите [AfxInitExtensionModule](#_mfc_afxinitextensionmodule) и проверяйте возвращаемое значение.
+
 - Создание `CDynLinkLibrary` объекта, если библиотека DLL будет экспортироваться [структура CRuntimeClass](cruntimeclass-structure.md) объектов или имеет свои собственные настраиваемые ресурсы.
+
 Можно вызвать `AfxTermExtensionModule` для очистки библиотеки DLL расширения MFC, при каждом процессе отсоединяется от библиотеки DLL расширения MFC (что происходит при завершении процесса или при выгрузке библиотеки DLL в результате использования `AfxFreeLibrary` вызова).
 
 ### <a name="requirements"></a>Требования
@@ -273,9 +279,8 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
 ### <a name="syntax"></a>Синтаксис
 
-  ```
-   void AFXAPI AfxSetAmbientActCtx( BOOL bSet
-);
+```
+void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 ### <a name="parameters"></a>Параметры
 
@@ -295,6 +300,7 @@ BOOL CMFCListViewApp::InitInstance()
 {
    AfxSetAmbientActCtx(FALSE);
    // Remainder of function definition omitted.
+}
 ```
 
 ### <a name="requirements"></a>Требования
@@ -314,9 +320,10 @@ BOOL CMFCListViewApp::InitInstance()
 
 ### <a name="syntax"></a>Синтаксис
 
-  ```
+```
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *state*<br/>
@@ -357,7 +364,6 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
     }
     return 1;   // ok
 }
-
 ```
 
 Если приложение загружает и освобождает библиотек DLL расширений MFC, динамически, необходимо вызвать `AfxTermExtensionModule`. Так как большинство расширения MFC, библиотеки DLL не загружаются динамически (как правило, они связаны с помощью свои библиотеки импорта), вызов `AfxTermExtensionModule` обычно нет необходимости.
@@ -372,8 +378,3 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
 [Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
 [AfxInitExtensionModule](#afxinitextensionmodule)
-
-
-
-
-

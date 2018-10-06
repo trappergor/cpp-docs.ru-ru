@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a511a70c1f6cecd9c2a6dd489f11d5c18b655f3d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9519250684ea4f354c2ccfbca5be64076d6376d6
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373338"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820585"
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 
@@ -49,7 +49,7 @@ unsigned char __vmx_vmlaunch(
 
 Приложение может выполнять операцию VM-enter, либо при помощи [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) или [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функции. [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) функция может использоваться только с VMCS, состояние запуска которой — `Clear`и [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функция может использоваться только с VMCS, состояние запуска которой — `Launched`. Следовательно, используйте [__vmx_vmclear](../intrinsics/vmx-vmclear.md) функцию для задания состояния запуска VMCS `Clear`, а затем с помощью [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) для первой операции VM-enter и функцию[__vmx_vmresume](../intrinsics/vmx-vmresume.md) функции для последующих операций VM-enter.
 
-`__vmx_vmlaunch` Функция эквивалентна `VMLAUNCH` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.
+`__vmx_vmlaunch` Функция эквивалентна `VMLAUNCH` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) сайта.
 
 ## <a name="requirements"></a>Требования
 

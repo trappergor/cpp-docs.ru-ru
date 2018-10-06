@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e455d5cc87052facfc80ca1ef2c69c61d89c53c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411472"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821573"
 ---
 # <a name="clistctrl-class"></a>Класс CListCtrl
 
@@ -295,13 +295,13 @@ class CListCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CListCtrl::CListCtrl](#clistctrl)|Создает объект `CListCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CListCtrl::ApproximateViewRect](#approximateviewrect)|Определяет ширину и высоту, необходимые для отображения элементов элемента управления представления списка.|
 |[CListCtrl::Arrange](#arrange)|Выравнивает элементы на сетку.|
@@ -532,7 +532,7 @@ class CListCtrl : public CWnd
 
 **Заголовок:** afxcmn.h
 
-##  <a name="approximateviewrect"></a>  CListCtrl::ApproximateViewRect
+## <a name="approximateviewrect"></a>  CListCtrl::ApproximateViewRect
 
 Определяет ширину и высоту, необходимые для отображения элементов элемента управления представления списка.
 
@@ -559,7 +559,7 @@ CSize ApproximateViewRect(
 
 Эта функция-член реализует поведение макроса Win32, [ListView_ApproximateViewRect](/windows/desktop/api/commctrl/nf-commctrl-listview_approximateviewrect), как описано в пакете Windows SDK.
 
-##  <a name="arrange"></a>  CListCtrl::Arrange
+## <a name="arrange"></a>  CListCtrl::Arrange
 
 Перемещает элементы в представлении значками, таким образом, чтобы они были выровнены по сетке.
 
@@ -597,8 +597,7 @@ BOOL Arrange(UINT nCode);
     m_myListCtrl.Arrange(LVA_ALIGNTOP);
 ```
 
-
-##  <a name="canceleditlabel"></a>  CListCtrl::CancelEditLabel
+## <a name="canceleditlabel"></a>  CListCtrl::CancelEditLabel
 
 Отменяет операцию редактирования текста элемента.
 
@@ -610,7 +609,7 @@ void CancelEditLabel();
 
 Эта функция-член эмулирует функциональные возможности [LVM_CANCELEDITLABEL](/windows/desktop/Controls/lvm-canceleditlabel) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="clistctrl"></a>  CListCtrl::CListCtrl
+## <a name="clistctrl"></a>  CListCtrl::CListCtrl
 
 Создает объект `CListCtrl`.
 
@@ -618,7 +617,7 @@ void CancelEditLabel();
 CListCtrl();
 ```
 
-##  <a name="create"></a>  CListCtrl::Create
+## <a name="create"></a>  CListCtrl::Create
 
 Создает элемент управления и прикрепляет его к `CListCtrl` объекта.
 
@@ -662,8 +661,7 @@ virtual BOOL Create(
         CRect(10,10,400,200), pParentWnd, IDD_MYLISTCTRL);
 ```
 
-
-##  <a name="createex"></a>  CListCtrl::CreateEx
+## <a name="createex"></a>  CListCtrl::CreateEx
 
 Создает элемент управления (дочернего окна) и связывает его с `CListCtrl` объекта.
 
@@ -703,7 +701,7 @@ virtual BOOL CreateEx(
 
 `CreateEx` Создает элемент управления с помощью расширенных стилей Windows, определяемое *dwExStyle*. Чтобы задать расширенные стили к элементу управления, вызовите [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` такие стили заданы как WS_EX_CONTEXTHELP, но используют `SetExtendedStyle` должны стать LVS_EX_FULLROWSELECT подобные стили. Дополнительные сведения см. в разделе стили, описанную в разделе [расширенных стилей представления списка](/windows/desktop/Controls/extended-list-view-styles) в пакете Windows SDK.
 
-##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage
+## <a name="createdragimage"></a>  CListCtrl::CreateDragImage
 
 Создает список изображение перетаскивания для элемента, заданного посредством *nItem*.
 
@@ -729,7 +727,6 @@ CImageList* CreateDragImage(
 
 `CImageList` Объект является окончательным, и необходимо удалить его после завершения. Пример:
 
-
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
 
@@ -738,8 +735,7 @@ CImageList* CreateDragImage(
         delete pImageList;
 ```
 
-
-##  <a name="deleteallitems"></a>  CListCtrl::DeleteAllItems
+## <a name="deleteallitems"></a>  CListCtrl::DeleteAllItems
 
 Удаляет все элементы из элемента управления представления списка.
 
@@ -759,8 +755,7 @@ BOOL DeleteAllItems();
     ASSERT(m_myListCtrl.GetItemCount() == 0);
 ```
 
-
-##  <a name="deletecolumn"></a>  CListCtrl::DeleteColumn
+## <a name="deletecolumn"></a>  CListCtrl::DeleteColumn
 
 Удаляет столбец из элемента управления представления списка.
 
@@ -789,8 +784,7 @@ BOOL DeleteColumn(int nCol);
         }
 ```
 
-
-##  <a name="deleteitem"></a>  CListCtrl::DeleteItem
+## <a name="deleteitem"></a>  CListCtrl::DeleteItem
 
 Удаляет элемент из элемента управления представления списка.
 
@@ -819,8 +813,7 @@ BOOL DeleteItem(int nItem);
         }
 ```
 
-
-##  <a name="drawitem"></a>  CListCtrl::DrawItem
+## <a name="drawitem"></a>  CListCtrl::DrawItem
 
 Вызывается платформой при изменении внешнего вида Просмотр элемента управления рисуемого владельцем список изменений.
 
@@ -841,7 +834,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 Приложение следует восстановить всех графических устройств (интерфейс) выбранных объектов контекста отображения, указано в *lpDrawItemStruct* перед этим членом завершении функции.
 
-##  <a name="editlabel"></a>  CListCtrl::EditLabel
+## <a name="editlabel"></a>  CListCtrl::EditLabel
 
 Начинает редактирование на месте текста элемента.
 
@@ -876,8 +869,7 @@ CEdit* EditLabel(int nItem);
         ASSERT(pmyEdit != NULL);
 ```
 
-
-##  <a name="enablegroupview"></a>  CListCtrl::EnableGroupView
+## <a name="enablegroupview"></a>  CListCtrl::EnableGroupView
 
 Включает или отключает ли в элементе управления представления списком элементы как группу.
 
@@ -904,7 +896,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 
 Эта функция-член эмулирует функциональные возможности [LVM_ENABLEGROUPVIEW](/windows/desktop/Controls/lvm-enablegroupview) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="ensurevisible"></a>  CListCtrl::EnsureVisible
+## <a name="ensurevisible"></a>  CListCtrl::EnsureVisible
 
 Гарантирует, что элемент списка по крайней мере частично видимой.
 
@@ -939,8 +931,7 @@ BOOL EnsureVisible(
             m_myListCtrl.EnsureVisible(nCount-1, FALSE);
 ```
 
-
-##  <a name="finditem"></a>  CListCtrl::FindItem
+## <a name="finditem"></a>  CListCtrl::FindItem
 
 Выполняет поиск элемента представления списка, при указании характеристик.
 
@@ -982,8 +973,7 @@ int FindItem(
         }
 ```
 
-
-##  <a name="getbkcolor"></a>  CListCtrl::GetBkColor
+## <a name="getbkcolor"></a>  CListCtrl::GetBkColor
 
 Получает цвет фона элемента управления представления списка.
 
@@ -999,7 +989,7 @@ COLORREF GetBkColor() const;
 
   См. в примере [CListCtrl::SetBkColor](#setbkcolor).
 
-##  <a name="getbkimage"></a>  CListCtrl::GetBkImage
+## <a name="getbkimage"></a>  CListCtrl::GetBkImage
 
 Извлекает текущее фоновое изображение элемента управления представления списка.
 
@@ -1035,8 +1025,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
         }
 ```
 
-
-##  <a name="getcallbackmask"></a>  CListCtrl::GetCallbackMask
+## <a name="getcallbackmask"></a>  CListCtrl::GetCallbackMask
 
 Извлекает маска обратного вызова для элемента управления представления списка.
 
@@ -1056,7 +1045,7 @@ UINT GetCallbackMask() const;
 
   См. в примере [CListCtrl::SetCallbackMask](#setcallbackmask).
 
-##  <a name="getcheck"></a>  CListCtrl::GetCheck
+## <a name="getcheck"></a>  CListCtrl::GetCheck
 
 Извлекает текущее состояние отображения изображения, связанного с элементом.
 
@@ -1081,7 +1070,7 @@ BOOL GetCheck(int nItem) const;
 
   См. в примере [CListCtrl::SetCheck](#setcheck).
 
-##  <a name="getcolumn"></a>  CListCtrl::GetColumn
+## <a name="getcolumn"></a>  CListCtrl::GetColumn
 
 Извлекает атрибуты столбца элемента управления представления списком.
 
@@ -1122,8 +1111,7 @@ BOOL GetColumn(
         }
 ```
 
-
-##  <a name="getcolumnorderarray"></a>  CListCtrl::GetColumnOrderArray
+## <a name="getcolumnorderarray"></a>  CListCtrl::GetColumnOrderArray
 
 Получает порядок столбцов (слева направо) элемента управления представления списка.
 
@@ -1177,8 +1165,7 @@ m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
         }
 ```
 
-
-##  <a name="getcolumnwidth"></a>  CListCtrl::GetColumnWidth
+## <a name="getcolumnwidth"></a>  CListCtrl::GetColumnWidth
 
 Получает ширину столбца в представлении отчетов или представлении списка.
 
@@ -1203,8 +1190,7 @@ int GetColumnWidth(int nCol) const;
         m_myListCtrl.SetColumnWidth(1, 20 + nWidth);
 ```
 
-
-##  <a name="getcountperpage"></a>  CListCtrl::GetCountPerPage
+## <a name="getcountperpage"></a>  CListCtrl::GetCountPerPage
 
 Вычисляет количество элементов, которое может уместиться по вертикали в видимой области элемента управления представления списка в представлении списка или отчетов.
 
@@ -1220,7 +1206,7 @@ int GetCountPerPage() const;
 
   См. в примере [CListCtrl::GetTopIndex](#gettopindex).
 
-##  <a name="geteditcontrol"></a>  CListCtrl::GetEditControl
+## <a name="geteditcontrol"></a>  CListCtrl::GetEditControl
 
 Извлекает дескриптор элемента управления редактирования, используемый для редактирования текста для элемента представления списка.
 
@@ -1247,8 +1233,7 @@ CEdit* GetEditControl() const;
         }
 ```
 
-
-##  <a name="getemptytext"></a>  CListCtrl::GetEmptyText
+## <a name="getemptytext"></a>  CListCtrl::GetEmptyText
 
 Получает строку для отображения, если текущий элемент управления представление списка является пустым.
 
@@ -1264,7 +1249,7 @@ CString GetEmptyText() const;
 
 Этот метод отправляет [LVM_GETEMPTYTEXT](/windows/desktop/Controls/lvm-getemptytext) сообщения, который описан в пакете Windows SDK.
 
-##  <a name="getextendedstyle"></a>  CListCtrl::GetExtendedStyle
+## <a name="getextendedstyle"></a>  CListCtrl::GetExtendedStyle
 
 Извлекает текущий расширенные стили элемента управления представления списка.
 
@@ -1284,7 +1269,7 @@ DWORD GetExtendedStyle();
 
   См. в примере [CListCtrl::SetExtendedStyle](#setextendedstyle).
 
-##  <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
+## <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
 
 Получает положение первого выбранного элемента в элементе управления представления списка.
 
@@ -1299,7 +1284,6 @@ POSITION GetFirstSelectedItemPosition() const;
 ### <a name="example"></a>Пример
 
 В следующем образце кода показано использование этой функции.
-
 
 ```cpp
         POSITION pos = m_myListCtrl.GetFirstSelectedItemPosition();
@@ -1318,8 +1302,7 @@ POSITION GetFirstSelectedItemPosition() const;
         }
 ```
 
-
-##  <a name="getfocusedgroup"></a>  CListCtrl::GetFocusedGroup
+## <a name="getfocusedgroup"></a>  CListCtrl::GetFocusedGroup
 
 Получает группу, имеющий фокус клавиатуры в текущего элемента управления представление списка.
 
@@ -1335,7 +1318,7 @@ int GetFocusedGroup() const;
 
 Этот метод отправляет [LVM_GETFOCUSEDGROUP](/windows/desktop/Controls/lvm-getfocusedgroup) сообщения, который описан в пакете Windows SDK. Дополнительные сведения см. в разделе значение LVGS_FOCUSED `state` членом [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры.
 
-##  <a name="getgroupcount"></a>  CListCtrl::GetGroupCount
+## <a name="getgroupcount"></a>  CListCtrl::GetGroupCount
 
 Возвращает число групп в текущего элемента управления представление списка.
 
@@ -1351,7 +1334,7 @@ int GetGroupCount()const;
 
 Этот метод отправляет [LVM_GETGROUPCOUNT](/windows/desktop/Controls/lvm-getgroupcount) --> сообщение, который описан в пакете Windows SDK.
 
-##  <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo
+## <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo
 
 Возвращает сведения для указанной группы управления представления списком.
 
@@ -1377,7 +1360,7 @@ int GetGroupInfo(
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETGROUPINFO](/windows/desktop/Controls/lvm-getgroupinfo) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex
+## <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex
 
 Извлекает сведения об указанной группе в текущего элемента управления представление списка.
 
@@ -1389,7 +1372,7 @@ BOOL GetGroupInfoByIndex(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iIndex*|[in] Отсчитываемый от нуля индекс в группе.|
 |*pGroup*|[out] Указатель на [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры, который получает сведения о группе, указанной параметром *iIndex* параметра.<br /><br /> Вызывающий объект отвечает за инициализацию членов [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры. Задайте `cbSize` член размер структуры и флаги `mask` указал информацию необходимо вернуть.|
@@ -1411,7 +1394,6 @@ public:
     // Variable used to access the list control.
     CListCtrl m_listCtrl;
 ```
-
 
 ### <a name="example"></a>Пример
 
@@ -1443,8 +1425,7 @@ public:
     }
 ```
 
-
-##  <a name="getgroupmetrics"></a>  CListCtrl::GetGroupMetrics
+## <a name="getgroupmetrics"></a>  CListCtrl::GetGroupMetrics
 
 Извлекает метрики из группы.
 
@@ -1461,7 +1442,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETGROUPMETRICS](/windows/desktop/Controls/lvm-getgroupmetrics) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="getgrouprect"></a>  CListCtrl::GetGroupRect
+## <a name="getgrouprect"></a>  CListCtrl::GetGroupRect
 
 Получает ограничивающий прямоугольник для указанной группы в текущего элемента управления представление списка.
 
@@ -1474,7 +1455,7 @@ BOOL GetGroupRect(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iGroupId*|[in] Задает группу.|
 |*lpRect*|[in, out] Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Если этот метод выполняется успешно, структуры получает координаты прямоугольника, группы, который задается параметром *iGroupId*.|
@@ -1499,7 +1480,6 @@ public:
     CListCtrl m_listCtrl;
 ```
 
-
 ### <a name="example"></a>Пример
 
 В следующем примере кода показано `GetGroupRect` метод. В предыдущем разделе этого примера кода мы создали управления представление списка, в котором отображаются два столбца, под названием «ClientID» и «Grade» в представлении отчета. В следующем примере кода рисует объемный прямоугольник вокруг группы, индекс которого равно 0, если такая группа существует.
@@ -1519,8 +1499,7 @@ public:
     }
 ```
 
-
-##  <a name="getgroupstate"></a>  CListCtrl::GetGroupState
+## <a name="getgroupstate"></a>  CListCtrl::GetGroupState
 
 Получает состояние для указанной группы в текущего элемента управления представление списка.
 
@@ -1532,7 +1511,7 @@ UINT GetGroupState(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iGroupId*|[in] Отсчитываемый от нуля индекс в группе.|
 |*dwMask*|[in] Маска, указывающая значение состояния для извлечения для указанной группы. Дополнительные сведения см. в разделе `mask` членом [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры.|
@@ -1547,7 +1526,7 @@ UINT GetGroupState(
 
 Этот метод отправляет [LVM_GETGROUPSTATE](/windows/desktop/Controls/lvm-getgroupstate) сообщения, который описан в пакете Windows SDK. Дополнительные сведения см. в разделе [ListView_GetGroupState](/windows/desktop/api/commctrl/nf-commctrl-listview_getgroupstate) макрос.
 
-##  <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl
+## <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl
 
 Извлекает элемент управления заголовка элемента управления представления списка.
 
@@ -1567,7 +1546,7 @@ CHeaderCtrl* GetHeaderCtrl();
 
   См. в примере [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
 
-##  <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
+## <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
 
 Получает курсор, используемый, когда включено отслеживание для элемента управления представления списка.
 
@@ -1592,8 +1571,7 @@ HCURSOR GetHotCursor();
         ASSERT(m_myListCtrl.GetHotCursor() == hCursor);
 ```
 
-
-##  <a name="gethotitem"></a>  CListCtrl::GetHotItem
+## <a name="gethotitem"></a>  CListCtrl::GetHotItem
 
 Извлекает элемент списка в настоящее время под курсором.
 
@@ -1620,8 +1598,7 @@ int GetHotItem();
         m_myListCtrl.SetHotItem(0);
 ```
 
-
-##  <a name="gethovertime"></a>  CListCtrl::GetHoverTime
+## <a name="gethovertime"></a>  CListCtrl::GetHoverTime
 
 Извлекает текущее время элементе управления представления списком при наведении курсора мыши.
 
@@ -1646,8 +1623,7 @@ DWORD GetHoverTime() const;
             m_myListCtrl.SetHoverTime(1000);
 ```
 
-
-##  <a name="getimagelist"></a>  CListCtrl::GetImageList
+## <a name="getimagelist"></a>  CListCtrl::GetImageList
 
 Возвращает дескриптор списка изображений, используемый для рисования элементы списка.
 
@@ -1678,8 +1654,7 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
-
-##  <a name="getinsertmark"></a>  CListCtrl::GetInsertMark
+## <a name="getinsertmark"></a>  CListCtrl::GetInsertMark
 
 Извлекает текущее положение знака вставки.
 
@@ -1700,7 +1675,7 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETINSERTMARK](/windows/desktop/Controls/lvm-getinsertmark) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="getinsertmarkcolor"></a>  CListCtrl::GetInsertMarkColor
+## <a name="getinsertmarkcolor"></a>  CListCtrl::GetInsertMarkColor
 
 Получает текущий цвет знака вставки.
 
@@ -1716,7 +1691,7 @@ COLORREF GetInsertMarkColor() const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-getinsertmarkcolor) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect
+## <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect
 
 Возвращает прямоугольник, ограничивающий курсор.
 
@@ -1741,7 +1716,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETINSERTMARKRECT](/windows/desktop/Controls/lvm-getinsertmarkrect) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="getitem"></a>  CListCtrl::GetItem
+## <a name="getitem"></a>  CListCtrl::GetItem
 
 Извлекает все или некоторые из атрибутов для элемента представления списка.
 
@@ -1762,7 +1737,7 @@ BOOL GetItem(LVITEM* pItem) const;
 
 `LVITEM` Структура указывает или получает атрибуты элемента представления списка.
 
-##  <a name="getitemcount"></a>  CListCtrl::GetItemCount
+## <a name="getitemcount"></a>  CListCtrl::GetItemCount
 
 Получает число элементов в элементе управления представления списка.
 
@@ -1778,7 +1753,7 @@ int GetItemCount() const;
 
   См. в примере [CListCtrl::DeleteItem](#deleteitem).
 
-##  <a name="getitemdata"></a>  CListCtrl::GetItemData
+## <a name="getitemdata"></a>  CListCtrl::GetItemData
 
 Извлекает 32-разрядное значение конкретного приложения, связанные с элемента, заданного посредством `nItem`.
 
@@ -1812,8 +1787,7 @@ DWORD_PTR GetItemData(int nItem) const;
     }
 ```
 
-
-##  <a name="getitemindexrect"></a>  CListCtrl::GetItemIndexRect
+## <a name="getitemindexrect"></a>  CListCtrl::GetItemIndexRect
 
 Получает ограничивающий прямоугольник для полностью или частично подэлемента в текущего элемента управления представление списка.
 
@@ -1827,7 +1801,7 @@ BOOL GetItemIndexRect(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pItemIndex*|[in] Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуру для родительского элемента данного подэлемента.<br /><br /> Вызывающий объект отвечает за выделение и определения участников [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуры. Этот параметр не может иметь значение NULL.|
 |*iColumn*|[in] Отсчитываемый от нуля индекс столбца в элементе управления.|
@@ -1852,7 +1826,6 @@ public:
     CListCtrl m_listCtrl;
 ```
 
-
 ### <a name="example"></a>Пример
 
 В следующем примере кода показано `GetGroupRect` метод. Перед выполнением этого кода-примеры, мы создали управления представление списка отображает два столбца, под названием «ClientID» и «Grade» в представлении отчета. В следующем примере кода рисует объемный прямоугольник вокруг второй подэлемента в обоих столбцах.
@@ -1871,8 +1844,7 @@ public:
     m_listCtrl.GetDC()->Draw3dRect( &rect, RGB(255, 0, 0), RGB(255, 0, 0) );
 ```
 
-
-##  <a name="getitemposition"></a>  CListCtrl::GetItemPosition
+## <a name="getitemposition"></a>  CListCtrl::GetItemPosition
 
 Получает положение элемента представления списка.
 
@@ -1910,8 +1882,7 @@ BOOL GetItemPosition(
         }
 ```
 
-
-##  <a name="getitemrect"></a>  CListCtrl::GetItemRect
+## <a name="getitemrect"></a>  CListCtrl::GetItemRect
 
 Получает ограничивающий прямоугольник для всего или части элемента в текущем представлении.
 
@@ -1985,8 +1956,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 }
 ```
 
-
-##  <a name="getitemspacing"></a>  CListCtrl::GetItemSpacing
+## <a name="getitemspacing"></a>  CListCtrl::GetItemSpacing
 
 Вычисляет расстояние между элементами в текущего элемента управления представление списка.
 
@@ -1999,7 +1969,7 @@ BOOL GetItemSpacing(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*fSmall*|[in] Представление, для которого требуется извлечь интервалы между элементами. Укажите значение TRUE для мелкими значками, или FALSE для представления значок.|
 |*pnHorzSpacing*|[out] Содержит горизонтальный интервал между элементами.|
@@ -2013,7 +1983,7 @@ BOOL GetItemSpacing(
 
 Этот метод отправляет [LVM_GETITEMSPACING](/windows/desktop/Controls/lvm-getitemspacing) сообщения, который описан в пакете Windows SDK.
 
-##  <a name="getitemstate"></a>  CListCtrl::GetItemState
+## <a name="getitemstate"></a>  CListCtrl::GetItemState
 
 Получает состояние представление элемента списка.
 
@@ -2043,7 +2013,7 @@ UINT GetItemState(
 
   См. в примере [CListCtrl::GetTopIndex](#gettopindex).
 
-##  <a name="getitemtext"></a>  CListCtrl::GetItemText
+## <a name="getitemtext"></a>  CListCtrl::GetItemText
 
 Извлекает текст подэлемента или элемент списка.
 
@@ -2083,7 +2053,7 @@ CString GetItemText(
 
 Если *nSubItem* равен нулю, эта функция получает подпись элемента; Если *nSubItem* имеет ненулевое значение, происходит получение текста данного подэлемента. Дополнительные сведения об аргументе подэлемента, см. в статье в обсуждении [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуры в пакете Windows SDK.
 
-##  <a name="getnextitem"></a>  CListCtrl::GetNextItem
+## <a name="getnextitem"></a>  CListCtrl::GetNextItem
 
 Выполняет поиск списка Просмотр элемента с указанными свойствами и предпоследнюю указанную связь с данным объектом.
 
@@ -2125,7 +2095,7 @@ int GetNextItem(
 
 Индекс следующего элемента в случае успеха или -1, в противном случае.
 
-##  <a name="getnextitemindex"></a>  CListCtrl::GetNextItemIndex
+## <a name="getnextitemindex"></a>  CListCtrl::GetNextItemIndex
 
 Извлекает индекс элемента в текущего элемента управления представление списка с указанным набором свойств.
 
@@ -2137,7 +2107,7 @@ BOOL GetNextItemIndex(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pItemIndex*|[in, out] Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуру, которая описывает элемент, в которой начинается поиск, или значение -1, чтобы найти первый элемент, соответствующий флаги в *nFlags* параметра.<br /><br /> При успешном выполнении, этот метод `LVITEMINDEX` структура описывает элемент, найденный в ходе поиска.|
 |*nFlags*|[in] Побитовое сочетание (OR) флагов, определяющих, как выполняется поиск.<br /><br /> Поиск может зависеть от индекса, состояние или внешний вид целевой элемент или конечный элемент физическое расположение относительно элемента указано посредством *pItemIndex* параметра. Дополнительные сведения см. в разделе *флаги* параметр в [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) сообщения.|
@@ -2152,7 +2122,7 @@ BOOL GetNextItemIndex(
 
 Этот метод отправляет [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) сообщения, который описан в пакете Windows SDK.
 
-##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
+## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
 Получает индекс элемента списка, идентифицируемый *pos*, затем задает *pos* значение ПОЗИЦИИ.
 
@@ -2196,8 +2166,7 @@ int GetNextSelectedItem(POSITION& pos) const;
         }
 ```
 
-
-##  <a name="getnumberofworkareas"></a>  CListCtrl::GetNumberOfWorkAreas
+## <a name="getnumberofworkareas"></a>  CListCtrl::GetNumberOfWorkAreas
 
 Извлекает текущее количество рабочие области для элемента управления представления списка.
 
@@ -2241,8 +2210,7 @@ UINT GetNumberOfWorkAreas() const;
 
 ```
 
-
-##  <a name="getoutlinecolor"></a>  CListCtrl::GetOutlineColor
+## <a name="getoutlinecolor"></a>  CListCtrl::GetOutlineColor
 
 Получает цвет границы элемента управления представления списка.
 
@@ -2258,7 +2226,7 @@ COLORREF GetOutlineColor() const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETOUTLINECOLOR](/windows/desktop/Controls/lvm-getoutlinecolor) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="getorigin"></a>  CListCtrl::GetOrigin
+## <a name="getorigin"></a>  CListCtrl::GetOrigin
 
 Извлекает текущее исходное представление для элемента управления представления списка.
 
@@ -2275,7 +2243,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 
 Ненулевое значение в случае успеха, иначе — 0. Тем не менее если элемент управления в представлении отчетов, возвращаемое значение всегда равно нулю.
 
-##  <a name="getselectedcolumn"></a>  CListCtrl::GetSelectedColumn
+## <a name="getselectedcolumn"></a>  CListCtrl::GetSelectedColumn
 
 Получает индекс столбца выбранных в настоящий момент в элементе управления списком.
 
@@ -2291,7 +2259,7 @@ UINT GetSelectedColumn() const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-getselectedcolumn) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount
+## <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount
 
 Возвращает число выбранных элементов в элементе управления представления списка.
 
@@ -2321,8 +2289,7 @@ UINT GetSelectedCount() const;
         }
 ```
 
-
-##  <a name="getselectionmark"></a>  CListCtrl::GetSelectionMark
+## <a name="getselectionmark"></a>  CListCtrl::GetSelectionMark
 
 Возвращает знак выбора элемента управления представления списка.
 
@@ -2347,8 +2314,7 @@ int GetSelectionMark();
         m_myListCtrl.SetSelectionMark(0);
 ```
 
-
-##  <a name="getstringwidth"></a>  CListCtrl::GetStringWidth
+## <a name="getstringwidth"></a>  CListCtrl::GetStringWidth
 
 Определяет минимальную ширину столбца необходимая для отображения всех заданной строки.
 
@@ -2385,8 +2351,7 @@ int GetStringWidth(LPCTSTR lpsz) const;
         }
 ```
 
-
-##  <a name="getsubitemrect"></a>  CListCtrl::GetSubItemRect
+## <a name="getsubitemrect"></a>  CListCtrl::GetSubItemRect
 
 Получает ограничивающий прямоугольник элемента в элементе управления списком.
 
@@ -2426,7 +2391,7 @@ BOOL GetSubItemRect(
 
 Эта функция-член реализует поведение макроса Win32, [ListView_GetSubItemRect](/windows/desktop/api/commctrl/nf-commctrl-listview_getsubitemrect), как описано в пакете Windows SDK.
 
-##  <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor
+## <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor
 
 Получает цвет фона текста элемента управления представления списка.
 
@@ -2442,7 +2407,7 @@ COLORREF GetTextBkColor() const;
 
   См. в примере [CListCtrl::SetTextBkColor](#settextbkcolor).
 
-##  <a name="gettextcolor"></a>  CListCtrl::GetTextColor
+## <a name="gettextcolor"></a>  CListCtrl::GetTextColor
 
 Возвращает цвет текста элемента управления представления списка.
 
@@ -2458,7 +2423,7 @@ COLORREF GetTextColor() const;
 
   См. в примере [CListCtrl::SetTextColor](#settextcolor).
 
-##  <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
+## <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
 
 Извлекает сведения о плитки в элементе управления представления списка.
 
@@ -2479,7 +2444,7 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETTILEINFO](/windows/desktop/Controls/lvm-gettileinfo) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo
+## <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo
 
 Извлекает сведения об элементе управления представления списком мозаичного представления.
 
@@ -2500,7 +2465,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETTILEVIEWINFO](/windows/desktop/Controls/lvm-gettileviewinfo) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="gettooltips"></a>  CListCtrl::GetToolTips
+## <a name="gettooltips"></a>  CListCtrl::GetToolTips
 
 Извлекает элемент управления tooltip, используемого элементом управления представления списка для отображения подсказки.
 
@@ -2527,8 +2492,7 @@ CToolTipCtrl* GetToolTips() const;
         }
 ```
 
-
-##  <a name="gettopindex"></a>  CListCtrl::GetTopIndex
+## <a name="gettopindex"></a>  CListCtrl::GetTopIndex
 
 Извлекает индекс верхнего элемента, видимого в представлении списка или отчетов.
 
@@ -2541,7 +2505,6 @@ int GetTopIndex() const;
 Индекс верхний видимый элемент.
 
 ### <a name="example"></a>Пример
-
 
 ```cpp
         // Make sure the focus is set to the list view control.
@@ -2558,8 +2521,7 @@ int GetTopIndex() const;
         }
 ```
 
-
-##  <a name="getview"></a>  CListCtrl::GetView
+## <a name="getview"></a>  CListCtrl::GetView
 
 Получает представление элемента управления представления списка.
 
@@ -2575,7 +2537,7 @@ DWORD GetView() const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_GETVIEW](/windows/desktop/Controls/lvm-getview) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="getviewrect"></a>  CListCtrl::GetViewRect
+## <a name="getviewrect"></a>  CListCtrl::GetViewRect
 
 Получает прямоугольник, ограничивающий всех элементов в элементе управления представления списка.
 
@@ -2596,7 +2558,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 
 В представлении списка должен быть в представлении значка или мелкого значка.
 
-##  <a name="getworkareas"></a>  CListCtrl::GetWorkAreas
+## <a name="getworkareas"></a>  CListCtrl::GetWorkAreas
 
 Извлекает текущий рабочие области элемента управления представления списка.
 
@@ -2622,7 +2584,7 @@ void GetWorkAreas(
 
   См. в примере [CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas).
 
-##  <a name="hasgroup"></a>  CListCtrl::HasGroup
+## <a name="hasgroup"></a>  CListCtrl::HasGroup
 
 Определяет, имеет ли элемент представления списка указанной группы.
 
@@ -2643,7 +2605,7 @@ BOOL HasGroup(int iGroupId) const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_HASGROUP](/windows/desktop/Controls/lvm-hasgroup) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="hittest"></a>  CListCtrl::HitTest
+## <a name="hittest"></a>  CListCtrl::HitTest
 
 Определяет какой элемент представления списка, если он имеется в указанной позиции.
 
@@ -2698,8 +2660,7 @@ void CListCtrlDlg::OnRClick(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-
-##  <a name="insertcolumn"></a>  CListCtrl::InsertColumn
+## <a name="insertcolumn"></a>  CListCtrl::InsertColumn
 
 Вставка нового столбца в элементе управления представления списка.
 
@@ -2707,7 +2668,6 @@ void CListCtrlDlg::OnRClick(NMHDR* pNMHDR, LRESULT* pResult)
 int InsertColumn(
     int nCol,
     const LVCOLUMN* pColumn);
-
 
 int InsertColumn(
     int nCol,
@@ -2747,7 +2707,7 @@ int InsertColumn(
 
 [LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) структура содержит атрибуты столбца в представлении отчета. Он также используется для получения сведений о столбце. Эта структура описана в пакете Windows SDK.
 
-##  <a name="insertgroup"></a>  CListCtrl::InsertGroup
+## <a name="insertgroup"></a>  CListCtrl::InsertGroup
 
 Вставляет группы в элементе управления представления списка.
 
@@ -2773,7 +2733,7 @@ LRESULT InsertGroup(
 
 Эта функция-член эмулирует функциональные возможности [LVM_INSERTGROUP](/windows/desktop/Controls/lvm-insertgroup) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted
+## <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted
 
 Вставляет указанную группу в упорядоченный список групп.
 
@@ -2794,24 +2754,21 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 
 Эта функция-член эмулирует функциональные возможности [LVM_INSERTGROUPSORTED](/windows/desktop/Controls/lvm-insertgroupsorted) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="insertitem"></a>  CListCtrl::InsertItem
+## <a name="insertitem"></a>  CListCtrl::InsertItem
 
 Вставляет элемент в элементе управления представления списка.
 
 ```
 int InsertItem(const LVITEM* pItem);
 
-
 int InsertItem(
     int nItem,
     LPCTSTR lpszItem);
-
 
 int InsertItem(
     int nItem,
     LPCTSTR lpszItem,
     int nImage);
-
 
 int InsertItem(
     UINT nMask,
@@ -2881,8 +2838,7 @@ int InsertItem(
         }
 ```
 
-
-##  <a name="insertmarkhittest"></a>  CListCtrl::InsertMarkHitTest
+## <a name="insertmarkhittest"></a>  CListCtrl::InsertMarkHitTest
 
 Возвращает точку вставки, ближайшей к заданной точке.
 
@@ -2908,7 +2864,7 @@ int InsertMarkHitTest(
 
 Эта функция-член эмулирует функциональные возможности [LVM_INSERTMARKHITTEST](/windows/desktop/Controls/lvm-insertmarkhittest) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled
+## <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled
 
 Определяет, включена ли представление "Группа" для элемента управления представления списка.
 
@@ -2924,7 +2880,7 @@ BOOL IsGroupViewEnabled() const;
 
 Эта функция-член эмулирует функциональные возможности [LVM_ISGROUPVIEWENABLED](/windows/desktop/Controls/lvm-isgroupviewenabled) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="isitemvisible"></a>  CListCtrl::IsItemVisible
+## <a name="isitemvisible"></a>  CListCtrl::IsItemVisible
 
 Указывает, видима ли указанный элемент в текущий элемент управления представление списка.
 
@@ -2934,7 +2890,7 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*Индекс*|[in] Отсчитываемый от нуля индекс элемента в текущего элемента управления представление списка.|
 
@@ -2946,7 +2902,7 @@ BOOL IsItemVisible(int index) const;
 
 Этот метод отправляет [LVM_ISITEMVISIBLE](/windows/desktop/Controls/lvm-isitemvisible) сообщения, который описан в пакете Windows SDK.
 
-##  <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex
+## <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex
 
 Сопоставляет уникальный идентификатор элемента в текущий элемент управления списком индекс.
 
@@ -2956,7 +2912,7 @@ UINT MapIDToIndex(UINT id) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*id*|[in] Уникальный идентификатор элемента.|
 
@@ -2972,7 +2928,7 @@ UINT MapIDToIndex(UINT id) const;
 
 Этот метод отправляет [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137) сообщения, который описан в пакете Windows SDK.
 
-##  <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
+## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
 Сопоставляет индекс элемента в элементе управления списком текущий уникальный идентификатор.
 
@@ -2982,7 +2938,7 @@ UINT MapIndexToID(UINT index) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*Индекс*|[in] Отсчитываемый от нуля индекс элемента.|
 
@@ -3007,7 +2963,6 @@ public:
     // Variable used to access the list control.
     CListCtrl m_listCtrl;
 ```
-
 
 ### <a name="example"></a>Пример
 
@@ -3039,8 +2994,7 @@ public:
         MB_ICONINFORMATION);
 ```
 
-
-##  <a name="movegroup"></a>  CListCtrl::MoveGroup
+## <a name="movegroup"></a>  CListCtrl::MoveGroup
 
 Перемещает указанный группе в указанный отсчитываемый от нуля индекс элемента управления представления списка.
 
@@ -3066,7 +3020,7 @@ LRESULT MoveGroup(
 
 Эта функция-член эмулирует функциональные возможности [LVM_MOVEGROUP](/windows/desktop/Controls/lvm-movegroup) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup
+## <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup
 
 Перемещает указанный элемент в указанной группе.
 
@@ -3091,7 +3045,7 @@ void MoveItemToGroup(
 
 Этот метод эмулирует функциональные возможности [LVM_MOVEITEMTOGROUP](/windows/desktop/Controls/lvm-moveitemtogroup) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="redrawitems"></a>  CListCtrl::RedrawItems
+## <a name="redrawitems"></a>  CListCtrl::RedrawItems
 
 Заставляет элемент управления списка перерисовку диапазона элементов.
 
@@ -3117,7 +3071,7 @@ BOOL RedrawItems(
 
 Указанные элементы не будут обновлены фактически, пока в окно представления списка не получит сообщение WM_PAINT. Чтобы немедленно перерисовать, вызовите Windows [UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow) функции после применения этой функции.
 
-##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups
+## <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups
 
 Удаляет все группы из элемента управления представления списка.
 
@@ -3129,7 +3083,7 @@ void RemoveAllGroups();
 
 Эта функция-член эмулирует функциональные возможности [LVM_REMOVEALLGROUPS](/windows/desktop/Controls/lvm-removeallgroups) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="removegroup"></a>  CListCtrl::RemoveGroup
+## <a name="removegroup"></a>  CListCtrl::RemoveGroup
 
 Удаляет указанную группу из элемента управления представления списка.
 
@@ -3150,7 +3104,7 @@ LRESULT RemoveGroup(int iGroupId);
 
 Эта функция-член эмулирует функциональные возможности [LVM_REMOVEGROUP](/windows/desktop/Controls/lvm-removegroup) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="scroll"></a>  CListCtrl::Scroll
+## <a name="scroll"></a>  CListCtrl::Scroll
 
 Прокручивает содержимое элемента управления представления списка.
 
@@ -3167,7 +3121,7 @@ BOOL Scroll(CSize size);
 
 Ненулевое значение в случае успеха, иначе — 0.
 
-##  <a name="setbkcolor"></a>  CListCtrl::SetBkColor
+## <a name="setbkcolor"></a>  CListCtrl::SetBkColor
 
 Задает цвет фона элемента управления представления списком.
 
@@ -3186,7 +3140,6 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
         // Use the 3D button face color for the background.
         COLORREF crBkColor = ::GetSysColor(COLOR_3DFACE);
@@ -3194,8 +3147,7 @@ BOOL SetBkColor(COLORREF cr);
         ASSERT(m_myListCtrl.GetBkColor() == crBkColor);
 ```
 
-
-##  <a name="setbkimage"></a>  CListCtrl::SetBkImage
+## <a name="setbkimage"></a>  CListCtrl::SetBkImage
 
 Задает фоновое изображение элемента управления представления списка.
 
@@ -3248,7 +3200,7 @@ BOOL SetBkImage(
 
   См. в примере [CListCtrl::GetBkImage](#getbkimage).
 
-##  <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
+## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
 
 Задает маску обратного вызова для элемента управления представления списка.
 
@@ -3267,7 +3219,6 @@ BOOL SetCallbackMask(UINT nMask);
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
     // Set the callback mask so that only the selected and focused states
     // are stored for each item.
@@ -3276,8 +3227,7 @@ BOOL SetCallbackMask(UINT nMask);
         (LVIS_SELECTED|LVIS_FOCUSED));
 ```
 
-
-##  <a name="setcheck"></a>  CListCtrl::SetCheck
+## <a name="setcheck"></a>  CListCtrl::SetCheck
 
 Определяет, является ли видимым изображение состояния элемента управления списка.
 
@@ -3301,7 +3251,6 @@ BOOL SetCheck(
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
         int nCount = m_myListCtrl.GetItemCount();
         BOOL fCheck = FALSE;
@@ -3317,8 +3266,7 @@ BOOL SetCheck(
         }
 ```
 
-
-##  <a name="setcolumn"></a>  CListCtrl::SetColumn
+## <a name="setcolumn"></a>  CListCtrl::SetColumn
 
 Задает атрибуты столбца представления списка.
 
@@ -3344,7 +3292,7 @@ BOOL SetColumn(
 
   См. в примере [CListCtrl::GetColumn](#getcolumn).
 
-##  <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray
+## <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray
 
 Задает порядок столбцов (слева направо) элемента управления представления списка.
 
@@ -3374,7 +3322,7 @@ BOOL SetColumnOrderArray(
 
   См. в примере [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
 
-##  <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth
+## <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth
 
 Изменяет ширину столбца в представлении отчетов или представлении списка.
 
@@ -3396,7 +3344,7 @@ BOOL SetColumnWidth(
 
 Ненулевое значение в случае успеха, иначе — 0.
 
-##  <a name="setextendedstyle"></a>  CListCtrl::SetExtendedStyle
+## <a name="setextendedstyle"></a>  CListCtrl::SetExtendedStyle
 
 Задает текущий расширенные стили элемента управления представления списка.
 
@@ -3419,15 +3367,13 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
     // Allow the header controls item to be movable by the user.
     m_myListCtrl.SetExtendedStyle
         (m_myListCtrl.GetExtendedStyle()|LVS_EX_HEADERDRAGDROP);
 ```
 
-
-##  <a name="setgroupinfo"></a>  CListCtrl::SetGroupInfo
+## <a name="setgroupinfo"></a>  CListCtrl::SetGroupInfo
 
 Задает сведения, описывающие указанной группы текущего элемента управления представление списка.
 
@@ -3453,7 +3399,7 @@ int SetGroupInfo(
 
 Этот метод отправляет [LVM_SETGROUPINFO](/windows/desktop/Controls/lvm-setgroupinfo) сообщения, который описан в пакете Windows SDK.
 
-##  <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics
+## <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics
 
 Задает метрики групповой элемент управления списка.
 
@@ -3470,7 +3416,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 
 Эта функция-член эмулирует функциональные возможности [LVM_SETGROUPMETRICS](/windows/desktop/Controls/lvm-setgroupmetrics) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="sethotcursor"></a>  CListCtrl::SetHotCursor
+## <a name="sethotcursor"></a>  CListCtrl::SetHotCursor
 
 Задает курсор, используемый, когда включено отслеживание для элемента управления представления списка.
 
@@ -3497,7 +3443,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
   См. в примере [CListCtrl::GetHotCursor](#gethotcursor).
 
-##  <a name="sethotitem"></a>  CListCtrl::SetHotItem
+## <a name="sethotitem"></a>  CListCtrl::SetHotItem
 
 Задает текущий элемент "Горячий" элемента управления представления списка.
 
@@ -3522,7 +3468,7 @@ int SetHotItem(int iIndex);
 
   См. в примере [CListCtrl::GetHotItem](#gethotitem).
 
-##  <a name="sethovertime"></a>  CListCtrl::SetHoverTime
+## <a name="sethovertime"></a>  CListCtrl::SetHoverTime
 
 Задает текущее время элементе управления представления списком при наведении курсора мыши.
 
@@ -3547,7 +3493,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 
   См. в примере [CListCtrl::GetHoverTime](#gethovertime).
 
-##  <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
+## <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
 
 Задает интервал между значками в элементе управления представления списка.
 
@@ -3580,14 +3526,12 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
     // Leave lots of space between icons.
     m_myListCtrl.SetIconSpacing(CSize(100, 100));
 ```
 
-
-##  <a name="setimagelist"></a>  CListCtrl::SetImageList
+## <a name="setimagelist"></a>  CListCtrl::SetImageList
 
 Назначает списка изображений элемента управления представления списка.
 
@@ -3619,7 +3563,7 @@ CImageList* SetImageList(
 
   См. в примере [CListCtrl::GetImageList](#getimagelist).
 
-##  <a name="setinfotip"></a>  CListCtrl::SetInfoTip
+## <a name="setinfotip"></a>  CListCtrl::SetInfoTip
 
 Задает текст всплывающей подсказки.
 
@@ -3640,7 +3584,7 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 
 Эта функция-член эмулирует функциональные возможности [LVM_SETINFOTIP](/windows/desktop/Controls/lvm-setinfotip) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="setinsertmark"></a>  CListCtrl::SetInsertMark
+## <a name="setinsertmark"></a>  CListCtrl::SetInsertMark
 
 Задает курсор в определенной позиции.
 
@@ -3661,7 +3605,7 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
 
 Эта функция-член эмулирует функциональные возможности [LVM_SETINSERTMARK](/windows/desktop/Controls/lvm-setinsertmark) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor
+## <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor
 
 Задает цвет курсора.
 
@@ -3682,13 +3626,12 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 Эта функция-член эмулирует функциональные возможности [LVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-setinsertmarkcolor) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="setitem"></a>  CListCtrl::SetItem
+## <a name="setitem"></a>  CListCtrl::SetItem
 
 Задает некоторые или все представления списка атрибуты элемента.
 
 ```
 BOOL SetItem(const LVITEM* pItem);
-
 
 BOOL SetItem(
     int nItem,
@@ -3699,7 +3642,6 @@ BOOL SetItem(
     UINT nState,
     UINT nStateMask,
     LPARAM lParam);
-
 
 BOOL SetItem(
     int nItem,
@@ -3763,7 +3705,7 @@ BOOL SetItem(
 
   См. в примере [CListCtrl::HitTest](#hittest).
 
-##  <a name="setitemcount"></a>  CListCtrl::SetItemCount
+## <a name="setitemcount"></a>  CListCtrl::SetItemCount
 
 Подготавливает элементе представления списка для добавления большое число элементов.
 
@@ -3786,7 +3728,6 @@ void SetItemCount(int nItems);
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
         CString str;
 
@@ -3800,8 +3741,7 @@ void SetItemCount(int nItems);
         }
 ```
 
-
-##  <a name="setitemcountex"></a>  CListCtrl::SetItemCountEx
+## <a name="setitemcountex"></a>  CListCtrl::SetItemCountEx
 
 Задает число элементов для элемента управления представление виртуального списка.
 
@@ -3833,7 +3773,6 @@ BOOL SetItemCountEx(
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
         CString str;
 
@@ -3851,8 +3790,7 @@ BOOL SetItemCountEx(
         }
 ```
 
-
-##  <a name="setitemdata"></a>  CListCtrl::SetItemData
+## <a name="setitemdata"></a>  CListCtrl::SetItemData
 
 Задает 32-разрядное значение конкретного приложения, связанные с элемента, заданного посредством *nItem*.
 
@@ -3878,7 +3816,6 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
     // Set the data of each item to be equal to its index.
     for (int i = 0; i < m_myListCtrl.GetItemCount(); i++)
@@ -3887,8 +3824,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
     }
 ```
 
-
-##  <a name="setitemindexstate"></a>  CListCtrl::SetItemIndexState
+## <a name="setitemindexstate"></a>  CListCtrl::SetItemIndexState
 
 Задает состояние элемента в текущего элемента управления представление списка.
 
@@ -3901,7 +3837,7 @@ BOOL SetItemIndexState(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pItemIndex*|[in] Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структура, описывающая элемент. Вызывающий объект отвечает за выделение эту структуру и установке его членов.|
 |*dwState*|[in] Состояние, чтобы задать элемент, который представляет собой битовую комбинацию из [список состояний представления элементов](/windows/desktop/Controls/list-view-item-states). Укажите ноль для сброса или одну для установки, состояния.|
@@ -3919,7 +3855,7 @@ BOOL SetItemIndexState(
 
 Этот метод отправляет [LVM_SETITEMINDEXSTATE](/windows/desktop/Controls/lvm-setitemindexstate) сообщения, который описан в пакете Windows SDK.
 
-##  <a name="setitemposition"></a>  CListCtrl::SetItemPosition
+## <a name="setitemposition"></a>  CListCtrl::SetItemPosition
 
 Перемещает элемент в указанную позицию в элементе управления представления списка.
 
@@ -3951,7 +3887,7 @@ BOOL SetItemPosition(
 
   См. в примере [CListCtrl::GetItemPosition](#getitemposition).
 
-##  <a name="setitemstate"></a>  CListCtrl::SetItemState
+## <a name="setitemstate"></a>  CListCtrl::SetItemState
 
 Изменяет состояние элемента в элементе управления списком.
 
@@ -3959,7 +3895,6 @@ BOOL SetItemPosition(
 BOOL SetItemState(
     int nItem,
     LVITEM* pItem);
-
 
 BOOL SetItemState(
     int nItem,
@@ -3993,7 +3928,7 @@ BOOL SetItemState(
 
   См. в примере [CListCtrl::GetTopIndex](#gettopindex).
 
-##  <a name="setitemtext"></a>  CListCtrl::SetItemText
+## <a name="setitemtext"></a>  CListCtrl::SetItemText
 
 Изменение текста элемента представления списка или подэлемента.
 
@@ -4027,7 +3962,7 @@ BOOL SetItemText(
 
   См. в примере [CListCtrl::InsertItem](#insertitem).
 
-##  <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
+## <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
 
 Задает цвет границы элемента управления представление списка, если [LVS_EX_BORDERSELECT](/windows/desktop/Controls/list-view-window-styles) окно расширенного стиля задано значение.
 
@@ -4048,7 +3983,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 Эта функция-член эмулирует функциональные возможности [LVM_SETOUTLINECOLOR](/windows/desktop/Controls/lvm-setoutlinecolor) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="setselectedcolumn"></a>  CListCtrl::SetSelectedColumn
+## <a name="setselectedcolumn"></a>  CListCtrl::SetSelectedColumn
 
 Задает выбранный столбец элемента управления представления списка.
 
@@ -4069,7 +4004,7 @@ LRESULT SetSelectedColumn(int iCol);
 
 Эта функция-член эмулирует функциональные возможности [LVM_SETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-setselectedcolumn) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="setselectionmark"></a>  CListCtrl::SetSelectionMark
+## <a name="setselectionmark"></a>  CListCtrl::SetSelectionMark
 
 Задает метки выделения элемента управления представления списка.
 
@@ -4094,7 +4029,7 @@ int SetSelectionMark(int iIndex);
 
   См. в примере [CListCtrl::GetSelectionMark](#getselectionmark).
 
-##  <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
+## <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
 
 Задает цвет фона текста в элементе управления представления списка.
 
@@ -4113,7 +4048,6 @@ COLORREF, указав новый цвет фона текста. Сведени
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
         // Use the 3D button face color for the background.
         COLORREF crBkColor = ::GetSysColor(COLOR_3DFACE);
@@ -4121,8 +4055,7 @@ COLORREF, указав новый цвет фона текста. Сведени
         ASSERT(m_myListCtrl.GetTextBkColor() == crBkColor);
 ```
 
-
-##  <a name="settextcolor"></a>  CListCtrl::SetTextColor
+## <a name="settextcolor"></a>  CListCtrl::SetTextColor
 
 Задает цвет текста элемента управления представления списка.
 
@@ -4141,7 +4074,6 @@ COLORREF, указав новый цвет текста. Сведения см. 
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
     // Use the window text color for
     // the item text of the list view control.
@@ -4150,8 +4082,7 @@ COLORREF, указав новый цвет текста. Сведения см. 
     ASSERT(m_myListCtrl.GetTextColor() == crTextColor);
 ```
 
-
-##  <a name="settileinfo"></a>  CListCtrl::SetTileInfo
+## <a name="settileinfo"></a>  CListCtrl::SetTileInfo
 
 Задает информацию для плитки элемента управления представления списка.
 
@@ -4172,7 +4103,7 @@ BOOL SetTileInfo(PLVTILEINFO pti);
 
 Эта функция-член эмулирует функциональные возможности [LVM_SETTILEINFO](/windows/desktop/Controls/lvm-settileinfo) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo
+## <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo
 
 Задает сведения, которые использует элемент управления списка мозаичного представления.
 
@@ -4193,7 +4124,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 
 Эта функция-член эмулирует функциональные возможности [LVM_SETTILEVIEWINFO](/windows/desktop/Controls/lvm-settileviewinfo) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="settooltips"></a>  CListCtrl::SetToolTips
+## <a name="settooltips"></a>  CListCtrl::SetToolTips
 
 Задает подсказку, которая управления представления списком будет использоваться для отображения подсказки.
 
@@ -4216,7 +4147,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 Чтобы не использовать всплывающие подсказки, указывающих стиль LVS_NOTOOLTIPS при создании `CListCtrl` объекта.
 
-##  <a name="setview"></a>  CListCtrl::SetView
+## <a name="setview"></a>  CListCtrl::SetView
 
 Задает представление элемента управления представления списка.
 
@@ -4237,7 +4168,7 @@ DWORD SetView(int iView);
 
 Эта функция-член эмулирует функциональные возможности [LVM_SETVIEW](/windows/desktop/Controls/lvm-setview) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="setworkareas"></a>  CListCtrl::SetWorkAreas
+## <a name="setworkareas"></a>  CListCtrl::SetWorkAreas
 
 Задает область, где могут отображаться значки в элементе управления представления списка.
 
@@ -4261,14 +4192,12 @@ void SetWorkAreas(
 
 ### <a name="example"></a>Пример
 
-
 ```cpp
     // Remove all working areas.
     m_myListCtrl.SetWorkAreas(0, NULL);
 ```
 
-
-##  <a name="sortgroups"></a>  CListCtrl::SortGroups
+## <a name="sortgroups"></a>  CListCtrl::SortGroups
 
 Функция сравнения, определяемые приложением для сортировки групп по Идентификатору в элементе управления списком.
 
@@ -4294,7 +4223,7 @@ BOOL SortGroups(
 
 Эта функция-член эмулирует функциональные возможности [LVM_SORTGROUPS](/windows/desktop/Controls/lvm-sortgroups) сообщения, как описано в пакете Windows SDK.
 
-##  <a name="sortitems"></a>  CListCtrl::SortItems
+## <a name="sortitems"></a>  CListCtrl::SortItems
 
 Сортирует элементы списка с помощью функции сравнения, определяемые приложением.
 
@@ -4357,7 +4286,7 @@ void CListCtrlDlg::Sort()
 }
 ```
 
-##  <a name="sortitemsex"></a>  CListCtrl::SortItemsEx
+## <a name="sortitemsex"></a>  CListCtrl::SortItemsEx
 
 Сортирует элементы текущего элемента управления представление списка с помощью функции сравнения, определяемые приложением.
 
@@ -4369,7 +4298,7 @@ BOOL SortItemsEx(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pfnCompare*|[in] Адрес функции сравнения, определяемые приложением.<br /><br /> Операция сортировки вызывает функцию сравнения, каждый раз, когда необходимо определить относительный порядок двух элементов списка. Функция сравнения необходимо либо статический член класса или автономного функцию, которая не является членом класса.|
 |*dwData*|[in] Определяемый приложением значение, передаваемое в функцию сравнения.|
@@ -4408,11 +4337,9 @@ public:
     CListCtrl m_listCtrl;
 ```
 
-
 ### <a name="example"></a>Пример
 
 В следующем примере кода показано `SortItemEx` метод. В предыдущем разделе этого примера кода мы создали управления представление списка, в котором отображаются два столбца, под названием «ClientID» и «Grade» в представлении отчета. В следующем примере кода сортирует таблицу, используя значения в столбце «Grade».
-
 
 ```cpp
 // The ListCompareFunc() method is a global function used by SortItemEx().
@@ -4444,8 +4371,7 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 }
 ```
 
-
-##  <a name="subitemhittest"></a>  CListCtrl::SubItemHitTest
+## <a name="subitemhittest"></a>  CListCtrl::SubItemHitTest
 
 Определяет какой элемент представления списка, если он имеется в заданной позиции.
 
@@ -4486,8 +4412,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 }
 ```
 
-
-##  <a name="update"></a>  CListCtrl::Update
+## <a name="update"></a>  CListCtrl::Update
 
 Вызывает перерисовку элемента, заданного посредством элемента управления представление списка *nItem*.
 

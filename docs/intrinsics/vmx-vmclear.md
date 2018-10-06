@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0b584172a95fc388893c276b05b311365ad109
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13939e3e5407a7f78d199ef872ebddc3134b2a18
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441789"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820979"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 
@@ -40,7 +40,7 @@ unsigned char __vmx_vmclear(
 
 #### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*VmcsPhysicalAddress*|[in] Указатель на адрес памяти 64-разрядной, содержащий физический адрес VMCS для очистки.|
 
@@ -56,7 +56,7 @@ unsigned char __vmx_vmclear(
 
 Приложение может выполнять операцию VM-enter, либо при помощи [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) или [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функции. [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) функция может использоваться только с VMCS, состояние запуска которой — `Clear`и [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функция может использоваться только с VMCS, состояние запуска которой — `Launched`. Следовательно, используйте [__vmx_vmclear](../intrinsics/vmx-vmclear.md) функцию для задания состояния запуска VMCS `Clear`. Используйте [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) функции для первой операции VM-enter и [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функции для последующих операций VM-enter.
 
-`__vmx_vmclear` Функция эквивалентна `VMCLEAR` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.
+`__vmx_vmclear` Функция эквивалентна `VMCLEAR` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) сайта.
 
 ## <a name="requirements"></a>Требования
 
