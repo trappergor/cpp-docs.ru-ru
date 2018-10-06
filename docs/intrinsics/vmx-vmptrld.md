@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7126dc3b6a0ece4a5b7627859d0b80abf962d88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f3304106662d290a208545061bf9f71b7f30c10
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429108"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820949"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
@@ -54,7 +54,7 @@ int __vmx_vmptrld(
 
 Указатель VMCS — это 64-разрядный физический адрес.
 
-`__vmx_vmptrld` Функция эквивалентна `VMPTRLD` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) сайта.
+`__vmx_vmptrld` Функция эквивалентна `VMPTRLD` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) сайта.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,7 +1,7 @@
 ---
 title: Добавление свойства в элемент управления (учебник ATL, часть 3) | Документация Майкрософт
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,52 +12,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e90da3fe44613b0c530e801d963eaddd9d783e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2373d2d703f18824274df158b31023669d8df945
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756912"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820476"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Добавление свойства в элемент управления (учебник ATL, часть 3)
 
 `IPolyCtl` — Это интерфейс, содержащий элемент управления пользовательских методов и свойств, и будет добавить свойство.
 
-### <a name="to-add-a-property-using-the-add-property-wizard"></a>Чтобы добавить свойства с помощью мастера добавления свойства
+### <a name="to-add-the-property-definitions-to-your-project"></a>Чтобы добавить определения свойств в проект
 
-1. В представлении классов разверните многоугольника.
+1. В **представление классов**, разверните `Polygon` ветви.
 
-2. Щелкните правой кнопкой мыши IPolyCtl.
+1. Щелкните правой кнопкой мыши `IPolyCtl`.
 
-3. В контекстном меню, щелкните **добавить**, а затем нажмите кнопку **добавить свойство**.
+1. В контекстном меню, щелкните **добавить**, а затем нажмите кнопку **добавить свойство**. **Добавить свойство** отобразится окно мастера.
 
-     Появится мастер добавления свойств.
+1. Тип `Sides` как **имя свойства**.
 
-4. В раскрывающемся списке список типов свойств, выберите `SHORT`.
+1. В раскрывающемся списке **тип свойства**выберите `short`.
 
-5. Тип *сторон* как **имя свойства.**
+1. Нажмите кнопку **ОК** чтобы завершить добавление свойства.
 
-6. Нажмите кнопку **Готово** чтобы завершить добавление свойства.
+1. Из **обозревателе решений**откройте Polygon.idl и замените следующие строки в конце `IPolyCtl : IDispatch` интерфейса:
 
-При добавлении свойства к интерфейсу, MIDL (программы, компилирует IDL-файлы) определяет `Get` метод для извлечения его значения и `Put` метод для установки нового значения. Методы именуется путем добавления префикса `put_` и `get_` имени свойства.
+    ```cpp
+    short get_Sides();
+    void set_Sides(short value);
+    ```
 
-Мастер добавления свойств добавляет необходимые строки в IDL-файл. Он также добавляет `Get` и `Put` прототипы в определение класса в PolyCtl.h функции и добавляет пустую реализацию PolyCtl.cpp. Это можно проверить, открыв PolyCtl.cpp и поиске функций `get_Sides` и `put_Sides`.
+    на
 
-Несмотря на то, что теперь у вас есть каркас функции задание и получение свойства, ему требуется место для сохранения. Создается переменная для хранения этого свойства и соответствующим образом обновите функции.
+    ```cpp
+    [propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
+    [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
+    ```
 
-#### <a name="to-create-a-variable-to-store-the-property-and-update-the-put-and-get-methods"></a>Для создания переменной для хранения этого свойства, put и с именами методов get
+1. Из **обозревателе решений**откройте PolyCtl.h и добавьте следующие строки после определения `m_clrFillColor`:
 
-1. В обозревателе решений откройте PolyCtl.h и добавьте следующую строку после определения `m_clrFillColor`:
+    [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
+Несмотря на то, что теперь у вас есть каркас функции задание и получение свойства и переменной для хранения этого свойства, необходимо реализовать функции соответствующим образом.
 
-2. Значение по умолчанию `m_nSides`. Сделать по умолчанию фигуры треугольника, добавив строку в конструктор в PolyCtl.h:
+### <a name="to-update-the-get-and-put-methods"></a>Чтобы обновить get и put методы
 
-     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
+1. Значение по умолчанию `m_nSides`. Сделать по умолчанию фигуры треугольника, добавив строку в конструктор в PolyCtl.h:
 
-3. Реализуйте `Get` и `Put` методы. `get_Sides` И `put_Sides` объявления функций были добавлены в PolyCtl.h. Замените код в PolyCtl.cpp для `get_Sides` и `put_Sides` следующим кодом:
+    [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
+1. Реализуйте `Get` и `Put` методы. `get_Sides` И `put_Sides` объявления функций были добавлены в PolyCtl.h. Теперь добавьте код для `get_Sides` и `put_Sides` для PolyCtl.cpp на следующий:
+
+    [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
 `get_Sides` Метод возвращает текущее значение `Sides` свойства с помощью `pVal` указатель. В `put_Sides` метод, код обеспечивает пользователю `Sides` свойство допустимым значением. Минимальное значение должно быть 3, а поскольку массив точек будет использоваться для каждой стороны, 100 приемлемого предела для максимального значения.
 
@@ -68,4 +76,3 @@ ms.locfileid: "43756912"
 ## <a name="see-also"></a>См. также
 
 [Учебник](../atl/active-template-library-atl-tutorial.md)
-

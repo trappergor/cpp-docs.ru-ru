@@ -1,7 +1,7 @@
 ---
-title: / Параметр CLRUNMANAGEDCODECHECK (Добавление SuppressUnmanagedCodeSecurityAttribute) | Документация Майкрософт
+title: / Параметр CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 9868f0c35f4a988ac8e0aee8076f232f86c04afd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429765"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820929"
 ---
-# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/ Параметр CLRUNMANAGEDCODECHECK (Добавление SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/ Параметр CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute)
 
-**/ Параметр CLRUNMANAGEDCODECHECK** указывает, будет ли компоновщик применять <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> до компоновщиком `PInvoke` вызовы собственных библиотек DLL из управляемого кода.
+**/ Параметр CLRUNMANAGEDCODECHECK** указывает, что компоновщик не применяется <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> до компоновщиком `PInvoke` вызовы собственных библиотек DLL из управляемого кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,13 +34,13 @@ ms.locfileid: "47429765"
 
 ## <a name="remarks"></a>Примечания
 
-По умолчанию компоновщик применяет **SuppressUnmanagedCodeSecurityAttribute** до компоновщиком `PInvoke` вызовов. Когда **/clrunmanagedcodecheck** , **SuppressUnmanagedCodeSecurityAttribute** не применяется.
+По умолчанию компоновщик применяет **SuppressUnmanagedCodeSecurityAttribute** до компоновщиком `PInvoke` вызовов. Когда **/clrunmanagedcodecheck** , **SuppressUnmanagedCodeSecurityAttribute** удаляется. Для явного применения **SuppressUnmanagedCodeSecurityAttribute** до компоновщиком `PInvoke` вызовов, можно использовать **/CLRUNMANAGEDCODECHECK:NO**.
 
-Компоновщик только добавляет атрибут к объектам, которые компилируются с **/CLR** или **/CLR: pure**. Тем не менее **/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
+Компоновщик только добавляет атрибут к объектам, которые компилируются с помощью **/CLR** или **/CLR: pure**. Тем не менее **/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
 
 Объект `PInvoke` компоновщиком создается вызов, когда компоновщик не может найти управляемый символ для удовлетворения ссылку из управляемого вызывающего объекта, но можно найти символ для удовлетворения этой ссылки. Дополнительные сведения о `PInvoke`, см. в разделе [вызов собственных функций из управляемого кода](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Обратите внимание, что при использовании <xref:System.Security.AllowPartiallyTrustedCallersAttribute> в коде, необходимо явно указать **/clrunmanagedcodecheck**. Это потенциальной уязвимости безопасности, если изображение содержит атрибуты AllowPartiallyTrustedCallers и SuppressUnmanagedCodeSecurity.
+Обратите внимание, что при использовании <xref:System.Security.AllowPartiallyTrustedCallersAttribute> в коде, необходимо явно указать **/clrunmanagedcodecheck** удаляемый **SuppressUnmanagedCodeSecurity** атрибута. Это потенциальной уязвимости безопасности, если изображение содержит оба **SuppressUnmanagedCodeSecurity** и **AllowPartiallyTrustedCallers** атрибуты.
 
 См. в разделе [правил написания безопасного кода для неуправляемого кода](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) Дополнительные сведения о последствиях с помощью **SuppressUnmanagedCodeSecurityAttribute**.
 

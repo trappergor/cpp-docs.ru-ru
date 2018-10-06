@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705f4f0d41b98c46e2cd61962d84fe8412b9e296
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414060"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821365"
 ---
 # <a name="message-map-macros-mfc"></a>Макросы схемы сообщений (MFC)
 
@@ -81,7 +81,6 @@ ms.locfileid: "46414060"
 |[ON_CONTROL_RANGE](#on_control_range)|Указывает, какая функция будет обрабатывать уведомления из диапазона идентификаторов, указанных в параметрах второго и третьего в макрос элементов управления. Первый параметр является сообщением уведомление элемента управления, например BN_CLICKED.|
 
 Дополнительные сведения о схемы сообщений, в объявлении схемы сообщений и разделительной макросы и макросы сопоставления сообщений, см. в разделе [схемы сообщений](../../mfc/reference/message-maps-mfc.md) и [обработка сообщений и разделы сопоставления](../../mfc/message-handling-and-mapping.md). Дополнительные сведения о диапазонов схем сообщений, см. в разделе [обработчики для диапазонов схем сообщений](../../mfc/handlers-for-message-map-ranges.md).
-
 
 ## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
@@ -125,15 +124,18 @@ END_MESSAGE_MAP()
 
 ### <a name="syntax"></a>Синтаксис
 
-  ```
+```
 BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *theClass*<br/>
 Указывает, что имя класса, сопоставить сообщение о которой является.
+
 *type_name*<br/>
 Имя параметра шаблона, указанный для класса.
+
 *baseClass*<br/>
 Указывает имя базового класса *theClass*.
 
@@ -181,7 +183,6 @@ class CMainFrame : public CMDIFrameWnd
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxwin.h
-
 
 ## <a name="end_message_map"></a>  END_MESSAGE_MAP
 
@@ -245,9 +246,10 @@ END_MESSAGE_MAP()
 
 ### <a name="syntax"></a>Синтаксис
 
-  ```
+```
 ON_COMMAND_EX(id, memberFxn);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *id*<br/>
@@ -267,6 +269,7 @@ ON_COMMAND_EX(id, memberFxn);
 ```
 ON_COMMAND_EX(id,  memberFxn);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *id*<br/>
@@ -287,8 +290,7 @@ ON_COMMAND_EX(id,  memberFxn);
 ### <a name="see-also"></a>См. также
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006: схемы сообщений] tm006-сообщение maps.md)
-
+[TN006. Схемы сообщений](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -322,7 +324,6 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxmsg_.h
-
 
 ## <a name="on_message"></a>  ON_MESSAGE
 
@@ -382,7 +383,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 **Заголовок:** afxmsg_.h
 
-## <a name="on_olecmd"></a>  ON_OLECMD  
+## <a name="on_olecmd"></a>  ON_OLECMD
 
 Перенаправляет команды через интерфейс диспетчеризации команд `IOleCommandTarget`.
 
@@ -545,7 +546,6 @@ ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )
 ```cpp
 static UINT NEAR WM_FIND = RegisterWindowMessage(_T("COMMDLG_FIND"));
 
-
 BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
    ON_REGISTERED_MESSAGE(WM_FIND, OnFind)
 END_MESSAGE_MAP()
@@ -560,7 +560,7 @@ END_MESSAGE_MAP()
 [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
 [Пользовательские обработчики](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
 
 Указывает, какая функция будет обрабатывать сообщения, зарегистрированные с помощью функции Windows RegisterWindowMessage.
 
@@ -586,7 +586,7 @@ RegisterWindowMessage используется для определения н�
 
 **Заголовок:** afxmsg_.h
 
-## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE
 
 Указывает, какая функция будет обрабатывать определяемое пользователем сообщение.
 
@@ -612,7 +612,7 @@ ON_THREAD_MESSAGE( message, memberFxn )
 
 **Заголовок:** afxole.h
 
-## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI
 
 Этот макрос указывает, какая функция будет обрабатывать сообщения команды обновления пользовательского интерфейса.
 
@@ -699,7 +699,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **Заголовок:** afxmsg_.h
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE
 
 Сопоставляется функции обработчика сообщений в одно обновление непрерывный диапазон идентификаторов команд.
 
@@ -730,7 +730,7 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 **Заголовок:** afxmsg_.h
 
-## <a name="on_control_range"></a>  ON_CONTROL_RANGE    
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE
 
 Используйте этот макрос для сопоставления функции обработчика одно сообщение для указанного сообщения уведомлений Windows, например BN_CLICKED непрерывный диапазон идентификаторов элементов управления.
 
