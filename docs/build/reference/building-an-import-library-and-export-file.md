@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75f629c8a9c8a06f02024e9d52ab13b2d12b234c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723311"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860398"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Построение библиотеки импорта и файла экспорта
 
@@ -52,9 +52,9 @@ ms.locfileid: "45723311"
 
 1. Объект **__declspec(dllexport)** определение в одном из *объектных* или *библиотеки*
 
-2. Спецификация/Export:*имя* в командной строке LIB
+1. Спецификация/Export:*имя* в командной строке LIB
 
-3. Определение в **ЭКСПОРТОВ** инструкции в *deffile*
+1. Определение в **ЭКСПОРТОВ** инструкции в *deffile*
 
 Это те же методы, используемые для указания экспортов при компоновке экспортирующей программы. Программа может использовать более одного метода. Можно указать части команды LIB (например, несколько *объектных* или спецификации/export) в файле команд в команде LIB, так же, как можно в команде LINK.
 

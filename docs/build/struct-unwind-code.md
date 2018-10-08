@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726652"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861725"
 ---
 # <a name="struct-unwindcode"></a>Структура UNWIND_CODE
 
@@ -112,17 +112,17 @@ ms.locfileid: "45726652"
 
 1. Обратного адреса RIP с вершины стека в *Temp*
 
-2. Передача SS
+1. Передача SS
 
-3. Старый RSP Push-уведомлений
+1. Старый RSP Push-уведомлений
 
-4. Push-EFLAGS
+1. Push-EFLAGS
 
-5. Передача CS
+1. Передача CS
 
-6. Push- *Temp*
+1. Push- *Temp*
 
-7. Передача кода ошибки (если сведений об операции значение 1)
+1. Передача кода ошибки (если сведений об операции значение 1)
 
 Simulated `UWOP_PUSH_MACHFRAME` операции уменьшает RSP на 40 (сведений об операции значение 0) или 48 (сведений об операции значение 1).
 

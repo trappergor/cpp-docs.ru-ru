@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae9ab3c2e8f077d943b69b419694fbf686ffdf38
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 22b79454b71f4908d71e683d8bebe4611da7cb14
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703863"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861870"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (экспортирует функцию)
 
@@ -70,9 +70,9 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
 
-2. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
+1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
 
-3. Введите параметр в **Дополнительные параметры** поле.
+1. Введите параметр в **Дополнительные параметры** поле.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 

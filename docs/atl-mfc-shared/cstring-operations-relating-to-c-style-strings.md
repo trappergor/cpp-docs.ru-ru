@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387020"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860567"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Операции CString, связанные со строками в стиле C
 
@@ -67,7 +67,7 @@ strcpy(myString, (LPCTSTR)aCString);
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  Третий аргумент `strcpy_s` (или MBCS-переносимой между Юникодом и `_tcscpy_s`) либо `const wchar_t*` (Юникод) или `const char*` (ANSI). Приведенный выше пример передает `CString` для этого аргумента. Компилятор C++ автоматически применяет функцию преобразования, определенную для класса `CString`, который преобразует `CString` в `LPCTSTR`. Возможность определения операций приведения от одного типа к другому — это одна из самых полезных особенностей C++.
+> Третий аргумент `strcpy_s` (или MBCS-переносимой между Юникодом и `_tcscpy_s`) либо `const wchar_t*` (Юникод) или `const char*` (ANSI). Приведенный выше пример передает `CString` для этого аргумента. Компилятор C++ автоматически применяет функцию преобразования, определенную для класса `CString`, который преобразует `CString` в `LPCTSTR`. Возможность определения операций приведения от одного типа к другому — это одна из самых полезных особенностей C++.
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Работа со строковыми функциями стандартной библиотеки времени выполнения
 
@@ -83,13 +83,13 @@ strcpy(myString, (LPCTSTR)aCString);
 
 Методы `GetBuffer` и `ReleaseBuffer` предоставляют доступ к внутреннему символьному буферу объекта `CString` и позволяют изменять его напрямую. Приведенные ниже действия показывают, как использовать такие функции в этих целях.
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Использование GetBuffer и ReleaseBuffer для доступа к внутреннему символьному буферу объекта CString
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Использование GetBuffer и ReleaseBuffer для доступа к внутреннему символьному буферу объекта CString
 
 1. Вызовите `GetBuffer` для объекта `CString` и укажите требуемую длину буфера.
 
-2. Используйте указатель, возвращенный `GetBuffer`, для записи символов напрямую в объект `CString`.
+1. Используйте указатель, возвращенный `GetBuffer`, для записи символов напрямую в объект `CString`.
 
-3. Вызовите `ReleaseBuffer` для объекта `CString`, чтобы обновить все внутренние сведения о состоянии `CString`, например длину строки. После непосредственного изменения содержимого объекта `CString` необходимо вызвать `ReleaseBuffer` до вызова любых других функций-членов `CString`.
+1. Вызовите `ReleaseBuffer` для объекта `CString`, чтобы обновить все внутренние сведения о состоянии `CString`, например длину строки. После непосредственного изменения содержимого объекта `CString` необходимо вызвать `ReleaseBuffer` до вызова любых других функций-членов `CString`.
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Использование объектов CString с функциями аргументов переменных
 
@@ -113,4 +113,3 @@ strcpy(myString, (LPCTSTR)aCString);
 
 [Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Передача аргументов CString](../atl-mfc-shared/cstring-argument-passing.md)
-

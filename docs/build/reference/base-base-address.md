@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725976"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860541"
 ---
 # <a name="base-base-address"></a>/BASE (базовый адрес)
 
@@ -78,9 +78,9 @@ link dlltwo.obj /dll /base:@dlls.txt,two
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
 
-2. Выберите **свойства конфигурации** > **компоновщика** > **Дополнительно** страницу свойств.
+1. Выберите **свойства конфигурации** > **компоновщика** > **Дополнительно** страницу свойств.
 
-3. Изменить **базовый адрес** свойство.
+1. Изменить **базовый адрес** свойство.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 

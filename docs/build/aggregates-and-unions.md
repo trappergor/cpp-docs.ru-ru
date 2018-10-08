@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aac6da94a0786e5cdc2eee4d16f5927f66e0a8d5
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710025"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861191"
 ---
 # <a name="aggregates-and-unions"></a>Статические выражения и объединения
 
@@ -29,7 +29,7 @@ ms.locfileid: "45710025"
 
    Содержит упорядоченную группу смежных объектов данных. Каждый объект вызывается элемент. Все элементы массива имеют одинаковый тип размера и данных.
 
--  Структура
+- Структура
 
    Содержит упорядоченную группу объектов данных. В отличие от элементов массива объекты данных в структуре может иметь различные типы данных и размеры. Каждый объект данных в структуре вызывается член.
 

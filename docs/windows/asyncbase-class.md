@@ -1,7 +1,7 @@
 ---
 title: Класс AsyncBase | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/03/2018
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6538d06c291bccc8764403b26f5c8d88f4afd781
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788803"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861958"
 ---
 # <a name="asyncbase-class"></a>AsyncBase - класс
 
@@ -106,13 +106,13 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-Имя                               | Описание
+Имя                               | Описание:
 ---------------------------------- | -------------------------------------------------
 [AsyncBase::AsyncBase](#asyncbase) | Инициализирует экземпляр класса `AsyncBase`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-Имя                                         | Описание
+Имя                                         | Описание:
 -------------------------------------------- | -------------------------------------------------------------------------------------
 [AsyncBase::Cancel](#cancel)                 | Отменяет асинхронную операцию.
 [AsyncBase::Close](#close)                   | Закрывает асинхронной операции.
@@ -130,7 +130,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-Имя                                                                         | Описание
+Имя                                                                         | Описание:
 ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
 [AsyncBase::CheckValidStateForDelegateCall](#checkvalidstatefordelegatecall) | Проверяет, является ли делегат свойства можно изменить в текущем состоянии асинхронной.
 [AsyncBase::CheckValidStateForResultsCall](#checkvalidstateforresultscall)   | Проверяет, является ли результаты асинхронной операции можно собирать в текущем состоянии асинхронной.
@@ -436,7 +436,7 @@ virtual void OnClose(
 При переопределении в производном классе запускает асинхронную операцию.
 
 ```cpp
-virtual void OnStart(
+virtual HRESULT OnStart(
    void
 ) = 0;
 ```
