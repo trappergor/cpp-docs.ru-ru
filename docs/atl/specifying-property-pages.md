@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f80abd3b6270f105fecd7ef8b9988a379901b541
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069434"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860216"
 ---
 # <a name="specifying-property-pages"></a>Указание страниц свойств
 
@@ -32,12 +32,12 @@ ms.locfileid: "46069434"
 
 1. Наследование класса из [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).
 
-2. Добавьте запись для `ISpecifyPropertyPages` для вашего класса COM карты.
+1. Добавьте запись для `ISpecifyPropertyPages` для вашего класса COM карты.
 
-3. Добавить [PROP_PAGE](reference/property-map-macros.md#prop_page) запись, чтобы в схеме сопоставления свойств для каждой страницы, связанный с элементом управления.
+1. Добавить [PROP_PAGE](reference/property-map-macros.md#prop_page) запись, чтобы в схеме сопоставления свойств для каждой страницы, связанный с элементом управления.
 
 > [!NOTE]
->  При создании стандартного элемента управления с помощью [мастер элементов управления ATL](../atl/reference/atl-control-wizard.md), будет достаточно для добавления записей PROP_PAGE в схеме сопоставления свойств. Мастер создает необходимый код для других шагов.
+> При создании стандартного элемента управления с помощью [мастер элементов управления ATL](../atl/reference/atl-control-wizard.md), будет достаточно для добавления записей PROP_PAGE в схеме сопоставления свойств. Мастер создает необходимый код для других шагов.
 
 Затрачивать контейнеров будет отображаться на страницах свойств, указанный в том же порядке, как записи PROP_PAGE в сопоставлении свойств. Как правило следует помещать записи страницы стандартных свойств после операции для настраиваемых страниц в сопоставлении свойств, таким образом, чтобы пользователи, см. на страницах, определенных в элемент управления сначала.
 
@@ -51,4 +51,3 @@ ms.locfileid: "46069434"
 
 [Страницы свойств](../atl/atl-com-property-pages.md)<br/>
 [Пример ATLPages](../visual-cpp-samples.md)
-

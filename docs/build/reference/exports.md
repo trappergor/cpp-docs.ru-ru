@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714532"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860983"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -82,11 +82,11 @@ EXPORTS
 
 1. [__Declspec(dllexport)](../../cpp/dllexport-dllimport.md) ключевое слово в исходном коде
 
-2. оператор `EXPORTS` в файле DEF;
+1. оператор `EXPORTS` в файле DEF;
 
-3. [/EXPORT](../../build/reference/export-exports-a-function.md) спецификации в команде LINK
+1. [/EXPORT](../../build/reference/export-exports-a-function.md) спецификации в команде LINK
 
-4. Объект [комментарий](../../preprocessor/comment-c-cpp.md) директив в исходном коде, в формате `#pragma comment(linker, "/export: definition ")`. В следующем примере показано comment-директива #pragma перед объявлением функции, где `PlainFuncName` недекорированное имя, и `_PlainFuncName@4` декорированное имя функции:
+1. Объект [комментарий](../../preprocessor/comment-c-cpp.md) директив в исходном коде, в формате `#pragma comment(linker, "/export: definition ")`. В следующем примере показано comment-директива #pragma перед объявлением функции, где `PlainFuncName` недекорированное имя, и `_PlainFuncName@4` декорированное имя функции:
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba4cb1411bca452de0f146626421315fa7dc177e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716596"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859865"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (указание каталогов метаданных)
 
@@ -49,9 +49,9 @@ ms.locfileid: "45716596"
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
-2. Выберите **свойства конфигурации** > **C/C++** > **Общие** страницу свойств.
+1. Выберите **свойства конфигурации** > **C/C++** > **Общие** страницу свойств.
 
-3. Изменить **дополнительные #using каталогов** свойство.
+1. Изменить **дополнительные #using каталогов** свойство.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 

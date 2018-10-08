@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61a931ac5f9793f800157ed02ffcb7ff5071f4df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c4881ba20e999b13e2a7841161a775eac69638f6
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724403"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861022"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (ограничение длины внешних имен)
 
@@ -86,9 +86,9 @@ void func2(void) {}
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
-2. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
+1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
-3. Введите параметр компилятора в **Дополнительные параметры** поле.
+1. Введите параметр компилятора в **Дополнительные параметры** поле.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 

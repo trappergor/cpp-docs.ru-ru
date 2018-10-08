@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e65451fcb506da9072d0dc8031ffba1b30280e6
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040483"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861438"
 ---
 # <a name="ccontainedwindowt-class"></a>Класс CContainedWindowT
 
@@ -68,13 +68,13 @@ class CContainedWindowT : public TBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|Конструктор. Инициализирует элементы данных, чтобы указать, какие схемы сообщений будет обрабатывать содержащееся окно сообщения.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CContainedWindowT::Create](#create)|Создает окно.|
 |[CContainedWindowT::DefWindowProc](#defwindowproc)|Обеспечивает обработку сообщений по умолчанию.|
@@ -87,7 +87,7 @@ class CContainedWindowT : public TBase
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CContainedWindowT::m_dwMsgMapID](#m_dwmsgmapid)|Определяет, какие схемы сообщений будет обрабатывать содержащееся окно сообщения.|
 |[CContainedWindowT::m_lpszClassName](#m_lpszclassname)|Задает имя используемого существующий класс окон, на котором будет основан новый класс окна.|
@@ -118,7 +118,7 @@ class CContainedWindowT : public TBase
 |Создание элементов управления|[Учебник по ATL](../../atl/active-template-library-atl-tutorial.md)|
 |Использование окон в ATL|[Классы окон ATL](../../atl/atl-window-classes.md)|
 |Мастер проектов ATL|[Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) и последующие разделы в пакете SDK для Windows|
+|Windows|[Windows](/windows/desktop/winmsg/windows) и последующие разделы в пакете SDK для Windows|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

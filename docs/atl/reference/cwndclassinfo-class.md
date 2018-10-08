@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d674b2e3049d27f0e79eb082a44640f67a395dea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0d0b9da19ca3d1500e4e25822e8b10d5967a45cc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097901"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861685"
 ---
 # <a name="cwndclassinfo-class"></a>Класс CWndClassInfo
 
@@ -69,7 +69,7 @@ class CWndClassInfo
 
 `CWndClassInfo` Управляет данными класса окна. Как правило, используется `CWndClassInfo` посредством одного из трех макросы, DECLARE_WND_CLASS, DECLARE_WND_CLASS_EX или DECLARE_WND_SUPERCLASS, как описано в следующей таблице:
 
-|Макрос|Описание|
+|Макрос|Описание:|
 |-----------|-----------------|
 |[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` Регистрирует сведения для нового класса окна.|
 |[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` Регистрирует сведения для нового класса окна, включая параметры класса.|
@@ -81,7 +81,7 @@ class CWndClassInfo
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 
-Дополнительные сведения о классах окна см. в разделе [классы окон](https://msdn.microsoft.com/library/windows/desktop/ms632596) в пакете Windows SDK.
+Дополнительные сведения о классах окна см. в разделе [классы окон](/windows/desktop/winmsg/window-classes) в пакете Windows SDK.
 
 Дополнительные сведения об использовании windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
 

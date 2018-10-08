@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722375"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860749"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (загрузка импорта с задержкой)
 
@@ -46,9 +46,9 @@ ms.locfileid: "45722375"
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
-2. В **компоновщика** папку, выберите **ввода** страницу свойств.
+1. В **компоновщика** папку, выберите **ввода** страницу свойств.
 
-3. Изменить **Отложенно загружаемые DLL** свойство.
+1. Изменить **Отложенно загружаемые DLL** свойство.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 

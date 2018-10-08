@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58bc8b4e8e857ff78a8231112d7478b23c168381
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 08f4c2e5497994cfcd7bf4aa4a0976f7dd3e0a3f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387460"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861672"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Класс CMFCToolBarButton
 
@@ -191,14 +191,14 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Создает и инициализирует объект `CMFCToolBarButton`.|
 |`CMFCToolBarButton::~CMFCToolBarButton`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Указывает, является ли пользователь можно разместить кнопку на панели инструментов или меню во время настройки.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Указывает, можно ли хранить кнопки.|
@@ -270,7 +270,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Указывает, отображается ли изображение на кнопке.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Указывает, отображается ли текстовая метка на кнопке.|

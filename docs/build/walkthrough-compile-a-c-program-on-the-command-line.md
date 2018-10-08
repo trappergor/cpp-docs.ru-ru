@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8361890c264e11fbd5817331e07ba9005da17240
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d8b48093641982f171a5d8b43fa70d7694122263
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821378"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861269"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Пошаговое руководство: Компиляция программы на языке C в командной строке
 

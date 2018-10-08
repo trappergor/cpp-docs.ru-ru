@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109699"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861945"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 
@@ -187,13 +187,13 @@ class CWindow
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWindow::CWindow](#cwindow)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWindow::ArrangeIconicWindows](#arrangeiconicwindows)|Упорядочивает все свернутые дочерние окна.|
 |[CWindow::Attach](#attach)|Прикрепляет окно к `CWindow` объекта.|
@@ -341,14 +341,14 @@ class CWindow
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWindow::operator HWND](#operator_hwnd)|Преобразует `CWindow` объект HWND.|
 |[CWindow::operator =](#operator_eq)|Назначает HWND для `CWindow` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWindow::m_hWnd](#m_hwnd)|Дескриптор окна, связанный с `CWindow` объекта.|
 |[CWindow::rcDefault](#rcdefault)|Содержит размеры окна по умолчанию.|
@@ -382,7 +382,7 @@ class CWindow
 
 [CDialogImpl](../../atl/reference/cdialogimpl-class.md) позволяет создать модальное или немодальное диалоговое окно.
 
-Дополнительные сведения о windows, см. в разделе [Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) и последующие разделы в пакете Windows SDK. Дополнительные сведения об использовании windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
+Дополнительные сведения о windows, см. в разделе [Windows](/windows/desktop/winmsg/windows) и последующие разделы в пакете Windows SDK. Дополнительные сведения об использовании windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
 
 ## <a name="requirements"></a>Требования
 
