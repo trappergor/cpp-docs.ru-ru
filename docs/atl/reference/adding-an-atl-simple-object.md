@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1347fcebc6a3793cbe63ae356f7f9d2e03742cd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f757602459c55b7b66e01d9512d9d4cdeb2f3946
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109773"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861048"
 ---
 # <a name="adding-an-atl-simple-object"></a>Добавление простого объекта ATL
 
 Чтобы добавить объект ATL (Active Template Library) в проект, проект должен будут созданы как приложение ATL или как приложение MFC с поддержкой ATL. Вы можете использовать [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md), чтобы создать приложение ATL, или [добавить объект ATL в свое приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), чтобы реализовать поддержку ATL для приложения MFC.
 
-Можно определить COM-интерфейсы для нового объекта ATL, при создании его, или добавить их позже с помощью [реализовать интерфейс](../../ide/implement-interface-wizard.md) команду в контекстном меню представления классов.
+Можно определить COM-интерфейсы для нового объекта ATL, при создании его, или добавить их позже с помощью [реализовать интерфейс](../../ide/implement-interface-wizard.md) команду **представление классов** контекстное меню.
 
-### <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>Добавление простого объекта ATL в проект ATL COM
+## <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>Добавление простого объекта ATL в проект ATL COM
 
 1. В любом **обозревателе решений** или [представление классов](/visualstudio/ide/viewing-the-structure-of-code), щелкните правой кнопкой мыши имя проекта, к которому вы хотите добавить простой объект ATL.
 
-2. В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.
+1. В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.
 
-3. В [Добавление класса](../../ide/add-class-dialog-box.md) диалоговом окне в области «Шаблоны» щелкните **простой объект ATL**, а затем нажмите кнопку **откройте** для отображения [мастер простых объектов ATL](../../atl/reference/atl-simple-object-wizard.md).
+1. В [Добавление класса](../../ide/add-class-dialog-box.md) отображаемое в диалоговом окне **шаблоны** панели щелкните **простой объект ATL**и нажмите кнопку **откройте** для отображения [Мастер простых объектов ATL](../../atl/reference/atl-simple-object-wizard.md).
 
-4. Задание дополнительных параметров для проекта на [параметры](../../atl/reference/options-atl-simple-object-wizard.md) странице мастера простой объект ATL.
+1. Задание дополнительных параметров для проекта на [параметры](../../atl/reference/options-atl-simple-object-wizard.md) странице **простой объект ATL** мастера.
 
-5. Нажмите кнопку **Готово** добавлен объект в проект.
+1. Нажмите кнопку **Готово** добавлен объект в проект.
 
 ## <a name="see-also"></a>См. также
 
@@ -51,4 +51,3 @@ ms.locfileid: "46109773"
 [Добавление метода](../../ide/adding-a-method-visual-cpp.md)<br/>
 [Класс MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Добавление универсального класса C++](../../ide/adding-a-generic-cpp-class.md)
-
