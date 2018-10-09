@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42583942"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821441"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и MacOS
 
@@ -138,7 +138,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Создание файлов для Linux из Windows посредством WSL
 
-Можно создавать двоичные файлы для Linux на компьютере с Windows с помощью подсистемы Windows для Linux (WSL). Следуйте инструкциям, чтобы [настроить WSL в Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10) и настроить его работу с [расширением Visual Studio для Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Можно разместить все библиотеки сборки для Windows и Linux в одной папке и обращаться к ней из Windows и WSL.
+Можно создавать двоичные файлы для Linux на компьютере с Windows с помощью подсистемы Windows для Linux (WSL). Следуйте инструкциям, чтобы [настроить WSL в Windows 10](/windows/wsl/install-win10) и настроить его работу с [расширением Visual Studio для Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Можно разместить все библиотеки сборки для Windows и Linux в одной папке и обращаться к ней из Windows и WSL.
 
 
 ## <a name="export_binaries_per_project"></a> Экспорт скомпилированных двоичных файлов и файлов заголовков
@@ -243,4 +243,3 @@ If you are sure you want to rebuild the above packages, run this command with th
 |---------|---------|
 |**--triplet \<t>**|Указание триады значений для целевой архитектуры (по умолчанию: `%VCPKG_DEFAULT_TRIPLET%`, см. также **vcpkg help triplet**)|
 |**--vcpkg-root \<путь>**|Указание корневого каталога vcpkg (по умолчанию: `%VCPKG_ROOT%`)|
-

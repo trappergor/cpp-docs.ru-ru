@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6993f209f5e7c5ab6f56ae886f2d57ba90a19936
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096812"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860658"
 ---
 # <a name="while-statement-c"></a>Оператор while (C)
 
@@ -37,7 +37,7 @@ ms.locfileid: "46096812"
 
 1. Вычисляется значение *expression*.
 
-2. Если *expression* изначально ложно, тело оператора `while` не выполняется ни одного раза и управление передается из оператора `while` следующему оператору в программе.
+1. Если *expression* изначально ложно, тело оператора `while` не выполняется ни одного раза и управление передается из оператора `while` следующему оператору в программе.
 
    Если *expression* имеет значение True (то есть не равно нулю), выполняется тело оператора и процесс повторяется с шага 1.
 

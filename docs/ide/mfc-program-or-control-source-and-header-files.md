@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb9518f60db98bd590cecdffa09ee7d814241ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ec05f200d81a9753563a654257d9df3dd50a19f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447912"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861113"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Программа MFC или управление файлами исходного кода и заголовков
 
@@ -36,7 +36,7 @@ ms.locfileid: "46447912"
 |Dlgproxy.cpp, Dlgproxy.h|В программе на базе диалогового окна это файл реализации и заголовка для прокси-класса автоматизации проекта для главного диалогового окна. Используется, только если вы выбрали поддержку автоматизации.|
 |*Имя_проекта*doc.cpp, *Имя_проекта*doc.h|Наследуют и реализуют класс документа `CProjnameDoc`, а также содержат базовые функции-члены для инициализации документа, сериализации (сохранения и загрузки) документа и реализации отладочной диагностики.|
 |*Имя_проекта*set.h/.cpp|Создается при создании программы, которая поддерживает базу данных и содержит класс набора записей.|
-|*Имя_проекта*view.cpp, *Имя_проекта*view.h|Наследуют и реализуют класс представления `CProjnameView`, используемый для отображения и печати данных документа. Класс `CProjnameView` является производным от одного из следующих классов MFC:<br /><br /> -   [CEditView](../mfc/reference/ceditview-class.md)<br />-   [CFormView](../mfc/reference/cformview-class.md)<br />-   [CRecordView](../mfc/reference/crecordview-class.md)<br />-   [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />-   [CTreeView](../mfc/reference/ctreeview-class.md)<br />-   [CListView](../mfc/reference/clistview-class.md)<br />-   [CRichEditView](../mfc/reference/cricheditview-class.md)<br />-   [CScrollView](../mfc/reference/cscrollview-class.md)<br />-   [CView](../mfc/reference/cview-class.md)<br />-   [CHTMLView](../mfc/reference/chtmlview-class.md)<br />-   [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> Класс представления проекта содержит базовые функции-члены для отрисовки представления и реализации отладочной диагностики. Если включена поддержка печати, записи схемы сообщений добавляются для сообщений команд печати, настройки печати и предварительного просмотра печати. Эти записи вызывают соответствующие функции-члены в базовом классе представления.|
+|*Имя_проекта*view.cpp, *Имя_проекта*view.h|Наследуют и реализуют класс представления `CProjnameView`, используемый для отображения и печати данных документа. Класс `CProjnameView` является производным от одного из следующих классов MFC:<br /><br />- [CEditView](../mfc/reference/ceditview-class.md)<br />- [CFormView](../mfc/reference/cformview-class.md)<br />- [CRecordView](../mfc/reference/crecordview-class.md)<br />- [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />- [CTreeView](../mfc/reference/ctreeview-class.md)<br />- [CListView](../mfc/reference/clistview-class.md)<br />- [CRichEditView](../mfc/reference/cricheditview-class.md)<br />- [CScrollView](../mfc/reference/cscrollview-class.md)<br />- [CView](../mfc/reference/cview-class.md)<br />- [CHTMLView](../mfc/reference/chtmlview-class.md)<br />- [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> Класс представления проекта содержит базовые функции-члены для отрисовки представления и реализации отладочной диагностики. Если включена поддержка печати, записи схемы сообщений добавляются для сообщений команд печати, настройки печати и предварительного просмотра печати. Эти записи вызывают соответствующие функции-члены в базовом классе представления.|
 |*Имя_проекта*PropPage.h, *Имя_проекта*PropPage.cpp|Объявляют и реализуют класс `CProjnamePropPage`. `CProjnamePropPage` является производным от `COlePropertyPage` и базовой функцией-членом, `DoDataExchange`, предоставляется для реализации обмена данными и их проверки.|
 |IPframe.cpp, IPframe.h|Создается, если на странице **Параметры автоматизации** (шаг 3 из 6) мастера приложений выбран параметр мини-сервера или полного сервера. Эти файлы наследуют и реализуют класс окна фрейма на месте с именем **CInPlaceFrame**, используемый, когда сервер активируется на месте программой контейнера.|
 |Mainfrm.cpp, Mainfrm.h|Создают производный класс **CMainFrame** от [CFrameWnd](../mfc/reference/cframewnd-class.md) (для приложений SDI) или [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) (для приложений MDI). Класс **CMainFrame** обрабатывает создание кнопок панели инструментов и строки состояния, если на странице **Параметры приложения** (шаг 4 из 6) мастера приложений выбраны соответствующие параметры. Сведения об использовании **CMainFrame** см. в разделе [Классы окна фрейма, создаваемые с помощью мастера приложений](../mfc/frame-window-classes-created-by-the-application-wizard.md).|

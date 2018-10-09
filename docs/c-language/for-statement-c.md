@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f0090195506e26cab165e3ddadca0342c0b35b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ad4b23e6caef15b5dabaaa3102d72e3ff84fbc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084059"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860593"
 ---
 # <a name="for-statement-c"></a>Оператор for (C)
 
@@ -34,7 +34,7 @@ ms.locfileid: "46084059"
 
 1. Вычисляется выражение *init-expression* (если есть). Оно определяет инициализацию цикла. На тип выражения *init-expression* ограничений не накладывается.
 
-2. Вычисляется выражение *cond-expression* (если есть). Это выражение должно иметь арифметический тип или тип указателя. Оно вычисляется перед каждой итерацией. Возможны три результата.
+1. Вычисляется выражение *cond-expression* (если есть). Это выражение должно иметь арифметический тип или тип указателя. Оно вычисляется перед каждой итерацией. Возможны три результата.
 
    - Если выражение *cond-expression* возвращает **true** (ненулевое значение), выполняется оператор *statement*, после чего вычисляется выражение *loop-expression* (если есть). Выражение *loop-expression* вычисляется после завершения каждой итерации. На его тип ограничений не накладывается. Побочные эффекты выполняются по порядку. Затем процесс начинается снова с вычисления выражения *cond-expression*.
 

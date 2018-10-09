@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 172ead8aa67f042512a73b8c0d1ecdaa0723c5d1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1e74ed975cce0ac3a87716d9f7ad00da2d75d509
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676549"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820684"
 ---
 # <a name="visual-c-help-and-community"></a>Справка и сообщество Visual C++
 
@@ -34,7 +34,7 @@ ms.locfileid: "43676549"
 |Заголовок|Описание:|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Содержит общую и справочную документацию по Visual C++. Часть библиотеки MSDN.|
-|[Центр разработчиков для Windows](https://developer.microsoft.com/en-us/windows/)|Содержит сведения об использовании C++ и других языков для разработки приложений для Windows 8. Часть центра разработчиков Windows; содержимое по C++ находится в разделе Документы > Справочник по языку.|
+|[Центр разработчиков для Windows](https://developer.microsoft.com/windows/)|Содержит сведения об использовании C++ и других языков для разработки приложений для Windows 8. Часть центра разработчиков Windows; содержимое по C++ находится в разделе Документы > Справочник по языку.|
 
 ### <a name="online-and-offline-documentation"></a>Документация, доступная в сети и вне сети
 
