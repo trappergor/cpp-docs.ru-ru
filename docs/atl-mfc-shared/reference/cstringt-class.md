@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445143"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890703"
 ---
 # <a name="cstringt-class"></a>Класс CStringT
 
@@ -147,14 +147,14 @@ public CSimpleStringT<BaseType,
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Создает `CStringT` объект по-разному.|
 |[CStringT:: ~ CStringT](#_dtorcstringt)|Уничтожает объект `CStringT`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStringT::AllocSysString](#allocsysstring)|Выделяет строку BSTR из `CStringT` данных.|
 |[CStringT::AnsiToOem](#ansitooem)|Производится преобразование на месте из кодировки ANSI в набор символов OEM.|
@@ -224,7 +224,7 @@ public CSimpleStringT<BaseType,
 `CString`, `CStringA`, и `CStringW` экспортируются из библиотеки DLL MFC (MFC90. Библиотека DLL), никогда не от пользователя библиотеки DLL. Это делается во избежание `CStringT` из определен несколько раз.
 
 > [!NOTE]
->  Если код содержит инструкции по решению для ошибки компоновщика, которые описаны в [Linking Errors When You Import CString-Derived классов» (номер Q309801)](https://support.microsoft.com/help/309801/you-may-receive-an-lnk2019-error-message-when-you-build-a-visual-c-200), следует удалить этот код. Больше не используется.
+>  Если код содержит инструкции по решению для ошибки компоновщика, которые описаны в [Экспорт CStringT с помощью классов строка](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), следует удалить этот код. Больше не используется.
 
 В приложениях MFC доступны следующие строки:
 
@@ -264,7 +264,7 @@ public CSimpleStringT<BaseType,
 
 Так как `CStringT` использует аргумент шаблона, чтобы определить тип символа (либо [wchar_t](../../c-runtime-library/standard-types.md) или [char](../../c-runtime-library/standard-types.md)) поддерживается, типы параметров метода, может быть затруднена время от времени. Чтобы упростить эту проблему, определяется и используется на протяжении всего набора предопределенных типов `CStringT` класса. В следующей таблице перечислены различные типы:
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |`XCHAR`|Один символ (либо **wchar_t** или **char**) с помощью символа совпадает с типом `CStringT` объекта.|
 |`YCHAR`|Один символ (либо **wchar_t** или **char**) с противоположной символьным типом как `CStringT` объекта.|

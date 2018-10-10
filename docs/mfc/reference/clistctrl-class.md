@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821573"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890898"
 ---
 # <a name="clistctrl-class"></a>Класс CListCtrl
 
@@ -457,12 +457,6 @@ class CListCtrl : public CWnd
 - Представление отчетов
 
      Каждый элемент отображается на отдельной строке с дополнительной информацией, в виде столбцов справа. Самый левый столбец содержит небольшой значок и метку, и последующих столбцах располагаются подэлементы, как указано для приложения. Элемент управления заголовка embedded (класс [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) реализует эти столбцы. Дополнительные сведения для управления "Заголовок" и столбцов в представлении отчета см. в разделе [использование CListCtrl: Добавление столбцов к элементу управления (представление отчета)](../../mfc/adding-columns-to-the-control-report-view.md).
-
-См. также:
-
-- Статье базы знаний Q250614: HOWTO: сортировать элементы в CListCtrl в представлении отчета
-
-- Статье базы знаний Q200054: PRB: OnTimer() — не вызывается несколько раз для элемента управления списка
 
 Стиль отображения списка элемента управления определяет текущее представление. Дополнительные сведения о этих стилей и их использовании см. в разделе [использование CListCtrl: изменение стилей элемента управления "список"](../../mfc/changing-list-control-styles.md).
 

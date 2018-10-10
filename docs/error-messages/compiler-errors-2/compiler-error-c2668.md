@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b318c663bb036629086d0bca9a67641e3c4c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23bb1a6fcf64590670ede2eb6aca232a5a3b4f5c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093757"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890002"
 ---
 # <a name="compiler-error-c2668"></a>Ошибка компилятора C2668
 
@@ -31,15 +31,11 @@ ms.locfileid: "46093757"
 
 Эта ошибка также можно получить с помощью шаблона. Если, в том же классе функции-члена регулярных и функции-члена шаблонного с такой же сигнатурой, то шаблонная идти первой. Это ограничение в текущей реализации Visual C++.
 
-См. в статье базы знаний Q240869 подробнее на частичное Упорядочение шаблонов функций.
-
-Если вы создаете проект ATL, содержащий объект COM, поддерживающий `ISupportErrorInfo`, см. в статье базы знаний Q243298.
-
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2668:
 
-```
+```cpp
 // C2668.cpp
 struct A {};
 struct B : A {};
@@ -59,7 +55,7 @@ int main() {
 
 Другой способ устранения этой ошибки — с помощью [объявление using](../../cpp/using-declaration.md):
 
-```
+```cpp
 // C2668b.cpp
 // compile with: /EHsc /c
 // C2668 expected
@@ -104,7 +100,7 @@ class MyTestCase : public AppTestCase {
 
 Преобразование в приведении с использованием константы 0 является неоднозначным, так как int требует преобразования обоих долго и void *. Чтобы устранить эту ошибку, приведите 0 к точному типу параметра функции, которые он используется для преобразования не потребуется выполнить (этот код будет допустимым в версии Visual C++ в Visual Studio .NET 2003 и Visual Studio .NET).
 
-```
+```cpp
 // C2668c.cpp
 #include "stdio.h"
 void f(long) {
@@ -126,7 +122,7 @@ int main() {
 
 Эта ошибка может возникнуть, так как CRT теперь имеет float и double видов все математические функции.
 
-```
+```cpp
 // C2668d.cpp
 #include <math.h>
 int main() {
@@ -141,7 +137,7 @@ int main() {
 
 Эта ошибка может возникать, поскольку pow (int, int) была удалена из math.h в CRT.
 
-```
+```cpp
 // C2668e.cpp
 #include <math.h>
 int main() {
@@ -154,8 +150,7 @@ int main() {
 
 Этот код выполняется успешно в Visual Studio 2015, но не в Visual Studio 2017 и более поздней версией с C2668. В Visual Studio 2015 компилятор ошибочно интерпретировал инициализацию копии списка так же, как обычную инициализацию копии. Он рассматривал только преобразование конструкторов для разрешения перегрузки.
 
-```
-C++
+```cpp
 struct A {
     explicit A(int) {}
 };

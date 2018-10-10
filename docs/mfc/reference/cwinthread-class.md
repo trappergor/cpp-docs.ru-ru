@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c01336094077cc1f451f2e7b479ca4acf9fb77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441360"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890601"
 ---
 # <a name="cwinthread-class"></a>Класс CWinThread
 
@@ -81,13 +81,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinThread::CWinThread](#cwinthread)|Создает объект `CWinThread`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Функцию CWinThread::CreateThread](#createthread)|Начинает выполнение `CWinThread` объекта.|
 |[CWinThread::ExitInstance](#exitinstance)|Переопределение для очистки при завершении потока.|
@@ -108,13 +108,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinThread::operator ДЕСКРИПТОР](#operator_handle)|Извлекает дескриптор `CWinThread` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinThread::m_bAutoDelete](#m_bautodelete)|Указывает, следует ли уничтожать объект, находящийся в завершение потока.|
 |[CWinThread::m_hThread](#m_hthread)|Дескриптор текущего потока.|
@@ -455,7 +455,7 @@ BOOL PostThreadMessage(
 Отправленное сообщение макросом карты сообщение ON_THREAD_MESSAGE сопоставляется обработчик соответствующее сообщение.
 
 > [!NOTE]
->  При вызове Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) функции одного приложения MFC, MFC сообщение обработчики не вызываются. Дополнительные сведения см. в статье базы знаний, «PRB: MFC сообщение обработчик не вызывается с PostThreadMessage()» (Q142415).
+> При вызове [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), сообщение помещается в очередь сообщений потока. Тем не менее так как сообщения, учтена таким образом не связаны с окном, MFC не передает их обработчики сообщений или команды. Для обработки этих сообщений, переопределите `PreTranslateMessage()` функции вашей CWinApp производного класса и обрабатывать сообщения вручную.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 
@@ -490,7 +490,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Параметры
 
-*Код*<br/>
+*код*<br/>
 Указывает код обработчика. Эта функция-член использует код для определения способа обработки *lpMsg.*
 
 *lpMsg*<br/>

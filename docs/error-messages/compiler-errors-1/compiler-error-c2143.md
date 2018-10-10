@@ -16,20 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6352c87748bafa635d8d6dae29bf37b78ac6c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c729ecbdea13c36cf5df71efa16d12853fc4433
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041991"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890498"
 ---
 # <a name="compiler-error-c2143"></a>Ошибка компилятора C2143
 
 Синтаксическая ошибка: отсутствует «токен1» до «токен2»
 
 Компилятор ожидает определенного маркера (то есть элемента языка не пробел) и вместо этого обнаружен другой токен.
-
-Сведения об этой ошибке см. в случае его при использовании блока try функция [статье базы знаний 241706](http://support.microsoft.com/kb/241706).
 
 Проверьте [Справочник по языку C++](../../cpp/cpp-language-reference.md) для определения, где синтаксически неправильный код. Поскольку компилятор может сообщить об этой ошибке, после обнаружения строки, которая вызывает проблему, следует проверьте несколько строк кода, вызвавшей ошибку.
 

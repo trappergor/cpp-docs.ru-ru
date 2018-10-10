@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821365"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890638"
 ---
 # <a name="message-map-macros-mfc"></a>Макросы схемы сообщений (MFC)
 
@@ -352,7 +352,7 @@ ON_MESSAGE( message, memberFxn )
 Должно быть ровно один оператор ON_MESSAGE макрос в схему сообщений для каждого сообщения в определяемых пользователем, должны быть сопоставлены с функцию обработчика сообщений.
 
 > [!NOTE]
->  Помимо определяемых пользователем сообщений ON_MESSAGE обрабатывает менее распространенные сообщения Windows. Дополнительные сведения см. в статье базы знаний [99848: INFO: используйте макрос ON_MESSAGE() карты менее распространенных сообщений](http://go.microsoft.com/fwlink/p/?linkid=192022).
+>  Помимо определяемых пользователем сообщений ON_MESSAGE обрабатывает менее распространенные сообщения Windows. Дополнительные сведения см. в разделе [схемы сообщений](../../mfc/tn006-message-maps.md).
 
 Дополнительные сведения и примеры см. в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md) и [определяемые пользователем обработчики](user-defined-handlers.md)
 

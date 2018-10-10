@@ -18,24 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87682d9110aa37fbb806f7d1dcd70009cf2ad63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ac1eef12a3f782f3ad9ba8a9bb526989876251e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406962"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890222"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Шаги для организации типичного клиентского приложения FTP
 
 Типичное приложение клиента FTP создает [CInternetSession](../mfc/reference/cinternetsession-class.md) и [CFtpConnection](../mfc/reference/cftpconnection-class.md) объекта. Обратите внимание, что эти классы MFC WinInet фактически управляет параметры типа прокси-сервера; Делает IIS.
-
-Кроме того см. в статьях базы знаний:
-
-- ИНСТРУКЦИИ: Протокол FTP с CERN прокси-сервер с помощью API-интерфейса WinInet (идентификатор статьи: Q166961)
-
-- Пример: FTP с помощью паролей на основе CERN защищенных прокси-сервера (идентификатор статьи: Q216214)
-
-- Internet Services Manager не удается показать установленных прокси-служб (идентификатор статьи: Q216802)
 
 Ниже приведены шаги, которые необходимо выполнять в обычном клиентском приложении FTP.
 

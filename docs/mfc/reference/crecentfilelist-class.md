@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393312"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890612"
 ---
 # <a name="crecentfilelist-class"></a>Класс CRecentFileList
 
@@ -53,13 +53,13 @@ class CRecentFileList
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRecentFileList::CRecentFileList](#crecentfilelist)|Создает объект `CRecentFileList`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRecentFileList::Add](#add)|Добавляет файл в список последних Выбиравшихся файлов.|
 |[CRecentFileList::GetDisplayName](#getdisplayname)|Предоставляет отображаемое имя для отображения меню файла MRU.|
@@ -71,17 +71,13 @@ class CRecentFileList
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[[CRecentFileList::operator]](#operator_at)|Возвращает `CString` объекта в заданной позиции.|
 
 ## <a name="remarks"></a>Примечания
 
 Файлы можно добавить или удалить из списка последних Использованных файлов, список файлов может быть чтения или записи в реестр или. Можно обновить INI-файл и меню, отображение в списке последних Выбиравшихся файлов.
-
-Дополнительные сведения о последних Использованных элементов меню см. в разделе
-
-- Статье базы знаний Q243751: Практическое руководство: Добавление обработчики команд для последних Использованных элементов меню в приложении MFC
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
